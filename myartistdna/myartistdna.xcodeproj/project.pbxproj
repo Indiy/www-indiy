@@ -1150,6 +1150,7 @@
 		2DF474131440B77F005538C7 /* terms_service.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = terms_service.html; sourceTree = "<group>"; };
 		2DF474141440B77F005538C7 /* tour.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = tour.php; sourceTree = "<group>"; };
 		2DF474151440B77F005538C7 /* working.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = working.php; sourceTree = "<group>"; };
+		2DF4741A1440CFC6005538C7 /* jquery.mCustomScrollbar.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = jquery.mCustomScrollbar.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -1538,6 +1539,7 @@
 		2DF470471440B77F005538C7 /* css */ = {
 			isa = PBXGroup;
 			children = (
+				2DF4741A1440CFC6005538C7 /* jquery.mCustomScrollbar.css */,
 				2DF470491440B77F005538C7 /* Lucida Grande.eot */,
 				2DF4704A1440B77F005538C7 /* Lucida Grande.ttf */,
 				2DF4704B1440B77F005538C7 /* Neuzeit-Grotesk-Light.eot */,

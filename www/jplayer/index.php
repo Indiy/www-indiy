@@ -1177,7 +1177,7 @@ $(window).load(function() {
                //$("#mcs_container").mCustomScrollbar("vertical",400,"easeOutCirc",1.05,"auto","yes","yes",10);
                });
 </script>
-<script src="jquery.mCustomScrollbar.js" type="text/javascript"></script>
+<script src="js/jquery.mCustomScrollbar.js" type="text/javascript"></script>
 <!-- Custom scrollbar Ends -->
 
 <!-- Tracking code Starts --> 

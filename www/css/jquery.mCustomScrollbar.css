@@ -15,8 +15,8 @@
 #mcs_container .dragger{position:absolute; width:2px; height:60px; background:#999; text-align:center; line-height:60px; color:#666; overflow:hidden; cursor:pointer; -moz-border-radius:2px; -khtml-border-radius:2px; -webkit-border-radius:2px; border-radius:2px;}
 #mcs_container .dragger_pressed{position:absolute; width:4px; margin-left:-1px; height:60px; background:#999; text-align:center; line-height:60px; color:#666; overflow:hidden; -moz-border-radius:4px; -khtml-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; cursor:s-resize;}
 #mcs_container .scrollUpBtn,#mcs_container .scrollDownBtn{position:absolute; display:inline-block; width:14px; height:15px; margin-right:12px; text-decoration:none; right:0; filter:alpha(opacity=20); -moz-opacity:0.20; -khtml-opacity:0.20; opacity:0.20;}
-#mcs_container .scrollUpBtn{top:16px; background:url(mcs_btnUp.png) center center no-repeat;}
-#mcs_container .scrollDownBtn{bottom:12px; background:url(mcs_btnDown.png) center center no-repeat;}
+#mcs_container .scrollUpBtn{top:16px; background:url('/images/mcs_btnUp.png') center center no-repeat;}
+#mcs_container .scrollDownBtn{bottom:12px; background:url('/images/mcs_btnDown.png') center center no-repeat;}
 #mcs_container .scrollUpBtn:hover,#mcs_container .scrollDownBtn:hover{filter:alpha(opacity=60); -moz-opacity:0.60; -khtml-opacity:0.60; opacity:0.60;}
 /* content block 2 */
 #mcs2_container{position:absolute; left:340px; top:20px; margin:0; width:260px; height:500px; padding:0 10px; border-top:1px dashed #999; border-bottom:1px dashed #999;}
@@ -57,8 +57,8 @@
 #mcs5_container .customScrollBox .content p{padding:5px; margin:0 5px;}
 #mcs5_container .customScrollBox .content p img{margin-right:5px;}
 #mcs5_container .dragger_container{position:relative; height:0px; width:540px; margin:10px; border-top:1px dashed #C30;}
-#mcs5_container .dragger{position:absolute; width:60px; height:9px; background:#111 url(mcsDragger.png) no-repeat; margin-top:-5px;}
-#mcs5_container .dragger_pressed{position:absolute; width:60px; height:9px; background:#111 url(mcsDraggerHover.png) no-repeat; margin-top:-5px;}
+#mcs5_container .dragger{position:absolute; width:60px; height:9px; background:#111 url('/images/mcsDragger.png') no-repeat; margin-top:-5px;}
+#mcs5_container .dragger_pressed{position:absolute; width:60px; height:9px; background:#111 url('/images/mcsDraggerHover.png') no-repeat; margin-top:-5px;}
 #mcs5_container .scrollUpBtn,#mcs5_container .scrollDownBtn{position:absolute; top:0; display:inline-block; font-family:Arial,Helvetica,sans-serif; font-size:large; font-weight:normal; color:#C30; margin:8px 5px 0 10px; text-decoration:none;}
 #mcs5_container .scrollDownBtn{right:10px;}
 #mcs5_container .scrollUpBtn{right:50px;}
