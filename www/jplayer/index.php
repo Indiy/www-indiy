@@ -174,12 +174,14 @@ if ($browser == true || $_GET["debug"] == "true"){
 <html xmlns="http://www.w3.org/1999/xhtml"> 
 <head>
 <title><?=siteTitle(); ?><? if (!$fan) { echo " - $artist_name"; } ?></title>
-<link href="<?=trueSiteUrl();?>/jplayer/style.css" rel="stylesheet" type="text/css" /> 
+<link href="jplayer/style.css" rel="stylesheet" type="text/css" /> 
 <!--<link rel="stylesheet" media="all and (orientation:portrait)" href="<?=trueSiteUrl();?>/jplayer/portrait.css">-->
-<link rel="stylesheet" href="<?=trueSiteUrl();?>/jplayer/css/supersized.core.css" type="text/css" media="screen" />
-<? // <link rel="stylesheet" media="all and (orientation:landscape)" href="/jplayer/landscape.css"> ?>
+<link rel="stylesheet" href="jplayer/css/supersized.core.css" type="text/css" media="screen" />
 
 <link media="only screen and (max-device-width: 480px)" href="<?=trueSiteUrl();?>/jplayer/iphone.css" type= "text/css" rel="stylesheet" />
+
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
@@ -192,6 +194,10 @@ if ($browser == true || $_GET["debug"] == "true"){
 <script src="jplayer/js/index.js" type="text/javascript"></script>
 <script src="js/application.php?id=<?php echo $artist_id;?>"  type="text/javascript"></script>
 <script src="jplayer/demos.common.js" type="text/javascript"></script> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+<script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
 
 <script src="js/artist_home.js" type="text/javascript"></script>
 <script src="js/artist_home_ui.js" type="test/javascript"></script>
@@ -419,62 +425,6 @@ if ($browser == true || $_GET["debug"] == "true"){
 				}
 			}
 			
-			// Old socialize code, no longer used
-			/*$(".socializestream").click(function(event){
-				$(this).hide();
-				$(".socializehide").show();
-				<? if ($artist_facebook != "") { ?>
-					$("#facebook").show();
-				<? } else if ($artist_twitter != "") { ?>
-					$("#twitter").show();
-				<? } else { ?>
-					$("#emaillist").show();
-				<? } ?>
-				$(".socialize").animate({
-					marginTop: "-400px"
-				}, 300);
-			});
-			
-			$(".socializehide").click(function(event){
-				$(this).hide();
-				$(".socializestream").show();			
-				$(".socialize").animate({
-					marginTop: "-39px"
-				}, 300);
-			});
-
-			$(".showfacebook").click(function(event){
-				$(this).parent(".socialize").children(".padthis").children("#emaillist").hide();
-				$(this).parent(".socialize").children(".padthis").children("#googleplus").hide();
-				$(this).parent(".socialize").children(".padthis").children("#facebook").fadeIn();
-				$(this).parent(".socialize").children(".padthis").children("#twitter").hide();
-				return false;
-			});	
-			
-			$(".showtwitter").click(function(event) {
-				$(this).parent(".socialize").children(".padthis").children("#emaillist").hide();
-				$(this).parent(".socialize").children(".padthis").children("#googleplus").hide();
-				$(this).parent(".socialize").children(".padthis").children("#facebook").hide();
-				$(this).parent(".socialize").children(".padthis").children("#twitter").fadeIn();
-				return false;
-			});
-			
-			$(".showemail").click(function(event){
-				$(this).parent(".socialize").children(".padthis").children("#emaillist").fadeIn();
-				$(this).parent(".socialize").children(".padthis").children("#googleplus").hide();
-				$(this).parent(".socialize").children(".padthis").children("#facebook").hide();
-				$(this).parent(".socialize").children(".padthis").children("#twitter").hide();
-				return false;
-			});	
-			
-			$(".showgoogle").click(function(event){
-				$(this).parent(".socialize").children(".padthis").children("#emaillist").hide();
-				$(this).parent(".socialize").children(".padthis").children("#googleplus").fadeIn();
-				$(this).parent(".socialize").children(".padthis").children("#facebook").hide();
-				$(this).parent(".socialize").children(".padthis").children("#twitter").hide();
-				return false;
-			});	*/
-			
 			$(".bottom").click(function(event){
 				var logoclass = $(this).parent("#logo").attr("class");
 				if (logoclass == "openlogo") {
@@ -488,7 +438,6 @@ if ($browser == true || $_GET["debug"] == "true"){
 				}
 				$(this).parent("#logo").toggleClass("openlogo");
 			});	
-			
 			
 			$(".submitform").click(function(event){
 			
@@ -1220,6 +1169,16 @@ $(document).ready(function(){
 	});
 })(jQuery);
 </script>
+
+
+<!-- Custom scrollbar Starts -->
+<script>
+$(window).load(function() {
+               //$("#mcs_container").mCustomScrollbar("vertical",400,"easeOutCirc",1.05,"auto","yes","yes",10);
+               });
+</script>
+<script src="jquery.mCustomScrollbar.js" type="text/javascript"></script>
+<!-- Custom scrollbar Ends -->
 
 <!-- Tracking code Starts --> 
 <script type="text/javascript">
