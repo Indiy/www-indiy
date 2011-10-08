@@ -13,11 +13,8 @@
     $listens = $music["views"] + 1;
     update("[p]musicplayer_audio","views","{$listens}","id",$music["id"]);
 
-
     $total = mf(mq("SELECT SUM(views) FROM `[p]musicplayer_audio` WHERE `artistid`='{$artistid}'"));
-    
-    $output = array("total_listens" => $total[0],"track_listens" => $listens);
-    
-    print json_encode($output);
 
+    $output = array("total_listens" => intval($total[0]),"track_listens" => $listens);
+    print json_encode($output);
 ?>

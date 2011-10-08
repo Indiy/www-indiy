@@ -124,11 +124,11 @@ if ($browser == true || $_GET["debug"] == "true"){
 			$musicList .= '{name:"'.$music_name.'",mp3:"'.trueSiteUrl().'/artists/audio/'.$music_audio.'",download:"'.$music_download.'",image:"'.$music_image.'",bgcolor:"'.$music_bgcolor.'",bgrepeat:"'.$music_bgrepeat.'",bgposition:"'.$music_bgposition.'",plus:"",amazon:"'.$music_amazon.'",itunes:"'.$music_itunes.'"}'; //,plus:"<a href=\'http://www.google.com\' target=\'_blank\' class=\'plus\' onclick=\'javascript: void(0);\'>Test</a>
 		}
 		++$m;
-		$total_listens = $total_listens + $music_listens;
 	}
 	
-	
-	
+	$total_q = mf(mq("SELECT SUM(views) FROM `[p]musicplayer_audio` WHERE `artistid`='{$music_artistid}'"));
+	$total_listens = intval($total_q[0]);
+    
 	$loadvideo = mq("select `id`,`name`,`image`,`artistid`,`order` from `[p]musicplayer_video` where {$mQuery} order by `order` asc, `id` desc");
 	$cv = 0;
 	/* Video Overlay Pagination Code Begins */
@@ -203,6 +203,8 @@ if ($browser == true || $_GET["debug"] == "true"){
 <script src="js/artist_home_ui.js" type="test/javascript"></script>
 
 	<script type="text/javascript">
+
+        var g_totalListens = <?=$total_listens?>;
 
 		$(document).ready(function(){
 
@@ -708,7 +710,9 @@ $(document).ready(function(){
                                      }, 2000);
                           });
                 });
-                
+            
+            g_totalListens++;
+            $('#total_listens').text(g_totalListens);
             updateListens(image);
             
 			setTimeout(function(){ 

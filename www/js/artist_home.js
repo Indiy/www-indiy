@@ -13,9 +13,9 @@ function updateListens(image)
         dataType: 'json',
         success: function(data) 
         {
-            var total_listens = data['total_listens'];
+            g_totalListens = data['total_listens'];
             var track_listens = data['track_listens'];
-            $('#total_listens').text(total_listens);
+            $('#total_listens').text(g_totalListens);
             $('#current_track_listens').text(track_listens);
         },
         error: function()

@@ -261,7 +261,6 @@
 		2DF470511440B77F005538C7 /* Teletex_Light.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = Teletex_Light.eot; sourceTree = "<group>"; };
 		2DF470521440B77F005538C7 /* Teletex_Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Teletex_Light.otf; sourceTree = "<group>"; };
 		2DF470531440B77F005538C7 /* working.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = working.css; sourceTree = "<group>"; };
-		2DF470551440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
 		2DF470561440B77F005538C7 /* listens.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = listens.php; sourceTree = "<group>"; };
 		2DF470571440B77F005538C7 /* download.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = download.php; sourceTree = "<group>"; };
 		2DF470581440B77F005538C7 /* faq.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = faq.html; sourceTree = "<group>"; };
@@ -842,18 +841,14 @@
 		2DF472C41440B77F005538C7 /* jquery.hoverscroll.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = jquery.hoverscroll.css; sourceTree = "<group>"; };
 		2DF472C51440B77F005538C7 /* jquery.hoverscroll.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.hoverscroll.js; sourceTree = "<group>"; };
 		2DF472C61440B77F005538C7 /* jquery.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
-		2DF472C81440B77F005538C7 /* .htaccess */ = {isa = PBXFileReference; lastKnownFileType = text; path = .htaccess; sourceTree = "<group>"; };
-		2DF472C91440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
 		2DF472CA1440B77F005538C7 /* application.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = application.js; sourceTree = "<group>"; };
 		2DF472CB1440B77F005538C7 /* application.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = application.php; sourceTree = "<group>"; };
 		2DF472CC1440B77F005538C7 /* artist_home.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_home.js; sourceTree = "<group>"; };
 		2DF472CD1440B77F005538C7 /* artist_home_ui.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_home_ui.js; sourceTree = "<group>"; };
-		2DF472CE1440B77F005538C7 /* error_log */ = {isa = PBXFileReference; lastKnownFileType = text; path = error_log; sourceTree = "<group>"; };
 		2DF472CF1440B77F005538C7 /* fb_redirect.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fb_redirect.php; sourceTree = "<group>"; };
 		2DF472D01440B77F005538C7 /* fb_testpic.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fb_testpic.php; sourceTree = "<group>"; };
 		2DF472D11440B77F005538C7 /* homepage_slideshow.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = homepage_slideshow.js; sourceTree = "<group>"; };
 		2DF472D21440B77F005538C7 /* html5.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = html5.js; sourceTree = "<group>"; };
-		2DF472D31440B77F005538C7 /* index_test.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index_test.js; sourceTree = "<group>"; };
 		2DF472D41440B77F005538C7 /* Jplayer.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jplayer.swf; sourceTree = "<group>"; };
 		2DF472D51440B77F005538C7 /* jquery-1.4.1-and-plugins.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.4.1-and-plugins.min.js"; sourceTree = "<group>"; };
 		2DF472D61440B77F005538C7 /* jquery-1.6.2.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.6.2.js"; sourceTree = "<group>"; };
@@ -1558,7 +1553,6 @@
 		2DF470541440B77F005538C7 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				2DF470551440B77F005538C7 /* .listing */,
 				2DF470561440B77F005538C7 /* listens.php */,
 			);
 			path = data;
@@ -2425,18 +2419,14 @@
 		2DF472C71440B77F005538C7 /* js */ = {
 			isa = PBXGroup;
 			children = (
-				2DF472C81440B77F005538C7 /* .htaccess */,
-				2DF472C91440B77F005538C7 /* .listing */,
 				2DF472CA1440B77F005538C7 /* application.js */,
 				2DF472CB1440B77F005538C7 /* application.php */,
 				2DF472CC1440B77F005538C7 /* artist_home.js */,
 				2DF472CD1440B77F005538C7 /* artist_home_ui.js */,
-				2DF472CE1440B77F005538C7 /* error_log */,
 				2DF472CF1440B77F005538C7 /* fb_redirect.php */,
 				2DF472D01440B77F005538C7 /* fb_testpic.php */,
 				2DF472D11440B77F005538C7 /* homepage_slideshow.js */,
 				2DF472D21440B77F005538C7 /* html5.js */,
-				2DF472D31440B77F005538C7 /* index_test.js */,
 				2DF472D41440B77F005538C7 /* Jplayer.swf */,
 				2DF472D51440B77F005538C7 /* jquery-1.4.1-and-plugins.min.js */,
 				2DF472D61440B77F005538C7 /* jquery-1.6.2.js */,
