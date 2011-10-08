@@ -1,0 +1,718 @@
+
+/*
+---------------------------------------------
+01. main/default elements
+---------------------------------------------
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style:none
+}
+img, fieldset {
+	border:none
+}
+/* render html5 elements as block */
+header, footer, section, aside, nav, article {
+	display: block;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight:normal
+}
+
+textarea {outline:none}
+textarea:focus {outline:none} 
+input:focus { outline: 0; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; }
+ 
+@font-face {
+ font-family: 'Neuzeit Grotesk';
+ src: url('Neuzeit-Grotesk.eot');
+ src: local('Neuzeit-Grotesk'), url('Neuzeit-Grotesk.otf') format('opentype');
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: 'Neuzeit Grotesk Light';
+ src: url('Neuzeit-Grotesk-Light.eot');
+ src: local('Neuzeit-Grotesk-Light'), url('Neuzeit-Grotesk-Light.otf') format('opentype');
+ font-weight: normal;
+ font-style: normal;
+}
+
+@font-face {
+ font-family: 'Teletex Light';
+ src: url('Teletex_Light.eot');
+ src: local('Teletex_Light'), url('Teletex_Light.otf') format('opentype');
+ font-weight: normal;
+ font-style: normal;
+}
+
+@font-face {
+ font-family: 'Lucida Grande';
+ src: url('Lucida Grande.eot');
+ src: local('Lucida Grande'), url('Lucida Grande.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
+}
+
+
+body {
+	font-family:"Lucida Grande", Verdana, Arial, Helvetica, sans-serif; background:#f6f6f6
+}
+
+p { font-size:14px; color:#556270}
+p a { color:#556270; text-decoration:none}
+p a:hover { text-decoration:underline}
+
+h2 { font-family:"Teletex Light",Arial, Helvetica, sans-serif; font-size:30px; color:#353a3f; line-height:1em; text-transform:uppercase}
+h2 a { color:#353a3f; text-decoration:none}
+h3 { font-family:"Teletex Light",Arial, Helvetica, sans-serif; font-size:22px; color:#FFFFFF; line-height:1em; text-transform:uppercase}
+
+h4 { font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; font-size:28px; color:#474248; line-height:1em;}
+h4 a { color:#474248; text-decoration:none}
+h4 a:hover { text-decoration:underline}
+
+h5 { font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; font-size:15px; color:#36421b; line-height:1em}
+
+/*
+---------------------------------------------
+02. header
+---------------------------------------------
+*/
+
+#header {width:100%; height:50px; float:left; background:#0a0b0d}
+header { width:940px; margin:0 auto}
+
+header h1 { float:left; line-height:.5em; padding:14px 16px 0 0}
+
+header nav {width:701px; height:50px; float:left; background:url(../images/bg_nav.gif) repeat-x; padding:0 20px 0 60px}
+header nav ul {float:left; padding:20px 0 0 0}
+header nav ul li { float:left; font-family:"Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; color:#D5D5D5; text-transform:uppercase; background:url(../images/divider_nav.png) no-repeat right 4px; padding:0 18px}
+header nav ul li.nodivider { background:none}
+header nav ul li a { float:left; color:#D5D5D5; text-decoration:none; padding-bottom:14px; z-index:10}
+header nav ul li a:hover { background:url(../images/arrow_nav.gif) no-repeat bottom center}
+header nav ul li:hover a { background:url(../images/arrow_nav.gif) no-repeat bottom center}
+header nav ul li a.active { background:url(../images/arrow_nav.gif) no-repeat bottom center}
+header nav ul li a.login {color:#4ecdc4} 
+
+header nav ul li span { width:100%; height:40px; float:left; background:#FFFFFF; display:none; top:50px; left:0%; position:absolute}
+header nav ul li:hover span  { display:block}
+header nav ul li ul { width:570px; margin:0 auto; float:none; padding-top:16px}
+
+header nav ul li ul li {float:left; font-size:11px; color:#556270; background:none; padding:0px 0px 0 52px}
+header nav ul li ul li a { color:#556270; text-decoration:none; padding:0}
+header nav ul li ul li a:hover {background:none; text-decoration:underline}
+header nav ul li:hover ul li a { background:none}
+
+header .search {float:right; padding-top:13px; position:relative}
+header .search fieldset { width:210px; height:24px; float:right; background:#d2d2d2}
+header .search .button {float:left; line-height:.5em; padding:6px 5px 0 0}
+header .search .input { width:181px; float:left; color:#595959; font-size:10px; border:none; background:none; padding:5px 6px}
+
+/*
+---------------------------------------------
+03. wrapper and content
+---------------------------------------------
+*/
+
+#wrapper {width:940px; margin:0 auto}
+#content {width:940px; float:left; padding-top:40px}
+
+/*
+---------------------------------------------
+04.1 content - features
+---------------------------------------------
+*/
+
+#content .features { width:940px; float:left; padding-bottom:40px}
+
+ul#accordion-slider{ width:940px; position: relative;}
+ul#accordion-slider li{ width:314px; height:257px; float:left; display: block; overflow: hidden}
+
+#content .features ul { width:960px; float:left}
+#content .features ul li { width:314px; float:left;}
+#content .features ul li.active { width:480px;}
+ 
+#content .features .caption {width:465px; height:40px; float:left; font-size:14px; color:#FFFFFF; background:url(../images/bg_bar.png) repeat; padding:0 0 0 15px; margin-top:-60px; position:relative}
+#content .features .caption  span {float:left; padding-top:10px}
+#content .features .caption  .go {float:right; font-size:14px; padding:0 0 0 0}
+#content .features .caption  .go a { width:40px; height:30px; float:left; color:#FFFFFF; text-decoration:none; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; background:url(../images/button_go.png) no-repeat; padding:10px 0 0 22px}
+
+
+/*
+
+/*
+---------------------------------------------
+04.2 content - signup
+---------------------------------------------
+*/
+
+#content .signup {width:940px; height:50px; float:left; background:url(../images/bg_sign_up.gif) no-repeat; margin-bottom:40px}
+#content .signup h3 {float:left; padding:14px 0 0 20px;}
+
+#content .signup .button {float:right; font-family:"Teletex Light",Arial, Helvetica, sans-serif}
+#content .signup .button a { width:242px; height:36px; float:left; color:#000000; text-decoration:none; font-size:22px; background:url(../images/button_signup.gif) no-repeat; text-align:center; padding:14px 0 0 0}
+
+
+/*
+---------------------------------------------
+04.3 content - benefits
+---------------------------------------------
+*/
+
+#benefitshome {width:940px; float:left; background:url(../images/borderdesign.gif) repeat-x bottom left; padding-bottom:51px; margin-bottom:40px}
+#benefitshome h2 {width:940px; float:left; text-align:center; background:url(../images/borderdesign.gif) repeat-x; padding-top:51px; padding-bottom:38px}
+#benefitshome h2 span {font-weight:bold}
+
+#benefitshome aside { width:300px; height:115px; float:left; background:url(../images/bg_benefits_home.gif) no-repeat; padding:15px 20px 0 0}
+#benefitshome ul { width:294px; float:left; padding:0px 0 5px 6px}
+#benefitshome ul li { width:294px; float:left;font-family:"Teletex Light",Arial, Helvetica, sans-serif; font-size:28px; color:#FFFFFF; line-height:.9em}
+#benefitshome ul li span { float:left; background:url(../images/bg_gray_home.png) repeat; padding:0 0 0px 8px}
+#benefitshome ul li .be { float:left; background:url(../images/bg_blue1.png) repeat; padding:3px 6px; margin-top:-6px}
+#benefitshome ul li .heard { float:left; font-size:40px; letter-spacing:-1px; background:url(../images/bg_blue1.png) repeat; padding:7px 6px; margin:0 -6px 6px 0}
+
+#benefitshome h5 {width:260px; height:27px; float:left; background:url(../images/bg_blue1.png) repeat; padding:13px 0 0 40px; margin-top:0px}
+#benefitshome h5 a {color:#36421b; text-decoration:none}
+#benefitshome h5 a:hover {color:#36421b; text-decoration:underline}
+
+#benefitshome .seen { width:300px; height:115px; float:left; background:url(../images/bg_benefits_home.gif) no-repeat; padding:15px 20px 0 0}
+#benefitshome .seen ul li .be {background:url(../images/bg_green.png) repeat}
+#benefitshome .seen ul li .heard {background:url(../images/bg_green.png) repeat}
+#benefitshome .seen h5 {background:url(../images/bg_green1.png) repeat}
+
+#benefitshome .independent { width:300px; height:115px; float:left; background:url(../images/bg_benefits_home.gif) no-repeat; padding:15px 0px 0 0}
+#benefitshome .independent ul li .be {background:url(../images/bg_pink.png) repeat}
+#benefitshome .independent ul li .heard {background:url(../images/bg_pink.png) repeat}
+#benefitshome .independent h5 {background:url(../images/bg_pink1.png) repeat}
+
+
+/*
+---------------------------------------------
+04.4 content - artisthome
+---------------------------------------------
+*/
+
+#artistshome {width:940px; float:left; padding:0px 0 40px 0}
+#artistshome h2 { text-align:center; padding-bottom:15px}
+#artistshome h2 span {font-weight:bold}
+
+#artistshome ul { width:960px; float:left; margin-right:-20px}
+#artistshome ul li {width:300px; float:left; padding:20px 20px 0 0}
+#artistshome ul li span { height:34px; float:left; font-size:14px; color:#323840; background:url(../images/bg_heading_artists.png) no-repeat top right; padding:16px 32px 0 17px; margin-top:-55px; position:relative}
+#artistshome ul li a { color:#323840; text-decoration:none}
+
+#artistshome .pagination { width:661px; float:left; padding:27px 0 0 279px}
+#artistshome .pagination p {float:left; font-size:12px; padding-right:2px}
+#artistshome .pagination p a { width:189px; height:17px; float:left; background:#dddee0 url(../images/arrow_previous.gif) no-repeat top left; color:#666666; text-decoration:none; text-align:right; padding:8px 14px}
+#artistshome .pagination p a.next { text-align:left; background:#dddee0 url(../images/arrow_next.gif) no-repeat top right}
+
+/*
+----------------------------------------
+05. footer
+----------------------------------------
+*/
+
+#footer {width:100%; height:149px; float:left; background:#0a0b0d; padding-top:37px}
+footer { width:940px; margin:0 auto}
+
+footer p { float:right; font-size:12px; color:#FFFFFF; text-align:right}
+footer p a { color:#FFFFFF}
+
+footer h5 { font-size:14px; color:#f5f5f5; padding-bottom:10px}
+footer aside { width:100px; float:left}
+
+footer .benefits { width:110px; float:left}
+
+footer aside ul {float:left}
+footer aside ul li {font-size:12px; color:#4ecdc4; line-height:1.5em}
+footer aside ul li a {color:#4ecdc4; text-decoration:none}
+footer aside ul li a:hover {color:#4ecdc4; text-decoration:underline}
+
+footer article { width:185px; float:left}
+footer article ul li { width:185px; float:left; background:url(../images/dottedborder.gif) repeat-x bottom left; margin-bottom:3px}
+footer article ul li.last {background:none; margin-bottom:0}
+footer article ul li img { float:left; padding:3px 7px 7px 0}
+footer article ul li a { font-size:12px; color:#4ecdc4; text-decoration:none}
+footer article ul li a:hover {color:#4ecdc4; text-decoration:underline}
+
+footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
+
+
+
+/*
+----------------------------------------
+06.1. benefits - 01
+----------------------------------------
+*/
+
+#benefits { width:940px; float:left}
+#benefits h2 { width:940px; font-size:50px; float:left; background:url(../images/borderdesign.gif) repeat-x bottom left; padding:0 0 25px 0; margin-bottom:24px}
+
+#leftpanel { width:220px; float:left; padding:5px 0 0 0}
+#leftpanel .subnav { width:220px; float:left; background:url(../images/dottedborder.gif) repeat-x top left; padding-top:19px; margin-bottom:30px}
+#leftpanel .subnav ul { width:220px; float:left; background:url(../images/dottedborder.gif) repeat-x bottom left; padding-bottom:19px}
+#leftpanel .subnav ul li { width:220px; float:left; font-size:20px; font-family:"Teletex Light",Arial, Helvetica, sans-serif; padding:3px 0}
+#leftpanel .subnav ul li a { width:202px; float:left; color:#28bcb0; text-transform:uppercase; text-decoration:none; padding:3px 9px 1px 9px}
+#leftpanel .subnav ul li a:hover { color:#FFFFFF; background:#4ecdc4 url(../images/bg_subnav.gif) no-repeat top right}
+#leftpanel .subnav ul li a.active { color:#FFFFFF; background:#4ecdc4 url(../images/bg_subnav.gif) no-repeat top right}
+
+#leftpanel .signuptoday { width:220px; height:59px; float:left; background:url(../images/bg_sign_up_today..gif) no-repeat; padding:0 0 40px 0}
+#leftpanel .signuptoday p {font-size:14px; color:#FFFFFF; text-align:center; text-transform:uppercase; font-family:"Teletex Light",Arial, Helvetica, sans-serif; padding-top:10px}
+#leftpanel .signuptoday p a { width:220px; float:left; text-align:center; font-size:14px; color:#1e2226; font-weight:bold; padding-top:5px}
+
+
+#rightpanel{width:651px; float:left; padding-left:53px; padding-bottom:53px}
+
+#rightpanel .playbar {width:651px; float:left}
+#rightpanel h4 { line-height:.9em; padding-bottom:10px}
+#rightpanel h4 span { font-size:16px; color:#248079; text-transform:uppercase; font-family:"Neuzeit Grotesk Light",Arial, Helvetica, sans-serif}
+#rightpanel .playbar .extras { width:641px; float:left; background:#FFFFFF; line-height:.5em; -moz-border-radius:5px; -webkit-border-radius:5px;  border-radius:5px; -webkit-box-shadow: -4px 4px 7px #C3C3C3; -moz-box-shadow: -4px 4px 7px #C3C3C3; box-shadow: -4px 4px 7px #C3C3C3; behavior: url(PIE.htc); position:relative; padding:5px; margin-bottom:26px}
+
+#rightpanel article {width:651px; float:left}
+#rightpanel article figure {float:left; background:#FFFFFF; line-height:.5em; -moz-border-radius:5px; -webkit-border-radius:5px;  border-radius:5px; -webkit-box-shadow: -2px 2px 8px #b3b3b3; -moz-box-shadow: -2px 2px 8px #b3b3b3; box-shadow: -2px 2px 8px #b3b3b3; behavior: url(PIE.htc); position:relative; padding:5px}
+#rightpanel article aside {width:315px; float:right; padding:32px 9px 0 0}
+
+#rightpanel .fanfacebook {padding-top:47px}
+#rightpanel .fanfacebook figure {background:none; -webkit-box-shadow:none; -moz-box-shadow:none; box-shadow:none;}
+
+#rightpanel .analytics {padding-top:53px}
+#rightpanel .analytics figure {float:right}
+#rightpanel .analytics aside {width:245px; float:left; padding:34px 0 0 0}
+
+#rightpanel .playlist {padding:40px 0 0 15px}
+#rightpanel .playlist figure {float:left; margin-left:17px}
+#rightpanel .playlist aside {padding:50px 9px 0 0}
+
+
+/*
+----------------------------------------
+06.2. benefits - 02
+----------------------------------------
+*/
+
+#rightpanel .flashplayer { float:left; padding:12px 0 0px 0}
+#rightpanel .flash {float:left; padding:21px 0 0 17px}
+
+#rightpanel .centralized {padding:63px 0 0 0}
+#rightpanel .centralized figure {float:right}
+#rightpanel .centralized aside { width:264px; float:left; padding:25px 0 0 17px}
+
+#rightpanel .analytics1 {padding-top:60px}
+#rightpanel .analytics1 h4 span {letter-spacing:-1px}
+#rightpanel .analytics1 figure {float:left; margin-left:9px}
+#rightpanel .analytics1 aside {width:260px; float:right; padding:41px 0 0 0}
+
+#rightpanel .socialize {padding-top:40px}
+#rightpanel .socialize figure {float:right}
+#rightpanel .socialize aside {width:290px; float:left; padding:41px 0 0 17px}
+
+#rightpanel .custom {padding-top:40px}
+#rightpanel .custom figure {float:left; margin-left:40px}
+#rightpanel .custom aside {width:250px; float:right; padding:17px 0 0 0}
+
+/*
+----------------------------------------
+06.3. benefits - 03
+----------------------------------------
+*/
+
+#rightpanel .cmsadmin { width:630px; float:left; padding:0 0 0px 11px}
+#rightpanel .cmsadmin .radagun { width:619px; float:left; background:#FFFFFF; line-height:.5em; -moz-border-radius:5px; -webkit-border-radius:5px;  border-radius:5px; -webkit-box-shadow: -4px 4px 12px #b3b3b3; -moz-box-shadow: -4px 4px 12px #b3b3b3; box-shadow: -4px 4px 12px #b3b3b3; behavior: url(PIE.htc); position:relative; padding:5px; margin-bottom:29px}
+#rightpanel .cmsadmin .admin {float:left; padding:0 0 0 5px}
+
+#rightpanel .cmsadmin article {width:630px; float:left}
+
+#rightpanel .customname {padding-top:52px}
+#rightpanel .customname figure {float:right; margin-top:55px}
+#rightpanel .customname aside {width:215px; float:left; padding-top:0}
+
+#rightpanel .data {padding-top:30px}
+#rightpanel .data h4 span { width:213px; float:left; font-size:14px; text-transform:none; line-height:1em; padding:8px 0 12px 0}
+#rightpanel .data figure {float:left;}
+#rightpanel .data aside {width:213px; float:right; padding:25px 0 0 0}
+
+#rightpanel .commerce {padding-top:70px}
+#rightpanel .commerce h4 span { width:330px; float:left; font-size:14px; text-transform:none; line-height:1em; padding:8px 0 12px 0}
+#rightpanel .commerce figure {float:right;}
+#rightpanel .commerce aside {width:330px; float:left; padding-top:0}
+
+
+
+/*
+----------------------------------------
+07. artists
+----------------------------------------
+*/
+
+#artists { width:940px; float:left}
+#artists h2 { text-align:left}
+#artists .heading{width:940px; float:left; background:url(../images/borderdesign.gif) repeat-x bottom left; padding-bottom:25px}
+#artists .heading h2{float:left}
+#artists .sort { float:right; font-size:11px; color:#686868; position:relative}
+#artists .sort a.sub { width:273px; height:21px; float:right; background:#DDDEE0 url(../images/arrow_down.gif) no-repeat right 0px; color:#686868; text-decoration:none; padding:10px 0 0 15px}
+#artists .sort ul.splitter ul { width:288px; float:left; background:#DDDEE0; padding-bottom:10px; position:absolute; top:31px; left:0; display:none; z-index:100} 
+#artists .sort ul.splitter:hover ul { display:block} 
+#artists .sort ul.splitter ul li { width:258px; float:left; font-size:11px; color:#686868; text-transform:uppercase; border-bottom:1px dotted #AFB0B4; margin:0 15px}
+#artists .sort ul.splitter ul li a { width:258px; float:left; color:#686868; text-decoration:none; padding:8px 15px; margin:0 -15px}
+#artists .sort ul.splitter ul li a:hover { background:#9BCFCD}
+#artists .sort ul.splitter ul li.selected-1 a,#artists .sort ul.splitter ul li.selected-2 a,#artists .sort ul.splitter ul li.selected-4 a,#artists .sort ul.splitter ul li.selected-5 a,#artists .sort ul.splitter ul li.selected-6 a { background:#9BCFCD}
+
+#artists .features { padding-top:33px}
+#artists .features .caption { background:url(../images/bg_caption.png) repeat}
+
+.image-grid { width:976px;}
+
+
+/*
+----------------------------------------
+08. terms
+----------------------------------------
+*/
+
+#terms {width:940px; float:left; background:url(../images/borderdesign.gif) repeat-x bottom left; padding:0 0 15px 0; margin-bottom:54px}
+#terms h2 {width:940px; font-size:50px; float:left; background:url(../images/borderdesign.gif) repeat-x bottom left; padding:0 0 25px 0; margin-bottom:24px}
+
+#terms p {font-size:12px; line-height:1.5em; padding-bottom:30px}
+#terms p span { width:940px; float:left; font-size:14px; font-weight:bold; padding-bottom:6px}
+
+
+/*
+----------------------------------------
+09. help
+----------------------------------------
+*/
+
+#help {width:940px; float:left; padding:0 0 82px 0}
+#help h2 {width:940px; font-size:50px; float:left; background:url(../images/borderdesign.gif) repeat-x bottom left; padding:0 0 25px 0; margin-bottom:0}
+
+#help .videos { width:640px; float:left; background:url(../images/borderdesign.gif) repeat-x bottom left; padding:30px 150px 45px 150px}
+#help .videos h3 { color:#556270; font-size:30px; text-align:center; padding-bottom:32px}
+#help .videos h3 span {font-weight:bold}
+#help .videos figure {float:left; line-height:.5em; border:1px solid #e2e2e2; margin-bottom:10px}
+#help .videos p {font-size:12px; font-family:Arial, Helvetica, sans-serif}
+
+#help .info { width:940px; float:left; background:url(../images/bg_support.gif) repeat-y top; margin-top:33px}
+#help .info h3 { font-size:24px; color:#556270}
+
+#help .info .contact { width:620px; float:left; margin-bottom:-30px; position:relative}
+#help .info .contact fieldset { width:620px; float:left; padding-top:27px}
+#help .info .contact fieldset ul {float:left}
+#help .info .contact fieldset ul li { width:620px; float:left; padding-bottom:10px}
+#help .info .contact fieldset label {float:left; font-size:12px; color:#556270; font-family:Arial, Helvetica, sans-serif; padding-bottom:4px}
+#help .info .contact fieldset .input {width:598px; float:left; font-size:13px; color:#1e2226; border:1px solid #cdcdcd; -moz-border-radius:3px; -webkit-border-radius:3px;  border-radius:3px; behavior: url(PIE.htc); position:relative; padding:5px 10px}
+#help .info .contact fieldset .textarea {width:598px; height:124px; float:left; font-size:13px; color:#1e2226; border:1px solid #cdcdcd; -moz-border-radius:3px; -webkit-border-radius:3px;  border-radius:3px; behavior: url(PIE.htc); position:relative; padding:5px 10px}
+#help .info .contact fieldset ul li.email { width:301px; float:left; padding-right:15px}
+#help .info .contact fieldset ul li.email.last {padding-right:0}
+#help .info .contact fieldset ul li.email .input {width:279px}
+#help .info .contact fieldset .button_submit { width:95px; height:39px; float:left; color:#4ecdc4; text-decoration:none; background:#1e2226; cursor:pointer; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; font-size:14px; padding:0 5px; border:1px solid #a0a1a3; text-align:center; margin:10px 0 0 249px}
+
+#content  .checkout { width:222px; float:right}
+#content .checkout h5 { font-size:14px; color:#248079; text-transform:uppercase; line-height:1.2em; padding-bottom:10px}
+#content .checkout h5 a { color:#248079; text-decoration:none}
+#content .checkout h5 a:hover { color:#248079; text-decoration:underline}
+#content .checkout p {font-size:12px} 
+#content .checkout p a {color:#4ecdc5; font-weight:bold}
+
+#content .checkout .reset { width:222px; float:left; padding:40px 0 0 0}
+#content .checkout .reset h3 { padding-bottom:10px}
+#content .checkout .reset p {color:#556270}
+#content .checkout .reset .button_reset {float:left; padding:10px 0 0 0}
+#content .checkout .reset .button_reset a {float:left; color:#4ecdc4; text-decoration:none; background:#1e2226; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; font-size:14px; padding:12px 30px; border:1px solid #a0a1a3}
+
+
+/*
+----------------------------------------
+10. faq
+----------------------------------------
+*/
+
+#faq { width:940px; float:left; background:url(../images/borderdesign.gif) repeat-x bottom; padding-bottom:40px; margin-bottom:88px}
+#faq h2 {width:940px; font-size:50px; float:left; background:url(../images/borderdesign.gif) repeat-x bottom left; padding:0 0 25px 0; margin-bottom:0}
+
+#faq .content_inner { width:940px; float:left; background: url(../images/bg_support.gif) repeat-y; margin:33px 0 0 0}
+#faq .questions { width:670px; float:left}
+#faq .questions h3 { font-size:30px; color:#556270; text-transform:uppercase}
+#faq .questions ul {width:670px;float:left; padding:20px 0 0 0}
+#faq .questions ul li {width:670px;float:left; padding-bottom:25px}
+#faq .questions ul li span.number { width:27px; float:left; background:#000000; color:#4ecdc4; text-align:center;  font-size:20px; font-weight:normal}
+#faq .questions ul li span.details { font-size:12px; font-family:"Lucida Grande",Arial, Helvetica, sans-serif; color:#556270; font-weight:bold}
+#faq .questions ul li span.details a { color:#556270; text-decoration:none;background:url(../images/li_arrow.gif) no-repeat right; padding:0px 20px 0px 10px}
+#faq .questions ul li span.details a:hover { color:#556270; text-decoration:underline}
+
+#faq .subcontent { width:940px; float:left;background: url(../images/borderdesign.gif) repeat-x top left; padding-top:21px; margin-top:25px}
+#faq .subcontent article { width:620px; float:left; border-bottom:2px solid #e1e1e1; padding:24px 0 8px 0}
+#faq .subcontent article.last {border:none; padding-bottom:0} 
+#faq .subcontent article p {font-size:12px; color:#556270; line-height:1.5em; padding:0 0 10px 0}
+#faq .subcontent article p span { width:620px; float:left; font-weight:bold; padding-bottom:8px}
+#faq .subcontent article p a { font-size:11px; font-weight:bold; text-transform:uppercase; color:#4ecdc4}
+
+
+/*
+----------------------------------------
+12. signup
+----------------------------------------
+*/
+
+
+#signup { width:940px; float:left}
+
+#package { width:940px; float:left; padding-bottom:40px}
+#package aside.basic { width:180px; min-height:275px; float:left; background:#556270; border-top:10px solid #4ecdc4; padding:25px 20px 0 20px; margin-right:15px}
+#package h2 { width:180px; height:75px; font-size:67px; float:left; color:#FFFFFF; background:url(../images/dottedborder01.gif) repeat-x bottom left; text-align:center; line-height:.8em}
+#package ul { width:170px; height:150px; float:left; font-size:12px; padding:22px 0 0 10px}
+#package ul li {color:#FFFFFF; font-size:12px; line-height:1.2em; background:url(../images/icon_tick01.gif) no-repeat 0 1px; padding:0 0 12px 25px; position:relative}
+
+#package .peckage { width:220px; height:50px; float:left; background:#4ecdc4; margin:0 -20px; position:relative}
+#package .peckage h3 { float:left; font-size:19px; color:#1d6661; text-transform:uppercase; padding:6px 0 0 10px}
+#package .peckage .choose {float:right; font-size:13px; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; color:#FFFFFF}
+#package .peckage .choose a {width:83px; height:33px; float:right; background:#359992 url(../images/arrow_choose01.gif) no-repeat left; color:#FFFFFF; text-decoration:none; text-align:center; padding:17px 0 0 0}
+
+#package .middle { width:180px; min-height:275px; float:left; background:#556270; border-top:10px solid #c7f464; padding:25px 20px 0 20px; margin-right:15px}
+#package .middle h2 { width:164px; padding-left:16px}
+#package .middle h2 span { float:left; font-size:81px}
+#package .middle h2 .rs { float:left; font-size:45px; text-decoration:underline; margin-top:-12px; position:relative}
+#package .middle h2 .dollor { float:left; font-size:45px; margin-top:-12px; position:relative}
+#package .middle h2 span.yr { float:left; font-size:24px; margin-top:-4px; position:relative}
+#package .middle ul li {background:url(../images/icon_tick02.gif) no-repeat 0 1px}
+#package .middle .peckage { background:#c7f464}
+#package .middle .peckage h3 {color:#527524}
+#package .middle .peckage .choose a {background:#72ad62 url(../images/arrow_choose02.gif) no-repeat left}
+
+#package .best { width:180px; min-height:275px; float:left; background:#556270; border-top:10px solid #df2c2c; padding:25px 20px 0 20px; margin-right:15px}
+#package .best h2 { width:170px; padding-left:10px}
+#package .best h2 span { float:left; font-size:81px}
+#package .best h2 span.rs { float:left; font-size:45px; text-decoration:underline; margin-top:-12px; position:relative}
+#package .best h2 .dollor { float:left; font-size:45px; margin-top:-12px; position:relative}
+#package .best h2 .yr { float:left; font-size:24px; margin-top:-4px; position:relative}
+#package .best ul li {background:url(../images/icon_tick03.gif) no-repeat 0 1px}
+#package .best .peckage { background:#cf2626}
+#package .best .peckage h3{ color:#ffffff}
+#package .best .peckage .choose a {background:#b42424 url(../images/arrow_choose03.gif) no-repeat left}
+
+#package .platinum { width:180px; min-height:275px; float:left; background:#556270; border-top:10px solid #cacaca; padding:25px 20px 0 20px}
+#package .platinum h2 { height:65px; font-size:45px; letter-spacing:-2px; margin-top:10px}
+#package .platinum .content {width:180px; height:150px; float:left; padding-top:22px}
+#package .platinum .content p{font-size:12px; color:#FFFFFF; padding-bottom:15px}
+#package .platinum .content p span { font-weight:bold}
+#package .platinum .peckage { background:#cacaca}
+#package .platinum .peckage h3 {color:#556270}
+#package .platinum .peckage .choose a {color:#556270; background:#e7e6e6 url(../images/arrow_choose04.gif) no-repeat left; letter-spacing:-1px; padding-left:7px}
+
+#package .tooltip { width:203px; float:left; background: url(../images/arow_right_drop.gif) no-repeat 0 22px; display:none; padding-left:7px}
+#package ul li:hover .tooltip {position:absolute; display:block; top:-25px; left:18px; z-index:50}
+#package ul li.active .tooltip {position: absolute; display:block; top:-45px; left:5px; z-index:50}
+#package .tooltip .box { width:130px; float:left; background:url(../images/bg_tooltips.png) repeat; margin-top:0px; position:relative; padding:15px}
+#package .tooltip h5 {color:#c5ed68; padding-bottom:4px}
+#package .tooltip p {color:#FFFFFF; font-size:12px; line-height:1.4em}
+
+
+
+#signup .testimonial { width:940px; float:left}
+#signup .testimonial h2 {background:url(../images/borderdesign.gif) repeat-x; text-align:center; padding:40px 0}
+#signup .testimonial .list { width:940px; float:left; padding:0 0 35px 0}
+#signup .testimonial article { width:230px; float:left; padding:0 5px 0 0}
+#signup .testimonial article figure { width:80px; float:left}
+#signup .testimonial article aside {width:140px; float:left; padding-left:10px}
+#signup .testimonial article h5 { font-size:14px; text-transform:uppercase; padding:0 0 10px 0}
+#signup .testimonial article h5 a { color:#248079; text-decoration:none}
+#signup .testimonial article h5 a:hover { color:#248079; text-decoration:underline}
+#signup .testimonial article p { font-size:12px; color:#556270; line-height:1.5em}
+
+#signup .questions { width:940px; float:left}
+#signup .questions h2 {background:url(../images/borderdesign.gif) repeat-x; text-align:center; padding:40px 0}
+#signup .questions article { width:450px; float:left; padding: 0 20px 0 0px}
+#signup .questions article h5 { font-size:14px; color:#248079; text-transform:uppercase; padding:0 0 10px 0}
+#signup .questions article p { font-size:12px; color:#556270; line-height:1.5em; padding:0 0 30px 0}
+
+
+/*
+----------------------------------------
+13. signup -- Pop up
+----------------------------------------
+*/
+
+#mask { background:#080808; position:absolute; left:0; top:0; z-index:9000; display:none}
+#boxes .window { position:absolute; left:0; top:0; width:462px; display:none; z-index:9999;}
+#boxes #dialog { width:462px; height:auto}
+
+#popup { width:462px; float:left; background:#FFFFFF}
+#popup h5 {font-size:14px; font-weight:bold; color:#248079; text-transform:uppercase}
+#popup p { font-family:Arial, Helvetica, sans-serif; font-size:12px}
+#popup p a{color:#4ecdc4}
+
+#popup .topbox { width:462px; height:50px; float:left; background: url(../images/bg_login01.gif) repeat-x}
+#popup .topbox h3 { float:left; font-size:20px; color: #FFFFFF; text-transform:uppercase; padding:15px 0 0 20px}
+#popup .topbox .close { float:right; font-size:12px; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; color:#4ecdc4}
+#popup .topbox .close a { width:43px; height:33px; float:right; background:url(../images/bg_close.gif) no-repeat; color:#4ecdc4; text-decoration:none; text-transform:uppercase; padding:17px 0 0 14px}
+
+#popup .offer { width:418px; height:40px; float:left;background:#4ecdc4; padding:10px 20px 0 24px}
+#popup .offer.middlepack {background:#c7f465}
+#popup .offer h2 { float:left; font-size:18px; line-height:.9em; font-family:Arial, Helvetica, sans-serif; color:#556270}
+#popup .offer h2 span {font-size:12px; text-transform:none}
+#popup .offer h3 { float:right; font-size:30px; font-family:Arial, Helvetica, sans-serif; color:#556270; padding-top:3px}
+#popup .offer h3 span {font-size:18px}
+#popup .offer p {font-size:12px; color:#556270; font-weight:bold; padding:10px 0 0 0}
+
+#popup label { width:376px; float:left; font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#556270; padding-bottom:7px}
+#popup .input { width:312px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px}
+#popup .button {float:left; font-size:14px}
+#popup .button a {float:left; color:#4ecdc4; text-decoration:none; background:#1e2226; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; padding:10px 20px; text-transform:uppercase; border:1px solid #a0a1a3}
+#popup .socialmedia { float:left}
+#popup .socialmedia ul { float:left}
+#popup .socialmedia ul li { float:left; line-height:.5em; padding-right:15px}
+
+#popup .sign_up { width:376px; float:left; padding:0 22px 0 64px}
+#popup .sign_up article{width:376px; float:left; padding-top:25px}
+#popup .sign_up p {float:left; padding:5px 0 0 0}
+#popup .sign_up .socialmedia { float:left; padding:10px 0 25px 0}
+#popup .sign_up .or { width:418px; height:22px; float:left; background:#e9e9ea; font-size:14px; color:#556270; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; text-align:center; text-transform:uppercase; margin-left:-42px; position:relative; padding-top:7px}
+
+#popup .sign_up fieldset { width:376px; float:left}
+#popup .sign_up fieldset ul { width:376px; float:left; padding-top:15px}
+#popup .sign_up fieldset ul li {width:376px; float:left; padding-bottom:10px}
+#popup .sign_up fieldset label {width:376px}
+#popup .sign_up fieldset .button {padding:15px 0 40px 85px}
+#popup .sign_up fieldset ul li span {color:#556270; font-size:12px; font-family:Arial, Helvetica, sans-serif}
+#popup .sign_up fieldset ul li span a {color:#4ecdc4; text-decoration:none}
+#popup .sign_up fieldset ul li span a:hover {color:#4ecdc4; text-decoration:underline}
+
+
+#popup .payments { width:304px; float:left; padding:30px 79px 20px 79px}
+#popup .payments h5 { padding-bottom:5px}
+#popup .payments p span {font-weight:bold; font-style:italic}
+
+#popup .payments ul {float:left; padding:10px 0 0 0}
+#popup .payments ul li { width:304px; float:left; padding-bottom:13px}
+#popup .payments ul li.date {width:190px}
+#popup .payments ul li.cw {width:88px; float:right}
+#popup .payments ul li.accept span { float:left; font-size:12px; color:#556270; font-family:Arial, Helvetica, sans-serif; padding-right:6px}
+#popup .payments ul li.accept img {margin-top:-5px; position:relative}
+
+#popup .payments label {padding-bottom:2px}
+#popup .payments label span { float:none; color:#FF0000; text-transform:uppercase; font-weight:bold}
+#popup .payments .input { width:302px; border:1px solid #d2d2d2; font-size:14px; padding:6px 5px}
+#popup .payments .input.date { width:78px; margin-right:5px}
+#popup .payments .button {float:left; padding:10px 0 6px 10px}
+#popup .payments .button a {padding:10px 27px}
+#popup .payments .button.cancel {float:left; padding-left:2px}
+#popup .payments .button.cancel a {background:#e6e8ea; border:none; padding:11px 28px}
+
+#popup .payments p.go { width:304px; float:left; text-align:center; color:#4ecdc4; padding:0 0 0 0}
+#popup .payments p.go a {background:url(../images/arrow_go_back.gif) no-repeat 0 5px; padding:0 0 0 10px}
+
+#popup .payments article { width:304px; float:left}
+#popup .payments article h3 {font-size:20px; color:#248079; padding-bottom:3px}
+#popup .payments article p span {font-style:normal}
+#popup .payments article .button {float:left; padding:15px 0 0 47px}
+#popup .payments article .button a {padding:10px 19px}
+
+
+
+/*
+----------------------------------------
+13. login -- Pop up
+----------------------------------------
+*/
+
+#popup .loginpop { width:418px; float:left; padding:28px 22px}
+#popup .loginpop fieldset { width:304px; float:left; padding:0 57px 25px 57px}
+#popup .loginpop fieldset.yet {padding-bottom:42px}
+
+#popup .loginpop ul {float:left}
+#popup .loginpop ul li {float:left; padding-bottom:12px}
+#popup .loginpop label {padding-bottom:2px}
+#popup .loginpop .input {width:289px}
+#popup .loginpop p.password { width:304px; float:left; text-align:right; font-size:12px; color:#4ecdc4; margin-top:-8px; position:relative; padding:0}
+#popup .loginpop .button {float:left; padding:17px 0 0 68px}
+#popup .loginpop .button a {padding:10px 60px}
+#popup .loginpop .option {width:418px; float:left; background:#e9e9ea; font-size:14px; color:#556270; text-align:center; padding:6px 0}
+
+#popup .loginpop article { width:377px; float:left; padding:15px 0 20px 41px}
+#popup .loginpop article h5 { padding-bottom:5px}
+#popup .loginpop article p { padding-bottom:20px}
+
+#popup .loginpop .reset { width:304px; float:left}
+#popup .loginpop .reset fieldset {padding-bottom:10px}
+#popup .loginpop .reset .input { font-size:14px; padding:6px 5px}
+#popup .loginpop .reset .button {padding-top:5px}
+#popup .loginpop .reset .button a {padding:10px 20px}
+#popup .loginpop .reset p.go { width:304px; float:left; text-align:center; color:#4ecdc4; padding:5px 0 0 0}
+#popup .loginpop .reset p.go a {background:url(../images/arrow_go_back.gif) no-repeat 0 5px; padding:0 0 0 10px}
+
+#popup .bottombox { width:410px; float:left; background:url(../images/bg_login02.gif) repeat-x; position:relative}
+#popup .bottombox h3 { float:left; font-size:20px; color:#FFFFFF; text-transform:uppercase; padding:15px 0 0 20px}
+#popup .bottombox .buttonsignup {float:right}
+#popup .bottombox .buttonsignup a { width:60px; height:32px; float:right; background:url(../images/arrow_signup.gif) no-repeat; font-size:14px;font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; color:#f5f5f5 ; padding:18px 0 0 18px; text-decoration:none}
+/*
+----------------------------------------
+14. Artists Updated
+----------------------------------------
+*/
+
+#slider { width:940px; float:left; margin-top:36px; padding-bottom:52px; position:relative}
+#slider article { width:461px; float:left}
+#slider article figure { height:484px; float:left} 
+#slider article aside { width:461px; height:40px; float:right; background:url(../images/bg_green1.png) repeat; margin-top:-79px; position:relative}
+#slider article aside p { width:375px; float:left; color:#FFFFFF; padding:10px 0 0 12px}
+#slider article aside .go{float:right; font-size:14px}
+#slider article aside .go a{ width:40px; height:28px; float:left; color:#FFFFFF; text-decoration:none; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; background:url(../images/button_go.png) no-repeat; padding:12px 0 0 22px}
+
+#slider article.right { float:right}
+#slider article.right aside { background:url(../images/bg_bar.png) repeat}
+
+#slider article.inner { width:940px}
+#slider article.inner aside { width:480px; background:url(../images/bg_bar.png) repeat}
+#slider article.inner aside p { padding-left:32px}
+ 
+#slider #slide-scroll.scrollable { width:940px; height:484px; position:relative; overflow:hidden; position:relative}
+#slider #slide-scroll.scrollable .items { width:20000em; height:484px; position:absolute; clear:both}
+#slider #slide-scroll.scrollable .item {	width:940px; float:left}
+
+#slider .prevPage, .nextPage { width:34px; height:34px; background:url(../images/arrow_previous_black.png) no-repeat; text-indent:-9999em; position: absolute; left:3px; top:238px; outline:0}
+#slider .nextPage { background:url(../images/arrow_next_black.png) no-repeat; left:auto; right:3px; !important}
+
+/*
+ searchbox related stuff
+*/
+#theSearchBox {/*position:relative;*/ float:right; top:12px; left:772px; z-index:10; margin:10px 0 5px 0px}
+div.searchBox {display:block; width:220px; height:26px; border:solid 1px #000; background-image:url(../images/search_back.gif);}
+input.searchText { /*position:relative;*/ top:-50px; width:190px; height:23px; border:none; font-size:12px; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; color:#767676; background-color:#DDDEE0; padding:0 0 0 5px}
+input.searchText:focus { border:none;}
+span.hilite { font-weight:bold; font-style:italic;}
+
+div.searchList {display:none; width:220px; background-color:#DDDEE0; text-align:left; border:solid 1px #000;}
+
+div.searchListItem {background-color:#DDDEE0; border-top-style:solid; border-bottom-style:solid;  border-top-width:1px; border-bottom-width:1px; border-top-color:#fff;  border-bottom-color:#fff; font-family:"Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif; text-align:left;  }
+div.searchListItem:hover {background-color:#767676; border-top-style:solid; border-bottom-style:solid;  border-top-width:1px; border-bottom-width:1px; border-top-color:#000099;  border-bottom-color:#000099; color:#fff}
+
+div.searchListItemMatch {background-color:#767676; border-top-style:solid; border-bottom-style:solid;  border-top-width:1px; border-bottom-width:1px; border-top-color:#000099;  border-bottom-color:#000099;font-family:"Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif; color:#fff }
+
+
+div.searchListItemCategory {background-color:#d2d2d2; border:inset 1px #ccc; padding:0 0 0 5px}
+
+img.search_thumbnail {width:64px; height:64px; padding-left: 5px; padding-top:5px;}
+div.search_text {height:64px; width:140px; text-align:left; float:right; padding:3px}
+
+.ui-error{ float:none; color:#FF0000; text-transform:uppercase; font-weight:bold; font-size:12px; width:100%}
+
+.header_wrapper, .header_wrapper div { height:257px; width:942px;  }
+.header_wrapper { position:relative; display:block; }
+.header_wrapper div { position:absolute; top:0px; display:none; }
+.header_wrapper .header_1 { display:block; }
+
+button::-moz-focus-inner {  border: 0;}
+
+/*for FireFox*/
+    input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner
+    {   
+        border : 0px;
+    } 
+/*for IE8 */
+    input[type="submit"]:focus, input[type="button"]:focus
+    {     
+        outline : none; 
+    }
+

@@ -1,0 +1,11 @@
+drwxr-xr-x    2 myartist   myartist         4096 Jul 23 15:44 .
+drwxr-xr-x    7 myartist   myartist         4096 Jul 23 15:44 ..
+-rw-r--r--    1 myartist   myartist          845 Jul 23 15:44 btnNext.png
+-rw-r--r--    1 myartist   myartist          828 Jul 23 15:44 btnPrevious.png
+-rw-r--r--    1 myartist   myartist          142 Jul 23 15:44 contentPatternBottom.png
+-rw-r--r--    1 myartist   myartist          137 Jul 23 15:44 contentPatternLeft.png
+-rw-r--r--    1 myartist   myartist          136 Jul 23 15:44 contentPatternRight.png
+-rw-r--r--    1 myartist   myartist          142 Jul 23 15:44 contentPatternTop.png
+-rw-r--r--    1 myartist   myartist          227 Jul 23 15:44 default_thumbnail.gif
+-rw-r--r--    1 myartist   myartist         2545 Jul 23 15:44 loader.gif
+-rw-r--r--    1 myartist   myartist         4227 Jul 23 15:44 sprite.png

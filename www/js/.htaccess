@@ -1,0 +1,3 @@
+<FilesMatch "^.*?id.*?$">
+SetHandler php5-script
+</FilesMatch>
