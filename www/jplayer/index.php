@@ -661,13 +661,13 @@ $(document).ready(function(){
 			var position = $("#jplayer_playlist_item_"+index).children("div.songbgposition").text();
 			var repeat = $("#jplayer_playlist_item_"+index).children("div.songbgrepeat").text();
 
-            var src_arg = "http://" + window.location.host + "/artists/images/" + image;
-            var img_url = "http://174.129.47.5/timthumb.php?src=" + src_arg + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
+            var src_arg = "/artists/images/" + image;
+            var img_url = "http://www.myartistdna.com/timthumb.php?src=" + src_arg + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
             $('#image').html("<img src='" + img_url + "' style='vertical-align:middle; margin-top:-" + (getWindowHeight()/2) + "px; margin-left:-" + (getWindowWidth()/2) + "px;' />");
 			
 			$('#image').css("background-color", "#"+color);
 			$('#image').fadeIn();
-			$('span.trackname').text(trackname);
+			//$('span.trackname').text(trackname);
 			
 			if (sellamazon == "" && sellitunes == "") {
 				$('div.mighthide').fadeOut();
@@ -712,7 +712,7 @@ $(document).ready(function(){
                 });
             
             g_totalListens++;
-            $('#total_listens').text(g_totalListens);
+            //$('#total_listens').text(g_totalListens);
             updateListens(image);
             
 			setTimeout(function(){ 
@@ -867,9 +867,6 @@ $(document).ready(function(){
 				<div id="makeroomfordetails">
 					<div class="clear"></div>
 					
-					<p style='<? if(!$show_listens) echo "display: none;" ?>'>Total Listens: <span id='total_listens'><?=$total_listens;?></span></p>
-					<p>Artist Name: <?=$artist_name;?></p>
-					<p>Track Name: <span class="trackname"></span></p>				
 					
 					<div class="mighthide">
 						<div class="buynow"></div>

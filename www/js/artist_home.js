@@ -15,7 +15,7 @@ function updateListens(image)
         {
             g_totalListens = data['total_listens'];
             var track_listens = data['track_listens'];
-            $('#total_listens').text(g_totalListens);
+            //$('#total_listens').text(g_totalListens);
             $('#current_track_listens').text(track_listens);
         },
         error: function()
