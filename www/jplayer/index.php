@@ -661,13 +661,22 @@ $(document).ready(function(){
 			var position = $("#jplayer_playlist_item_"+index).children("div.songbgposition").text();
 			var repeat = $("#jplayer_playlist_item_"+index).children("div.songbgrepeat").text();
 
+            $('#image').css("background-color", "#"+color);
             var src_arg = "/artists/images/" + image;
-            var img_url = "http://www.myartistdna.com/timthumb.php?src=" + src_arg + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
-            $('#image').html("<img src='" + img_url + "' style='vertical-align:middle; margin-top:-" + (getWindowHeight()/2) + "px; margin-left:-" + (getWindowWidth()/2) + "px;' />");
-			
-			$('#image').css("background-color", "#"+color);
-			$('#image').fadeIn();
-			//$('span.trackname').text(trackname);
+            if( repeat == "no-repeat" || repeat == "stretch" )
+            {
+                var img_url = "http://www.myartistdna.com/timthumb.php?src=" + src_arg + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
+                //$('#image').html("<img src='" + img_url + "' style='vertical-align:middle; margin-top:-" + (getWindowHeight()/2) + "px; margin-left:-" + (getWindowWidth()/2) + "px;' />");
+                var style = "width: 100%; height: 100%;";
+                var html = "<img src='" + img_url + "' style='" + style + "'/>";
+                $('#image').html(html);
+            }
+            else
+            {
+                $('#image').html("");
+                $('#image').css("background-image: url('" + src_arg +"'); background-repeat: repeat;");
+            }
+            $('#image').fadeIn();
 			
 			if (sellamazon == "" && sellitunes == "") {
 				$('div.mighthide').fadeOut();
