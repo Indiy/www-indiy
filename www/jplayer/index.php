@@ -1182,7 +1182,7 @@ $(document).ready(function(){
 })(jQuery);
 </script>
 
-    <!-- LOGIN FORM -->
+    <!-- LOGIN FORM 
     <div id="dialog2" class="window">
     <div id="popup">
     <div class="topbox">
@@ -1223,7 +1223,7 @@ $(document).ready(function(){
     </div>
     </div><!-- pop up -->
     </div> 
-    <!-- END LOGIN FORM -->
+    END LOGIN FORM -->
 
     <!-- Mask to cover the whole screen --> 
     <div id="mask"></div> 
