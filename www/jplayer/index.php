@@ -205,6 +205,7 @@ if ($browser == true || $_GET["debug"] == "true"){
 	<script type="text/javascript">
 
         var g_totalListens = <?=$total_listens?>;
+        var g_logoOpen = false;
 
 		$(document).ready(function(){
 
@@ -427,18 +428,18 @@ if ($browser == true || $_GET["debug"] == "true"){
 				}
 			}
 			
-			$(".bottom").click(function(event){
-				var logoclass = $(this).parent("#logo").attr("class");
-				if (logoclass == "openlogo") {
-					$(this).parent("#logo").animate({
-						marginTop: "-175px"
-					}, 300);
-				} else {
-					$(this).parent("#logo").animate({
-						marginTop: "0px"
-					}, 300);
+			$(".bottom").click(function(event)
+            {
+				if(!g_logoOpen) 
+                {
+					$('#makeroomforlogo').animate({ height: "160px" }, 300);
+				} 
+                else 
+                {
+					$('#makeroomforlogo').animate({ height: "0px" }, 300);
 				}
-				$(this).parent("#logo").toggleClass("openlogo");
+                g_logoOpen = !g_logoOpen;
+                $('#logo').toggleClass('openlogo');
 			});	
 			
 			$(".submitform").click(function(event){
@@ -870,6 +871,7 @@ $(document).ready(function(){
 			
 			<? if (!$fan) { ?>
 			<div id="logo">
+                <div id="login_signup">Login | Signup</div>
 				<div id="makeroomforlogo">
 				<? if ($artist_logo) { ?><img src="<?=trueSiteUrl();?>/artists/images/thumbs.php?src=<?=$trueSiteUrl;?>/artists/images/<?=$artist_logo;?>&q=100&h=145&w=145" /><? } ?>
 				</div>
