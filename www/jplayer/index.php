@@ -1185,7 +1185,7 @@ $(document).ready(function(){
 </script>
 
     <!-- LOGIN FORM -->
-    <div id="login_dialog" class="window" style="display:none">
+    <div id="login_dialog" class="window">
         <div id="popup">
             <div class="topbox">
                 <h3>LOG IN TO MYARTISTDNA</h3>

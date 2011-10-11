@@ -441,16 +441,16 @@ img.search_thumbnail {width:55px; height:55px; display:inline-block; border:1px 
  ----------------------------------------
  */
 
-#mask { background:#080808; position:absolute; left:0; top:0; z-index:9000; display:none}
-#boxes .window { position:absolute; left:0; top:0; width:462px; display:none; z-index:9999;}
+#mask { background:#080808; position:absolute; left:0; top:0; z-index:10; display:none}
+#boxes .window { position:absolute; left:0; top:0; width:462px; display:none; }
 #boxes #dialog { width:462px; height:auto}
 
-#popup { width:462px; float:left; background:#FFFFFF}
+#popup { width:462px; float:left; background:#FFFFFF; }
 #popup h5 {font-size:14px; font-weight:bold; color:#248079; text-transform:uppercase}
 #popup p { font-family:Arial, Helvetica, sans-serif; font-size:12px}
 #popup p a{color:#4ecdc4}
 
-#popup .topbox { width:462px; height:50px; float:left; background: url(../images/bg_login01.gif) repeat-x}
+#popup .topbox { width:462px; height:50px; float:left; background: url('/images/bg_login01.gif') repeat-x}
 #popup .topbox h3 { float:left; font-size:20px; color: #FFFFFF; text-transform:uppercase; padding:15px 0 0 20px}
 #popup .topbox .close { float:right; font-size:12px; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; color:#4ecdc4}
 #popup .topbox .close a { width:43px; height:33px; float:right; background:url(../images/bg_close.gif) no-repeat; color:#4ecdc4; text-decoration:none; text-transform:uppercase; padding:17px 0 0 14px}
@@ -508,7 +508,7 @@ img.search_thumbnail {width:55px; height:55px; display:inline-block; border:1px 
 #popup .payments .button.cancel a {background:#e6e8ea; border:none; padding:11px 28px}
 
 #popup .payments p.go { width:304px; float:left; text-align:center; color:#4ecdc4; padding:0 0 0 0}
-#popup .payments p.go a {background:url(../images/arrow_go_back.gif) no-repeat 0 5px; padding:0 0 0 10px}
+#popup .payments p.go a {background:url('/images/arrow_go_back.gif') no-repeat 0 5px; padding:0 0 0 10px}
 
 #popup .payments article { width:304px; float:left}
 #popup .payments article h3 {font-size:20px; color:#248079; padding-bottom:3px}
@@ -523,7 +523,9 @@ img.search_thumbnail {width:55px; height:55px; display:inline-block; border:1px 
  ----------------------------------------
  */
 
-#popup .loginpop { width:418px; float:left; padding:28px 22px}
+#login_dialog { z-index: 11; display: none; }
+
+#popup .loginpop { width:418px; float:left; padding:28px 22px; z-index: 11;}
 #popup .loginpop fieldset { width:304px; float:left; padding:0 57px 25px 57px}
 #popup .loginpop fieldset.yet {padding-bottom:42px}
 
@@ -546,11 +548,11 @@ img.search_thumbnail {width:55px; height:55px; display:inline-block; border:1px 
 #popup .loginpop .reset .button {padding-top:5px}
 #popup .loginpop .reset .button a {padding:10px 20px}
 #popup .loginpop .reset p.go { width:304px; float:left; text-align:center; color:#4ecdc4; padding:5px 0 0 0}
-#popup .loginpop .reset p.go a {background:url(../images/arrow_go_back.gif) no-repeat 0 5px; padding:0 0 0 10px}
+#popup .loginpop .reset p.go a {background:url('/images/arrow_go_back.gif') no-repeat 0 5px; padding:0 0 0 10px}
 
-#popup .bottombox { width:410px; float:left; background:url(../images/bg_login02.gif) repeat-x; position:relative}
+#popup .bottombox { width:410px; float:left; background:url('/images/bg_login02.gif') repeat-x; position:relative}
 #popup .bottombox h3 { float:left; font-size:20px; color:#FFFFFF; text-transform:uppercase; padding:15px 0 0 20px}
 #popup .bottombox .buttonsignup {float:right}
-#popup .bottombox .buttonsignup a { width:60px; height:32px; float:right; background:url(../images/arrow_signup.gif) no-repeat; font-size:14px;font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; color:#f5f5f5 ; padding:18px 0 0 18px; text-decoration:none}
+#popup .bottombox .buttonsignup a { width:60px; height:32px; float:right; background:url('/images/arrow_signup.gif') no-repeat; font-size:14px;font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; color:#f5f5f5 ; padding:18px 0 0 18px; text-decoration:none}
 
 
