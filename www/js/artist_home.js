@@ -25,7 +25,7 @@ function updateListens(image)
         },
         error: function()
         {
-            alert('Failed to get listens!');
+            //alert('Failed to get listens!');
         }
     });
 }

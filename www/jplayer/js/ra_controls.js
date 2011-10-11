@@ -57,7 +57,7 @@ this.getSearchItems=function(S,pfx)
   				data: "ff="+S+pfx,
 				error:function(x)
 					{
-					alert("problem occured with request!!"+x);
+					//alert("problem occured with request!!"+x);
 					},
   				success: function(data)
 	{
