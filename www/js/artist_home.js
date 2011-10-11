@@ -4,7 +4,7 @@
 
 function artistHomeReady()
 {
-    $('#login_dialog_close').click(closeLogin);
+    //$('#login_dialog_close').click(closeLogin);
 }
 
 function updateListens(image)
@@ -30,7 +30,7 @@ function updateListens(image)
     });
 }
 
-function showLogin()
+function showPopup(name)
 {
     var maskHeight = $(document).height();
     var maskWidth = $(window).width();
@@ -43,21 +43,38 @@ function showLogin()
     var winH = $(window).height();
     var winW = $(window).width();
     
-    var dialogHeight = $('#login_dialog').height();
-    var dialogWidth = $('#login_dialog').width();
+    var dialogHeight = $(name).height();
+    var dialogWidth = $(name).width();
     
     var top = winH / 2 - dialogHeight / 2;
     var left = winW / 2 - dialogWidth / 2;
     
-    $('#login_dialog').css('top',top);
-    $('#login_dialog').css('left',left);
+    $(name).css('top',top);
+    $(name).css('left',left);
 	
-    $('#login_dialog').fadeIn(600); 
+    $(name).fadeIn(600);     
+}
+
+function showLogin()
+{
+    showPopup('#login_dialog');
 }
 
 function closeLogin()
 {
     $('#login_dialog').fadeOut(100);
+    $('#mask').fadeOut(100);
+}
+
+function showSignup()
+{
+    $('#login_dialog').hide();
+    showPopup('#signup_dialog');
+}
+
+function closeSignup()
+{
+    $('#signup_dialog').fadeOut(100);
     $('#mask').fadeOut(100);
 }
 

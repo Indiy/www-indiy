@@ -440,7 +440,7 @@ img.search_thumbnail {width:55px; height:55px; display:inline-block; border:1px 
  */
 
 #mask { background:#080808; position:absolute; left:0; top:0; z-index:10; display: none; }
-#boxes .window { position:absolute; left:0; top:0; width:462px;  }
+#signup_dialog { position:absolute; left:0; top:0; width:462px; z-index: 11; display: none; }
 #boxes #dialog { width:462px; height:auto; z-index: 11; }
 
 #popup { width:462px; float:left; background:#FFFFFF; }
@@ -461,8 +461,8 @@ img.search_thumbnail {width:55px; height:55px; display:inline-block; border:1px 
 #popup .offer h3 span {font-size:18px}
 #popup .offer p {font-size:12px; color:#556270; font-weight:bold; padding:10px 0 0 0}
 
-#popup label { width:376px; float:left; font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#556270; padding-bottom:7px}
-#popup .input { width:312px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px}
+#popup label { width:376px; float:left; font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#556270; padding-bottom:7px; text-align: left; }
+#popup .input { width:312px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; background-color: white;}
 #popup .button {float:left; font-size:14px}
 #popup .button a {float:left; color:#4ecdc4; text-decoration:none; background:#1e2226; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; padding:10px 20px; text-transform:uppercase; border:1px solid #a0a1a3}
 #popup .socialmedia { float:left}
@@ -471,14 +471,14 @@ img.search_thumbnail {width:55px; height:55px; display:inline-block; border:1px 
 
 #popup .sign_up { width:376px; float:left; padding:0 22px 0 64px}
 #popup .sign_up article{width:376px; float:left; padding-top:25px}
-#popup .sign_up p {float:left; padding:5px 0 0 0}
+#popup .sign_up p {float:left; padding:5px 0 0 0; color: black;}
 #popup .sign_up .socialmedia { float:left; padding:10px 0 25px 0}
 #popup .sign_up .or { width:418px; height:22px; float:left; background:#e9e9ea; font-size:14px; color:#556270; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; text-align:center; text-transform:uppercase; margin-left:-42px; position:relative; padding-top:7px}
 
-#popup .sign_up fieldset { width:376px; float:left}
-#popup .sign_up fieldset ul { width:376px; float:left; padding-top:15px}
-#popup .sign_up fieldset ul li {width:376px; float:left; padding-bottom:10px}
-#popup .sign_up fieldset label {width:376px}
+#popup .sign_up fieldset { width:376px; float:left; }
+#popup .sign_up fieldset ul { width:376px; float:left; padding-top:15px; }
+#popup .sign_up fieldset ul li {width:376px; float:left; padding-bottom:10px; text-align: left;}
+#popup .sign_up fieldset label {width:376px; text-align: left; }
 #popup .sign_up fieldset .button {padding:15px 0 40px 85px}
 #popup .sign_up fieldset ul li span {color:#556270; font-size:12px; font-family:Arial, Helvetica, sans-serif}
 #popup .sign_up fieldset ul li span a {color:#4ecdc4; text-decoration:none}

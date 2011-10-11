@@ -1184,12 +1184,61 @@ $(document).ready(function(){
 })(jQuery);
 </script>
 
+    <!-- SIGNUP FORM -->
+    <div id="signup_dialog" class="window">
+    <div id="popup">
+        <div class="topbox">
+        <h3>SIGN UP FOR MYARTISTDNA</h3>
+        <div class="close"><a href="#" onclick='closeSignup();'>CLOSE</a></div>
+        </div>
+        
+        <div class="offer">
+        <h2><span>You selected:</span> <br> Basic Package</h2>
+        <h3>FREE</h3>
+        </div>
+        
+        <div class="sign_up">
+        <article>
+        <h5>GET STARTED NOW</h5>
+        <p>Log in  and get started easily using your existing Facebook <br /> or Twitter account </p>
+        <div class="socialmedia">
+        <ul>
+        <li><a href="Login_Twitbook/login-facebook.php"><img src="images/facebook.jpg" alt=""></a></li>
+        <li><a href="Login_Twitbook/login-twitter.php"><img src="images/twitter.jpg" alt=""></a></li>
+        </ul>
+        </div>
+        </article>
+        
+        <div class="or">OR</div>
+        <span class="error" style="display:none">Please fill up all required fields.</span>
+        <span class="success" style="display:none">Registration Successfull.</span>
+
+        <article>
+        <h5>Create Login</h5>	 
+         <form autocomplete="off" enctype="multipart/form-data" method="post" name="form">
+            <fieldset>
+            <ul>
+                <li><label>Name</label> <input name="name" id="name" type="text" class="input" value="" /></li>			
+                <li><label>Email Address</label> <input name="email" id="email" type="text" class="input" value="" /></li>
+                <li><label>Username</label> <input name="username" id="username" type="text" class="input" value="" /></li>
+                <li><label>Password</label> <input name="password" id="password" type="password" class="input" value="" /></li>
+                <li><input name="agree" id="agree" type="checkbox" value="agree"> <span>I agree to the <a href="#">Terms &amp; Conditions</a> of MyArtistDNA</span></li>
+            </ul>
+            <div class="button"><a href="#" class="submit">Complete Signup</a></div>
+            </fieldset>
+        </form>
+        </article>
+        </div> 
+    </div><!-- pop up -->
+    </div>
+    <!-- END SIGNUP FORM -->
+
     <!-- LOGIN FORM -->
     <div id="login_dialog" class="window">
         <div id="popup">
             <div class="topbox">
                 <h3>LOG IN TO MYARTISTDNA</h3>
-                <div class="close"><a id="login_dialog_close" href="#">CLOSE</a></div>
+                <div class="close"><a href="#" onclick='closeLogin();'>CLOSE</a></div>
             </div>
 
             <div class="loginpop">
@@ -1220,7 +1269,7 @@ $(document).ready(function(){
 
                 <div class="bottombox">
                 <h3>NOT A MEMBER Yet?</h3>
-                <div class="buttonsignup"><a href="signup_popup_step1.html">SIGN UP</a></div>
+                <div class="buttonsignup"><a href="#" onclick='showSignup();'>SIGN UP</a></div>
             </div>
             </div>
         </div><!-- pop up -->
