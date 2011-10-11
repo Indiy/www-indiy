@@ -867,13 +867,13 @@ $(document).ready(function(){
 			<? } ?>
 			
 			<div id="image"></div>
-			<div id="loader"><img src="<?=trueSiteUrl();?>/jplayer/images/ajax-loader.gif" /></div>
+			<div id="loader"><img src="/jplayer/images/ajax-loader.gif" /></div>
 			
 			<? if (!$fan) { ?>
 			<div id="logo">
-                <div id="login_signup"><button onclick='showLogin();'>Login</button> | <a href='/signup_popup_step1.html'>Signup</a></div>
+                <button id="login_signup_button" onclick='showLogin();'>Login / Signup</button>
 				<div id="makeroomforlogo">
-				<? if ($artist_logo) { ?><img src="<?=trueSiteUrl();?>/artists/images/thumbs.php?src=<?=$trueSiteUrl;?>/artists/images/<?=$artist_logo;?>&q=100&h=145&w=145" /><? } ?>
+				<? if ($artist_logo) { ?><img src="http://www.myartistdna.com/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&h=145&w=145" /><? } ?>
 				</div>
 				<div id="makeroomfordetails">
 					<div class="clear"></div>
