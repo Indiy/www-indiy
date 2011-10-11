@@ -27,25 +27,25 @@ function updateListens(image)
 
 function showLogin()
 {
-    //Get the screen height and width
     var maskHeight = $(document).height();
     var maskWidth = $(window).width();
 	
-    //Set heigth and width to mask to fill up the whole screen
     $('#mask').css({'width':maskWidth,'height':maskHeight});
     
-    //transition effect		
     $('#mask').fadeIn(600);	
     $('#mask').fadeTo("slow",0.5);	
 	
-    //Get the window height and width
     var winH = $(window).height();
     var winW = $(window).width();
     
-    //Set the popup window to center
-    $('#login_dialog').css('top',  winH/2-$(id).height()/2);
-    $('#login_dialog').css('left', winW/2-$(id).width()/2);
+    var dialogHeight = $('#login_dialog').height();
+    var dialogWidth = $('#login_dialog').width();
+    
+    var top = winH / 2 - dialogHeight / 2;
+    var left = winW / 2 - dialogWidth / 2;
+    
+    $('#login_dialog').css('top',top);
+    $('#login_dialog').css('left',left);
 	
-    //transition effect
     $('#login_dialog').fadeIn(600); 
 }

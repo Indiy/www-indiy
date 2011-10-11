@@ -1163,7 +1163,9 @@ $(document).ready(function(){
 
 			<a class="jp-play-fake"></a>
 			<a class="jp-pause-fake"></a>
-			
+			</div>
+        </div>
+    </div>
 			
 			
 
@@ -1184,44 +1186,44 @@ $(document).ready(function(){
 
     <!-- LOGIN FORM -->
     <div id="login_dialog" class="window" style="display:none">
-    <div id="popup">
-    <div class="topbox">
-    <h3>LOG IN TO MYARTISTDNA</h3>
-    <div class="close"><a href="#">CLOSE</a></div>
-    </div>
+        <div id="popup">
+            <div class="topbox">
+                <h3>LOG IN TO MYARTISTDNA</h3>
+                <div class="close"><a href="#">CLOSE</a></div>
+            </div>
 
-    <div class="loginpop">
-    <div id="validate-login"></div>
-    <form action="" name="loginPopup" method="post">
-    <fieldset>
-    <ul>
-    <li><label>Email Address</label> <input name="username" type="text" class="input" value="" /></li>
-    <li><label>Password</label> <input name="password" type="text" class="input" value="" /></li>
-    </ul>
-    <p class="password"><a href="http://www.myartistdna.fm?p=index&forgot=true">Forgot your password?</a></p>
-    <div class="button"><a href="#-1" onclick="send_ajax_login('validate-login');">LOGIN</a></div>
-    </fieldset>
-    </form>
-    <h5 class="option">OR</h5>
+            <div class="loginpop">
+                <div id="validate-login"></div>
+                <form action="" name="loginPopup" method="post">
+                <fieldset>
+                <ul>
+                <li><label>Email Address</label> <input name="username" type="text" class="input" value="" /></li>
+                <li><label>Password</label> <input name="password" type="text" class="input" value="" /></li>
+                </ul>
+                <p class="password"><a href="http://www.myartistdna.fm?p=index&forgot=true">Forgot your password?</a></p>
+                <div class="button"><a href="#-1" onclick="send_ajax_login('validate-login');">LOGIN</a></div>
+                </fieldset>
+                </form>
+                <h5 class="option">OR</h5>
 
-    <article>
-    <h5>LOG IN WITH YOUR SOCIAL ACCOUNT</h5>
-    <p>Log in  and get started easily using your existing Facebook <br /> or Twitter account</p>
+                <article>
+                <h5>LOG IN WITH YOUR SOCIAL ACCOUNT</h5>
+                <p>Log in  and get started easily using your existing Facebook <br /> or Twitter account</p>
 
-    <div class="socialmedia">
-    <ul>
-    <li><a href="Login_Twitbook/login-facebook.php"><img src="images/facebook.jpg" alt="Facebook"></a></li>
-    <li><a href="Login_Twitbook/login-twitter.php"><img src="images/twitter.jpg" alt="Twitter"></a></li>
-    </ul>
-    </div>
-    </article>
+                <div class="socialmedia">
+                <ul>
+                <li><a href="Login_Twitbook/login-facebook.php"><img src="images/facebook.jpg" alt="Facebook"></a></li>
+                <li><a href="Login_Twitbook/login-twitter.php"><img src="images/twitter.jpg" alt="Twitter"></a></li>
+                </ul>
+                </div>
+                </article>
 
-    <div class="bottombox">
-    <h3>NOT A MEMBER Yet?</h3>
-    <div class="buttonsignup"><a href="signup_popup_step1.html">SIGN UP</a></div>
-    </div>
-    </div>
-    </div><!-- pop up -->
+                <div class="bottombox">
+                <h3>NOT A MEMBER Yet?</h3>
+                <div class="buttonsignup"><a href="signup_popup_step1.html">SIGN UP</a></div>
+            </div>
+            </div>
+        </div><!-- pop up -->
     </div> 
     <!-- END LOGIN FORM -->
 
