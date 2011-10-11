@@ -1197,11 +1197,11 @@ $(document).ready(function(){
                 <form action="" name="loginPopup" method="post">
                 <fieldset>
                 <ul>
-                <li><label>Email Address</label> <input name="username" type="text" class="input" value="" /></li>
-                <li><label>Password</label> <input name="password" type="text" class="input" value="" /></li>
+                <li><label>Email Address</label> <input id='login_username' name="username" type="text" class="input" value="" /></li>
+                <li><label>Password</label> <input id='login_password' name="password" type="text" class="input" value="" /></li>
                 </ul>
-                <p class="password"><a href="http://www.myartistdna.fm?p=index&forgot=true">Forgot your password?</a></p>
-                <div class="button"><a href="#-1" onclick="send_ajax_login('validate-login');">LOGIN</a></div>
+                <p class="password"><a href="/?p=index&forgot=true">Forgot your password?</a></p>
+                <div class="button"><a href="#-1" onclick="tryLogin();">LOGIN</a></div>
                 </fieldset>
                 </form>
                 <h5 class="option">OR</h5>

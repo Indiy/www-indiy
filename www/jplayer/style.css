@@ -523,22 +523,24 @@ img.search_thumbnail {width:55px; height:55px; display:inline-block; border:1px 
 
 #login_dialog { position: absolute; z-index: 11; display: none; }
 
+#validate-login { color: red; font-weight: bold; font-size: 13px; }
+
 #popup .loginpop { width:418px; float:left; padding:28px 22px; z-index: 11;}
 #popup .loginpop fieldset { width:304px; float:left; padding:0 57px 25px 57px}
 #popup .loginpop fieldset.yet {padding-bottom:42px}
 
 #popup .loginpop ul {float:left}
-#popup .loginpop ul li {float:left; padding-bottom:12px}
-#popup .loginpop label {padding-bottom:2px}
-#popup .loginpop .input {width:289px}
+#popup .loginpop ul li { float:left; padding-bottom:12px; text-align: left; }
+#popup .loginpop label { padding-bottom:2px;  text-align: left; }
+#popup .loginpop .input { width:289px; background-color: white; }
 #popup .loginpop p.password { width:304px; float:left; text-align:right; font-size:12px; color:#4ecdc4; margin-top:-8px; position:relative; padding:0}
 #popup .loginpop .button {float:left; padding:17px 0 0 68px}
 #popup .loginpop .button a {padding:10px 60px}
 #popup .loginpop .option {width:418px; float:left; background:#e9e9ea; font-size:14px; color:#556270; text-align:center; padding:6px 0}
 
 #popup .loginpop article { width:377px; float:left; padding:15px 0 20px 41px}
-#popup .loginpop article h5 { padding-bottom:5px}
-#popup .loginpop article p { padding-bottom:20px}
+#popup .loginpop article h5 { padding-bottom:5px; }
+#popup .loginpop article p { padding-bottom:20px; color: black; }
 
 #popup .loginpop .reset { width:304px; float:left}
 #popup .loginpop .reset fieldset {padding-bottom:10px}

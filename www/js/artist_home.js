@@ -61,6 +61,38 @@ function closeLogin()
     $('#mask').fadeOut(100);
 }
 
+function tryLogin()
+{			
+	var username = $('#login_username').val();
+	var password = $('#login_password').val();
+
+	// Send the ajax request.
+	 $.ajax({
+	   type: "POST",
+	   url: "check_login.php?username="+username+"&password="+password,
+	   dataType: "html",
+	   success: function(msg){			   	   
+		if(msg==0)	{	
+			$("#validate-login").html("");
+			$("#validate-login").html("<span class='ui-error'>Wrong username or password. Please try again.</span>");					 
+			 return false;
+		}else if(msg==1){			
+			window.location.href='index.php/?p=home';	
+			return true;
+		 }
+		 else{
+ 			$("#validate-login").html("");
+			 $("#validate-login").html("<span class='ui-error'>Please enter the username and password.</span>");					 
+			 return false;
+		 }
+	   }
+	  
+	 });
+}
+
+
+
+
 $(document).ready(artistHomeReady);
 
 
