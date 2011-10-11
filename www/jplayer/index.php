@@ -1189,7 +1189,7 @@ $(document).ready(function(){
         <div id="popup">
             <div class="topbox">
                 <h3>LOG IN TO MYARTISTDNA</h3>
-                <div class="close"><a href="#">CLOSE</a></div>
+                <div class="close"><a id="login_dialog_close" href="#">CLOSE</a></div>
             </div>
 
             <div class="loginpop">

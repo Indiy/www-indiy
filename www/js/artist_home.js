@@ -2,6 +2,11 @@
 
 // Helper functions for artist home page
 
+function artistHomeReady()
+{
+    $('#login_dialog_close').click(closeLogin);
+}
+
 function updateListens(image)
 {
     var url = "/data/listens.php?image=" + image;
@@ -49,3 +54,13 @@ function showLogin()
 	
     $('#login_dialog').fadeIn(600); 
 }
+
+function closeLogin()
+{
+    $('#login_dialog').fadeOut(100);
+    $('#mask').fadeOut(100);
+}
+
+$(document).ready(artistHomeReady);
+
+

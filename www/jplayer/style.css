@@ -441,8 +441,8 @@ img.search_thumbnail {width:55px; height:55px; display:inline-block; border:1px 
  ----------------------------------------
  */
 
-#mask { background:#080808; position:absolute; left:0; top:0; z-index:10; display:none}
-#boxes .window { position:absolute; left:0; top:0; width:462px; display:none; }
+#mask { background:#080808; position:absolute; left:0; top:0; z-index:10; display: none; }
+#boxes .window { position:absolute; left:0; top:0; width:462px;  }
 #boxes #dialog { width:462px; height:auto; z-index: 11; }
 
 #popup { width:462px; float:left; background:#FFFFFF; }
@@ -453,7 +453,7 @@ img.search_thumbnail {width:55px; height:55px; display:inline-block; border:1px 
 #popup .topbox { width:462px; height:50px; float:left; background: url('/images/bg_login01.gif') repeat-x}
 #popup .topbox h3 { float:left; font-size:20px; color: #FFFFFF; text-transform:uppercase; padding:15px 0 0 20px}
 #popup .topbox .close { float:right; font-size:12px; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; color:#4ecdc4}
-#popup .topbox .close a { width:43px; height:33px; float:right; background:url(../images/bg_close.gif) no-repeat; color:#4ecdc4; text-decoration:none; text-transform:uppercase; padding:17px 0 0 14px}
+#popup .topbox .close a { width:43px; height:33px; float:right; background:url('/images/bg_close.gif') no-repeat; color:#4ecdc4; text-decoration:none; text-transform:uppercase; padding: 17px 0 0 14px; border: none; cursor: pointer; }
 
 #popup .offer { width:418px; height:40px; float:left;background:#4ecdc4; padding:10px 20px 0 24px}
 #popup .offer.middlepack {background:#c7f465}
@@ -523,7 +523,7 @@ img.search_thumbnail {width:55px; height:55px; display:inline-block; border:1px 
  ----------------------------------------
  */
 
-#login_dialog { z-index: 11; display: none; }
+#login_dialog { position: absolute; z-index: 11; display: none; }
 
 #popup .loginpop { width:418px; float:left; padding:28px 22px; z-index: 11;}
 #popup .loginpop fieldset { width:304px; float:left; padding:0 57px 25px 57px}
