@@ -1182,8 +1182,8 @@ $(document).ready(function(){
 })(jQuery);
 </script>
 
-    <!-- LOGIN FORM 
-    <div id="dialog2" class="window">
+    <!-- LOGIN FORM -->
+    <div id="login_dialog" class="window" style="display:none">
     <div id="popup">
     <div class="topbox">
     <h3>LOG IN TO MYARTISTDNA</h3>
@@ -1223,7 +1223,7 @@ $(document).ready(function(){
     </div>
     </div><!-- pop up -->
     </div> 
-    END LOGIN FORM -->
+    <!-- END LOGIN FORM -->
 
     <!-- Mask to cover the whole screen --> 
     <div id="mask"></div> 

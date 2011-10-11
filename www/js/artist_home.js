@@ -43,9 +43,9 @@ function showLogin()
     var winW = $(window).width();
     
     //Set the popup window to center
-    $('#popup').css('top',  winH/2-$(id).height()/2);
-    $('#popup').css('left', winW/2-$(id).width()/2);
+    $('#login_dialog').css('top',  winH/2-$(id).height()/2);
+    $('#login_dialog').css('left', winW/2-$(id).width()/2);
 	
     //transition effect
-    $('#popup').fadeIn(600); 
+    $('#login_dialog').fadeIn(600); 
 }
