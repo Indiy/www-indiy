@@ -167,7 +167,7 @@ div#logo.openlogo { background: url('images/new/logo_opened.png') no-repeat cent
 div#logo #makeroomforlogo { width: 100%; height: 0px; overflow: hidden; border-left: 0px solid #fff; }
 div#logo #makeroomfordetails { width: 100%;overflow: hidden; border-right: 0px solid #fff; }
 div#logo .bottom { width: 100%; height: 25px; cursor: pointer; border-left: 0px solid #fff; position:absolute; bottom:0; }
-div#logo img { width: 145px; margin-bottom: 20px;  }
+div#logo img { width: 145px; margin: 5px 0px 0px 5px;  }
 div#logo .buynow { width: 65px; height: 25px; background: url('images/new/buynow_spot.png') -12px 0 no-repeat; float: left; }
 div#logo .mystore { width: 30px; height: 25px; background: url('images/new/buynow_spot.png') -75px 0 no-repeat; float: left; }
 div#logo .showamazon { width: 30px; height: 25px; float: left; display: block; }
