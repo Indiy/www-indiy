@@ -47,7 +47,7 @@ if (!empty($_GET['oauth_verifier']) && !empty($_SESSION['oauth_token']) && !empt
             $_SESSION['oauth_provider'] = $userdata['oauth_provider'];
             //header("Location: /index.php?p=addartist&id=".$userdata['id']);
 			//header("Location: /index.php?p=addartist&id=$uid");
-			header("Location: /index.php?p=addartist");
+			header("Location: ../manage/dashboard.php");
         }
     }
 } else {

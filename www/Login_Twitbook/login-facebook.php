@@ -1,5 +1,4 @@
-<?php
-session_start();
+<?php session_start();
 require 'facebook/facebook.php';
 require 'config/fbconfig.php';
 require 'config/functions.php';
@@ -8,7 +7,6 @@ $facebook = new Facebook(array(
             'secret' => APP_SECRET,
             'cookie' => true
         ));
-
 $session = $facebook->getSession();
 
 //print_r($session);
@@ -100,8 +98,11 @@ if (!empty($session)) {
             $_SESSION['username'] = $userdata['userName'];
             $_SESSION['oauth_provider'] = $userdata['oauth_provider'];*/
 			$_SESSION['me'] = $userdata['id'];
+			$_SESSION['sess_userId'] =	$userdata['id'];		
+			$_SESSION['sess_userName'] = $userdata['artist'];
+			$_SESSION['sess_userUsername'] = $userdata['userName'];
             //header("Location: /index.php?p=addartist&id=".$userdata['id']);
-			header("Location: /index.php?p=addartist");
+			header("Location: ../manage/dashboard.php");
         }
     } else {
         # For testing purposes, if there was an error, let's kill the script

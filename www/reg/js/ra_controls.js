@@ -33,10 +33,10 @@ this.lastFind="";
 this.lastEnter=null;
 
 this.maxResults=7;
-this.artistLogoFolder="http://myartistdna.fm/artists/images/";
-this.songImagesFolder="http://myartistdna.fm/artists/images/";
-this.mediaImagesFolder="http://myartistdna.fm/artists/images/";
-this.url_suffix=".myartistdna.fm";
+this.artistLogoFolder="http://myartistdna.com/artists/images/";
+this.songImagesFolder="http://myartistdna.com/artists/images/";
+this.mediaImagesFolder="http://myartistdna.com/artists/images/";
+this.url_suffix=".myartistdna.com";
 
 this.artistFormat="<img src=\'{artist_logo}\' class=\'"+this.class_search_thumbnail+"\' /><div class=\'"+this.class_search_text+"\'>Artist: {artist_name}<br />{artist_site}</div>";
 this.songFormat="<img src=\'{song_image}\' class=\'"+this.class_search_thumbnail+"\' /><div class=\'"+this.class_search_text+"\'>Artist: {artist_name}<br />Song: {song_name}</div>";

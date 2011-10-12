@@ -180,7 +180,7 @@
 												<hr />
 												<strong>Music Player &raquo;</strong>
 												<br />
-												<a href="?p=addartist">Edit</a> | 
+												<a href="?p=addartist&id='.$artist_id.'">Edit</a> | 
 												<a href="?p=stats">Analytics</a> | 
 												<a href="?p=newsletter">Newsletter</a>';
 												if (!isFan()) { 
