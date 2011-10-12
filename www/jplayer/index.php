@@ -281,6 +281,10 @@ if ($browser == true || $_GET["debug"] == "true"){
 					$('.store').fadeIn();
 					$('.aClose').fadeIn();
 				}, 450);
+                var cart = "&paypal=<?=$paypalEmail;?>&cart=true&artist=<?=$artist_id;?>";
+                $.post("jplayer/ajax.php", cart, function(items) {
+                      $(".cart").html(items);
+                      });
 			});
 			
 			/* Videos */
@@ -314,19 +318,16 @@ if ($browser == true || $_GET["debug"] == "true"){
 				var pro = $(this).text();
 				var cart = "&paypal=<?=$paypalEmail;?>&cart=true&artist=<?=$artist_id;?>&product="+pro;
 				$.post("jplayer/ajax.php", cart, function(items) {
-					$("ul.products").hide();
-					$(".cart").html(items);
-					$(".cart").show();
+                    $(".cart").html(items);
+                    showCart(false);
 				});
 			});
 			
 			$("div.showstore").click(function(event){
-				$(".cart").hide();
-				$("ul.products").fadeIn();
+                showProducts(true);
 			});
 			$("div.showcart").click(function(event){
-				$("ul.products").hide();
-				$(".cart").fadeIn();
+                showCart(true);
 			});
 			
 			$("a.jp-previous").mouseover(function(event){
@@ -871,7 +872,7 @@ $(document).ready(function(){
 			
 			<? if (!$fan) { ?>
 			<div id="logo">
-                <button id="login_signup_button" onclick='showLogin();'>Login / Signup</button>
+                <button id="login_signup_button" onclick='showLogin();'>Log in | Sign Up</button>
 				<div id="makeroomforlogo">
 				<? if ($artist_logo) { ?><img src="http://www.myartistdna.com/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&h=145&w=145" /><? } ?>
 				</div>
@@ -1101,7 +1102,7 @@ $(document).ready(function(){
 			<div class="store">
 				<div class="box-header"></div>
 				<div class="cartnav">
-				<div class="showstore">Store Front</div>
+				<div class="showstore" style="display:none;">Store Front</div>
 				<div class="showcart">View Cart</div>
 				<div class="clear"></div>
 				</div>
@@ -1109,7 +1110,7 @@ $(document).ready(function(){
 				<h1>Store</h1>
 				
 				<div class="clear"></div>
-				<div class="cart"></div>
+				<div class="cart" style="display:none;"></div>
 				
 				<ul class="products">
 				<?

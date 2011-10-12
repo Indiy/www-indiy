@@ -197,33 +197,35 @@ MESSAGE: {$comments}
 		$product = $_REQUEST["product"];
 		$artist = $_REQUEST["artist"];
 		
-		if ($_SESSION['cart'] != "") {
+		if ($_SESSION['cart'] != "" ) {
 		
 			$cart_productid = $product;
-			$row = mf(mq("select * from `[p]musicplayer_ecommerce_products` where `id`='{$cart_productid}' limit 1"));
+            if( $cart_productid )
+            {
+                $row = mf(mq("select * from `[p]musicplayer_ecommerce_products` where `id`='{$cart_productid}' limit 1"));
 
-			$product_name = addslashes($row["name"]);
-			if ($row["discount"] != "") {
-				$product_price = $row["discount"];
-			} else {
-				$product_price = $row["price"];
-			}
-			$product_filename = $row["filename"];
-			$product_manufacturer = $row["manufacturer"];
-			$product_origin = $row["origin"];
-			if ($_POST["size"] != "") { 
-				$product_size = " - ".$_POST["size"]; 
-			}
-			if ($_POST["color"] != "") { 
-				$product_color = " - ".$_POST["color"]; 
-			}
-			
-			$database = "[p]musicplayer_ecommerce_cart";
-			$tables = "userid|productid|price|name|code";
-			$values = "{$_SESSION['cart']}|{$cart_productid}|{$product_price}|{$product_name}{$product_size}{$product_color}|".$_SESSION["discount"];
+                $product_name = addslashes($row["name"]);
+                if ($row["discount"] != "") {
+                    $product_price = $row["discount"];
+                } else {
+                    $product_price = $row["price"];
+                }
+                $product_filename = $row["filename"];
+                $product_manufacturer = $row["manufacturer"];
+                $product_origin = $row["origin"];
+                if ($_POST["size"] != "") { 
+                    $product_size = " - ".$_POST["size"]; 
+                }
+                if ($_POST["color"] != "") { 
+                    $product_color = " - ".$_POST["color"]; 
+                }
+                
+                $database = "[p]musicplayer_ecommerce_cart";
+                $tables = "userid|productid|price|name|code";
+                $values = "{$_SESSION['cart']}|{$cart_productid}|{$product_price}|{$product_name}{$product_size}{$product_color}|".$_SESSION["discount"];
 
-			insert($database,$tables,$values);
-
+                insert($database,$tables,$values);
+            }
 		} else {
 			if ($_REQUEST["checkout"] == "") {
 				$statusMessage .= "<p class='center'>Error!</p>";

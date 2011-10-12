@@ -107,7 +107,27 @@ function tryLogin()
 	 });
 }
 
+function showCart(fade)
+{
+    $("ul.products").hide();
+    $(".showcart").hide();
+    $(".showstore").show();
+    if( fade )
+        $(".cart").fadeIn();
+    else
+        $(".cart").show();
+}
 
+function showProducts(fade)
+{
+    $(".cart").hide();
+    $(".showstore").hide();
+    $(".showcart").show();
+    if( fade )
+        $("ul.products").fadeIn();
+    else
+        $("ul.products").show();
+}
 
 
 $(document).ready(artistHomeReady);
