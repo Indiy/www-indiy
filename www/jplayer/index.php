@@ -1227,10 +1227,10 @@ $(document).ready(function(){
         <div class="close"><a href="#" onclick='closeSignup();'>CLOSE</a></div>
         </div>
         
-        <div class="offer">
+       <!-- <div class="offer">
         <h2><span>You selected:</span> <br> Basic Package</h2>
         <h3>FREE</h3>
-        </div>
+        </div> -->
         
         <div class="sign_up">
         <article>
@@ -1257,7 +1257,7 @@ $(document).ready(function(){
                 <li><label>Email Address</label> <input name="email" id="email" type="text" class="input" value="" /></li>
                 <li><label>Username</label> <input name="username" id="username" type="text" class="input" value="" /></li>
                 <li><label>Password</label> <input name="password" id="password" type="password" class="input" value="" /></li>
-                <li><input name="agree" id="agree" type="checkbox" value="agree"> <span>I agree to the <a href="#">Terms &amp; Conditions</a> of MyArtistDNA</span></li>
+                <li><input name="agree" id="agree" type="checkbox" value="agree"> <span>I agree to the Terms &amp; Conditions of MyArtistDNA</span></li>
             </ul>
             <div class="button"><a href="#" class="submit">Complete Signup</a></div>
             </fieldset>
