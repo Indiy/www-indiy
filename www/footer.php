@@ -79,7 +79,7 @@ $(".submit").click(function() {
 </script>
 <style type="text/css">
 body{
-background:url(http://s3.amazonaws.com/twitter_production/profile_background_images/6250979/bgtwitter.jpg) no-repeat;
+background:#f6f6f6;
 }
 .error{
 	color:#d12f19;

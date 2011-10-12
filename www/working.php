@@ -18,7 +18,7 @@
 		
 		</div>
 		<div id="footer">
-			<p>Copyright &copy; Levas Entertainment. All Rights Reserved.</p>
+			<p>Copyright &copy; Levas Entertainment 2011. All Rights Reserved.</p>
 		</div>
 	</div>
 </body>
