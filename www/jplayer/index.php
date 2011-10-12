@@ -521,6 +521,12 @@ $(id).bind($.jPlayer.event.play, function() { // Bind an event handler to the in
 
 <script type="text/javascript"> 
 
+function clickSongBuy(i)
+{
+    var id = '#song_buy_popup_' + i;
+    $(id).fadeIn();
+}
+
 $(document).ready(function(){
 
 	var playItem = 0;
@@ -607,12 +613,40 @@ $(document).ready(function(){
  
 	function displayPlayList() {
 		$("#jplayer_playlist ul").empty();
-		for (i=0; i < myPlayList.length; i++) {
+		for( var i in myPlayList ) 
+        {
+            var song = myPlayList[i];
 			var listItem = (i == myPlayList.length-1) ? "<li class='jplayer_playlist_item_last'>" : "<li>";
-			listItem += myPlayList[i].plus + "<a href='#' id='jplayer_playlist_item_" + i + "' tabindex='1'><span class='thisisthetrackname'>" + myPlayList[i].name + "</span><span class='songimage' style='display: none;'>" + myPlayList[i].image + "</span><span class='sellitunes' style='display: none;'>" + myPlayList[i].itunes + "</span><span class='sellamazon' style='display: none;'>" + myPlayList[i].amazon + "</span><div class='songbgcolor' style='display: none;'>" + myPlayList[i].bgcolor + "</div><div class='songbgposition' style='display: none;'>" + myPlayList[i].bgposition + "</div><div class='songbgrepeat' style='display: none;'>" + myPlayList[i].bgrepeat + "</div></a>" + myPlayList[i].download;
+			listItem += song.plus;
+            listItem += "<a href='#' id='jplayer_playlist_item_" + i + "' tabindex='1'>";
+            listItem += "<span class='thisisthetrackname'>" + song.name + "</span>";
+            listItem += "<span class='songimage' style='display: none;'>" + song.image + "</span>";
+            listItem += "<span class='sellitunes' style='display: none;'>" + song.itunes + "</span>";
+            listItem += "<span class='sellamazon' style='display: none;'>" + song.amazon + "</span>";
+            listItem += "<div class='songbgcolor' style='display: none;'>" + song.bgcolor + "</div>";
+            listItem += "<div class='songbgposition' style='display: none;'>" + song.bgposition + "</div>";
+            listItem += "<div class='songbgrepeat' style='display: none;'>" + song.bgrepeat + "</div>";
+            listItem += "</a>";
+            if( song.download )
+            {
+                listItem += song.download;
+            }
+            else if( song.amazon || song.itunes )
+            {
+                listItem += "<span class='song_buy_icon' onclick='clickSongBuy(" + i + ");'>";
+                listItem += "<img src='/images/buy_icon.png'/>";
+                listItem += "<div id='song_buy_popup_" + i + "'class='song_buy_popup'>";
+                if( song.amazon )
+                    listItem += "<a href='" + song.amazon + "' class='store_icon amazon'/>";
+                if( song.itunes )
+                    listItem += "<a href='" + song.itunes + "' class='store_icon itunes'/>";
+                listItem += "</div>";
+                listItem += "</span>";
+            }
 			listItem += "<div class='clear'></div>";
 			listItem += "<div class='metadata'>This is a test</div>";
-			listItem += "<div class='clear'></div></li>";
+			listItem += "<div class='clear'></div>";
+            listItem += "</li>";
 			$("#jplayer_playlist ul").append(listItem);
 			$("#jplayer_playlist_item_"+i).data( "index", i ).click( function() {
 				var index = $(this).data("index");

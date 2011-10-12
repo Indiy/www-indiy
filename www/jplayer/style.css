@@ -356,6 +356,14 @@ div.jp-playlist-player div.jp-playlist a.jp-playlist-current { color:#FF0000 !im
 div.current-track { position: fixed; top: 33px; left: 60px; z-index: 12; font-size: 12px; font-weight: bold; color: #fff; }
 
 
+.song_buy_icon { float: right; position: relative; margin-right: 8px; margin-top: 4px; cursor: pointer; width: 25px; height: 25px; }
+.song_buy_popup { position: absolute; margin-top: -20px; margin-right: 60px; left: 0px; height: 60px; width: 100px; display: none; background: gray; }
+
+.store_icon .amazon { background: url('images/new/buynow_spot.png') -105px 0 no-repeat; }
+.store_icon .itunes { background: url('images/new/buynow_spot.png') -135px 0 no-repeat; }
+
+.store_icon { width: 30px; height: 25px; float: left; }
+
 
 a.jp-volume-min { top: 22px; left: 110px; background: #ffffff; width: 4px; height: 57px; }
 a.jp-volume-max { top: 22px; left: 110px; background: #ff9900; width: 4px; height: 57px; }
