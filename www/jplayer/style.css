@@ -16,7 +16,7 @@ ul,ol { list-style: none; }
 body { background: #fff; font-size: 12px; color: #fff; font-family: Helvetica, Arial, sans-serif; }
 p { line-height: 14px; margin-bottom: 12px; letter-spacing: 0.5px; }
 a { text-decoration: none; color: #333; }
-h1, h2, h3 { font-family: Helvetica, Arial, sans-serif; font-weight: bold; margin-bottom: 5px; text-transform: uppercase; color:#fff; letter-spacing:0.5px; }
+h1, h2, h3 { font-family: Arial,Helvetica,sans-serif; margin-bottom: 5px; text-transform: uppercase; color:#fff; letter-spacing:0.5px; }
 h1 { font-size: 14px; } /* 20 */
 h2 { font-size: 11px; } /* 24 */
 h3 { font-size: 10px; } /* 18 */
@@ -35,7 +35,7 @@ button::-moz-focus-inner {  border: 0;}
 /* PAGE */
 .anchor { display: block; width: 100px; height: 1px; text-indent: -9999px; }
 .space { width: 100%; height: 100px; }
-.page, .comments, .store, .contact, .videos {max-height:500px; display:none; position:relative; -webkit-box-shadow: 0 0 5px #000; box-shadow: 0 0 5px #000; z-index: 2; padding: 25px; width: 600px; margin: 15px auto 100px auto; background:url('images/box/bg.png') repeat-y center top; }
+.page, .comments, .store, .contact, .videos {max-height:500px; display:none; position:relative; -webkit-box-shadow: 0 0 5px #000; box-shadow: 0 0 5px #000; z-index: 1; padding: 25px; width: 600px; margin: 15px auto 100px auto; background:url('images/box/bg.png') repeat-y center top; }
 /*.comments .customScrollBox { max-height:100px; padding: 25px; }*/
 .page h1, .comments h1, .store h1, .contact h1, .videos h1 { color: #fff; }
 .page p, .comments p, .store p, .contact p, .videos p { color: #fff; font-size: 11px; } /* #ccc // 14 */
@@ -187,7 +187,7 @@ a.www { margin: 0px 5px; filter:alpha(opacity=60); opacity:0.6; display: block; 
 a.www:hover { filter:alpha(opacity=100); opacity:1.0; }
 
 
-div.footerfade { z-index: -1; position: fixed; width: 100%; height: 200px; top: 100%; left: 0; margin: -50px 0 0 0; background: url('images/bg.png'); }
+div.footerfade { z-index: 2; position: fixed; width: 100%; height: 200px; top: 100%; left: 0; margin: -50px 0 0 0; background: url('images/bg.png'); }
 
 div.footerfade .logo_img { float:right; }
 div.footerfade .logo_img a { width:176px; height:34px; display:block; background: url('images/new/footer_logo.png') no-repeat center top; margin:8px; }
@@ -201,7 +201,7 @@ div.twitterstream { z-index: 0; position: fixed; width: 200px; padding: 0px; top
 div.twitterstreamshow, div.twitterstreamhide { cursor: pointer; background: url('images/new/twitter.png') 0 0 no-repeat; width: 200px; height: 40px; }
 
 /* New Socialize Area Styling */
-div.socialize { background: url("images/new/socialize_bg.png") repeat scroll 0 0 transparent; bottom: -361px; height: 400px; margin-left: 40px; position: fixed; width: 246px; z-index: 2; }
+div.socialize { background: url("images/new/socialize_bg.png") repeat scroll 0 0 transparent; bottom: -361px; height: 400px; margin-left: 40px; position: fixed; width: 246px; z-index: 3; }
 div.socialize .title { background: url('images/new/socialize.png')  no-repeat; height:16px; width:78px; display:inline-block; margin: 12px 0 0 16px; vertical-align:top; cursor:pointer; }
 div.socialize .buttons { display: inline-block; margin-left: 9px; margin-top: 6px; }
 div.socialize .buttons div { height:26px; width:26px; display:inline-block; margin-left:3px; cursor:pointer; }
@@ -457,7 +457,7 @@ img.search_thumbnail {width:55px; height:55px; display:inline-block; border:1px 
 #popup p a{color:#4ecdc4}
 
 #popup .topbox { width:462px; height:50px; float:left; background: url('/images/bg_login01.gif') repeat-x}
-#popup .topbox h3 { float:left; font-size:20px; color: #FFFFFF; text-transform:uppercase; padding:15px 0 0 20px}
+#popup .topbox h3 { float:left; font-family: "Teletex Light", Arial,Helvetica,sans-serif; font-size:20px; color: #FFFFFF; text-transform:uppercase; padding:15px 0 0 20px}
 #popup .topbox .close { float:right; font-size:12px; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; color:#4ecdc4}
 #popup .topbox .close a { width:43px; height:33px; float:right; background:url('/images/bg_close.gif') no-repeat; color:#4ecdc4; text-decoration:none; text-transform:uppercase; padding: 17px 0 0 14px; border: none; cursor: pointer; }
 
@@ -477,13 +477,13 @@ img.search_thumbnail {width:55px; height:55px; display:inline-block; border:1px 
 #popup .socialmedia ul { float:left}
 #popup .socialmedia ul li { float:left; line-height:.5em; padding-right:15px}
 
-#popup .sign_up { width:376px; float:left; padding:0 22px 0 64px}
+#popup .sign_up { width:376px; float:left; padding:0 22px 0 50px}
 #popup .sign_up article{width:376px; float:left; padding-top:25px}
 #popup .sign_up p {float:left; padding:5px 0 0 0; color: black;}
 #popup .sign_up .socialmedia { float:left; padding:10px 0 25px 0}
 #popup .sign_up .or { width:418px; height:22px; float:left; background:#e9e9ea; font-size:14px; color:#556270; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; text-align:center; text-transform:uppercase; margin-left:-42px; position:relative; padding-top:7px}
 
-#popup .sign_up fieldset { width:376px; float:left; }
+#popup .sign_up fieldset { width:376px; float:left; border: 0px;}
 #popup .sign_up fieldset ul { width:376px; float:left; padding-top:15px; }
 #popup .sign_up fieldset ul li {width:376px; float:left; padding-bottom:10px; text-align: left;}
 #popup .sign_up fieldset label {width:376px; text-align: left; }
@@ -534,7 +534,7 @@ img.search_thumbnail {width:55px; height:55px; display:inline-block; border:1px 
 #validate-login { color: red; font-weight: bold; font-size: 13px; }
 
 #popup .loginpop { width:418px; float:left; padding:28px 22px; z-index: 11;}
-#popup .loginpop fieldset { width:304px; float:left; padding:0 57px 25px 57px}
+#popup .loginpop fieldset { width:304px; float:left; padding:0 57px 25px 57px; border: 0px;}
 #popup .loginpop fieldset.yet {padding-bottom:42px}
 
 #popup .loginpop ul {float:left}
@@ -559,7 +559,7 @@ img.search_thumbnail {width:55px; height:55px; display:inline-block; border:1px 
 #popup .loginpop .reset p.go a {background:url('/images/arrow_go_back.gif') no-repeat 0 5px; padding:0 0 0 10px}
 
 #popup .bottombox { width:410px; float:left; background:url('/images/bg_login02.gif') repeat-x; position:relative}
-#popup .bottombox h3 { float:left; font-size:20px; color:#FFFFFF; text-transform:uppercase; padding:15px 0 0 20px}
+#popup .bottombox h3 { float:left; font-family: "Teletex Light", Arial,Helvetica,sans-serif; font-size:20px; color:#FFFFFF; text-transform:uppercase; padding:15px 0 0 20px}
 #popup .bottombox .buttonsignup {float:right}
 #popup .bottombox .buttonsignup a { width:60px; height:32px; float:right; background:url('/images/arrow_signup.gif') no-repeat; font-size:14px;font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; color:#f5f5f5 ; padding:18px 0 0 18px; text-decoration:none}
 
