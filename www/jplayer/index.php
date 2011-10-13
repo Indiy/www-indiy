@@ -546,7 +546,7 @@ $(document).ready(function(){
 			playListInit(true); // Parameter is a boolean for autoplay.
 		},
         solution: "html, flash",
-        supplied: "oga, mp3",
+        supplied: "mp3, oga",
         swfPath: "/jplayer/js",
         verticalVolume: true
 	})
