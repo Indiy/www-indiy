@@ -96,6 +96,8 @@ if ($browser == true || $_GET["debug"] == "true"){
 	$loadmusic = mq("select * from `[p]musicplayer_audio` where {$mQuery} order by `order` asc, `id` desc");
 	$m=0;
 	while ($music = mf($loadmusic)) {
+        if( !isset($first_track_listens))
+            $first_track_listens = $music['views'];
 		$music_id = $music["id"];
 		$music_listens = $music["views"];
 		$music_audio = $music["audio"];
@@ -1007,7 +1009,7 @@ $(document).ready(function(){
                                 <span style='color: #555 !important;'>// Track:</span>
                                 <span id='current_track_name'></span>
                                 <span style='color: #555 !important; <? if( !$show_listens ) echo "display: none;"; ?>'>// Listens:</span>
-                                <span id='current_track_listens'>1</span>
+                                <span id='current_track_listens'><?=$first_track_listens;?></span>
                             </div>
                             <div class='vote'>1</div>
                             <div class='vote nay'>0</div>
