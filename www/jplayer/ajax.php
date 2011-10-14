@@ -105,11 +105,6 @@ MESSAGE: {$comments}
 		//echo "Thank you for your vote!";
 	}
 	
-	if ($_REQUEST["delete"] != "") {
-		$delete = $_REQUEST["delete"];
-		mq("delete from `[p]musicplayer_ecommerce_cart` where `id`='{$delete}'");
-		echo "Successfully Deleted!";
-	}
 	
 	if ($_REQUEST["updatetotal"] != "") {
 		$id = $_REQUEST["updatetotal"];
@@ -161,23 +156,9 @@ MESSAGE: {$comments}
 			$('.remove').click(function() {
 				var remove = $(this).text();
 				$('div#product-'+remove).slideUp();
-				var removeValue = '&delete='+remove;
-				$.post('jplayer/ajax.php', removeValue, function(result) {
-					//alert(remove);
-					$('#shop_results').html(result);
-					$('#shop_results').fadeIn();
-					setTimeout(function(){ 
-						$('#shop_results').fadeOut();
-					}, 500);
-				});
-				var removeValue = '&updatetotal='+remove;
-				$.post('jplayer/ajax.php', removeValue, function(result) {
-					//alert(remove);
-					$('.totalvalue').text(result);
-				});
-				var shippingValue = '&shippingtotal='+remove;
-				$.post('jplayer/ajax.php', shippingValue, function(result) {
-					$('.shipping').text(result);
+				var removeValue = '&cart=true&delete='+remove;
+				$.post('jplayer/ajax.php', removeValue, function(items) {
+					$('.cart').html(items);
 				});
 			});
 			
@@ -196,6 +177,12 @@ MESSAGE: {$comments}
 		</script>
 		<div style='display: none;'>cart:".$_SESSION['cart']."</div>
 		";
+        
+        if ($_REQUEST["delete"] != "") {
+            $delete = $_REQUEST["delete"];
+            mq("delete from `[p]musicplayer_ecommerce_cart` where `id`='{$delete}'");
+            //echo "Successfully Deleted!";
+        }
 		
 		$paypal = $_REQUEST["paypal"];
 		$product = $_REQUEST["product"];
