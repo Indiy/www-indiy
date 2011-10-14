@@ -186,6 +186,10 @@ if ($browser == true || $_GET["debug"] == "true"){
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
 
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
 <script src="js/swfobject.js"  type="text/javascript"></script>
 <script src="jplayer/js/supersized.3.1.3.core.min.js" type="text/javascript"></script>
@@ -576,16 +580,11 @@ $(document).ready(function(){
 			displayPlayList();
 			playListInit(true); // Parameter is a boolean for autoplay.
 		},
-        solution: "html, flash",
-        supplied: "mp3, oga",
-        swfPath: "/jplayer/js",
-        verticalVolume: true
-	})
-	.jPlayer("onProgressChange", function(loadPercent, playedPercentRelative, playedPercentAbsolute, playedTime, totalTime) {
-		jpPlayTime.text($.jPlayer.convertTime(playedTime));
-		jpTotalTime.text($.jPlayer.convertTime(totalTime));
- 
-		demoStatusInfo(this.element, jpStatus); // This displays information about jPlayer's status in the demo page
+        //solution: "html, flash",
+        supplied: "mp3",
+        swfPath: "/js/Jplayer2.swf",
+        verticalVolume: true,
+        wmode: "window"
 	})
 	.bind($.jPlayer.event.ended, function() {
 		playListNext();
@@ -977,7 +976,7 @@ $(document).ready(function(){
 				<div class="clear"></div>
 			</div>
 			
-			<div id="jquery_jplayer"></div> 
+			<div id="jquery_jplayer" class="jp-jplayer"></div> 
 
 			<div class="top-bg"></div>
 			<div id="playlister">
