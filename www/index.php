@@ -1,5 +1,12 @@
 <?
 
+    $browser = get_browser(null,TRUE);
+    if( $browser['browser'] == 'IE' && $browser['majorver'] < 8 )
+    {
+        include('unsupported_browser.php');
+        die();
+    }
+
 	$loadUsername = explode(".", $_SERVER["HTTP_HOST"]);
 	if ($loadUsername[0] == "www" || $loadUsername[0] == "myartistdna") {
 		$artist_url = $_GET["url"];
