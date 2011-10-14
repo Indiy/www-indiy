@@ -1243,8 +1243,8 @@ $(document).ready(function(){
 </script>
 
     <div id='song_buy_popup'>
-        <a id='song_buy_popup_amazon' href='#' class='store_icon amazon'/>
-        <a id='song_buy_popup_itunes' href='#' class='store_icon itunes'/>
+        <a id='song_buy_popup_amazon' href='#' class='store_icon amazon'></a>
+        <a id='song_buy_popup_itunes' href='#' class='store_icon itunes'></a>
     </div>
 
     <!-- SIGNUP FORM -->
