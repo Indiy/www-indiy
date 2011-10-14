@@ -473,7 +473,6 @@
 		2DF4712E1440B77F005538C7 /* Thumbs.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thumbs.db; sourceTree = "<group>"; };
 		2DF4712F1440B77F005538C7 /* twitter.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = twitter.gif; sourceTree = "<group>"; };
 		2DF471301440B77F005538C7 /* twitter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = twitter.jpg; sourceTree = "<group>"; };
-		2DF471321440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
 		2DF471331440B77F005538C7 /* ajax.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = ajax.php; sourceTree = "<group>"; };
 		2DF471341440B77F005538C7 /* config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = config.php; sourceTree = "<group>"; };
 		2DF471361440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
@@ -1819,7 +1818,6 @@
 		2DF471311440B77F005538C7 /* includes */ = {
 			isa = PBXGroup;
 			children = (
-				2DF471321440B77F005538C7 /* .listing */,
 				2DF471331440B77F005538C7 /* ajax.php */,
 				2DF471341440B77F005538C7 /* config.php */,
 				2DF471351440B77F005538C7 /* css */,

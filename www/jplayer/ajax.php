@@ -1,10 +1,14 @@
 <?
 
-	session_start();
 
-	include(dirname(__FILE__).'/../includes/functions.php');	
-	include(dirname(__FILE__).'/../includes/config.php');
-	
+    include('../includes/config.php');
+	include('../includes/functions.php');
+
+    session_start();
+
+    if($_SESSION['cart'] == "")	
+        $_SESSION['cart'] = rand(1111111,9999999);
+	session_write_close();
 	if ($_REQUEST["form"] != "") {
 	
 	/*
@@ -190,7 +194,7 @@ MESSAGE: {$comments}
 			
 		});	
 		</script>
-		
+		<div style='display: none;'>cart:".$_SESSION['cart']."</div>
 		";
 		
 		$paypal = $_REQUEST["paypal"];
@@ -439,7 +443,7 @@ MESSAGE: {$comments}
 				$statusMessage = "<p class='center'>You have not added products to your cart yet.</p>";
 			}
 		} else {
-			$statusMessage = "<p class='center'>No shopping cart</p>";
+			$statusMessage = "<p class='center'>No shopping cart: " . $_SESSION['cart'] . "</p>";
 		}
 ?>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">  
