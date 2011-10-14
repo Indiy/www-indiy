@@ -311,6 +311,7 @@ if ($browser == true || $_GET["debug"] == "true"){
 				$(this).parent(".jp-playlist").animate({"left": "-233px"}, "fast");
 				$(this).hide();
 				$(this).parent(".jp-playlist").children("#playlistaction").show();
+                $('#song_buy_popup').hide();
 			});
 			
 			// Shopping Cart Functionality
@@ -521,19 +522,47 @@ $(id).bind($.jPlayer.event.play, function() { // Bind an event handler to the in
 
 <script type="text/javascript"> 
 
+var g_myPlayList = [
+    <?=$musicList;?>
+];
+
+
 function clickSongBuy(i)
 {
-    var id = '#song_buy_popup_' + i;
-    $(id).fadeIn();
+    var id = '#song_buy_icon_' + i;
+    var pos = $(id).offset();
+    var top = pos.top - 38;
+    var left = pos.left;
+    
+    var song = g_myPlayList[i];
+    if( song.itunes )
+    {
+        $('#song_buy_popup_itunes').show();
+        $('#song_buy_popup_itunes').attr('href',song.itunes);
+    }
+    else
+    {
+        $('#song_buy_popup_itunes').hide();
+    }
+    if( song.amazon )
+    {
+        $('#song_buy_popup_amazon').show();
+        $('#song_buy_popup_amazon').attr('href',song.amazon);
+    }
+    else
+    {
+        $('#song_buy_popup_amazon').hide();
+    }
+    
+    $('#song_buy_popup').css('top',top);
+    $('#song_buy_popup').css('left',left);
+    $('#song_buy_popup').show();
 }
 
 $(document).ready(function(){
 
 	var playItem = 0;
  
-	var myPlayList = [
-		<?=$musicList;?>
-	];
  
 	// Local copy of jQuery selectors, for performance.
 	var jpPlayTime = $("#jplayer_play_time");
@@ -613,10 +642,10 @@ $(document).ready(function(){
  
 	function displayPlayList() {
 		$("#jplayer_playlist ul").empty();
-		for( var i in myPlayList ) 
+		for( var i in g_myPlayList ) 
         {
-            var song = myPlayList[i];
-			var listItem = (i == myPlayList.length-1) ? "<li class='jplayer_playlist_item_last'>" : "<li>";
+            var song = g_myPlayList[i];
+			var listItem = (i == g_myPlayList.length-1) ? "<li class='jplayer_playlist_item_last'>" : "<li>";
 			listItem += song.plus;
             listItem += "<a href='#' id='jplayer_playlist_item_" + i + "' tabindex='1'>";
             listItem += "<span class='thisisthetrackname'>" + song.name + "</span>";
@@ -633,14 +662,8 @@ $(document).ready(function(){
             }
             else if( song.amazon || song.itunes )
             {
-                listItem += "<span class='song_buy_icon' onclick='clickSongBuy(" + i + ");'>";
+                listItem += "<span id='song_buy_icon_" + i + "' class='song_buy_icon' onclick='clickSongBuy(" + i + ");'>";
                 listItem += "<img src='/images/buy_icon.png'/>";
-                listItem += "<div id='song_buy_popup_" + i + "'class='song_buy_popup'>";
-                if( song.amazon )
-                    listItem += "<a href='" + song.amazon + "' class='store_icon amazon'/>";
-                if( song.itunes )
-                    listItem += "<a href='" + song.itunes + "' class='store_icon itunes'/>";
-                listItem += "</div>";
                 listItem += "</span>";
             }
 			listItem += "<div class='clear'></div>";
@@ -675,8 +698,8 @@ $(document).ready(function(){
 		
 		playItem = index;
         var media = {
-            mp3: myPlayList[playItem].mp3,
-            oga: myPlayList[playItem].mp3.replace(".mp3",".ogg")
+            mp3: g_myPlayList[playItem].mp3,
+            oga: g_myPlayList[playItem].mp3.replace(".mp3",".ogg")
         };
 		$("#jquery_jplayer").jPlayer("setMedia", media);
 		
@@ -814,12 +837,12 @@ $(document).ready(function(){
 	}
  
 	function playListNext() {
-		var index = (playItem+1 < myPlayList.length) ? playItem+1 : 0;
+		var index = (playItem+1 < g_myPlayList.length) ? playItem+1 : 0;
 		playListChange( index );
 	}
  
 	function playListPrev() {
-		var index = (playItem-1 >= 0) ? playItem-1 : myPlayList.length-1;
+		var index = (playItem-1 >= 0) ? playItem-1 : g_myPlayList.length-1;
 		playListChange( index );
 	}
 	
@@ -1218,6 +1241,11 @@ $(document).ready(function(){
 	});
 })(jQuery);
 </script>
+
+    <div id='song_buy_popup'>
+        <a id='song_buy_popup_amazon' href='#' class='store_icon amazon'/>
+        <a id='song_buy_popup_itunes' href='#' class='store_icon itunes'/>
+    </div>
 
     <!-- SIGNUP FORM -->
     <div id="signup_dialog" class="window">
