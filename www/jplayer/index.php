@@ -643,7 +643,7 @@ $(document).ready(function(){
  
 	function displayPlayList() {
 		$("#jplayer_playlist ul").empty();
-		for( var i in g_myPlayList ) 
+		for( var i = 0 ; i < g_myPlayList.length ; ++i ) 
         {
             var song = g_myPlayList[i];
 			var listItem = (i == g_myPlayList.length-1) ? "<li class='jplayer_playlist_item_last'>" : "<li>";
@@ -1235,8 +1235,8 @@ $(document).ready(function(){
 			$("#playlist").simplyScroll({
 				className: 'vert',
 				horizontal: false,
-				frameRate: 20,
-				speed: 20
+                frameRate: 30,
+				speed: 5
 			});		
 		}, 500);
 	});

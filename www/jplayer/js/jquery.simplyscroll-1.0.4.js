@@ -151,13 +151,14 @@ $.simplyScroll.fn.extend({
 		this.intervalDelay = Math.floor(1000 / this.o.frameRate);
 		
 		//ensure that speed is divisible by item width
+        /*
 		while (this.itemMax % this.o.speed !== 0) {
 			this.o.speed--;
 			if (this.o.speed===0) {
 				this.o.speed=1; break;	
 			}
 		}
-		
+		*/
 		var self = this;
 		this.trigger = null;
 		this.funcMoveBack = function() { self.trigger=this;self.moveBack(); };
