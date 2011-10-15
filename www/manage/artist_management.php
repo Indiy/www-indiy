@@ -69,12 +69,14 @@ include_once('header.php');
     <div id="admin">
     <h2><?php echo $record_artistDetail['artist']; ?></h2>
     
+    <!--
     <div class="search">
     <fieldset>
     <input name="" value="SEARCH" type="text" class="input" />
     <input name="" type="image" src="images/icon_search.gif" class="button">
     </fieldset>
     </div>
+    -->
     
     <div id="adminblock">
     	<div class="column1">
