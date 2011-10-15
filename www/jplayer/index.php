@@ -580,8 +580,8 @@ $(document).ready(function(){
 			displayPlayList();
 			playListInit(true); // Parameter is a boolean for autoplay.
 		},
-        //solution: "html, flash",
-        supplied: "mp3",
+        solution: "html, flash",
+        supplied: "mp3, oga",
         swfPath: "/js/Jplayer2.swf",
         verticalVolume: true,
         wmode: "window"
