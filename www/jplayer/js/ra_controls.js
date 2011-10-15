@@ -33,14 +33,14 @@ this.lastFind="";
 this.lastEnter=null;
 
 this.maxResults=7;
-this.artistLogoFolder="http://myartistdna.fm/artists/images/";
-this.songImagesFolder="http://myartistdna.fm/artists/images/";
-this.mediaImagesFolder="http://myartistdna.fm/artists/images/";
-this.url_suffix=".myartistdna.fm";
+this.artistLogoFolder="/artists/images/";
+this.songImagesFolder="/artists/images/";
+this.mediaImagesFolder="/artists/images/";
+this.url_suffix=".myartistdna.com";
 
-this.artistFormat="<img src=\'{artist_logo}\' class=\'"+this.class_search_thumbnail+"\' /><div class=\'"+this.class_search_text+"\'><div class='heading'>Artist:</div> {artist_name}<br />{artist_site}</div>";
-this.songFormat="<img src=\'{song_image}\' class=\'"+this.class_search_thumbnail+"\' /><div class=\'"+this.class_search_text+"\'><div class='heading'>Artist:</div> {artist_name}<br /><div class='heading'>Song:</div> {song_name}</div>";
-this.mediaFormat="<img src=\'{media_image}\' class=\'"+this.class_search_thumbnail+"\' /><div class=\'"+this.class_search_text+"\'><div class='heading'>Artist:</div> {artist_name}<br /><div class='heading'>Album:</div> {media_name}</div>";
+this.artistFormat="<img src='/timthumb.php?w=55&h=55&src={artist_logo}' class=\'"+this.class_search_thumbnail+"\' /><div class=\'"+this.class_search_text+"\'><div class='heading'>Artist:</div> {artist_name}<br />{artist_site}</div>";
+this.songFormat="<img src=\'/timthumb.php?w=55&h=55&src={song_image}\' class=\'"+this.class_search_thumbnail+"\' /><div class=\'"+this.class_search_text+"\'><div class='heading'>Artist:</div> {artist_name}<br /><div class='heading'>Song:</div> {song_name}</div>";
+this.mediaFormat="<img src=\'/timthumb.php?w=55&h=55&src={media_image}\' class=\'"+this.class_search_thumbnail+"\' /><div class=\'"+this.class_search_text+"\'><div class='heading'>Artist:</div> {artist_name}<br /><div class='heading'>Album:</div> {media_name}</div>";
 
 this.listItems_ST="";
 this.listWords_ST="";
