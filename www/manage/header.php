@@ -55,18 +55,34 @@ $(document).ready(function(){
     <h1><a href="#"><img src="images/MYARTISTDNA.png" alt="MYARTISTDNA"></a></h1>
 	<nav>
     <ul>
-        <li><a class="active" href="dashboard.php">DASHBOARD</a></li>
         <?php 
             echo $_SESSION['sess_userType'];
         if( $_SESSION['sess_userType'] == 2 ) 
         {
+            echo '<li><a class="active" href="dashboard.php">DASHBOARD</a></li>';
             echo '<li><a href="#">ADD ARTIST</a></li>';
             echo '<li><a href="#">ADD LABEL</a></li>';
             echo '<li class="nodivider"><a href="dashboard.php">BACK TO MAIN</a></li>';
          }
          else
          {
-             echo "<li class='nodivider'><a href='/manage/artist_management.php?userId=".$_SESSION['sess_userId']."'>VIEW MY PROFILE</a></li>";
+             $host_explode = explode(".", $_SERVER["HTTP_HOST"]);
+             if( $host_explode[0] == $_SESSION['sess_userURL'] )
+             {
+                 $artist_home_host = $_SERVER["HTTP_HOST"];
+             }
+             else if( $host_explode[0] == 'www' )
+             {
+                 $artist_home_host = $_SESSION['sess_userURL'] . '.' . implode(".",array_slice($host_explode,1));
+             }
+             else
+             {
+                 $artist_home_host = $_SESSION['sess_userURL'] . $_SERVER["HTTP_HOST"];
+             }
+             echo "<li class='active'><a href='/manage/artist_management.php?userId=".$_SESSION['sess_userId']."'>DASHBOARD</a></li>";
+             echo "<li class='nodivider'>";
+             echo "<a href='http://$artist_home_host'>VIEW MY SITE</a>";
+             echo "</li>";
          }
          ?>
     </ul>

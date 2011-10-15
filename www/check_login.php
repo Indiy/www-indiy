@@ -27,6 +27,7 @@
             $_SESSION['sess_userUsername'] = $row['username'];
             $_SESSION['sess_userEmail'] =  $row['email'];
             $_SESSION['sess_userType'] = $row['type'];
+			$_SESSION['sess_userURL'] = $row['url'];
             
             // Set cookie to expire in two months
             $inTwoMonths = 60 * 60 * 24 * 60 + time();
