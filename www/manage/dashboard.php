@@ -71,14 +71,15 @@
 <section id="wrapper">
 <section id="content">
 	<section id="adminlist">
+        <!--
         <div class="search">
         <fieldset>
 	        <input name="" value="search" type="text" class="input" />
 		    <input name="" type="image" src="images/icon_search.gif" class="button">
         </fieldset>
         </div>
-        
-        <h2>Def jam records</h2>
+        <h2>&nbsp;</h2>
+        -->
 		<?php
 		if($_SESSION[me]==""):
 		?>

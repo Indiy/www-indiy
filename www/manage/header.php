@@ -79,7 +79,7 @@ $(document).ready(function(){
              {
                  $artist_home_host = $_SESSION['sess_userURL'] . $_SERVER["HTTP_HOST"];
              }
-             echo "<li class='active'><a href='/manage/artist_management.php?userId=".$_SESSION['sess_userId']."'>DASHBOARD</a></li>";
+             //echo "<li class='active'><a href='/manage/artist_management.php?userId=".$_SESSION['sess_userId']."'>DASHBOARD</a></li>";
              echo "<li class='nodivider'>";
              echo "<a href='http://$artist_home_host'>VIEW MY SITE</a>";
              echo "</li>";
