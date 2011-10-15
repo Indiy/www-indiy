@@ -30,7 +30,8 @@ if(isset($_POST['submitted']))
 			$_SESSION['sess_userId'] =	$find_records['id'];		
 			$_SESSION['sess_userName'] = $find_records['name'];
 			$_SESSION['sess_userUsername'] = $find_records['username'];
-			$_SESSION['sess_userEmail'] =  $find_records['email'];		
+			$_SESSION['sess_userEmail'] = $find_records['email'];
+			$_SESSION['sess_userType'] = $find_records['type'];
 			
 			echo "<script type='text/javascript'>window.location='dashboard.php';  </script>'";			
 			exit(); 
