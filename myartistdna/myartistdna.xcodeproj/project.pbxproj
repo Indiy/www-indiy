@@ -1139,6 +1139,7 @@
 		2DF474141440B77F005538C7 /* tour.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = tour.php; sourceTree = "<group>"; };
 		2DF474151440B77F005538C7 /* working.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = working.php; sourceTree = "<group>"; };
 		2DF4741A1440CFC6005538C7 /* jquery.mCustomScrollbar.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = jquery.mCustomScrollbar.css; sourceTree = "<group>"; };
+		2DF474221449FF1E005538C7 /* footer2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer2.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -1178,6 +1179,7 @@
 				2DF470591440B77F005538C7 /* fashion.php */,
 				2DF4705A1440B77F005538C7 /* favicon.ico */,
 				2DF4705B1440B77F005538C7 /* footer.php */,
+				2DF474221449FF1E005538C7 /* footer2.php */,
 				2DF4705C1440B77F005538C7 /* header.php */,
 				2DF4705D1440B77F005538C7 /* home.php */,
 				2DF471C71440B77F005538C7 /* index.php */,

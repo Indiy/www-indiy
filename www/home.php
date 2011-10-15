@@ -98,5 +98,5 @@
 <!-- wrapper -->
 
 <?php
-include "footer.php";
+include "footer2.php";
 ?>
