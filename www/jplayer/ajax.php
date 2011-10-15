@@ -36,28 +36,25 @@
 	*/
 		$name = $_REQUEST["name"];
 		$email = $_REQUEST["email"];
-		$phone = $_REQUEST["phone"];
 		$comments = $_REQUEST["comments"];	
 	
-		$to = $_REQUEST["from"];
-		$subject = "{$siteName} Contact Form Submission";
-		$message = "
-NAME: {$name}
-
-EMAIL: {$email}
-
-PHONE: {$phone}
-
-MESSAGE: {$comments}		
-		
-		";
-		$from = $email;
-		$headers = "From:" . $from;
-		mail($to,$subject,$message,$headers);	
-		
-		$status = "Success! Your message was delivered.";
-		echo $status;
-		
+        $artist_id = $_REQUEST["artist_id"];
+        
+        $artist = mf( mq("SELECT * FROM `[p]musicplayer` WHERE `id`='$artist_id'") );
+		$to = $artist['email'];
+        if( $to )
+        {
+            $subject = "Contact Form Submission";
+            $message = "NAME: {$name}\n\nEMAIL: {$email}\n\nMESSAGE: {$comments}\n";
+            $from = "no-reply@myartistdna.com";
+            $headers = "From:" . $from;
+            mail($to,$subject,$message,$headers);
+            echo "Success! Your message was delivered.";
+        }
+        else
+        {
+            echo "Bad to address!";
+        }
 	}
 	
 	if ($_REQUEST["newsletter"] != "") {

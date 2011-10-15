@@ -450,34 +450,6 @@ if ($browser == true || $_GET["debug"] == "true"){
                 $('#logo').toggleClass('openlogo');
 			});	
 			
-			$(".submitform").click(function(event){
-			
-				var loading = "Message pending...";
-				$(".notify").slideToggle();
-				$(".notify").html(loading);
-				
-				// Grab the current data
-				var from = "<?=$artist_email;?>";
-				var pname = document.getElementById('name').value;
-				var pemail = document.getElementById('email').value;
-				var pphone = document.getElementById('phone').value;
-				var pcomments = document.getElementById('comments').value;
-				var submit = "&form=send&from=" + from + "&name=" + pname + "&email=" + pemail + "&phone=" + pphone + "&comments=" + pcomments;
-				
-				//submit the data for processing
-				$.post("jplayer/ajax.php", submit, function(response) {
-					$(".notify").html(response);
-					setTimeout('$(".notify").slideToggle()', 3000);	
-					document.getElementById('name').value = "Name...";
-					document.getElementById('email').value = "Email...";
-					document.getElementById('phone').value = "Phone...";
-					document.getElementById('comments').value = "Message...";
-				});
-				
-				return false;
-				
-			});
-			
 			$(".submitNewsletter").click(function(event){
 			
 				var loader = "Message pending...";
@@ -485,10 +457,10 @@ if ($browser == true || $_GET["debug"] == "true"){
 				$("#successMessage").html(loader);
 				
 				// Grab the current data
-				var eartist = "<?=$artist_id;?>";
-				var ename = document.getElementById('emailName').value;
-				var eemail = document.getElementById('emailEmail').value;
-				var submited = "&newsletter=true&artist=" + eartist + "&name=" + ename + "&email=" + eemail;
+				var artist = "<?=$artist_id;?>";
+				var name = $('#emailName').val();
+				var email = $('#emailEmail').val();
+				var submited = "&newsletter=true&artist=" + artist + "&name=" + name + "&email=" + email;
 				
 				//submit the data for processing
 				$.post("jplayer/ajax.php", submited, function(repo) {
@@ -563,6 +535,23 @@ function clickSongBuy(i)
     $('#song_buy_popup').css('top',top);
     $('#song_buy_popup').css('left',left);
     $('#song_buy_popup').show();
+}
+
+function sendContactForm()
+{
+    $('#contact_table').hide();
+    $('#contact_thanks').show();
+    
+    // Grab the current data
+    var artist_id = "<?=$artist_id;?>";
+    var name = $('#contact_name').val();
+    var email = $('#contact_email').val();
+    var phone = $('#contact_phone').val();
+    var comments = $('#contact_comments').val();
+    var submit = "&form=send&artist_id=" + artist_id + "&name=" + name + "&email=" + email + "&phone=" + phone + "&comments=" + comments;
+    
+    //submit the data for processing
+    $.post("jplayer/ajax.php", submit, function(response) { });
 }
 
 $(document).ready(function(){
@@ -1088,36 +1077,29 @@ $(document).ready(function(){
 				
 				<div class="left">
 					<h1>CONTACT <span class="slashes">//</span> <?=$artist_name;?></h1>
-					
-					<table>
+					<table id="contact_table">
 						<tr>
 							<td><span class="red">*</span> Name:</td>
-							<td><input type="text" value="Name..." name="name" id="name" onfocus="clickclear(this, 'Name...')" onblur="clickrecall(this, 'Name...')" /></td>
+							<td><input type="text" value="Name..." name="name" id="contact_name" onfocus="clickclear(this, 'Name...')" onblur="clickrecall(this, 'Name...')" /></td>
 						</tr>
 						<tr>
 							<td><span class="red">*</span> E-Mail:</td>
-							<td><input type="text" value="Email..." name="email" id="email" onfocus="clickclear(this, 'Email...')" onblur="clickrecall(this, 'Email...')" /></td>
+							<td><input type="text" value="Email..." name="email" id="contact_email" onfocus="clickclear(this, 'Email...')" onblur="clickrecall(this, 'Email...')" /></td>
 						</tr>
-						
 						<tr>
 							<td class="message"><span class="red">*</span> Message:</td>
-							<td><textarea name="comments" class="textarea" id="comments" onfocus="clickclear(this, 'Message...')" onblur="clickrecall(this, 'Message...')"></textarea></td>
-						</tr>
-						<tr>
-							<td>&nbsp;</td>
-							<td><br />*CAPTCHA Goes Here*<br /><br /></td>
+							<td><textarea name="comments" class="textarea" id="contact_comments"></textarea></td>
 						</tr>
 						<tr>
 							<td><span class="red">*</span> required</td>
-							<td><div class="clearform">clear form X</div><div class="submitform">submit</div></td>
+							<td>
+                                <button id="contact_submit" onclick="sendContactForm();">submit</button>
+                                <button id="contact_clear" onclick="clearContactForm();">clear form</button>
+                            </td>
 						</tr>
 					</table>
-			
+                    <div id="contact_thanks" style="height: 180px; display: none;">Thank you for your message.</div>
 				</div>
-
-				
-
-
 				<div class="box-footer"></div>
 			</div>
 			<? } ?>

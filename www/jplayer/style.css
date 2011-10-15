@@ -79,8 +79,13 @@ button::-moz-focus-inner {  border: 0;}
 .box-header, .box-footer { position:absolute; left:0; width:100%; }
 .box-header { background:url('images/box/header.png') no-repeat; top:-8px; height:8px; }
 .box-footer { background:url('images/box/footer.png') no-repeat; bottom:-14px; height:14px; }
-.contact .submitform { border:2px solid #292929; background-color:#000; font-size:11px; text-align:center; width:100px; padding:5px 0; -moz-border-radius: 5px; border-radius: 5px; }
-.contact .clearform { float:right; text-decoration:underline; color:#fff; font-weight:bold; font-size:11px; }
+#contact_submit { border:2px solid #292929; background-color:#000; font-size:11px; text-align:center; width:100px; padding:5px 0; 
+    -moz-border-radius: 5px; border-radius: 5px; color: white; cursor: pointer;}
+#contact_submit:hover { background: #ff0000; }
+
+#contact_clear { float:right; text-decoration:underline; color:#fff; font-weight:bold; font-size:11px; 
+    cursor: pointer; background: transparent; border: 0; display: none; }
+
 .contact .left h1 { margin-left:80px; }
 .contact .right { float:right; border-left:1px solid #3c3c3c; padding-left:20px; width:195px; }
 .contact h1, .contact h2, .contact h3 { text-transform:none; margin-bottom:5px; font-weight:bold; color:#fff; letter-spacing:0.5px; }
@@ -293,8 +298,6 @@ a.submitNewsletter:hover { background: #167a27; }
 .form input { padding: 3px; background: #fff; color: #333; width: 300px; font-family: Helvetica, Arial, sans-serif; }
 .form .textarea { padding: 3px; background: #fff; color: #333; width: 300px; height: 75px; font-family: Helvetica, Arial, sans-serif; }
 .form .clear { height: 10px; }
-.form .submitform { background: #990000; color: #fff; font-weight: bold; padding: 10px 20px; cursor: pointer; width: 75px; }
-.form .submitform:hover { background: #ff0000; }
 
 
 
