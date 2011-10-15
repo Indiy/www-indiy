@@ -9,21 +9,24 @@ function send_ajax_login(o)
 	 $.ajax({
 	   type: "POST",
 	   url: "check_login.php?username="+username+"&password="+password,
-	   dataType: "html",
-	   success: function(msg){			   	   
-		if(msg==0)	{	
-			$("#validate-login").html("");
-			$("#validate-login").html("<span class='ui-error'>Wrong username or password. Please try again.</span>");					 
-			 return false;
-		}else if(msg==1){			
-			window.location.href='index.php/?p=home';	
-			return true;
-		 }
-		 else{
- 			$("#validate-login").html("");
-			 $("#validate-login").html("<span class='ui-error'>Please enter the username and password.</span>");					 
-			 return false;
-		 }
+	   dataType: "json",
+	   success: function(data){
+            var result = data['result'];
+            if( result == 0 )
+            {	
+                $("#validate-login").html("<span class='ui-error'>Wrong username or password. Please try again.</span>");					 
+                 return false;
+            }
+            else if( result == 1 )
+            {
+                window.location.href=data['url'];	
+                return true;
+            }
+            else
+            {			
+                $("#validate-login").html("<span class='ui-error'>Please enter the username and password.</span>");					 
+                return false;
+            }
 	   }
 	  
 	 });
@@ -211,7 +214,7 @@ background:#f6f6f6;
     <fieldset>
     <ul>
     <li><label>Email Address</label> <input name="username" type="text" class="input" value="" /></li>
-    <li><label>Password</label> <input name="password" type="text" class="input" value="" /></li>
+    <li><label>Password</label> <input name="password" type="password" class="input" value="" /></li>
     </ul>
     <p class="password"><a href="http://www.myartistdna.fm?p=index&forgot=true">Forgot your password?</a></p>
     <div class="button"><a href="#-1" onclick="send_ajax_login('validate-login');">LOGIN</a></div>
