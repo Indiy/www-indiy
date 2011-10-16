@@ -2,6 +2,8 @@
 include ('header.php');
 ?>
 
+<script src="js/tour.js" type="text/javascript"></script> 
+
 <section id="wrapper">
 <section id="content">
 
@@ -30,15 +32,22 @@ include ('header.php');
 		<div class="info">
 		<div class="contact">
 		<h3>Contact Support Team</h3>
-		<fieldset>
-		<ul>
-		<li class="email"><label>Name</label> <input name="" type="text"  class="input" value="John Doe" /></li>
-		<li class="email last"><label>Email Address</label> <input name="" type="text"  class="input" value="email.address@domain.com" /></li>
-		<li><label>Subject</label> <input name="" type="text"  class="input" /></li>
-		<li><label>Description</label> <textarea name="" cols="" rows="" class="textarea"></textarea></li>
-		</ul>
-		<input name="" type="submit" class="button_submit" value="SUBMIT"> 
-		</fieldset>
+        <div id="contact_form">
+            <fieldset>
+            <ul>
+            <li class="email"><label>Name</label> <input id="contact_name" type="text"  class="input" value="" /></li>
+            <li class="email last"><label>Email Address</label> <input id="contact_email" type="text"  class="input" value="" /></li>
+            <li><label>Subject</label> <input id="contact_subject" type="text"  class="input" /></li>
+            <li><label>Description</label> <textarea id="contact_body" cols="" rows="" class="textarea"></textarea></li>
+            </ul>
+            <button class="button_submit" onclick="sendContactForm();"> SUBMIT</button> 
+            </fieldset>
+        </div>
+        <div id="contact_success" style="display:none;">
+        <br/>Thank you for your submission!<br/>
+        <br/>
+        Our support team will respond to you as soon as they can.<br/>
+        </div>
 		</div>
 		
 		<div class="checkout">
