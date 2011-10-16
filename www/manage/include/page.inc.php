@@ -222,13 +222,18 @@
 			global $records_per_pages;
 			echo '<select class="droplist" onChange="window.location=\'' . $this->page_name.'?page=0'.$this->qry_str.$link_para . '&rec_per_page=\' + this.options[this.selectedIndex].value" >';
 
-		  for($q=2; $q<=50; $q=$q+2)
-		  {
-			  ?>
- 			  <option value="<?php echo $q ?>" <?php if($_REQUEST[rec_per_page]==$q) echo 'selected'?> >Show <?php echo $q ?></option> 
-			  <?
-		  }
-		  echo '</select>';
+            $selected = '';
+            if( $_REQUEST[rec_per_page] == '20' )
+                $selected = 'selected';
+            echo "<option value='20' $selected>Show 20</option>";
+
+            $selected = '';
+            if( $_REQUEST[rec_per_page] == '999' )
+                $selected = 'selected';
+
+            echo "<option value='999' $selected>Show All</option>";
+            
+            echo '</select>';
      }
 
 
