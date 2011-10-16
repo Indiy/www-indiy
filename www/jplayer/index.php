@@ -1053,6 +1053,7 @@ $(document).ready(function(){
 				
 				
 				<div class="right">
+                <!--
 					<h1><span class="slashes">//</span> Management</h1>
 					<h2>Coming Soon</h2>
 					<ul>
@@ -1072,7 +1073,7 @@ $(document).ready(function(){
 						<li><span>fx:</span></li>
 						<li><span>email:</span></li>
 					</ul>
-					
+					-->
 				</div>
 				
 				<div class="left">
