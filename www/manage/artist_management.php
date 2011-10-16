@@ -84,7 +84,7 @@ include_once('header.php');
         
         <h6>Music Player</h6>
         <ul>
-        <li><a href="#">Analytics</a></li>
+        <li><a href="stats.php">Analytics</a></li>
         <li><a href="#">Newsletter</a></li>
         <li><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Music</a></li>
         <li><a href="addvideo.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Video</a></li>

@@ -56,7 +56,6 @@ $(document).ready(function(){
 	<nav>
     <ul>
         <?php 
-            echo $_SESSION['sess_userType'];
         if( $_SESSION['sess_userType'] == 2 ) 
         {
             echo '<li><a class="active" href="dashboard.php">DASHBOARD</a></li>';

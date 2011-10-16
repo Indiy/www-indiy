@@ -1374,6 +1374,7 @@
 		2DF47515144A2D84005538C7 /* play_music.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = play_music.php; sourceTree = "<group>"; };
 		2DF47516144A2D84005538C7 /* register.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = register.php; sourceTree = "<group>"; };
 		2DF47517144A2D84005538C7 /* timthumb.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = timthumb.php; sourceTree = "<group>"; };
+		2DF47518144A9765005538C7 /* stats.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = stats.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -3156,6 +3157,7 @@
 				2DF47514144A2D84005538C7 /* logout.php */,
 				2DF47515144A2D84005538C7 /* play_music.php */,
 				2DF47516144A2D84005538C7 /* register.php */,
+				2DF47518144A9765005538C7 /* stats.php */,
 				2DF47517144A2D84005538C7 /* timthumb.php */,
 			);
 			path = manage;
