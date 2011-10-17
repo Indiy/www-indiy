@@ -46,6 +46,9 @@ while ($list = mf($loadPlayList)) {
 }
 	$xml .= '</VIDLIBDATA>';
 
+$xml = str_replace("'","\'",$xml);
+$xml = str_replace("\\\\'","\'",$xml);
+
 
 // run query and get play list
 //$jsStr .= '<script>';
