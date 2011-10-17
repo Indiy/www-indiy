@@ -10,7 +10,7 @@
 		}
 	}
 
-	$id = $_SESSION["me"];
+	$id = $_REQUEST["userId"];
 	
 	// Player views
 	$stats_player = mf(mq("select `views` from `[p]musicplayer` where `id`='{$id}'"));
