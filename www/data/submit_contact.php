@@ -5,15 +5,15 @@
 
 
     $post_body = file_get_contents('php://input');
-    
-    $data = json_decode($post_body);
+    $data = json_decode($post_body,TRUE);
     
     $subject = 'Contact Form Request: ' . $data['subject'];
     $name = $data['name'];
     $email = $data['email'];
     $body = $data['body'];
     
-    $to = 'info@myartistdna.com';
+    $to = 'jim@blueskylabs.com';
+    //$to = 'info@myartistdna.com';
 
     $message = "NAME: $name\n\nEMAIL: $email\n\nMESSAGE: $body\n";
     $from = "no-reply@myartistdna.com";

@@ -11,13 +11,13 @@ function sendContactForm(image)
     var subject = $('#contact_subject').val();
     var body = $('#contact_body').val();
     
-    var postData = {
+    var d = {
         "name": name,
         "email": email,
         "subject": subject,
         "body": body
     };
-
+    var postData = JSON.stringify(d);
     jQuery.ajax(
     {
         type: 'POST',
