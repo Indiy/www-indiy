@@ -28,7 +28,7 @@ if (!empty($_GET['oauth_verifier']) && !empty($_SESSION['oauth_token']) && !empt
 		$auto_incremented_id = '';
 		$music_str = '';
 		if(isset($_SESSION['me'])){
-			$auto_incremented_id = $_SESSION['me'];
+			//$auto_incremented_id = $_SESSION['me'];
 		}
         $userdata = $user->checkUser($uid, 'twitter', $username,$user_info,$music_str,$auto_incremented_id);
 		
@@ -41,13 +41,21 @@ if (!empty($_GET['oauth_verifier']) && !empty($_SESSION['oauth_token']) && !empt
 			// Set the user cookie
 			setcookie($cookievar, $userdata['id'], $inTwoMonths);
 
-            $_SESSION['id'] = $userdata['id'];
-			$_SESSION['oauth_id'] = $uid;
-            $_SESSION['username'] = $userdata['username'];
-            $_SESSION['oauth_provider'] = $userdata['oauth_provider'];
-            //header("Location: /index.php?p=addartist&id=".$userdata['id']);
-			//header("Location: /index.php?p=addartist&id=$uid");
-			header("Location: ../manage/dashboard.php");
+            $myid = $userdata['id'];
+			$_SESSION['me'] = $userdata['id'];
+			$_SESSION['sess_userId'] =	$userdata['id'];		
+			$_SESSION['sess_userName'] = $userdata['artist'];
+			$_SESSION['sess_userUsername'] = $userdata['userName'];
+            $_SESSION['sess_userEmail'] =  $userdata['email'];
+            $_SESSION['sess_userType'] = $userdata['type'];
+			$_SESSION['sess_userURL'] = $userdata['url'];
+			header("Location: http://www.myartistdna.com/manage/artist_management.php?userId=$myid&session_id=". session_id());
+            /*
+            print "<html><body><pre>\n";
+            print_r($user_info);
+            print_r($userdata);
+            print_r($_SESSION);
+            */
         }
     }
 } else {

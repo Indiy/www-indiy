@@ -683,7 +683,7 @@ input.searchText { /*position:relative;*/ top:-50px; width:190px; height:23px; b
 input.searchText:focus { border:none;}
 span.hilite { font-weight:bold; font-style:italic;}
 
-div.searchList {display:none; width:220px; background-color:#DDDEE0; text-align:left; border:solid 1px #000;}
+div.searchList { position: absolute; display:none; width:220px; background-color:#DDDEE0; text-align:left; border:solid 1px #000; z-index: 9000;}
 
 div.searchListItem {background-color:#DDDEE0; border-top-style:solid; border-bottom-style:solid;  border-top-width:1px; border-bottom-width:1px; border-top-color:#fff;  border-bottom-color:#fff; font-family:"Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif; text-align:left;  }
 div.searchListItem:hover {background-color:#767676; border-top-style:solid; border-bottom-style:solid;  border-top-width:1px; border-bottom-width:1px; border-top-color:#000099;  border-bottom-color:#000099; color:#fff}

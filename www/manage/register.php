@@ -38,6 +38,7 @@
 			if (is_uploaded_file($_FILES["logo"]["tmp_name"])) {
 				$artist_logo = $artistid."_".strtolower(rand(11111,99999)."_".basename(cleanup($_FILES["logo"]["name"])));
 				@move_uploaded_file($_FILES['logo']['tmp_name'], '../artists/images/' . $artist_logo);
+                $logo = $artist_logo;
 			} else {
 				if ($old_logo != $artist_logo) {
 					$logo = $old_logo;
@@ -54,8 +55,8 @@
 		}
 		
 		
-		$tables = "artist|email|gender|languages|location|music_likes|url|website|twitter|facebook|appid|password|IsArtist";
-		$values = "{$artist}|{$email}|{$gender}|{$languages}|{$location}|{$music_likes}|{$url}|{$website}|{$twitter}|{$facebook}|{$appid}|{$password}|{$IsArtist}";
+		$tables = "artist|email|gender|languages|location|music_likes|url|website|twitter|facebook|appid|password|IsArtist|logo";
+		$values = "{$artist}|{$email}|{$gender}|{$languages}|{$location}|{$music_likes}|{$url}|{$website}|{$twitter}|{$facebook}|{$appid}|{$password}|{$IsArtist}|{$logo}";
 		
 		if ($artistid != "") {
 			update($database,$tables,$values,"id",$artistid);

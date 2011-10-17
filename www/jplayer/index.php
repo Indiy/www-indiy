@@ -1370,7 +1370,7 @@ $(document).ready(function(){
         </ul>
         </div>
         </article>
-        
+        <!--
         <div class="or">OR</div>
         <span class="error" style="display:none">Please fill up all required fields.</span>
         <span class="success" style="display:none">Registration Successfull.</span>
@@ -1390,7 +1390,8 @@ $(document).ready(function(){
             </fieldset>
         </form>
         </article>
-        </div> 
+    --> 
+        </div>
     </div><!-- pop up -->
     </div>
     <!-- END SIGNUP FORM -->

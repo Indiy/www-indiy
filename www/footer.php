@@ -175,7 +175,7 @@ background:#f6f6f6;
     </ul>
     </div>
     </article>
-    
+    <!--
     <div class="or">OR</div>
     <span class="error" style="display:none">Please fill up all required fields.</span>
 	<span class="success" style="display:none">Registration Successfull.</span>
@@ -195,6 +195,7 @@ background:#f6f6f6;
 		</fieldset>
     </form>
     </article>
+    -->
     </div> 
 </div><!-- pop up -->
 </div>

@@ -97,12 +97,16 @@ if (!empty($session)) {
 
             $_SESSION['username'] = $userdata['userName'];
             $_SESSION['oauth_provider'] = $userdata['oauth_provider'];*/
+
+            $myid = $userdata['id'];
 			$_SESSION['me'] = $userdata['id'];
 			$_SESSION['sess_userId'] =	$userdata['id'];		
 			$_SESSION['sess_userName'] = $userdata['artist'];
 			$_SESSION['sess_userUsername'] = $userdata['userName'];
-            //header("Location: /index.php?p=addartist&id=".$userdata['id']);
-			header("Location: ../manage/dashboard.php");
+            $_SESSION['sess_userEmail'] =  $userdata['email'];
+            $_SESSION['sess_userType'] = $userdata['type'];
+			$_SESSION['sess_userURL'] = $userdata['url'];
+			header("Location: http://www.myartistdna.com/manage/artist_management.php?userId=$myid&session_id=". session_id());
         }
     } else {
         # For testing purposes, if there was an error, let's kill the script
