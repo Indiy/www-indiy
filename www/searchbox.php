@@ -87,8 +87,8 @@ if($_SESSION['SEARCHBOX']==null)
 else
 	$fetch_flags=intval(get_qvalue('ff'));
 
-$link=mysql_connect('localhost','myartist_rasb','ra_searchbox13') or die('open failed='.mysql_error());
-mysql_select_db('myartist_mysql');
+$link=mysql_connect('localhost','madcom_user','MyartistDNA!') or die('open failed='.mysql_error());
+mysql_select_db('madcom_mysql');
 
 $like=get_qvalue('pfx');
 

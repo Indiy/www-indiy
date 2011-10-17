@@ -4,6 +4,7 @@
 	<meta charset="utf-8" />
 	<title>MyArtistDNA - BE HEARD, BE SEEN, BE INDEPENDENT</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    
     <link rel="icon"  href="favicon.ico" />
     <!--[if IE]>
         <script src="js/html5.js"></script>
@@ -30,13 +31,7 @@ echo '<script type="text/javascript" src="js/jquery-latest.pack.js"></script>
     <script language="javascript" src="reg/js/index.js" type="text/javascript"></script>
 	<script language="javascript" src="js/homepage_slideshow.js" type="text/javascript"></script>';
     ?>
-    <script type="text/javascript">
-        $().ready(function() {  
-        $('#accordion-slider').kwicks({  
-            max : 480,
-        });  
-    });
-    </script>
+   <meta name="google-site-verification" content="N_dnBaEcWPdsEUuvqgjeGctNNpzyGXrOvPE6idzArIg" />
 </head>
 
 <body>
