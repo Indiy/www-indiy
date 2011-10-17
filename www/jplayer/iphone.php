@@ -84,6 +84,9 @@
 <script type="text/javascript" src="<?=trueSiteUrl();?>/jplayer/jquery.jplayer.min.js"></script> 
 <script type="text/javascript" src="<?=trueSiteUrl();?>/jplayer/demos.common.js"></script> 
 	<script>
+	
+        var g_totalListens = <?=$total_listens?>;
+	
 		$(document).ready(function(){
 
 			//$('#image').hide();
@@ -292,6 +295,10 @@ $(document).ready(function(){
 					$('.current-track').html(data);
 			});
 			
+            g_totalListens++;
+            //$('#total_listens').text(g_totalListens);
+            updateListens(image);
+			
 			setTimeout(function(){ 
 				$('#loader').hide();
 			}, 1500);
@@ -313,6 +320,18 @@ $(document).ready(function(){
 		playListChange( index );
 	}
 	
+	/* Show & Hide Playlist Button */
+	$(".playlist-visibility").toggle(function(){
+		$(".playlist-visibility .show").show(); $(".playlist-visibility .hide").hide();},
+		function(){
+		$(".playlist-visibility .show").hide(); $(".playlist-visibility .hide").show();}
+	);
+	$(".playlist-visibility .show").click(function(){
+		$('#jplayer_playlist').fadeIn(); });
+	$(".playlist-visibility .hide").click(function(){
+		$('#jplayer_playlist').fadeOut(); });
+
+
 });
 -->
 </script> 
@@ -337,6 +356,9 @@ $(document).ready(function(){
 			<div id="progressbg"></div>
 			<div id="jquery_jplayer"></div> 
 			<div class="top-bg"></div>
+			<div class="listens">
+				<span style='<? if( !$show_listens ) echo "display: none;"; ?>'>Total Listens: </span><span id='current_track_listens'><?=$total_listens?></span>
+			</div>
 			<div id="playlister">
 				<div class="playlist-main"></div>
 				<div class="playlist-bottom"></div>
@@ -374,6 +396,8 @@ $(document).ready(function(){
 								<li></li> 
 							</ul> 
 						</div>
+						<div id="playlistaction"></div>
+						<div id="playlisthide"></div>
 						<div class="clear"><div>
 					</div> 
 				</div>
@@ -400,6 +424,7 @@ $(document).ready(function(){
 					<? if ($artist_website != "") { ?> <a target="_blank" href="http://<?=$artist_website;?>" class="www"><?=$artist_website;?></a> <? } ?>
 					<!--<div class="clear"></div>-->
 				</div>
+				<span class="playlist-visibility"><span class="hide">Hide Playlist</span><span class="show">Show Playlist</span></span>
 			</div>
 <script type="text/javascript">
 (function($) {
@@ -415,6 +440,6 @@ $(document).ready(function(){
 	});
 })(jQuery);
 </script>
-
+TEST
 </body>
 </html>

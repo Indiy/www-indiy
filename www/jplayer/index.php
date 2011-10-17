@@ -68,24 +68,26 @@ if ($browser == true || $_GET["debug"] == "true"){
 		$pagesJava .= '
 			/* '.$page_name.' */
 			$(".a'.$page_id.'").click(function() {
+				$(".dragger_container").fadeOut();
 				$(".comments").fadeOut();
 				$(".contact").fadeOut();
 				$(".store").fadeOut();
 				$(".videos").fadeOut();
 				$(".page").hide();
-				$(".page").html("<div class=\'pageload\'><img src=\''.trueSiteUrl().'/jplayer/images/page-loader.gif\' border=\'0\' /></div>");
+				$(".page .content").html("<div class=\'pageload\'><img src=\''.trueSiteUrl().'/jplayer/images/page-loader.gif\' border=\'0\' /></div>");
 				
 				setTimeout(function(){ $(".page").fadeIn(); $(".aClose").fadeIn(); }, 450);
 				
 				$(".aClose").fadeIn();
 				var body'.$page_id.' = "&artist='.$artist_id.'&page='.$page_id.'";
 				$.post("jplayer/ajax.php", body'.$page_id.', function(data'.$page_id.') {
-					$(".page").html("<div class=\"box-header\"></div>" + data'.$page_id.' + "<div class=\"box-footer\"></div>");
+					$(".page .content").html(data'.$page_id.');
+					setTimeout("mCustomScrollbars();","750");
 				});
 			});
 		'."\n";
 	}
-	
+
 	if ($fan) {
 		$mQuery = "`user`='{$artist_id}'";
 		$downQ = "&user={$artist_id}";
@@ -140,7 +142,7 @@ if ($browser == true || $_GET["debug"] == "true"){
 	
 		$video_id = $video["id"];
 		$video_image = $video["image"];
-		
+        
 		if( !($cv % $videos_per_row) ) { // If it has listed 3 videos (or is the first row), start a new row
 			++$row_counter;
 			if( $row_counter != 1 ) // End previous row, unless it's the first
@@ -206,7 +208,6 @@ if ($browser == true || $_GET["debug"] == "true"){
 <script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
 
 <script src="js/artist_home.js" type="text/javascript"></script>
-<script src="js/artist_home_ui.js" type="test/javascript"></script>
 
 	<script type="text/javascript">
 
@@ -215,6 +216,8 @@ if ($browser == true || $_GET["debug"] == "true"){
 
 		$(document).ready(function(){
 
+			$(".dragger_container").fadeOut();
+			
 			$("div.playlist_video").click(function(event){
 				$(".close_button").fadeIn(300);
 				$("#player_bg").fadeIn(300);
@@ -243,6 +246,7 @@ if ($browser == true || $_GET["debug"] == "true"){
 			
 			/* Close */
 			$('.aClose').click(function() {
+				$(".dragger_container").fadeOut();
 				$('.aClose').fadeOut();
 				$('.comments').fadeOut();
 				$('.contact').fadeOut();
@@ -255,6 +259,7 @@ if ($browser == true || $_GET["debug"] == "true"){
 			
 			/* Comment */
 			$('.aComment').click(function() {
+				$(".dragger_container").fadeOut();
 				$('.videos').fadeOut();
 				$('.page').fadeOut();
 				$('.store').fadeOut();
@@ -267,6 +272,7 @@ if ($browser == true || $_GET["debug"] == "true"){
 			
 			/* Contact */
 			$('.aContact').click(function() {
+				$(".dragger_container").fadeOut();
 				$('.videos').fadeOut();
 				$('.page').fadeOut();
 				$('.store').fadeOut();
@@ -279,6 +285,7 @@ if ($browser == true || $_GET["debug"] == "true"){
 			
 			/* Store */
 			$('.aStore').click(function() {
+				$(".dragger_container").fadeOut();
 				$('.videos').fadeOut();
 				$('.page').fadeOut();
 				$('.comments').fadeOut();
@@ -295,6 +302,7 @@ if ($browser == true || $_GET["debug"] == "true"){
 			
 			/* Videos */
 			$('.aVideos').click(function() {
+				$(".dragger_container").fadeOut();
 				$('.store').fadeOut();
 				$('.page').fadeOut();
 				$('.comments').fadeOut();
@@ -372,6 +380,8 @@ if ($browser == true || $_GET["debug"] == "true"){
 			});
 			
 			$(".socialize .facebook").click(function() {
+				$(".buttons div").removeClass("active");
+				$(this).addClass("active");
 				$(".socialize .body .tab").hide();
 				$(".socialize .body #facebook").show();
 				
@@ -389,6 +399,8 @@ if ($browser == true || $_GET["debug"] == "true"){
 			});
 
 			$(".socialize .twitter").click(function() {
+				$(".buttons div").removeClass("active");
+				$(this).addClass("active");
 				$(".socialize .body .tab").hide();
 				$(".socialize .body #twitter").show();
 				
@@ -406,6 +418,8 @@ if ($browser == true || $_GET["debug"] == "true"){
 			});
 			
 			$(".socialize .email").click(function() {
+				$(".buttons div").removeClass("active");
+				$(this).addClass("active");
 				$(".socialize .body .tab").hide();
 				$(".socialize .body #email").show();
 				
@@ -422,6 +436,25 @@ if ($browser == true || $_GET["debug"] == "true"){
 				
 			});
 			
+			$(".socialize .share").click(function() {
+				$(".buttons div").removeClass("active");
+				$(this).addClass("active");
+				$(".socialize .body .tab").hide();
+				$(".socialize .body #share").show();
+				
+				if( socialize_tab == 'share' ) {
+					if( socialize_minimized )
+						open_socialize();
+					else
+						close_socialize();
+				}
+				else {
+					open_socialize();
+					socialize_tab = 'share';
+				}
+				
+			});
+			
 			function open_socialize() {
 				if( socialize_minimized ) {
 					$(".socialize").animate({ bottom: "0" }, 300);
@@ -430,6 +463,7 @@ if ($browser == true || $_GET["debug"] == "true"){
 			}
 			
 			function close_socialize() {
+				$(".buttons div").removeClass("active");
 				if( !socialize_minimized ) {
 					$(".socialize").animate({ bottom: "-361px" }, 300);
 					socialize_minimized = true;
@@ -449,6 +483,34 @@ if ($browser == true || $_GET["debug"] == "true"){
                 g_logoOpen = !g_logoOpen;
                 $('#logo').toggleClass('openlogo');
 			});	
+			
+			$(".submitform").click(function(event){
+			
+				var loading = "Message pending...";
+				$(".notify").slideToggle();
+				$(".notify").html(loading);
+				
+				// Grab the current data
+				var from = "<?=$artist_email;?>";
+				var pname = document.getElementById('name').value;
+				var pemail = document.getElementById('email').value;
+				var pphone = document.getElementById('phone').value;
+				var pcomments = document.getElementById('comments').value;
+				var submit = "&form=send&from=" + from + "&name=" + pname + "&email=" + pemail + "&phone=" + pphone + "&comments=" + pcomments;
+				
+				//submit the data for processing
+				$.post("jplayer/ajax.php", submit, function(response) {
+					$(".notify").html(response);
+					setTimeout('$(".notify").slideToggle()', 3000);	
+					document.getElementById('name').value = "Name...";
+					document.getElementById('email').value = "Email...";
+					document.getElementById('phone').value = "Phone...";
+					document.getElementById('comments').value = "Message...";
+				});
+				
+				return false;
+				
+			});
 			
 			$(".submitNewsletter").click(function(event){
 			
@@ -850,27 +912,35 @@ $(document).ready(function(){
 				<div class="header">
 					<div class="title"></div>
 					<div class="buttons">
-						<div class="facebook"></div>
-						<div class="twitter"></div>
-						<div class="email"></div>
+						<div class="facebook holder"><div></div></div>
+						<div class="twitter holder"><div></div></div>
+						<div class="email holder"><div></div></div>
+						<div class="share holder"><div></div></div>
 					</div>
 				</div>
 				
 				<div class="body">
 					<div id="email" class="tab">
+						<div class="sub-title">
+							<h1>Mailing List //</h1>
+						</div>
 						<div id="successMessage"></div>
-						<p class="pad">Join our email list. We will never spam and never sell your personal information to anybody.</p>
-						<label>Name</label>
+						<p>If you'd like to keep right up to date with all the latest news, gigs, releases and competitions, then sign up to our mailing list.</p>
+						<p class="small">By clicking on the submit button, you are confirming that you have read and agree with the terms of our <a href="">Privacy Policy</a>.</p>
+						<label><span class="red">*</span> Name:</label>
 						<input type="text" name="name" id="emailName" class="input" />
 						<br /><br /><br />
-						<label>E-Mail</label>
+						<label><span class="red">*</span> E-Mail:</label>
 						<input type="text" name="email" id="emailEmail" class="input" />
-						<br /><br /><br /><br />
-						<a href="#" class="submitNewsletter">Submit</a>
+						<br /><br /><br />
+						<label><span class="red">*</span> Mobile:</label>
+						<input type="text" name="mobile" id="emailMobile" class="input" />
+						<br /><br /><br />
+						<a href="#" class="submitNewsletter">submit</a>
 					</div>
 					
 					<div id="facebook" class="tab">
-						<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F<?=$artist_facebook;?>&amp;width=220&amp;colorscheme=dark&amp;show_faces=false&amp;stream=true&amp;header=false&amp;height=415" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:220px; height:395px;" allowTransparency="true"></iframe>
+						<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F<?=$artist_facebook;?>&amp;width=273&amp;colorscheme=dark&amp;show_faces=false&amp;stream=true&amp;header=false&amp;height=415" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:273px; height:395px;" allowTransparency="true"></iframe>
 					</div>
 					
 					<div id="twitter" class="tab">
@@ -881,7 +951,7 @@ $(document).ready(function(){
 						  type: 'profile',
 						  rpp: 5,
 						  interval: 6000,
-						  width: 220,
+						  width: 273,
 						  height: 315,
 						  theme: {
 							shell: {
@@ -906,6 +976,27 @@ $(document).ready(function(){
 						}).render().setUser('<?=$artist_twitter;?>').start();
 						
 						</script>
+					</div>
+				
+					<div id="share" class="tab">
+						<div class="sub-title">
+							<h1>Send To A Friend //</h1>
+							<a href="" class="facebook"></a>
+							<a href="" class="twitter"></a>
+						</div>
+						<p>Fill out the form below to send a copy of the message to your friend.</p>
+						<p class="small">Please note that your friend will not be subscribed to any email list nor will his / her name or email address be permanently recorded.</p>
+						<label><span class="red">*</span> To:</label>
+						<input type="text" name="to" id="shareTo" class="input" />
+						<br /><br /><br />
+						<label><span class="red">*</span> From:</label>
+						<input type="text" name="from" id="shareFrom" class="input" />
+						<br /><br /><br />
+						<label><span class="red">*</span> Message:</label>
+						<textarea name="message" id="shareMessage" rows="4" cols="20" class="input"></textarea>
+						<br /><br /><br /><br />
+						<span class="required"><span class="red">*</span> required</span>
+						<a href="#" class="submitShare">submit</a>
 					</div>
 				
 				</div>
@@ -1035,7 +1126,24 @@ $(document).ready(function(){
 			
 			<div class="space"></div>
 			<div class="aClose"></div>
-			<div class="page"></div>
+			<div class="page">
+				<div class="box-header"></div>
+				
+				<div id="mcs2_container">
+					<div class="customScrollBox">
+						<div class="container">
+							<div class="content">
+
+							</div>
+						</div>
+						<div class="dragger_container">
+							<div class="dragger">&#9618;</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="box-footer"></div>
+			</div>
 			
 			<? if ($artist_appid) { ?>
 			<div class="comments">
@@ -1331,8 +1439,40 @@ $(document).ready(function(){
 <!-- Custom scrollbar Starts -->
 <script>
 $(window).load(function() {
-               //$("#mcs_container").mCustomScrollbar("vertical",400,"easeOutCirc",1.05,"auto","yes","yes",10);
-               });
+	mCustomScrollbars();
+});
+
+function mCustomScrollbars(){
+	/* 
+	malihu custom scrollbar function parameters: 
+	1) scroll type (values: "vertical" or "horizontal")
+	2) scroll easing amount (0 for no easing) 
+	3) scroll easing type 
+	4) extra bottom scrolling space for vertical scroll type only (minimum value: 1)
+	5) scrollbar height/width adjustment (values: "auto" or "fixed")
+	6) mouse-wheel support (values: "yes" or "no")
+	7) scrolling via buttons support (values: "yes" or "no")
+	8) buttons scrolling speed (values: 1-20, 1 being the slowest)
+	*/
+	$("#mcs2_container").mCustomScrollbar("vertical",0,"easeOutCirc",1.05,"auto","yes","no",0); 
+}
+
+/* function to fix the -10000 pixel limit of jquery.animate */
+$.fx.prototype.cur = function(){
+    if ( this.elem[this.prop] != null && (!this.elem.style || this.elem.style[this.prop] == null) ) {
+      return this.elem[ this.prop ];
+    }
+    var r = parseFloat( jQuery.css( this.elem, this.prop ) );
+    return typeof r == 'undefined' ? 0 : r;
+}
+
+/* function to load new content dynamically */
+function LoadNewContent(id,file){
+	$("#"+id+" .customScrollBox .content").load(file,function(){
+		mCustomScrollbars();
+	});
+}
+
 </script>
 <script src="js/jquery.mCustomScrollbar.js" type="text/javascript"></script>
 <!-- Custom scrollbar Ends -->
