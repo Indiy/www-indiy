@@ -228,24 +228,27 @@ $(document).ready(setupSortableLists);
 				while($record_artistVideo = mysql_fetch_array($result_artistVideo))
 				{
                     $video_id = $record_artistVideo['id'];
-					if(!empty($record_artistVideo['image']) && file_exists("artists/images/".$record_artistVideo['image'])){
+					if(!empty($record_artistVideo['image']) && file_exists("../artists/images/".$record_artistVideo['image'])){
 						$image = "../artists/images/".$record_artistVideo['image'];
 					}else{
 						$image = "images/photo_video_01.jpg";
 					}
-					?>
+                ?>
 			<li id="arrayorder_<?=$video_id;?>" class="videos_sortable">
-            <figure><span class="close"><a href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=$userId&action=1&video_id=<?=$record_artistVideo['id']?>";'></a></span>
-           <?
+            <figure>
+				<span class="close">
+					<a href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=<?=$userId?>&action=1&video_id=<?=$record_artistVideo['id']?>";'></a>
+				</span>
+           <?php
 			if(!empty($record_artistVideo['video'])){?>
-			<a href='play_music.php?video=<?=$record_artistVideo['video']?>' rel='facebox[.bolder]' ><img src="<?=$image?>" width="210" height="132" alt=""></a></figure>
-            <span><a href="addvideo.php?artist_id=<?=$artistID?>&id=<?=$record_artistVideo['id']?>" rel="facebox[.bolder]"><?=stripslashes($record_artistVideo['name'])?></a></span><br>3:35
+				<a href='play_video.php?videoID=<?=$record_artistVideo['id']?>' rel='facebox[.bolder]' ><img src="<?=$image?>" width="210" height="132" alt=""></a></figure>
+		        <span><a href="addvideo.php?artist_id=<?=$artistID?>&id=<?=$record_artistVideo['id']?>" rel="facebox[.bolder]"><?=stripslashes($record_artistVideo['name'])?></a></span><br><!-- 3:35 -->
 			<?}else{?>
-			<img src="<?=$image?>" width="210" height="132" alt=""></figure>
-			<span><?=stripslashes($record_artistVideo['name'])?></span><br>3:35
+				<img src="<?=$image?>" width="210" height="132" alt=""></figure>
+				<span><?=stripslashes($record_artistVideo['name'])?></span><br><!-- 3:35 -->
 			<?}?>
             </li>
-				<?}?>
+			<?}?>
             </ul>
             </div>
         </div>
@@ -263,8 +266,6 @@ $(document).ready(setupSortableLists);
            <!--  <span class="preview">Preview</span> -->
             <span class="delete">Delete</span>
             </li>
-            </ul>
-            <ul class="pages_sortable">
             <?php
 				$count = 1;
 				while($record_artistContent = mysql_fetch_array($result_artistContent))
@@ -276,7 +277,7 @@ $(document).ready(setupSortableLists);
             <li id="arrayorder_<?=$content_id;?>" class="pages_sortable <?=$class?>">
             <span class="title"><a href="addcontent.php?artist_id=<?=$artistID?>&id=<?=$record_artistContent['id']?>" rel="facebox[.bolder]"><?=$record_artistContent['name']?></a></span>
             <!-- <span class="preview"><a href="#">Preview</a></span> -->
-            <span class="delete"><a  href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=$userId&action=1&content_id=<?=$record_artistContent['id']?>";'></a></span>
+            <span class="delete"><a  href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=<?=$userId?>&action=1&content_id=<?=$record_artistContent['id']?>";'></a></span>
             </li>
             <?}?>
             </ul>
@@ -305,7 +306,7 @@ $(document).ready(setupSortableLists);
 					}
 					?>
 			<li id="arrayorder_<?=$product_id;?>"class="products_sortable">
-            <figure><span class="close"><a href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=$userId&action=1&prod_id=<?=$record_artistProduct['id']?>";'></a></span>
+            <figure><span class="close"><a href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=<?=$userId?>&action=1&prod_id=<?=$record_artistProduct['id']?>";'></a></span>
            <a href="addproduct.php?artist_id=<?=$artistID?>&id=<?=$record_artistProduct['id']?>" rel="facebox[.bolder]"><img src="<?=$image?>" width="207" height="130" alt=""></a></figure>
             <span><a href="addproduct.php?artist_id=<?=$artistID?>&id=<?=$record_artistProduct['id']?>" rel="facebox[.bolder]"><?=$record_artistProduct['name']?></a></span><br>$<?=$record_artistProduct['price']?>
             </li>

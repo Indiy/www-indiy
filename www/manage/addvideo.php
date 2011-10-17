@@ -37,16 +37,32 @@
 			if (is_uploaded_file($_FILES["video"]["tmp_name"])) {
 				
 				$ext = explode(".",$_FILES["video"]["name"]);
-				$video_sound = $artistid."_".strtolower(rand(11111,99999)."_video.".$ext[count($ext)-1]);
+
+				$filename = $artistid."_".strtolower(rand(11111,99999)."_video.");
+				$video_sound = $filename.$ext[count($ext)-1];
+				$video_sound_mp4 = $filename."mp4";
 				
-				@move_uploaded_file($_FILES['video']['tmp_name'], 'video/' . $video_sound);
+				@move_uploaded_file($_FILES['video']['tmp_name'], '../vid/' . $video_sound);
+				
+				$ext_name = $ext[count($ext)-1];
+
+				if($ext_name == "mp4" || $ext_name == "MP4")
+					@system("/usr/local/bin/ffmpeg -i /home/madcom/public_html/vid/".$video_sound. " -r 20 -ar 44100 -ab 196 -b 300k -aspect 4:3  /home/madcom/public_html/vid/".$video_sound_mp4);
+				elseif($ext_name == "mov" || $ext_name == "MOV")
+					@system("/usr/local/bin/ffmpeg -i /home/madcom/public_html/vid/".$video_sound. " -ar 22050 -ab 96k -qscale 2   /home/madcom/public_html/vid/".$video_sound_mp4);
+				else
+					@system("/usr/local/bin/ffmpeg -i /home/madcom/public_html/vid/".$video_sound. " -ar 22050 -ab 96k -qscale 2   /home/madcom/public_html/vid/".$video_sound_mp4);
+
+
+
+				$video_sound = $video_sound_mp4;
 			} else {
 				if ($old_sound != "") {
 					$video_sound = $old_sound;
 				}
 			}
 		}else{
-					$video_sound = $old_sound;
+				$video_sound = $old_sound;
 		}
 		
 		$tables = "artistid|name|image|video";
@@ -57,14 +73,19 @@
 		} else {
 			insert($database,$tables,$values);
 		}
+
+		$successMessage = "<div id='notify'>Success! You are being redirected...</div>";
+
 		$postedValues['imageSource'] = "../artists/images/".$video_logo;
 		$postedValues['video_sound'] = "../artists/video/".$video_sound;
 		$postedValues['success'] = "1";
+
 		$postedValues['postedValues'] = $_REQUEST;
+
 		//echo '{"Name":"'.$video_name.'","imageSource":"artists/images/'.$video_logo.'","":"","video_sound":"artists/video/'.$video_sound.'","success":1}';
 		echo json_encode($postedValues);
-		exit;
-		//$successMessage = "<div id='notify'>Success! You are being redirected...</div>";
+		exit;		
+		
 		refresh("1","?p=home");
 	}
 	
@@ -88,13 +109,12 @@
 	
 	if ($video_download == "1") { $yesDownload = " checked"; } else { $noDownload = " checked"; }
 	$video_name = stripslashes($video_name);
-	
 ?>
 
 				<div id="popup">
 					<?=$successMessage;?>
 					<div class="addvideo">
-						<h2 class="title" id="demonstrations"><?=$head_title?> Video</h2>
+						<h2 class="title"><?=$head_title?> Video</h2>
 						<form id="ajax_from" method="post" enctype="multipart/form-data" action="addvideo.php">
 						<input type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid">
 						<input type='hidden' value="<?=$_REQUEST['id']?>" name="id" id="song_id">

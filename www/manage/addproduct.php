@@ -152,7 +152,7 @@
 				<input type='hidden' value="<?=$_REQUEST['id']?>" name="id" id="song_id">
 					<div id="form_field">
 					<label>Name:</label>
-					<input type="text" name="name" value="<? echo $pname; ?>" id="input" class="input" />
+					<input type="text" name="name" class="text" value="<? echo $pname; ?>" id="input" class="input" />
 					<div class="clear"></div>	   
 
 					<? if ($_GET["id"] != "") { ?>
@@ -162,7 +162,7 @@
 					<? } ?>
 
 					<label>Category:</label>
-					<select name="origin" id="origin" class="input">
+					<select name="origin" id="origin" class="text">
 						<option value=""> -- Select -- </option>
 						<?
 							$cont = mq("select * from `[p]musicplayer_ecommerce_categories` order by `name` asc");
@@ -177,27 +177,27 @@
 					<div class="clear"></div>		    
 
 					<label>Description:</label>
-					<textarea name="description" id="input" class="input smalltextarea"><? echo $pproductdescription; ?></textarea>
+					<textarea name="description" id="input" class="textarea"><? echo $pproductdescription; ?></textarea>
 					<div class="clear"></div>	   
 		   
 					<label>Image:</label>
-					<input type="file" name="file" value="" id="input" class="input" /> <? if ($pimage != "") {?> <img src="../artists/products/<?=$pimage;?>" height="20" /><? } ?>
+					<input type="file" name="file" value="" id="input"  class="text" /> <? if ($pimage != "") {?> <img src="../artists/products/<?=$pimage;?>" height="20" /><? } ?>
 					<div class="clear"></div>	   
 		   
 					<label>Price:</label>
-					<input type="text" name="price" value="<? echo $pprice; ?>" id="input" class="input" />
+					<input type="text" name="price" value="<? echo $pprice; ?>" id="input"  class="text" />
 					<div class="clear"></div>	   
 		   
 					<label>Sku Number:</label>
-					<input type="text" name="sku" value="<? echo $psku; ?>" id="input" class="input" />
+					<input type="text" name="sku" value="<? echo $psku; ?>" id="input"  class="text" />
 					<div class="clear"></div>
 					
 					<label>Size:<br /><small><small>(Separated by commas)</small></small></label>
-					<input type="text" name="size" value="<? echo $psize; ?>" id="input" class="input" />
+					<input type="text" name="size" value="<? echo $psize; ?>" id="input"  class="text" />
 					<div class="clear"></div>
 					
 					<label>Colors:<br /><small><small>(Separated by commas)</small></small></label>
-					<input type="text" name="color" value="<? echo $pcolor; ?>" id="input" class="input" />
+					<input type="text" name="color" value="<? echo $pcolor; ?>" id="input"  class="text" />
 					<div class="clear"></div>
 
 					<label></label>

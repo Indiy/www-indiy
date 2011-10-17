@@ -112,7 +112,7 @@
 				
 				<div id="popup">
 					<?=$successMessage;?>
-					<div class="addmusic">
+					<div class="editprof">
 						<h2 class="title"><?=$head_title?> Profile</h2>
 						<form  id="ajax_from" method="post" enctype="multipart/form-data" action="register.php">
 						<input type="hidden" name="artistid" value="<?=$artistid?>">
@@ -156,21 +156,21 @@
 							<input type="text" class="text" value="<?=$website?>" name="website">
 							<div class="clear"></div>
 
-							<label>Twitter URL</label>
-							<input type="text" readonly="" class="text" value="<?=$twitter?>" name="twitter">
+							<label>Twitter username</label>
+							<input type="text" readonly="" disabled="disabled" class="text" value="<?=$twitter?>" name="twitter">
 							<div class="clear"></div>
 
-							<label>Facebook URL</label>
-							<input type="text" readonly="" class="text" value="<?=$facebook?>" name="facebook">
+							<label>Facebook username</label>
+							<input type="text" readonly="" disabled="disabled" class="text" value="http://www.facebook.com/<?=$facebook?>" name="facebook">
 							<div class="clear"></div>
 							
-							<label>Facbook App ID</label>
-							<input type="text" class="text" value="<?=$appid?> " name="appid"> &nbsp;&nbsp;<small><a target="_blank" href="http://developers.facebook.com/">Get App ID</a></small>
+							<label>Facbook App ID (<small><a target="_blank" href="http://developers.facebook.com/">Get App ID</a></small>)</label>
+							<input type="text" class="text" disabled="disabled" value="<?=$appid?> " name="appid"> &nbsp;&nbsp;
 							<div class="clear"></div>
 							
 							<label>Show "Listen" Count</label>
-							<div class="group">
-							<input type="radio" class="radio" checked="" value="1" name="listens"> Yes<br/>
+							<div class="floatbox">
+							<input type="radio" class="radio" checked="" value="1" name="listens"> Yes
 							<input type="radio" class="radio" value="0" name="listens"> No<br>
 							</div>
 							<div class="clear"></div>

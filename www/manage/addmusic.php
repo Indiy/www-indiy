@@ -56,7 +56,7 @@
 				@move_uploaded_file($_FILES['audio']['tmp_name'], '../artists/audio/' . $audio_sound);
 				@system('/usr/local/bin/ffmpeg -i /home/madcom/public_html/artists/audio/'.$audio_sound.'  -acodec libvorbis /home/madcom/public_html/artists/audio/'.$audio_sound_ogg);
 
-				$audio_sound = $audio_sound_ogg;
+				//$audio_sound = $audio_sound_ogg;
 			} else {
 				if ($old_sound != $audio_sound) {
 					$audio_sound = $old_sound;
@@ -111,7 +111,7 @@
 	}
 	
 	if ($audio_logo != "") {
-		$audio_logo = '<img src="../artists/images/'.$audio_logo.'" style=" margin-top: 5px; height: 25px;" />';
+		$audio_logo = '<img src="../artists/images/'.$audio_logo.'" style=" margin-top: 0px; height: 25px;" />';
 	}
 	
 	if ($audio_download == "1") { $yesDownload = " checked"; } else { $noDownload = " checked"; }
@@ -136,8 +136,8 @@
 							<input type="text" name="name" value="<?=$audio_name;?>" class="text" />
 							<div class="clear"></div>
 							
-							<label>Image</label>
-							<input type="file" name="logo" class="text" /><br> <?=$audio_logo;?>
+							<label>Image <?=$audio_logo;?></label>
+							<input type="file" name="logo" class="text" />
 							<div class="clear"></div>
 							
 							<label>Background Color</label>
@@ -146,7 +146,7 @@
 							
 							<label>Background Position</label>
 							<select name="bgposition" class="text">
-							<option value="">Select Background Position</option>
+							<option value="">Select</option>
 							<option value=""></option>
 							<?
 								$positions = array("top left","top center","top right","center left","center center","center right","bottom left","bottom center","bottom right");
@@ -164,7 +164,7 @@
 							
 							<label>Background Repeat</label>
 							<select name="bgrepeat" class="text">
-							<option value="">Select Background Repeat Pattern</option>
+							<option value="">Select </option>
 							<option value=""></option>
 							<?
 								$colors = array("repeat","repeat-x","repeat-y","no-repeat","stretch");
@@ -210,9 +210,9 @@
 						</div>
 						<div id="form_message">
 							<? if ($_GET["id"] != "") { ?>
-								Your record successfully updated!!!!
+								Your record was successfully updated!!!!
 							<? }else{ ?>
-								Your record successfully added!!!!
+								Your record was successfully added!!!!
 							<?}?>
 						</div>
 						</form>
