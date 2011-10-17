@@ -35,12 +35,12 @@ while ($list = mf($loadPlayList)) {
 	$video_arr = explode(".",$list['video']);
 	$songArr = explode('.',$list['video']);
 
-	if($list['name']='')
+	if( $list['name'] == '' )
 		$name_data = "Noname";
 	else
 		$name_data = $list['name'];
 
-		$xml .= '<VIDEO><TITLE>'.$video_arr[0].'</TITLE><DESCRIPTION>'.$video_arr[0].'</DESCRIPTION><PATH>vid/'.$list['video'].'</PATH><EMBED>Re-Nutriv EMBED CODE</EMBED></VIDEO>';
+		$xml .= '<VIDEO><TITLE>'.$name_data.'</TITLE><DESCRIPTION></DESCRIPTION><PATH>vid/'.$list['video'].'</PATH><EMBED>Re-Nutriv EMBED CODE</EMBED></VIDEO>';
 	
 		$cnt++;
 }

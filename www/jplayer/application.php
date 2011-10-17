@@ -1,6 +1,9 @@
 <?php
 // Sets the proper content type for javascript
 header("Content-type: application/javascript");
+header("Cache-Control: no-cache");
+header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
+
 include('../includes/config.php');
 include('../includes/functions.php');
 $jsStr = '';
@@ -30,7 +33,7 @@ while ($list = mf($loadPlayList)) {
 	else
 		$name_data = $list['name'];
 
-		$xml .= '<VIDEO><TITLE>'.$video_arr[0].'</TITLE><DESCRIPTION>'.$video_arr[0].'</DESCRIPTION><PATH>vid/'.$list['video'].'</PATH><EMBED>Re-Nutriv EMBED CODE</EMBED></VIDEO>';
+		$xml .= '<VIDEO><TITLE>'.$name_data.'</TITLE><DESCRIPTION></DESCRIPTION><PATH>vid/'.$list['video'].'</PATH><EMBED>Re-Nutriv EMBED CODE</EMBED></VIDEO>';
 	
 		$cnt++;
 }

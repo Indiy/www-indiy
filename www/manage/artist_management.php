@@ -37,16 +37,16 @@
 		}
 	}
 	
-	$find_artistAudio = "SELECT * FROM mydna_musicplayer_audio  WHERE artistid='".$artistID."' ";
+	$find_artistAudio = "SELECT * FROM mydna_musicplayer_audio  WHERE artistid='".$artistID."' AND `type`='0' ORDER BY `order` ASC, `id` DESC";
 	$result_artistAudio = mysql_query($find_artistAudio) or die(mysql_error());
 	
-	$find_artistVideo = "SELECT * FROM mydna_musicplayer_video  WHERE artistid='".$artistID."' ";
+	$find_artistVideo = "SELECT * FROM mydna_musicplayer_video  WHERE artistid='".$artistID."' ORDER BY `order` ASC, `id` DESC";
 	$result_artistVideo = mysql_query($find_artistVideo) or die(mysql_error());
 
-	$find_artistContent = "SELECT * FROM mydna_musicplayer_content  WHERE artistid='".$artistID."' ";
+	$find_artistContent = "SELECT * FROM mydna_musicplayer_content  WHERE artistid='".$artistID."' ORDER BY `order` ASC, `id` DESC";
 	$result_artistContent = mysql_query($find_artistContent) or die(mysql_error());
 	
-	$find_artistProduct = "SELECT * FROM mydna_musicplayer_ecommerce_products  WHERE artistid='".$artistID."' ";
+	$find_artistProduct = "SELECT * FROM mydna_musicplayer_ecommerce_products  WHERE artistid='".$artistID."' ORDER BY `order` ASC, `id` DESC";
 	$result_artistProduct = mysql_query($find_artistProduct) or die(mysql_error());
 	//echo "<pre />";
 	//print_r($record_artistDetail);
@@ -62,6 +62,59 @@
 
 include_once('header.php');
 ?>
+
+<script type="text/javascript">
+
+function setupSortableLists()
+{
+    $(function() {
+        $("ul.playlist_sortable").sortable({opacity: 0.8, cursor: 'move', update: function() {
+            //$("#response").html("Loading...");
+                var order = $(this).sortable("serialize") + '&order=order&type=musicplayer_audio';
+                $.post("/includes/ajax.php", order, function(theResponse){
+                    //$("#response").html(theResponse);
+                });
+            }
+        });
+    });
+
+    $(function() {
+        $("ul.pages_sortable").sortable({opacity: 0.8, cursor: 'move', update: function() {
+            //$("#response").html("Loading...");
+                var order = $(this).sortable("serialize") + '&order=order&type=musicplayer_content';
+                $.post("/includes/ajax.php", order, function(theResponse){
+                    //$("#response").html(theResponse);
+                });
+            }
+        });
+    });
+
+    $(function() {
+        $("ul.videos_sortable").sortable({opacity: 0.8, cursor: 'move', update: function() {
+            //$("#response").html("Loading...");
+                var order = $(this).sortable("serialize") + '&order=order&type=musicplayer_video';
+                $.post("/includes/ajax.php", order, function(theResponse){
+                    //$("#response").html(theResponse);
+                });
+            }
+        });
+    });			
+
+    $(function() {
+        $("ul.products_sortable").sortable({opacity: 0.8, cursor: 'move', update: function() {
+            //$("#response").html("Loading...");
+                var order = $(this).sortable("serialize") + '&order=order&type=musicplayer_ecommerce_products';
+                $.post("/includes/ajax.php", order, function(theResponse){
+                    //$("#response").html(theResponse);
+                });
+            }
+        });
+    });
+}
+
+$(document).ready(setupSortableLists);
+
+</script>
 
 <section id="wrapper">
 <section id="content">
@@ -131,14 +184,17 @@ include_once('header.php');
             <span class="preview">Preview</span>
             <span class="delete">Delete</span>
             </li>
+            </ul>
+            <ul class="playlist_sortable">
             
             <?php
 				$count = 1;
 				while($record_artistAudio = mysql_fetch_array($result_artistAudio))
 				{
-					$class = (( $count%2) == 0) ? '' : 'class=odd';
+                    $song_id = $record_artistAudio['id'];
+					$class = (( $count%2) == 0) ? '' : 'odd';
 					
-					echo "<li ".$class." >
+					echo "<li id='arrayorder_$song_id' class='playlist_sortable $class' >
 							<span class='title'><a href='addmusic.php?artist_id=".$artistID."&id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>".$record_artistAudio['name']."</a></span>
 							<span class='duration'>".$record_artistAudio['audio_duration']."</span>";
 					
@@ -166,18 +222,19 @@ include_once('header.php');
             </div>
         
             <div class="list">
-            <ul>
+            <ul class="videos_sortable">
             <?php
 				$count = 1;
 				while($record_artistVideo = mysql_fetch_array($result_artistVideo))
 				{
+                    $video_id = $record_artistVideo['id'];
 					if(!empty($record_artistVideo['image']) && file_exists("artists/images/".$record_artistVideo['image'])){
 						$image = "../artists/images/".$record_artistVideo['image'];
 					}else{
 						$image = "images/photo_video_01.jpg";
 					}
 					?>
-			<li>
+			<li id="arrayorder_<?=$video_id;?>" class="videos_sortable">
             <figure><span class="close"><a href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=$userId&action=1&video_id=<?=$record_artistVideo['id']?>";'></a></span>
            <?
 			if(!empty($record_artistVideo['video'])){?>
@@ -206,13 +263,17 @@ include_once('header.php');
            <!--  <span class="preview">Preview</span> -->
             <span class="delete">Delete</span>
             </li>
+            </ul>
+            <ul class="pages_sortable">
             <?php
 				$count = 1;
 				while($record_artistContent = mysql_fetch_array($result_artistContent))
 				{
-					$class = (( $count%2) == 0) ? '' : 'class=odd';
+                    $content_id = $record_artistContent['id'];
+                
+					$class = (( $count%2) == 0) ? '' : 'odd';
 					?>
-            <li <?=$class?>>
+            <li id="arrayorder_<?=$content_id;?>" class="pages_sortable <?=$class?>">
             <span class="title"><a href="addcontent.php?artist_id=<?=$artistID?>&id=<?=$record_artistContent['id']?>" rel="facebox[.bolder]"><?=$record_artistContent['name']?></a></span>
             <!-- <span class="preview"><a href="#">Preview</a></span> -->
             <span class="delete"><a  href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=$userId&action=1&content_id=<?=$record_artistContent['id']?>";'></a></span>
@@ -230,18 +291,20 @@ include_once('header.php');
             </div>
         
             <div class="list">
-            <ul>
+            <ul class="products_sortable">
            <?php
 				$count = 1;
 				while($record_artistProduct = mysql_fetch_array($result_artistProduct))
 				{
+                    $product_id = $record_artistProduct['id'];
+                
 					if(!empty($record_artistProduct['image']) && file_exists("../artists/products/".$record_artistProduct['image'])){
 						$image = "../artists/products/".$record_artistProduct['image'];
 					}else{
 						$image = "images/photo_video_01.jpg";
 					}
 					?>
-			<li>
+			<li id="arrayorder_<?=$product_id;?>"class="products_sortable">
             <figure><span class="close"><a href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=$userId&action=1&prod_id=<?=$record_artistProduct['id']?>";'></a></span>
            <a href="addproduct.php?artist_id=<?=$artistID?>&id=<?=$record_artistProduct['id']?>" rel="facebox[.bolder]"><img src="<?=$image?>" width="207" height="130" alt=""></a></figure>
             <span><a href="addproduct.php?artist_id=<?=$artistID?>&id=<?=$record_artistProduct['id']?>" rel="facebox[.bolder]"><?=$record_artistProduct['name']?></a></span><br>$<?=$record_artistProduct['price']?>

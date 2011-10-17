@@ -6,9 +6,10 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="js/jquery1.6.js"></script>
 	<link href="blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
-    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+
     <!--[if IE]>
         <script src="js/html5.js"></script>
     <![endif]-->
