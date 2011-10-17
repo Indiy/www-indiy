@@ -35,12 +35,12 @@
             setcookie($cookievar, $myid, $inTwoMonths);
             if( $row['type'] == 2 )
             {
-                $url = "/manage/dashboard.php";
+                $url = "http://www.myartistdna.com/manage/dashboard.php?session_id=". session_id();
             }
             else
             {
                 $_SESSION['me'] = $row['id'];
-                $url = "/manage/artist_management.php?userId=$myid";
+                $url = "http://www.myartistdna.com/manage/artist_management.php?userId=$myid&session_id=". session_id();
             }
             $result = 1;
         }
