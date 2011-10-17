@@ -266,6 +266,8 @@ $(document).ready(setupSortableLists);
            <!--  <span class="preview">Preview</span> -->
             <span class="delete">Delete</span>
             </li>
+            </ul>
+            <ul class="pages_sortable">
             <?php
 				$count = 1;
 				while($record_artistContent = mysql_fetch_array($result_artistContent))
