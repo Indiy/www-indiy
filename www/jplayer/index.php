@@ -486,56 +486,8 @@ if ($browser == true || $_GET["debug"] == "true"){
 			
 			$(".submitform").click(function(event){
 			
-				var loading = "Message pending...";
-				$(".notify").slideToggle();
-				$(".notify").html(loading);
-				
-				// Grab the current data
-				var from = "<?=$artist_email;?>";
-				var pname = document.getElementById('name').value;
-				var pemail = document.getElementById('email').value;
-				var pphone = document.getElementById('phone').value;
-				var pcomments = document.getElementById('comments').value;
-				var submit = "&form=send&from=" + from + "&name=" + pname + "&email=" + pemail + "&phone=" + pphone + "&comments=" + pcomments;
-				
-				//submit the data for processing
-				$.post("jplayer/ajax.php", submit, function(response) {
-					$(".notify").html(response);
-					setTimeout('$(".notify").slideToggle()', 3000);	
-					document.getElementById('name').value = "Name...";
-					document.getElementById('email').value = "Email...";
-					document.getElementById('phone').value = "Phone...";
-					document.getElementById('comments').value = "Message...";
-				});
-				
-				return false;
 				
 			});
-			
-			$(".submitNewsletter").click(function(event){
-			
-				var loader = "Message pending...";
-				$("#successMessage").slideToggle(100);
-				$("#successMessage").html(loader);
-				
-				// Grab the current data
-				var artist = "<?=$artist_id;?>";
-				var name = $('#emailName').val();
-				var email = $('#emailEmail').val();
-				var submited = "&newsletter=true&artist=" + artist + "&name=" + name + "&email=" + email;
-				
-				//submit the data for processing
-				$.post("jplayer/ajax.php", submited, function(repo) {
-					$("#successMessage").html(repo);
-					setTimeout('$("#successMessage").slideToggle(100)', 3000);	
-					document.getElementById('emailName').value = "";
-					document.getElementById('emailEmail').value = "";
-				});
-				
-				return false;
-				
-			});	
-			
 		});
 		
 	// Clear empty form
@@ -604,16 +556,64 @@ function sendContactForm()
     $('#contact_table').hide();
     $('#contact_thanks').show();
     
-    // Grab the current data
     var artist_id = "<?=$artist_id;?>";
     var name = $('#contact_name').val();
     var email = $('#contact_email').val();
     var phone = $('#contact_phone').val();
     var comments = $('#contact_comments').val();
     var submit = "&form=send&artist_id=" + artist_id + "&name=" + name + "&email=" + email + "&phone=" + phone + "&comments=" + comments;
-    
-    //submit the data for processing
+
     $.post("jplayer/ajax.php", submit, function(response) { });
+}
+
+function submitNewsletter()
+{    
+    $('#news_form').hide();
+    $('#news_success').show();
+
+    var artist = "<?=$artist_id;?>";
+    var name = $('#news_name').val();
+    var email = $('#news_email').val();
+    var mobile = $('#news_mobile').val();
+    var submited = "&newsletter=true&artist=" + artist;
+    submited += "&name=" + escape(name);
+    submited += "&email=" + escape(email);
+    submited += "&mobile=" + escape(mobile);
+    
+    $.post("jplayer/ajax.php", submited, function(repo) {});
+}
+
+function sendToFriend()
+{
+    $('#send_friend_form').hide();
+    $('#send_friend_success').show();
+
+    var artist_id = "<?=$artist_id;?>";
+    var to = $('#send_friend_to').val();
+    var from = $('#send_friend_from').val();
+    var message = $('#send_friend_message').val();
+    
+    var d = {
+        "artist_id": artist_id,
+        "to": to,
+        "from": from,
+        "message": message
+    };
+    var postData = JSON.stringify(d);
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: '/data/send_friend.php',
+        contentType: 'application/json',
+        data: postData,
+        processData: false,
+        success: function(data) 
+        {
+        },
+        error: function()
+        {
+        }
+    });
 }
 
 $(document).ready(function(){
@@ -805,14 +805,6 @@ $(document).ready(function(){
 				$('span.showitunes').show();
 			}
 			
-			// Display Current Track Title
-            /*
-			var track = "&track="+image;
-			$.post('jplayer/ajax.php', track, function(data) {
-					$('.current-track').html(data);
-			});
-			*/
-            
             $('#current_track_name').text(trackname);
             
             $(".vote").click(function(event) 
@@ -924,19 +916,25 @@ $(document).ready(function(){
 						<div class="sub-title">
 							<h1>Mailing List //</h1>
 						</div>
-						<div id="successMessage"></div>
-						<p>If you'd like to keep right up to date with all the latest news, gigs, releases and competitions, then sign up to our mailing list.</p>
-						<p class="small">By clicking on the submit button, you are confirming that you have read and agree with the terms of our <a href="">Privacy Policy</a>.</p>
-						<label><span class="red">*</span> Name:</label>
-						<input type="text" name="name" id="emailName" class="input" />
-						<br /><br /><br />
-						<label><span class="red">*</span> E-Mail:</label>
-						<input type="text" name="email" id="emailEmail" class="input" />
-						<br /><br /><br />
-						<label><span class="red">*</span> Mobile:</label>
-						<input type="text" name="mobile" id="emailMobile" class="input" />
-						<br /><br /><br />
-						<a href="#" class="submitNewsletter">submit</a>
+						<div id="news_success" style="display:none;">
+                        <br/>
+                        Thank you for your submission.  Your name will be added to our newsletter list.<br/>
+                        <br/>
+                        </div>
+                        <div id="news_form">
+                            <p>If you wouldd like to keep right up to date with all the latest news, gigs, releases and competitions, then sign up to our mailing list.</p>
+                            <p class="small">By clicking on the submit button, you are confirming that you have read and agree with the terms of our <a href="">Privacy Policy</a>.</p>
+                            <label><span class="red">*</span> Name:</label>
+                            <input id="news_name" type="text" class="input" />
+                            <br /><br /><br />
+                            <label><span class="red">*</span> E-Mail:</label>
+                            <input id="news_email" type="text" class="input" />
+                            <br /><br /><br />
+                            <label><span class="red">*</span> Mobile:</label>
+                            <input id="news_mobile" type="text" class="input" />
+                            <br /><br /><br />
+                            <button class="submitNewsletter" onclick="submitNewsletter();">submit</button>
+                        </div>
 					</div>
 					
 					<div id="facebook" class="tab">
@@ -981,22 +979,31 @@ $(document).ready(function(){
 					<div id="share" class="tab">
 						<div class="sub-title">
 							<h1>Send To A Friend //</h1>
-							<a href="" class="facebook"></a>
-							<a href="" class="twitter"></a>
+							<!--
+                            <a href="#" class="facebook"></a>
+							<a href="#" class="twitter"></a>
+                            -->
 						</div>
-						<p>Fill out the form below to send a copy of the message to your friend.</p>
-						<p class="small">Please note that your friend will not be subscribed to any email list nor will his / her name or email address be permanently recorded.</p>
-						<label><span class="red">*</span> To:</label>
-						<input type="text" name="to" id="shareTo" class="input" />
-						<br /><br /><br />
-						<label><span class="red">*</span> From:</label>
-						<input type="text" name="from" id="shareFrom" class="input" />
-						<br /><br /><br />
-						<label><span class="red">*</span> Message:</label>
-						<textarea name="message" id="shareMessage" rows="4" cols="20" class="input"></textarea>
-						<br /><br /><br /><br />
-						<span class="required"><span class="red">*</span> required</span>
-						<a href="#" class="submitShare">submit</a>
+                        <div id="send_friend_form">
+                            <p>Fill out the form below to send a copy of the message to your friend.</p>
+                            <p class="small">Please note that your friend will not be subscribed to any email list nor will his / her name or email address be permanently recorded.</p>
+                            <label><span class="red">*</span> To:</label>
+                            <input id="send_friend_to" type="text" class="input" />
+                            <br /><br /><br />
+                            <label><span class="red">*</span> From:</label>
+                            <input id="send_friend_from" type="text" class="input" />
+                            <br /><br /><br />
+                            <label><span class="red">*</span> Message:</label>
+                            <textarea id="send_friend_message" rows="4" cols="20" class="input"></textarea>
+                            <br /><br /><br /><br />
+                            <span class="required"><span class="red">*</span> required</span>
+                            <button class="submitShare" onclick="sendToFriend();">submit</button>
+                        </div>
+                        <div id="send_friend_success" style="display:none;">
+                            <br/>
+                            Your friend will be notified about this great artist!<br/>
+                            <br/>
+                        </div>
 					</div>
 				
 				</div>

@@ -1377,6 +1377,7 @@
 		2DF47518144A9765005538C7 /* stats.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = stats.php; sourceTree = "<group>"; };
 		2DF47519144B55A8005538C7 /* tour.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = tour.js; sourceTree = "<group>"; };
 		2DF47522144B5725005538C7 /* submit_contact.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = submit_contact.php; sourceTree = "<group>"; };
+		2DF47527144BD7CB005538C7 /* send_friend.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = send_friend.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -1787,6 +1788,7 @@
 		2DF470541440B77F005538C7 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				2DF47527144BD7CB005538C7 /* send_friend.php */,
 				2DF47522144B5725005538C7 /* submit_contact.php */,
 				2DF470561440B77F005538C7 /* listens.php */,
 			);

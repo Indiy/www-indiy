@@ -4,8 +4,6 @@
 
 function sendContactForm(image)
 {
-    var url = "/data/submit_contact.php";
-
     var name = $('#contact_name').val();
     var email = $('#contact_email').val();
     var subject = $('#contact_subject').val();

@@ -305,8 +305,8 @@ ul.products .option { display: block; padding: 3px; width: 250px; margin: 5px 0p
 #successMessage { background: #000; border: 3px solid #111; padding: 10px; color: #fff; font-weight: bold; display: none; margin: 0px 0px 15px 0px; width:200px; }
 label { float: left; width: 70px; padding: 5px; text-align: right; }
 .input { color: #fff; float: left; width: 150px; padding: 5px; background: #333; border: 2px solid #000; -webkit-border-radius: 5px;-moz-border-radius: 5px; border-radius: 5px; }
-a.submitNewsletter, a.submitShare { display:inline-block; margin-left:75px; font-weight: bold; color: #fff; padding: 3px 38px; background: #ce1b1a url('images/new/submit_bg.png'); border: 2px solid #2d2d2d; -webkit-border-radius: 5px;-moz-border-radius: 5px; border-radius: 5px; }
-a.submitShare { background: #ce1b1a url('images/new/submit_share_bg.png'); margin-top:10px; }
+.submitNewsletter, .submitShare { display:inline-block; margin-left:75px; font-weight: bold; color: #fff; padding: 3px 38px; background: #ce1b1a url('images/new/submit_bg.png'); border: 2px solid #2d2d2d; -webkit-border-radius: 5px;-moz-border-radius: 5px; border-radius: 5px; }
+.submitShare { background: #ce1b1a url('images/new/submit_share_bg.png'); margin-top:10px; }
 /*a.submitNewsletter:hover { background: #167a27; }*/
 #emaillist .clear { height: 10px; }
 
