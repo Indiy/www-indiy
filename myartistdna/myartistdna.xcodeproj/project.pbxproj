@@ -3454,6 +3454,9 @@
 /* Begin PBXProject section */
 		2DF46F421440B76B005538C7 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 2DF46F451440B76B005538C7 /* Build configuration list for PBXProject "myartistdna" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
