@@ -698,8 +698,8 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 
 #adminblock .column2 { width:711px; float:left; padding-left:9px}
 #adminblock .embedcode { width:691px; float:left; background:#5c626a; padding:10px; margin-bottom:10px}
-#adminblock .embedcode label { width:98px; float:left; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; color:#ffffff; padding-top:5px}
-#adminblock .embedcode .textarea { width:583px; height:22px; float:left; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#7f8894; background:#3b3f45; border:none; border-bottom:1px solid #6f7884; border-left:1px solid #6f7884; padding:6px 0px 2px 5px}
+#adminblock .embedcode label { width:98px; float:left; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; color:#ffffff; padding-top:11px}
+#adminblock .embedcode .textarea { width:583px; height:30px; float:left; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#7f8894; background:#3b3f45; border:none; border-bottom:1px solid #6f7884; border-left:1px solid #6f7884; padding:6px 0px 2px 5px}
 
 
 #adminblock .playlist { width:711px; float:left; padding-bottom:10px}
@@ -758,6 +758,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #adminblock .pages .list ul li.listheading { background:#d9dadc url(../images/bg_pagelist2.gif) repeat-y; font-size:13px; font-weight:bold; padding:15px 0}
 #adminblock .pages .list ul li.listheading .title { padding-top:0}
 #adminblock .pages .list ul li .title { width:512px; float:left; padding:4px 0 0 17px}
+#adminblock .pages .list ul li a { color:#383838; text-decoration:none}
 #adminblock .pages .list ul li .preview { width:110px; float:left; text-align:center}
 #adminblock .pages .list ul li .preview a { float:left; background:#3c4147 url(../images/icon_preview.gif) no-repeat; font-size:11px; color:#FFFFFF; text-decoration:none; padding:4px 8px 6px 32px; margin-left:20px}
 #adminblock .pages .list ul li .delete { width:70px; float:left; text-align:center}
@@ -880,17 +881,18 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #popup .addmusic fieldset.yet {padding-bottom:42px}
 #popup .addmusic h2 {color:#fff; width:390px; height:50px; float:left; background: url(../images/bg_login01.gif) repeat-x; padding:10px 0 0 10px}
 #popup .addmusic form {padding-left:10px}
-#popup .addmusic #form_field .text { width:312px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; margin-right:50px}
-#popup .addmusic #form_field label {padding-top:10px}
-#popup .addmusic #form_field .floatbox {float:left; color:#556270; font-family:Arial, Helvetica, sans-serif; font-size:12px}
-#popup .addmusic #form_field .submit {float:left; margin-top:20px; }
+#popup .addmusic #form_field .text { /*width:312px;*/ float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; width:178; max-width: 178px; min-width:178px; padding:3px 5px; margin-top:10px /*margin-right:50px*/}
+#popup .addmusic #form_field .color { /*width:312px;*/ float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; width:178; max-width: 178px; min-width:178px; padding:3px 5px; margin-top:10px /*margin-right:50px*/}
+#popup .addmusic #form_field label {padding-top:15px; width:150px}
+#popup .addmusic #form_field .floatbox {float:left; color:#556270; font-family:Arial, Helvetica, sans-serif; font-size:12px; padding-top:15px}
+#popup .addmusic #form_field .submit {float:left; margin-top:20px; background:none repeat scroll 0 0 #1E2226; color:#4ECDC4; border:1px solid #A0A1A3; font-size:14px; font-family:"Neuzeit Grotesk",Arial,Helvetica,sans-serif; text-transform:uppercase; padding:10px 60px }
 #popup .addmusic #form_field .input {float:left; color:#4ecdc4; text-decoration:none; background:#1e2226; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; padding:10px 20px; text-transform:uppercase; border:1px solid #a0a1a3}
 
 
 
 /*
 ----------------------------------------
-13. Add Video -- Pop up
+14. Add Video -- Pop up
 ----------------------------------------
 */
 
@@ -899,15 +901,15 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #popup .addvideo fieldset.yet {padding-bottom:42px}
 #popup .addvideo h2 {color:#fff; width:390px; height:50px; float:left; background: url(../images/bg_login01.gif) repeat-x; padding:10px 0 0 10px}
 #popup .addvideo form {padding-left:10px}
-#popup .addvideo #form_field .text { width:312px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; margin-right:50px}
-#popup .addvideo #form_field label {padding-top:10px}
+#popup .addvideo #form_field .text { width:178px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; margin-right:50px}
+#popup .addvideo #form_field label {padding-top:10px; width:150px}
 #popup .addvideo #form_field .floatbox {float:left; color:#556270; font-family:Arial, Helvetica, sans-serif; font-size:12px}
-#popup .addvideo #form_field .submit {float:left; margin-top:20px; }
+#popup .addvideo #form_field .submit {float:left; margin-top:20px; background:none repeat scroll 0 0 #1E2226; color:#4ECDC4; border:1px solid #A0A1A3; font-size:14px; font-family:"Neuzeit Grotesk",Arial,Helvetica,sans-serif; text-transform:uppercase; padding:10px 60px }
 #popup .addvideo #form_field .input {float:left; color:#4ecdc4; text-decoration:none; background:#1e2226; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; padding:10px 20px; text-transform:uppercase; border:1px solid #a0a1a3}
 
 /*
 ----------------------------------------
-13. Add Content -- Pop up
+15. Add Content -- Pop up
 ----------------------------------------
 */
 
@@ -916,17 +918,18 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #popup .addcontent fieldset.yet {padding-bottom:42px}
 #popup .addcontent h2 {color:#fff; width:390px; height:50px; float:left; background: url(../images/bg_login01.gif) repeat-x; padding:10px 0 0 10px}
 #popup .addcontent form {padding-left:10px}
-#popup .addcontent #form_field .text { width:312px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; margin-right:50px}
-#popup .addcontent #form_field label {padding-top:10px}
+#popup .addcontent #form_field .text { width:178px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; margin-right:50px}
+#popup .addcontent #form_field .textarea { width:178px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; margin-right:50px}
+#popup .addcontent #form_field label {padding-top:10px; width:150px}
 #popup .addcontent #form_field .floatbox {float:left; color:#556270; font-family:Arial, Helvetica, sans-serif; font-size:12px}
-#popup .addcontent #form_field .submit {float:left; margin-top:20px; }
+#popup .addcontent #form_field .submit {float:left; margin-top:20px; background:none repeat scroll 0 0 #1E2226; color:#4ECDC4; border:1px solid #A0A1A3; font-size:14px; font-family:"Neuzeit Grotesk",Arial,Helvetica,sans-serif; text-transform:uppercase; padding:10px 60px}
 #popup .addcontent #form_field .input {float:left; color:#4ecdc4; text-decoration:none; background:#1e2226; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; padding:10px 20px; text-transform:uppercase; border:1px solid #a0a1a3}
 
 
 
 /*
 ----------------------------------------
-13. Add Product -- Pop up
+16. Add Product -- Pop up
 ----------------------------------------
 */
 
@@ -935,11 +938,12 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #popup .addproduct fieldset.yet {padding-bottom:42px}
 #popup .addproduct h2 {color:#fff; width:390px; height:50px; float:left; background: url(../images/bg_login01.gif) repeat-x; padding:10px 0 0 10px}
 #popup .addproduct form {padding-left:10px}
-#popup .addproduct #form_field .text { width:312px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; margin-right:50px}
-#popup .addproduct #form_field label {padding-top:10px}
+#popup .addproduct #form_field .text {width:178px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; margin-right:50px}
+#popup .addproduct #form_field label {padding-top:10px; width:150px}
 #popup .addproduct #form_field .floatbox {float:left; color:#556270; font-family:Arial, Helvetica, sans-serif; font-size:12px}
-#popup .addproduct #form_field .submit {float:left; margin-top:20px; }
-#popup .addproduct #form_field .input {float:left; color:#4ecdc4; text-decoration:none; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; padding:10px 20px; text-transform:uppercase; border:1px solid #a0a1a3}
+#popup .addproduct #form_field .submit {float:left; margin-top:20px; background:none repeat scroll 0 0 #1E2226; color:#4ECDC4; border:1px solid #A0A1A3; font-size:14px; font-family:"Neuzeit Grotesk",Arial,Helvetica,sans-serif; text-transform:uppercase; padding:10px 60px}
+#popup .addproduct #form_field .input {float:left; color:#4ecdc4; text-decoration:none; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; padding:3px 2px; text-transform:uppercase; border:1px solid #a0a1a3; width:178px}
+#popup .addproduct #form_field .textarea { width:178px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; margin-right:50px}
 
 
 
@@ -971,12 +975,24 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 
 
 .ui-error{ float:none; color:#FF0000; text-transform:uppercase; font-weight:bold}
-#form_message{
-	display:none;
-}
-.clear{
-clear:both;
-}
-#form_field{
-text-align:left;
-}
+#form_message{display:none}
+.clear{clear:both}
+#form_field{text-align:left}
+
+/*
+----------------------------------------
+17. Edit Profile -- Pop up
+----------------------------------------
+*/
+
+#popup .editprof { /*width:418px;*/ float:left; /*padding:28px 22px*/}
+#popup .editprof fieldset { width:304px; float:left; padding:0 57px 25px 57px}
+#popup .editprof fieldset.yet {padding-bottom:42px}
+#popup .editprof h2 {color:#fff; width:390px; height:50px; float:left; background: url(../images/bg_login01.gif) repeat-x; padding:10px 0 0 10px}
+#popup .editprof form {padding-left:10px}
+#popup .editprof #form_field .text { /*width:312px;*/ float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; width:178; max-width: 178px; min-width:178px; padding:3px 5px; margin-top:10px /*margin-right:50px*/}
+#popup .editprof #form_field .color { /*width:312px;*/ float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; width:178; max-width: 178px; min-width:178px; padding:3px 5px; margin-top:10px /*margin-right:50px*/}
+#popup .editprof #form_field label {padding-top:15px; width:150px}
+#popup .editprof #form_field .floatbox {float:left; color:#556270; font-family:Arial, Helvetica, sans-serif; font-size:12px; padding-top:15px}
+#popup .editprof #form_field .submit {float:left; margin-top:20px; background:none repeat scroll 0 0 #1E2226; color:#4ECDC4; border:1px solid #A0A1A3; font-size:14px; font-family:"Neuzeit Grotesk",Arial,Helvetica,sans-serif; text-transform:uppercase; padding:10px 60px }
+#popup .editprof #form_field .input {float:left; color:#4ecdc4; text-decoration:none; background:#1e2226; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; padding:10px 20px; text-transform:uppercase; border:1px solid #a0a1a3}
