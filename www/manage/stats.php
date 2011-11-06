@@ -111,15 +111,17 @@
 <head>
 <meta charset="utf-8" />
 <title>MYARTISTDNA</title>
+
+<!-- Stylesheet from old site -->
+  <link rel="stylesheet" href="/includes/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="/includes/style.css" type="text/css" />
+  <!-- Your Custom Stylesheet -->
+  <link rel="stylesheet" href="/includes/css/custom.css" type="text/css" />
+<!-- Stylesheet from old site END -->
+
 <link href="css/styles.css" rel="stylesheet" type="text/css">
 <link href="blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
 
-<!-- Stylesheet from old site -->
-<link rel="stylesheet" href="/includes/css/style.css" type="text/css" />
-<link rel="stylesheet" href="/includes/style.css" type="text/css" />
-<!-- Your Custom Stylesheet --> 
-<link rel="stylesheet" href="/includes/css/custom.css" type="text/css" />
-<!-- Stylesheet from old site END -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
 
