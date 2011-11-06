@@ -31,7 +31,7 @@ include "header.php";
 		<div class="playbar">
 			<div class="extras"><img src="images/bg_extras.jpg" alt="EXTRAS"></div>
 			<h4>Play Bar</h4>
-			<p>Release new music on the drop of a dime. easy to use player makes listen to new music fun</p>
+			<p>Release new music on the drop of a dime. Easy to use player makes listening to new music fun</p>
 			</div>
 			
 			
