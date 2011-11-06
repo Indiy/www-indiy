@@ -503,7 +503,7 @@
 
 		$page_name = stripslashes($pages["name"]);
 		if ($pages["body"] != "") { 
-			$page_body = '<p>'.nohtml($pages["body"]).'</p>';
+			$page_body = '<p>' . $pages["body"] . '</p>';
 		} else { 
 			$page_body = '';
 		}
