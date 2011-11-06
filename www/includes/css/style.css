@@ -292,11 +292,11 @@ table {
 } 
 */
 
-/* html 5 specific */
+/* html 5 specific 
 article,aside,header,hgroup,nav,section,footer {
-	float:left;
+	float:left; 
 	display:block;
-}
+}*/
 figure {
 	display: block;
 }
