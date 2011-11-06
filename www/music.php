@@ -27,11 +27,14 @@ include "header.php";
     </ul>
     </div><!-- features -->
     
-    
+     <div class="signup">
+    <h3>Experience MyArtistDNA</h3>
+    <div class="button"><a href="http://navegante.myartistdna.com">EXPLORE NOW</a></div>
+    </div><!-- signup -->
 
 	
     <div id="artistshome">
-	<h2>who useS MY<span>ARTIST</span>DNA</h2>
+	<h2>ARTISTS USING MY<span>ARTIST</span>DNA</h2>
     	<ul>
         <li><a href="#"><img src="images/artists_01.jpg" alt="">
         <span>Navegante</span></a></li>
