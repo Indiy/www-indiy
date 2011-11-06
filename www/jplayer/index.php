@@ -15,17 +15,17 @@ if ($browser == true || $_GET["debug"] == "true"){
 } else if ($_GET["embed"] == "true") {
 
 	include("iphone.php");
-	
+
 } else {
 
-	
+
 	if ($_GET["url"] != "") {
 		$artist_url = $_GET["url"];
 	} else {
 		$loadUsername = explode(".", $_SERVER["HTTP_HOST"]);
 		$artist_url = $loadUsername[0];	
 	}
-	
+
 	$row = mf(mq("select * from `[p]musicplayer` where `url`='{$artist_url}' limit 1"));
 	if ($row["type"] == "1") {
 		// fan music player
@@ -41,16 +41,17 @@ if ($browser == true || $_GET["debug"] == "true"){
 	$artist_appid = $row["appid"];
 	$artist_listens = $row["listens"];
 	if ($artist_listens == "1") { $show_listens = "true"; }
-	
+
 	playerViews($artist_id);
-	
+
 	// Build Pages
 	$loadpages = mq("select * from `[p]musicplayer_content` where `artistid`='{$artist_id}' order by `order` asc, `id` desc");
 	while ($pages = mf($loadpages)) {
 		$page_id = $pages["id"];
-		$page_name = stripslashes($pages["name"]);
+		$page_name = $pages["name"];
 		if ($pages["body"] != "") { 
-			$page_body = '<p>'.nohtml($pages["body"]).'</p>';
+			//$page_body = '<p>'.nohtml($pages["body"]).'</p>';
+			$page_body = '<p>'.$pages["body"].'</p>';
 		} else { 
 			$page_body = '';
 		}
@@ -112,8 +113,8 @@ if ($browser == true || $_GET["debug"] == "true"){
 		$music_artistid = $music["artistid"];
 		$music_amazon = nohtml($music["amazon"]);
 		$music_itunes = nohtml($music["itunes"]);
-		
-		if ($music["download"] == "1") { 
+
+		if ($music["download"] != "0") { 
 			$music_download = '<a href=\'download.php?artist='.$music_artistid.'&id='.$music_id.$downQ.'\' title=\'Click here download '.$music_name.' for free\' class=\'download vtip\'>Download</a> '; 
 		} else { 
 			$music_download = ''; 
@@ -129,7 +130,7 @@ if ($browser == true || $_GET["debug"] == "true"){
 		}
 		++$m;
 	}
-	
+
 	$total_q = mf(mq("SELECT SUM(views) FROM `[p]musicplayer_audio` WHERE `artistid`='{$music_artistid}'"));
 	$total_listens = intval($total_q[0]);
     
@@ -139,7 +140,7 @@ if ($browser == true || $_GET["debug"] == "true"){
 	$row_counter = 0; // Counts the number of video pages left to right
 	$videos_per_row = 3;
 	while ($video = mf($loadvideo)) { // Run only while there are videos to display
-	
+
 		$video_id = $video["id"];
 		$video_image = $video["image"];
         
@@ -149,10 +150,10 @@ if ($browser == true || $_GET["debug"] == "true"){
 				$artist_videos .= '</div>';
 			$artist_videos .= '<div class="video-row video-row-' . $row_counter . '" id="' . $row_counter . '">'; // Start new row with $row_counter as class
 		} 
-		
+
 		$artist_videos .= '<li id="video_'.$cv.'" class="playlist_video_master'; // Create <li> entry for video
 		if( !(($cv+1) % $videos_per_row) ) $artist_videos .= ' last'; // Adds a CSS tag for the last video in the row
-							
+
 		$artist_videos .= '"><div class="playlist_video"><img src="artists/images/'.$video_image.'" border="0" /></div></li>'."\n"; // Display video thumb
 		++$cv;
 	}	
@@ -161,7 +162,7 @@ if ($browser == true || $_GET["debug"] == "true"){
 	// Build Store
 	$check = mf(mq("select * from `[p]musicplayer_ecommerce` where `userid`='{$artist_id}' limit 1"));
 	$paypalEmail = $check["paypal"];
-	
+
 	// Function that outputs the video overlay pagination buttons, dependant on the global $row_counter variable
 	function write_row_buttons() {
 		global $row_counter;
@@ -171,7 +172,7 @@ if ($browser == true || $_GET["debug"] == "true"){
 		}
 		echo "</div>";
 	}
-	
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
@@ -1017,7 +1018,7 @@ $(document).ready(function(){
 			
 			<? if (!$fan) { ?>
 			<div id="logo">
-                <button id="login_signup_button" onclick='showLogin();'>Log in | Sign Up</button>
+                <!-- <button id="login_signup_button" onclick='showLogin();'>Log in | Sign Up</button> -->
 				<div id="makeroomforlogo">
 				<? if ($artist_logo) { ?><img src="http://www.myartistdna.com/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&h=145&w=145" /><? } ?>
 				</div>
@@ -1299,7 +1300,7 @@ $(document).ready(function(){
 							}
 							$product_color .= "</select>";
 						}
-						
+
 						$productsList .= '<li><div class="productimage">'.$product_image.'</div><h2>'.$product_name.'</h2><div class="productdetails">'.$product_desc.''.$product_size.$product_color.'</div><hr /><div class="price">$'.$product_price.'</div><div class="addtocart">'.$product_id.'</div><div class="clear"></div></li>'."\n";
 					}
 					echo $productsList
@@ -1314,8 +1315,8 @@ $(document).ready(function(){
 			<? } ?>
 
 			<div class="footerfade">
-				<div class="logo_img"><a href="<?=trueSiteUrl();?>/artists.php" /></a></div>
-				<div id="theSearchBox"></div>
+				<div class="logo_img"><a href="#"></a><!-- <a href="<?=trueSiteUrl();?>/artists.php" /></a> --></div>
+				<!-- <div id="theSearchBox"></div> -->
 			</div> 
 
 			<a class="jp-play-fake"></a>
@@ -1487,15 +1488,19 @@ function LoadNewContent(id,file){
 
 <!-- Tracking code Starts --> 
 <script type="text/javascript">
-var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.carlosmariomejia.com/webstats/" : "http://www.carlosmariomejia.com/webstats/");
-document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-</script><script type="text/javascript">
-try {
-var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 6);
-piwikTracker.trackPageView();
-piwikTracker.enableLinkTracking();
-} catch( err ) {}
-</script><noscript><p><img src="http://www.carlosmariomejia.com/webstats/piwik.php?idsite=6" style="border:0" alt="" /></p></noscript>
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15194524-1']);
+  _gaq.push(['_setDomainName', '.myartistdna.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 <!-- Tracking code Ends -->
 </body>
 </html>
