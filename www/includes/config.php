@@ -1,5 +1,5 @@
 <?php
-    $new_include_path = get_include_path() . PATH_SEPARATOR . dirname(__FILE__) . "../..";
+    $new_include_path = get_include_path() . PATH_SEPARATOR . dirname(__FILE__) . "/../..";
     set_include_path($new_include_path);
 
     // This file should have db configuration
