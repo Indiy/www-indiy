@@ -122,14 +122,17 @@ background:#f6f6f6;
     <ul>
     <li><a href="faq.html">FAQs</a></li>
     <li><a href="tour.php">Help</a></li>
+    <li><a href="privacy.html">Privacy</a></li>
+    <li><a href="terms_service.html">Terms</a></li>
     </ul>
     </aside>
 
     <aside>
-    <h5>LEGAL</h5>
+    <h5>AFFILIATES</h5>
     <ul>
-    <li><a href="privacy.html">Privacy</a></li>
-    <li><a href="terms_service.html">Terms</a></li>
+    <li><a href="http://myartistdna.is">MyArtistdna.is</a></li>
+    <li><a href="http://myartistdna.fm">MyArtistdna.fm</a></li>
+       <li><a href="http://myartistdna.tv">MyArtistdna.tv</a></li>
     </ul>
     </aside>
 
