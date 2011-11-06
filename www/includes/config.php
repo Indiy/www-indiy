@@ -1,7 +1,7 @@
 <?php
 
     // This file should have db configuration
-    include_once("../../server_config.php");
+    require_once("server_config.php");
 
 	session_start();
 
