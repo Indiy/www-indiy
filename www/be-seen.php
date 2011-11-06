@@ -40,7 +40,7 @@ include "header.php";
 			<figure><img src="images/benefits_analytics.jpg" alt="Benefits Analytics"></figure>
 			<aside>
 			<h4>Real-time Analytics</h4>
-			<p>See how many people are visiting your platform and listening to your music. Real time stats. Find out how many listens each song has, or total songs, or downloads, or visits. we have loads of stats.</p>
+			<p>See how many people are visiting your platform and listening to your music. Real time stats. Find out how many listens each song has, or total songs, or downloads, or visits.</p>
 			</aside>
 			</article>
 			
