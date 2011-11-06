@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = unsupported_browser.php; sourceTree = "<group>"; };
+		2D380B8814671EF400E36189 /* server_config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = server_config.php; path = ../server_config.php; sourceTree = "<group>"; };
 		2DF46F4B1440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
 		2DF46F4C1440B77F005538C7 /* casestudies.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = casestudies.html; sourceTree = "<group>"; };
 		2DF46F4E1440B77F005538C7 /* -styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "-styles.css"; sourceTree = "<group>"; };
@@ -1385,6 +1386,7 @@
 		2DF46F401440B76B005538C7 = {
 			isa = PBXGroup;
 			children = (
+				2D380B8814671EF400E36189 /* server_config.php */,
 				2DF46F491440B77F005538C7 /* www */,
 			);
 			sourceTree = "<group>";

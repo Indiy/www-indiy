@@ -1,16 +1,9 @@
 <?php
 
-	session_start();
-	error_reporting(0);
+    // This file should have db configuration
+    include_once("../../server_config.php");
 
-	$dbhost		=	"localhost";
-	$dbusername	=	"myartist_user";
-	$dbpassword	=	"MyartistDNA!";
-	$dbname		=	"myartist_mysql";
-	$connect 	= 	mysql_connect($dbhost, $dbusername, $dbpassword);
-	mysql_select_db($dbname,$connect) or die ("Could not select database");
-	
-	// LOAD SYSTEM SETTINGS ////////////////////////////////////////////////////////////
+	session_start();
 
 	$prefix 			= "mydna_";
 	
