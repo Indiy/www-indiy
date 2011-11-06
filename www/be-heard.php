@@ -31,7 +31,7 @@ include "header.php";
 		<div class="playbar">
 			<div class="extras"><img src="images/bg_extras.jpg" alt="EXTRAS"></div>
 			<h4>Play Bar</h4>
-			<p>Release new music on the drop of a dime. easy to use player makes listen to new music fun</p>
+			<p>Release new music on the drop of a dime. Easy to use player makes listening to new music fun.</p>
 			</div>
 			
 			
@@ -56,7 +56,7 @@ include "header.php";
 			<figure><img src="images/benefits_fan_feedback.jpg" alt="Benefits Fan Feedback"></figure>
 			<aside>
 			<h4>Fan Feedback</h4>
-			<p>Learn what your fans think about your art. through comments with FB you can get real responses.</p>
+			<p>Learn what your fans think about your art. Through comments with FB you can get real responses.</p>
 			</aside>
 			</article>
 			

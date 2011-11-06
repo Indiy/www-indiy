@@ -40,7 +40,7 @@ include "header.php";
 			<figure><img src="images/benefits_analytics.jpg" alt="Benefits Analytics"></figure>
 			<aside>
 			<h4>Real-time Analytics</h4>
-			<p>See how many ppl are visiting yoru platform and listening to your music. Real time stats. Find out how many listens each song has, or total songs, or downloads, or visits. we have loads of stats.</p>
+			<p>See how many people are visiting your platform and listening to your music. Real time stats. Find out how many listens each song has, or total songs, or downloads, or visits.</p>
 			</aside>
 			</article>
 			
@@ -48,7 +48,7 @@ include "header.php";
 			<figure><img src="images/benefits_updatable_playlist.jpg" alt="Benefits Updatable Playlist"></figure>
 			<aside>
 			<h4>Updatable Playlist</h4>
-			<p>Upload content, ajax drag and drop playlist organizer. easy as 1,2,3.
+			<p>Upload content, ajax drag and drop playlist organizer. Easy as 1,2,3.
 </p>
 			</aside>
 			</article>

@@ -101,10 +101,9 @@ background:#f6f6f6;
     <aside>
     <h5>ARTIST</h5>
     <ul>
-    <li><a href="#">All</a></li>
-    <li><a href="#">Music</a></li>
-    <li><a href="#">Art</a></li>
-    <li><a href="#">Fashion</a></li>
+    <li><a href="artists.php">All</a></li>
+    <li><a href="music.php">Music</a></li>
+    <li><a href="art.php">Art</a></li>
   
     </ul>
     </aside>
@@ -122,29 +121,31 @@ background:#f6f6f6;
     <h5>SUPPORT</h5>
     <ul>
     <li><a href="faq.html">FAQs</a></li>
-    <li><a href="help.html">Help</a></li>
+    <li><a href="tour.php">Help</a></li>
+    <li><a href="privacy.html">Privacy</a></li>
+    <li><a href="terms_service.html">Terms</a></li>
     </ul>
     </aside>
 
     <aside>
-    <h5>LEGAL</h5>
+    <h5>AFFILIATES</h5>
     <ul>
-    <li><a href="privacy.html">Privacy</a></li>
-    <li><a href="terms_service.html">Terms</a></li>
+    <li><a href="http://myartistdna.is">MyArtistdna.is</a></li>
+    <li><a href="http://myartistdna.fm">MyArtistdna.fm</a></li>
+       <li><a href="http://myartistdna.tv">MyArtistdna.tv</a></li>
     </ul>
     </aside>
 
     <article>
     <h5>STAY CONNECTED</h5>
     <ul>
-    <li><a href="http://facebook.com/myartistdna"><span><img src="images/facebook.gif" alt="Facebook"></span> Become a fan on Facebook</a></li>
-    <li><a href="http://twitter.com/myartistdna"><span><img src="images/twitter.gif" alt="Twitter"></span> Follow us on Twitter</a></li>
-    <li class="last"><a href="#"><span><img src="images/email.gif" alt="Email"></span> Sign up for our newsletter</a></li>
+    <li><a href="http://facebook.com/pages/MyArtistDNA/106114012796731" target="_blank"><span><img src="images/facebook.gif" alt="Facebook"></span> Become a fan on Facebook</a></li>
+    <li><a href="http://twitter.com/myartistdna" target="_blank"><span><img src="images/twitter.gif" alt="Twitter"></span> Follow us on Twitter</a></li>
     </ul>
     </article>
 
-    <div class="logo"><a href="#"><img src="images/MYARTISTDNA_footer.gif" alt="MYARTISTDNA"></a></div>
-    <p>&copy; 2011 <a href="http://myartistdna.is">MyArtistDNA</a>, All rights reserved</p>
+    <div class="logo"><a href="http://myartistdna.is"><img src="images/MYARTISTDNA_footer.gif" alt="MYARTISTDNA"></a></div>
+    <p>&copy; 2011 <a href="http://levasent.com">Levas Entertainment</a>, All rights reserved</p>
 
 </footer>
 </section>
@@ -249,15 +250,18 @@ background:#f6f6f6;
 </div>
 <!-- Tracking code Starts --> 
 <script type="text/javascript">
-var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.carlosmariomejia.com/webstats/" : "http://www.carlosmariomejia.com/webstats/");
-document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-</script><script type="text/javascript">
-try {
-var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 6);
-piwikTracker.trackPageView();
-piwikTracker.enableLinkTracking();
-} catch( err ) {}
-</script><noscript><p><img src="http://www.carlosmariomejia.com/webstats/piwik.php?idsite=6" style="border:0" alt="" /></p></noscript>
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15194524-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 <!-- Tracking code Ends -->
 </body>
 </html>
