@@ -19,19 +19,22 @@ include "header.php";
      <div class="features">
     <ul id="accordion-slider">
 
-    <li><a href="http://navegante.myartistdna.fm" target="_blank"><img src="images/myartistdna_01.jpg" alt=""></a></li>
+    <li><a href="http://navegante.myartistdna.com" target="_blank"><img src="images/myartistdna_01.jpg" alt=""></a></li>
 
-    <li><a href="http://hierosonic.myartistdna.fm" target="_blank"><img src="images/myartistdna_11.jpg" alt=""></a></li>
+    <li><a href="http://youngchris.myartistdna.com" target="_blank"><img src="images/myartistdna_11.jpg" alt=""></a></li>
 
-    <li><a href="http://youngchris.myartistdna.fm" target="_blank"><img src="images/myartistdna_12.jpg" alt=""></a></li>    
+    <li><a href="http://hierosonic.myartistdna.com" target="_blank"><img src="images/myartistdna_12.jpg" alt=""></a></li>    
     </ul>
     </div><!-- features -->
     
-    
+     <div class="signup">
+    <h3>Experience MyArtistDNA</h3>
+    <div class="button"><a href="http://navegante.myartistdna.com">EXPLORE NOW</a></div>
+    </div><!-- signup -->
 
 	
     <div id="artistshome">
-	<h2>who useS MY<span>ARTIST</span>DNA</h2>
+	<h2>ARTISTS USING MY<span>ARTIST</span>DNA</h2>
     	<ul>
         <li><a href="#"><img src="images/artists_01.jpg" alt="">
         <span>Navegante</span></a></li>
