@@ -38,7 +38,7 @@ include "header.php";
 			<article class="centralized">
 			<figure><img src="images/benefits_centralized.jpg" alt="benefits_centralized"></figure>
 			<aside>
-			<h4>One centralized place for you to call home.</h4>
+			<h4>One centralized place for you to call home</h4>
 			<p>Instead of sending ppl tons of Youtube and Vimeo and FB, send them one spot that has all your content organized.</p>
 			</aside>
 			</article>
@@ -65,7 +65,7 @@ include "header.php";
 			<figure><img src="images/benefits_socialize.jpg" alt="benefits_socialize"></figure>
 			<aside>
 			<h4>Socialize Tab</h4>
-			<p>facebook and twitter stream integrated. also fans can signup for the mailist here.</p>
+			<p>facebook and twitter stream integrated. Also fans can signup for the mailist here.</p>
 			</aside>
 			</article>
 			
