@@ -1018,7 +1018,7 @@ $(document).ready(function(){
 			
 			<? if (!$fan) { ?>
 			<div id="logo">
-                <!-- <button id="login_signup_button" onclick='showLogin();'>Log in | Sign Up</button> -->
+                <button id="login_signup_button" onclick='showLogin();'>Log in | Sign Up</button>
 				<div id="makeroomforlogo">
 				<? if ($artist_logo) { ?><img src="/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&h=145&w=145" /><? } ?>
 				</div>
