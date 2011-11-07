@@ -60,7 +60,7 @@ $(document).ready(function(){
         if( $_SESSION['sess_userType'] == 2 ) 
         {
             echo '<li><a class="active" href="dashboard.php">DASHBOARD</a></li>';
-            echo '<li><a href="#">ADD ARTIST</a></li>';
+            echo '<li><a href="add_user.php" rel="facebox[.bolder]">ADD ARTIST</a></li>';
             echo '<li><a href="#">ADD LABEL</a></li>';
             echo '<li class="nodivider"><a href="dashboard.php">BACK TO MAIN</a></li>';
          }
