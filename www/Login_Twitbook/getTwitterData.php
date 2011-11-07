@@ -1,7 +1,12 @@
-<?php require("twitter/twitteroauth.php");
+<?php 
+
+require("twitter/twitteroauth.php");
 require 'config/twconfig.php';
 require 'config/functions.php';
 session_start();
+
+require_once '../includes/config.php';
+require_once '../includes/functions.php';
 
 if (!empty($_GET['oauth_verifier']) && !empty($_SESSION['oauth_token']) && !empty($_SESSION['oauth_token_secret'])) {
     // We've got everything we need
@@ -49,7 +54,7 @@ if (!empty($_GET['oauth_verifier']) && !empty($_SESSION['oauth_token']) && !empt
             $_SESSION['sess_userEmail'] =  $userdata['email'];
             $_SESSION['sess_userType'] = $userdata['type'];
 			$_SESSION['sess_userURL'] = $userdata['url'];
-			header("Location: http://www.myartistdna.com/manage/artist_management.php?userId=$myid&session_id=". session_id());
+			header("Location: " . trueSiteUrl() . "/manage/artist_management.php?userId=$myid&session_id=". session_id());
             /*
             print "<html><body><pre>\n";
             print_r($user_info);
