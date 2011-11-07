@@ -54,13 +54,14 @@ function onSubmit()
             $('#status').text("User Add Failed!");
         }
     });
+    return false;
 }
 </script>
 
 <div id="popup">
     <div class="addcontent">
         <h2 class="title"  id="demonstrations">Add Artist</h2>
-        <form id="none" method="post" enctype="multipart/form-data" action="add_user.php">
+        <!-- <form id="none" method="post" enctype="multipart/form-data" action="add_user.php"> -->
             <div id="form_field">
             <div class="clear"></div>
             
@@ -83,7 +84,7 @@ function onSubmit()
             <button id='add_user_submit' class="submit" onclick='onSubmit();'>Submit</button>
             <div id='status'></div>
         </div>
-        </form>
+        <!-- </form> -->
     </div>
     <div style="clear: both;">&nbsp;</div>
 </div>
