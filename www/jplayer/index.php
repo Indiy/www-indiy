@@ -777,7 +777,7 @@ $(document).ready(function(){
             var src_arg = "/artists/images/" + image;
             if( repeat == "no-repeat" || repeat == "stretch" )
             {
-                var img_url = "http://www.myartistdna.com/timthumb.php?src=" + src_arg + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
+                var img_url = "/timthumb.php?src=" + src_arg + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
                 //$('#image').html("<img src='" + img_url + "' style='vertical-align:middle; margin-top:-" + (getWindowHeight()/2) + "px; margin-left:-" + (getWindowWidth()/2) + "px;' />");
                 var style = "width: 100%; height: 100%;";
                 var html = "<img src='" + img_url + "' style='" + style + "'/>";
@@ -1020,7 +1020,7 @@ $(document).ready(function(){
 			<div id="logo">
                 <!-- <button id="login_signup_button" onclick='showLogin();'>Log in | Sign Up</button> -->
 				<div id="makeroomforlogo">
-				<? if ($artist_logo) { ?><img src="http://www.myartistdna.com/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&h=145&w=145" /><? } ?>
+				<? if ($artist_logo) { ?><img src="/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&h=145&w=145" /><? } ?>
 				</div>
 				<div id="makeroomfordetails">
 					<div class="clear"></div>
