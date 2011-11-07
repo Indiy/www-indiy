@@ -131,7 +131,7 @@ background:#f6f6f6;
     <h5>AFFILIATES</h5>
     <ul>
     <li><a href="http://myartistdna.is">MAD.is</a></li>
-    <li><a href="http://myartistdna.fm">MAD.fm</a></li>
+    <li><a href="http://myartistdna.fm">MyAD.fm</a></li>
        <li><a href="http://myartistdna.tv">MAD.tv</a></li>
     </ul>
     </aside>
@@ -141,8 +141,6 @@ background:#f6f6f6;
     <ul>
     <li><a href="http://facebook.com/pages/MyArtistDNA/106114012796731" target="_blank"><span><img src="images/facebook.gif" alt="Facebook"></span> Become a fan on Facebook</a></li>
     <li><a href="http://twitter.com/myartistdna" target="_blank"><span><img src="images/twitter.gif" alt="Twitter"></span> Follow us on Twitter</a></li>
-    <li><a href="#" target="_blank"><span><img src="images/email.gif" alt="Email"></span> Sign Up for Newsletter</a></li>
-
     </ul>
     </article>
 
