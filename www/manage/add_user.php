@@ -13,7 +13,7 @@
         $artist = $_POST['artist'];
         $url = $_POST['url'];
         $email = $_POST['email'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
 
         $tables = "artist|url|email|password";
 		$values = "{$artist}|{$url}|{$email}|{$password}";
