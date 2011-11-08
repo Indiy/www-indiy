@@ -33,7 +33,7 @@
                 <div class="clear"></div>
                 
                 <label>Label Name</label>
-                <input id='artist' type="text" name="name" value="" class="text" />
+                <input id='name' type="text" name="name" value="" class="text" />
                 <div class="clear"></div>
                 
                 <label>Email</label>
