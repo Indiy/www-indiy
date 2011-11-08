@@ -271,7 +271,6 @@
 		2DF470581440B77F005538C7 /* faq.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = faq.html; sourceTree = "<group>"; };
 		2DF470591440B77F005538C7 /* fashion.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fashion.php; sourceTree = "<group>"; };
 		2DF4705A1440B77F005538C7 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
-		2DF4705B1440B77F005538C7 /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DF4705C1440B77F005538C7 /* header.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = header.php; sourceTree = "<group>"; };
 		2DF4705D1440B77F005538C7 /* home.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = home.php; sourceTree = "<group>"; };
 		2DF4705F1440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
@@ -1422,7 +1421,6 @@
 				2DF470581440B77F005538C7 /* faq.html */,
 				2DF470591440B77F005538C7 /* fashion.php */,
 				2DF4705A1440B77F005538C7 /* favicon.ico */,
-				2DF4705B1440B77F005538C7 /* footer.php */,
 				2DF474221449FF1E005538C7 /* footer2.php */,
 				2DF4705C1440B77F005538C7 /* header.php */,
 				2DF4705D1440B77F005538C7 /* home.php */,
