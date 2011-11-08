@@ -1,16 +1,18 @@
 <script type="text/javascript">
 function send_ajax_login(o)
 {			
-	var username,password,msg;
-	username = document.loginPopup.username.value;
-	password = document.loginPopup.password.value;
+    var username,password,msg;
+    username = document.loginPopup.username.value;
+    password = document.loginPopup.password.value;
 
-	// Send the ajax request.
-	 $.ajax({
-	   type: "POST",
-	   url: "check_login.php?username="+username+"&password="+password,
-	   dataType: "json",
-	   success: function(data){
+    // Send the ajax request.
+    $.ajax(
+    {
+        type: "POST",
+        url: "check_login.php?username="+username+"&password="+password,
+        dataType: "json",
+        success: function(data)
+        {
             var result = data['result'];
             if( result == 0 )
             {	
@@ -26,14 +28,13 @@ function send_ajax_login(o)
             {			
                 $("#validate-login").html("<span class='ui-error'>Please enter the username and password.</span>");					 
                 return false;
-            },
+            }
+        },
         error: function()
         {
             $("#validate-login").html("<span class='ui-error'>Login Failed. Please try again.</span>");					 
         }
-	   }
-	  
-	 });
+    });
 }
 </script>
 
