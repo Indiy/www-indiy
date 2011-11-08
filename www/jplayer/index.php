@@ -1315,8 +1315,8 @@ $(document).ready(function(){
 			<? } ?>
 
 			<div class="footerfade">
-				<div class="logo_img"><a href="#"></a><!-- <a href="<?=trueSiteUrl();?>/artists.php" /></a> --></div>
-				<!-- <div id="theSearchBox"></div> -->
+				<div class="logo_img"><a href="<?=trueSiteUrl();?>/artists.php" /></a></div>
+			    <div id="theSearchBox"></div>
 			</div> 
 
 			<a class="jp-play-fake"></a>
