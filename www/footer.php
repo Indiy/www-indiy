@@ -141,7 +141,7 @@ background:#f6f6f6;
     <ul>
     <li><a href="http://facebook.com/pages/MyArtistDNA/106114012796731" target="_blank"><span><img src="images/facebook.gif" alt="Facebook"></span> Become a fan on Facebook</a></li>
     <li><a href="http://twitter.com/myartistdna" target="_blank"><span><img src="images/twitter.gif" alt="Twitter"></span> Follow us on Twitter</a></li>
-    <li><a href="#" target="_blank"><span><img src="images/email.gif" alt="Twitter"></span>Join Our Newsletter</a></li>
+    <li><a href="#" target="_blank"><span><img src="images/email.gif" alt="Email"></span>Join Our Newsletter</a></li>
 
     </ul>
     </article>
@@ -178,7 +178,7 @@ background:#f6f6f6;
     </ul>
     </div>
     </article>
-    <!--
+  
     <div class="or">OR</div>
     <span class="error" style="display:none">Please fill up all required fields.</span>
 	<span class="success" style="display:none">Registration Successfull.</span>
@@ -198,7 +198,7 @@ background:#f6f6f6;
 		</fieldset>
     </form>
     </article>
-    -->
+  
     </div> 
 </div><!-- pop up -->
 </div>
