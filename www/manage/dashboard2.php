@@ -78,7 +78,7 @@
         </fieldset>
         </div>
         
-        <h2>Def jam records</h2>
+        <h2>Super Admin</h2>
 		<?php
 		if($_SESSION[me]==""):
 		?>
