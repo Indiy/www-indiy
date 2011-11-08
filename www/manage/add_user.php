@@ -14,9 +14,12 @@
         $url = $_REQUEST['url'];
         $email = $_REQUEST['email'];
         $password = md5($_REQUEST['password']);
+        $label_id = "NULL";
+        if( $_SESSION['sess_userType'] == 'LABEL' )
+            $label_id = $_SESSION['sess_userId'];
 
-        $tables = "artist|url|email|password";
-		$values = "{$artist}|{$url}|{$email}|{$password}";
+        $tables = "artist|url|email|password|label_id";
+		$values = "{$artist}|{$url}|{$email}|{$password}|{$label_id}";
         insert('[p]musicplayer',$tables,$values);
 
         $postedValues['success'] = "1";

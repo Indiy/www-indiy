@@ -107,7 +107,7 @@
                 else if( $_SESSION['sess_userType'] == 'LABEL' )
                 {
                     $label_filter = $_SESSION['sess_userId'];
-					$sqlArtistFilter = " AND label_id = $id_filter ";
+					$sqlArtistFilter = " AND label_id = $label_filter ";
                 }
 				#### End Artist login ######
 
@@ -122,7 +122,7 @@
 				########### End sorting ##############
 
 				$sql = "SELECT id,artist,logo FROM mydna_musicplayer WHERE 1=1 ".$sqlArtistFilter.$orderBy;
-				$query_find_artist = mysql_query($sql) or die(mysql_error());
+				$query_find_artist = mysql_query($sql) or die(mysql_error() . "sql=$sql");
 
 				### Paging Goes here ####
 				$record_per_page="10";
