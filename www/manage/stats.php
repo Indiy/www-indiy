@@ -171,12 +171,9 @@ jQuery(document).ready(function($) {
 <nav>
 <ul>
 <?php 
-    if( $_SESSION['sess_userType'] == 2 ) 
+    if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' ) 
     {
-        echo '<li><a class="active" href="dashboard.php">DASHBOARD</a></li>';
-        echo '<li><a href="#">ADD ARTIST</a></li>';
-        echo '<li><a href="#">ADD LABEL</a></li>';
-        echo '<li class="nodivider"><a href="dashboard.php">BACK TO MAIN</a></li>';
+        echo '<li class="nodivider"><a href="dashboard.php">DASHBOARD</a></li>';
     }
     else
     {

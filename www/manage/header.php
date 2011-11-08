@@ -59,13 +59,17 @@ $(document).ready(function(){
 	<nav>
     <ul>
         <?php 
-        if( $_SESSION['sess_userType'] == 2 ) 
+        if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' ) 
         {
             echo '<li><a class="active" href="dashboard.php">DASHBOARD</a></li>';
             echo '<li><a href="add_user.php" rel="facebox[.bolder]">ADD ARTIST</a></li>';
             echo '<li><a href="add_label.php" rel="facebox[.bolder]">ADD LABEL</a></li>';
-            echo '<li class="nodivider"><a href="dashboard.php">BACK TO MAIN</a></li>';
-         }
+        }
+        else if( $_SESSION['sess_userType'] == 'LABEL' )
+        {
+            echo '<li><a class="active" href="dashboard.php">DASHBOARD</a></li>';
+            echo '<li class="nodivider"><a href="add_user.php" rel="facebox[.bolder]">ADD ARTIST</a></li>';
+        }
          else
          {
              $host_explode = explode(".", $_SERVER["HTTP_HOST"]);

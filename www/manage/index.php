@@ -31,7 +31,7 @@ if(isset($_POST['submitted']))
 			$_SESSION['sess_userName'] = $find_records['name'];
 			$_SESSION['sess_userUsername'] = $find_records['username'];
 			$_SESSION['sess_userEmail'] = $find_records['email'];
-			$_SESSION['sess_userType'] = 2;
+			$_SESSION['sess_userType'] = $find_records['usertype'];
 			$_SESSION['sess_userURL'] = $find_records['username'];
 			
 			echo "<script type='text/javascript'>window.location='dashboard.php';  </script>'";			

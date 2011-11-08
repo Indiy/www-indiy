@@ -52,7 +52,7 @@ if (!empty($_GET['oauth_verifier']) && !empty($_SESSION['oauth_token']) && !empt
 			$_SESSION['sess_userName'] = $userdata['artist'];
 			$_SESSION['sess_userUsername'] = $userdata['userName'];
             $_SESSION['sess_userEmail'] =  $userdata['email'];
-            $_SESSION['sess_userType'] = $userdata['type'];
+            $_SESSION['sess_userType'] = 'ARTIST';
 			$_SESSION['sess_userURL'] = $userdata['url'];
 			header("Location: " . trueSiteUrl() . "/manage/artist_management.php?userId=$myid&session_id=". session_id());
             /*

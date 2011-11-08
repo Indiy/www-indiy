@@ -99,8 +99,16 @@
         	<?php				
 				#### Artist Login ####
 				$sqlArtistFilter = "";
-				if($_SESSION['me'] > 0 )
-					$sqlArtistFilter = " AND id = $_SESSION[me] ";
+				if( $_SESSION['sess_userType'] == 'ARTIST' )
+                {
+                    $id_filter = $_SESSION['sess_userId'];
+					$sqlArtistFilter = " AND id = $id_filter ";
+                }
+                else if( $_SESSION['sess_userType'] == 'LABEL' )
+                {
+                    $label_filter = $_SESSION['sess_userId'];
+					$sqlArtistFilter = " AND label_id = $id_filter ";
+                }
 				#### End Artist login ######
 
 				####### To handle the sorting functionality #####
