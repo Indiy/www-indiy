@@ -34,8 +34,7 @@ function onAddLabelSubmit()
 {
     $('#add_label_submit').hide();
     $('#status').text("Adding user...");
-    var artist = $('#artist').val();
-    var url = $('#url').val();
+    var name = $('#name').val();
     var email = $('#email').val();
     var password = $('#password').val();
     
