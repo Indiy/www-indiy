@@ -12,6 +12,7 @@
 		2D380B8A1467970100E36189 /* add_user.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_user.php; sourceTree = "<group>"; };
 		2D380B8B1468AC0500E36189 /* manage.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = manage.js; sourceTree = "<group>"; };
 		2D380B8C1468CBE500E36189 /* add_label.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_label.php; sourceTree = "<group>"; };
+		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DF46F4B1440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
 		2DF46F4C1440B77F005538C7 /* casestudies.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = casestudies.html; sourceTree = "<group>"; };
 		2DF46F4E1440B77F005538C7 /* -styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "-styles.css"; sourceTree = "<group>"; };
@@ -1142,7 +1143,6 @@
 		2DF474141440B77F005538C7 /* tour.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = tour.php; sourceTree = "<group>"; };
 		2DF474151440B77F005538C7 /* working.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = working.php; sourceTree = "<group>"; };
 		2DF4741A1440CFC6005538C7 /* jquery.mCustomScrollbar.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = jquery.mCustomScrollbar.css; sourceTree = "<group>"; };
-		2DF474221449FF1E005538C7 /* footer2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer2.php; sourceTree = "<group>"; };
 		2DF47425144A2D84005538C7 /* addcontent.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = addcontent.php; sourceTree = "<group>"; };
 		2DF47426144A2D84005538C7 /* addmusic.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = addmusic.php; sourceTree = "<group>"; };
 		2DF47427144A2D84005538C7 /* addproduct.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = addproduct.php; sourceTree = "<group>"; };
@@ -1421,9 +1421,9 @@
 				2DF470581440B77F005538C7 /* faq.html */,
 				2DF470591440B77F005538C7 /* fashion.php */,
 				2DF4705A1440B77F005538C7 /* favicon.ico */,
-				2DF474221449FF1E005538C7 /* footer2.php */,
 				2DF4705C1440B77F005538C7 /* header.php */,
 				2DF4705D1440B77F005538C7 /* home.php */,
+				2DBDD1271469D46D001E20CC /* footer.php */,
 				2DF471C71440B77F005538C7 /* index.php */,
 				2DF471C81440B77F005538C7 /* inf.php */,
 				2DF471C91440B77F005538C7 /* join_now.php */,
