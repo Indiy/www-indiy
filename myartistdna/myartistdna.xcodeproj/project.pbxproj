@@ -9,7 +9,7 @@
 /* Begin PBXFileReference section */
 		2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = unsupported_browser.php; sourceTree = "<group>"; };
 		2D380B8814671EF400E36189 /* server_config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = server_config.php; path = ../server_config.php; sourceTree = "<group>"; };
-		2D380B8A1467970100E36189 /* add_user.php */ = {isa = PBXFileReference; path = add_user.php; sourceTree = "<group>"; };
+		2D380B8A1467970100E36189 /* add_user.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_user.php; sourceTree = "<group>"; };
 		2D380B8B1468AC0500E36189 /* manage.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = manage.js; sourceTree = "<group>"; };
 		2D380B8C1468CBE500E36189 /* add_label.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_label.php; sourceTree = "<group>"; };
 		2DF46F4B1440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
@@ -1174,7 +1174,6 @@
 		2DF47445144A2D84005538C7 /* Teletex_Light.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = Teletex_Light.eot; sourceTree = "<group>"; };
 		2DF47446144A2D84005538C7 /* Teletex_Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Teletex_Light.otf; sourceTree = "<group>"; };
 		2DF47447144A2D84005538C7 /* dashboard.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = dashboard.php; sourceTree = "<group>"; };
-		2DF47448144A2D84005538C7 /* dashboard2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = dashboard2.php; sourceTree = "<group>"; };
 		2DF47449144A2D84005538C7 /* delete_content.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = delete_content.php; sourceTree = "<group>"; };
 		2DF4744A144A2D84005538C7 /* delete_product.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = delete_product.php; sourceTree = "<group>"; };
 		2DF4744B144A2D84005538C7 /* delete_song.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = delete_song.php; sourceTree = "<group>"; };
@@ -3160,7 +3159,6 @@
 				2DF47428144A2D84005538C7 /* addvideo.php */,
 				2DF4742D144A2D84005538C7 /* artist_management.php */,
 				2DF47447144A2D84005538C7 /* dashboard.php */,
-				2DF47448144A2D84005538C7 /* dashboard2.php */,
 				2DF47449144A2D84005538C7 /* delete_content.php */,
 				2DF4744A144A2D84005538C7 /* delete_product.php */,
 				2DF4744B144A2D84005538C7 /* delete_song.php */,
