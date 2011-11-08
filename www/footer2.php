@@ -27,6 +27,10 @@ function send_ajax_login(o)
                 $("#validate-login").html("<span class='ui-error'>Please enter the username and password.</span>");					 
                 return false;
             }
+        error: function()
+        {
+            $("#validate-login").html("<span class='ui-error'>Login Failed. Please try again.</span>");					 
+        }
 	   }
 	  
 	 });

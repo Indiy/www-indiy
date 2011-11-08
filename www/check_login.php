@@ -31,11 +31,11 @@
             setcookie($cookievar, $myid, $inTwoMonths);
             $_SESSION['me'] = $row['id'];
             $url = trueSiteUrl() . "/manage/artist_management.php?userId=$myid&session_id=". session_id();
-            $result = 0;
+            $result = 1;
         }
         else 
         {
-            $result = mysql_query("SELECT * FROM myartist_users WHERE email='$user' AND password='$pass' AND activeStatus='1'");
+            $result = mysql_query("SELECT * FROM myartist_users WHERE (email='$user' ||  username='$user') AND password='$pass'");
             if( mysql_num_rows($result) > 0 )
             {
                 $row = mf($result);
@@ -46,10 +46,6 @@
                 $_SESSION['sess_userType'] = $row['usertype'];
                 $_SESSION['sess_userURL'] = $row['name'];
                 $url = trueSiteUrl() . "/manage/dashboard.php?session_id=". session_id();
-                $result = 0;
-            }
-            else
-            {
                 $result = 1;
             }
         }
