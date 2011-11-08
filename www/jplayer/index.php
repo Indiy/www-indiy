@@ -209,6 +209,7 @@ if ($browser == true || $_GET["debug"] == "true"){
 <script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
 
 <script src="js/artist_home.js" type="text/javascript"></script>
+<script src="/js/login_signup.js" type="text/javascript"></script>
 
 	<script type="text/javascript">
 
@@ -1371,27 +1372,28 @@ $(document).ready(function(){
         </ul>
         </div>
         </article>
-        <!--
         <div class="or">OR</div>
-        <span class="error" style="display:none">Please fill up all required fields.</span>
-        <span class="success" style="display:none">Registration Successfull.</span>
+        <span id='signup_error' class="error" style="display:none">Please fill up all required fields.</span>
+        <span id='signup_success' style="display:none">Registration Successfull.</span>
 
         <article>
         <h5>Create Login</h5>	 
-         <form autocomplete="off" enctype="multipart/form-data" method="post" name="form">
+         <form>
             <fieldset>
             <ul>
-                <li><label>Name</label> <input name="name" id="name" type="text" class="input" value="" /></li>			
-                <li><label>Email Address</label> <input name="email" id="email" type="text" class="input" value="" /></li>
-                <li><label>Username</label> <input name="username" id="username" type="text" class="input" value="" /></li>
-                <li><label>Password</label> <input name="password" id="password" type="password" class="input" value="" /></li>
-                <li><input name="agree" id="agree" type="checkbox" value="agree"> <span>I agree to the Terms &amp; Conditions of MyArtistDNA</span></li>
+                <li><label>Name</label> <input name="name" id='signup_name' type="text" class="input" value="" /></li>			
+                <li><label>Email Address</label> <input name="email" id='signup_email' type="text" class="input" value="" /></li>
+                <li><label>Username</label> <input name="username" id='signup_username' type="text" class="input" value="" /></li>
+                <li><label>Password</label> <input name="password" id='signup_password' type="password" class="input" value="" /></li>
+                <li>
+                    <input name="agree" id='signup_agree' type="checkbox" value="agree">
+                    <span>I agree to the Terms &amp; Conditions of MyArtistDNA</span>
+                </li>
             </ul>
-            <div class="button"><a href="#" class="submit">Complete Signup</a></div>
+            <div class="button"><a onclick='onSignupClick();'>Complete Signup</a></div>
             </fieldset>
         </form>
         </article>
-    --> 
         </div>
     </div><!-- pop up -->
     </div>
@@ -1414,7 +1416,7 @@ $(document).ready(function(){
                 <li><label>Password</label> <input id='login_password' name="password" type="password" class="input" value="" /></li>
                 </ul>
                 <p class="password"><a href="/?p=index&forgot=true">Forgot your password?</a></p>
-                <div class="button"><a href="#-1" onclick="tryLogin();">LOGIN</a></div>
+                <div class="button"><a href="#-1" onclick='onLoginClick();'>LOGIN</a></div>
                 </fieldset>
                 </form>
                 <h5 class="option">OR</h5>
