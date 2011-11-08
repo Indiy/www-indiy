@@ -4,11 +4,13 @@
 	<meta charset="utf-8" />
 	<title>MYARTISTDNA</title>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="js/jquery1.6.js"></script>
 	<link href="blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+
+    <script src="js/manage.js" type="text/javascript"></script>
+
 
     <!--[if IE]>
         <script src="js/html5.js"></script>

@@ -25,43 +25,11 @@
 		exit();
 	}
 ?>
-<script type="text/javascript">
-
-function onSubmit()
-{
-    $('#add_user_submit').hide();
-    $('#status').text("Adding user...");
-    var artist = $('#artist').val();
-    var url = $('#url').val();
-    var email = $('#email').val();
-    var password = $('#password').val();
-    
-    var post_url = "?artist=" + escape(artist);
-    post_url += "&url=" + escape(url);
-    post_url += "&email=" + escape(email);
-    post_url += "&password=" + escape(password);
-    jQuery.ajax(
-    {
-        type: 'POST',
-        url: post_url,
-        dataType: 'json',
-        success: function(data) 
-        {
-            $('#status').text("User Added");
-        },
-        error: function()
-        {
-            $('#status').text("User Add Failed!");
-        }
-    });
-    return false;
-}
-</script>
 
 <div id="popup">
     <div class="addcontent">
         <h2 class="title"  id="demonstrations">Add Artist</h2>
-        <!-- <form id="none" method="post" enctype="multipart/form-data" action="add_user.php"> -->
+        <form id="none"  onsubmit='return false;'> -->
             <div id="form_field">
             <div class="clear"></div>
             
@@ -81,10 +49,10 @@ function onSubmit()
             <input id='password' type="password" name="password" value="" class="text" />
             <div class="clear"></div>
             
-            <button id='add_user_submit' class="submit" onclick='onSubmit();'>Submit</button>
+            <button id='add_user_submit' class="submit" onclick='onAddUserSubmit();'>Submit</button>
             <div id='status'></div>
         </div>
-        <!-- </form> -->
+        </form>
     </div>
     <div style="clear: both;">&nbsp;</div>
 </div>
