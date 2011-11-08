@@ -33,7 +33,7 @@ function onAddUserSubmit()
 function onAddLabelSubmit()
 {
     $('#add_label_submit').hide();
-    $('#status').text("Adding user...");
+    $('#status').text("Adding label...");
     var name = $('#name').val();
     var email = $('#email').val();
     var password = $('#password').val();
