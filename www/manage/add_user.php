@@ -2,18 +2,18 @@
 
     require_once '../includes/config.php';
 	require_once '../includes/functions.php';
-	if($_SESSION['sess_userId']=="")
+	if($_SESSION['sess_userId'] == "")
 	{
 		header("Location: index.php");
 		exit();
 	}
 	
-	if($_POST['artist'] != "") 
+	if($_REQUEST['artist'] != "") 
     {
-        $artist = $_POST['artist'];
-        $url = $_POST['url'];
-        $email = $_POST['email'];
-        $password = md5($_POST['password']);
+        $artist = $_REQUEST['artist'];
+        $url = $_REQUEST['url'];
+        $email = $_REQUEST['email'];
+        $password = md5($_REQUEST['password']);
 
         $tables = "artist|url|email|password";
 		$values = "{$artist}|{$url}|{$email}|{$password}";
@@ -29,7 +29,7 @@
 <div id="popup">
     <div class="addcontent">
         <h2 class="title"  id="demonstrations">Add Artist</h2>
-        <form id="none"  onsubmit='return false;'> -->
+        <form id="none"  onsubmit='return false;'>
             <div id="form_field">
             <div class="clear"></div>
             

@@ -13,19 +13,19 @@ function onAddUserSubmit()
     post_url += "&email=" + escape(email);
     post_url += "&password=" + escape(password);
     jQuery.ajax(
-                {
-                type: 'POST',
-                url: post_url,
-                dataType: 'json',
-                success: function(data) 
-                {
-                $('#status').text("User Added");
-                },
-                error: function()
-                {
-                $('#status').text("User Add Failed!");
-                }
-                });
+    {
+        type: 'POST',
+        url: post_url,
+        dataType: 'json',
+        success: function(data) 
+        {
+            $('#status').text("User Added");
+        },
+        error: function()
+        {
+            $('#status').text("User Add Failed!");
+        }
+    });
     return false;
 }
 
