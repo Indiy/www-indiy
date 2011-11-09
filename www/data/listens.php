@@ -3,9 +3,9 @@
     header("Cache-Control: no-cache");
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
 
-	include('../includes/functions.php');	
-	include('../includes/config.php');
-	
+    include('../includes/functions.php');   
+    include('../includes/config.php');
+    
     $image = $_GET['image'];
 
     $music = mf(mq("select * from `[p]musicplayer_audio` where `image`='{$image}' limit 1"));

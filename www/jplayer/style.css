@@ -502,6 +502,8 @@ img.search_thumbnail {width:55px; height:55px; display:inline-block; border:1px 
 #popup .socialmedia ul { float:left}
 #popup .socialmedia ul li { float:left; line-height:.5em; padding-right:15px}
 
+#popup .error { color:red; }
+
 #popup .sign_up { width:376px; float:left; padding:0 22px 0 50px}
 #popup .sign_up article{width:376px; float:left; padding-top:25px}
 #popup .sign_up p {float:left; padding:5px 0 0 0; color: black;}

@@ -3,9 +3,9 @@
     header("Cache-Control: no-cache");
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
 
-	include('../includes/functions.php');	
-	include('../includes/config.php');
-	
+    include('../includes/functions.php');   
+    include('../includes/config.php');
+    
     $post_body = file_get_contents('php://input');
     $data = json_decode($post_body,TRUE);
 

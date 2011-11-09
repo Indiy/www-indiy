@@ -27,7 +27,7 @@
     else
     {
         $tables = "artist|url|email|username|password";
-		$values = "{$name}|{$username}|{$email}|{$username}|{$password}";
+        $values = "{$name}|{$username}|{$email}|{$username}|{$password}";
         if( insert('[p]musicplayer',$tables,$values) )
         {
             $insert_id = mysql_insert_id();

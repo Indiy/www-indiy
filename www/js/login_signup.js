@@ -1,10 +1,10 @@
 
 function onLoginClick()
-{			
-	var username = escape( $('#login_username').val() );
-	var password = escape( $('#login_password').val() );
+{           
+    var username = escape( $('#login_username').val() );
+    var password = escape( $('#login_password').val() );
 
-	// Send the ajax request.
+    // Send the ajax request.
     jQuery.ajax(
         {
             type: "POST",
@@ -14,24 +14,24 @@ function onLoginClick()
             {
                 var result = data['result'];
                 if( result == 0 )
-                {	
-                    $("#validate-login").html("<span class='ui-error'>Wrong username or password. Please try again.</span>");					 
+                {   
+                    $("#validate-login").html("<span class='ui-error'>Wrong username or password. Please try again.</span>");                    
                      return false;
                 }
                 else if( result == 1 )
                 {
-                    window.location.href=data['url'];	
+                    window.location.href=data['url'];   
                     return true;
                 }
                 else
-                {			
-                    $("#validate-login").html("<span class='ui-error'>Please enter the username and password.</span>");					 
+                {           
+                    $("#validate-login").html("<span class='ui-error'>Please enter the username and password.</span>");                  
                     return false;
                 }
             },
             error: function()
             {
-                $("#validate-login").html("<span class='ui-error'>Login Error. Please try again.</span>");					 
+                $("#validate-login").html("<span class='ui-error'>Login Error. Please try again.</span>");                   
                 return false;
             }
         });
