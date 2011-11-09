@@ -19,8 +19,9 @@
     $error = FALSE;
     $url = '';
 
-    $q = mysql_query("SELECT * FROM mydna_musicplayer WHERE username = $username OR url = $username");
-    if( mysql_num_rows($q) == 0 )
+    $sql = "SELECT * FROM mydna_musicplayer WHERE username = '$username' OR url = '$username'";
+    $q = mysql_query($sql) or die("bad sql: '$sql'");
+    if( mysql_num_rows($q) != 0 )
     {
         $error = "Username already exists.";
     }

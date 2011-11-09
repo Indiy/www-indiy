@@ -61,9 +61,10 @@ function onSignupClick()
                 contentType: 'application/json',
                 data: data,
                 processData: false,
-                dataType: 'json',
-                success: function(data) 
+                dataType: 'text',
+                success: function(text) 
                 {
+                    var data = JSON.parse(text);
                     if( data['error'] )
                     {
                         $('#signup_error').show();
