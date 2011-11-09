@@ -158,7 +158,7 @@
 							<span class='title'><a href='artist_management.php?userId=".$find_record['id']."'>".$find_record['artist']."</a></span>
 
 							<span class='visit'><a title='Visit ".$find_record['artist']."' href='artist_management.php?userId=".$find_record['id']." '>Visit</a></span>
-							<span class='deleteArtist'><a title='Delete ".$find_record['artist']."' href='#' onclick='if(confirm(\"Are you sure you want delete ".$find_record['artist']."?\"))location.href=\"dashboard2.php?userId=$userId&action=1&artist_id=".$find_record['id']."\";'></a></span>
+							<span class='deleteArtist'><a title='Delete ".$find_record['artist']."' href='#' onclick='if(confirm(\"Are you sure you want delete ".$find_record['artist']."?\"))location.href=\"dashboard.php?userId=$userId&action=1&artist_id=".$find_record['id']."\";'></a></span>
 						</li>"; 					
 				}			
 			?>			

@@ -1,4 +1,7 @@
-<?php include('../includes/config.php');
+<?php 
+start_session();
+
+include('../includes/config.php');
 require_once("include/fgcontactform.php");
 require_once("include/formvalidator.php");
 
@@ -21,12 +24,11 @@ if(isset($_POST['submitted']))
     //Then validate the form
     if($validator->ValidateForm())
     {
-		$query_findDetails = mysql_query("SELECT id,name,username,email FROM myartist_users WHERE username='".$_REQUEST['name']."' AND password='".md5($_REQUEST['userPwd'])."'");
+		$query_findDetails = mysql_query("SELECT * FROM myartist_users WHERE username='".$_REQUEST['name']."' AND password='".md5($_REQUEST['userPwd'])."'");
 		$find_records = mysql_fetch_array($query_findDetails);
 		$no_records = mysql_num_rows($query_findDetails);
 		if($no_records=='1')
 		{
-			session_start();
 			$_SESSION['sess_userId'] =	$find_records['id'];		
 			$_SESSION['sess_userName'] = $find_records['name'];
 			$_SESSION['sess_userUsername'] = $find_records['username'];
