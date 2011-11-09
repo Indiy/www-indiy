@@ -72,20 +72,9 @@ $(document).ready(function(){
         }
          else
          {
-             $host_explode = explode(".", $_SERVER["HTTP_HOST"]);
-             if( $host_explode[0] == $_SESSION['sess_userURL'] )
-             {
-                 $artist_home_host = $_SERVER["HTTP_HOST"];
-             }
-             else if( $host_explode[0] == 'www' )
-             {
-                 $artist_home_host = $_SESSION['sess_userURL'] . '.' . implode(".",array_slice($host_explode,1));
-             }
-             else
-             {
-                 $artist_home_host = $_SESSION['sess_userURL'] . $_SERVER["HTTP_HOST"];
-             }
-             //echo "<li class='active'><a href='/manage/artist_management.php?userId=".$_SESSION['sess_userId']."'>DASHBOARD</a></li>";
+             $host = parse_url(trueSiteUrl(),PHP_URL_HOST);
+             $host_explode = explode(".", $host);
+             $artist_home_host = $_SESSION['sess_userURL'] . '.' . implode('.',array_slice($host_explode,1));
              echo "<li class='nodivider'>";
              echo "<a href='http://$artist_home_host'>VIEW MY SITE</a>";
              echo "</li>";
