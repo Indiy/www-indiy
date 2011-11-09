@@ -10,7 +10,7 @@
 	
     $artist_id = $_REQUEST['artist_id'];
     
-	if($_REQUEST['paypal_email'] != "") 
+	if($_REQUEST['submit'] != "") 
     {
         $paypal_email = $_REQUEST['paypal_email'];
 
