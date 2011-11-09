@@ -1,6 +1,5 @@
 <?php
 
-
 function loginArtistFromRow($row)
 {
     $inTwoMonths = 60 * 60 * 24 * 60 + time();
@@ -14,8 +13,7 @@ function loginArtistFromRow($row)
     $_SESSION['sess_userType'] = 'ARTIST';
     $_SESSION['sess_userURL'] = $userdata['url'];
     
-    $url = trueSiteUrl() . "/manage/artist_management.php?userId=$myid&session_id=". session_id());
-    
+    $url = trueSiteUrl() . "/manage/artist_management.php?userId=$myid&session_id=" . session_id();
     return $url;
 }
 
