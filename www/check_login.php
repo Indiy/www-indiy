@@ -21,7 +21,7 @@
         if( mysql_num_rows($result) > 0 ) 
         {	
             $row = mf($result);
-            $url = loginWithRow($row);
+            $url = loginArtistFromRow($row);
             $result = 1;
         }
         else 

@@ -93,7 +93,7 @@ if (!empty($session)) {
         $userdata = $user->checkUser($uid, 'facebook', $username,$user_info,$music_str,$auto_incremented_id);
         if(!empty($userdata))
         {
-            $url = loginWithRow($userdata);
+            $url = loginArtistFromRow($userdata);
 			header("Location: $url");
         }
     } else {

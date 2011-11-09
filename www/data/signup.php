@@ -33,7 +33,7 @@
             $insert_id = mysql_insert_id();
             $q = mysql_query("SELECT * FROM mydna_musicplayer WHERE id = $insert_id");
             $row = mf($q);
-            $url = loginWithRow($row);
+            $url = loginArtistFromRow($row);
         }
         else
         {

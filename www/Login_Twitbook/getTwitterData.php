@@ -39,7 +39,7 @@
             $userdata = $user->checkUser($uid, 'twitter', $username,$user_info,$music_str,$auto_incremented_id);
             if( !empty($userdata) )
             {
-                $url = loginWithRow($userdata);
+                $url = loginArtistFromRow($userdata);
                 header("Location: $url");
             }
         }
