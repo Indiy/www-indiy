@@ -1390,7 +1390,7 @@ $(document).ready(function(){
                     <span>I agree to the Terms &amp; Conditions of MyArtistDNA</span>
                 </li>
             </ul>
-            <div class="button"><a onclick='onSignupClick();'>Complete Signup</a></div>
+            <div class="button"><a href="#" onclick='onSignupClick();'>Complete Signup</a></div>
             </fieldset>
         </form>
         </article>

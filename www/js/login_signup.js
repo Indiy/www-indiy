@@ -39,10 +39,10 @@ function onLoginClick()
 
 function onSignupClick()
 {
-    var name = $('#signup_name').val() or "";
-    var email = $('#signup_email').val() or "";
-    var username = $('#signup_username').val() or "";
-    var password = $('#signup_password').val() or "";
+    var name = $('#signup_name').val();
+    var email = $('#signup_email').val();
+    var username = $('#signup_username').val();
+    var password = $('#signup_password').val();
     var checkbox = $('#checkBox').attr('checked');
 
     if( checkbox && name.length > 0 && email.length > 0 && username.length > 0 && password.length > 0 )

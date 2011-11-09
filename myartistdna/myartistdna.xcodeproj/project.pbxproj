@@ -801,7 +801,6 @@
 		2DF472AD1440B77F005538C7 /* plugin_homepage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plugin_homepage.png; sourceTree = "<group>"; };
 		2DF472AE1440B77F005538C7 /* jquery.jplayer.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.jplayer.js; sourceTree = "<group>"; };
 		2DF472AF1440B77F005538C7 /* jquery.jplayer.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.jplayer.min.js; sourceTree = "<group>"; };
-		2DF472B11440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
 		2DF472B21440B77F005538C7 /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		2DF472B31440B77F005538C7 /* Jplayer.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jplayer.swf; sourceTree = "<group>"; };
 		2DF472B41440B77F005538C7 /* jquery.simplyscroll-1.0.4.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery.simplyscroll-1.0.4.js"; sourceTree = "<group>"; };
@@ -2562,7 +2561,6 @@
 		2DF472B01440B77F005538C7 /* js */ = {
 			isa = PBXGroup;
 			children = (
-				2DF472B11440B77F005538C7 /* .listing */,
 				2DF472B21440B77F005538C7 /* index.js */,
 				2DF472B31440B77F005538C7 /* Jplayer.swf */,
 				2DF472B41440B77F005538C7 /* jquery.simplyscroll-1.0.4.js */,
