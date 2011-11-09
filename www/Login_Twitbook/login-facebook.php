@@ -1,7 +1,13 @@
-<?php session_start();
-require 'facebook/facebook.php';
-require 'config/fbconfig.php';
-require 'config/functions.php';
+<?php 
+
+session_start();
+require_once 'facebook/facebook.php';
+require_once 'config/fbconfig.php';
+require_once 'config/functions.php';
+require_once '../includes/config.php';
+require_once '../includes/functions.php';
+require_once '../includes/login_helper.php';
+
 $facebook = new Facebook(array(
             'appId' => APP_ID,
             'secret' => APP_SECRET,
@@ -84,29 +90,11 @@ if (!empty($session)) {
 		$auto_incremented_id = '';
 		//Calling the DB USER object
         $user = new User();
-			if(isset($_SESSION['me'])){
-			$auto_incremented_id = $_SESSION['me'];
-		}
         $userdata = $user->checkUser($uid, 'facebook', $username,$user_info,$music_str,$auto_incremented_id);
-
-        if(!empty($userdata)){
-            session_start();
-			/*
-            $_SESSION['id'] = $userdata['id'];
-			$_SESSION['oauth_id'] = $uid;
-
-            $_SESSION['username'] = $userdata['userName'];
-            $_SESSION['oauth_provider'] = $userdata['oauth_provider'];*/
-
-            $myid = $userdata['id'];
-			$_SESSION['me'] = $userdata['id'];
-			$_SESSION['sess_userId'] =	$userdata['id'];		
-			$_SESSION['sess_userName'] = $userdata['artist'];
-			$_SESSION['sess_userUsername'] = $userdata['userName'];
-            $_SESSION['sess_userEmail'] =  $userdata['email'];
-            $_SESSION['sess_userType'] = 'ARTIST';
-			$_SESSION['sess_userURL'] = $userdata['url'];
-			header("Location: http://www.myartistdna.com/manage/artist_management.php?userId=$myid&session_id=". session_id());
+        if(!empty($userdata))
+        {
+            $url = loginWithRow($userdata);
+			header("Location: $url");
         }
     } else {
         # For testing purposes, if there was an error, let's kill the script

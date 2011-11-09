@@ -6,8 +6,9 @@
     header("Cache-Control: no-cache");
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
 
-    include('includes/config.php');
-    include('includes/functions.php');
+    require_once 'includes/config.php';
+    require_once 'includes/functions.php';
+    require_once 'includes/login_helper.php';
     
     $url = "";
     $result = 0;
@@ -20,17 +21,7 @@
         if( mysql_num_rows($result) > 0 ) 
         {	
             $row = mf($result);
-            $myid = $row['id'];
-            $_SESSION['sess_userId'] =	$row['id'];	
-            $_SESSION['sess_userName'] = $row['artist'];
-            $_SESSION['sess_userUsername'] = $row['username'];
-            $_SESSION['sess_userEmail'] =  $row['email'];
-            $_SESSION['sess_userType'] = 'ARTIST';
-			$_SESSION['sess_userURL'] = $row['url'];
-            $inTwoMonths = 60 * 60 * 24 * 60 + time();
-            setcookie($cookievar, $myid, $inTwoMonths);
-            $_SESSION['me'] = $row['id'];
-            $url = trueSiteUrl() . "/manage/artist_management.php?userId=$myid&session_id=". session_id();
+            $url = loginWithRow($row);
             $result = 1;
         }
         else 

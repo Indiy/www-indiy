@@ -9,21 +9,7 @@
 			//refresh("1", siteUrl()."?p=index");
 			refresh("1", siteUrl()."/");
 		} else {	
-			if (trim($_SESSION["me"]) == "") {
-				/* No Session Set - Look for existing cookie */
-				if(isset($_COOKIE[$cookievar])) {
-					$cookie = $_COOKIE[$cookievar];
-					$checkSess = mf(my("select id,online from [p]musiplayer where id='$cookie' and online='1' limit 1"));
-					if ($checkSess["id"] >= "1") {
-						session_regenerate_id();
-						$_SESSION['me'] = $cookie;
-						session_write_close();
-						$me = $_SESSION["me"];
-					}
-				}
-			} else {
-				$me = $_SESSION["me"];
-			}
+            $me = $_SESSION["sess_userId"];
 		}
 		
 		// LOGGING IN /////////////////////////////////////////////////////////////////////
@@ -74,7 +60,7 @@
 						$myid = $row["id"];
 						
 						//session_regenerate_id();
-						$_SESSION['me'] = $row['id'];
+						$_SESSION['sess_userId'] = $row['id'];
 
 						// Set cookie to expire in two months
 						$inTwoMonths = 60 * 60 * 24 * 60 + time();
@@ -99,7 +85,7 @@
 			
 		} else {
 		
-			if ($_SESSION['me'] != "") {
+			if ($_SESSION['sess_userId'] != "") {
 				$loginbox = "{$status}<p><a href='?p=home'>Administrator Page</a></p>";
 				$homeloginbox = "$loginbox";
 				header("Location: ?p=home");

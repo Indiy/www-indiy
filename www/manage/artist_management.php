@@ -5,7 +5,6 @@
 
     require_once('../includes/config.php');
 	include_once('../includes/functions.php');	
-	include_once('../includes/functions.php');	
 	if($_SESSION['sess_userId']=="")
 	{
 		header("location: index.php");
@@ -154,15 +153,10 @@ $(document).ready(setupSortableLists);
         <li><a href="#">Settings</a></li>
         <li><a href="addproduct.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Product</a></li>
         </ul>
-         <?
-		 
-		 //if($artistID ==$_SESSION['me'] ){
-		 ?>
 		 <h6>Manage Profile</h6>
 		<ul>
         <li><a href="register.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Settings</a></li>
 		</ul>
-		<?//}?>
         <h6>Add Social Channel</h6>
         <ul>
         <li><a href="#">Add your Facebook Account</a></li>

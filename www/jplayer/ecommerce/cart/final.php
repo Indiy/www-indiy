@@ -143,7 +143,7 @@ if ($response_array[0] == "1") {
 	echo "<p><em>Thank you for your business and we look forward to working with you again!</em></p>";
 	
 	$fullname = $p_first_name." ".$p_last_name;
-	if ($_SESSION['me'] != "") {
+	if ($_SESSION['sess_userId'] != "") {
 	
 	} else {
 	
