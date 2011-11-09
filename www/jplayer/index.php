@@ -180,20 +180,21 @@ if ($browser == true || $_GET["debug"] == "true"){
 <head>
 <title><?=siteTitle(); ?><? if (!$fan) { echo " - $artist_name"; } ?></title>
 <link href="jplayer/style.css" rel="stylesheet" type="text/css" /> 
-<!--<link rel="stylesheet" media="all and (orientation:portrait)" href="<?=trueSiteUrl();?>/jplayer/portrait.css">-->
+<!--<link rel="stylesheet" media="all and (orientation:portrait)" href="/jplayer/portrait.css">-->
 <link rel="stylesheet" href="jplayer/css/supersized.core.css" type="text/css" media="screen" />
 
-<link media="only screen and (max-device-width: 480px)" href="<?=trueSiteUrl();?>/jplayer/iphone.css" type= "text/css" rel="stylesheet" />
+<link media="only screen and (max-device-width: 480px)" href="/jplayer/iphone.css" type= "text/css" rel="stylesheet" />
 
 <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
 
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
 <script src="js/swfobject.js"  type="text/javascript"></script>
 <script src="jplayer/js/supersized.3.1.3.core.min.js" type="text/javascript"></script>
 <script src="jplayer/js/jquery.simplyscroll-1.0.4.js" type="text/javascript"></script>
@@ -204,7 +205,6 @@ if ($browser == true || $_GET["debug"] == "true"){
 <script src="js/application.php?id=<?php echo $artist_id;?>"  type="text/javascript"></script>
 <script src="jplayer/demos.common.js" type="text/javascript"></script> 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
 <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
 <script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
 
