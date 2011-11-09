@@ -83,6 +83,7 @@
 		    <input name="" type="image" src="images/icon_search.gif" class="button">
         </fieldset>
         </div>
+        -->
         <h2><?=$label_name;?></h2>
 		<?php
 		if( $_SESSION['sess_userType'] != 'ARTIST' ):
