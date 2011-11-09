@@ -57,5 +57,33 @@ function onAddLabelSubmit()
         }
     });
     return false;
-    
 }
+
+function onStoreSettingsSubmit()
+{
+    $('#store_settings_submit').hide();
+    $('#status').text("Updating settings...");
+    var paypal_email = $('#paypal_email').val();
+    
+    var post_url = "/manage/store_settings.php?";
+    post_url += "&artist_id=" + escape(g_artistId);
+    post_url += "&paypal_email=" + escape(paypal_email);
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: post_url,
+        dataType: 'text',
+        success: function(data) 
+        {
+            $('#status').text("Settings updated.");
+            $('#store_settings_submit').show();
+        },
+        error: function()
+        {
+            $('#status').text("Update failed!");
+            $('#store_settings_submit').show();
+        }
+    });
+    return false;    
+}
+

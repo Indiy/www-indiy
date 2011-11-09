@@ -3,8 +3,8 @@
     if( $_REQUEST['session_id'] )
         session_id($_REQUEST['session_id']);
 
-    require_once('../includes/config.php');
-	include_once('../includes/functions.php');	
+    require_once '../includes/config.php';
+	require_once '../includes/functions.php';	
 	if($_SESSION['sess_userId']=="")
 	{
 		header("location: index.php");
@@ -64,7 +64,7 @@
 
 	$img_url = "timthumb.php?src=".$artist_img_logo.'&amp;w=220&amp;h=248&amp;zc=1&amp;q=100';
 
-include_once('header.php');
+    require_once 'header.php';
 ?>
 
 <script type="text/javascript">
@@ -150,7 +150,7 @@ $(document).ready(setupSortableLists);
         
         <h6>Ecommerce</h6>
         <ul>
-        <li><a href="#">Settings</a></li>
+        <li><a href="store_settings.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Settings</a></li>
         <li><a href="addproduct.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Product</a></li>
         </ul>
 		 <h6>Manage Profile</h6>
