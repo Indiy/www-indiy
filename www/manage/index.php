@@ -1,5 +1,5 @@
 <?php 
-start_session();
+session_start();
 
 include('../includes/config.php');
 require_once("include/fgcontactform.php");
