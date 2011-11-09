@@ -69,6 +69,7 @@
 
 	$img_url = "timthumb.php?src=".$artist_img_logo.'&amp;w=220&amp;h=248&amp;zc=1&amp;q=100';
 
+    $label_name = $_SESSION['sess_userName'];
 
 	include_once('header.php');	
 ?>
@@ -82,8 +83,7 @@
 		    <input name="" type="image" src="images/icon_search.gif" class="button">
         </fieldset>
         </div>
-        <h2>&nbsp;</h2>
-        -->
+        <h2><?=$label_name;?></h2>
 		<?php
 		if($_SESSION[me]==""):
 		?>
