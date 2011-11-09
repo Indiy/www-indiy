@@ -85,7 +85,7 @@
         </div>
         <h2><?=$label_name;?></h2>
 		<?php
-		if($_SESSION[me]==""):
+		if( $_SESSION['sess_userType'] != 'ARTIST' ):
 		?>
         <div class="sortby">
 	        <p>SORT BY:<a href="dashboard.php?sort_by=DESC" <?php if($_GET['sort_by']=='DESC' || $_GET['sort_by']==''){ echo 'class="active"';}?>> NEWSEST FIRST</a> / <a  href="dashboard.php?sort_by=ASC" <?php if($_GET['sort_by']=='ASC'){ echo 'class="active"';}?>>OLDEST FIRST</a> / <a href="dashboard.php?sort_by=name" <?php if($_GET['sort_by']=='name'){ echo 'class="active"';}?>>A-Z</a></p>
@@ -167,7 +167,7 @@
         </form>
 
 		<?php
-		if($_SESSION[me]==""):
+		if( $_SESSION['sess_userType'] != 'ARTIST' ):
 		?>	
 			<div class="pagination2">
 			   <?php $page->get_page_nav();?>

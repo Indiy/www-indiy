@@ -181,7 +181,7 @@
 							<div class="clear"></div>
 
 							<?php
-							if($_SESSION[me]=="") :
+							if( $_SESSION['sess_userType'] != 'ARTIST' ):
 							?>
 							<label>Is this an Artist?</label>
 							<div class="group">
