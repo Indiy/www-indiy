@@ -43,9 +43,9 @@ function onSignupClick()
     var email = $('#signup_email').val();
     var username = $('#signup_username').val();
     var password = $('#signup_password').val();
-    var checkbox = $('#checkBox').attr('checked');
+    var agree = $('#signup_agree').attr('checked');
 
-    if( checkbox && name.length > 0 && email.length > 0 && username.length > 0 && password.length > 0 )
+    if( agree && name.length > 0 && email.length > 0 && username.length > 0 && password.length > 0 )
     {
         var dict = {
             'name': name,
