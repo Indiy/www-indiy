@@ -63,7 +63,7 @@ $(document).ready(function(){
         {
             echo '<li><a class="active" href="dashboard.php">DASHBOARD</a></li>';
             echo '<li><a href="add_user.php" rel="facebox[.bolder]">ADD ARTIST</a></li>';
-            echo '<li><a href="add_label.php" rel="facebox[.bolder]">ADD LABEL</a></li>';
+            echo '<li class="nodivider"><a href="add_label.php" rel="facebox[.bolder]">ADD LABEL</a></li>';
         }
         else if( $_SESSION['sess_userType'] == 'LABEL' )
         {
