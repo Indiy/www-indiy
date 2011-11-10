@@ -50,7 +50,7 @@ background:#f6f6f6;
     <h5>AFFILIATES</h5>
     <ul>
     <li><a href="http://myartistdna.is">MAD.is</a></li>
-    <li><a href="http://myartistdna.fm">MyAD.fm</a></li>
+    <li><a href="http://myartistdna.fm">MAD.fm</a></li>
        <li><a href="http://myartistdna.tv">MAD.tv</a></li>
     </ul>
     </aside>
