@@ -62,7 +62,7 @@
     
     <div class="signup">
     <h3>A NEW WAY TO BUILD YOUR ONLINE BRAND</h3>
-    <div class="button"><a href="#dialog" name="modal">START NOW!</a></div>
+    <div class="button"><a href="#" onclick="showSignup();">START NOW!</a></div>
     </div><!-- signup -->
         
         
