@@ -1,4 +1,53 @@
 
+function showPopup(name)
+{
+    var maskHeight = $(document).height();
+    var maskWidth = $(window).width();
+	
+    $('#mask').css({'width':maskWidth,'height':maskHeight});
+    
+    $('#mask').fadeIn(600);	
+    $('#mask').fadeTo("slow",0.5);	
+	
+    var winH = $(window).height();
+    var winW = $(window).width();
+    
+    var dialogHeight = $(name).height();
+    var dialogWidth = $(name).width();
+    
+    var top = winH / 2 - dialogHeight / 2;
+    var left = winW / 2 - dialogWidth / 2;
+    
+    $(name).css('top',top);
+    $(name).css('left',left);
+	
+    $(name).fadeIn(600);     
+}
+
+function showLogin()
+{
+    showPopup('#login_dialog');
+}
+
+function closeLogin()
+{
+    $('#login_dialog').fadeOut(100);
+    $('#mask').fadeOut(100);
+}
+
+function showSignup()
+{
+    $('#login_dialog').hide();
+    showPopup('#signup_dialog');
+}
+
+function closeSignup()
+{
+    $('#signup_dialog').fadeOut(100);
+    $('#mask').fadeOut(100);
+}
+
+
 function onLoginClick()
 {           
     var username = escape( $('#login_username').val() );
