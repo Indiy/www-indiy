@@ -64,6 +64,8 @@
 
 	$img_url = "timthumb.php?src=".$artist_img_logo.'&amp;w=220&amp;h=248&amp;zc=1&amp;q=100';
 
+    $artist_url = preg_replace("http://[^\.]*.","http://".$query_artistDetail['url'].".",trueSiteUrl(),1);
+
     require_once 'header.php';
 ?>
 
@@ -141,6 +143,7 @@ $(document).ready(setupSortableLists);
         
         <h6>Music Player</h6>
         <ul>
+        <li><a href="<?=$arist_url;?>">View Site</a></li>
         <li><a href="stats.php?userId=<?=$artistID;?>">Analytics</a></li>
         <li><a href="#">Newsletter</a></li>
         <li><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Music</a></li>
