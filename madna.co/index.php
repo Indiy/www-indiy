@@ -43,11 +43,13 @@
     $song_id = $row['song_id'];
     
     $redirect_url = str_replace('www.',$artist_url . '.',$true_site_url);
-    $redirect_url .= "/?song_id=" . $song_id;
+    $redirect_url .= "/#song_id=" . $song_id;
     
     //echo "redirect_url = '$redirect_url'\n";
 
     header("Location: $redirect_url");
+    header("Cache-Control: no-cache");
+    header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
 
     echo "<html>\n";
     echo "<head>\n";
