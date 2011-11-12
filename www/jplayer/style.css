@@ -166,7 +166,9 @@ div#loader { position: fixed; top: 50%; left: 50%; margin: -16px -16px 0px 0px; 
 
 
 /* LOGO */
-div#logo { padding: 10px; background: url('images/new/logo_closed.png') no-repeat center bottom; position: fixed; overflow: hidden; padding-bottom:30px; top: 10px; left: 100%; width: 155px; color: #fff; margin: 0px 0px 0px -200px; z-index: 5; }
+/* div#logo { padding: 10px; background: url('images/new/logo_closed.png') no-repeat center bottom; position: fixed; overflow: hidden; padding-bottom:30px; top: 10px; left: 100%; width: 155px; color: #fff; margin: 0px 0px 0px -200px; z-index: 5; } */
+div#logo { padding: 10px; background: url('images/new/logo_open_close.png') no-repeat left bottom; position: fixed; overflow: hidden; padding-bottom:30px; top: 10px; left: 100%; width: 155px; color: #fff; margin: 0px 0px 0px -200px; z-index: 5; }
+
 div#logo p { font-size: 10px; margin-bottom: 0px; }
 div#logo.openlogo { background: url('images/new/logo_opened.png') no-repeat center bottom; }
 div#logo #makeroomforlogo { width: 100%; height: 0px; overflow: hidden; border-left: 0px solid #fff; }

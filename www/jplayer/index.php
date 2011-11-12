@@ -476,14 +476,16 @@ if ($browser == true || $_GET["debug"] == "true"){
             {
 				if(!g_logoOpen) 
                 {
+                    $('div#logo').css("background-position","right bottom");
 					$('#makeroomforlogo').animate({ height: "160px" }, 300);
 				} 
                 else 
                 {
+                    $('div#logo').css("background-position","left bottom");
 					$('#makeroomforlogo').animate({ height: "0px" }, 300);
 				}
                 g_logoOpen = !g_logoOpen;
-                $('#logo').toggleClass('openlogo');
+                //$('#logo').toggleClass('openlogo');
 			});	
 			
 			$(".submitform").click(function(event){
