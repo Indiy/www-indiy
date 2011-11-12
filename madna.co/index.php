@@ -11,7 +11,7 @@
      
     */
 
-    echo "<html><body><pre>\n";
+    //echo "<html><body><pre>\n";
     
     // MADDEV.COM
     error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE); 
@@ -29,10 +29,10 @@
     $true_site_url = $row['url'];
 
     $url = $_REQUEST['url'];
-    echo "url=$url\n";
+    //echo "url=$url\n";
 
     $abbrev = $url;
-    echo "abbrev=$abbrev\n";
+    //echo "abbrev=$abbrev\n";
 
     $sql = "SELECT mydna_musicplayer_audio.id AS song_id, mydna_musicplayer.url AS artist_url FROM mydna_musicplayer_audio "
         . "JOIN mydna_musicplayer ON mydna_musicplayer_audio.artistid = mydna_musicplayer.id "
@@ -43,8 +43,23 @@
     $song_id = $row['song_id'];
     
     $redirect_url = str_replace('www.',$artist_url . '.',$true_site_url);
-    $redirect_url .= "?song_id=" . $song_id;
+    $redirect_url .= "/?song_id=" . $song_id;
     
-    echo "redirect_url = '$redirect_url'\n";
+    //echo "redirect_url = '$redirect_url'\n";
+
+    header("Location: $redirect_url");
+
+    echo "<html>\n";
+    echo "<head>\n";
+    echo "<title>...</title>\n";
+    echo "<meta http-equiv=\"refresh\" content=\"1; url=$redirect_url\">\n";
+    echo "<meta http-equiv=\"pragma\" content=\"no-cache\">\n";
+    echo "<meta http-equiv=\"expires\" content=\"-1\">\n";
+    echo "</head>\n";
+    echo "<body>\n";
+    echo "<a href=\"$redirect_url\">Click here to continue.</a>\n";
+    echo "</body>\n";
+    echo "</html>\n";
+    
 ?>
 
