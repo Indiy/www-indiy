@@ -113,6 +113,8 @@
         $name = $artist['artist'];
         $name = cleanup_name($name);
 
+        echo "artist: $name($id)\n";
+
         if( try_split($name,' ',$id) )
             continue;
         
@@ -140,6 +142,8 @@
         $name = $song['name'];
         $name = cleanup_name($name);
         
+        echo "artist: $name($id)\n";
+
         if( try_split($name,' ',$id) )
             continue;
         
