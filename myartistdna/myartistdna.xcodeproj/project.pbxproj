@@ -18,6 +18,8 @@
 		2D380B94146B55F700E36189 /* login_signup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = login_signup.html; sourceTree = "<group>"; };
 		2D380B95146E35CD00E36189 /* robots.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = robots.txt; sourceTree = "<group>"; };
 		2D380B96146E3EAC00E36189 /* setup_abbrev.php */ = {isa = PBXFileReference; path = setup_abbrev.php; sourceTree = "<group>"; };
+		2D380B99146F0A5D00E36189 /* .htaccess */ = {isa = PBXFileReference; lastKnownFileType = text; path = .htaccess; sourceTree = "<group>"; };
+		2D380B9A146F0A5D00E36189 /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
 		2DF46F4C1440B77F005538C7 /* casestudies.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = casestudies.html; sourceTree = "<group>"; };
@@ -1353,11 +1355,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		2D380B98146F0A5700E36189 /* madna.co */ = {
+			isa = PBXGroup;
+			children = (
+				2D380B99146F0A5D00E36189 /* .htaccess */,
+				2D380B9A146F0A5D00E36189 /* index.php */,
+			);
+			name = madna.co;
+			path = ../madna.co;
+			sourceTree = "<group>";
+		};
 		2DF46F401440B76B005538C7 = {
 			isa = PBXGroup;
 			children = (
 				2D380B8814671EF400E36189 /* server_config.php */,
 				2DF46F491440B77F005538C7 /* www */,
+				2D380B98146F0A5700E36189 /* madna.co */,
 			);
 			sourceTree = "<group>";
 		};
