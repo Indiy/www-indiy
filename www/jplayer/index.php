@@ -814,7 +814,7 @@ $(document).ready(function(){
             $(".vote").click(function(event) 
                 {
                    var voteBody = $(this).text();
-                   var voteData = "&vartist=<?=$artist?>";
+                   var voteData = "&vartist=<?=$artist_id;?>";
                    voteData += "&vtrack=" + image;
                    voteData += "&vote=" + voteBody;
                    
