@@ -13,7 +13,7 @@
     function try_abbrev($abbrev,$id)
     {
         $abbrev = strtolower($artist_abbrev . '_' . $abbrev);
-        $ret = update('mydna_musicplayer_music','abbrev',$abbrev,'id',$id);
+        $ret = update('mydna_musicplayer_audio','abbrev',$abbrev,'id',$id);
         if( $ret )
             echo "Saved abbrev $abbrev for $id\n";
         return $ret;
@@ -27,9 +27,13 @@
             $abbrev = $words[0][0];
             for( $i = 1 ; $i < count($words) ; ++$i)
             {
-                $abbrev .= $words[$i][0];
-                if( try_abbrev($abbrev,$id) )
-                    return TRUE;
+                $word = $words[$i];
+                if( strlen($word) > 0 )
+                {
+                    $abbrev .= $word[0];
+                    if( try_abbrev($abbrev,$id) )
+                        return TRUE;
+                }
             }
         }
         return FALSE;
@@ -42,7 +46,7 @@
         for( $i = 1 ; $i < strlen($name) ; ++$i )
         {
             $c = $name[$i];
-            if( is_upper($c) )
+            if( ctype_upper($c) )
             {
                 $last_add = $i;
                 $abbrev .= $c;
@@ -53,17 +57,13 @@
         for( $i = $last_add + 1; $i < strlen($name) ; ++$i )
         {
             $c = $name[$i];
-            $abbrev .= $c;
-            if( try_abbrev($abbrev,$id) )
-                return TRUE;
+            if( ctype_alnum($c) )
+            {
+                $abbrev .= $c;
+                if( try_abbrev($abbrev,$id) )
+                    return TRUE;
+            }
         }
-        return FALSE;
-    }
-    
-    function is_upper($c)
-    {
-        if( $c >= 'A' && $c <= 'Z' )
-            return TRUE;
         return FALSE;
     }
     
@@ -74,14 +74,21 @@
         for( $i = 1 ; $i < strlen($name) ; ++$i )
         {
             $c = $name[$i];
-            $abbrev .= $c;
-            if( try_abbrev($abbrev,$id) )
-                return TRUE;
+            if( ctype_alnum($c) )
+            {
+                $abbrev .= $c;
+                if( try_abbrev($abbrev,$id) )
+                    return TRUE;
+            }
         }
         return FALSE;
     }
 
-    $sql = "SELECT mydna_musicplayer_music.*,mydna_musicplayer.abbrev AS artist_abbrev FROM mydna_musicplayer_music JOIN mydna_musicplayer_music.artistid = mydna_musicplayer.id WHERE mydna_musicplayer_music.abbrev IS NULL";
+    $sql = "SELECT mydna_musicplayer_audio.*,mydna_musicplayer.abbrev AS artist_abbrev FROM mydna_musicplayer_audio "
+        . "JOIN mydna_musicplayer ON mydna_musicplayer_audio.artistid = mydna_musicplayer.id "
+        . "WHERE mydna_musicplayer_audio.abbrev IS NULL";
+        
+    echo "sql='$sql'\n";
     $q = mq($sql);
     while( $song = mf($q) )
     {
@@ -89,10 +96,14 @@
         $done = FALSE;
         $artist_abbrev = $song['artist_abbrev'];
         $name = $song['name'];
+        for( $i = 0 ; $i < len($name) ; ++i)
+        {
+            $c = $name[$i];
+            if( !ctype_alnum($c) )
+                $name[$i] = ' ';
+        }
 
         if( try_split($name,' ',$id) )
-            continue;
-        if( try_split($name,'-',$id) )
             continue;
         
         if( try_caps($name,$id) )
