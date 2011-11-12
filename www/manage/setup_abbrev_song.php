@@ -12,8 +12,8 @@
 
     function try_abbrev($abbrev,$id)
     {
-        $abbrev = strtolower($abbrev);
-        $ret = update('mydna_musicplayer','abbrev',$abbrev,'id',$id);
+        $abbrev = strtolower($artist_abbrev . '_' . $abbrev);
+        $ret = update('mydna_musicplayer_music','abbrev',$abbrev,'id',$id);
         if( $ret )
             echo "Saved abbrev $abbrev for $id\n";
         return $ret;
@@ -81,13 +81,14 @@
         return FALSE;
     }
 
-    $sql = "SELECT * FROM mydna_musicplayer WHERE abbrev IS NULL";
+    $sql = "SELECT mydna_musicplayer_music.*,mydna_musicplayer.abbrev AS artist_abbrev FROM mydna_musicplayer_music JOIN mydna_musicplayer_music.artistid = mydna_musicplayer.id WHERE mydna_musicplayer_music.abbrev IS NULL";
     $q = mq($sql);
-    while( $artist = mf($q) )
+    while( $song = mf($q) )
     {
-        $id = $artist['id'];
+        $id = $song['id'];
         $done = FALSE;
-        $name = $artist['artist'];
+        $artist_abbrev = $song['artist_abbrev'];
+        $name = $song['name'];
 
         if( try_split($name,' ',$id) )
             continue;
