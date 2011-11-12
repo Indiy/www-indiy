@@ -124,9 +124,9 @@ if ($browser == true || $_GET["debug"] == "true"){
 			$music_artistid = $music["artistid"];
 			$art = mf(mq("select `artist` from `[p]musicplayer` where id='{$music_artistid}' limit 1"));
 			$music_artist = nohtml($art["artist"]);
-			$musicList .= '{name:"<small>'.$music_artist.' - '.$music_name.'</small>",mp3:"'.trueSiteUrl().'/artists/audio/'.$music_audio.'",download:"'.$music_download.'",image:"'.$music_image.'",bgcolor:"'.$music_bgcolor.'",bgrepeat:"'.$music_bgrepeat.'",bgposition:"'.$music_bgposition.'"}';
+			$musicList .= '{id:'+$music_id+',name:"<small>'.$music_artist.' - '.$music_name.'</small>",mp3:"'.trueSiteUrl().'/artists/audio/'.$music_audio.'",download:"'.$music_download.'",image:"'.$music_image.'",bgcolor:"'.$music_bgcolor.'",bgrepeat:"'.$music_bgrepeat.'",bgposition:"'.$music_bgposition.'"}';
 		} else {
-			$musicList .= '{name:"'.$music_name.'",mp3:"'.trueSiteUrl().'/artists/audio/'.$music_audio.'",download:"'.$music_download.'",image:"'.$music_image.'",bgcolor:"'.$music_bgcolor.'",bgrepeat:"'.$music_bgrepeat.'",bgposition:"'.$music_bgposition.'",plus:"",amazon:"'.$music_amazon.'",itunes:"'.$music_itunes.'"}'; //,plus:"<a href=\'http://www.google.com\' target=\'_blank\' class=\'plus\' onclick=\'javascript: void(0);\'>Test</a>
+			$musicList .= '{id:'+$music_id+',name:"'.$music_name.'",mp3:"'.trueSiteUrl().'/artists/audio/'.$music_audio.'",download:"'.$music_download.'",image:"'.$music_image.'",bgcolor:"'.$music_bgcolor.'",bgrepeat:"'.$music_bgrepeat.'",bgposition:"'.$music_bgposition.'",plus:"",amazon:"'.$music_amazon.'",itunes:"'.$music_itunes.'"}'; //,plus:"<a href=\'http://www.google.com\' target=\'_blank\' class=\'plus\' onclick=\'javascript: void(0);\'>Test</a>
 		}
 		++$m;
 	}
@@ -523,6 +523,8 @@ var g_myPlayList = [
 ];
 
 
+var g_currentSongId = 0;
+
 function clickSongBuy(i)
 {
     var id = '#song_buy_icon_' + i;
@@ -758,7 +760,7 @@ $(document).ready(function(){
             oga: g_myPlayList[playItem].mp3.replace(".mp3",".ogg")
         };
 		$("#jquery_jplayer").jPlayer("setMedia", media);
-		
+		g_currentSongId = g_myPlayList[playItem].id;
 		
 			$('span.showamazon').hide();
 			$('span.showitunes').hide();
@@ -815,7 +817,7 @@ $(document).ready(function(){
                 {
                    var voteBody = $(this).text();
                    var voteData = "&vartist=<?=$artist_id;?>";
-                   voteData += "&vtrack=" + image;
+                   voteData += "&vtrack=" + g_currentSongId;
                    voteData += "&vote=" + voteBody;
                    
                    $.post("jplayer/ajax.php", voteData, function(voteResultsNow) {
