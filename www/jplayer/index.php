@@ -622,9 +622,38 @@ function sendToFriend()
     });
 }
 
+var playItem = 0;
+
+var anchor = self.document.location.hash.substring(1);
+var anchor_elements = anchor.split('&');
+var g_anchor_map = {};
+for( var k in anchor_elements )
+{
+    var e = anchor_elements[k];
+    var k_v = e.split('=');
+    
+    k = unescape(k_v[0]);
+    if( k_v.length > 1 )
+        g_anchor_map[k] = unescape(k_v[1]);
+    else
+        g_anchor_map[k] = true;
+}
+
+if( 'song_id' in g_anchor_map )
+{
+    var song_id = g_anchor_map['song_id'];
+    for( var k in g_myPlayList )
+    {
+        if( g_myPlayList['id'] == song_id )
+        {
+            playItem = k;
+            break;
+        }
+    }
+}
+
 $(document).ready(function(){
 
-	var playItem = 0;
  
  
 	// Local copy of jQuery selectors, for performance.
