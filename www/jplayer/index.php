@@ -644,7 +644,8 @@ if( 'song_id' in g_anchor_map )
     var song_id = g_anchor_map['song_id'];
     for( var k in g_myPlayList )
     {
-        if( g_myPlayList['id'] == song_id )
+        var song = g_myPlayList[k];
+        if( song['id'] == song_id )
         {
             playItem = k;
             break;
@@ -652,10 +653,8 @@ if( 'song_id' in g_anchor_map )
     }
 }
 
-$(document).ready(function(){
-
- 
- 
+$(document).ready(function()
+{
 	// Local copy of jQuery selectors, for performance.
 	var jpPlayTime = $("#jplayer_play_time");
 	var jpTotalTime = $("#jplayer_total_time");
