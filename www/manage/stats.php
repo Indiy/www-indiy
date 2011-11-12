@@ -22,7 +22,7 @@
 	while ($pa = mf($loadpages)) {
 		$buildmax .= $pa["views"].",";
 	}
-	$size = 100 / num($loadpages);
+	$size = 100 / max(num($loadpages),1);
 	//$size = num($loadpages) / 100;
 	$buildmax = explode(",", $buildmax);
 	$max = max($buildmax);
