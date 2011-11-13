@@ -818,16 +818,16 @@ $(document).ready(function()
             var style = "width: 100%; height: 100%;";
             var html = "<img src='" + img_url + "' style='" + style + "'/>";
             $('#image').html(html);
-            $('#image').css("background-image: none;");
-            $('#image').css("background-repeat: no-repeat;");
-            $('#image').css("background-position: center center;");
+            $('#image').css("background-image","none");
+            $('#image').css("background-repeat","no-repeat");
+            $('#image').css("background-position","center center");
         }
         else
         {
             $('#image').html("");
-            $('#image').css("background-image: url('" + src_arg + "');");
-            $('#image').css("background-repeat: " + repeat + ";");
-            $('#image').css("background-position: " + position + ";");
+            $('#image').css("background-image","url(" + src_arg + ")");
+            $('#image').css("background-repeat",repeat);
+            $('#image').css("background-position",position);
         }
         $('#image').fadeIn();
         
