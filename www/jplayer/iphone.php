@@ -142,7 +142,7 @@ if( 'song_id' in g_anchor_map )
         var song = g_myPlayList[k];
         if( song['id'] == song_id )
         {
-            playItem = k;
+            playItem = Number(k);
             break;
         }
     }
