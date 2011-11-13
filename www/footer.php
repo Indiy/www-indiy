@@ -30,9 +30,9 @@ background:#f6f6f6;
     <aside class="benefits">
     <h5>BENEFITS</h5>
     <ul>
-     <li><a href="be-heard.html">Be Heard</a></li>
-     <li><a href="be-seen.html">Be Seen</a></li>
-     <li><a href="be-independent.html">Be Independent</a></li>
+     <li><a href="be-heard.php">Be Heard</a></li>
+     <li><a href="be-seen.php">Be Seen</a></li>
+     <li><a href="be-independent.php">Be Independent</a></li>
     </ul>
     </aside>
 
@@ -51,7 +51,7 @@ background:#f6f6f6;
     <ul>
     <li><a href="http://myartistdna.is">MAD.is</a></li>
     <li><a href="http://myartistdna.fm">MAD.fm</a></li>
-       <li><a href="http://myartistdna.tv">MAD.tv</a></li>
+    <li><a href="http://myartistdna.tv">MAD.tv</a></li>
     </ul>
     </aside>
 
