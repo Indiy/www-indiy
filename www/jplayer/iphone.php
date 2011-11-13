@@ -54,9 +54,9 @@
 			$music_artistid = $music["artistid"];
 			$art = mf(mq("select `artist` from `[p]musicplayer` where id='{$music_artistid}' limit 1"));
 			$music_artist = nohtml($art["artist"]);
-			$musicList .= '{name:"<small>'.$music_artist.' - '.$music_name.'</small>",mp3:"'.trueSiteUrl().'/artists/audio/'.$music_audio.'",download:"'.$music_download.'",image:"'.$music_image.'",bgcolor:"'.$music_bgcolor.'",bgrepeat:"'.$music_bgrepeat.'",bgposition:"'.$music_bgposition.'"}';
+			$musicList .= '{id:'.$music_id.',name:"<small>'.$music_artist.' - '.$music_name.'</small>",mp3:"'.trueSiteUrl().'/artists/audio/'.$music_audio.'",download:"'.$music_download.'",image:"'.$music_image.'",bgcolor:"'.$music_bgcolor.'",bgrepeat:"'.$music_bgrepeat.'",bgposition:"'.$music_bgposition.'"}';
 		} else {
-			$musicList .= '{name:"'.$music_name.'",mp3:"'.trueSiteUrl().'/artists/audio/'.$music_audio.'",download:"'.$music_download.'",image:"'.$music_image.'",bgcolor:"'.$music_bgcolor.'",bgrepeat:"'.$music_bgrepeat.'",bgposition:"'.$music_bgposition.'",plus:"",amazon:"'.$music_amazon.'",itunes:"'.$music_itunes.'"}'; //,plus:"<a href=\'http://www.google.com\' target=\'_blank\' class=\'plus\' onclick=\'javascript: void(0);\'>Test</a>
+			$musicList .= '{id:'.$music_id.',name:"'.$music_name.'",mp3:"'.trueSiteUrl().'/artists/audio/'.$music_audio.'",download:"'.$music_download.'",image:"'.$music_image.'",bgcolor:"'.$music_bgcolor.'",bgrepeat:"'.$music_bgrepeat.'",bgposition:"'.$music_bgposition.'",plus:"",amazon:"'.$music_amazon.'",itunes:"'.$music_itunes.'"}'; //,plus:"<a href=\'http://www.google.com\' target=\'_blank\' class=\'plus\' onclick=\'javascript: void(0);\'>Test</a>
 		}
 		++$m;
 		$total_listens = $total_listens + $music_listens;
@@ -115,14 +115,41 @@
 
 <script type="text/javascript"> 
 <!--
-$(document).ready(function(){
 
-	var playItem = 0;
- 
-	var myPlayList = [
-		<?=$musicList;?>
-	];
- 
+var playItem = 0;
+
+var g_myPlayList = [ <?=$musicList;?> ];
+
+var anchor = self.document.location.hash.substring(1);
+var anchor_elements = anchor.split('&');
+var g_anchor_map = {};
+for( var k in anchor_elements )
+{
+    var e = anchor_elements[k];
+    var k_v = e.split('=');
+    
+    k = unescape(k_v[0]);
+    if( k_v.length > 1 )
+        g_anchor_map[k] = unescape(k_v[1]);
+    else
+        g_anchor_map[k] = true;
+}
+if( 'song_id' in g_anchor_map )
+{
+    var song_id = g_anchor_map['song_id'];
+    for( var k in g_myPlayList )
+    {
+        var song = g_myPlayList[k];
+        if( song['id'] == song_id )
+        {
+            playItem = k;
+            break;
+        }
+    }
+}
+
+$(document).ready(function()
+{
 	// Local copy of jQuery selectors, for performance.
 	var jpPlayTime = $("#jplayer_play_time");
 	var jpTotalTime = $("#jplayer_total_time");
@@ -159,9 +186,9 @@ $(document).ready(function(){
  
 	function displayPlayList() {
 		$("#jplayer_playlist ul").empty();
-		for (i=0; i < myPlayList.length; i++) {
-			var listItem = (i == myPlayList.length-1) ? "<li class='jplayer_playlist_item_last'>" : "<li>";
-			listItem += myPlayList[i].plus + "<a href='#' id='jplayer_playlist_item_" + i + "' tabindex='1'><span class='thisisthetrackname'>" + myPlayList[i].name + "</span><span class='songimage' style='display: none;'>" + myPlayList[i].image + "</span><span class='sellitunes' style='display: none;'>" + myPlayList[i].itunes + "</span><span class='sellamazon' style='display: none;'>" + myPlayList[i].amazon + "</span><div class='songbgcolor' style='display: none;'>" + myPlayList[i].bgcolor + "</div><div class='songbgposition' style='display: none;'>" + myPlayList[i].bgposition + "</div><div class='songbgrepeat' style='display: none;'>" + myPlayList[i].bgrepeat + "</div></a>" + myPlayList[i].download;
+		for (i=0; i < g_myPlayList.length; i++) {
+			var listItem = (i == g_myPlayList.length-1) ? "<li class='jplayer_playlist_item_last'>" : "<li>";
+			listItem += g_myPlayList[i].plus + "<a href='#' id='jplayer_playlist_item_" + i + "' tabindex='1'><span class='thisisthetrackname'>" + g_myPlayList[i].name + "</span><span class='songimage' style='display: none;'>" + g_myPlayList[i].image + "</span><span class='sellitunes' style='display: none;'>" + g_myPlayList[i].itunes + "</span><span class='sellamazon' style='display: none;'>" + g_myPlayList[i].amazon + "</span><div class='songbgcolor' style='display: none;'>" + g_myPlayList[i].bgcolor + "</div><div class='songbgposition' style='display: none;'>" + g_myPlayList[i].bgposition + "</div><div class='songbgrepeat' style='display: none;'>" + g_myPlayList[i].bgrepeat + "</div></a>" + g_myPlayList[i].download;
 			listItem += "<div class='clear'></div>";
 			listItem += "<div class='metadata'>This is a test</div>";
 			listItem += "<div class='clear'></div></li>";
@@ -192,7 +219,7 @@ $(document).ready(function(){
 		$("#jplayer_playlist_item_"+index).addClass("jplayer_playlist_current").parent().addClass("jplayer_playlist_current");
 		
 		playItem = index;
-		$("#jquery_jplayer").jPlayer("setFile", myPlayList[playItem].mp3);
+		$("#jquery_jplayer").jPlayer("setFile", g_myPlayList[playItem].mp3);
 		
 		
 			$('span.showamazon').hide();
@@ -298,7 +325,7 @@ $(document).ready(function(){
 			
             g_totalListens++;
             //$('#total_listens').text(g_totalListens);
-            updateListens(image);
+            //updateListens(image);
 			
 			setTimeout(function(){ 
 				$('#loader').hide();
@@ -312,12 +339,12 @@ $(document).ready(function(){
 	}
  
 	function playListNext() {
-		var index = (playItem+1 < myPlayList.length) ? playItem+1 : 0;
+		var index = (playItem+1 < g_myPlayList.length) ? playItem+1 : 0;
 		playListChange( index );
 	}
  
 	function playListPrev() {
-		var index = (playItem-1 >= 0) ? playItem-1 : myPlayList.length-1;
+		var index = (playItem-1 >= 0) ? playItem-1 : g_myPlayList.length-1;
 		playListChange( index );
 	}
 	
