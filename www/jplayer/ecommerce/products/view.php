@@ -47,7 +47,8 @@
 ?>
 
 	<link href="<?=pluginUrl();?>/ecommerce/style.css" rel="stylesheet" type="text/css" media="screen" /> 
-	<script src="<?=pluginUrl();?>/ecommerce/js/jquery-1.4.4.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
 	<script src="<?=pluginUrl();?>/ecommerce/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
 	<script>
 

@@ -53,7 +53,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
 <link rel="stylesheet" type="text/css" media="screen" title="screen" href="fonts/stylesheet.css"/> 
 <link rel="stylesheet" type="text/css" media="screen" title="screen" href="style.css"/> 
-<script type="text/javascript" src="js/jquery-1.5.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/java.js"></script> 
 <script type="text/javascript">
 	$(document).ready(function(){

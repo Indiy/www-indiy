@@ -1,2 +1,0 @@
-[28-Sep-2011 08:18:37] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Unknown MySQL server host 'mysql50-28.wc2.dfw1.stabletransit.com' (1) in /home/myartist/public_html/sfo/includes/config.php on line 7
-[28-Sep-2011 08:18:37] PHP Warning:  mysql_select_db(): supplied argument is not a valid MySQL-Link resource in /home/myartist/public_html/sfo/includes/config.php on line 8

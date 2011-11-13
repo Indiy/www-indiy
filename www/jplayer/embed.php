@@ -84,10 +84,11 @@
 <link rel="apple-touch-icon" href="<?=trueSiteUrl();?>/artists/images/<?=$artist_logo;?>" />
 <link rel="apple-touch-startup-image" href="<?=trueSiteUrl();?>/includes/images/apple-loading-screen.jpg" />
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
 
-<script type="text/javascript" src="<?=trueSiteUrl();?>/jplayer/jquery.jplayer.min.js"></script> 
-<script type="text/javascript" src="<?=trueSiteUrl();?>/jplayer/demos.common.js"></script> 
+<script type="text/javascript" src="/jplayer/jquery.jplayer.min.js"></script> 
+<script type="text/javascript" src="/jplayer/demos.common.js"></script> 
 	<script>
 		$(document).ready(function(){
 

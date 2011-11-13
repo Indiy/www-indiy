@@ -85,9 +85,10 @@ if ($browser == true || $_GET["debug"] == "true"){
 <link media="only screen and (max-device-width: 480px)" href="<?=trueSiteUrl();?>/jplayer/iphone.css" type= "text/css" rel="stylesheet" />
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> 
-<script type="text/javascript" src="<?=trueSiteUrl();?>/jplayer/jquery.jplayer.min.js"></script> 
-<script type="text/javascript" src="<?=trueSiteUrl();?>/jplayer/demos.common.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/jplayer/jquery.jplayer.min.js"></script> 
+<script type="text/javascript" src="/jplayer/demos.common.js"></script> 
 	<script>
 		$(document).ready(function(){
 

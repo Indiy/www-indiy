@@ -85,7 +85,8 @@
 ?>
 	<link rel="stylesheet" href="includes/css/colorpicker.css" type="text/css" />
     <link rel="stylesheet" media="screen" type="text/css" href="includes/css/layout.css" />
-	<script type="text/javascript" src="includes/js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="includes/js/colorpicker.js"></script>
     <script type="text/javascript" src="includes/js/eye.js"></script>
     <script type="text/javascript" src="includes/js/utils.js"></script>

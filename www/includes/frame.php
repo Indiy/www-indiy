@@ -10,17 +10,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <![endif]-->
 <!-- Favicons --> 
-<link rel="shortcut icon" type="image/png" HREF="<?=trueSiteUrl();?>/includes/img/favicons/favicon.png"/>
-<link rel="icon" type="image/png" HREF="<?=trueSiteUrl();?>/includes/img/favicons/favicon.png"/>
-<link rel="apple-touch-icon" HREF="<?=trueSiteUrl();?>/includes/img/favicons/apple.png" />
+<link rel="shortcut icon" type="image/png" HREF="/includes/img/favicons/favicon.png"/>
+<link rel="icon" type="image/png" HREF="/includes/img/favicons/favicon.png"/>
+<link rel="apple-touch-icon" HREF="/includes/img/favicons/apple.png" />
 <!-- Main Stylesheet --> 
-<link rel="stylesheet" href="<?=trueSiteUrl();?>/includes/css/style.css" type="text/css" />
-<link rel="stylesheet" href="<?=trueSiteUrl();?>/includes/style.css" type="text/css" />
+<link rel="stylesheet" href="/includes/css/style.css" type="text/css" />
+<link rel="stylesheet" href="/includes/style.css" type="text/css" />
 <!-- Your Custom Stylesheet --> 
-<link rel="stylesheet" href="<?=trueSiteUrl();?>/includes/css/custom.css" type="text/css" />
+<link rel="stylesheet" href="/includes/css/custom.css" type="text/css" />
 <!-- jQuery with plugins -->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script> 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 	// Confirm Delete
