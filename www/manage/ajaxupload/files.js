@@ -71,7 +71,7 @@ $(function ()
 					for (title in response.postedValues)
 					{
 						if(title!="submit" || title!="PHPSESSID")
-						html += '<strong>' + title + ':</strong> ' + response.postedValues[title] + '<br />';
+						;//html += '<strong>' + title + ':</strong> ' + response.postedValues[title] + '<br />';
 					}
 				}
 				
