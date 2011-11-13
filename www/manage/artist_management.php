@@ -196,6 +196,7 @@ $(document).ready(setupSortableLists);
                     $song_id = $record_artistAudio['id'];
 					$class = (( $count%2) == 0) ? '' : 'odd';
                     $short_link = make_short_link($record_artistAudio['abbrev']);
+                    $link_name = "madna.co/" . $record_artistAudio['abbrev'];
 					
 					echo "<li id='arrayorder_$song_id' class='playlist_sortable $class' >\n";
                     echo "<span class='title'>\n";
