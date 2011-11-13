@@ -20,7 +20,7 @@ include "header.php";
 			
 			<div class="signuptoday">
 			<p>Ready to get Started?</p>
-			<p><a href="#">SIGN UP TODAY</a></p>
+			<p><a href="#" onclick="showSignup();">SIGN UP TODAY</a></p>
 			</div>
 			
 		</div><!-- leftpanel -->
@@ -64,7 +64,7 @@ include "header.php";
     
 		<div class="signup">
 			<h3>Be heard, be seen, be independent.</h3>
-			<div class="button"><a href="#">SIGN UP NOW</a></div>
+			<div class="button"><a href="#" onclick="showSignup();">SIGN UP NOW</a></div>
 		</div><!-- signup -->
 		
     </div><!-- benefits -->

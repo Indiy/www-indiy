@@ -55,11 +55,11 @@ include 'header.php';
     	
     <div class="signup">
     <h3>Be heard, be seen, Get started now!</h3>
-    <div class="button"><a href="#">SIGN UP NOW</a></div>
+    <div class="button"><a href="#" onclick="showSignup();">SIGN UP NOW</a></div>
     </div><!-- signup -->
 
     <div id="artistshome">
-	<h2>who useS MY<span>ARTIST</span>DNA</h2>
+	<h2>Who uses MY<span>ARTIST</span>DNA</h2>
     	<ul>
         <li data-id="id-7" class="hiphop"><a href="#"><img src="images/artists_13.jpg" alt="">
         <span>Florence & The Machine</span></a></li>
