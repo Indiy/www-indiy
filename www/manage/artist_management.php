@@ -205,7 +205,7 @@ $(document).ready(setupSortableLists);
                     echo "</a>\n";
                     echo "</span>\n";
                     echo "<span class='duration'>";
-                    echo "<a href='$short_link' target='_blank'>Link</a>";
+                    echo "<a href='$short_link' target='_blank'>$link_name</a>";
                     echo "</span>\n";
 					
 					if(!empty($record_artistAudio['audio']))
