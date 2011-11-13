@@ -1101,7 +1101,6 @@
 		2DF47426144A2D84005538C7 /* addmusic.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = addmusic.php; sourceTree = "<group>"; };
 		2DF47427144A2D84005538C7 /* addproduct.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = addproduct.php; sourceTree = "<group>"; };
 		2DF47428144A2D84005538C7 /* addvideo.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = addvideo.php; sourceTree = "<group>"; };
-		2DF4742A144A2D84005538C7 /* 05-10-11files.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "05-10-11files.js"; sourceTree = "<group>"; };
 		2DF4742B144A2D84005538C7 /* files.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = files.js; sourceTree = "<group>"; };
 		2DF4742C144A2D84005538C7 /* jquery.iframe-post-form.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery.iframe-post-form.js"; sourceTree = "<group>"; };
 		2DF4742D144A2D84005538C7 /* artist_management.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artist_management.php; sourceTree = "<group>"; };
@@ -3086,7 +3085,6 @@
 		2DF47429144A2D84005538C7 /* ajaxupload */ = {
 			isa = PBXGroup;
 			children = (
-				2DF4742A144A2D84005538C7 /* 05-10-11files.js */,
 				2DF4742B144A2D84005538C7 /* files.js */,
 				2DF4742C144A2D84005538C7 /* jquery.iframe-post-form.js */,
 			);

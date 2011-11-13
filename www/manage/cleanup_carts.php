@@ -2,7 +2,7 @@
 
     require_once '../includes/config.php';
 	require_once '../includes/functions.php';	
-	if( $_SESSION['sess_userId'] == '')
+	if( $_SESSION['sess_userId'] == '' || php_sapi_name() == 'cli')
 	{
 		header("Location: index.php");
 		exit();
