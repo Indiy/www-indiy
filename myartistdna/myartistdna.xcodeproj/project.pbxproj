@@ -20,6 +20,7 @@
 		2D380B96146E3EAC00E36189 /* setup_abbrev.php */ = {isa = PBXFileReference; path = setup_abbrev.php; sourceTree = "<group>"; };
 		2D380B99146F0A5D00E36189 /* .htaccess */ = {isa = PBXFileReference; lastKnownFileType = text; path = .htaccess; sourceTree = "<group>"; };
 		2D380B9A146F0A5D00E36189 /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
+		2D380B9B1470800600E36189 /* cleanup_carts.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = cleanup_carts.php; sourceTree = "<group>"; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
 		2DF46F4C1440B77F005538C7 /* casestudies.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = casestudies.html; sourceTree = "<group>"; };
@@ -3077,6 +3078,7 @@
 				2DF47518144A9765005538C7 /* stats.php */,
 				2DF47517144A2D84005538C7 /* timthumb.php */,
 				2D380B96146E3EAC00E36189 /* setup_abbrev.php */,
+				2D380B9B1470800600E36189 /* cleanup_carts.php */,
 			);
 			path = manage;
 			sourceTree = "<group>";
