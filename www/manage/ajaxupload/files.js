@@ -63,9 +63,7 @@ $(function ()
 			
 			else
 			{
-				html += '<p>Below is the uploaded image and the values that were posted when you submitted the demonstration form.</p>';
-				
-				
+				//html += '<p>Below is the uploaded image and the values that were posted when you submitted the demonstration form.</p>';
 				if (response.postedValues)
 				{
 					for (title in response.postedValues)
@@ -74,14 +72,10 @@ $(function ()
 						;//html += '<strong>' + title + ':</strong> ' + response.postedValues[title] + '<br />';
 					}
 				}
-				
-				
 				if (response.imageSize)
 				{
 					width = response.imageSize[0] > 500 ? 500 : response.imageSize[0];
 				}
-				
-				
 				if (response.imageSource)
 				{
 					//html += '<img src="' + response.imageSource + '" width="250" id="image" alt="Your uploaded image" />';
