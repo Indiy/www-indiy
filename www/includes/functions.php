@@ -915,5 +915,10 @@
 		$set = mf(mq("select `id`,`shipping_discount` from `[p]musicplayer_ecommerce` where `id`='1' limit 1"));
 		return $set["shipping_discount"];
 	}
+    
+    function make_short_link($abbrev)
+    {
+        return "http://madna.co/" . $abbrev;
+    }
 	
 ?>

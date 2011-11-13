@@ -182,7 +182,7 @@ $(document).ready(setupSortableLists);
             <ul>
             <li class="listheading">
             <span class="title">Title</span>
-            <span class="duration">Duration</span>
+            <span class="duration">Short Link</span>
             <span class="preview">Preview</span>
             <span class="delete">Delete</span>
             </li>
@@ -195,10 +195,17 @@ $(document).ready(setupSortableLists);
 				{
                     $song_id = $record_artistAudio['id'];
 					$class = (( $count%2) == 0) ? '' : 'odd';
+                    $short_link = make_short_link($record_artistAudio['abbrev']);
 					
-					echo "<li id='arrayorder_$song_id' class='playlist_sortable $class' >
-							<span class='title'><a href='addmusic.php?artist_id=".$artistID."&id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>".$record_artistAudio['name']."</a></span>
-							<span class='duration'>".$record_artistAudio['audio_duration']."</span>";
+					echo "<li id='arrayorder_$song_id' class='playlist_sortable $class' >\n";
+                    echo "<span class='title'>\n";
+                    echo "<a href='addmusic.php?artist_id=".$artistID."&id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>";
+                    echo $record_artistAudio['name']
+                    echo "</a>\n";
+                    echo "</span>\n";
+                    echo "<span class='duration'>";
+                    echo "<a href='$short_link' target='_blank'>Link</a>";
+                    echo "</span>\n";
 					
 					if(!empty($record_artistAudio['audio']))
 						echo	"<span class='preview'><a href='play_music.php?song=".$record_artistAudio['audio']."' rel='facebox[.bolder]' >Play</a></span>";
