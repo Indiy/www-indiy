@@ -155,7 +155,7 @@ this.enterListItem=function(idx)
 			if(website.indexOf(".")<0)
 				website = "http://" + website + this.url_suffix;
             if( song_id )
-                website += "?song_id=" + song_id;
+                website += "/#song_id=" + song_id;
 			window.open(website,"_blank");
         }
 			
