@@ -108,47 +108,58 @@ this.getSearchItems=function(S,pfx)
 // this.searchItemsCatcher=
 
 this.enterListItem=function(idx)
-	{
+{
 	if(this.listResultItems.length==0)
 		return;
 		
 	if(idx)	
-		{
+    {
 		this.listItemSelected=idx;		
 		this.lastEnter=null; // always open url when idx specified
-		}
+    }
 		
 	if(this.listItemSelected>(this.listResultItems.length-1) || this.listItemSelected<0)
 		this.listItemSelected=0;
 		
 	if(this.listResultItems[this.listItemSelected].id!=this.lastEnter)
-		{
+    {
 		
 		var sid=this.listResultItems[this.listItemSelected].id;
 		var website=null;
-		var hid=sid.split("_");			
+		var hid=sid.split("_");
+        var song_id = false;
 		if(hid.length>1)
-			{
+        {
 			var LIA=this.getListItem(hid[0]);
 			// alert("id: "+sid);
 			if(LIA)
-				website=LIA.data.url;
-			}
+            {
+				website = LIA.data.url;
+                if( 'song_id' in LIA.data )
+                    song_id = LIA.data.song_id;
+            }
+        }
 		else
-			website=this.listResultItems[this.listItemSelected].data.url;
-			
+        {
+            var LIA = this.listResultItems[this.listItemSelected];
+			website = LIA.data.url;
+            if( 'song_id' in LIA.data )
+                song_id = LIA.data.song_id;
+		}	
 		// alert("Selected item id: "+this.listResultItems[this.listItemSelected].id+" site: "+website);
 		
 		if(website)
-			{			
+        {			
 			if(website.indexOf(".")<0)
-				website=("http://"+website+this.url_suffix);
+				website = "http://" + website + this.url_suffix;
+            if( song_id )
+                website += "?song_id=" + song_id;
 			window.open(website,"_blank");
-			}
+        }
 			
-		this.lastEnter=sid;
-		}
-	}
+		this.lastEnter = sid;
+    }
+}
 
 
 this.selectListItemNext=function()
@@ -382,7 +393,7 @@ ra_ActiveSearch.prototype.addSong=function(sid,artistid,name,image)
 	var scategory="// Song Title //";
 	var stext=name;	
 	var hid=artistid+"_S"+sid;
-	var item_data={type:'S',song_image:image,song_name:name};
+	var item_data={type:'S',song_image:image,song_name:name,song_id:sid};
 	this.addItem(hid,scategory,stext,item_data);
 	}
 	
