@@ -19,8 +19,6 @@ $(function ()
 					.html('Uploading file&hellip;')
 					.css({
 						color : '#006100',
-						background : '#c6efce',
-						border : '2px solid #006100'
 					})
 					.slideDown();
 			}
@@ -31,8 +29,6 @@ $(function ()
 					.html('Please select an image for uploading.')
 					.css({
 						color : '#9c0006',
-						background : '#ffc7ce',
-						border : '2px solid #9c0006'
 					})
 					.slideDown();
 				
@@ -54,8 +50,6 @@ $(function ()
 						.html('There was a problem with the image you uploaded')
 						.css({
 							color : '#9c0006',
-							background : '#ffc7ce',
-							borderColor : '#9c0006'
 						})
 						.slideDown();
 				});
@@ -87,8 +81,6 @@ $(function ()
 						.html(html)
 						.css({
 							color : '#006100',
-							background : '#c6efce',
-							borderColor : '#006100'
 						})
 						.slideDown();
 				});
