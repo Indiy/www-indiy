@@ -6,6 +6,13 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     
     <link rel="icon"  href="favicon.ico" />
+
+    <script type="text/javascript">
+    
+    var g_siteUrl = "<?=trueSiteUrl();?>";
+    
+    </script>
+
     <!--[if IE]>
         <script src="js/html5.js"></script>
     <![endif]-->

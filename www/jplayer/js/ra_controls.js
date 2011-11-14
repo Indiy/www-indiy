@@ -36,7 +36,8 @@ this.maxResults=7;
 this.artistLogoFolder="/artists/images/";
 this.songImagesFolder="/artists/images/";
 this.mediaImagesFolder="/artists/images/";
-this.url_suffix=".myartistdna.com";
+
+this.url_suffix=g_siteUrl.replace("http://www","");
 
 this.artistFormat="<img src='/timthumb.php?w=55&h=55&src={artist_logo}' class=\'"+this.class_search_thumbnail+"\' /><div class=\'"+this.class_search_text+"\'><div class='heading'>Artist:</div> {artist_name}<br />{artist_site}</div>";
 this.songFormat="<img src=\'/timthumb.php?w=55&h=55&src={song_image}\' class=\'"+this.class_search_thumbnail+"\' /><div class=\'"+this.class_search_text+"\'><div class='heading'>Artist:</div> {artist_name}<br /><div class='heading'>Song:</div> {song_name}</div>";
