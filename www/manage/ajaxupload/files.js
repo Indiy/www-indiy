@@ -17,9 +17,6 @@ $(function ()
 			{
 				$('.message')
 					.html('Uploading file&hellip;')
-					.css({
-						color : '#006100',
-					})
 					.slideDown();
 			}
 			
