@@ -143,9 +143,11 @@ this.enterListItem=function(idx)
         {
             var LIA = this.listResultItems[this.listItemSelected];
 			website = LIA.data.url;
-            if( 'song_id' in LIA.data )
-                song_id = LIA.data.song_id;
 		}	
+        if( 'song_id' in this.listResultItems[this.listItemSelected].data )
+            song_id = this.listResultItems[this.listItemSelected].data.song_id;
+
+
 		// alert("Selected item id: "+this.listResultItems[this.listItemSelected].id+" site: "+website);
 		
 		if(website)
