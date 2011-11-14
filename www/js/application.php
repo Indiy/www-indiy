@@ -15,19 +15,7 @@ $loadPlayList = mq("select * from mydna_musicplayer_video where artistid='{$user
 
 //artist image
 $getArtistImage = mf(mq("SELECT facebook,username, profile_image_url, oauth_uid, logo,oauth_provider FROM mydna_musicplayer WHERE id='{$user_id}'"));
-
-//getting the profile picture from the facebook.
-if($getArtistImage["oauth_provider"]=='facebook') {
-	$fbg_url=file_get_contents('http://graph.facebook.com/'.$getArtistImage["facebook"].'?fields=picture');
-	$data=json_decode($fbg_url,true);
-	$fb_picture=$data['picture'];
-
-	$xml .= '<VIDLIBDATA avatar_img="'.$fb_picture.'" playlist_id="0" vidnum_selected="2">';
-}
-elseif($getArtistImage["oauth_provider"]=='twitter')
-	$xml .= '<VIDLIBDATA avatar_img="'.$getArtistImage['profile_image_url'].'" playlist_id="0" vidnum_selected="2">';
-else
-	$xml .= '<VIDLIBDATA avatar_img="/artists/images/'.$getArtistImage['logo'].'" playlist_id="0" vidnum_selected="2">';
+$xml .= '<VIDLIBDATA avatar_img="/artists/images/'.$getArtistImage['logo'].'" playlist_id="0" vidnum_selected="2">';
 //end artist image
 $cnt = 0;	
 while ($list = mf($loadPlayList)) {
