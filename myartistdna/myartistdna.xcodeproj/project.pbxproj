@@ -984,7 +984,6 @@
 		2DF473911440B77F005538C7 /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		2DF473921440B77F005538C7 /* jquery.kwicks-1.5.1.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery.kwicks-1.5.1.js"; sourceTree = "<group>"; };
 		2DF473931440B77F005538C7 /* jquery.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
-		2DF473941440B77F005538C7 /* ra_controls.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = ra_controls.js; sourceTree = "<group>"; };
 		2DF473951440B77F005538C7 /* searchbox.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = searchbox.php; sourceTree = "<group>"; };
 		2DF473961440B77F005538C7 /* s_inf.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = s_inf.php; sourceTree = "<group>"; };
 		2DF473971440B77F005538C7 /* searchbox.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = searchbox.php; sourceTree = "<group>"; };
@@ -2844,7 +2843,6 @@
 				2DF473911440B77F005538C7 /* index.js */,
 				2DF473921440B77F005538C7 /* jquery.kwicks-1.5.1.js */,
 				2DF473931440B77F005538C7 /* jquery.min.js */,
-				2DF473941440B77F005538C7 /* ra_controls.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
