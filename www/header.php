@@ -20,25 +20,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
         
-	<?php if ($thisPage=="art") 
-echo '<script type="text/javascript" src="js/jquery.tools.js"></script>
-    <script type="text/javascript" src="js/jquery.custom.js"></script>
-	<!--SEARCH-->
-	<script type="text/javascript" src="js/jquery.kwicks-1.5.1.js"></script>
-    <script language="javascript" src="js/ra_controls.js" type="text/javascript"></script>
-    <script language="javascript" src="js/index.js" type="text/javascript"></script>'; 
+<?php
 
+    if( $thisPage=="art")
+    { 
+        echo '<script src="js/jquery.tools.js" type="text/javascript"></script>';
+        echo '<script src="js/jquery.custom.js" type="text/javascript"></script>';
+    }
 	else
-echo '<script type="text/javascript" src="js/popup.js"></script>
-	<!--SEARCH-->
-	<script type="text/javascript" src="js/jquery.kwicks-1.5.1.js"></script>
-    <script language="javascript" src="reg/js/ra_controls.js" type="text/javascript"></script>
-    <script language="javascript" src="reg/js/index.js" type="text/javascript"></script>
-	<script language="javascript" src="js/homepage_slideshow.js" type="text/javascript"></script>';
-    ?>
+    {
+        echo '<script src="js/popup.js" type="text/javascript"></script>';
+        echo '<script src="/js/homepage_slideshow.js" type="text/javascript"></script>';
+    }
+
+?>
     
+    <!--SEARCH-->
+    <script src="/js/jquery.kwicks-1.5.1.js" type="text/javascript"></script>
+    <script src="/jplayer/js/ra_controls.js" type="text/javascript"></script>
+    <script src="/jplayer/js/index.js" type="text/javascript"></script>
+
     <script src="/js/login_signup.js" type="text/javascript"></script>
-    
 </head>
 
 <body>
