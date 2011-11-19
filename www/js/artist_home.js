@@ -34,8 +34,6 @@ function updateListens(image)
 function showCart(fade)
 {
     $("ul.products").hide();
-    $(".showcart").hide();
-    $(".showstore").show();
     if( fade )
         $(".cart").fadeIn();
     else
@@ -45,8 +43,6 @@ function showCart(fade)
 function showProducts(fade)
 {
     $(".cart").hide();
-    $(".showstore").hide();
-    $(".showcart").show();
     if( fade )
         $("ul.products").fadeIn();
     else

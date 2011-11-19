@@ -131,7 +131,7 @@ ul.products .option { display: block; padding: 3px; width: 250px; margin: 5px 0p
 
 .remove { width: 47px; height: 23px; display: block; background: url('images/remove.jpg') 0 0 no-repeat; text-indent: -9999px; margin: 0 auto; cursor: pointer; }
 
-.shoppingcartstyle { width: 570px; background: #000; padding: 15px; }
+.shoppingcartstyle { width: 97%; background: #000; padding: 15px; }
 .shoppingcartstyle span { display: block; }
 .shoppingcartstyle p, .shoppingcartstyle .two p { color: #eee !important; }
 .shoppingcartstyle .productimage { width: 45px; }
@@ -140,7 +140,7 @@ ul.products .option { display: block; padding: 3px; width: 250px; margin: 5px 0p
 .shoppingcartstyle .right { text-align: right; }
 .shoppingcartstyle .center { text-align: center; }
 .shoppingcartstyle .one { float: left; width: 65px; padding: 5px; margin: 0px; border-top: 1px solid #555; color: #eee; }
-.shoppingcartstyle .two { float: left; width: 285px; padding: 5px; border-top: 1px solid #555; color: #eee; }
+.shoppingcartstyle .two { float: left; width: 585px; padding: 5px; border-top: 1px solid #555; color: #eee; }
 .shoppingcartstyle .three { float: left; width: 100px; padding: 5px; border-top: 1px solid #555; color: #eee;  }
 .shoppingcartstyle .one img { border: 1px solid #ccc; }
 .shoppingcartstyle .four { float: left; width: 80px; padding: 5px; text-align: center; border-top: 1px solid #555; }
