@@ -262,6 +262,11 @@ function setupPageLinks()
     $('.aClose').click(function() {
         fadeAllPageElements();
     });
+
+    $('.store_Close').click(function() {
+                       fadeAllPageElements();
+                       });
+
     
     <?=$pagesJava;?>
     
