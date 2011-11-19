@@ -123,7 +123,7 @@ ul.products li div.price { width: 125px; float: left; font-size: 18px; font-weig
 ul.products li div.addtocart { display: block; width: 109px; height: 23px; background: url('images/addtocart.jpg') 0 0 no-repeat; float: right; cursor: pointer; text-indent: -9999px; }
 
 .cartnav { margin: 10px 15px 0px 0px; }
-.cartnav div { font-size: 14px; color: #fff; font-weight: 400; text-decoration: underline; margin: 5px 0px 5px 10px; cursor: pointer;}
+.cartnav span { font-size: 14px; color: #fff; font-weight: 400; text-decoration: underline; margin: 5px 0px 5px 10px; cursor: pointer;}
 
 
 ul.products .option { display: block; padding: 3px; width: 250px; margin: 5px 0px; }

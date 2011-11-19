@@ -335,10 +335,10 @@ function setupPageLinks()
         });
     });
     
-    $("div.showstore").click(function(event){
+    $(".showstore").click(function(event){
         showProducts(true);
     });
-    $("div.showcart").click(function(event){
+    $(".showcart").click(function(event){
         showCart(true);
     });
     
@@ -1293,8 +1293,8 @@ $(document).ready(function()
                 <div class="box-header"></div>
                 
                 <div class="cartnav">
-                    <div class="showstore" id='store_tab_link'>Store</div>
-                    <div class="showcart" id='store_cart_link'>Cart</div>
+                    <span class="showstore" id='store_tab_link'>Store</span>
+                    <span class="showcart" id='store_cart_link'>Cart</span>
                 </div>
                 
                 <div class="clear"></div>
