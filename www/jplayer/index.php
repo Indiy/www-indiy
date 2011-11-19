@@ -1299,12 +1299,9 @@ $(document).ready(function()
             <div class="store">
                 <div class="box-header"></div>
                 <div class="cartnav">
-                <div class="showstore" style="display:none;">Store Front</div>
-                <div class="showcart">View Cart</div>
-                <div class="clear"></div>
+                    <div class="showstore" id='store_tab_link'>Store</div>
+                    <div class="showcart" id='store_cart_link'>Cart</div>
                 </div>
-            
-                <h1>Store</h1>
                 
                 <div class="clear"></div>
                 <div class="cart" style="display:none;"></div>
