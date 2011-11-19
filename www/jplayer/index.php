@@ -254,6 +254,7 @@ function setupPageLinks()
     $('.comments').hide();
     $('.contact').hide();
     $('.aClose').hide();
+    $('.store_Close').hide();
     $('.store').hide();
     $('.checkout').hide();
     $('.videos').hide();
