@@ -48,6 +48,7 @@ $(document).ready(function(){
 <!--PLAYLIST ENDS-->
 </head>
 <body>
+<div id='mask' style='display: none;'></div>
 <section id="bgtopbar">
 	<section id="topbar">
 		<p>Logged in as <a href="#"><?php echo $_SESSION['sess_userName']; ?></a> | <a href="logout.php">Logout</a></p>

@@ -339,7 +339,6 @@ $(document).ready(setupSortableLists);
 </section><!-- content -->
 </section><!-- wrapper -->
 
-<div id='mask' style='display: none;'></div>
 
 <script src="ajaxupload/file.js" type="text/javascript"></script>
 <script src="ajaxupload/jquery.iframe-post-form.js" type="text/javascript"></script>

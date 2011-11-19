@@ -520,7 +520,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 ----------------------------------------
 */
 
-#mask { background:#080808; position:absolute; left:0; top:0; z-index:99; display:none}
+#mask { background:#080808; position:absolute; left:0; top:0; z-index:99; width: 100%; height: 100%; opacity: 0.5; }
 #boxes .window { position:absolute; left:0; top:0; width:462px; display:none; z-index:9999;}
 #boxes #dialog { width:462px; height:auto}
 
