@@ -158,13 +158,15 @@
 							<div class="clear"></div>
 
 							<label>Facebook username</label>
-							<input type="text" readonly="" disabled="disabled" class="text" value="http://www.facebook.com/<?=$facebook?>" name="facebook">
+							<input type="text" class="text" value="<?=$facebook?>" name="facebook">
 							<div class="clear"></div>
 							
+                            <!--
 							<label>Facbook App ID (<small><a target="_blank" href="http://developers.facebook.com/">Get App ID</a></small>)</label>
 							<input type="text" class="text" disabled="disabled" value="<?=$appid?> " name="appid"> &nbsp;&nbsp;
 							<div class="clear"></div>
-							
+							-->
+                            
 							<label>Show "Listen" Count</label>
 							<div class="floatbox">
 							<input type="radio" class="radio" checked="" value="1" name="listens"> Yes
