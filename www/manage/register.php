@@ -154,7 +154,7 @@
 							<div class="clear"></div>
 
 							<label>Twitter username</label>
-							<input type="text" readonly="" disabled="disabled" class="text" value="<?=$twitter?>" name="twitter">
+							<input type="text" readonly="" class="text" value="<?=$twitter?>" name="twitter">
 							<div class="clear"></div>
 
 							<label>Facebook username</label>
