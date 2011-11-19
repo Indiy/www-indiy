@@ -152,10 +152,6 @@
 							<label>Logo</label>
 							<input type="file" class="text" name="logo">&nbsp;
 							<div class="clear"></div>
-							
-							<label>Official Website</label>
-							<input type="text" class="text" value="<?=$website?>" name="website">
-							<div class="clear"></div>
 
 							<label>Twitter username</label>
 							<input type="text" readonly="" disabled="disabled" class="text" value="<?=$twitter?>" name="twitter">

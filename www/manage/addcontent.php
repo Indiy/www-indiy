@@ -92,10 +92,6 @@
 							<input type="file" name="logo" class="text" /> <?=$content_logo;?>
 							<div class="clear"></div>
 							
-							<label>Video URL<br /><small>(Youtube or Vimeo)</small></label>
-							<input type="text" name="video" value="<?=$content_video;?>" class="text" />
-							<div class="clear"></div>
-							
 							<label>Body</label>
 							<textarea name="body" class="textarea"><?=$content_body;?></textarea>
 							<div class="clear"></div>
