@@ -78,8 +78,8 @@ button::-moz-focus-inner {  border: 0;}
 .contact .left table tr td:first-child { text-align:right; font-size:11px; padding-right:5px; padding-left:5px; }
 .contact .left table tr td.message { vertical-align:top; }
 .box-header, .box-footer { position:absolute; left:0; width:100%; }
-.box-header { background:url('images/box/header.png') no-repeat; top:-8px; height:8px; background-width: 100%; }
-.box-footer { background:url('images/box/footer.png') no-repeat; bottom:-14px; height:14px;  background-width: 100%; }
+.box-header { background:url('images/box/header.png') no-repeat; top:-8px; height:8px; background-size: 100%; }
+.box-footer { background:url('images/box/footer.png') no-repeat; bottom:-14px; height:14px;  background-size: 100%; }
 #contact_submit { border:2px solid #292929; background-color:#000; font-size:11px; text-align:center; width:100px; padding:5px 0; 
     -moz-border-radius: 5px; border-radius: 5px; color: white; cursor: pointer;}
 #contact_submit:hover { background: #ff0000; }
@@ -107,8 +107,7 @@ button::-moz-focus-inner {  border: 0;}
 .store { max-height:650px; display:none; position:relative; 
         -webkit-box-shadow: 0 0 5px #000; box-shadow: 0 0 5px #000; 
         z-index: 1; padding: 25px; width: 900px; margin: -5px auto 100px auto; 
-        background:url('images/box/bg.png') repeat center top; background-width: 100%; 
-}
+        background:url('images/box/bg.png') no-repeat center top; background-size: 100%; }
 
 .store_Close { cursor: pointer; z-index: 46; position: absolute; top: 143px; left: 50%; padding: 0px; width: 45px; height: 45px; margin: -45px 0px 0px 50%; background: url('images/close.png') 0px 0px no-repeat; }
 
