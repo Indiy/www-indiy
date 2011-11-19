@@ -57,9 +57,8 @@
       <table> \
         <tbody> \
           <tr> \
-            <td class="tl"/><td class="b"/><a href="#" class="close"> \
-                  <img src="'+this.close_image+'" title="close" class="close_image" /> \
-                </a><td class="tr"/> \
+            <td class="tl"/><td class="b"/> \
+                <td class="tr"/> \
           </tr> \
           <tr> \
             <td class="b"/> \
@@ -94,7 +93,8 @@
     $('#facebox').css({
       top:	pageScroll[1] + ($.facebox.getPageHeight() / 10),
       left:	pageScroll[0]
-    }).show()
+    }).show();
+    $('#mask').show();
 
     $(document).bind('keydown.facebox', function(e) {
       if (e.keyCode == 27) $.facebox.close()
@@ -155,9 +155,10 @@
   }
 
   $(document).bind('close.facebox', function() {
-    $(document).unbind('keydown.facebox')
+    $(document).unbind('keydown.facebox');
+    $('#mask').hide();
     $('#facebox').fadeOut(function() {
-      $('#facebox .content').removeClass().addClass('content')
+      $('#facebox .content').removeClass().addClass('content');
     });
 	  
 	 // location.replace(location.href);
