@@ -1294,10 +1294,11 @@ $(document).ready(function()
             <div id="player_bg"></div> 
             <!-- /VIDEO PLAYER -->
             
-            
+            <div class="store_Close"></div>
             <? if ($paypalEmail != "") { ?>
             <div class="store">
                 <div class="box-header"></div>
+                
                 <div class="cartnav">
                     <div class="showstore" id='store_tab_link'>Store</div>
                     <div class="showcart" id='store_cart_link'>Cart</div>
