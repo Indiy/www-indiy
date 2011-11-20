@@ -16,9 +16,8 @@ function mouseoverClip(self)
     $('#link_tooltip').text('Copy to clipboard');
     $('#link_tooltip').show();
     var new_offset = $(self).offset();
-    var size = $('#link_tooltop').size();
-    new_offset.left -= size.width/2;
-    new_offset.top -= size.height + 5; 
+    new_offset.left -= $('#link_tooltip').width()/2;
+    new_offset.top -= $('#link_tooltip').height() + 5; 
     $('#link_tooltip').offset(new_offset)
 }
 
