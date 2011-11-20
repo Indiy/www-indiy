@@ -6,21 +6,28 @@ if (!$_SESSION["cart"]) {
 $_SESSION["cart"] = rand(1111111,9999999);
 }
 
-$browser = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
-if ($browser == true || $_GET["debug"] == "true"){
+$browser = ;
+if( strpos($_SERVER['HTTP_USER_AGENT'],"iPhone") !== FALSE
+   || strpos($_SERVER['HTTP_USER_AGENT'],"Googlebot-Mobile") !== FALSE
+   )
+{
 
     $browser = 'iphone';
     include("iphone.php");
 
-} else if ($_GET["embed"] == "true") {
-
+} 
+else if ($_GET["embed"] == "true") 
+{
     include("iphone.php");
-
-} else {
-
-    if ($_GET["url"] != "") {
+} 
+else 
+{
+    if ($_GET["url"] != "") 
+    {
         $artist_url = $_GET["url"];
-    } else {
+    } 
+    else 
+    {
         $loadUsername = explode(".", $_SERVER["HTTP_HOST"]);
         $artist_url = $loadUsername[0]; 
     }
