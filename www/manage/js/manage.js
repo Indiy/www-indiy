@@ -38,7 +38,7 @@ function setupClipboard()
     g_clip = new ZeroClipboard.Client();
     g_clip.setHandCursor(true);
     g_clip.addEventListener('onMouseOut',clipMouseOut);
-    clip.addEventListener('onComplete',clipComplete);
+    g_clip.addEventListener('onComplete',clipComplete);
     $('.short_link_clip').mouseover(function() { mouseoverClip(this); });
 }
 
