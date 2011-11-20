@@ -405,7 +405,7 @@ ra_ActiveSearch.prototype.addMedia=function(sid,artistid,name,image)
 	var stext=name;	
 	var hid=artistid+"_M"+sid;
 	var item_data={type:'M',media_image:image,media_name:name};
-	this.addItem(hid,scategory,stext,item_data);
+	//this.addItem(hid,scategory,stext,item_data);
 	}
 
 ra_ActiveSearch.prototype.getListItem=function(sid)

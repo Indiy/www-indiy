@@ -54,9 +54,9 @@
         global $rec_sep;
         global $fld_sep;
         global $grp_marker;
-        $sql = "SELECT id,artistid,name,image FROM mydna_musicplayer_audio";
+        $sql = "SELECT id,artistid,name,image FROM mydna_musicplayer_audio WHERE `type` = '0' ";
         if($like!=null)
-            $sql.=" WHERE name LIKE '$like%'";
+            $sql.=" AND name LIKE '$like%' ";
         $result=mysql_query($sql);
         echo $grp_marker.'songs'.$rec_sep;
         while($row = mysql_fetch_assoc($result))
