@@ -1,7 +1,6 @@
 
 function mouseoverClip(self)
 {
-    $('#link_tooltip').text('Copy to clipboard');
     g_clip.setText( self.previousSibling.href );
     if( g_clip.div ) 
     {
@@ -13,20 +12,25 @@ function mouseoverClip(self)
         g_clip.glue(self);
     }
     g_clip.receiveEvent('mouseover',null);
-    var new_offset = self.offset();
-    new_offset.left -= 20;
-    new_offset.top -= 20; 
-    $('#link_tooltip').offset(new_offset)
+
+    $('#link_tooltip').text('Copy to clipboard');
     $('#link_tooltip').show();
+    var new_offset = $(self).offset();
+    new_offset.left -= 100;
+    new_offset.top -= 40; 
+    $('#link_tooltip').offset(new_offset)
 }
 
 var g_clip = false;
 
+function clipMouseOver()
+{
+    $('#link_tooltip').show();    
+}
 function clipMouseOut()
 {
     $('#link_tooltip').hide();
 }
-
 function clipComplete()
 {
     $('#link_tooltip').text('Copied');
@@ -37,6 +41,7 @@ function setupClipboard()
     ZeroClipboard.setMoviePath('/flash/ZeroClipboard.swf');
     g_clip = new ZeroClipboard.Client();
     g_clip.setHandCursor(true);
+    g_clip.addEventListener('onMouseOver',clipMouseOver);
     g_clip.addEventListener('onMouseOut',clipMouseOut);
     g_clip.addEventListener('onComplete',clipComplete);
     $('.short_link_clip').mouseover(function() { mouseoverClip(this); });
