@@ -36,6 +36,7 @@ this.maxResults=7;
 this.artistLogoFolder="/artists/images/";
 this.songImagesFolder="/artists/images/";
 this.mediaImagesFolder="/artists/images/";
+this.noPhoto="/images/no_photo.jpg";
 
 this.url_suffix=g_siteUrl.replace("http://www","");
 
@@ -574,7 +575,7 @@ ra_ActiveSearch.prototype.renderItems=function()
 			if(LI.data.artist_logo)
 				html_out=html_out.replace("{artist_logo}",this.artistLogoFolder+LI.data.artist_logo);
 			else
-				html_out=html_out.replace("{artist_logo}","no logo");
+				html_out=html_out.replace("{artist_logo}",this.noPhoto);
 			html_out=html_out.replace("{artist_name}",LI.data.artist_name);
 			if(LI.data.artist_site)
 				html_out=html_out.replace("{artist_site}",LI.data.artist_site);
@@ -590,7 +591,7 @@ ra_ActiveSearch.prototype.renderItems=function()
 			if(LI.data.song_image)
 				html_out=html_out.replace("{song_image}",this.songImagesFolder+LI.data.song_image);
 			else
-				html_out=html_out.replace("{song_image}","no image");
+				html_out=html_out.replace("{song_image}",this.noPhoto);
 			html_out=html_out.replace("{song_name}",LI.data.song_name);			
 			if(LIA)
 				html_out=html_out.replace("{artist_name}",LIA.data.artist_name);			
@@ -607,7 +608,7 @@ ra_ActiveSearch.prototype.renderItems=function()
 			if(LI.data.media_image)
 				html_out=html_out.replace("{media_image}",this.mediaImagesFolder+LI.data.media_image);
 			else
-				html_out=html_out.replace("{media_image}","no image");
+				html_out=html_out.replace("{media_image}",this.noPhoto);
 			html_out=html_out.replace("{media_name}",LI.data.media_name);			
 			if(LIA)
 				html_out=html_out.replace("{artist_name}",LIA.data.artist_name);			
