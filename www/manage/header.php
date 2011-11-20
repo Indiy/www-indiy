@@ -49,6 +49,7 @@ $(document).ready(function(){
 </head>
 <body>
 <div id='mask' style='display: none;'></div>
+<div id='link_tooltip'>Copy to clipboard</div>
 <section id="bgtopbar">
 	<section id="topbar">
 		<p>Logged in as <a href="#"><?php echo $_SESSION['sess_userName']; ?></a> | <a href="logout.php">Logout</a></p>

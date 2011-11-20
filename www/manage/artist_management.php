@@ -120,32 +120,6 @@ function setupSortableLists()
 
 $(document).ready(setupSortableLists);
 
-function mouseoverClip(self)
-{
-    g_clip.setText( self.previousSibling.href );
-    if( g_clip.div ) 
-    {
-        g_clip.receiveEvent('mouseout', null);
-        g_clip.reposition(self);
-    }
-    else
-    {
-        g_clip.glue(self);
-    }
-    g_clip.receiveEvent('mouseover', null);
-}
-
-var g_clip = false;
-
-function setupClipboard()
-{
-    ZeroClipboard.setMoviePath('/flash/ZeroClipboard.swf');
-    g_clip = new ZeroClipboard.Client();
-    g_clip.setHandCursor(true);
-    $('.short_link_clip').mouseover(function() { mouseoverClip(this); });
-}
-
-$(document).ready(setupClipboard);
 
 </script>
 
