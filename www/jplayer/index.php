@@ -789,7 +789,7 @@ $(document).ready(function()
         };
         $("#jquery_jplayer").jPlayer("setMedia", media);
         g_currentSongId = song.id;
-        
+        window.location.hash = '#song_id=' + g_currentSongId; 
         $('span.showamazon').hide();
         $('span.showitunes').hide();
         
