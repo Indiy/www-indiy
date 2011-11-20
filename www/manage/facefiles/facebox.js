@@ -119,14 +119,15 @@
 						$("#jquery_jplayer_1").jPlayer({
 								ready: function (event) {	
 									$(this).jPlayer("setMedia", {
-										mp3:audio_sound
-										
+										mp3: audio_sound,
+                                        oga: audio_sound.replace(".mp3",".ogg")
 									}).jPlayer("play");
-								
 								},
-								swfPath: "/js",
-								supplied: "mp3",
-								wmode: "window"
+                                solution: "html, flash",
+                                supplied: "mp3, oga",
+                                swfPath: "/js/Jplayer.swf",
+                                verticalVolume: true,
+                                wmode: "window"
 							});
 		}
 
