@@ -67,11 +67,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml"> 
 <head>
 <title>MyArtistDNA.fm<?=$artist_name?></title>
-<link href="<?=trueSiteUrl();?>/jplayer/iphone.css" rel="stylesheet" type="text/css" /> 
+<link href="/jplayer/iphone.css" rel="stylesheet" type="text/css" /> 
 
 <link media="only screen and (max-device-width: 480px)" href="<?=trueSiteUrl();?>/jplayer/iphone.css" type="text/css" rel="stylesheet" />
 
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
@@ -238,8 +238,8 @@ $(document).ready(function()
 			var position = $("#jplayer_playlist_item_"+index).children("div.songbgposition").text();
 			var repeat = $("#jplayer_playlist_item_"+index).children("div.songbgrepeat").text();
 
-            var src_arg = "http://" + window.location.host + "/artists/images/" + image;
-            var img_url = "http://174.129.47.5/timthumb.php?src=" + src_arg + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
+            var src_arg = "/artists/images/" + image;
+            var img_url = "/timthumb.php?src=" + src_arg + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
 			//$('#image').html("<img src='" + img_url + "' style='vertical-align:middle; margin-top:-" + (getWindowHeight()/2) + "px; margin-left:-" + (getWindowWidth()/2) + "px;' />");
 			$('#image').html("<img src='" + img_url + "' style='margin-top:55px;' />");
 
