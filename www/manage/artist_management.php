@@ -217,8 +217,8 @@ id="clippy" >
 <param name="allowScriptAccess" value="always" />
 <param name="quality" value="high" />
 <param name="scale" value="noscale" />
-<param NAME="FlashVars" value="text=<?=$shortlink;?>">
-<param name="bgcolor" value="#000000">
+<param NAME="FlashVars" value="text=<?=$short_link;?>">
+<param name="bgcolor" value="#FFFFFF">
 <embed src="/flash/clippy.swf"
 width="110"
 height="14"
@@ -227,8 +227,8 @@ quality="high"
 allowScriptAccess="always"
 type="application/x-shockwave-flash"
 pluginspage="http://www.macromedia.com/go/getflashplayer"
-FlashVars="text=<?=$shortlink;?>"
-bgcolor="#000000"
+FlashVars="text=<?=$short_link;?>"
+bgcolor="#FFFFFF"
 />
 </object>
                     <?
