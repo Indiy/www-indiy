@@ -2,27 +2,25 @@
 
 session_start();
 //error_reporting(0);
-if (!$_SESSION["cart"]) {
-$_SESSION["cart"] = rand(1111111,9999999);
+if( !$_SESSION["cart"] )
+{
+    $_SESSION["cart"] = rand(1111111,9999999);
 }
 
-$browser = ;
 if( strpos($_SERVER['HTTP_USER_AGENT'],"iPhone") !== FALSE
    || strpos($_SERVER['HTTP_USER_AGENT'],"Googlebot-Mobile") !== FALSE
    )
 {
-
     $browser = 'iphone';
     include("iphone.php");
-
 } 
-else if ($_GET["embed"] == "true") 
+else if( $_GET["embed"] == "true" )
 {
     include("iphone.php");
 } 
 else 
 {
-    if ($_GET["url"] != "") 
+    if( $_GET["url"] != "" )
     {
         $artist_url = $_GET["url"];
     } 
