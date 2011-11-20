@@ -18,7 +18,6 @@ if ($browser == true || $_GET["debug"] == "true"){
 
 } else {
 
-
     if ($_GET["url"] != "") {
         $artist_url = $_GET["url"];
     } else {
@@ -27,7 +26,13 @@ if ($browser == true || $_GET["debug"] == "true"){
     }
 
     $row = mf(mq("select * from `[p]musicplayer` where `url`='{$artist_url}' limit 1"));
-    if ($row["type"] == "1") {
+    if( $row == FALSE )
+    {
+        header("HTTP/1.0 404 Not Found");
+        die("Artist not found.");
+    }
+    if ($row["type"] == "1") 
+    {
         // fan music player
         $fan = "true";      
     }
