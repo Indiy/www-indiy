@@ -735,6 +735,7 @@ $(document).ready(function()
             $(".videos .right-arrow").children('span').html('');
         }
     }
+    shows_video_row("1");
  
     function displayPlayList() {
         $("#jplayer_playlist ul").empty();
