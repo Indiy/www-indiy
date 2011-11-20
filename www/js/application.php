@@ -13,13 +13,13 @@ $xml .= '<?xml version="1.0" encoding="UTF-8"?>';
 $loadPlayList = mq("select * from mydna_musicplayer_video where artistid='{$user_id}' ORDER BY id DESC");
 
 
-//artist image
 $getArtistImage = mf(mq("SELECT facebook,username, profile_image_url, oauth_uid, logo,oauth_provider FROM mydna_musicplayer WHERE id='{$user_id}'"));
-$xml .= '<VIDLIBDATA avatar_img="/artists/images/'.$getArtistImage['logo'].'" playlist_id="0" vidnum_selected="2">';
-//end artist image
+$logo_url = '/timthumb.php?w=50&h=50&src=/artists/images/' . $getArtistImage['logo']';
+$xml .= '<VIDLIBDATA avatar_img="' . $logo_url . '" playlist_id="0" vidnum_selected="2">';
+
 $cnt = 0;	
-while ($list = mf($loadPlayList)) {
-	
+while ($list = mf($loadPlayList)) 
+{
 	$video_arr = explode(".",$list['video']);
 	$songArr = explode('.',$list['video']);
 
@@ -28,11 +28,12 @@ while ($list = mf($loadPlayList)) {
 	else
 		$name_data = $list['name'];
 
-		$xml .= '<VIDEO><TITLE>'.$name_data.'</TITLE><DESCRIPTION></DESCRIPTION><PATH>vid/'.$list['video'].'</PATH><EMBED>Re-Nutriv EMBED CODE</EMBED></VIDEO>';
-	
-		$cnt++;
+    $xml .= '<VIDEO><TITLE>'.$name_data.'</TITLE><DESCRIPTION></DESCRIPTION><PATH>vid/'.$list['video'].'</PATH><EMBED>Re-Nutriv EMBED CODE</EMBED></VIDEO>';
+
+    $cnt++;
 }
-	$xml .= '</VIDLIBDATA>';
+
+$xml .= '</VIDLIBDATA>';
 
 $xml = str_replace("'","\'",$xml);
 $xml = str_replace("\\\\'","\'",$xml);
