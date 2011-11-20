@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
 
     <script src="js/manage.js" type="text/javascript"></script>
-
+    <script src="/js/ZeroClipboard.js" type="text/javascript"></script>
 
     <!--[if IE]>
         <script src="js/html5.js"></script>

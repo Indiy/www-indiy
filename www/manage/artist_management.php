@@ -120,6 +120,34 @@ function setupSortableLists()
 
 $(document).ready(setupSortableLists);
 
+function mouseoverClip(this)
+{
+    g_clip.setText( 'foo' );
+    
+    if( g_clip.div ) 
+    {
+        g_clip.receiveEvent('mouseout', null);
+        g_clip.reposition(this);
+    }
+    else
+    {
+        g_clip.glue(this);
+    }
+    g_clip.receiveEvent('mouseover', null);
+}
+
+var g_clip = false;
+ZeroClipboard.setMoviePath('/flash/ZeroClipboard.swf');
+
+function setupClipboard()
+{
+    g_clip = new ZeroClipboard.Client();
+    g_clip.setHandCursor(true);
+    $('.short_link_clip').mouseover(function() { mouseoverClip(this); });
+}
+
+$(document).ready(setupClipboard);
+
 </script>
 
 <section id="wrapper">
@@ -208,30 +236,7 @@ $(document).ready(setupSortableLists);
                     echo "</span>\n";
                     echo "<span class='duration'>";
                     echo "<a href='$short_link' target='_blank'>Link</a>";
-                    ?>
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
-width="110"
-height="14"
-id="clippy" >
-<param name="movie" value="/flash/clippy.swf"/>
-<param name="allowScriptAccess" value="always" />
-<param name="quality" value="high" />
-<param name="scale" value="noscale" />
-<param NAME="FlashVars" value="text=<?=$short_link;?>">
-<param name="bgcolor" value="#FFFFFF">
-<embed src="/flash/clippy.swf"
-width="110"
-height="14"
-name="clippy"
-quality="high"
-allowScriptAccess="always"
-type="application/x-shockwave-flash"
-pluginspage="http://www.macromedia.com/go/getflashplayer"
-FlashVars="text=<?=$short_link;?>"
-bgcolor="#FFFFFF"
-/>
-</object>
-                    <?
+                    echo "<img class='short_link_clip' src='/images/clipboard.png' alt='Copy to clipboard' title='Copy to clipboard'></img>";
                     echo "</span>\n";
 					
 					if(!empty($record_artistAudio['audio']))
