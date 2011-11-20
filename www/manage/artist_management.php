@@ -120,18 +120,18 @@ function setupSortableLists()
 
 $(document).ready(setupSortableLists);
 
-function mouseoverClip(this)
+function mouseoverClip(self)
 {
     g_clip.setText( 'foo' );
     
     if( g_clip.div ) 
     {
         g_clip.receiveEvent('mouseout', null);
-        g_clip.reposition(this);
+        g_clip.reposition(self);
     }
     else
     {
-        g_clip.glue(this);
+        g_clip.glue(self);
     }
     g_clip.receiveEvent('mouseover', null);
 }
