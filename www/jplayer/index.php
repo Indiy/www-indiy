@@ -665,7 +665,7 @@ $(document).ready(function()
         },
         solution: "html, flash",
         supplied: "mp3, oga",
-        swfPath: "/js/Jplayer2.swf",
+        swfPath: "/js/Jplayer.swf",
         verticalVolume: true,
         wmode: "window"
     })

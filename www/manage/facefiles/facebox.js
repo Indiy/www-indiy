@@ -114,7 +114,7 @@
 	});
 	$.getScript('js/jquery.jplayer.min.js', function() {
 		if(songUrl.match(/song=([0-9a-zA-Z_-]+)/) != null){
-							audio_sound="../artists/audio/"+(songUrl.match(/song=([0-9a-zA-Z_-]+)/)[1])+".mp3";
+							audio_sound="/artists/audio/"+(songUrl.match(/song=([0-9a-zA-Z_-]+)/)[1])+".mp3";
 							
 						$("#jquery_jplayer_1").jPlayer({
 								ready: function (event) {	
@@ -124,14 +124,14 @@
 									}).jPlayer("play");
 								
 								},
-								swfPath: "js",
+								swfPath: "/js",
 								supplied: "mp3",
 								wmode: "window"
 							});
 		}
 
 		if(songUrl.match(/video=([0-9a-zA-Z_-]+)/) != null){
-							video_sound="../artists/video/"+(songUrl.match(/video=([0-9a-zA-Z_-]+)/)[1])+".mp4";
+							video_sound="/artists/video/"+(songUrl.match(/video=([0-9a-zA-Z_-]+)/)[1])+".mp4";
 							
 						$("#jquery_jplayer_1").jPlayer({
 								ready: function (event) {	
@@ -141,7 +141,7 @@
 									}).jPlayer("play");
 								
 								},
-								swfPath: "js",
+								swfPath: "/js",
 								supplied: "mp4",
 								wmode: "window"
 							});
