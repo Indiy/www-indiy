@@ -128,6 +128,8 @@
 							<input type="text" class="text" value="<?=$email?>" name="email" readonly>
 							<div class="clear"></div>
 
+                            <!--
+
 							<label>Gender</label>
 							<input type="text" class="text" value="<?=$gender?>" name="artist_gender">
 							<div class="clear"></div>
@@ -143,7 +145,8 @@
 							<label>Music likes</label>
 							<input type="text" class="text" value="<?=$music_likes?>" name="artist_music_likes">
 							<div class="clear"></div>
-							
+
+							-->
 														
 							<label>URL</label>
 							<input type="text" class="text" value="<?=$url?>" name="url">
