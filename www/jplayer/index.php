@@ -29,7 +29,7 @@ if ($browser == true || $_GET["debug"] == "true"){
     if( $row == FALSE )
     {
         header("HTTP/1.0 404 Not Found");
-        die("Artist not found.");
+        die();
     }
     if ($row["type"] == "1") 
     {
