@@ -17,7 +17,7 @@ function mouseoverClip(self)
     $('#link_tooltip').show();
     var new_offset = $(self).offset();
     new_offset.left -= $('#link_tooltip').width()/2;
-    new_offset.top -= $('#link_tooltip').height() + 5; 
+    new_offset.top -= $('#link_tooltip').height() + 15; 
     $('#link_tooltip').offset(new_offset)
 }
 
