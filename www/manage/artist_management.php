@@ -122,8 +122,7 @@ $(document).ready(setupSortableLists);
 
 function mouseoverClip(self)
 {
-    g_clip.setText( 'foo' );
-    
+    g_clip.setText( self.previousSibling.href );
     if( g_clip.div ) 
     {
         g_clip.receiveEvent('mouseout', null);
