@@ -19,7 +19,7 @@
     $error = FALSE;
     $url = '';
 
-    $sql = "SELECT * FROM mydna_musicplayer WHERE username = '$username' OR url = '$username'";
+    $sql = "SELECT * FROM mydna_musicplayer WHERE artist = '$name' OR username = '$username' OR url = '$username'";
     $q = mysql_query($sql) or die("bad sql: '$sql'");
     if( mysql_num_rows($q) != 0 )
     {
