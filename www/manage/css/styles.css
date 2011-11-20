@@ -726,7 +726,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #adminblock .playlist .list ul li .delete a { width:30px; height:25px; float:left; background:url(../images/icon_delete_admin.gif) no-repeat; margin-left:20px}
 #adminblock .playlist .list ul li .delete a:hover { background:url(../images/icon_delete_hover_admin.gif) no-repeat}
 
-.short_link_clip { width: 15px; height: 15px; }
+.short_link_clip { margin-left: 10px; width: 25px; height: 25px; }
 
 #adminblock .videolist { width:711px; float:left; padding-bottom:10px}
 #adminblock .videolist .heading { width:691px; float:left; background:#7f7f99; padding:10px}
