@@ -183,6 +183,8 @@ else
 <html xmlns="http://www.w3.org/1999/xhtml"> 
 <head>
 <title><?=siteTitle(); ?><? if (!$fan) { echo " - $artist_name"; } ?></title>
+<meta name="description" content="MyArtistDNA - <?=$artist_name;?> - Home Page - Come here to connect with your favorite artist."/>
+
 <link href="jplayer/style.css" rel="stylesheet" type="text/css" /> 
 <!--<link rel="stylesheet" media="all and (orientation:portrait)" href="/jplayer/portrait.css">-->
 <link rel="stylesheet" href="jplayer/css/supersized.core.css" type="text/css" media="screen" />
