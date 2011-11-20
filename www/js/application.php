@@ -14,7 +14,7 @@ $loadPlayList = mq("select * from mydna_musicplayer_video where artistid='{$user
 
 
 $getArtistImage = mf(mq("SELECT facebook,username, profile_image_url, oauth_uid, logo,oauth_provider FROM mydna_musicplayer WHERE id='{$user_id}'"));
-$logo_url = '/timthumb.php?w=50&amp;h=50&amp;src=/artists/images/' . $getArtistImage['logo'];
+$logo_url = '/timthumb.php?w=90&amp;h=60&amp;src=/artists/images/' . $getArtistImage['logo'];
 $xml .= '<VIDLIBDATA avatar_img="' . $logo_url . '" playlist_id="0" vidnum_selected="2">';
 
 $cnt = 0;	
