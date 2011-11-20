@@ -19,11 +19,11 @@
     $error = FALSE;
     $url = '';
 
-    $sql = "SELECT * FROM mydna_musicplayer WHERE artist = '$name' OR username = '$username' OR url = '$username'";
+    $sql = "SELECT * FROM mydna_musicplayer WHERE artist = '$name' OR username = '$username' OR url = '$username' OR email = '$email'";
     $q = mysql_query($sql) or die("bad sql: '$sql'");
     if( mysql_num_rows($q) != 0 )
     {
-        $error = "Username already exists.";
+        $error = "User already exists with that name or email address.";
     }
     else
     {
