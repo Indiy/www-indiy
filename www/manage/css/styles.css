@@ -729,8 +729,9 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 .short_link_clip { margin-left: 10px; margin-bottom: -5px; width: 25px; height: 25px; }
 #link_tooltip { position: absolute; display: none; 
                 padding: 2px 7px 2px 7px; 
-                border: 2px solid black; background-color: white; 
-                font-size: 10px; }
+                border: 2px solid black; background-color: #CFCFCF; 
+                font-size: 10px; 
+                border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; }
 
 #adminblock .videolist { width:711px; float:left; padding-bottom:10px}
 #adminblock .videolist .heading { width:691px; float:left; background:#7f7f99; padding:10px}
