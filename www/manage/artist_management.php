@@ -137,10 +137,10 @@ function mouseoverClip(this)
 }
 
 var g_clip = false;
-ZeroClipboard.setMoviePath('/flash/ZeroClipboard.swf');
 
 function setupClipboard()
 {
+    ZeroClipboard.setMoviePath('/flash/ZeroClipboard.swf');
     g_clip = new ZeroClipboard.Client();
     g_clip.setHandCursor(true);
     $('.short_link_clip').mouseover(function() { mouseoverClip(this); });
