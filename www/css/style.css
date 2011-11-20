@@ -692,7 +692,7 @@ div.searchList { position: absolute; display:none; width:220px; background-color
 div.searchListItem {background-color:#DDDEE0; border-top-style:solid; border-bottom-style:solid;  border-top-width:1px; border-bottom-width:1px; border-top-color:#fff;  border-bottom-color:#fff; font-family:"Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif; text-align:left;  font-size:11px; }
 div.searchListItem:hover {background-color:#767676; border-top-style:solid; border-bottom-style:solid;  border-top-width:1px; border-bottom-width:1px; border-top-color:#000099;  border-bottom-color:#000099; color:#fff; font-size:11px; }
 
-div.searchListItemMatch {background-color:#767676; border-top-style:solid; border-bottom-style:solid;  border-top-width:1px; border-bottom-width:1px; border-top-color:#000099;  border-bottom-color:#000099;font-family:"Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif; color:#fff font-size:11px; }
+div.searchListItemMatch {background-color:#767676; border-top-style:solid; border-bottom-style:solid;  border-top-width:1px; border-bottom-width:1px; border-top-color:#000099;  border-bottom-color:#000099;font-family:"Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif; color:#fff; font-size:11px; }
 
 
 div.searchListItemCategory {background-color:#d2d2d2; border:inset 1px #ccc; padding:0 0 0 5px; }
