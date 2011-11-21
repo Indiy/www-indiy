@@ -48,8 +48,9 @@ else
     $artist_website = $row["website"];
     $artist_twitter = $row["twitter"];
     $artist_facebook = $row["facebook"];
-    $artist_appid = $row["appid"];
     $artist_listens = $row["listens"];
+    $show_comments = TRUE;
+    
     if ($artist_listens == "1") { $show_listens = "true"; }
 
     playerViews($artist_id);
@@ -1097,7 +1098,7 @@ $(document).ready(function()
                     <? if ($paypalEmail != "") { ?>
                     <li><a href="#" class="aStore">Store</a></li>
                     <? } ?>
-                    <? if ($artist_appid) { ?>
+                    <? if ($show_comments) { ?>
                     <li><a href="#" class="aComment">Comment</a></li>
                     <? } ?>
                     <? if ($artist_email) { ?>
@@ -1200,12 +1201,12 @@ $(document).ready(function()
                 <div class="box-footer"></div>
             </div>
             
-            <? if ($artist_appid) { ?>
+            <? if ($show_comments) { ?>
             <div class="comments">
                 <div class="box-header"></div>
                 <h1>Comment</h1>
-                <script src="http://connect.facebook.net/en_US/all.js#appId=<?=$artist_appid;?>&amp;xfbml=1"></script>
-                <div id="fb-root"><fb:comments numposts="10" width="570" publish_feed="true"></fb:comments></div>
+                <script src="http://connect.facebook.net/en_US/all.js#appId=129628953743524&xfbml=1"></script>
+                <div id="fb-root"><fb:comments href="<?=$_SERVER['HTTP_HOST'];?>" numposts="10" width="570" publish_feed="true"></fb:comments></div>
                 <div class="box-footer"></div>
             </div>
             <? } ?>
