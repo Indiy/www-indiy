@@ -1205,8 +1205,8 @@ $(document).ready(function()
             <div class="comments">
                 <div class="box-header"></div>
                 <h1>Comment</h1>
-                <script src="http://connect.facebook.net/en_US/all.js#appId=129628953743524&xfbml=1"></script>
-                <div id="fb-root"><fb:comments numposts="10" width="570" publish_feed="true"></fb:comments></div>
+                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+                <div id="fb-root"><fb:comments href="http://<?=$_SERVER['HTTP_HOST'];?>" numposts="10" width="570" publish_feed="true"></fb:comments></div>
                 <div class="box-footer"></div>
             </div>
             <? } ?>
