@@ -17,7 +17,7 @@
 		2D380B93146A490100E36189 /* store_settings.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = store_settings.php; sourceTree = "<group>"; };
 		2D380B94146B55F700E36189 /* login_signup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = login_signup.html; sourceTree = "<group>"; };
 		2D380B95146E35CD00E36189 /* robots.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = robots.txt; sourceTree = "<group>"; };
-		2D380B96146E3EAC00E36189 /* setup_abbrev.php */ = {isa = PBXFileReference; path = setup_abbrev.php; sourceTree = "<group>"; };
+		2D380B96146E3EAC00E36189 /* setup_abbrev.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = setup_abbrev.php; sourceTree = "<group>"; };
 		2D380B99146F0A5D00E36189 /* .htaccess */ = {isa = PBXFileReference; lastKnownFileType = text; path = .htaccess; sourceTree = "<group>"; };
 		2D380B9A146F0A5D00E36189 /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
 		2D380B9B1470800600E36189 /* cleanup_carts.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = cleanup_carts.php; sourceTree = "<group>"; };
@@ -1333,6 +1333,7 @@
 		2DF47522144B5725005538C7 /* submit_contact.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = submit_contact.php; sourceTree = "<group>"; };
 		2DF47527144BD7CB005538C7 /* send_friend.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = send_friend.php; sourceTree = "<group>"; };
 		2DF47528144BFF7A005538C7 /* timthumb.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = timthumb.php; sourceTree = "<group>"; };
+		2DF4AA60147A058500CA819B /* download_newsletter.php */ = {isa = PBXFileReference; path = download_newsletter.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -3076,6 +3077,7 @@
 				2DF47517144A2D84005538C7 /* timthumb.php */,
 				2D380B96146E3EAC00E36189 /* setup_abbrev.php */,
 				2D380B9B1470800600E36189 /* cleanup_carts.php */,
+				2DF4AA60147A058500CA819B /* download_newsletter.php */,
 			);
 			path = manage;
 			sourceTree = "<group>";

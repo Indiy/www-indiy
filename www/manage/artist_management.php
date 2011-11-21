@@ -146,7 +146,7 @@ $(document).ready(setupSortableLists);
             <ul>
             <li><a href="<?=$artist_url;?>">View Site</a></li>
             <li><a href="stats.php?userId=<?=$artistID;?>">Analytics</a></li>
-            <li><a href="#">Newsletter</a></li>
+            <li><a href="download_newsletter.php?artist_id=<?=$artistID;?>">Newsletter</a></li>
             <li><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Music</a></li>
             <li><a href="addvideo.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Video</a></li>
             <li><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Pages</a></li>
