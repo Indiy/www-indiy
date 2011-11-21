@@ -53,21 +53,20 @@
 				$video_sound_mp4 = $artistid . '_' . strtolower( rand(11111,99999) . '_video.mp4' );
 				$dest_file = '../vid/' . $video_sound_mp4;
 
+                $args = "-i_qfactor 0.71 -qcomp 0.6 -qmin 10 -qmax 63 -qdiff 4 -trellis 0 -vcodec libx264 -s 640x360 -vb 300k -ab 64k -ar 44100 -threads 4";
 				if( $upload_ext == "mp4" )
                 {
-                    $args = "-i_qfactor 0.71 -qcomp 0.6 -qmin 10 -qmax 63 -qdiff 4 -trellis 0 -vcodec libx264 -s 640x360 -b:v 1000k -b:a 56k -ar 44100";
 					@system("/usr/local/bin/ffmpeg -i " . $tmp_file . " " . $args . " " . $dest_file);
                 }
 				else if( $upload_ext == "mov" )
                 {
-                    $args = "-i_qfactor 0.71 -qcomp 0.6 -qmin 10 -qmax 63 -qdiff 4 -trellis 0 -vcodec libx264 -s 640x360 -b:v 1000k -b:a 56k -ar 44100";
 					@system("/usr/local/bin/ffmpeg -i " . $tmp_file . " " . $args . " " . $dest_file);
 				}
                 else
                 {
-                    $args = "-i_qfactor 0.71 -qcomp 0.6 -qmin 10 -qmax 63 -qdiff 4 -trellis 0 -vcodec libx264 -s 640x360 -b:v 1000k -b:a 56k -ar 44100";
 					@system("/usr/local/bin/ffmpeg -i " . $tmp_file . " " . $args . " " . $dest_file);
                 }
+                @unlink($_FILES['video']['tmp_name']);
 				$video_sound = $video_sound_mp4;
 			} 
             else 
