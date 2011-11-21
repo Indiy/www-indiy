@@ -301,8 +301,8 @@ div.jp-playlist-player div.jp-playlist a.jp-playlist-current { color:#FF0000 !im
 div.current-track { position: fixed; top: 33px; left: 10px; z-index: 12; font-size: 12px; font-weight: bold; color: #fff; }
 
 span.playlist-visibility { font-size:11px; float:left; margin-left:87px; margin-top:3px; cursor:pointer; }
-span.playlist-visibility span.hide { display:block; }
-span.playlist-visibility span.show { display:none; }
+span.playlist-visibility span.hide { display:none; }
+span.playlist-visibility span.show { display:block; }
 
 a.jp-volume-min { top: 22px; left: 110px; background: #ffffff; width: 4px; height: 57px; }
 a.jp-volume-max { top: 22px; left: 110px; background: #ff9900; width: 4px; height: 57px; }

@@ -418,7 +418,7 @@ $(document).ready(function()
 						
 					</div>
 					
-					<div id="jplayer_playlist" class="jp-playlist"> 
+					<div id="jplayer_playlist" class="jp-playlist" style="display: none;"> 
 						<div id="retract"> 
 							<ul id="playlist"> 
 								<li></li> 
