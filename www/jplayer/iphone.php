@@ -349,10 +349,9 @@ $(document).ready(function()
 	}
 	
 	/* Show & Hide Playlist Button */
-	$(".playlist-visibility").toggle(function(){
-		$(".playlist-visibility .show").show(); $(".playlist-visibility .hide").hide();},
-		function(){
-		$(".playlist-visibility .show").hide(); $(".playlist-visibility .hide").show();}
+	$(".playlist-visibility").toggle(
+        function(){$(".playlist-visibility .show").hide(); $(".playlist-visibility .hide").show();},
+		function(){$(".playlist-visibility .show").show(); $(".playlist-visibility .hide").hide();}
 	);
 	$(".playlist-visibility .show").click(function(){
 		$('#jplayer_playlist').fadeIn(); });
