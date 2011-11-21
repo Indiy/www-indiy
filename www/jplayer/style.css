@@ -211,7 +211,7 @@ a.jp-stop:hover { background: url('images/new/playPauseStop.jpg') -72px 0px no-r
 a.jp-play-fake, a.jp-pause-fake { z-index: 2 !important; }
 
 /* FACEBOOK COMMENTS */
-div#fb-root { width: 575px; background: #eee; border: 1px solid #888; padding: 10px; display: block; }
+#fb_comments_container { width: 575px; background: #eee; border: 1px solid #888; padding: 10px; display: block; }
 
 
 

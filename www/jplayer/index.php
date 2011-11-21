@@ -26,7 +26,7 @@ else
     } 
     else 
     {
-        $loadUsername = explode(".", $_SERVER["HTTP_HOST"]);
+        $loadUsername = explode(".", $_SERVER['HTTP_HOST']);
         $artist_url = $loadUsername[0]; 
     }
 
@@ -1205,8 +1205,18 @@ $(document).ready(function()
             <div class="comments">
                 <div class="box-header"></div>
                 <h1>Comment</h1>
-                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-                <div id="fb-root"><fb:comments href="http://<?=$_SERVER['HTTP_HOST'];?>" numposts="10" width="570" publish_feed="true"></fb:comments></div>
+                <div id='fb_comments_container'>
+                <div id="fb-root"></div>
+                    <script>(function(d, s, id) {
+                             var js, fjs = d.getElementsByTagName(s)[0];
+                             if (d.getElementById(id)) {return;}
+                             js = d.createElement(s); js.id = id;
+                             js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                             fjs.parentNode.insertBefore(js, fjs);
+                             }(document, 'script', 'facebook-jssdk'));
+                    </script>
+                    <div class="fb-comments" data-href="http://<?=$_SERVER['HTTP_HOST'];?>" data-num-posts="2" data-width="500"></div>
+                </div>
                 <div class="box-footer"></div>
             </div>
             <? } ?>
