@@ -215,7 +215,7 @@ function onAddVideoSubmit()
         form_data.append('logo',video_image_file);
         form_data.append('video',video_file);
         */
-        var data = new FormData(document.forms.namedItem('add_video_form'));
+        var form_data = new FormData(document.forms.namedItem('add_video_form'));
         var url = '/manage/addvideo.php';
         xhr.open("POST",url);
         xhr.send(form_data);
