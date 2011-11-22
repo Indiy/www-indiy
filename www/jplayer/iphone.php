@@ -372,14 +372,15 @@ $(document).ready(function()
 			<div id="loader"><img src="<?=trueSiteUrl();?>/jplayer/images/ajax-loader.gif" /></div>
 
 					
+                <!--
 					<div class="mighthide">
 						<div class="buynow"></div>
-						<!-- <a href="#" class="buynow mystore"></a> -->
+                        <a href="#" class="buynow mystore"></a>
 						<span class="showamazon"></span>
 						<span class="showitunes"></span>
 						<div class="clear"></div>
 					</div>
-					
+				-->	
 			<div id="progressbg"></div>
 			<div id="jquery_jplayer"></div> 
 			<div class="top-bg"></div>
