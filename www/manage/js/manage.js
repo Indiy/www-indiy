@@ -206,13 +206,15 @@ function onAddVideoSubmit()
             upload.addEventListener('load',onUploadDone,false);
             upload.addEventListener('error',onUploadFailed,false);
         }
+        /*
         var form_data = new FormData();
         form_data.append('artistid',artist_id);
         form_data.append('id',song_id);
         form_data.append('name',video_name);
         form_data.append('logo',video_image_file);
         form_data.append('video',video_file);
-        
+        */
+        var data = new FormData(document.forms.namedItem('add_video_form'));
         var url = '/manage/addvideo.php';
         xhr.open("POST",url);
         xhr.send(form_data);
