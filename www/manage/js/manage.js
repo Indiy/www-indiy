@@ -138,3 +138,89 @@ function onStoreSettingsSubmit()
     return false;    
 }
 
+function onUploadProgress(evt)
+{
+    if( evt.lengthComputable )
+    {
+        var percentage = evt.loaded / evt.total * 100.0;
+        console.log("progress: " + percentage);
+    }
+    else
+    {
+        console.log("progress event but can't calculate percent");
+    }
+}
+function onUploadDone(evt)
+{
+    file.upload_progress = 100.0;
+}
+function onUploadFailed(evt)
+{
+    window.alert("Upload failed: " + evt.code);
+}
+function uploadReadyStateChange(xhr)
+{
+    if( xhr.readyState == 4 )
+    {
+        var status_code = xhr.status;
+        var text = xhr.responseText;
+        try
+        {
+            if( status_code == 200 && text.length > 0 )
+            {
+                var data = JSON.parse(text);
+            }
+            else
+            {
+                window.alert("Failure status code: " + status_code);
+            }
+        }
+        catch(e)
+        {
+            window.alert("Exception: " + e);
+        }
+    }
+}
+
+function onAddVideoSubmit()
+{
+    try
+    {
+        var artist_id = $('#artist_id').val();
+        var song_id = $('#song_id').val();
+        var video_name = $('#video_name').val();
+        var video_image_file = $('#video_image_file').file[0];
+        var video_file = $('#video_file').file[0];
+    
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() { uploadReadyStateChange(this); };
+        var upload = xhr.upload;
+        
+        function makeCallback(callback)
+        {
+            return function(evt) { callback(evt,file_obj); }
+        }
+        if( upload )
+        {
+            upload.addEventListener('progress',onUploadProgress,false);
+            upload.addEventListener('load',onUploadDone,false);
+            upload.addEventListener('error',onUploadFailed,false);
+        }
+        var form_data = new FormData();
+        form_data.append('artistid',artist_id);
+        form_data.append('id',song_id);
+        form_data.append('name',video_name);
+        form_data.append('logo',video_image_file);
+        form_data.append('video',video_file);
+        
+        var url = '/manage/addvideo.php';
+        xhr.open("POST",url);
+        xhr.send(form_data);
+    }
+    catch(e)
+    {
+        $('#add_video_form').submit();
+    }
+    
+}
+

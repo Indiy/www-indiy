@@ -9,7 +9,7 @@
 	}
 	$database = "[p]musicplayer_video";
     $_SESSION['tabOpen']='videolist';
-	if ($_POST["WriteTags"] != "") 
+	if ($_POST["name"] != "") 
     {
 		if ($_POST["id"] != "") 
         {
@@ -103,11 +103,8 @@
 
 		$postedValues['postedValues'] = $_REQUEST;
 
-		//echo '{"Name":"'.$video_name.'","imageSource":"artists/images/'.$video_logo.'","":"","video_sound":"artists/video/'.$video_sound.'","success":1}';
 		echo json_encode($postedValues);
-		exit;		
-		
-		refresh("1","?p=home");
+		exit();
 	}
 	
 	if ($_GET["id"] != "") 
@@ -143,50 +140,38 @@
 	$video_name = stripslashes($video_name);
 ?>
 
-				<div id="popup">
-					<?=$successMessage;?>
-					<div class="addvideo">
-						<h2 class="title"><?=$head_title?> Video</h2>
-						<form id="ajax_from" method="post" enctype="multipart/form-data" action="addvideo.php">
-						<input type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid">
-						<input type='hidden' value="<?=$_REQUEST['id']?>" name="id" id="song_id">
-							<div id="form_field">
-							<div class="clear"></div>
-							
-							<label>Name</label>
-							<input type="text" name="name" value="<?=$video_name;?>" class="text" />
-							<div class="clear"></div>
-							
-							<label>Default Image</label>
-							<input type="file" name="logo" class="text" /> <?=$video_logo;?>
-							<div class="clear"></div>
-							
-							<label>Video (flv or mp4)</label>
-							<input type="file" name="video" class="text" /> <?=$video_sound;?>
-							<div class="clear"></div>
-							
-							<input type="submit" name="WriteTags" value="submit" class="submit" />
-							
-							<? if ($_GET["id"] != "") { ?>
-							<!-- <p><br /><br />
-							<a href="#" class="xdelete" onclick="confirmDelete('?p=home&delete=true&type=video&a=<?=$artistid;?>&id=<?=$video_id;?>')"><small>Delete</small></a>
-							</p> -->
-							<? } ?>
-						</div>
-						<div id="form_message">
-							<? if ($_GET["id"] != "") { ?>
-								Your record successfully updated!!!!
-							<? }else{ ?>
-								Your record successfully added!!!!
-							<?}?>
-						</div>
-						</form>
-					</div>
-					<div style="clear: both;">&nbsp;</div>
-				</div>
-				<!-- end #content -->
-				<div id="sidebar">
+<div id="popup">
+    <?=$successMessage;?>
+    <div class="addvideo">
+        <h2 class="title"><?=$head_title?> Video</h2>
+        <form id="add_video_form" method="post" enctype="multipart/form-data" action="addvideo.php">
+            <input id='artist_id' type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid"/>
+            <input id='song_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id"/>
+            <div id="form_field">
+                <div class="clear"></div>
+                
+                <label>Name</label>
+                <input id='video_name' type="text" name="name" value="<?=$video_name;?>" class="text" />
+                <div class="clear"></div>
+                
+                <label>Default Image</label>
+                <input id='video_image_file' type="file" name="logo" class="text" /> <?=$video_logo;?>
+                <div class="clear"></div>
+                
+                <label>Video (flv or mp4)</label>
+                <input id='video_file' type="file" name="video" class="text" /> <?=$video_sound;?>
+                <div class="clear"></div>
+                
+                <button id='add_video_submit' class="submit" onclick='onAddVideoSubmit();'>Submit</button>
+                <div id='status'></div>
+            </div>
+        </form>
+    </div>
+    <div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end #content -->
+<div id="sidebar">
 
-				</div>
-				<!-- end #sidebar -->
-				<div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end #sidebar -->
+<div style="clear: both;">&nbsp;</div>
