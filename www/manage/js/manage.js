@@ -186,12 +186,13 @@ function onAddVideoSubmit()
 {
     try
     {
+        /*
         var artist_id = $('#artist_id').val();
         var song_id = $('#song_id').val();
         var video_name = $('#video_name').val();
         var video_image_file = $('#video_image_file').file[0];
         var video_file = $('#video_file').file[0];
-    
+         */
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() { uploadReadyStateChange(this); };
         var upload = xhr.upload;
