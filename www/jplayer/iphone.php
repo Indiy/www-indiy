@@ -241,7 +241,7 @@ $(document).ready(function()
             var src_arg = "/artists/images/" + image;
             var img_url = "/timthumb.php?src=" + src_arg + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
 			//$('#image').html("<img src='" + img_url + "' style='vertical-align:middle; margin-top:-" + (getWindowHeight()/2) + "px; margin-left:-" + (getWindowWidth()/2) + "px;' />");
-			$('#image').html("<img src='" + img_url + "' style='margin-top:55px;' />");
+			$('#image').html("<img src='" + img_url + "' style='width: 100%; height: 100%;' />");
 
 			// Function that gets window width
 			function getWindowWidth() {
