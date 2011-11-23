@@ -210,7 +210,7 @@ function uploadReadyStateChange(xhr)
     }
 }
 
-function startAjaxUpload(fillForm)
+function startAjaxUpload(url,fillForm)
 {
     $('#ajax_from').hide();
     $('#status').show();
@@ -231,7 +231,6 @@ function startAjaxUpload(fillForm)
         var form_data = new FormData();
         fillForm(form_data);
         
-        var url = '/manage/addvideo.php';
         xhr.open("POST",url);
         xhr.send(form_data);
         $('#upload_bar').show();
@@ -261,8 +260,8 @@ function onAddVideoSubmit()
         form_data.append('logo',video_image_file);
         form_data.append('video',video_file);
     }
-    
-    startAjaxUpload(fillVideoForm);
+    var url = '/manage/addvideo.php';
+    return startAjaxUpload(url,fillVideoForm);
 }
 
 function onAddMusicSubmit()
@@ -272,8 +271,9 @@ function onAddMusicSubmit()
         var artist_id = $('#artist_id').val();
         var song_id = $('#song_id').val();
         var song_name = $('#song_name').val();
-        var song_bgcolor = $('#song_bgcolor option:selected').val();
+        var song_bgcolor = $('#song_bgcolor').val();
         var song_bgposition = $('#song_bgposition option:selected').val();
+        var song_bgrepeat = $('#song_bgrepeat option:selected').val();
         var free_download = $('input[@name=download]:checked').val();
         var amazon_url = $('#amazon_url').val();
         var itunes_url = $('#itunes_url').val();
@@ -283,6 +283,7 @@ function onAddMusicSubmit()
         form_data.append('name',song_name);
         form_data.append('bgcolor',song_bgcolor);
         form_data.append('bgposition',song_bgposition);
+        form_data.append('bgrepeat',song_bgrepeat);
         form_data.append('download',free_download);
         form_data.append('amazon',amazon_url);
         form_data.append('itunes',itunes_url);
@@ -300,6 +301,7 @@ function onAddMusicSubmit()
         form_data.append('WriteTags','submit');
     }
     
-    startAjaxUpload(fillMusicForm);
+    var url = '/manage/addmusic.php';
+    return startAjaxUpload(url,fillMusicForm);
 }
 
