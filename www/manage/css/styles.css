@@ -1009,6 +1009,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     width: 100%;
     text-align: center;
     margin-top: 20px;
+    margin-left: 20px;
 }
 
 div.form_status
@@ -1051,5 +1052,6 @@ div.upload-percent
 {
     text-align: center;
     width: 100%;
+    margin-top: 20px;
 }
 

@@ -212,7 +212,7 @@ function uploadReadyStateChange(xhr)
 
 function onAddVideoSubmit()
 {
-    $('#add_video_form').hide();
+    $('#ajax_from').hide();
     $('#status').show();
     $('#status').text('Uploading content...');
 
@@ -254,7 +254,6 @@ function onAddVideoSubmit()
     }
     catch(e)
     {
-        $('#add_video_form').submit();
         $('#spinner').show();
         return true;
     }
