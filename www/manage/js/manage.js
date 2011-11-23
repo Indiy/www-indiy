@@ -138,12 +138,24 @@ function onStoreSettingsSubmit()
     return false;    
 }
 
+function uploadProgress(percent)
+{
+    var html = "";
+    html += "<div class='upload-progress'>";
+    html += "<div class='upload-progress-done' style='width:{0}%;'/>".format(percent.toFixed(2));
+    html += "<div class='upload-percent'>{0}%</div>".format(percent.toFixed(2));
+    html += "</div>";
+
+    $('#upload_bar').html(html);
+}
+
 function onUploadProgress(evt)
 {
     if( evt.lengthComputable )
     {
         var percentage = evt.loaded / evt.total * 100.0;
         console.log("progress: " + percentage);
+        uploadProgress(percent);
     }
     else
     {
@@ -152,7 +164,7 @@ function onUploadProgress(evt)
 }
 function onUploadDone(evt)
 {
-    file.upload_progress = 100.0;
+    console.log("upload done");
 }
 function onUploadFailed(evt)
 {
@@ -184,6 +196,10 @@ function uploadReadyStateChange(xhr)
 
 function onAddVideoSubmit()
 {
+    $('#add_video_form').hide();
+    $('#status').show();
+    $('#status').text('Uploading content...');
+
     try
     {
         var artist_id = $('#artist_id').val();
@@ -217,6 +233,7 @@ function onAddVideoSubmit()
         var url = '/manage/addvideo.php';
         xhr.open("POST",url);
         xhr.send(form_data);
+        $('#upload_bar').show();
     }
     catch(e)
     {
