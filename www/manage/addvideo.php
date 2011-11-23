@@ -144,7 +144,7 @@
     <?=$successMessage;?>
     <div class="addvideo">
         <h2 class="title"><?=$head_title?> Video</h2>
-        <form id="add_video_form" method="post" enctype="multipart/form-data" action="addvideo.php" name='add_video_form'>
+        <form id="add_video_form" onsubmit='return false;'>
             <input id='artist_id' type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid"/>
             <input id='song_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id"/>
             <div id="form_field">

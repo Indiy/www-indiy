@@ -186,13 +186,12 @@ function onAddVideoSubmit()
 {
     try
     {
-        /*
         var artist_id = $('#artist_id').val();
         var song_id = $('#song_id').val();
         var video_name = $('#video_name').val();
-        var video_image_file = $('#video_image_file').file[0];
-        var video_file = $('#video_file').file[0];
-         */
+        var video_image_file = element = document.getElementById('video_image_file').files[0];
+        var video_file = element = document.getElementById('video_file').files[0];
+        
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() { uploadReadyStateChange(this); };
         var upload = xhr.upload;
@@ -207,19 +206,15 @@ function onAddVideoSubmit()
             upload.addEventListener('load',onUploadDone,false);
             upload.addEventListener('error',onUploadFailed,false);
         }
-        /*
+        
         var form_data = new FormData();
         form_data.append('artistid',artist_id);
         form_data.append('id',song_id);
         form_data.append('name',video_name);
         form_data.append('logo',video_image_file);
         form_data.append('video',video_file);
-        */
-        
-        var video_file = element = document.getElementById('video_file');
-        
-        var form_data = new FormData(document.forms.namedItem('add_video_form'));
-        var url = 'addvideo.php';
+
+        var url = '/manage/addvideo.php';
         xhr.open("POST",url);
         xhr.send(form_data);
     }
