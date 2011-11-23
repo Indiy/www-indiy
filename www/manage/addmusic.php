@@ -126,7 +126,7 @@
 					<?=$successMessage;?>
 					<div class="addmusic">
 						<h2 class="title"><?=$head_title?> Music</h2>
-						<form id="ajax_from" method="post" enctype="multipart/form-data" action="addmusic.php" onclick='return onAddMusicSubmit();'>
+						<form id="ajax_from" method="post" enctype="multipart/form-data" action="addmusic.php" onsubmit='return onAddMusicSubmit();'>
 						<input id='artist_id' type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid">
 						<input id='song_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id">
 						<div id="form_field">
@@ -216,7 +216,15 @@
 							<?}?>
 						</div>
 						</form>
+                        <div class="clear"></div>
+                        <div id='status' class='form_status' style='display: none;'></div>
+                        <div class="clear"></div>
+                        <div id='upload_bar' style='display: none;'></div>
+                        <div id='spinner' style='display: none;'>
+                            <img src='/images/ajax-loader-white.gif'/>
+                        </div>
 					</div>
+
 					<div style="clear: both;">&nbsp;</div>
 				</div>
 				<!-- end #content -->
