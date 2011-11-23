@@ -210,28 +210,17 @@ function uploadReadyStateChange(xhr)
     }
 }
 
-function onAddVideoSubmit()
+function startAjaxUpload(fillForm)
 {
     $('#ajax_from').hide();
     $('#status').show();
     $('#status').text('Uploading content...');
-
+    
     try
     {
-        var artist_id = $('#artist_id').val();
-        var song_id = $('#song_id').val();
-        var video_name = $('#video_name').val();
-        var video_image_file = element = document.getElementById('video_image_file').files[0];
-        var video_file = element = document.getElementById('video_file').files[0];
-        
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() { uploadReadyStateChange(this); };
         var upload = xhr.upload;
-        
-        function makeCallback(callback)
-        {
-            return function(evt) { callback(evt,file_obj); }
-        }
         if( upload )
         {
             upload.addEventListener('progress',onUploadProgress,false);
@@ -240,12 +229,8 @@ function onAddVideoSubmit()
         }
         
         var form_data = new FormData();
-        form_data.append('artistid',artist_id);
-        form_data.append('id',song_id);
-        form_data.append('name',video_name);
-        form_data.append('logo',video_image_file);
-        form_data.append('video',video_file);
-
+        fillForm(form_data);
+        
         var url = '/manage/addvideo.php';
         xhr.open("POST",url);
         xhr.send(form_data);
@@ -257,5 +242,27 @@ function onAddVideoSubmit()
         $('#spinner').show();
         return true;
     }
+    
+}
+
+function onAddVideoSubmit()
+{
+    function fillVideoForm(form_data)
+    {
+
+        var artist_id = $('#artist_id').val();
+        var song_id = $('#song_id').val();
+        var video_name = $('#video_name').val();
+        var video_image_file = element = document.getElementById('video_image_file').files[0];
+        var video_file = element = document.getElementById('video_file').files[0];
+            
+        form_data.append('artistid',artist_id);
+        form_data.append('id',song_id);
+        form_data.append('name',video_name);
+        form_data.append('logo',video_image_file);
+        form_data.append('video',video_file);
+    }
+    
+    startAjaxUpload(fillVideoForm);
 }
 
