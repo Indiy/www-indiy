@@ -215,8 +215,11 @@ function onAddVideoSubmit()
         form_data.append('logo',video_image_file);
         form_data.append('video',video_file);
         */
+        
+        var video_file = element = document.getElementById('video_file');
+        
         var form_data = new FormData(document.forms.namedItem('add_video_form'));
-        var url = '/manage/addvideo.php';
+        var url = 'addvideo.php';
         xhr.open("POST",url);
         xhr.send(form_data);
     }
@@ -224,6 +227,7 @@ function onAddVideoSubmit()
     {
         $('#add_video_form').submit();
     }
+    return false;
     
 }
 
