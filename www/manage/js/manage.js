@@ -138,12 +138,12 @@ function onStoreSettingsSubmit()
     return false;    
 }
 
-function uploadProgress(percent)
+function uploadProgress(percentage)
 {
     var html = "";
     html += "<div class='upload-progress'>";
-    html += "<div class='upload-progress-done' style='width:{0}%;'/>".format(percent.toFixed(2));
-    html += "<div class='upload-percent'>{0}%</div>".format(percent.toFixed(2));
+    html += "<div class='upload-progress-done' style='width:{0}%;'/>".format(percentage.toFixed(2));
+    html += "<div class='upload-percent'>{0}%</div>".format(percentage.toFixed(2));
     html += "</div>";
 
     $('#upload_bar').html(html);
@@ -155,7 +155,7 @@ function onUploadProgress(evt)
     {
         var percentage = evt.loaded / evt.total * 100.0;
         console.log("progress: " + percentage);
-        uploadProgress(percent);
+        uploadProgress(percentage);
     }
     else
     {
