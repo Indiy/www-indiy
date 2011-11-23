@@ -142,8 +142,8 @@ function uploadProgress(percentage)
 {
     var html = "";
     html += "<div class='upload-progress'>";
-    html += "<div class='upload-progress-done' style='width:{0}%;'/>".format(percentage.toFixed(2));
-    html += "<div class='upload-percent'>{0}%</div>".format(percentage.toFixed(2));
+    html += "<div class='upload-progress-done' style='width:" + percentage.toFixed(2) + "%;'/>";
+    html += "<div class='upload-percent'>" + percentage.toFixed(2) + "%</div>";
     html += "</div>";
 
     $('#upload_bar').html(html);
