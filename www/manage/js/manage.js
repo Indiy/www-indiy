@@ -289,12 +289,12 @@ function onAddMusicSubmit()
         form_data.append('itunes',itunes_url);
 
         var song_image = document.getElementById('song_image');
-        if( !song_image.files )
+        if( song_image.files && song_image.files.length > 0 )
         {
             form_data.append('logo',song_image.files[0]);
         }
         var song_audio = document.getElementById('song_audio');
-        if( !song_audio.files )
+        if( song_audio.files && song_audio.files.length > 0 )
         {
             form_data.append('audio',song_audio.files[0]);
         }
