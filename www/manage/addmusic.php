@@ -126,26 +126,26 @@
 					<?=$successMessage;?>
 					<div class="addmusic">
 						<h2 class="title"><?=$head_title?> Music</h2>
-						<form id="ajax_from" method="post" enctype="multipart/form-data" action="addmusic.php">
-						<input type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid">
-						<input type='hidden' value="<?=$_REQUEST['id']?>" name="id" id="song_id">
+						<form id="ajax_from" method="post" enctype="multipart/form-data" action="addmusic.php" onclick='return onAddMusicSubmit();'>
+						<input id='artist_id' type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid">
+						<input id='song_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id">
 						<div id="form_field">
 							<div class="clear"></div>
 							
 							<label>Name</label>
-							<input type="text" name="name" value="<?=$audio_name;?>" class="text" />
+							<input id='song_name' type="text" name="name" value="<?=$audio_name;?>" class="text" />
 							<div class="clear"></div>
 							
 							<label>Image <?=$audio_logo;?></label>
-							<input type="file" name="logo" class="text" />
+							<input id='song_image' type="file" name="logo" class="text" />
 							<div class="clear"></div>
 							
 							<label>Background Color</label>
-							<input type="text" name="bgcolor" maxlength="6" size="6" class="color"  value="<?=$audio_bgcolor;?>" />
+							<input id='song_bgcolor' type="text" name="bgcolor" maxlength="6" size="6" class="color"  value="<?=$audio_bgcolor;?>" />
 							<div class="clear"></div>
 							
 							<label>Background Position</label>
-							<select name="bgposition" class="text">
+							<select id='song_bgposition' name="bgposition" class="text">
 							<option value="">Select</option>
 							<option value=""></option>
 							<?
@@ -163,7 +163,7 @@
 							<div class="clear"></div>
 							
 							<label>Background Repeat</label>
-							<select name="bgrepeat" class="text">
+							<select id='song_bgrepeat' name="bgrepeat" class="text">
 							<option value="">Select </option>
 							<option value=""></option>
 							<?
@@ -181,7 +181,7 @@
 							<div class="clear"></div>
 							
 							<label>MP3 File</label>
-							<input type="file" name="audio" class="text" /> <br><?=$audio_sound;?>
+							<input id='song_audio' type="file" name="audio" class="text" /> <br><?=$audio_sound;?>
 							<div class="clear"></div>
 							
 							<label>Free Download</label>
@@ -192,11 +192,11 @@
 							<div class="clear"></div>
 							
 							<label>Amazon MP3 URL</label>
-							<input type="text" name="amazon" value="<?=$audio_amazon;?>" class="text" />
+							<input id='amazon_url' type="text" name="amazon" value="<?=$audio_amazon;?>" class="text" />
 							<div class="clear"></div>
 							
 							<label>iTunes URL</label>
-							<input type="text" name="itunes" value="<?=$audio_itunes;?>" class="text" />
+							<input id='itunes_url' type="text" name="itunes" value="<?=$audio_itunes;?>" class="text" />
 							<div class="clear"></div>
 							
 							

@@ -249,12 +249,11 @@ function onAddVideoSubmit()
 {
     function fillVideoForm(form_data)
     {
-
         var artist_id = $('#artist_id').val();
         var song_id = $('#song_id').val();
         var video_name = $('#video_name').val();
-        var video_image_file = element = document.getElementById('video_image_file').files[0];
-        var video_file = element = document.getElementById('video_file').files[0];
+        var video_image_file = document.getElementById('video_image_file').files[0];
+        var video_file = document.getElementById('video_file').files[0];
             
         form_data.append('artistid',artist_id);
         form_data.append('id',song_id);
@@ -264,5 +263,43 @@ function onAddVideoSubmit()
     }
     
     startAjaxUpload(fillVideoForm);
+}
+
+function onAddMusicSubmit()
+{
+    function fillMusicForm(form_data)
+    {
+        var artist_id = $('#artist_id').val();
+        var song_id = $('#song_id').val();
+        var song_name = $('#song_name').val();
+        var song_bgcolor = $('#song_bgcolor option:selected').val();
+        var song_bgposition = $('#song_bgposition option:selected').val();
+        var free_download = $('input[@name=download]:checked').val();
+        var amazon_url = $('#amazon_url').val();
+        var itunes_url = $('#itunes_url').val();
+
+        form_data.append('artistid',artist_id);
+        form_data.append('id',song_id);
+        form_data.append('name',song_name);
+        form_data.append('bgcolor',song_bgcolor);
+        form_data.append('bgposition',song_bgposition);
+        form_data.append('download',free_download);
+        form_data.append('amazon',amazon_url);
+        form_data.append('itunes',itunes_url);
+
+        var song_image = document.getElementById('song_image');
+        if( !song_image.files )
+        {
+            form_data.append('logo',song_image.files[0]);
+        }
+        var song_audio = document.getElementById('song_audio');
+        if( !song_audio.files )
+        {
+            form_data.append('audio',song_audio.files[0]);
+        }
+        form_data.append('WriteTags','submit');
+    }
+    
+    startAjaxUpload(fillMusicForm);
 }
 
