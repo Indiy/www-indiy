@@ -164,11 +164,15 @@ function onUploadProgress(evt)
 }
 function onUploadDone(evt)
 {
-    console.log("upload done");
+    $('#status').show();
+    $('#status').text('Upload done. Processing content...');
+    $('#upload_bar').hide();
 }
 function onUploadFailed(evt)
 {
-    window.alert("Upload failed: " + evt.code);
+    $('#status').show();
+    $('#status').text('Upload failed!');
+    $('#upload_bar').hide();
 }
 function uploadReadyStateChange(xhr)
 {
@@ -181,15 +185,22 @@ function uploadReadyStateChange(xhr)
             if( status_code == 200 && text.length > 0 )
             {
                 var data = JSON.parse(text);
+                $('#status').show();
+                $('#status').text('Upload success.');
+                $('#upload_bar').hide();
             }
             else
             {
-                window.alert("Failure status code: " + status_code);
+                $('#status').show();
+                $('#status').text('Upload failed.');
+                $('#upload_bar').hide();
             }
         }
         catch(e)
         {
-            window.alert("Exception: " + e);
+            $('#status').show();
+            $('#status').text('Upload failed.');
+            $('#upload_bar').hide();
         }
     }
 }

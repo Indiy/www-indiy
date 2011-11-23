@@ -165,7 +165,9 @@
                 <button id='add_video_submit' class="submit" onclick='onAddVideoSubmit();'>Submit</button>
             </div>
         </form>
-        <div id='status' style='display: none;'></div>
+        <div class="clear"></div>
+        <div id='status' class='form_status' style='display: none;'></div>
+        <div class="clear"></div>
         <div id='upload_bar' style='display: none;'></div>
     </div>
     <div style="clear: both;">&nbsp;</div>
