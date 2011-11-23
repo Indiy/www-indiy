@@ -144,7 +144,7 @@
     <?=$successMessage;?>
     <div class="addvideo">
         <h2 class="title"><?=$head_title?> Video</h2>
-        <form id="add_video_form" onsubmit='return false;'>
+        <form id="ajax_from" method="post" enctype="multipart/form-data" action="addvideo.php" onsubmit='return onAddVideoSubmit();'>
             <input id='artist_id' type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid"/>
             <input id='song_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id"/>
             <div id="form_field">
@@ -162,13 +162,16 @@
                 <input id='video_file' type="file" name="video" class="text" /> <?=$video_sound;?>
                 <div class="clear"></div>
                 
-                <button id='add_video_submit' class="submit" onclick='onAddVideoSubmit();'>Submit</button>
+                <input type="submit" name="WriteTags" value="submit" class="submit" />
             </div>
         </form>
         <div class="clear"></div>
         <div id='status' class='form_status' style='display: none;'></div>
         <div class="clear"></div>
         <div id='upload_bar' style='display: none;'></div>
+        <div id='spinner' style='display: none;'>
+            <img src='/images/ajax-loader-white.gif'/>
+        </div>
     </div>
     <div style="clear: both;">&nbsp;</div>
 </div>

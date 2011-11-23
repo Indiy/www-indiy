@@ -1006,20 +1006,22 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #upload_bar
 {
     height: 20px;
-    width: 300px;
+    width: 100%;
     text-align: center;
+    margin-top: 20px;
 }
 
 div.form_status
 {
     margin-left: 20px;
+    margin-top: 20px;
 }
 
 div.upload-progress
 {
     position: relative;
     height: 20px;
-    width: 100%;
+    width: 300px;
     background-color: gray;
     border: 1px solid black;
 }
@@ -1043,5 +1045,11 @@ div.upload-percent
     height: 100%;
     text-align: center;
     color: white;
+}
+
+#spinner
+{
+    text-align: center;
+    width: 100%;
 }
 

@@ -167,12 +167,14 @@ function onUploadDone(evt)
     $('#status').show();
     $('#status').text('Upload done. Processing content...');
     $('#upload_bar').hide();
+    $('#spinner').show();
 }
 function onUploadFailed(evt)
 {
     $('#status').show();
     $('#status').text('Upload failed!');
     $('#upload_bar').hide();
+    $('#spinner').hide();
 }
 function uploadReadyStateChange(xhr)
 {
@@ -188,12 +190,14 @@ function uploadReadyStateChange(xhr)
                 $('#status').show();
                 $('#status').text('Upload success.');
                 $('#upload_bar').hide();
+                $('#spinner').hide();
             }
             else
             {
                 $('#status').show();
                 $('#status').text('Upload failed.');
                 $('#upload_bar').hide();
+                $('#spinner').hide();
             }
         }
         catch(e)
@@ -201,6 +205,7 @@ function uploadReadyStateChange(xhr)
             $('#status').show();
             $('#status').text('Upload failed.');
             $('#upload_bar').hide();
+            $('#spinner').hide();
         }
     }
 }
@@ -245,12 +250,13 @@ function onAddVideoSubmit()
         xhr.open("POST",url);
         xhr.send(form_data);
         $('#upload_bar').show();
+        return false;
     }
     catch(e)
     {
         $('#add_video_form').submit();
+        $('#spinner').show();
+        return true;
     }
-    return false;
-    
 }
 
