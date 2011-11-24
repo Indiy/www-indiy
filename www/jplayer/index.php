@@ -860,7 +860,7 @@ $(document).ready(function()
         }
         if( mystore_product_id )
         {
-            $('span.show_mystore').show(("<a href='javascript:buySong(" + mystore_product_id + ");' class='buynow mystore' target='_blank'></a>");
+            $('span.show_mystore').show("<a href='javascript:buySong(" + mystore_product_id + ");' class='buynow mystore' target='_blank'></a>");
             $('span.show_mystore').show();
         }
         
