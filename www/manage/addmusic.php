@@ -226,7 +226,7 @@
 							<div class="clear"></div>
 
                             <label>MyArtistDNA Store</label>
-                            <input id='mad_store' type="checkbox" name="mad_store" <? if($mad_store) echo 'checked'; ?> class="radio"/>
+                            <input id='mad_store' type="checkbox" name="mad_store" <? if($mad_store) echo 'checked'; ?> class="input_checkbox"/>
                             <div class="clear"></div>
 							
 							<input type="submit" name="WriteTags" value="submit" class="submit" />
