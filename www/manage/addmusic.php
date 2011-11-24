@@ -85,7 +85,7 @@
         {
             if( isset($old_product_id) )
             {
-                $sql = 'DELETE FROM mydna_musicplayer_ecommerce_products WHERE id = $old_product_id';
+                $sql = "DELETE FROM mydna_musicplayer_ecommerce_products WHERE id = '$old_product_id'";
                 mq($sql);
             }
             $product_id = NULL;
