@@ -118,6 +118,7 @@ else
         $music_artistid = $music["artistid"];
         $music_amazon = nohtml($music["amazon"]);
         $music_itunes = nohtml($music["itunes"]);
+        $music_product_id = $music["product_id"];
 
         if ($music["download"] != "0") { 
             $music_download = '<a href=\'download.php?artist='.$music_artistid.'&id='.$music_id.$downQ.'\' title=\'Click here download '.$music_name.' for free\' class=\'download vtip\'>Download</a> '; 
@@ -129,9 +130,9 @@ else
             $music_artistid = $music["artistid"];
             $art = mf(mq("select `artist` from `[p]musicplayer` where id='{$music_artistid}' limit 1"));
             $music_artist = nohtml($art["artist"]);
-            $musicList .= '{id:'.$music_id.',name:"<small>'.$music_artist.' - '.$music_name.'</small>",mp3:"'.trueSiteUrl().'/artists/audio/'.$music_audio.'",download:"'.$music_download.'",image:"'.$music_image.'",bgcolor:"'.$music_bgcolor.'",bgrepeat:"'.$music_bgrepeat.'",bgposition:"'.$music_bgposition.'"}';
+            $musicList .= '{id:'.$music_id.',name:"<small>'.$music_artist.' - '.$music_name.'</small>",mp3:"'.trueSiteUrl().'/artists/audio/'.$music_audio.'",download:"'.$music_download.'",image:"'.$music_image.'",bgcolor:"'.$music_bgcolor.'",bgrepeat:"'.$music_bgrepeat.'",bgposition:"'.$music_bgposition.'",product_id:'.$music_product_id.'}';
         } else {
-            $musicList .= '{id:'.$music_id.',name:"'.$music_name.'",mp3:"'.trueSiteUrl().'/artists/audio/'.$music_audio.'",download:"'.$music_download.'",image:"'.$music_image.'",bgcolor:"'.$music_bgcolor.'",bgrepeat:"'.$music_bgrepeat.'",bgposition:"'.$music_bgposition.'",plus:"",amazon:"'.$music_amazon.'",itunes:"'.$music_itunes.'"}'; //,plus:"<a href=\'http://www.google.com\' target=\'_blank\' class=\'plus\' onclick=\'javascript: void(0);\'>Test</a>
+            $musicList .= '{id:'.$music_id.',name:"'.$music_name.'",mp3:"'.trueSiteUrl().'/artists/audio/'.$music_audio.'",download:"'.$music_download.'",image:"'.$music_image.'",bgcolor:"'.$music_bgcolor.'",bgrepeat:"'.$music_bgrepeat.'",bgposition:"'.$music_bgposition.'",plus:"",amazon:"'.$music_amazon.'",itunes:"'.$music_itunes.'",product_id:'.$music_product_id.'}'; 
         }
         ++$m;
     }
