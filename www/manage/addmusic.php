@@ -93,7 +93,7 @@
 		
 		//INSERTING THE DATA
 		$tables = "artistid|name|image|bgcolor|bgposition|bgrepeat|audio|download|amazon|itunes|product_id";
-		$values = "{$artistid}|{$audio_name}|{$audio_logo}|{$audio_bgcolor}|{$audio_bgposition}|{$audio_bgrepeat}|{$audio_sound}|{$audio_download}|{$audio_amazon}|{$audio_itunes}|{$product_id}";
+		$values = "{$artistid}|{$audio_name}|{$audio_logo}|{$audio_bgcolor}|{$audio_bgposition}|{$audio_bgrepeat}|{$audio_sound}|{$audio_download}|{$audio_amazon}|{$audio_itunes}|{$product_id} ";
 		
 		if ($_POST["id"] != "") {
 			update($database,$tables,$values,"id",$_POST["id"]);
