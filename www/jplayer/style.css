@@ -233,9 +233,9 @@ div#logo .bottom { width: 100%; height: 25px; cursor: pointer; border-left: 0px 
 div#logo img { width: 145px; margin: 0px  0px 20px 7px;  }
 div#logo .buynow { width: 65px; height: 25px; background: url('images/new/buynow_spot.png') -12px 0 no-repeat; float: left; }
 div#logo .show_mystore { width: 25px; height: 25px; float: left; display: block; }
-div#logo .mystore { width: 30px; height: 25px; background: url('images/new/buynow_spot.png') -75px 0 no-repeat; float: left; }
-div#logo .showamazon { width: 30px; height: 25px; float: left; display: block; }
-div#logo .amazon { width: 30px; height: 25px; background: url('images/new/buynow_spot.png') -105px 0 no-repeat; float: left; display: block; }
+div#logo .mystore { width: 25px; height: 25px; background: url('images/new/buynow_spot.png') -75px 0 no-repeat; float: left; }
+div#logo .showamazon { width: 25px; height: 25px; float: left; display: block; }
+div#logo .amazon { width: 25px; height: 25px; background: url('images/new/buynow_spot.png') -105px 0 no-repeat; float: left; display: block; }
 div#logo .showitunes { width: 25px; height: 25px; float: left; display: block; }
 div#logo .itunes { width: 25px; height: 25px; background: url('images/new/buynow_spot.png') -135px 0 no-repeat; float: left; display: block; }
 div#logo .mighthide { display:none; }
