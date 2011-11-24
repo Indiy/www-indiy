@@ -844,7 +844,7 @@ $(document).ready(function()
         }
         $('#image').fadeIn();
         
-        if (sellamazon == "" && sellitunes == "") {
+        if (sellamazon == "" && sellitunes == "" && !mystore_product_id) {
             $('div.mighthide').fadeOut();
         } else {
             $('div.mighthide').fadeIn();
@@ -859,9 +859,9 @@ $(document).ready(function()
             $('span.showitunes').html("<a href='" + sellitunes + "' class='buynow itunes' target='_blank'></a>");
             $('span.showitunes').show();
         }
-        if( mystore_product_id )
+        if (mystore_product_id)
         {
-            $('span.show_mystore').show("<a href='javascript:buySong(" + mystore_product_id + ");' class='buynow mystore' target='_blank'></a>");
+            $('span.show_mystore').html("<a href='javascript:buySong(" + mystore_product_id + ");' class='buynow mystore' target='_blank'></a>");
             $('span.show_mystore').show();
         }
         
