@@ -49,6 +49,27 @@ function showProducts(fade)
         $("ul.products").show();
 }
 
+function buySong(product_id)
+{
+    var pro = $(this).text();
+    
+    var cart = "&cart=true";
+    cart += "&paypal=" + g_paypalEmail;
+    cart += "&artist=" + g_artistId;
+    cart += "&product=" + product_id;
+    
+    $.post("jplayer/ajax.php", cart, function(items) 
+    {
+        $(".cart").html(items);
+        fadeAllPageElements();
+        setTimeout(function()
+        {
+            $('.contact').fadeIn();
+            $('.aClose').fadeIn();
+            showCart(false);
+        }, 450);
+    });
+}
 
 $(document).ready(artistHomeReady);
 

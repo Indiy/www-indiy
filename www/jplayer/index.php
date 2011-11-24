@@ -224,9 +224,13 @@ var g_siteUrl = "<?=trueSiteUrl();?>";
 
 <script type="text/javascript">
 
-var g_totalListens = <?=$total_listens?>;
+var g_totalListens = <?=$total_listens;?>;
 var g_logoOpen = false;
+var g_artistId = <?=$artist_id;?>;
+var g_paypalEmail = "<?=$paypalEmail;?>";
 
+var g_myPlayList = [ <?=$musicList;?> ];
+var g_currentSongId = 0;
 
 function fadeAllPageElements()
 {
@@ -529,12 +533,6 @@ $(id).bind($.jPlayer.event.play, function() { // Bind an event handler to the in
 
 <script type="text/javascript"> 
 
-var g_myPlayList = [
-    <?=$musicList;?>
-];
-
-
-var g_currentSongId = 0;
 
 function clickSongBuy(i)
 {
@@ -806,6 +804,7 @@ $(document).ready(function()
         window.location.hash = '#song_id=' + g_currentSongId; 
         $('span.showamazon').hide();
         $('span.showitunes').hide();
+        $('span.show_mystore').hide();
         
         // Display Image            
         $('#loader').show();
@@ -814,6 +813,8 @@ $(document).ready(function()
         // Get Current Image
         var sellamazon = $("#jplayer_playlist_item_"+index).children("span.sellamazon").text();
         var sellitunes = $("#jplayer_playlist_item_"+index).children("span.sellitunes").text();
+        var mystore_product_id = song.product_id;
+        
         var trackname = $("#jplayer_playlist_item_"+index).children("span.thisisthetrackname").text();
         var image = $("#jplayer_playlist_item_"+index).children("span.songimage").text();
 
@@ -856,6 +857,11 @@ $(document).ready(function()
         if (sellitunes != "") {
             $('span.showitunes').html("<a href='" + sellitunes + "' class='buynow itunes' target='_blank'></a>");
             $('span.showitunes').show();
+        }
+        if( mystore_product_id )
+        {
+            $('span.show_mystore').show(("<a href='javascript:buySong(" + mystore_product_id + ");' class='buynow mystore' target='_blank'></a>");
+            $('span.show_mystore').show();
         }
         
         $('#current_track_name').text(trackname);
@@ -1076,7 +1082,7 @@ $(document).ready(function()
                     
                     <div class="mighthide">
                         <div class="buynow"></div>
-                        <!-- <a href="#" class="buynow mystore"></a> -->
+                        <span class="mystore"></span>
                         <span class="showamazon"></span>
                         <span class="showitunes"></span>
                     </div>
