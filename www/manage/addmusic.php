@@ -12,10 +12,11 @@
 	if ($_POST["WriteTags"] != "") {
 		
 		if ($_POST["id"] != "") {
-			$row = mf(mq("select id,image,audio from {$database} where id='{$_POST[id]}'"));
+			$row = mf(mq("select * from {$database} where id='{$_POST[id]}'"));
 			
 			$old_logo = $row["image"];
 			$old_sound = $row["audio"];
+            $old_product_id = $row["product_id"];
 		}
 		
 		extract($_REQUEST);
@@ -27,6 +28,7 @@
 		$audio_bgrepeat = $_POST["bgrepeat"];
 		$audio_amazon = $_POST["amazon"];
 		$audio_itunes = $_POST["itunes"];
+        $mad_store = $_POST["mad_store"];
 		
 		// Upload Image
 		if(!empty($_FILES["logo"]["name"])){
@@ -65,6 +67,29 @@
 		}else{
 				$audio_sound = $old_sound;
 		}
+        if( $mad_store )
+        {
+            if( isset($old_product_id) && $old_product_id > 0 )
+            {
+                $product_id = $old_product_id;
+            }
+            else
+            {
+                $columns = "artistid|name|description|image|price|sku";
+                $values = "$artistid|$audio_name|Single|$audio_logo|0.99|MADSONG";
+                insert('mydna_musicplayer_ecommerce_products',$columns,$values);
+                $product_id = mysql_insert_id();
+            }
+        }
+        else
+        {
+            if( isset($old_product_id) )
+            {
+                $sql = 'DELETE FROM mydna_musicplayer_ecommerce_products WHERE id = $old_product_id';
+                mq($sql);
+            }
+            $product_id = NULL;
+        }
 		
 		//INSERTING THE DATA
 		$tables = "artistid|name|image|bgcolor|bgposition|bgrepeat|audio|download|amazon|itunes";
@@ -106,6 +131,7 @@
 		$audio_amazon = $row["amazon"];
 		$audio_itunes = $row["itunes"];
 		$head_title = "Edit";
+        $mad_store = $row["product_id"];
 	}else{
 		$head_title = "Add";
 	}
@@ -198,7 +224,10 @@
 							<label>iTunes URL</label>
 							<input id='itunes_url' type="text" name="itunes" value="<?=$audio_itunes;?>" class="text" />
 							<div class="clear"></div>
-							
+
+                            <label>MyArtistDNA Store/label>
+                            <input id='mad_store' type="checkbox" name="mad_store" <? if($mad_store) echo 'checked'; ?> />
+                            <div class="clear"></div>
 							
 							<input type="submit" name="WriteTags" value="submit" class="submit" />
                             

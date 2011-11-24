@@ -277,6 +277,7 @@ function onAddMusicSubmit()
         var free_download = $('input[@name=download]:checked').val();
         var amazon_url = $('#amazon_url').val();
         var itunes_url = $('#itunes_url').val();
+        var mad_store = $('#mad_store').attr('checked'); 
 
         form_data.append('artistid',artist_id);
         form_data.append('id',song_id);
@@ -287,6 +288,7 @@ function onAddMusicSubmit()
         form_data.append('download',free_download);
         form_data.append('amazon',amazon_url);
         form_data.append('itunes',itunes_url);
+        form_data.append('mad_store',mad_store);
 
         var song_image = document.getElementById('song_image');
         if( song_image.files && song_image.files.length > 0 )
