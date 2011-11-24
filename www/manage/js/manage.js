@@ -277,7 +277,7 @@ function onAddMusicSubmit()
         var free_download = $('input[@name=download]:checked').val();
         var amazon_url = $('#amazon_url').val();
         var itunes_url = $('#itunes_url').val();
-        var mad_store = $('#mad_store').attr('checked'); 
+        var mad_store = $('#mad_store').is(':checked'); 
 
         form_data.append('artistid',artist_id);
         form_data.append('id',song_id);

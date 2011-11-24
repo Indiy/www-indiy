@@ -28,7 +28,7 @@
 		$audio_bgrepeat = $_POST["bgrepeat"];
 		$audio_amazon = $_POST["amazon"];
 		$audio_itunes = $_POST["itunes"];
-        $mad_store = $_POST["mad_store"];
+        $mad_store = $_POST["mad_store"] == 'true';
 		
 		// Upload Image
 		if(!empty($_FILES["logo"]["name"])){
