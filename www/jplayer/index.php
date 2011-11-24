@@ -1083,7 +1083,7 @@ $(document).ready(function()
                     
                     <div class="mighthide">
                         <div class="buynow"></div>
-                        <span class="mystore"></span>
+                        <span class="show_mystore"></span>
                         <span class="showamazon"></span>
                         <span class="showitunes"></span>
                     </div>
