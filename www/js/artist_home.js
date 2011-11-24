@@ -63,9 +63,8 @@ function buySong(product_id)
     });
 
     fadeAllPageElements();
-    $('.contact').fadeIn();
-    $('.aClose').fadeIn();
-    showCart(false);
+    $('.store').fadeIn();
+    $('.store_Close').fadeIn();
 }
 
 $(document).ready(artistHomeReady);
