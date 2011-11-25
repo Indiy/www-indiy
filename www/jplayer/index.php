@@ -118,7 +118,9 @@ else
         $music_artistid = $music["artistid"];
         $music_amazon = nohtml($music["amazon"]);
         $music_itunes = nohtml($music["itunes"]);
-        $music_product_id = $music["product_id"] || 0;
+        $music_product_id = $music["product_id"];
+        if( !$music_product_id )
+            $music_product_id = 'false';
 
         if ($music["download"] != "0") { 
             $music_download = '<a href=\'download.php?artist='.$music_artistid.'&id='.$music_id.$downQ.'\' title=\'Click here download '.$music_name.' for free\' class=\'download vtip\'>Download</a> '; 
