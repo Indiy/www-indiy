@@ -537,7 +537,7 @@ $(id).bind($.jPlayer.event.play, function() { // Bind an event handler to the in
 <script type="text/javascript"> 
 
 
-function clickSongBuy(i)
+function songBuyPopup(i)
 {
     var id = '#song_buy_icon_' + i;
     var pos = $(id).offset();
@@ -545,6 +545,15 @@ function clickSongBuy(i)
     var left = pos.left;
     
     var song = g_myPlayList[i];
+    if( song.product_id )
+    {
+        $('#song_buy_popup_mystore').show();
+        $('#song_buy_popup_mystore').attr('href','javascript:buySong(' + song.product_id + ');');
+    }
+    else
+    {
+        $('#song_buy_popup_mystore').hide();
+    }
     if( song.itunes )
     {
         $('#song_buy_popup_itunes').show();
@@ -761,7 +770,7 @@ $(document).ready(function()
             }
             else if( song.amazon || song.itunes )
             {
-                listItem += "<span id='song_buy_icon_" + i + "' class='song_buy_icon' onclick='clickSongBuy(" + i + ");'>";
+                listItem += "<span id='song_buy_icon_" + i + "' class='song_buy_icon' onclick='songBuyPopup(" + i + ");'>";
                 listItem += "<img src='/images/buy_icon.png'/>";
                 listItem += "</span>";
             }
@@ -1408,6 +1417,7 @@ $(document).ready(function()
 </script>
 
     <div id='song_buy_popup'>
+        <a id='song_buy_popup_mystore' href='#' class='store_icon mystore'></a>
         <a id='song_buy_popup_amazon' href='#' class='store_icon amazon'></a>
         <a id='song_buy_popup_itunes' href='#' class='store_icon itunes'></a>
     </div>
