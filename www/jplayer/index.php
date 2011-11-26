@@ -1245,27 +1245,29 @@ $(document).ready(function()
                 
                 
                 <div class="right">
-                <!--
-                    <h1><span class="slashes">//</span> Management</h1>
-                    <h2>Coming Soon</h2>
-                    <ul>
-                        <li><span>Attn:</span> </li>
-                        <li><span>ph:</span> </li>
-                        <li><span>fx:</span> </li>
-                        <li><span>email:</span> </li>
-                    </ul>
-                    
-                    <br />
-                    
-                    <h1><span class="slashes">//</span> Booking</h1>
-                    <h2>Coming Soon</h2>
-                    <ul>
-                        <li><span>Attn:</span> </li>
-                        <li><span>ph:</span></li>
-                        <li><span>fx:</span></li>
-                        <li><span>email:</span></li>
-                    </ul>
-                    -->
+                    <h1>&nbsp;</h1>
+                    <table id="contact_table">
+                        <tr>
+                            <td><span class="red">*</span> Date of Event:</td>
+                            <td><input id="contact_date" type="text" value="" /></td>
+                        </tr>
+                        <tr>
+                            <td><span class="red">*</span> Location:</td>
+                            <td><input id="contact_location" type="text" value="" /></td>
+                        </tr>
+                        <tr>
+                            <td><span class="red">*</span> Budget:</td>
+                            <td>
+                                <select id='contact_budget'>
+                                    <option>$0 - $500</option>
+                                    <option>$500 - $1,000</option>
+                                    <option>$1,000 - $5,000</option>
+                                    <option>$5,000 - $10,000</option>
+                                    <option>$10,000+</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
                 
                 <div class="left">
