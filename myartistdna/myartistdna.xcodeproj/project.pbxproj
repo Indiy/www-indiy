@@ -36,6 +36,7 @@
 		2D98BF481480778500CE851D /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		2D98BF4B14807CED00CE851D /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		2D98BF4D14807CED00CE851D /* madfm_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = madfm_bg.jpg; sourceTree = "<group>"; };
+		2D98BF4E1480C4C600CE851D /* madfm_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = madfm_bg.png; sourceTree = "<group>"; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
 		2DF46F4C1440B77F005538C7 /* casestudies.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = casestudies.html; sourceTree = "<group>"; };
@@ -1404,6 +1405,7 @@
 		2D98BF4C14807CED00CE851D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2D98BF4E1480C4C600CE851D /* madfm_bg.png */,
 				2D98BF4D14807CED00CE851D /* madfm_bg.jpg */,
 			);
 			path = images;
