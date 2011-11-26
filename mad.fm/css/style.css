@@ -15,6 +15,8 @@
 {
     font-family: "Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif;
     font-size: 10px;
+    background-color: #333;
+    color: white;
 }
 
 .submit_music
