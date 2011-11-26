@@ -1,2 +1,41 @@
 
 /* Styles */
+
+.overlay_container
+{
+    height: 100%; 
+    width: 100%; 
+    position: absolute; 
+    z-index: 9999; 
+    left: 0px; 
+    top: 0px;
+}
+
+.top_bar
+{
+    font-family: "Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+.submit_music
+{
+    float: right;    
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    background-color: gray; 
+}
+
+.social_buttons
+{
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    float: right;
+}
+
+.bg_image
+{
+    height: 100%;
+    width: 100%;
+}
