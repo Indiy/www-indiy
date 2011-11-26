@@ -245,6 +245,7 @@ function fadeAllPageElements()
     $('.page').fadeOut();
     $('.videos').fadeOut();
     $('.store_Close').fadeOut();
+    $('.contact_Close').fadeOut();
 }
 
 function setupPageLinks()
@@ -305,7 +306,7 @@ function setupPageLinks()
         fadeAllPageElements();
         setTimeout(function(){ 
             $('.contact').fadeIn();
-            $('.aClose').fadeIn();
+            $('.contact_Close').fadeIn();
         }, 450);
     });
     
@@ -1333,6 +1334,7 @@ $(document).ready(function()
             <!-- /VIDEO PLAYER -->
             
             <div class="store_Close"></div>
+            <div class="contact_Close"></div>
             <? if ($paypalEmail != "") { ?>
             <div class="store">
                 <div class="box-header"></div>
