@@ -14,14 +14,14 @@
 .top_bar
 {
     font-family: "Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size: 10px;
+    font-size: 15px;
     background-color: #333;
     color: white;
 }
 
 .submit_music
 {
-    float: right;    
+    float: left;    
     padding-left: 20px; 
     padding-right: 20px; 
     padding-top: 10px; 
