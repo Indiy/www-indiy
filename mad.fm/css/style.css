@@ -49,9 +49,5 @@
 {
     height: 100%;
     width: 100%;
-    position: absolute;
-    z-index: 9998;
-    top: 0px;
-    left: 0px;
 }
 
