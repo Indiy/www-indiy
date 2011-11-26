@@ -15,8 +15,10 @@
 .top_bar
 {
     font-family: "Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 13px;
     color: white;
+    padding-top: 8px; 
+    padding-bottom: 8px; 
 }
 
 .submit_music
@@ -24,15 +26,11 @@
     float: left;    
     padding-left: 20px; 
     padding-right: 20px; 
-    padding-top: 10px; 
-    padding-bottom: 10px; 
     background-color: gray; 
 }
 
 .social_buttons
 {
-    padding-top: 10px; 
-    padding-bottom: 10px; 
     float: right;
 }
 
@@ -40,4 +38,9 @@
 {
     height: 100%;
     width: 100%;
+}
+
+.social_buttons span
+{
+    border: solid 1px gray;
 }
