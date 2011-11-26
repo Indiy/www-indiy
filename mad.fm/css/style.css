@@ -9,13 +9,13 @@
     z-index: 9999; 
     left: 0px; 
     top: 0px;
+    background-color: #333;
 }
 
 .top_bar
 {
     font-family: "Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif;
     font-size: 15px;
-    background-color: #333;
     color: white;
 }
 
