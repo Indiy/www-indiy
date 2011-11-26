@@ -275,10 +275,11 @@ function setupPageLinks()
     $('.comments').hide();
     $('.contact').hide();
     $('.aClose').hide();
-    $('.store_Close').hide();
     $('.store').hide();
     $('.checkout').hide();
     $('.videos').hide();
+    $('.store_Close').hide();
+    $('.contact_Close').hide();
     
     /* Close */
     $('.aClose').click(function() {
@@ -589,7 +590,19 @@ function sendContactForm()
     var email = $('#contact_email').val();
     var phone = $('#contact_phone').val();
     var comments = $('#contact_comments').val();
-    var submit = "&form=send&artist_id=" + artist_id + "&name=" + name + "&email=" + email + "&phone=" + phone + "&comments=" + comments;
+    var date = $('#contact_date').val();
+    var location = $('#contact_location').val();
+    var budget = $('#contact_budget option:selected').val();
+
+    var submit = "&form=send";
+    submit += "&artist_id=" + artist_id;
+    submit += "&name=" + escape(name);
+    submit += "&email=" + escape(email);
+    submit += "&phone=" + escape(phone);
+    submit += "&comments=" + escape(comments);
+    submit += "&date=" + escape(date);
+    submit += "&location=" + escape(location);
+    submit += "&budget=" + escape(budget);
 
     $.post("jplayer/ajax.php", submit, function(response) { });
 }
