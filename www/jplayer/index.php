@@ -582,7 +582,7 @@ function songBuyPopup(i)
 
 function sendContactForm()
 {
-    $('#contact_table').hide();
+    $('.contact table').hide();
     $('#contact_thanks').show();
     
     var artist_id = "<?=$artist_id;?>";
@@ -1260,7 +1260,7 @@ $(document).ready(function()
                 
                 <div class="right">
                     <h1>&nbsp;</h1>
-                    <table id="contact_table">
+                    <table>
                         <tr>
                             <td><span class="red">*</span> Date of Event:</td>
                             <td><input id="contact_date" type="text" value="" /></td>
@@ -1286,7 +1286,7 @@ $(document).ready(function()
                 
                 <div class="left">
                     <h1>CONTACT <span class="slashes">//</span> <?=$artist_name;?></h1>
-                    <table id="contact_table">
+                    <table>
                         <tr>
                             <td><span class="red">*</span> Name:</td>
                             <td><input type="text" value="Name..." name="name" id="contact_name" onfocus="clickclear(this, 'Name...')" onblur="clickrecall(this, 'Name...')" /></td>

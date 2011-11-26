@@ -124,6 +124,11 @@ button::-moz-focus-inner {  border: 0;}
 
 .contact select { width:220px; display:block; padding:2px 3px; margin:5px auto; }
 
+#contact_thanks 
+{
+    padding-top: 40px;
+    padding-left: 40px;
+}
 
 /* Store Stuff */
 
