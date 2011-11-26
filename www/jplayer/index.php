@@ -290,6 +290,10 @@ function setupPageLinks()
                        fadeAllPageElements();
                        });
 
+    $('.contact_Close').click(function() {
+                            fadeAllPageElements();
+                            });
+
     
     <?=$pagesJava;?>
     

@@ -10,11 +10,14 @@
     $name = $data['name'];
     $email = $data['email'];
     $body = $data['body'];
+    $date = $data['date'];
+    $location = $data['location'];
+    $budget = $data['budget'];
     
     //$to = 'jim@blueskylabs.com';
     $to = 'info@myartistdna.com';
 
-    $message = "NAME: $name\n\nEMAIL: $email\n\nMESSAGE: $body\n";
+    $message = "NAME: $name\n\nEMAIL: $email\n\nMESSAGE: $body\n\nDATE: $date\n\nLOCATION: $location\n\nBUDGET: $budget\n";
     $from = "no-reply@myartistdna.com";
     $headers = "From:" . $from;
     
