@@ -43,7 +43,7 @@
                 if( $facebook )
                     echo "<input type='text' disabled='disabled' value='$facebook' class='text' />\n";
                 else
-                    echo "<buton class='submit' onclick='window.alert(\"Add FB\");'>Add Facebook</button>\n";
+                    echo "<button class='submit' onclick='window.alert(\"Add FB\");'>Add Facebook</button>\n";
             ?>
             <div class="clear"></div>
 
@@ -52,7 +52,7 @@
                 if( $twitter )
                     echo "<input type='text' disabled='disabled' value='$twitter' class='text' />\n";
                 else
-                    echo "<buton class='submit' onclick='window.alert(\"Add TW\");'>Add Twitter</button>\n";
+                    echo "<button class='submit' onclick='window.alert(\"Add TW\");'>Add Twitter</button>\n";
             ?>
             <div class="clear"></div>
 
