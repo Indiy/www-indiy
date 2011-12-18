@@ -70,7 +70,6 @@ class User {
                                                            "oauth_token" => $_SESSION['oauth_token'],
                                                            "oauth_secret" => $_SESSION['oauth_token_secret'],
                                                            "oauth_provider" => $oauth_provider,
-                                                           "created_at" => now(),
                                                            "twitter_screen_name" => $user_info->screen_name,
                                                            ));
                 }
