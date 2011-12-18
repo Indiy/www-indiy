@@ -21,6 +21,8 @@
 		2D380B99146F0A5D00E36189 /* .htaccess */ = {isa = PBXFileReference; lastKnownFileType = text; path = .htaccess; sourceTree = "<group>"; };
 		2D380B9A146F0A5D00E36189 /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
 		2D380B9B1470800600E36189 /* cleanup_carts.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = cleanup_carts.php; sourceTree = "<group>"; };
+		2D760A31149DA72200BFE196 /* social_config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = social_config.php; sourceTree = "<group>"; };
+		2D760A32149DA74A00BFE196 /* socialize.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = socialize.php; sourceTree = "<group>"; };
 		2D98BF3B1480778500CE851D /* ffmp3-config.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ffmp3-config.swf"; sourceTree = "<group>"; };
 		2D98BF3D1480778500CE851D /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		2D98BF3E1480778500CE851D /* holder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holder.png; sourceTree = "<group>"; };
@@ -3115,6 +3117,8 @@
 				2DF47427144A2D84005538C7 /* addproduct.php */,
 				2DF47428144A2D84005538C7 /* addvideo.php */,
 				2DF4742D144A2D84005538C7 /* artist_management.php */,
+				2D760A32149DA74A00BFE196 /* socialize.php */,
+				2D760A31149DA72200BFE196 /* social_config.php */,
 				2D380B93146A490100E36189 /* store_settings.php */,
 				2DF47447144A2D84005538C7 /* dashboard.php */,
 				2DF47449144A2D84005538C7 /* delete_content.php */,

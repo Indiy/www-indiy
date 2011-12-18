@@ -160,20 +160,11 @@ $(document).ready(setupSortableLists);
              <h6>Manage Profile</h6>
             <ul>
             <li><a href="register.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Settings</a></li>
+            <li><a href="social_config.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Social Connections</a></li>
             </ul>
-            <!--
-            <h6>Add Social Channel</h6>
-            <ul>
-            <li><a href="#">Add your Facebook Account</a></li>
-            </ul>
-            -->
         </div>
         
         <div class="column2">
-        <div class="embedcode">
-            <label>EMBED CODE</label>
-            <textarea name="" cols="" rows="" class="textarea"><iframe src="<?=playerUrl().$record_artistDetail[url]?>&embed=true" border="0" width="400" height="600" frameborder="0" name="<?=$record_artistDetail['url']?>"></iframe></textarea>
-        </div>
         
         <div class="playlist">
         	<div class="heading">
@@ -187,6 +178,7 @@ $(document).ready(setupSortableLists);
             <span class="title">Title</span>
             <span class="duration">Short Link</span>
             <span class="preview">Preview</span>
+            <span class="duration">Socialize</span>
             <span class="delete">Delete</span>
             </li>
             </ul>
@@ -216,9 +208,16 @@ $(document).ready(setupSortableLists);
 						echo	"<span class='preview'><a href='play_music.php?song=".$record_artistAudio['audio']."' rel='facebox[.bolder]' >Play</a></span>";
 					else
 						echo	"<span class='preview'>N/A</span>";
+                        
+                    echo "<span class='duration'>";
+                    echo "<a href='socialize.php?artist_id=".$artistID."&song_id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>";
+                    echo "<img src='/images/facebook.gif'/>";
+                    echo "<img src='/images/twitter.gif'/>";
+                    echo "</a>\n";
+                    echo "</span>";
 
-					echo 	"<span class='delete'><a href='#' onclick='if(confirm(\"Are you sure you want delete this item?\"))location.href=\"artist_management.php?userId=$userId&action=1&song_id=".$record_artistAudio['id']."\";' ></a></span>
-						 </li>";
+					echo 	"<span class='delete'><a href='#' onclick='if(confirm(\"Are you sure you want delete this item?\"))location.href=\"artist_management.php?userId=$userId&action=1&song_id=".$record_artistAudio['id']."\";' ></a></span>";
+                    echo "</li>\n";
 						 
 					$count++;
 				}
@@ -331,7 +330,11 @@ $(document).ready(setupSortableLists);
             </ul>
             </div>
         </div>
-        
+        <div class="embedcode">
+        <label>EMBED CODE</label>
+        <textarea name="" cols="" rows="" class="textarea"><iframe src="<?=playerUrl().$record_artistDetail[url]?>&embed=true" border="0" width="400" height="600" frameborder="0" name="<?=$record_artistDetail['url']?>"></iframe></textarea>
+        </div>
+
         </div>
     </div>
     
