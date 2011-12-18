@@ -28,13 +28,12 @@
             <label>Type your text below:</label>
             <textarea name="description" id="input" class="textarea"></textarea>
             <p>Warning - You can not undo once you publish</p>
-            <label>URL</label>
-            <input id='url' type="text" name="url" value="" class="text" />
             <div class="clear"></div>
 
-            <input type="radio" name="fb_or_tw" value="facebook" />Facebook
-            <input type="radio" name="fb_or_tw" value="twitter" />Twitter
-            <br/>
+            <input type="radio" name="fb_or_tw" value="facebook" class="radio" /> Facebook
+            <input type="radio" name="fb_or_tw" value="twitter" class="radio" /> Twitter
+            <div class="clear"></div>
+            
             <button id='socialize_publish' class="submit" onclick='onSocializePublish();'>Publish</button>
             <div id='status'></div>
         </div>

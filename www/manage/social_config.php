@@ -16,6 +16,8 @@
     if( $artist['oauth_token'] && $artist['oauth_secret'] && $artist['twitter'] )
         $twitter = $artist['twitter'];
 
+    $auto_fb = FALSE;
+    $auto_tw = FALSE;
 
     
 	if($_REQUEST['artist'] != "") 
@@ -41,20 +43,28 @@
                 if( $facebook )
                     echo "<input type='text' disabled='disabled' value='$facebook' class='text' />\n";
                 else
-                    echo "<buton onclick=''>Add Facebook</button>\n";
+                    echo "<buton class='submit' onclick='window.alert(\"Add FB\");'>Add Facebook</button>\n";
             ?>
-            
+            <div class="clear"></div>
+
             <label>Twitter Account</label>
             <?php
                 if( $twitter )
                     echo "<input type='text' disabled='disabled' value='$twitter' class='text' />\n";
                 else
-                    echo "<buton onclick=''>Add Twitter</button>\n";
+                    echo "<buton class='submit' onclick='window.alert(\"Add TW\");'>Add Twitter</button>\n";
             ?>
             <div class="clear"></div>
 
+            <label>Automatic Facebook post on Song Add</label>
+            <input id='auto_fb' type="checkbox" name="auto_fb" <? if($auto_fb) echo 'checked'; ?> class="input_checkbox"/>
+            <div class="clear"></div>
+
+            <label>Automatic Tweet on Song Add</label>
+            <input id='auto_tw' type="checkbox" name="auto_tw" <? if($auto_tw) echo 'checked'; ?> class="input_checkbox"/>
+            <div class="clear"></div>
             
-            <button class="submit" onclick='$.facebox.close();'>Close</button>
+            <button class="submit" onclick='onSocialConfigSave();'>Save</button>
             <div id='status'></div>
         </div>
         </form>
