@@ -1,7 +1,6 @@
 <?php 
 
 require_once 'dbconfig.php';
-require_once '../../includes/functions.php';
 
 class User {
 
