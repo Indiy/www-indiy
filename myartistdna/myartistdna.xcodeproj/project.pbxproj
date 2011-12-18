@@ -848,24 +848,19 @@
 		2DF472DF1440B77F005538C7 /* smoothscroll.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = smoothscroll.js; sourceTree = "<group>"; };
 		2DF472E01440B77F005538C7 /* swfobject.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = swfobject.js; sourceTree = "<group>"; };
 		2DF472E31440B77F005538C7 /* login_resetpassword.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = login_resetpassword.html; sourceTree = "<group>"; };
-		2DF472E71440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
 		2DF472E81440B77F005538C7 /* dbconfig.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = dbconfig.php; sourceTree = "<group>"; };
 		2DF472E91440B77F005538C7 /* fbconfig.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fbconfig.php; sourceTree = "<group>"; };
 		2DF472EA1440B77F005538C7 /* functions.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = functions.php; sourceTree = "<group>"; };
 		2DF472EB1440B77F005538C7 /* twconfig.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twconfig.php; sourceTree = "<group>"; };
-		2DF472EC1440B77F005538C7 /* error_log */ = {isa = PBXFileReference; lastKnownFileType = text; path = error_log; sourceTree = "<group>"; };
-		2DF472EE1440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
 		2DF472EF1440B77F005538C7 /* example.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = example.php; sourceTree = "<group>"; };
 		2DF472F01440B77F005538C7 /* facebook.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = facebook.php; sourceTree = "<group>"; };
 		2DF472F11440B77F005538C7 /* getTwitterData.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = getTwitterData.php; sourceTree = "<group>"; };
-		2DF472F31440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
 		2DF472F41440B77F005538C7 /* fb_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_login.png; sourceTree = "<group>"; };
 		2DF472F51440B77F005538C7 /* Thumbs.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thumbs.db; sourceTree = "<group>"; };
 		2DF472F61440B77F005538C7 /* tw_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tw_login.png; sourceTree = "<group>"; };
 		2DF472F71440B77F005538C7 /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
 		2DF472F81440B77F005538C7 /* login-facebook.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "login-facebook.php"; sourceTree = "<group>"; };
 		2DF472F91440B77F005538C7 /* login-twitter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "login-twitter.php"; sourceTree = "<group>"; };
-		2DF472FB1440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
 		2DF472FC1440B77F005538C7 /* OAuth.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = OAuth.php; sourceTree = "<group>"; };
 		2DF472FD1440B77F005538C7 /* twitteroauth.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twitteroauth.php; sourceTree = "<group>"; };
 		2DF472FE1440B77F005538C7 /* music.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = music.php; sourceTree = "<group>"; };
@@ -2654,7 +2649,6 @@
 			isa = PBXGroup;
 			children = (
 				2DF472E61440B77F005538C7 /* config */,
-				2DF472EC1440B77F005538C7 /* error_log */,
 				2DF472ED1440B77F005538C7 /* facebook */,
 				2DF472F11440B77F005538C7 /* getTwitterData.php */,
 				2DF472F21440B77F005538C7 /* images */,
@@ -2669,7 +2663,6 @@
 		2DF472E61440B77F005538C7 /* config */ = {
 			isa = PBXGroup;
 			children = (
-				2DF472E71440B77F005538C7 /* .listing */,
 				2DF472E81440B77F005538C7 /* dbconfig.php */,
 				2DF472E91440B77F005538C7 /* fbconfig.php */,
 				2DF472EA1440B77F005538C7 /* functions.php */,
@@ -2681,7 +2674,6 @@
 		2DF472ED1440B77F005538C7 /* facebook */ = {
 			isa = PBXGroup;
 			children = (
-				2DF472EE1440B77F005538C7 /* .listing */,
 				2DF472EF1440B77F005538C7 /* example.php */,
 				2DF472F01440B77F005538C7 /* facebook.php */,
 			);
@@ -2691,7 +2683,6 @@
 		2DF472F21440B77F005538C7 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				2DF472F31440B77F005538C7 /* .listing */,
 				2DF472F41440B77F005538C7 /* fb_login.png */,
 				2DF472F51440B77F005538C7 /* Thumbs.db */,
 				2DF472F61440B77F005538C7 /* tw_login.png */,
@@ -2702,7 +2693,6 @@
 		2DF472FA1440B77F005538C7 /* twitter */ = {
 			isa = PBXGroup;
 			children = (
-				2DF472FB1440B77F005538C7 /* .listing */,
 				2DF472FC1440B77F005538C7 /* OAuth.php */,
 				2DF472FD1440B77F005538C7 /* twitteroauth.php */,
 			);

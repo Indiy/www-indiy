@@ -279,7 +279,15 @@
 			}
 			return mysql_query("insert into `{$intodatabase}` ({$updatetables}) values ({$updatevalues})");
 		}
-	}	
+	}
+    
+    function mysql_insert($table,$inserts)
+    {
+        $values = array_map('mysql_real_escape_string', array_values($inserts));
+        $keys = array_keys($inserts);
+        $q = 'INSERT INTO `'.$table.'` (`'.implode('`,`', $keys).'`) VALUES (\''.implode('\',\'', $values).'\')';
+        return mysql_query($q);
+    }
 
 	/* No HTML AT ALL! */
 	function nohtml($nohtml) {
