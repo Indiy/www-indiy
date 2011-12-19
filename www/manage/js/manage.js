@@ -314,7 +314,7 @@ function onSocializePublish()
     var update_text = $('#update_text').val();
     var network = $('input[name=network]:checked').val();
     
-    var post_url = "/manage/store_settings.php?";
+    var post_url = "/manage/socialize.php?";
     post_url += "&artist_id=" + escape(g_artistId);
     post_url += "&update_text=" + escape(update_text);
     post_url += "&network=" + network;
