@@ -26,8 +26,11 @@
             $artist = mf(mq($sql));
             $oauth_token = $artist['oauth_token'];
             $oauth_secret = $artist['oauth_secret'];
+
+            $postedValues['twitter_args'] = YOUR_CONSUMER_KEY .','. YOUR_CONSUMER_SECRET .','. $oauth_token .','. $oauth_secret;
+            
             $connection = new TwitterOAuth(YOUR_CONSUMER_KEY, YOUR_CONSUMER_SECRET, $oauth_token, $oauth_secret);
-            //$content = $connection->get('account/verify_credentials');
+            $content = $connection->get('account/verify_credentials');
             $result = $connection->post('statuses/update', array('status' => $update_text));
             $postedValues['twitter_content'] = $content;
             $postedValues['twitter_result'] = $result;
