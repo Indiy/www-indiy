@@ -54,6 +54,10 @@ class User {
                 {
 
 					$name_arr = explode(" ",$user_info->name);
+                    
+                    $access_token = $_SESSION['access_token'];
+                    $oauth_token = $access_token['oauth_token'];
+                    $oauth_token_secret = $access_token['oauth_token_secret'];
 
                     mysql_insert('mydna_musicplayer',array("username" => $user_info->screen_name,
                                                            "artist" => $user_info->name,
@@ -67,8 +71,8 @@ class User {
                                                            "website" => $user_info->url,
                                                            "oauth_uid" => $uid,
                                                            "oauth_uid_twitter" => $uid,
-                                                           "oauth_token" => $_SESSION['oauth_token'],
-                                                           "oauth_secret" => $_SESSION['oauth_token_secret'],
+                                                           "oauth_token" => $oauth_token,
+                                                           "oauth_secret" => $oauth_token_secret,
                                                            "oauth_provider" => $oauth_provider,
                                                            "twitter_screen_name" => $user_info->screen_name,
                                                            ));
