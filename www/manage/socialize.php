@@ -46,7 +46,7 @@
             {
                 $facebook = new Facebook(array('appId' => APP_ID,'secret' => APP_SECRET));
                 $facebook->setAccessToken($fb_access_token);
-                $result = $facebook->api('/me/feed','POST',array('message'=>$update_text, 'link'=> "http://www.google.com"));
+                $result = $facebook->api('/me/feed','POST',array('message'=>$update_text);
                 $postedValues['fb_result'] = $result;
             }
             catch(Exception $e)

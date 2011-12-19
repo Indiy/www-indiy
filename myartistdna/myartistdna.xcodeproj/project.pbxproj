@@ -39,6 +39,7 @@
 		2D98BF4B14807CED00CE851D /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		2D98BF4D14807CED00CE851D /* madfm_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = madfm_bg.jpg; sourceTree = "<group>"; };
 		2D98BF4E1480C4C600CE851D /* madfm_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = madfm_bg.png; sourceTree = "<group>"; };
+		2D9B38CC149FFC6E008BDB40 /* base_facebook.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = base_facebook.php; sourceTree = "<group>"; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
 		2DF46F4C1440B77F005538C7 /* casestudies.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = casestudies.html; sourceTree = "<group>"; };
@@ -854,7 +855,6 @@
 		2DF472E91440B77F005538C7 /* fbconfig.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fbconfig.php; sourceTree = "<group>"; };
 		2DF472EA1440B77F005538C7 /* functions.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = functions.php; sourceTree = "<group>"; };
 		2DF472EB1440B77F005538C7 /* twconfig.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twconfig.php; sourceTree = "<group>"; };
-		2DF472EF1440B77F005538C7 /* example.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = example.php; sourceTree = "<group>"; };
 		2DF472F01440B77F005538C7 /* facebook.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = facebook.php; sourceTree = "<group>"; };
 		2DF472F11440B77F005538C7 /* getTwitterData.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = getTwitterData.php; sourceTree = "<group>"; };
 		2DF472F41440B77F005538C7 /* fb_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_login.png; sourceTree = "<group>"; };
@@ -2676,7 +2676,7 @@
 		2DF472ED1440B77F005538C7 /* facebook */ = {
 			isa = PBXGroup;
 			children = (
-				2DF472EF1440B77F005538C7 /* example.php */,
+				2D9B38CC149FFC6E008BDB40 /* base_facebook.php */,
 				2DF472F01440B77F005538C7 /* facebook.php */,
 			);
 			path = facebook;
