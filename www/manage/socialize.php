@@ -2,44 +2,86 @@
 
     require_once '../includes/config.php';
 	require_once '../includes/functions.php';
+    
+    require_once '../Login_Twitbook/twitter/twitteroauth.php';
+    require_once '../Login_Twitbook/config/twconfig.php';
+    
 	if($_SESSION['sess_userId'] == "")
 	{
 		header("Location: index.php");
 		exit();
 	}
 	
-	if($_REQUEST['artist'] != "") 
+	if($_REQUEST['update_text'] != "") 
     {
+        $artist_id = $_REQUEST['artist_id'];
+        $update_text = $_REQUEST['update_text'];
+        $network = $_REQUEST['network'];
+        
+        $postedValues = array();
+        
+        if( $network == 'twitter' )
+        {
+            $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE id = '$artist_id'"));
+            $oath_token = $artist['oath_token'];
+            $oath_secret = $artist['oath_secret'];
+            $connection = new TwitterOAuth(YOUR_CONSUMER_KEY, YOUR_CONSUMER_SECRET, $oath_token, $oath_secret);
+            $result = $connection->post('statuses/update', array('status' => $update_text));
+            $postedValues['twitter_result'] = $result;
+        }
+        else if( $network == 'facebook' )
+        {
+            header("HTTP/1.0 500 Server Error");
+            exit();
+        }
+        else
+        {
+            header("HTTP/1.0 500 Server Error");
+            exit();
+        }
 
         $postedValues['success'] = "1";
 		$postedValues['postedValues'] = $_REQUEST;
 		echo json_encode($postedValues);
 		exit();
 	}
+    $song_id = $_REQUEST['song_id'];
+    $song = mf(mq("SELECT * FROM mydna_musicplayer_audio WHERE id = '$song_id'"));
+    $short_link = make_short_link($song['abbrev']);
+    $update_text = "Check out my new song: $short_link";
 ?>
+
+
+<script type="text/javascript"> 
+var g_artistId = '<?=$artist_id;?>';
+</script>
 
 <div id="popup">
     <div class="addcontent">
         <h2 class="title"  id="demonstrations">Socialize</h2>
-        <form id="none"  onsubmit='return false;'>
+        <form id="socialize_form" onsubmit='return false;'>
             <div id="form_field">
             <div class="clear"></div>
             
             <label>Type your text below:</label>
             <div class="clear"></div>
-            <textarea name="description" id="input" class="social_textarea"></textarea>
+            <textarea id="update_text" class="social_textarea"><?=$update_text;?></textarea>
             <p>Warning - You can not undo once you publish</p>
             <div class="clear"></div>
+            <br/>
 
             Select a platform:
-            <input type="radio" name="fb_or_tw" value="twitter" class="radio" /> Twitter
-            <input type="radio" name="fb_or_tw" value="facebook" class="radio" /> Facebook
+            <input type="radio" name="network" value="twitter" class="radio" /> Twitter
+            <input type="radio" name="network" value="facebook" class="radio" /> Facebook
             <div class="clear"></div>
             
             <button id='socialize_publish' class="submit" onclick='onSocializePublish();'>Publish</button>
-            <div id='status'></div>
         </div>
         </form>
+        <div class="clear"></div>
+        <div id='status' class='form_status' style='display: none;'></div>
+        <div class="clear"></div>
+
     </div>
     <div style="clear: both;">&nbsp;</div>
 </div>

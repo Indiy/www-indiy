@@ -307,3 +307,33 @@ function onAddMusicSubmit()
     return startAjaxUpload(url,fillMusicForm);
 }
 
+function onSocializePublish()
+{
+    $('#socialize_form').hide();
+    $('#status').text("Updating settings...");
+    var update_text = $('#update_text').val();
+    var network = $('input[name=network]:checked').val();
+    
+    var post_url = "/manage/store_settings.php?";
+    post_url += "&artist_id=" + escape(g_artistId);
+    post_url += "&update_text=" + escape(update_text);
+    post_url += "&network=" + network;
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: post_url,
+        dataType: 'text',
+        success: function(data) 
+        {
+            $('#status').text("Update sent.");
+        },
+        error: function()
+        {
+            $('#status').text("Update failed!");
+        }
+    });
+    return false;
+}
+
+
+
