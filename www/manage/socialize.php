@@ -24,17 +24,10 @@
         {
             $sql = "SELECT * FROM mydna_musicplayer WHERE id = '$artist_id'";
             $artist = mf(mq($sql));
-            $oath_token = $artist['oath_token'];
-            $oath_secret = $artist['oath_secret'];
-
-            $postedValues['twitter_sql'] = $sql;
-            $postedValues['twitter_artist'] = $artist;
-            $postedValues['oath_token'] = $oath_token;
-            $postedValues['oath_secret'] = $oath_secret;
-            $postedValues['twitter_args'] = YOUR_CONSUMER_KEY .','. YOUR_CONSUMER_SECRET .','. $oath_token .','. $oath_secret;
-            
-            $connection = new TwitterOAuth(YOUR_CONSUMER_KEY, YOUR_CONSUMER_SECRET, $oath_token, $oath_secret);
-            $content = $connection->get('account/verify_credentials');
+            $oauth_token = $artist['oauth_token'];
+            $oauth_secret = $artist['oauth_secret'];
+            $connection = new TwitterOAuth(YOUR_CONSUMER_KEY, YOUR_CONSUMER_SECRET, $oauth_token, $oauth_secret);
+            //$content = $connection->get('account/verify_credentials');
             $result = $connection->post('statuses/update', array('status' => $update_text));
             $postedValues['twitter_content'] = $content;
             $postedValues['twitter_result'] = $result;
