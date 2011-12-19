@@ -85,7 +85,7 @@ if (!empty($session)) {
     if (!empty($user)) {
         # User info ok? Let's print it (Here we will be adding the login and registering routines)  
 
-        $_SESSION['fb_access_token'] = $facebook->getAccessToken();
+        //$_SESSION['fb_access_token'] = $facebook->getAccessToken();
         $username = $user['name'];
 		$user_info = $user;
 		$auto_incremented_id = '';
