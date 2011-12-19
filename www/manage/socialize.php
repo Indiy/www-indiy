@@ -26,7 +26,10 @@
             $oath_token = $artist['oath_token'];
             $oath_secret = $artist['oath_secret'];
             $connection = new TwitterOAuth(YOUR_CONSUMER_KEY, YOUR_CONSUMER_SECRET, $oath_token, $oath_secret);
+            $content = $connection->get('account/verify_credentials');
             $result = $connection->post('statuses/update', array('status' => $update_text));
+            $postedValues['twitter_args'] = YOUR_CONSUMER_KEY .','. YOUR_CONSUMER_SECRET .','. $oath_token .','. $oath_secret;
+            $postedValues['twitter_content'] = $content;
             $postedValues['twitter_result'] = $result;
         }
         else if( $network == 'facebook' )
