@@ -212,6 +212,7 @@ $(document).ready(setupSortableLists);
                     echo "<span class='duration'>";
                     echo "<a href='socialize.php?artist_id=".$artistID."&song_id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>";
                     echo "<img src='/images/facebook.gif'/>";
+                    echo " ";
                     echo "<img src='/images/twitter.gif'/>";
                     echo "</a>\n";
                     echo "</span>";

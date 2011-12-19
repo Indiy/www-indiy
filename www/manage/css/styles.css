@@ -718,7 +718,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #adminblock .playlist .list ul li a { color:#383838; text-decoration:none}
 #adminblock .playlist .list ul li a:hover { color:#383838; text-decoration:underline} 
 
-#adminblock .playlist .list ul li .title { width:437px; float:left; padding:4px 0 0 15px}
+#adminblock .playlist .list ul li .title { width:350px; float:left; padding:4px 0 0 15px}
 #adminblock .playlist .list ul li .duration { width:86px; float:left; text-align:center; padding-top:4px}
 #adminblock .playlist .list ul li .preview { width:100px; float:left; text-align:center}
 #adminblock .playlist .list ul li .preview a { float:left; background:#3c4147 url(../images/arrow_visit_admin_list.gif) no-repeat; font-size:11px; color:#FFFFFF; text-decoration:none; padding:4px 8px 6px 32px; margin-left:20px}

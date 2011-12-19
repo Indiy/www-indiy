@@ -46,6 +46,7 @@
                     echo "<button class='submit' onclick='window.alert(\"Add FB\");'>Add Facebook</button>\n";
             ?>
             <div class="clear"></div>
+            <br/>
 
             <label>Twitter Account</label>
             <?php
@@ -55,12 +56,13 @@
                     echo "<button class='submit' onclick='window.alert(\"Add TW\");'>Add Twitter</button>\n";
             ?>
             <div class="clear"></div>
+            <br/>
 
-            <label>Automatic Facebook post on Song Add</label>
+            <label>Automatic Facebook</label>
             <input id='auto_fb' type="checkbox" name="auto_fb" <? if($auto_fb) echo 'checked'; ?> class="input_checkbox"/>
             <div class="clear"></div>
 
-            <label>Automatic Tweet on Song Add</label>
+            <label>Automatic Tweet</label>
             <input id='auto_tw' type="checkbox" name="auto_tw" <? if($auto_tw) echo 'checked'; ?> class="input_checkbox"/>
             <div class="clear"></div>
             
