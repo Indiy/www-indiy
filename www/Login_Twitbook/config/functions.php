@@ -79,30 +79,20 @@ class User {
                 }
 			    else
                 {
-				
-					$languages_str = "";
-					if(count($user_info[languages]) > 0 ):
-						foreach($user_info[languages] as $languages):				
-							$languages_str .= $languages["name"].", ";
-						endforeach;
-					endif;
-					
-					 $query="INSERT INTO mydna_musicplayer 
-								SET  username ='".mysql_real_escape_string($user_info["username"])."',
-								artist='".$user_info["first_name"]." ".$user_info["last_name"]."',
-								facebook='".$user_info["username"]."',
-								first_name='".$user_info["first_name"]."',
-								last_name='".$user_info["last_name"]."',
-								linkToProfile='".$user_info["link"]."',
-								location='".$user_info["location"]["name"]."',
-								gender='".$user_info["gender"]."',		
-								languages='".$languages_str."',
-								music_likes='".$music_str."',
-								oauth_uid='".$uid."',
-								oauth_provider='".$oauth_provider."',
-								created_at=now()";
-					mysql_query($query);
-						
+                    $first_last = $user_info["first_name"] . " " . $user_info["last_name"];
+                    $fb_access_token = $_SESSION['fb_access_token'];
+                    
+                    mysql_insert('mydna_musicplayer',array("username" => $user_info["username"],
+                                                           "artist" => $first_last,
+                                                           "facebook" => $user_info["username"],
+                                                           "first_name" => $user_info["first_name"],
+                                                           "last_name" => $user_info["last_name"],
+                                                           "linkToProfile" => $user_info["link"],
+                                                           "fb_uid" => $uid,
+                                                           "fb_access_token" => $fb_access_token,
+                                                           "oauth_provider" => $oauth_provider,
+                                                           "oauth_uid" => $uid,
+                                                           ));
                 }
 
 			 $query_data = mysql_query("SELECT * FROM mydna_musicplayer WHERE oauth_uid = '$uid' and oauth_provider = '$oauth_provider'");
