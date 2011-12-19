@@ -16,6 +16,9 @@
     if( $artist['oauth_token'] && $artist['oauth_secret'] && $artist['twitter'] )
         $twitter = $artist['twitter'];
 
+    if( $artist['fb_access_token'] && $artist['facebook'] )
+        $facebook = $artist['facebook'];
+
     $auto_fb = FALSE;
     $auto_tw = FALSE;
 

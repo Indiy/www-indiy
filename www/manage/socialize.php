@@ -6,6 +6,9 @@
     require_once '../Login_Twitbook/twitter/twitteroauth.php';
     require_once '../Login_Twitbook/config/twconfig.php';
     
+    require_once '../Login_Twitbook/facebook/facebook.php';
+    require_once '../Login_Twitbook/config/fbconfig.php';
+    
 	if($_SESSION['sess_userId'] == "")
 	{
 		header("Location: index.php");
@@ -20,10 +23,10 @@
         
         $postedValues = array();
         
+        $sql = "SELECT * FROM mydna_musicplayer WHERE id = '$artist_id'";
+        $artist = mf(mq($sql));
         if( $network == 'twitter' )
         {
-            $sql = "SELECT * FROM mydna_musicplayer WHERE id = '$artist_id'";
-            $artist = mf(mq($sql));
             $oauth_token = $artist['oauth_token'];
             $oauth_secret = $artist['oauth_secret'];
 
@@ -37,8 +40,19 @@
         }
         else if( $network == 'facebook' )
         {
-            header("HTTP/1.0 500 Server Error");
-            exit();
+            $fb_access_token = $artist['fb_access_token'];
+            $postedValues['fb_a_t'] = $fb_access_token;
+            try
+            {
+                $facebook = new Facebook(array('appId' => APP_ID,'secret' => APP_SECRET));
+                $facebook->setAccessToken($fb_access_token);
+                $result = $facebook->api('/me/feed','POST',array('message'=>$update_text, 'link'=> "http://www.google.com"));
+                $postedValues['fb_result'] = $result;
+            }
+            catch(Exception $e)
+            {
+                $postedValues['fb_exception'] = $e;
+            }
         }
         else
         {
