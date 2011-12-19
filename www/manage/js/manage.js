@@ -310,7 +310,8 @@ function onAddMusicSubmit()
 function onSocializePublish()
 {
     $('#socialize_form').hide();
-    $('#status').text("Updating settings...");
+    $('#status').show();
+    $('#status').text("Posting update...");
     var update_text = $('#update_text').val();
     var network = $('input[name=network]:checked').val();
     
@@ -325,7 +326,7 @@ function onSocializePublish()
         dataType: 'text',
         success: function(data) 
         {
-            $('#status').text("Update sent.");
+            $('#status').text("Update posted.");
         },
         error: function()
         {
