@@ -26,7 +26,8 @@
             <div class="clear"></div>
             
             <label>Type your text below:</label>
-            <textarea name="description" id="input" class="textarea"></textarea>
+            <div class="clear"></div>
+            <textarea name="description" id="input" class="social_textarea"></textarea>
             <p>Warning - You can not undo once you publish</p>
             <div class="clear"></div>
 
