@@ -1,10 +1,10 @@
 <?php
 
-    require_once '../../Login_Twitbook/twitter/twitteroauth.php';
-    require_once '../../Login_Twitbook/config/twconfig.php';
+    require_once '../Login_Twitbook/twitter/twitteroauth.php';
+    require_once '../Login_Twitbook/config/twconfig.php';
     
-    require_once '../../Login_Twitbook/facebook/facebook.php';
-    require_once '../../Login_Twitbook/config/fbconfig.php';
+    require_once '../Login_Twitbook/facebook/facebook.php';
+    require_once '../Login_Twitbook/config/fbconfig.php';
 
 
     $table = '';
