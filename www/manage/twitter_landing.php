@@ -34,7 +34,10 @@
                                "twitter" => $screen_name),
                          'id',$artist_id);
             
+            $_SESSION['attach_artist_id'] = 0;
+
             header("Location: /manage/artist_management.php?userId=$artist_id");
+            exit();
         }
     } 
     else 
