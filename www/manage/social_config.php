@@ -19,13 +19,18 @@
     if( $artist['fb_access_token'] && $artist['facebook'] )
         $facebook = $artist['facebook'];
 
-    $auto_fb = FALSE;
-    $auto_tw = FALSE;
+    $auto_fb = $artist['auto_fb'];
+    $auto_tw = $artist['auto_tw'];
 
     
-	if($_REQUEST['artist'] != "") 
+	if(isset($_REQUEST['auto_fb'])) 
     {
-        $artist = $_REQUEST['artist'];
+        $auto_fb = $_REQUEST['auto_fb'];
+        $auto_tw = $_REQUEST['auto_tw'];
+        
+        mysql_update('mydna_musicplayer',
+                     array("auto_fb" => $auto_fb,"auto_tw" => $auto_tw),
+                     'id',$artist_id);
         
         $postedValues['success'] = "1";
 		$postedValues['postedValues'] = $_REQUEST;
@@ -34,10 +39,14 @@
 	}
 ?>
 
+<script type="text/javascript"> 
+var g_artistId = '<?=$artist_id;?>';
+</script>
+
 <div id="popup">
     <div class="addcontent">
         <h2 class="title"  id="demonstrations">Add Artist</h2>
-        <form id="none"  onsubmit='return false;'>
+        <form id="social_config_form"  onsubmit='return false;'>
             <div id="form_field">
             <div class="clear"></div>
             
@@ -70,9 +79,11 @@
             <div class="clear"></div>
             
             <button class="submit" onclick='onSocialConfigSave();'>Save</button>
-            <div id='status'></div>
         </div>
         </form>
+        <div class="clear"></div>
+        <div id='status' class='form_status' style='display: none;'></div>
+        <div class="clear"></div>
     </div>
     <div style="clear: both;">&nbsp;</div>
 </div>

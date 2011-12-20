@@ -336,5 +336,33 @@ function onSocializePublish()
     return false;
 }
 
+function onSocialConfigSave()
+{
+    $('#social_config_form').hide();
+    $('#status').show();
+    $('#status').text("Updating Settings...");
+    var auto_fb = $('#auto_fb').is(':checked') ? "1":"0";
+    var auto_tw = $('#auto_tw').is(':checked') ? "1":"0";
+    
+    var post_url = "/manage/social_config.php?";
+    post_url += "&artist_id=" + escape(g_artistId);
+    post_url += "&auto_fb=" + auto_fb;
+    post_url += "&auto_tw=" + auto_tw;
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: post_url,
+        dataType: 'text',
+        success: function(data) 
+        {
+            $('#status').text("Updated settings.");
+        },
+        error: function()
+        {
+            $('#status').text("Update failed!");
+        }
+    });
+    return false;
+}
 
 

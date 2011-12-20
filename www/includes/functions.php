@@ -288,6 +288,19 @@
         $q = 'INSERT INTO `'.$table.'` (`'.implode('`,`', $keys).'`) VALUES (\''.implode('\',\'', $values).'\')';
         return mysql_query($q);
     }
+    function mysql_update($table,$inserts,$insert_key,$insert_val)
+    {
+        $values = array_map('mysql_real_escape_string', array_values($inserts));
+        $keys = array_keys($inserts);
+        $pairs = array();
+        foreach( $inserts as $key => $val )
+        {
+            $val = mysql_real_escape_string($val);
+            $pairs[] = "`" . $key . "` = '" . $val . "'"; 
+        }
+        $q = 'UPDATE `'.$table.'` SET '.implode(',', $pairs).' WHERE `$insert_key` = \'$insert_val\'';
+        return mysql_query($q);
+    }
 
 	/* No HTML AT ALL! */
 	function nohtml($nohtml) {

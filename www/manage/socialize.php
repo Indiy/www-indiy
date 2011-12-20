@@ -71,7 +71,6 @@
     $update_text = "Check out my new song: $short_link";
 ?>
 
-
 <script type="text/javascript"> 
 var g_artistId = '<?=$artist_id;?>';
 </script>
