@@ -298,7 +298,7 @@
             $val = mysql_real_escape_string($val);
             $pairs[] = "`" . $key . "` = '" . $val . "'"; 
         }
-        $q = 'UPDATE `'.$table.'` SET '.implode(',', $pairs).' WHERE `$insert_key` = \'$insert_val\'';
+        $q = "UPDATE `$table` SET " . implode(',', $pairs) . " WHERE `$insert_key` = '$insert_val'";
         return mysql_query($q);
     }
 
