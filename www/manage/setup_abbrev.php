@@ -2,7 +2,7 @@
 
     require_once '../includes/config.php';
 	require_once '../includes/functions.php';	
-    require_once 'includes/utils.php';
+    require_once 'include/utils.php';
     
 	if( $_SESSION['sess_userId'] == '')
 	{
