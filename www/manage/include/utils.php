@@ -15,7 +15,7 @@
             $abbrev = strtolower($abbrev);
             $ret = update($table,'abbrev',$abbrev,'id',$id);
             if( $ret )
-                echo "Saved abbrev $abbrev for $id\n";
+                ;//echo "Saved abbrev $abbrev for $id\n";
             return $ret;
         }
         
@@ -98,7 +98,7 @@
         
         $table = 'mydna_musicplayer';
         $sql = "SELECT * FROM mydna_musicplayer WHERE abbrev IS NULL";
-        echo "sql='$sql'\n";
+        //echo "sql='$sql'\n";
         $q = mq($sql);
         while( $artist = mf($q) )
         {
@@ -106,7 +106,7 @@
             $name = $artist['artist'];
             $name = cleanup_name($name);
             
-            echo "artist: $name($id)\n";
+            //echo "artist: $name($id)\n";
             
             if( try_split($name,' ',$id) )
                 continue;
@@ -117,7 +117,7 @@
             if( try_shortened($name,$id) )
                 continue;
             
-            echo "failed to find an abbrev for $name,$id\n";
+            //echo "failed to find an abbrev for $name,$id\n";
         }
         
         
@@ -126,7 +126,7 @@
         . "JOIN mydna_musicplayer ON mydna_musicplayer_audio.artistid = mydna_musicplayer.id "
         . "WHERE mydna_musicplayer_audio.abbrev IS NULL";
         
-        echo "sql='$sql'\n";
+        //echo "sql='$sql'\n";
         $q = mq($sql);
         while( $song = mf($q) )
         {
@@ -135,7 +135,7 @@
             $name = $song['name'];
             $name = cleanup_name($name);
             
-            echo "artist: $name($id)\n";
+            //echo "artist: $name($id)\n";
             
             if( try_split($name,' ',$id) )
                 continue;
@@ -146,7 +146,7 @@
             if( try_shortened($name,$id) )
                 continue;
             
-            echo "failed to find an song abbrev for $name,$id\n";
+            //echo "failed to find an song abbrev for $name,$id\n";
         }
     }
 
