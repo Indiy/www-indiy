@@ -1,11 +1,9 @@
 <?php
 
+    $table = '';
+    $artist_abbrev = '';
     function create_abbrevs()
     {
-        
-        $table = '';
-        $artist_abbrev = '';
-        
         function try_abbrev($abbrev,$id)
         {
             global $artist_abbrev;
@@ -95,6 +93,8 @@
             }
             return $name;
         }
+        global $artist_abbrev;
+        global $table;
         
         $table = 'mydna_musicplayer';
         $sql = "SELECT * FROM mydna_musicplayer WHERE abbrev IS NULL";
