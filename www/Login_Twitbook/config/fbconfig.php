@@ -4,9 +4,9 @@
 //define('APP_ID', '180862031990017');
 //define('APP_SECRET', 'e8dc6fa4058b881fc2c4ee9ceead9f0e');
 
-// Temp Test Code
-define('APP_ID', '256680924395123');
-define('APP_SECRET', 'aeed84d28520b93930a3f83ccee6dd1f');
+// New MAD Code
+define('APP_ID', '120524971363318');
+define('APP_SECRET', 'b91187b0ec738f75207cd1c2805004d6');
 
 
 //define('APP_ID', '200922729964116');
