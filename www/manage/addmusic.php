@@ -111,7 +111,10 @@
 		$postedValues['postedValues'] = $_REQUEST;
 
 		//echo '{"Name":"'.$audio_name.'","imageSource":"artists/images/'.$audio_logo.'","":"","audio_sound":"artists/audio/'.$audio_sound.'","success":1}';
-		echo json_encode($postedValues);	
+		echo json_encode($postedValues);
+        
+        require_once 'include/utils.php';
+        @create_abbrevs();
 		exit;		
 
 		refresh("1","?p=home");
