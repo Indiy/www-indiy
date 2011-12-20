@@ -44,7 +44,7 @@
         # For testing purposes, if there was an error, let's kill the script
         //$facebook->setSession(null);
         $login_url = $facebook->getLoginUrl(array(
-			'req_perms' => 'email,user_birthday,status_update,publish_stream,user_photos,user_videos,manage_pages,offline_access'));
+			'scope' => 'email,user_birthday,status_update,publish_stream,user_photos,user_videos,manage_pages,offline_access'));
         @header("Location: " . $login_url);
     }
     
