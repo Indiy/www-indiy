@@ -99,6 +99,7 @@
 			update($database,$tables,$values,"id",$_POST["id"]);
 		} else {
 			insert($database,$tables,$values);
+            $new_song_id = mysql_insert_id();
 		}
 		
 		$successMessage = "<div id='notify'>Success! You are being redirected...</div>";
@@ -115,6 +116,24 @@
         
         require_once 'include/utils.php';
         @create_abbrevs();
+        
+        if( $new_song_id )
+        {
+            $song = mf(mq("SELECT * FROM mydna_musicplayer_audio WHERE id = '$new_song_id'"));
+            $short_link = make_short_link($song['abbrev']);
+            $update_text = "Check out my new song: $short_link";
+
+            $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE id = '$artistid'"));
+            if( $artist['auto_fb'] )
+            {
+                send_fb_update($artist,$update_text);
+            }
+            if( $artist['auto_tw'] )
+            {
+                send_tweet($artist,$update_text);
+            }
+        }
+        
 		exit;		
 
 		refresh("1","?p=home");

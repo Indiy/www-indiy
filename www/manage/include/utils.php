@@ -1,5 +1,12 @@
 <?php
 
+    require_once '../../Login_Twitbook/twitter/twitteroauth.php';
+    require_once '../../Login_Twitbook/config/twconfig.php';
+    
+    require_once '../../Login_Twitbook/facebook/facebook.php';
+    require_once '../../Login_Twitbook/config/fbconfig.php';
+
+
     $table = '';
     $artist_abbrev = '';
     function create_abbrevs()
@@ -148,6 +155,29 @@
             
             //echo "failed to find an song abbrev for $name,$id\n";
         }
+    }
+    
+    function send_fb_update($artist,$text)
+    {
+        $fb_access_token = $artist['fb_access_token'];
+        try
+        {
+            $facebook = new Facebook(array('appId' => APP_ID,'secret' => APP_SECRET));
+            $facebook->setAccessToken($fb_access_token);
+            $result = $facebook->api('/me/feed','POST',array('message'=>$text));
+        }
+        catch(Exception $e)
+        {
+        }
+    }
+    
+    function send_tweet($artist,$text)
+    {
+        $oauth_token = $artist['oauth_token'];
+        $oauth_secret = $artist['oauth_secret'];
+        $connection = new TwitterOAuth(YOUR_CONSUMER_KEY, YOUR_CONSUMER_SECRET, $oauth_token, $oauth_secret);
+        $content = $connection->get('account/verify_credentials');
+        $result = $connection->post('statuses/update', array('status' => $text));
     }
 
 
