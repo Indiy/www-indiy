@@ -21,6 +21,7 @@
         else
         {
             $uid = $user_info->id;
+            $username = $user_info->name;
             $oauth_token = $access_token['oauth_token'];
             $oauth_token_secret = $access_token['oauth_token_secret'];
             
@@ -29,7 +30,8 @@
             mysql_update('mydna_musicplayer',
                          array("oauth_uid_twitter" => $uid,
                                "oauth_token" => $oauth_token,
-                               "oauth_secret" => $oauth_token_secret),
+                               "oauth_secret" => $oauth_token_secret,
+                               "twitter" => $username),
                          'id',$artist_id);
             
             header("Location: /manage/artist_management.php?userId=$artist_id");

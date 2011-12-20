@@ -367,6 +367,10 @@ function onSocialConfigSave()
 
 function clickAddFacebook()
 {
+    $('#social_config_form').hide();
+    $('#status').show();
+    $('#status').text("Adding Facebook...");
+
     var url = "/manage/add_network.php?";
     url += "&artist_id=" + escape(g_artistId);
     url += "&network=facebook";
@@ -375,6 +379,10 @@ function clickAddFacebook()
 
 function clickAddTwitter()
 {
+    $('#social_config_form').hide();
+    $('#status').show();
+    $('#status').text("Adding Twitter...");
+
     var url = "/manage/add_network.php?";
     url += "&artist_id=" + escape(g_artistId);
     url += "&network=twitter";
