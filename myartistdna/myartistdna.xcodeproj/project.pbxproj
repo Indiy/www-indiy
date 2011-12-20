@@ -9,6 +9,8 @@
 /* Begin PBXFileReference section */
 		2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = unsupported_browser.php; sourceTree = "<group>"; };
 		2D34E22414A05F05004473F9 /* utils.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = utils.php; sourceTree = "<group>"; };
+		2D34E22614A0699A004473F9 /* add_network.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_network.php; sourceTree = "<group>"; };
+		2D34E22714A06AC9004473F9 /* twitter_landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twitter_landing.php; sourceTree = "<group>"; };
 		2D380B8814671EF400E36189 /* server_config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = server_config.php; path = ../server_config.php; sourceTree = "<group>"; };
 		2D380B8A1467970100E36189 /* add_user.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_user.php; sourceTree = "<group>"; };
 		2D380B8B1468AC0500E36189 /* manage.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = manage.js; sourceTree = "<group>"; };
@@ -3113,6 +3115,8 @@
 				2DF47503144A2D84005538C7 /* js */,
 				2D380B8A1467970100E36189 /* add_user.php */,
 				2D380B8C1468CBE500E36189 /* add_label.php */,
+				2D34E22614A0699A004473F9 /* add_network.php */,
+				2D34E22714A06AC9004473F9 /* twitter_landing.php */,
 				2DF47425144A2D84005538C7 /* addcontent.php */,
 				2DF47426144A2D84005538C7 /* addmusic.php */,
 				2DF47427144A2D84005538C7 /* addproduct.php */,

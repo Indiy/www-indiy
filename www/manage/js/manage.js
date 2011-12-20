@@ -365,4 +365,19 @@ function onSocialConfigSave()
     return false;
 }
 
+function clickAddFacebook()
+{
+    var url = "/manage/add_network.php?";
+    url += "&artist_id=" + escape(g_artistId);
+    url += "&network=facebook";
+    window.location.href = url;
+}
+
+function clickAddTwitter()
+{
+    var url = "/manage/add_network.php?";
+    url += "&artist_id=" + escape(g_artistId);
+    url += "&network=twitter";
+    window.location.href = url;
+}
 

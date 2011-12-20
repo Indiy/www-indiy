@@ -55,7 +55,7 @@ var g_artistId = '<?=$artist_id;?>';
                 if( $facebook )
                     echo "<input type='text' disabled='disabled' value='$facebook' class='text' />\n";
                 else
-                    echo "<button class='submit' onclick='window.alert(\"Add FB\");'>Add Facebook</button>\n";
+                    echo "<button class='submit' onclick='clickAddFacebook();'>Add Facebook</button>\n";
             ?>
             <div class="clear"></div>
             <br/>
@@ -65,7 +65,7 @@ var g_artistId = '<?=$artist_id;?>';
                 if( $twitter )
                     echo "<input type='text' disabled='disabled' value='$twitter' class='text' />\n";
                 else
-                    echo "<button class='submit' onclick='window.alert(\"Add TW\");'>Add Twitter</button>\n";
+                    echo "<button class='submit' onclick='clickAddTwitter();'>Add Twitter</button>\n";
             ?>
             <div class="clear"></div>
             <br/>
