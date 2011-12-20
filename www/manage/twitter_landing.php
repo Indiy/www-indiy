@@ -21,7 +21,7 @@
         else
         {
             $uid = $user_info->id;
-            $username = $user_info->name;
+            $screen_name = $user_info->screen_name;
             $oauth_token = $access_token['oauth_token'];
             $oauth_token_secret = $access_token['oauth_token_secret'];
             
@@ -31,7 +31,7 @@
                          array("oauth_uid_twitter" => $uid,
                                "oauth_token" => $oauth_token,
                                "oauth_secret" => $oauth_token_secret,
-                               "twitter" => $username),
+                               "twitter" => $screen_name),
                          'id',$artist_id);
             
             header("Location: /manage/artist_management.php?userId=$artist_id");
