@@ -26,8 +26,6 @@ class User {
 
 				$query = "UPDATE mydna_musicplayer SET 
 							facebook='".$user_info["username"]."',
-							gender='".$user_info["gender"]."',
-							music_likes='".$music_str."',
 							location='".$user_info["location"]["name"]."',
 							oauth_uid='".$uid."'
 						    WHERE id = '$result[id]'";
@@ -79,15 +77,16 @@ class User {
                 }
 			    else
                 {
-                    $first_last = $user_info["first_name"] . " " . $user_info["last_name"];
                     $fb_access_token = $_SESSION['fb_access_token'];
+                    $username = $user_info['username'];
+                    if( !$username )
+                        $username = $user_info['name'];
                     
-                    mysql_insert('mydna_musicplayer',array("username" => $user_info["username"],
-                                                           "artist" => $first_last,
-                                                           "facebook" => $user_info["username"],
+                    mysql_insert('mydna_musicplayer',array("username" => $username,
+                                                           "artist" => $user_info["name"],
+                                                           "facebook" => $username,
                                                            "first_name" => $user_info["first_name"],
                                                            "last_name" => $user_info["last_name"],
-                                                           "linkToProfile" => $user_info["link"],
                                                            "fb_uid" => $uid,
                                                            "fb_access_token" => $fb_access_token,
                                                            "oauth_provider" => $oauth_provider,

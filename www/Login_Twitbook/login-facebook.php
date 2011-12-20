@@ -15,19 +15,16 @@
 //            'cookie' => true
             ));
 
-    # Active session, let's try getting the user id (getUser()) and user info (api->('/me'))
-    try {
+    try 
+    {
         $uid = $facebook->getUser();
         $user = $facebook->api('/me');
-    } catch (Exception $e) {
+    } 
+    catch (Exception $e) 
+    {}
 
-    }
-	############# End userdata ############
-
-
-    if (!empty($user)) {
-        # User info ok? Let's print it (Here we will be adding the login and registering routines)  
-
+    if (!empty($user)) 
+    {
         $_SESSION['fb_access_token'] = $facebook->getAccessToken();
         $username = $user['name'];
 		$user_info = $user;
@@ -40,12 +37,12 @@
             $url = loginArtistFromRow($userdata);
 			header("Location: $url");
         }
-    } else {
-        # For testing purposes, if there was an error, let's kill the script
-        //$facebook->setSession(null);
+    } 
+    else 
+    {
         $login_url = $facebook->getLoginUrl(array(
 			'scope' => 'email,user_birthday,status_update,publish_stream,user_photos,user_videos,manage_pages,offline_access'));
-        @header("Location: " . $login_url);
+        header("Location: " . $login_url);
     }
     
 ?>
