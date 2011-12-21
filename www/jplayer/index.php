@@ -1530,7 +1530,7 @@ $(document).ready(function()
 
                 <div class="bottombox">
                 <h3>NOT A MEMBER Yet?</h3>
-                <div class="buttonsignup"><a href="#" onclick="onSignupClick();">SIGN UP</a></div>
+                <div class="buttonsignup"><a href="#" onclick="showSignup();">SIGN UP</a></div>
             </div>
             </div>
         </div><!-- pop up -->
