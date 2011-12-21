@@ -58,8 +58,8 @@
 
 			include('includes/config.php');
 			include('includes/functions.php');		
-			include('home.php');
-
+			//include('home.php');
+            include 'landing.html';
 		}
 	}
 ?>
