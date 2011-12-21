@@ -727,6 +727,10 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #adminblock .playlist .list ul li .delete a:hover { background:url(../images/icon_delete_hover_admin.gif) no-repeat}
 
 .short_link_clip { margin-left: 10px; margin-bottom: -5px; width: 25px; height: 25px; }
+
+.social_icon { width: 16px; height: 16px; }
+
+
 #link_tooltip { position: absolute; display: none; 
                 padding: 4px 8px 4px 8px; 
                 border: 2px solid black; background-color: #FF9; 

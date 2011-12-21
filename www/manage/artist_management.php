@@ -212,9 +212,9 @@ $(document).ready(setupSortableLists);
                     */
                     echo "<span class='duration'>";
                     echo "<a href='socialize.php?artist_id=".$artistID."&song_id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>";
-                    echo "<img src='/images/facebook.gif'/>";
+                    echo "<img class='social_icon' src='/images/fb_icon_color.gif'/>";
                     echo " ";
-                    echo "<img src='/images/twitter.gif'/>";
+                    echo "<img class='social_icon' src='/images/tw_icon_color.gif'/>";
                     echo "</a>\n";
                     echo "</span>";
 
@@ -226,6 +226,38 @@ $(document).ready(setupSortableLists);
 				
 			?>                      
 
+            </ul>
+            </div>
+        </div>
+        
+        <div class="products">
+        
+            <div class="heading">
+            <h5>MONITIZE</h5>
+            <div class="buttonadd"><a href="addproduct.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Product</a></div>
+            </div>
+        
+            <div class="list">
+            <ul class="products_sortable">
+           <?php
+				$count = 1;
+				while($record_artistProduct = mysql_fetch_array($result_artistProduct))
+				{
+                    $product_id = $record_artistProduct['id'];
+                
+					if(!empty($record_artistProduct['image']) && file_exists("../artists/products/".$record_artistProduct['image'])){
+						$image = "../artists/products/".$record_artistProduct['image'];
+					}else{
+						$image = "images/photo_video_01.jpg";
+					}
+					?>
+			<li id="arrayorder_<?=$product_id;?>"class="products_sortable">
+            <figure><span class="close"><a href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=<?=$userId?>&action=1&prod_id=<?=$record_artistProduct['id']?>";'></a></span>
+           <a href="addproduct.php?artist_id=<?=$artistID?>&id=<?=$record_artistProduct['id']?>" rel="facebox[.bolder]"><img src="<?=$image?>" width="207" height="130" alt=""></a></figure>
+            <span><a href="addproduct.php?artist_id=<?=$artistID?>&id=<?=$record_artistProduct['id']?>" rel="facebox[.bolder]"><?=$record_artistProduct['name']?></a></span><br>$<?=$record_artistProduct['price']?>
+            </li>
+				<?}?>
+           
             </ul>
             </div>
         </div>
@@ -301,37 +333,7 @@ $(document).ready(setupSortableLists);
             </div>
         </div>
         
-        <div class="products">
         
-            <div class="heading">
-            <h5>PRODUCTS</h5>
-            <div class="buttonadd"><a href="addproduct.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Product</a></div>
-            </div>
-        
-            <div class="list">
-            <ul class="products_sortable">
-           <?php
-				$count = 1;
-				while($record_artistProduct = mysql_fetch_array($result_artistProduct))
-				{
-                    $product_id = $record_artistProduct['id'];
-                
-					if(!empty($record_artistProduct['image']) && file_exists("../artists/products/".$record_artistProduct['image'])){
-						$image = "../artists/products/".$record_artistProduct['image'];
-					}else{
-						$image = "images/photo_video_01.jpg";
-					}
-					?>
-			<li id="arrayorder_<?=$product_id;?>"class="products_sortable">
-            <figure><span class="close"><a href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=<?=$userId?>&action=1&prod_id=<?=$record_artistProduct['id']?>";'></a></span>
-           <a href="addproduct.php?artist_id=<?=$artistID?>&id=<?=$record_artistProduct['id']?>" rel="facebox[.bolder]"><img src="<?=$image?>" width="207" height="130" alt=""></a></figure>
-            <span><a href="addproduct.php?artist_id=<?=$artistID?>&id=<?=$record_artistProduct['id']?>" rel="facebox[.bolder]"><?=$record_artistProduct['name']?></a></span><br>$<?=$record_artistProduct['price']?>
-            </li>
-				<?}?>
-           
-            </ul>
-            </div>
-        </div>
         <div class="embedcode">
         <label>EMBED CODE</label>
         <textarea name="" cols="" rows="" class="textarea"><iframe src="<?=playerUrl().$record_artistDetail[url]?>&embed=true" border="0" width="400" height="600" frameborder="0" name="<?=$record_artistDetail['url']?>"></iframe></textarea>
