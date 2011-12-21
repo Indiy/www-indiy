@@ -53,12 +53,14 @@ var g_artistId = '<?=$artist_id;?>';
 
 <div id="popup">
     <div class="addcontent">
-        <h2 class="title"  id="demonstrations">Invite Friends to MyArtistDNA</h2>
+        <h2 class="title"  id="demonstrations">Invite Friends</h2>
         <form id="invite_friends_form" onsubmit='return false;'>
             <div id="form_field">
             <div class="clear"></div>
             
+            <br/>
             <p>Enter your friends emails below.  Seperate with commas.</p>
+            <br/>
             <div class="clear"></div>
             <textarea id="friends_text" class="friends_textarea"></textarea>
             <div class="clear"></div>
