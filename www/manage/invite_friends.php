@@ -41,10 +41,6 @@ END;
 		echo json_encode($postedValues);
 		exit();
 	}
-    $song_id = $_REQUEST['song_id'];
-    $song = mf(mq("SELECT * FROM mydna_musicplayer_audio WHERE id = '$song_id'"));
-    $short_link = make_short_link($song['abbrev']);
-    $update_text = "Check out my new song: $short_link";
 ?>
 
 <script type="text/javascript"> 
