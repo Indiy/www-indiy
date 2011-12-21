@@ -149,7 +149,7 @@ $(document).ready(setupSortableLists);
                 <li><a href="#">Invite Friends</a></li>
                 <li><a href="<?=$artist_url;?>">View Site</a></li>
             </ul>
-            <h6>Platformr</h6>
+            <h6>Platform</h6>
             <ul>
                 <li><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Audio</a></li>
                 <li><a href="addvideo.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Video</a></li>

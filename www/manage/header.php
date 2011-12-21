@@ -77,8 +77,17 @@ $(document).ready(function(){
              $host = parse_url(trueSiteUrl(),PHP_URL_HOST);
              $host_explode = explode(".", $host);
              $artist_home_host = $_SESSION['sess_userURL'] . '.' . implode('.',array_slice($host_explode,1));
+             
+             $artist_id = $_SESSION['sess_userId'];
+             
+             echo "<li>";
+             echo "<a href='http://$artist_home_host'>VIEW SITE</a>";
+             echo "</li>";
+             echo "<li>";
+             echo "<a href='register.php?artist_id=$artist_id' rel='facebox[.bolder]'>EDIT PROFILE</a>";
+             echo "</li>";
              echo "<li class='nodivider'>";
-             echo "<a href='http://$artist_home_host'>VIEW MY SITE</a>";
+             echo "<a href='#'>INVITE FRIENDS</a>";
              echo "</li>";
          }
          ?>
