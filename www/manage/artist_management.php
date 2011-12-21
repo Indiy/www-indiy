@@ -7,7 +7,7 @@
 	require_once '../includes/functions.php';	
 	if($_SESSION['sess_userId']=="")
 	{
-		header("location: index.php");
+		header("Location: /index.php");
 		exit();
 	}
 	$artistID = $_REQUEST['userId']; 
