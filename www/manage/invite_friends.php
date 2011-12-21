@@ -58,7 +58,7 @@ var g_artistId = '<?=$artist_id;?>';
             <div id="form_field">
             <div class="clear"></div>
             
-            <label>Enter your friends emails below.  Seperate with commas.</label>
+            <p>Enter your friends emails below.  Seperate with commas.</p>
             <div class="clear"></div>
             <textarea id="friends_text" class="friends_textarea"></textarea>
             <div class="clear"></div>
