@@ -142,25 +142,26 @@ $(document).ready(setupSortableLists);
     	<div class="column1">
             <figure><img src="<?php echo $img_url; ?>" alt="<?php echo $record_artistDetail['artist']; ?>" title="<?php echo $record_artistDetail['artist']; ?>" /></figure>
             
-            <h6>Music Player</h6>
+            <h6>Manage Profile</h6>
             <ul>
-            <li><a href="<?=$artist_url;?>">View Site</a></li>
-            <li><a href="stats.php?userId=<?=$artistID;?>">Analytics</a></li>
-            <li><a href="download_newsletter.php?artist_id=<?=$artistID;?>">Newsletter</a></li>
-            <li><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Music</a></li>
-            <li><a href="addvideo.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Video</a></li>
-            <li><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Pages</a></li>
+                <li><a href="register.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Edit Profile</a></li>
+                <li><a href="social_config.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Social Connections</a></li>
+                <li><a href="#">Invite Friends</a></li>
+                <li><a href="<?=$artist_url;?>">View Site</a></li>
+            </ul>
+            <h6>Platformr</h6>
+            <ul>
+                <li><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Audio</a></li>
+                <li><a href="addvideo.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Video</a></li>
+                <li><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Pages</a></li>
+                <li><a href="stats.php?userId=<?=$artistID;?>">View Analytics</a></li>
+                <li><a href="download_newsletter.php?artist_id=<?=$artistID;?>">View Email Sign Up</a></li>
             </ul>
             
             <h6>Ecommerce</h6>
             <ul>
-            <li><a href="store_settings.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Settings</a></li>
-            <li><a href="addproduct.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Product</a></li>
-            </ul>
-             <h6>Manage Profile</h6>
-            <ul>
-            <li><a href="register.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Settings</a></li>
-            <li><a href="social_config.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Social Connections</a></li>
+                <li><a href="store_settings.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Edit Settings</a></li>
+                <li><a href="addproduct.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Product</a></li>
             </ul>
         </div>
         

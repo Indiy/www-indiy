@@ -125,7 +125,7 @@
 							<div class="clear"></div>
 							
 							<label>Email</label>
-							<input type="text" class="text" value="<?=$email?>" name="email" readonly>
+							<input type="text" class="text" value="<?=$email?>" name="email">
 							<div class="clear"></div>
 
                             <!--
