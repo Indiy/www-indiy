@@ -177,7 +177,7 @@ $(document).ready(setupSortableLists);
             <ul>
             <li class="listheading">
             <span class="title">Title</span>
-            <span class="duration">Short Link</span>
+            <span class="duration">Share</span>
             <span class="duration">Socialize</span>
             <span class="delete">Delete</span>
             </li>
