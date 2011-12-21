@@ -140,12 +140,7 @@ function onStoreSettingsSubmit()
 
 function uploadProgress(percentage)
 {
-    var html = "";
-    html += "<div class='upload-progress'>";
-    html += "<div class='upload-progress-done' style='width:" + percentage.toFixed(2) + "%;'/>";
-    html += "<div class='upload-percent'>" + percentage.toFixed(2) + "%</div>";
-    html += "</div>";
-
+    var html = "" + percentage.toFixed(0) + "%";
     $('#upload_bar').html(html);
 }
 
