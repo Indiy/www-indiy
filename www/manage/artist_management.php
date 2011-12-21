@@ -127,7 +127,7 @@ $(document).ready(setupSortableLists);
 <section id="content">
 	
     <div id="admin">
-    <a href="<?=$artist_url;?>"><h2><?php echo $record_artistDetail['artist']; ?></h2></a>
+    <h2><a href="<?=$artist_url;?>"><?php echo $record_artistDetail['artist']; ?></a></h2>
     
     <!--
     <div class="search">
