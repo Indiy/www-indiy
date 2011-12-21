@@ -127,7 +127,7 @@ $(document).ready(setupSortableLists);
 <section id="content">
 	
     <div id="admin">
-    <h2><?php echo $record_artistDetail['artist']; ?></h2>
+    <a href="<?=$artist_url;?>"><h2><?php echo $record_artistDetail['artist']; ?></h2></a>
     
     <!--
     <div class="search">
@@ -147,7 +147,7 @@ $(document).ready(setupSortableLists);
                 <li><a href="register.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Edit Profile</a></li>
                 <li><a href="social_config.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Social Connections</a></li>
                 <li><a href="invite_friends.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Invite Friends</a></li>
-                <li><a href="<?=$artist_url;?>">View Site</a></li>
+                <li><a style="font-weight: bold;" href="<?=$artist_url;?>">View Site</a></li>
             </ul>
             <h6>Platform</h6>
             <ul>
@@ -178,7 +178,6 @@ $(document).ready(setupSortableLists);
             <li class="listheading">
             <span class="title">Title</span>
             <span class="duration">Short Link</span>
-            <span class="preview">Preview</span>
             <span class="duration">Socialize</span>
             <span class="delete">Delete</span>
             </li>
@@ -205,11 +204,12 @@ $(document).ready(setupSortableLists);
                     echo "<img class='short_link_clip' src='/images/clipboard.png' alt='Copy to clipboard' title='Copy to clipboard'></img>";
                     echo "</span>\n";
 					
+                    /*
 					if(!empty($record_artistAudio['audio']))
 						echo	"<span class='preview'><a href='play_music.php?song=".$record_artistAudio['audio']."' rel='facebox[.bolder]' >Play</a></span>";
 					else
 						echo	"<span class='preview'>N/A</span>";
-                        
+                    */
                     echo "<span class='duration'>";
                     echo "<a href='socialize.php?artist_id=".$artistID."&song_id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>";
                     echo "<img src='/images/facebook.gif'/>";
