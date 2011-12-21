@@ -394,7 +394,7 @@ function onInviteFriends()
     $('#invite_friends_form').hide();
     $('#status').show();
     $('#status').text("Sending Form...");
-    var friends = $('friends_text').val();
+    var friends = $('#friends_text').val();
     
     var post_url = "/manage/invite_friends.php?";
     post_url += "&artist_id=" + escape(g_artistId);
