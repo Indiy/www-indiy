@@ -87,7 +87,7 @@ $(document).ready(function(){
              echo "<a href='register.php?artist_id=$artist_id' rel='facebox[.bolder]'>EDIT PROFILE</a>";
              echo "</li>";
              echo "<li class='nodivider'>";
-             echo "<a href='#'>INVITE FRIENDS</a>";
+             echo "<a href='invite_friends.php?artist_id=$artist_id' rel='facebox[.bolder]'>INVITE FRIENDS</a>";
              echo "</li>";
          }
          ?>
