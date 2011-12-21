@@ -389,3 +389,31 @@ function clickAddTwitter()
     window.location.href = url;
 }
 
+function onInviteFriends()
+{
+    $('#invite_friends_form').hide();
+    $('#status').show();
+    $('#status').text("Sending Form...");
+    var friends = $('friends_text').val();
+    
+    var post_url = "/manage/invite_friends.php?";
+    post_url += "&artist_id=" + escape(g_artistId);
+    post_url += "&friends=" + escape(friends);
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: post_url,
+        dataType: 'text',
+        success: function(data) 
+        {
+            $('#status').text("Thank you, your friends will be invited.");
+        },
+        error: function()
+        {
+            $('#status').text("Thank you, your friends will be invited.");
+        }
+    });
+    return false;
+}
+
+

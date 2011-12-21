@@ -12,6 +12,7 @@
 		2D34E22614A0699A004473F9 /* add_network.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_network.php; sourceTree = "<group>"; };
 		2D34E22714A06AC9004473F9 /* twitter_landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twitter_landing.php; sourceTree = "<group>"; };
 		2D34E22814A173A9004473F9 /* landing.html */ = {isa = PBXFileReference; path = landing.html; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.html; };
+		2D34E22914A1CBB5004473F9 /* invite_friends.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = invite_friends.php; sourceTree = "<group>"; };
 		2D380B8814671EF400E36189 /* server_config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = server_config.php; path = ../server_config.php; sourceTree = "<group>"; };
 		2D380B8A1467970100E36189 /* add_user.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_user.php; sourceTree = "<group>"; };
 		2D380B8B1468AC0500E36189 /* manage.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = manage.js; sourceTree = "<group>"; };
@@ -3136,6 +3137,7 @@
 				2DF4745A144A2D84005538C7 /* footer.php */,
 				2DF4745B144A2D84005538C7 /* header.php */,
 				2DF47502144A2D84005538C7 /* index.php */,
+				2D34E22914A1CBB5004473F9 /* invite_friends.php */,
 				2DF47514144A2D84005538C7 /* logout.php */,
 				2DF47515144A2D84005538C7 /* play_music.php */,
 				2DF47516144A2D84005538C7 /* register.php */,
