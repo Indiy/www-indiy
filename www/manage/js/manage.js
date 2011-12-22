@@ -6,7 +6,7 @@ var g_clip = false;
 function startTooltipTimer()
 {
     clearTooltipTimer();
-    g_hideTooltipTimer = setTimeout("$('#link_tooltip').hide();",5000);
+    g_hideTooltipTimer = setTimeout("$('#link_tooltip').hide();",1000);
 }
 function clearTooltipTimer()
 {
