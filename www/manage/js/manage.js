@@ -13,7 +13,6 @@ function mouseoverClip(self)
     }
     g_clip.receiveEvent('mouseover',null);
 
-    $('#link_tooltip').text('Copy to clipboard');
     $('#link_tooltip').show();
     var new_offset = $(self).offset();
     new_offset.left -= $('#link_tooltip').width()/2;
