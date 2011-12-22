@@ -116,9 +116,9 @@
     <div class='top_bar'>
         <h2>Edit Profile</h2>
         <button onclick='$.facebox.close();'>CLOSE</button>
-        <div></div>
     </div>
-        
+
+    <div class='top_blue_bar'></div>
     <form  id="ajax_from" method="post" enctype="multipart/form-data" action="register.php">
         
         <input type="hidden" name="artistid" value="<?=$artistid?>">
@@ -178,6 +178,7 @@
         <?php } ?>
         </div>
     </form>
+    <div class='bottom_blue_bar'></div>
 </div>
 <!-- end #content -->
 <div id="sidebar">
