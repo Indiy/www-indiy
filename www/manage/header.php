@@ -49,7 +49,13 @@ $(document).ready(function(){
 </head>
 <body>
 <div id='mask' style='display: none;'></div>
-<div id='link_tooltip'><div class='link_url' id='link_url'>madna.co/aa_bb</div><div class='link_sep_bar'></div><div class='link_copy'>Copy</div></div>
+<div id='link_tooltip'>
+    <div class='link_url' id='link_url'>madna.co/aa_bb</div>
+    <div class='link_copy_sep'>
+        <div class='link_sep_bar'> </div>
+        <div class='link_copy'>Copy</div>
+    </div>
+</div>
 <section id="bgtopbar">
 	<section id="topbar">
 		<p>Logged in as <a href="#"><?php echo $_SESSION['sess_userName']; ?></a> | <a href="logout.php">Logout</a></p>
