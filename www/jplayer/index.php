@@ -517,7 +517,7 @@ function setupPageLinks()
         
     });
     
-    if( g_userName )
+    if( typeof g_userName != "undefined" && g_userName )
     {
         var html = "<a href='<?=trueSiteUrl();?>/manage/artist_management.php'>";
         html += g_userName;
