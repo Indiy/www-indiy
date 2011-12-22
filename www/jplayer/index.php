@@ -516,6 +516,16 @@ function setupPageLinks()
     
         
     });
+    
+    if( g_userName )
+    {
+        var html = "<a href='<?=trueSiteUrl();?>/manage/artist_management.php'>";
+        html += g_userName;
+        html += "</a>";
+        html += " | ";
+        html += "<a href='<?=trueSiteUrl();?>/manage/logout.php'>Logout</a>";
+        $("#signup_login").html(html);
+    }
 }
 
 $(document).ready(setupPageLinks);
