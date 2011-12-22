@@ -142,7 +142,7 @@
 
         <div class='input_container'>
             <div class='left_label'>Logo</div>
-            <input type="file" class="right_text" name="logo">
+            <input type="file" class="right_file" name="logo">
         </div>
 
         <div class='input_container'>

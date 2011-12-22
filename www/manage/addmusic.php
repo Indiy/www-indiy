@@ -190,7 +190,7 @@
         </div>
         <div class='input_container'>
             <div class='left_label'>MP3 File</div>
-            <div class='right_text'>
+            <div class='right_file_filename'>
                 <input id='song_audio' type="file" name="audio" />
                 <div class='filename'><?=$audio_sound;?></div>
             </div>
@@ -200,7 +200,7 @@
                 <div>Image</div>
                 <?=$audio_logo;?>
             </div>
-            <input id='song_image' type="file" name="logo" class='right_text' />
+            <input id='song_image' type="file" name="logo" class='right_file' />
         </div>
         <div class='input_container'>
             <div class='left_label'>Background Color</div>
