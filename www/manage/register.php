@@ -116,7 +116,7 @@
     <div class='top_bar'>
         <h2>Edit Profile</h2>
         <button onclick='$.facebox.close();'>CLOSE</button>
-        <div>
+        <div></div>
     </div>
         
     <form  id="ajax_from" method="post" enctype="multipart/form-data" action="register.php">
