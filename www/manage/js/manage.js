@@ -1,6 +1,7 @@
 
 
 var g_hideTooltipTimer = false;
+var g_clip = false;
 
 function startTooltipTimer()
 {
@@ -11,38 +12,42 @@ function clearTooltipTimer()
 {
     if( g_hideTooltipTimer )
     {
-        cancelTimeout(g_hideTooltipTimer);
+        clearTimeout(g_hideTooltipTimer);
         g_hideTooltipTimer = false;
     }
 }
 
-function mouseoverClip(self)
+function mouseenterLink()
 {
     clearTooltipTimer();
-    g_clip.setText( self.href );
-    if( g_clip.div ) 
-    {
-        g_clip.receiveEvent('mouseout', null);
-        g_clip.reposition(self);
-    }
-    else
-    {
-        g_clip.glue(self);
-    }
-    g_clip.receiveEvent('mouseover',null);
-
+    var url = self.href;
+    g_clip.setText(url);
+    var short_url = url.substring(7);
+    $('#link_url').text(short_url);
+    
     $('#link_tooltip').show();
     var new_offset = $(self).offset();
     new_offset.left -= $('#link_tooltip').width()/2;
     new_offset.top -= $('#link_tooltip').height() + 5; 
     $('#link_tooltip').offset(new_offset)
-}
 
-var g_clip = false;
+    var link_tooltip = $('#link_tooltip').get(0);
+    if( g_clip.div ) 
+    {
+        g_clip.reposition(link_tooltip);
+    }
+    else
+    {
+        g_clip.glue(link_tooltip);
+    }
+}
+function mouseleaveLink()
+{
+    startTooltipTimer();
+}
 
 function clipMouseOver()
 {
-    $('#link_tooltip').show();
     clearTooltipTimer();   
 }
 function clipMouseOut()
@@ -53,11 +58,11 @@ function clipComplete()
 {
     $('.link_copy').text('Copied');
 }
-function tipMouseEnter()
+function mouseenterToolTip()
 {
     clearTooltipTimer();
 }
-function tipMouseLeave()
+function mouseleaveToolTip()
 {
     startTooltipTimer();
 }
@@ -70,9 +75,10 @@ function setupClipboard()
     g_clip.addEventListener('onMouseOver',clipMouseOver);
     g_clip.addEventListener('onMouseOut',clipMouseOut);
     g_clip.addEventListener('onComplete',clipComplete);
-    $('.share a').mouseover(function() { mouseoverClip(this); });
-    $('#link_tooltip').mouseenter(tipMouseEnter);
-    $('#link_tooltip').mouseleave(tipMouseLeave);
+    $('.share a').mouseenter(mouseenterLink);
+    $('.share a').mouseleave(mouseleaveLink);
+    $('#link_tooltip').mouseenter(mouseenterToolTip);
+    $('#link_tooltip').mouseleave(mouseleaveToolTip);
 }
 
 $(document).ready(setupClipboard);
