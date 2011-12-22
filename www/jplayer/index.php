@@ -222,6 +222,8 @@ var g_siteUrl = "<?=trueSiteUrl();?>";
 <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
 <script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
 
+<script src="<?=trueSiteUrl();?>/js/logged_in.php" type="text/javascript"></script>
+
 <script src="js/artist_home.js" type="text/javascript"></script>
 <script src="/js/login_signup.js" type="text/javascript"></script>
 
@@ -1102,7 +1104,7 @@ $(document).ready(function()
             
             <? if (!$fan) { ?>
             <div id="logo">
-                <button id="login_signup_button" onclick='showLogin();'>Log in | Sign Up</button>
+                <div id="login_signup"><button onclick='showLogin();'>Log in | Sign Up</button></div>
                 <div id="makeroomforlogo">
                 <? if ($artist_logo) { ?><img src="/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&h=145&w=145" /><? } ?>
                 </div>
