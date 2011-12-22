@@ -17,7 +17,7 @@ function clearTooltipTimer()
     }
 }
 
-function mouseenterLink()
+function mouseenterLink(self)
 {
     clearTooltipTimer();
     var url = self.href;
@@ -75,7 +75,7 @@ function setupClipboard()
     g_clip.addEventListener('onMouseOver',clipMouseOver);
     g_clip.addEventListener('onMouseOut',clipMouseOut);
     g_clip.addEventListener('onComplete',clipComplete);
-    $('.share a').mouseenter(mouseenterLink);
+    $('.share a').mouseenter(function() { mouseenterLink(this); });
     $('.share a').mouseleave(mouseleaveLink);
     $('#link_tooltip').mouseenter(mouseenterToolTip);
     $('#link_tooltip').mouseleave(mouseleaveToolTip);
