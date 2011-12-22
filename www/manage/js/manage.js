@@ -19,6 +19,7 @@ function clearTooltipTimer()
 
 function mouseenterLink(self)
 {
+    $('.link_copy').text('Copy');
     clearTooltipTimer();
     var url = self.href;
     g_clip.setText(url);
