@@ -10,7 +10,19 @@
 		header("Location: /index.php");
 		exit();
 	}
-	$artistID = $_REQUEST['userId']; 
+	$artistID = $_REQUEST['userId'];
+    if( !$artistID )
+    {
+        if( $_SESSION['sess_userType'] == 'ARTIST' )
+        {
+            $artistID = $_SESSION['sess_userId'];
+        }
+        else
+        {
+            header("Location: dashboard.php");
+            exit();
+        }
+    }
 	
 	$query_artistDetail = "SELECT * FROM mydna_musicplayer WHERE id='".$artistID."' ";
 	$result_artistDetail = mysql_query($query_artistDetail) or die(mysql_error());

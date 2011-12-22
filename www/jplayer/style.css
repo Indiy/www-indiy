@@ -42,7 +42,11 @@ button::-moz-focus-inner {  border: 0;}
     background-color: transparent; 
 } 
 
-#login_signup a { text-decoration: none; }
+#login_signup a 
+{ 
+    text-decoration: none;
+    color: white;
+}
 
 /* PAGE */
 .anchor { display: block; width: 100px; height: 1px; text-indent: -9999px; }
