@@ -65,11 +65,6 @@
             <td class="body"> \
               <div class="content"> \
               </div> \
-              <div class="footer"> \
-                <a href="#" class="close"> \
-                  <img src="'+this.close_image+'" title="close" class="close_image" /> \
-                </a> \
-              </div> \
             </td> \
             <td class="b"/> \
           </tr> \
