@@ -173,7 +173,7 @@
 <div id="popup">
     <?=$successMessage;?>
     <div class='top_bar'>
-        <h2>Edit Profile</h2>
+        <h2><?=$head_title;?> Music</h2>
         <button onclick='$.facebox.close();'>CLOSE</button>
     </div>
 
@@ -191,7 +191,7 @@
         <div class='input_container'>
             <div class='left_label'>MP3 File</div>
             <div class='right_text'>
-                <input id='song_audio' type="file" name="audio" class='right_text' />
+                <input id='song_audio' type="file" name="audio" />
                 <div class='filename'><?=$audio_sound;?></div>
             </div>
         </div>
