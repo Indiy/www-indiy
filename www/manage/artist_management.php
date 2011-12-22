@@ -213,7 +213,6 @@ $(document).ready(setupSortableLists);
                     echo "<span class='socialize'>";
                     echo "<a href='socialize.php?artist_id=".$artistID."&song_id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>";
                     echo "<img class='social_icon' src='/images/fb_icon_color.png'/>";
-                    echo " ";
                     echo "<img class='social_icon' src='/images/tw_icon_color.png'/>";
                     echo "</a>\n";
                     echo "</span>";
