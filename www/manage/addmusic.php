@@ -202,7 +202,7 @@
         </div>
         <div class='input_container'>
             <div class='left_label'>Background Position</div>
-            <select id='song_bgposition' name="bgposition" class='right_text'>
+            <select id='song_bgposition' name="bgposition" class='right_drop'>
             <option value="">Select</option>
             <option value=""></option>
             <?
@@ -220,7 +220,7 @@
         </div>
         <div class='input_container'>
             <div class='left_label'>Background Repeat</div>
-            <select id='song_bgrepeat' name="bgrepeat" class='right_text'>
+            <select id='song_bgrepeat' name="bgrepeat" class='right_drop'>
             <option value="">Select </option>
             <option value=""></option>
             <?
