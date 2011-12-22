@@ -197,7 +197,7 @@
         </div>
         <div class='input_container'>
             <div class='left_image_label'>
-                <div class='left_label'>Image</div>
+                <div>Image</div>
                 <?=$audio_logo;?>
             </div>
             <input id='song_image' type="file" name="logo" class='right_text' />

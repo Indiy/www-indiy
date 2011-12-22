@@ -1004,6 +1004,14 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     color: #555;
     width: 100px;
 }
+.left_image_label div
+{
+    float: left;
+}
+.left_image_label img
+{
+    float: right;
+}
 .line_label
 {
     font-size: 12px;
