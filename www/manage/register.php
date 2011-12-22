@@ -171,12 +171,15 @@
         <div class='submit_container'>
             <input type="submit" class="submit" value="submit" name="WriteTags" >
         </div>
-        <div class="form_message">
         <?php if ($_GET["id"] != "") { ?>
-            Your record successfully updated!
+            <div id="form_message "class="form_message">
+                Your record successfully updated!
+            </div>
         <?php }else{ ?>
+            <div id="form_message "class="form_message">
+                Your record successfully updated!
+            </div>
         <?php } ?>
-        </div>
     </form>
     <div class='bottom_sep'></div>
     <div class='bottom_blue_bar'></div>
