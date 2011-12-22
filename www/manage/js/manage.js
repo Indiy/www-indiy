@@ -44,7 +44,7 @@ function setupClipboard()
     g_clip.addEventListener('onMouseOver',clipMouseOver);
     g_clip.addEventListener('onMouseOut',clipMouseOut);
     g_clip.addEventListener('onComplete',clipComplete);
-    $('.short_link a').mouseover(function() { mouseoverClip(this); });
+    $('.share a').mouseover(function() { mouseoverClip(this); });
 }
 
 $(document).ready(setupClipboard);
