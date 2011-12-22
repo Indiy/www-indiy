@@ -123,46 +123,46 @@
         
         <input type="hidden" name="artistid" value="<?=$artistid?>">
         
-        <div>
-            <div>Name</div>
+        <div class='input_container'>
+            <div class='left_label'>Name</div>
             <input type="text" class="right_text" value="<?=$artist?>" name="artist">
             <div class="clear"></div>
         </div>
         
-        <div>
-            <div>Email</div>
+        <div class='input_container'>
+            <div class='left_label'>Email</div>
             <input type="text" class="right_text" value="<?=$email?>" name="email">
         </div>
 
-        <div>
-            <div>URL</div>
+        <div class='input_container'>
+            <div class='left_label'>URL</div>
             <input type="text" class="right_text" value="<?=$url?>" name="url">
         </div>
 
-        <div>
-            <div>Logo</div>
+        <div class='input_container'>
+            <div class='left_label'>Logo</div>
             <input type="file" class="right_text" name="logo">
         </div>
 
-        <div>
-            <div>Twitter username</div>
+        <div class='input_container'>
+            <div class='left_label'>Twitter username</div>
             <input type="text" class="right_text" value="<?=$twitter?>" name="twitter">
         </div>
 
-        <div>
-            <div>Facebook username</div>
+        <div class='input_container'>
+            <div class='left_label'>Facebook username</div>
             <input type="text" class="right_text" value="<?=$facebook?>" name="facebook">
         </div>
         
-        <div>
-            <div>Show "Listen" Count</div>
+        <div class='input_container'>
+            <div class='left_label'>Show "Listen" Count</div>
             <div class="right_box">
                 <input type="radio" class="radio" checked="" value="1" name="listens"> Yes
                 <input type="radio" class="radio" value="0" name="listens"> No<br>
             </div>
         </div>
 
-        <div>
+        <div class='input_container'>
             <div>New Password</div>
             <input type="password" class="right_text" value="" name="newpass">
         </div>
