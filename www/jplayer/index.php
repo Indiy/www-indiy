@@ -524,7 +524,7 @@ function setupPageLinks()
         html += "</a>";
         html += " | ";
         html += "<a href='<?=trueSiteUrl();?>/manage/logout.php'>Logout</a>";
-        $("#signup_login").html(html);
+        $("#login_signup").html(html);
     }
 }
 
