@@ -1,6 +1,24 @@
 
+
+var g_hideTooltipTimer = false;
+
+function startTooltipTimer()
+{
+    clearTooltipTimer();
+    g_hideTooltipTimer = setTimeout("$('#link_tooltip').hide();",5000);
+}
+function clearTooltipTimer()
+{
+    if( g_hideTooltipTimer )
+    {
+        cancelTimeout(g_hideTooltipTimer);
+        g_hideTooltipTimer = false;
+    }
+}
+
 function mouseoverClip(self)
 {
+    clearTooltipTimer();
     g_clip.setText( self.href );
     if( g_clip.div ) 
     {
@@ -16,7 +34,7 @@ function mouseoverClip(self)
     $('#link_tooltip').show();
     var new_offset = $(self).offset();
     new_offset.left -= $('#link_tooltip').width()/2;
-    new_offset.top -= $('#link_tooltip').height() + 15; 
+    new_offset.top -= $('#link_tooltip').height() + 5; 
     $('#link_tooltip').offset(new_offset)
 }
 
@@ -24,15 +42,24 @@ var g_clip = false;
 
 function clipMouseOver()
 {
-    $('#link_tooltip').show();    
+    $('#link_tooltip').show();
+    clearTooltipTimer();   
 }
 function clipMouseOut()
 {
-    $('#link_tooltip').hide();
+    startTooltipTimer();
 }
 function clipComplete()
 {
-    $('#link_tooltip').text('Copied');
+    $('.link_copy').text('Copied');
+}
+function tipMouseEnter()
+{
+    clearTooltipTimer();
+}
+function tipMouseLeave()
+{
+    startTooltipTimer();
 }
 
 function setupClipboard()
@@ -44,6 +71,8 @@ function setupClipboard()
     g_clip.addEventListener('onMouseOut',clipMouseOut);
     g_clip.addEventListener('onComplete',clipComplete);
     $('.share a').mouseover(function() { mouseoverClip(this); });
+    $('#link_tooltip').mouseenter(tipMouseEnter);
+    $('#link_tooltip').mouseleave(tipMouseLeave);
 }
 
 $(document).ready(setupClipboard);
