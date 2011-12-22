@@ -177,8 +177,8 @@ $(document).ready(setupSortableLists);
             <ul>
             <li class="listheading">
             <span class="title">Title</span>
-            <span class="duration">Share</span>
-            <span class="duration">Socialize</span>
+            <span class="share">Share</span>
+            <span class="socialize">Socialize</span>
             <span class="delete">Delete</span>
             </li>
             </ul>
@@ -199,7 +199,7 @@ $(document).ready(setupSortableLists);
                     echo $record_artistAudio['name'];
                     echo "</a>\n";
                     echo "</span>\n";
-                    echo "<span class='duration'>";
+                    echo "<span class='share'>";
                     echo "<a href='$short_link' target='_blank'>Link</a>";
                     echo "<img class='short_link_clip' src='/images/clipboard.png' alt='Copy to clipboard' title='Copy to clipboard'></img>";
                     echo "</span>\n";
@@ -210,7 +210,7 @@ $(document).ready(setupSortableLists);
 					else
 						echo	"<span class='preview'>N/A</span>";
                     */
-                    echo "<span class='duration'>";
+                    echo "<span class='socialize'>";
                     echo "<a href='socialize.php?artist_id=".$artistID."&song_id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>";
                     echo "<img class='social_icon' src='/images/fb_icon_color.png'/>";
                     echo " ";
@@ -233,7 +233,7 @@ $(document).ready(setupSortableLists);
         <div class="products">
         
             <div class="heading">
-            <h5>MONITIZE</h5>
+            <h5>MONETIZE</h5>
             <div class="buttonadd"><a href="addproduct.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Product</a></div>
             </div>
         
