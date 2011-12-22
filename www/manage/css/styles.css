@@ -746,7 +746,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 .link_url
 {
     padding-right: 5px;
-    padding-left: 5px;
+    padding-left: 7px;
     padding-top: 5px;
     float: left;
 }
@@ -759,8 +759,8 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 .link_sep_bar
 {
     width: 2px;
-    height: 22px;
-    margin-top: 2px;
+    height: 18px;
+    margin-top: 4px;
     background-color: gray;
     float: left;
 }
@@ -768,8 +768,8 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 .link_copy
 {
     padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 3px;
+    padding-right: 7px;
+    padding-top: 5px;
     float: right;
     color: red;
     background-color: black;
