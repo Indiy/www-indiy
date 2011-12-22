@@ -111,104 +111,78 @@
     <link rel="stylesheet" media="screen" type="text/css" href="includes/css/layout.css" />
 				
 				
-				<div id="popup">
-					<?=$successMessage;?>
-					<div class="editprof">
-						<h2 class="title"><?=$head_title?> Profile</h2>
-						<form  id="ajax_from" method="post" enctype="multipart/form-data" action="register.php">
-						<input type="hidden" name="artistid" value="<?=$artistid?>">
-							<div id="form_field">
-							<div class="clear"></div>
-							
-							<label>Name</label>
-							<input type="text" class="text" value="<?=$artist?>" name="artist">
-							<div class="clear"></div>
-							
-							<label>Email</label>
-							<input type="text" class="text" value="<?=$email?>" name="email">
-							<div class="clear"></div>
+<div id="popup">
+    <?=$successMessage;?>
+    <div class="editprof">
+        <h2 class="title"><?=$head_title?> Profile</h2>
+        <form  id="ajax_from" method="post" enctype="multipart/form-data" action="register.php">
+        <input type="hidden" name="artistid" value="<?=$artistid?>">
+            <div id="form_field">
+            <div class="clear"></div>
+            
+            <label>Name</label>
+            <input type="text" class="text" value="<?=$artist?>" name="artist">
+            <div class="clear"></div>
+            
+            <label>Email</label>
+            <input type="text" class="text" value="<?=$email?>" name="email">
+            <div class="clear"></div>
+                                        
+            <label>URL</label>
+            <input type="text" class="text" value="<?=$url?>" name="url">
+            <div class="clear"></div>
+            
+            <label>Logo</label>
+            <input type="file" class="text" name="logo">&nbsp;
+            <div class="clear"></div>
 
-                            <!--
+            <label>Twitter username</label>
+            <input type="text" class="text" value="<?=$twitter?>" name="twitter">
+            <div class="clear"></div>
 
-							<label>Gender</label>
-							<input type="text" class="text" value="<?=$gender?>" name="artist_gender">
-							<div class="clear"></div>
-								 
-							<label>Language</label>
-							<input type="text" class="text" value="<?=$language?>" name="artist_language">
-							<div class="clear"></div>
+            <label>Facebook username</label>
+            <input type="text" class="text" value="<?=$facebook?>" name="facebook">
+            <div class="clear"></div>
+            
+            <label>Show "Listen" Count</label>
+            <div class="floatbox">
+            <input type="radio" class="radio" checked="" value="1" name="listens"> Yes
+            <input type="radio" class="radio" value="0" name="listens"> No<br>
+            </div>
+            <div class="clear"></div>
+                                        
+            <label>New Password</label>
+            <input type="password" class="text" value="" name="newpass">
+            <div class="clear"></div>
 
-							<label>Location</label>
-							<input type="text" class="text" value="<?=$location?>" name="artist_location">
-							<div class="clear"></div>
+            <?php
+            if( $_SESSION['sess_userType'] != 'ARTIST' ):
+            ?>
+            <label>Is this an Artist?</label>
+            <div class="group">
+            <input type="checkbox" class="text" value="Y" name="IsArtist" <?php if($row["IsArtist"]=='Y') echo "checked";?>/>
+            </div>
+            <div class="clear"></div>
+            <?php
+            endif;
+            ?>
 
-							<label>Music likes</label>
-							<input type="text" class="text" value="<?=$music_likes?>" name="artist_music_likes">
-							<div class="clear"></div>
+            <input type="submit" class="submit" value="submit"  name="WriteTags" >
+            </div>
+            <div id="form_message">
+            <?php if ($_GET["id"] != "") { ?>
+                Your record successfully updated!!!!
+            <?php }else{ ?>
+                Your record successfully updated!!!!
+            <?php } ?>
+        </div>
+        </form>
+    </div>
+    <div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end #content -->
+<div id="sidebar">
 
-							-->
-														
-							<label>URL</label>
-							<input type="text" class="text" value="<?=$url?>" name="url">
-							<div class="clear"></div>
-							
-							<label>Logo</label>
-							<input type="file" class="text" name="logo">&nbsp;
-							<div class="clear"></div>
-
-							<label>Twitter username</label>
-							<input type="text" class="text" value="<?=$twitter?>" name="twitter">
-							<div class="clear"></div>
-
-							<label>Facebook username</label>
-							<input type="text" class="text" value="<?=$facebook?>" name="facebook">
-							<div class="clear"></div>
-							
-                            <!--
-							<label>Facbook App ID (<small><a target="_blank" href="http://developers.facebook.com/">Get App ID</a></small>)</label>
-							<input type="text" class="text" disabled="disabled" value="<?=$appid?> " name="appid"> &nbsp;&nbsp;
-							<div class="clear"></div>
-							-->
-                            
-							<label>Show "Listen" Count</label>
-							<div class="floatbox">
-							<input type="radio" class="radio" checked="" value="1" name="listens"> Yes
-							<input type="radio" class="radio" value="0" name="listens"> No<br>
-							</div>
-							<div class="clear"></div>
-														
-							<label>New Password</label>
-							<input type="password" class="text" value="" name="newpass">
-							<div class="clear"></div>
-
-							<?php
-							if( $_SESSION['sess_userType'] != 'ARTIST' ):
-							?>
-							<label>Is this an Artist?</label>
-							<div class="group">
-							<input type="checkbox" class="text" value="Y" name="IsArtist" <?php if($row["IsArtist"]=='Y') echo "checked";?>/>
-							</div>
-							<div class="clear"></div>
-							<?php
-							endif;
-							?>
-
-							<input type="submit" class="submit" value="submit"  name="WriteTags" >
-							</div>
-							<div id="form_message">
-							<?php if ($_GET["id"] != "") { ?>
-								Your record successfully updated!!!!
-							<?php }else{ ?>
-								Your record successfully updated!!!!
-							<?php } ?>
-						</div>
-						</form>
-					</div>
-					<div style="clear: both;">&nbsp;</div>
-				</div>
-				<!-- end #content -->
-				<div id="sidebar">
-
-				</div>
-				<!-- end #sidebar -->
-				<div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end #sidebar -->
+<div style="clear: both;">&nbsp;</div>
