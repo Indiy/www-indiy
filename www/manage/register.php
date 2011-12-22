@@ -175,7 +175,6 @@
         <?php if ($_GET["id"] != "") { ?>
             Your record successfully updated!
         <?php }else{ ?>
-            Your record successfully updated!
         <?php } ?>
         </div>
     </form>
