@@ -259,9 +259,13 @@
             <input type="submit" name="WriteTags" value="submit" class="submit" />
         </div>
     </form>
+
     <div id='status' class='form_status' style='display: none;'></div>
     <div id='upload_bar' style='display: none;'></div>
     <div id='spinner' style='display: none;'>
         <img src='/images/ajax-loader-white.gif'/>
     </div>
+    
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
 </div>
