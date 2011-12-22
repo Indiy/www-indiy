@@ -119,6 +119,7 @@
     </div>
 
     <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
     <form  id="ajax_from" method="post" enctype="multipart/form-data" action="register.php">
         
         <input type="hidden" name="artistid" value="<?=$artistid?>">
@@ -163,7 +164,7 @@
         </div>
 
         <div class='input_container'>
-            <div>New Password</div>
+            <div class='left_label'>New Password</div>
             <input type="password" class="right_text" value="" name="newpass">
         </div>
 
@@ -178,11 +179,6 @@
         <?php } ?>
         </div>
     </form>
+    <div class='bottom_sep'></div>
     <div class='bottom_blue_bar'></div>
 </div>
-<!-- end #content -->
-<div id="sidebar">
-
-</div>
-<!-- end #sidebar -->
-<div style="clear: both;">&nbsp;</div>
