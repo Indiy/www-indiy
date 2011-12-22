@@ -201,7 +201,6 @@ $(document).ready(setupSortableLists);
                     echo "</span>\n";
                     echo "<span class='share'>";
                     echo "<a href='$short_link' target='_blank'>Link</a>";
-                    echo "<img class='short_link_clip' src='/images/clipboard.png' alt='Copy to clipboard' title='Copy to clipboard'></img>";
                     echo "</span>\n";
 					
                     /*

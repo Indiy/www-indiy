@@ -1,7 +1,7 @@
 
 function mouseoverClip(self)
 {
-    g_clip.setText( self.previousSibling.href );
+    g_clip.setText( self.href );
     if( g_clip.div ) 
     {
         g_clip.receiveEvent('mouseout', null);
@@ -44,7 +44,7 @@ function setupClipboard()
     g_clip.addEventListener('onMouseOver',clipMouseOver);
     g_clip.addEventListener('onMouseOut',clipMouseOut);
     g_clip.addEventListener('onComplete',clipComplete);
-    $('.short_link_clip').mouseover(function() { mouseoverClip(this); });
+    $('.short_link a').mouseover(function() { mouseoverClip(this); });
 }
 
 $(document).ready(setupClipboard);
