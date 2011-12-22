@@ -18,4 +18,4 @@
 
 ?>
 
-var g_userName = <?=$name;=?>;
+var g_userName = <?=$name;?>;
