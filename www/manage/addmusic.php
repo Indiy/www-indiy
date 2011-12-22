@@ -190,18 +190,21 @@
         </div>
         <div class='input_container'>
             <div class='left_label'>MP3 File</div>
-            <div class='right_box'>
+            <div class='right_text'>
                 <input id='song_audio' type="file" name="audio" class='right_text' />
                 <div class='filename'><?=$audio_sound;?></div>
             </div>
         </div>
         <div class='input_container'>
-            <div class='left_label'><span>Image</span><?=$audio_logo;?></div>
+            <div class='left_image_label'>
+                <div class='left_label'>Image</div>
+                <?=$audio_logo;?>
+            </div>
             <input id='song_image' type="file" name="logo" class='right_text' />
         </div>
         <div class='input_container'>
             <div class='left_label'>Background Color</div>
-            <input id='song_bgcolor' type="text" name="bgcolor" maxlength="6" size="6" class='right_box' value="<?=$audio_bgcolor;?>" />
+            <input id='song_bgcolor' type="text" name="bgcolor" maxlength="6" size="6" class='color' value="<?=$audio_bgcolor;?>" />
         </div>
         <div class='input_container'>
             <div class='left_label'>Background Position</div>
@@ -256,7 +259,7 @@
         </div>
         <div class='input_container'>
             <div class='left_label'>MyArtistDNA Store</div>
-            <input id='mad_store' type="checkbox" name="mad_store" <? if($mad_store) echo 'checked'; ?> class='right_text'/>
+            <input id='mad_store' type="checkbox" name="mad_store" <? if($mad_store) echo 'checked'; ?> class='right_box'/>
         </div>
         <div class='submit_container'>
             <input type="submit" name="WriteTags" value="submit" class="submit" />

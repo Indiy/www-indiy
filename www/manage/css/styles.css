@@ -994,6 +994,16 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     margin-top: 15px;
     color: #555;
 }
+.left_image_label
+{
+    float: left;
+    font-size: 12px;
+    font-family: sans-serif;
+    margin-left: 20px;
+    margin-top: 15px;
+    color: #555;
+    width: 100px;
+}
 .line_label
 {
     font-size: 12px;
@@ -1023,13 +1033,18 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     margin-top: 10px;
     padding-left: 3px;
 }
+.filename
+{
+    font-size: 12px;
+    padding-top: 4px;
+}
 input.right_text
 {
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 }
-.right_box, .right_drop
+.right_box, .right_drop, .color
 {
     float: right;
     font-size: 12px;
