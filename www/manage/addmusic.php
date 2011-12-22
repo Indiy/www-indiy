@@ -170,117 +170,98 @@
     <link rel="stylesheet" media="screen" type="text/css" href="includes/css/layout.css" />
 				
 				
-				<div id="popup">
-					<?=$successMessage;?>
-					<div class="addmusic">
-						<h2 class="title"><?=$head_title?> Music</h2>
-						<form id="ajax_from" method="post" enctype="multipart/form-data" action="addmusic.php" onsubmit='return onAddMusicSubmit();'>
-						<input id='artist_id' type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid">
-						<input id='song_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id">
-						<div id="form_field">
-							<div class="clear"></div>
-							
-							<label>Name</label>
-							<input id='song_name' type="text" name="name" value="<?=$audio_name;?>" class="text" />
-							<div class="clear"></div>
-							
-							<label>Image <?=$audio_logo;?></label>
-							<input id='song_image' type="file" name="logo" class="text" />
-							<div class="clear"></div>
-							
-							<label>Background Color</label>
-							<input id='song_bgcolor' type="text" name="bgcolor" maxlength="6" size="6" class="color"  value="<?=$audio_bgcolor;?>" />
-							<div class="clear"></div>
-							
-							<label>Background Position</label>
-							<select id='song_bgposition' name="bgposition" class="text">
-							<option value="">Select</option>
-							<option value=""></option>
-							<?
-								$positions = array("top left","top center","top right","center left","center center","center right","bottom left","bottom center","bottom right");
-								foreach ($positions as $position) {
-									if ($audio_bgposition == $position) {
-										$selected = " selected";
-									} else {
-										$selected = "";
-									}
-									echo "<option value='{$position}'{$selected}>".ucfirst($position)."</option>\n";
-								}
-							?>
-							</select>
-							<div class="clear"></div>
-							
-							<label>Background Repeat</label>
-							<select id='song_bgrepeat' name="bgrepeat" class="text">
-							<option value="">Select </option>
-							<option value=""></option>
-							<?
-								$colors = array("repeat","repeat-x","repeat-y","no-repeat","stretch");
-								foreach ($colors as $color) {
-									if ($audio_bgrepeat == $color) {
-										$selected = " selected";
-									} else {
-										$selected = "";
-									}
-									echo "<option value='{$color}'{$selected}>".ucfirst($color)."</option>\n";
-								}
-							?>
-							</select>
-							<div class="clear"></div>
-							
-							<label>MP3 File</label>
-							<input id='song_audio' type="file" name="audio" class="text" /> <br><?=$audio_sound;?>
-							<div class="clear"></div>
-							
-							<label>Free Download</label>
-							<div class="floatbox">
-							<input type="radio" name="download" value="1" class="radio"<?=$yesDownload;?> /> Yes
-							<input type="radio" name="download" value="0" class="radio"<?=$noDownload;?> /> No
-							</div>
-							<div class="clear"></div>
-							
-							<label>Amazon MP3 URL</label>
-							<input id='amazon_url' type="text" name="amazon" value="<?=$audio_amazon;?>" class="text" />
-							<div class="clear"></div>
-							
-							<label>iTunes URL</label>
-							<input id='itunes_url' type="text" name="itunes" value="<?=$audio_itunes;?>" class="text" />
-							<div class="clear"></div>
+<div id="popup">
+    <?=$successMessage;?>
+    <div class='top_bar'>
+        <h2>Edit Profile</h2>
+        <button onclick='$.facebox.close();'>CLOSE</button>
+    </div>
 
-                            <label>MyArtistDNA Store</label>
-                            <input id='mad_store' type="checkbox" name="mad_store" <? if($mad_store) echo 'checked'; ?> class="input_checkbox"/>
-                            <div class="clear"></div>
-							
-							<input type="submit" name="WriteTags" value="submit" class="submit" />
-                            
-							
-							<? if ($_GET["id"] != "") { ?>
-							<!-- <p><br /><br />
-							<a href="#" class="xdelete" onclick="confirmDelete('?p=home&delete=true&type=audio&a=<?=$artistid;?>&id=<?=$audio_id;?>')"><small>Delete</small></a></p> -->
-							<? } ?>
-						</div>
-						<div id="form_message">
-							<? if ($_GET["id"] != "") { ?>
-								Your record was successfully updated!!!!
-							<? }else{ ?>
-								Your record was successfully added!!!!
-							<?}?>
-						</div>
-						</form>
-                        <div class="clear"></div>
-                        <div id='status' class='form_status' style='display: none;'></div>
-                        <div class="clear"></div>
-                        <div id='upload_bar' style='display: none;'></div>
-                        <div id='spinner' style='display: none;'>
-                            <img src='/images/ajax-loader-white.gif'/>
-                        </div>
-					</div>
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
 
-					<div style="clear: both;">&nbsp;</div>
-				</div>
-				<!-- end #content -->
-				<div id="sidebar">
-
-				</div>
-				<!-- end #sidebar -->
-				<div style="clear: both;">&nbsp;</div>
+    <form id="ajax_from" method="post" enctype="multipart/form-data" action="addmusic.php" onsubmit='return onAddMusicSubmit();'>
+        <input id='artist_id' type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid">
+        <input id='song_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id">
+        
+        <div class='input_container'>
+            <div class='line_label'>Name</div>
+            <input id='song_name' type="text" name="name" value="<?=$audio_name;?>" class="line_text" />
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>MP3 File</div>
+            <input id='song_audio' type="file" name="audio" class='right_text' /> <br><?=$audio_sound;?>
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Image <?=$audio_logo;?></div>
+            <input id='song_image' type="file" name="logo" class='right_text' />
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Background Color</div>
+            <input id='song_bgcolor' type="text" name="bgcolor" maxlength="6" size="6" class="color"  value="<?=$audio_bgcolor;?>" />
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Background Position</div>
+            <select id='song_bgposition' name="bgposition" class='right_text'>
+            <option value="">Select</option>
+            <option value=""></option>
+            <?
+                $positions = array("top left","top center","top right","center left","center center","center right","bottom left","bottom center","bottom right");
+                foreach ($positions as $position) {
+                    if ($audio_bgposition == $position) {
+                        $selected = " selected";
+                    } else {
+                        $selected = "";
+                    }
+                    echo "<option value='{$position}'{$selected}>".ucfirst($position)."</option>\n";
+                }
+            ?>
+            </select>
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Background Repeat</div>
+            <select id='song_bgrepeat' name="bgrepeat" class='right_text'>
+            <option value="">Select </option>
+            <option value=""></option>
+            <?
+                $colors = array("repeat","repeat-x","repeat-y","no-repeat","stretch");
+                foreach ($colors as $color) {
+                    if ($audio_bgrepeat == $color) {
+                        $selected = " selected";
+                    } else {
+                        $selected = "";
+                    }
+                    echo "<option value='{$color}'{$selected}>".ucfirst($color)."</option>\n";
+                }
+            ?>
+            </select>
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Free Download</div>
+            <div class='right_box'>
+                <input type="radio" name="download" value="1" class="radio"<?=$yesDownload;?> /> Yes
+                <input type="radio" name="download" value="0" class="radio"<?=$noDownload;?> /> No
+            </div>
+        </div>
+        <div class='input_container'>
+            <div class='line_label'>Amazon MP3 URL</div>
+            <input id='amazon_url' type="text" name="amazon" value="<?=$audio_amazon;?>" class='line_text' />
+        </div>
+        <div class='input_container'>
+            <div class='line_label'>iTunes URL</div>
+            <input id='itunes_url' type="text" name="itunes" value="<?=$audio_itunes;?>" class='line_text' />
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>MyArtistDNA Store</div>
+            <input id='mad_store' type="checkbox" name="mad_store" <? if($mad_store) echo 'checked'; ?> class="input_checkbox"/>
+        </div>
+        <div class='submit_container'>
+            <input type="submit" name="WriteTags" value="submit" class="submit" />
+        </div>
+    </form>
+    <div id='status' class='form_status' style='display: none;'></div>
+    <div id='upload_bar' style='display: none;'></div>
+    <div id='spinner' style='display: none;'>
+        <img src='/images/ajax-loader-white.gif'/>
+    </div>
+</div>
