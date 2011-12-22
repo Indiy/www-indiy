@@ -172,11 +172,11 @@
             <input type="submit" class="submit" value="submit" name="WriteTags" >
         </div>
         <?php if ($_GET["id"] != "") { ?>
-            <div id="form_message "class="form_message">
+            <div id="form_message" class="form_message">
                 Your record successfully updated!
             </div>
         <?php }else{ ?>
-            <div id="form_message "class="form_message">
+            <div id="form_message" class="form_message">
                 Your record successfully updated!
             </div>
         <?php } ?>
