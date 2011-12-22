@@ -975,15 +975,20 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     width: 100%;
     height: 10px;
 }
-.top_sep, .bottom_sep
+.top_sep
 {
     width: 100%;
-    height: 20px;
+    height: 1px; 
+} 
+.bottom_sep
+{
+    width: 100%;
+    height: 15px;
 }
 .input_container
 {
     width: 100%;
-    height: 46px;
+    height: 40px;
 }
 .left_label
 {
