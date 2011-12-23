@@ -44,55 +44,54 @@ var g_artistId = '<?=$artist_id;?>';
 </script>
 
 <div id="popup">
-    <div class="addcontent">
-        <h2 class="title"  id="demonstrations">Add Artist</h2>
-        <form id="social_config_form"  onsubmit='return false;'>
-            <div id="form_field">
-            <div class="clear"></div>
-            
-            <label>Facebook Account</label>
+    <div class='top_bar'>
+        <h2>Socialize</h2>
+        <button onclick='$.facebox.close();'>CLOSE</button>
+    </div>
+
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+    <form id="social_config_form"  onsubmit='return false;'>
+        <div class='input_container'>
+            <div class='left_label'Facebook Account</div>
             <?php
                 if( $facebook )
-                    echo "<input type='text' disabled='disabled' value='$facebook' class='text' />\n";
+                    echo "<input type='text' disabled='disabled' value='$facebook' class='right_input' />\n";
                 else
+                {
+                    echo "<div class='right_box'>";
                     echo "<button class='submit' onclick='clickAddFacebook();'>Add Facebook</button>\n";
+                    echo "</div>";
+                }
             ?>
-            <div class="clear"></div>
-            <br/>
-
-            <label>Twitter Account</label>
+        </div>
+        <div class='input_container'>
+            <div class='left_label'Twitter Account</div>
             <?php
                 if( $twitter )
-                    echo "<input type='text' disabled='disabled' value='$twitter' class='text' />\n";
+                    echo "<input type='text' disabled='disabled' value='$twitter' class='right_input' />\n";
                 else
+                {
+                    echo "<div class='right_box'>";
                     echo "<button class='submit' onclick='clickAddTwitter();'>Add Twitter</button>\n";
+                    echo "</div>";
+                }
             ?>
-            <div class="clear"></div>
-            <br/>
-
-            <label>Automatic Facebook</label>
-            <input id='auto_fb' type="checkbox" name="auto_fb" <? if($auto_fb) echo 'checked'; ?> class="input_checkbox"/>
-            <div class="clear"></div>
-
-            <label>Automatic Tweet</label>
-            <input id='auto_tw' type="checkbox" name="auto_tw" <? if($auto_tw) echo 'checked'; ?> class="input_checkbox"/>
-            <div class="clear"></div>
-            
+        </div>
+        <div class='input_container'>
+            <div class='left_label'Automatic Facebook</div>
+            <input id='auto_fb' type="checkbox" name="auto_fb" <? if($auto_fb) echo 'checked'; ?> class="right_box"/>
+        </div>
+        <div class='input_container'>
+            <div class='left_label'Automatic Tweet</div>
+            <input id='auto_tw' type="checkbox" name="auto_tw" <? if($auto_tw) echo 'checked'; ?> class="right_box"/>
+        </div>
+        <div class='submit_container'>
             <button class="submit" onclick='onSocialConfigSave();'>Save</button>
         </div>
-        </form>
-        <div class="clear"></div>
-        <div id='status' class='form_status' style='display: none;'></div>
-        <div class="clear"></div>
-    </div>
-    <div style="clear: both;">&nbsp;</div>
+    </form>
+    <div id='status' class='form_status' style='display: none;'></div>
+    
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
 </div>
-<!-- end #content -->
-<div id="sidebar">
-
-</div>
-<!-- end #sidebar -->
-<div style="clear: both;">&nbsp;</div>
-
-
-
