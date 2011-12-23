@@ -126,7 +126,7 @@
 	
 	if ($video_logo != "")
     {
-		$video_logo = '<img src="../artists/images/'.$video_logo.'" style="margin-top: 5px; height: 25px;" />';
+		$video_logo = '<img src="../artists/images/'.$video_logo.'" style="height: 25px;" />';
 	}
 	
 	if ($video_download == "1") 
@@ -159,7 +159,7 @@
         </div>
         <div class='input_container'>
             <div class='left_image_label'>
-                <div>Video Icon Image</div>
+                <div>Image</div>
                 <?=$video_logo;?>
             </div>
             <input id='video_image_file' type="file" name="logo" class='right_file' />
@@ -171,7 +171,7 @@
                 <div class='filename'><?=$video_sound;?></div>
             </div>
         </div>
-        <div class='submit_container'>
+        <div class='submit_container' style="padding-top: 25px;">
             <input type="submit" name="WriteTags" value="submit" class="submit" />
         </div>
     </form>
