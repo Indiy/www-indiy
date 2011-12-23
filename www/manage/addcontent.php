@@ -95,7 +95,7 @@
             <div class='left_label'>Image</div>
             <input type="file" name="logo" class='right_file' /> <?=$content_logo;?>
         </div>
-        <div class='input_container'>
+        <div class='flow_container'>
             <div class='line_label'>Body</div>
             <textarea name="body" class='line_text'><?=$content_body;?></textarea>
         </div>
