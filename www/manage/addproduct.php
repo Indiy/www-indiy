@@ -192,14 +192,6 @@
             <input type="file" name="file" value="" id="input" class='right_file'/> 
         </div>
         <div class='input_container'>
-            <div class='left_image_label'>
-                <div>Image</div>
-                <?=$audio_logo;?>
-            </div>
-            <input id='song_image' type="file" name="logo" class='right_file' />
-        </div>
-        
-        <div class='input_container'>
             <div class='left_label'>Price:</div>
             <input type="text" name="price" value="<? echo $pprice; ?>" id="input"  class='right_text' />
         </div>
@@ -208,11 +200,11 @@
             <input type="text" name="sku" value="<? echo $psku; ?>" id="input"  class='right_text' />
         </div>
         <div class='input_container'>
-            <div class='left_label'>Size:<br /><small><small>(Separated by commas)</small></small></div>
+            <div class='left_label'>Size <small><small>(Separated by commas)</small></small></div>
             <input type="text" name="size" value="<? echo $psize; ?>" id="input"  class='right_text' />
         </div>
         <div class='input_container'>
-            <div class='left_label'>Colors:<br /><small><small>(Separated by commas)</small></small></div>
+            <div class='left_label'>Colors <small><small>(Separated by commas)</small></small></div>
             <input type="text" name="color" value="<? echo $pcolor; ?>" id="input"  class='right_text' />
         </div>
         <div class='submit_container'>
