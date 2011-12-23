@@ -43,27 +43,25 @@
 </script>
 
 <div id="popup">
-    <div class="addcontent">
-        <h2 class="title"  id="demonstrations">Ecommerce Settings</h2>
-        <form onsubmit='return false;'>
-            <div id="form_field">
-                <div class="clear"></div>
-                
-                <label>Paypal Email</label>
-                <input id='paypal_email' type="text" value="<?=$paypal_email?>" class="text" />
-                <div class="clear"></div>
-                
-                <button id='store_settings_submit' class="submit" onclick='onStoreSettingsSubmit();'>Submit</button>
-                <div id='status'></div>
-            </div>
-        </form>
+    <div class='top_bar'>
+        <h2>Store Settings</h2>
+        <button onclick='$.facebox.close();'>CLOSE</button>
     </div>
-    <div style="clear: both;">&nbsp;</div>
-</div>
-<!-- end #content -->
-<div id="sidebar">
 
-</div>
-<!-- end #sidebar -->
-<div style="clear: both;">&nbsp;</div>
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+    <form onsubmit='return false;'>
 
+        <div class='input_container'>
+            <div class='left_label'>Paypal Email</div>
+            <input id='paypal_email' type="text" value="<?=$paypal_email?>" class="text" />
+        </div>
+        <div class='submit_container'>
+            <button id='store_settings_submit' class="submit" onclick='onStoreSettingsSubmit();'>Submit</button>
+        </div>
+    </form>
+    <div id='status'></div>
+
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
+</div>
