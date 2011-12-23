@@ -76,38 +76,33 @@ var g_artistId = '<?=$artist_id;?>';
 </script>
 
 <div id="popup">
-    <div class="addcontent">
-        <h2 class="title"  id="demonstrations">Socialize</h2>
-        <form id="socialize_form" onsubmit='return false;'>
-            <div id="form_field">
-            <div class="clear"></div>
-            
-            <label>Type your text below:</label>
-            <div class="clear"></div>
+    <div class='top_bar'>
+        <h2>Socialize</h2>
+        <button onclick='$.facebox.close();'>CLOSE</button>
+    </div>
+
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+    <form id="socialize_form" onsubmit='return false;'>
+        <div class='flow_container'>
+            <div class='left_label'>Type your text below</div>
             <textarea id="update_text" class="social_textarea"><?=$update_text;?></textarea>
             <p>Warning - You can not undo once you publish</p>
-            <div class="clear"></div>
-            <br/>
-
-            Select a platform:
-            <input type="radio" name="network" value="twitter" class="radio" /> Twitter
-            <input type="radio" name="network" value="facebook" class="radio" /> Facebook
-            <div class="clear"></div>
-            
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Select a platform</div>
+            <div class='right_box'>
+                <input type="radio" name="network" value="twitter" class="radio" /> Twitter
+                <input type="radio" name="network" value="facebook" class="radio" /> Facebook
+            </div>
+        </div>
+        <div class='submit_container'>
             <button id='socialize_publish' class="submit" onclick='onSocializePublish();'>Publish</button>
         </div>
-        </form>
-        <div class="clear"></div>
-        <div id='status' class='form_status' style='display: none;'></div>
-        <div class="clear"></div>
-
-    </div>
-    <div style="clear: both;">&nbsp;</div>
+    </form>
+    <div id='status' class='form_status' style='display: none;'></div>
+    
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
 </div>
-<!-- end #content -->
-<div id="sidebar">
-
-</div>
-<!-- end #sidebar -->
-<div style="clear: both;">&nbsp;</div>
 
