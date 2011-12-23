@@ -168,7 +168,7 @@
 
         <div class='input_container'>
             <div class='left_label'>Category</div>
-            <select name="origin" id="origin" class='right_text'>
+            <select name="origin" id="origin" class='right_drop'>
                 <option value=""> -- Select -- </option>
                 <?
                     $cont = mq("select * from `[p]musicplayer_ecommerce_categories` order by `name` asc");
