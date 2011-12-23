@@ -92,7 +92,7 @@ var g_artistId = '<?=$artist_id;?>';
         <div class='input_container'>
             <div class='left_label'>Select a platform</div>
             <div class='right_box' style="margin-top: 4px;">
-                <input type="radio" name="network" value="twitter" class="img_radio" selected/>
+                <input type="radio" name="network" value="twitter" class="img_radio" checked="checked"/>
                 <img src='/images/tw_icon_color.png'>
                 <input type="radio" name="network" value="facebook" class="img_radio" />
                 <img src='/images/fb_icon_color.png'>
