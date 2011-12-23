@@ -54,7 +54,7 @@
 
         <div class='input_container'>
             <div class='left_label'>Paypal Email</div>
-            <input id='paypal_email' type="text" value="<?=$paypal_email?>" class="text" />
+            <input id='paypal_email' type="text" value="<?=$paypal_email?>" class="right_text" />
         </div>
         <div class='submit_container'>
             <button id='store_settings_submit' class="submit" onclick='onStoreSettingsSubmit();'>Submit</button>
