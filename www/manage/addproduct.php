@@ -160,13 +160,13 @@
         <? } ?>
 
         <div class='input_container'>
-            <div class='line_label'>Name:</label>
+            <div class='line_label'>Name:</div>
             <input type="text" name="name" class='line_text' value="<? echo $pname; ?>" id="input" class="input" />
         </div>
 
 
         <div class='input_container'>
-            <div class='left_label'>Category:</label>
+            <div class='left_label'>Category:</div>
             <select name="origin" id="origin" class='right_text'>
                 <option value=""> -- Select -- </option>
                 <?
@@ -181,27 +181,27 @@
             </select>
         </div>
         <div class='flow_container'>
-            <div class='line_label'>Description:</label>
+            <div class='line_label'>Description:</div>
             <textarea name="description" id="input" class="textarea" style="height: 200px;"><? echo $pproductdescription; ?></textarea>
         </div>
         <div class='input_container'>
-            <div class='left_label'>Image:</label>
+            <div class='left_label'>Image:</div>
             <input type="file" name="file" value="" id="input"  class='right_file' /> <? if ($pimage != "") {?> <img src="../artists/products/<?=$pimage;?>" height="20" /><? } ?>
         </div>
         <div class='input_container'>
-            <div class='left_label'>Price:</label>
+            <div class='left_label'>Price:</div>
             <input type="text" name="price" value="<? echo $pprice; ?>" id="input"  class='right_text' />
         </div>
         <div class='input_container'>
-            <div class='left_label'>Sku Number:</label>
+            <div class='left_label'>Sku Number:</div>
             <input type="text" name="sku" value="<? echo $psku; ?>" id="input"  class='right_text' />
         </div>
         <div class='input_container'>
-            <div class='left_label'>Size:<br /><small><small>(Separated by commas)</small></small></label>
+            <div class='left_label'>Size:<br /><small><small>(Separated by commas)</small></small></div>
             <input type="text" name="size" value="<? echo $psize; ?>" id="input"  class='right_text' />
         </div>
         <div class='input_container'>
-            <div class='left_label'>Colors:<br /><small><small>(Separated by commas)</small></small></label>
+            <div class='left_label'>Colors:<br /><small><small>(Separated by commas)</small></small></div>
             <input type="text" name="color" value="<? echo $pcolor; ?>" id="input"  class='right_text' />
         </div>
         <div class='submit_container'>
