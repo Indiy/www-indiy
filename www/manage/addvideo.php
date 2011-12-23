@@ -142,42 +142,45 @@
 
 <div id="popup">
     <?=$successMessage;?>
-    <div class="addvideo">
-        <h2 class="title"><?=$head_title?> Video</h2>
-        <form id="ajax_from" method="post" enctype="multipart/form-data" action="addvideo.php" onsubmit='return onAddVideoSubmit();'>
-            <input id='artist_id' type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid"/>
-            <input id='song_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id"/>
-            <div id="form_field">
-                <div class="clear"></div>
-                
-                <label>Name</label>
-                <input id='video_name' type="text" name="name" value="<?=$video_name;?>" class="text" />
-                <div class="clear"></div>
-                
-                <label>Default Image</label>
-                <input id='video_image_file' type="file" name="logo" class="text" /> <?=$video_logo;?>
-                <div class="clear"></div>
-                
-                <label>Video (flv or mp4)</label>
-                <input id='video_file' type="file" name="video" class="text" /> <?=$video_sound;?>
-                <div class="clear"></div>
-                
-                <input type="submit" name="WriteTags" value="submit" class="submit" />
-            </div>
-        </form>
-        <div class="clear"></div>
-        <div id='status' class='form_status' style='display: none;'></div>
-        <div class="clear"></div>
-        <div id='upload_bar' style='display: none;'></div>
-        <div id='spinner' style='display: none;'>
-            <img src='/images/ajax-loader-white.gif'/>
-        </div>
+    <div class='top_bar'>
+        <h2><?=$head_title?> Video</h2>
+        <button onclick='$.facebox.close();'>CLOSE</button>
     </div>
-    <div style="clear: both;">&nbsp;</div>
-</div>
-<!-- end #content -->
-<div id="sidebar">
 
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+    <form id="ajax_from" method="post" enctype="multipart/form-data" action="addvideo.php" onsubmit='return onAddVideoSubmit();'>
+        <input id='artist_id' type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid"/>
+        <input id='song_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id"/>
+
+        <div class='input_container'>
+            <div class='line_label'>Name</div>
+            <input id='video_name' type="text" name="name" value="<?=$video_name;?>" class='right_text' />
+        </div>
+        <div class='input_container'>
+            <div class='left_image_label'>
+                <div>Video Icon Image</div>
+                <?=$video_logo;?>
+            </div>
+            <input id='video_image_file' type="file" name="logo" class='right_file' />
+        </div>
+        <div class='input_container'>
+            <div class='line_label'>Video (flv or mp4)</div>
+            <div class='right_file_filename'>
+                <input id='video_file' type="file" name="video" />
+                <div class='filename'><?=$video_sound;?></div>
+            </div>
+        </div>
+        <div class='submit_container'>
+            <input type="submit" name="WriteTags" value="submit" class="submit" />
+        </div>
+    </form>
+    <div id='status' class='form_status' style='display: none;'></div>
+    <div id='upload_bar' style='display: none;'></div>
+    <div id='spinner' style='display: none;'>
+        <img src='/images/ajax-loader-white.gif'/>
+    </div>
+
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
 </div>
-<!-- end #sidebar -->
-<div style="clear: both;">&nbsp;</div>
