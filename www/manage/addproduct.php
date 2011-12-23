@@ -182,7 +182,7 @@
         </div>
         <div class='flow_container'>
             <div class='line_label'>Description:</div>
-            <textarea name="description" id="input" class="textarea" style="height: 40px;"><? echo $pproductdescription; ?></textarea>
+            <textarea name="description" id="input" class="textarea" style="height: 40px; width: 325px;"><? echo $pproductdescription; ?></textarea>
         </div>
         <div class='input_container'>
             <div class='left_image_label'>
