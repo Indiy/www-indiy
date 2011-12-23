@@ -148,6 +148,7 @@ function onStoreSettingsSubmit()
 {
     $('#store_settings_submit').hide();
     $('#status').text("Updating settings...");
+    $('#status').show();
     var paypal_email = $('#paypal_email').val();
     
     var post_url = "/manage/store_settings.php?";
