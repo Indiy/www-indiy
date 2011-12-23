@@ -142,81 +142,81 @@
 ?>
 
 
-		<div id="popup">
-			<?=$successMessage;?>
-			<div class="addproduct">
-				<h2 class="title" id="demonstrations"><?=$situation;?> Product</h2>
+<div id="popup">
+    <?=$successMessage;?>
+    <div class='top_bar'>
+        <h2><?=$situation;?> Product</h2>
+        <button onclick='$.facebox.close();'>CLOSE</button>
+    </div>
 
-				<form id="ajax_from" method="post" enctype="multipart/form-data" action="addproduct.php">
-						<input type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid">
-				<input type='hidden' value="<?=$_REQUEST['id']?>" name="id" id="song_id">
-					<div id="form_field">
-					<label>Name:</label>
-					<input type="text" name="name" class="text" value="<? echo $pname; ?>" id="input" class="input" />
-					<div class="clear"></div>	   
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
 
-					<? if ($_GET["id"] != "") { ?>
-					
-					<input type="hidden" name="filename" value="<? echo $pfilename; ?>" id="input" class="input" />
+    <form id="ajax_from" method="post" enctype="multipart/form-data" action="addproduct.php">
+        <input type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid">
+        <input type='hidden' value="<?=$_REQUEST['id']?>" name="id" id="song_id">
+        <? if ($_GET["id"] != "") { ?>
+            <input type="hidden" name="filename" value="<? echo $pfilename; ?>" id="input" class="input" />
+        <? } ?>
 
-					<? } ?>
+        <div class='input_container'>
+            <div class='line_label'>Name:</label>
+            <input type="text" name="name" class='line_text' value="<? echo $pname; ?>" id="input" class="input" />
+        </div>
 
-					<label>Category:</label>
-					<select name="origin" id="origin" class="text">
-						<option value=""> -- Select -- </option>
-						<?
-							$cont = mq("select * from `[p]musicplayer_ecommerce_categories` order by `name` asc");
-							while ($rw = mf($cont)) {
-								$man_id = $rw["id"];
-								$man_name = stripslashes($rw["name"]);
-								if ($porigin == $man_id) { $selected = " selected"; } else { $selected = ""; }
-								echo "<option value='{$man_id}'{$selected}>{$man_name}</option>\n";
-							}
-						?>						
-						</select>
-					<div class="clear"></div>		    
 
-					<label>Description:</label>
-					<textarea name="description" id="input" class="textarea"><? echo $pproductdescription; ?></textarea>
-					<div class="clear"></div>	   
-		   
-					<label>Image:</label>
-					<input type="file" name="file" value="" id="input"  class="text" /> <? if ($pimage != "") {?> <img src="../artists/products/<?=$pimage;?>" height="20" /><? } ?>
-					<div class="clear"></div>	   
-		   
-					<label>Price:</label>
-					<input type="text" name="price" value="<? echo $pprice; ?>" id="input"  class="text" />
-					<div class="clear"></div>	   
-		   
-					<label>Sku Number:</label>
-					<input type="text" name="sku" value="<? echo $psku; ?>" id="input"  class="text" />
-					<div class="clear"></div>
-					
-					<label>Size:<br /><small><small>(Separated by commas)</small></small></label>
-					<input type="text" name="size" value="<? echo $psize; ?>" id="input"  class="text" />
-					<div class="clear"></div>
-					
-					<label>Colors:<br /><small><small>(Separated by commas)</small></small></label>
-					<input type="text" name="color" value="<? echo $pcolor; ?>" id="input"  class="text" />
-					<div class="clear"></div>
-
-					<label></label>
-					<input type="hidden" value="<? echo $situation; ?>" name="situation" /><input type="submit" name="submit" class="submit" value="<? echo $situation; ?>" id="submitr" />
-					<div class="clear"></div>		
-
-					
-					<div class="buttons block">
-						<? if ($_GET["id"] != "") { ?><!-- <a href="#" onclick="confirmDelete('?p=home&type=products&a=<?=$artistid;?>&delete=true&id=<?=$getid;?>')">Delete Product</a> --> <? } ?>
-					</div>					
-					</div>					
-					<div id="form_message">
-							<? if ($_GET["id"] != "") { ?>
-								Your record successfully updated!!!!
-							<? }else{ ?>
-								Your record successfully added!!!!
-							<?}?>
-						</div>
-				</form>
-
-			</div>
-		</div>			
+        <div class='input_container'>
+            <div class='left_label'>Category:</label>
+            <select name="origin" id="origin" class='right_text'>
+                <option value=""> -- Select -- </option>
+                <?
+                    $cont = mq("select * from `[p]musicplayer_ecommerce_categories` order by `name` asc");
+                    while ($rw = mf($cont)) {
+                        $man_id = $rw["id"];
+                        $man_name = stripslashes($rw["name"]);
+                        if ($porigin == $man_id) { $selected = " selected"; } else { $selected = ""; }
+                        echo "<option value='{$man_id}'{$selected}>{$man_name}</option>\n";
+                    }
+                ?>						
+            </select>
+        </div>
+        <div class='flow_container'>
+            <div class='line_label'>Description:</label>
+            <textarea name="description" id="input" class="textarea" style="height: 200px;"><? echo $pproductdescription; ?></textarea>
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Image:</label>
+            <input type="file" name="file" value="" id="input"  class='right_file' /> <? if ($pimage != "") {?> <img src="../artists/products/<?=$pimage;?>" height="20" /><? } ?>
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Price:</label>
+            <input type="text" name="price" value="<? echo $pprice; ?>" id="input"  class='right_text' />
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Sku Number:</label>
+            <input type="text" name="sku" value="<? echo $psku; ?>" id="input"  class='right_text' />
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Size:<br /><small><small>(Separated by commas)</small></small></label>
+            <input type="text" name="size" value="<? echo $psize; ?>" id="input"  class='right_text' />
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Colors:<br /><small><small>(Separated by commas)</small></small></label>
+            <input type="text" name="color" value="<? echo $pcolor; ?>" id="input"  class='right_text' />
+        </div>
+        <div class='submit_container'>
+            <input type="hidden" value="<? echo $situation; ?>" name="situation" /><input type="submit" name="submit" class="submit" value="<? echo $situation; ?>" id="submitr" />
+        </div>
+            
+        <div id="form_message">
+            <? if ($_GET["id"] != "") { ?>
+                Your record successfully updated!!!!
+            <? }else{ ?>
+                Your record successfully added!!!!
+            <?}?>
+        </div>
+    </form>
+    
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
+</div>			
