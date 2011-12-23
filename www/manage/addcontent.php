@@ -97,7 +97,7 @@
         </div>
         <div class='flow_container'>
             <div class='line_label'>Body</div>
-            <textarea name="body" class='line_text'><?=$content_body;?></textarea>
+            <textarea name="body"><?=$content_body;?></textarea>
         </div>
         <div class='submit_container'>
             <input type="submit" name="submit" value="submit" class='submit' />
