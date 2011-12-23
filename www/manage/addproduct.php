@@ -1,7 +1,8 @@
-<?php require_once('../includes/config.php');
+<?php 
+    require_once('../includes/config.php');
 	if($_SESSION['sess_userId']=="")
 	{
-		header("location: index.php");
+		header("Location: /index.php");
 		exit();
 	}
 	include("../includes/functions.php");
@@ -160,13 +161,13 @@
         <? } ?>
 
         <div class='input_container'>
-            <div class='line_label'>Name:</div>
+            <div class='line_label'>Name</div>
             <input type="text" name="name" class='line_text' value="<? echo $pname; ?>" id="input" class="input" />
         </div>
 
 
         <div class='input_container'>
-            <div class='left_label'>Category:</div>
+            <div class='left_label'>Category</div>
             <select name="origin" id="origin" class='right_text'>
                 <option value=""> -- Select -- </option>
                 <?
@@ -181,7 +182,7 @@
             </select>
         </div>
         <div class='flow_container'>
-            <div class='line_label'>Description:</div>
+            <div class='line_label'>Description</div>
             <textarea name="description" id="input" class="textarea" style="height: 40px; width: 325px;"><? echo $pproductdescription; ?></textarea>
         </div>
         <div class='input_container'>
@@ -192,11 +193,11 @@
             <input type="file" name="file" value="" id="input" class='right_file'/> 
         </div>
         <div class='input_container'>
-            <div class='left_label'>Price:</div>
+            <div class='left_label'>Price</div>
             <input type="text" name="price" value="<? echo $pprice; ?>" id="input"  class='right_text' />
         </div>
         <div class='input_container'>
-            <div class='left_label'>Sku Number:</div>
+            <div class='left_label'>Sku Number</div>
             <input type="text" name="sku" value="<? echo $psku; ?>" id="input"  class='right_text' />
         </div>
         <div class='input_container'>
