@@ -60,7 +60,7 @@
             <button id='store_settings_submit' class="submit" onclick='onStoreSettingsSubmit();'>Submit</button>
         </div>
     </form>
-    <div id='status'></div>
+    <div id='status' class='form_message'></div>
 
     <div class='bottom_sep'></div>
     <div class='bottom_blue_bar'></div>
