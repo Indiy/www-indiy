@@ -154,7 +154,7 @@
         <input id='song_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id"/>
 
         <div class='input_container'>
-            <div class='line_label'>Name</div>
+            <div class='left_label'>Name</div>
             <input id='video_name' type="text" name="name" value="<?=$video_name;?>" class='right_text' />
         </div>
         <div class='input_container'>
@@ -165,7 +165,7 @@
             <input id='video_image_file' type="file" name="logo" class='right_file' />
         </div>
         <div class='input_container'>
-            <div class='line_label'>Video (flv or mp4)</div>
+            <div class='left_label'>Video (flv or mp4)</div>
             <div class='right_file_filename'>
                 <input id='video_file' type="file" name="video" />
                 <div class='filename'><?=$video_sound;?></div>
