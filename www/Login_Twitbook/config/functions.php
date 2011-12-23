@@ -1,6 +1,7 @@
 <?php 
 
 require_once 'dbconfig.php';
+require_once '../../include/login_helper.php';
 
 class User {
 
@@ -81,6 +82,7 @@ class User {
                     $username = $user_info['username'];
                     if( !$username )
                         $username = $user_info['name'];
+                    $email = $user_info['email'];
                     
                     mysql_insert('mydna_musicplayer',array("username" => $username,
                                                            "artist" => $user_info["name"],
@@ -91,11 +93,13 @@ class User {
                                                            "fb_access_token" => $fb_access_token,
                                                            "oauth_provider" => $oauth_provider,
                                                            "oauth_uid" => $uid,
+                                                           "email" => $email,
                                                            ));
                 }
 
 			 $query_data = mysql_query("SELECT * FROM mydna_musicplayer WHERE oauth_uid = '$uid' and oauth_provider = '$oauth_provider'");
 			 $result_data = mysql_fetch_array($query_data);
+             post_signup($result_data);
 			 return $result_data;
         }
         return $result;

@@ -17,4 +17,35 @@ function loginArtistFromRow($row)
     return $url;
 }
 
+function post_signup($row)
+{
+    $email = $row['email'];
+    $username = $row['username']
+    if( $email )
+    {
+        $to = $email;
+        $message = <<<END
+
+Thanks for signing up!
+
+Welcome! We're excited to have you join us and wanted to give you your login info for your records.
+
+Username: $username
+        
+Enjoy your membership, and if you have any quesitons, email us at support@myartistdna.com
+
+Thank You,
+The MyArtistDNA Team
+
+Be Heard. Be Seen. Be Independent.
+
+END;
+        $subject = "Welcome to MyArtistDNA";
+        $from = "no-reply@myartistdna.com";
+        $headers = "From:" . $from;
+        
+        mail($to,$subject,$message,$headers);
+    }
+}
+
 ?>
