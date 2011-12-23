@@ -110,6 +110,8 @@
                 Your record successfully added!
             <?}?>
         </div>
-        </form>
-    </div>
+    </form>
+
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
 </div>
