@@ -182,12 +182,23 @@
         </div>
         <div class='flow_container'>
             <div class='line_label'>Description:</div>
-            <textarea name="description" id="input" class="textarea" style="height: 200px;"><? echo $pproductdescription; ?></textarea>
+            <textarea name="description" id="input" class="textarea" style="height: 40px;"><? echo $pproductdescription; ?></textarea>
         </div>
         <div class='input_container'>
-            <div class='left_label'>Image:</div>
-            <input type="file" name="file" value="" id="input"  class='right_file' /> <? if ($pimage != "") {?> <img src="../artists/products/<?=$pimage;?>" height="20" /><? } ?>
+            <div class='left_image_label'>
+                <div>Image</div>
+                <? if ($pimage != "") {?> <img src="../artists/products/<?=$pimage;?>" height="20" /><? } ?>
+            </div>
+            <input type="file" name="file" value="" id="input" class='right_file'/> 
         </div>
+        <div class='input_container'>
+            <div class='left_image_label'>
+                <div>Image</div>
+                <?=$audio_logo;?>
+            </div>
+            <input id='song_image' type="file" name="logo" class='right_file' />
+        </div>
+        
         <div class='input_container'>
             <div class='left_label'>Price:</div>
             <input type="text" name="price" value="<? echo $pprice; ?>" id="input"  class='right_text' />

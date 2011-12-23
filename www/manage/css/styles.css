@@ -989,6 +989,8 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     width: 400px;
     height: 300px;
     margin-top: 10px;
+    padding-top: 3px;
+    padding-left: 3px;
 }
 .left_label {
     float: left;
