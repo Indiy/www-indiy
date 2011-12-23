@@ -26,35 +26,33 @@
 ?>
 
 <div id="popup">
-    <div class="addcontent">
-        <h2 class="title"  id="demonstrations">Add Label</h2>
-        <form onsubmit='return false;'>
-            <div id="form_field">
-                <div class="clear"></div>
-                
-                <label>Label Name</label>
-                <input id='name' type="text" name="name" value="" class="text" />
-                <div class="clear"></div>
-                
-                <label>Email</label>
-                <input id='email' type="text" name="email" value="" class="text" />
-                <div class="clear"></div>
-                
-                <label>Password</label>
-                <input id='password' type="password" name="password" value="" class="text" />
-                <div class="clear"></div>
-                
-                <button id='add_label_submit' class="submit" onclick='onAddLabelSubmit();'>Submit</button>
-                <div id='status'></div>
-            </div>
-        </form>
+    <div class='top_bar'>
+    <h2>Add Label</h2>
+    <button onclick='$.facebox.close();'>CLOSE</button>
     </div>
-    <div style="clear: both;">&nbsp;</div>
-</div>
-<!-- end #content -->
-<div id="sidebar">
 
-</div>
-<!-- end #sidebar -->
-<div style="clear: both;">&nbsp;</div>
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+    
+    <form onsubmit='return false;'>
+        <div class='input_container'>
+            <div class='left_label'>Label Name</div>
+            <input id='name' type="text" name="name" value="" class='right_text' />
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Email</div>
+            <input id='email' type="text" name="email" value="" class='right_text' />
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Password</div>
+            <input id='password' type="password" name="password" value="" class='right_text' />
+        </div>
+        <div class='submit_container'>
+            <button id='add_label_submit' class="submit" onclick='onAddLabelSubmit();'>Submit</button>
+        </div>
+    </form>
 
+    <div id='status'></div>
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
+</div>
