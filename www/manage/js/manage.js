@@ -163,12 +163,10 @@ function onStoreSettingsSubmit()
         success: function(data) 
         {
             $('#status').text("Settings updated.");
-            $('#store_settings_submit').show();
         },
         error: function()
         {
             $('#status').text("Update failed!");
-            $('#store_settings_submit').show();
         }
     });
     return false;    
