@@ -20,7 +20,7 @@ function loginArtistFromRow($row)
 function post_signup($row)
 {
     $email = $row['email'];
-    $username = $row['username']
+    $username = $row['username'];
     if( $email )
     {
         $to = $email;
