@@ -1,7 +1,7 @@
 <?php 
 
 require_once 'dbconfig.php';
-require_once '../../includes/login_helper.php';
+require_once '../includes/login_helper.php';
 
 class User {
 
