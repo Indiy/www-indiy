@@ -56,7 +56,7 @@ var g_artistId = '<?=$artist_id;?>';
             <div class='left_label'>Facebook Account</div>
             <?php
                 if( $facebook )
-                    echo "<input type='text' disabled='disabled' value='$facebook' class='right_input' />\n";
+                    echo "<input type='text' disabled='disabled' value='$facebook' class='right_text' />\n";
                 else
                 {
                     echo "<div class='right_box'>";
@@ -69,7 +69,7 @@ var g_artistId = '<?=$artist_id;?>';
             <div class='left_label'>Twitter Account</div>
             <?php
                 if( $twitter )
-                    echo "<input type='text' disabled='disabled' value='$twitter' class='right_input' />\n";
+                    echo "<input type='text' disabled='disabled' value='$twitter' class='right_text' />\n";
                 else
                 {
                     echo "<div class='right_box'>";
