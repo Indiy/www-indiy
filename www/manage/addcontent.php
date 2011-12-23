@@ -76,32 +76,34 @@
 				
 <div id="popup">
     <?=$successMessage;?>
-    <div class="addcontent">
-        <h2 class="title"  id="demonstrations"><?=$head_title?> Page</h2>
-        <form id="ajax_from" method="post" enctype="multipart/form-data" action="addcontent.php">
+    <div class='top_bar'>
+        <h2><?=$head_title?> Page</h2>
+        <button onclick='$.facebox.close();'>CLOSE</button>
+    </div>
+
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+    <form id="ajax_from" method="post" enctype="multipart/form-data" action="addcontent.php">
         <input type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid">
-            <input type='hidden' value="<?=$_REQUEST['id']?>" name="id" id="song_id">
-            
-            <label>Name</label>
-            <input type="text" name="name" value="<?=$content_name;?>" class="text" />
-            <div class="clear"></div>
-            
-            <label>Image</label>
-            <input type="file" name="logo" class="text" /> <?=$content_logo;?>
-            <div class="clear"></div>
-            
-            <label>Body</label>
-            <textarea name="body" class="textarea"><?=$content_body;?></textarea>
-            <div class="clear"></div>
-            
-            <input type="submit" name="submit" value="submit" class="submit" />
-            
-            <? if ($_GET["id"] != "") { ?>
-            <!-- <p><br /><br />
-            <a href="#" class="xdelete" onclick="confirmDelete('?p=home&delete=true&type=content&a=<?=$artistid;?>&id=<?=$content_id;?>')"><small>Delete</small></a></p> -->
-            <? } ?>
-            </div>
-            <div id="form_message">
+        <input type='hidden' value="<?=$_REQUEST['id']?>" name="id" id="song_id">
+        
+        <div class='input_container'>
+            <div class='left_label'>Name</div>
+            <input type="text" name="name" value="<?=$content_name;?>" class='right_text' />
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Image</div>
+            <input type="file" name="logo" class='right_file' /> <?=$content_logo;?>
+        </div>
+        <div class='input_container'>
+            <div class='line_label'>Body</div>
+            <textarea name="body" class='line_text'><?=$content_body;?></textarea>
+        </div>
+        <div class='submit_container'>
+            <input type="submit" name="submit" value="submit" class='submit' />
+        </div>
+        
+        <div id="form_message" class='form_message'>
             <? if ($_GET["id"] != "") { ?>
                 Your record successfully updated!
             <? }else{ ?>
@@ -110,5 +112,4 @@
         </div>
         </form>
     </div>
-    <div style="clear: both;">&nbsp;</div>
 </div>
