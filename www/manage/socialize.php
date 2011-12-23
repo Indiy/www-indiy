@@ -86,14 +86,16 @@ var g_artistId = '<?=$artist_id;?>';
     <form id="socialize_form" onsubmit='return false;'>
         <div class='flow_container'>
             <div class='left_label'>Type your text below</div>
-            <textarea id="update_text" class="social_textarea"><?=$update_text;?></textarea>
-            <p>Warning - You can not undo once you publish</p>
+            <textarea id="update_text" style="height: 40px;"><?=$update_text;?></textarea>
+            <p>**Warning - You can not undo once you publish**</p>
         </div>
         <div class='input_container'>
             <div class='left_label'>Select a platform</div>
             <div class='right_box'>
-                <input type="radio" name="network" value="twitter" class="radio" /> Twitter
-                <input type="radio" name="network" value="facebook" class="radio" /> Facebook
+                <input type="radio" name="network" value="twitter" class="radio" />
+                <img src='/images/tw_icon_color.png'>
+                <input type="radio" name="network" value="facebook" class="radio" />
+                <img src='/images/fw_icon_color.png'>
             </div>
         </div>
         <div class='submit_container'>
