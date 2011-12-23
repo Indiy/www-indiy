@@ -1063,6 +1063,7 @@ input.right_text, input.color {
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
+    border: 1px solid #333;
 }
 .right_box, .right_drop, .color {
     float: right;
