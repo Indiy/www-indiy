@@ -52,7 +52,7 @@ var g_artistId = '<?=$artist_id;?>';
     <div class='top_blue_bar'></div>
     <div class='top_sep'></div>
     <form id="social_config_form"  onsubmit='return false;'>
-        <div class='input_container'>
+        <div class='input_container' style='height: 55px;'>
             <div class='left_label'>Facebook Account</div>
             <?php
                 if( $facebook )
@@ -65,7 +65,7 @@ var g_artistId = '<?=$artist_id;?>';
                 }
             ?>
         </div>
-        <div class='input_container'>
+        <div class='input_container' style='height: 55px;'>
             <div class='left_label'>Twitter Account</div>
             <?php
                 if( $twitter )
