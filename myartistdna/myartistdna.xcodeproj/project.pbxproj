@@ -11,7 +11,7 @@
 		2D34E22414A05F05004473F9 /* utils.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = utils.php; sourceTree = "<group>"; };
 		2D34E22614A0699A004473F9 /* add_network.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_network.php; sourceTree = "<group>"; };
 		2D34E22714A06AC9004473F9 /* twitter_landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twitter_landing.php; sourceTree = "<group>"; };
-		2D34E22814A173A9004473F9 /* landing.html */ = {isa = PBXFileReference; path = landing.html; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.html; };
+		2D34E22814A173A9004473F9 /* landing.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = landing.html; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.html; };
 		2D34E22914A1CBB5004473F9 /* invite_friends.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = invite_friends.php; sourceTree = "<group>"; };
 		2D34E22A14A30B50004473F9 /* logged_in.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = logged_in.php; sourceTree = "<group>"; };
 		2D380B8814671EF400E36189 /* server_config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = server_config.php; path = ../server_config.php; sourceTree = "<group>"; };
@@ -1148,7 +1148,6 @@
 		2DF4744A144A2D84005538C7 /* delete_product.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = delete_product.php; sourceTree = "<group>"; };
 		2DF4744B144A2D84005538C7 /* delete_song.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = delete_song.php; sourceTree = "<group>"; };
 		2DF4744C144A2D84005538C7 /* delete_video.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = delete_video.php; sourceTree = "<group>"; };
-		2DF4744D144A2D84005538C7 /* editmusic.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = editmusic.php; sourceTree = "<group>"; };
 		2DF4744F144A2D84005538C7 /* b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b.png; sourceTree = "<group>"; };
 		2DF47450144A2D84005538C7 /* bl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bl.png; sourceTree = "<group>"; };
 		2DF47451144A2D84005538C7 /* br.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = br.png; sourceTree = "<group>"; };
@@ -3135,7 +3134,6 @@
 				2DF4744A144A2D84005538C7 /* delete_product.php */,
 				2DF4744B144A2D84005538C7 /* delete_song.php */,
 				2DF4744C144A2D84005538C7 /* delete_video.php */,
-				2DF4744D144A2D84005538C7 /* editmusic.php */,
 				2DF4745A144A2D84005538C7 /* footer.php */,
 				2DF4745B144A2D84005538C7 /* header.php */,
 				2DF47502144A2D84005538C7 /* index.php */,
