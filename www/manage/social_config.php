@@ -45,7 +45,7 @@ var g_artistId = '<?=$artist_id;?>';
 
 <div id="popup">
     <div class='top_bar'>
-        <h2>Socialize</h2>
+        <h2>Social Connections</h2>
         <button onclick='$.facebox.close();'>CLOSE</button>
     </div>
 
@@ -53,7 +53,7 @@ var g_artistId = '<?=$artist_id;?>';
     <div class='top_sep'></div>
     <form id="social_config_form"  onsubmit='return false;'>
         <div class='input_container'>
-            <div class='left_label'Facebook Account</div>
+            <div class='left_label'>Facebook Account</div>
             <?php
                 if( $facebook )
                     echo "<input type='text' disabled='disabled' value='$facebook' class='right_input' />\n";
@@ -66,7 +66,7 @@ var g_artistId = '<?=$artist_id;?>';
             ?>
         </div>
         <div class='input_container'>
-            <div class='left_label'Twitter Account</div>
+            <div class='left_label'>Twitter Account</div>
             <?php
                 if( $twitter )
                     echo "<input type='text' disabled='disabled' value='$twitter' class='right_input' />\n";
@@ -79,11 +79,11 @@ var g_artistId = '<?=$artist_id;?>';
             ?>
         </div>
         <div class='input_container'>
-            <div class='left_label'Automatic Facebook</div>
+            <div class='left_label'>Automatic Facebook</div>
             <input id='auto_fb' type="checkbox" name="auto_fb" <? if($auto_fb) echo 'checked'; ?> class="right_box"/>
         </div>
         <div class='input_container'>
-            <div class='left_label'Automatic Tweet</div>
+            <div class='left_label'>Automatic Tweet</div>
             <input id='auto_tw' type="checkbox" name="auto_tw" <? if($auto_tw) echo 'checked'; ?> class="right_box"/>
         </div>
         <div class='submit_container'>
