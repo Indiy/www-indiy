@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
 
+    <script src="js/tooltip_text.js" type="text/javascript"></script>
     <script src="js/manage.js" type="text/javascript"></script>
     <script src="/js/ZeroClipboard.js" type="text/javascript"></script>
 

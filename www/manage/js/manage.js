@@ -448,6 +448,14 @@ function onInviteFriends()
 function hoverInQuestion(event)
 {
     $('#question_tooltip').show();
+    var id = $(event.target).attr('id');
+    $('#question_tooltip').text(g_tooltipText[id]);
+
+    var new_offset = $(event.target).offset();
+    new_offset.left -= $('#question_tooltip').width()/2 - 20;
+    new_offset.top -= $('#question_tooltip').height() + 5;
+    $('#question_tooltip').offset(new_offset);
+    
 }
 function hoverOutQuestion(event)
 {

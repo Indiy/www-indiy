@@ -261,7 +261,7 @@
             <input id='itunes_url' type="text" name="itunes" value="<?=$audio_itunes;?>" class='line_text' />
         </div>
         <div class='input_container'>
-            <div class='left_label'>MyArtistDNA Store <span id='tip_image' class='tooltip'>(?)</span></div>
+            <div class='left_label'>MyArtistDNA Store <span id='tip_store' class='tooltip'>(?)</span></div>
             <input id='mad_store' type="checkbox" name="mad_store" <? if($mad_store) echo 'checked'; ?> class='right_box'/>
         </div>
         <div class='submit_container'>

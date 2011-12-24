@@ -1128,12 +1128,14 @@ input.right_text, input.color,input.line_text {
 }
 #question_tooltip {
     z-index: 1000;
-    position: relative;
+    position: absolute;
     width: 80px;
     background-color: black;
-    color: white;
-    border-radius: 3px;
-    padding: 5px 5px 5px 5px;
+    color: #ddd;
+    padding-left: 8px;
+    padding-top: 6px;
+    padding-right: 6px;
+    border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px;
 }
 
 /*
