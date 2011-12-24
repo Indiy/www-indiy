@@ -453,7 +453,7 @@ function hoverInQuestion(event)
 
     var new_offset = $(event.target).offset();
     new_offset.left -= $('#question_tooltip').width()/2 - 20;
-    new_offset.top -= $('#question_tooltip').height() + 15;
+    new_offset.top -= $('#question_tooltip').height() + 20;
     $('#question_tooltip').offset(new_offset);
     
 }
