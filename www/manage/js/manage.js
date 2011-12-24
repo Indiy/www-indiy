@@ -452,7 +452,7 @@ function hoverInQuestion(event)
     $('#question_tooltip').text(g_tooltipText[id]);
 
     var new_offset = $(event.target).offset();
-    new_offset.left -= $('#question_tooltip').width()/2 - 20;
+    new_offset.left -= $('#question_tooltip').width()/2 - 40;
     new_offset.top -= $('#question_tooltip').height() + 20;
     $('#question_tooltip').offset(new_offset);
     
