@@ -1132,9 +1132,11 @@ input.right_text, input.color,input.line_text {
     width: 80px;
     background-color: black;
     color: #ddd;
+    font-size: 12px;
+    font-family: sans-serif;
     padding-left: 8px;
     padding-top: 6px;
-    padding-right: 6px;
+    padding-bottom: 6px;
     border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px;
 }
 
