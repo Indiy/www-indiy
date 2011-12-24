@@ -445,4 +445,17 @@ function onInviteFriends()
     return false;
 }
 
+function hoverInQuestion(event)
+{
+    $('#question_tooltip').show();
+}
+function hoverOutQuestion(event)
+{
+    $('#question_tooltip').hide();
+}
+function setupQuestionTolltips()
+{
+    $('.tooltip').hover(hoverInQuestion,hoverOutQuestion);
+}
+
 

@@ -168,8 +168,11 @@
 ?>
 	
     <link rel="stylesheet" media="screen" type="text/css" href="includes/css/layout.css" />
-				
-				
+
+<script type="text/javascript">
+    $(document).ready(setupQuestionTolltips);
+</script>
+
 <div id="popup">
     <?=$successMessage;?>
     <div class='top_bar'>

@@ -1126,6 +1126,15 @@ input.right_text, input.color,input.line_text {
     height: 30px;
     padding-top: 20px;
 }
+#question_tooltip {
+    z-index: 1000;
+    position: relative;
+    width: 80px;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    padding: 5px 5px 5px 5px;
+}
 
 /*
 ----------------------------------------

@@ -56,6 +56,9 @@ $(document).ready(function(){
         <div class='link_copy'>Copy</div>
     </div>
 </div>
+<div id='question_tooltip' style='display: none;'>
+    Tooltip Text
+</div>
 <section id="bgtopbar">
 	<section id="topbar">
 		<p>Logged in as <a href="#"><?php echo $_SESSION['sess_userName']; ?></a> | <a href="logout.php">Logout</a></p>
