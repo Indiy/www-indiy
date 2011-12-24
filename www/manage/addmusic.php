@@ -189,7 +189,7 @@
             <input id='song_name' type="text" name="name" value="<?=$audio_name;?>" class="line_text" />
         </div>
         <div class='input_container'>
-            <div class='left_label'>MP3 File</div>
+            <div class='left_label'>MP3 File <span id='tip_mp3' class='tooltip'>(?)</span></div>
             <div class='right_file_filename'>
                 <input id='song_audio' type="file" name="audio" />
                 <div class='filename'><?=$audio_sound;?></div>
@@ -197,7 +197,7 @@
         </div>
         <div class='input_container'>
             <div class='left_image_label'>
-                <div>Image</div>
+                <div>Image <span id='tip_image' class='tooltip'>(?)</span></div>
                 <?=$audio_logo;?>
             </div>
             <input id='song_image' type="file" name="logo" class='right_file' />
@@ -258,7 +258,7 @@
             <input id='itunes_url' type="text" name="itunes" value="<?=$audio_itunes;?>" class='line_text' />
         </div>
         <div class='input_container'>
-            <div class='left_label'>MyArtistDNA Store</div>
+            <div class='left_label'>MyArtistDNA Store <span id='tip_image' class='tooltip'>(?)</span></div>
             <input id='mad_store' type="checkbox" name="mad_store" <? if($mad_store) echo 'checked'; ?> class='right_box'/>
         </div>
         <div class='submit_container'>
