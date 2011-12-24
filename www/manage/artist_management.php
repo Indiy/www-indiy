@@ -268,7 +268,7 @@ $(document).ready(showFirstInstruction);
             <div class="buttonadd"><a href="addproduct.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Product</a></div>
             </div>
         
-            <div class="list">
+            <div class="list" style='display:none;'>
             <ul class="products_sortable">
            <?php
 				$count = 1;
@@ -299,7 +299,7 @@ $(document).ready(showFirstInstruction);
             <div class="buttonadd"><a href="addvideo.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Video</a></div>
             </div>
         
-            <div class="list">
+            <div class="list" style='display:none;'>
             <ul class="videos_sortable">
             <?php
 				$count = 1;
@@ -337,7 +337,7 @@ $(document).ready(showFirstInstruction);
             <div class="buttonadd"><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Page</a></div>
         	</div> 
             
-            <div class="list">
+            <div class="list" style='display:none;'>
             <ul>
             <li class="listheading">
             <span class="title">Title</span>
