@@ -8,7 +8,7 @@
     }
 
 	$host_parts = explode(".", $_SERVER["HTTP_HOST"]);
-	if( array_len($host_parts) < 3 || $host_parts[0] == "www" ) 
+	if( count($host_parts) < 3 || $host_parts[0] == "www" ) 
     {
 		$artist_url = $_GET["url"];
 	} 
