@@ -1141,6 +1141,55 @@ input.right_text, input.color,input.line_text {
     border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px;
 }
 
+
+.line_title {
+    font-size: 17px;
+    color: black;
+    font-family: sans-serif;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.number_container {
+    width: 100%;
+    height: 70px;
+}
+.left_number {
+    float: left;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    font-size: 17px;
+
+    margin-left: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 4px;
+}
+.right_title_detail {
+    float: right;
+    height: 70px;
+    width: 200px;
+    margin-right: 20px;
+}
+.right_title {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.right_detail {
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.need_help {
+    font-size: 12px;
+    font-family: sans-serif;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
 /*
 ----------------------------------------
 14. Add Video -- Pop up
