@@ -1129,7 +1129,7 @@ input.right_text, input.color,input.line_text {
 #question_tooltip {
     z-index: 1000;
     position: absolute;
-    width: 80px;
+    max-width: 130px;
     background-color: black;
     color: #ddd;
     font-size: 12px;
@@ -1137,6 +1137,7 @@ input.right_text, input.color,input.line_text {
     padding-left: 8px;
     padding-top: 6px;
     padding-bottom: 6px;
+    padding-right: 6px;
     border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px;
 }
 
