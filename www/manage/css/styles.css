@@ -1179,6 +1179,7 @@ input.right_text, input.color,input.line_text {
     font-size: 14px;
     font-weight: bold;
     font-family: sans-serif;
+    margin-bottom: 5px;
 }
 .right_detail {
     font-size: 12px;
