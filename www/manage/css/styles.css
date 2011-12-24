@@ -1118,6 +1118,7 @@ input.right_text, input.color,input.line_text {
     text-transform: uppercase;
     font-size: 14px;
     font-family: sans-serif;
+    cursor: pointer;
 }
 .form_message {
     text-align: center;
