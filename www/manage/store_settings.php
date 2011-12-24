@@ -40,6 +40,7 @@
 
 <script type="text/javascript"> 
     var g_artistId = '<?=$artist_id;?>';
+    $(document).ready(setupQuestionTolltips);
 </script>
 
 <div id="popup">

@@ -142,6 +142,9 @@
 
 ?>
 
+<script type="text/javascript">
+    $(document).ready(setupQuestionTolltips);
+</script>
 
 <div id="popup">
     <?=$successMessage;?>
