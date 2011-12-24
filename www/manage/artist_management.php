@@ -78,6 +78,16 @@
 
     $artist_url = str_replace("http://www.","http://".$record_artistDetail['url'].".",trueSiteUrl());
 
+    $show_first_instruction = FALSE;
+    if( $_SESSION['sess_userType'] == 'ARTIST' && $artistID == $_SESSION['sess_userId'] )
+    {
+        if(! $record_artistDetail['shown_first_instructions'] )
+        {
+            $show_first_instruction = TRUE;
+            mysql_update('mydna_musicplayer',array("shown_first_instructions" => 1),'id'.$artistID);
+        }
+    }
+
     require_once 'header.php';
 ?>
 
@@ -132,6 +142,17 @@ function setupSortableLists()
 
 $(document).ready(setupSortableLists);
 
+<? if( $show_first_instruction ) {?>
+
+function showFirstInstruction()
+{
+    $.facebox.loading(true);
+    $.get('/manage/first_instructions.php',function(data) { $.facebox.reveal(data, klass); });
+}
+
+$(document).ready(showFirstInstruction);
+
+<? } ?>
 
 </script>
 
