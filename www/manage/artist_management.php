@@ -84,7 +84,7 @@
         if(! $record_artistDetail['shown_first_instructions'] )
         {
             $show_first_instruction = TRUE;
-            mysql_update('mydna_musicplayer',array("shown_first_instructions" => 1),'id'.$artistID);
+            mysql_update('mydna_musicplayer',array("shown_first_instructions" => 1),'id',$artistID);
         }
     }
 
