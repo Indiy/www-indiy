@@ -147,7 +147,7 @@ $(document).ready(setupSortableLists);
 function showFirstInstruction()
 {
     $.facebox.loading(true);
-    $.get('/manage/first_instructions.php',function(data) { $.facebox.reveal(data, klass); });
+    $.get('/manage/first_instructions.php',function(data) { $.facebox.reveal(data, "bolder"); });
 }
 
 $(document).ready(showFirstInstruction);
