@@ -206,8 +206,7 @@ input
     margin-top: 18px;
 }
 
-.learn_more
-{
+.learn_more {
     width: 100%;
     margin-top: 21px;
     font-family: sans-serif; 
@@ -216,11 +215,19 @@ input
     text-align: center;
 }
 
-.learn_more a
-{
+.learn_more a {
     font-family: sans-serif; 
     font-size: 12px;
     color: #999;
+}
+.learn_more button {
+    border: 0 none;
+    background-color: transparent;
+    text-decoration: underline;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-left: 15px;
 }
 
 .validate_login
@@ -276,7 +283,6 @@ input
          <![endif]-->
 
         <link href="/css/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
-
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
@@ -292,7 +298,7 @@ function docReady()
 		ready: function () {
 			$(this).jPlayer("setMedia", {
 				m4v: "http://myartistdna.com/videos/assets/videos/-Master.mp4",
-				poster: "http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
+				poster: "http://myartistdna.com/videos/assets/images/sm-logo.jpg"
 			});
 		},
 		swfPath: "/js",

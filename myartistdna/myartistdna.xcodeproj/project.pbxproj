@@ -16,6 +16,7 @@
 		2D34E22A14A30B50004473F9 /* logged_in.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = logged_in.php; sourceTree = "<group>"; };
 		2D34E22E14A59976004473F9 /* tooltip_text.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = tooltip_text.js; sourceTree = "<group>"; };
 		2D34E23014A5AD3E004473F9 /* first_instructions.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = first_instructions.php; sourceTree = "<group>"; };
+		2D34E23114A645ED004473F9 /* jplayer.blue.monday.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = jplayer.blue.monday.css; sourceTree = "<group>"; };
 		2D380B8814671EF400E36189 /* server_config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = server_config.php; path = ../server_config.php; sourceTree = "<group>"; };
 		2D380B8A1467970100E36189 /* add_user.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_user.php; sourceTree = "<group>"; };
 		2D380B8B1468AC0500E36189 /* manage.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = manage.js; sourceTree = "<group>"; };
@@ -497,7 +498,6 @@
 		2DF4712B1440B77F005538C7 /* signup_06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = signup_06.jpg; sourceTree = "<group>"; };
 		2DF4712C1440B77F005538C7 /* signup_07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = signup_07.jpg; sourceTree = "<group>"; };
 		2DF4712D1440B77F005538C7 /* signup_08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = signup_08.jpg; sourceTree = "<group>"; };
-		2DF4712E1440B77F005538C7 /* Thumbs.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thumbs.db; sourceTree = "<group>"; };
 		2DF4712F1440B77F005538C7 /* twitter.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = twitter.gif; sourceTree = "<group>"; };
 		2DF471301440B77F005538C7 /* twitter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = twitter.jpg; sourceTree = "<group>"; };
 		2DF471331440B77F005538C7 /* ajax.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = ajax.php; sourceTree = "<group>"; };
@@ -1780,6 +1780,7 @@
 		2DF470471440B77F005538C7 /* css */ = {
 			isa = PBXGroup;
 			children = (
+				2D34E23114A645ED004473F9 /* jplayer.blue.monday.css */,
 				2DF4741A1440CFC6005538C7 /* jquery.mCustomScrollbar.css */,
 				2DF470491440B77F005538C7 /* Lucida Grande.eot */,
 				2DF4704A1440B77F005538C7 /* Lucida Grande.ttf */,
@@ -2040,7 +2041,6 @@
 				2DF4712B1440B77F005538C7 /* signup_06.jpg */,
 				2DF4712C1440B77F005538C7 /* signup_07.jpg */,
 				2DF4712D1440B77F005538C7 /* signup_08.jpg */,
-				2DF4712E1440B77F005538C7 /* Thumbs.db */,
 				2DF4712F1440B77F005538C7 /* twitter.gif */,
 				2DF471301440B77F005538C7 /* twitter.jpg */,
 			);
