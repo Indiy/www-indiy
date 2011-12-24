@@ -197,7 +197,7 @@
             <input type="text" name="price" value="<? echo $pprice; ?>" id="input"  class='right_text' />
         </div>
         <div class='input_container'>
-            <div class='left_label'>Sku Number</div>
+            <div class='left_label'>SKU  <span id='tip_sku' class='tooltip'>(?)</span></div>
             <input type="text" name="sku" value="<? echo $psku; ?>" id="input"  class='right_text' />
         </div>
         <div class='input_container'>

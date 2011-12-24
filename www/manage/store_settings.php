@@ -53,7 +53,7 @@
     <form onsubmit='return false;'>
 
         <div class='input_container'>
-            <div class='left_label'>Paypal Email</div>
+            <div class='left_label'>Paypal Email <span id='tip_paypal_email' class='tooltip'>(?)</span></div>
             <input id='paypal_email' type="text" value="<?=$paypal_email?>" class="right_text" />
         </div>
         <div class='submit_container'>

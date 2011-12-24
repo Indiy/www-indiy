@@ -136,7 +136,7 @@
         </div>
 
         <div class='input_container'>
-            <div class='left_label'>URL</div>
+            <div class='left_label'>URL <span id='tip_artist_url' class='tooltip'>(?)</span></div>
             <input type="text" class="right_text" value="<?=$url?>" name="url">
         </div>
 
