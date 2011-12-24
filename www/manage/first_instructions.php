@@ -13,7 +13,7 @@
         <div class='right_title_detail'>
             <div class='right_title'>Make a name for youself</div>
             <div class='right_detail'>
-            Click on Store > Details to edit your title and description
+            Click on Store > Details to edit your title and description.
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
         <div class='right_title_detail'>
             <div class='right_title'>Tell your story</div>
             <div class='right_detail'>
-            Click on Pages > Add to create an About page
+            Click on Pages > Add to create an About page.
             </div>
         </div>
     </div>

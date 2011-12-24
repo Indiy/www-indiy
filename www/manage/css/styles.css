@@ -1143,11 +1143,13 @@ input.right_text, input.color,input.line_text {
 
 
 .line_title {
-    font-size: 17px;
+    font-size: 19px;
     color: black;
     font-family: sans-serif;
     width: 100%;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 .number_container {
     width: 100%;
@@ -1156,22 +1158,21 @@ input.right_text, input.color,input.line_text {
 .left_number {
     float: left;
     width: 30px;
-    height: 30px;
+    height: 21px;
     background-color: black;
     color: white;
     font-size: 17px;
+    text-align: center;
 
     margin-left: 20px;
-    padding-top: 4px;
+    padding-top: 5px;
     padding-bottom: 4px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 .right_title_detail {
     float: right;
     height: 70px;
-    width: 200px;
+    width: 290px;
     margin-right: 20px;
 }
 .right_title {
@@ -1186,7 +1187,8 @@ input.right_text, input.color,input.line_text {
 .need_help {
     font-size: 12px;
     font-family: sans-serif;
-    margin-top: 30px;
+    font-weight: bold;
+    margin-top: 5px;
     margin-left: 20px;
 }
 
