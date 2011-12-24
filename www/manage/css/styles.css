@@ -1129,7 +1129,7 @@ input.right_text, input.color,input.line_text {
 #question_tooltip {
     z-index: 1000;
     position: absolute;
-    max-width: 130px;
+    max-width: 145px;
     background-color: black;
     color: #ddd;
     font-size: 12px;
