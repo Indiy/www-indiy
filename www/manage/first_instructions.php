@@ -13,16 +13,16 @@
         <div class='right_title_detail'>
             <div class='right_title'>Make a name for youself</div>
             <div class='right_detail'>
-            Click on Store > Details to edit your title and description.
+            Click on Edit Profile to select your URL and email address.
             </div>
         </div>
     </div>
     <div class='number_container'>
         <div class='left_number'>2</div>
         <div class='right_title_detail'>
-            <div class='right_title'>Tell your story</div>
+            <div class='right_title'>Share Your Are</div>
             <div class='right_detail'>
-            Click on Pages > Add to create an About page.
+            Click on Add Art to upload images and music.
             </div>
         </div>
     </div>
@@ -31,7 +31,17 @@
         <div class='right_title_detail'>
             <div class='right_title'>Brand your store</div>
             <div class='right_detail'>
-            Click on Design to change your layout, color scheme, background, and more.
+            Click on E-commerce > Add Product to populate your store!
+            </div>
+        </div>
+    </div>
+    
+    <div class='number_container'>
+        <div class='left_number'>4</div>
+        <div class='right_title_detail'>
+            <div class='right_title'>Socialize</div>
+            <div class='right_detail'>
+            Click on Social Connections to add your Facebook and Twitter account!
             </div>
         </div>
     </div>
