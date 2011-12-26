@@ -25,7 +25,7 @@
     
     <div class="signup">
     <h3>AN INDEPENDENT BRANDING NETWORK</h3>
-    <div class="button"><a href="http://discover.myartistdna.fm">EXPERIENCE NOW</a></div>
+    <div class="button"><a href="#" onclick="showSignup();">EXPERIENCE NOW!</a></div>
     </div><!-- signup -->
     
     
@@ -62,7 +62,7 @@
     
     <div class="signup">
     <h3>A NEW WAY TO BUILD YOUR ONLINE BRAND</h3>
-    <div class="button"><a href="#" onclick="showSignup();">START NOW!</a></div>
+    <div class="button"><a href="#" onclick="http://navegante.madd3v.com">SEE EXAMPLES</a></div>
     </div><!-- signup -->
         
         

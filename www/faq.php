@@ -29,7 +29,7 @@ include "header.php";
 		</div>
         
         <div class="checkout">
-        <h5>CAN’T FInd the answer <br /> you’re looking for?</h5>
+        <h5>Can't find the answer <br /> you’re looking for?</h5>
         <p>Visit our Help page to contact our support team directly. <a href="tour.php">GO</a></p>
         </div>
         </div>
