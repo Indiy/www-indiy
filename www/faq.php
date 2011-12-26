@@ -37,7 +37,7 @@ include "header.php";
         <div class="subcontent">
         <div class="setlist">
         <article>
-		<p>What is MyArtistDNA?<br />
+		<span class="details"><p>What is MyArtistDNA?<br /></span>
         A home for artists' brands and discovery destination for fan's. MyArtistDNA is a movement that puts the control of the artists back into artist to inspire to be independent. We provide the outlet for Artists' brands to build the way they intended. We are your partner in this journey. Be heard. Be seen. Be independent. </p>
         <p><a href="#faq">Back to top</a></p>
         </article>
