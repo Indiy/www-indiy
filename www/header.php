@@ -65,7 +65,6 @@
         </ul>
 		</span>
     </li>                      
-    <li><a href="http://discover.myartistdna.fm" target="_self">DISCOVER</a></li>                       
     <li><a href="be-heard.php">BENEFITS</a><span>
         <ul>
         <li></li>
@@ -75,6 +74,7 @@
        
         </ul>
 		</span>     
+    <li><a href="http://discover.myartistdna.fm" target="_self">DEMO</a></li>                       
     
     
     <li><a href="tour.php">What Is It?</a></li>                     
