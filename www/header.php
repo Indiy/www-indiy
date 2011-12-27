@@ -74,7 +74,7 @@
        
         </ul>
 		</span>     
-    <li><a href="http://discover.myartistdna.fm" target="_self">DEMO</a></li>                       
+    <li><a href="#" target="_self">DEMO</a></li>                       
     
     
     <li><a href="tour.php">What Is It?</a></li>                     
