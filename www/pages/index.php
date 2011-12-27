@@ -35,11 +35,11 @@
 				<div class="clear"></div>
 			</div>
 			
-			<!-- <div class="row">
+		    <div class="row">
 				<label>&nbsp;</label>
 				<a href="'.$siteUrl.'?p=index&forgot=true">Forgot Password</a>
 				<div class="clear"></div>
-			</div> -->
+			</div>
 			
 		</form>';
 		
