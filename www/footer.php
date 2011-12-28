@@ -65,7 +65,7 @@ background:#f6f6f6;
     </ul>
     </article>
 
-    <div class="logo"><a href="http://myartistdna.is"><img src="images/MYARTISTDNA_footer.gif" alt="MYARTISTDNA"></a></div>
+    <div class="logo"><a href="home.php"><img src="images/MYARTISTDNA_footer.gif" alt="MYARTISTDNA"></a></div>
     <p>&copy; 2011 <a href="http://levasent.com">Levas Entertainment</a>, All rights reserved</p>
 
 </footer>
