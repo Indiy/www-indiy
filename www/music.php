@@ -19,7 +19,7 @@ include "header.php";
      <div class="features">
    
 
-    <li><a href="#" target="_blank"><img src="images/musicBanner.jpg" alt=""></a></li>
+    <li><img src="images/musicBanner.jpg" alt=""></li>
   
     </div><!-- features -->
     
@@ -32,38 +32,38 @@ include "header.php";
     <div id="artistshome">
 	<h2>ARTISTS USING MY<span>ARTIST</span>DNA</h2>
     	<ul>
-         <li><a href="#"><img src="images/bv.jpg" alt="">
-        <span>Black Violin</span></a></li>
+         <li><img src="images/bv.jpg" alt="">
+        <span>Black Violin</span></li>
         
-        <li><a href="#"><img src="images/coolMent.jpg" alt="">
-        <span>Cool Mentality</span></a></li>
+        <li><img src="images/coolMent.jpg" alt="">
+        <span>Cool Mentality</span></li>
         
-        <li><a href="#"><img src="images/wondaland.jpg" alt="">
-        <span>Wondaland Arts Society</span></a></li>
+        <li><img src="images/wondaland.jpg" alt="">
+        <span>Wondaland Arts Society</span></li>
         
-        <li><a href="#"><img src="images/artists_04.jpg" alt="">
-        <span>Kithe Brewster</span></a></li>
+        <li><img src="images/artists_04.jpg" alt="">
+        <span>Kithe Brewster</span></li>
         
-        <li><a href="#"><img src="images/bc.jpg" alt="">
-        <span>Babylon Cartel</span></a></li>
+        <li><img src="images/bc.jpg" alt="">
+        <span>Babylon Cartel</span></li>
         
-        <li><a href="#"><img src="images/artists_03.jpg" alt="">
-        <span>Hierosonic</span></a></li>
+        <li><img src="images/artists_03.jpg" alt="">
+        <span>Hierosonic</span></li>
 		
-		<li><a href="http://navegante.myartistdna.com"><img src="images/nvg.jpg" alt="">
-        <span>Navegante</span></a></li>
+		<li><img src="images/nvg.jpg" alt="">
+        <span>Navegante</span></li>
         
-        <li><a href="http://youngchris.myartistdna.com"><img src="images/youngc.jpg" alt="">
-        <span>Young Chris</span></a></li>
+        <li><img src="images/youngc.jpg" alt="">
+        <span>Young Chris</span></li>
         
-        <li><a href="http://marcecko.myartistdna.com"><img src="images/marc.jpg" alt="">
-        <span>Marc Ecko</span></a></li>
+        <li><img src="images/marc.jpg" alt="">
+        <span>Marc Ecko</span></li>
         
-        <li><a href="#"><img src="images/blakroc.jpg" alt="">
-        <span>Blakroc</span></a></li>
+        <li><img src="images/blakroc.jpg" alt="">
+        <span>Blakroc</span></li>
         
-        <li><a href="#"><img src="images/mmjb.jpg" alt="">
-        <span>Money Making Jam Boys</span></a></li>
+        <li><img src="images/mmjb.jpg" alt="">
+        <span>Money Making Jam Boys</span></li>
         
   		        
         </ul>
