@@ -27,7 +27,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">HEARD</span></span></li>
         </ul>
-        <h5><a href="be-heard.php">Make your presence felt.</a></h5>
+        <h5><a href="be-heard.php">Build your brand, fan by fan</a></h5>
         </aside>
     
         <aside class="seen">
@@ -35,7 +35,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">SEEN</span></span></li>
         </ul>
-        <h5><a href="be-seen.php">Let the world see your vision.</a></h5>
+        <h5><a href="be-seen.php">Get products to consumers</a></h5>
         </aside>
     
         <aside class="independent">
@@ -43,7 +43,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">INDEPENDENT</span></span></li>
         </ul>
-        <h5><a href="be-independent.php">Take control, be independent.</a></h5>
+        <h5><a href="be-independent.php">Take control of your brand</a></h5>
         </aside>
     </article>
     </div><!-- benefit -->
