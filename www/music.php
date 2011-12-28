@@ -16,14 +16,13 @@ include "header.php";
         </div> dropdown -->
     </div>
 	
-     <div class="features">
+    <div class="features">
    
-
-    <li><img src="images/musicBanner.jpg" alt=""></li>
+    <img src="images/musicBanner.jpg" alt="">
   
     </div><!-- features -->
     
-     <div class="signup">
+    <div class="signup">
     <h3>Experience MyArtistDNA</h3>
     <div class="button"><a href="http://navegante.myartistdna.com">EXPLORE NOW</a></div>
     </div><!-- signup -->
