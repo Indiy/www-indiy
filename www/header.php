@@ -74,7 +74,7 @@
        
         </ul>
 		</span>     
-    <li><a href="#" target="_self">DEMO</a></li>                       
+    <li><a href="http://demo.madd3v.com" target="_self">DEMO</a></li>                       
     
     
     <li><a href="tour.php">What Is It?</a></li>                     
