@@ -28,40 +28,40 @@ include "header.php";
     <div id="artistshome">
     	<ul id="list" class="image-grid">
         <li data-id="id-1" class="rock"><a href="#"><img src="images/artists_01.jpg" alt="">
-        <span>Navegante</span></a></li>
+        <span>Black Violin</span></a></li>
         
         <li data-id="id-2" class="pop"><a href="#"><img src="images/artists_02.jpg" alt="">
-        <span>Young Chris</span></a></li>
+        <span>Cool Mentality</span></a></li>
         
         <li data-id="id-3" class="hiphop"><a href="#"><img src="images/artists_03.jpg" alt="">
-        <span>Hierosonic</span></a></li>
+        <span>Woodlands Arts Society</span></a></li>
         
         <li data-id="id-4" class="dance"><a href="#"><img src="images/artists_04.jpg" alt="">
         <span>Kithe Brewster</span></a></li>
         
         <li data-id="id-5" class="country"><a href="#"><img src="images/artists_05.jpg" alt="">
-        <span>Vanessa Cantave</span></a></li>
+        <span>Babylon Cartel</span></a></li>
         
         <li data-id="id-6" class="pop"><a href="#"><img src="images/artists_06.jpg" alt="">
-        <span>New Jersey State of Mind</span></a></li>
+        <span>Hireosonic</span></a></li>
 		
-		<li data-id="id-7" class="hiphop"><a href="#"><img src="images/artists_13.jpg" alt="">
-        <span>Florence & The Machine</span></a></li>
-        
-        <li data-id="id-8" class="pop"><a href="#"><img src="images/artists_14.jpg" alt="">
-        <span>LCD Soundsystem</span></a></li>
-        
-        <li data-id="id-9" class="rock"><a href="#"><img src="images/artists_15.jpg" alt="">
-        <span>Toro y Moi</span></a></li>
-        
-          <li data-id="id-1" class="rock"><a href="#"><img src="images/artists_01.jpg" alt="">
+		<li data-id="id-7" class="pop"><a href="http://navegante.myartistdna.com"><img src="images/nvg.jpg" alt="">
         <span>Navegante</span></a></li>
         
-        <li data-id="id-2" class="pop"><a href="#"><img src="images/artists_02.jpg" alt="">
+        <li data-id="id-8" class="pop"><a href="http://youngchris.myartistdna.com"><img src="images/youngc.jpg" alt="">
         <span>Young Chris</span></a></li>
         
-        <li data-id="id-3" class="hiphop"><a href="#"><img src="images/artists_03.jpg" alt="">
-        <span>Hierosonic</span></a></li>
+        <li data-id="id-9" class="pop"><a href="http://marcecko.myartistdna.com"><img src="images/marc.jpg" alt="">
+        <span>Marc Ecko</span></a></li>
+        
+        <li data-id="id-10" class="pop"><a href="#"><img src="images/blakroc.jpg" alt="">
+        <span>Blakroc</span></a></li>
+        
+        <li data-id="id-11" class="pop"><a href="#"><img src="images/mmjb.jpg" alt="">
+        <span>Money Making Jam Boys</span></a></li>
+        
+  		<li data-id="id-12" class="pop"><a href="#"><img src="images/jen.jpg" alt="">
+        <span>Jen</span></a></li>
         
         </ul>
        
