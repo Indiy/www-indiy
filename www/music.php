@@ -17,11 +17,10 @@ include "header.php";
     </div>
 	
      <div class="features">
-    <ul id="accordion-slider">
+   
 
     <li><a href="#" target="_blank"><img src="images/musicBanner.jpg" alt=""></a></li>
- 
-    </ul>
+  
     </div><!-- features -->
     
      <div class="signup">
