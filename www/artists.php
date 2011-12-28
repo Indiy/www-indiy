@@ -80,11 +80,11 @@ include "header.php";
        
 	</div>	
     </div><!-- artists -->
-    <div class="signup">
-    <h3>Be heard, be seen, be independent.</h3>
+    
+      <div class="signup">
+    <h3>Be heard, be seen, Get started now!</h3>
     <div class="button"><a href="#" onclick="showSignup();">SIGN UP NOW</a></div>
-    </div><!-- signup -->
-</section><!-- content -->
+    </div><!-- signup --></section><!-- content -->
 </section><!-- wrapper -->
 
 <?php
