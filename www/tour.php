@@ -57,7 +57,7 @@ include ('header.php');
 		<div class="reset">
 		<h3>Can’t Login?</h3>
 		<p>Cras vel sem consequat neque aliquam sagittis venenatis quis tortor. </p>
-		<div class="button_reset"><a href="#">RESET PASSWORD</a></div>
+		<div class="button_reset"><a href="/forgot_password.html">RESET PASSWORD</a></div>
 		</div>
 		</div>
 		</div>
