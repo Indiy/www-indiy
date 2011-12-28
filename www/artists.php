@@ -45,13 +45,13 @@ include "header.php";
         <li data-id="id-6" ><img src="images/artists_03.jpg" alt="">
         <span>Hireosonic</span></li>
 		
-		<li data-id="id-7" ><a href="http://navegante.myartistdna.com"><img src="images/nvg.jpg" alt="">
+		<li data-id="id-7" ><img src="images/nvg.jpg" alt="">
         <span>Navegante</span></li>
         
-        <li data-id="id-8" ><a href="http://youngchris.myartistdna.com"><img src="images/youngc.jpg" alt="">
+        <li data-id="id-8" ><img src="images/youngc.jpg" alt="">
         <span>Young Chris</span></li>
         
-        <li data-id="id-9" ><a href="http://marcecko.myartistdna.com"><img src="images/marc.jpg" alt="">
+        <li data-id="id-9" ><img src="images/marc.jpg" alt="">
         <span>Marc Ecko</span></li>
         
         <li data-id="id-10" ><img src="images/blakroc.jpg" alt="">
@@ -84,7 +84,9 @@ include "header.php";
       <div class="signup">
     <h3>Be heard, be seen, Get started now!</h3>
     <div class="button"><a href="#" onclick="showSignup();">SIGN UP NOW</a></div>
-    </div><!-- signup --></section><!-- content -->
+    </div><!-- signup -->
+
+</section><!-- content -->
 </section><!-- wrapper -->
 
 <?php
