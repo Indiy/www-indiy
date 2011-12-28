@@ -8,7 +8,7 @@ include "header.php";
 	<div id="artists">
 	<div class="heading">
     <h2>ALL ARTISTS</h2>
-    
+    <!--
     <div class="sort">
         <ul class="splitter">
         <li><a class="sub" href="#">SORT PROJECTS BY CATEGORY</a>
@@ -22,7 +22,7 @@ include "header.php";
             </ul>
         </li>
         </ul>
-      </div><!-- dropdown -->
+      </div>  dropdown -->
     </div>
 	
     <div id="artistshome">
