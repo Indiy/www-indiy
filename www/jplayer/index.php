@@ -1522,7 +1522,7 @@ $(document).ready(function()
                 <li><label>Email Address</label> <input id='login_username' name="username" type="text" class="input" value="" /></li>
                 <li><label>Password</label> <input id='login_password' name="password" type="password" class="input" value="" /></li>
                 </ul>
-                <p class="password"><a href="/?p=index&forgot=true">Forgot your password?</a></p>
+                <p class="password"><a href="/forgot_password.html">Forgot your password?</a></p>
                 <div class="button"><a href="#-1" onclick='onLoginClick();'>LOGIN</a></div>
                 </fieldset>
                 </form>
