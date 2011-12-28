@@ -48,14 +48,14 @@ include 'header.php';
     <div id="artistshome">
 	<h2>Who uses MY<span>ARTIST</span>DNA</h2>
     	<ul>
-        <li data-id="id-7" class="hiphop"><a href="#"><img src="images/marc.jpg" alt="">
-        <span>Marc Ecko</span></a></li>
+        <li data-id="id-7" class="hiphop"><img src="images/marc.jpg" alt="">
+        <span>Marc Ecko</span></li>
         
-        <li data-id="id-8" class="pop"><a href="#"><img src="images/basil.jpg" alt="">
-        <span>Basil</span></a></li>
+        <li data-id="id-8" class="pop"><img src="images/basil.jpg" alt="">
+        <span>Basil</span></li>
         
-        <li data-id="id-9" class="rock"><a href="#"><img src="images/onionflats.jpg" alt="">
-        <span>Onion Flats</span></a></li>        
+        <li data-id="id-9" class="rock"><img src="images/onionflats.jpg" alt="">
+        <span>Onion Flats</span></li>        
         </ul>
 	</div>	
     </div><!-- artists -->
