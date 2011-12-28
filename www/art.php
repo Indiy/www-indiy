@@ -38,11 +38,7 @@ include 'header.php';
         </div>
     </div>
     
-    <div id="slide-scroller">		
-        <a href="#" class="prevPage">Previous</a>
-        <a href="#" class="nextPage">Next</a>                    
-    </div>
-    </div>
+       </div>
     	
     <div class="signup">
     <h3>Be heard, be seen, Get started now!</h3>
