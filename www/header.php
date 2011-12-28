@@ -52,7 +52,7 @@
 <section id="header">
 <header>
 
-    <h1><a href="index.php"><img src="images/MYARTISTDNA.gif" alt="MYARTISTDNA"></a></h1>
+    <h1><a href="home.php"><img src="images/MYARTISTDNA.gif" alt="MYARTISTDNA"></a></h1>
 
     <nav>
     <ul>
