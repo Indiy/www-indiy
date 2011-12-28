@@ -706,7 +706,7 @@ div.search_text { height:64px; width:140px; text-align:left; float:right; paddin
 
 .ui-error{ float:none; color:#FF0000; text-transform:uppercase; font-weight:bold; font-size:12px; width:100%}
 
-.header_wrapper, .header_wrapper div { height:257px; width:942px;  }
+.header_wrapper, .header_wrapper div { height:257px; width:940px;  }
 .header_wrapper { position:relative; display:block; }
 .header_wrapper div { position:absolute; top:0px; display:none; }
 .header_wrapper .header_1 { display:block; }
