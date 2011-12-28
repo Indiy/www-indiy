@@ -59,23 +59,23 @@
         <h2>Artists who use MY<span>ARTIST</span>DNA</h2>
     
         <ul>
-        <li><a href="http://navegante.myartistdna.com"><img src="images/nvg.jpg" alt="">
-        <span>Navegante</span></a></li>
+        <li><img src="images/nvg.jpg" alt="">
+        <span>Navegante</span></li>
         
-        <li><a href="http://youngchris.myartistdna.com"><img src="images/youngc.jpg" alt="">
-        <span>Young Chris</span></a></li>
+        <li><img src="images/youngc.jpg" alt="">
+        <span>Young Chris</span></li>
         
-        <li><a href="http://marcecko.myartistdna.com"><img src="images/marc.jpg" alt="">
-        <span>Marc Ecko</span></a></li>
+        <li><img src="images/marc.jpg" alt="">
+        <span>Marc Ecko</span></li>
         
-        <li><a href="#"><img src="images/blakroc.jpg" alt="">
-        <span>Blakroc</span></a></li>
+        <li><img src="images/blakroc.jpg" alt="">
+        <span>Blakroc</span></li>
         
-        <li><a href="#"><img src="images/mmjb.jpg" alt="">
-        <span>Money Making Jam Boys</span></a></li>
+        <li><img src="images/mmjb.jpg" alt="">
+        <span>Money Making Jam Boys</span></li>
         
-  		 <li><a href="#"><img src="images/jen.jpg" alt="">
-        <span>Jen</span></a></li>
+  		 <li><img src="images/jen.jpg" alt="">
+        <span>Jen</span></li>
         
         </ul>
         
