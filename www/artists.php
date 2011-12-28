@@ -27,7 +27,7 @@ include "header.php";
 	
     <div id="artistshome">
     	<ul id="list" class="image-grid">
-        <li data-id="id-1" ><a href="#"><img src="images/artists_01.jpg" alt="">
+        <li data-id="id-1" ><a href="#"><img src="images/bv.jpg" alt="">
         <span>Black Violin</span></a></li>
         
         <li data-id="id-2" ><a href="#"><img src="images/coolMent.jpg" alt="">
