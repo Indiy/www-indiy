@@ -42,6 +42,18 @@
                      array("password" => md5($new_password)),
                      "id",
                      $user['id']);
+
+        $to = $email;
+        $subject = 'Retrieve password for MyArtistDNA!';
+        $message = <<<END
+        
+Forgot your password? No worries, we created a new one for you: $new_password
+
+END;
+        $from = "no-reply@myartistdna.com";
+        $headers = "From:" . $from;
+        
+        mail($to,$subject,$message,$headers);
         $error = 0;
         $msg = "Your new password has been emailed to $email.";
     }
