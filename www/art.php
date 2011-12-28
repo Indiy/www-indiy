@@ -21,7 +21,7 @@ include 'header.php';
     	<article>
         <figure><img src="images/photo_art_slide1.jpg" alt=""></figure>
         <aside>
-        <p>Check out Lady Gaga's latest single, "MonsterBike"</p>
+        <p>Kithe Brewster - Stylist of the Stars</p>
         <div class="go"><a href="#">GO</a></div>
         </aside>
         </article>
@@ -29,21 +29,12 @@ include 'header.php';
     	<article class="right">
         <figure><img src="images/photo_art_slide2.jpg" alt=""></figure>
         <aside>
-        <p>Check out Lady Gaga's latest single, "MonsterBike"</p>
+        <p>Vanessa Cantave - Executive Chef / Entrepeneur</p>
         <div class="go"><a href="#">GO</a></div>
         </aside>
         </article>
         </div>
-        
-        <div class="item">
-    	<article class="inner">
-        <figure><img src="images/photo_art_slide3.jpg" alt=""></figure>
-        <aside>
-        <p>Check out Lady Gaga's latest single, "MonsterBike"</p>
-        <div class="go"><a href="#">GO</a></div>
-        </aside>
-        </article>
-        </div>
+      
         </div>
     </div>
     
