@@ -19,11 +19,8 @@ include "header.php";
      <div class="features">
     <ul id="accordion-slider">
 
-    <li><a href="#" target="_blank"><img src="images/nol.jpg" alt=""></a></li>
-
-    <li><a href="#" target="_blank"><img src="images/cannon.jpg" alt=""></a></li>
-
-    <li><a href="#" target="_blank"><img src="images/hssd.jpg" alt=""></a></li>    
+    <li><a href="#" target="_blank"><img src="images/musicBanner.jpg" alt=""></a></li>
+ 
     </ul>
     </div><!-- features -->
     
