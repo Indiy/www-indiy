@@ -63,6 +63,22 @@ include "header.php";
   		<li data-id="id-12" ><a href="#"><img src="images/jen.jpg" alt="">
         <span>Jen</span></a></li>
         
+        <li><a href="#"><img src="images/jen.jpg" alt="">
+        <span>Jen</span></a></li>
+ 
+        <li><a href="#"><img src="images/artists_05.jpg" alt="">
+        <span>Vanessa Cantave</span></a></li>
+        
+        <li><a href="#"><img src="images/hssd.jpg" alt="">
+        <span>Heart Set Self Destruct</span></a></li>
+        
+        <li><a href="#"><img src="images/basil.jpg" alt="">
+        <span>Basil</span></a></li>
+        
+        <li><a href="#"><img src="images/onionflats.jpg" alt="">
+        <span>Onion Flats</span></a></li>
+
+        
         </ul>
        
 	</div>	

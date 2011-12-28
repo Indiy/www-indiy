@@ -39,7 +39,7 @@ include "header.php";
         <span>Cool Mentality</span></a></li>
         
         <li><a href="#"><img src="images/wondaland.jpg" alt="">
-        <span>Woodlands Arts Society</span></a></li>
+        <span>Wondaland Arts Society</span></a></li>
         
         <li><a href="#"><img src="images/artists_04.jpg" alt="">
         <span>Kithe Brewster</span></a></li>
@@ -48,7 +48,7 @@ include "header.php";
         <span>Babylon Cartel</span></a></li>
         
         <li><a href="#"><img src="images/artists_03.jpg" alt="">
-        <span>Hireosonic</span></a></li>
+        <span>Hierosonic</span></a></li>
 		
 		<li><a href="http://navegante.myartistdna.com"><img src="images/nvg.jpg" alt="">
         <span>Navegante</span></a></li>
@@ -65,9 +65,7 @@ include "header.php";
         <li><a href="#"><img src="images/mmjb.jpg" alt="">
         <span>Money Making Jam Boys</span></a></li>
         
-  		<li><a href="#"><img src="images/jen.jpg" alt="">
-        <span>Jen</span></a></li>
-        
+  		        
         </ul>
 	</div>	
     </div><!-- artists -->
