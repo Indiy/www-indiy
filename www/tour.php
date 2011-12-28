@@ -52,11 +52,11 @@ include ('header.php');
 		
 		<div class="checkout">
 		<h5>NEED QUICK ANWERS? <br /> CHECK OUT OUR FAQ</h5>
-		<p>Cras vel sem consequat neque aliquam sagittis venenatis quis tortor. Duis nec lorem ut mi eleifend tincidunt. Donec a ornare. <a href="faq.php">GO</a></p>
+		<p>Any additional questions or concerns please send us a message and our team will respond respectively. <a href="faq.php">GO</a></p>
 		
 		<div class="reset">
 		<h3>Can’t Login?</h3>
-		<p>Cras vel sem consequat neque aliquam sagittis venenatis quis tortor. </p>
+		<p>Click the button below and we will email instructions to you on how to reset your password. </p>
 		<div class="button_reset"><a href="/forgot_password.html">RESET PASSWORD</a></div>
 		</div>
 		</div>
