@@ -68,7 +68,7 @@
         <li><a href="http://marcecko.myartistdna.com"><img src="images/marc.jpg" alt="">
         <span>Marc Ecko</span></a></li>
         
-        <li><a href="#"><img src="images/artists_05.jpg" alt="">
+        <li><a href="#"><img src="images/blakroc.jpg" alt="">
         <span>Blakroc</span></a></li>
         
         <li><a href="#"><img src="images/mmjb.jpg" alt="">
