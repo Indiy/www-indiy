@@ -17,6 +17,8 @@
 		2D34E22E14A59976004473F9 /* tooltip_text.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = tooltip_text.js; sourceTree = "<group>"; };
 		2D34E23014A5AD3E004473F9 /* first_instructions.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = first_instructions.php; sourceTree = "<group>"; };
 		2D34E23114A645ED004473F9 /* jplayer.blue.monday.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = jplayer.blue.monday.css; sourceTree = "<group>"; };
+		2D34E23214A9680C004473F9 /* faq.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = faq.php; sourceTree = "<group>"; };
+		2D34E23314AAD64D004473F9 /* forgot_password.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = forgot_password.html; sourceTree = "<group>"; };
 		2D380B8814671EF400E36189 /* server_config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = server_config.php; path = ../server_config.php; sourceTree = "<group>"; };
 		2D380B8A1467970100E36189 /* add_user.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_user.php; sourceTree = "<group>"; };
 		2D380B8B1468AC0500E36189 /* manage.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = manage.js; sourceTree = "<group>"; };
@@ -299,7 +301,6 @@
 		2DF470521440B77F005538C7 /* Teletex_Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Teletex_Light.otf; sourceTree = "<group>"; };
 		2DF470561440B77F005538C7 /* listens.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = listens.php; sourceTree = "<group>"; };
 		2DF470571440B77F005538C7 /* download.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = download.php; sourceTree = "<group>"; };
-		2DF470581440B77F005538C7 /* faq.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = faq.html; sourceTree = "<group>"; };
 		2DF470591440B77F005538C7 /* fashion.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fashion.php; sourceTree = "<group>"; };
 		2DF4705A1440B77F005538C7 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
 		2DF4705C1440B77F005538C7 /* header.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = header.php; sourceTree = "<group>"; };
@@ -858,7 +859,6 @@
 		2DF472DE1440B77F005538C7 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
 		2DF472DF1440B77F005538C7 /* smoothscroll.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = smoothscroll.js; sourceTree = "<group>"; };
 		2DF472E01440B77F005538C7 /* swfobject.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = swfobject.js; sourceTree = "<group>"; };
-		2DF472E31440B77F005538C7 /* login_resetpassword.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = login_resetpassword.html; sourceTree = "<group>"; };
 		2DF472E81440B77F005538C7 /* dbconfig.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = dbconfig.php; sourceTree = "<group>"; };
 		2DF472E91440B77F005538C7 /* fbconfig.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fbconfig.php; sourceTree = "<group>"; };
 		2DF472EA1440B77F005538C7 /* functions.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = functions.php; sourceTree = "<group>"; };
@@ -1451,15 +1451,15 @@
 				2DF470431440B77F005538C7 /* be-seen.php */,
 				2DF470461440B77F005538C7 /* check_login.php */,
 				2DF470571440B77F005538C7 /* download.php */,
-				2DF470581440B77F005538C7 /* faq.html */,
 				2DF470591440B77F005538C7 /* fashion.php */,
+				2D34E23214A9680C004473F9 /* faq.php */,
 				2DF4705A1440B77F005538C7 /* favicon.ico */,
 				2DF4705C1440B77F005538C7 /* header.php */,
 				2DF4705D1440B77F005538C7 /* home.php */,
 				2DBDD1271469D46D001E20CC /* footer.php */,
 				2DF471C71440B77F005538C7 /* index.php */,
 				2D34E22814A173A9004473F9 /* landing.html */,
-				2DF472E31440B77F005538C7 /* login_resetpassword.html */,
+				2D34E23314AAD64D004473F9 /* forgot_password.html */,
 				2DF472FE1440B77F005538C7 /* music.php */,
 				2DF473291440B77F005538C7 /* php.ini */,
 				2DF4732A1440B77F005538C7 /* PIE.htc */,
