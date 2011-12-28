@@ -62,6 +62,9 @@ include "header.php";
                 
         <li><img src="images/jen.jpg" alt="">
         <span>Jen</span></li>
+        
+        <li><img src="images/rbanks.jpg" alt="">
+        <span>Ryan Bank$</span></li>
  
         <li><img src="images/artists_05.jpg" alt="">
         <span>Vanessa Cantave</span></li>
