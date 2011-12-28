@@ -35,7 +35,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">SEEN</span></span></li>
         </ul>
-        <h5><a href="be-seen.php">Get products to consumers</a></h5>
+        <h5><a href="be-seen.php">Helping you get products to consumers</a></h5>
         </aside>
     
         <aside class="independent">
@@ -43,7 +43,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">INDEPENDENT</span></span></li>
         </ul>
-        <h5><a href="be-independent.php">Take control of your brand</a></h5>
+        <h5><a href="be-independent.php">Cut out the middleman. Take control!</a></h5>
         </aside>
     </article>
     </div><!-- benefit -->
