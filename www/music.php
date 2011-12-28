@@ -19,11 +19,11 @@ include "header.php";
      <div class="features">
     <ul id="accordion-slider">
 
-    <li><a href="http://navegante.myartistdna.com" target="_blank"><img src="images/myartistdna_01.jpg" alt=""></a></li>
+    <li><a href="#" target="_blank"><img src="images/nol.jpg" alt=""></a></li>
 
-    <li><a href="http://youngchris.myartistdna.com" target="_blank"><img src="images/myartistdna_11.jpg" alt=""></a></li>
+    <li><a href="#" target="_blank"><img src="images/cannon.jpg" alt=""></a></li>
 
-    <li><a href="http://hierosonic.myartistdna.com" target="_blank"><img src="images/myartistdna_12.jpg" alt=""></a></li>    
+    <li><a href="#" target="_blank"><img src="images/hssd.jpg" alt=""></a></li>    
     </ul>
     </div><!-- features -->
     
