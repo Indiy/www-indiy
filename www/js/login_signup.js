@@ -139,4 +139,37 @@ function onSignupClick()
     return false;
 }
 
+function onForgotPasswordClick()
+{           
+    var username = escape( $('#login_username').val() );
+
+    // Send the ajax request.
+    jQuery.ajax(
+        {
+            type: "POST",
+            url: "/data/forgot_password.php?email="+username,
+            dataType: "json",
+            success: function(data)
+            {
+                var error = data['error'];
+                if( error == 0 )
+                {
+                    $('.instructions').text(data['msg']);
+                    $('.login').hide();
+                    $('.email_header').hide();
+                    $('#login_username').hide();
+                }
+                else
+                {           
+                    $('#validate-login').html("<span class='ui-error'>Couldn't find your user. Please try again.</span>");                  
+                    return false;
+                }
+            },
+            error: function()
+            {
+                $('#validate-login').html("<span class='ui-error'>Couldn't find your user. Please try again.</span>");                   
+                return false;
+            }
+        });
+} 
 
