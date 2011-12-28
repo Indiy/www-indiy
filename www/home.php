@@ -51,7 +51,7 @@
     
     <div class="signup">
     <h3>A NEW WAY TO BUILD YOUR ONLINE BRAND</h3>
-    <div class="button"><a href="#" onclick="http://demo.madd3v.com">SEE EXAMPLES</a></div>
+    <div class="button"><a href="http://demo.madd3v.com">SEE EXAMPLES</a></div>
     </div><!-- signup -->
         
         
