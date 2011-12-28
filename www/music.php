@@ -36,32 +36,42 @@ include "header.php";
     <div id="artistshome">
 	<h2>ARTISTS USING MY<span>ARTIST</span>DNA</h2>
     	<ul>
-        <li><a href="#"><img src="images/artists_01.jpg" alt="">
-        <span>Navegante</span></a></li>
+         <li><a href="#"><img src="images/bv.jpg" alt="">
+        <span>Black Violin</span></a></li>
         
-        <li><a href="#"><img src="images/artists_07.jpg" alt="">
-        <span>Bon Iver</span></a></li>
+        <li><a href="#"><img src="images/coolMent.jpg" alt="">
+        <span>Cool Mentality</span></a></li>
         
-        <li><a href="#"><img src="images/artists_08.jpg" alt="">
-        <span>Junior Boys</span></a></li>
+        <li><a href="#"><img src="images/wondaland.jpg" alt="">
+        <span>Woodlands Arts Society</span></a></li>
         
         <li><a href="#"><img src="images/artists_04.jpg" alt="">
         <span>Kithe Brewster</span></a></li>
         
-        <li><a href="#"><img src="images/artists_05.jpg" alt="">
-        <span>Vanessa Cantave</span></a></li>
+        <li><a href="#"><img src="images/bc.jpg" alt="">
+        <span>Babylon Cartel</span></a></li>
         
-        <li><a href="#"><img src="images/artists_09.jpg" alt="">
-        <span>Sean Price</span></a></li>
+        <li><a href="#"><img src="images/artists_03.jpg" alt="">
+        <span>Hireosonic</span></a></li>
 		
-		<li><a href="#"><img src="images/artists_10.jpg" alt="">
-        <span>Florence & The Machine</span></a></li>
+		<li><a href="http://navegante.myartistdna.com"><img src="images/nvg.jpg" alt="">
+        <span>Navegante</span></a></li>
         
-        <li><a href="#"><img src="images/artists_11.jpg" alt="">
-        <span>LCD Soundsystem</span></a></li>
+        <li><a href="http://youngchris.myartistdna.com"><img src="images/youngc.jpg" alt="">
+        <span>Young Chris</span></a></li>
         
-        <li><a href="#"><img src="images/artists_12.jpg" alt="">
-        <span>Nikki Manaj</span></a></li>
+        <li><a href="http://marcecko.myartistdna.com"><img src="images/marc.jpg" alt="">
+        <span>Marc Ecko</span></a></li>
+        
+        <li><a href="#"><img src="images/blakroc.jpg" alt="">
+        <span>Blakroc</span></a></li>
+        
+        <li><a href="#"><img src="images/mmjb.jpg" alt="">
+        <span>Money Making Jam Boys</span></a></li>
+        
+  		<li><a href="#"><img src="images/jen.jpg" alt="">
+        <span>Jen</span></a></li>
+        
         </ul>
 	</div>	
     </div><!-- artists -->
