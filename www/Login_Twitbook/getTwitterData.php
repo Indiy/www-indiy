@@ -46,9 +46,11 @@
                     $file_path = '../artists/images/' . $artist_logo;
                     
                     $contents = file_get_contents($user_info->profile_image_url);
-                    file_put_contents($file_path,$contents);
-                    
-                    mysql_update("mydna_musicplayer",array("logo" => $artist_logo),"id",$artist_id);
+                    if( $contents )
+                    {
+                        file_put_contents($file_path,$contents);
+                        mysql_update("mydna_musicplayer",array("logo" => $artist_logo),"id",$artist_id);
+                    }
                 }
             
                 $url = loginArtistFromRow($userdata);
