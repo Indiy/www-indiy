@@ -20,6 +20,8 @@
 		2D34E23214A9680C004473F9 /* faq.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = faq.php; sourceTree = "<group>"; };
 		2D34E23314AAD64D004473F9 /* forgot_password.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = forgot_password.html; sourceTree = "<group>"; };
 		2D34E23414AADC6D004473F9 /* forgot_password.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = forgot_password.php; sourceTree = "<group>"; };
+		2D34E23514ABFF09004473F9 /* video-js.css */ = {isa = PBXFileReference; path = "video-js.css"; sourceTree = "<group>"; };
+		2D34E23614ABFF15004473F9 /* video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = video.js; sourceTree = "<group>"; };
 		2D380B8814671EF400E36189 /* server_config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = server_config.php; path = ../server_config.php; sourceTree = "<group>"; };
 		2D380B8A1467970100E36189 /* add_user.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_user.php; sourceTree = "<group>"; };
 		2D380B8B1468AC0500E36189 /* manage.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = manage.js; sourceTree = "<group>"; };
@@ -1781,6 +1783,7 @@
 		2DF470471440B77F005538C7 /* css */ = {
 			isa = PBXGroup;
 			children = (
+				2D34E23514ABFF09004473F9 /* video-js.css */,
 				2D34E23114A645ED004473F9 /* jplayer.blue.monday.css */,
 				2DF4741A1440CFC6005538C7 /* jquery.mCustomScrollbar.css */,
 				2DF470491440B77F005538C7 /* Lucida Grande.eot */,
@@ -2631,6 +2634,7 @@
 		2DF472C71440B77F005538C7 /* js */ = {
 			isa = PBXGroup;
 			children = (
+				2D34E23614ABFF15004473F9 /* video.js */,
 				2DF472CA1440B77F005538C7 /* application.js */,
 				2DF472CB1440B77F005538C7 /* application.php */,
 				2DF472CC1440B77F005538C7 /* artist_home.js */,
