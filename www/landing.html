@@ -337,10 +337,24 @@ input
         
         <script type="text/javascript">
 
+var g_initVideo = false;
+
 function showVideo()
 {
     $('.wrapper').hide();
     $('.video_wrapper').show();
+    
+    if( !g_initVideo )
+    {
+        g_initVideo = true;
+        VideoJS.setupAllWhenReady({
+                                  controlsBelow: false,
+                                  controlsHiding: true,
+                                  defaultVolume: 0.85,
+                                  flashVersion: 9,
+                                  linksHiding: true
+                                  });
+    }
 }
 
 function closeVideo()
@@ -349,13 +363,7 @@ function closeVideo()
     $('.wrapper').show();
 }
 
-VideoJS.setupAllWhenReady({
-        controlsBelow: false,
-        controlsHiding: true,
-        defaultVolume: 0.85,
-        flashVersion: 9,
-        linksHiding: true
-    });
+
 
         </script>
     </head>
