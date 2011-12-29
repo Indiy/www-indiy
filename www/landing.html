@@ -337,26 +337,6 @@ input
         
         <script type="text/javascript">
 
-function docReady()
-{
-	$("#jquery_jplayer_1").jPlayer(
-    {
-		ready: function () {
-			$(this).jPlayer("setMedia", {
-				m4v: "http://myartistdna.com/videos/assets/videos/-Master.mp4",
-				poster: "http://myartistdna.com/videos/assets/images/sm-logo.jpg"
-			});
-		},
-		swfPath: "/js",
-		supplied: "m4v",
-		size: {
-			width: "640px",
-			height: "360px",
-			cssClass: "jp-video-360p"
-            }
-    });
-}
-
 function showVideo()
 {
     $('.wrapper').hide();
@@ -369,7 +349,13 @@ function closeVideo()
     $('.wrapper').show();
 }
 
-//$(document).ready(docReady);
+VideoJS.setupAllWhenReady({
+        controlsBelow: false,
+        controlsHiding: true,
+        defaultVolume: 0.85,
+        flashVersion: 9,
+        linksHiding: true
+    });
 
         </script>
     </head>
@@ -443,18 +429,16 @@ function closeVideo()
                     </div>
                 </div>
                 <div class="video-js-box">
-                    <video id="example_video_1" class="video-js" width="853" height="480" controls="controls" preload="auto" poster="http://video-js.zencoder.com/oceans-clip.png">
-                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm; codecs="vp8, vorbis"' />
-                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg; codecs="theora, vorbis"' />
+                    <video id="example_video_1" class="video-js" width="853" height="480" controls="controls" preload="auto" poster="/images/mad_poster.png">
+                        <source src="http://www.myartistdna.com/mad.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
                         <!-- Flash Fallback. Use any flash video player here. Make sure to keep the vjs-flash-fallback class. -->
                         <object id="flash_fallback_1" class="vjs-flash-fallback" width="640" height="264" type="application/x-shockwave-flash"
                             data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
                             <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
                             <param name="allowfullscreen" value="true" />
-                            <param name="flashvars" value='config={"playlist":["http://video-js.zencoder.com/oceans-clip.png", {"url": "http://video-js.zencoder.com/oceans-clip.mp4","autoPlay":false,"autoBuffering":true}]}' />
+                            <param name="flashvars" value='config={"playlist":["http://www.myartistdna.com/images/mad_poster.png", {"url": "http://www.myartistdna.com/mad.mp4","autoPlay":false,"autoBuffering":true}]}' />
                             <!-- Image Fallback. Typically the same as the poster image. -->
-                            <img src="http://video-js.zencoder.com/oceans-clip.png" width="853" height="480" alt="Poster Image"
+                            <img src="/images/mad_poster.png" width="853" height="480" alt="Poster Image"
                             title="No video playback capabilities." />
                         </object>
                     </video>
