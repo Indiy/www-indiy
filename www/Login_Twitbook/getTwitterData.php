@@ -39,6 +39,18 @@
             $userdata = $user->checkUser($uid, 'twitter', $username,$user_info,$music_str,$auto_incremented_id);
             if( !empty($userdata) )
             {
+                $artist_id = $userdata['id'];
+                if( $user_info->profile_image_url )
+                {
+                    $artist_logo = $artist_id . "_" . rand(11111,99999) . "_twitter.jpg";
+                    $file_path = '../artists/images/' . $artist_logo;
+                    
+                    $contents = file_get_contents($user_info->profile_image_url);
+                    file_put_contents($file_path,$contents);
+                    
+                    mysql_update("mydna_musicplayer",array("logo" => $artist_logo),"id",$artist_id);
+                }
+            
                 $url = loginArtistFromRow($userdata);
                 header("Location: $url");
             }
