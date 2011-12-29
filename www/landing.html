@@ -338,6 +338,7 @@ input
         <script type="text/javascript">
 
 var g_initVideo = false;
+var g_videoPlayer = false;
 
 function showVideo()
 {
@@ -347,7 +348,7 @@ function showVideo()
     if( !g_initVideo )
     {
         g_initVideo = true;
-        VideoJS.setupAllWhenReady({
+        g_videoPlayer = VideoJS.setup("mad_video_1",{
                                   controlsBelow: false,
                                   controlsHiding: true,
                                   defaultVolume: 0.85,
@@ -361,9 +362,8 @@ function closeVideo()
 {
     $('.video_wrapper').hide();
     $('.wrapper').show();
+    g_videoPlayer.stop();
 }
-
-
 
         </script>
     </head>
@@ -437,7 +437,7 @@ function closeVideo()
                     </div>
                 </div>
                 <div class="video-js-box">
-                    <video id="example_video_1" class="video-js" width="853" height="480" controls="controls" preload="auto" poster="/images/mad_poster.png">
+                    <video id="mad_video_1" class="video-js" width="853" height="480" controls="controls" preload="auto" poster="/images/mad_poster.png">
                         <source src="http://www.myartistdna.com/mad.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
                         <!-- Flash Fallback. Use any flash video player here. Make sure to keep the vjs-flash-fallback class. -->
                         <object id="flash_fallback_1" class="vjs-flash-fallback" width="640" height="264" type="application/x-shockwave-flash"
