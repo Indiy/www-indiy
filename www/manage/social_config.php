@@ -19,20 +19,31 @@
     if( $artist['fb_access_token'] && $artist['facebook'] )
         $facebook = $artist['facebook'];
 
-    $auto_fb = $artist['auto_fb'];
-    $auto_tw = $artist['auto_tw'];
+    $fb_auto = $artist['fb_setting'] == 'AUTO' ? 'checked' : '';
+    $fb_manual = $artist['fb_setting'] == 'MANUAL' ? 'checked' : '';
+    $fb_disabled = $artist['fb_setting'] == 'DISABLED' ? 'checked' : '';
+    $tw_auto = $artist['tw_setting'] == 'AUTO' ? 'checked' : '';
+    $tw_manual = $artist['tw_setting'] == 'MANUAL' ? 'checked' : '';
+    $tw_disabled = $artist['tw_setting'] == 'DISABLED' ? 'checked' : '';
 
     $artist_url = $artist['url'];
     $embed_url = playerUrl() . $artist_url . "&embed=true";
     $embed_text = "<iframe src=\"$embed_url\" border=\"0\" width=\"400\" height=\"600\" frameborder=\"0\" name=\"$artist_url\"></iframe>";
     
-	if(isset($_REQUEST['auto_fb'])) 
+    $fb_page_url = $artist['fb_page_url'];
+    
+	if(isset($_REQUEST['fb_setting'])) 
     {
-        $auto_fb = $_REQUEST['auto_fb'];
-        $auto_tw = $_REQUEST['auto_tw'];
+        $fb_setting = $_REQUEST['fb_setting'];
+        $tw_setting = $_REQUEST['tw_setting'];
+        $fb_page_url = $_REQUEST['fb_page_url'];
         
         mysql_update('mydna_musicplayer',
-                     array("auto_fb" => $auto_fb,"auto_tw" => $auto_tw),
+                     array(
+                           "fb_setting" => $fb_setting,
+                           "tw_setting" => $tw_setting,
+                           "fb_page_url" => $fb_page_url,
+                           ),
                      'id',$artist_id);
         
         $postedValues['success'] = "1";
@@ -56,6 +67,19 @@ var g_artistId = '<?=$artist_id;?>';
     <div class='top_sep'></div>
     <form id="social_config_form"  onsubmit='return false;'>
         <div class='input_container' style='height: 55px;'>
+            <div class='left_label'>Twitter Account</div>
+            <?php
+                if( $twitter )
+                    echo "<input type='text' disabled='disabled' value='$twitter' class='right_text' />\n";
+                else
+                {
+                    echo "<div class='right_box'>";
+                    echo "<button class='submit' onclick='clickAddTwitter();'>Add Twitter</button>\n";
+                    echo "</div>";
+                }
+            ?>
+        </div>
+        <div class='input_container' style='height: 55px;'>
             <div class='left_label'>Facebook Account</div>
             <?php
                 if( $facebook )
@@ -71,19 +95,6 @@ var g_artistId = '<?=$artist_id;?>';
         <div class='input_container'>
             <div class='line_label'>Facebook Page URL</div>
             <input id='fb_page_url' type="text" name="name" value="<?=$fb_page_url;?>" class='line_text' />
-        </div>
-        <div class='input_container' style='height: 55px;'>
-            <div class='left_label'>Twitter Account</div>
-            <?php
-                if( $twitter )
-                    echo "<input type='text' disabled='disabled' value='$twitter' class='right_text' />\n";
-                else
-                {
-                    echo "<div class='right_box'>";
-                    echo "<button class='submit' onclick='clickAddTwitter();'>Add Twitter</button>\n";
-                    echo "</div>";
-                }
-            ?>
         </div>
         <div class='input_container'>
             <div class='left_label'>Facebook</div>
@@ -103,7 +114,7 @@ var g_artistId = '<?=$artist_id;?>';
         </div>
         <div class='flow_container'>
             <div class='line_label'>Embed Widget</div>
-            <textarea style='height: 40px;'><?=$embed_text;?></textarea>
+            <textarea style='height: 40px; width: 320px;'><?=$embed_text;?></textarea>
         </div>
         <div class='submit_container'>
             <button class="submit" onclick='onSocialConfigSave();'>Save</button>

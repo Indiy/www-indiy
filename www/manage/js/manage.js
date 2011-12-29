@@ -370,13 +370,15 @@ function onSocialConfigSave()
     $('#social_config_form').hide();
     $('#status').show();
     $('#status').text("Updating Settings...");
-    var auto_fb = $('#auto_fb').is(':checked') ? "1":"0";
-    var auto_tw = $('#auto_tw').is(':checked') ? "1":"0";
+    var fb_setting = $('input[name=fb_setting]:checked').val();
+    var tw_setting = $('input[name=tw_setting]:checked').val();
+    var fb_page_url = $('#fb_page_url').val();
     
     var post_url = "/manage/social_config.php?";
     post_url += "&artist_id=" + escape(g_artistId);
-    post_url += "&auto_fb=" + auto_fb;
-    post_url += "&auto_tw=" + auto_tw;
+    post_url += "&fb_setting=" + fb_setting;
+    post_url += "&tw_setting=" + tw_setting;
+    post_url += "&fb_page_url=" + escape(fb_page_url);
     jQuery.ajax(
     {
         type: 'POST',
