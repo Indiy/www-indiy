@@ -22,6 +22,9 @@
     $auto_fb = $artist['auto_fb'];
     $auto_tw = $artist['auto_tw'];
 
+    $artist_url = $artist['url'];
+    $embed_url = playerUrl() . $artist_url . "&embed=true";
+    $embed_text = "<iframe src=\"$embed_url\" border=\"0\" width=\"400\" height=\"600\" frameborder=\"0\" name=\"$artist_url\"></iframe>";
     
 	if(isset($_REQUEST['auto_fb'])) 
     {
@@ -65,6 +68,10 @@ var g_artistId = '<?=$artist_id;?>';
                 }
             ?>
         </div>
+        <div class='input_container'>
+            <div class='line_label'>Facebook Page URL</div>
+            <input id='fb_page_url' type="text" name="name" value="<?=$fb_page_url;?>" class='line_text' />
+        </div>
         <div class='input_container' style='height: 55px;'>
             <div class='left_label'>Twitter Account</div>
             <?php
@@ -79,12 +86,24 @@ var g_artistId = '<?=$artist_id;?>';
             ?>
         </div>
         <div class='input_container'>
-            <div class='left_label'>Automatic Facebook</div>
-            <input id='auto_fb' type="checkbox" name="auto_fb" <? if($auto_fb) echo 'checked'; ?> class="right_box"/>
+            <div class='left_label'>Facebook</div>
+            <div class='right_box'>
+                <input id='fb_setting' type="radio" name="fb_setting" value="AUTO" class="radio" <?=$fb_auto;?> /> Auto
+                <input id='fb_setting' type="radio" name="fb_setting" value="MANUAL" class="radio" <?=$fb_manual;?> /> Manual
+                <input id='fb_setting' type="radio" name="fb_setting" value="DISABLED" class="radio" <?=$fb_disabled;?> /> Disabled
+            </div>
         </div>
         <div class='input_container'>
-            <div class='left_label'>Automatic Tweet</div>
-            <input id='auto_tw' type="checkbox" name="auto_tw" <? if($auto_tw) echo 'checked'; ?> class="right_box"/>
+            <div class='left_label'>Twitter</div>
+            <div class='right_box'>
+                <input id='tw_setting' type="radio" name="tw_setting" value="AUTO" class="radio" <?=$tw_auto;?> /> Auto
+                <input id='tw_setting' type="radio" name="tw_setting" value="MANUAL" class="radio" <?=$tw_manual;?> /> Manual
+                <input id='tw_setting' type="radio" name="tw_setting" value="DISABLED" class="radio" <?=$tw_disabled;?> /> Disabled
+            </div>
+        </div>
+        <div class='flow_container'>
+            <div class='line_label'>Embed Widget</div>
+            <textarea style='height: 40px;'><?=$embed_text;?></textarea>
         </div>
         <div class='submit_container'>
             <button class="submit" onclick='onSocialConfigSave();'>Save</button>
