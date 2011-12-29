@@ -74,7 +74,7 @@
 	else
 		$artist_img_logo = '../artists/images/'.$record_artistDetail['logo'];
 
-	$img_url = "timthumb.php?src=".$artist_img_logo.'&amp;w=220&amp;h=248&amp;zc=1&amp;q=100';
+	$img_url = "timthumb.php?src=$artist_img_logo&w=220&zc=1&q=100";
 
     $artist_url = str_replace("http://www.","http://".$record_artistDetail['url'].".",trueSiteUrl());
 
@@ -173,7 +173,7 @@ $(document).ready(showFirstInstruction);
     
     <div id="adminblock">
     	<div class="column1">
-            <figure><img src="<?php echo $img_url; ?>" alt="<?php echo $record_artistDetail['artist']; ?>" title="<?php echo $record_artistDetail['artist']; ?>" /></figure>
+            <figure><img src="<?=$img_url;?>" alt="<?php echo $record_artistDetail['artist']; ?>" title="<?php echo $record_artistDetail['artist']; ?>" /></figure>
             
             <h6>Manage Profile</h6>
             <ul>
