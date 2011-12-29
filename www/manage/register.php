@@ -28,8 +28,6 @@
 		$music_likes  = $_POST["artist_music_likes"];
 		$url  = $_POST["url"];
 		$website = $_POST["website"];
-		$twitter = $_POST["twitter"];
-		$facebook = $_POST["facebook"];
 		$appid = $_POST["appid"];
 		$password = md5($_POST["newpass"]);
 		
@@ -55,8 +53,8 @@
 		}
 		
 		
-		$tables = "artist|email|gender|languages|location|music_likes|url|website|twitter|facebook|appid|password|IsArtist|logo";
-		$values = "{$artist}|{$email}|{$gender}|{$languages}|{$location}|{$music_likes}|{$url}|{$website}|{$twitter}|{$facebook}|{$appid}|{$password}|{$IsArtist}|{$logo}";
+		$tables = "artist|email|gender|languages|location|music_likes|url|website|appid|password|IsArtist|logo";
+		$values = "{$artist}|{$email}|{$gender}|{$languages}|{$location}|{$music_likes}|{$url}|{$website}|{$appid}|{$password}|{$IsArtist}|{$logo}";
 		
 		if ($artistid != "") {
 			update($database,$tables,$values,"id",$artistid);
@@ -147,17 +145,6 @@
             <div class='left_label'>Logo</div>
             <input type="file" class="right_file" name="logo">
         </div>
-
-        <div class='input_container'>
-            <div class='left_label'>Twitter username</div>
-            <input type="text" class="right_text" value="<?=$twitter?>" name="twitter">
-        </div>
-
-        <div class='input_container'>
-            <div class='left_label'>Facebook username</div>
-            <input type="text" class="right_text" value="<?=$facebook?>" name="facebook">
-        </div>
-        
         <div class='input_container'>
             <div class='left_label'>Show "Listen" Count</div>
             <div class="right_box">
