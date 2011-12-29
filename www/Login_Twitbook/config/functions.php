@@ -57,6 +57,19 @@ class User {
                     $access_token = $_SESSION['access_token'];
                     $oauth_token = $access_token['oauth_token'];
                     $oauth_token_secret = $access_token['oauth_token_secret'];
+                    $logo = NULL;
+                    if( $user_info->profile_image_url )
+                    {
+                        $new_logo = $artist_id . "_" . rand(11111,99999) . "_twitter.jpg";
+                        $file_path = '../artists/images/' . $new_logo;
+                        
+                        $contents = file_get_contents($user_info->profile_image_url);
+                        if( $contents )
+                        {
+                            file_put_contents($file_path,$contents);
+                            $logo = $new_logo;
+                        }
+                    }
 
                     mysql_insert('mydna_musicplayer',array("username" => $user_info->screen_name,
                                                            "artist" => $user_info->name,
@@ -74,6 +87,7 @@ class User {
                                                            "oauth_secret" => $oauth_token_secret,
                                                            "oauth_provider" => $oauth_provider,
                                                            "twitter_screen_name" => $user_info->screen_name,
+                                                           "logo" => $logo,
                                                            ));
                 }
 			    else
@@ -83,6 +97,21 @@ class User {
                     if( !$username )
                         $username = $user_info['name'];
                     $email = $user_info['email'];
+                    $logo = NULL;
+                    $artist_id = $userdata['id'];
+                    if( $user_info['username'] )
+                    {
+                        $url = "http://graph.facebook.com/$username/picture";
+                        $new_logo = $artist_id . "_" . rand(11111,99999) . "_fb.jpg";
+                        $file_path = '../artists/images/' . $new_logo;
+                        
+                        $contents = file_get_contents($url);
+                        if( $contents )
+                        {
+                            file_put_contents($file_path,$contents);
+                            $logo = $new_logo;
+                        }
+                    }
                     
                     mysql_insert('mydna_musicplayer',array("username" => $username,
                                                            "artist" => $user_info["name"],
@@ -94,6 +123,7 @@ class User {
                                                            "oauth_provider" => $oauth_provider,
                                                            "oauth_uid" => $uid,
                                                            "email" => $email,
+                                                           "logo" => $logo,
                                                            ));
                 }
 
