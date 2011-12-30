@@ -1123,10 +1123,11 @@ input.right_text, input.color,input.line_text {
 .submit_branding_container {
     width: 100%;
     padding-top: 10px;
+    height: 40px;
 }
 .left_submit {
     float: left;
-    width: 150px;
+    width: 160px;
     height: 40px;
     color: #51C3C4;
     background-color: black;
@@ -1143,6 +1144,7 @@ input.right_text, input.color,input.line_text {
     margin-right: 20px;
     font-size: 12px;
     font-family: sans-serif;
+    color: #555;
 }
 .form_message {
     text-align: center;
