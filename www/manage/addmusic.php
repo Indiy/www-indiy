@@ -160,7 +160,7 @@
 	
 	if ($audio_logo != "") {
 		$audio_logo = '<img src="../artists/images/'.$audio_logo.'" style=" margin-top: 0px; height: 25px;" />';
-        $audio_logo .= "<button onclick='onImageRemove();'></button>";
+        $audio_logo .= "<button onclick='return onImageRemove();'></button>";
 	}
 	
 	if ($audio_download == "1") { $yesDownload = " checked"; } else { $noDownload = " checked"; }
@@ -174,14 +174,21 @@
 
 $(document).ready(setupQuestionTolltips);
 
+var g_removeSong = false;
+
 function onSongRemove()
 {
-    
+    var result = window.confirm("Remove song from page?");
+    if( result )
+        g_removeSong = true;
     return false;
 }
 
 function onImageRemove()
 {
+    var result = window.confirm("Remove image from page?");
+    if( result )
+        g_removeSong = true;
     return false;
 }
     
