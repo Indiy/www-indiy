@@ -160,6 +160,7 @@
 	
 	if ($audio_logo != "") {
 		$audio_logo = '<img src="../artists/images/'.$audio_logo.'" style=" margin-top: 0px; height: 25px;" />';
+        $audio_logo .= "<button onclick='onImageRemove();'></button>";
 	}
 	
 	if ($audio_download == "1") { $yesDownload = " checked"; } else { $noDownload = " checked"; }
@@ -195,7 +196,7 @@
             <div class='left_label'>MP3 File <span id='tip_mp3' class='tooltip'>(?)</span></div>
             <div class='right_file_filename'>
                 <input id='song_audio' type="file" name="audio" />
-                <div class='filename'><?=$audio_sound;?></div>
+                <div class='filename'><?=$audio_sound;?><button onclick='onSongRemove();'></button></div>
             </div>
         </div>
         <div class='input_container'>

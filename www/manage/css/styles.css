@@ -1080,6 +1080,12 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     font-size: 10px;
     padding-top: 4px;
 }
+.filename button
+{
+    width: 15px;
+    height: 15px;
+    background-image: url("/images/close.png");
+}
 input.right_text, input.color,input.line_text {
     border-radius: 3px;
     -webkit-border-radius: 3px;
