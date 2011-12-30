@@ -188,7 +188,7 @@ $(document).ready(showFirstInstruction);
                 <li><a href="addvideo.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Video</a></li>
                 <li><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Pages</a></li>
                 <li><a href="stats.php?userId=<?=$artistID;?>">View Analytics</a></li>
-                <li><a href="download_newsletter.php?artist_id=<?=$artistID;?>">View Email Sign Up</a></li>
+                <li><a href="fan_connections.php?artist_id=<?=$artistID;?>" rel="facebox[.bolder]">Fan Connections</a></li>
             </ul>
             
             <h6>Ecommerce</h6>
