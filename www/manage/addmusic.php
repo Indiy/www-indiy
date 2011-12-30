@@ -208,7 +208,7 @@ function onImageRemove()
     if( result )
     {
         g_removeImage = true;
-        $('').hide();
+        $('.image_image').hide();
     }
     return false;
 }
