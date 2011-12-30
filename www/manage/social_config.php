@@ -54,7 +54,8 @@
 ?>
 
 <script type="text/javascript"> 
-var g_artistId = '<?=$artist_id;?>';
+    var g_artistId = '<?=$artist_id;?>';
+    $(document).ready(setupQuestionTolltips);
 </script>
 
 <div id="popup">
@@ -93,11 +94,11 @@ var g_artistId = '<?=$artist_id;?>';
             ?>
         </div>
         <div class='input_container'>
-            <div class='line_label'>Facebook Page URL</div>
+            <div class='line_label'>Facebook Page URL <span id='tip_fb_page_url' class='tooltip'>(?)</span></div>
             <input id='fb_page_url' type="text" name="name" value="<?=$fb_page_url;?>" class='line_text' />
         </div>
         <div class='input_container'>
-            <div class='left_label'>Facebook</div>
+            <div class='left_label'>Facebook Update <span id='tip_fb_setting' class='tooltip'>(?)</span></div>
             <div class='right_box'>
                 <input id='fb_setting' type="radio" name="fb_setting" value="AUTO" class="radio" <?=$fb_auto;?> /> Auto
                 <input id='fb_setting' type="radio" name="fb_setting" value="MANUAL" class="radio" <?=$fb_manual;?> /> Manual
@@ -105,7 +106,7 @@ var g_artistId = '<?=$artist_id;?>';
             </div>
         </div>
         <div class='input_container'>
-            <div class='left_label'>Twitter</div>
+            <div class='left_label'>Tweet <span id='tip_tw_setting' class='tooltip'>(?)</span></div>
             <div class='right_box'>
                 <input id='tw_setting' type="radio" name="tw_setting" value="AUTO" class="radio" <?=$tw_auto;?> /> Auto
                 <input id='tw_setting' type="radio" name="tw_setting" value="MANUAL" class="radio" <?=$tw_manual;?> /> Manual
@@ -113,7 +114,7 @@ var g_artistId = '<?=$artist_id;?>';
             </div>
         </div>
         <div class='flow_container'>
-            <div class='line_label'>Embed Widget</div>
+            <div class='line_label'>Embed Widget <span id='tip_embed' class='tooltip'>(?)</span></div>
             <textarea style='height: 40px; width: 320px;'><?=$embed_text;?></textarea>
         </div>
         <div class='submit_container'>
