@@ -87,6 +87,14 @@
             mysql_update('mydna_musicplayer',array("shown_first_instructions" => 1),'id',$artistID);
         }
     }
+    
+    $twitter = FALSE;
+    $facebook = FALSE;
+    if( $record_artistDetail['oauth_token'] && $record_artistDetail['oauth_secret'] && $record_artistDetail['twitter'] )
+        $twitter = TRUE;
+    
+    if( $record_artistDetail['fb_access_token'] && $record_artistDetail['facebook'] )
+        $facebook = TRUE;
 
     require_once 'header.php';
 ?>
@@ -244,8 +252,10 @@ $(document).ready(showFirstInstruction);
                     */
                     echo "<span class='socialize'>";
                     echo "<a href='socialize.php?artist_id=".$artistID."&song_id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>";
-                    echo "<img class='social_icon' src='/images/fb_icon_color.png'/>";
-                    echo "<img class='social_icon' src='/images/tw_icon_color.png'/>";
+                    if( $facebook )
+                        echo "<img class='social_icon' src='/images/fb_icon_color.png'/>";
+                    if( $twitter )
+                        echo "<img class='social_icon' src='/images/tw_icon_color.png'/>";
                     echo "</a>\n";
                     echo "</span>";
 
