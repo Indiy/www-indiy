@@ -164,10 +164,18 @@
 		$head_title = "Add";
 	}
 	
-	if ($audio_logo != "") {
-        $audio_logo = "<button onclick='return onImageRemove();'></button>";
-		$audio_logo .= '<img src="../artists/images/'.$audio_logo.'" style=" margin-top: 0px; height: 25px;" />';
+    $image_html = '';
+	if( $audio_logo != "" )
+    {
+        $image_html .= "<button onclick='return onImageRemove();'></button>";
+		$image_html .= "<img src='../artists/images/$audio_logo' style='margin-top: 0px; height: 25px;' />";
 	}
+    $audio_html = '';
+    if( $audio_song != '' )
+    {
+        $audio_html .= $audio_song;
+        $audio_html .= "<button onclick='return onSongRemove();'></button>";
+    }
 	
 	if ($audio_download == "1") { $yesDownload = " checked"; } else { $noDownload = " checked"; }
 	$audio_name = stripslashes($audio_name);
@@ -223,13 +231,13 @@ function onImageRemove()
             <div class='left_label'>MP3 File <span id='tip_mp3' class='tooltip'>(?)</span></div>
             <div class='right_file_filename'>
                 <input id='song_audio' type="file" name="audio" />
-                <div class='filename'><?=$audio_sound;?><button onclick='return onSongRemove();'></button></div>
+                <div class='filename'><?=$audio_html;?></div>
             </div>
         </div>
         <div class='input_container'>
             <div class='left_image_label'>
                 <div>Image <span id='tip_image' class='tooltip'>(?)</span></div>
-                <?=$audio_logo;?>
+                <?=$image_html;?>
             </div>
             <input id='song_image' type="file" name="logo" class='right_file' />
         </div>
