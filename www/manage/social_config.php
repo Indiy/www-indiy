@@ -68,7 +68,7 @@
     <div class='top_sep'></div>
     <form id="social_config_form"  onsubmit='return false;'>
         <div class='input_container' style='height: 55px;'>
-            <div class='left_label'>Twitter Account</div>
+            <div class='left_label'>Twitter Account <span id='tip_tw_account' class='tooltip'>(?)</span></div>
             <?php
                 if( $twitter )
                     echo "<input type='text' disabled='disabled' value='$twitter' class='right_text' />\n";
@@ -81,7 +81,7 @@
             ?>
         </div>
         <div class='input_container' style='height: 55px;'>
-            <div class='left_label'>Facebook Account</div>
+            <div class='left_label'>Facebook Account <span id='tip_fb_account' class='tooltip'>(?)</span></div>
             <?php
                 if( $facebook )
                     echo "<input type='text' disabled='disabled' value='$facebook' class='right_text' />\n";
