@@ -167,8 +167,8 @@
     $image_html = '';
 	if( $audio_logo != "" )
     {
-        $image_html .= "<button onclick='return onImageRemove();'></button>";
 		$image_html .= "<img src='../artists/images/$audio_logo' style='margin-top: 0px; height: 25px;' />";
+        $image_html .= "<button onclick='return onImageRemove();'></button>";
 	}
     $audio_html = '';
     if( $audio_sound != '' )
@@ -195,7 +195,10 @@ function onSongRemove()
 {
     var result = window.confirm("Remove song from page?");
     if( result )
+    {
         g_removeSong = true;
+        $('.filename').hide();
+    }
     return false;
 }
 
@@ -203,7 +206,10 @@ function onImageRemove()
 {
     var result = window.confirm("Remove image from page?");
     if( result )
+    {
         g_removeImage = true;
+        $('').hide();
+    }
     return false;
 }
     
@@ -236,8 +242,8 @@ function onImageRemove()
         </div>
         <div class='input_container'>
             <div class='left_image_label'>
-                <div>Image <span id='tip_image' class='tooltip'>(?)</span></div>
-                <?=$image_html;?>
+                <div class='image_label'>Image <span id='tip_image' class='tooltip'>(?)</span></div>
+                <div class='image_image'><?=$image_html;?></div>
             </div>
             <input id='song_image' type="file" name="logo" class='right_file' />
         </div>
