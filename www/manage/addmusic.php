@@ -171,9 +171,9 @@
 		$image_html .= "<img src='../artists/images/$audio_logo' style='margin-top: 0px; height: 25px;' />";
 	}
     $audio_html = '';
-    if( $audio_song != '' )
+    if( $audio_sound != '' )
     {
-        $audio_html .= $audio_song;
+        $audio_html .= $audio_sound;
         $audio_html .= "<button onclick='return onSongRemove();'></button>";
     }
 	
