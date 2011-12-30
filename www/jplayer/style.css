@@ -93,7 +93,8 @@ button::-moz-focus-inner {  border: 0;}
 { 
     max-height:650px; display:none; position:relative; 
     -webkit-box-shadow: 0 0 5px #000; box-shadow: 0 0 5px #000; 
-    z-index: 1; padding: 25px; width: 750px; margin: -5px auto 100px auto; 
+    z-index: 1; width: 750px; margin: -5px auto 100px auto; 
+    padding-left: 25px; padding-right: 25px; padding-top: 25px; padding-bottom: 50px;
     background:url('images/box/bg.png') no-repeat center top; background-size: 100%; 
     font-family:Helvetica, Arial, sans-serif; 
 }
@@ -126,7 +127,7 @@ button::-moz-focus-inner {  border: 0;}
     border-left:1px solid #3c3c3c; 
     padding-left:20px; 
     width:350px;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
 }
 .contact h1, .contact h2, .contact h3 { text-transform:none; margin-bottom:5px; font-weight:bold; color:#fff; letter-spacing:0.5px; }
 .contact table { width:330px; }
