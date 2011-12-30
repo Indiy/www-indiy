@@ -171,8 +171,9 @@
                 <div class='filename'><?=$video_sound;?></div>
             </div>
         </div>
-        <div class='submit_container' style="padding-top: 25px;">
-            <input type="submit" name="WriteTags" value="submit" class="submit" />
+        <div class='submit_branding_container' style="padding-top: 25px;">
+            <input type="submit" name="WriteTags" value="submit" class='left_submit' />
+            <div class='branding_tip'>Branding Tip: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
         </div>
     </form>
     <div id='status' class='form_status' style='display: none;'></div>

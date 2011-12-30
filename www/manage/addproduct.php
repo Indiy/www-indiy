@@ -211,8 +211,10 @@
             <div class='left_label'>Colors <small><small>(Separated by commas)</small></small></div>
             <input type="text" name="color" value="<? echo $pcolor; ?>" id="input"  class='right_text' />
         </div>
-        <div class='submit_container'>
-            <input type="hidden" value="<? echo $situation; ?>" name="situation" /><input type="submit" name="submit" class="submit" value="<? echo $situation; ?>" id="submitr" />
+        <div class='submit_branding_container'>
+            <input type="hidden" value="<? echo $situation; ?>" name="situation" />
+            <input type="submit" name="submit" class='left_submit' value="<? echo $situation; ?>" id="submitr" />
+            <div class='branding_tip'>Branding Tip: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
         </div>
             
         <div id="form_message">

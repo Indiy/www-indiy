@@ -99,8 +99,9 @@
             <div class='line_label'>Body</div>
             <textarea name="body"><?=$content_body;?></textarea>
         </div>
-        <div class='submit_container'>
-            <input type="submit" name="submit" value="submit" class='submit' />
+        <div class='submit_branding_container'>
+            <input type="submit" name="submit" value="submit" class='left_submit' />
+            <div class='branding_tip'>Branding Tip: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
         </div>
         
         <div id="form_message" class='form_message'>
