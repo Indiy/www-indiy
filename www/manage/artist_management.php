@@ -192,9 +192,9 @@ $(document).ready(showFirstInstruction);
             </ul>
             <h6>Platform</h6>
             <ul>
-                <li><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Audio</a></li>
+                <li><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Page</a></li>
                 <li><a href="addvideo.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Video</a></li>
-                <li><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Pages</a></li>
+                <li><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Tab</a></li>
                 <li><a href="stats.php?userId=<?=$artistID;?>">View Analytics</a></li>
                 <li><a href="fan_connections.php?artist_id=<?=$artistID;?>" rel="facebox[.bolder]">Fan Connections</a></li>
             </ul>
@@ -210,8 +210,8 @@ $(document).ready(showFirstInstruction);
         
         <div class="playlist">
         	<div class="heading">
-            <h5>PLAYLIST</h5>
-            <div class="buttonadd"><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Song</a></div>
+            <h5>PAGES</h5>
+            <div class="buttonadd"><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Page</a></div>
             </div>
             
             <div class="list">
@@ -343,8 +343,8 @@ $(document).ready(showFirstInstruction);
         
         <div class="pages">
             <div class="heading">
-            <h5>PAGES</h5>
-            <div class="buttonadd"><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Page</a></div>
+            <h5>TABS</h5>
+            <div class="buttonadd"><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Tab</a></div>
         	</div> 
             
             <div class="list" style='display:none;'>
@@ -374,11 +374,6 @@ $(document).ready(showFirstInstruction);
             </div>
         </div>
         
-        
-        <div class="embedcode">
-        <label>EMBED CODE</label>
-        <textarea name="" cols="" rows="" class="textarea"><iframe src="<?=playerUrl().$record_artistDetail[url]?>&embed=true" border="0" width="400" height="600" frameborder="0" name="<?=$record_artistDetail['url']?>"></iframe></textarea>
-        </div>
 
         </div>
     </div>

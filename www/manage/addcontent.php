@@ -77,7 +77,7 @@
 <div id="popup">
     <?=$successMessage;?>
     <div class='top_bar'>
-        <h2><?=$head_title?> Page</h2>
+        <h2><?=$head_title?> Tab</h2>
         <button onclick='$.facebox.close();'>CLOSE</button>
     </div>
 
