@@ -37,9 +37,6 @@
 		$name = $_REQUEST["name"];
 		$email = $_REQUEST["email"];
 		$comments = $_REQUEST["comments"];
-        $date = $_REQUEST["date"];
-        $location = $_REQUEST["location"];
-        $budget = $_REQUEST["budget"];
 	
         $artist_id = $_REQUEST["artist_id"];
         
@@ -48,7 +45,7 @@
         if( $to )
         {
             $subject = "Contact Form Submission";
-            $message = "NAME: $name\n\nEMAIL: $email\n\nMESSAGE: $comments\n\nDATE: $date\n\nLOCATION: $location\n\nBUDGET: $budget\n";
+            $message = "NAME: $name\n\nEMAIL: $email\n\nMESSAGE: $comments\n\n";
             $from = "no-reply@myartistdna.com";
             $headers = "From:" . $from;
             mail($to,$subject,$message,$headers);

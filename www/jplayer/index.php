@@ -606,9 +606,6 @@ function sendContactForm()
     var email = $('#contact_email').val();
     var phone = $('#contact_phone').val();
     var comments = $('#contact_comments').val();
-    var date = $('#contact_date').val();
-    var location = $('#contact_location').val();
-    var budget = $('#contact_budget option:selected').val();
 
     var submit = "&form=send";
     submit += "&artist_id=" + artist_id;
@@ -616,11 +613,32 @@ function sendContactForm()
     submit += "&email=" + escape(email);
     submit += "&phone=" + escape(phone);
     submit += "&comments=" + escape(comments);
+
+    $.post("jplayer/ajax.php", submit, function(response) { });
+}
+function sendBookingForm()
+{
+    $('.contact table').hide();
+    $('#contact_thanks').show();
+    
+    var artist_id = "<?=$artist_id;?>";
+    var name = $('#contact_name').val();
+    var email = $('#contact_email').val();
+    var date = $('#booking_date').val();
+    var location = $('#booking_location').val();
+    var budget = $('#booking_budget option:selected').val();
+    var comments = $('#booking_comments').val();
+    
+    var submit = "";
+    submit += "&artist_id=" + artist_id;
+    submit += "&name=" + escape(name);
+    submit += "&email=" + escape(email);
     submit += "&date=" + escape(date);
     submit += "&location=" + escape(location);
     submit += "&budget=" + escape(budget);
-
-    $.post("jplayer/ajax.php", submit, function(response) { });
+    submit += "&comments=" + escape(comments);
+    
+    $.post("/data/booking.php", submit, function(response) { });
 }
 
 function submitNewsletter()

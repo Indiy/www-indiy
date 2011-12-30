@@ -24,6 +24,7 @@
 		2D34E23614ABFF15004473F9 /* video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = video.js; sourceTree = "<group>"; };
 		2D34E23714AD5897004473F9 /* fan_connections.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_connections.php; sourceTree = "<group>"; };
 		2D34E23814AD69ED004473F9 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		2D34E23914AD87E2004473F9 /* booking.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = booking.php; sourceTree = "<group>"; };
 		2D380B8814671EF400E36189 /* server_config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = server_config.php; path = ../server_config.php; sourceTree = "<group>"; };
 		2D380B8A1467970100E36189 /* add_user.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_user.php; sourceTree = "<group>"; };
 		2D380B8B1468AC0500E36189 /* manage.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = manage.js; sourceTree = "<group>"; };
@@ -1805,6 +1806,7 @@
 		2DF470541440B77F005538C7 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				2D34E23914AD87E2004473F9 /* booking.php */,
 				2DF47527144BD7CB005538C7 /* send_friend.php */,
 				2DF47522144B5725005538C7 /* submit_contact.php */,
 				2DF470561440B77F005538C7 /* listens.php */,
