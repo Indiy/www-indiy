@@ -233,14 +233,14 @@ function onImageRemove()
             <div class='line_label'>Name</div>
             <input id='song_name' type="text" name="name" value="<?=$audio_name;?>" class="line_text" />
         </div>
-        <div class='input_container'>
+        <div class='input_container' style='height: 50px;'>
             <div class='left_label'>MP3 File <span id='tip_mp3' class='tooltip'>(?)</span></div>
             <div class='right_file_filename'>
                 <input id='song_audio' type="file" name="audio" />
                 <div class='filename'><?=$audio_html;?></div>
             </div>
         </div>
-        <div class='input_container'>
+        <div class='input_container' style='height: 50px;'>
             <div class='left_image_label'>
                 <div class='image_label'>Image <span id='tip_image' class='tooltip'>(?)</span></div>
                 <div class='image_image'><?=$image_html;?></div>

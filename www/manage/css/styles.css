@@ -1026,6 +1026,19 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 }
 .image_image {
     float: right;
+    position: relative;
+    padding-right: 10px;
+}
+.image_image button {
+    width: 15px;
+    height: 15px;
+    background-image: url("/images/close.png");
+    background-size: 100% 100%;
+    background-color: transparent;
+    border: 0 none;
+    cursor: pointer;
+    margin-left: 4px;
+    position: absolute;
 }
 .line_label {
     font-size: 12px;
@@ -1080,7 +1093,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     font-size: 10px;
     padding-top: 4px;
 }
-.filename button, .left_image_label button {
+.filename button {
     width: 15px;
     height: 15px;
     background-image: url("/images/close.png");
