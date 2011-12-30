@@ -961,7 +961,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     border: 0 none;
     float: right;
     font-size: 12px;
-    background: url(../images/bg_close.gif) no-repeat;
+    background: url("../images/bg_close.gif") no-repeat;
     cursor: pointer;
 }
 .top_blue_bar, .bottom_blue_bar {
@@ -1085,6 +1085,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     width: 15px;
     height: 15px;
     background-image: url("/images/close.png");
+    background-size: 100% 100%;
 }
 input.right_text, input.color,input.line_text {
     border-radius: 3px;
