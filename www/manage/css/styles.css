@@ -1120,6 +1120,30 @@ input.right_text, input.color,input.line_text {
     font-family: sans-serif;
     cursor: pointer;
 }
+.submit_branding_container {
+    width: 100%;
+    padding-top: 10px;
+}
+.left_submit {
+    float: left;
+    width: 150px;
+    height: 40px;
+    color: #51C3C4;
+    background-color: black;
+    border: 0 none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: sans-serif;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.branding_tip {
+    float: right;
+    width: 150px;
+    margin-right: 20px;
+    font-size: 12px;
+    font-family: sans-serif;
+}
 .form_message {
     text-align: center;
     width: 100%;

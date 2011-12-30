@@ -264,8 +264,9 @@
             <div class='left_label'>MyArtistDNA Store <span id='tip_store' class='tooltip'>(?)</span></div>
             <input id='mad_store' type="checkbox" name="mad_store" <? if($mad_store) echo 'checked'; ?> class='right_box'/>
         </div>
-        <div class='submit_container'>
-            <input type="submit" name="WriteTags" value="submit" class="submit" />
+        <div class='submit_branding_container'>
+            <input type="submit" name="WriteTags" value="submit" class='left_submit' />
+            <div class='branding_tip'>Branding Tip: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
         </div>
     </form>
 
