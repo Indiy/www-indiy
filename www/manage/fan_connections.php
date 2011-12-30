@@ -20,7 +20,7 @@
     <div class='input_container' style='height: 55px;'>
         <div class='left_label'>Email Signups <span id='tip_email_signups' class='tooltip'>(?)</span></div>
         <div class='right_box'>
-            <a class='submit' href='download_newsletter.php?artist_id=<?=$artist_id;?>'DOWNLOAD NOW</a>
+            <a class='submit' href="download_newsletter.php?artist_id=<?=$artist_id;?>">DOWNLOAD NOW</a>
         </div>
     </div>
 
