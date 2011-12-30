@@ -1275,26 +1275,36 @@ $(document).ready(function()
                 
                 
                 <div class="right">
-                    <h1>&nbsp;</h1>
+                    <h1>BOOKINGS&nbsp;</h1>
                     <table>
                         <tr>
                             <td><span class="red">*</span> Date of Event:</td>
-                            <td><input id="contact_date" type="text" value="" /></td>
+                            <td><input id="booking_date" type="text" value="" /></td>
                         </tr>
                         <tr>
                             <td><span class="red">*</span> Location:</td>
-                            <td><input id="contact_location" type="text" value="" /></td>
+                            <td><input id="booking_location" type="text" value="" /></td>
                         </tr>
                         <tr>
                             <td><span class="red">*</span> Budget:</td>
                             <td>
-                                <select id='contact_budget'>
+                                <select id='booking_budget'>
                                     <option>$0 - $500</option>
                                     <option>$500 - $1,000</option>
                                     <option>$1,000 - $5,000</option>
                                     <option>$5,000 - $10,000</option>
                                     <option>$10,000+</option>
                                 </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="message"><span class="red">*</span> Message:</td>
+                            <td><textarea name="comments" class="textarea" id="booking_comments"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><span class="red">*</span> required</td>
+                            <td>
+                                <button id="contact_submit" onclick="sendBookingForm();">submit</button>
                             </td>
                         </tr>
                     </table>
