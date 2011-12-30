@@ -29,6 +29,8 @@
 		$audio_amazon = $_POST["amazon"];
 		$audio_itunes = $_POST["itunes"];
         $mad_store = $_POST["mad_store"] == 'true';
+        $remove_image = $_POST["remove_image"] == 'true';
+        $remove_song = $_POST["remove_song"] == 'true';
 		
 		// Upload Image
 		if(!empty($_FILES["logo"]["name"])){
@@ -90,6 +92,10 @@
             }
             $product_id = NULL;
         }
+        if( $remove_song )
+            $audio_sound = '';
+        if( $remove_image )
+            $audio_logo = '';
 		
 		//INSERTING THE DATA
 		$tables = "artistid|name|image|bgcolor|bgposition|bgrepeat|audio|download|amazon|itunes|product_id";
@@ -159,8 +165,8 @@
 	}
 	
 	if ($audio_logo != "") {
-		$audio_logo = '<img src="../artists/images/'.$audio_logo.'" style=" margin-top: 0px; height: 25px;" />';
-        $audio_logo .= "<button onclick='return onImageRemove();'></button>";
+        $audio_logo = "<button onclick='return onImageRemove();'></button>";
+		$audio_logo .= '<img src="../artists/images/'.$audio_logo.'" style=" margin-top: 0px; height: 25px;" />';
 	}
 	
 	if ($audio_download == "1") { $yesDownload = " checked"; } else { $noDownload = " checked"; }
@@ -175,6 +181,7 @@
 $(document).ready(setupQuestionTolltips);
 
 var g_removeSong = false;
+var g_removeImage = false;
 
 function onSongRemove()
 {
@@ -188,7 +195,7 @@ function onImageRemove()
 {
     var result = window.confirm("Remove image from page?");
     if( result )
-        g_removeSong = true;
+        g_removeImage = true;
     return false;
 }
     
