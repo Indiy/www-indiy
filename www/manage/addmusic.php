@@ -171,7 +171,20 @@
     <link rel="stylesheet" media="screen" type="text/css" href="includes/css/layout.css" />
 
 <script type="text/javascript">
-    $(document).ready(setupQuestionTolltips);
+
+$(document).ready(setupQuestionTolltips);
+
+function onSongRemove()
+{
+    
+    return false;
+}
+
+function onImageRemove()
+{
+    return false;
+}
+    
 </script>
 
 <div id="popup">
@@ -196,7 +209,7 @@
             <div class='left_label'>MP3 File <span id='tip_mp3' class='tooltip'>(?)</span></div>
             <div class='right_file_filename'>
                 <input id='song_audio' type="file" name="audio" />
-                <div class='filename'><?=$audio_sound;?><button onclick='onSongRemove();'></button></div>
+                <div class='filename'><?=$audio_sound;?><button onclick='return onSongRemove();'></button></div>
             </div>
         </div>
         <div class='input_container'>
