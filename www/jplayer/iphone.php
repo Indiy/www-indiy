@@ -375,7 +375,7 @@ $(document).ready(function()
                 
 					<div class="mighthide">
 						<div class="buynow"></div>
-                        <a href="#" class="buynow mystore"></a>
+                        <!-- <a href="#" class="buynow mystore"></a> -->
 						<span class="showamazon"></span>
 						<span class="showitunes"></span>
 						<div class="clear"></div>

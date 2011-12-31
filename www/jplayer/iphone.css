@@ -121,7 +121,7 @@ div#logo #makeroomforlogo { width: 100%; height: 160px; overflow: hidden; border
 div#logo #makeroomfordetails { width: 100%; height: 100px; overflow: hidden; border-right: 0px solid #fff; }
 div#logo .bottom { width: 100%; height: 25px; cursor: pointer; border-left: 0px solid #fff; }
 div#logo img { width: 145px; margin-bottom: 20px;  }
-.mighthide { width: 140px; position: fixed; z-index: 10; top: 65px; left: 180px; }
+.mighthide { width: 170px; position: fixed; z-index: 10; top: 65px; left: 180px; }
 .buynow { width: 65px; height: 25px; background: url('images/new/buynow_spot.png') -12px 0 no-repeat; float: left; }
 .mystore { width: 30px; height: 25px; background: url('images/new/buynow_spot.png') -75px 0 no-repeat; float: left; }
 .showamazon { width: 30px; height: 25px; float: left; display: block; }
