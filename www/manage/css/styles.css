@@ -1014,7 +1014,11 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 }
-
+.yui-skin-sam h2 {
+    text-transform: none;
+    font-family: sans-serif;
+    line-height: 11px;
+}
 .flow_container textarea {
     margin-left: 20px;
     margin-right: 20px;
