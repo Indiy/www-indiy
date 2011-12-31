@@ -838,7 +838,7 @@ $(document).ready(function()
                 if (playItem != index) {
                     playListChange( index );
                 } else {
-                    $("#jquery_jplayer").jPlayer("play");
+                    //$("#jquery_jplayer").jPlayer("play");
                 }
                 $(this).blur();
                 return false;
@@ -865,9 +865,10 @@ $(document).ready(function()
             mp3: song.mp3,
             oga: song.mp3.replace(".mp3",".ogg")
         };
-        $("#jquery_jplayer").jPlayer("setMedia", media);
         if( song.mp3.endsWith("mp3") )
         {
+            $("#jquery_jplayer").jPlayer("setMedia", media);
+            $("#jquery_jplayer").jPlayer("play");
             $('#jplayer_stop').show();
             $('#jplayer_pause').show();
             $('#jplayer_play').show();
@@ -883,9 +884,11 @@ $(document).ready(function()
             $('.jp-pause-fake').show();
             $('.playlist-main').show();
             $('.playlist-bottom').show();
+            $('.jp-controls-to-hide').show();
         }
         else
         {
+            $("#jquery_jplayer").jPlayer("stop");
             $('#jplayer_stop').hide();
             $('#jplayer_pause').hide();
             $('#jplayer_play').hide();
@@ -901,24 +904,7 @@ $(document).ready(function()
             $('.jp-pause-fake').hide();
             $('.playlist-main').hide();
             $('.playlist-bottom').hide();
-            window.setTimeout(function()
-            {
-                $('#jplayer_stop').hide();
-                $('#jplayer_pause').hide();
-                $('#jplayer_play').hide();
-                $('#jplayer_volume_bar').hide();
-                $('.current-track').hide();
-                $('#jplayer_play_time').hide();
-                $('.slash').hide();
-                $('#jplayer_total_time').hide();
-                $('.jp-progress').hide();
-                $('#volumebg').hide();
-                $('#progressbg').hide();
-                $('.jp-play-fake').hide();
-                $('.jp-pause-fake').hide();
-                $('.playlist-main').hide();
-                $('.playlist-bottom').hide();
-            },10);
+            $('.jp-controls-to-hide').hide();
         }
         
         g_currentSongId = song.id;
@@ -1053,7 +1039,7 @@ $(document).ready(function()
     
     function playListChange( index ) {
         playListConfig( index );
-        $("#jquery_jplayer").jPlayer("play");
+        //$("#jquery_jplayer").jPlayer("play");
     }
  
     function playListNext() {
@@ -1252,9 +1238,15 @@ $(document).ready(function()
                 
                     <div id="jp_container_1" class="jp-interface">
                         <ul class="jp-controls">
-                            <li><a href="#" id="jplayer_play" class="jp-play" tabindex="1">play</a></li>
-                            <li><a href="#" id="jplayer_pause" class="jp-pause" tabindex="1">pause</a></li>
-                            <li><a href="#" id="jplayer_stop" class="jp-stop" tabindex="1">stop</a></li>
+                            <li class='jp-controls-to-hide'>
+                                <a href="#" id="jplayer_play" class="jp-play" tabindex="1">play</a>
+                            </li>
+                            <li class='jp-controls-to-hide'>
+                                <a href="#" id="jplayer_pause" class="jp-pause" tabindex="1">pause</a>
+                            </li>
+                            <li class='jp-controls-to-hide'>
+                                <a href="#" id="jplayer_stop" class="jp-stop" tabindex="1">stop</a>
+                            </li>
 
                             <li><a href="#" id="jplayer_previous" class="jp-previous vtip" tabindex="1">previous</a></li>
                             <li><a href="#" id="jplayer_next" class="jp-next vtip" tabindex="1">next</a></li>
