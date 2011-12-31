@@ -144,7 +144,7 @@ function onReady()
 {
     var myEditor = new YAHOO.widget.Editor('msgpost', {
                                            height: '300px',
-                                           width: '600px',
+                                           width: '750px',
                                            dompath: false, 
                                            animate: false,
                                            toolbar: toolbar_config
