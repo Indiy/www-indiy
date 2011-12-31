@@ -815,15 +815,14 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #adminblock .branding_tips { width:709px; float:left; padding-bottom:10px}
 #adminblock .branding_tips .heading { width:691px; float:left; background:#b84852; padding:10px}
 #adminblock .branding_tips .heading h5 { float:left; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; color:#ffffff; text-transform:uppercase; padding:5px 0 0 9px}
-
 #adminblock .branding_tips .list ul { 
-    width:711px; 
+    width:709px; 
     float:left; 
     border-bottom:1px solid #dddee0; 
     border-right: 1px solid #dddee0;
     border-left: 1px solid #dddee0;
 }
-#adminblock .branding_tips .list ul li { width:709px; float:left; background-color: #eee; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#383838; padding:10px 0; }
+#adminblock .branding_tips .list ul li { width:709px; float:left; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#383838; padding:10px 0; }
 #adminblock .branding_tips .list ul li.odd { background-color: #eee; }
 #adminblock .branding_tips .list ul li .branding_left { width:50px; float:left; padding:4px 0 0 17px; }
 #adminblock .branding_tips .list ul li .branding_right { width:600px; float:left; }
