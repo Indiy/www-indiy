@@ -377,22 +377,21 @@ $(document).ready(showFirstInstruction);
         <div class="branding_tips">
             <div class="heading">
                 <h5>BRANDING TIPS</h5>
-                <div class="buttonadd"><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Tab</a></div>
         	</div> 
             
             <div class="list" style='display:none;'>
                 <ul class="branding_tips">
                     <li class="branding_tips odd">
                         <span class='branding_left'>Tip #1 - </span>
-                        <span class='branding_right'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                        <span class='branding_right'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
                     </li>
                     <li class="branding_tips">
                         <span class='branding_left'>Tip #2 - </span>
-                        <span class='branding_right'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                        <span class='branding_right'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
                     </li>
                     <li class="branding_tips odd">
                         <span class='branding_left'>Tip #3 - </span>
-                        <span class='branding_right'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                        <span class='branding_right'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
                     </li>
                     <li class="branding_tips">
                         <span class='branding_left'>Tip #4 - </span>
