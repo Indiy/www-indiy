@@ -50,7 +50,7 @@
 	while ($mu = mf($loadmuse)) {
 		$buildmaxe .= $mu["views"].",";
 	}
-	$msize = 100 / num($loadmuse);
+	$msize = 100 / max(num($loadmuse),1);
 	$sizee = round(($msize) / 2, 2);
 	$buildmaxe = explode(",", $buildmaxe);
 	$maxe = max($buildmaxe);
