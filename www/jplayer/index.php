@@ -865,9 +865,10 @@ $(document).ready(function()
             mp3: song.mp3,
             oga: song.mp3.replace(".mp3",".ogg")
         };
-        $("#jquery_jplayer").jPlayer("setMedia", media);
+        
         if( song.mp3.endsWith("mp3") )
         {
+            $("#jquery_jplayer").jPlayer("setMedia", media);
             $('#jplayer_stop').show();
             $('#jplayer_pause').show();
             $('#jplayer_play').show();
@@ -886,6 +887,7 @@ $(document).ready(function()
         }
         else
         {
+            $("#jquery_jplayer").jPlayer("stop");
             $('#jplayer_stop').hide();
             $('#jplayer_pause').hide();
             $('#jplayer_play').hide();
@@ -901,6 +903,24 @@ $(document).ready(function()
             $('.jp-pause-fake').hide();
             $('.playlist-main').hide();
             $('.playlist-bottom').hide();
+            windowsetTimeout(function()
+            {
+                $('#jplayer_stop').hide();
+                $('#jplayer_pause').hide();
+                $('#jplayer_play').hide();
+                $('#jplayer_volume_bar').hide();
+                $('.current-track').hide();
+                $('#jplayer_play_time').hide();
+                $('.slash').hide();
+                $('#jplayer_total_time').hide();
+                $('.jp-progress').hide();
+                $('#volumebg').hide();
+                $('#progressbg').hide();
+                $('.jp-play-fake').hide();
+                $('.jp-pause-fake').hide();
+                $('.playlist-main').hide();
+                $('.playlist-bottom').hide();
+            },10);
         }
         
         g_currentSongId = song.id;
