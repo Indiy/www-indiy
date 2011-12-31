@@ -51,6 +51,8 @@ else
     $artist_listens = $row["listens"];
     $show_comments = TRUE;
     
+    $facebook_page = $row['fb_page_url'];
+    
     if ($artist_listens == "1") { $show_listens = "true"; }
 
     playerViews($artist_id);
@@ -1053,7 +1055,7 @@ $(document).ready(function()
                     </div>
                     
                     <div id="facebook" class="tab">
-                        <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F<?=$artist_facebook;?>&amp;width=273&amp;colorscheme=dark&amp;show_faces=false&amp;stream=true&amp;header=false&amp;height=415" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:273px; height:395px;" allowTransparency="true"></iframe>
+                        <iframe src="http://www.facebook.com/plugins/likebox.php?href=<?=urlencode($facebook_page);?>&width=273&colorscheme=dark&show_faces=false&stream=true&header=false&height=415" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:273px; height:395px;" allowTransparency="true"></iframe>
                     </div>
                     
                     <div id="twitter" class="tab">
