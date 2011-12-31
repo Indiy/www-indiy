@@ -124,7 +124,7 @@ buttons: [
         ]
     },
     { type: 'separator' },
-    { group: 'indentlist', label: 'Indenting and Lists',
+    { group: 'indentlist', label: 'Lists',
     buttons: [
         { type: 'push', label: 'Create an Unordered List', value: 'insertunorderedlist' },
         { type: 'push', label: 'Create an Ordered List', value: 'insertorderedlist' }
