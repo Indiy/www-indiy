@@ -76,13 +76,78 @@
 
 <script type="text/javascript">
 
+var toolbar_config = 
+{
+collapse: true,
+titlebar: 'Body',
+draggable: false,
+buttonType: 'advanced',
+buttons: [
+    { group: 'fontstyle', label: 'Font Name and Size',
+    buttons: [
+        { type: 'select', label: 'Arial', value: 'fontname', disabled: true,
+        menu: [
+            { text: 'Arial', checked: true },
+            { text: 'Arial Black' },
+            { text: 'Comic Sans MS' },
+            { text: 'Courier New' },
+            { text: 'Lucida Console' },
+            { text: 'Tahoma' },
+            { text: 'Times New Roman' },
+            { text: 'Trebuchet MS' },
+            { text: 'Verdana' }
+            ]
+        },
+        { type: 'spin', label: '13', value: 'fontsize', range: [ 9, 75 ], disabled: true }
+        ]
+    },
+    { type: 'separator' },
+    { group: 'textstyle', label: 'Font Style',
+    buttons: [
+        { type: 'push', label: 'Bold CTRL + SHIFT + B', value: 'bold' },
+        { type: 'push', label: 'Italic CTRL + SHIFT + I', value: 'italic' },
+        { type: 'push', label: 'Underline CTRL + SHIFT + U', value: 'underline' },
+        { type: 'separator' },
+        { type: 'color', label: 'Font Color', value: 'forecolor', disabled: true },
+        { type: 'color', label: 'Background Color', value: 'backcolor', disabled: true },
+        { type: 'separator' },
+        { type: 'push', label: 'Show/Hide Hidden Elements', value: 'hiddenelements' }
+        ]
+    },
+    { type: 'separator' },
+    { group: 'alignment', label: 'Alignment',
+    buttons: [
+        { type: 'push', label: 'Align Left CTRL + SHIFT + [', value: 'justifyleft' },
+        { type: 'push', label: 'Align Center CTRL + SHIFT + |', value: 'justifycenter' },
+        { type: 'push', label: 'Align Right CTRL + SHIFT + ]', value: 'justifyright' },
+        { type: 'push', label: 'Justify', value: 'justifyfull' }
+        ]
+    },
+    { type: 'separator' },
+    { group: 'indentlist', label: 'Indenting and Lists',
+    buttons: [
+        { type: 'push', label: 'Create an Unordered List', value: 'insertunorderedlist' },
+        { type: 'push', label: 'Create an Ordered List', value: 'insertorderedlist' }
+        ]
+    },
+    { type: 'separator' },
+    { group: 'insertitem', label: 'Insert Item',
+    buttons: [
+        { type: 'push', label: 'HTML Link CTRL + SHIFT + L', value: 'createlink', disabled: true },
+        { type: 'push', label: 'Insert Image', value: 'insertimage' }
+        ]
+    }
+    ]
+};
+
 function onReady()
 {
     var myEditor = new YAHOO.widget.Editor('msgpost', {
-                                           height: '400px',
+                                           height: '300px',
                                            width: '600px',
                                            dompath: false, 
-                                           animate: false 
+                                           animate: false,
+                                           toolbar: toolbar_config
                                            });
     myEditor.render();
 }
@@ -113,7 +178,6 @@ $(document).ready(onReady);
             <input type="file" name="logo" class='right_file' /> <?=$content_logo;?>
         </div>
         <div class='editor_container yui-skin-sam'>
-            <div class='line_label'>Body</div>
             <textarea id="msgpost" name="msgpsot"><?=$content_body;?></textarea>
         </div>
         <div class='submit_branding_container'>

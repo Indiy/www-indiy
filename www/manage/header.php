@@ -3,14 +3,16 @@
 <head>
 	<meta charset="utf-8" />
 	<title>MYARTISTDNA</title>
+
+    <!-- Combo-handled YUI CSS files: --> 
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.9.0/build/assets/skins/sam/skin.css"> 
+
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 	<link href="blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
 
-    <!-- Combo-handled YUI CSS files: --> 
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.9.0/build/assets/skins/sam/skin.css"> 
     <!-- Combo-handled YUI JS files: --> 
     <script type="text/javascript" src="http://yui.yahooapis.com/combo?2.9.0/build/yahoo-dom-event/yahoo-dom-event.js&2.9.0/build/container/container_core-min.js&2.9.0/build/menu/menu-min.js&2.9.0/build/element/element-min.js&2.9.0/build/button/button-min.js&2.9.0/build/editor/editor-min.js"></script>
 
