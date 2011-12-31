@@ -861,13 +861,13 @@ $(document).ready(function()
         
         playItem = index;
         var song = g_myPlayList[index];
+        var media = {
+            mp3: song.mp3,
+            oga: song.mp3.replace(".mp3",".ogg")
+        };
+        $("#jquery_jplayer").jPlayer("setMedia", media);
         if( song.mp3.endsWith("mp3") )
         {
-            var media = {
-                mp3: song.mp3,
-                oga: song.mp3.replace(".mp3",".ogg")
-            };
-            $("#jquery_jplayer").jPlayer("setMedia", media);
             $('#jplayer_stop').show();
             $('#jplayer_pause').show();
             $('#jplayer_play').show();
@@ -886,7 +886,6 @@ $(document).ready(function()
         }
         else
         {
-            $("#jquery_jplayer").jPlayer("stop");
             $('#jplayer_stop').hide();
             $('#jplayer_pause').hide();
             $('#jplayer_play').hide();
