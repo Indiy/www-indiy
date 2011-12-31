@@ -72,8 +72,36 @@
 	$content_name = stripslashes($content_name);
 	$content_body = stripslashes($content_body);
 ?>
-				
-				
+
+<!-- Skin CSS file -->
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/assets/skins/sam/skin.css">
+<!-- Utility Dependencies -->
+<script src="http://yui.yahooapis.com/2.9.0/build/yahoo-dom-event/yahoo-dom-event.js"></script> 
+<script src="http://yui.yahooapis.com/2.9.0/build/element/element-min.js"></script> 
+<!-- Needed for Menus, Buttons and Overlays used in the Toolbar -->
+<script src="http://yui.yahooapis.com/2.9.0/build/container/container_core-min.js"></script>
+<script src="http://yui.yahooapis.com/2.9.0/build/menu/menu-min.js"></script>
+<script src="http://yui.yahooapis.com/2.9.0/build/button/button-min.js"></script>
+<!-- Source file for Rich Text Editor-->
+<script src="http://yui.yahooapis.com/2.9.0/build/editor/editor-min.js"></script>
+
+<script type="text/javascript">
+
+function onReady()
+{
+    var myEditor = new YAHOO.widget.Editor('msgpost', {
+                                           height: '300px',
+                                           width: '400px',
+                                           dompath: false, 
+                                           animate: false 
+                                           });
+    myEditor.render();
+}
+
+$(document).ready(onReady);
+
+</script>
+
 <div id="popup">
     <?=$successMessage;?>
     <div class='top_bar'>
@@ -95,9 +123,9 @@
             <div class='left_label'>Image</div>
             <input type="file" name="logo" class='right_file' /> <?=$content_logo;?>
         </div>
-        <div class='flow_container'>
+        <div class='flow_container yui-skin-sam'>
             <div class='line_label'>Body</div>
-            <textarea name="body"><?=$content_body;?></textarea>
+            <textarea id="msgpost" name="msgpsot"><?=$content_body;?></textarea>
         </div>
         <div class='submit_branding_container'>
             <input type="submit" name="submit" value="submit" class='left_submit' />
