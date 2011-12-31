@@ -724,6 +724,10 @@ if( 'song_id' in g_anchor_map )
     }
 }
 
+String.prototype.endsWith = function(suffix) {
+    return this.indexOf(suffix, this.length - suffix.length) !== -1;
+};
+
 $(document).ready(function()
 {
     // Local copy of jQuery selectors, for performance.
@@ -857,11 +861,49 @@ $(document).ready(function()
         
         playItem = index;
         var song = g_myPlayList[index];
-        var media = {
-            mp3: song.mp3,
-            oga: song.mp3.replace(".mp3",".ogg")
-        };
-        $("#jquery_jplayer").jPlayer("setMedia", media);
+        if( song.mp3.endsWith("mp3") )
+        {
+            var media = {
+                mp3: song.mp3,
+                oga: song.mp3.replace(".mp3",".ogg")
+            };
+            $("#jquery_jplayer").jPlayer("setMedia", media);
+            $('#jplayer_stop').show();
+            $('#jplayer_pause').show();
+            $('#jplayer_play').show();
+            $('#jplayer_volume_bar').show();
+            $('.current-track').show();
+            $('#jplayer_play_time').show();
+            $('.slash').show();
+            $('#jplayer_total_time').show();
+            $('.jp-progress').show();
+            $('#volumebg').show();
+            $('#progressbg').show();
+            $('.jp-play-fake').show();
+            $('.jp-pause-fake').show();
+            $('.playlist-main').show();
+            $('.playlist-bottom').show();
+        }
+        else
+        {
+            $("#jquery_jplayer").jPlayer("stop");
+            $('#jplayer_stop').hide();
+            $('#jplayer_pause').hide();
+            $('#jplayer_play').hide();
+            $('#jplayer_volume_bar').hide();
+            $('.current-track').hide();
+            $('#jplayer_play_time').hide();
+            $('.slash').hide();
+            $('#jplayer_total_time').hide();
+            $('.jp-progress').hide();
+            $('#volumebg').hide();
+            $('#progressbg').hide();
+            $('.jp-play-fake').hide();
+            $('.jp-pause-fake').hide();
+            $('.playlist-main').hide();
+            $('.playlist-bottom').hide();
+        }
+        
         g_currentSongId = song.id;
         window.location.hash = '#song_id=' + g_currentSongId; 
         $('span.showamazon').hide();
