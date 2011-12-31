@@ -79,8 +79,8 @@
 function onReady()
 {
     var myEditor = new YAHOO.widget.Editor('msgpost', {
-                                           height: '300px',
-                                           width: '400px',
+                                           height: '400px',
+                                           width: '600px',
                                            dompath: false, 
                                            animate: false 
                                            });
@@ -112,7 +112,7 @@ $(document).ready(onReady);
             <div class='left_label'>Image</div>
             <input type="file" name="logo" class='right_file' /> <?=$content_logo;?>
         </div>
-        <div class='flow_container yui-skin-sam'>
+        <div class='editor_container yui-skin-sam'>
             <div class='line_label'>Body</div>
             <textarea id="msgpost" name="msgpsot"><?=$content_body;?></textarea>
         </div>
