@@ -903,7 +903,7 @@ $(document).ready(function()
             $('.jp-pause-fake').hide();
             $('.playlist-main').hide();
             $('.playlist-bottom').hide();
-            windowsetTimeout(function()
+            window.setTimeout(function()
             {
                 $('#jplayer_stop').hide();
                 $('#jplayer_pause').hide();
