@@ -72,7 +72,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml"> 
 <head>
-<title>MyArtistDNA.fm<?=$artist_name?></title>
+<title>MyArtistDNA - <?=$artist_name?></title>
 <link href="<?=trueSiteUrl();?>/jplayer/iphone.css" rel="stylesheet" type="text/css" /> 
 
 <link media="only screen and (max-device-width: 480px)" href="<?=trueSiteUrl();?>/jplayer/iphone.css" type="text/css" rel="stylesheet" />
@@ -340,7 +340,6 @@ $(document).ready(function(){
 			<div id="getsocial">
 			<? if ($artist_twitter != "") { ?> <a href="http://www.twitter.com/<?=$artist_twitter;?>" class="twitter">Twitter.com/<?=$artist_twitter;?></a> <? } ?>
 			<? if ($artist_facebook != "") { ?> <a href="http://www.facebook.com/<?=$artist_facebook;?>" class="facebook">Facebook.com/<?=$artist_facebook;?></a> <? } ?>
-			<? if ($artist_website != "") { ?> <a href="http://<?=$artist_website;?>" class="www"><?=$artist_website;?></a> <? } ?>
 			<div class="clear"></div>
 			</div>
 						

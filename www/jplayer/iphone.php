@@ -66,7 +66,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml"> 
 <head>
-<title>MyArtistDNA.fm<?=$artist_name?></title>
+<title>MyArtistDNA - <?=$artist_name?></title>
 <link href="/jplayer/iphone.css" rel="stylesheet" type="text/css" /> 
 
 <link media="only screen and (max-device-width: 480px)" href="<?=trueSiteUrl();?>/jplayer/iphone.css" type="text/css" rel="stylesheet" />
@@ -372,7 +372,7 @@ $(document).ready(function()
 			<div id="loader"><img src="<?=trueSiteUrl();?>/jplayer/images/ajax-loader.gif" /></div>
 
 					
-                <!--
+                
 					<div class="mighthide">
 						<div class="buynow"></div>
                         <a href="#" class="buynow mystore"></a>
@@ -380,7 +380,7 @@ $(document).ready(function()
 						<span class="showitunes"></span>
 						<div class="clear"></div>
 					</div>
-				-->	
+            
 			<div id="progressbg"></div>
 			<div id="jquery_jplayer"></div> 
 			<div class="top-bg"></div>
@@ -433,23 +433,14 @@ $(document).ready(function()
 			<a class="jp-play-fake"></a>
 			<a class="jp-pause-fake"></a>
 			
-<!--
-			<div id="getsocial">
-			<? if ($artist_twitter != "") { ?> <a target="_blank" href="http://www.twitter.com/<?=$artist_twitter;?>" class="twitter">Twitter.com/<?=$artist_twitter;?></a> <? } ?>
-			<? if ($artist_facebook != "") { ?> <a target="_blank" href="http://www.facebook.com/<?=$artist_facebook;?>" class="facebook">Facebook.com/<?=$artist_facebook;?></a> <? } ?>
-			<? if ($artist_website != "") { ?> <a target="_blank" href="http://<?=$artist_website;?>" class="www"><?=$artist_website;?></a> <? } ?>
-			<div class="clear"></div>
-			</div>
--->
 			<div id="iphonebottombg">
 				<div class="logo_img">
-					<a target="_blank" href="http://www.myartistdna.fm/artists.php"></a>
+					<a target="_blank" href="<?=trueSiteUrl();?>/artists.php"></a>
 				</div>
 				<div class="social-media">
 					<!--<div class="copyright">&copy; Copyright 2011 MyArtistDNA.fm</div>-->
 					<? if ($artist_twitter != "") { ?> <a target="_blank" href="http://www.twitter.com/<?=$artist_twitter;?>" class="twitter">Twitter.com/<?=$artist_twitter;?></a> <? } ?>
 					<? if ($artist_facebook != "") { ?> <a target="_blank" href="http://www.facebook.com/<?=$artist_facebook;?>" class="facebook">Facebook.com/<?=$artist_facebook;?></a> <? } ?>
-					<? if ($artist_website != "") { ?> <a target="_blank" href="http://<?=$artist_website;?>" class="www"><?=$artist_website;?></a> <? } ?>
 					<!--<div class="clear"></div>-->
 				</div>
 				<span class="playlist-visibility"><span class="hide">Hide Playlist</span><span class="show">Show Playlist</span></span>
