@@ -53,6 +53,18 @@ else
     
     $facebook_page = $row['fb_page_url'];
     
+    $hide_fb = FALSE;
+    if( $row['fb_setting'] == 'DISABLED' )
+        $hide_fb = TRUE;
+    if( $facebook_page == '' )
+        $hide_fb = TRUE;
+    
+    $hide_tw = FALSE;
+    if( $row['tw_setting'] == 'DISBALED' )
+        $hide_tw = TRUE;
+    if( $row['twitter'] == '' )
+        $hide_tw = TRUE;
+    
     if ($artist_listens == "1") { $show_listens = "true"; }
 
     playerViews($artist_id);
@@ -1066,8 +1078,13 @@ $(document).ready(function()
                 <div class="header">
                     <div class="title"></div>
                     <div class="buttons">
-                        <div class="facebook holder"><div></div></div>
-                        <div class="twitter holder"><div></div></div>
+                        <?
+                            if( !$hide_fb )
+                                echo "<div class='facebook holder'><div></div></div>\n";
+                            if( !$hide_tw )
+                                echo "<div class='twitter holder'><div></div></div>\n";
+                        ?>
+                        
                         <div class="email holder"><div></div></div>
                         <div class="share holder"><div></div></div>
                     </div>
