@@ -1,52 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>MYARTISTDNA</title>
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    
-    <!--[if IE]>
-        <script src="js/html5.js"></script>
-    <![endif]-->
-	    
-</head>
-
-<body>
-<section id="header">
-<header>
-
-    <h1><a href="index.php"><img src="images/MYARTISTDNA.gif" alt="MYARTISTDNA"></a></h1>
-
-    <nav>
-    <ul>
-    <li><a href="#">ARTISTS</a>
-		<span>
-        <ul>
-        <li><a href="#">All</a></li>
-        <li><a href="#">Rock</a></li>
-        <li><a href="#">HIP-HOP</a></li>
-        <li><a href="#">POP</a></li>
-        <li><a href="#">DANCE</a></li>
-        <li><a href="#">COUNTRY</a></li>
-        </ul>
-		</span>
-    </li>                      
-    <li><a href="#">BENEFITS</a></li>                       
-    <li><a href="#">SIGN UP</a></li>     
-    <li><a href="#">SUPPORT</a></li>                     
-    <li class="nodivider"><a class="login" href="#">LOGIN</a></li>
-    </ul>
-    
-    <div class="search">
-    <fieldset>
-    <input name="" value="SEARCH" type="text" class="input" />
-    <input name="" type="image" src="images/icon_search.gif" class="button">
-    </fieldset>
-    </div>
-    </nav>
-
-</header>
-</section><!-- header -->
+<?php
+include "header.php";
+?>
 
 <section id="wrapper">
 <section id="content">
@@ -309,62 +263,6 @@ any other matter relating to the Site.<br /></p>
 </section>
 </section>
 
-<section id="footer">
-<footer>
-
-    <aside>
-    <h5>ARTIST</h5>
-    <ul>
-    <li><a href="artists.php">All</a></li>
-    <li><a href="music.php">Music</a></li>
-    <li><a href="art.php">Art</a></li>
-  
-    </ul>
-    </aside>
-
-    <aside class="benefits">
-    <h5>BENEFITS</h5>
-    <ul>
-     <li><a href="be-heard.php">Be Heard</a></li>
-     <li><a href="be-seen.php">Be Seen</a></li>
-     <li><a href="be-independent.php">Be Independent</a></li>
-    </ul>
-    </aside>
-
-    <aside>
-    <h5>SUPPORT</h5>
-    <ul>
-    <li><a href="faq.php">FAQs</a></li>
-    <li><a href="tour.php">Help</a></li>
-    <li><a href="privacy.html">Privacy</a></li>
-    <li><a href="terms_service.html">Terms</a></li>
-    </ul>
-    </aside>
-
-    <aside>
-    <h5>AFFILIATES</h5>
-    <ul>
-    <li><a href="http://myartistdna.is">MAD.is</a></li>
-    <li><a href="http://myartistdna.fm">MAD.fm</a></li>
-    <li><a href="http://myartistdna.tv">MAD.tv</a></li>
-    </ul>
-    </aside>
-
-    <article>
-    <h5>STAY CONNECTED</h5>
-    <ul>
-    <li><a href="http://facebook.com/pages/MyArtistDNA/106114012796731" target="_blank"><span><img src="images/facebook.gif" alt="Facebook"></span> Become a fan on Facebook</a></li>
-    <li><a href="http://twitter.com/myartistdna" target="_blank"><span><img src="images/twitter.gif" alt="Twitter"></span> Follow us on Twitter</a></li>
-    <li><a href="#" target="_blank"><span><img src="images/email.gif" alt="Email"></span> Join Newsletter</a></li>
-
-    </ul>
-    </article>
-
-    <div class="logo"><a href="home.php"><img src="images/MYARTISTDNA_footer.gif" alt="MYARTISTDNA"></a></div>
-    <p>&copy; 2011 <a href="http://levasent.com">Levas Entertainment</a>, All rights reserved</p>
-
-</footer></section><!-- footer -->
-
-
-</body>
-</html>
+<?php
+include "footer.php";
+?>
