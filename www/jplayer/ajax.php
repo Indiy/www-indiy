@@ -527,7 +527,7 @@
             $image_path = '/artists/images/'.$pages["image"];
             $size = getimagesize('..' . $image_path);
 			$page_image = "<img class='image' src='$image_path' border='0' ";
-            if( $size['width'] > 450 )
+            if( $size[0] > 450 )
                 $page_image .= " width='450' ";
             $page_image .= "/>";
             
