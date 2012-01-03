@@ -130,11 +130,11 @@
             $update_text = "Check out my new song: $short_link";
 
             $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE id = '$artistid'"));
-            if( $artist['auto_fb'] )
+            if( $artist['fb_setting'] == 'AUTO' )
             {
                 send_fb_update($artist,$update_text);
             }
-            if( $artist['auto_tw'] )
+            if( $artist['tw_setting'] == 'AUTO' )
             {
                 send_tweet($artist,$update_text);
             }
