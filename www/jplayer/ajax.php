@@ -523,8 +523,14 @@
 		} else { 
 			$page_video = '';
 		}
-		if ($pages["image"] != "") { 
-			$page_image = '<img class="image" src="'.trueSiteUrl().'/artists/images/'.$pages["image"].'" border="0" />';
+		if ($pages["image"] != "") {
+            $image_path = '/artists/images/'.$pages["image"];
+            $size = getimagesize('..' . $image_path);
+			$page_image = "<img class='image' src='$image_path' border='0' ";
+            if( $size['width'] > 450 )
+                $page_image .= " width='450' ";
+            $page_image .= "/>";
+            
 		} else { 
 			$page_image = '';
 		}
