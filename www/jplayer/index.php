@@ -60,7 +60,7 @@ else
         $hide_fb = TRUE;
     
     $hide_tw = FALSE;
-    if( $row['tw_setting'] == 'DISBALED' )
+    if( $row['tw_setting'] == 'DISABLED' )
         $hide_tw = TRUE;
     if( $row['twitter'] == '' )
         $hide_tw = TRUE;
