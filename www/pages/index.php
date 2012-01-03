@@ -69,7 +69,7 @@
 						
 						$status = "<p>{$logoutLink}</p>";
 						$loginbox = "$status";
-						refresh("1","http://www.myartistdna.fm");
+						refresh("1","http://www.myartistdna.com");
 						//refresh("1","?p=home");
 						$homeloginbox = "
 							$loginbox
@@ -128,7 +128,7 @@
 		<div id="login-wrapper">
 			<div class="box-header-bg">
 			<div class="box-header login">
-				MyArtistDNA.fm <span class="fr"><a href="<?=trueSiteUrl();?>">Back to the site</a></span>
+				MyArtistDNA.com <span class="fr"><a href="<?=trueSiteUrl();?>">Back to the site</a></span>
 			</div>
 			</div>
 

@@ -1265,8 +1265,8 @@ $(document).ready(function()
                                 <a href="#" id="jplayer_stop" class="jp-stop" tabindex="1">stop</a>
                             </li>
 
-                            <li><a href="#" id="jplayer_previous" class="jp-previous vtip" tabindex="1">previous</a></li>
-                            <li><a href="#" id="jplayer_next" class="jp-next vtip" tabindex="1">next</a></li>
+                            <li><a href="#" id="jplayer_previous" class="jp-previous vtip" tabindex="1"></a></li>
+                            <li><a href="#" id="jplayer_next" class="jp-next vtip" tabindex="1"></a></li>
                         </ul>
 
                         <div id="jplayer_volume_bar" class="jp-volume-bar">
