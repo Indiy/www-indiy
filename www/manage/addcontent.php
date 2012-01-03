@@ -142,11 +142,12 @@ buttons: [
 
 function onReady()
 {
-    var myEditor = new YAHOO.widget.Editor('msgpost', {
+    var myEditor = new YAHOO.widget.Editor('body', {
                                            height: '300px',
                                            width: '750px',
                                            dompath: false, 
                                            animate: false,
+                                           handleSubmit: true,
                                            toolbar: toolbar_config
                                            });
     myEditor.render();
@@ -178,7 +179,7 @@ $(document).ready(onReady);
             <input type="file" name="logo" class='right_file' /> <?=$content_logo;?>
         </div>
         <div class='editor_container yui-skin-sam'>
-            <textarea id="msgpost" name="msgpsot"><?=$content_body;?></textarea>
+            <textarea id="body" name="body"><?=$content_body;?></textarea>
         </div>
         <div class='submit_branding_container'>
             <input type="submit" name="submit" value="submit" class='left_submit' />
