@@ -10,6 +10,7 @@
 		<div class='header_2'><a href="http://navegante.myartistdna.com/"><img alt="Navegante" height="257" width="942" src="images/header_images/02.jpg" /></a></div>
 		<div class='header_3'><a href="http://ladygaga.myartistdna.com/"><img alt="Lady Gaga" height="257" width="942" src="images/header_images/03.jpg" /></a></div>
 		<div class='header_4'><a href="http://ladygaga.myartistdna.com/"><img alt="Lady Gaga" height="257" width="942" src="images/header_images/04.jpg" /></a></div>
+		<div class='header_5'><a href="http://ladygaga.myartistdna.com/"><img alt="Lady Gaga" height="257" width="942" src="images/header_images/05.jpg" /></a></div>
 
 	</div>
 		    
