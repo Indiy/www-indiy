@@ -14,9 +14,9 @@ include ('header.php');
 <!-- warning: playback does not work on iOS3 if you include the poster attribute! fixed in iOS4.0 -->
 <video controls>
 	<!-- MP4 must be first for iPad! -->
-   <source src="http://www.myartistdna.com/mad.iphone.mp4" type="video/mp4" />
-   <source src="http://www.myartistdna.com/mad.webm" type="video/webm" />
-   <source src="http://www.myartistdna.com/mad.ogv" type="video/ogg" />	<!-- <source src="__VIDEO__.OGV" type="video/ogg" /> Firefox / Opera / Chrome10 -->
+   <source src="_Master.mp4" type="video/mp4" />
+   <source src="_Master.webm" type="video/webm" />
+   <!-- <source src="http://www.myartistdna.com/mad.ogv" type="video/ogg" /> -->
 	
 	<!-- fallback to Flash: 
 	<object width="640" height="360" type="application/x-shockwave-flash" data="__FLASH__.SWF">
