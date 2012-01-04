@@ -9,23 +9,25 @@ include ('header.php');
 
     <div id="help">
 		<h2>WHAT IS IT?</h2>
-		   <div class="video-js-box vim-css">
-                    <video id="mad_video_1" class="video-js" width="853" height="480" controls="controls" preload="auto" poster="/images/mad_poster.png">
-                        <source src="http://www.myartistdna.com/mad.iphone.mp4" type="video/mp4" />
-                        <source src="http://www.myartistdna.com/mad.webm" type="video/webm" />
-                        <source src="http://www.myartistdna.com/mad.ogv" type="video/ogg" />
-                        <!-- Flash Fallback. Use any flash video player here. Make sure to keep the vjs-flash-fallback class. -->
-                        <object id="flash_fallback_1" class="vjs-flash-fallback" width="640" height="264" type="application/x-shockwave-flash"
-                            data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
-                            <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
-                            <param name="allowfullscreen" value="true" />
-                            <param name="flashvars" value='config={"playlist":["http://www.myartistdna.com/images/mad_poster.png", {"url": "http://www.myartistdna.com/mad.mp4","autoPlay":false,"autoBuffering":true}]}' />
-                            <!-- Image Fallback. Typically the same as the poster image. -->
-                            <img src="/images/mad_poster.png" width="853" height="480" alt="Poster Image"
-                            title="No video playback capabilities." />
-                        </object>
-                    </video>
-                </div>
+		<div class="videos">
+		<!-- first try HTML5 playback: if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise -->
+<!-- warning: playback does not work on iOS3 if you include the poster attribute! fixed in iOS4.0 -->
+<video width="638" height="358" controls>
+	<!-- MP4 must be first for iPad! -->
+   <source src="http://www.myartistdna.com/mad.iphone.mp4" type="video/mp4" />
+   <source src="http://www.myartistdna.com/mad.webm" type="video/webm" />
+   <source src="http://www.myartistdna.com/mad.ogv" type="video/ogg" />	<!-- <source src="__VIDEO__.OGV" type="video/ogg" /> Firefox / Opera / Chrome10 -->
+	
+	<!-- fallback to Flash: 
+	<object width="640" height="360" type="application/x-shockwave-flash" data="__FLASH__.SWF">
+		<!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
+		<param name="movie" value="__FLASH__.SWF" />
+		<param name="flashvars" value="controlbar=over&amp;image=__POSTER__.JPG&amp;file=__VIDEO__.MP4" />
+		<!-- fallback image. note the title field below, put the title of the video there -->
+		<img src="__VIDEO__.JPG" width="640" height="360" alt="__TITLE__"
+		     title="No video playback capabilities, please download the video below" />
+	</object>-->
+</video>
 		</div>
     
 		<div class="info">
