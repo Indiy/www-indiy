@@ -13,8 +13,8 @@ include ('header.php');
 		<!-- first try HTML5 playback: if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise -->
 <!-- warning: playback does not work on iOS3 if you include the poster attribute! fixed in iOS4.0 -->
 <video width="638" height="358" controls>	<!-- MP4 must be first for iPad! -->
-   <source src="http://madd3v.com/_Master.mp4" type="video/mp4" />
-   <source src="http://madd3v.com/_Master.webm" type="video/webm" />
+   <source src="http://madd3v.com/__Master.mp4" type="video/mp4" />
+   <source src="http://madd3v.com/__Master.webm" type="video/webm" />
    <!-- <source src="http://www.myartistdna.com/mad.ogv" type="video/ogg" /> -->
 	
 	<!-- fallback to Flash: 
