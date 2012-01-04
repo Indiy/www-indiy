@@ -12,7 +12,7 @@ include ('header.php');
 		<div class="videos">
 		<!-- first try HTML5 playback: if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise -->
 <!-- warning: playback does not work on iOS3 if you include the poster attribute! fixed in iOS4.0 -->
-<video width="638" height="358" controls>
+<video controls>
 	<!-- MP4 must be first for iPad! -->
    <source src="http://www.myartistdna.com/mad.iphone.mp4" type="video/mp4" />
    <source src="http://www.myartistdna.com/mad.webm" type="video/webm" />
