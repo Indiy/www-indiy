@@ -94,7 +94,7 @@ include_once 'includes/login_signup.html';
                 <input id='newsletter_email' class='line_text'/>
             </div>
             <div class='submit_container'>
-                <button class="submit" onclick='onSubmitNewsletter();'>SUBMIT</button>
+                <button class="submit" onclick='submitNewsletter();'>SUBMIT</button>
             </div>
         </div>
         <div id='newsletter_success' class='form_status' style='display: none;'>
