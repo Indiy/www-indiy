@@ -78,6 +78,133 @@ background:#f6f6f6;
 include_once 'includes/login_signup.html';
 ?>
 
+<style type="text/css">
+
+.newsletter_wrapper, .newsletter_container {
+    height: 250px;
+    width: 500px;
+}
+
+.newsletter_wrapper  {
+    bottom: 50%;
+    right: 50%;
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.newsletter_container {
+    left: 50%;
+    position: relative;
+    top: 50%;
+}
+
+.top_bar h2 {
+    float:left;
+    padding-left: 20px;
+    padding-top: 17px;
+    color: white;
+    font-size: 22px;
+    font-weight: normal;
+    color: #ddd;
+}
+.top_bar button {
+    height: 100%;
+    width: 57px;
+    padding-left: 10px;
+    padding-right: 4px;
+    color: #51C3C4;
+    border: 0 none;
+    float: right;
+    font-size: 12px;
+    background: url("../images/bg_close.gif") no-repeat;
+    cursor: pointer;
+}
+.top_blue_bar, .bottom_blue_bar {
+    background-color: #51C3C4;
+    width: 100%;
+    height: 10px;
+}
+.top_sep {
+    width: 100%;
+    height: 1px; 
+} 
+.bottom_sep {
+    width: 100%;
+    height: 15px;
+}
+.input_container {
+    width: 100%;
+    height: 40px;
+}
+.line_label {
+    font-size: 12px;
+    font-family: sans-serif;
+    margin-left: 20px;
+    margin-top: 15px;
+    color: #555;
+}
+.line_text {
+    width: 325px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.submit_container {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+.submit {
+    width: 150px;
+    height: 40px;
+    color: #51C3C4;
+    background-color: black;
+    border: 0 none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.form_message {
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    padding-top: 20px;
+}
+
+
+
+</style>
+
+<div id='newsletter_wrapper' style='display: none;'>
+    <div id='newsletter_container'>
+        <div class='top_bar'>
+            <h2>Invite Friends</h2>
+            <button onclick='closeNewsletter();'>CLOSE</button>
+        </div>
+
+        <div class='top_blue_bar'></div>
+        <div class='top_sep'></div>
+        <div class='input_container'>
+            <div class='line_label'>Please enter your name below and you will be registered for our newsleter.</div>
+            <input id='newsletter_email' class='line_text'/>
+        </div>
+        <div class='submit_container'>
+            <button class="submit" onclick='onInviteFriends();'>Send</button>
+        </div>
+        <div id='status' class='form_status' style='display: none;'></div>
+
+        <div class='bottom_sep'></div>
+        <div class='bottom_blue_bar'></div>
+        </div>
+</div>
+
 <!-- Tracking code Starts --> 
 <script type="text/javascript">
 
