@@ -822,13 +822,6 @@ Newsletter
     cursor: pointer;
 }
 #newsletter_container .form_message {
-    text-align: center;
-    width: 100%;
-    height: 30px;
-    padding-top: 20px;
-}
-
-#newsletter_container .form_message {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 10px;
