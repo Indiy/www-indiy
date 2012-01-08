@@ -80,6 +80,18 @@ include_once 'includes/login_signup.html';
 
 <style type="text/css">
 
+#newsletter_mask
+{
+    position: fixed;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #080808;
+    opacity: 0.65;
+    z-index: 9049;
+}
+
 #newsletter_wrapper, #newsletter_container {
     width: 500px;
 }
@@ -95,6 +107,7 @@ include_once 'includes/login_signup.html';
     position: relative;
     top: 50%;
     background-color: white;
+    z-index: 9050;
 }
 .top_bar {
     width: 100%;
@@ -175,10 +188,8 @@ include_once 'includes/login_signup.html';
     padding-top: 20px;
 }
 
-
-
 </style>
-
+<div id='newsletter_mask' style='display: none;'></div>
 <div id='newsletter_wrapper' style='display: none;'>
     <div id='newsletter_container'>
         <div class='top_bar'>
