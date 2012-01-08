@@ -88,7 +88,7 @@ include_once 'includes/login_signup.html';
 
         <div class='top_blue_bar'></div>
         <div class='top_sep'></div>
-        <div id='newletter_form'>
+        <div id='newsletter_form'>
             <div class='flow_container'>
                 <div class='line_label'>Please enter your name below and you will be registered for our newsleter.</div>
                 <input id='newsletter_email' class='line_text'/>
@@ -97,7 +97,7 @@ include_once 'includes/login_signup.html';
                 <button class="submit" onclick='submitNewsletter();'>SUBMIT</button>
             </div>
         </div>
-        <div id='newsletter_success' class='form_status' style='display: none;'>
+        <div id='newsletter_success' class='form_message' style='display: none;'>
         Thank you for your email.  You will be added to our newsletter list.
         </div>
 

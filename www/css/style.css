@@ -828,6 +828,15 @@ Newsletter
     padding-top: 20px;
 }
 
+#newsletter_container .form_message {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+
 
 /*for FireFox*/
     input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner
