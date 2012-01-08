@@ -60,7 +60,7 @@ background:#f6f6f6;
     <ul>
     <li><a href="http://facebook.com/pages/MyArtistDNA/106114012796731" target="_blank"><span><img src="images/facebook.gif" alt="Facebook"></span> Become a fan on Facebook</a></li>
     <li><a href="http://twitter.com/myartistdna" target="_blank"><span><img src="images/twitter.gif" alt="Twitter"></span> Follow us on Twitter</a></li>
-    <li><a href="#" onclick='showNewsletter();'><span><img src="images/email.gif" alt="Email"></span> Join Newsletter</a></li>
+    <li><a onclick='showNewsletter();'><span><img src="images/email.gif" alt="Email"></span> Join Newsletter</a></li>
 
     </ul>
     </article>
@@ -88,12 +88,14 @@ include_once 'includes/login_signup.html';
 
         <div class='top_blue_bar'></div>
         <div class='top_sep'></div>
-        <div class='flow_container'>
-            <div class='line_label'>Please enter your name below and you will be registered for our newsleter.</div>
-            <input id='newsletter_email' class='line_text'/>
-        </div>
-        <div class='submit_container'>
-            <button class="submit" onclick='onSubmitNewsletter();'>SUBMIT</button>
+        <div id='newletter_form'>
+            <div class='flow_container'>
+                <div class='line_label'>Please enter your name below and you will be registered for our newsleter.</div>
+                <input id='newsletter_email' class='line_text'/>
+            </div>
+            <div class='submit_container'>
+                <button class="submit" onclick='onSubmitNewsletter();'>SUBMIT</button>
+            </div>
         </div>
         <div id='status' class='form_status' style='display: none;'></div>
 
