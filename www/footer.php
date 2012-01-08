@@ -134,15 +134,16 @@ include_once 'includes/login_signup.html';
 .bottom_sep {
     height: 15px;
 }
-.input_container {
-    height: 40px;
+.flow_container {
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 20px;
 }
 .line_label {
     font-size: 12px;
     font-family: sans-serif;
     color: #555;
+    padding-bottom: 20px;
 }
 .line_text {
     width: 100%;
@@ -151,6 +152,7 @@ include_once 'includes/login_signup.html';
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
+    border: 1px solid #ccc;
 }
 .submit_container {
     text-align: center;
