@@ -46,6 +46,7 @@
     <script src="/jplayer/js/index.js" type="text/javascript"></script>
 
     <script src="/js/login_signup.js" type="text/javascript"></script>
+    <script src="/js/footer.js" type="text/javascript"></script>
 </head>
 
 <body>

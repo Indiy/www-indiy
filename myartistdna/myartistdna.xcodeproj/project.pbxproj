@@ -38,6 +38,7 @@
 		2D380B99146F0A5D00E36189 /* .htaccess */ = {isa = PBXFileReference; lastKnownFileType = text; path = .htaccess; sourceTree = "<group>"; };
 		2D380B9A146F0A5D00E36189 /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
 		2D380B9B1470800600E36189 /* cleanup_carts.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = cleanup_carts.php; sourceTree = "<group>"; };
+		2D6DF95114BA4F4A00D0750E /* footer.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = footer.js; sourceTree = "<group>"; };
 		2D760A31149DA72200BFE196 /* social_config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = social_config.php; sourceTree = "<group>"; };
 		2D760A32149DA74A00BFE196 /* socialize.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = socialize.php; sourceTree = "<group>"; };
 		2D98BF3B1480778500CE851D /* ffmp3-config.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ffmp3-config.swf"; sourceTree = "<group>"; };
@@ -2659,6 +2660,7 @@
 				2DF472E01440B77F005538C7 /* swfobject.js */,
 				2DBDD1281469DCC4001E20CC /* login_signup.js */,
 				2D34E22A14A30B50004473F9 /* logged_in.php */,
+				2D6DF95114BA4F4A00D0750E /* footer.js */,
 			);
 			path = js;
 			sourceTree = "<group>";

@@ -60,7 +60,7 @@ background:#f6f6f6;
     <ul>
     <li><a href="http://facebook.com/pages/MyArtistDNA/106114012796731" target="_blank"><span><img src="images/facebook.gif" alt="Facebook"></span> Become a fan on Facebook</a></li>
     <li><a href="http://twitter.com/myartistdna" target="_blank"><span><img src="images/twitter.gif" alt="Twitter"></span> Follow us on Twitter</a></li>
-    <li><a href="#" target="_blank"><span><img src="images/email.gif" alt="Email"></span> Join Newsletter</a></li>
+    <li><a href="#" onclick='showNewsletter();'><span><img src="images/email.gif" alt="Email"></span> Join Newsletter</a></li>
 
     </ul>
     </article>
@@ -78,117 +78,6 @@ background:#f6f6f6;
 include_once 'includes/login_signup.html';
 ?>
 
-<style type="text/css">
-
-#newsletter_mask
-{
-    position: fixed;
-    left: 0; 
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #080808;
-    opacity: 0.65;
-    z-index: 9049;
-}
-
-#newsletter_wrapper, #newsletter_container {
-    width: 500px;
-}
-#newsletter_wrapper  {
-    bottom: 50%;
-    right: 50%;
-    position: fixed;
-    max-height: 100%;
-    max-width: 100%;
-}
-#newsletter_container {
-    left: 50%;
-    position: relative;
-    top: 50%;
-    background-color: white;
-    z-index: 9050;
-}
-#newsletter_container .top_bar {
-    width: 100%;
-    height: 50px;
-    background: url("/images/bg_login01.gif") repeat-x;
-    background-size: auto 100%;
-}
-#newsletter_container .top_bar h2 {
-    float:left;
-    padding-left: 20px;
-    padding-top: 17px;
-    color: white;
-    font-size: 22px;
-    font-weight: normal;
-    color: #ddd;
-}
-#newsletter_container .top_bar button {
-    height: 100%;
-    width: 57px;
-    padding-left: 10px;
-    padding-right: 4px;
-    color: #51C3C4;
-    border: 0 none;
-    float: right;
-    font-size: 12px;
-    background: url("/images/bg_close.gif") no-repeat;
-    cursor: pointer;
-}
-#newsletter_container .top_blue_bar, #newsletter_container .bottom_blue_bar {
-    background-color: #51C3C4;
-    height: 10px;
-}
-#newsletter_container .top_sep {
-    height: 1px;
-    padding-bottom: 20px;
-} 
-#newsletter_container .bottom_sep {
-    height: 15px;
-}
-#newsletter_container .flow_container {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 15px;
-}
-#newsletter_container .line_label {
-    font-size: 12px;
-    font-family: sans-serif;
-    color: #555;
-    padding-bottom: 15px;
-}
-#newsletter_container .line_text {
-    width: 100%;
-    height: 20px;
-    padding-left: 3px;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border: 1px solid #ccc;
-}
-#newsletter_container .submit_container {
-    text-align: center;
-}
-#newsletter_container .submit {
-    width: 150px;
-    height: 40px;
-    color: #51C3C4;
-    background-color: black;
-    border: 0 none;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-family: sans-serif;
-    cursor: pointer;
-}
-#newsletter_container .form_message {
-    text-align: center;
-    width: 100%;
-    height: 30px;
-    padding-top: 20px;
-}
-
-</style>
 <div id='newsletter_mask' style='display: none;'></div>
 <div id='newsletter_wrapper' style='display: none;'>
     <div id='newsletter_container'>
