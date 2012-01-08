@@ -375,7 +375,7 @@ ra_ActiveSearch.prototype.findItems=function(SEARCH)
 	// 2. create a collision collection of possible result matches using list a and b
 	// 3. create a result list collision collection and regular expressions
 	
-	if(this.listResultItems.length>0)
+	//if(this.listResultItems.length>0)
 		{
 		this.listItemsChanged=true;
 		this.renderItems();
