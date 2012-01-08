@@ -97,7 +97,9 @@ include_once 'includes/login_signup.html';
                 <button class="submit" onclick='onSubmitNewsletter();'>SUBMIT</button>
             </div>
         </div>
-        <div id='status' class='form_status' style='display: none;'></div>
+        <div id='newsletter_success' class='form_status' style='display: none;'>
+        Thank you for your email.  You will be added to our newsletter list.
+        </div>
 
         <div class='bottom_sep'></div>
         <div class='bottom_blue_bar'></div>
