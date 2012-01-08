@@ -80,25 +80,29 @@ include_once 'includes/login_signup.html';
 
 <style type="text/css">
 
-.newsletter_wrapper, .newsletter_container {
+#newsletter_wrapper, #newsletter_container {
     height: 250px;
     width: 500px;
 }
-
-.newsletter_wrapper  {
+#newsletter_wrapper  {
     bottom: 50%;
     right: 50%;
     position: absolute;
     max-height: 100%;
     max-width: 100%;
 }
-
-.newsletter_container {
+#newsletter_container {
     left: 50%;
     position: relative;
     top: 50%;
+    background-color: white;
 }
-
+.top_bar {
+    width: 100%;
+    height: 50px;
+    background: url("/images/bg_login01.gif") repeat-x;
+    background-size: auto 100%;
+}
 .top_bar h2 {
     float:left;
     padding-left: 20px;
@@ -117,7 +121,7 @@ include_once 'includes/login_signup.html';
     border: 0 none;
     float: right;
     font-size: 12px;
-    background: url("../images/bg_close.gif") no-repeat;
+    background: url("/images/bg_close.gif") no-repeat;
     cursor: pointer;
 }
 .top_blue_bar, .bottom_blue_bar {
