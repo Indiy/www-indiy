@@ -81,13 +81,12 @@ include_once 'includes/login_signup.html';
 <style type="text/css">
 
 #newsletter_wrapper, #newsletter_container {
-    height: 250px;
     width: 500px;
 }
 #newsletter_wrapper  {
     bottom: 50%;
     right: 50%;
-    position: absolute;
+    position: fixed;
     max-height: 100%;
     max-width: 100%;
 }
@@ -126,41 +125,34 @@ include_once 'includes/login_signup.html';
 }
 .top_blue_bar, .bottom_blue_bar {
     background-color: #51C3C4;
-    width: 100%;
     height: 10px;
 }
 .top_sep {
-    width: 100%;
-    height: 1px; 
+    height: 1px;
+    padding-bottom: 20px;
 } 
 .bottom_sep {
-    width: 100%;
     height: 15px;
 }
 .input_container {
-    width: 100%;
     height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .line_label {
     font-size: 12px;
     font-family: sans-serif;
-    margin-left: 20px;
-    margin-top: 15px;
     color: #555;
 }
 .line_text {
-    width: 325px;
+    width: 100%;
     height: 20px;
-    margin-top: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
     padding-left: 3px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 }
 .submit_container {
-    width: 100%;
     text-align: center;
     padding-top: 10px;
 }
