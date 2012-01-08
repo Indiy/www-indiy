@@ -137,13 +137,13 @@ include_once 'includes/login_signup.html';
 .flow_container {
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 .line_label {
     font-size: 12px;
     font-family: sans-serif;
     color: #555;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 .line_text {
     width: 100%;
@@ -156,7 +156,6 @@ include_once 'includes/login_signup.html';
 }
 .submit_container {
     text-align: center;
-    padding-top: 10px;
 }
 .submit {
     width: 150px;
@@ -189,7 +188,7 @@ include_once 'includes/login_signup.html';
 
         <div class='top_blue_bar'></div>
         <div class='top_sep'></div>
-        <div class='input_container'>
+        <div class='flow_container'>
             <div class='line_label'>Please enter your name below and you will be registered for our newsleter.</div>
             <input id='newsletter_email' class='line_text'/>
         </div>
