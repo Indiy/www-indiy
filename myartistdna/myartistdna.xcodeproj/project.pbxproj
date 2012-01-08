@@ -20,7 +20,7 @@
 		2D34E23214A9680C004473F9 /* faq.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = faq.php; sourceTree = "<group>"; };
 		2D34E23314AAD64D004473F9 /* forgot_password.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = forgot_password.html; sourceTree = "<group>"; };
 		2D34E23414AADC6D004473F9 /* forgot_password.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = forgot_password.php; sourceTree = "<group>"; };
-		2D34E23514ABFF09004473F9 /* video-js.css */ = {isa = PBXFileReference; path = "video-js.css"; sourceTree = "<group>"; };
+		2D34E23514ABFF09004473F9 /* video-js.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "video-js.css"; sourceTree = "<group>"; };
 		2D34E23614ABFF15004473F9 /* video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = video.js; sourceTree = "<group>"; };
 		2D34E23714AD5897004473F9 /* fan_connections.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_connections.php; sourceTree = "<group>"; };
 		2D34E23814AD69ED004473F9 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
@@ -918,7 +918,6 @@
 		2DF4732A1440B77F005538C7 /* PIE.htc */ = {isa = PBXFileReference; lastKnownFileType = text; path = PIE.htc; sourceTree = "<group>"; };
 		2DF4732B1440B77F005538C7 /* player.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player.html; sourceTree = "<group>"; };
 		2DF4732C1440B77F005538C7 /* pricing.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = pricing.html; sourceTree = "<group>"; };
-		2DF4732D1440B77F005538C7 /* privacy.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = privacy.html; sourceTree = "<group>"; };
 		2DF4732F1440B77F005538C7 /* .ftpquota */ = {isa = PBXFileReference; lastKnownFileType = text; path = .ftpquota; sourceTree = "<group>"; };
 		2DF473321440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
 		2DF473331440B77F005538C7 /* dwsync.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = dwsync.xml; sourceTree = "<group>"; };
@@ -1120,7 +1119,6 @@
 		2DF474101440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
 		2DF474111440B77F005538C7 /* expressInstall.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = expressInstall.swf; sourceTree = "<group>"; };
 		2DF474121440B77F005538C7 /* integrated_player.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = integrated_player.swf; sourceTree = "<group>"; };
-		2DF474131440B77F005538C7 /* terms_service.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = terms_service.html; sourceTree = "<group>"; };
 		2DF474141440B77F005538C7 /* tour.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = tour.php; sourceTree = "<group>"; };
 		2DF4741A1440CFC6005538C7 /* jquery.mCustomScrollbar.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = jquery.mCustomScrollbar.css; sourceTree = "<group>"; };
 		2DF47425144A2D84005538C7 /* addcontent.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = addcontent.php; sourceTree = "<group>"; };
@@ -1471,10 +1469,8 @@
 				2DF4732A1440B77F005538C7 /* PIE.htc */,
 				2DF4732B1440B77F005538C7 /* player.html */,
 				2DF4732C1440B77F005538C7 /* pricing.html */,
-				2DF4732D1440B77F005538C7 /* privacy.html */,
 				2DF473961440B77F005538C7 /* s_inf.php */,
 				2DF473971440B77F005538C7 /* searchbox.php */,
-				2DF474131440B77F005538C7 /* terms_service.html */,
 				2DF47528144BFF7A005538C7 /* timthumb.php */,
 				2DF474141440B77F005538C7 /* tour.php */,
 				2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */,
