@@ -109,13 +109,13 @@ include_once 'includes/login_signup.html';
     background-color: white;
     z-index: 9050;
 }
-.top_bar {
+#newsletter_container .top_bar {
     width: 100%;
     height: 50px;
     background: url("/images/bg_login01.gif") repeat-x;
     background-size: auto 100%;
 }
-.top_bar h2 {
+#newsletter_container .top_bar h2 {
     float:left;
     padding-left: 20px;
     padding-top: 17px;
@@ -124,7 +124,7 @@ include_once 'includes/login_signup.html';
     font-weight: normal;
     color: #ddd;
 }
-.top_bar button {
+#newsletter_container .top_bar button {
     height: 100%;
     width: 57px;
     padding-left: 10px;
@@ -136,29 +136,29 @@ include_once 'includes/login_signup.html';
     background: url("/images/bg_close.gif") no-repeat;
     cursor: pointer;
 }
-.top_blue_bar, .bottom_blue_bar {
+#newsletter_container .top_blue_bar, #newsletter_container .bottom_blue_bar {
     background-color: #51C3C4;
     height: 10px;
 }
-.top_sep {
+#newsletter_container .top_sep {
     height: 1px;
     padding-bottom: 20px;
 } 
-.bottom_sep {
+#newsletter_container .bottom_sep {
     height: 15px;
 }
-.flow_container {
+#newsletter_container .flow_container {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 15px;
 }
-.line_label {
+#newsletter_container .line_label {
     font-size: 12px;
     font-family: sans-serif;
     color: #555;
     padding-bottom: 15px;
 }
-.line_text {
+#newsletter_container .line_text {
     width: 100%;
     height: 20px;
     padding-left: 3px;
@@ -167,10 +167,10 @@ include_once 'includes/login_signup.html';
     -moz-border-radius: 3px;
     border: 1px solid #ccc;
 }
-.submit_container {
+#newsletter_container .submit_container {
     text-align: center;
 }
-.submit {
+#newsletter_container .submit {
     width: 150px;
     height: 40px;
     color: #51C3C4;
@@ -181,7 +181,7 @@ include_once 'includes/login_signup.html';
     font-family: sans-serif;
     cursor: pointer;
 }
-.form_message {
+#newsletter_container .form_message {
     text-align: center;
     width: 100%;
     height: 30px;
@@ -204,7 +204,7 @@ include_once 'includes/login_signup.html';
             <input id='newsletter_email' class='line_text'/>
         </div>
         <div class='submit_container'>
-            <button class="submit" onclick='onInviteFriends();'>Send</button>
+            <button class="submit" onclick='onSubmitNewsletter();'>SUBMIT</button>
         </div>
         <div id='status' class='form_status' style='display: none;'></div>
 
