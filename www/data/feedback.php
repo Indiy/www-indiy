@@ -6,7 +6,7 @@
     include('../includes/functions.php');   
     include('../includes/config.php');
 
-    $form_contens = '';
+    $form_contents = '';
 
     foreach( $_POST as $key => $value )
     {
