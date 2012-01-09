@@ -189,6 +189,78 @@ function submitFeedback()
                         <span class='radio_text'>Nirvana</span>
                     </div>
                 </li>
+                  <li>
+                    <span class="number">1</span>
+                    <span class="details">
+                        What do you think?
+                    </span><br/>
+                    <textarea class='textarea' name='What do you think?'></textarea>
+                </li>
+                <li>
+                    <span class="number">2</span>
+                    <span class="details">
+                        Anything you would change?
+                    </span><br/>
+                    <textarea class='textarea' name='Anything you would change?'></textarea>
+                </li>
+                <li>
+                    <span class="number">3</span>
+                    <span class="details">
+                        Who is the best band ever?
+                    </span><br/>
+                    <div class='radio_group'>
+                        <input type='radio' class='radio' name='Best Band?' value='led zepplin'>
+                        <span class='radio_text'>Led Zepplin</span>
+                    </div>
+                    <div class='radio_group'>
+                        <input type='radio' class='radio' name='Best Band?' value='pink floyd'>
+                        <span class='radio_text'>Pink Floyd</span>
+                    </div>
+                    <div class='radio_group'>
+                        <input type='radio' class='radio' name='Best Band?' value='U2'>
+                        <span class='radio_text'>U2</span>
+                    </div>
+                    <div class='radio_group'>
+                        <input type='radio' class='radio' name='Best Band?' value='nirvana'>
+                        <span class='radio_text'>Nirvana</span>
+                    </div>
+                </li>
+                  <li>
+                    <span class="number">1</span>
+                    <span class="details">
+                        What do you think?
+                    </span><br/>
+                    <textarea class='textarea' name='What do you think?'></textarea>
+                </li>
+                <li>
+                    <span class="number">2</span>
+                    <span class="details">
+                        Anything you would change?
+                    </span><br/>
+                    <textarea class='textarea' name='Anything you would change?'></textarea>
+                </li>
+                <li>
+                    <span class="number">3</span>
+                    <span class="details">
+                        Who is the best band ever?
+                    </span><br/>
+                    <div class='radio_group'>
+                        <input type='radio' class='radio' name='Best Band?' value='led zepplin'>
+                        <span class='radio_text'>Led Zepplin</span>
+                    </div>
+                    <div class='radio_group'>
+                        <input type='radio' class='radio' name='Best Band?' value='pink floyd'>
+                        <span class='radio_text'>Pink Floyd</span>
+                    </div>
+                    <div class='radio_group'>
+                        <input type='radio' class='radio' name='Best Band?' value='U2'>
+                        <span class='radio_text'>U2</span>
+                    </div>
+                    <div class='radio_group'>
+                        <input type='radio' class='radio' name='Best Band?' value='nirvana'>
+                        <span class='radio_text'>Nirvana</span>
+                    </div>
+                </li>
              </ul>
             <button class='submit' onclick='submitFeedback(); return false;'>SUBMIT</button>
         </div>
