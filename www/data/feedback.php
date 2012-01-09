@@ -10,7 +10,7 @@
 
     foreach( $_GET as $key => $value )
     {
-        $form_contents .= "$key:\n$value\n";
+        $form_contents .= "$key:\n$value\n\n";
     }
 
     $to = "jim@blueskylabs.com";
@@ -33,7 +33,6 @@ END;
 
     mail($to,$subject,$message,$headers);
     
-    echo $message;
     echo "{ \"success\": 1 }\n";
 ?>
 

@@ -158,14 +158,14 @@ function submitFeedback()
                     <span class="details">
                         What do you think?
                     </span><br/>
-                    <textarea class='textarea' name='what_think'></textarea>
+                    <textarea class='textarea' name='What do you think?'></textarea>
                 </li>
                 <li>
                     <span class="number">2</span>
                     <span class="details">
                         Anything you would change?
                     </span><br/>
-                    <textarea class='textarea' name='what_change'></textarea>
+                    <textarea class='textarea' name='Anything you would change?'></textarea>
                 </li>
                 <li>
                     <span class="number">3</span>
@@ -173,19 +173,19 @@ function submitFeedback()
                         Who is the best band ever?
                     </span><br/>
                     <div class='radio_group'>
-                        <input type='radio' class='radio' name='best_band' value='led zepplin'>
+                        <input type='radio' class='radio' name='Best Band?' value='led zepplin'>
                         <span class='radio_text'>Led Zepplin</span>
                     </div>
                     <div class='radio_group'>
-                        <input type='radio' class='radio' name='best_band' value='pink floyd'>
+                        <input type='radio' class='radio' name='Best Band?' value='pink floyd'>
                         <span class='radio_text'>Pink Floyd</span>
                     </div>
                     <div class='radio_group'>
-                        <input type='radio' class='radio' name='best_band' value='U2'>
+                        <input type='radio' class='radio' name='Best Band?' value='U2'>
                         <span class='radio_text'>U2</span>
                     </div>
                     <div class='radio_group'>
-                        <input type='radio' class='radio' name='best_band' value='nirvana'>
+                        <input type='radio' class='radio' name='Best Band?' value='nirvana'>
                         <span class='radio_text'>Nirvana</span>
                     </div>
                 </li>
