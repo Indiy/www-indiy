@@ -275,7 +275,7 @@ function onImageRemove()
             <option value="">Select </option>
             <option value=""></option>
             <?
-                $colors = array("repeat","repeat-x","repeat-y","no-repeat","stretch");
+                $colors = array("repeat",,"stretch");
                 foreach ($colors as $color) {
                     if ($audio_bgrepeat == $color) {
                         $selected = " selected";
