@@ -25,7 +25,7 @@ html, body
 
 body
 {
-    background: url(images/landing_bg1.jpg);
+    background: url('images/landing_bg1.jpg');
     background-size: 100% 100%;
 }
             
@@ -369,6 +369,19 @@ function closeVideo()
     $('.wrapper').show();
     g_videoPlayer.pause();
 }
+
+var num_images = 3;
+
+function rand(n)
+{
+    return Math.floor( Math.random() * n + 1 );
+}
+
+$(document).ready(function()
+{
+    var image = 'images/landing_bg' + rand(num_images) + '.jpg';
+    $("body").css('background',"url('" + image + "')");
+});
 
         </script>
     </head>
