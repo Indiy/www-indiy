@@ -124,11 +124,6 @@
 		$head_title	=	"Add";
 	}
 	
-	if ($video_logo != "")
-    {
-		$video_logo = '<img src="../artists/images/'.$video_logo.'" style="height: 25px;" />';
-	}
-	
 	if ($video_download == "1") 
     { 
         $yesDownload = " checked"; 
