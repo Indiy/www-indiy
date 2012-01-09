@@ -8,7 +8,7 @@
 
     $form_contents = '';
 
-    foreach( $_POST as $key => $value )
+    foreach( $_REQUEST as $key => $value )
     {
         $form_contents .= "$key:\n$value\n";
     }
