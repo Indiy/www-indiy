@@ -41,6 +41,7 @@
 		2D6DF95114BA4F4A00D0750E /* footer.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = footer.js; sourceTree = "<group>"; };
 		2D6DF95214BA5DA400D0750E /* add_mad_newsletter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_mad_newsletter.php; sourceTree = "<group>"; };
 		2D6DF95314BA62A900D0750E /* mad_newsletter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = mad_newsletter.php; sourceTree = "<group>"; };
+		2D6DF95414BA7D3A00D0750E /* feedback.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = feedback.php; sourceTree = "<group>"; };
 		2D760A31149DA72200BFE196 /* social_config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = social_config.php; sourceTree = "<group>"; };
 		2D760A32149DA74A00BFE196 /* socialize.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = socialize.php; sourceTree = "<group>"; };
 		2D98BF3B1480778500CE851D /* ffmp3-config.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ffmp3-config.swf"; sourceTree = "<group>"; };
@@ -1460,6 +1461,7 @@
 				2DF470571440B77F005538C7 /* download.php */,
 				2DF470591440B77F005538C7 /* fashion.php */,
 				2D34E23214A9680C004473F9 /* faq.php */,
+				2D6DF95414BA7D3A00D0750E /* feedback.php */,
 				2DF4705A1440B77F005538C7 /* favicon.ico */,
 				2DF4705C1440B77F005538C7 /* header.php */,
 				2DF4705D1440B77F005538C7 /* home.php */,
