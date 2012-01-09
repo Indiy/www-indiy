@@ -83,6 +83,11 @@
             $video_sound = $old_sound;
 		}
 		
+        if( $_POST["remove_video_image"] == 'true' )
+            $video_logo = '';
+        if( $_POST["remove_video"] == 'true' )
+            $video_sound = '';
+        
 		$tables = "artistid|name|image|video";
 		$values = "{$artistid}|{$video_name}|{$video_logo}|{$video_sound}";
 		
@@ -149,6 +154,37 @@
 
 ?>
 
+<script type="text/javascript">
+
+$(document).ready(setupQuestionTolltips);
+
+var g_removeVideo = false;
+var g_removeVideoImage = false;
+
+function onVideoRemove()
+{
+    var result = window.confirm("Remove video?");
+    if( result )
+    {
+        g_removeVideo = true;
+        $('.filename').hide();
+    }
+    return false;
+}
+
+function onVideoImageRemove()
+{
+    var result = window.confirm("Remove image?");
+    if( result )
+    {
+        g_removeVideoImage = true;
+        $('.image_image').hide();
+    }
+    return false;
+}
+
+</script>
+
 <div id="popup">
     <?=$successMessage;?>
     <div class='top_bar'>
@@ -168,7 +204,7 @@
         </div>
         <div class='input_container' style='height: 50px;'>
             <div class='left_image_label'>
-                <div class='image_label'>Image></div>
+                <div class='image_label'>Image</div>
                 <div class='image_image'><?=$image_html;?></div>
             </div>
             <input id='video_image_file' type="file" name="logo" class='right_file' />

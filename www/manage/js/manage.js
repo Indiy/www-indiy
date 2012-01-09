@@ -288,6 +288,8 @@ function onAddVideoSubmit()
         form_data.append('name',video_name);
         form_data.append('logo',video_image_file);
         form_data.append('video',video_file);
+        form_data.append('remove_video',g_removeVideo);
+        form_data.append('remove_video_image',g_removeVideoImage);
     }
     var url = '/manage/addvideo.php';
     return startAjaxUpload(url,fillVideoForm);
