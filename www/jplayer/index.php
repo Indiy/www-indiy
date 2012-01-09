@@ -1101,7 +1101,7 @@ $(document).ready(function()
                         <br/>
                         </div>
                         <div id="news_form">
-                            <p>If you wouldd like to keep right up to date with all the latest news, gigs, releases and competitions, then sign up to our mailing list.</p>
+                            <p>If you would like to keep right up to date with all the latest news, gigs, releases and competitions, then sign up to our mailing list.</p>
                             <p class="small">By clicking on the submit button, you are confirming that you have read and agree with the terms of our <a href="">Privacy Policy</a>.</p>
                             <label><span class="red">*</span> Name:</label>
                             <input id="news_name" type="text" class="input" />
