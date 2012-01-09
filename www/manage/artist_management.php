@@ -330,11 +330,10 @@ $(document).ready(showFirstInstruction);
            <?php
 			if(!empty($record_artistVideo['video'])){?>
 				<a href='play_video.php?videoID=<?=$record_artistVideo['id']?>' rel='facebox[.bolder]' ><img src="<?=$image?>" width="210" height="132" alt=""></a></figure>
-		        <span><a href="addvideo.php?artist_id=<?=$artistID?>&id=<?=$record_artistVideo['id']?>" rel="facebox[.bolder]"><?=stripslashes($record_artistVideo['name'])?></a></span><br><!-- 3:35 -->
 			<?}else{?>
 				<img src="<?=$image?>" width="210" height="132" alt=""></figure>
-				<span><?=stripslashes($record_artistVideo['name'])?></span><br><!-- 3:35 -->
 			<?}?>
+            <span><a href="addvideo.php?artist_id=<?=$artistID?>&id=<?=$record_artistVideo['id']?>" rel="facebox[.bolder]"><?=stripslashes($record_artistVideo['name'])?></a></span><br>
             </li>
 			<?}?>
             </ul>
