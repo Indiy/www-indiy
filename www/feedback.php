@@ -106,7 +106,7 @@ include "header.php";
 #feedback .submit_success {
     padding-top: 20px;
     padding-left: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 500px;
     font-size: 16px;
     font-family: sans-serif;
 }
