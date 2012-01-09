@@ -33,6 +33,7 @@ END;
 
     mail($to,$subject,$message,$headers);
     
+    echo $message;
     echo "{ \"success\": 1 }\n";
 ?>
 

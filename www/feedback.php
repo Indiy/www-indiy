@@ -131,6 +131,7 @@ function submitFeedback()
         dataType: 'text',
         success: function(data) 
         {
+            var foo = data;
         },
         error: function()
         {
