@@ -255,7 +255,6 @@ function onImageRemove()
             <div class='left_label'>Background Position</div>
             <select id='song_bgposition' name="bgposition" class='right_drop'>
             <option value="">Select</option>
-            <option value=""></option>
             <?
                 $positions = array("top left","top center","top right","center left","center center","center right","bottom left","bottom center","bottom right");
                 foreach ($positions as $position) {
@@ -275,7 +274,7 @@ function onImageRemove()
             <option value="">Select </option>
             <option value=""></option>
             <?
-                $colors = array("repeat",,"stretch");
+                $colors = array("repeat","repeat-x","repeat-y","no-repeat","stretch");
                 foreach ($colors as $color) {
                     if ($audio_bgrepeat == $color) {
                         $selected = " selected";
