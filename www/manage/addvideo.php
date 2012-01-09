@@ -138,6 +138,20 @@
         $noDownload = " checked"; 
     }
 	$video_name = stripslashes($video_name);
+    
+    $image_html = '';
+	if( $video_logo != "" )
+    {
+		$image_html .= "<img src='../artists/images/$video_logo' style='height: 25px;' />";
+        $image_html .= "<button onclick='return onVideoImageRemove();'></button>";
+	}
+    $video_html = '';
+    if( $video_sound != '' )
+    {
+        $video_html .= $video_sound;
+        $video_html .= "<button onclick='return onVideoRemove();'></button>";
+    }
+
 ?>
 
 <div id="popup">
@@ -157,18 +171,18 @@
             <div class='left_label'>Name</div>
             <input id='video_name' type="text" name="name" value="<?=$video_name;?>" class='right_text' />
         </div>
-        <div class='input_container'>
+        <div class='input_container' style='height: 50px;'>
             <div class='left_image_label'>
-                <div>Image</div>
-                <?=$video_logo;?>
+                <div class='image_label'>Image></div>
+                <div class='image_image'><?=$image_html;?></div>
             </div>
             <input id='video_image_file' type="file" name="logo" class='right_file' />
         </div>
-        <div class='input_container'>
+        <div class='input_container' style='height: 50px;'>
             <div class='left_label'>Video (flv or mp4)</div>
             <div class='right_file_filename'>
-                <input id='video_file' type="file" name="video" />
-                <div class='filename'><?=$video_sound;?></div>
+                <input id='video_file' type="file" name="audio" />
+                <div class='filename'><?=$video_html;?></div>
             </div>
         </div>
         <div class='submit_branding_container' style="padding-top: 25px;">
