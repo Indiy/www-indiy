@@ -76,18 +76,17 @@ include "header.php";
 
 #feedback .radio_group {
     padding-left: 50px;
+    padding-top: 2px;
+    font-size: 14px;
+    font-family: sans-serif;
 }
 
 #feedback .radio {
-    padding-top: 10px;
     padding-left: 20px;
 }
 
 #feedback .radio_text {
-    font-size: 12px;
-    font-family: sans-serif;
     padding-left: 10px;
-    padding-top: 10px;
 }
 
 </style>
