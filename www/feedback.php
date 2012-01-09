@@ -74,6 +74,10 @@ include "header.php";
     padding: 5px;
 }
 
+#feedback .radio_group {
+    padding-left: 50px;
+}
+
 #feedback .radio {
     padding-top: 10px;
     padding-left: 20px;
@@ -120,16 +124,16 @@ include "header.php";
                     <div class='radio_group'>
                         <input type='radio' class='radio' name='best_band' value='led zepplin'>
                         <span class='radio_text'>Led Zepplin</span>
-                        <br/>
-                        
+                    </div>
+                    <div class='radio_group'>
                         <input type='radio' class='radio' name='best_band' value='pink floyd'>
                         <span class='radio_text'>Pink Floyd</span>
-                        <br/>
-                        
+                    </div>
+                    <div class='radio_group'>
                         <input type='radio' class='radio' name='best_band' value='U2'>
                         <span class='radio_text'>U2</span>
-                        <br/>
-                        
+                    </div>
+                    <div class='radio_group'>
                         <input type='radio' class='radio' name='best_band' value='nirvana'>
                         <span class='radio_text'>Nirvana</span>
                     </div>
