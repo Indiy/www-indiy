@@ -382,19 +382,20 @@ $(document).ready(showFirstInstruction);
                 <ul class="branding_tips">
                     <li class="branding_tips odd">
                         <span class='branding_left'>Tip #1 - </span>
-                        <span class='branding_right'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                        <span class='branding_right'>Pages - Be creative! This is your art collection, your magazine, your radio station. Become a Producer of your Brand.</span>
                     </li>
                     <li class="branding_tips">
                         <span class='branding_left'>Tip #2 - </span>
-                        <span class='branding_right'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                        <span class='branding_right'>Monetize - Image is everything. People buy things that look good. Make your image as good as possible to increase sales.</span>
                     </li>
                     <li class="branding_tips odd">
                         <span class='branding_left'>Tip #3 - </span>
-                        <span class='branding_right'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                        <span class='branding_right'>Videos - Quality, Quality, Quality. We suggest using Canon camera products. Great quality and cost.</span>
                     </li>
                     <li class="branding_tips">
                         <span class='branding_left'>Tip #4 - </span>
-                        <span class='branding_right'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                        <span class='branding_right'>Tabs - The more info in the form of text you add about yourself the better chance your account will be found. Learn the term "Metadata". 
+</span>
                     </li>
                 </ul>
             </div>
