@@ -13,7 +13,7 @@
         $form_contents .= "$key:\n$value\n\n";
     }
 
-    $to = "jim@blueskylabs.com";
+    $to = "info@myartistdna.com";
     $subject = "User Feedback";
     $message = <<<END
 
