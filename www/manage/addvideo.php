@@ -47,7 +47,7 @@
 			if (is_uploaded_file($_FILES["video"]["tmp_name"]))
             {
                 $tmp_file = $_FILES['video']['tmp_name'];
-				$ext = explode(".",$tmp_file);
+				$ext = explode(".",$_FILES['video']['name']);
                 $upload_ext = strtolower($ext[count($ext)-1]);
 
 				$video_sound_mp4 = $artistid . '_' . strtolower( rand(11111,99999) . '_video.mp4' );
