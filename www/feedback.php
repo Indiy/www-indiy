@@ -117,22 +117,22 @@ include "header.php";
                     <span class="details">
                         Who is the best band ever?
                     </span><br/>
-                    
-                    <input type='radio' class='radio' name='best_band' value='led zepplin'>
-                    <span class='radio_text'>Led Zepplin</span>
-                    <br/>
-                    
-                    <input type='radio' class='radio' name='best_band' value='pink floyd'>
-                    <span class='radio_text'>Pink Floyd</span>
-                    <br/>
-                    
-                    <input type='radio' class='radio' name='best_band' value='U2'>
-                    <span class='radio_text'>U2</span>
-                    <br/>
-                    
-                    <input type='radio' class='radio' name='best_band' value='nirvana'>
-                    <span class='radio_text'>Nirvana</span>
-                    
+                    <div class='radio_group'>
+                        <input type='radio' class='radio' name='best_band' value='led zepplin'>
+                        <span class='radio_text'>Led Zepplin</span>
+                        <br/>
+                        
+                        <input type='radio' class='radio' name='best_band' value='pink floyd'>
+                        <span class='radio_text'>Pink Floyd</span>
+                        <br/>
+                        
+                        <input type='radio' class='radio' name='best_band' value='U2'>
+                        <span class='radio_text'>U2</span>
+                        <br/>
+                        
+                        <input type='radio' class='radio' name='best_band' value='nirvana'>
+                        <span class='radio_text'>Nirvana</span>
+                    </div>
                 </li>
              </ul>
         </div>
