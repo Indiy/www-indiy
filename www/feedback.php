@@ -61,12 +61,17 @@ include "header.php";
     padding-top: 0px;
     padding-bottom: 20px;
     padding-right: 10px;
-    padding-left: 0px;
+    padding-left: 10px;
 }
 
 #feedback .textarea {
-    width: 500px;
-    height: 40px;
+    width: 550px;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    padding: 5px;
 }
 
 </style>
@@ -74,6 +79,7 @@ include "header.php";
 <section id="wrapper">
 <section id="content">
 
+<form id='feedback_form'>
 <div id="feedback">
     <h2>User Feedback</h2>
     <div class="content_inner">
@@ -85,13 +91,20 @@ include "header.php";
                     <span class="details">
                         What do you think?
                     </span><br/>
-                    <textarea class='textarea' id='think_area'></textarea>
+                    <textarea class='textarea' name='what_think'></textarea>
+                </li>
+                <li>
+                    <span class="number">1</span>
+                    <span class="details">
+                        Anything you would change?
+                    </span><br/>
+                    <textarea class='textarea' name='what_change'></textarea>
                 </li>
              </ul>
         </div>
     </div>
 </div><!-- faq -->
-	
+</form>	
 
 </section><!-- content -->
 </section><!-- wrapper -->
