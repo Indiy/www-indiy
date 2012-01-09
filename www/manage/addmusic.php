@@ -272,7 +272,6 @@ function onImageRemove()
             <div class='left_label'>Background Repeat</div>
             <select id='song_bgrepeat' name="bgrepeat" class='right_drop'>
             <option value="">Select </option>
-            <option value=""></option>
             <?
                 $colors = array("repeat","no-repeat","stretch");
                 foreach ($colors as $color) {
