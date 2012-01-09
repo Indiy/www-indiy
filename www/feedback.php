@@ -76,7 +76,7 @@ include "header.php";
 
 #feedback .radio_group {
     padding-left: 50px;
-    padding-top: 2px;
+    padding-top: 5px;
     font-size: 14px;
     font-family: sans-serif;
 }
@@ -89,7 +89,58 @@ include "header.php";
     padding-left: 10px;
 }
 
+#feedback .submit {
+    width: 150px;
+    height: 40px;
+    color: #51C3C4;
+    background-color: black;
+    border: 0 none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: sans-serif;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#feedback .submit_success {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 50px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
 </style>
+
+<script type="text/javascript">
+
+function submitFeedback()
+{
+    $('.questions').hide();
+    $('.submit_success').show();
+
+    var args = $('#feedback_form').serialize();
+    var url = '/data/feedback.php?'
+    url += args;
+    
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: url,
+        dataType: 'text',
+        success: function(data) 
+        {
+        },
+        error: function()
+        {
+        }
+    });
+    
+}
+
+
+</script>
 
 <section id="wrapper">
 <section id="content">
@@ -138,6 +189,10 @@ include "header.php";
                     </div>
                 </li>
              </ul>
+            <button class='submit' onclick='submitFeedback(); return false;'>SUBMIT</button>
+        </div>
+        <div class='submit_success' style='display: none;'>
+            Thank you for your feedback!
         </div>
     </div>
 </div><!-- faq -->
