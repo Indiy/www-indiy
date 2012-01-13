@@ -48,17 +48,39 @@
 		//echo "{'img':'<img src=artists/images/$audio_logo>'}";
 		
 		// Upload Audio
+        
+        $upload_sound_error = false;
 		if(!empty($_FILES["audio"]["name"]))
 		{
 			if (is_uploaded_file($_FILES["audio"]["tmp_name"])) {
-				$ext = explode(".",$_FILES["audio"]["name"]);
-				
-				$filename = $artistid."_".strtolower(rand(11111,99999)."_song.");
-				$audio_sound = $filename.$ext[count($ext)-1];
-				$audio_sound_ogg = $filename."ogg";
+				$ext_parts = explode(".",strtolower($_FILES["audio"]["name"]));
+				$ext = $ext[count($ext)-1];
 
-				@move_uploaded_file($_FILES['audio']['tmp_name'], '../artists/audio/' . $audio_sound);
-				@system('/usr/local/bin/ffmpeg -i /home/madcom/public_html/artists/audio/'.$audio_sound.'  -acodec libvorbis /home/madcom/public_html/artists/audio/'.$audio_sound_ogg);
+				$filename = $artistid."_".strtolower(rand(11111,99999)."_song.");
+				$audio_sound = $filename . ".mp3";
+				$audio_sound_ogg = $filename . "ogg";
+                
+                $upload_file = $_FILES['audio']['tmp_name'];
+                $mp3_file = '../artists/audio/' . $audio_sound;
+                $ogg_file = '../artists/audio/' . $audio_sound_ogg;
+                if( $ext == ".mp3" )
+                {
+                    @move_uploaded_file($upload_file, $mp3_file);
+                    @system('/usr/local/bin/ffmpeg -i $mp3_file -acodec libvorbis $ogg_file');
+                }
+                else
+                {
+                    @system('/usr/local/bin/ffmpeg -i $upload_file -acodec libmp3lame $mp3_file',$retval);
+                    if( $retval == 0 )
+                    {
+                        @system('/usr/local/bin/ffmpeg -i $upload_file -acodec libvorbis $ogg_file');
+                    }
+                    else
+                    {
+                        $upload_sound_error = 'Please upload audio files in mp3 format.';
+                        $audio_sound = '';
+                    }
+                }
 
 				//$audio_sound = $audio_sound_ogg;
 			} else {
@@ -114,6 +136,8 @@
 		$postedValues['imageSource'] = "../artists/images/".$audio_logo;
 		$postedValues['audio_sound'] = "../artists/audio/".$audio_sound;
 		$postedValues['success'] = "1";
+        if( $upload_sound_error )
+            $postedValues['upload_sound_error'] = $upload_sound_error;
 		
 		$postedValues['postedValues'] = $_REQUEST;
 
