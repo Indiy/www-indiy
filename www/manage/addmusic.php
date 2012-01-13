@@ -79,7 +79,7 @@
                     }
                     else
                     {
-                        $upload_sound_error = 'Please upload audio files in mp3 format.';
+                        $postedValues['upload_error'] = 'Please upload audio files in mp3 format.';
                         $audio_sound = '';
                     }
                 }
@@ -138,8 +138,6 @@
 		$postedValues['imageSource'] = "../artists/images/".$audio_logo;
 		$postedValues['audio_sound'] = "../artists/audio/".$audio_sound;
 		$postedValues['success'] = "1";
-        if( $upload_sound_error )
-            $postedValues['upload_sound_error'] = $upload_sound_error;
 		
 		$postedValues['postedValues'] = $_REQUEST;
 
