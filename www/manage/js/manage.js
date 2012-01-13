@@ -340,6 +340,27 @@ function onAddMusicSubmit()
     return startAjaxUpload(url,fillMusicForm);
 }
 
+String.prototype.endsWith = function(suffix) {
+    return this.indexOf(suffix, this.length - suffix.length) !== -1;
+};
+
+function onSongChange()
+{
+    var song_audio = document.getElementById('song_audio');
+    if( song_audio.files && song_audio.files.length > 0 )
+    {
+        var file_name = song_audio.files[0].fileName
+        if( file_name && file_name.length > 0 )
+        {
+            file_name = file_name.toLowerCase();
+            if( !file_name.endsWith("mp3") )
+            {
+                window.alert("Please upload songs in MP3 format.");
+            }
+        }
+    }
+}
+
 function onSocializePublish()
 {
     $('#socialize_form').hide();
