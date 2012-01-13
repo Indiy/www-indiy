@@ -70,13 +70,14 @@
                 }
                 else
                 {
-                    @system('/usr/local/bin/ffmpeg -i $upload_file -acodec libmp3lame $mp3_file',$retval);
+                    $output = @system('/usr/local/bin/ffmpeg -i $upload_file -acodec libmp3lame $mp3_file',$retval);
                     if( $retval == 0 )
                     {
                         @system('/usr/local/bin/ffmpeg -i $upload_file -acodec libvorbis $ogg_file');
                     }
                     else
                     {
+                        $postedValues['debug'] = "ffmpeg error: $retval, output: $output";
                         $upload_sound_error = 'Please upload audio files in mp3 format.';
                         $audio_sound = '';
                     }
