@@ -309,8 +309,9 @@ function checkFileExtensions(element_id,extensions,error_string)
             file_name = file_name.toLowerCase();
             var file_name_parts = file_name.split('.');
             var ext = file_name_parts[file_name_parts.length - 1];
-            for( var valid_ext in extensions )
+            for( var k in extensions )
             {
+                var valid_ext = extensions[k];
                 if( valid_ext == ext )
                     return;
             }
