@@ -65,14 +65,14 @@
                 $upload_file = $_FILES['audio']['tmp_name'];
                 $mp3_file = '../artists/audio/' . $audio_sound;
                 $ogg_file = '../artists/audio/' . $audio_sound_ogg;
-                if( $ext == ".mp3" )
+                if( $ext == "mp3" )
                 {
                     @move_uploaded_file($upload_file, $mp3_file);
                     @system('/usr/local/bin/ffmpeg -i $mp3_file -acodec libvorbis $ogg_file');
                 }
                 else
                 {
-                    $output = @system('/usr/local/bin/ffmpeg -i $upload_file -acodec libmp3lame $mp3_file',$retval);
+                    $output = @system('/usr/local/bin/ffmpeg -i $upload_file -acodec libmp3lame $mp3_file 2>&1',$retval);
                     if( $retval == 0 )
                     {
                         @system('/usr/local/bin/ffmpeg -i $upload_file -acodec libvorbis $ogg_file');
