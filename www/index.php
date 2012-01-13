@@ -6,52 +6,52 @@
         include('unsupported_browser.php');
         die();
     }
-
-	$host_parts = explode(".", $_SERVER["HTTP_HOST"]);
-	if( count($host_parts) < 3 || $host_parts[0] == "www" ) 
+    
+    require_once 'includes/config.php';
+    require_once 'includes/functions.php';
+    
+    $artist_url = '';
+    $http_host = $_SERVER["HTTP_HOST"];
+    if( "http://" . $http_host == trueSiteUrl() )
     {
-		$artist_url = $_GET["url"];
-	} 
+        $artist_url = $_GET["url"];
+    }
+    else if( "http://www." . $http_host == trueSiteUrl() )
+    {
+        if( $_GET["url"] )
+        {
+            $artist_url = $_GET["url"];
+        }
+        else
+        {
+            header("Location: " . trueSiteUrl());
+            die();
+        }
+    }
     else 
     {
-		$artist_url = $host_parts[0];
-	}
-
-    if ($_GET["p"] != "") 
-    {
-        include('includes/config.php');
-        include('includes/functions.php');
-    
-        // call the function to include the "frame.tpl" file as a string
-        $string = get_include_contents('includes/frame.php');
-        // break apart the "frame.tpl" to pull the header and footer out
-        $displayframe = explode("{inject}", $string);
-        // header variable
-        $header = $displayframe[0];
-        // footer variable
-        $footer = $displayframe[1];		
-
-        //// LOAD FRAME /////////////////////////////////////////////////////////
-        if ($_GET["p"] == "index") {
-            include("pages/index.php");
-        } else {
-            echo $header; // Header
-            include('pages/'.$_GET["p"].'.php'); // Body
-            echo $footer; // Footer
+        $host_parts = explode('.',$http_host);
+        $trailing_parts = array_slice($host_parts,1);
+        $trailing = implode('.',$trailing_parts);
+        if( "http://www." . $trailing == trueSiteUrl() )
+        {
+            $artist_url = $host_parts[0];
         }
-        
-    } 
-    else if( $_GET["url"] != "" || $artist_url != "" )
+        else
+        {
+            $row = mf(mq("SELECT * FROM mydna_musicplayer WHERE custom_domain = '$http_host'"));
+            if( $row )
+                $artist_url = $row['url'];
+        }
+    }
+
+    if( $artist_url != "" )
     {
-        include('includes/config.php');
-        include('includes/functions.php');
-        include('jplayer/index.php');
+        include 'jplayer/index.php';
     }
     else
     {
-        include('includes/config.php');
-        include('includes/functions.php');		
-        //include('home.php');
+        //include 'home.php';
         include 'landing.html';
     }
 ?>
