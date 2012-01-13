@@ -298,7 +298,7 @@ function onAddVideoSubmit()
     var url = '/manage/addvideo.php';
     return startAjaxUpload(url,fillVideoForm);
 }
-function checkFileExtensions(element_id,extensions)
+function checkFileExtensions(element_id,extensions,error_string)
 {
     var file = document.getElementById(element_id);
     if( file.files && file.files.length > 0 )
@@ -314,13 +314,13 @@ function checkFileExtensions(element_id,extensions)
                 if( valid_ext == ext )
                     return;
             }
-            window.alert("Please upload songs in MP3 format.");
+            window.alert(error_string);
         }
     }
 }
 function onVideoChange()
 {
-    checkFileExtensions('video_file',['mov','mp4']);
+    checkFileExtensions('video_file',['mov','mp4'],"Please upload video in MP4 or MOV format.");
 }
 
 function onAddMusicSubmit()
