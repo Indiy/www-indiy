@@ -18,8 +18,6 @@
 			$old_pwd = $row["password"];
 		//}
 		
-	
-
 		$artist = my($_POST["artist"]);
 		$email = $_POST["email"];
 		$gender = $_POST["artist_gender"];
@@ -29,6 +27,7 @@
 		$url  = $_POST["url"];
 		$website = $_POST["website"];
 		$appid = $_POST["appid"];
+        $custom_domain = $_POST["custom_domain"];
 		$password = md5($_POST["newpass"]);
 		
 		// Upload Image
@@ -53,8 +52,8 @@
 		}
 		
 		
-		$tables = "artist|email|gender|languages|location|music_likes|url|website|appid|password|IsArtist|logo";
-		$values = "{$artist}|{$email}|{$gender}|{$languages}|{$location}|{$music_likes}|{$url}|{$website}|{$appid}|{$password}|{$IsArtist}|{$logo}";
+		$tables = "artist|email|gender|languages|location|music_likes|url|website|appid|password|IsArtist|logo|custom_domain";
+		$values = "{$artist}|{$email}|{$gender}|{$languages}|{$location}|{$music_likes}|{$url}|{$website}|{$appid}|{$password}|{$IsArtist}|{$logo}|{$custom_domain}";
 		
 		if ($artistid != "") {
 			update($database,$tables,$values,"id",$artistid);
@@ -92,6 +91,7 @@
 		$twitter = $row["twitter"];
 		$facebook = $row["facebook"];
 		$appid = $row["appid"];
+        $custom_domain = $row["custom_domain"];
 		$head_title = "Edit";
 	}else{
 		$head_title = "Add";
@@ -152,7 +152,10 @@
                 <input type="radio" class="radio" value="0" name="listens"> No<br>
             </div>
         </div>
-
+        <div class='input_container'>
+            <div class='line_label'>Custom Domain</div>
+            <input name="custom_domain" class='line_text' value="<?$custom_domain;?>">
+        </div>
         <div class='input_container'>
             <div class='left_label'>New Password</div>
             <input type="password" class="right_text" value="" name="newpass">
