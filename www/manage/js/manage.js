@@ -218,8 +218,8 @@ function uploadReadyStateChange(xhr)
                 var data = JSON.parse(text);
                     
                 $('#status').show();
-                if( 'upload_sound_error' in data )
-                    $('#status').text(data['upload_sound_error']);
+                if( 'upload_error' in data )
+                    $('#status').text(data['upload_error']);
                 else
                     $('#status').text('Upload success.');
                 $('#upload_bar').hide();

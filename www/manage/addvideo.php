@@ -65,7 +65,7 @@
 				}
                 else
                 {
-					@system("/usr/local/bin/ffmpeg -i $tmp_file $args $dest_file");
+					$postedValues['upload_error'] = 'Please upload video files in MP4 or MOV format.';
                 }
                 @unlink($_FILES['video']['tmp_name']);
                 @system("/usr/bin/qafaststart $dest_file");
