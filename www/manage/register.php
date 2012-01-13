@@ -140,7 +140,10 @@
             <div class='left_label'>URL <span id='tip_artist_url' class='tooltip'>(?)</span></div>
             <input type="text" class="right_text" value="<?=$url?>" name="url">
         </div>
-
+        <div class='input_container'>
+            <div class='line_label'>Custom Domain</div>
+            <input name="custom_domain" class='line_text' value="<?=$custom_domain;?>">
+        </div>
         <div class='input_container'>
             <div class='left_label'>Logo</div>
             <input type="file" class="right_file" name="logo">
@@ -151,10 +154,6 @@
                 <input type="radio" class="radio" checked="" value="1" name="listens"> Yes
                 <input type="radio" class="radio" value="0" name="listens"> No<br>
             </div>
-        </div>
-        <div class='input_container'>
-            <div class='line_label'>Custom Domain</div>
-            <input name="custom_domain" class='line_text' value="<?$custom_domain;?>">
         </div>
         <div class='input_container'>
             <div class='left_label'>New Password</div>
