@@ -213,8 +213,8 @@ function onVideoImageRemove()
         <div class='input_container' style='height: 50px;'>
             <div class='left_label'>Video (flv or mp4)</div>
             <div class='right_file_filename'>
-                <input id='video_file' type="file" name="audio" />
-                <div class='filename' onchange='onVideoChange();'><?=$video_html;?></div>
+                <input id='video_file' type="file" name="audio" onchange='onVideoChange();' />
+                <div class='filename'><?=$video_html;?></div>
             </div>
         </div>
         <div class='submit_branding_container' style="padding-top: 25px;">
