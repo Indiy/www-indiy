@@ -72,7 +72,7 @@
                 }
                 else
                 {
-                    $output = @system('/usr/local/bin/ffmpeg -i $upload_file -acodec libmp3lame $mp3_file 2>&1',$retval);
+                    $output = @system("/usr/local/bin/ffmpeg -i $upload_file -acodec libmp3lame $mp3_file 2>&1",$retval);
                     $postedValues['debug'] = "ffmpeg error: $retval, output: $output";
                     $postedValues['debug2'] = "ext: $ext, ext_parts: $ext_parts, name: " . $_FILES["audio"]["name"];
                     if( $retval == 0 )
