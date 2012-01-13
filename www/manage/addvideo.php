@@ -58,18 +58,22 @@
                 {
                     //@system("/bin/cp $tmp_file $dest_file");
 					@system("/usr/local/bin/ffmpeg -i $tmp_file $args $dest_file");
+                    @unlink($_FILES['video']['tmp_name']);
+                    @system("/usr/bin/qafaststart $dest_file");
+                    $video_sound = $video_sound_mp4;
                 }
 				else if( $upload_ext == "mov" )
                 {
 					@system("/usr/local/bin/ffmpeg -i $tmp_file $args $dest_file");
+                    @unlink($_FILES['video']['tmp_name']);
+                    @system("/usr/bin/qafaststart $dest_file");
+                    $video_sound = $video_sound_mp4;
 				}
                 else
                 {
 					$postedValues['upload_error'] = 'Please upload video files in MP4 or MOV format.';
+                    $video_sound = '';
                 }
-                @unlink($_FILES['video']['tmp_name']);
-                @system("/usr/bin/qafaststart $dest_file");
-				$video_sound = $video_sound_mp4;
 			} 
             else 
             {
