@@ -52,9 +52,11 @@
         $upload_sound_error = false;
 		if(!empty($_FILES["audio"]["name"]))
 		{
-			if (is_uploaded_file($_FILES["audio"]["tmp_name"])) {
-				$ext_parts = explode(".",strtolower($_FILES["audio"]["name"]));
-				$ext = $ext[count($ext)-1];
+			if (is_uploaded_file($_FILES["audio"]["tmp_name"])) 
+            {
+                $uploaded_name = strtolower($_FILES["audio"]["name"]);
+				$ext_parts = explode(".",$uploaded_name);
+				$ext = $ext_parts[count($ext_parts) - 1];
 
 				$filename = $artistid."_".strtolower(rand(11111,99999)."_song.");
 				$audio_sound = $filename . ".mp3";
