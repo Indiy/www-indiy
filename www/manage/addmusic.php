@@ -68,14 +68,14 @@
                 if( $ext == "mp3" )
                 {
                     @move_uploaded_file($upload_file, $mp3_file);
-                    @system('/usr/local/bin/ffmpeg -i $mp3_file -acodec libvorbis $ogg_file');
+                    @system("/usr/local/bin/ffmpeg -i $mp3_file -acodec libvorbis $ogg_file");
                 }
                 else
                 {
                     @system("/usr/local/bin/ffmpeg -i $upload_file -acodec libmp3lame $mp3_file",$retval);
                     if( $retval == 0 )
                     {
-                        @system('/usr/local/bin/ffmpeg -i $upload_file -acodec libvorbis $ogg_file');
+                        @system("/usr/local/bin/ffmpeg -i $upload_file -acodec libvorbis $ogg_file");
                     }
                     else
                     {
