@@ -78,6 +78,7 @@
                     else
                     {
                         $postedValues['debug'] = "ffmpeg error: $retval, output: $output";
+                        $postedValues['debug2'] = "ext: $ext, ext_parts: $ext_parts, name: " . $_FILES["audio"]["name"];
                         $upload_sound_error = 'Please upload audio files in mp3 format.';
                         $audio_sound = '';
                     }
