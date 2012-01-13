@@ -20,16 +20,6 @@ else if( $_GET["embed"] == "true" )
 } 
 else 
 {
-    if( $_GET["url"] != "" )
-    {
-        $artist_url = $_GET["url"];
-    } 
-    else 
-    {
-        $loadUsername = explode(".", $_SERVER['HTTP_HOST']);
-        $artist_url = $loadUsername[0]; 
-    }
-
     $row = mf(mq("select * from `[p]musicplayer` where `url`='{$artist_url}' limit 1"));
     if( $row == FALSE )
     {
