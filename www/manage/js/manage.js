@@ -298,6 +298,30 @@ function onAddVideoSubmit()
     var url = '/manage/addvideo.php';
     return startAjaxUpload(url,fillVideoForm);
 }
+function checkFileExtensions(element_id,extensions)
+{
+    var file = document.getElementById(element_id);
+    if( file.files && file.files.length > 0 )
+    {
+        var file_name = file.files[0].fileName;
+        if( file_name && file_name.length > 0 )
+        {
+            file_name = file_name.toLowerCase();
+            var file_name_parts = file_name.split('.');
+            var ext = file_name_parts[file_name_parts.length - 1];
+            for( var valid_ext in extensions )
+            {
+                if( valid_ext == ext )
+                    return;
+            }
+            window.alert("Please upload songs in MP3 format.");
+        }
+    }
+}
+function onVideoChange()
+{
+    checkFileExtensions('video_file',['mov','mp4']);
+}
 
 function onAddMusicSubmit()
 {
@@ -353,7 +377,7 @@ function onSongChange()
     var song_audio = document.getElementById('song_audio');
     if( song_audio.files && song_audio.files.length > 0 )
     {
-        var file_name = song_audio.files[0].fileName
+        var file_name = song_audio.files[0].fileName;
         if( file_name && file_name.length > 0 )
         {
             file_name = file_name.toLowerCase();
