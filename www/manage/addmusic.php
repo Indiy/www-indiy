@@ -59,7 +59,7 @@
 				$ext = $ext_parts[count($ext_parts) - 1];
 
 				$filename = $artistid."_".strtolower(rand(11111,99999)."_song.");
-				$audio_sound = $filename . ".mp3";
+				$audio_sound = $filename . "mp3";
 				$audio_sound_ogg = $filename . "ogg";
                 
                 $upload_file = $_FILES['audio']['tmp_name'];
@@ -72,9 +72,7 @@
                 }
                 else
                 {
-                    $output = @system("/usr/local/bin/ffmpeg -i $upload_file -acodec libmp3lame $mp3_file 2>&1",$retval);
-                    $postedValues['debug'] = "ffmpeg error: $retval, output: $output";
-                    $postedValues['debug2'] = "ext: $ext, ext_parts: $ext_parts, name: " . $_FILES["audio"]["name"];
+                    @system("/usr/local/bin/ffmpeg -i $upload_file -acodec libmp3lame $mp3_file",$retval);
                     if( $retval == 0 )
                     {
                         @system('/usr/local/bin/ffmpeg -i $upload_file -acodec libvorbis $ogg_file');
