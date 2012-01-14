@@ -29,12 +29,12 @@ $(document).ready(function(){
 	//Set default open/close settings
 	$('.list').hide(); //Hide/close all containers
 	<?
-	if(!isset($_SESSION['tabOpen']) ||  $_SESSION['tabOpen']=='playlist'){?>
-	$('.heading:first').addClass('active').next().show(); //Add "active" class to first trigger, then show/open the immediate next container
-	<?}else{?>
-	$('.<?=$_SESSION["tabOpen"]?> .heading').addClass('active').next().show(); //Add "active" class to first trigger, then show/open the immediate next container
-	 <?}?>
-	//On Click
+        $active_tab = 'branding_tips';
+        if( isset($_SESSION['tabOpen']) )
+            $active_tab = $_SESSION['tabOpen'];
+        
+    ?>
+	$('.<?=$active_tab?> .heading').addClass('active').next().show(); 
 	$('.heading').click(function(){
 		if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
 			$('.heading').removeClass('active').next().slideUp(); //Remove all .heading classes and slide up the immediate next container
