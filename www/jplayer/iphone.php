@@ -111,7 +111,6 @@
 		
 	</script>	
 
-<body>
 
 <script type="text/javascript"> 
 <!--
@@ -361,104 +360,110 @@ $(document).ready(function()
 
 });
 -->
-</script> 
-
-			<div id="iphonetopbg"></div>
-			<div id="results"></div>
-			
-			
-
-			<div id="image"></div>
-			<div id="loader"><img src="<?=trueSiteUrl();?>/jplayer/images/ajax-loader.gif" /></div>
-
-					
-                
-					<div class="mighthide">
-						<div class="buynow"></div>
-                        <!-- <a href="#" class="buynow mystore"></a> -->
-						<span class="showamazon"></span>
-						<span class="showitunes"></span>
-						<div class="clear"></div>
-					</div>
-            
-			<div id="progressbg"></div>
-			<div id="jquery_jplayer"></div> 
-			<div class="top-bg"></div>
-			<div class="listens">
-				<span style='<? if( !$show_listens ) echo "display: none;"; ?>'>Total Listens: </span><span id='current_track_listens'><?=$total_listens?></span>
-			</div>
-			<div id="playlister">
-				<div class="playlist-main"></div>
-				<div class="playlist-bottom"></div>
-			</div>	
-			<div class="jp-audio">
-				<div class="jp-playlist-player">
-					<div id="jp_interface_2" class="jp-interface">
-						<ul class="jp-controls">
-							<li><a href="#" id="jplayer_play" class="jp-play" tabindex="1">play</a></li>
-							<li><a href="#" id="jplayer_pause" class="jp-pause" tabindex="1">pause</a></li>
-							<li><a href="#" id="jplayer_stop" class="jp-stop" tabindex="1">stop</a></li>
-							
-							<li><a href="#" id="jplayer_previous" class="jp-previous vtip" tabindex="1">previous<span class="vtip">Play the previous track</span></a></li>
-							<li><a href="#" id="jplayer_next" class="jp-next vtip" tabindex="1">next<span class="vtip">Play the next track</span></a></li>
-						</ul>
-						
-						<div class="current-track"></div>
-						
-						<div id="jplayer_play_time" class="jp-current-time"></div>
-						<div class="slash">/</div>
-						<div id="jplayer_total_time" class="jp-duration"></div>	
-						<div class="clear"></div>
-						
-						<div class="jp-progress">
-							<div id="jplayer_load_bar" class="jp-seek-bar jp-load-bar">
-								<div id="jplayer_play_bar" class="jp-play-bar"></div>
-							</div>
-						</div>
-						
-					</div>
-					
-					<div id="jplayer_playlist" class="jp-playlist" style="display: none;"> 
-						<div id="retract"> 
-							<ul id="playlist"> 
-								<li></li> 
-							</ul> 
-						</div>
-						<div id="playlistaction"></div>
-						<div id="playlisthide"></div>
-						<div class="clear"><div>
-					</div> 
-				</div>
-			</div>
-			<a class="jp-play-fake"></a>
-			<a class="jp-pause-fake"></a>
-			
-			<div id="iphonebottombg">
-				<div class="logo_img">
-					<a target="_blank" href="<?=trueSiteUrl();?>/artists.php"></a>
-				</div>
-				<div class="social-media">
-					<!--<div class="copyright">&copy; Copyright 2011 MyArtistDNA.fm</div>-->
-					<? if ($artist_twitter != "") { ?> <a target="_blank" href="http://www.twitter.com/<?=$artist_twitter;?>" class="twitter">Twitter.com/<?=$artist_twitter;?></a> <? } ?>
-					<? if ($artist_facebook != "") { ?> <a target="_blank" href="http://www.facebook.com/<?=$artist_facebook;?>" class="facebook">Facebook.com/<?=$artist_facebook;?></a> <? } ?>
-					<!--<div class="clear"></div>-->
-				</div>
-				<span class="playlist-visibility"><span class="hide">Hide Playlist</span><span class="show">Show Playlist</span></span>
-			</div>
+</script>
 <script type="text/javascript">
 (function($) {
-	$(function() { //on DOM ready
-		setTimeout(function(){ 
-			$("#playlist").simplyScroll({
-				className: 'vert',
-				horizontal: false,
-				frameRate: 20,
-				speed: 5
-			});		
-		}, 2000);
-	});
-})(jQuery);
+ $(function() { //on DOM ready
+   setTimeout(function(){ 
+              $("#playlist").simplyScroll({
+                                          className: 'vert',
+                                          horizontal: false,
+                                          frameRate: 20,
+                                          speed: 5
+                                          });		
+              }, 2000);
+   });
+ })(jQuery);
 </script>
-TEST
+
+<script type="text/javascript">
+function onReady()
+{
+    window.scrollTo(0,1);
+}
+$(document).ready(onReady);
+</script>
+
+<body>
+    <div id="iphonetopbg"></div>
+    <div id="results"></div>
+
+    <div id="image"></div>
+    <div id="loader"><img src="<?=trueSiteUrl();?>/jplayer/images/ajax-loader.gif" /></div>
+
+    <div class="mighthide">
+        <div class="buynow"></div>
+        <!-- <a href="#" class="buynow mystore"></a> -->
+        <span class="showamazon"></span>
+        <span class="showitunes"></span>
+        <div class="clear"></div>
+    </div>
+    
+    <div id="progressbg"></div>
+    <div id="jquery_jplayer"></div> 
+    <div class="top-bg"></div>
+    <div class="listens">
+        <span style='<? if( !$show_listens ) echo "display: none;"; ?>'>Total Listens: </span><span id='current_track_listens'><?=$total_listens?></span>
+    </div>
+    <div id="playlister">
+        <div class="playlist-main"></div>
+        <div class="playlist-bottom"></div>
+    </div>	
+    <div class="jp-audio">
+        <div class="jp-playlist-player">
+            <div id="jp_interface_2" class="jp-interface">
+                <ul class="jp-controls">
+                    <li><a href="#" id="jplayer_play" class="jp-play" tabindex="1">play</a></li>
+                    <li><a href="#" id="jplayer_pause" class="jp-pause" tabindex="1">pause</a></li>
+                    <li><a href="#" id="jplayer_stop" class="jp-stop" tabindex="1">stop</a></li>
+                    
+                    <li><a href="#" id="jplayer_previous" class="jp-previous vtip" tabindex="1">previous<span class="vtip">Play the previous track</span></a></li>
+                    <li><a href="#" id="jplayer_next" class="jp-next vtip" tabindex="1">next<span class="vtip">Play the next track</span></a></li>
+                </ul>
+                
+                <div class="current-track"></div>
+                
+                <div id="jplayer_play_time" class="jp-current-time"></div>
+                <div class="slash">/</div>
+                <div id="jplayer_total_time" class="jp-duration"></div>	
+                <div class="clear"></div>
+                
+                <div class="jp-progress">
+                    <div id="jplayer_load_bar" class="jp-seek-bar jp-load-bar">
+                        <div id="jplayer_play_bar" class="jp-play-bar"></div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div id="jplayer_playlist" class="jp-playlist" style="display: none;"> 
+                <div id="retract"> 
+                    <ul id="playlist"> 
+                        <li></li> 
+                    </ul> 
+                </div>
+                <div id="playlistaction"></div>
+                <div id="playlisthide"></div>
+                <div class="clear"><div>
+            </div> 
+        </div>
+    </div>
+    <a class="jp-play-fake"></a>
+    <a class="jp-pause-fake"></a>
+    
+    <div id="iphonebottombg">
+        <div class="logo_img">
+            <a target="_blank" href="<?=trueSiteUrl();?>/artists.php"></a>
+        </div>
+        <div class="social-media">
+            <!--<div class="copyright">&copy; Copyright 2011 MyArtistDNA.fm</div>-->
+            <? if ($artist_twitter != "") { ?> <a target="_blank" href="http://www.twitter.com/<?=$artist_twitter;?>" class="twitter">Twitter.com/<?=$artist_twitter;?></a> <? } ?>
+            <? if ($artist_facebook != "") { ?> <a target="_blank" href="http://www.facebook.com/<?=$artist_facebook;?>" class="facebook">Facebook.com/<?=$artist_facebook;?></a> <? } ?>
+            <!--<div class="clear"></div>-->
+        </div>
+        <span class="playlist-visibility"><span class="hide">Hide Playlist</span><span class="show">Show Playlist</span></span>
+    </div>
+
 </body>
 </html>
+
