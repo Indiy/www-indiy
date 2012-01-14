@@ -16,7 +16,7 @@
 	if($_REQUEST['account_type'] != "") 
     {
         $account_type = $_REQUEST['account_type'];
-        mysql_update('myartist_users',
+        mysql_update('mydna_musicplayer',
                      array("account_type" => $account_type),
                      'id',$artist_id);
 
