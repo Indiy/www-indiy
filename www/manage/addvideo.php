@@ -61,14 +61,17 @@
 					//@system("/usr/local/bin/ffmpeg -i $tmp_file $args $dest_file");
                     @unlink($_FILES['video']['tmp_name']);
                     //@system("/usr/bin/qafaststart $dest_file");
-                    $video_sound = $video_sound_mp4;
                     @system("/usr/local/bin/ffmpeg2theora --videoquality 8 --audioquality 6 -o $dest_file_ogv $dest_file");
+
+                    $video_sound = $video_sound_mp4;
                 }
 				else if( $upload_ext == "mov" )
                 {
 					@system("/usr/local/bin/ffmpeg -i $tmp_file $args $dest_file");
                     @unlink($_FILES['video']['tmp_name']);
-                    @system("/usr/bin/qafaststart $dest_file");
+                    //@system("/usr/bin/qafaststart $dest_file");
+                    @system("/usr/local/bin/ffmpeg2theora --videoquality 8 --audioquality 6 -o $dest_file_ogv $dest_file");
+
                     $video_sound = $video_sound_mp4;
 				}
                 else
