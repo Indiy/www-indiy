@@ -204,6 +204,12 @@ $(document).ready(showFirstInstruction);
                 <li><a href="store_settings.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Edit Settings</a></li>
                 <li><a href="addproduct.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Product</a></li>
             </ul>
+            <? if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' ): ?>
+                <h6>Super Admin</h6>
+                <ul>
+                <li><a href="account_settings.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Account Settings</a></li>
+                </ul>
+            <? endif; ?>
         </div>
         
         <div class="column2">
