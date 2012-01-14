@@ -374,10 +374,16 @@ $(document).ready(function()
 </script>
 
 <script type="text/javascript">
-function onReady()
+function onOrientationChange()
 {
     window.scrollTo(0,1);
 }
+function onReady()
+{
+    $(window).bind(orientationEvent,onOrientationChange);
+    onOrientationChange();
+}
+
 $(document).ready(onReady);
 </script>
 
