@@ -392,10 +392,10 @@ $(document).ready(onReady);
 
 @media only screen and (orientation:portrait) {
     body {
-        height: 640px;
+        height: 480px;
     }
     #image img {
-        height: 640px;
+        height: 480px;
     }
 }
 @media only screen and (orientation:landscape) {
