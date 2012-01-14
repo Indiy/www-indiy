@@ -34,7 +34,7 @@ function showVideo(n)
 
 var g_videoPlayer = false;
 
-function setupVideoJS
+function setupVideoJS()
 {
     g_videoPlayer = VideoJS.setup("mad_video_1",{
                                   controlsBelow: false,
