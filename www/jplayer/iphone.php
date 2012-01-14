@@ -392,7 +392,7 @@ $(document).ready(onReady);
 
 @media only screen and (orientation:portrait) {
     body {
-        height: 480px;
+        height: 640px;
     }
 }
 @media only screen and (orientation:landscape) {
