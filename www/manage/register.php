@@ -92,6 +92,8 @@
 		$facebook = $row["facebook"];
 		$appid = $row["appid"];
         $custom_domain = $row["custom_domain"];
+        $account_type = $row["account_type"];
+        
 		$head_title = "Edit";
 	}else{
 		$head_title = "Add";
@@ -140,10 +142,12 @@
             <div class='left_label'>URL <span id='tip_artist_url' class='tooltip'>(?)</span></div>
             <input type="text" class="right_text" value="<?=$url?>" name="url">
         </div>
-        <div class='input_container'>
-            <div class='line_label'>Custom Domain</div>
-            <input name="custom_domain" class='line_text' value="<?=$custom_domain;?>">
-        </div>
+        <? if( $account_type == 'PREMIUM' ): ?>
+            <div class='input_container'>
+                <div class='line_label'>Custom Domain</div>
+                <input name="custom_domain" class='line_text' value="<?=$custom_domain;?>">
+            </div>
+        <? endif; ?>
         <div class='input_container'>
             <div class='left_label'>Logo</div>
             <input type="file" class="right_file" name="logo">
