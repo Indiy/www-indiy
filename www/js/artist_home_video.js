@@ -50,3 +50,12 @@ function setupVideoJS()
                                   linksHiding: true
                                   });
 }
+
+function closeVideo()
+{
+    if( g_videoPlayer )
+        g_videoPlayer.pause();
+    $('#close_btn').fadeOut(300);
+    $('#player_bg').fadeOut(300);
+    $('.player_holder').fadeOut(300);
+}

@@ -283,11 +283,7 @@ function setupPageLinks()
         $("#jquery_jplayer").jPlayer("pause");
     });
     
-    $(".close_button").click(function(event){
-        $(this).fadeOut(300);
-        $("#player_bg").fadeOut(300);
-        $(".player_holder").fadeOut(300);
-    });         
+             
 
     $('#image').hide();
     $('.page').hide();
@@ -1458,7 +1454,7 @@ $(document).ready(function()
             <? } ?>
 
             <!-- VIDEO PLAYER -->
-            <div id="close_btn" class="close_button">&raquo; CLOSE VIDEO PLAYER &laquo;</div>
+            <div id="close_btn" class="close_button" onclick="closeVideo();">&raquo; CLOSE VIDEO PLAYER &laquo;</div>
             <div id="player_hldr" class="player_holder"></div> 
             <div id="player_bg"></div> 
             <!-- /VIDEO PLAYER -->
