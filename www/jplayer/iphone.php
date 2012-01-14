@@ -381,6 +381,17 @@ function onReady()
 $(document).ready(onReady);
 </script>
 
+<style type="text/css">
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+</style>
+
+
+</head>
 <body>
     <div id="iphonetopbg"></div>
     <div id="results"></div>
