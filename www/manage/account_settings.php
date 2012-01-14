@@ -16,9 +16,9 @@
 	if($_REQUEST['account_type'] != "") 
     {
         $account_type = $_REQUEST['account_type'];
-
-
-        mysql_update('myartist_users',$tables,$values,'id',$artist_id);
+        mysql_update('myartist_users',
+                     array("account_type" => $account_type),
+                     'id',$artist_id);
 
         $postedValues['success'] = "1";
 		$postedValues['postedValues'] = $_REQUEST;
@@ -62,7 +62,7 @@
         </div>
     </form>
 
-    <div id='status'></div>
+    <div id='status' class='form_message' style='display: none;'></div>
     <div class='bottom_sep'></div>
     <div class='bottom_blue_bar'></div>
 </div>
