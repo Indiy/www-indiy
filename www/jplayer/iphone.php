@@ -380,7 +380,7 @@ function onOrientationChange()
 }
 function onReady()
 {
-    $(window).bind(orientationEvent,onOrientationChange);
+    $('body').bind('orientationchange',onOrientationChange);
     onOrientationChange();
 }
 
