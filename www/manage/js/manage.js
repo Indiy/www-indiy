@@ -437,7 +437,30 @@ function onSocialConfigSave()
     });
     return false;
 }
-
+function onAccountSettingsSubmit()
+{
+    $('#ajax_form').hide();
+    $('#status').show();
+    $('#status').text("Updating Settings...");
+    var post_url = "/manage/account_settings.php?";
+    post_url += $('#ajax_form').serialize();
+    
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: post_url,
+        dataType: 'text',
+        success: function(data) 
+        {
+            $('#status').text("Updated settings.");
+        },
+        error: function()
+        {
+            $('#status').text("Update failed!");
+        }
+    });
+    return false;
+}
 function clickAddFacebook()
 {
     $('#social_config_form').hide();
