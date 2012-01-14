@@ -154,7 +154,7 @@ $(document).ready(function()
 	$("#jquery_jplayer").jPlayer({
 		ready: function() {
 			displayPlayList();
-			playListInit(true); // Parameter is a boolean for autoplay.
+			playListInit(false); // Parameter is a boolean for autoplay.
 		},
 		oggSupport: false
 	})
@@ -237,7 +237,7 @@ $(document).ready(function()
             var src_arg = "/artists/images/" + image;
             var img_url = "/timthumb.php?src=" + src_arg + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
 			//$('#image').html("<img src='" + img_url + "' style='vertical-align:middle; margin-top:-" + (getWindowHeight()/2) + "px; margin-left:-" + (getWindowWidth()/2) + "px;' />");
-			$('#image').html("<img src='" + img_url + "' style='width: 100%; height: 100%;' />");
+			$('#image').html("<img src='" + img_url + "' style='width: 100%;' />");
 
 			// Function that gets window width
 			function getWindowWidth() {
@@ -394,10 +394,16 @@ $(document).ready(onReady);
     body {
         height: 640px;
     }
+    #image {
+        height: 640px;
+    }
 }
 @media only screen and (orientation:landscape) {
     body {
         height: 320px; 
+    }
+    #image {
+        height: 320px;
     }
 }
 
