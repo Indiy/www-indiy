@@ -38,7 +38,7 @@
     <div class='top_blue_bar'></div>
     <div class='top_sep'></div>
     
-    <form id='ajax_from' onsubmit='return false;'>
+    <form id='ajax_form' onsubmit='return false;'>
         <input name='artist_id' type='hidden' value="<?=$artist_id;?>">
         <div class='input_container'>
             <div class='left_label'>Account Type</div>
