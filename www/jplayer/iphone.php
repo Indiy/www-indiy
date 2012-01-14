@@ -68,7 +68,7 @@
 <title>MyArtistDNA - <?=$artist_name?></title>
 <link href="/jplayer/iphone.css" rel="stylesheet" type="text/css" /> 
 
-<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
@@ -383,9 +383,16 @@ $(document).ready(onReady);
 
 <style type="text/css">
 
-body {
-    width: 100%;
-    height: 100%;
+
+@media only screen and (orientation:portrait) {
+    body {
+        height: 480px;
+    }
+}
+@media only screen and (orientation:landscape) {
+    body {
+        height: 320px; 
+    }
 }
 
 </style>
