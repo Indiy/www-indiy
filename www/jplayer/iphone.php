@@ -400,10 +400,10 @@ $(document).ready(onReady);
 }
 @media only screen and (orientation:landscape) {
     body {
-        height: 320px; 
+        height: 280px; 
     }
     #image img {
-        height: 320px;
+        height: 280px;
     }
 }
 
