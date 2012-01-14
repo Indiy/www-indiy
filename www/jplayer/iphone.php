@@ -63,20 +63,17 @@
 	}
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml"> 
+<!DOCTYPE html>
 <head>
 <title>MyArtistDNA - <?=$artist_name?></title>
 <link href="/jplayer/iphone.css" rel="stylesheet" type="text/css" /> 
 
-<link media="only screen and (max-device-width: 480px)" href="<?=trueSiteUrl();?>/jplayer/iphone.css" type="text/css" rel="stylesheet" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-<link rel="apple-touch-icon" href="<?=trueSiteUrl();?>/artists/images/<?=$artist_logo;?>" />
-<link rel="apple-touch-startup-image" href="<?=trueSiteUrl();?>/includes/images/apple-loading-screen.jpg" />
+<link rel="apple-touch-icon" href="/artists/images/<?=$artist_logo;?>" />
+<link rel="apple-touch-startup-image" href="/includes/images/apple-loading-screen.jpg" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
