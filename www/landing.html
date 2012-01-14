@@ -123,7 +123,7 @@ input
 
 .forgot_login_box
 {
-    margin-top: 5px;
+    margin-top: 2px;
     width: 364px;
     margin-left: 18px;
     background: url('images/bg_sign_up.gif') no-repeat;
@@ -202,38 +202,12 @@ input
     font-family:"Teletex Light",Arial, Helvetica, sans-serif; 
     font-size: 18px;
     color: #ccc;
-    background: url('images/bg_sign_up.gif') no-repeat;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    background: url('images/bg_sign_up.gif') repeat;
+    padding-top: 22px;
+    padding-bottom: 18px;
     margin-left: 20px;
     margin-top: 18px;
 }
-
-.learn_more {
-    width: 100%;
-    margin-top: 21px;
-    font-family: sans-serif; 
-    font-size: 12px;
-    color: #999;
-    text-align: center;
-}
-
-.learn_more a {
-    font-family: sans-serif; 
-    font-size: 12px;
-    color: #999;
-}
-.learn_more button {
-    border: 0 none;
-    background-color: transparent;
-    text-decoration: underline;
-    font-family: sans-serif;
-    font-size: 12px;
-    color: #999;
-    margin-left: 15px;
-    cursor: pointer;
-}
-
 .validate_login
 {
     height: 20px;
@@ -243,7 +217,6 @@ input
     padding-left: 20px;
     color: red;
 }
-
 .copyright
 {
     padding-top: 20px; 
@@ -326,6 +299,51 @@ input
     font-family:"Teletex Light",Arial, Helvetica, sans-serif;
 }
 
+input {
+    border: 1px solid #ccc;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 0px;
+}
+
+.watch_learn {
+    height: 78px;
+    padding-top: 30px;
+}
+.watch_video_box {
+    float: left;
+    width: 167px;
+    height: 78px;
+    margin-left: 20px;
+    text-align: center;
+    background: url('images/blue_hatch.png') no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.learn_more_box {
+    float: right;
+    width: 167px;
+    height: 78px;
+    margin-right: 20px;
+    text-align: center;
+    background: url('images/red_hatch.png') no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.watch_video, .learn_more
+{
+    font-family: "Teletex Light",Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    color: white;
+    margin-top: 16px;
+    text-decoration: none;
+}
+
+.watch_learn a
+{
+    text-decoration: none;
+}
 
         </style>
         <!--[if IE]>
@@ -420,15 +438,18 @@ $(document).ready(function()
                 <div class="right">
                     <div class='right_header'>
                     </div>
-                    <div class='beta_line'>
-                        We are currently in Beta testing mode.
-                    </div>
                     <div class='be_seen'>
                         BE SEEN. BE HEARD. BE INDEPENDENT.
                     </div>
-                    <div class='learn_more'>
-                        <a href='home.php'>Learn More</a>
-                        <button onclick='showVideo();'>Watch Video</button>
+                    <div class='watch_learn'>
+                        <div class='watch_video_box' onclick='showVideo();'>
+                            <div class='watch_video'>WATCH VIDEO</div>
+                        </div>
+                        <a href='/home.php'>
+                            <div class='learn_more_box'>
+                                <div class='learn_more'>LEARN MORE</div>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="copyright_social">
