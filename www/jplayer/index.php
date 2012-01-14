@@ -146,7 +146,7 @@ else
     $total_q = mf(mq("SELECT SUM(views) FROM `[p]musicplayer_audio` WHERE `artistid`='{$music_artistid}'"));
     $total_listens = intval($total_q[0]);
     
-    $loadvideo = mq("select `id`,`name`,`image`,`artistid`,`order` from `[p]musicplayer_video` where {$mQuery} order by `order` asc, `id` desc");
+    $loadvideo = mq("SELECT * from `[p]musicplayer_video` WHERE {$mQuery} ORDER BY `order` ASC, `id` DESC");
     $cv = 0;
     /* Video Overlay Pagination Code Begins */
     $row_counter = 0; // Counts the number of video pages left to right
@@ -166,10 +166,17 @@ else
         $artist_videos .= '<li id="video_'.$cv.'" class="playlist_video_master'; // Create <li> entry for video
         if( !(($cv+1) % $videos_per_row) ) $artist_videos .= ' last'; // Adds a CSS tag for the last video in the row
 
+        $artist_videos .= " onclick='showVideo($video_id);' ";
         $artist_videos .= '"><div class="playlist_video"><img src="artists/images/'.$video_image.'" border="0" /></div></li>'."\n"; // Display video thumb
         ++$cv;
-    }   
-    if( $artist_videos ) $artist_videos .= '</div>'; // Closes last pagination row, as long as artist has videos
+        
+        $video_list[$video_id] = array( 'video_file' => '/vid/' . $video['video'],'name' => $video['name']);
+    }
+    if( $artist_videos ) 
+        $artist_videos .= '</div>'; // Closes last pagination row, as long as artist has videos
+
+    $video_list_json = json_encode($video_list);
+
 
     // Build Store
     $check = mf(mq("select * from `[p]musicplayer_ecommerce` where `userid`='{$artist_id}' limit 1"));
@@ -201,6 +208,9 @@ else
 
 <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
 
+<link href="/css/video-js.css"rel="stylesheet" type="text/css" />
+<link href="/css/vim.css" rel="stylesheet" type="text/css" />
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
 <!--[if lt IE 9]>
@@ -208,7 +218,10 @@ else
 <![endif]-->
 
 <script type="text/javascript">
+
 var g_siteUrl = "<?=trueSiteUrl();?>";
+var g_videoList = <?=$video_list_json;?>;
+
 </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
@@ -220,7 +233,6 @@ var g_siteUrl = "<?=trueSiteUrl();?>";
 
 <script src="jplayer/js/ra_controls.js" type="text/javascript"></script>
 <script src="jplayer/js/index.js" type="text/javascript"></script>
-<script src="js/application.php?id=<?php echo $artist_id;?>"  type="text/javascript"></script>
 <script src="jplayer/demos.common.js" type="text/javascript"></script> 
 
 <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
@@ -228,8 +240,11 @@ var g_siteUrl = "<?=trueSiteUrl();?>";
 
 <script src="<?=trueSiteUrl();?>/js/logged_in.php" type="text/javascript"></script>
 
-<script src="js/artist_home.js" type="text/javascript"></script>
+<script src="/js/artist_home.js" type="text/javascript"></script>
 <script src="/js/login_signup.js" type="text/javascript"></script>
+<script src="/js/artist_home_video.js" type="text/javascript"></script>
+
+<script src="/js/video.js" type="text/javascript"></script> 
 
 <script type="text/javascript">
 
