@@ -166,11 +166,12 @@ else
         $artist_videos .= '<li id="video_'.$cv.'" class="playlist_video_master'; // Create <li> entry for video
         if( !(($cv+1) % $videos_per_row) ) $artist_videos .= ' last'; // Adds a CSS tag for the last video in the row
 
+        $artist_videos .= '"';
         $artist_videos .= " onclick='showVideo($video_id);' ";
-        $artist_videos .= '"><div class="playlist_video"><img src="artists/images/'.$video_image.'" border="0" /></div></li>'."\n"; // Display video thumb
+        $artist_videos .= '><div class="playlist_video"><img src="artists/images/'.$video_image.'" border="0" /></div></li>'."\n"; // Display video thumb
         ++$cv;
         
-        $video_list[$video_id] = array( 'video_file' => '/vid/' . $video['video'],'name' => $video['name']);
+        $video_list[$video_id] = array( 'video_file' => '/vid/' .$video['video'],'name' => $video['name']);
     }
     if( $artist_videos ) 
         $artist_videos .= '</div>'; // Closes last pagination row, as long as artist has videos
@@ -274,11 +275,6 @@ function setupPageLinks()
 
     $(".dragger_container").fadeOut();
     
-    $("div.playlist_video").click(function(event){
-        $(".close_button").fadeIn(300);
-        $("#player_bg").fadeIn(300);
-        $(".player_holder").fadeIn(300);
-    });
     
     // Pauses the audio player when a user opens a video                
     $("div.playlist_video img").click(function(event){

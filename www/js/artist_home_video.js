@@ -3,14 +3,19 @@ function showVideo(n)
 {
     var video = g_videoList[n];
     var w = $(window).width();
-	var h = $(window).height()-50;
+    var h = $(window).height()-50;
     $("#player_hldr").css('width',w);
-	$("#player_hldr").css('height',h);
-	$("#player_hldr").show();
-	$("#close_btn").show();
-    
+    $("#player_hldr").css('height',h);
+    $("#player_hldr").show();
+    $("#close_btn").show();
+    $("#player_bg").fadeIn(300);
+
+    //$(".close_button").fadeIn(300);
+    //$(".player_holder").fadeIn(300);
+
+
     var video_file = video.video_file;
-    
+
     var html = '';
     
     html += '<div class="video-js-box vim-css">';
@@ -27,8 +32,8 @@ function showVideo(n)
     html += '<p class="vjs-no-video">';
     html += '</p>';
     html += '</div>';
-    
-	$('#player_hldr').html(html);
+
+    $('#player_hldr').html(html);
     window.setTimeout(setupVideoJS,10);
 }
 
