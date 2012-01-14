@@ -394,7 +394,7 @@ $(document).ready(onReady);
     body {
         height: 640px;
     }
-    #image {
+    #image img {
         height: 640px;
     }
 }
@@ -402,7 +402,7 @@ $(document).ready(onReady);
     body {
         height: 320px; 
     }
-    #image {
+    #image img {
         height: 320px;
     }
 }
