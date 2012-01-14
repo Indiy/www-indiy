@@ -15,6 +15,7 @@ function showVideo(n)
 
 
     var video_file = video.video_file;
+    var video_file_ogv = video_file.replace(".mp4",".ogv");
     var poster = video.image_file;
 
     var html = '';
@@ -22,6 +23,7 @@ function showVideo(n)
     html += '<div class="video-js-box vim-css" style="width:100%; height: 100%;">';
     html += '<video id="mad_video_1" class="video-js" width="100%" height="100%" controls="controls" preload="auto" poster="' + poster + '">';
     html += '<source src="' + video_file + '" type="video/mp4" />';
+    html += '<source src="' + video_file_ogv + '" type="video/ogg" />';
     html += '<object id="flash_fallback_1" class="vjs-flash-fallback" width="640" height="264" type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">';
     
     html += '<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />';    
