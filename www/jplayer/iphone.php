@@ -112,6 +112,7 @@
 <script type="text/javascript"> 
 <!--
 
+var g_hasPlayed = false;
 var playItem = 0;
 
 var g_myPlayList = [ <?=$musicList;?> ];
@@ -236,6 +237,7 @@ $(document).ready(function()
 					playListChange( index );
 				} else {
 					$("#jquery_jplayer").jPlayer("play");
+                    g_hasPlayed = true;
 				}
 				$(this).blur();
 				return false;
@@ -333,6 +335,7 @@ $(document).ready(function()
 	function playListChange( index ) {
 		playListConfig( index );
 		$("#jquery_jplayer").jPlayer("play");
+        g_hasPlayed = true;
 	}
  
 	function playListNext() {
@@ -354,7 +357,7 @@ $(document).ready(function()
 		$('#jplayer_playlist').fadeIn(); });
 	$(".playlist-visibility .hide").click(function(){
 		$('#jplayer_playlist').fadeOut(); });
-
+    $("$jplayer_play").click(function() { g_hasPlayed = true; });
 
 });
 -->
@@ -378,7 +381,8 @@ $(document).ready(function()
 
 function imageChange(event, index, elem)
 {
-    console.log("index: " + index);
+    playItem = index;
+    playListInit(g_hasPlayed);
 }
 
 function setupSwipe()
