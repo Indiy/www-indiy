@@ -359,7 +359,7 @@ $(document).ready(function()
 	);
 	$(".playlist-visibility .show").click(function(){ $('#jplayer_playlist').fadeIn(); });
 	$(".playlist-visibility .hide").click(function(){ $('#jplayer_playlist').fadeOut(); });
-    $("$jplayer_play").click(function() { g_hasPlayed = true; });
+    $("#jplayer_play").click(function() { g_hasPlayed = true; });
 
 });
 -->
