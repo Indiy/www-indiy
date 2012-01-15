@@ -381,7 +381,7 @@ function setupImageList()
     var width = getWindowWidth();
     var height = getWindowHeight();
     
-    $('image_ul').empty();
+    $('#image_ul').empty();
     var first = true;
     for( var k in g_myPlayList )
     {
@@ -402,7 +402,7 @@ function setupImageList()
         }
         html += "<img src='" + img_url + "' style='width: 100%;' />\n";
         html += "</li>\n";
-        $('image_ul').append(html);
+        $('#image_ul').append(html);
     }
 }
 
@@ -414,6 +414,7 @@ function onReady()
 {
     $('body').bind('orientationchange',onOrientationChange);
     onOrientationChange();
+    setupImageList();
 }
 
 $(document).ready(onReady);
