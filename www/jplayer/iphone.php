@@ -332,8 +332,6 @@ $(document).ready(function()
 	.jPlayer("onProgressChange", function(loadPercent, playedPercentRelative, playedPercentAbsolute, playedTime, totalTime) {
 		$("#jplayer_play_time").text($.jPlayer.convertTime(playedTime));
 		$("#jplayer_total_time").text($.jPlayer.convertTime(totalTime));
- 
-		demoStatusInfo(this.element, $("#demo_status")); // This displays information about jPlayer's status in the demo page
 	})
 	.jPlayer("onSoundComplete", function() {
 		window.mySwipe.next();
@@ -494,7 +492,7 @@ $(document).ready(onReady);
             </ul>
         </div>
     </div>
-    <div id="loader"><img src="<?=trueSiteUrl();?>/jplayer/images/ajax-loader.gif" /></div>
+    <div id="loader"><img src="/jplayer/images/ajax-loader.gif" /></div>
 
     <div class="mighthide">
         <div class="buynow"></div>
