@@ -391,13 +391,16 @@ $(document).ready(function()
 
 function imageChange(event, index, elem)
 {
-    if( g_hasPlayed ) 
+    if( playItem != index )
     {
-        playListChange( index );
-    } 
-    else 
-    {
-        playListConfig( index );
+        if( g_hasPlayed ) 
+        {
+            playListChange( index );
+        } 
+        else 
+        {
+            playListConfig( index );
+        }
     }
 }
 
