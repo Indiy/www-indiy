@@ -1114,7 +1114,6 @@
 		2DF474071440B77F005538C7 /* java.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = java.js; sourceTree = "<group>"; };
 		2DF474081440B77F005538C7 /* jquery-1.5.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.5.min.js"; sourceTree = "<group>"; };
 		2DF474091440B77F005538C7 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
-		2DF474101440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
 		2DF474111440B77F005538C7 /* expressInstall.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = expressInstall.swf; sourceTree = "<group>"; };
 		2DF474121440B77F005538C7 /* integrated_player.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = integrated_player.swf; sourceTree = "<group>"; };
 		2DF474141440B77F005538C7 /* tour.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = tour.php; sourceTree = "<group>"; };
@@ -3101,7 +3100,6 @@
 		2DF4740F1440B77F005538C7 /* swf */ = {
 			isa = PBXGroup;
 			children = (
-				2DF474101440B77F005538C7 /* .listing */,
 				2DF474111440B77F005538C7 /* expressInstall.swf */,
 				2DF474121440B77F005538C7 /* integrated_player.swf */,
 			);
