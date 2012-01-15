@@ -20,7 +20,7 @@ else if( $_GET["embed"] == "true" )
 } 
 else 
 {
-    $row = mf(mq("select * from `[p]musicplayer` where `url`='{$artist_url}' limit 1"));
+    $row = mf(mq("SELECT * FROM `[p]musicplayer` WHERE `url`='$artist_url' LIMIT 1"));
     if( $row == FALSE )
     {
         header("HTTP/1.0 404 Not Found");
@@ -105,9 +105,10 @@ else
         $mQuery = "`artistid`='{$artist_id}' and `type`='0'";   
     }
     // Build Music
-    $loadmusic = mq("select * from `[p]musicplayer_audio` where {$mQuery} order by `order` asc, `id` desc");
-    $m=0;
-    while ($music = mf($loadmusic)) {
+    $loadmusic = mq("SELECT * FROM `[p]musicplayer_audio` WHERE {$mQuery} ORDER BY `order` ASC, `id` DESC");
+    $music_list = [];
+    while ($music = mf($loadmusic)) 
+    {
         if( !isset($first_track_listens))
             $first_track_listens = $music['views'];
         $music_id = $music["id"];
@@ -126,22 +127,33 @@ else
         if( !$music_product_id )
             $music_product_id = 'false';
 
-        if ($music["download"] != "0") { 
+        if ($music["download"] != "0") 
+        { 
             $music_download = '<a href=\'download.php?artist='.$music_artistid.'&id='.$music_id.$downQ.'\' title=\'Click here download '.$music_name.' for free\' class=\'download vtip\'>Download</a> '; 
-        } else { 
+        } 
+        else 
+        { 
             $music_download = ''; 
         }
-        if ($m != "0") { $musicList .= ","; }
-        if ($fan) {
-            $music_artistid = $music["artistid"];
-            $art = mf(mq("select `artist` from `[p]musicplayer` where id='{$music_artistid}' limit 1"));
-            $music_artist = nohtml($art["artist"]);
-            $musicList .= '{id:'.$music_id.',name:"<small>'.$music_artist.' - '.$music_name.'</small>",mp3:"'.trueSiteUrl().'/artists/audio/'.$music_audio.'",download:"'.$music_download.'",image:"'.$music_image.'",bgcolor:"'.$music_bgcolor.'",bgrepeat:"'.$music_bgrepeat.'",bgposition:"'.$music_bgposition.'",product_id:'.$music_product_id.'}';
-        } else {
-            $musicList .= '{id:'.$music_id.',name:"'.$music_name.'",mp3:"'.trueSiteUrl().'/artists/audio/'.$music_audio.'",download:"'.$music_download.'",image:"'.$music_image.'",bgcolor:"'.$music_bgcolor.'",bgrepeat:"'.$music_bgrepeat.'",bgposition:"'.$music_bgposition.'",plus:"",amazon:"'.$music_amazon.'",itunes:"'.$music_itunes.'",product_id:'.$music_product_id.'}'; 
+        $item = array("id" => $music_id,
+                      "name" => $music_name,
+                      "mp3" => '/artists/audio/' . $music_audio,
+                      "download" => $music_download,
+                      "image" => $music_image,
+                      "bgcolor" => $music_bgcolor,
+                      "bgrepeat" => $music_bgrepeat,
+                      "bgposition" => $music_bgposition,
+                      "plus" => "",
+                      "amazon" => $music_amazon,
+                      "itunes" => $music_itunes,
+                      "product_id" => $music_product_id,
+                      );
+        
+        $music_list[] = $item;
+                      
         }
-        ++$m;
     }
+    $music_list_json = json_encode($music_list);
 
     $total_q = mf(mq("SELECT SUM(views) FROM `[p]musicplayer_audio` WHERE `artistid`='{$music_artistid}'"));
     $total_listens = intval($total_q[0]);
@@ -197,8 +209,7 @@ else
 
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml"> 
+<!DOCTYPE html>
 <head>
 <title><?=siteTitle(); ?><? if (!$fan) { echo " - $artist_name"; } ?></title>
 <meta name="description" content="MyArtistDNA - <?=$artist_name;?> - Home Page - Come here to connect with your favorite artist."/>
@@ -229,17 +240,14 @@ var g_videoList = <?=$video_list_json;?>;
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
-<script src="js/swfobject.js"  type="text/javascript"></script>
-<script src="jplayer/js/supersized.3.1.3.core.min.js" type="text/javascript"></script>
-<script src="jplayer/js/jquery.simplyscroll-1.0.4.js" type="text/javascript"></script>
-<script src="jplayer/jquery.jplayer.js" type="text/javascript"></script> 
+<script src="/js/swfobject.js"  type="text/javascript"></script>
+<script src="/js/jquery.jplayer.js" type="text/javascript"></script> 
 
-<script src="jplayer/js/ra_controls.js" type="text/javascript"></script>
-<script src="jplayer/js/index.js" type="text/javascript"></script>
-<script src="jplayer/demos.common.js" type="text/javascript"></script> 
+<script src="/jplayer/js/ra_controls.js" type="text/javascript"></script>
+<script src="/jplayer/js/index.js" type="text/javascript"></script>
 
-<script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
-<script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
+<script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="/js/jquery.mousewheel.min.js" type="text/javascript"></script>
 
 <script src="<?=trueSiteUrl();?>/js/logged_in.php" type="text/javascript"></script>
 
@@ -256,7 +264,7 @@ var g_logoOpen = false;
 var g_artistId = <?=$artist_id;?>;
 var g_paypalEmail = "<?=$paypalEmail;?>";
 
-var g_myPlayList = [ <?=$musicList;?> ];
+var g_myPlayList = <?=$music_list_json;?>;
 var g_currentSongId = 0;
 
 function fadeAllPageElements()

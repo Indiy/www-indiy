@@ -107,7 +107,7 @@
 		$.getScript('ajaxupload/jquery.iframe-post-form.js', function() {
 	});
 	});
-	$.getScript('js/jquery.jplayer.min.js', function() {
+	$.getScript('/js/jquery.jplayer.min.js', function() {
 		if(songUrl.match(/song=([0-9a-zA-Z_-]+)/) != null){
 							audio_sound="/artists/audio/"+(songUrl.match(/song=([0-9a-zA-Z_-]+)/)[1])+".mp3";
 							
