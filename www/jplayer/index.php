@@ -245,6 +245,7 @@ var g_videoList = <?=$video_list_json;?>;
 
 <script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
 <script src="/js/jquery.mousewheel.min.js" type="text/javascript"></script>
+<script src="/jplayer/js/jquery.simplyscroll-1.0.4.js" type="text/javascript"></script>
 
 <script src="<?=trueSiteUrl();?>/js/logged_in.php" type="text/javascript"></script>
 
