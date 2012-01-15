@@ -33,9 +33,11 @@
         $host_parts = explode('.',$http_host);
         $trailing_parts = array_slice($host_parts,-2);
         $trailing = implode('.',$trailing_parts);
+        $leading_parts = array_slice($host_parts,0,-2);
+        $leading = implode('.',$leading_parts);
         if( "http://www." . $trailing == trueSiteUrl() )
         {
-            $artist_url = $host_parts[0];
+            $artist_url = $leading_parts;
         }
         else
         {
