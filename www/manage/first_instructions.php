@@ -46,7 +46,7 @@
         </div>
     </div>
     
-    <div class='need_help'>Need more help?</div>
+    <div class='need_help'>Need more help? <a href="#">Watch our screencast.</a></div>
     
     <div class='bottom_sep'></div>
     <div class='bottom_blue_bar'></div>
