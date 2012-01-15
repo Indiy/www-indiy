@@ -485,6 +485,22 @@ function clickAddTwitter()
     window.location.href = url;
 }
 
+function validateEditProfile()
+{
+    var url = $('#url').val();
+    var re = new RegExp('^(?=.{1,255}$)[0-9A-Za-z](?:(?:[0-9A-Za-z]|\b-){0,61}[0-9A-Za-z])?(?:\.[0-9A-Za-z](?:(?:[0-9A-Za-z]|\b-){0,61}[0-9A-Za-z])?)*\.?$');
+
+    if( !url.match(re) )
+    {
+        window.alert("Please enter a valid hostname.  A-Z, a-z, -, ., 0-9 are allowed.");
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
 function onInviteFriends()
 {
     $('#invite_friends_form').hide();

@@ -123,7 +123,7 @@
 
     <div class='top_blue_bar'></div>
     <div class='top_sep'></div>
-    <form  id="ajax_from" method="post" enctype="multipart/form-data" action="register.php">
+    <form  id="ajax_from" method="post" enctype="multipart/form-data" action="register.php" onsubmit="return validateEditProfile();">
         
         <input type="hidden" name="artistid" value="<?=$artistid?>">
         
@@ -140,7 +140,7 @@
 
         <div class='input_container'>
             <div class='left_label'>URL <span id='tip_artist_url' class='tooltip'>(?)</span></div>
-            <input type="text" class="right_text" value="<?=$url?>" name="url">
+            <input id="url" class="right_text" value="<?=$url?>" name="url">
         </div>
         <? if( $account_type == 'PREMIUM' ): ?>
             <div class='input_container'>
