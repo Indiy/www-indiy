@@ -376,6 +376,20 @@ $(document).ready(function()
 
 <script type="text/javascript">
 
+function imageChange(event, index, elem)
+{
+    console.log("index: " + index);
+}
+
+function setupSwipe()
+{
+    var element = document.getElementById('image');
+    var settings = {
+        callback: imageChange
+    }
+    window.mySwipe = new Swipe(element,settings);
+}
+
 function setupImageList()
 {
     var width = getWindowWidth();
@@ -404,6 +418,7 @@ function setupImageList()
         html += "</li>\n";
         $('#image_ul').append(html);
     }
+    window.setTimeout(setupSwipe,100);
 }
 
 function onOrientationChange()
