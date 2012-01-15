@@ -148,10 +148,7 @@ else
                       "itunes" => $music_itunes,
                       "product_id" => $music_product_id,
                       );
-        
         $music_list[] = $item;
-                      
-        }
     }
     $music_list_json = json_encode($music_list);
 
