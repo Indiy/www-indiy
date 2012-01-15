@@ -391,14 +391,21 @@ $(document).ready(function()
 
 function imageChange(event, index, elem)
 {
-    playItem = index;
-    playListInit(g_hasPlayed);
+    if( g_hasPlayed ) 
+    {
+        playListChange( index );
+    } 
+    else 
+    {
+        playListConfig( index );
+    }
 }
 
 function setupSwipe()
 {
     var element = document.getElementById('slider');
     var settings = {
+        startSlide: playItem,
         callback: imageChange
     }
     window.mySwipe = new Swipe(element,settings);
