@@ -270,6 +270,15 @@ function fadeAllPageElements()
     $('.videos').fadeOut();
     $('.store_Close').fadeOut();
     $('.contact_Close').fadeOut();
+    hidePlaylist();
+}
+
+function hidePlaylist()
+{
+    $("#playlisthide").parent(".jp-playlist").animate({"left": "-233px"}, "fast");
+    $("#playlisthide").hide();
+    $("#playlisthide").parent(".jp-playlist").children("#playlistaction").show();
+    $('#song_buy_popup').hide();
 }
 
 function setupPageLinks()
@@ -361,10 +370,7 @@ function setupPageLinks()
         $(this).parent(".jp-playlist").children("#playlisthide").show();
     });
     $("#playlisthide").click(function(){
-        $(this).parent(".jp-playlist").animate({"left": "-233px"}, "fast");
-        $(this).hide();
-        $(this).parent(".jp-playlist").children("#playlistaction").show();
-        $('#song_buy_popup').hide();
+        hidePlaylist();
     });
     
     // Shopping Cart Functionality
