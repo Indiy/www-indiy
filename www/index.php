@@ -31,7 +31,7 @@
     else 
     {
         $host_parts = explode('.',$http_host);
-        $trailing_parts = array_slice($host_parts,1);
+        $trailing_parts = array_slice($host_parts,-2);
         $trailing = implode('.',$trailing_parts);
         if( "http://www." . $trailing == trueSiteUrl() )
         {
