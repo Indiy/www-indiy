@@ -511,9 +511,10 @@ $(document).ready(onReady);
                     <li><a href="#" id="jplayer_play" class="jp-play" tabindex="1">play</a></li>
                     <li><a href="#" id="jplayer_pause" class="jp-pause" tabindex="1">pause</a></li>
                     <li><a href="#" id="jplayer_stop" class="jp-stop" tabindex="1">stop</a></li>
-                    
+                    <!--
                     <li><a href="#" id="jplayer_previous" class="jp-previous vtip" tabindex="1">previous<span class="vtip">Play the previous track</span></a></li>
                     <li><a href="#" id="jplayer_next" class="jp-next vtip" tabindex="1">next<span class="vtip">Play the next track</span></a></li>
+                    -->
                 </ul>
                 
                 <div class="current-track"></div>
