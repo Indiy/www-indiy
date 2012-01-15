@@ -161,7 +161,8 @@ function getWindowWidth() {
             }
         }
     }
-    if( windowWidth < screenMinWidth ) windowWidth = screenMinWidth;
+    if( windowWidth < screenMinWidth ) 
+        windowWidth = screenMinWidth;
     return windowWidth;
 }
 
@@ -182,29 +183,36 @@ function getWindowHeight() {
             }
         }
     }
-    if( windowHeight < screenMinHeight ) windowHeight = screenMinHeight;
+    if( windowHeight < screenMinHeight ) 
+        windowHeight = screenMinHeight;
     return windowHeight;
 }
 function displayPlayList() {
     $("#jplayer_playlist ul").empty();
-    for (i=0; i < g_myPlayList.length; i++) {
+    
+    for( i = 0 ; i < g_myPlayList.length ; i++ ) 
+    {
         var listItem = (i == g_myPlayList.length-1) ? "<li class='jplayer_playlist_item_last'>" : "<li>";
         listItem += g_myPlayList[i].plus + "<a href='#' id='jplayer_playlist_item_" + i + "' tabindex='1'><span class='thisisthetrackname'>" + g_myPlayList[i].name + "</span><span class='songimage' style='display: none;'>" + g_myPlayList[i].image + "</span><span class='sellitunes' style='display: none;'>" + g_myPlayList[i].itunes + "</span><span class='sellamazon' style='display: none;'>" + g_myPlayList[i].amazon + "</span><div class='songbgcolor' style='display: none;'>" + g_myPlayList[i].bgcolor + "</div><div class='songbgposition' style='display: none;'>" + g_myPlayList[i].bgposition + "</div><div class='songbgrepeat' style='display: none;'>" + g_myPlayList[i].bgrepeat + "</div></a>" + g_myPlayList[i].download;
+        
         listItem += "<div class='clear'></div>";
         listItem += "<div class='metadata'>This is a test</div>";
         listItem += "<div class='clear'></div></li>";
+        
         $("#jplayer_playlist ul").append(listItem);
-        $("#jplayer_playlist_item_"+i).data( "index", i ).click( function() {
-                                                                var index = $(this).data("index");
-                                                                if (playItem != index) {
-                                                                playListChange( index );
-                                                                } else {
-                                                                $("#jquery_jplayer").jPlayer("play");
-                                                                g_hasPlayed = true;
-                                                                }
-                                                                $(this).blur();
-                                                                return false;
-                                                                });
+        
+        $("#jplayer_playlist_item_"+i).data( "index", i ).click( function() 
+        {
+            var index = $(this).data("index");
+            if (playItem != index) {
+                playListChange( index );
+            } else {
+                $("#jquery_jplayer").jPlayer("play");
+                g_hasPlayed = true;
+            }
+            $(this).blur();
+            return false;
+        });
     }
 }
 
@@ -228,8 +236,8 @@ function playListConfig( index ) {
     $('span.showitunes').hide();
     
     // Display Image			
-    $('#loader').show();
-    $('#image').hide();
+    //$('#loader').show();
+    //$('#image').hide();
     
     // Get Current Image
     var sellamazon = $("#jplayer_playlist_item_"+index).children("span.sellamazon").text();
@@ -240,8 +248,8 @@ function playListConfig( index ) {
     var position = $("#jplayer_playlist_item_"+index).children("div.songbgposition").text();
     var repeat = $("#jplayer_playlist_item_"+index).children("div.songbgrepeat").text();
     
-    var src_arg = "/artists/images/" + image;
-    var img_url = "/timthumb.php?src=" + src_arg + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
+    //var src_arg = "/artists/images/" + image;
+    //var img_url = "/timthumb.php?src=" + src_arg + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
     //$('#image').html("<img src='" + img_url + "' style='vertical-align:middle; margin-top:-" + (getWindowHeight()/2) + "px; margin-left:-" + (getWindowWidth()/2) + "px;' />");
     //$('#image').html("<img src='" + img_url + "' style='width: 100%;' />");
     
@@ -259,8 +267,8 @@ function playListConfig( index ) {
      });
      }*/
     
-    $('#image').css("background-color", "#"+color);
-    $('#image').fadeIn();
+    //$('#image').css("background-color", "#"+color);
+    //$('#image').fadeIn();
     $('span.trackname').text(trackname);
     
     if (sellamazon == "" && sellitunes == "") {
@@ -328,7 +336,7 @@ $(document).ready(function()
 		demoStatusInfo(this.element, $("#demo_status")); // This displays information about jPlayer's status in the demo page
 	})
 	.jPlayer("onSoundComplete", function() {
-		playListNext();
+		window.mySwipe.next();
 	});
  
 	$("#jplayer_previous").click( function() {
