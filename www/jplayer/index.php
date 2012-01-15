@@ -106,7 +106,7 @@ else
     }
     // Build Music
     $loadmusic = mq("SELECT * FROM `[p]musicplayer_audio` WHERE {$mQuery} ORDER BY `order` ASC, `id` DESC");
-    $music_list = [];
+    $music_list = array();
     while ($music = mf($loadmusic)) 
     {
         if( !isset($first_track_listens))
