@@ -143,6 +143,47 @@ if( 'song_id' in g_anchor_map )
         }
     }
 }
+// Function that gets window width
+function getWindowWidth() {
+    screenMinWidth = 350; // Minimum screen width
+    var windowWidth = 0;
+    if (typeof(window.innerWidth) == 'number') {
+        windowWidth = window.innerWidth;
+    }
+    else {
+        if (document.documentElement && document.documentElement.clientWidth) {
+            windowWidth = document.documentElement.clientWidth;
+        }
+        else {
+            if (document.body && document.body.clientWidth) {
+                windowWidth = document.body.clientWidth;
+            }
+        }
+    }
+    if( windowWidth < screenMinWidth ) windowWidth = screenMinWidth;
+    return windowWidth;
+}
+
+// Function that gets window height
+function getWindowHeight() {
+    screenMinHeight =  (480-55); // Minimum screen height
+    var windowHeight = 0;
+    if (typeof(window.innerHeight) == 'number') {
+        windowHeight = window.innerHeight;
+    }
+    else {
+        if (document.documentElement && document.documentElement.clientHeight) {
+            windowHeight = document.documentElement.clientHeight;
+        }
+        else {
+            if (document.body && document.body.clientHeight) {
+                windowHeight = document.body.clientHeight;
+            }
+        }
+    }
+    if( windowHeight < screenMinHeight ) windowHeight = screenMinHeight;
+    return windowHeight;
+}
 
 $(document).ready(function()
 {
@@ -239,47 +280,7 @@ $(document).ready(function()
 			//$('#image').html("<img src='" + img_url + "' style='vertical-align:middle; margin-top:-" + (getWindowHeight()/2) + "px; margin-left:-" + (getWindowWidth()/2) + "px;' />");
 			$('#image').html("<img src='" + img_url + "' style='width: 100%;' />");
 
-			// Function that gets window width
-			function getWindowWidth() {
-				screenMinWidth = 350; // Minimum screen width
-				var windowWidth = 0;
-				if (typeof(window.innerWidth) == 'number') {
-					windowWidth = window.innerWidth;
-				}
-				else {
-					if (document.documentElement && document.documentElement.clientWidth) {
-						windowWidth = document.documentElement.clientWidth;
-					}
-					else {
-						if (document.body && document.body.clientWidth) {
-							windowWidth = document.body.clientWidth;
-						}
-					}
-				}
-				if( windowWidth < screenMinWidth ) windowWidth = screenMinWidth;
-				return windowWidth;
-			}
-
-			// Function that gets window height
-			function getWindowHeight() {
-				screenMinHeight =  (480-55); // Minimum screen height
-				var windowHeight = 0;
-				if (typeof(window.innerHeight) == 'number') {
-					windowHeight = window.innerHeight;
-				}
-				else {
-					if (document.documentElement && document.documentElement.clientHeight) {
-						windowHeight = document.documentElement.clientHeight;
-					}
-					else {
-						if (document.body && document.body.clientHeight) {
-							windowHeight = document.body.clientHeight;
-						}
-					}
-				}
-				if( windowHeight < screenMinHeight ) windowHeight = screenMinHeight;
-				return windowHeight;
-			}
+			
 			
 			/*if (repeat == "stretch") {
 				$('#image').css({
@@ -374,6 +375,37 @@ $(document).ready(function()
 </script>
 
 <script type="text/javascript">
+
+function setupImageList()
+{
+    var width = getWindowWidth();
+    var height = getWindowHeight();
+    
+    $('image_ul').empty();
+    var first = true;
+    for( var k in g_myPlayList )
+    {
+        var song = g_myPlayList[k];
+        var src_arg = "/artists/images/" + song.image;
+        var img_url = "/timthumb.php?src=" + src_arg + "&w=" + width + "&h="+ height + "&zc=0&q=100";
+        
+        var html = '';
+        
+        if( first )
+        {
+            first = false;
+            html += "<li style='display: block;'>\n";
+        }
+        else
+        {
+            html += "<li style='display: none;'>\n";
+        }
+        html += "<img src='" + img_url + "' style='width: 100%;' />\n";
+        html += "</li>\n";
+        $('image_ul').append(html);
+    }
+}
+
 function onOrientationChange()
 {
     window.scrollTo(0,1);
@@ -415,7 +447,11 @@ $(document).ready(onReady);
     <div id="iphonetopbg"></div>
     <div id="results"></div>
 
-    <div id="image"></div>
+    <div id="image">
+        <ul id='image_ul'>
+            
+        </ul>
+    </div>
     <div id="loader"><img src="<?=trueSiteUrl();?>/jplayer/images/ajax-loader.gif" /></div>
 
     <div class="mighthide">
