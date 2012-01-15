@@ -383,7 +383,7 @@ function imageChange(event, index, elem)
 
 function setupSwipe()
 {
-    var element = document.getElementById('image');
+    var element = document.getElementById('slider');
     var settings = {
         callback: imageChange
     }
@@ -395,7 +395,7 @@ function setupImageList()
     var width = getWindowWidth();
     var height = getWindowHeight();
     
-    $('#image_ul').empty();
+    $('#slider_ul').empty();
     var first = true;
     for( var k in g_myPlayList )
     {
@@ -416,7 +416,7 @@ function setupImageList()
         }
         html += "<img src='" + img_url + "' style='width: 100%;' />\n";
         html += "</li>\n";
-        $('#image_ul').append(html);
+        $('#slider_ul').append(html);
     }
     window.setTimeout(setupSwipe,100);
 }
@@ -464,9 +464,11 @@ $(document).ready(onReady);
     <div id="results"></div>
 
     <div id="image">
-        <ul id='image_ul'>
-            
-        </ul>
+        <div id='slider'>
+            <ul id='slider_ul'>
+                
+            </ul>
+        </div>
     </div>
     <div id="loader"><img src="<?=trueSiteUrl();?>/jplayer/images/ajax-loader.gif" /></div>
 
