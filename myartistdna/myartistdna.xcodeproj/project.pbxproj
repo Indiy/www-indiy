@@ -64,6 +64,7 @@
 		2D9B38CC149FFC6E008BDB40 /* base_facebook.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = base_facebook.php; sourceTree = "<group>"; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
+		2DD94A2B14C368DF002B1259 /* vim.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = vim.css; sourceTree = "<group>"; };
 		2DE2142714C15540000C5142 /* artist_home_video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_home_video.js; sourceTree = "<group>"; };
 		2DE2142914C212E0000C5142 /* account_settings.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = account_settings.php; sourceTree = "<group>"; };
 		2DF46F4C1440B77F005538C7 /* casestudies.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = casestudies.html; sourceTree = "<group>"; };
@@ -861,12 +862,8 @@
 		2DF472D21440B77F005538C7 /* html5.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = html5.js; sourceTree = "<group>"; };
 		2DF472D41440B77F005538C7 /* Jplayer.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jplayer.swf; sourceTree = "<group>"; };
 		2DF472D51440B77F005538C7 /* jquery-1.4.1-and-plugins.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.4.1-and-plugins.min.js"; sourceTree = "<group>"; };
-		2DF472D61440B77F005538C7 /* jquery-1.6.2.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.6.2.js"; sourceTree = "<group>"; };
-		2DF472D71440B77F005538C7 /* jquery-latest.pack.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-latest.pack.js"; sourceTree = "<group>"; };
 		2DF472D81440B77F005538C7 /* jquery.custom.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.custom.js; sourceTree = "<group>"; };
-		2DF472D91440B77F005538C7 /* jquery.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
 		2DF472DA1440B77F005538C7 /* jquery.kwicks-1.5.1.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery.kwicks-1.5.1.js"; sourceTree = "<group>"; };
-		2DF472DB1440B77F005538C7 /* jquery.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
 		2DF472DC1440B77F005538C7 /* jquery.tools.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.tools.js; sourceTree = "<group>"; };
 		2DF472DD1440B77F005538C7 /* main.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		2DF472DE1440B77F005538C7 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
@@ -1790,6 +1787,7 @@
 		2DF470471440B77F005538C7 /* css */ = {
 			isa = PBXGroup;
 			children = (
+				2DD94A2B14C368DF002B1259 /* vim.css */,
 				2D34E23514ABFF09004473F9 /* video-js.css */,
 				2D34E23114A645ED004473F9 /* jplayer.blue.monday.css */,
 				2DF4741A1440CFC6005538C7 /* jquery.mCustomScrollbar.css */,
@@ -2655,12 +2653,8 @@
 				2DF472D21440B77F005538C7 /* html5.js */,
 				2DF472D41440B77F005538C7 /* Jplayer.swf */,
 				2DF472D51440B77F005538C7 /* jquery-1.4.1-and-plugins.min.js */,
-				2DF472D61440B77F005538C7 /* jquery-1.6.2.js */,
-				2DF472D71440B77F005538C7 /* jquery-latest.pack.js */,
 				2DF472D81440B77F005538C7 /* jquery.custom.js */,
-				2DF472D91440B77F005538C7 /* jquery.js */,
 				2DF472DA1440B77F005538C7 /* jquery.kwicks-1.5.1.js */,
-				2DF472DB1440B77F005538C7 /* jquery.min.js */,
 				2DF472DC1440B77F005538C7 /* jquery.tools.js */,
 				2DF472DD1440B77F005538C7 /* main.js */,
 				2DF472DE1440B77F005538C7 /* popup.js */,
