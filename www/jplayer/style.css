@@ -682,6 +682,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-weight: lighter;
     border-bottom: 1px solid #aaa;
     border-top: 1px solid #ddd;
+    overflow: hidden;
 }
 #playlist .song_list_item.first {
     border-top: none;
