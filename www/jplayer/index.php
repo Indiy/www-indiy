@@ -209,7 +209,7 @@ else
 <!DOCTYPE html>
 <html>
 <head>
-<title><? echo siteTitle(); . ' - ' . $artist_name; ?></title>
+<title><? echo siteTitle() . ' - ' . $artist_name; ?></title>
 <meta name="description" content="MyArtistDNA - <?=$artist_name;?> - Home Page - Come here to connect with your favorite artist."/>
 
 <link href="/jplayer/style.css" rel="stylesheet" type="text/css" /> 
