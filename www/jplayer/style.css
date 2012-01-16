@@ -654,11 +654,13 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 
 #playlist {
     position: absolute;
-    top: 118px;
+    top: 119px;
     left: 0px;
     width: 260px;
-    height: 210px;
-    background-color: rgba(255,255,255,0.7);
+    height: 200px;
+    padding-top: 4px;
+    padding-bottom: 6px;
+    background-color: rgba(255, 255, 255, 0.7);
     z-index: 1;
     -webkit-border-top-right-radius: 5px;
     -webkit-border-bottom-right-radius: 5px;
