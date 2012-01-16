@@ -6,7 +6,7 @@ $(document).ready(setupAudioPlayer);
 
 function setupAudioPlayer()
 {
-    $('#playlist .song_list').tinyscrollbar({autohide:true});
+    $('#playlist .song_list').lionbars();
 
     $("#jquery_jplayer").jPlayer({
         ready: function() {
