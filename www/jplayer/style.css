@@ -667,14 +667,14 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #playlist .song_list {
     float: left;
-    width: 220px;
+    width: 230px;
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
 }
 #playlist .song_list_item {
     height: 21px;
-    width: 210px;
+    width: 220px;
     padding-top: 3px;
     color: #666;
     font-family: 'Helvetica',sans-serif;
