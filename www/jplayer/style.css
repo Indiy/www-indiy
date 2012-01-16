@@ -12,6 +12,22 @@ ul,ol { list-style: none; }
 @font-face { font-family: 'HattoriHanzoLight'; src: url('fonts/hattori_hanzo-webfont.eot#') format('embedded-opentype'), url('fonts/hattori_hanzo-webfont.woff') format('woff'), url('fonts/hattori_hanzo-webfont.ttf') format('truetype'), url('fonts/hattori_hanzo-webfont.svg#webfontbrBDfpL8') format('svg'); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'Teletex Light'; src: url('fonts/Teletex_Light.eot#') format('opentype'), url('fonts/Teletex_Light.otf') format('woff'); font-weight: normal; font-style: normal; }
 
+@font-face {
+    font-family: 'Neuzeit Grotesk';
+    src: url('/css/Neuzeit-Grotesk.eot');
+    src: local('Neuzeit-Grotesk'), url('/css/Neuzeit-Grotesk.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Neuzeit Grotesk Light';
+    src: url('/css/Neuzeit-Grotesk-Light.eot');
+    src: local('Neuzeit-Grotesk-Light'), url('/css/Neuzeit-Grotesk-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 /* HTML ELEMENTS */
 body { background: #fff; font-size: 12px; color: #fff; font-family: Helvetica, Arial, sans-serif; }
 p { line-height: 14px; margin-bottom: 12px; letter-spacing: 0.5px; }
@@ -657,7 +673,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 27px;
     width: 100%;
     color: #333;
-    font-family: sans-serif;
+    font-family: 'Neuzeit Grotesk Light', sans-serif;
     font-size: 17px;
 }
 #playlist .song_name_only {
