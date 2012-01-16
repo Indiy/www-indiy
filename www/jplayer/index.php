@@ -318,8 +318,8 @@ $(document).ready(function() { <?=$pagesJava;?> });
     </head>
     <body>
         <div id='playlist'>
-            <div class="viewport"><div class="overview">
             <div class='song_list'>
+    <div class="viewport"><div class="overview">
 <?
     $first = ' first';
     foreach( $music_list as $i => $song )
@@ -357,8 +357,8 @@ $(document).ready(function() { <?=$pagesJava;?> });
         echo "</div>\n";
     }
 ?>
+    </div></div>
             </div>
-            </div></div>
             <div class='scroll_label_bar'>
                 <div class='scroll_up' onclick='playlistScrollUp();'></div>
                 <div class='scroll_down' onclick='playlistScrollDown();'></div>
