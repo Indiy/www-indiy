@@ -721,10 +721,8 @@
 		2DF472271440B77F005538C7 /* hattori_hanzo_italic-webfont.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "hattori_hanzo_italic-webfont.svg"; sourceTree = "<group>"; };
 		2DF472281440B77F005538C7 /* hattori_hanzo_italic-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hattori_hanzo_italic-webfont.ttf"; sourceTree = "<group>"; };
 		2DF472291440B77F005538C7 /* hattori_hanzo_italic-webfont.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hattori_hanzo_italic-webfont.woff"; sourceTree = "<group>"; };
-		2DF4722B1440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
 		2DF4722C1440B77F005538C7 /* _rlj.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = _rlj.jpg; sourceTree = "<group>"; };
 		2DF4722D1440B77F005538C7 /* addtocart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = addtocart.jpg; sourceTree = "<group>"; };
-		2DF4722E1440B77F005538C7 /* ajax-loader-old.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ajax-loader-old.gif"; sourceTree = "<group>"; };
 		2DF4722F1440B77F005538C7 /* ajax-loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ajax-loader.gif"; sourceTree = "<group>"; };
 		2DF472301440B77F005538C7 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		2DF472311440B77F005538C7 /* biking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = biking.jpg; sourceTree = "<group>"; };
@@ -820,7 +818,6 @@
 		2DF4728D1440B77F005538C7 /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
 		2DF472911440B77F005538C7 /* iphone.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = iphone.css; sourceTree = "<group>"; };
 		2DF472921440B77F005538C7 /* iphone.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = iphone.php; sourceTree = "<group>"; };
-		2DF472951440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
 		2DF472961440B77F005538C7 /* dynamic_content.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = dynamic_content.html; sourceTree = "<group>"; };
 		2DF472971440B77F005538C7 /* jquery.easing.1.3.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.easing.1.3.js; sourceTree = "<group>"; };
 		2DF472981440B77F005538C7 /* jquery.mCustomScrollbar.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = jquery.mCustomScrollbar.css; sourceTree = "<group>"; };
@@ -2467,10 +2464,8 @@
 		2DF4722A1440B77F005538C7 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				2DF4722B1440B77F005538C7 /* .listing */,
 				2DF4722C1440B77F005538C7 /* _rlj.jpg */,
 				2DF4722D1440B77F005538C7 /* addtocart.jpg */,
-				2DF4722E1440B77F005538C7 /* ajax-loader-old.gif */,
 				2DF4722F1440B77F005538C7 /* ajax-loader.gif */,
 				2DF472301440B77F005538C7 /* bg.png */,
 				2DF472311440B77F005538C7 /* biking.jpg */,
@@ -2586,7 +2581,6 @@
 		2DF472941440B77F005538C7 /* jquery-scroller */ = {
 			isa = PBXGroup;
 			children = (
-				2DF472951440B77F005538C7 /* .listing */,
 				2DF472961440B77F005538C7 /* dynamic_content.html */,
 				2DF472971440B77F005538C7 /* jquery.easing.1.3.js */,
 				2DF472981440B77F005538C7 /* jquery.mCustomScrollbar.css */,
