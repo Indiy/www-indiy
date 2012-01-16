@@ -64,6 +64,7 @@
 ?>
 
 <!DOCTYPE html>
+<html>
 <head>
 <title>MyArtistDNA - <?=$artist_name?></title>
 <link href="/jplayer/iphone.css" rel="stylesheet" type="text/css" /> 
