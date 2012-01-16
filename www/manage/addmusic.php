@@ -168,6 +168,7 @@
 
 		refresh("1","?p=home");
 	}
+    $audio_bgcolor = '#000000';
 	
 	if ($_GET["id"] != "") {
 		$artistid=$_REQUEST['artist_id'];
