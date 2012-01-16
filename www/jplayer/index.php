@@ -358,7 +358,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
             <div class='scroll_label_bar'>
                 <div class='scroll_up' onclick='playlistScrollUp();'></div>
                 <div class='scroll_down' onclick='playlistScrollDown();'></div>
-                <div class='playlist_label' onclick='togglePlaylistShow();'>PLAYLIST</div>
+                <div class='playlist_label' onclick='togglePlaylistShow();'></div>
             </div>
         </div>
 

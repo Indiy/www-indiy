@@ -693,24 +693,31 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #playlist .scroll_label_bar {
     float: right;
-    width: 30px;
+    width: 24px;
     height: 100%;
-    background: transparent url('/jplayer/images/new/playlistAction.png') no-repeat;
+    border-radius: 3px;
+    background-color: #ddd;
+    margin-left: 3px;
+    margin-top: 3px; 
+    border: 1px solid #333;
 }
 #playlist .scroll_up {
     width: 100%;
     height: 25px;
     cursor: pointer;
+    background: transparent url('/images/playlist_up_arrow.png') no-repeat;
 }
 #playlist .scroll_down {
     width: 100%;
     height: 25px;
     cursor: pointer;
+    background: transparent url('/images/playlist_down_arrow.png') no-repeat;
 }
 #playlist .playlist_label {
-    width: 20px;
-    height: 150px;
+    width: 100%;
+    height: 144px;
     cursor: pointer;
+    background: transparent url('/images/playlist_text.png') no-repeat;
     /*
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
@@ -722,6 +729,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-family: 'Helvetica',sans-serif;
     font-size: 20px;
     background-color: #DDD;
+    content: 'PLAYLIST';
     */
 }
 
