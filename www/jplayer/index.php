@@ -209,17 +209,11 @@ else
 <!DOCTYPE html>
 <html>
 <head>
-<title><?=siteTitle(); ?><? if (!$fan) { echo " - $artist_name"; } ?></title>
+<title><? echo siteTitle(); . ' - ' . $artist_name; ?></title>
 <meta name="description" content="MyArtistDNA - <?=$artist_name;?> - Home Page - Come here to connect with your favorite artist."/>
 
-<link href="jplayer/style.css" rel="stylesheet" type="text/css" /> 
-<!--<link rel="stylesheet" media="all and (orientation:portrait)" href="/jplayer/portrait.css">-->
-<link rel="stylesheet" href="jplayer/css/supersized.core.css" type="text/css" media="screen" />
-
-<link media="only screen and (max-device-width: 480px)" href="/jplayer/iphone.css" type= "text/css" rel="stylesheet" />
-
-<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
-
+<link href="/jplayer/style.css" rel="stylesheet" type="text/css" /> 
+<link href="/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
 <link href="/css/video-js.css"rel="stylesheet" type="text/css" />
 <link href="/css/vim.css" rel="stylesheet" type="text/css" />
 
@@ -237,8 +231,7 @@ var g_totalListens = <?=$total_listens;?>;
 var g_logoOpen = false;
 var g_artistId = <?=$artist_id;?>;
 var g_paypalEmail = "<?=$paypalEmail;?>";
-
-var g_myPlayList = <?=$music_list_json;?>;
+var g_songPlayList = <?=$music_list_json;?>;
 var g_currentSongId = 0;
 
 </script>
@@ -578,7 +571,7 @@ function songBuyPopup(i)
     var top = pos.top - 38;
     var left = pos.left;
     
-    var song = g_myPlayList[i];
+    var song = g_songPlayList[i];
     if( song.product_id )
     {
         $('#song_buy_popup_mystore').show();
@@ -727,9 +720,9 @@ for( var k in anchor_elements )
 if( 'song_id' in g_anchor_map )
 {
     var song_id = g_anchor_map['song_id'];
-    for( var k in g_myPlayList )
+    for( var k in g_songPlayList )
     {
-        var song = g_myPlayList[k];
+        var song = g_songPlayList[k];
         if( song['id'] == song_id )
         {
             playItem = Number(k);
@@ -746,6 +739,9 @@ String.prototype.endsWith = function(suffix) {
 </script> 
     </head>
     <body>
+        <div id='playlist'>
+        </div>
+
             <div id="results"></div>
             <div id="shop_results"></div>
 
@@ -974,19 +970,7 @@ String.prototype.endsWith = function(suffix) {
                                 <div id="jplayer_play_bar" class="jp-play-bar"></div>
                             </div>
                         </div>
-                        
                     </div>
-                    
-                    <div id="jplayer_playlist" class="jp-playlist"> 
-                        <div id="retract"> 
-                            <ul id="playlist"> 
-                                <li></li> 
-                            </ul> 
-                        </div> 
-                        <div id="playlistaction"></div>
-                        <div id="playlisthide"></div>
-                        <div class="clear"><div>
-                    </div> 
                 </div>
             </div>
             
@@ -1207,22 +1191,6 @@ String.prototype.endsWith = function(suffix) {
         </div>
     </div>
             
-            
-
-<script type="text/javascript">
-(function($) {
-    $(function() { //on DOM ready
-        setTimeout(function(){ 
-            $("#playlist").simplyScroll({
-                className: 'vert',
-                horizontal: false,
-                frameRate: 30,
-                speed: 5
-            });     
-        }, 500);
-    });
-})(jQuery);
-</script>
 
     <div id='song_buy_popup'>
         <a id='song_buy_popup_mystore' href='#' class='store_icon mystore'></a>
