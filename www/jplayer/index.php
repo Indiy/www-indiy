@@ -139,7 +139,7 @@ else
                       "name" => $music_name,
                       "mp3" => '/artists/audio/' . $music_audio,
                       "download" => $music_download,
-                      "image" => $music_image,
+                      "image" => '/artists/images/' . $music_image,
                       "bgcolor" => $music_bgcolor,
                       "bgrepeat" => $music_bgrepeat,
                       "bgposition" => $music_bgposition,
@@ -207,6 +207,7 @@ else
 ?>
 
 <!DOCTYPE html>
+<html>
 <head>
 <title><?=siteTitle(); ?><? if (!$fan) { echo " - $artist_name"; } ?></title>
 <meta name="description" content="MyArtistDNA - <?=$artist_name;?> - Home Page - Come here to connect with your favorite artist."/>
@@ -569,17 +570,6 @@ function clickrecall(thisfield, defaulttext) {
     thisfield.value = defaulttext;
     }
 }       
-</script>   
-<!--<script type="text/javascript">
-$(id).bind($.jPlayer.event.play, function() { // Bind an event handler to the instance's play event.
-  $(this).jPlayer("pauseOthers"); // pause all players except this one.
-});
-</script>-->
-
-<body>
-
-<script type="text/javascript"> 
-
 
 function songBuyPopup(i)
 {
@@ -754,7 +744,8 @@ String.prototype.endsWith = function(suffix) {
 
 
 </script> 
-
+    </head>
+    <body>
             <div id="results"></div>
             <div id="shop_results"></div>
 

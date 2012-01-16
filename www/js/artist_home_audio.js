@@ -65,16 +65,16 @@ function displayPlayList()
         listItem += "<div class='clear'></div>";
         listItem += "</li>";
         $("#jplayer_playlist ul").append(listItem);
-        $("#jplayer_playlist_item_"+i).data( "index", i ).click( function() {
-                                                                var index = $(this).data("index");
-                                                                if (playItem != index) {
-                                                                playListChange( index );
-                                                                } else {
-                                                                //$("#jquery_jplayer").jPlayer("play");
-                                                                }
-                                                                $(this).blur();
-                                                                return false;
-                                                                });
+        $("#jplayer_playlist_item_"+i).data( "index", i ).click( function() 
+        {
+            var index = $(this).data("index");
+            if( playItem != index )
+            {
+                playListChange(index);
+            }
+            $(this).blur();
+            return false;
+        });
     }
 }
 
@@ -150,22 +150,21 @@ function playListConfig( index )
     $('#image').hide();
     
     // Get Current Image
-    var sellamazon = $("#jplayer_playlist_item_"+index).children("span.sellamazon").text();
-    var sellitunes = $("#jplayer_playlist_item_"+index).children("span.sellitunes").text();
+    var sellamazon = song.amazon;
+    var sellitunes = song.itunes;
     var mystore_product_id = song.product_id;
     
-    var trackname = $("#jplayer_playlist_item_"+index).children("span.thisisthetrackname").text();
-    var image = $("#jplayer_playlist_item_"+index).children("span.songimage").text();
+    var trackname = song.name;
+    var image = song.image;
     
     var color = song.bgcolor;
     var position = song.bgposition;
     var repeat = song.bgrepeat;
     
     $('#image').css("background-color", "#"+color);
-    var src_arg = "/artists/images/" + image;
     if( repeat == 'stretch' )
     {
-        var img_url = "/timthumb.php?src=" + src_arg + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
+        var img_url = "/timthumb.php?src=" + image + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
         var style = "width: 100%; height: 100%;";
         var html = "<img src='" + img_url + "' style='" + style + "'/>";
         $('#image').html(html);
@@ -176,7 +175,7 @@ function playListConfig( index )
     else
     {
         $('#image').html("");
-        $('#image').css("background-image","url(" + src_arg + ")");
+        $('#image').css("background-image","url(" + image + ")");
         $('#image').css("background-repeat",repeat);
         $('#image').css("background-position",position);
     }
