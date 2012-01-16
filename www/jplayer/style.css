@@ -662,8 +662,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-bottom: 6px;
     background-color: rgba(255, 255, 255, 0.7);
     z-index: 1;
-    -webkit-border-top-right-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 #playlist .song_list {
     float: left;
