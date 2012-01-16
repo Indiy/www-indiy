@@ -260,7 +260,6 @@ function getWindowHeight()
 function playListChange( index ) 
 {
     playListConfig( index );
-    //$("#jquery_jplayer").jPlayer("play");
 }
 
 function playListNext() 
@@ -301,6 +300,10 @@ function playlistScrollDown()
 {
     var top = $('#playlist .song_list').scrollTop();
     $('#playlist .song_list').scrollTop(top + 25);
+}
+function changeSong(i)
+{
+    playListConfig(i);
 }
 
 function songBuyPopup(i)
