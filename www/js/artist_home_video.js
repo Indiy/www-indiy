@@ -1,4 +1,54 @@
 
+
+var g_videoMaxRows = 0;
+
+$(document).ready(setupVideoPlayer);
+
+function setupVideoPlayer()
+{
+    // Calculate the max number of video overlay rows
+    $(".videos .row-button").each( function() {
+                                  ++g_videoMaxRows;
+                                  });
+    
+    // JS code for the pagination buttons
+    $(".videos .row-button").click( function() {
+                                   var row_num = $(this).children('span').html()
+                                   showVideoRow(row_num);
+                                   });
+    
+    // JS code for the arrows of pagination
+    $(".videos .nav-arrows div").click( function() {
+                                       var new_page = $(this).children('span').html();
+                                       if( new_page ) {
+                                       showVideoRow(new_page);
+                                       }
+                                       });
+    
+    // Function that switches video overlay pages
+    showVideoRow("1");
+}
+
+function showVideoRow(page) 
+{
+    $(".videos .row-button").css("background-position", "center top");
+    $(".videos .row-button-" + page).css("background-position", "center bottom");
+    $(".videos .video-row").hide();
+    $(".videos .video-row-" + page).show();
+    $(".videos .nav-arrows div").addClass('active');
+    $(".videos .left-arrow").children('span').html( page*1-1 );
+    $(".videos .right-arrow").children('span').html( page*1+1 );
+    if( page == 1 ) {
+        $(".videos .left-arrow").removeClass('active');
+        $(".videos .left-arrow").children('span').html('');
+    }
+    if( page == g_videoMaxRows ) {
+        $(".videos .right-arrow").removeClass('active');
+        $(".videos .right-arrow").children('span').html('');
+    }
+}
+
+
 function showVideo(n)
 {
     var video = g_videoList[n];

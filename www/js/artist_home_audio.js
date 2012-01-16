@@ -1,5 +1,38 @@
 
 
+$(document).ready(setupAudioPlayer);
+
+function setupAudioPlayer()
+{
+ 
+    $("#jquery_jplayer").jPlayer({
+        ready: function() {
+            displayPlayList();
+            playListInit(true); // Parameter is a boolean for autoplay.
+        },
+        solution: "html, flash",
+        supplied: "mp3, oga",
+        swfPath: "/js/Jplayer.swf",
+        verticalVolume: true,
+        wmode: "window"
+    })
+    .bind($.jPlayer.event.ended, function() {
+        playListNext();
+    });
+ 
+    $("#jplayer_previous").click( function() {
+        playListPrev();
+        $(this).blur();
+        return false;
+    });
+ 
+    $("#jplayer_next").click( function() {
+        playListNext();
+        $(this).blur();
+        return false;
+    });
+}
+
 function displayPlayList() 
 {
     $("#jplayer_playlist ul").empty();
