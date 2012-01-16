@@ -290,6 +290,16 @@ function togglePlaylistVisibility()
     else
         showPlaylist();
 }
+function playlistScrollUp()
+{
+    var top = $('#playlist .song_list').scrollTop();
+    $('#playlist .song_list').scrollTop(top - 25px);
+}
+function playlistScrollDown()
+{
+    var top = $('#playlist .song_list').scrollTop();
+    $('#playlist .song_list').scrollTop(top + 25px);
+}
 
 function songBuyPopup(i)
 {
