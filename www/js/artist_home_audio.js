@@ -86,6 +86,30 @@ function playListInit(autoplay)
         playListConfig( playItem );
 }
 
+function updateListens(song_id)
+{
+    var url = "/data/listens.php?song_id=" + song_id;
+
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: url,
+        dataType: 'json',
+        success: function(data) 
+        {
+            g_totalListens = data['total_listens'];
+            var track_listens = data['track_listens'];
+            //$('#total_listens').text(g_totalListens);
+            $('#current_track_listens').text(track_listens);
+        },
+        error: function()
+        {
+            //alert('Failed to get listens!');
+        }
+    });
+}
+
+
 function playListConfig( index ) 
 {
     $("#jplayer_playlist_item_"+playItem).removeClass("jplayer_playlist_current").parent().removeClass("jplayer_playlist_current");
@@ -94,8 +118,8 @@ function playListConfig( index )
     playItem = index;
     var song = g_myPlayList[index];
     var media = {
-    mp3: song.mp3,
-    oga: song.mp3.replace(".mp3",".ogg")
+        mp3: song.mp3,
+        oga: song.mp3.replace(".mp3",".ogg")
     };
     if( song.mp3.endsWith("mp3") )
     {
@@ -219,7 +243,7 @@ function playListConfig( index )
                             });
                      });
     g_totalListens++;
-    updateListens(image);
+    updateListens(song.id);
     
     setTimeout(function(){ 
                $('#loader').hide();
