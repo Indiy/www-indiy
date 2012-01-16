@@ -70,7 +70,7 @@ function updateListens(song_id)
 function playListConfig( index ) 
 {
     $("#playlist .song_list_item").removeClass("current");
-    $("#playlist .song_list_item_" + index).addClass("current");
+    $("#playlist #song_list_item_" + index).addClass("current");
     
     playItem = index;
     var song = g_songPlayList[index];
