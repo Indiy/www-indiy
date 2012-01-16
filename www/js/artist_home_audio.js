@@ -317,3 +317,52 @@ function playListPrev()
     playListChange( index );
 }
 
+function hidePlaylist()
+{
+    $("#playlisthide").parent(".jp-playlist").animate({"left": "-233px"}, "fast");
+    $("#playlisthide").hide();
+    $("#playlisthide").parent(".jp-playlist").children("#playlistaction").show();
+    $('#song_buy_popup').hide();
+}
+
+function songBuyPopup(i)
+{
+    var id = '#song_buy_icon_' + i;
+    var pos = $(id).offset();
+    var top = pos.top - 38;
+    var left = pos.left;
+    
+    var song = g_songPlayList[i];
+    if( song.product_id )
+    {
+        $('#song_buy_popup_mystore').show();
+        $('#song_buy_popup_mystore').attr('href','javascript:buySong(' + song.product_id + ');');
+    }
+    else
+    {
+        $('#song_buy_popup_mystore').hide();
+    }
+    if( song.itunes )
+    {
+        $('#song_buy_popup_itunes').show();
+        $('#song_buy_popup_itunes').attr('href',song.itunes);
+    }
+    else
+    {
+        $('#song_buy_popup_itunes').hide();
+    }
+    if( song.amazon )
+    {
+        $('#song_buy_popup_amazon').show();
+        $('#song_buy_popup_amazon').attr('href',song.amazon);
+    }
+    else
+    {
+        $('#song_buy_popup_amazon').hide();
+    }
+    
+    $('#song_buy_popup').css('top',top);
+    $('#song_buy_popup').css('left',left);
+    $('#song_buy_popup').show();
+}
+

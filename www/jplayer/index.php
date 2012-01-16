@@ -238,318 +238,29 @@ var g_currentSongId = 0;
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+
 <script src="/js/swfobject.js"  type="text/javascript"></script>
 <script src="/js/jquery.jplayer.js" type="text/javascript"></script> 
 
-<script src="/jplayer/js/ra_controls.js" type="text/javascript"></script>
-<script src="/jplayer/js/index.js" type="text/javascript"></script>
-
 <script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
 <script src="/js/jquery.mousewheel.min.js" type="text/javascript"></script>
-<script src="/jplayer/js/jquery.simplyscroll-1.0.4.js" type="text/javascript"></script>
+<script src="/js/video.js" type="text/javascript"></script> 
 
 <script src="<?=trueSiteUrl();?>/js/logged_in.php" type="text/javascript"></script>
 
 <script src="/js/artist_home.js" type="text/javascript"></script>
-<script src="/js/login_signup.js" type="text/javascript"></script>
 <script src="/js/artist_home_audio.js" type="text/javascript"></script>
 <script src="/js/artist_home_video.js" type="text/javascript"></script>
+<script src="/js/artist_home_tabs.js" type="text/javascript"></script>
+<script src="/js/artist_home_socialize.js" type="text/javascript"></script>
 
-<script src="/js/video.js" type="text/javascript"></script> 
+<script src="/js/login_signup.js" type="text/javascript"></script>
+
+<script src="/jplayer/js/ra_controls.js" type="text/javascript"></script>
+<script src="/jplayer/js/index.js" type="text/javascript"></script>
 
 <script type="text/javascript">
-
-
-function fadeAllPageElements()
-{
-    $('.dragger_container').fadeOut();
-    $('.aClose').fadeOut();
-    $('.comments').fadeOut();
-    $('.contact').fadeOut();
-    $('.store').fadeOut();
-    $('.page').fadeOut();
-    $('.videos').fadeOut();
-    $('.store_Close').fadeOut();
-    $('.contact_Close').fadeOut();
-    hidePlaylist();
-}
-
-function hidePlaylist()
-{
-    $("#playlisthide").parent(".jp-playlist").animate({"left": "-233px"}, "fast");
-    $("#playlisthide").hide();
-    $("#playlisthide").parent(".jp-playlist").children("#playlistaction").show();
-    $('#song_buy_popup').hide();
-}
-
-function setupPageLinks()
-{
-
-    $(".dragger_container").fadeOut();
-    
-    
-    // Pauses the audio player when a user opens a video                
-    $("div.playlist_video img").click(function(event){
-        $("#jquery_jplayer").jPlayer("pause");
-    });
-    
-             
-
-    $('#image').hide();
-    $('.page').hide();
-    $('.comments').hide();
-    $('.contact').hide();
-    $('.aClose').hide();
-    $('.store').hide();
-    $('.checkout').hide();
-    $('.videos').hide();
-    $('.store_Close').hide();
-    $('.contact_Close').hide();
-    
-    /* Close */
-    $('.aClose').click(function() {
-        fadeAllPageElements();
-    });
-
-    $('.store_Close').click(function() {
-                       fadeAllPageElements();
-                       });
-
-    $('.contact_Close').click(function() {
-                            fadeAllPageElements();
-                            });
-
-    
-    <?=$pagesJava;?>
-    
-    /* Comment */
-    $('.aComment').click(function() {
-        fadeAllPageElements();
-        setTimeout(function(){ 
-            $('.comments').fadeIn();
-            $('.aClose').fadeIn();
-        }, 450);
-    });
-    
-    /* Contact */
-    $('.aContact').click(function() {
-        fadeAllPageElements();
-        setTimeout(function(){ 
-            $('.contact').fadeIn();
-            $('.contact_Close').fadeIn();
-        }, 450);
-    });
-    
-    /* Store */
-    $('.aStore').click(function() {
-        fadeAllPageElements();
-        setTimeout(function(){ 
-            $('.store').fadeIn();
-            $('.store_Close').fadeIn();
-        }, 450);
-        var cart = "&paypal=<?=$paypalEmail;?>&cart=true&artist=<?=$artist_id;?>";
-        $.post("jplayer/ajax.php", cart, function(items) {
-              $(".cart").html(items);
-              });
-    });
-    
-    /* Videos */
-    $('.aVideos').click(function() {
-        fadeAllPageElements();
-        setTimeout(function(){ 
-            $('.videos').fadeIn();
-            $('.aClose').fadeIn();
-        }, 450);
-    });         
-    
-    
-    /* Playlist Controller */
-    $("#playlistaction").click(function(){
-        $(this).parent("pauseOthers");
-        $(this).parent(".jp-playlist").animate({"left": "0px"}, "fast");
-        $(this).hide();
-        $(this).parent(".jp-playlist").children("#playlisthide").show();
-    });
-    $("#playlisthide").click(function(){
-        hidePlaylist();
-    });
-    
-    // Shopping Cart Functionality
-    $("div.addtocart").click(function(event){
-        var pro = $(this).text();
-        var cart = "&paypal=<?=$paypalEmail;?>&cart=true&artist=<?=$artist_id;?>&product="+pro;
-        $.post("jplayer/ajax.php", cart, function(items) {
-            $(".cart").html(items);
-            showCart(false);
-        });
-    });
-    
-    $(".showstore").click(function(event){
-        showProducts(true);
-    });
-    $(".showcart").click(function(event){
-        showCart(true);
-    });
-    
-    $("a.jp-previous").mouseover(function(event){
-        $(this).animate({
-            left: "0px"
-        }, 250);                
-    });
-    
-    $("a.jp-previous").mouseout(function(event){
-        $(this).animate({
-            left: "-169px"
-        }, 250);
-    }); 
-    
-    $("a.jp-next").mouseover(function(event){
-        $(this).animate({
-            right: "0px"
-        }, 250);    
-    });
-    
-    $("a.jp-next").mouseout(function(event){
-        $(this).animate({
-            right: "-138px"
-        }, 250);
-    });
-    
-    // All new socialize tab functionality
-    var socialize_minimized = true;
-    var socialize_tab = '';
-    $(".socialize .title").click(function() {
-        if( socialize_minimized )
-            open_socialize();
-        else
-            close_socialize();
-    });
-    
-    $(".socialize .facebook").click(function() {
-        $(".buttons div").removeClass("active");
-        $(this).addClass("active");
-        $(".socialize .body .tab").hide();
-        $(".socialize .body #facebook").show();
-        
-        if( socialize_tab == 'facebook' ) {
-            if( socialize_minimized )
-                open_socialize();
-            else
-                close_socialize();
-        }
-        else {
-            open_socialize();
-            socialize_tab = 'facebook';
-        }
-        
-    });
-
-    $(".socialize .twitter").click(function() {
-        $(".buttons div").removeClass("active");
-        $(this).addClass("active");
-        $(".socialize .body .tab").hide();
-        $(".socialize .body #twitter").show();
-        
-        if( socialize_tab == 'twitter' ) {
-            if( socialize_minimized )
-                open_socialize();
-            else
-                close_socialize();
-        }
-        else {
-            open_socialize();
-            socialize_tab = 'twitter';
-        }
-        
-    });
-    
-    $(".socialize .email").click(function() {
-        $(".buttons div").removeClass("active");
-        $(this).addClass("active");
-        $(".socialize .body .tab").hide();
-        $(".socialize .body #email").show();
-        
-        if( socialize_tab == 'email' ) {
-            if( socialize_minimized )
-                open_socialize();
-            else
-                close_socialize();
-        }
-        else {
-            open_socialize();
-            socialize_tab = 'email';
-        }
-        
-    });
-    
-    $(".socialize .share").click(function() {
-        $(".buttons div").removeClass("active");
-        $(this).addClass("active");
-        $(".socialize .body .tab").hide();
-        $(".socialize .body #share").show();
-        
-        if( socialize_tab == 'share' ) {
-            if( socialize_minimized )
-                open_socialize();
-            else
-                close_socialize();
-        }
-        else {
-            open_socialize();
-            socialize_tab = 'share';
-        }
-        
-    });
-    
-    function open_socialize() {
-        if( socialize_minimized ) {
-            $(".socialize").animate({ bottom: "0" }, 300);
-            socialize_minimized = false;
-        }
-    }
-    
-    function close_socialize() {
-        $(".buttons div").removeClass("active");
-        if( !socialize_minimized ) {
-            $(".socialize").animate({ bottom: "-361px" }, 300);
-            socialize_minimized = true;
-        }
-    }
-    
-    $(".bottom").click(function(event)
-    {
-        if(!g_logoOpen) 
-        {
-            $('div#logo').css("background-position","right bottom");
-            $('#makeroomforlogo').animate({ height: "160px" }, 300);
-        } 
-        else 
-        {
-            $('div#logo').css("background-position","left bottom");
-            $('#makeroomforlogo').animate({ height: "0px" }, 300);
-        }
-        g_logoOpen = !g_logoOpen;
-        //$('#logo').toggleClass('openlogo');
-    }); 
-    
-    $(".submitform").click(function(event){
-    
-        
-    });
-    
-    if( typeof g_userName != "undefined" && g_userName )
-    {
-        var html = "<a href='<?=trueSiteUrl();?>/manage/artist_management.php'>";
-        html += g_userName;
-        html += "</a>";
-        html += " | ";
-        html += "<a href='<?=trueSiteUrl();?>/manage/logout.php'>Logout</a>";
-        $("#login_signup").html(html);
-    }
-}
-
-$(document).ready(setupPageLinks);
-    
+   
 // Clear empty form
 function clickclear(thisfield, defaulttext) {
     if (thisfield.value == defaulttext) {
@@ -563,142 +274,6 @@ function clickrecall(thisfield, defaulttext) {
     thisfield.value = defaulttext;
     }
 }       
-
-function songBuyPopup(i)
-{
-    var id = '#song_buy_icon_' + i;
-    var pos = $(id).offset();
-    var top = pos.top - 38;
-    var left = pos.left;
-    
-    var song = g_songPlayList[i];
-    if( song.product_id )
-    {
-        $('#song_buy_popup_mystore').show();
-        $('#song_buy_popup_mystore').attr('href','javascript:buySong(' + song.product_id + ');');
-    }
-    else
-    {
-        $('#song_buy_popup_mystore').hide();
-    }
-    if( song.itunes )
-    {
-        $('#song_buy_popup_itunes').show();
-        $('#song_buy_popup_itunes').attr('href',song.itunes);
-    }
-    else
-    {
-        $('#song_buy_popup_itunes').hide();
-    }
-    if( song.amazon )
-    {
-        $('#song_buy_popup_amazon').show();
-        $('#song_buy_popup_amazon').attr('href',song.amazon);
-    }
-    else
-    {
-        $('#song_buy_popup_amazon').hide();
-    }
-    
-    $('#song_buy_popup').css('top',top);
-    $('#song_buy_popup').css('left',left);
-    $('#song_buy_popup').show();
-}
-
-function sendContactForm()
-{
-    $('.contact table').hide();
-    $('#contact_thanks').show();
-    
-    var artist_id = "<?=$artist_id;?>";
-    var name = $('#contact_name').val();
-    var email = $('#contact_email').val();
-    var phone = $('#contact_phone').val();
-    var comments = $('#contact_comments').val();
-
-    var submit = "&form=send";
-    submit += "&artist_id=" + artist_id;
-    submit += "&name=" + escape(name);
-    submit += "&email=" + escape(email);
-    submit += "&phone=" + escape(phone);
-    submit += "&comments=" + escape(comments);
-
-    $.post("jplayer/ajax.php", submit, function(response) { });
-}
-function sendBookingForm()
-{
-    $('.contact table').hide();
-    $('#contact_thanks').show();
-    
-    var artist_id = "<?=$artist_id;?>";
-    var name = $('#contact_name').val();
-    var email = $('#contact_email').val();
-    var date = $('#booking_date').val();
-    var location = $('#booking_location').val();
-    var budget = $('#booking_budget option:selected').val();
-    var comments = $('#booking_comments').val();
-    
-    var submit = "";
-    submit += "&artist_id=" + artist_id;
-    submit += "&name=" + escape(name);
-    submit += "&email=" + escape(email);
-    submit += "&date=" + escape(date);
-    submit += "&location=" + escape(location);
-    submit += "&budget=" + escape(budget);
-    submit += "&comments=" + escape(comments);
-    
-    $.post("/data/booking.php", submit, function(response) { });
-}
-
-function submitNewsletter()
-{    
-    $('#news_form').hide();
-    $('#news_success').show();
-
-    var artist = "<?=$artist_id;?>";
-    var name = $('#news_name').val();
-    var email = $('#news_email').val();
-    var mobile = $('#news_mobile').val();
-    var submited = "&newsletter=true&artist=" + artist;
-    submited += "&name=" + escape(name);
-    submited += "&email=" + escape(email);
-    submited += "&mobile=" + escape(mobile);
-    
-    $.post("jplayer/ajax.php", submited, function(repo) {});
-}
-
-function sendToFriend()
-{
-    $('#send_friend_form').hide();
-    $('#send_friend_success').show();
-
-    var artist_id = "<?=$artist_id;?>";
-    var to = $('#send_friend_to').val();
-    var from = $('#send_friend_from').val();
-    var message = $('#send_friend_message').val();
-    
-    var d = {
-        "artist_id": artist_id,
-        "to": to,
-        "from": from,
-        "message": message
-    };
-    var postData = JSON.stringify(d);
-    jQuery.ajax(
-    {
-        type: 'POST',
-        url: '/data/send_friend.php',
-        contentType: 'application/json',
-        data: postData,
-        processData: false,
-        success: function(data) 
-        {
-        },
-        error: function()
-        {
-        }
-    });
-}
 
 var playItem = 0;
 
@@ -740,6 +315,16 @@ String.prototype.endsWith = function(suffix) {
     </head>
     <body>
         <div id='playlist'>
+            <div class='song_list'>
+                <?
+                    foreach( $
+                ?>
+            </div>
+            <div class='scroll_label_bar'>
+                <div class='scroll_up' onclick='playlistScrollUp();'></div>
+                <div class='scroll_down' onclick='playlistScrollDown();'></div>
+                <div class='playlist_label' onclick='togglePlaylistShow();'></div>
+            </div>
         </div>
 
             <div id="results"></div>
