@@ -712,5 +712,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 100%;
     height: 150px;
     background-color: gray;
+    transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg);
 }
 
