@@ -4,7 +4,6 @@ $(document).ready(setupAudioPlayer);
 
 function setupAudioPlayer()
 {
- 
     $("#jquery_jplayer").jPlayer({
         ready: function() {
             displayPlayList();
@@ -36,10 +35,10 @@ function setupAudioPlayer()
 function displayPlayList() 
 {
     $("#jplayer_playlist ul").empty();
-    for( var i = 0 ; i < g_myPlayList.length ; ++i ) 
+    for( var i = 0 ; i < g_songPlayList.length ; ++i ) 
     {
-        var song = g_myPlayList[i];
-        var listItem = (i == g_myPlayList.length-1) ? "<li class='jplayer_playlist_item_last'>" : "<li>";
+        var song = g_songPlayList[i];
+        var listItem = (i == g_songPlayList.length-1) ? "<li class='jplayer_playlist_item_last'>" : "<li>";
         listItem += song.plus;
         listItem += "<a href='#' id='jplayer_playlist_item_" + i + "' tabindex='1'>";
         listItem += "<span class='thisisthetrackname'>" + song.name + "</span>";
@@ -116,7 +115,7 @@ function playListConfig( index )
     $("#jplayer_playlist_item_"+index).addClass("jplayer_playlist_current").parent().addClass("jplayer_playlist_current");
     
     playItem = index;
-    var song = g_myPlayList[index];
+    var song = g_songPlayList[index];
     var media = {
         mp3: song.mp3,
         oga: song.mp3.replace(".mp3",".ogg")
@@ -308,13 +307,13 @@ function playListChange( index )
 
 function playListNext() 
 {
-    var index = (playItem+1 < g_myPlayList.length) ? playItem+1 : 0;
+    var index = (playItem+1 < g_songPlayList.length) ? playItem+1 : 0;
     playListChange( index );
 }
 
 function playListPrev() 
 {
-    var index = (playItem-1 >= 0) ? playItem-1 : g_myPlayList.length-1;
+    var index = (playItem-1 >= 0) ? playItem-1 : g_songPlayList.length-1;
     playListChange( index );
 }
 
