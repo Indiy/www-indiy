@@ -69,11 +69,11 @@ function updateListens(song_id)
 
 function playListConfig( index ) 
 {
-    $("#playlist .song_list_item").removeClass("current");
-    $("#playlist #song_list_item_" + index).addClass("current");
-    
     playItem = index;
     var song = g_songPlayList[index];
+    $("#playlist .song_list_item").removeClass("current");
+    $("#playlist #song_list_item_" + song.id).addClass("current");
+
     var media = {
         mp3: song.mp3,
         oga: song.mp3.replace(".mp3",".ogg")
