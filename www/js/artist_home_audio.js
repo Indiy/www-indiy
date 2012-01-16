@@ -6,7 +6,6 @@ function setupAudioPlayer()
 {
     $("#jquery_jplayer").jPlayer({
         ready: function() {
-            displayPlayList();
             playListInit(true); // Parameter is a boolean for autoplay.
         },
         solution: "html, flash",
@@ -30,51 +29,6 @@ function setupAudioPlayer()
         $(this).blur();
         return false;
     });
-}
-
-function displayPlayList() 
-{
-    $("#jplayer_playlist ul").empty();
-    for( var i = 0 ; i < g_songPlayList.length ; ++i ) 
-    {
-        var song = g_songPlayList[i];
-        var listItem = (i == g_songPlayList.length-1) ? "<li class='jplayer_playlist_item_last'>" : "<li>";
-        listItem += song.plus;
-        listItem += "<a href='#' id='jplayer_playlist_item_" + i + "' tabindex='1'>";
-        listItem += "<span class='thisisthetrackname'>" + song.name + "</span>";
-        listItem += "<span class='songimage' style='display: none;'>" + song.image + "</span>";
-        listItem += "<span class='sellitunes' style='display: none;'>" + song.itunes + "</span>";
-        listItem += "<span class='sellamazon' style='display: none;'>" + song.amazon + "</span>";
-        listItem += "<div class='songbgcolor' style='display: none;'>" + song.bgcolor + "</div>";
-        listItem += "<div class='songbgposition' style='display: none;'>" + song.bgposition + "</div>";
-        listItem += "<div class='songbgrepeat' style='display: none;'>" + song.bgrepeat + "</div>";
-        listItem += "</a>";
-        if( song.download )
-        {
-            listItem += song.download;
-        }
-        else if( song.amazon || song.itunes )
-        {
-            listItem += "<span id='song_buy_icon_" + i + "' class='song_buy_icon' onclick='songBuyPopup(" + i + ");'>";
-            listItem += "<img src='/images/buy_icon.png'/>";
-            listItem += "</span>";
-        }
-        listItem += "<div class='clear'></div>";
-        listItem += "<div class='metadata'>This is a test</div>";
-        listItem += "<div class='clear'></div>";
-        listItem += "</li>";
-        $("#jplayer_playlist ul").append(listItem);
-        $("#jplayer_playlist_item_"+i).data( "index", i ).click( function() 
-        {
-            var index = $(this).data("index");
-            if( playItem != index )
-            {
-                playListChange(index);
-            }
-            $(this).blur();
-            return false;
-        });
-    }
 }
 
 function playListInit(autoplay) 

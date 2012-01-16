@@ -317,9 +317,43 @@ $(document).ready(function() { <?=$pagesJava;?> });
     <body>
         <div id='playlist'>
             <div class='song_list'>
-                <?
-                    #foreach( $
-                ?>
+<?
+    $first = ' first';
+    foreach( $music_list as $i => $song )
+    {
+        $song_name = $song['name'];
+        $song_id = $song['id'];
+        echo "<div class='song_list_item$first'>";
+        $first = '';
+        if( $song['download'] )
+        {
+            echo "<div class='song_name_free' onclick='changeSong($i);'>";
+            echo $song_name;
+            echo "</div>";
+            echo "<div class='song_free'>";
+            echo "<a href='/download.php?artist=$artist_id&id=$song_id' title='Free Song Download'>FREE</a>";
+            echo "</div>'";
+        }
+        elseif( $song['amazon'] || $song['itunes'] || $song['product_id'] )
+        {
+            echo "<div class='song_name_store' onclick='changeSong($i);'>";
+            echo $song_name;
+            echo "</div>";
+            echo "<div class='song_store'>";
+            echo "<a title='Purchase Song' onclick='songBuyPopup($song_id);'>";
+            echo "<img src='/images/buy_icon.png'/>";
+            echo "</a>";
+            echo "</div>";
+        }
+        else
+        {
+            echo "<div class='song_name_only' onclick='changeSong($i);'>";
+            echo $song_name;
+            echo "</div>";
+        }
+        echo "</div>\n";
+    }
+?>
             </div>
             <div class='scroll_label_bar'>
                 <div class='scroll_up' onclick='playlistScrollUp();'></div>
