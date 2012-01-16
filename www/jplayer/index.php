@@ -125,7 +125,7 @@ else
         $music_itunes = nohtml($music["itunes"]);
         $music_product_id = $music["product_id"];
         if( !$music_product_id )
-            $music_product_id = 'false';
+            $music_product_id = FALSE;
 
         if ($music["download"] != "0") 
         { 
