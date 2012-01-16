@@ -318,6 +318,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
     </head>
     <body>
         <div id='playlist'>
+            <div class="viewport"><div class="overview">
             <div class='song_list'>
 <?
     $first = ' first';
@@ -357,6 +358,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
     }
 ?>
             </div>
+            </div></div>
             <div class='scroll_label_bar'>
                 <div class='scroll_up' onclick='playlistScrollUp();'></div>
                 <div class='scroll_down' onclick='playlistScrollDown();'></div>
