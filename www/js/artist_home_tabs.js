@@ -64,7 +64,7 @@ function setupPageLinks()
             $('.store').fadeIn();
             $('.store_Close').fadeIn();
         }, 450);
-        var cart = "&paypal=<?=$paypalEmail;?>&cart=true&artist=<?=$artist_id;?>";
+        var cart = "&paypal=" + escape(g_paypalEmail) + "&cart=true&artist=" + g_aristId;
         $.post("jplayer/ajax.php", cart, function(items) {
               $(".cart").html(items);
               });
@@ -94,7 +94,7 @@ function setupPageLinks()
     // Shopping Cart Functionality
     $("div.addtocart").click(function(event){
         var pro = $(this).text();
-        var cart = "&paypal=<?=$paypalEmail;?>&cart=true&artist=<?=$artist_id;?>&product="+pro;
+        var cart = "&paypal=" + escape(g_paypalEmail) + "&cart=true&artist=" + g_aristId + "&product=" + escape(pro);
         $.post("jplayer/ajax.php", cart, function(items) {
             $(".cart").html(items);
             showCart(false);
@@ -256,11 +256,11 @@ function setupPageLinks()
     
     if( typeof g_userName != "undefined" && g_userName )
     {
-        var html = "<a href='<?=trueSiteUrl();?>/manage/artist_management.php'>";
+        var html = "<a href='" + g_siteUrl + "/manage/artist_management.php'>";
         html += g_userName;
         html += "</a>";
         html += " | ";
-        html += "<a href='<?=trueSiteUrl();?>/manage/logout.php'>Logout</a>";
+        html += "<a href='" + g_siteUrl + "/manage/logout.php'>Logout</a>";
         $("#login_signup").html(html);
     }
 }
