@@ -664,6 +664,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     z-index: 1;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    border: 1px solid #DDD;
 }
 #playlist .song_list {
     float: left;
@@ -673,16 +674,18 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     overflow-y: scroll;
 }
 #playlist .song_list_item {
-    height: 21px;
+    height: 19px;
     width: 220px;
-    padding-top: 3px;
+    padding-top: 5px;
     color: #666;
     font-family: 'Helvetica',sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: lighter;
     border-bottom: 1px solid #aaa;
     border-top: 1px solid #ddd;
-    overflow: hidden;
+    white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis; -o-text-overflow: ellipsis;
 }
 #playlist .song_list_item.first {
     border-top: none;
