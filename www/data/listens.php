@@ -6,9 +6,9 @@
     include('../includes/functions.php');   
     include('../includes/config.php');
     
-    $image = $_GET['image'];
+    $song_id = $_GET['song_id'];
 
-    $music = mf(mq("select * from `[p]musicplayer_audio` where `image`='{$image}' limit 1"));
+    $music = mf(mq("SELECT * FROM `[p]musicplayer_audio` WHERE id='$song_id' limit 1"));
     $artistid = $music["artistid"];
     $listens = $music["views"] + 1;
     update("[p]musicplayer_audio","views","{$listens}","id",$music["id"]);
