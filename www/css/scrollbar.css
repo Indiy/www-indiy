@@ -1,0 +1,14 @@
+/* Default settings for scrollbar, do not change */
+.fsScrollbar { overflow:hidden; clear: both; }
+	.fsScrollbar .viewport { position: relative; }
+	.fsScrollbar .overview { list-style: none; left: 0; top: 0;	}
+	.fsScrollbar .scrollbar { position: relative; float: right; width: 7px; padding-bottom: 2px; z-index: 9995; }
+		.fsScrollbar .scrollbar .track { background-color: #FFF; height: 100%; width:7px; position: relative;  -moz-border-radius: 5px; border-radius: 5px; z-index: 9996; cursor: pointer; }
+		.fsScrollbar .scrollbar .thumb { height: 20px; width: 7px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left:0px; background-color:#737373;  -moz-border-radius: 7px; border-radius: 7px; z-index: 9997; }
+		.fsScrollbar .scrollbar .thumb .end { overflow: hidden; height: 5px; width: 5px; z-index: 9998; }
+		.fsScrollbar .scrollbar.disable { display: none; }
+
+/* You can add your scrollbars from here */
+#scrollbar1 { width: 520px; margin: 20px 0 10px;  }
+#scrollbar1 .viewport { width: 500px; height: 200px; }					
+#scrollbar1 .overview { position: absolute; }

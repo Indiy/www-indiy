@@ -6,6 +6,8 @@ $(document).ready(setupAudioPlayer);
 
 function setupAudioPlayer()
 {
+    $('#playlist .song_list').tinyscrollbar({autohide:true});
+
     $("#jquery_jplayer").jPlayer({
         ready: function() {
             playListInit(true); // Parameter is a boolean for autoplay.
@@ -67,8 +69,8 @@ function updateListens(song_id)
 
 function playListConfig( index ) 
 {
-    $("#jplayer_playlist_item_"+playItem).removeClass("jplayer_playlist_current").parent().removeClass("jplayer_playlist_current");
-    $("#jplayer_playlist_item_"+index).addClass("jplayer_playlist_current").parent().addClass("jplayer_playlist_current");
+    $("#playlist .song_list_item").removeClass("current");
+    $("#playlist .song_list_item_" + index).addClass("current");
     
     playItem = index;
     var song = g_songPlayList[index];
