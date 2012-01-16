@@ -655,7 +655,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #playlist {
     position: absolute;
     top: 119px;
-    left: 0px;
+    left: -230px;
     width: 260px;
     height: 200px;
     padding-top: 4px;

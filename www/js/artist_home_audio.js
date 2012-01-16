@@ -1,5 +1,7 @@
 
 
+g_playListShown = false;
+
 $(document).ready(setupAudioPlayer);
 
 function setupAudioPlayer()
@@ -273,10 +275,20 @@ function playListPrev()
 
 function hidePlaylist()
 {
-    $("#playlisthide").parent(".jp-playlist").animate({"left": "-233px"}, "fast");
-    $("#playlisthide").hide();
-    $("#playlisthide").parent(".jp-playlist").children("#playlistaction").show();
-    $('#song_buy_popup').hide();
+    $('#playlist').animate({"left": "-230px"}, "fast");
+    g_playListShown = false;
+}
+function showPlaylist()
+{
+    $('#playlist').animate({"left": "0px"}, "fast");
+    g_playListShown = true;
+}
+function togglePlaylistVisibility()
+{
+    if( g_playListShown )
+        hidePlaylist();
+    else
+        showPlaylist();
 }
 
 function songBuyPopup(i)
