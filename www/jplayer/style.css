@@ -658,9 +658,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     left: 0px;
     width: 260px;
     height: 210px;
-    background-color: white;
-    opacity: 0.65;
+    background-color: rgba(255,255,255,0.7);
     z-index: 1;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
 }
 #playlist .song_list {
     float: left;
@@ -670,16 +671,17 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     overflow-y: scroll;
 }
 #playlist .song_list_item {
-    height: 27px;
+    height: 21px;
     width: 100%;
-    color: #888;
+    padding-top: 3px;
+    color: #666;
     font-family: 'Helvetica',sans-serif;
     font-size: 17px;
     font-weight: lighter;
-    border-bottom: 1px solid #999;
-    border-top: 1px solid white;
+    border-bottom: 1px solid #aaa;
+    border-top: 1px solid #ddd;
 }
-#playlist .song_list_item .first {
+#playlist .song_list_item.first {
     border-top: none;
 }
 #playlist .song_name_only {
@@ -689,7 +691,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #playlist .scroll_label_bar {
     float: right;
-    width: 25px;
+    width: 30px;
     height: 100%;
     background-color: white;
     opacity: 1.0;
