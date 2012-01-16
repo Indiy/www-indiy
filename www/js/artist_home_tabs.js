@@ -37,7 +37,7 @@ function setupPageLinks()
                             });
 
     
-    <?=$pagesJava;?>
+    //<?=$pagesJava;?>
     
     /* Comment */
     $('.aComment').click(function() {
