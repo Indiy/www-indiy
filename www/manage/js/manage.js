@@ -492,7 +492,7 @@ function validateEditProfile()
 
     if( !url.match(re) )
     {
-        window.alert("Please enter a valid hostname.  A-Z, a-z, -, ., 0-9 are allowed.");
+        window.alert("Please enter a valid URL.  A-Z, a-z, -, ., 0-9 are allowed.");
         return false;
     }
     else
