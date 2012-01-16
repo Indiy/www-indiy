@@ -693,25 +693,23 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #playlist .scroll_label_bar {
     float: right;
-    width: 24px;
+    width: 22px;
     height: 100%;
-    border-radius: 3px;
-    background-color: #ddd;
-    margin-left: 3px;
-    margin-top: 3px; 
-    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-right: 4px;
 }
 #playlist .scroll_up {
     width: 100%;
     height: 25px;
     cursor: pointer;
-    background: transparent url('/images/playlist_up_arrow.png') no-repeat;
+    background: transparent url('/images/playlist_up_down.png') no-repeat 0px -25px;
 }
 #playlist .scroll_down {
     width: 100%;
     height: 25px;
     cursor: pointer;
-    background: transparent url('/images/playlist_down_arrow.png') no-repeat;
+    background: transparent url('/images/playlist_up_down.png') no-repeat 0px 0px;
 }
 #playlist .playlist_label {
     width: 100%;
