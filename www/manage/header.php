@@ -69,7 +69,7 @@ $(document).ready(function(){
 </div>
 <section id="bgtopbar">
 	<section id="topbar">
-		<p>Logged in as <a href="#"><?php echo $_SESSION['sess_userName']; ?></a> | <a href="logout.php">Logout</a></p>
+		<p>Logged in as <a href="index.php"><?php echo $_SESSION['sess_userName']; ?></a> | <a href="logout.php">Logout</a></p>
 	</section>
 </section>
 <section id="headerinner">
