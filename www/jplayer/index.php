@@ -246,7 +246,7 @@ var g_currentSongId = 0;
 <script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
 <script src="/js/jquery.mousewheel.min.js" type="text/javascript"></script>
 <script src="/js/video.js" type="text/javascript"></script> 
-<script src="/js/jquery.lionbars.0.3.js" type="text/javascript"></script> 
+<script src="/js/jquery.lionbars.0.3.min.js" type="text/javascript"></script> 
 
 <script src="<?=trueSiteUrl();?>/js/logged_in.php" type="text/javascript"></script>
 
