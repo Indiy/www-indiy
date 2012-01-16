@@ -672,9 +672,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #playlist .song_list_item {
     height: 27px;
     width: 100%;
-    color: #333;
-    font-family: 'Neuzeit Grotesk Light', sans-serif;
+    color: #AAA;
+    font-family: 'Helvetica',sans-serif;
     font-size: 17px;
+    font-weight: lighter;
 }
 #playlist .song_name_only {
     width: 100%;
