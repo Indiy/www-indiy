@@ -718,7 +718,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 100%;
     height: 140px;
     cursor: pointer;
-    background: transparent url('/images/playlist_text.png') no-repeat;
+    background: transparent url('/images/playlist_text.png') no-repeat bottom;
     /*
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
