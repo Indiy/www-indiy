@@ -216,6 +216,7 @@ else
 <link href="/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
 <link href="/css/video-js.css"rel="stylesheet" type="text/css" />
 <link href="/css/vim.css" rel="stylesheet" type="text/css" />
+<link href="/css/scrollbar.css" rel="stylesheet" type="text/css" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
@@ -245,6 +246,7 @@ var g_currentSongId = 0;
 <script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
 <script src="/js/jquery.mousewheel.min.js" type="text/javascript"></script>
 <script src="/js/video.js" type="text/javascript"></script> 
+<script src="/js/jquery.tinyscrollbar.js" type="text/javascript"></script> 
 
 <script src="<?=trueSiteUrl();?>/js/logged_in.php" type="text/javascript"></script>
 
@@ -323,7 +325,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
     {
         $song_name = $song['name'];
         $song_id = $song['id'];
-        echo "<div class='song_list_item$first'>";
+        echo "<div id='song_list_item_$song_id' class='song_list_item$first'>";
         $first = '';
         if( $song['download'] )
         {
