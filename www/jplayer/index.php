@@ -317,7 +317,7 @@ String.prototype.endsWith = function(suffix) {
         <div id='playlist'>
             <div class='song_list'>
                 <?
-                    foreach( $
+                    #foreach( $
                 ?>
             </div>
             <div class='scroll_label_bar'>
