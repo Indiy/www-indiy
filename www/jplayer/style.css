@@ -687,6 +687,11 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #playlist .song_list_item.first {
     border-top: none;
 }
+#playlist .song_list_item.current {
+    background-color: white;
+    font-weight: normal;
+    color: black;
+}
 #playlist .song_name_only {
     width: 100%;
     height: 100%;
