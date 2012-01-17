@@ -438,6 +438,17 @@ div.jp-playlist-player div.jp-playlist a:hover { color:#fff !important; }
 div.jp-playlist-player div.jp-playlist a.jp-playlist-current { color:#FF0000 !important; }
 div.current-track { position: fixed; top: 33px; left: 60px; z-index: 12; font-size: 12px; font-weight: normal; color: #fff; }
 
+.current-track .track_label {
+    color: #777;
+    padding-right: 2px;
+}
+
+.current-track .track_slashes {
+    color: #777;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
 
 .song_buy_icon { float: right; position: relative; margin-right: 8px; margin-top: 4px; cursor: pointer; width: 25px; height: 25px; }
 #song_buy_popup { position: absolute; display: none; background: black; z-index: 100; 
