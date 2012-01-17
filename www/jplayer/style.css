@@ -445,8 +445,8 @@ div.current-track { position: fixed; top: 33px; left: 60px; z-index: 12; font-si
 
 .current-track .track_slashes {
     color: #777;
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 
