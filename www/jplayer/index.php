@@ -321,11 +321,14 @@ $(document).ready(function() { <?=$pagesJava;?> });
             <div class='song_list'>
 <?
     $first = ' first';
+    $num = count($music_list);
     foreach( $music_list as $i => $song )
     {
         $song_name = $song['name'];
         $song_id = $song['id'];
-        echo "<div id='song_list_item_$song_id' class='song_list_item$first'>";
+        if( $i == $num -1 )
+            $last = ' last';
+        echo "<div id='song_list_item_$song_id' class='song_list_item$first$last'>";
         $first = '';
         if( $song['download'] )
         {
