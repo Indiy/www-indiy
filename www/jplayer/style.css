@@ -724,10 +724,20 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border-top: 1px solid #ddd;
 	overflow: hidden;
 }
+#playlist .song_list_item:hover {
+    background-color: rgba(200,200,200, 0.8);
+    color: #ddd;
+}
 #playlist .song_list_item.first {
     border-top: none;
+    border-top-right-radius: 4px;
 }
 #playlist .song_list_item.current {
+    background-color: white;
+    font-weight: bold;
+    color: black;
+}
+#playist .song_list_item.current:hover {
     background-color: white;
     font-weight: bold;
     color: black;
