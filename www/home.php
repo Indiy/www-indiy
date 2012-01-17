@@ -16,8 +16,8 @@
 			<br />
     
     <div class="signup">
-    <h3>AN INDEPENDENT BRANDING NETWORK</h3>
-    <div class="button"><a href="#" onclick="showSignup();">EXPERIENCE NOW!</a></div>
+    <h3>A BRAND NETWORKING TOOL, CONNECTING ARTISTS TO CONSUMERS</h3>
+    <div class="button"><a href="#" onclick="showSignup();">SIGN UP!</a></div>
     </div><!-- signup -->
     
     
