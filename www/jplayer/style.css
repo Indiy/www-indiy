@@ -723,6 +723,19 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     float: right;
     width: 60px;
 }
+#playlist .song_free a {
+    background-color: black;
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: white;
+    border-radius: 9px;
+    font-size: 11px;
+    padding-top: 2px;
+    padding-bottom: 1px;
+    cursor: pointer;
+    font-weight: lighter;
+}
 #playlist .scroll_label_bar {
     float: right;
     width: 22px;
