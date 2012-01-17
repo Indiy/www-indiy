@@ -162,25 +162,32 @@ function playListConfig( index )
     }
     $('#image').fadeIn();
     
-    if (sellamazon == "" && sellitunes == "" && !mystore_product_id) {
-        $('div.mighthide').fadeOut();
-    } else {
-        $('div.mighthide').fadeIn();
-    }
-    
-    if (sellamazon != "") {
-        $('span.showamazon').html("<a href='" + sellamazon + "' class='amazon' target='_blank'></a>");
-        $('span.showamazon').show();
-    }
-    
-    if (sellitunes != "") {
-        $('span.showitunes').html("<a href='" + sellitunes + "' class='itunes' target='_blank'></a>");
-        $('span.showitunes').show();
-    }
-    if (mystore_product_id)
+    if( sellamazon != "" ) 
     {
-        $('span.show_mystore').html("<a href='javascript:buySong(" + mystore_product_id + ");' class='mystore' target='_blank'></a>");
-        $('span.show_mystore').show();
+        $('#buynow_amazon a').attr("href",sellamazon);
+        $('#buynow_amazon').show();
+    }
+    else
+    {
+        $('#buynow_amazon').hide();
+    }
+    if( sellitunes != "" ) 
+    {
+        $('#buynow_itunes a').attr("href",sellitunes);
+        $('#buynow_itunes').show();
+    }
+    else
+    {
+        $('#buynow_itunes').hide();
+    }
+    if( mystore_product_id )
+    {
+        $('#buynow_mad_store a').attr("href",'javascript:buySong(' + mystore_product_id + ');');
+        $('#buynow_mad_store').show();
+    }
+    else
+    {
+        $('#buynow_mad_store').hide();
     }
     
     $('#current_track_name').text(trackname);

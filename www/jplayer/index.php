@@ -504,19 +504,6 @@ $(document).ready(function() { <?=$pagesJava;?> });
                 <div id="makeroomforlogo">
                 <? if ($artist_logo) { ?><img src="/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&h=145&w=145" /><? } ?>
                 </div>
-                <div id="makeroomfordetails">
-                    <div class="clear"></div>
-                    
-                    
-                    <div class="mighthide">
-                        <div class="buynow"></div>
-                        <span class="show_mystore"></span>
-                        <span class="showamazon"></span>
-                        <span class="showitunes"></span>
-                    </div>
-                    
-                    <div class="clear"></div>
-                </div>
                 <div class="bottom"></div>
             </div>
             <? } ?>
@@ -578,21 +565,36 @@ $(document).ready(function() { <?=$pagesJava;?> });
                         </div>
 
                         <div class="current-track">
-                            <div style='float: left; padding-right: 10px;'>
-                                <span class='track_label'>Artist:</span> 
-                                <span id='current_track_artist_name'><?=$artist_name;?></span> 
+                            <span class='track_label'>Artist:</span> 
+                            <span id='current_track_artist_name'><?=$artist_name;?></span> 
+                            <span class='track_slashes'>//</span>
+                            <span class='track_label'>Track:</span>
+                            <span id='current_track_name'></span>
+                            <? if( $show_listens ): ?>
                                 <span class='track_slashes'>//</span>
-                                <span class='track_label'>Track:</span>
-                                <span id='current_track_name'></span>
-                                <? if( $show_listens ): ?>
-                                    <span class='track_slashes'>//</span>
-                                    <span class='track_label'>Listens:</span>
-                                    <span id='current_track_listens'><?=$first_track_listens;?></span>
-                                <? endif; ?>
-                            </div>
-                            <div class='vote'>1</div>
-                            <div class='vote nay'>0</div>
-                            <div class='clear'></div>
+                                <span class='track_label'>Listens:</span>
+                                <span id='current_track_listens'><?=$first_track_listens;?></span>
+                            <? endif; ?>
+                            <span id='buynow_mad_store' class='buynow_icon'>
+                                <a href='#' title='Buy on MyArtistDNA Store'>
+                                    MyArtistDNA Store
+                                </a>
+                            </span>
+                            <span id='buynow_amazon' class='buynow_icon'>
+                                <a href='#' title='Buy from Amazon'>
+                                    <img src='/images/buy_from_amazon.gif'/>
+                                </a>
+                            </span>
+                            <span id='buynow_itunes' class='buynow_icon'>
+                                <a href='#' title='Download on iTunes'>
+                                    <img src='/images/download_on_itunes.png'/>
+                                </a>
+                            </span>
+                            <span id='buynow_free'>
+                                <a href='#' title='Download for Free'>
+                                    FREE DOWNLOAD
+                                </a>
+                            </span>
                         </div>
                         
                         <div id="jplayer_play_time" class="jp-current-time"></div>
