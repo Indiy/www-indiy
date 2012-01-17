@@ -228,10 +228,27 @@ ul.products .option { display: block; padding: 3px; width: 250px; margin: 5px 0p
 
 
 /* NAVIGATION */
-#navigation { background: url('images/bg.png'); position: fixed; top: 54px; left: 0; width: auto; padding: 7px 10px 5px 170px; }
+#navigation { 
+    background-color: rgba(0,0,0,0.7); 
+    position: fixed; 
+    top: 54px; 
+    left: 0; 
+    width: auto; 
+    height: 30px;
+    padding: 10px 10px 5px 170px; 
+}
 #navigation ul { list-style: none; }
 #navigation ul li { padding: 0px; margin: 0px 5px; float: left; }
-#navigation ul li a { padding: 5px; font-size: 14px; font-family: Helvetica, Arial, sans-serif; font-weight: 100; letter-spacing: -1px; text-transform: uppercase; color: #fff; text-decoration: none; display: block; }
+#navigation ul li a { 
+    padding: 5px; 
+    font-size: 18px;
+    font-family: Helvetica, Arial, sans-serif; 
+    font-weight: normal; 
+    text-transform: uppercase; 
+    color: #fff; 
+    text-decoration: none; 
+    display: block; 
+}
 #navigation ul li a:hover { color: #ccc; }
 
 
@@ -444,7 +461,7 @@ div.current-track { position: fixed; top: 33px; left: 60px; z-index: 12; font-si
 }
 
 .current-track .track_slashes {
-    color: #777;
+    color: #444;
     padding-left: 4px;
     padding-right: 4px;
 }
