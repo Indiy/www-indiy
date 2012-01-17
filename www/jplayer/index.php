@@ -412,10 +412,16 @@ $(document).ready(function() { <?=$pagesJava;?> });
                     </div>
                     
                     <div id="facebook" class="tab">
+                         <div class="sub-title">
+                            <h1>Facebook //</h1>
+                        </div>
                         <iframe src="http://www.facebook.com/plugins/likebox.php?href=<?=urlencode($facebook_page);?>&width=273&colorscheme=dark&show_faces=false&stream=true&header=false&height=415" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:273px; height:395px;" allowTransparency="true"></iframe>
                     </div>
                     
                     <div id="twitter" class="tab">
+                          <div class="sub-title">
+                            <h1>Twitter //</h1>
+                        </div>
                         <script src="http://widgets.twimg.com/j/2/widget.js"></script>
                         <script>
                         new TWTR.Widget({
