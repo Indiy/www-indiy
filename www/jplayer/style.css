@@ -856,4 +856,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     content: 'PLAYLIST';
     */
 }
+#playlist .playlist_label:hover {
+    background: transparent url('/images/playlit_text_hover.png') no-repeat bottom;
+}
 
