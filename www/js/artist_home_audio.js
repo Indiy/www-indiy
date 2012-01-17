@@ -189,6 +189,15 @@ function playListConfig( index )
     {
         $('#buynow_mad_store').hide();
     }
+    if( song.download )
+    {
+        $('#buynow_free a').attr("href",'/download.php?artist=' + g_artistId + '&id=' + song.id);
+        $('#buynow_free').show();
+    }
+    else
+    {
+        $('#buynow_free').hide();
+    }
     
     $('#current_track_name').text(trackname);
     $(".vote").click(function(event) 
