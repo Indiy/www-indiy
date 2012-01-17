@@ -67,7 +67,7 @@ button::-moz-focus-inner {  border: 0;}
 /* PAGE */
 .anchor { display: block; width: 100px; height: 1px; text-indent: -9999px; }
 .space { width: 100%; height: 70px; }
-.page, .comments, .videos {max-height:500px; display:none; position:relative; -webkit-box-shadow: 0 0 5px #000; box-shadow: 0 0 5px #000; z-index: 1; padding: 25px; width: 600px; margin: -5px auto 100px auto; background:url('images/box/bg.png') repeat center top; }
+.page, .comments, .videos {max-height:500px; display:none; position:relative; -webkit-box-shadow: 0 0 5px #000; box-shadow: 0 0 5px #000; z-index: 1; padding: 25px; width: 600px; margin: -5px auto 100px auto; background-color: rgba(0, 0, 0, 0.9); }
 /*.comments .customScrollBox { max-height:100px; padding: 25px; }*/
 
 .page h1, .comments h1, .store h1, .contact h1, .videos h1 { color: #fff; }
@@ -111,7 +111,7 @@ button::-moz-focus-inner {  border: 0;}
     -webkit-box-shadow: 0 0 5px #000; box-shadow: 0 0 5px #000; 
     z-index: 1; width: 750px; margin: -5px auto 100px auto; 
     padding-left: 25px; padding-right: 25px; padding-top: 25px; padding-bottom: 50px;
-    background:url('images/box/bg.png') no-repeat center top; background-size: 100%; 
+    background-color: rgba(0, 0, 0, 0.9); 
     font-family:Helvetica, Arial, sans-serif; 
 }
 
@@ -168,7 +168,8 @@ button::-moz-focus-inner {  border: 0;}
 .store { max-height:650px; display:none; position:relative; 
         -webkit-box-shadow: 0 0 5px #000; box-shadow: 0 0 5px #000; 
         z-index: 1; padding: 25px; width: 900px; margin: -5px auto 100px auto; 
-        background:url('images/box/bg.png') no-repeat center top; background-size: 100%; }
+        background-color: rgba(0, 0, 0, 0.9);
+}
 
 .store_Close { cursor: pointer; z-index: 46; position: absolute; 
         top: 143px; left: 50%; padding: 0px; width: 45px; height: 45px; 
@@ -274,7 +275,17 @@ div.top-bg { z-index: 1; display: block; position: fixed; top: 0px; left: 0px; w
 div#playlister { width: 165px; display: block; z-index: 1; position: fixed; top: 0; left: 0; height: 114px; }
 div#playlister .playlist-main { width: 165px; height: 100px; background: #101011; }
 div#playlister .playlist-bottom { width: 165px; height: 14px; background: url('images/new/playlistBottom.png') 0 0 no-repeat; }
-div.jp-progress { position: fixed; z-index: 100; overflow: hidden; top: 17px; left: 147px; display: block; width: 595px; height: 4px; }
+div.jp-progress { 
+    position: fixed; 
+    z-index: 100; 
+    overflow: hidden; 
+    top: 17px; 
+    left: 147px; 
+    display: block; 
+    width: 595px; 
+    height: 4px;
+    border: 1px solid #444;
+}
 div.jp-progress div.jp-seek-bar { width:0px; height:100%; cursor: pointer; }
 div.jp-progress div.jp-play-bar { background: #fff; width:0px; height:100%; }
 div.jp-progress div.jp-seeking-bg {  }
