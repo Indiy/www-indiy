@@ -725,8 +725,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 	overflow: hidden;
 }
 #playlist .song_list_item:hover {
-    background-color: rgba(200,200,200, 0.8);
-    color: #ddd;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+    font-weight: 400;
 }
 #playlist .song_list_item.first {
     border-top: none;
@@ -748,7 +749,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     cursor: pointer;
     white-space: nowrap;
     overflow: hidden;
-	text-overflow: ellipsis; -o-text-overflow: ellipsis;
+    text-overflow: ellipsis; -o-text-overflow: ellipsis;
 }
 #playlist .song_name_store {
     float: left;
@@ -756,17 +757,31 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 100%;
     margin-left: 10px;
     cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; -o-text-overflow: ellipsis;
 }
 #playlist .song_store {
     float: right;
     height: 100%;
+    width: 55px;
+    padding-right: 5px;
 }
 #playlist .song_store a {
-    margin-right: 5px;
+    background-color: black;
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: white;
+    border-radius: 9px;
+    font-size: 11px;
+    padding-top: 2px;
+    padding-bottom: 1px;
     cursor: pointer;
+    font-weight: lighter;
 }
-#playlist .song_store a img {
-    margin-top: -3px;
+#playlist .song_store a:hover {
+    background-color: #00F;
 }
 #playlist .song_name_free {
     float: left;
@@ -774,6 +789,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 100%;
     margin-left: 10px;
     cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; -o-text-overflow: ellipsis;
 }
 #playlist .song_free {
     float: right;
@@ -792,6 +810,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-bottom: 1px;
     cursor: pointer;
     font-weight: lighter;
+}
+#playlist .song_free a:hover {
+    background-color: #00F;
 }
 #playlist .scroll_label_bar {
     float: right;

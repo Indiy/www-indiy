@@ -343,7 +343,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
             echo "</div>";
             echo "<div class='song_store'>";
             echo "<a id='song_buy_icon_$i' title='Purchase Song' onclick='songBuyPopup($i);'>";
-            echo "<img src='/images/buy_icon.png'/>";
+            echo "BUY";
             echo "</a>";
             echo "</div>";
         }
