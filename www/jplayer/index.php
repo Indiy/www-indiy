@@ -334,7 +334,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
             echo "</div>";
             echo "<div class='song_free'>";
             echo "<a href='/download.php?artist=$artist_id&id=$song_id' title='Free Song Download'>FREE</a>";
-            echo "</div>'";
+            echo "</div>";
         }
         elseif( $song['amazon'] || $song['itunes'] || $song['product_id'] )
         {
