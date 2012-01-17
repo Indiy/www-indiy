@@ -575,11 +575,11 @@ $(document).ready(function() { <?=$pagesJava;?> });
                                 <span class='track_slashes'>//</span>
                                 <span class='track_label'>Track:</span>
                                 <span id='current_track_name'></span>
-                                <? if( !$show_listens ): ?>
+                                <? if( $show_listens ): ?>
                                     <span class='track_slashes'>//</span>
                                     <span class='track_label'>Listens:</span>
+                                    <span id='current_track_listens'><?=$first_track_listens;?></span>
                                 <? endif; ?>
-                                <span id='current_track_listens'><?=$first_track_listens;?></span>
                             </div>
                             <div class='vote'>1</div>
                             <div class='vote nay'>0</div>
