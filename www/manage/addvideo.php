@@ -19,6 +19,11 @@
 		}
 		
 		$video_name = my($_POST["name"]);
+
+        if( $_POST["remove_video_image"] == 'true' )
+            $old_logo = '';
+        if( $_POST["remove_video"] == 'true' )
+            $old_sound = '';
 		
 		// Upload Image
 		if(!empty($_FILES["logo"]["name"]))
@@ -94,10 +99,6 @@
             $video_sound = $old_sound;
 		}
 		
-        if( $_POST["remove_video_image"] == 'true' )
-            $video_logo = '';
-        if( $_POST["remove_video"] == 'true' )
-            $video_sound = '';
         
 		$tables = "artistid|name|image|video";
 		$values = "{$artistid}|{$video_name}|{$video_logo}|{$video_sound}";
