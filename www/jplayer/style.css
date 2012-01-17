@@ -716,6 +716,15 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #popup .bottombox .buttonsignup a { width:60px; height:32px; float:right; background:url('/images/arrow_signup.gif') no-repeat; font-size:14px;font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; color:#f5f5f5 ; padding:18px 0 0 18px; text-decoration:none}
 
 
+.buynow_icon {
+    padding-left: 10px;
+    color: #ccc;
+}
+
+.buynow_icon img {
+    height: 25px;
+}
+
 #playlist {
     position: absolute;
     top: 119px;
