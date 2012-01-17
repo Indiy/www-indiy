@@ -717,7 +717,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     cursor: pointer;
 }
 #playlist .song_store a img {
-    margin-top: -4px;
+    margin-top: -3px;
 }
 #playlist .song_name_free {
     float: left;

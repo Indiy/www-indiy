@@ -277,6 +277,7 @@ function playListPrev()
 function hidePlaylist()
 {
     $('#playlist').animate({"left": "-230px"}, "fast");
+    $('#song_buy_popup').hide();
     g_playListShown = false;
 }
 function showPlaylist()
@@ -303,6 +304,7 @@ function playlistScrollDown()
 }
 function changeSong(i)
 {
+    $('#song_buy_popup').hide();
     playListConfig(i);
 }
 

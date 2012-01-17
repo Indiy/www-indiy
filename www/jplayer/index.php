@@ -815,9 +815,9 @@ $(document).ready(function() { <?=$pagesJava;?> });
             
 
     <div id='song_buy_popup'>
-        <a id='song_buy_popup_mystore' href='#' class='store_icon mystore'></a>
-        <a id='song_buy_popup_amazon' href='#' class='store_icon amazon'></a>
-        <a id='song_buy_popup_itunes' href='#' class='store_icon itunes'></a>
+        <a id='song_buy_popup_mystore' class='store_icon mystore' title='Buy on MyArtistDNA Store'></a>
+        <a id='song_buy_popup_amazon' href='#' class='store_icon amazon' title='Buy on Amazon'></a>
+        <a id='song_buy_popup_itunes' href='#' class='store_icon itunes' title='Download on iTunes'></a>
     </div>
 
     <!-- SIGNUP FORM -->
