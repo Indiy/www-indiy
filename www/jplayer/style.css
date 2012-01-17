@@ -701,6 +701,28 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     overflow: hidden;
 	text-overflow: ellipsis; -o-text-overflow: ellipsis;
 }
+#playlist .song_name_store {
+    float: left;
+    width: 180px;
+    height: 100%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#playlist .song_store {
+    float: right;
+    height: 100%;
+}
+#playlist .song_name_free {
+    float: left;
+    width: 150px;
+    height: 100%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#playlist .song_free {
+    float: right;
+    width: 60px;
+}
 #playlist .scroll_label_bar {
     float: right;
     width: 22px;

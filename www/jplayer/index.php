@@ -570,11 +570,11 @@ $(document).ready(function() { <?=$pagesJava;?> });
 
                         <div class="current-track">
                             <div style='float: left; padding-right: 10px;'>
-                                <span style='color: #555 !important;'>Artist:</span> 
+                                <span style='color: #777 !important;'>Artist:</span> 
                                 <span id='current_track_artist_name'><?=$artist_name;?></span> 
-                                <span style='color: #555 !important;'>// Track:</span>
+                                <span style='color: #777 !important;'>// Track:</span>
                                 <span id='current_track_name'></span>
-                                <span style='color: #555 !important; <? if( !$show_listens ) echo "display: none;"; ?>'>// Listens:</span>
+                                <span style='color: #777 !important; <? if( !$show_listens ) echo "display: none;"; ?>'>// Listens:</span>
                                 <span id='current_track_listens'><?=$first_track_listens;?></span>
                             </div>
                             <div class='vote'>1</div>
