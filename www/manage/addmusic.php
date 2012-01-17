@@ -32,6 +32,11 @@
         $remove_image = $_POST["remove_image"] == 'true';
         $remove_song = $_POST["remove_song"] == 'true';
 		
+        if( $remove_song )
+            $old_sound = '';
+        if( $remove_image )
+            $old_logo = '';
+        
 		// Upload Image
 		if(!empty($_FILES["logo"]["name"])){
 			if (is_uploaded_file($_FILES["logo"]["tmp_name"])) {
@@ -116,10 +121,6 @@
             }
             $product_id = NULL;
         }
-        if( $remove_song )
-            $audio_sound = '';
-        if( $remove_image )
-            $audio_logo = '';
 		
 		//INSERTING THE DATA
 		$tables = "artistid|name|image|bgcolor|bgposition|bgrepeat|audio|download|amazon|itunes|product_id";
