@@ -699,7 +699,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 200px;
     padding-top: 4px;
     padding-bottom: 6px;
-    background-color: rgba(200, 200, 200, 0.6);
+    background-color: rgba(230, 230, 230, 0.6);
     z-index: 1;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
