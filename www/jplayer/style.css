@@ -753,7 +753,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #playlist .song_name_store {
     float: left;
-    width: 230px;
+    width: 200px;
     height: 100%;
     margin-left: 10px;
     cursor: pointer;
