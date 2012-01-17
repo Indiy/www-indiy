@@ -46,6 +46,8 @@
         {
 			if (is_uploaded_file($_FILES["video"]["tmp_name"]))
             {
+                ignore_user_abort(true);
+                set_time_limit(0);
                 $tmp_file = $_FILES['video']['tmp_name'];
 				$ext = explode(".",$_FILES['video']['name']);
                 $upload_ext = strtolower($ext[count($ext)-1]);
@@ -57,9 +59,8 @@
                 $args = "-i_qfactor 0.71 -qcomp 0.6 -qmin 10 -qmax 63 -qdiff 4 -trellis 0 -vcodec libx264 -s 640x360 -vb 300k -ab 64k -ar 44100 -threads 4";
 				if( $upload_ext == "mp4" )
                 {
-                    @system("/bin/cp $tmp_file $dest_file");
-					//@system("/usr/local/bin/ffmpeg -i $tmp_file $args $dest_file");
-                    @unlink($_FILES['video']['tmp_name']);
+                    @move_uploaded_file($tmp_file, $dest_file);
+                    @chmod($dest_file, 0644);
                     //@system("/usr/bin/qafaststart $dest_file");
                     @system("/usr/local/bin/ffmpeg2theora --videoquality 8 --audioquality 6 -o $dest_file_ogv $dest_file");
 
