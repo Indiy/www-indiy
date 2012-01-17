@@ -699,7 +699,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 200px;
     padding-top: 4px;
     padding-bottom: 6px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(200, 200, 200, 0.6);
     z-index: 1;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -716,7 +716,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 19px;
     width: 270px;
     padding-top: 5px;
-    color: #666;
+    color: #444;
     font-family: 'Helvetica',sans-serif;
     font-size: 15px;
     font-weight: lighter;
