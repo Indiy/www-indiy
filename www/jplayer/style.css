@@ -492,7 +492,16 @@ div.current-track { position: fixed; top: 33px; left: 60px; z-index: 12; font-si
 
 a.jp-volume-min { top: 22px; left: 110px; background: #ffffff; width: 4px; height: 57px; }
 a.jp-volume-max { top: 22px; left: 110px; background: #ff9900; width: 4px; height: 57px; }
-div.jp-volume-bar { position: relative; top: 27px; left: 22px; width: 4px; height: 57px; cursor: pointer; z-index: 100; background: #555; }
+div.jp-volume-bar { 
+    position: relative; 
+    top: 27px; 
+    left: 22px; 
+    width: 4px; 
+    height: 57px; 
+    cursor: pointer; 
+    z-index: 100; 
+    border: 1px solid #444;
+}
 div.jp-volume-bar-value { position: absolute; width: 4px; background: #fff; bottom: 0px; }
 
 
