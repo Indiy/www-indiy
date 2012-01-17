@@ -124,7 +124,7 @@ else
         $music_amazon = nohtml($music["amazon"]);
         $music_itunes = nohtml($music["itunes"]);
         $music_product_id = $music["product_id"];
-        $music_download = $music["download"];
+        $music_download = $music["download"] != "0";
         if( !$music_product_id )
             $music_product_id = FALSE;
 
