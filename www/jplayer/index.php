@@ -342,7 +342,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
             echo $song_name;
             echo "</div>";
             echo "<div class='song_store'>";
-            echo "<a title='Purchase Song' onclick='songBuyPopup($song_id);'>";
+            echo "<a id='song_buy_icon_$i' title='Purchase Song' onclick='songBuyPopup($i);'>";
             echo "<img src='/images/buy_icon.png'/>";
             echo "</a>";
             echo "</div>";
