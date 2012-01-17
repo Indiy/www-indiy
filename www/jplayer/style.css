@@ -716,8 +716,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     margin-left: 5px;
     cursor: pointer;
 }
-#playlisst .song_store a img {
-    margin-top: -3px;
+#playlisst .song_store img {
+    margin-top: -4px;
 }
 #playlist .song_name_free {
     float: left;
@@ -728,7 +728,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #playlist .song_free {
     float: right;
-    width: 60px;
+    width: 55px;
+    padding-right: 5px;
 }
 #playlist .song_free a {
     background-color: black;
