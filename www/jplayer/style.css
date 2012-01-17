@@ -250,13 +250,19 @@ ul.products .option { display: block; padding: 3px; width: 250px; margin: 5px 0p
     text-decoration: none; 
     display: block; 
 }
-#navigation ul li a:hover { color: #ccc; }
+#navigation ul li a:hover { 
+    color: #ccc; 
+}
 
-
-
-#progressbg { position: fixed; top: 12px; left: 57px; z-index: 1; width: 753px; height: 15px; background: url('images/new/progressbg.jpg') 0 0 no-repeat; }
-
-
+#progressbg { 
+    position: absolute;
+    top: 12px;
+    left: 57px;
+    z-index: 1;
+    width: 753px;
+    height: 15px;
+    background-color: #292929;
+}
 
 /* CONTROLS */
 ul { padding: 0px; margin: 0px; }
@@ -285,6 +291,7 @@ div.jp-progress {
     width: 595px; 
     height: 4px;
     border: 1px solid #444;
+    background-color: black;
 }
 div.jp-progress div.jp-seek-bar { width:0px; height:100%; cursor: pointer; }
 div.jp-progress div.jp-play-bar { background: #fff; width:0px; height:100%; }
