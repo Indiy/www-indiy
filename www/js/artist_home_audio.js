@@ -7,6 +7,7 @@ $(document).ready(setupAudioPlayer);
 function setupAudioPlayer()
 {
     $('#playlist .song_list').lionbars(/*{ autohide: true }*/);
+    $('#playlist .lb-wrap').css('height','200px');
 
     $("#jquery_jplayer").jPlayer({
         ready: function() {
@@ -310,13 +311,13 @@ function togglePlaylistVisibility()
 }
 function playlistScrollUp()
 {
-    var top = $('#playlist .song_list').scrollTop();
-    $('#playlist .song_list').scrollTop(top - 25);
+    var top = $('#playlist .lb-wrap').scrollTop();
+    $('#playlist .lb-wrap').scrollTop(top - 25);
 }
 function playlistScrollDown()
 {
-    var top = $('#playlist .song_list').scrollTop();
-    $('#playlist .song_list').scrollTop(top + 25);
+    var top = $('#playlist .lb-wrap').scrollTop();
+    $('#playlist .lb-wrap').scrollTop(top + 25);
 }
 function changeSong(i)
 {
