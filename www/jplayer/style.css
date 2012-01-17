@@ -683,8 +683,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #playlist {
     position: absolute;
     top: 119px;
-    left: -230px;
-    width: 260px;
+    left: -280px;
+    width: 310px;
     height: 200px;
     padding-top: 4px;
     padding-bottom: 6px;
@@ -696,14 +696,14 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #playlist .song_list {
     float: left;
-    width: 230px;
+    width: 280px;
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
 }
 #playlist .song_list_item {
     height: 19px;
-    width: 220px;
+    width: 270px;
     padding-top: 5px;
     color: #666;
     font-family: 'Helvetica',sans-serif;
@@ -731,7 +731,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #playlist .song_name_store {
     float: left;
-    width: 180px;
+    width: 230px;
     height: 100%;
     margin-left: 10px;
     cursor: pointer;
@@ -749,7 +749,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #playlist .song_name_free {
     float: left;
-    width: 150px;
+    width: 200px;
     height: 100%;
     margin-left: 10px;
     cursor: pointer;
