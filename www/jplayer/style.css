@@ -713,7 +713,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 100%;
 }
 #playlist .song_store a {
-    margin-left: 5px;
+    margin-right: 5px;
     cursor: pointer;
 }
 #playlist .song_store a img {
