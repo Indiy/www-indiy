@@ -276,7 +276,7 @@ function playListPrev()
 
 function hidePlaylist()
 {
-    $('#playlist').animate({"left": "-230px"}, "fast");
+    $('#playlist').animate({"left": "-280px"}, "fast");
     $('#song_buy_popup').hide();
     g_playListShown = false;
 }
