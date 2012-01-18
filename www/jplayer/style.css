@@ -392,18 +392,7 @@ p.pad { padding: 5px 0; }
 .hide { display: none; }
 
 
-.vote { position: fixed; top: 15px; left: 750px; width: 12px; height: 13px; cursor: pointer; margin: 0px 5px 0px 5px; text-indent: -9999px; background-repeat: no-repeat; float: left; }
-.nay { left: 783px; background-position: -13px 0px !important; }
-
-
-
-#results { width:176px; height:176px; background: url('images/thank_you_for_your_vote.png') center; position: fixed; top: 50%; left: 50%; margin: -88px 0px 0px -88px; display: none; text-align: center; }
-
 hr { color: #333; background: #333; height: 0px; border: 1px solid #333; margin: 5px 0px; }
-
-
-
-
 
 
 
@@ -953,16 +942,16 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border-radius: 6px;
     cursor: pointer;
 }
-#current_song_info .buynow_text:hover {
+#current_song_info .buynow_text:hover,
+#current_song_info .buynow_text:hover a,
+#current_song_info .buynow_text a:hover {
     background-color: #900;
+    text-decoration: none;
+    color: #DDD;
 }
 #current_song_info .buynow_text a {
     text-decoration: none;
     color: black;
-}
-#current_song_info .buynow_text a:hover {
-    text-decoration: none;
-    color: #DDD;
 }
 #current_song_info .buynow_icon img {
     height: 24px;
@@ -1000,3 +989,14 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background: #CCC url('/images/thumbs_down.png') no-repeat -11px 4px;
 }
 
+#vote_results { 
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -88px 0px 0px -88px;
+    width: 176px;
+    height: 176px;
+    background: url('/images/thank_you_for_your_vote.png') center;
+    text-align: center;
+}
