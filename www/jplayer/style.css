@@ -921,7 +921,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #current_song_info .buynow_icon img {
     height: 24px;
 }
-
+#current_song_info .buynow_icon .amazon img {
+}
+#current_song_info .buynow_icon .itunes img {
+    height: 15px;
+    padding-top: 5px;
+}
 #vote_buttons {
     position: absolute;
     top: 10px;

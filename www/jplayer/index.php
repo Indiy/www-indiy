@@ -376,12 +376,12 @@ $(document).ready(function() { <?=$pagesJava;?> });
                     MyArtistDNA Store
                 </a>
             </div>
-            <div id='buynow_amazon' class='buynow_icon'>
+            <div id='buynow_amazon' class='buynow_icon amazon'>
                 <a href='#' title='Buy from Amazon'>
                     <img src='/images/buy_from_amazon.gif'/>
                 </a>
             </div>
-            <div id='buynow_itunes' class='buynow_icon'>
+            <div id='buynow_itunes' class='buynow_icon itunes'>
                 <a href='#' title='Download on iTunes'>
                     <img src='/images/download_on_itunes.png'/>
                 </a>
