@@ -1064,8 +1064,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 .mad_video_css .vjs-controls .vjs-play-control { 
     top: 10px;
     left: 40px;
-    margin: 0; 
     height: 40px;
+    width: 40px;
+    margin: 0;
     background: url('/images/player_buttons.jpg') -36px 0px no-repeat;
 }
 .mad_video_css .vjs-play-control:hover { 
@@ -1076,6 +1077,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 .mad_video_css.vjs-playing .vjs-play-control { 
     background: url('/images/player_buttons.jpg') -36px 0px no-repeat;
+}
+.mad_video_css .vjs-play-control span {
+    display: none;
 }
 
 /* Progress
