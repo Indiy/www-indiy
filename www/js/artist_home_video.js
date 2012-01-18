@@ -53,6 +53,9 @@ function showVideo(n)
 {
     $('#video_player').show();
 
+    var h = $('#video_player').height();
+    $('#player_body').css('height',h-60);
+
     var video = g_videoList[n];
     var video_file = video.video_file;
     var video_file_ogv = video_file.replace(".mp4",".ogv");
