@@ -383,7 +383,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
             </div>
             <div id='buynow_itunes' class='buynow_icon itunes'>
                 <a href='#' title='Download on iTunes'>
-                    <img src='/images/buynow_itunes.png'/>
+                    <img src='/images/buynow_itunes.jpg'/>
                 </a>
             </div>
             <div id='buynow_free' class='buynow_text'>
