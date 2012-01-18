@@ -964,30 +964,32 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 
 #vote_buttons {
     position: absolute;
-    top: 12px;
-    left: 500px;
+    top: 11px;
+    left: 778px;
     height: 30px;
     width: 100px;
+    z-index: 2;
 }
 #vote_buttons .vote_up {
-    height: 24px;
-    width: 24px;
-    background: #353535 url('/images/thumbs_up.png') no-repeat 7px 7px;
+    height: 19px;
+    width: 30px;
+    background: #353535 url('/images/thumbs_up.png') no-repeat 10px 4px;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }
 #vote_buttons .vote_up:hover {
-    background: #CCC url('/images/thumbs_up.png') no-repeat -20px 7px;
+    background: #CCC url('/images/thumbs_up.png') no-repeat -11px 3px;
 }
 #vote_buttons .vote_down {
-    height: 24px;
-    width: 24px;
+    height: 19px;
+    width: 30px;
     margin-left: 7px;
-    background: #353535 url('/images/thumbs_down.png') no-repeat 7px 7px;
+    background: #353535 url('/images/thumbs_down.png') no-repeat 10px 4px;
     border-radius: 10px;
     border: none;
 }
 #vote_buttons .vote_down:hover {
-    background: #CCC url('/images/thumbs_down.png') no-repeat -20px 7px;
+    background: #CCC url('/images/thumbs_down.png') no-repeat -11px 3px;
 }
 
