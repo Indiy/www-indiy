@@ -359,6 +359,41 @@ $(document).ready(function() { <?=$pagesJava;?> });
                 <div class='playlist_label' onclick='togglePlaylistVisibility();'></div>
             </div>
         </div>
+        
+        <div id='current_song_info'>
+            <div class='label'>Artist:</div> 
+            <div id='current_track_artist_name' class='value'><?=$artist_name;?></div> 
+            <div class='slashes'>//</div>
+            <div class='label'>Track:</div>
+            <div id='current_track_name' class='value'></div>
+            <? if( $show_listens ): ?>
+                <div class='slashes'>//</div>
+                <div class='label'>Listens:</div>
+                <div id='current_track_listens' class='value'><?=$first_track_listens;?></div>
+            <? endif; ?>
+            <div class='space'></div>
+            <div id='buynow_mad_store' class='buynow_text'>
+                <a href='#' title='Buy on MyArtistDNA Store'>
+                    MyArtistDNA Store
+                </a>
+            </div>
+            <div id='buynow_amazon' class='buynow_icon'>
+                <a href='#' title='Buy from Amazon'>
+                    <img src='/images/buy_from_amazon.gif'/>
+                </a>
+            </div>
+            <div id='buynow_itunes' class='buynow_icon'>
+                <a href='#' title='Download on iTunes'>
+                    <img src='/images/download_on_itunes.png'/>
+                </a>
+            </div>
+            <div id='buynow_free' class='buynow_text'>
+                <a href='#' title='Download for Free'>
+                    FREE DOWNLOAD
+                </a>
+            </div>
+        </div>
+
 
             <div id="results"></div>
             <div id="shop_results"></div>
@@ -557,38 +592,6 @@ $(document).ready(function() { <?=$pagesJava;?> });
                             <div id="jplayer_volume_bar_value" class="jp-volume-bar-value"></div>
                         </div>
 
-                        <div class="current-track">
-                            <span class='track_label'>Artist:</span> 
-                            <span id='current_track_artist_name'><?=$artist_name;?></span> 
-                            <span class='track_slashes'>//</span>
-                            <span class='track_label'>Track:</span>
-                            <span id='current_track_name'></span>
-                            <? if( $show_listens ): ?>
-                                <span class='track_slashes'>//</span>
-                                <span class='track_label'>Listens:</span>
-                                <span id='current_track_listens'><?=$first_track_listens;?></span>
-                            <? endif; ?>
-                            <span id='buynow_mad_store' class='buynow_icon'>
-                                <a href='#' title='Buy on MyArtistDNA Store'>
-                                    MyArtistDNA Store
-                                </a>
-                            </span>
-                            <span id='buynow_amazon' class='buynow_icon'>
-                                <a href='#' title='Buy from Amazon'>
-                                    <img src='/images/buy_from_amazon.gif'/>
-                                </a>
-                            </span>
-                            <span id='buynow_itunes' class='buynow_icon'>
-                                <a href='#' title='Download on iTunes'>
-                                    <img src='/images/download_on_itunes.png'/>
-                                </a>
-                            </span>
-                            <span id='buynow_free'>
-                                <a href='#' title='Download for Free'>
-                                    FREE DOWNLOAD
-                                </a>
-                            </span>
-                        </div>
                         
                         <div id="jplayer_play_time" class="jp-current-time"></div>
                         <div class="slash">/</div>

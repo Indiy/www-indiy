@@ -166,7 +166,7 @@ function playListConfig( index )
     if( sellamazon != "" ) 
     {
         $('#buynow_amazon a').attr("href",sellamazon);
-        $('#buynow_amazon').show();
+        $('#buynow_amazon').css('display', 'inline-block');
     }
     else
     {
@@ -175,7 +175,7 @@ function playListConfig( index )
     if( sellitunes != "" ) 
     {
         $('#buynow_itunes a').attr("href",sellitunes);
-        $('#buynow_itunes').show();
+        $('#buynow_itunes').css('display', 'inline-block');
     }
     else
     {
@@ -184,7 +184,7 @@ function playListConfig( index )
     if( mystore_product_id )
     {
         $('#buynow_mad_store a').attr("href",'javascript:buySong(' + mystore_product_id + ');');
-        $('#buynow_mad_store').show();
+        $('#buynow_mad_store').css('display', 'inline-block');
     }
     else
     {
@@ -193,7 +193,7 @@ function playListConfig( index )
     if( song.download )
     {
         $('#buynow_free a').attr("href",'/download.php?artist=' + g_artistId + '&id=' + song.id);
-        $('#buynow_free').show();
+        $('#buynow_free').css('display', 'inline-block');
     }
     else
     {
