@@ -1065,7 +1065,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     top: 5px;
     left: 40px;
     height: 40px;
-    width: 40px;
+    width: 36px;
     margin: 0;
     background: transparent;
 }
@@ -1091,7 +1091,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     top: 15px;
     left: 180px;
     right: 200px;
-    height: 19px;
+    height: 18px;
     background-color: #222;
     opacity: 1.0;
     border-radius: 9px;
