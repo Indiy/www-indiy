@@ -852,12 +852,18 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     cursor: pointer;
     background: transparent url('/images/playlist_up_down.png') no-repeat 0px 0px;
 }
+#playlist .scroll_up:hover {
+    background: transparent url('/images/playlist_up_down.png') no-repeat -10px 0px;
+}
 #playlist .scroll_down {
     width: 100%;
     height: 25px;
     cursor: pointer;
     background: transparent url('/images/playlist_up_down.png') no-repeat 0px -25px;
     margin-left: 2px;
+}
+#playlist .scroll_down:hover {
+    background: transparent url('/images/playlist_up_down.png') no-repeat -10px -25px;
 }
 #playlist .playlist_label {
     width: 100%;
@@ -964,7 +970,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 
 #vote_buttons {
     position: absolute;
-    top: 11px;
+    top: 10px;
     left: 778px;
     height: 30px;
     width: 100px;
@@ -973,7 +979,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #vote_buttons .vote_up {
     height: 19px;
     width: 30px;
-    background: #353535 url('/images/thumbs_up.png') no-repeat 10px 3px;
+    background: #333 url('/images/thumbs_up.png') no-repeat 10px 3px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -985,7 +991,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 19px;
     width: 30px;
     margin-left: 7px;
-    background: #353535 url('/images/thumbs_down.png') no-repeat 10px 4px;
+    background: #333 url('/images/thumbs_down.png') no-repeat 10px 4px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
