@@ -917,7 +917,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #current_song_info .space {
     float: left;
-    width: 20px;
+    width: 30px;
 }
 #current_song_info .slashes {
     float: left;
@@ -930,19 +930,20 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     color: #444;
 }
 #current_song_info .buynow_icon {
-    float: left;
     display: none;
+    float: left;
     height: 24px;
-    margin-right: 10px;
+    margin-right: 12px;
 }
-#current_song_info .buynow_text {
+#current_song_info .buynow_text {   
+    display: none;
     float: left;
     padding-top: 2px;
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 3px;
-    margin-right: 10px;
-    font-size: 11px;
+    margin-right: 12px;
+    font-size: 12px;
     font-weight: normal;
     background-color: white;
     color: black;
