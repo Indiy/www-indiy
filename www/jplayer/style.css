@@ -1061,7 +1061,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;
 }
 /* Placement of Control Items */
-.mad_video_css .vjs-controls > div.vjs-time-control       { width: 75px; right: 85px; }
 .mad_video_css .vjs-controls > div.vjs-volume-control     { width: 50px; right: 35px; }
 .mad_video_css .vjs-controls > div.vjs-fullscreen-control { width: 25px; right: 10px; }
 
@@ -1123,8 +1122,14 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 
 /* Time Display
  -------------------------------------------------------------------------------- */
-.mad_video_css .vjs-controls .vjs-time-control { font-size: 11px; }
-.mad_video_css .vjs-controls .vjs-time-control span { line-height: 32px; /* Centering vertically */ }
+.mad_video_css .vjs-controls .vjs-time-control { 
+    top: 9px;
+    left: 183px;
+    width: 75px;
+    font-size: 11px;
+    line-height: 32px;
+    background-color: transparent;
+}
 
 /* Volume
  -------------------------------------------------------------------------------- */
