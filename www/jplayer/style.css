@@ -1043,7 +1043,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 
 .mad_video_css .vjs-controls {
-    display: block !important;
     height: 50px; 
     opacity: 0.9; 
     color: #fff;
