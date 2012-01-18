@@ -373,7 +373,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
             <div class='space'></div>
             <div id='buynow_mad_store' class='buynow_icon madna'>
                 <a href='#' title='Buy on MyArtistDNA Store'>
-                    <img src='/images/buynow_madna.jpg'/>
+                    <img src='/images/buynow_madna.png'/>
                 </a>
             </div>
             <div id='buynow_amazon' class='buynow_icon amazon'>
@@ -383,7 +383,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
             </div>
             <div id='buynow_itunes' class='buynow_icon itunes'>
                 <a href='#' title='Download on iTunes'>
-                    <img src='/images/buynow_itunes.jpg'/>
+                    <img src='/images/buynow_itunes.png'/>
                 </a>
             </div>
             <div id='buynow_free' class='buynow_text'>
