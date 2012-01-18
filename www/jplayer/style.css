@@ -1074,16 +1074,16 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background: transparent;
 }
 .mad_video_css.vjs-paused .vjs-play-control { 
-    background: url('/images/player_buttons.png') 0px -36px no-repeat;
-}
-.mad_video_css.vjs-paused .vjs-play-control:hover { 
     background: url('/images/player_buttons.png') 0px 0px no-repeat;
 }
+.mad_video_css.vjs-paused .vjs-play-control:hover { 
+    background: url('/images/player_buttons.png') 0px -36px no-repeat;
+}
 .mad_video_css.vjs-playing .vjs-play-control { 
-    background: url('/images/player_buttons.png') -36px -36px no-repeat;
+    background: url('/images/player_buttons.png') -36px 0px no-repeat;
 }
 .mad_video_css.vjs-playing .vjs-play-control:hover { 
-    background: url('/images/player_buttons.png') -36px 0px no-repeat;
+    background: url('/images/player_buttons.png') -36px -36px no-repeat;
 }
 .mad_video_css .vjs-play-control span {
     display: none;
