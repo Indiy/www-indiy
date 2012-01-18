@@ -1044,7 +1044,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 
 .mad_video_css .vjs-controls {
     display: block !important;
-    height: 60px; 
+    height: 50px; 
     opacity: 0.9; 
     color: #fff;
     background-color: rgba(0,0,0,0.6);
@@ -1062,7 +1062,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 /* Play/Pause
  -------------------------------------------------------------------------------- */
 .mad_video_css .vjs-controls .vjs-play-control { 
-    top: 10px;
+    top: 5px;
     left: 40px;
     height: 40px;
     width: 40px;
@@ -1089,18 +1089,19 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
  -------------------------------------------------------------------------------- */
 .mad_video_css .vjs-controls .vjs-progress-control {
     top: 15px;
-    left: 180px; 
+    left: 180px;
     right: 200px;
-    height: 16px;
-    background-color: #444;
+    height: 19px;
+    background-color: #222;
     opacity: 1.0;
+    border-radius: 9px;
 }
 .mad_video_css .vjs-progress-control .vjs-progress-holder { 
-    height: 8px; 
-    margin-top: 4px;
-    margin-left: 10px;
-    margin-right: 10px; 
-    border: 1px solid #AAA;
+    height: 5px;
+    margin-top: 6px;
+    margin-left: 80px;
+    margin-right: 10px;
+    border: 1px solid #555;
     border-radius: 0;
 }
 .mad_video_css .vjs-progress-control .vjs-play-progress { 
@@ -1109,8 +1110,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border-radius: 0; 
 }
 .mad_video_css .vjs-progress-control .vjs-load-progress { 
-    height: 8px; 
-    background: #444;  
+    height: 8px;
+    background: #777;
+    border-radius: 0;  
 }
 
 /* Time Display
