@@ -850,20 +850,20 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     margin-top: 6px;
     margin-left: 2px;
     cursor: pointer;
-    background: transparent url('/images/playlist_up_down.png') no-repeat 0px 0px;
+    background: transparent url('/images/playlist_up_down.png') no-repeat 1px 0px;
 }
 #playlist .scroll_up:hover {
-    background: transparent url('/images/playlist_up_down.png') no-repeat -10px 0px;
+    background: transparent url('/images/playlist_up_down.png') no-repeat -29px 0px;
 }
 #playlist .scroll_down {
     width: 100%;
     height: 25px;
     cursor: pointer;
-    background: transparent url('/images/playlist_up_down.png') no-repeat 0px -25px;
+    background: transparent url('/images/playlist_up_down.png') no-repeat 1px -25px;
     margin-left: 2px;
 }
 #playlist .scroll_down:hover {
-    background: transparent url('/images/playlist_up_down.png') no-repeat -10px -25px;
+    background: transparent url('/images/playlist_up_down.png') no-repeat -29px -25px;
 }
 #playlist .playlist_label {
     width: 100%;
