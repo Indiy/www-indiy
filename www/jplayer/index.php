@@ -398,6 +398,22 @@ $(document).ready(function() { <?=$pagesJava;?> });
             <button class='vote_down'  title='Thumbs Down Song' onclick='songVote(0);'></button>
         </div>
         <div id='vote_results'></div>
+        <div id='video_player'>
+            <div class='top_bar'>
+                <div class='logo_title_artist'>
+                    <div class='logo'>
+                        <img src='/artists/images/<?=$artist_logo;?>'/>
+                    </div>
+                    <div class='title_artist'>
+                        <div id='video_title' class='title'></div>
+                        <div class='artist_label'>Artist:</div>
+                        <div class='artist'><?=$artist_name;?></div>
+                    </div>
+                </div>
+                <div class='close_button' onclick='closeVideo();'>&raquo; CLOSE &laquo;</div>
+            </div>
+            <div id='player_body' class='player_body'></div>
+        </div>
 
             <div id="shop_results"></div>
 
@@ -751,11 +767,6 @@ $(document).ready(function() { <?=$pagesJava;?> });
             </div>
             <? } ?>
 
-            <!-- VIDEO PLAYER -->
-            <div id="close_btn" class="close_button" onclick="closeVideo();">&raquo; CLOSE VIDEO PLAYER &laquo;</div>
-            <div id="player_hldr" class="player_holder"></div> 
-            <div id="player_bg"></div> 
-            <!-- /VIDEO PLAYER -->
             
             <div class="store_Close"></div>
             <div class="contact_Close"></div>
