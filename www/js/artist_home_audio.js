@@ -201,27 +201,22 @@ function playListConfig( index )
     }
     
     $('#current_track_name').text(trackname);
-    $(".vote").click(function(event) 
-                     {
-                     var voteBody = $(this).text();
-                     var voteData = "&vartist=" + g_artistId;
-                     voteData += "&vtrack=" + g_currentSongId;
-                     voteData += "&vote=" + voteBody;
-                     
-                     $.post("jplayer/ajax.php", voteData, function(voteResultsNow) {
-                            $("#results").html(voteResultsNow);
-                            $("#results").fadeIn();
-                            setTimeout(function(){ 
-                                       $("#results").fadeOut();
-                                       }, 2000);
-                            });
-                     });
     g_totalListens++;
     updateListens(song.id);
     
-    setTimeout(function(){ 
-               $('#loader').hide();
-               }, 1500);
+    window.setTimeout(function() { $('#loader').hide(); }, 1500);
+}
+function songVote(vote)
+{
+    var voteData = "&vartist=" + g_artistId;
+    voteData += "&vtrack=" + g_currentSongId;
+    voteData += "&vote=" + vote;
+    
+    $.post("/jplayer/ajax.php", voteData, function(voteResultsNow) 
+    {
+        $("#vote_results").fadeIn();
+        window.setTimeout(function() { $("#vote_results").fadeOut(); }, 2000);
+    });
 }
 
 // Function that gets window width
