@@ -393,7 +393,10 @@ $(document).ready(function() { <?=$pagesJava;?> });
                 </a>
             </div>
         </div>
-
+        <div id='vote_buttons'>
+            <button class='vote_up' title='Thumbs Up Song' onclick='songVote(1);'></button>
+            <button class='vote_down'  title='Thumbs Down Song' onclick='songVote(0);'></button>
+        </div>
 
             <div id="results"></div>
             <div id="shop_results"></div>
