@@ -1055,7 +1055,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;
 }
 /* Placement of Control Items */
-.mad_video_css .vjs-controls > div.vjs-progress-control   { left: 85px; right: 160px; }
 .mad_video_css .vjs-controls > div.vjs-time-control       { width: 75px; right: 85px; }
 .mad_video_css .vjs-controls > div.vjs-volume-control     { width: 50px; right: 35px; }
 .mad_video_css .vjs-controls > div.vjs-fullscreen-control { width: 25px; right: 10px; }
@@ -1088,10 +1087,31 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 
 /* Progress
  -------------------------------------------------------------------------------- */
-.mad_video_css .vjs-controls .vjs-progress-control { border-radius: 5px 0 0 5px; -webkit-border-radius: 5px 0 0 5px; -moz-border-radius: 5px 0 0 5px; }
-.mad_video_css .vjs-progress-control .vjs-progress-holder { height: 8px; padding: 1px; margin: 10px 5px 0 10px; border-color: #666666; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; }
-.mad_video_css .vjs-progress-control .vjs-play-progress { height: 8px; background: #00ADEF; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; }
-.mad_video_css .vjs-progress-control .vjs-load-progress { height: 8px; background: #898F8F; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; }
+.mad_video_css .vjs-controls .vjs-progress-control {
+    top: 15px;
+    left: 180px; 
+    right: 200px;
+    height: 16px;
+    background-color: #444;
+    opacity: 1.0;
+}
+.mad_video_css .vjs-progress-control .vjs-progress-holder { 
+    height: 8px; 
+    margin-top: 4px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    border: 1px solid #AAA;
+    border-radius: 0;
+}
+.mad_video_css .vjs-progress-control .vjs-play-progress { 
+    height: 8px; 
+    background: white; 
+    border-radius: 0; 
+}
+.mad_video_css .vjs-progress-control .vjs-load-progress { 
+    height: 8px; 
+    background: #444;  
+}
 
 /* Time Display
  -------------------------------------------------------------------------------- */
