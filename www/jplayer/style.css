@@ -1067,7 +1067,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 /* Play/Pause
  -------------------------------------------------------------------------------- */
 .mad_video_css .vjs-controls .vjs-play-control { 
-    top: 5px;
+    top: 8px;
     left: 40px;
     height: 40px;
     width: 36px;
@@ -1078,13 +1078,13 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background: url('/images/player_buttons.png') 0px 0px no-repeat;
 }
 .mad_video_css.vjs-paused .vjs-play-control:hover { 
-    background: url('/images/player_buttons.png') 0px -36px no-repeat;
+    background: url('/images/player_buttons.png') 0px -42px no-repeat;
 }
 .mad_video_css.vjs-playing .vjs-play-control { 
     background: url('/images/player_buttons.png') -36px 0px no-repeat;
 }
 .mad_video_css.vjs-playing .vjs-play-control:hover { 
-    background: url('/images/player_buttons.png') -36px -36px no-repeat;
+    background: url('/images/player_buttons.png') -36px -42px no-repeat;
 }
 .mad_video_css .vjs-play-control span {
     display: none;
