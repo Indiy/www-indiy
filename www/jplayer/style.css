@@ -893,12 +893,13 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #current_song_info .label {
     float: left;
-    padding-right: 4px;
+    padding-right: 5px;
     padding-top: 4px;
     font-size: 12px;
     font-family: Helvetica, sans-serif;
     font-weight: normal;
     color: #777;
+    font-weight: lighter;
 }
 #current_song_info .value {
     float: left;
@@ -907,6 +908,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-family: Helvetica, sans-serif;
     font-weight: normal;
     color: white;
+    font-weight: lighter;
 }
 #current_song_info .space {
     float: left;
@@ -921,6 +923,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-family: Helvetica, sans-serif;
     font-weight: normal;
     color: #444;
+    font-weight: lighter;
 }
 #current_song_info .buynow_icon {
     display: none;
@@ -932,7 +935,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     display: none;
     float: left;
     padding-top: 2px;
-    padding-bottom: 2px;
+    padding-bottom: 1px;
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 2px;
@@ -953,7 +956,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #current_song_info .buynow_text a:hover {
     text-decoration: none;
-    color: #CCC;
+    color: #DDD;
 }
 #current_song_info .buynow_icon img {
     height: 24px;
