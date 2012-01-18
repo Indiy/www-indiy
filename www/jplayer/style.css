@@ -943,17 +943,16 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border-radius: 6px;
     cursor: pointer;
 }
+#current_song_info .buynow_text:hover {
+    background-color: #900;
+}
 #current_song_info .buynow_text a {
     text-decoration: none;
     color: black;
 }
-#current_song_info .buynow_text:hover {
-    background-color: #900;
-    color: white;
-}
 #current_song_info .buynow_text a:hover {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 #current_song_info .buynow_icon img {
     height: 24px;
