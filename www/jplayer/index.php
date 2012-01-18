@@ -371,7 +371,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
                 <div id='current_track_listens' class='value'><?=$first_track_listens;?></div>
             <? endif; ?>
             <div class='space'></div>
-            <div id='buynow_mad_store' class='buynow_text'>
+            <div id='buynow_mad_store' class='buynow_icon madna'>
                 <a href='#' title='Buy on MyArtistDNA Store'>
                     <img src='/images/buynow_madna.jpg'/>
                 </a>
