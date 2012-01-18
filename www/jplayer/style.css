@@ -973,7 +973,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #vote_buttons .vote_up {
     height: 19px;
     width: 30px;
-    background: #353535 url('/images/thumbs_up.png') no-repeat 10px 4px;
+    background: #353535 url('/images/thumbs_up.png') no-repeat 10px 3px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -985,9 +985,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 19px;
     width: 30px;
     margin-left: 7px;
-    background: #353535 url('/images/thumbs_down.png') no-repeat 10px 4px;
+    background: #353535 url('/images/thumbs_down.png') no-repeat 10px 3px;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }
 #vote_buttons .vote_down:hover {
     background: #CCC url('/images/thumbs_down.png') no-repeat -11px 3px;
