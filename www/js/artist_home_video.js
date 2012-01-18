@@ -64,7 +64,7 @@ function showVideo(n)
     $('#video_title').text(video.name);
 
     var html = '';
-    html += '<div class="video-js-box mad-video-css" style="width:100%; height: 100%;">';
+    html += '<div class="video-js-box mad_video_css" style="width:100%; height: 100%;">';
     html += '<video id="mad_video_1" class="video-js" width="100%" height="100%" controls="controls" preload="auto" poster="' + poster + '">';
     html += '<source src="' + video_file + '" type="video/mp4" />';
     html += '<source src="' + video_file_ogv + '" type="video/ogg" />';
