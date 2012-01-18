@@ -393,7 +393,7 @@ ra_ActiveSearch.prototype.addArtist=function(sid,name,url,logo,website)
 	
 ra_ActiveSearch.prototype.addSong=function(sid,artistid,name,image)
 	{
-	var scategory="// Song Title //";
+	var scategory="//  //";
 	var stext=name;	
 	var hid=artistid+"_S"+sid;
 	var item_data={type:'S',song_image:image,song_name:name,song_id:sid};
