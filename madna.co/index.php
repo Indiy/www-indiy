@@ -1,7 +1,5 @@
 <?php
 
-    /*
-    
     //Production 
     error_reporting(0);
     $dbhost		=	"localhost";
@@ -9,17 +7,17 @@
     $dbpassword	=	"MyartistDNA!";
     $dbname		=	"madcom_mysql";
      
-    */
-
     //echo "<html><body><pre>\n";
     
+    /*
     // MADDEV.COM
     error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE); 
     $dbhost		=	"localhost";
     $dbusername	=	"maddvcom_user";
     $dbpassword	=	"MyartistDNA!";
     $dbname		=	"maddvcom_mysql";
-
+     */
+    
     $connect 	= 	mysql_connect($dbhost, $dbusername, $dbpassword);
     mysql_select_db($dbname,$connect) or die ("Could not select database");
 
