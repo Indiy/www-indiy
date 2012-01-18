@@ -1015,6 +1015,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #video_player .logo_title_artist {
     float: left;
+    height: 60px;
+}
+#video_player .logo {
+    float: left;
+    width: 90px;
+    height: 60px;
 }
 #video_player .title_artist {
     float: left;
