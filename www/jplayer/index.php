@@ -205,11 +205,10 @@ else
 <title><? echo siteTitle() . ' - ' . $artist_name; ?></title>
 <meta name="description" content="MyArtistDNA - <?=$artist_name;?> - Home Page - Come here to connect with your favorite artist."/>
 
+<link href="/css/video-js.css"rel="stylesheet" type="text/css" />
+<link href="/css/lionbars.css" rel="stylesheet" type="text/css" />
 <link href="/jplayer/style.css" rel="stylesheet" type="text/css" /> 
 <link href="/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
-<link href="/css/video-js.css"rel="stylesheet" type="text/css" />
-<link href="/css/vim.css" rel="stylesheet" type="text/css" />
-<link href="/css/lionbars.css" rel="stylesheet" type="text/css" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
