@@ -948,8 +948,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background-color: white;
     color: black;
     border-radius: 6px;
+    cursor: pointer;
 }
-
+#current_song_info .buynow_text:hover {
+    background-color: #900;
+    color: white;
+}
 #current_song_info .buynow_icon img {
     height: 24px;
 }
