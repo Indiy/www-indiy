@@ -414,6 +414,15 @@ $(document).ready(function() { <?=$pagesJava;?> });
             </div>
             <div id='player_body' class='player_body'></div>
         </div>
+        <div id='right_box'>
+            <div id="login_signup" class='login_signup'><button onclick='showLogin();'>Log in | Sign Up</button></div>
+            <div class='logo_box'>
+            <? if ($artist_logo) { ?>
+                <img class='logo' src="/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&w=145" />
+            <? } ?>
+            </div>
+            <div class='up_down_arrow'></div>
+        </div>
 
             <div id="shop_results"></div>
 
@@ -545,15 +554,6 @@ $(document).ready(function() { <?=$pagesJava;?> });
             <div id="image"></div>
             <div id="loader"><img src="/jplayer/images/ajax-loader.gif" /></div>
             
-            <? if (!$fan) { ?>
-            <div id="logo">
-                <div id="login_signup"><button onclick='showLogin();'>Log in | Sign Up</button></div>
-                <div id="makeroomforlogo">
-                <? if ($artist_logo) { ?><img src="/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&h=145&w=145" /><? } ?>
-                </div>
-                <div class="bottom"></div>
-            </div>
-            <? } ?>
             
             
             <div id="navigation">

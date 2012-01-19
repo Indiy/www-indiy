@@ -310,25 +310,6 @@ div#loader { position: fixed; top: 50%; left: 50%; margin: -16px -16px 0px 0px; 
 
 
 
-/* LOGO */
-/* div#logo { padding: 10px; background: url('images/new/logo_closed.png') no-repeat center bottom; position: fixed; overflow: hidden; padding-bottom:30px; top: 10px; left: 100%; width: 155px; color: #fff; margin: 0px 0px 0px -200px; z-index: 5; } */
-div#logo { padding: 10px; background: url('images/new/logo_open_close.png') no-repeat left bottom; position: fixed; overflow: hidden; padding-bottom:30px; top: 10px; left: 100%; width: 155px; color: #fff; margin: 0px 0px 0px -200px; z-index: 5; }
-
-div#logo p { font-size: 10px; margin-bottom: 0px; }
-div#logo.openlogo { background: url('images/new/logo_opened.png') no-repeat center bottom; }
-div#logo #makeroomforlogo { width: 100%; height: 0px; overflow: hidden; border-left: 0px solid #fff; }
-div#logo #makeroomfordetails { width: 100%;overflow: hidden; border-right: 0px solid #fff; }
-div#logo .bottom { width: 100%; height: 25px; cursor: pointer; border-left: 0px solid #fff; position:absolute; bottom:0; }
-div#logo img { width: 145px; margin: 0px  0px 20px 7px;  }
-div#logo .buynow { width: 65px; height: 25px; background: url('images/new/buynow_spot.png') -12px 0 no-repeat; float: left; }
-div#logo .show_mystore { width: 25px; height: 25px; float: left; display: block; }
-div#logo .mystore { width: 25px; height: 25px; background: url('images/new/buynow_spot.png') -75px 0 no-repeat; float: left; }
-div#logo .showamazon { width: 25px; height: 25px; float: left; display: block; }
-div#logo .amazon { width: 25px; height: 25px; background: url('images/new/buynow_spot.png') -103px 0 no-repeat; float: left; display: block; }
-div#logo .showitunes { width: 25px; height: 25px; float: left; display: block; }
-div#logo .itunes { width: 25px; height: 25px; background: url('images/new/buynow_spot.png') -132px 0 no-repeat; float: left; display: block; }
-div#logo .mighthide { display:none; }
-
 
 /* Get Social */
 div#getsocial { display: none; position: fixed; top: 100%; right: 0; margin: -75px 0px 0px 0px; height: 20px; padding: 5px; background-image: url('images/bg.png'); }
@@ -1215,6 +1196,82 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     /* Height of play icon is total top & bottom border widths. Color is transparent. */
     border-top: 18px solid rgba(0,0,0,0); border-bottom: 18px solid rgba(0,0,0,0);
 }
+
+/* LOGO */
+/* div#logo { padding: 10px; background: url('images/new/logo_closed.png') no-repeat center bottom; position: fixed; overflow: hidden; padding-bottom:30px; top: 10px; left: 100%; width: 155px; color: #fff; margin: 0px 0px 0px -200px; z-index: 5; } */
+div#logo { padding: 10px; background: url('images/new/logo_open_close.png') no-repeat left bottom; position: fixed; overflow: hidden; padding-bottom:30px; top: 10px; left: 100%; width: 155px; color: #fff; margin: 0px 0px 0px -200px; z-index: 5; }
+
+div#logo p { font-size: 10px; margin-bottom: 0px; }
+div#logo.openlogo { background: url('images/new/logo_opened.png') no-repeat center bottom; }
+div#logo #makeroomforlogo { width: 100%; height: 0px; overflow: hidden; border-left: 0px solid #fff; }
+div#logo #makeroomfordetails { width: 100%;overflow: hidden; border-right: 0px solid #fff; }
+div#logo .bottom { width: 100%; height: 25px; cursor: pointer; border-left: 0px solid #fff; position:absolute; bottom:0; }
+div#logo img { width: 145px; margin: 0px  0px 20px 7px;  }
+div#logo .buynow { width: 65px; height: 25px; background: url('images/new/buynow_spot.png') -12px 0 no-repeat; float: left; }
+div#logo .show_mystore { width: 25px; height: 25px; float: left; display: block; }
+div#logo .mystore { width: 25px; height: 25px; background: url('images/new/buynow_spot.png') -75px 0 no-repeat; float: left; }
+div#logo .showamazon { width: 25px; height: 25px; float: left; display: block; }
+div#logo .amazon { width: 25px; height: 25px; background: url('images/new/buynow_spot.png') -103px 0 no-repeat; float: left; display: block; }
+div#logo .showitunes { width: 25px; height: 25px; float: left; display: block; }
+div#logo .itunes { width: 25px; height: 25px; background: url('images/new/buynow_spot.png') -132px 0 no-repeat; float: left; display: block; }
+div#logo .mighthide { display:none; }
+
+#right_box {
+    position: absolute;
+    top: 0px;
+    right: 13px;
+    width: 175px;
+    background-color: #555;
+}
+
+#right_box .login_signup {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #DDD;
+    text-align: center;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+#right_box .login_signup a, #right_box .login_signup button {
+    color: #DDD;
+    text-align: center;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: lighter;
+}
+#right_box .login_signup a:hover, #right_box .login_signup button:hover {
+    color: #777;
+}
+#right_box .logo_box {
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#right_box .logo {
+    width: 100%;
+}
+#right_box .up_down_arrow {
+    height: 17px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-right: 4px;
+    margin-left: 4px;
+    background: transparent url('/images/right_box_down.png') no-repeat center center;
+    pointer: cursor;
+}
+
+
+
+
+
+
+
+
 
 
 
