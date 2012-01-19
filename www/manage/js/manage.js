@@ -330,6 +330,13 @@ function onVideoChange()
 
 function onAddMusicSubmit()
 {
+    var song_image = document.getElementById('song_image');
+    if( g_needsImage && ( !song_image || !song_image.value || song_image.value.length == 0 ) )
+    {
+        window.alert("Please upload an image for the page.");
+        return false;
+    }
+
     function fillMusicForm(form_data)
     {
         var artist_id = $('#artist_id').val();
