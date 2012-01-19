@@ -192,7 +192,7 @@ $(document).ready(showFirstInstruction);
             </ul>
             <h6>Platform</h6>
             <ul>
-                <li><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Page</a></li>
+                <li><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Music + Photo</a></li>
                 <li><a href="addvideo.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Video</a></li>
                 <li><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Tab</a></li>
                 <li><a href="stats.php?userId=<?=$artistID;?>">View Analytics</a></li>
@@ -217,7 +217,7 @@ $(document).ready(showFirstInstruction);
         <div class="playlist">
         	<div class="heading">
             <h5>PAGES</h5>
-            <div class="buttonadd"><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Page</a></div>
+            <div class="buttonadd"><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Music + Photo</a></div>
             </div>
             
             <div class="list" style='display: none;'>
