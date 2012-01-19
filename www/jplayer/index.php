@@ -43,17 +43,17 @@ else
     
     $facebook_page = $row['fb_page_url'];
     
-    $hide_fb = FALSE;
+    $hide_fb = '';
     if( $row['fb_setting'] == 'DISABLED' )
-        $hide_fb = TRUE;
+        $hide_fb = 'style="display: none;"';
     if( $facebook_page == '' )
-        $hide_fb = TRUE;
+        $hide_fb = 'style="display: none;"';
     
-    $hide_tw = FALSE;
+    $hide_tw = '';
     if( $row['tw_setting'] == 'DISABLED' )
-        $hide_tw = TRUE;
+        $hide_tw = 'style="display: none;"';
     if( $row['twitter'] == '' )
-        $hide_tw = TRUE;
+        $hide_tw = 'style="display: none;"';
     
     if ($artist_listens == "1") { $show_listens = "true"; }
 
@@ -431,17 +431,12 @@ $(document).ready(function() { <?=$pagesJava;?> });
             <? if (!$fan) { ?>
             <div class="socialize">
                 <div class="header">
-                    <div class="title"></div>
+                    <div class="title" onclick='toggleSocialTab();'></div>
                     <div class="buttons">
-                        <?
-                            if( !$hide_fb )
-                                echo "<div class='facebook holder'><div></div></div>\n";
-                            if( !$hide_tw )
-                                echo "<div class='twitter holder'><div></div></div>\n";
-                        ?>
-                        
-                        <div class="email holder"><div></div></div>
-                        <div class="share holder"><div></div></div>
+                        <div class='facebook holder' <?=$hide_fb;?> onclick='toggleSocialFB();'><div></div></div>
+                        <div class='twitter holder'  <?=$hide_tw;?> onclick='toggleSocialTW();'><div></div></div>
+                        <div class="email holder" onclick='toggleSocialEmail();'><div></div></div>
+                        <div class="share holder" onclick='toggleSocialShare();'><div></div></div>
                     </div>
                 </div>
                 
