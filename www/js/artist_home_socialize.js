@@ -1,12 +1,12 @@
 
-var socialize_minimized = true;
-var socialize_tab = '';
+var g_socialMinimized = true;
+var g_currentSocialTab = '';
 
 function toggleSocialTab() 
 {
-    if( socialize_minimized )
+    if( g_socialMinimized )
     {
-        if( socialize_tab == '' )
+        if( g_currentSocialTab == '' )
         {
             if( $(".socialize .facebook").is(':visible') )
             {
@@ -35,13 +35,12 @@ function toggleSocialTab()
 function toggleSocialFB() 
 {
     $(".buttons div").removeClass("active");
-    $(".socialize .facebook").addClass("active");
     $(".socialize .body .tab").hide();
     $(".socialize .body #facebook").show();
     
-    if( socialize_tab == 'facebook' ) 
+    if( g_currentSocialTab == 'facebook' ) 
     {
-        if( socialize_minimized )
+        if( g_socialMinimized )
             openSocialTab();
         else
             closeSocialTab();
@@ -49,20 +48,19 @@ function toggleSocialFB()
     else 
     {
         openSocialTab();
-        socialize_tab = 'facebook';
+        g_currentSocialTab = 'facebook';
     }
 }
 
 function toggleSocialTW() 
 {
     $(".buttons div").removeClass("active");
-    $(".socialize .twitter").addClass("active");
     $(".socialize .body .tab").hide();
     $(".socialize .body #twitter").show();
     
-    if( socialize_tab == 'twitter' ) 
+    if( g_currentSocialTab == 'twitter' ) 
     {
-        if( socialize_minimized )
+        if( g_socialMinimized )
             openSocialTab();
         else
             closeSocialTab();
@@ -70,20 +68,19 @@ function toggleSocialTW()
     else 
     {
         openSocialTab();
-        socialize_tab = 'twitter';
+        g_currentSocialTab = 'twitter';
     }
 }
 
 function toggleSocialEmail()
 {
     $(".buttons div").removeClass("active");
-    $(".socialize .email").addClass("active");
     $(".socialize .body .tab").hide();
     $(".socialize .body #email").show();
     
-    if( socialize_tab == 'email' ) 
+    if( g_currentSocialTab == 'email' ) 
     {
-        if( socialize_minimized )
+        if( g_socialMinimized )
             openSocialTab();
         else
             closeSocialTab();
@@ -91,7 +88,7 @@ function toggleSocialEmail()
     else 
     {
         openSocialTab();
-        socialize_tab = 'email';
+        g_currentSocialTab = 'email';
     }
     
 }
@@ -99,35 +96,40 @@ function toggleSocialEmail()
 function toggleSocialShare() 
 {
     $(".buttons div").removeClass("active");
-    $(".socialize .share").addClass("active");
     $(".socialize .body .tab").hide();
     $(".socialize .body #share").show();
     
-    if( socialize_tab == 'share' ) {
-        if( socialize_minimized )
+    if( g_currentSocialTab == 'share' ) {
+        if( g_socialMinimized )
             openSocialTab();
         else
             closeSocialTab();
     }
-    else {
+    else 
+    {
         openSocialTab();
-        socialize_tab = 'share';
+        g_currentSocialTab = 'share';
     }
     
 }
 
-function openSocialTab() {
-    if( socialize_minimized ) {
+function openSocialTab() 
+{
+    if( g_socialMinimized ) 
+    {
+        if( g_currentSocialTab != '' )
+            $(".socialize ." + g_currentSocialTab).addClass("active");
         $(".socialize").animate({ bottom: "0" }, 300);
-        socialize_minimized = false;
+        g_socialMinimized = false;
     }
 }
 
 function closeSocialTab() {
     $(".buttons div").removeClass("active");
-    if( !socialize_minimized ) {
+    if( !g_socialMinimized ) 
+    {
         $(".socialize").animate({ bottom: "-361px" }, 300);
-        socialize_minimized = true;
+        g_socialMinimized = true;
     }
 }
 
