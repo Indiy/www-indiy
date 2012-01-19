@@ -311,8 +311,6 @@ function sendContactForm()
 }
 function sendBookingForm()
 {
-    $('.contact table').hide();
-    $('#contact_thanks').show();
     
     var artist_id = g_artistId;
     var name = $('#contact_name').val();
@@ -322,15 +320,32 @@ function sendBookingForm()
     var budget = $('#booking_budget option:selected').val();
     var comments = $('#booking_comments').val();
     
-    var submit = "";
-    submit += "&artist_id=" + artist_id;
-    submit += "&name=" + escape(name);
-    submit += "&email=" + escape(email);
-    submit += "&date=" + escape(date);
-    submit += "&location=" + escape(location);
-    submit += "&budget=" + escape(budget);
-    submit += "&comments=" + escape(comments);
-    
-    $.post("/data/booking.php", submit, function(response) { });
+    if( name.length == 0 
+       || name == 'Name...'
+       || comments.length == 0 
+       || !email.match(EMAIL_REGEX) 
+       || email == 'Email...'
+       || location.length == 0
+       || date.length == 0
+       )
+    {
+        window.alert('Please enter all required fields.');
+    }
+    else
+    {
+        $('.contact table').hide();
+        $('#contact_thanks').show();
+
+        var submit = "";
+        submit += "&artist_id=" + artist_id;
+        submit += "&name=" + escape(name);
+        submit += "&email=" + escape(email);
+        submit += "&date=" + escape(date);
+        submit += "&location=" + escape(location);
+        submit += "&budget=" + escape(budget);
+        submit += "&comments=" + escape(comments);
+        
+        $.post("/data/booking.php", submit, function(response) { });
+    }
 }
 
