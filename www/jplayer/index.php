@@ -417,11 +417,12 @@ $(document).ready(function() { <?=$pagesJava;?> });
         <div id='right_box'>
             <div id="login_signup" class='login_signup'><button onclick='showLogin();'>Log in | Sign Up</button></div>
             <div class='logo_box'>
+                <div class='logo_box_spacer'></div>
             <? if ($artist_logo) { ?>
                 <img class='logo' src="/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&w=145" />
             <? } ?>
             </div>
-            <div class='up_down_arrow'></div>
+            <div class='up_down_arrow' onclick='toggleRightBox();'></div>
         </div>
 
             <div id="shop_results"></div>
