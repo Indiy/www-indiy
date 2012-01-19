@@ -1,4 +1,136 @@
 
+var socialize_minimized = true;
+var socialize_tab = '';
+
+function toggleSocialTab() 
+{
+    if( socialize_minimized )
+    {
+        if( socialize_tab == '' )
+        {
+            if( $(".socialize .facebook").is(':visible') )
+            {
+                toggleSocialFB();
+            }
+            else if(  $(".socialize .twitter").is(':visible') )
+            {
+                toggleSocialTW();
+            }
+            else
+            {
+                toggleSocialEmail();
+            }
+        }
+        else
+        {
+            openSocialTab();
+        }
+    }
+    else
+    {
+        closeSocialTab();
+    }
+}
+
+function toggleSocialFB() 
+{
+    $(".buttons div").removeClass("active");
+    $(".socialize .facebook").addClass("active");
+    $(".socialize .body .tab").hide();
+    $(".socialize .body #facebook").show();
+    
+    if( socialize_tab == 'facebook' ) 
+    {
+        if( socialize_minimized )
+            openSocialTab();
+        else
+            closeSocialTab();
+    }
+    else 
+    {
+        openSocialTab();
+        socialize_tab = 'facebook';
+    }
+}
+
+function toggleSocialTW() 
+{
+    $(".buttons div").removeClass("active");
+    $(".socialize .twitter").addClass("active");
+    $(".socialize .body .tab").hide();
+    $(".socialize .body #twitter").show();
+    
+    if( socialize_tab == 'twitter' ) 
+    {
+        if( socialize_minimized )
+            openSocialTab();
+        else
+            closeSocialTab();
+    }
+    else 
+    {
+        openSocialTab();
+        socialize_tab = 'twitter';
+    }
+}
+
+function toggleSocialEmail()
+{
+    $(".buttons div").removeClass("active");
+    $(".socialize .email").addClass("active");
+    $(".socialize .body .tab").hide();
+    $(".socialize .body #email").show();
+    
+    if( socialize_tab == 'email' ) 
+    {
+        if( socialize_minimized )
+            openSocialTab();
+        else
+            closeSocialTab();
+    }
+    else 
+    {
+        openSocialTab();
+        socialize_tab = 'email';
+    }
+    
+}
+
+function toggleSocialShare() 
+{
+    $(".buttons div").removeClass("active");
+    $(".socialize .share").addClass("active");
+    $(".socialize .body .tab").hide();
+    $(".socialize .body #share").show();
+    
+    if( socialize_tab == 'share' ) {
+        if( socialize_minimized )
+            openSocialTab();
+        else
+            closeSocialTab();
+    }
+    else {
+        openSocialTab();
+        socialize_tab = 'share';
+    }
+    
+}
+
+function openSocialTab() {
+    if( socialize_minimized ) {
+        $(".socialize").animate({ bottom: "0" }, 300);
+        socialize_minimized = false;
+    }
+}
+
+function closeSocialTab() {
+    $(".buttons div").removeClass("active");
+    if( !socialize_minimized ) {
+        $(".socialize").animate({ bottom: "-361px" }, 300);
+        socialize_minimized = true;
+    }
+}
+
 function submitNewsletter()
 {    
     $('#news_form').hide();
