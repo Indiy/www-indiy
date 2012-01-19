@@ -33,6 +33,7 @@
         $mad_store = $_POST["mad_store"] == 'true';
         $remove_image = $_POST["remove_image"] == 'true';
         $remove_song = $_POST["remove_song"] == 'true';
+        $bg_style = $_POST["bg_style"];
 		
         if( $remove_song )
             $old_sound = '';
@@ -137,7 +138,8 @@
                         "amazon" => $audio_amazon,
                         "itunes" => $audio_itunes,
                         "product_id" => $product_id,
-                        "upload_audio_filename" => $upload_audio_filename
+                        "upload_audio_filename" => $upload_audio_filename,
+                        "bg_style" => $bg_style
                         );
 		
 		if ($_POST["id"] != "") 
@@ -187,6 +189,7 @@
 		refresh("1","?p=home");
 	}
     $audio_bgcolor = '000000';
+    $bg_style = 'STRETCH';
 	
 	if ($_GET["id"] != "") {
 		$artistid=$_REQUEST['artist_id'];
@@ -204,6 +207,7 @@
 		$head_title = "Edit";
         $mad_store = $row["product_id"];
         $upload_audio_filename = $row["upload_audio_filename"];
+        $bg_style = $row["bg_style"];
 	}else{
 		$head_title = "Add";
 	}
@@ -302,40 +306,25 @@ function onImageRemove()
             <input id='song_image' type="file" name="logo" class='right_file' />
         </div>
         <div class='input_container'>
+            <div class='left_label'>Background Style</div>
+            <select id='bg_style' name="bg_style" class='right_drop'>
+            <?
+                $styles = array('STRETCH','CENTER','TILE');
+                foreach( $styles as $style ) 
+                {
+                    if( $style == $bg_style )
+                        $selected = "selected";
+                    else
+                        $selected = "";
+                    $display_style = ucfirst($style);
+                    echo "<option value='$style' $selected>$display_style</option>\n";
+                }
+            ?>
+            </select>
+        </div>
+        <div class='input_container'>
             <div class='left_label'>Background Color</div>
             <input id='song_bgcolor' type="text" name="bgcolor" maxlength="6" size="6" class='color' value="<?=$audio_bgcolor;?>" />
-        </div>
-        <div class='input_container'>
-            <div class='left_label'>Background Position</div>
-            <select id='song_bgposition' name="bgposition" class='right_drop'>
-            <?
-                $positions = array("top left","top center","top right","center left","center center","center right","bottom left","bottom center","bottom right");
-                foreach ($positions as $position) {
-                    if ($audio_bgposition == $position) {
-                        $selected = " selected";
-                    } else {
-                        $selected = "";
-                    }
-                    echo "<option value='{$position}'{$selected}>".ucfirst($position)."</option>\n";
-                }
-            ?>
-            </select>
-        </div>
-        <div class='input_container'>
-            <div class='left_label'>Background Repeat</div>
-            <select id='song_bgrepeat' name="bgrepeat" class='right_drop'>
-            <?
-                $colors = array("repeat","no-repeat","stretch");
-                foreach ($colors as $color) {
-                    if ($audio_bgrepeat == $color) {
-                        $selected = " selected";
-                    } else {
-                        $selected = "";
-                    }
-                    echo "<option value='{$color}'{$selected}>".ucfirst($color)."</option>\n";
-                }
-            ?>
-            </select>
         </div>
         <div class='input_container'>
             <div class='left_label'>Free Download</div>
