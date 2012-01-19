@@ -1191,7 +1191,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;
 }
 .mad_video_css div.vjs-big-play-button:hover {
-    background: #00ADEF;
+    background: #555;
     opacity: 1;
 }
 .mad_video_css div.vjs-big-play-button span {
