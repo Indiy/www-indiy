@@ -11,12 +11,14 @@
 
 	if ($_POST["WriteTags"] != "") {
 		
+        $upload_audio_filename = NULL;
 		if ($_POST["id"] != "") {
 			$row = mf(mq("select * from {$database} where id='{$_POST[id]}'"));
 			
 			$old_logo = $row["image"];
 			$old_sound = $row["audio"];
             $old_product_id = $row["product_id"];
+            $upload_audio_filename = $row["upload_audio_filename"];
 		}
 		
 		extract($_REQUEST);
@@ -88,8 +90,7 @@
                         $audio_sound = '';
                     }
                 }
-
-				//$audio_sound = $audio_sound_ogg;
+                $upload_audio_filename = $_FILES["audio"]["name"];
 			} else {
 				if ($old_sound != $audio_sound) {
 					$audio_sound = $old_sound;
@@ -123,13 +124,28 @@
         }
 		
 		//INSERTING THE DATA
-		$tables = "artistid|name|image|bgcolor|bgposition|bgrepeat|audio|download|amazon|itunes|product_id";
-		$values = "{$artistid}|{$audio_name}|{$audio_logo}|{$audio_bgcolor}|{$audio_bgposition}|{$audio_bgrepeat}|{$audio_sound}|{$audio_download}|{$audio_amazon}|{$audio_itunes}|{$product_id} ";
+        
+        $values = array("artistid" => $artistid,
+                        "name" => $audio_name,
+                        "image" => $audio_logo,
+                        "bgcolor" => $audio_bgcolor,
+                        "bgposition" => $audio_bgposition,
+                        "bgrepeat" => $audio_bgrepeat,
+                        "audio" => $audio_sound,
+                        "download" => $audio_download,
+                        "amazon" => $audio_amazon,
+                        "itunes" => $audio_itunes,
+                        "product_id" => $product_id,
+                        "upload_audio_filename" => $upload_audio_filename
+                        );
 		
-		if ($_POST["id"] != "") {
-			update($database,$tables,$values,"id",$_POST["id"]);
-		} else {
-			insert($database,$tables,$values);
+		if ($_POST["id"] != "") 
+        {
+			mysql_update('mydna_musicplayer_audio',$values,"id",$_POST["id"]);
+		} 
+        else 
+        {
+			mysql_insert('mydna_musicplayer_audio',$values);
             $new_song_id = mysql_insert_id();
 		}
 		
@@ -186,6 +202,7 @@
 		$audio_itunes = $row["itunes"];
 		$head_title = "Edit";
         $mad_store = $row["product_id"];
+        $upload_audio_filename = $row["upload_audio_filename"];
 	}else{
 		$head_title = "Add";
 	}
@@ -199,17 +216,21 @@
     $audio_html = '';
     if( $audio_sound != '' )
     {
-        $audio_html .= $audio_sound;
+        if( $upload_audio_filename && strlen($upload_audio_filename) > 0 )
+            $audio_html .= $upload_audio_filename;
+        else
+            $audio_html .= $audio_sound;
         $audio_html .= "<button onclick='return onSongRemove();'></button>";
     }
 	
-	if ($audio_download == "1") { $yesDownload = " checked"; } else { $noDownload = " checked"; }
-	$audio_name = stripslashes($audio_name);
+	if( $audio_download == "1" )
+        $yesDownload = " checked"; 
+    else 
+        $noDownload = " checked"; 
 	
+    $audio_name = stripslashes($audio_name);	
 ?>
 	
-    <link rel="stylesheet" media="screen" type="text/css" href="includes/css/layout.css" />
-
 <script type="text/javascript">
 
 $(document).ready(setupQuestionTolltips);
