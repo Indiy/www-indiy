@@ -217,7 +217,7 @@ $(document).ready(showFirstInstruction);
         <div class="playlist">
         	<div class="heading">
             <h5>PAGES</h5>
-            <div class="buttonadd"><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Page</a></div>
+            <div class="buttonadd"><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Music</a></div>
             </div>
             
             <div class="list" style='display: none;'>
