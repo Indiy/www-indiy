@@ -11,11 +11,13 @@
     $_SESSION['tabOpen']='videolist';
 	if ($_POST["name"] != "") 
     {
+        $upload_video_filename = NULL;
 		if ($_POST["id"] != "") 
         {
 			$row = mf(mq("select `id`,`image`,`video` from `{$database}` where `id`='{$_POST["id"]}'"));
 			$old_logo = $row["image"];
 			$old_sound = $row["video"];
+            $upload_video_filename = $row["upload_video_filename"];
 		}
 		
 		$video_name = my($_POST["name"]);
@@ -70,6 +72,7 @@
                     @system("/usr/local/bin/ffmpeg2theora --videoquality 8 --audioquality 6 -o $dest_file_ogv $dest_file");
 
                     $video_sound = $video_sound_mp4;
+                    $upload_video_filename = $_FILES["video"]["name"];
                 }
 				else if( $upload_ext == "mov" )
                 {
@@ -79,6 +82,7 @@
                     @system("/usr/local/bin/ffmpeg2theora --videoquality 8 --audioquality 6 -o $dest_file_ogv $dest_file");
 
                     $video_sound = $video_sound_mp4;
+                    $upload_video_filename = $_FILES["video"]["name"];
 				}
                 else
                 {
@@ -100,8 +104,8 @@
 		}
 		
         
-		$tables = "artistid|name|image|video";
-		$values = "{$artistid}|{$video_name}|{$video_logo}|{$video_sound}";
+		$tables = "artistid|name|image|video|upload_video_filename";
+		$values = "{$artistid}|{$video_name}|{$video_logo}|{$video_sound}|$upload_video_filename";
 		
 		if ($_POST["id"] != "") 
         {
@@ -133,6 +137,7 @@
 		$video_name = $row["name"];
 		$video_logo = $row["image"];
 		$video_sound = $row["video"];
+        $upload_video_filename = $row["upload_video_filename"];
 
 		$head_title	=	"Edit";
 	}
@@ -160,7 +165,10 @@
     $video_html = '';
     if( $video_sound != '' )
     {
-        $video_html .= $video_sound;
+        if( $upload_video_filename && strlen($upload_video_filename) > 0 )
+            $video_html .= $upload_video_filename;
+        else
+            $video_html .= $video_sound;
         $video_html .= "<button onclick='return onVideoRemove();'></button>";
     }
 
