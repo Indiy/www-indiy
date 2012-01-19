@@ -358,6 +358,6 @@ function songBuyPopup(i)
     
     $('#song_buy_popup').css('top',top);
     $('#song_buy_popup').css('left',left);
-    $('#song_buy_popup').show();
+    $('#song_buy_popup').toggle();
 }
 
