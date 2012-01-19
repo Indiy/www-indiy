@@ -140,11 +140,10 @@ function playListConfig( index )
     var image = song.image;
     
     var color = song.bgcolor;
-    var position = song.bgposition;
-    var repeat = song.bgrepeat;
+    var bg_style = song.bg_style;
     
     $('#image').css("background-color", "#"+color);
-    if( repeat == 'stretch' )
+    if( bg_style == 'STRETCH' )
     {
         var img_url = "/timthumb.php?src=" + image + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
         var style = "width: 100%; height: 100%;";
@@ -154,12 +153,19 @@ function playListConfig( index )
         $('#image').css("background-repeat","no-repeat");
         $('#image').css("background-position","center center");
     }
-    else
+    else if( bg_style == 'CENTER' )
     {
         $('#image').html("");
         $('#image').css("background-image","url(" + image + ")");
-        $('#image').css("background-repeat",repeat);
-        $('#image').css("background-position",position);
+        $('#image').css("background-repeat","no-repeat");
+        $('#image').css("background-position","center center");
+    }
+    else if( bg_style == 'TILE' )
+    {
+        $('#image').html("");
+        $('#image').css("background-image","url(" + image + ")");
+        $('#image').css("background-repeat","repeat");
+        $('#image').css("background-position","center center");
     }
     $('#image').fadeIn();
     

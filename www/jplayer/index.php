@@ -116,8 +116,7 @@ else
         $music_audio = $music["audio"];
         $music_image = $music["image"];
         $music_bgcolor = $music["bgcolor"];
-        $music_bgrepeat = $music["bgrepeat"];
-        $music_bgposition = $music["bgposition"];
+        $bg_style = $music["bg_style"];
         $music_name = stripslashes($music["name"]);
         $music_name = str_replace('"', '&quot;', $music_name);
         $music_artistid = $music["artistid"];
@@ -134,8 +133,7 @@ else
                       "download" => $music_download,
                       "image" => '/artists/images/' . $music_image,
                       "bgcolor" => $music_bgcolor,
-                      "bgrepeat" => $music_bgrepeat,
-                      "bgposition" => $music_bgposition,
+                      "bg_style" => $bg_style,
                       "plus" => "",
                       "amazon" => $music_amazon,
                       "itunes" => $music_itunes,
