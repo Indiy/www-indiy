@@ -920,7 +920,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #current_song_info .buynow_icon img {
     height: 15px;
-    padding-top: 5px;
+    padding-top: 4px;
 }
 #current_song_info .buynow_icon.amazon img {
 }
@@ -1045,7 +1045,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 
 #video_player .player_body {
     width: 100%;
-    height: 100%;
+    bottom: 0px;
 }
 
 .mad_video_css .vjs-controls {
@@ -1053,7 +1053,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     opacity: 0.9; 
     color: #fff;
     background-color: rgba(0,0,0,0.6);
-    /* display: block !important; */
+    display: block !important;
 }
 .mad_video_css .vjs-controls > div {
     height: 32px; top: 18px; padding: 0; text-align: center; background: rgba(23, 35, 34, 0.746094);
@@ -1062,7 +1062,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 /* Placement of Control Items */
 .mad_video_css .vjs-controls > div.vjs-volume-control     { width: 50px; right: 35px; }
-.mad_video_css .vjs-controls > div.vjs-fullscreen-control { width: 25px; right: 10px; }
 
 /* Play/Pause
  -------------------------------------------------------------------------------- */
@@ -1095,7 +1094,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 .mad_video_css .vjs-controls .vjs-progress-control {
     top: 15px;
     left: 180px;
-    right: 200px;
+    right: 0px;
     height: 18px;
     background-color: #222;
     opacity: 1.0;
@@ -1105,7 +1104,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 5px;
     margin-top: 6px;
     margin-left: 80px;
-    margin-right: 10px;
+    margin-right: 210px;
     border: 1px solid #555;
     border-radius: 0;
 }
@@ -1143,8 +1142,14 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 
 /* Fullscreen
  -------------------------------------------------------------------------------- */
-.mad_video_css .vjs-fullscreen-control div { margin: 10px 0 0 0; }
-.mad_video_css .vjs-controls .vjs-fullscreen-control { border-radius: 0 5px 5px 0; -webkit-border-radius: 0 5px 5px 0; -moz-border-radius: 0 5px 5px 0; }
+.mad_video_css .vjs-controls .vjs-fullscreen-control {
+    right: 110px;
+    top: 9px;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: #222 url('/images/player_expand.png') 0px 0px no-repeat;
+}
 /* Making default fullscreen icon smaller */
 .mad_video_css .vjs-fullscreen-control div span:nth-child(1) { margin: 0 4px 4px 0; border: none; border-top: 4px solid #fff; border-right: 4px solid rgba(0,0,0,0); }
 .mad_video_css .vjs-fullscreen-control div span:nth-child(2) { border: none; border-top: 4px solid #fff; border-left: 4px solid rgba(0,0,0,0); }
