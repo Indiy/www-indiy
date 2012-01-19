@@ -76,6 +76,7 @@
                 {
                     @move_uploaded_file($upload_file, $mp3_file);
                     @system("/usr/local/bin/ffmpeg -i $mp3_file -acodec libvorbis $ogg_file");
+                    $upload_audio_filename = $_FILES["audio"]["name"];
                 }
                 else
                 {
@@ -83,6 +84,7 @@
                     if( $retval == 0 )
                     {
                         @system("/usr/local/bin/ffmpeg -i $upload_file -acodec libvorbis $ogg_file");
+                        $upload_audio_filename = $_FILES["audio"]["name"];
                     }
                     else
                     {
@@ -90,7 +92,6 @@
                         $audio_sound = '';
                     }
                 }
-                $upload_audio_filename = $_FILES["audio"]["name"];
 			} else {
 				if ($old_sound != $audio_sound) {
 					$audio_sound = $old_sound;
