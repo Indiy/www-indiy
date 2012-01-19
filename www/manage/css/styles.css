@@ -1218,21 +1218,6 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     height: 30px;
     padding-top: 20px;
 }
-#popup #question_tooltip {
-    z-index: 1000;
-    position: absolute;
-    max-width: 145px;
-    background-color: black;
-    color: #ddd;
-    font-size: 12px;
-    font-family: sans-serif;
-    padding-left: 8px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-right: 6px;
-    border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px;
-}
-
 
 #popup .line_title {
     font-size: 19px;
@@ -1342,5 +1327,20 @@ div.upload-percent
     text-align: center;
     width: 100%;
     margin-top: 20px;
+}
+
+#question_tooltip {
+    z-index: 1000;
+    position: absolute;
+    max-width: 145px;
+    background-color: black;
+    color: #ddd;
+    font-size: 12px;
+    font-family: sans-serif;
+    padding-left: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 6px;
+    border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px;
 }
 
