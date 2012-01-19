@@ -343,7 +343,7 @@ function onAddMusicSubmit()
         var song_id = $('#song_id').val();
         var song_name = $('#song_name').val();
         var song_bgcolor = $('#song_bgcolor').val();
-        var song_bg_style = $('#bg_style option:selected').val();
+        var bg_style = $('#bg_style option:selected').val();
         var free_download = $('input[@name=download]:checked').val();
         var amazon_url = $('#amazon_url').val();
         var itunes_url = $('#itunes_url').val();

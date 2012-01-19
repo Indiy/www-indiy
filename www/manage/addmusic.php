@@ -316,7 +316,7 @@ function onImageRemove()
                         $selected = "selected";
                     else
                         $selected = "";
-                    $display_style = ucfirst($style);
+                    $display_style = $style;
                     echo "<option value='$style' $selected>$display_style</option>\n";
                 }
             ?>
