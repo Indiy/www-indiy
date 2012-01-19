@@ -229,7 +229,12 @@
     else 
         $noDownload = " checked"; 
 	
-    $audio_name = stripslashes($audio_name);	
+    $audio_name = stripslashes($audio_name);
+    
+    if( isset($audio_logo) && strlen($audio_logo) > 0 )
+        $needs_image = 'false';
+    else
+        $needs_image = 'true';
 ?>
 	
 <script type="text/javascript">
@@ -238,6 +243,7 @@ $(document).ready(setupQuestionTolltips);
 
 var g_removeSong = false;
 var g_removeImage = false;
+var g_needsImage = <?=$needs_image;?>;
 
 function onSongRemove()
 {
