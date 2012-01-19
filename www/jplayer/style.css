@@ -1230,7 +1230,7 @@ div#logo .mighthide { display:none; }
 #right_box .login_signup {
     width: 100%;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 6px;
     color: #DDD;
     text-align: center;
     text-decoration: none;
@@ -1253,11 +1253,15 @@ div#logo .mighthide { display:none; }
 #right_box .logo_box {
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 6px;
     height: 10px;
     overflow: hidden;
 }
-#right_box .logo_box_spacer {
+#right_box .logo_box_top_spacer {
     height: 10px;
+}
+#right_box .logo_box_bottom_spacer {
+    height: 6px;
 }
 #right_box .logo {
     width: 100%;
@@ -1273,13 +1277,13 @@ div#logo .mighthide { display:none; }
     cursor: pointer;
 }
 #right_box .up_down_arrow:hover {
-    background: black url('/images/right_box_up_down_selected.pn') no-repeat center 0px center center;
+    background: black url('/images/right_box_up_down_selected.png') no-repeat center 0px;
 }
 #right_box .up_down_arrow.open {
     background: black url('/images/right_box_up.png') no-repeat center center;
 }
 #right_box .up_down_arrow.open:hover {
-    background: black url('/images/right_box_up_down_selected.png') no-repeat center -25px center center;
+    background: black url('/images/right_box_up_down_selected.png') no-repeat center -25px;
 }
 
 
