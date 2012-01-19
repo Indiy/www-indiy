@@ -1053,7 +1053,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     opacity: 0.9; 
     color: #fff;
     background-color: rgba(0,0,0,0.6);
-    display: block !important;
+    /* display: block !important; */
 }
 .mad_video_css .vjs-controls > div {
     height: 32px; top: 18px; padding: 0; text-align: center; background: rgba(23, 35, 34, 0.746094);
