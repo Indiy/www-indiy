@@ -134,12 +134,12 @@
         </div>
         
         <div class='input_container'>
-            <div class='left_label'>Email</div>
+            <div class='left_label'>Email<span class='required'></span></div>
             <input type="text" class="right_text" value="<?=$email?>" name="email">
         </div>
 
         <div class='input_container'>
-            <div class='left_label'>URL <span id='tip_artist_url' class='tooltip'>(?)</span></div>
+            <div class='left_label'>URL <span id='tip_artist_url' class='tooltip'>(?)</span><span class='required'></span></div>
             <input id="url" class="right_text" value="<?=$url?>" name="url">
         </div>
         <? if( $account_type == 'PREMIUM' ): ?>

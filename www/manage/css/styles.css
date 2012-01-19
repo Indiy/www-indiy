@@ -958,7 +958,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     background-size: auto 100%;
 }
 
-.top_bar h2 {
+#popup .top_bar h2 {
     float:left;
     padding-left: 20px;
     padding-top: 17px;
@@ -968,7 +968,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     color: #ddd;
 }
 
-.top_bar button {
+#popup .top_bar button {
     height: 100%;
     width: 57px;
     padding-left: 10px;
@@ -980,31 +980,31 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     background: url("../images/bg_close.gif") no-repeat;
     cursor: pointer;
 }
-.top_blue_bar, .bottom_blue_bar {
+#popup .top_blue_bar, .bottom_blue_bar {
     background-color: #51C3C4;
     width: 100%;
     height: 10px;
 }
-.top_sep {
+#popup .top_sep {
     width: 100%;
     height: 1px; 
 } 
-.bottom_sep {
+#popup .bottom_sep {
     width: 100%;
     height: 15px;
 }
-.input_container {
+#popup .input_container {
     width: 100%;
     height: 40px;
 }
-.editor_container {
+#popup .editor_container {
     width: 750px;
     height: 385px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
 }
-.editor_container textarea {
+#popup .editor_container textarea {
     width: 100%;
     height: 100%;
     padding-top: 3px;
@@ -1025,7 +1025,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     line-height: 11px;
 }
 
-.flow_container textarea {
+#popup .flow_container textarea {
     margin-left: 20px;
     margin-right: 20px;
     width: 400px;
@@ -1038,7 +1038,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 }
-.flow_container p
+#popup .flow_container p
 {
     margin-left: 20px;
     margin-right: 20px;
@@ -1048,7 +1048,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     color: #888;
     padding-bottom: 10px;
 }
-.left_label {
+#popup .left_label {
     float: left;
     font-size: 12px;
     font-family: sans-serif;
@@ -1056,7 +1056,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     margin-top: 15px;
     color: #555;
 }
-.left_image_label {
+#popup .left_image_label {
     float: left;
     font-size: 12px;
     font-family: sans-serif;
@@ -1065,15 +1065,15 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     color: #555;
     width: 100px;
 }
-.image_label {
+#popup .image_label {
     float: left;
 }
-.image_image {
+#popup .image_image {
     float: right;
     position: relative;
     padding-right: 10px;
 }
-.image_image button {
+#popup .image_image button {
     width: 15px;
     height: 15px;
     background-image: url("/images/close.png");
@@ -1084,14 +1084,14 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     margin-left: 4px;
     position: absolute;
 }
-.line_label {
+#popup .line_label {
     font-size: 12px;
     font-family: sans-serif;
     margin-left: 20px;
     margin-top: 15px;
     color: #555;
 }
-.line_text {
+#popup .line_text {
     width: 325px;
     height: 20px;
     margin-top: 5px;
@@ -1102,7 +1102,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 }
-.right_text {
+#popup .right_text {
     height: 20px;
     width: 200px;
     float: right;
@@ -1110,7 +1110,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     margin-top: 10px;
     padding-left: 3px;
 }
-.right_file {
+#popup .right_file {
     height: 20px;
     width: 195px;
     float: right;
@@ -1118,7 +1118,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     margin-top: 10px;
     padding-left: 3px;
 }
-.right_file_filename {
+#popup .right_file_filename {
     height: 20px;
     width: 203px;
     float: right;
@@ -1126,18 +1126,18 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     margin-top: 10px;
     padding-left: 3px;
 }
-.right_file_filename input {
+#popup .right_file_filename input {
     width: 200px;
     border-radius: 3px;
     height: 20px;
     padding-left: 3px;
     margin-left: -5px;
 }
-.filename {
+#popup .filename {
     font-size: 10px;
     padding-top: 4px;
 }
-.filename button {
+#popup .filename button {
     width: 15px;
     height: 15px;
     background-image: url("/images/close.png");
@@ -1147,36 +1147,34 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     cursor: pointer;
     margin-left: 4px;
 }
-input.right_text, input.color,input.line_text {
+#popup input.right_text, input.color,input.line_text {
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border: 1px solid #CCC;
 }
-.right_box, .right_drop, .color {
+#popup .right_box, .right_drop, .color {
     float: right;
     font-size: 12px;
     font-family: sans-serif;
     margin-top: 12px;
     margin-right: 30px;
 }
-.right_box img
-{
+#popup .right_box img {
     height: 32px;
     width: 32px;
     margin-left: 10px;
     margin-right: 15px;
 }
-.right_box .img_radio
-{
+#popup .right_box .img_radio {
     height: 32px;
 }
-.submit_container {
+#popup .submit_container {
     width: 100%;
     text-align: center;
     padding-top: 10px;
 }
-.submit {
+#popup .submit {
     width: 150px;
     height: 40px;
     color: #51C3C4;
@@ -1187,12 +1185,12 @@ input.right_text, input.color,input.line_text {
     font-family: sans-serif;
     cursor: pointer;
 }
-.submit_branding_container {
+#popup .submit_branding_container {
     width: 100%;
     padding-top: 10px;
     height: 40px;
 }
-.left_submit {
+#popup .left_submit {
     float: left;
     width: 160px;
     height: 40px;
@@ -1205,7 +1203,7 @@ input.right_text, input.color,input.line_text {
     cursor: pointer;
     margin-left: 20px;
 }
-.branding_tip {
+#popup .branding_tip {
     float: right;
     width: 150px;
     margin-right: 20px;
@@ -1213,13 +1211,13 @@ input.right_text, input.color,input.line_text {
     font-family: sans-serif;
     color: #555;
 }
-.form_message {
+#popup .form_message {
     text-align: center;
     width: 100%;
     height: 30px;
     padding-top: 20px;
 }
-#question_tooltip {
+#popup #question_tooltip {
     z-index: 1000;
     position: absolute;
     max-width: 145px;
@@ -1235,7 +1233,7 @@ input.right_text, input.color,input.line_text {
 }
 
 
-.line_title {
+#popup .line_title {
     font-size: 19px;
     color: black;
     font-family: sans-serif;
@@ -1244,11 +1242,11 @@ input.right_text, input.color,input.line_text {
     margin-left: 20px;
     margin-top: 20px;
 }
-.number_container {
+#popup .number_container {
     width: 100%;
     height: 70px;
 }
-.left_number {
+#popup .left_number {
     float: left;
     width: 30px;
     height: 21px;
@@ -1262,138 +1260,29 @@ input.right_text, input.color,input.line_text {
     padding-bottom: 4px;
     border-radius: 6px;
 }
-.right_title_detail {
+#popup .right_title_detail {
     float: right;
     height: 70px;
     width: 290px;
     margin-right: 20px;
 }
-.right_title {
+#popup .right_title {
     font-size: 14px;
     font-weight: bold;
     font-family: sans-serif;
     margin-bottom: 5px;
 }
-.right_detail {
+#popup .right_detail {
     font-size: 12px;
     font-family: sans-serif;
 }
-.need_help {
+#popup .need_help {
     font-size: 12px;
     font-family: sans-serif;
     font-weight: bold;
     margin-top: 5px;
     margin-left: 20px;
 }
-
-/*
-----------------------------------------
-14. Add Video -- Pop up
-----------------------------------------
-*/
-
-#popup .addvideo { /*width:418px;*/ float:left; /*padding:28px 22px*/}
-#popup .addvideo fieldset { width:304px; float:left; padding:0 57px 25px 57px}
-#popup .addvideo fieldset.yet {padding-bottom:42px}
-#popup .addvideo h2 {color:#fff; width:390px; height:50px; float:left; background: url(../images/bg_login01.gif) repeat-x; padding:10px 0 0 10px}
-#popup .addvideo form {padding-left:10px}
-#popup .addvideo #form_field .text { width:178px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; margin-right:50px}
-#popup .addvideo #form_field label {padding-top:10px; width:150px}
-#popup .addvideo #form_field .floatbox {float:left; color:#556270; font-family:Arial, Helvetica, sans-serif; font-size:12px}
-#popup .addvideo #form_field .submit {float:left; margin-top:20px; background:none repeat scroll 0 0 #1E2226; color:#4ECDC4; border:1px solid #A0A1A3; font-size:14px; font-family:"Neuzeit Grotesk",Arial,Helvetica,sans-serif; text-transform:uppercase; padding:10px 60px }
-#popup .addvideo #form_field .input {float:left; color:#4ecdc4; text-decoration:none; background:#1e2226; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; padding:10px 20px; text-transform:uppercase; border:1px solid #a0a1a3}
-
-/*
-----------------------------------------
-15. Add Content -- Pop up
-----------------------------------------
-*/
-
-#popup .addcontent { /*width:418px;*/ float:left; /*padding:28px 22px*/}
-#popup .addcontent fieldset { width:304px; float:left; padding:0 57px 25px 57px}
-#popup .addcontent fieldset.yet {padding-bottom:42px}
-#popup .addcontent h2 {color:#fff; width:390px; height:50px; float:left; background: url(../images/bg_login01.gif) repeat-x; padding:10px 0 0 10px}
-#popup .addcontent form {padding-left:10px}
-#popup .addcontent #form_field .text { width:178px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; margin-right:50px}
-#popup .addcontent #form_field .textarea { width:178px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; margin-right:50px}
-.social_textarea { width:350px; height: 80px; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; }
-#popup .addcontent #form_field .friends_textarea { width:350px; height: 80px; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; }
-#popup .addcontent #form_field label {padding-top:10px; width:150px}
-#popup .addcontent #form_field .floatbox {float:left; color:#556270; font-family:Arial, Helvetica, sans-serif; font-size:12px}
-#popup .addcontent #form_field .submit {float:left; margin-top:20px; background:none repeat scroll 0 0 #1E2226; color:#4ECDC4; border:1px solid #A0A1A3; font-size:14px; font-family:"Neuzeit Grotesk",Arial,Helvetica,sans-serif; text-transform:uppercase; padding:10px 60px}
-#popup .addcontent #form_field .input {float:left; color:#4ecdc4; text-decoration:none; background:#1e2226; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; padding:10px 20px; text-transform:uppercase; border:1px solid #a0a1a3}
-
-
-
-/*
-----------------------------------------
-16. Add Product -- Pop up
-----------------------------------------
-*/
-
-#popup .addproduct { /*width:418px;*/ float:left; /*padding:28px 22px*/}
-#popup .addproduct fieldset { width:304px; float:left; padding:0 57px 25px 57px}
-#popup .addproduct fieldset.yet {padding-bottom:42px}
-#popup .addproduct h2 {color:#fff; width:390px; height:50px; float:left; background: url(../images/bg_login01.gif) repeat-x; padding:10px 0 0 10px}
-#popup .addproduct form {padding-left:10px}
-#popup .addproduct #form_field .text {width:178px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; margin-right:50px}
-#popup .addproduct #form_field label {padding-top:10px; width:150px}
-#popup .addproduct #form_field .floatbox {float:left; color:#556270; font-family:Arial, Helvetica, sans-serif; font-size:12px}
-#popup .addproduct #form_field .submit {float:left; margin-top:20px; background:none repeat scroll 0 0 #1E2226; color:#4ECDC4; border:1px solid #A0A1A3; font-size:14px; font-family:"Neuzeit Grotesk",Arial,Helvetica,sans-serif; text-transform:uppercase; padding:10px 60px}
-#popup .addproduct #form_field .input {float:left; color:#4ecdc4; text-decoration:none; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; padding:3px 2px; text-transform:uppercase; border:1px solid #a0a1a3; width:178px}
-#popup .addproduct #form_field .textarea { width:178px; float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; padding:3px 5px; margin-right:50px}
-
-
-
-#popup .addmusic ul {float:left}
-#popup .addmusic ul li {float:left; padding-bottom:12px}
-#popup .addmusic label {padding-bottom:2px}
-#popup .addmusic .input {width:289px}
-#popup .addmusic p.password { width:304px; float:left; text-align:right; font-size:12px; color:#4ecdc4; margin-top:-8px; position:relative; padding:0}
-#popup .addmusic .button {float:left; padding:17px 0 0 68px}
-#popup .addmusic .button a {padding:10px 60px}
-#popup .addmusic .option {width:418px; float:left; background:#e9e9ea; font-size:14px; color:#556270; text-align:center; padding:6px 0}
-
-#popup .addmusic article { width:377px; float:left; padding:15px 0 20px 41px}
-#popup .addmusic article h5 { padding-bottom:5px}
-#popup .addmusic article p { padding-bottom:20px}
-
-#popup .addmusic .reset { width:304px; float:left}
-#popup .addmusic .reset fieldset {padding-bottom:10px}
-#popup .addmusic .reset .input { font-size:14px; padding:6px 5px}
-#popup .addmusic .reset .button {padding-top:5px}
-#popup .addmusic .reset .button a {padding:10px 20px}
-#popup .addmusic .reset p.go { width:304px; float:left; text-align:center; color:#4ecdc4; padding:5px 0 0 0}
-#popup .addmusic .reset p.go a {background:url(../images/arrow_go_back.gif) no-repeat 0 5px; padding:0 0 0 10px}
-
-#popup .bottombox { width:410px; float:left; background:url(../images/bg_login02.gif) repeat-x; position:relative}
-#popup .bottombox h3 { float:left; font-size:20px; color:#FFFFFF; text-transform:uppercase; padding:15px 0 0 20px}
-#popup .bottombox .buttonsignup {float:right}
-#popup .bottombox .buttonsignup a { width:60px; height:32px; float:right; background:url(../images/arrow_signup.gif) no-repeat; font-size:14px;font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; color:#f5f5f5 ; padding:18px 0 0 18px; text-decoration:none}
-
-
-.ui-error{ float:none; color:#FF0000; text-transform:uppercase; font-weight:bold}
-#form_message{display:none}
-.clear{clear:both}
-#form_field{text-align:left}
-
-/*
-----------------------------------------
-17. Edit Profile -- Pop up
-----------------------------------------
-*/
-
-#popup .editprof { /*width:418px;*/ float:left; /*padding:28px 22px*/}
-#popup .editprof fieldset { width:304px; float:left; padding:0 57px 25px 57px}
-#popup .editprof fieldset.yet {padding-bottom:42px}
-#popup .editprof h2 {color:#fff; width:390px; height:50px; float:left; background: url(../images/bg_login01.gif) repeat-x; padding:10px 0 0 10px}
-#popup .editprof form {padding-left:10px}
-#popup .editprof #form_field .text { /*width:312px;*/ float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; width:178; max-width: 178px; min-width:178px; padding:3px 5px; margin-top:10px /*margin-right:50px*/}
-#popup .editprof #form_field .color { /*width:312px;*/ float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; width:178; max-width: 178px; min-width:178px; padding:3px 5px; margin-top:10px /*margin-right:50px*/}
-#popup .editprof #form_field label {padding-top:15px; width:150px}
-#popup .editprof #form_field .floatbox {float:left; color:#556270; font-family:Arial, Helvetica, sans-serif; font-size:12px; padding-top:15px}
-#popup .editprof #form_field .submit {float:left; margin-top:20px; background:none repeat scroll 0 0 #1E2226; color:#4ECDC4; border:1px solid #A0A1A3; font-size:14px; font-family:"Neuzeit Grotesk",Arial,Helvetica,sans-serif; text-transform:uppercase; padding:10px 60px }
-#popup .editprof #form_field .input {float:left; color:#4ecdc4; text-decoration:none; background:#1e2226; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; padding:10px 20px; text-transform:uppercase; border:1px solid #a0a1a3}
 
 #upload_bar
 {
