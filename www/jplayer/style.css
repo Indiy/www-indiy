@@ -1061,7 +1061,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;
 }
 /* Placement of Control Items */
-.mad_video_css .vjs-controls > div.vjs-volume-control     { width: 50px; right: 35px; }
 
 /* Play/Pause
  -------------------------------------------------------------------------------- */
@@ -1098,7 +1097,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 18px;
     background-color: #222;
     opacity: 1.0;
-    border-radius: 9px;
+    border-left-top-radius: 9px;
+    border-left-bottom-radius: 9px;
 }
 .mad_video_css .vjs-progress-control .vjs-progress-holder { 
     height: 5px;
@@ -1132,24 +1132,39 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 
 /* Volume
  -------------------------------------------------------------------------------- */
+.mad_video_css .vjs-controls > div.vjs-volume-control { 
+    width: 50px;
+    right: 135px;
+    top: 9px;
+    border-radius: 10px;
+    background-color: #222;
+}
 .mad_video_css .vjs-volume-control div { padding: 7px 0 0 5px; width: 30px; }
 .mad_video_css .vjs-volume-control div span {
     float: left; margin: 0 2px 0 0; padding: 0; width: 3px; height: 3px; border-bottom: 12px solid #666666;
     -webkit-transition: all 100ms linear; -moz-transition: all 100ms linear;
 }
-.mad_video_css .vjs-volume-control div span.vjs-volume-level-on { border-color: #00ADEF; }
+.mad_video_css .vjs-volume-control div span.vjs-volume-level-on { border-color: #EEE; }
 .mad_video_css .vjs-volume-control div span:hover { height: 0; border-bottom-width: 15px; }
 
 /* Fullscreen
  -------------------------------------------------------------------------------- */
 .mad_video_css .vjs-controls .vjs-fullscreen-control {
-    right: 110px;
+    right: 91px;
     top: 9px;
     width: 32px;
     height: 32px;
-    border-radius: 10px;
-    background: #222 url('/images/player_expand.png') 0px 0px no-repeat;
+    border-radius: 14px;
+    background: #222 url('/images/player_expand.png') 4px 4px no-repeat;
 }
+.mad_video_css .vjs-controls .vjs-fullscreen-control:hover {
+    background: #222 url('/images/player_expand.png') 4px 4px no-repeat;
+}
+
+.mad_video_css .vjs-controls .vjs-fullscreen-control div {
+    display: none;
+}
+
 /* Making default fullscreen icon smaller */
 .mad_video_css .vjs-fullscreen-control div span:nth-child(1) { margin: 0 4px 4px 0; border: none; border-top: 4px solid #fff; border-right: 4px solid rgba(0,0,0,0); }
 .mad_video_css .vjs-fullscreen-control div span:nth-child(2) { border: none; border-top: 4px solid #fff; border-left: 4px solid rgba(0,0,0,0); }
