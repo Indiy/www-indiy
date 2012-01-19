@@ -304,7 +304,6 @@ function sendContactForm()
         submit += "&artist_id=" + artist_id;
         submit += "&name=" + escape(name);
         submit += "&email=" + escape(email);
-        submit += "&phone=" + escape(phone);
         submit += "&comments=" + escape(comments);
         
         $.post("jplayer/ajax.php", submit, function(response) { });
