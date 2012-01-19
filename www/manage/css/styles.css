@@ -1212,6 +1212,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     color: #555;
 }
 #popup .form_message {
+    display: none;
     text-align: center;
     width: 100%;
     height: 30px;
