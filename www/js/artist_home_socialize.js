@@ -47,8 +47,8 @@ function toggleSocialFB()
     }
     else 
     {
-        openSocialTab();
         g_currentSocialTab = 'facebook';
+        openSocialTab();
     }
 }
 
@@ -67,8 +67,8 @@ function toggleSocialTW()
     }
     else 
     {
-        openSocialTab();
         g_currentSocialTab = 'twitter';
+        openSocialTab();
     }
 }
 
@@ -87,8 +87,8 @@ function toggleSocialEmail()
     }
     else 
     {
-        openSocialTab();
         g_currentSocialTab = 'email';
+        openSocialTab();
     }
     
 }
@@ -107,8 +107,8 @@ function toggleSocialShare()
     }
     else 
     {
-        openSocialTab();
         g_currentSocialTab = 'share';
+        openSocialTab();
     }
     
 }
@@ -117,10 +117,10 @@ function openSocialTab()
 {
     if( g_socialMinimized ) 
     {
+        g_socialMinimized = false;
         if( g_currentSocialTab != '' )
             $(".socialize ." + g_currentSocialTab).addClass("active");
         $(".socialize").animate({ bottom: "0" }, 300);
-        g_socialMinimized = false;
     }
 }
 
@@ -128,8 +128,8 @@ function closeSocialTab() {
     $(".buttons div").removeClass("active");
     if( !g_socialMinimized ) 
     {
-        $(".socialize").animate({ bottom: "-361px" }, 300);
         g_socialMinimized = true;
+        $(".socialize").animate({ bottom: "-361px" }, 300);
     }
 }
 
