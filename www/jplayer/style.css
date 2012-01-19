@@ -1066,7 +1066,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
  -------------------------------------------------------------------------------- */
 .mad_video_css .vjs-controls .vjs-play-control { 
     top: 8px;
-    left: 40px;
+    left: 140px;
     height: 40px;
     width: 36px;
     margin: 0;
