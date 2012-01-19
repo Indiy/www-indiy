@@ -284,13 +284,14 @@ function sendContactForm()
     var artist_id = g_artistId;
     var name = $('#contact_name').val();
     var email = $('#contact_email').val();
-    var phone = $('#contact_phone').val();
     var comments = $('#contact_comments').val();
 
     if( name.length == 0 
-       || phone.length == 0 
+       || name == 'Name...'
        || comments.length == 0 
-       || !email.match(EMAIL_REGEX) )
+       || !email.match(EMAIL_REGEX) 
+       || email == 'Email...'
+       )
     {
         window.alert('Please enter all required fields.');
     }
