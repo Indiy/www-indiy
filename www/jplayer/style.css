@@ -1097,8 +1097,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 18px;
     background-color: #222;
     opacity: 1.0;
-    border-left-top-radius: 9px;
-    border-left-bottom-radius: 9px;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
 }
 .mad_video_css .vjs-progress-control .vjs-progress-holder { 
     height: 5px;
@@ -1158,7 +1158,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background: #222 url('/images/player_expand.png') 4px 4px no-repeat;
 }
 .mad_video_css .vjs-controls .vjs-fullscreen-control:hover {
-    background: #222 url('/images/player_expand.png') 4px 4px no-repeat;
+    background: #222 url('/images/player_expand.png') -23px 4px no-repeat;
 }
 
 .mad_video_css .vjs-controls .vjs-fullscreen-control div {
