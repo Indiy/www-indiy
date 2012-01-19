@@ -1273,13 +1273,13 @@ div#logo .mighthide { display:none; }
     cursor: pointer;
 }
 #right_box .up_down_arrow:hover {
-    background: black url('/images/playlist_up_down.png') no-repeat -29px 0px center center;
+    background: black url('/images/right_box_up_down_selected.pn') no-repeat center 0px center center;
 }
 #right_box .up_down_arrow.open {
     background: black url('/images/right_box_up.png') no-repeat center center;
 }
 #right_box .up_down_arrow.open:hover {
-    background: black url('/images/playlist_up_down.png') no-repeat -29px -25px center center;
+    background: black url('/images/right_box_up_down_selected.png') no-repeat center -25px center center;
 }
 
 

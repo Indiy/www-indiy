@@ -219,7 +219,6 @@ else
 var g_siteUrl = "<?=trueSiteUrl();?>";
 var g_videoList = <?=$video_list_json;?>;
 var g_totalListens = <?=$total_listens;?>;
-var g_logoOpen = false;
 var g_artistId = <?=$artist_id;?>;
 var g_paypalEmail = "<?=$paypalEmail;?>";
 var g_songPlayList = <?=$music_list_json;?>;

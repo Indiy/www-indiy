@@ -231,21 +231,6 @@ function setupPageLinks()
         }
     }
     
-    $(".bottom").click(function(event)
-    {
-        if(!g_logoOpen) 
-        {
-            $('div#logo').css("background-position","right bottom");
-            $('#makeroomforlogo').animate({ height: "160px" }, 300);
-        } 
-        else 
-        {
-            $('div#logo').css("background-position","left bottom");
-            $('#makeroomforlogo').animate({ height: "0px" }, 300);
-        }
-        g_logoOpen = !g_logoOpen;
-        //$('#logo').toggleClass('openlogo');
-    }); 
     
     $(".submitform").click(function(event){
     
@@ -264,6 +249,24 @@ function setupPageLinks()
 }
 
 $(document).ready(setupPageLinks);
+
+var g_rightBoxOpen = false;
+
+function toggleRightBox()
+{
+    if( !g_rightBoxOpen ) 
+    {
+        var h = $('#right_box .logo_box img').height() + 10;
+        var new_height = '' + h + 'px';
+        $('#right_box .logo_box').animate({ height: new_height }, 300);
+    } 
+    else 
+    {
+        $('#right_box .logo_box').animate({ height: "10px" }, 300);
+    }
+    $('#right_box .up_down_arrow').toggleClass('open');
+    g_rightBoxOpen = !g_rightBoxOpen;
+}
 
 function fadeAllPageElements()
 {
