@@ -62,7 +62,7 @@ function setupPageLinks()
             $('.store').fadeIn();
             $('.store_Close').fadeIn();
         }, 450);
-        var cart = "&paypal=" + escape(g_paypalEmail) + "&cart=true&artist=" + g_aristId;
+        var cart = "&paypal=" + escape(g_paypalEmail) + "&cart=true&artist=" + g_artistId;
         $.post("jplayer/ajax.php", cart, function(items) {
               $(".cart").html(items);
               });
@@ -92,7 +92,7 @@ function setupPageLinks()
     // Shopping Cart Functionality
     $("div.addtocart").click(function(event){
         var pro = $(this).text();
-        var cart = "&paypal=" + escape(g_paypalEmail) + "&cart=true&artist=" + g_aristId + "&product=" + escape(pro);
+        var cart = "&paypal=" + escape(g_paypalEmail) + "&cart=true&artist=" + g_artistId + "&product=" + escape(pro);
         $.post("jplayer/ajax.php", cart, function(items) {
             $(".cart").html(items);
             showCart(false);
@@ -281,7 +281,7 @@ function fadeAllPageElements()
 
 function sendContactForm()
 {
-    var artist_id = g_aristId;
+    var artist_id = g_artistId;
     var name = $('#contact_name').val();
     var email = $('#contact_email').val();
     var phone = $('#contact_phone').val();
@@ -314,7 +314,7 @@ function sendBookingForm()
     $('.contact table').hide();
     $('#contact_thanks').show();
     
-    var artist_id = g_aristId;
+    var artist_id = g_artistId;
     var name = $('#contact_name').val();
     var email = $('#contact_email').val();
     var date = $('#booking_date').val();
