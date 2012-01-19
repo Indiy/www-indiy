@@ -135,7 +135,7 @@
         
         <div class='input_container'>
             <div class='left_label'>Email<span class='required'>*</span></div>
-            <input type="text" class="right_text" value="<?=$email?>" name="email">
+            <input id="email" type="text" class="right_text" value="<?=$email?>" name="email">
         </div>
 
         <div class='input_container'>
