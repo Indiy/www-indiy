@@ -3,6 +3,10 @@
 var g_hideTooltipTimer = false;
 var g_clip = false;
 
+var HOSTNAME_REGEX = new RegExp('^(?=.{1,255}$)[0-9A-Za-z](?:(?:[0-9A-Za-z]|\\b-){0,61}[0-9A-Za-z])?(?:\\.[0-9A-Za-z](?:(?:[0-9A-Za-z]|\\b-){0,61}[0-9A-Za-z])?)*\\.?$');
+
+var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
+
 function startTooltipTimer()
 {
     clearTooltipTimer();
@@ -488,17 +492,19 @@ function clickAddTwitter()
 function validateEditProfile()
 {
     var url = $('#url').val();
-    var re = new RegExp('^(?=.{1,255}$)[0-9A-Za-z](?:(?:[0-9A-Za-z]|\\b-){0,61}[0-9A-Za-z])?(?:\\.[0-9A-Za-z](?:(?:[0-9A-Za-z]|\\b-){0,61}[0-9A-Za-z])?)*\\.?$');
-
-    if( !url.match(re) )
+    if( !url.match(HOSTNAME_REGEX) )
     {
         window.alert("Please enter a valid URL.  A-Z, a-z, -, ., 0-9 are allowed.");
         return false;
     }
-    else
+
+    var email = $('#email').val();
+    if( !email.match(EMAIL_REGEX) )
     {
-        return true;
+        window.alert("Please enter a valid email address.");
+        return false;
     }
+    return true;
 }
 
 function onInviteFriends()
