@@ -256,7 +256,7 @@ function toggleRightBox()
 {
     if( !g_rightBoxOpen ) 
     {
-        var h = $('#right_box .logo_box img').height() + 10;
+        var h = $('#right_box .logo_box img').height() + 10 + 6;
         var new_height = '' + h + 'px';
         $('#right_box .logo_box').animate({ height: new_height }, 300);
     } 
