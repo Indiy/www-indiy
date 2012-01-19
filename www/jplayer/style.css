@@ -1269,20 +1269,20 @@ div#logo .mighthide { display:none; }
     height: 18px;
     margin-top: 4px;
     margin-bottom: 4px;
-    margin-right: 4px;
-    margin-left: 4px;
+    margin-right: 8px;
+    margin-left: 8px;
     background: black url('/images/right_box_down.png') no-repeat center center;
     border-radius: 9px;
     cursor: pointer;
 }
 #right_box .up_down_arrow:hover {
-    background: black url('/images/right_box_up_down_selected.png') no-repeat center -28px;
+    background: #111 url('/images/right_box_up_down_selected.png') no-repeat center -28px;
 }
 #right_box .up_down_arrow.open {
     background: black url('/images/right_box_up.png') no-repeat center center;
 }
 #right_box .up_down_arrow.open:hover {
-    background: black url('/images/right_box_up_down_selected.png') no-repeat center 4px;
+    background: #111 url('/images/right_box_up_down_selected.png') no-repeat center 4px;
 }
 
 
