@@ -1042,6 +1042,16 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #video_player .close_button:hover {
     color: #aaa;
 }
+#video_player .close_text {
+    float: left;
+}
+#video_player .close_img {
+    float: left;
+    width: 28px;
+    height: 28px;
+    margin-left: 4px;
+    background: transparent url('/images/video_close.png') 0px 0px no-repeat;
+}
 
 #video_player .player_body {
     width: 100%;

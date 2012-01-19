@@ -409,7 +409,10 @@ $(document).ready(function() { <?=$pagesJava;?> });
                         <div class='artist'><?=$artist_name;?></div>
                     </div>
                 </div>
-                <div class='close_button' onclick='closeVideo();'>&raquo; CLOSE &laquo;</div>
+                <div class='close_button' onclick='closeVideo();'>
+                    <div class='close_text'>CLOSE</div>
+                    <div class='close_img'></div>
+                </div>
             </div>
             <div id='player_body' class='player_body'></div>
         </div>
