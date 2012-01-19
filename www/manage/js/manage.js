@@ -343,8 +343,7 @@ function onAddMusicSubmit()
         var song_id = $('#song_id').val();
         var song_name = $('#song_name').val();
         var song_bgcolor = $('#song_bgcolor').val();
-        var song_bgposition = $('#song_bgposition option:selected').val();
-        var song_bgrepeat = $('#song_bgrepeat option:selected').val();
+        var song_bg_style = $('#bg_style option:selected').val();
         var free_download = $('input[@name=download]:checked').val();
         var amazon_url = $('#amazon_url').val();
         var itunes_url = $('#itunes_url').val();
@@ -354,8 +353,7 @@ function onAddMusicSubmit()
         form_data.append('id',song_id);
         form_data.append('name',song_name);
         form_data.append('bgcolor',song_bgcolor);
-        form_data.append('bgposition',song_bgposition);
-        form_data.append('bgrepeat',song_bgrepeat);
+        form_data.append('bg_style',bg_style);
         form_data.append('download',free_download);
         form_data.append('amazon',amazon_url);
         form_data.append('itunes',itunes_url);
