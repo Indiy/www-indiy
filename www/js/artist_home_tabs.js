@@ -1,16 +1,14 @@
 
+var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
+
 function setupPageLinks()
 {
-
     $(".dragger_container").fadeOut();
-    
     
     // Pauses the audio player when a user opens a video                
     $("div.playlist_video img").click(function(event){
         $("#jquery_jplayer").jPlayer("pause");
     });
-    
-             
 
     $('#image').hide();
     $('.page').hide();
@@ -283,23 +281,33 @@ function fadeAllPageElements()
 
 function sendContactForm()
 {
-    $('.contact table').hide();
-    $('#contact_thanks').show();
-    
     var artist_id = g_aristId;
     var name = $('#contact_name').val();
     var email = $('#contact_email').val();
     var phone = $('#contact_phone').val();
     var comments = $('#contact_comments').val();
-    
-    var submit = "&form=send";
-    submit += "&artist_id=" + artist_id;
-    submit += "&name=" + escape(name);
-    submit += "&email=" + escape(email);
-    submit += "&phone=" + escape(phone);
-    submit += "&comments=" + escape(comments);
-    
-    $.post("jplayer/ajax.php", submit, function(response) { });
+
+    if( name.length == 0 
+       || phone.length == 0 
+       || comments.length == 0 
+       || !email.match(EMAIL_REGEX) )
+    {
+        window.alert('Please enter all required fields.');
+    }
+    else
+    {
+        $('.contact table').hide();
+        $('#contact_thanks').show();
+        
+        var submit = "&form=send";
+        submit += "&artist_id=" + artist_id;
+        submit += "&name=" + escape(name);
+        submit += "&email=" + escape(email);
+        submit += "&phone=" + escape(phone);
+        submit += "&comments=" + escape(comments);
+        
+        $.post("jplayer/ajax.php", submit, function(response) { });
+    }
 }
 function sendBookingForm()
 {
