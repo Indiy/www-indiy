@@ -1221,7 +1221,10 @@ div#logo .mighthide { display:none; }
     top: 0px;
     right: 13px;
     width: 175px;
-    background-color: #555;
+    background-color: #333;
+    z-index: 2;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 #right_box .login_signup {
@@ -1232,8 +1235,8 @@ div#logo .mighthide { display:none; }
     text-align: center;
     text-decoration: none;
     font-family: Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: lighter;
+    font-size: 12px;
+    font-weight: normal;
     cursor: pointer;
 }
 #right_box .login_signup a, #right_box .login_signup button {
@@ -1241,28 +1244,42 @@ div#logo .mighthide { display:none; }
     text-align: center;
     text-decoration: none;
     font-family: Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: lighter;
+    font-size: 12px;
+    font-weight: normal;
 }
 #right_box .login_signup a:hover, #right_box .login_signup button:hover {
     color: #777;
 }
 #right_box .logo_box {
-    padding-top: 10px;
     padding-left: 15px;
     padding-right: 15px;
+    height: 10px;
+    overflow: hidden;
+}
+#right_box .logo_box_spacer {
+    height: 10px;
 }
 #right_box .logo {
     width: 100%;
 }
 #right_box .up_down_arrow {
-    height: 17px;
+    height: 18px;
     margin-top: 4px;
     margin-bottom: 4px;
     margin-right: 4px;
     margin-left: 4px;
-    background: transparent url('/images/right_box_down.png') no-repeat center center;
-    pointer: cursor;
+    background: black url('/images/right_box_down.png') no-repeat center center;
+    border-radius: 9px;
+    cursor: pointer;
+}
+#right_box .up_down_arrow:hover {
+    background: black url('/images/playlist_up_down.png') no-repeat -29px 0px center center;
+}
+#right_box .up_down_arrow.open {
+    background: black url('/images/right_box_up.png') no-repeat center center;
+}
+#right_box .up_down_arrow.open:hover {
+    background: black url('/images/playlist_up_down.png') no-repeat -29px -25px center center;
 }
 
 
