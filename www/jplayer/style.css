@@ -1230,7 +1230,7 @@ div#logo .mighthide { display:none; }
 #right_box .login_signup {
     width: 100%;
     padding-top: 10px;
-    padding-bottom: 6px;
+    margin-bottom: 6px;
     color: #DDD;
     text-align: center;
     text-decoration: none;
