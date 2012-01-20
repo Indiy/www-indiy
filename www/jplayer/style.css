@@ -823,11 +823,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background: transparent url('/images/playlist_text_hover.png') no-repeat bottom;
 }
 
-
 #current_song_info {
     position: absolute;
     left: 60px;
-    top: 35px;
+    top: 31px;
     height: 24px;
     min-width: 100px;
     z-index: 2;
@@ -901,7 +900,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #current_song_info .buynow_icon img {
     height: 15px;
-    padding-top: 4px;
+    padding-top: 3px;
 }
 #current_song_info .buynow_icon.amazon img {
 }
