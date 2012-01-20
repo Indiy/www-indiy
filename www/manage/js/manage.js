@@ -178,8 +178,8 @@ function onStoreSettingsSubmit()
 
 function uploadProgress(percentage)
 {
-    var html = "" + percentage.toFixed(0) + "%";
-    $('#upload_bar').html(html);
+    var text = "" + percentage.toFixed(0);
+    $('#upload_percent').text(text);
 }
 
 function onUploadProgress(evt)
@@ -187,7 +187,7 @@ function onUploadProgress(evt)
     if( evt.lengthComputable )
     {
         var percentage = evt.loaded / evt.total * 100.0;
-        console.log("progress: " + percentage);
+        //console.log("progress: " + percentage);
         uploadProgress(percentage);
     }
     else
@@ -197,17 +197,13 @@ function onUploadProgress(evt)
 }
 function onUploadDone(evt)
 {
-    $('#status').show();
-    $('#status').text('Upload done. Processing content...');
-    $('#upload_bar').hide();
-    $('#spinner').show();
+    $('.status_container').hide();
+    $('#processing_msg').show();
 }
 function onUploadFailed(evt)
 {
-    $('#status').show();
-    $('#status').text('Upload failed!');
-    $('#upload_bar').hide();
-    $('#spinner').hide();
+    $('.status_container').hide();
+    $('#failure_msg').show();
 }
 function uploadReadyStateChange(xhr)
 {
@@ -221,37 +217,29 @@ function uploadReadyStateChange(xhr)
             {
                 var data = JSON.parse(text);
                     
-                $('#status').show();
+                $('.status_container').hide();
+                $('#success_msg').show();
                 if( 'upload_error' in data )
-                    $('#status').text(data['upload_error']);
-                else
-                    $('#status').text('Upload success.');
-                $('#upload_bar').hide();
-                $('#spinner').hide();
+                    $('#success_msg .status').text(data['upload_error']);
             }
             else
             {
-                $('#status').show();
-                $('#status').text('Upload failed.');
-                $('#upload_bar').hide();
-                $('#spinner').hide();
+                $('.status_container').hide();
+                $('#failure_msg').show();
             }
         }
         catch(e)
         {
-            $('#status').show();
-            $('#status').text('Upload failed.');
-            $('#upload_bar').hide();
-            $('#spinner').hide();
+            $('.status_container').hide();
+            $('#failure_msg').show();
         }
     }
 }
 
 function startAjaxUpload(url,fillForm)
 {
-    $('#ajax_from').hide();
-    $('#status').show();
-    $('#status').text('Uploading content...');
+    $('#ajax_form').hide();
+    $('.status_container').hide();
     
     try
     {
@@ -270,12 +258,12 @@ function startAjaxUpload(url,fillForm)
         
         xhr.open("POST",url);
         xhr.send(form_data);
-        $('#upload_bar').show();
+        $('#uploading_msg').show();
         return false;
     }
     catch(e)
     {
-        $('#spinner').show();
+        $('#progress_msg').show();
         return true;
     }
     

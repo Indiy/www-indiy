@@ -166,7 +166,7 @@ $(document).ready(onReady);
 
     <div class='top_blue_bar'></div>
     <div class='top_sep'></div>
-    <form id="ajax_from" method="post" enctype="multipart/form-data" action="addcontent.php">
+    <form id="ajax_form" method="post" enctype="multipart/form-data" action="addcontent.php">
         <input type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid">
         <input type='hidden' value="<?=$_REQUEST['id']?>" name="id" id="song_id">
         
