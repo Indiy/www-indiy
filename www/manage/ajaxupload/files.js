@@ -1,6 +1,6 @@
 $(function ()
 {
-	$('form#ajax_from').iframePostForm
+	$('form#ajax_form').iframePostForm
 	({
 		json : true,
 		post : function ()
