@@ -357,7 +357,7 @@ function onImageRemove()
         <img src='/images/ajax-loader-white.gif'/>
     </div>
     <div id='uploading_msg' class='status_container'>
-        <div class='status'>Uploading content... <span id='upload_percent' class='upload_percent'></span>%</div>
+        <div class='status'>Uploading content&hellip;<span id='upload_percent' class='upload_percent'>0</span>%</div>
     </div>
     <div id='processing_msg' class='status_container'>
         <div class='status'>Processing upload.  This may take a while...</div>
@@ -366,7 +366,7 @@ function onImageRemove()
         </div>
     </div>
     <div id='progress_msg' class='status_container'>
-        <div class='status'>Updating record...</div>
+        <div class='status'>Updating record&hellip;</div>
         <div class='spinner'>
             <img src='/images/ajax-loader-white.gif'/>
         </div>
@@ -374,13 +374,13 @@ function onImageRemove()
     <div id='success_msg' class='status_container'>
         <div class='status'>Update Success</div>
         <div class='submit_container'>
-            <button class='submit' onclick='$.facebox.close()'>CLOSE</button>
+            <button class='submit' onclick='$.facebox.close()'>DONE</button>
         </div>
     </div>
     <div id='failure_msg' class='status_container'>
         <div class='status'>Update Failed</div>
         <div class='submit_container'>
-            <button class='submit' onclick='$.facebox.close()'>CLOSE</button>
+            <button class='submit' onclick='$.facebox.close()'>DONE</button>
         </div>
     </div>
     

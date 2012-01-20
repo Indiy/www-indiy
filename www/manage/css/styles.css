@@ -1326,21 +1326,23 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
 #popup .status {
+    padding-bottom: 10px;
     text-align: left;
     font-family: Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: normal;
-    color: #AAA;
+    color: #777;
 }
 #popup .upload_percent {
-    padding-left: 10px;
+    padding-left: 140px;
 }
 #popup .spinner {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 #spinner
