@@ -356,6 +356,33 @@ function onImageRemove()
     <div id='spinner' style='display: none;'>
         <img src='/images/ajax-loader-white.gif'/>
     </div>
+    <div id='uploading_msg' class='status_container'>
+        <div class='status'>Uploading content... <span id='upload_percent' class='upload_percent'></span>%</div>
+    </div>
+    <div id='processing_msg' class='status_container'>
+        <div class='status'>Processing upload.  This may take a while...</div>
+        <div class='spinner'>
+            <img src='/images/ajax-loader-white.gif'/>
+        </div>
+    </div>
+    <div id='progress_msg' class='status_container'>
+        <div class='status'>Updating record...</div>
+        <div class='spinner'>
+            <img src='/images/ajax-loader-white.gif'/>
+        </div>
+    </div>
+    <div id='success_msg' class='status_container'>
+        <div class='status'>Update Success</div>
+        <div class='submit_container'>
+            <button class='submit' onclick='$.facebox.close()'>CLOSE</button>
+        </div>
+    </div>
+    <div id='failure_msg' class='status_container'>
+        <div class='status'>Update Failed</div>
+        <div class='submit_container'>
+            <button class='submit' onclick='$.facebox.close()'>CLOSE</button>
+        </div>
+    </div>
     
     <div class='bottom_sep'></div>
     <div class='bottom_blue_bar'></div>
