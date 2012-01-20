@@ -116,8 +116,6 @@
 			insert($database,$tables,$values);
 		}
 
-		$successMessage = "<div id='notify'>Success! You are being redirected...</div>";
-
 		$postedValues['imageSource'] = "../artists/images/".$video_logo;
 		$postedValues['video_sound'] = "../artists/video/".$video_sound;
 		$postedValues['success'] = "1";
@@ -206,7 +204,6 @@ function onVideoImageRemove()
 </script>
 
 <div id="popup">
-    <?=$successMessage;?>
     <div class='top_bar'>
         <h2><?=$head_title?> Video</h2>
         <button onclick='$.facebox.close();'>CLOSE</button>
@@ -241,11 +238,8 @@ function onVideoImageRemove()
             <div class='branding_tip'>Branding Tip: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
         </div>
     </form>
-    <div id='status' class='form_status' style='display: none;'></div>
-    <div id='upload_bar' style='display: none;'></div>
-    <div id='spinner' style='display: none;'>
-        <img src='/images/ajax-loader-white.gif'/>
-    </div>
+    
+    <? include_once 'include/popup_messages.html'; ?>
 
     <div class='bottom_sep'></div>
     <div class='bottom_blue_bar'></div>
