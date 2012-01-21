@@ -152,6 +152,7 @@ function onReady()
                                            toolbar: toolbar_config
                                            });
     g_editor.render();
+    setupQuestionTolltips();
 }
 
 $(document).ready(onReady);
@@ -176,8 +177,12 @@ $(document).ready(onReady);
             <input id='name' type="text" name="name" value="<?=$content_name;?>" class='right_text' />
         </div>
         <div class='input_container'>
+            <div class='left_image_label'>
+                <div class='image_label'>Image</div>
+                <div class='image_image'><?=$content_logo;?></div>
+            </div>
             <div class='left_label'>Image</div>
-            <input id='content_image' type="file" name="logo" class='right_file' /> <?=$content_logo;?>
+            <input id='content_image' type="file" name="logo" class='right_file' />
         </div>
         <div class='editor_container yui-skin-sam'>
             <textarea id="body" name="body"><?=$content_body;?></textarea>
