@@ -64,9 +64,10 @@
 		$head_title	=	"Add";
 	}
 
-	
-	if ($content_logo != "") {
-		$content_logo = '<img src="../artists/images/'.$content_logo.'" style="margin-top: 5px; height: 25px;" />';
+	$image_html = '';
+	if( $content_logo != "" ) 
+    {
+		$image_html = "<img src='../artists/images/$content_logo' style='height: 25px;'/>";
 	}
 	
 	$content_name = stripslashes($content_name);
@@ -179,7 +180,7 @@ $(document).ready(onReady);
         <div class='input_container'>
             <div class='left_image_label'>
                 <div class='image_label'>Image</div>
-                <div class='image_image'><?=$content_logo;?></div>
+                <div class='image_image'><?=$image_html;?></div>
             </div>
             <input id='content_image' type="file" name="logo" class='right_file' />
         </div>
