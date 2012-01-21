@@ -30,14 +30,6 @@ function setupPageLinks()
                        fadeAllPageElements();
                        });
 
-    $('.contact_Close').click(function() 
-    {
-        $('.contact table').show();
-        $('#contact_thanks').hide();
-        fadeAllPageElements();
-    });
-    
-    
     /* Comment */
     $('.aComment').click(function() {
         fadeAllPageElements();
@@ -215,7 +207,6 @@ function sendContactForm()
 }
 function sendBookingForm()
 {
-    
     var artist_id = g_artistId;
     var name = $('#contact_name').val();
     var email = $('#contact_email').val();
@@ -251,5 +242,19 @@ function sendBookingForm()
         
         $.post("/data/booking.php", submit, function(response) { });
     }
+}
+function closeContactTab()
+{
+    $('.contact table').show();
+    $('#contact_thanks').hide();
+    $('#contact_name').val('');
+    $('#contact_email').val('');
+    $('#contact_comments').val('');
+    $('#contact_name').val('');
+    $('#contact_email').val('');
+    $('#booking_date').val('');
+    $('#booking_location').val('');
+    $('#booking_comments').val('');
+    fadeAllPageElements();
 }
 
