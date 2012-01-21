@@ -125,32 +125,32 @@
     <div class='top_sep'></div>
     <form id='ajax_form' method="post" enctype="multipart/form-data" action="register.php" onsubmit="return validateEditProfile();">
         
-        <input type="hidden" name="artistid" value="<?=$artistid?>">
+        <input id='artist_id' type="hidden" name="artistid" value="<?=$artistid?>">
         
         <div class='input_container'>
             <div class='left_label'>Name</div>
-            <input type="text" class="right_text" value="<?=$artist?>" name="artist">
+            <input id='artist' type="text" class="right_text" value="<?=$artist?>" name="artist">
             <div class="clear"></div>
         </div>
         
         <div class='input_container'>
             <div class='left_label'>Email<span class='required'>*</span></div>
-            <input id="email" type="text" class="right_text" value="<?=$email?>" name="email">
+            <input id='email' type="text" class="right_text" value="<?=$email?>" name="email">
         </div>
 
         <div class='input_container'>
             <div class='left_label'>URL <span id='tip_artist_url' class='tooltip'>(?)</span><span class='required'>*</span></div>
-            <input id="url" class="right_text" value="<?=$url?>" name="url">
+            <input id='url' class="right_text" value="<?=$url?>" name="url">
         </div>
         <? if( $account_type == 'PREMIUM' ): ?>
             <div class='input_container'>
                 <div class='line_label'>Custom Domain</div>
-                <input name="custom_domain" class='line_text' value="<?=$custom_domain;?>">
+                <input id='custom_domain' name="custom_domain" class='line_text' value="<?=$custom_domain;?>">
             </div>
         <? endif; ?>
         <div class='input_container'>
             <div class='left_label'>Logo</div>
-            <input type="file" class="right_file" name="logo">
+            <input id='logo' type="file" class="right_file" name="logo">
         </div>
         <div class='input_container'>
             <div class='left_label'>Show "Listen" Count</div>
@@ -161,14 +161,11 @@
         </div>
         <div class='input_container'>
             <div class='left_label'>New Password</div>
-            <input type="password" class="right_text" value="" name="newpass">
+            <input id='newpass' type="password" class="right_text" value="" name="newpass">
         </div>
 
         <div class='submit_container'>
-            <input type="submit" class="submit" value="submit" name="WriteTags" >
-        </div>
-        <div id="form_message" class="form_message">
-            Your record successfully updated!
+            <button class="submit" onclick='onEditProfileSubmit();'>Submit</button>
         </div>
     </form>
     

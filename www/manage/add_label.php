@@ -48,7 +48,7 @@
             <input id='password' type="password" name="password" value="" class='right_text' />
         </div>
         <div class='submit_container'>
-            <button id='add_label_submit' class="submit" onclick='onAddLabelSubmit();'>Submit</button>
+            <button class="submit" onclick='onAddLabelSubmit();'>Submit</button>
         </div>
     </form>
     
