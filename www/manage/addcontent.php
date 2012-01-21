@@ -140,9 +140,10 @@ buttons: [
     ]
 };
 
+var g_editor = false;
 function onReady()
 {
-    var myEditor = new YAHOO.widget.Editor('body', {
+    g_editor = new YAHOO.widget.Editor('body', {
                                            height: '300px',
                                            width: '750px',
                                            dompath: false, 
@@ -150,7 +151,7 @@ function onReady()
                                            handleSubmit: true,
                                            toolbar: toolbar_config
                                            });
-    myEditor.render();
+    g_editor.render();
 }
 
 $(document).ready(onReady);
@@ -166,17 +167,17 @@ $(document).ready(onReady);
 
     <div class='top_blue_bar'></div>
     <div class='top_sep'></div>
-    <form id="ajax_form" method="post" enctype="multipart/form-data" action="addcontent.php">
-        <input type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid">
-        <input type='hidden' value="<?=$_REQUEST['id']?>" name="id" id="song_id">
+    <form id="ajax_form" method="post" enctype="multipart/form-data" action="addcontent.php" onsubmit='return onAddContentSubmit();'>
+        <input id='artist_id' type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid">
+        <input id='content_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id">
         
         <div class='input_container'>
             <div class='left_label'>Name</div>
-            <input type="text" name="name" value="<?=$content_name;?>" class='right_text' />
+            <input id='name' type="text" name="name" value="<?=$content_name;?>" class='right_text' />
         </div>
         <div class='input_container'>
             <div class='left_label'>Image</div>
-            <input type="file" name="logo" class='right_file' /> <?=$content_logo;?>
+            <input id='content_image' type="file" name="logo" class='right_file' /> <?=$content_logo;?>
         </div>
         <div class='editor_container yui-skin-sam'>
             <textarea id="body" name="body"><?=$content_body;?></textarea>
@@ -185,15 +186,9 @@ $(document).ready(onReady);
             <input type="submit" name="submit" value="submit" class='left_submit' />
             <div class='branding_tip'>Branding Tip: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
         </div>
-        
-        <div id="form_message" class='form_message'>
-            <? if ($_GET["id"] != "") { ?>
-                Your record successfully updated!
-            <? }else{ ?>
-                Your record successfully added!
-            <?}?>
-        </div>
     </form>
+    
+    <? include_once 'include/popup_messages.html'; ?>
 
     <div class='bottom_sep'></div>
     <div class='bottom_blue_bar'></div>
