@@ -71,10 +71,8 @@
 		$postedValues['postedValues'] = $_REQUEST;
 
 		//echo '{"Name":"'.$artist_name.'","imageSource":"artists/images/'.$artist_logo.'","":"","artist_sound":"artists/audio/'.$artist_sound.'","success":1}';
-		echo json_encode($postedValues);	
-		exit;		
-
-		refresh("1","?p=home");
+		echo json_encode($postedValues);
+        exit();
 	}
 	
 	if ($_SESSION['sess_userId'] != "") {
