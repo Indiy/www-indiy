@@ -306,7 +306,7 @@ function onImageRemove()
             <input id='song_image' type="file" name="logo" class='right_file' />
         </div>
         <div class='input_container'>
-            <div class='left_label'>Background Style</div>
+            <div class='left_label'>Background Style <span id='tip_bg_style' class='tooltip'>(?)</span></div>
             <select id='bg_style' name="bg_style" class='right_drop'>
             <?
                 $styles = array('STRETCH','CENTER','TILE');
@@ -327,7 +327,7 @@ function onImageRemove()
             <input id='song_bgcolor' type="text" name="bgcolor" maxlength="6" size="6" class='color' value="<?=$audio_bgcolor;?>" />
         </div>
         <div class='input_container'>
-            <div class='left_label'>Free Download</div>
+            <div class='left_label'>Free Download <span id='tip_free_download' class='tooltip'>(?)</span></div>
             <div class='right_box'>
                 <input type="radio" name="download" value="1" class="radio"<?=$yesDownload;?> /> Yes
                 <input type="radio" name="download" value="0" class="radio"<?=$noDownload;?> /> No

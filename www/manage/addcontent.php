@@ -172,7 +172,7 @@ $(document).ready(onReady);
         <input id='content_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id">
         
         <div class='input_container'>
-            <div class='left_label'>Name</div>
+            <div class='left_label'>Name <span id='tip_tab_name' class='tooltip'>(?)</span></div>
             <input id='name' type="text" name="name" value="<?=$content_name;?>" class='right_text' />
         </div>
         <div class='input_container'>
