@@ -1275,7 +1275,7 @@ div.socialize div.padthis { padding: 5px; }
     width: 300px;
     left: 40px;
     bottom: 0px;
-    position: position;
+    position: absolute;
     z-index: 20; 
     background: #333;
     border-top-left-radius: 12px;
@@ -1289,7 +1289,7 @@ div.socialize div.padthis { padding: 5px; }
 }
 #socialize .title {
     float: left;
-    padding: top;
+    padding-top: 10px;;
     color: white;
     font-size: 14px;
     font-family: Helvetica, sans-serif;
@@ -1301,16 +1301,16 @@ div.socialize div.padthis { padding: 5px; }
     width: 45px;
     background: transparent url('/images/socialize_button_fade.png');
 }
-#socialize .button .facebook {
+#socialize .button.facebook {
     background: transparent url('/images/socialize_facebook.png');
 }
-#socialize .button .twitter {
+#socialize .button.twitter {
     background: transparent url('/images/socialize_twitter.png');
 }
-#socialize .button .email {
+#socialize .button.email {
     background: transparent url('/images/socialize_email.png');
 }
-#socialize .button .share {
+#socialize .button.share {
     background: transparent url('/images/socialize_share.png');
 }
 #socialize .button.active {
@@ -1336,6 +1336,8 @@ div.socialize div.padthis { padding: 5px; }
 #socialize .tab {
     display: none;
 }
-
+#socialize .body {
+    padding-left: 12px;
+}
 
 
