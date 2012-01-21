@@ -765,7 +765,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
 
             
             <div class="store_Close"></div>
-            <div class="contact_Close"></div>
+            <div class="contact_Close" onclick='closeContactTab();'></div>
             <? if ($paypalEmail != "") { ?>
             <div class="store">
                 <div class="box-header"></div>
