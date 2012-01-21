@@ -141,16 +141,16 @@
         </div>
         <? if( $account_type == 'PREMIUM' ): ?>
             <div class='input_container'>
-                <div class='line_label'>Custom Domain</div>
+                <div class='line_label'>Custom Domain <span id='tip_custom_domain' class='tooltip'>(?)</span></div>
                 <input id='custom_domain' name="custom_domain" class='line_text' value="<?=$custom_domain;?>">
             </div>
         <? endif; ?>
         <div class='input_container'>
-            <div class='left_label'>Logo</div>
+            <div class='left_label'>Logo <span id='tip_artist_logo' class='tooltip'>(?)</span></div>
             <input id='logo' type="file" class="right_file" name="logo">
         </div>
         <div class='input_container'>
-            <div class='left_label'>Show "Listen" Count</div>
+            <div class='left_label'>Show "Listen" Count <span id='tip_listen_count' class='tooltip'>(?)</span></div>
             <div class="right_box">
                 <input type="radio" class="radio" checked="" value="1" name="listens"> Yes
                 <input type="radio" class="radio" value="0" name="listens"> No<br>
