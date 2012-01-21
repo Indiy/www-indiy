@@ -167,7 +167,7 @@ $(document).ready(onReady);
 
     <div class='top_blue_bar'></div>
     <div class='top_sep'></div>
-    <form id="ajax_form" method="post" enctype="multipart/form-data" action="addcontent.php" onsubmit='return onAddContentSubmit();'>
+    <form id='ajax_form' method="post" enctype="multipart/form-data" action="addcontent.php" onsubmit='return onAddContentSubmit();'>
         <input id='artist_id' type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid">
         <input id='content_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id">
         

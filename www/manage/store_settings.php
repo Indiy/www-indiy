@@ -51,7 +51,7 @@
 
     <div class='top_blue_bar'></div>
     <div class='top_sep'></div>
-    <form onsubmit='return false;'>
+    <form id='ajax_form' onsubmit='return false;'>
 
         <div class='input_container'>
             <div class='left_label'>Paypal Email <span id='tip_paypal_email' class='tooltip'>(?)</span></div>
@@ -61,8 +61,9 @@
             <button id='store_settings_submit' class="submit" onclick='onStoreSettingsSubmit();'>Submit</button>
         </div>
     </form>
-    <div id='status' class='form_message' style='display:none;'></div>
 
+    <? include_once 'include/popup_messages.html'; ?>
+    
     <div class='bottom_sep'></div>
     <div class='bottom_blue_bar'></div>
 </div>

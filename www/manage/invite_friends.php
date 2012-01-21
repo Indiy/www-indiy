@@ -55,8 +55,7 @@ var g_artistId = '<?=$artist_id;?>';
 
     <div class='top_blue_bar'></div>
     <div class='top_sep'></div>
-    <form id="invite_friends_form" onsubmit='return false;'>
-    
+    <form id='ajax_form' onsubmit='return false;'>
         <div class='flow_container'>
             <div class='left_label'>Enter your friends emails below.  Seperate with commas.</div>
             <textarea id="friends_text" style='height: 40px;'></textarea>
@@ -65,7 +64,8 @@ var g_artistId = '<?=$artist_id;?>';
             <button class="submit" onclick='onInviteFriends();'>Send</button>
         </div>
     </form>
-    <div id='status' class='form_status' style='display: none;'></div>
+    
+    <? include_once 'include/popup_messages.html'; ?>
 
     <div class='bottom_sep'></div>
     <div class='bottom_blue_bar'></div>
