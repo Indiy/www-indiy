@@ -34,7 +34,7 @@
     <div class='top_blue_bar'></div>
     <div class='top_sep'></div>
     
-    <form onsubmit='return false;'>
+    <form id='ajax_form' onsubmit='return false;'>
         <div class='input_container'>
             <div class='left_label'>Label Name</div>
             <input id='name' type="text" name="name" value="" class='right_text' />
@@ -51,8 +51,9 @@
             <button id='add_label_submit' class="submit" onclick='onAddLabelSubmit();'>Submit</button>
         </div>
     </form>
+    
+    <? include_once 'include/popup_messages.html'; ?>
 
-    <div id='status'></div>
     <div class='bottom_sep'></div>
     <div class='bottom_blue_bar'></div>
 </div>

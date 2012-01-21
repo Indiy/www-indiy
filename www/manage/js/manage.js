@@ -90,8 +90,10 @@ $(document).ready(setupClipboard);
 
 function onAddUserSubmit()
 {
-    $('#add_user_submit').hide();
-    $('#status').text("Adding user...");
+    $('#ajax_form').hide();
+    $('.status_container').hide();
+    $('#progress_show').show();
+
     var artist = $('#artist').val();
     var url = $('#url').val();
     var email = $('#email').val();
@@ -109,11 +111,13 @@ function onAddUserSubmit()
         dataType: 'json',
         success: function(data) 
         {
-            $('#status').text("User Added");
+            $('.status_container').hide();
+            $('#success_msg').show();
         },
         error: function()
         {
-            $('#status').text("User Add Failed!");
+            $('.status_container').hide();
+            $('#failure_msg').show();
         }
     });
     return false;
@@ -121,8 +125,10 @@ function onAddUserSubmit()
 
 function onAddLabelSubmit()
 {
-    $('#add_label_submit').hide();
-    $('#status').text("Adding label...");
+    $('#ajax_form').hide();
+    $('.status_container').hide();
+    $('#progress_show').show();
+
     var name = $('#name').val();
     var email = $('#email').val();
     var password = $('#password').val();
@@ -138,11 +144,13 @@ function onAddLabelSubmit()
         dataType: 'json',
         success: function(data) 
         {
-            $('#status').text("Label Added");
+            $('.status_container').hide();
+            $('#success_msg').show();
         },
         error: function()
         {
-            $('#status').text("Label Add Failed!");
+            $('.status_container').hide();
+            $('#failure_msg').show();
         }
     });
     return false;
@@ -496,6 +504,31 @@ function onAddProductSubmit()
     
     var url = '/manage/addproduct.php';
     return startAjaxUpload(url,fillProductForm);
+}
+function onAddContentSubmit()
+{
+    function fillContentForm(form_data)
+    {
+        var artist_id = $('#artist_id').val();
+        var content_id = $('#content_id').val();
+        var name = $('#name').val();
+        var body = $('#body').val();
+        
+        form_data.append('artistid',artist_id);
+        form_data.append('id',content_id);
+        form_data.append('name',name);
+        form_data.append('body',body);
+        
+        var content_image = document.getElementById('content_image');
+        if( content_image.files && content_image.files.length > 0 )
+        {
+            form_data.append('logo',content_image.files[0]);
+        }
+        form_data.append('submit','submit');
+    }
+    
+    var url = '/manage/addcontent.php';
+    return startAjaxUpload(url,fillContentForm);
 }
 function clickAddFacebook()
 {
