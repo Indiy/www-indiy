@@ -547,37 +547,6 @@ function onAddContentSubmit()
     var url = '/manage/addcontent.php';
     return startAjaxUpload(url,fillContentForm);
 }
-function onEditProfileSubmit()
-{
-    function fillProfileForm(form_data)
-    {
-        var artist_id = $('#artist_id').val();
-        var artist = $('#artist').val();
-        var email = $('#email').val();
-        var url = $('#url').val();
-        var custom_domain = $('#custom_domain').val();
-        var listens = $('input[name=listens]:checked').val()
-        var newpass = $('#newpass').val();
-        
-        form_data.append('artistid',artist_id);
-        form_data.append('artist',artist);
-        form_data.append('email',email);
-        form_data.append('url',url);
-        form_data.append('custom_domain',custom_domain);
-        form_data.append('listens',listens);
-        form_data.append('newpass',newpass);
-        
-        var logo = document.getElementById('logo');
-        if( logo.files && logo.files.length > 0 )
-        {
-            form_data.append('logo',logo.files[0]);
-        }
-        form_data.append('WriteTags','submit');
-    }
-    
-    var url = '/manage/register.php';
-    return startAjaxUpload(url,fillProfileForm);
-}
 function clickAddFacebook()
 {
     showProgress("Adding Facebook account...");
@@ -615,7 +584,40 @@ function validateEditProfile()
     }
     return true;
 }
+function onEditProfileSubmit()
+{
+    if( !validateEditProfile() )
+        return false;
 
+    function fillProfileForm(form_data)
+    {
+        var artist_id = $('#artist_id').val();
+        var artist = $('#artist').val();
+        var email = $('#email').val();
+        var url = $('#url').val();
+        var custom_domain = $('#custom_domain').val();
+        var listens = $('input[name=listens]:checked').val()
+        var newpass = $('#newpass').val();
+        
+        form_data.append('artistid',artist_id);
+        form_data.append('artist',artist);
+        form_data.append('email',email);
+        form_data.append('url',url);
+        form_data.append('custom_domain',custom_domain);
+        form_data.append('listens',listens);
+        form_data.append('newpass',newpass);
+        
+        var logo = document.getElementById('logo');
+        if( logo.files && logo.files.length > 0 )
+        {
+            form_data.append('logo',logo.files[0]);
+        }
+        form_data.append('WriteTags','submit');
+    }
+    
+    var url = '/manage/register.php';
+    return startAjaxUpload(url,fillProfileForm);
+}
 function onInviteFriends()
 {
     showProgress();
