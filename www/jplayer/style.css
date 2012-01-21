@@ -1284,22 +1284,26 @@ div.socialize div.padthis { padding: 5px; }
 
 #socialize .header {
     height: 40px;
-    padding-left: 10px;
+    padding-left: 12px;
     padding-right: 20px; 
 }
 #socialize .title {
     float: left;
-    padding-top: 10px;;
+    padding-top: 14px;
     color: white;
-    font-size: 14px;
+    font-size: 15px;
     font-family: Helvetica, sans-serif;
     font-weight: normal;
+    cursor: pointer;
 }
 #socialize .button_holder {
     float: right;
     height: 100%;
     width: 45px;
-    background: transparent url('/images/socialize_button_fade.png');
+    background: transparent url('/images/socialize_button_fade.png') no-repeat;
+}
+#socialize .button {
+    height: 100%;
 }
 #socialize .button.facebook {
     background: transparent url('/images/socialize_facebook.png');
