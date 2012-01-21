@@ -458,6 +458,32 @@ function onAccountSettingsSubmit()
     });
     return false;
 }
+function onAddProductSubmit()
+{
+    $('#ajax_form').hide();
+    $('.status_container').hide();
+    $('#progress_msg').show();
+    
+    var args = $('#ajax_form').serialize();
+    var post_url = '/manage/addproduct.php?' + args;
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: post_url,
+        dataType: 'text',
+        success: function(data) 
+        {
+            $('.status_container').hide();
+            $('#success_msg').show();
+        },
+        error: function()
+        {
+            $('.status_container').hide();
+            $('#failure_msg').show();
+        }
+    });
+    return false;
+}
 function clickAddFacebook()
 {
     $('#social_config_form').hide();
