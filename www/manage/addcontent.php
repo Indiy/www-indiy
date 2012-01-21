@@ -178,7 +178,7 @@ $(document).ready(onReady);
             <input id='name' type="text" name="name" value="<?=$content_name;?>" class='right_text' />
         </div>
         <div class='input_container'>
-            <div class='left_image_label'>
+            <div class='left_image_label' style='width: 200px;'>
                 <div class='image_label'>Image</div>
                 <div class='image_image'><?=$image_html;?></div>
             </div>
