@@ -158,20 +158,19 @@
 
     <form id="ajax_form" method="post" enctype="multipart/form-data" action="addproduct.php" onsubmit='return onAddProductSubmit();'>
         <input type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid">
-        <input type='hidden' value="<?=$_REQUEST['id']?>" name="id" id="song_id">
+        <input id='product_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id" >
         <? if ($_GET["id"] != "") { ?>
-            <input type="hidden" name="filename" value="<? echo $pfilename; ?>" id="input" class="input" />
+            <input id='filename' type="hidden" name="filename" value="<?=$pfilename;?>" class="input" />
         <? } ?>
 
         <div class='input_container'>
             <div class='line_label'>Name</div>
-            <input type="text" name="name" class='line_text' value="<? echo $pname; ?>" id="input" class="input" />
+            <input type="text" name="name" class='line_text' value="<?=$pname;?>" class="input" />
         </div>
-
 
         <div class='input_container'>
             <div class='left_label'>Category</div>
-            <select name="origin" id="origin" class='right_drop'>
+            <select name="origin" id="category" class='right_drop'>
                 <option value=""> -- Select -- </option>
                 <?
                     $cont = mq("select * from `[p]musicplayer_ecommerce_categories` order by `name` asc");
@@ -186,34 +185,34 @@
         </div>
         <div class='flow_container'>
             <div class='line_label'>Description</div>
-            <textarea name="description" id="input" class="textarea" style="height: 40px; width: 325px;"><? echo $pproductdescription; ?></textarea>
+            <textarea id='description' name="description" class="textarea" style="height: 40px; width: 325px;"><?=$pproductdescription;?></textarea>
         </div>
         <div class='input_container'>
             <div class='left_image_label'>
                 <div>Image</div>
                 <? if ($pimage != "") {?> <img src="../artists/products/<?=$pimage;?>" height="20" /><? } ?>
             </div>
-            <input type="file" name="file" value="" id="input" class='right_file'/> 
+            <input id='product_image' type="file" name="file" value="" class='right_file'/> 
         </div>
         <div class='input_container'>
             <div class='left_label'>Price</div>
-            <input type="text" name="price" value="<? echo $pprice; ?>" id="input"  class='right_text' />
+            <input id='price' type="text" name="price" value="<?=$pprice;?>" class='right_text' />
         </div>
         <div class='input_container'>
             <div class='left_label'>SKU  <span id='tip_sku' class='tooltip'>(?)</span></div>
-            <input type="text" name="sku" value="<? echo $psku; ?>" id="input"  class='right_text' />
+            <input id='sku' type="text" name="sku" value="<?=$psku;?>" class='right_text' />
         </div>
         <div class='input_container'>
             <div class='left_label'>Size <small><small>(Separated by commas)</small></small></div>
-            <input type="text" name="size" value="<? echo $psize; ?>" id="input"  class='right_text' />
+            <input id='size' type="text" name="size" value="<?=$psize;?>" class='right_text' />
         </div>
         <div class='input_container'>
             <div class='left_label'>Colors <small><small>(Separated by commas)</small></small></div>
-            <input type="text" name="color" value="<? echo $pcolor; ?>" id="input"  class='right_text' />
+            <input id='color' type="text" name="color" value="<?=$pcolor;?>" class='right_text' />
         </div>
         <div class='submit_branding_container'>
-            <input type="hidden" value="<? echo $situation; ?>" name="situation" />
-            <input type="submit" name="submit" class='left_submit' value="<? echo $situation; ?>" id="submitr" />
+            <input id='situation' type="hidden" value="<?=$situation;?>" name="situation" />
+            <input type="submit" name="submit" class='left_submit' value="<?=$situation;?>" />
             <div class='branding_tip'>Branding Tip: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
         </div>
     </form>

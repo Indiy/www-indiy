@@ -460,29 +460,42 @@ function onAccountSettingsSubmit()
 }
 function onAddProductSubmit()
 {
-    $('#ajax_form').hide();
-    $('.status_container').hide();
-    $('#progress_msg').show();
-    
-    var args = $('#ajax_form').serialize();
-    var post_url = '/manage/addproduct.php?' + args;
-    jQuery.ajax(
+    function fillProductForm(form_data)
     {
-        type: 'POST',
-        url: post_url,
-        dataType: 'text',
-        success: function(data) 
+        var artist_id = g_artistId;
+        var product_id = $('#product_id').val();
+        var filename = $('#filename').val();
+        var name = $('#name').val();
+        var category = $('#category option:selected').val();
+        var description = $('#description').val();
+        var price = $('#price').val();
+        var sku = $('#sku').val();
+        var size = $('#size').val();
+        var color = $('#color').val();
+        var situation = $('#situation').val();
+        
+        form_data.append('artistid',artist_id);
+        form_data.append('id',product_id);
+        form_data.append('filename',filename);
+        form_data.append('name',name);
+        form_data.append('origin',category);
+        form_data.append('description',description);
+        form_data.append('price',price);
+        form_data.append('sku',sku);
+        form_data.append('size',size);
+        form_data.append('color',color);
+        form_data.append('situation',situation);
+        
+        var product_image = document.getElementById('product_image');
+        if( product_image.files && product_image.files.length > 0 )
         {
-            $('.status_container').hide();
-            $('#success_msg').show();
-        },
-        error: function()
-        {
-            $('.status_container').hide();
-            $('#failure_msg').show();
+            form_data.append('file',product_image.files[0]);
         }
-    });
-    return false;
+        form_data.append('submit',situation);
+    }
+    
+    var url = '/manage/addproduct.php';
+    return startAjaxUpload(url,fillProductForm);
 }
 function clickAddFacebook()
 {
