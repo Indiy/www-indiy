@@ -134,10 +134,11 @@
 		$situation = "Add New";
 	}	
 	
-	
-	
-
-
+	$image_html = '';
+    if( $pimage != '' )
+    {
+        $image_html = "<img src='/artists/products/$pimage' style='margin-top: 0px; height: 25px;' />";
+    }
 //// Include Template Design ///////////////////////
 
 ?>
@@ -165,7 +166,7 @@
 
         <div class='input_container'>
             <div class='line_label'>Name</div>
-            <input type="text" name="name" class='line_text' value="<?=$pname;?>" class="input" />
+            <input id='name' type="text" name="name" class='line_text' value="<?=$pname;?>" class="input" />
         </div>
 
         <div class='input_container'>
@@ -189,8 +190,8 @@
         </div>
         <div class='input_container'>
             <div class='left_image_label'>
-                <div>Image</div>
-                <? if ($pimage != "") {?> <img src="../artists/products/<?=$pimage;?>" height="20" /><? } ?>
+                <div class='image_label'>Image</div>
+                <div class='image_image'><?=$image_html;?></div>
             </div>
             <input id='product_image' type="file" name="file" value="" class='right_file'/> 
         </div>
