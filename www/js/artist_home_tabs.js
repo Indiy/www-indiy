@@ -30,12 +30,13 @@ function setupPageLinks()
                        fadeAllPageElements();
                        });
 
-    $('.contact_Close').click(function() {
-                            fadeAllPageElements();
-                            });
-
+    $('.contact_Close').click(function() 
+    {
+        $('.contact table').show();
+        $('#contact_thanks').hide();
+        fadeAllPageElements();
+    });
     
-    //<?=$pagesJava;?>
     
     /* Comment */
     $('.aComment').click(function() {
