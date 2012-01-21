@@ -103,7 +103,6 @@
     $('#facebox .body').children().fadeIn('normal')
 	jscolor.install();
 	
-	});
 	$.getScript('/js/jquery.jplayer.min.js', function() {
 		if(songUrl.match(/song=([0-9a-zA-Z_-]+)/) != null){
 							audio_sound="/artists/audio/"+(songUrl.match(/song=([0-9a-zA-Z_-]+)/)[1])+".mp3";
