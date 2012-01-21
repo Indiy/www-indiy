@@ -462,7 +462,7 @@ function onAddProductSubmit()
 {
     function fillProductForm(form_data)
     {
-        var artist_id = g_artistId;
+        var artist_id = $('#artist_id').val();
         var product_id = $('#product_id').val();
         var filename = $('#filename').val();
         var name = $('#name').val();
