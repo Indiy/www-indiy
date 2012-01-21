@@ -188,7 +188,7 @@
             <div class='line_label'>Description</div>
             <textarea id='description' name="description" class="textarea" style="height: 40px; width: 325px;"><?=$pproductdescription;?></textarea>
         </div>
-        <div class='input_container'>
+        <div class='input_container' style='height: 50px;'>
             <div class='left_image_label'>
                 <div class='image_label'>Image</div>
                 <div class='image_image'><?=$image_html;?></div>
