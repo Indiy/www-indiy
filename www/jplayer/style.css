@@ -1333,7 +1333,9 @@ div.socialize div.padthis { padding: 5px; }
 #socialize .sub_title .slashes {
     color: #AAA;
 }
-
+#socialize .tab {
+    display: none;
+}
 
 
 
