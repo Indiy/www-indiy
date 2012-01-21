@@ -420,10 +420,6 @@ $(document).ready(showFirstInstruction);
 </section><!-- content -->
 </section><!-- wrapper -->
 
-
-<script src="ajaxupload/file.js" type="text/javascript"></script>
-<script src="ajaxupload/jquery.iframe-post-form.js" type="text/javascript"></script>
-
 <?php
 	include('footer.php');
 ?>

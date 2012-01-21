@@ -66,7 +66,7 @@
 
     <div class='top_blue_bar'></div>
     <div class='top_sep'></div>
-    <form id="social_config_form"  onsubmit='return false;'>
+    <form id='ajax_form'  onsubmit='return false;'>
         <div class='input_container' style='height: 55px;'>
             <div class='left_label'>Twitter Account <span id='tip_tw_account' class='tooltip'>(?)</span></div>
             <?php
@@ -121,7 +121,8 @@
             <button class="submit" onclick='onSocialConfigSave();'>Save</button>
         </div>
     </form>
-    <div id='status' class='form_status' style='display: none;'></div>
+    
+    <? include_once 'include/popup_messages.html'; ?>
     
     <div class='bottom_sep'></div>
     <div class='bottom_blue_bar'></div>

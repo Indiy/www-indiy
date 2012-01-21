@@ -62,7 +62,6 @@
         </div>
     </form>
 
-    <div id='status' class='form_message' style='display: none;'></div>
-    <div class='bottom_sep'></div>
-    <div class='bottom_blue_bar'></div>
+    <? include_once 'include/popup_messages.html'; ?>
+    
 </div>

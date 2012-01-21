@@ -7,10 +7,14 @@ var HOSTNAME_REGEX = new RegExp('^(?=.{1,255}$)[0-9A-Za-z](?:(?:[0-9A-Za-z]|\\b-
 
 var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
 
+function hideTooltip()
+{
+    $('#link_tooltip').hide();
+}
 function startTooltipTimer()
 {
     clearTooltipTimer();
-    g_hideTooltipTimer = setTimeout("$('#link_tooltip').hide();",1000);
+    g_hideTooltipTimer = setTimeout(hideTooltip,1000);
 }
 function clearTooltipTimer()
 {
@@ -88,11 +92,38 @@ function setupClipboard()
 
 $(document).ready(setupClipboard);
 
-function onAddUserSubmit()
+function showProgress(text)
 {
     $('#ajax_form').hide();
     $('.status_container').hide();
-    $('#progress_show').show();
+    if( text && text.length > 0 )
+    {
+        $('#progress_msg .status').text(text);
+    }
+    $('#progress_msg').show();
+}
+function showSuccess(text)
+{
+    $('.status_container').hide();
+    if( text && text.length > 0 )
+    {
+        $('#success_msg .status').text(text);
+    }
+    $('#success_msg').show();
+}
+function showFailure(text)
+{
+    $('.status_container').hide();
+    if( text && text.length > 0 )
+    {
+        $('#failure_msg .status').text(text);
+    }
+    $('#failure_msg').show();
+}
+
+function onAddUserSubmit()
+{
+    showProgress("Adding user...");
 
     var artist = $('#artist').val();
     var url = $('#url').val();
@@ -111,13 +142,11 @@ function onAddUserSubmit()
         dataType: 'json',
         success: function(data) 
         {
-            $('.status_container').hide();
-            $('#success_msg').show();
+            showSuccess("User added.");
         },
         error: function()
         {
-            $('.status_container').hide();
-            $('#failure_msg').show();
+            showFailure();
         }
     });
     return false;
@@ -125,9 +154,7 @@ function onAddUserSubmit()
 
 function onAddLabelSubmit()
 {
-    $('#ajax_form').hide();
-    $('.status_container').hide();
-    $('#progress_show').show();
+    showProgress("Adding label...");
 
     var name = $('#name').val();
     var email = $('#email').val();
@@ -144,13 +171,11 @@ function onAddLabelSubmit()
         dataType: 'json',
         success: function(data) 
         {
-            $('.status_container').hide();
-            $('#success_msg').show();
+            showSuccess("Label added.");
         },
         error: function()
         {
-            $('.status_container').hide();
-            $('#failure_msg').show();
+            showFailure();
         }
     });
     return false;
@@ -158,9 +183,8 @@ function onAddLabelSubmit()
 
 function onStoreSettingsSubmit()
 {
-    $('#store_settings_submit').hide();
-    $('#status').text("Updating settings...");
-    $('#status').show();
+    showProgress();
+
     var paypal_email = $('#paypal_email').val();
     
     var post_url = "/manage/store_settings.php?";
@@ -174,11 +198,11 @@ function onStoreSettingsSubmit()
         dataType: 'text',
         success: function(data) 
         {
-            $('#status').text("Settings updated.");
+            showSuccess("Settings updated.");
         },
         error: function()
         {
-            $('#status').text("Update failed!");
+            showFailure();
         }
     });
     return false;    
@@ -210,8 +234,7 @@ function onUploadDone(evt)
 }
 function onUploadFailed(evt)
 {
-    $('.status_container').hide();
-    $('#failure_msg').show();
+    showFailure();
 }
 function uploadReadyStateChange(xhr)
 {
@@ -224,22 +247,19 @@ function uploadReadyStateChange(xhr)
             if( status_code == 200 && text.length > 0 )
             {
                 var data = JSON.parse(text);
-                    
-                $('.status_container').hide();
-                $('#success_msg').show();
                 if( 'upload_error' in data )
-                    $('#success_msg .status').text(data['upload_error']);
+                    showSuccess(data['upload_error']);
+                else
+                    showSuccess();
             }
             else
             {
-                $('.status_container').hide();
-                $('#failure_msg').show();
+                showFailure();
             }
         }
         catch(e)
         {
-            $('.status_container').hide();
-            $('#failure_msg').show();
+            showFailure();
         }
     }
 }
@@ -385,9 +405,8 @@ function onSongChange()
 
 function onSocializePublish()
 {
-    $('#socialize_form').hide();
-    $('#status').show();
-    $('#status').text("Posting update...");
+    showProgress("Posting update...");
+    
     var update_text = $('#update_text').val();
     var network = $('input[name=network]:checked').val();
     
@@ -402,21 +421,19 @@ function onSocializePublish()
         dataType: 'text',
         success: function(data) 
         {
-            $('#status').text("Update posted.");
+            showSuccess("Updated Posted.");
         },
         error: function()
         {
-            $('#status').text("Update failed!");
+            showFailure("Update Failed.");
         }
     });
     return false;
 }
-
 function onSocialConfigSave()
 {
-    $('#social_config_form').hide();
-    $('#status').show();
-    $('#status').text("Updating Settings...");
+    showProgress();
+
     var fb_setting = $('input[name=fb_setting]:checked').val();
     var tw_setting = $('input[name=tw_setting]:checked').val();
     var fb_page_url = $('#fb_page_url').val();
@@ -433,20 +450,19 @@ function onSocialConfigSave()
         dataType: 'text',
         success: function(data) 
         {
-            $('#status').text("Updated settings.");
+            showSuccess();
         },
         error: function()
         {
-            $('#status').text("Update failed!");
+            showFailure();
         }
     });
     return false;
 }
 function onAccountSettingsSubmit()
 {
-    $('#ajax_form').hide();
-    $('#status').show();
-    $('#status').text("Updating Settings...");
+    showProgress();
+
     var post_url = "/manage/account_settings.php?";
     post_url += $('#ajax_form').serialize();
     
@@ -457,11 +473,11 @@ function onAccountSettingsSubmit()
         dataType: 'text',
         success: function(data) 
         {
-            $('#status').text("Updated settings.");
+            showSuccess();
         },
         error: function()
         {
-            $('#status').text("Update failed!");
+            showFailure();
         }
     });
     return false;
@@ -533,9 +549,7 @@ function onAddContentSubmit()
 }
 function clickAddFacebook()
 {
-    $('#social_config_form').hide();
-    $('#status').show();
-    $('#status').text("Adding Facebook...");
+    showProgress("Adding Facebook account...");
 
     var url = "/manage/add_network.php?";
     url += "&artist_id=" + escape(g_artistId);
@@ -545,9 +559,7 @@ function clickAddFacebook()
 
 function clickAddTwitter()
 {
-    $('#social_config_form').hide();
-    $('#status').show();
-    $('#status').text("Adding Twitter...");
+    showProgress("Adding Twitter account...");
 
     var url = "/manage/add_network.php?";
     url += "&artist_id=" + escape(g_artistId);
@@ -575,9 +587,8 @@ function validateEditProfile()
 
 function onInviteFriends()
 {
-    $('#invite_friends_form').hide();
-    $('#status').show();
-    $('#status').text("Sending Form...");
+    showProgress();
+
     var friends = $('#friends_text').val();
     
     var post_url = "/manage/invite_friends.php?";
@@ -590,11 +601,11 @@ function onInviteFriends()
         dataType: 'text',
         success: function(data) 
         {
-            $('#status').text("Thank you, your friends will be invited.");
+            showSuccess("Thank you, your friends will be invited.");
         },
         error: function()
         {
-            $('#status').text("Thank you, your friends will be invited.");
+            showSuccess("Thank you, your friends will be invited.");
         }
     });
     return false;

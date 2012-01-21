@@ -1149,10 +1149,6 @@
 		2DF47445144A2D84005538C7 /* Teletex_Light.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = Teletex_Light.eot; sourceTree = "<group>"; };
 		2DF47446144A2D84005538C7 /* Teletex_Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Teletex_Light.otf; sourceTree = "<group>"; };
 		2DF47447144A2D84005538C7 /* dashboard.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = dashboard.php; sourceTree = "<group>"; };
-		2DF47449144A2D84005538C7 /* delete_content.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = delete_content.php; sourceTree = "<group>"; };
-		2DF4744A144A2D84005538C7 /* delete_product.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = delete_product.php; sourceTree = "<group>"; };
-		2DF4744B144A2D84005538C7 /* delete_song.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = delete_song.php; sourceTree = "<group>"; };
-		2DF4744C144A2D84005538C7 /* delete_video.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = delete_video.php; sourceTree = "<group>"; };
 		2DF47453144A2D84005538C7 /* facebox.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = facebox.css; sourceTree = "<group>"; };
 		2DF47454144A2D84005538C7 /* facebox.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = facebox.js; sourceTree = "<group>"; };
 		2DF47456144A2D84005538C7 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
@@ -3129,10 +3125,6 @@
 				2D760A31149DA72200BFE196 /* social_config.php */,
 				2D380B93146A490100E36189 /* store_settings.php */,
 				2DF47447144A2D84005538C7 /* dashboard.php */,
-				2DF47449144A2D84005538C7 /* delete_content.php */,
-				2DF4744A144A2D84005538C7 /* delete_product.php */,
-				2DF4744B144A2D84005538C7 /* delete_song.php */,
-				2DF4744C144A2D84005538C7 /* delete_video.php */,
 				2DF4745A144A2D84005538C7 /* footer.php */,
 				2DF4745B144A2D84005538C7 /* header.php */,
 				2DF47502144A2D84005538C7 /* index.php */,
