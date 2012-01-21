@@ -509,6 +509,7 @@ function onAddContentSubmit()
 {
     function fillContentForm(form_data)
     {
+        g_editor.saveHTML();
         var artist_id = $('#artist_id').val();
         var content_id = $('#content_id').val();
         var name = $('#name').val();

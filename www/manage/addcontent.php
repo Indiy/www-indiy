@@ -148,7 +148,7 @@ function onReady()
                                            width: '750px',
                                            dompath: false, 
                                            animate: false,
-                                           handleSubmit: true,
+                                           handleSubmit: false,
                                            toolbar: toolbar_config
                                            });
     g_editor.render();
