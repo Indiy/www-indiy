@@ -156,7 +156,7 @@
     <div class='top_blue_bar'></div>
     <div class='top_sep'></div>
 
-    <form id="ajax_form" method="post" enctype="multipart/form-data" action="addproduct.php">
+    <form id="ajax_form" method="post" enctype="multipart/form-data" action="addproduct.php" onsubmit='return onAddProductSubmit();'>
         <input type='hidden' value="<?=$_REQUEST['artist_id']?>" name="artistid">
         <input type='hidden' value="<?=$_REQUEST['id']?>" name="id" id="song_id">
         <? if ($_GET["id"] != "") { ?>
@@ -216,15 +216,9 @@
             <input type="submit" name="submit" class='left_submit' value="<? echo $situation; ?>" id="submitr" />
             <div class='branding_tip'>Branding Tip: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
         </div>
-            
-        <div id="form_message">
-            <? if ($_GET["id"] != "") { ?>
-                Your record successfully updated!!!!
-            <? }else{ ?>
-                Your record successfully added!!!!
-            <?}?>
-        </div>
     </form>
+
+    <? include_once 'include/popup_messages.html'; ?>
     
     <div class='bottom_sep'></div>
     <div class='bottom_blue_bar'></div>
