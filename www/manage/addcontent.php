@@ -181,7 +181,6 @@ $(document).ready(onReady);
                 <div class='image_label'>Image</div>
                 <div class='image_image'><?=$content_logo;?></div>
             </div>
-            <div class='left_label'>Image</div>
             <input id='content_image' type="file" name="logo" class='right_file' />
         </div>
         <div class='editor_container yui-skin-sam'>
