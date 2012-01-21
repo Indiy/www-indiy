@@ -425,130 +425,120 @@ $(document).ready(function() { <?=$pagesJava;?> });
             <div class='up_down_arrow' onclick='toggleRightBox();'></div>
         </div>
 
-            <div id="shop_results"></div>
-
+        <div id='shop_results'></div>
             
-            <? if (!$fan) { ?>
-            <div class="socialize">
-                <div class="header">
-                    <div class="title" onclick='toggleSocialTab();'></div>
-                    <div class="buttons">
-                        <div class='facebook holder' <?=$hide_fb;?> onclick='toggleSocialFB();'><div></div></div>
-                        <div class='twitter holder'  <?=$hide_tw;?> onclick='toggleSocialTW();'><div></div></div>
-                        <div class="email holder" onclick='toggleSocialEmail();'><div></div></div>
-                        <div class="share holder" onclick='toggleSocialShare();'><div></div></div>
-                    </div>
+        <div id='socialize'>
+            <div class="header">
+                <div class="title" onclick='toggleSocialTab();'>SOCIALIZE</div>
+                <div class='button_holder'>
+                    <div class='facebook button' <?=$hide_fb;?> onclick='toggleSocialFB();'></div>
+                </div>
+                <div class='button_holder'>
+                    <div class='twitter button' <?=$hide_tw;?> onclick='toggleSocialTW();'></div>
+                </div>
+                <div class='button_holder'>
+                    <div class='email button' onclick='toggleSocialEmail();'></div>
+                </div>
+                <div class='button_holder'>
+                    <div class='share button' onclick='toggleSocialShare();'></div>
+                </div>
+            </div>
+            
+            <div class="body">
+                
+                <div id='facebook' class="tab">
+                    <div class="sub_title">Facebook <span class='slashes'>//</span></div>
+                    <? if( !$hide_fb ) : ?>
+                        <iframe src="http://www.facebook.com/plugins/likebox.php?href=<?=urlencode($facebook_page);?>&width=273&colorscheme=dark&show_faces=false&stream=true&header=false&height=300" scrolling="no" frameborder="0" style="border:none; overflow:hidden;height:300px;" allowTransparency="true"></iframe>
+                    <? endif; ?>
                 </div>
                 
-                <div class="body">
-                    <div id="email" class="tab">
-                        <div class="sub-title">
-                            <h1>Mailing List //</h1>
-                        </div>
-                        <div id="news_success" style="display:none;">
-                        <br/>
-                        Thank you for your submission.  Your name will be added to our newsletter list.<br/>
-                        <br/>
-                        </div>
-                        <div id="news_form">
-                            <p>If you would like to keep right up to date with all the latest news, gigs, releases and competitions, then sign up to our mailing list.</p>
-                            <p class="small">By clicking on the submit button, you are confirming that you have read and agree with the terms of our <a href="">Privacy Policy</a>.</p>
-                            <label><span class="red">*</span> Name:</label>
-                            <input id="news_name" type="text" class="input" />
-                            <br /><br /><br />
-                            <label><span class="red">*</span> E-Mail:</label>
-                            <input id="news_email" type="text" class="input" />
-                            <br /><br /><br />
-                            <label><span class="red">*</span> Mobile:</label>
-                            <input id="news_mobile" type="text" class="input" />
-                            <br /><br /><br />
-                            <button class="submitNewsletter" onclick="submitNewsletter();">submit</button>
-                        </div>
-                    </div>
-                    
-                    <div id="facebook" class="tab">
-                         <div class="sub-title">
-                            <h1>Facebook //</h1>
-                        </div>
-                        <iframe src="http://www.facebook.com/plugins/likebox.php?href=<?=urlencode($facebook_page);?>&width=273&colorscheme=dark&show_faces=false&stream=true&header=false&height=415" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:273px; height:395px;" allowTransparency="true"></iframe>
-                    </div>
-                    
-                    <div id="twitter" class="tab">
-                          <div class="sub-title">
-                            <h1>Twitter //</h1>
-                        </div>
-                        <script src="http://widgets.twimg.com/j/2/widget.js"></script>
-                        <script>
-                        new TWTR.Widget({
-                          version: 2,
-                          type: 'profile',
-                          rpp: 5,
-                          interval: 6000,
-                          width: 273,
-                          height: 315,
-                          theme: {
-                            shell: {
-                              background: '#333333',
-                              color: '#ffffff'
+                <div id='twitter' class="tab">
+                    <div class="sub_title">Twitter <span class='slashes'>//</span></div>
+                    <? if( !$hide_tw ) : ?>
+                        <script src="http://widgets.twimg.com/j/2/widget.js" type="text/javascript"></script>
+                        <script type="text/javascript">
+                        new TWTR.Widget(
+                        {
+                            version: 2,
+                            type: 'profile',
+                            rpp: 5,
+                            interval: 6000,
+                            width: 273,
+                            height: 315,
+                            theme: {
+                                shell: {
+                                  background: '#333333',
+                                  color: '#ffffff'
+                                },
+                                tweets: {
+                                  background: '#000000',
+                                  color: '#ffffff',
+                                  links: '#4aed05'
+                                }
                             },
-                            tweets: {
-                              background: '#000000',
-                              color: '#ffffff',
-                              links: '#4aed05'
+                            features: {
+                                scrollbar: true,
+                                loop: false,
+                                live: false,
+                                hashtags: true,
+                                timestamp: true,
+                                avatars: true,
+                                behavior: 'all'
                             }
-                          },
-                          features: {
-                            scrollbar: true,
-                            loop: false,
-                            live: false,
-                            hashtags: true,
-                            timestamp: true,
-                            avatars: true,
-                            behavior: 'all'
-                          }
                         }).render().setUser('<?=$artist_twitter;?>').start();
-                        
                         </script>
-                    </div>
-                
-                    <div id="share" class="tab">
-                        <div class="sub-title">
-                            <h1>Send To A Friend //</h1>
-                            <!--
-                            <a href="#" class="facebook"></a>
-                            <a href="#" class="twitter"></a>
-                            -->
-                        </div>
-                        <div id="send_friend_form">
-                            <p>Fill out the form below to send a copy of the message to your friend.</p>
-                            <p class="small">Please note that your friend will not be subscribed to any email list nor will his / her name or email address be permanently recorded.</p>
-                            <label><span class="red">*</span> To:</label>
-                            <input id="send_friend_to" type="text" class="input" />
-                            <br /><br /><br />
-                            <label><span class="red">*</span> From:</label>
-                            <input id="send_friend_from" type="text" class="input" />
-                            <br /><br /><br />
-                            <label><span class="red">*</span> Message:</label>
-                            <textarea id="send_friend_message" rows="4" cols="20" class="input"></textarea>
-                            <br /><br /><br /><br />
-                            <span class="required"><span class="red">*</span> required</span>
-                            <button class="submitShare" onclick="sendToFriend();">submit</button>
-                        </div>
-                        <div id="send_friend_success" style="display:none;">
-                            <br/>
-                            Your friend will be notified about this great artist!<br/>
-                            <br/>
-                        </div>
-                    </div>
-                
+                    <? endif; ?>
                 </div>
                 
-            </div> 
-    
-            <? } ?>
+                <div id='email' class="tab">
+                    <div class="sub_title">Mailing List <span class='slashes'>//</span></div>
+                    <div id='news_success' class='news_success' style="display:none;">
+                        Thank you for your submission.  Your name will be added to our newsletter list.
+                    </div>
+                    <div id="news_form" class='news_form'>
+                        <div>If you would like to keep right up to date with all the latest news, gigs, releases and competitions, then sign up to our mailing list.</div>
+                        <label><span class="red">*</span> Name:</label>
+                        <input id="news_name" type="text" class="input" />
+                        <br /><br /><br />
+                        <label><span class="red">*</span> E-Mail:</label>
+                        <input id="news_email" type="text" class="input" />
+                        <br /><br /><br />
+                        <label><span class="red">*</span> Mobile:</label>
+                        <input id="news_mobile" type="text" class="input" />
+                        <br /><br /><br />
+                        <button class="submitNewsletter" onclick="submitNewsletter();">submit</button>
+                    </div>
+                </div>
+
+                <div id='share' class="tab">
+                    <div class="sub_title">Send To A Friend <span class='slashes'>//</span></div>
+                    <div id='send_friend_form' class='send_friend_form'>
+                        <p>Fill out the form below to send a copy of the message to your friend.</p>
+                        <p class="small">Please note that your friend will not be subscribed to any email list nor will his / her name or email address be permanently recorded.</p>
+                        <label><span class="red">*</span> To:</label>
+                        <input id="send_friend_to" type="text" class="input" />
+                        <br /><br /><br />
+                        <label><span class="red">*</span> From:</label>
+                        <input id="send_friend_from" type="text" class="input" />
+                        <br /><br /><br />
+                        <label><span class="red">*</span> Message:</label>
+                        <textarea id="send_friend_message" rows="4" cols="20" class="input"></textarea>
+                        <br /><br /><br /><br />
+                        <span class="required"><span class="red">*</span> required</span>
+                        <button class="submitShare" onclick="sendToFriend();">submit</button>
+                    </div>
+                    <div id='send_friend_success' class='send_friend_success' style="display:none;">
+                        Your friend will be notified about this great artist!
+                    </div>
+                </div>
             
-            <div id="image"></div>
-            <div id="loader"><img src="/jplayer/images/ajax-loader.gif" /></div>
+            </div>
+            
+        </div> 
+            
+        <div id='image'></div>
+        <div id='loader'><img src="/jplayer/images/ajax-loader.gif" /></div>
             
             
             
