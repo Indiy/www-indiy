@@ -121,8 +121,7 @@
 
     <div class='top_blue_bar'></div>
     <div class='top_sep'></div>
-    <form id='ajax_form' method="post" enctype="multipart/form-data" action="register.php" onsubmit="return validateEditProfile();">
-        
+    <form id='ajax_form' onsubmit="return false;">
         <input id='artist_id' type="hidden" name="artistid" value="<?=$artistid?>">
         
         <div class='input_container'>
