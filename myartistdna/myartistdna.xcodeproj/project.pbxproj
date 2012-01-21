@@ -1153,17 +1153,9 @@
 		2DF4744A144A2D84005538C7 /* delete_product.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = delete_product.php; sourceTree = "<group>"; };
 		2DF4744B144A2D84005538C7 /* delete_song.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = delete_song.php; sourceTree = "<group>"; };
 		2DF4744C144A2D84005538C7 /* delete_video.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = delete_video.php; sourceTree = "<group>"; };
-		2DF4744F144A2D84005538C7 /* b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b.png; sourceTree = "<group>"; };
-		2DF47450144A2D84005538C7 /* bl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bl.png; sourceTree = "<group>"; };
-		2DF47451144A2D84005538C7 /* br.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = br.png; sourceTree = "<group>"; };
-		2DF47452144A2D84005538C7 /* closelabel.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = closelabel.gif; sourceTree = "<group>"; };
 		2DF47453144A2D84005538C7 /* facebox.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = facebox.css; sourceTree = "<group>"; };
 		2DF47454144A2D84005538C7 /* facebox.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = facebox.js; sourceTree = "<group>"; };
-		2DF47455144A2D84005538C7 /* jquery-1.2.2.pack.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.2.2.pack.js"; sourceTree = "<group>"; };
 		2DF47456144A2D84005538C7 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
-		2DF47457144A2D84005538C7 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		2DF47458144A2D84005538C7 /* tl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tl.png; sourceTree = "<group>"; };
-		2DF47459144A2D84005538C7 /* tr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tr.png; sourceTree = "<group>"; };
 		2DF4745A144A2D84005538C7 /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DF4745B144A2D84005538C7 /* header.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = header.php; sourceTree = "<group>"; };
 		2DF4745D144A2D84005538C7 /* arow_right_drop.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = arow_right_drop.gif; sourceTree = "<group>"; };
@@ -3219,17 +3211,9 @@
 		2DF4744E144A2D84005538C7 /* facefiles */ = {
 			isa = PBXGroup;
 			children = (
-				2DF4744F144A2D84005538C7 /* b.png */,
-				2DF47450144A2D84005538C7 /* bl.png */,
-				2DF47451144A2D84005538C7 /* br.png */,
-				2DF47452144A2D84005538C7 /* closelabel.gif */,
 				2DF47453144A2D84005538C7 /* facebox.css */,
 				2DF47454144A2D84005538C7 /* facebox.js */,
-				2DF47455144A2D84005538C7 /* jquery-1.2.2.pack.js */,
 				2DF47456144A2D84005538C7 /* loading.gif */,
-				2DF47457144A2D84005538C7 /* README.txt */,
-				2DF47458144A2D84005538C7 /* tl.png */,
-				2DF47459144A2D84005538C7 /* tr.png */,
 			);
 			path = facefiles;
 			sourceTree = "<group>";

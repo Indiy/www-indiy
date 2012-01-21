@@ -103,9 +103,6 @@
     $('#facebox .body').children().fadeIn('normal')
 	jscolor.install();
 	
-	$.getScript('ajaxupload/files.js', function() {
-		$.getScript('ajaxupload/jquery.iframe-post-form.js', function() {
-	});
 	});
 	$.getScript('/js/jquery.jplayer.min.js', function() {
 		if(songUrl.match(/song=([0-9a-zA-Z_-]+)/) != null){
