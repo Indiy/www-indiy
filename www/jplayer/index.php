@@ -618,17 +618,19 @@ String.prototype.endsWith = function(suffix) {
             <div id='store_wrapper'>
                 <div id='store'>
                     <div class='close' onclick='closeStore();'></div>
+                    <?
+                        if( $need_product_page_arrows )
+                        {
+                            echo "<div class='scroll_button right disabled' onclick='scrollStoreRight();'></div>\n";
+                            echo "<div class='scroll_button left disabled' onclick='scrollStoreLeft();'></div>\n";
+                        }
+                    ?>
                     <div class='cart_nav'>
                         <button onclick='showProducts();'>Store</button>
                         <button onclick='showCart();'>Cart</button>
                     </div>
                     <div id='product_slider' class='product_list'>
                         <? 
-                            if( $need_product_page_arrows )
-                            {
-                                echo "<div class='scroll_button right disbaled' onclick='scrollStoreRight();'></div>\n";
-                                echo "<div class='scroll_button left disbaled' onclick='scrollStoreLeft();'></div>\n";
-                            }
                             //echo "<ul id='product_slider_ul' class='product_slider'>\n";
                             foreach( $product_list as $i => $product )
                             {
