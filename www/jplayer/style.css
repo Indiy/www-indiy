@@ -1168,7 +1168,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     right: 13px;
     width: 175px;
     background: #252525;
-    border: 1px solid #555;
+    border-bottom: 1px solid #555;
+    border-right: 1px solid #555;
+    border-left: 1px solid #555;
+    border-top: none;
     z-index: 2;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
