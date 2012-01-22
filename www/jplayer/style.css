@@ -1167,7 +1167,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     top: 0px;
     right: 13px;
     width: 175px;
-    background-color: #333;
+    background: #252525;
+    border: 1px solid #555;
     z-index: 2;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
