@@ -466,7 +466,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
                             rpp: 5,
                             interval: 6000,
                             width: 273,
-                            height: 228,
+                            height: 226,
                             theme: {
                                 shell: {
                                   background: '#333333',
