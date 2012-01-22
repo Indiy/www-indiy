@@ -79,7 +79,7 @@ else
     $pages_list_json = json_encode($pages_list);
 
     // Build Music
-    $loadmusic = mq("SELECT * FROM `[p]musicplayer_audio` WHERE `artistid`='{$artist_id}' AND `type`='0' ORDER BY `order` ASC, `id` DESC");
+    $loadmusic = mq("SELECT * FROM `[p]musicplayer_audio` WHERE `artistid`='{$artist_id}' ORDER BY `order` ASC, `id` DESC");
     $music_list = array();
     while ($music = mf($loadmusic)) 
     {
@@ -120,7 +120,7 @@ else
     $total_q = mf(mq("SELECT SUM(views) FROM `[p]musicplayer_audio` WHERE `artistid`='{$music_artistid}'"));
     $total_listens = intval($total_q[0]);
     
-    $loadvideo = mq("SELECT * from `[p]musicplayer_video` WHERE {$mQuery} ORDER BY `order` ASC, `id` DESC");
+    $loadvideo = mq("SELECT * from `[p]musicplayer_video` WHERE `artistid`='{$artist_id}' ORDER BY `order` ASC, `id` DESC");
     $cv = 0;
     /* Video Overlay Pagination Code Begins */
     $row_counter = 0; // Counts the number of video pages left to right
