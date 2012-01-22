@@ -500,7 +500,9 @@ $(document).ready(function() { <?=$pagesJava;?> });
                         Thank you for your submission.  Your name will be added to our newsletter list.
                     </div>
                     <div id="news_form" class='news_form'>
-                        <div>If you would like to keep right up to date with all the latest news, gigs, releases and competitions, then sign up to our mailing list.</div>
+                        <div class='instructions'>
+                            If you would like to keep right up to date with all the latest news, gigs, releases and competitions, then sign up to our mailing list.
+                        </div>
                         <label><span class="red">*</span> Name:</label>
                         <input id="news_name" type="text" class="input" />
                         <br /><br /><br />
@@ -519,19 +521,30 @@ $(document).ready(function() { <?=$pagesJava;?> });
                 <div class="sub_title">SEND TO A FRIEND<span class='slashes'>//</span></div>
                 <div class='content'>
                     <div id='send_friend_form' class='send_friend_form'>
-                        <p>Fill out the form below to send a copy of the message to your friend.</p>
-                        <p class="small">Please note that your friend will not be subscribed to any email list nor will his / her name or email address be permanently recorded.</p>
-                        <label><span class="red">*</span> To:</label>
-                        <input id="send_friend_to" type="text" class="input" />
-                        <br /><br /><br />
-                        <label><span class="red">*</span> From:</label>
-                        <input id="send_friend_from" type="text" class="input" />
-                        <br /><br /><br />
-                        <label><span class="red">*</span> Message:</label>
-                        <textarea id="send_friend_message" rows="4" cols="20" class="input"></textarea>
-                        <br /><br /><br /><br />
-                        <span class="required"><span class="red">*</span> required</span>
-                        <button class="submitShare" onclick="sendToFriend();">submit</button>
+                        <div class='instructions'>Fill out the form below to send a copy of the message to your friend.</div>
+                        <div class='disclaimer'>Please note that your friend will not be subscribed to any email list nor will his / her name or email address be permanently recorded.</div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>To:</div>
+                            <div class='input_container'>
+                                <input id='send_friend_to' />
+                            </div>
+                        </div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>From:</div>
+                            <div class='input_container'>
+                                <input id='send_friend_from' />
+                            </div>
+                        </div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>Message:</div>
+                            <div class='input_container'>
+                                <textarea id='send_friend_message'></textarea>
+                            </div>
+                        </div>
+                        <div class='submit_required'>
+                            <button class='submit green' onclick='sendToFriend();'>send</button>
+                            <div class='required_label'><span class='required'>*</span>required</div>
+                        </div>
                     </div>
                     <div id='send_friend_success' class='send_friend_success' style="display:none;">
                         Your friend will be notified about this great artist!

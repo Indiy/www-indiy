@@ -1231,45 +1231,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background: #111 url('/images/right_box_up_down_selected.png') no-repeat center 4px;
 }
 
-/***************************/
-/* New Socialize Area Styling */
-div.socialize { background: url("images/new/socialize_bg.png") repeat scroll 0 0 transparent; bottom: -361px; height: 400px; margin-left: 40px; position: fixed; width: 300px; z-index: 3; }
-div.socialize .title { background: url('images/new/socialize.png')  no-repeat; height:16px; width:78px; display:inline-block; margin: 12px 0 0 8px; vertical-align:top; cursor:pointer; }
-div.socialize .buttons { display: inline-block; margin-left: 9px; }
-div.socialize .buttons div.holder { background: url('images/button_fade.png') no-repeat left top; height:43px; width:46px; float:left; cursor:pointer; }
-div.socialize .buttons div.holder div { height:26px; width:26px; display:inline-block; margin-left:10px; margin-top:8px; }
-div.socialize .buttons .facebook div { background: url('images/new/socialize_facebook.png') no-repeat; }
-div.socialize .buttons .twitter div { background: url('images/new/socialize_twitter.png') no-repeat; }
-div.socialize .buttons .email div { background: url('images/new/socialize_email.png') no-repeat; }
-div.socialize .buttons .share div { background: url('images/new/socialize_share.png') no-repeat; }
-div.socialize .buttons .share div { background: url('images/new/socialize_share.png') no-repeat; }
-div.socialize .sub-title { background: url("images/new/sub_title_bg.png") no-repeat scroll 0 0 transparent !important; padding-top:9px; height: 21px; margin-left: -5px; margin-bottom:10px; margin-top: -18px; width: 288px; z-index: -1; }
-div.socialize .sub-title h1 { float:left; margin-left:10px; }
-div.socialize #share a.facebook, div.socialize #share a.twitter { margin:0px; } 
-div.socialize #share a.facebook { margin-left:6px; background: url("images/new/socialize_fb_small.png") no-repeat; height:15px; width:15px; display:inline-block; }
-div.socialize #share a.twitter { margin-left:6px; background: url("images/new/socialize_twitter_small.png") no-repeat; height:15px; width:15px; display:inline-block; }
-div.socialize #share .required { float:right; float: right; font-size: 11px; margin: 10px 33px 0 0; }
-div.socialize a { color:#fff; }
-div.socialize .small { font-size: 10px; letter-spacing: 0; line-height: 110%; }
-div.socialize .tab p { width:95%; }
-div.socialize .buttons .active { background: url('images/new/socialize_active.png') no-repeat !important; }
-
-div.socialize .body .tab { display:none; }
-div.socialize .body #facebook { display:block; }
-div.socialize #email label, div.socialize #share label { width:65px; font-size:11px; margin-top:3px; }
-
-div.socialize .body { margin-top:10px; }
-div.socialize .body > div { margin-left:12px; }
-
-div.socialize input, div.socialize textarea { background:url('images/new/socialize_form_bg.png') left top; border-width:1px; }
-
-div.socializestream { width: 100px; height: 40px; cursor: pointer; border-bottom: 0px solid #fff; float: left; }
-div.socializehide { width: 100px; height: 40px; cursor: pointer; border-bottom: 0px solid #fff; float: left; }
-a.showfacebook, a.showtwitter, a.showemail, a.showgoogle { display: block; text-indent: -9999px; width: 35px; height: 40px; border-bottom: 0px solid #fff; float: left; }
-div.socialize div.padthis { padding: 5px; }
-
-/***************************/
-
 #socialize {
     height: 400px;
     width: 300px;
@@ -1348,5 +1309,77 @@ div.socialize div.padthis { padding: 5px; }
     padding-right: 12px;
     overflow: hidden;
 }
+#socialize .instructions {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    color: #CCC;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+}
+#socialize .disclaimer {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #CCC;
+    font-size: 10px;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+}
+#socialize .label_input {
+    margin-bottom: 12px;
+}
+#socialize .label {
+    float: left;
+    width: 70px;
+    padding-right: 10px;
+    padding-top: 2px;
+    text-align: right;
+    color: #CCC;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+}
+#socialize .input_container {
+    float: left;
+}
+#socialize .input_container input {
+    width: 180px;
+    height: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #CCC;
+    background-color: #444;
+    border-radius: 4px;
+}
+#socialize .label .required {
+    color: red;
+}
+#socialize .required_label {
+    float: right;
+    margin-right: 10px;
+    color: #CCC;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+}
+#socialize .submit {
+    float: left;
+    margin-left: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: white;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+}
+#socialize .submit.green {
+    background-color: green;
+}
+
 
 
