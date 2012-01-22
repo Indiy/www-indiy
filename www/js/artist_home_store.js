@@ -38,7 +38,7 @@ function buySong(product_id)
 function showStore()
 {
     var w = $('#store').width();
-    $('#store_wrapper').width(w);
+    //$('#store_wrapper').width(w);
 
     fadeAllPageElements();
     $('#store_wrapper').fadeIn();
