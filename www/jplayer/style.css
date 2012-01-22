@@ -1562,12 +1562,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #store .product {
     display: inline-block;
     position: relative;
-    width: 280px;
+    width: 260px;
     height: 350px;
-    padding-top: 5px;
+    padding-top: 7px;
     padding-bottom: 7px;
-    padding-right: 7px;
-    padding-left: 7px;
+    padding-right: 12px;
+    padding-left: 12px;
     margin-right: 8px;
     border: 2px solid white;
     border-radius: 10px;
@@ -1603,12 +1603,13 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 280px;
     margin-right: 10px;
     padding-bottom: 10px;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 #store .price {
     float: left;
     width: 100px;
     padding-top: 5px;
+    padding-left: 10px;
     color: white;
     font-size: 18px;
     font-family: Helvetica, sans-serif;
@@ -1620,6 +1621,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-bottom: 3px;
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 5px;
     color: white;
     font-size: 12px;
     font-family: Helvetica, sans-serif;
