@@ -1541,6 +1541,22 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #store .close:hover {
     background: transparent url('/images/video_close.png') 0px -32px no-repeat;
 }
+#store .scroll_button {
+    position: absolute;
+    top: 150px;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    z-index: 31;
+}
+#store .scroll_button.right {
+    right: -22px;
+    background: transparent url('/jplayer/images/video_right_arrow.png') 0px 0px no-repeat;
+}
+#store .scroll_button.left {
+    left: -22px;
+    background: transparent url('/jplayer/images/video_left_arrow.png') 0px 0px no-repeat;
+}
 #store .cart_nav {
 }
 #store .cart_nav button {
@@ -1598,6 +1614,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-size: 12px;
     font-family: Helvetica, sans-serif;
     font-weight: lighter;
+    white-space: normal;
 }
 #store .price_cart {
     position: absolute;
