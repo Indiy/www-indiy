@@ -1578,7 +1578,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-bottom: 10px;
     text-align: center;
 }
-#store .image_holder image {
+#store .image_holder img {
     max-height: 170px;
     max-width: 266px;
 }
