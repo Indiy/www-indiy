@@ -1313,6 +1313,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 2px;
+    padding-bottom: 15px;
     color: #EEE;
     font-size: 12px;
     font-family: Helvetica, sans-serif;
@@ -1321,6 +1322,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #socialize .disclaimer {
     padding-left: 5px;
     padding-right: 5px;
+    padding-bottom: 15px;
     color: #EEE;
     font-size: 10px;
     font-family: Helvetica, sans-serif;
@@ -1357,11 +1359,14 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background-color: #444;
     border-radius: 4px;
     border: none;
+    box-shadow: 1px 1px 8px -3px black inset;
+}
 }
 #socialize .input_container textarea {
-    height: 80px;
+    height: 78px;
+    padding-top: 4px;
 }
-#socialize .label .required {
+#socialize .required {
     color: red;
     padding-right: 5px;
 }
