@@ -635,7 +635,7 @@ String.prototype.endsWith = function(suffix) {
                                     $description = $product['description'];
                                     $price = $product['price'];
                                     echo "<li>";
-                                    echo " <div class='product'>
+                                    echo " <div class='product'>";
                                     echo "  <div class='image_holder'>";
                                     echo "   <img src='$image'>"
                                     echo "  </div>";
