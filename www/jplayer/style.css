@@ -1409,12 +1409,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background-color: #0a0;
 }
 #socialize .submit.red {
-    background-color: #a00;
+    background-color: #c00;
     padding-left: 40px;
     padding-right: 40px;
 }
 #socialize .submit.red:hover {
-    background-color: #c00;
+    background-color: #f00;
 }
 
 
