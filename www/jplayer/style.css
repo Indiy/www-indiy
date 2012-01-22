@@ -1323,12 +1323,12 @@ div.socialize div.padthis { padding: 5px; }
     background-color: #555;
 }
 #socialize .sub_title {
-    height: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
+    height: 21px;
+    margin-left: 12px;
+    margin-right: 12px;
     margin-bottom: 15px;
     padding-left: 10px;
-    padding-top: 10px;
+    padding-top: 8px;
     color: white;
     font-size: 14px;
     font-family: Helvetica, sans-serif;
@@ -1337,7 +1337,8 @@ div.socialize div.padthis { padding: 5px; }
     border-radius: 4px;
 }
 #socialize .sub_title .slashes {
-    color: #AAA;
+    color: #777;
+    padding-left: 8px;
 }
 #socialize .tab {
     display: none;
