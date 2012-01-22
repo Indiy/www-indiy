@@ -637,7 +637,7 @@ String.prototype.endsWith = function(suffix) {
                                     echo "<li>";
                                     echo " <div class='product'>";
                                     echo "  <div class='image_holder'>";
-                                    echo "   <img src='$image'>"
+                                    echo "   <img src='$image'>";
                                     echo "  </div>";
                                     echo "  <div class='name'>$name</div>";
                                     echo "  <div class='description'>$description</div>";
