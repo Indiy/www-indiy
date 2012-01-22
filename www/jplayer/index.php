@@ -499,20 +499,27 @@ $(document).ready(function() { <?=$pagesJava;?> });
                     <div id='news_success' class='news_success' style="display:none;">
                         Thank you for your submission.  Your name will be added to our newsletter list.
                     </div>
-                    <div id="news_form" class='news_form'>
+                    <div id='news_form'>
                         <div class='instructions'>
                             If you would like to keep right up to date with all the latest news, gigs, releases and competitions, then sign up to our mailing list.
                         </div>
-                        <label><span class="red">*</span> Name:</label>
-                        <input id="news_name" type="text" class="input" />
-                        <br /><br /><br />
-                        <label><span class="red">*</span> E-Mail:</label>
-                        <input id="news_email" type="text" class="input" />
-                        <br /><br /><br />
-                        <label><span class="red">*</span> Mobile:</label>
-                        <input id="news_mobile" type="text" class="input" />
-                        <br /><br /><br />
-                        <button class="submitNewsletter" onclick="submitNewsletter();">submit</button>
+                        <div class='disclaimer'>By clicking on the submit button, you are confirming that you have read and agree with the terms of our <a href="">Privacy Policy</a>.</div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>Name:</div>
+                            <div class='input_container'>
+                                <input id='news_name' />
+                            </div>
+                        </div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>Email:</div>
+                            <div class='input_container'>
+                                <input id='news_email' />
+                            </div>
+                        </div>
+                        <div class='submit_required'>
+                            <button class='submit red' onclick='submitNewsletter();'>submit</button>
+                            <div class='required_label'><span class='required'>*</span>required</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -520,7 +527,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
             <div id='share' class="tab">
                 <div class="sub_title">SEND TO A FRIEND<span class='slashes'>//</span></div>
                 <div class='content'>
-                    <div id='send_friend_form' class='send_friend_form'>
+                    <div id='send_friend_form'>
                         <div class='instructions'>Fill out the form below to send a copy of the message to your friend.</div>
                         <div class='disclaimer'>Please note that your friend will not be subscribed to any email list nor will his / her name or email address be permanently recorded.</div>
                         <div class='label_input'>
