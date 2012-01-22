@@ -8,11 +8,11 @@ function toggleSocialTab()
     {
         if( g_currentSocialTab == '' )
         {
-            if( $(".socialize .facebook").is(':visible') )
+            if( $("#socialize .button.facebook").is(':visible') )
             {
                 toggleSocialFB();
             }
-            else if(  $(".socialize .twitter").is(':visible') )
+            else if(  $("#socialize .button.twitter").is(':visible') )
             {
                 toggleSocialTW();
             }
@@ -31,106 +31,62 @@ function toggleSocialTab()
         closeSocialTab();
     }
 }
-
-function toggleSocialFB() 
-{
-    $(".buttons div").removeClass("active");
-    $(".socialize .body .tab").hide();
-    $(".socialize .body #facebook").show();
-    
-    if( g_currentSocialTab == 'facebook' ) 
-    {
-        if( g_socialMinimized )
-            openSocialTab();
-        else
-            closeSocialTab();
-    }
-    else 
-    {
-        g_currentSocialTab = 'facebook';
-        openSocialTab();
-    }
-}
-
-function toggleSocialTW() 
-{
-    $(".buttons div").removeClass("active");
-    $(".socialize .body .tab").hide();
-    $(".socialize .body #twitter").show();
-    
-    if( g_currentSocialTab == 'twitter' ) 
-    {
-        if( g_socialMinimized )
-            openSocialTab();
-        else
-            closeSocialTab();
-    }
-    else 
-    {
-        g_currentSocialTab = 'twitter';
-        openSocialTab();
-    }
-}
-
-function toggleSocialEmail()
-{
-    $(".buttons div").removeClass("active");
-    $(".socialize .body .tab").hide();
-    $(".socialize .body #email").show();
-    
-    if( g_currentSocialTab == 'email' ) 
-    {
-        if( g_socialMinimized )
-            openSocialTab();
-        else
-            closeSocialTab();
-    }
-    else 
-    {
-        g_currentSocialTab = 'email';
-        openSocialTab();
-    }
-    
-}
-
-function toggleSocialShare() 
-{
-    $(".buttons div").removeClass("active");
-    $(".socialize .body .tab").hide();
-    $(".socialize .body #share").show();
-    
-    if( g_currentSocialTab == 'share' ) {
-        if( g_socialMinimized )
-            openSocialTab();
-        else
-            closeSocialTab();
-    }
-    else 
-    {
-        g_currentSocialTab = 'share';
-        openSocialTab();
-    }
-    
-}
-
 function openSocialTab() 
 {
     if( g_socialMinimized ) 
     {
         g_socialMinimized = false;
         if( g_currentSocialTab != '' )
-            $(".socialize ." + g_currentSocialTab).addClass("active");
-        $(".socialize").animate({ bottom: "0" }, 300);
+            $("#socialize .button." + g_currentSocialTab).addClass("active");
+        $("#socialize").animate({ bottom: "0" }, 300);
     }
 }
 
 function closeSocialTab() {
-    $(".buttons div").removeClass("active");
+    $("#socialize .button").removeClass("active");
     if( !g_socialMinimized ) 
     {
         g_socialMinimized = true;
-        $(".socialize").animate({ bottom: "-361px" }, 300);
+        $("#socialize").animate({ bottom: "-361px" }, 300);
     }
+}
+
+function resetActiveTab(name)
+{
+    $("#socialize .body .tab").hide();
+    $("#socialize .body #" + name).show();    
+    if( g_currentSocialTab == name ) 
+    {
+        if( g_socialMinimized )
+            openSocialTab();
+        else
+            closeSocialTab();
+    }
+    else 
+    {
+        g_currentSocialTab = name;
+        openSocialTab();
+    }
+}
+
+function toggleSocialFB() 
+{
+    resetActiveTab('facebook');
+}
+
+function toggleSocialTW() 
+{
+    resetActiveTab('twitter');
+}
+
+function toggleSocialEmail()
+{
+    resetActiveTab('email');
+}
+
+function toggleSocialShare() 
+{
+    resetActiveTab('share');
 }
 
 function submitNewsletter()
