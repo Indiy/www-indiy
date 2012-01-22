@@ -178,6 +178,8 @@ function fadeAllPageElements()
 
 function showUserPage(i)
 {
+    fadeAllPageElements();
+    
     var page = g_pageList[i];
     $('#page_title').text(page['title']);
     $('#page_content').html(page['content']);
@@ -189,7 +191,7 @@ function showUserPage(i)
     {
         $('#page_image_holder').hide();
     }
-    $('#user_page_wrapper').show();
+    $('#user_page_wrapper').fadeIn();
 }
 function closeUserPage()
 {
