@@ -1599,7 +1599,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #store .price_cart {
     position: absolute;
     bottom: 0px;
-    display: none;
     border-top: 1px solid #888;
     width: 280px;
     margin-right: 10px;
