@@ -1476,6 +1476,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #user_page .close:hover {
     background: transparent url('/images/video_close.png') 0px -32px no-repeat;
 }
+#user_page .scrollable_container {
+    overflow-y: scroll;
+    max-height: 400px;
+}
 #user_page .title {
     padding-bottom: 20px;
     color: white;
@@ -1492,7 +1496,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-size: 14px;
     font-family: Helvetica, sans-serif;
     font-weight: normal;
-    overflow-y: scroll;
 }
 
 
