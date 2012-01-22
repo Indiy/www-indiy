@@ -1401,6 +1401,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #socialize .submit.green:hover {
     background-color: #0a0;
 }
+#socialize .submit.red {
+    background-color: red;
+}
+#socialize .submit.red:hover {
+    background-color: #a00;
+}
 
 
 
