@@ -431,16 +431,16 @@ $(document).ready(function() { <?=$pagesJava;?> });
             <div class="header">
                 <div class="title" onclick='toggleSocialTab();'>SOCIALIZE</div>
                 <div class='button_holder'>
-                    <div class='facebook button' <?=$hide_fb;?> onclick='toggleSocialFB();'></div>
-                </div>
-                <div class='button_holder'>
-                    <div class='twitter button' <?=$hide_tw;?> onclick='toggleSocialTW();'></div>
+                    <div class='share button' onclick='toggleSocialShare();'></div>
                 </div>
                 <div class='button_holder'>
                     <div class='email button' onclick='toggleSocialEmail();'></div>
                 </div>
                 <div class='button_holder'>
-                    <div class='share button' onclick='toggleSocialShare();'></div>
+                    <div class='twitter button' <?=$hide_tw;?> onclick='toggleSocialTW();'></div>
+                </div>
+                <div class='button_holder'>
+                    <div class='facebook button' <?=$hide_fb;?> onclick='toggleSocialFB();'></div>
                 </div>
             </div>
             

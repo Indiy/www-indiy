@@ -1274,7 +1274,7 @@ div.socialize div.padthis { padding: 5px; }
     height: 400px;
     width: 300px;
     left: 40px;
-    bottom: 0px;
+    bottom: -360px;
     position: absolute;
     z-index: 20; 
     background: #333;
@@ -1304,18 +1304,19 @@ div.socialize div.padthis { padding: 5px; }
 }
 #socialize .button {
     height: 100%;
+    cursor: pointer;
 }
 #socialize .button.facebook {
-    background: transparent url('/images/socialize_facebook.png');
+    background: transparent url('/images/socialize_facebook.png') no-repeat center center;
 }
 #socialize .button.twitter {
-    background: transparent url('/images/socialize_twitter.png');
+    background: transparent url('/images/socialize_twitter.png') no-repeat center center;
 }
 #socialize .button.email {
-    background: transparent url('/images/socialize_email.png');
+    background: transparent url('/images/socialize_email.png') no-repeat center center;
 }
 #socialize .button.share {
-    background: transparent url('/images/socialize_share.png');
+    background: transparent url('/images/socialize_share.png') no-repeat center center;
 }
 #socialize .button.active {
     background-color: #555;
