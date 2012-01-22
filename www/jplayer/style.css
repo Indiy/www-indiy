@@ -1567,7 +1567,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-bottom: 7px;
     padding-right: 7px;
     padding-left: 7px;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 5px;
 }
 #store .title {
