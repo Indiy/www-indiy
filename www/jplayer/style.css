@@ -1280,16 +1280,24 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background: #353535;
 }
 #socialize .button.facebook {
-    background-image: url('/images/socialize_facebook.png') no-repeat center center;
+    background-image: url('/images/socialize_facebook.png');
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 #socialize .button.twitter {
-    background-image: url('/images/socialize_twitter.png') no-repeat center center;
+    background-image: url('/images/socialize_twitter.png');
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 #socialize .button.email {
-    background-image: url('/images/socialize_email.png') no-repeat center center;
+    background-image: url('/images/socialize_email.png');
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 #socialize .button.share {
-    background-image: url('/images/socialize_share.png') no-repeat center center;
+    background-image: url('/images/socialize_share.png');
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 #socialize .button.active,
 #socialize .button.active:hover {
