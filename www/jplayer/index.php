@@ -70,7 +70,7 @@ else
             $image = '/artists/images/' . $pages['image'];
         }
         $item = array("id" => $pages['id'],
-                      "title" => $pages['title'],
+                      "title" => $pages['name'],
                       "image" => $image,
                       "content" => $pages['body'],
                       );
