@@ -34,6 +34,7 @@ function toggleSocialTab()
 function openSocialTab() 
 {
     g_socialMinimized = false;
+    $("#socialize .button").removeClass("active");
     $("#socialize .button." + g_currentSocialTab).addClass("active");
     $("#socialize").animate({ bottom: "0" }, 300);
 }
@@ -48,7 +49,7 @@ function closeSocialTab()
 function setActiveSocialTab(name)
 {
     $("#socialize .tab").hide();
-    $("#socialize .tab#" + name).show();    
+    $("#socialize .tab#" + name).show();  
     if( g_currentSocialTab == name ) 
     {
         if( g_socialMinimized )
