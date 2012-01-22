@@ -1328,6 +1328,13 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-family: Helvetica, sans-serif;
     font-weight: lighter;
 }
+#socialize .disclaimer a {
+    text-decoration: underline;
+    color: #EEE;
+}
+#socialize .disclaimer a:hover {
+    color: #999;
+}
 #socialize .label_input {
     margin-bottom: 12px;
 }
@@ -1402,10 +1409,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background-color: #0a0;
 }
 #socialize .submit.red {
-    background-color: red;
+    background-color: #a00;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 #socialize .submit.red:hover {
-    background-color: #a00;
+    background-color: red;
 }
 
 
