@@ -177,9 +177,9 @@ else
             $image = '/images/default_product_image.jpg';
             if( $product_image != "" ) 
             {
-                $path = "/artists/products/$product_image";
-                if( file_exists("..$path") )
-                    $image = $path;
+                $path = "artists/products/$product_image";
+                if( file_exists("$path") )
+                    $image = "/$path";
             }
             $item = array("id" => $pro['id'],
                           "image" => $image,
