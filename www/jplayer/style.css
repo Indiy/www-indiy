@@ -1320,7 +1320,7 @@ div.socialize div.padthis { padding: 5px; }
     background: transparent url('/images/socialize_share.png') no-repeat center center;
 }
 #socialize .button.active {
-    background-color: #555;
+    background-color: #444;
 }
 #socialize .tab {
     display: none;
@@ -1336,7 +1336,7 @@ div.socialize div.padthis { padding: 5px; }
     font-size: 14px;
     font-family: Helvetica, sans-serif;
     font-weight: normal;
-    background-color: #555;
+    background-color: #444;
     border-radius: 4px;
 }
 #socialize .sub_title .slashes {
