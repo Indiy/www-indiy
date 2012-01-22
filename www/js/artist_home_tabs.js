@@ -172,6 +172,7 @@ function fadeAllPageElements()
     $('.videos').fadeOut();
     $('.store_Close').fadeOut();
     $('.contact_Close').fadeOut();
+    $('#user_page_wrapper').fadeOut();
     hidePlaylist();
 }
 
@@ -189,6 +190,10 @@ function showUserPage(i)
         $('#page_image_holder').hide();
     }
     $('#user_page_wrapper').show();
+}
+function closeUserPage()
+{
+    
 }
 
 function sendContactForm()

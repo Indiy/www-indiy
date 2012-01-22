@@ -563,7 +563,7 @@ String.prototype.endsWith = function(suffix) {
         </div>
         <div id='user_page_wrapper'>
             <div id='user_page'>
-                <div class='close'></div>
+                <div class='close' onclick='closeUserPage();'></div>
                 <div id='page_title' class='title'></div>
                 <div id='page_image_holder' class='image_holder'>
                     <img id='page_image'/>

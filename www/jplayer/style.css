@@ -1453,11 +1453,11 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 600px;
     min-height: 200px;
     max-height: 400px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
-    background-color: rgba(0,0,0,0.6);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: rgba(0,0,0,0.7);
     border-radius: 20px;
     border: 1px solid #555;
     z-index: 30;
@@ -1466,19 +1466,19 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     position: absolute;
     right: -10px;
     top: -10px;
-    height: 25px;
-    width: 25px;
+    height: 28px;
+    width: 28px;
     background: transparent url('/images/video_close.png') 0px 0px no-repeat;
     cursor: pointer;
     z-index: 31;
 }
-user_page .close:hover {
+#user_page .close:hover {
     background: transparent url('/images/video_close.png') 0px -32px no-repeat;
 }
 #user_page .title {
     padding-bottom: 20px;
     color: white;
-    font-size: 16px;
+    font-size: 22px;
     font-family: Helvetica, sans-serif;
     font-weight: normal;
 }
@@ -1486,9 +1486,9 @@ user_page .close:hover {
     padding-bottom: 10px;
     text-align: center;
 }
-#user_page .content {
+#user_page .page_content {
     color: white;
-    font-size: 12px;
+    font-size: 14px;
     font-family: Helvetica, sans-serif;
     font-weight: normal;
     overflow-y: scroll;
