@@ -193,7 +193,7 @@ function showUserPage(i)
 }
 function closeUserPage()
 {
-    
+    fadeAllPageElements();
 }
 
 function sendContactForm()
