@@ -1543,7 +1543,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #store .cart_nav {
 }
-#store .cart_nav buttons {
+#store .cart_nav button {
     margin-right: 30px;
     margin-bottom: 20px;
     color: white;
@@ -1551,6 +1551,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-family: Helvetica, sans-serif;
     font-weight: normal;
     text-decoration: underline;
+    background-color: transparent;
     border: none;
 }
 #store .product_list {
