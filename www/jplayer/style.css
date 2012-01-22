@@ -1414,7 +1414,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-right: 40px;
 }
 #socialize .submit.red:hover {
-    background-color: red;
+    background-color: #c00;
 }
 
 
