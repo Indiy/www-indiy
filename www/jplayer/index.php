@@ -60,52 +60,26 @@ else
     playerViews($artist_id);
 
     // Build Pages
-    $loadpages = mq("select * from `[p]musicplayer_content` where `artistid`='{$artist_id}' order by `order` asc, `id` desc");
-    while ($pages = mf($loadpages)) {
-        $page_id = $pages["id"];
-        $page_name = $pages["name"];
-        if ($pages["body"] != "") { 
-            //$page_body = '<p>'.nohtml($pages["body"]).'</p>';
-            $page_body = '<p>'.$pages["body"].'</p>';
-        } else { 
-            $page_body = '';
+    $loadpages = mq("SELECT * FROM `[p]musicplayer_content` WHERE `artistid`='{$artist_id}' ORDER BY `order` ASC, `id` DESC");
+    $pages_list = array();
+    while( $pages = mf($loadpages) )
+    {
+        $image = FALSE;
+        if( $pages['image'] != '' )
+        {
+            $image = '/artists/images/' . $pages['image'];
         }
-        if ($pages["video"] != "") {
-            $page_video = '<div class="video">'.$pages["video"].'</div>';
-        } else { 
-            $page_video = '';
-        }
-        if ($pages["image"] != "") { 
-            $page_image = '<img class="image" src="'.trueSiteUrl().'/artists/images/'.$pages["image"].'" border="0" />';
-        } else { 
-            $page_image = '';
-        }
-        $pagesList .= '<li><a href="#" class="a'.$page_id.'">'.$page_name.'</a></li>'."\n";
-        $pagesJava .= '
-            /* '.$page_name.' */
-            $(".a'.$page_id.'").click(function() {
-                fadeAllPageElements();
-                $(".page .content").html("<div class=\'pageload\'><img src=\''.trueSiteUrl().'/jplayer/images/page-loader.gif\' border=\'0\' /></div>");
-                
-                setTimeout(function(){ $(".page").fadeIn(); $(".aClose").fadeIn(); }, 450);
-                
-                var body'.$page_id.' = "&artist='.$artist_id.'&page='.$page_id.'";
-                $.post("jplayer/ajax.php", body'.$page_id.', function(data'.$page_id.') {
-                    $(".page .content").html(data'.$page_id.');
-                    setTimeout("mCustomScrollbars();","750");
-                });
-            });
-        '."\n";
+        $item = array("id" => $pages['id'],
+                      "name" => $pages['name'],
+                      "image" => $image,
+                      "content" => $pages['body'],
+                      );
+        $pages_list[] = $item;
     }
+    $pages_list_json = json_encode($pages_list);
 
-    if ($fan) {
-        $mQuery = "`user`='{$artist_id}'";
-        $downQ = "&user={$artist_id}";
-    } else {
-        $mQuery = "`artistid`='{$artist_id}' and `type`='0'";   
-    }
     // Build Music
-    $loadmusic = mq("SELECT * FROM `[p]musicplayer_audio` WHERE {$mQuery} ORDER BY `order` ASC, `id` DESC");
+    $loadmusic = mq("SELECT * FROM `[p]musicplayer_audio` WHERE `artistid`='{$artist_id}' AND `type`='0' ORDER BY `order` ASC, `id` DESC");
     $music_list = array();
     while ($music = mf($loadmusic)) 
     {
@@ -223,6 +197,7 @@ var g_artistId = <?=$artist_id;?>;
 var g_paypalEmail = "<?=$paypalEmail;?>";
 var g_songPlayList = <?=$music_list_json;?>;
 var g_currentSongId = 0;
+var g_pageList = <?=$pages_list_json;?>;
 
 </script>
 
@@ -252,17 +227,18 @@ var g_currentSongId = 0;
 
 <script type="text/javascript">
    
-// Clear empty form
-function clickclear(thisfield, defaulttext) {
-    if (thisfield.value == defaulttext) {
-    thisfield.value = "";
+function clickclear(thisfield, defaulttext) 
+{
+    if( thisfield.value == defaulttext ) 
+    {
+        thisfield.value = "";
     }
 }   
-
-// Refill empty form
-function clickrecall(thisfield, defaulttext) {
-    if (thisfield.value == "") {
-    thisfield.value = defaulttext;
+function clickrecall(thisfield, defaulttext) 
+{
+    if( thisfield.value == "" )
+    {
+        thisfield.value = defaulttext;
     }
 }       
 
@@ -300,8 +276,6 @@ if( 'song_id' in g_anchor_map )
 String.prototype.endsWith = function(suffix) {
     return this.indexOf(suffix, this.length - suffix.length) !== -1;
 };
-
-$(document).ready(function() { <?=$pagesJava;?> });
 
 </script> 
     </head>
@@ -562,32 +536,42 @@ $(document).ready(function() { <?=$pagesJava;?> });
             
         <div id='image'></div>
         <div id='loader'><img src="/jplayer/images/ajax-loader.gif" /></div>
-            
-            
-            
-            <div id="navigation">
-                <ul>
-                <? if (!$fan) { ?>
-                    <? if ($artist_videos) { ?>
+        <div id='navigation'>
+            <ul>
+                <?
+                    foreach( $pages_list as $i => $page )
+                    {
+                        $name = $page['name'];
+                        echo "<li><a onclick='showPage($i);'>$name</a></li>\n";
+                    }
+                ?>
+                <? if ($artist_videos) { ?>
                     <li><a href="#" class="aVideos">Videos</a></li>
-                    <? } ?>             
-                    <?=$pagesList;?>
-                    <? if ($paypalEmail != "") { ?>
+                <? } ?>             
+                <?=$pagesList;?>
+                <? if ($paypalEmail != "") { ?>
                     <li><a href="#" class="aStore">Store</a></li>
-                    <? } ?>
-                    <? if ($show_comments) { ?>
-                    <li><a href="#" class="aComment">Comment</a></li>
-                    <? } ?>
-                    <? if ($artist_email) { ?>
-                    <li><a href="#" class="aContact">Contact</a></li>
-                    <? } ?>
-                <? } else { ?>
-                    <li><a href="#" style="width: 162px;">&nbsp;</a></li>
                 <? } ?>
-                    
-                </ul>
-                <div class="clear"></div>
+                <? if ($show_comments) { ?>
+                    <li><a href="#" class="aComment">Comment</a></li>
+                <? } ?>
+                <? if ($artist_email) { ?>
+                    <li><a href="#" class="aContact">Contact</a></li>
+                <? } ?>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div id='user_page_wrapper'>
+            <div id='user_page'>
+                <div class='close'></div>
+                <div id='page_title' class='title'></div>
+                <div id='page_image_holder' class='image_holder'>
+                    <img id='page_image'/>
+                </div>
+                <div id='page_content' class='page_content'></div>
             </div>
+        </div>
+        
             
             <div id="jquery_jplayer" class="jp-jplayer"></div> 
 
