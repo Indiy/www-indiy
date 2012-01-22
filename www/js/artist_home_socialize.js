@@ -36,14 +36,14 @@ function openSocialTab()
     g_socialMinimized = false;
     $("#socialize .button").removeClass("active");
     $("#socialize .button." + g_currentSocialTab).addClass("active");
-    $("#socialize").animate({ bottom: "0" }, 300);
+    $("#socialize").animate({ height: "400px" }, 300);
 }
 
 function closeSocialTab() 
 {
     g_socialMinimized = true;
     $("#socialize .button").removeClass("active");
-    $("#socialize").animate({ bottom: "-361px" }, 300);
+    $("#socialize").animate({ height: "40px" }, 300);
 }
 
 function setActiveSocialTab(name)

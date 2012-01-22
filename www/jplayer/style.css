@@ -1236,16 +1236,17 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 
 #socialize {
-    height: 400px;
+    height: 40px;
     width: 300px;
     left: 40px;
-    bottom: -360px;
+    bottom: 0px;
     position: absolute;
     z-index: 20; 
     background: #252525;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     border: 1px solid #555;
+    overflow: hidden;
 }
 
 #socialize .header {
