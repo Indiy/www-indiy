@@ -542,7 +542,7 @@ String.prototype.endsWith = function(suffix) {
                     foreach( $pages_list as $i => $page )
                     {
                         $name = $page['name'];
-                        echo "<li><a onclick='showPage($i);'>$name</a></li>\n";
+                        echo "<li><a onclick='showUserPage($i);'>$name</a></li>\n";
                     }
                 ?>
                 <? if ($artist_videos) { ?>
