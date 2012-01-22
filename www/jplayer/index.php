@@ -170,7 +170,7 @@ else
                 $sizes = explode(",", $pro["size"]);
 
             $colors = FALSE;
-            if ($pro["color"] != "") {
+            if ($pro["color"] != "")
                 $colors = explode(",", $pro["color"]);
             
             $product_image = $pro["image"];
