@@ -1263,6 +1263,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-weight: normal;
     cursor: pointer;
 }
+#socialize .title:hover {
+    color: #aaa;
+}
 #socialize .button_holder {
     float: right;
     height: 100%;
@@ -1272,6 +1275,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #socialize .button {
     height: 100%;
     cursor: pointer;
+}
+#socialize .button:hover {
+    background: #353535;
 }
 #socialize .button.facebook {
     background: transparent url('/images/socialize_facebook.png') no-repeat center center;
@@ -1285,7 +1291,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #socialize .button.share {
     background: transparent url('/images/socialize_share.png') no-repeat center center;
 }
-#socialize .button.active {
+#socialize .button.active,
+#socialize .button.active:hover {
     background-color: #444;
 }
 #socialize .tab {
