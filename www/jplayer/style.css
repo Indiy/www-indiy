@@ -1304,6 +1304,7 @@ div.socialize div.padthis { padding: 5px; }
 }
 #socialize .button {
     height: 100%;
+    cursor: pointer;
 }
 #socialize .button.facebook {
     background: transparent url('/images/socialize_facebook.png') no-repeat center center;
