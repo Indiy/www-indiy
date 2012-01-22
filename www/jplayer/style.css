@@ -1460,7 +1460,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background-color: rgba(0,0,0,0.6);
     border-radius: 20px;
     border: 1px solid #555;
-    overflow-x: scroll;
     z-index: 30;
 }
 #user_page .close {
@@ -1492,6 +1491,7 @@ user_page .close:hover {
     font-size: 12px;
     font-family: Helvetica, sans-serif;
     font-weight: normal;
+    overflow-y: scroll;
 }
 
 
