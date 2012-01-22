@@ -1277,9 +1277,10 @@ div.socialize div.padthis { padding: 5px; }
     bottom: -360px;
     position: absolute;
     z-index: 20; 
-    background: #333;
+    background: #252525;
     border-top-left-radius: 12px;
-    border-top-right-radius: 12px
+    border-top-right-radius: 12px;
+    border: 1px solid #555;
 }
 
 #socialize .header {
