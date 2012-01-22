@@ -1364,6 +1364,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #socialize .input_container textarea {
     height: 78px;
     padding-top: 4px;
+    resize: none;
 }
 #socialize .required {
     color: red;
@@ -1394,6 +1395,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #socialize .submit.green {
     background-color: green;
+}
+#socialize .submit.green:hover {
+    background-color: #0a0;
 }
 
 
