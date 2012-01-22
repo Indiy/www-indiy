@@ -167,12 +167,12 @@ function fadeAllPageElements()
     $('.aClose').fadeOut();
     $('.comments').fadeOut();
     $('.contact').fadeOut();
-    $('.store').fadeOut();
     $('.page').fadeOut();
     $('.videos').fadeOut();
     $('.store_Close').fadeOut();
     $('.contact_Close').fadeOut();
     $('#user_page_wrapper').fadeOut();
+    $('#store_wrapper').fadeOut();
     hidePlaylist();
 }
 
