@@ -645,7 +645,7 @@ String.prototype.endsWith = function(suffix) {
                                 echo "  <div class='description'>$description</div>";
                                 echo "  <div class='line'></div>";
                                 echo "  <div class='price_cart'>";
-                                echo "   <div class='price'>$price</div>";
+                                echo "   <div class='price'>\$$price</div>";
                                 echo "   <div class='add_to_card' onclick='addToCart($i);'>Buy Now</div>";
                                 echo "  </div>";
                                 echo " </div>";
