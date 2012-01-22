@@ -258,6 +258,7 @@ var g_productList = <?=$product_list_json;?>;
 <script src="/js/artist_home_video.js" type="text/javascript"></script>
 <script src="/js/artist_home_tabs.js" type="text/javascript"></script>
 <script src="/js/artist_home_socialize.js" type="text/javascript"></script>
+<script src="/js/artist_home_store.js" type="text/javascript"></script>
 
 <script src="/js/login_signup.js" type="text/javascript"></script>
 
