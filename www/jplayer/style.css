@@ -241,6 +241,7 @@ ul.products .option { display: block; padding: 3px; width: 250px; margin: 5px 0p
     color: #fff; 
     text-decoration: none; 
     display: block; 
+    cursor: pointer;
 }
 #navigation ul li a:hover { 
     color: #ccc; 
