@@ -444,17 +444,18 @@ $(document).ready(function() { <?=$pagesJava;?> });
                 </div>
             </div>
             
-            <div class="body">
-                
-                <div id='facebook' class="tab">
-                    <div class="sub_title">FACEBOOK<span class='slashes'>//</span></div>
+            <div id='facebook' class="tab">
+                <div class="sub_title">FACEBOOK<span class='slashes'>//</span></div>
+                <div class='content'>
                     <? if( !$hide_fb ) : ?>
                         <iframe src="http://www.facebook.com/plugins/likebox.php?href=<?=urlencode($facebook_page);?>&width=273&colorscheme=dark&show_faces=false&stream=true&header=false&height=300" scrolling="no" frameborder="0" style="border:none; overflow:hidden;height:300px;" allowTransparency="true"></iframe>
                     <? endif; ?>
                 </div>
+            </div>
                 
-                <div id='twitter' class="tab">
-                    <div class="sub_title">TWITTER<span class='slashes'>//</span></div>
+            <div id='twitter' class="tab">
+                <div class="sub_title">TWITTER<span class='slashes'>//</span></div>
+                <div class='content'>
                     <? if( !$hide_tw ) : ?>
                         <script src="http://widgets.twimg.com/j/2/widget.js" type="text/javascript"></script>
                         <script type="text/javascript">
@@ -490,9 +491,11 @@ $(document).ready(function() { <?=$pagesJava;?> });
                         </script>
                     <? endif; ?>
                 </div>
-                
-                <div id='email' class="tab">
-                    <div class="sub_title">MAILING LIST<span class='slashes'>//</span></div>
+            </div>
+            
+            <div id='email' class="tab">
+                <div class="sub_title">MAILING LIST<span class='slashes'>//</span></div>
+                <div class='content'>
                     <div id='news_success' class='news_success' style="display:none;">
                         Thank you for your submission.  Your name will be added to our newsletter list.
                     </div>
@@ -510,9 +513,11 @@ $(document).ready(function() { <?=$pagesJava;?> });
                         <button class="submitNewsletter" onclick="submitNewsletter();">submit</button>
                     </div>
                 </div>
+            </div>
 
-                <div id='share' class="tab">
-                    <div class="sub_title">SEND TO A FRIEND<span class='slashes'>//</span></div>
+            <div id='share' class="tab">
+                <div class="sub_title">SEND TO A FRIEND<span class='slashes'>//</span></div>
+                <div class='content'>
                     <div id='send_friend_form' class='send_friend_form'>
                         <p>Fill out the form below to send a copy of the message to your friend.</p>
                         <p class="small">Please note that your friend will not be subscribed to any email list nor will his / her name or email address be permanently recorded.</p>
@@ -532,9 +537,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
                         Your friend will be notified about this great artist!
                     </div>
                 </div>
-            
             </div>
-            
         </div> 
             
         <div id='image'></div>
