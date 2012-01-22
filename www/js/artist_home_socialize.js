@@ -8,11 +8,11 @@ function toggleSocialTab()
     {
         if( g_currentSocialTab == '' )
         {
-            if( $("#socialize .button.facebook").is(':visible') )
+            if( $("#socalize_fb_holder").is(':visible') )
             {
                 toggleSocialFB();
             }
-            else if(  $("#socialize .button.twitter").is(':visible') )
+            else if(  $("#socalize_tw_holderr").is(':visible') )
             {
                 toggleSocialTW();
             }

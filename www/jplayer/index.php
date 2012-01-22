@@ -436,11 +436,11 @@ $(document).ready(function() { <?=$pagesJava;?> });
                 <div class='button_holder'>
                     <div class='email button' onclick='toggleSocialEmail();'></div>
                 </div>
-                <div class='button_holder'>
-                    <div class='twitter button' <?=$hide_tw;?> onclick='toggleSocialTW();'></div>
+                <div id='socalize_fb_holder' class='button_holder' <?=$hide_tw;?> >
+                    <div class='twitter button' onclick='toggleSocialTW();'></div>
                 </div>
-                <div class='button_holder'>
-                    <div class='facebook button' <?=$hide_fb;?> onclick='toggleSocialFB();'></div>
+                <div id='socalize_tw_holder' class='button_holder' <?=$hide_tw;?> >
+                    <div class='facebook button' onclick='toggleSocialFB();'></div>
                 </div>
             </div>
             
