@@ -176,10 +176,8 @@ function fadeAllPageElements()
     hidePlaylist();
 }
 
-function showUserPage(i)
+function internalShowUserPage(i)
 {
-    fadeAllPageElements();
-    
     var page = g_pageList[i];
     $('#page_title').text(page['title']);
     $('#page_content').html(page['content']);
@@ -192,6 +190,12 @@ function showUserPage(i)
         $('#page_image_holder').hide();
     }
     $('#user_page_wrapper').fadeIn();
+}
+
+function showUserPage(i)
+{
+    fadeAllPageElements();
+    window.setTimeout(function() { internalShowUserPage(i); },300);
 }
 function closeUserPage()
 {
