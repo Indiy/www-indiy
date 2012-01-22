@@ -156,8 +156,46 @@ else
 
 
     // Build Store
-    $check = mf(mq("select * from `[p]musicplayer_ecommerce` where `userid`='{$artist_id}' limit 1"));
+    $check = mf(mq("SELECT * FROM `[p]musicplayer_ecommerce` WHERE `userid`='{$artist_id}' LIMIT 1"));
     $paypalEmail = $check["paypal"];
+    $store_enabled = $paypalEmail != '';
+    $product_list = array();
+    if( $store_enabled )
+    {
+        $loadpro = mq("select * from `[p]musicplayer_ecommerce_products` where `artistid`='{$artist_id}' order by `order` asc, `id` desc");
+        while( $pro = mf($loadpro) ) 
+        {
+            $sizes = FALSE;
+            if( $pro["size"] != "" )
+                $sizes = explode(",", $pro["size"]);
+
+            $colors = FALSE;
+            if ($pro["color"] != "") {
+                $colors = explode(",", $pro["color"]);
+            
+            $product_image = $pro["image"];
+            $image = '/images/default_product_image.jpg';
+            if( $product_image != "" ) 
+            {
+                $path = "/artists/products/$product_image";
+                if( file_exists("..$path") )
+                    $image = $path;
+            }
+            $item = array("id" => $pro['id'],
+                          "image" => $image,
+                          "name" => stripslashes($pro['name']),
+                          "description" => $product_desc = nohtml($pro['description']),
+                          "price" => $pro['price'],
+                          "sizes" => $sizes,
+                          "colors" => $colors,
+                          );
+            $product_list[] = $item;
+        }
+    }
+    $need_product_page_arrows = FALSE;
+    if( count($product_list) > 3 )
+        $need_product_page_arrows = TRUE;
+    $product_list_json = json_encode($product_list);
 
     // Function that outputs the video overlay pagination buttons, dependant on the global $row_counter variable
     function write_row_buttons() {
@@ -198,6 +236,7 @@ var g_paypalEmail = "<?=$paypalEmail;?>";
 var g_songPlayList = <?=$music_list_json;?>;
 var g_currentSongId = 0;
 var g_pageList = <?=$pages_list_json;?>;
+var g_productList = <?=$product_list_json;?>;
 
 </script>
 
@@ -545,19 +584,19 @@ String.prototype.endsWith = function(suffix) {
                         echo "<li><a onclick='showUserPage($i);'>$title</a></li>\n";
                     }
                 ?>
-                <? if ($artist_videos) { ?>
+                <? if( $artist_videos ): ?>
                     <li><a class="aVideos">Videos</a></li>
-                <? } ?>             
+                <? endif; ?>             
                 <?=$pagesList;?>
-                <? if ($paypalEmail != "") { ?>
-                    <li><a class="aStore">Store</a></li>
-                <? } ?>
-                <? if ($show_comments) { ?>
+                <? if( $store_enabled != "" ): ?>
+                    <li><a onclick='showStore();'>Store</a></li>
+                <? endif; ?>
+                <? if( $show_comments ): ?>
                     <li><a class="aComment">Comment</a></li>
-                <? } ?>
-                <? if ($artist_email) { ?>
+                <? endif; ?>
+                <? if( $artist_email ): ?>
                     <li><a class="aContact">Contact</a></li>
-                <? } ?>
+                <? endif; ?>
             </ul>
             <div class="clear"></div>
         </div>
@@ -573,6 +612,50 @@ String.prototype.endsWith = function(suffix) {
                 </div>
             </div>
         </div>
+        
+        <? if( $store_enabled ): ?>
+            <div id='store_wrapper'>
+                <div id='store'>
+                    <div class='close' onclick='closeStore();'></div>
+                    <div class='cart_nav'>
+                        <button onclick='showProducts();'>Store</button>
+                        <button onclick='showCart();'>Cart</button>
+                    </div>
+                    <div id='product_slider' class='product_list'>
+                        <? if( $need_product_page_arrows ): ?>
+                            <div class='scroll_button right disbaled' onclick='scrollStoreRight();'></div>
+                            <div class='scroll_button left disbaled' onclick='scrollStoreLeft();'></div>
+                        <? endif; ?>
+                        <ul id='product_slider_ul' class='product_slider'>
+                            <?
+                                foreach( $product_list as $i => $product )
+                                {
+                                    $name = $product['name'];
+                                    $image = $product['image'];
+                                    $description = $product['description'];
+                                    $price = $product['price'];
+                                    echo "<li>";
+                                    echo " <div class='product'>
+                                    echo "  <div class='image_holder'>";
+                                    echo "   <img src='$image'>"
+                                    echo "  </div>";
+                                    echo "  <div class='name'>$name</div>";
+                                    echo "  <div class='description'>$description</div>";
+                                    echo "  <div class='line'></div>";
+                                    echo "  <div class='price_cart'>";
+                                    echo "   <div class='price'>$price</div>";
+                                    echo "   <div class='add_to_card' onclick='addToCart($i);'>Buy Now</div>";
+                                    echo "  </div>";
+                                    echo " </div>";
+                                    echo "</li>\n";
+                                }
+                            ?>
+                        </ul>
+                    </div>
+                    <div class='cart'></div>
+                </div>
+            </div>
+        <? endif; ?>
         
             
             <div id="jquery_jplayer" class="jp-jplayer"></div> 
@@ -765,62 +848,7 @@ String.prototype.endsWith = function(suffix) {
             
             <div class="store_Close"></div>
             <div class="contact_Close" onclick='closeContactTab();'></div>
-            <? if ($paypalEmail != "") { ?>
-            <div class="store">
-                <div class="box-header"></div>
-                
-                <div class="cartnav">
-                    <span class="showstore" id='store_tab_link'>Store</span>
-                    <span class="showcart" id='store_cart_link'>Cart</span>
-                </div>
-                
-                <div class="clear"></div>
-                <div class="cart" style="display:none;"></div>
-                
-                <ul class="products">
-                <?
-                // Build Products List
-                    $loadpro = mq("select * from `[p]musicplayer_ecommerce_products` where `artistid`='{$artist_id}' order by `order` asc, `id` desc");
-                    while ($pro = mf($loadpro)) {
-                        $product_color = "";
-                        $product_size = "";
-                        $product_id = $pro["id"];
-                        $product_image = $pro["image"];
-                        if ($product_image != "") {
-                            $product_image = '<img src="artists/products/'.$product_image.'" border="0" />';
-                        }
-                        $product_name = stripslashes($pro["name"]);
-                        $product_desc = nohtml($pro["description"]);
-                        $product_price = $pro["price"];
-                        if ($pro["size"] != "") {
-                            $sizeEx = explode(",", $pro["size"]);
-                            $product_size .= "<select class='option' name='size'><option value=''> -- Select -- </option>";
-                            foreach ($sizeEx as $size) {
-                                $product_size .= "<option value='{$size}'>{$size}</option>";
-                            }
-                            $product_size .= "</select>";
-                        }
-                        if ($pro["color"] != "") {
-                            $colorEx = explode(",", $pro["color"]);
-                            $product_color .= "<select class='option' name='color'><option value=''> -- Select -- </option>";
-                            foreach ($colorEx as $color) {
-                                $product_color .= "<option value='{$color}'>{$color}</option>";
-                            }
-                            $product_color .= "</select>";
-                        }
-
-                        $productsList .= '<li><div class="productimage">'.$product_image.'</div><h2>'.$product_name.'</h2><div class="productdetails">'.$product_desc.''.$product_size.$product_color.'</div><hr /><div class="price">$'.$product_price.'</div><div class="addtocart">'.$product_id.'</div><div class="clear"></div></li>'."\n";
-                    }
-                    echo $productsList
-                ?>
-                <div class="clear"></div>
-                
-                
-                
-                </ul>
-                <div class="box-footer"></div>
-            </div>
-            <? } ?>
+            
 
             <div class="footerfade">
                 <div class="logo_img"><a href="<?=trueSiteUrl();?>/artists.php" /></a></div>
