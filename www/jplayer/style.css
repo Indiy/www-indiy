@@ -1554,11 +1554,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     text-decoration: underline;
     border: none;
 }
-#store .product_slider {
+#store .product_list {
     overflow: hidden;
     max-width: 900px;
 }
 #store .product {
+    float: left;
     position: relative;
     width: 280px;
     height: 350px;
