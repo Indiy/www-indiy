@@ -1438,4 +1438,60 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 
 
+#user_page_wrapper {
+    display: none;
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+#user_page {
+    position: relative;
+    min-width: 400px;
+    min-height: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 30;
+}
+#user_page .close {
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    height: 25px;
+    width: 25px;
+    background: transparent url('/images/video_close.png') 0px 0px no-repeat;
+    cursor: pointer;
+    z-index: 31;
+}
+user_page .close:hover {
+    background: transparent url('/images/video_close.png') 0px -32px no-repeat;
+}
+#user_page .title {
+    padding-bottom: 20px;
+    color: white;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+}
+#user_page .image_holder {
+    padding-bottom: 10px;
+    text-align: center;
+}
+#user_page .content {
+    color: white;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+
+
+
+
+
+
+
 

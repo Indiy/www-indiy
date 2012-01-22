@@ -175,6 +175,22 @@ function fadeAllPageElements()
     hidePlaylist();
 }
 
+function showUserPage(i)
+{
+    var page = g_pageList[i];
+    $('#page_title').text(page['title']);
+    $('#page_content').html(page['content']);
+    if( page['image'] )
+    {
+        $('#page_image').attr('src',page['image']);
+    }
+    else
+    {
+        $('#page_image_holder').hide();
+    }
+    $('#user_page_wrapper').show();
+}
+
 function sendContactForm()
 {
     var artist_id = g_artistId;
