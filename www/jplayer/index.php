@@ -564,11 +564,13 @@ String.prototype.endsWith = function(suffix) {
         <div id='user_page_wrapper'>
             <div id='user_page'>
                 <div class='close' onclick='closeUserPage();'></div>
-                <div id='page_title' class='title'></div>
-                <div id='page_image_holder' class='image_holder'>
-                    <img id='page_image'/>
+                <div class='scrollable_container'>
+                    <div id='page_title' class='title'></div>
+                    <div id='page_image_holder' class='image_holder'>
+                        <img id='page_image'/>
+                    </div>
+                    <div id='page_content' class='page_content'></div>
                 </div>
-                <div id='page_content' class='page_content'></div>
             </div>
         </div>
         
