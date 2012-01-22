@@ -546,17 +546,17 @@ String.prototype.endsWith = function(suffix) {
                     }
                 ?>
                 <? if ($artist_videos) { ?>
-                    <li><a href="#" class="aVideos">Videos</a></li>
+                    <li><a class="aVideos">Videos</a></li>
                 <? } ?>             
                 <?=$pagesList;?>
                 <? if ($paypalEmail != "") { ?>
-                    <li><a href="#" class="aStore">Store</a></li>
+                    <li><a class="aStore">Store</a></li>
                 <? } ?>
                 <? if ($show_comments) { ?>
-                    <li><a href="#" class="aComment">Comment</a></li>
+                    <li><a class="aComment">Comment</a></li>
                 <? } ?>
                 <? if ($artist_email) { ?>
-                    <li><a href="#" class="aContact">Contact</a></li>
+                    <li><a class="aContact">Contact</a></li>
                 <? } ?>
             </ul>
             <div class="clear"></div>
