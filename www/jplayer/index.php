@@ -477,7 +477,7 @@ String.prototype.endsWith = function(suffix) {
                         <div class='instructions'>
                             If you would like to keep right up to date with all the latest news, gigs, releases and competitions, then sign up to our mailing list.
                         </div>
-                        <div class='disclaimer'>By clicking on the submit button, you are confirming that you have read and agree with the terms of our <a href="">Privacy Policy</a>.</div>
+                        <div class='disclaimer'>By clicking on the submit button, you are confirming that you have read and agree with the terms of our <a href="privacy.php">Privacy Policy</a>.</div>
                         <div class='label_input'>
                             <div class='label'><span class='required'>*</span>Name:</div>
                             <div class='input_container'>
