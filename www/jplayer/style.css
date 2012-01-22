@@ -1382,16 +1382,18 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #socialize .submit {
     float: left;
     margin-left: 80px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-left: 47px;
+    padding-right: 47px;
+    padding-top: 6px;
+    padding-bottom: 3px;
     color: white;
-    font-size: 11px;
+    font-size: 12px;
     font-family: Helvetica, sans-serif;
     font-weight: lighter;
     border-radius: 4px;
-    border: none;
+    border: 1px solid #444;
+    box-shadow: 1px 1px 7px black inset;
+    text-shadow: 1px 1px black;
 }
 #socialize .submit.green {
     background-color: green;
