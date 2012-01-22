@@ -1346,8 +1346,7 @@ div.socialize div.padthis { padding: 5px; }
 #socialize .content {
     padding-left: 12px;
     padding-right: 12px;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: hidden;
 }
 
 
