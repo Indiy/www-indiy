@@ -1459,7 +1459,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     min-height: 200px;
     max-height: 400px;
     padding-top: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     padding-right: 30px;
     padding-left: 30px;
     background-color: rgba(0,0,0,0.7);
@@ -1481,7 +1481,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background: transparent url('/images/video_close.png') 0px -32px no-repeat;
 }
 #user_page .scrollable_container {
-    overflow-y: scroll;
+    overflow: auto;
     max-height: 400px;
 }
 #user_page .title {
