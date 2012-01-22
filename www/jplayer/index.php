@@ -70,7 +70,7 @@ else
             $image = '/artists/images/' . $pages['image'];
         }
         $item = array("id" => $pages['id'],
-                      "name" => $pages['name'],
+                      "title" => $pages['title'],
                       "image" => $image,
                       "content" => $pages['body'],
                       );
@@ -541,8 +541,8 @@ String.prototype.endsWith = function(suffix) {
                 <?
                     foreach( $pages_list as $i => $page )
                     {
-                        $name = $page['name'];
-                        echo "<li><a onclick='showUserPage($i);'>$name</a></li>\n";
+                        $title = $page['title'];
+                        echo "<li><a onclick='showUserPage($i);'>$title</a></li>\n";
                     }
                 ?>
                 <? if ($artist_videos) { ?>
