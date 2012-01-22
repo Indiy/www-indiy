@@ -448,7 +448,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
                 <div class="sub_title">FACEBOOK<span class='slashes'>//</span></div>
                 <div class='content'>
                     <? if( !$hide_fb ) : ?>
-                        <iframe src="http://www.facebook.com/plugins/likebox.php?href=<?=urlencode($facebook_page);?>&width=273&colorscheme=dark&show_faces=false&stream=true&header=false&height=300" scrolling="no" frameborder="0" style="border:none; overflow:hidden;height:300px;" allowTransparency="true"></iframe>
+                        <iframe src="http://www.facebook.com/plugins/likebox.php?href=<?=urlencode($facebook_page);?>&width=273&colorscheme=dark&show_faces=false&stream=true&header=false&height=300" scrolling="no" frameborder="0" style="border:none; overflow:hidden;height:310px;" allowTransparency="true"></iframe>
                     <? endif; ?>
                 </div>
             </div>
@@ -466,7 +466,7 @@ $(document).ready(function() { <?=$pagesJava;?> });
                             rpp: 5,
                             interval: 6000,
                             width: 273,
-                            height: 223,
+                            height: 228,
                             theme: {
                                 shell: {
                                   background: '#333333',

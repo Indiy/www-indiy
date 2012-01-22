@@ -1322,13 +1322,16 @@ div.socialize div.padthis { padding: 5px; }
 #socialize .button.active {
     background-color: #555;
 }
+#socialize .tab {
+    display: none;
+}
 #socialize .sub_title {
     height: 21px;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-bottom: 15px;
     padding-left: 10px;
     padding-top: 8px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 10px;
     color: white;
     font-size: 14px;
     font-family: Helvetica, sans-serif;
@@ -1340,12 +1343,11 @@ div.socialize div.padthis { padding: 5px; }
     color: #777;
     padding-left: 8px;
 }
-#socialize .tab {
-    display: none;
-}
 #socialize .content {
     padding-left: 12px;
     padding-right: 12px;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 
