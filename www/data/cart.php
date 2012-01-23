@@ -23,7 +23,15 @@
             $product_id = $cart['productid'];
             $price = $cart['price'];
             $name = $cart['name'];
-            $image = productImage($product_id);
+            $product_image = productImage($product_id);
+            $product_image = $pro["image"];
+            $image = '/images/default_product_image.jpg';
+            if( $product_image != "" ) 
+            {
+                $path = "artists/products/$product_image";
+                if( file_exists("../$path") )
+                    $image = "/$path";
+            }
             $shipping = 0.0;
             
             $item = array("id" => $id,
