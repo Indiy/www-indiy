@@ -97,6 +97,8 @@ function scrollStoreLeft()
 function renderCart()
 {
     $('#store_cart_body').empty();
+    var shipping_total = 0.0;
+    var sub_total = 0.0
     for( var k in g_cartList )
     {
         var c = g_cartList[k];
@@ -105,6 +107,9 @@ function renderCart()
         var image = c['image'];
         var price = c['price'];
         var shipping = c['shipping'];
+        
+        shipping_total += shipping;
+        sub_total += price; 
         
         var html = "";
         html += "<div class='cart_line'>";
@@ -121,6 +126,20 @@ function renderCart()
         html += "</div>";
         $('#store_cart_body').append(html);
     }
+    if( sub_total > 0.0 )
+    {
+        var total = shipping_total + sub_total;
+        html += "<div class='shipping_label_value'>";
+        html += " <div class='label'>Shipping:</div>";
+        html += " <div class='value'>${0}</div>".format(shipping_total.toFixed(2));
+        html += "</div>\n";
+        html += "<div class='total_label_value'>";
+        html += " <div class='label'>Total:</div>";
+        html += " <div class='value'>${0}</div>".format(total.toFixed(2));
+        html += "</div>\n";
+        $('#store_cart_body').append(html);
+    }
+    
 }
 
 function addToCart(i)
