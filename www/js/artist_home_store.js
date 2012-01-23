@@ -94,8 +94,8 @@ function renderCart()
         if( shipping )
             html += "<div class='price_shipping'>Shipping: ${0}</div>".format(shipping.toFixed(2));
         html += "</td>";
-        html += "<td class='delete'>";
-        html += "<div class='delete_button' onclick='deleteCart({0});'>".format(id);;
+        html += "<td class='remove'>";
+        html += "<div class='remove_button' onclick='deleteCart({0});'>remove</div>".format(id);
         html += "</td>";
         html += "</tr>";
         $('#cart_tbody').append(html);

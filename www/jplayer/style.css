@@ -1684,6 +1684,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border: none;
 }
 #store .cart tbody tr {
+    height: 40px;
     color: white;
     font-size: 12px;
     font-family: Helvetica, sans-serif;
@@ -1691,11 +1692,43 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     text-align: left;
     border: none;
 }
+#store .cart tbody td {
+    padding-left: 4px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    color: white;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: left;
+    border: none;
+}
+#store .cart .remove_button {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 4px;
+    color: white;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+    border-radius: 4px;
+    border: 1px solid #333;
+    box-shadow: 1px 1px 7px black inset;
+    text-shadow: 1px 1px black;
+    background-color: #c00;
+    cursor: pointer;
+}
+#store .cart tbody .image img {
+    max-height: 40px;
+    max-width: 50px;
+}
 #store .cart .image {
     width: 75px;
 }
 #store .cart .name {
-    width: 300px;
+    width: 400px;
 }
 #store .cart .price {
     width: 100px;
