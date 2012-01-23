@@ -40,15 +40,7 @@ function buySong(product_id)
         }
     });
     
-    $.post(, cart, function(items) 
-           {
-                $('.cart').html(items);
-           showCart(false);
-           });
-    
-    fadeAllPageElements();
-    $('.store').fadeIn();
-    $('.store_Close').fadeIn();
+    showStore();
 }
 
 function showStore()
