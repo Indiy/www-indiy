@@ -24,7 +24,6 @@
             $price = $cart['price'];
             $name = $cart['name'];
             $product_image = productImage($product_id);
-            $product_image = $pro["image"];
             $image = '/images/default_product_image.jpg';
             if( $product_image != "" ) 
             {
