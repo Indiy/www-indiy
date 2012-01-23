@@ -1678,8 +1678,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     display: inline-block;
     vertical-align: top;
 }
+#store .cart .body {
+    padding-left: 5px;
+}
 #store .cart .cart_line  {
-    height: 40px;
+    height: 36px;
+    padding-top: 4px;
     color: white;
     font-size: 12px;
     font-family: Helvetica, sans-serif;
@@ -1708,6 +1712,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     box-shadow: 1px 1px 7px black inset;
     text-shadow: 1px 1px black;
     background-color: #c00;
+    text-align: center;
     cursor: pointer;
 }
 #store .cart .image_holder img {
@@ -1724,7 +1729,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 100px;
 }
 #store .cart .remove {
-    width: 75px;
+    width: 100px;
     text-align: center;
 }
 
