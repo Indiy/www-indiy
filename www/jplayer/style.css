@@ -1662,7 +1662,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 
 #store .cart .header {
-    padding-left: 5px;
+    padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     color: black;
@@ -1679,7 +1679,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     vertical-align: top;
 }
 #store .cart .body {
-    padding-left: 5px;
+    padding-left: 10px;
 }
 #store .cart .cart_line  {
     height: 36px;
@@ -1726,7 +1726,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 330px;
 }
 #store .cart .price {
-    width: 100px;
+    width: 125px;
 }
 #store .cart .remove_holder {
     width: 75px;
