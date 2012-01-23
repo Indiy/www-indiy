@@ -1577,7 +1577,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     white-space: nowrap;
     text-align: center;
 }
-#store .product {
+#store .product_list .product {
     display: inline-block;
     position: relative;
     vertical-align: top;
@@ -1593,23 +1593,23 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.7);
 }
-#store .image_holder {
+#store .product_list .image_holder {
     height: 170px;
     padding-bottom: 10px;
     text-align: center;
 }
-#store .image_holder img {
+#store .product_list .image_holder img {
     max-height: 170px;
     max-width: 266px;
 }
-#store .name {
+#store .product_list .name {
     padding-bottom: 8px;
     color: white;
     font-size: 16px;
     font-family: Helvetica, sans-serif;
     font-weight: normal;
 }
-#store .description {
+#store .product_list .description {
     padding-bottom: 5px;
     color: #EEE;
     font-size: 12px;
@@ -1617,7 +1617,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-weight: lighter;
     white-space: normal;
 }
-#store .price_cart {
+#store .product_list .price_cart {
     position: absolute;
     bottom: 0px;
     border-top: 1px solid #555;
@@ -1626,7 +1626,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-bottom: 10px;
     padding-top: 5px;
 }
-#store .price {
+#store .product_list .price {
     float: left;
     width: 100px;
     padding-top: 5px;
@@ -1636,7 +1636,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-family: Helvetica, sans-serif;
     font-weight: normal;
 }
-#store .add_to_card {
+#store .product_list .add_to_card {
     float: right;
     padding-top: 3px;
     padding-bottom: 3px;
@@ -1654,8 +1654,35 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background-color: #c00;
     cursor: pointer;
 }
-#store .add_to_card:hover {
+#store .product_list .add_to_card:hover {
     background-color: #f00;
 }
 
+#store .cart thead tr {
+    background-color: #CCC;
+    color: black;
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: left;
+}
+#store .cart tbody tr {
+    color: white;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: left;
+}
+#store .cart .image {
+    width: 50px;
+}
+#store .cart .name {
+    width: 200px;
+}
+#store .cart .price {
+    width: 75px;
+}
+#store .cart .remove {
+    width: 50px;
+}
 
