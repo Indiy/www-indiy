@@ -656,7 +656,7 @@ String.prototype.endsWith = function(suffix) {
                         </ul>
                     </div>
                     <div id='store_cart' class='cart'>
-                        <table>
+                        <table cellspacing="0" cellpadding="0">
                             <thead>
                                 <tr>
                                     <th class='image'>Image</th>

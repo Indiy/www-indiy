@@ -1663,9 +1663,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 
 #store .cart thead tr {
-    padding-left: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
     background-color: #CCC;
     color: black;
     font-size: 14px;
@@ -1675,6 +1672,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border: none;
 }
 #store .cart thead th {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     color: black;
     font-size: 14px;
     font-family: Helvetica, sans-serif;
