@@ -43,10 +43,18 @@ function showStore()
     fadeAllPageElements();
     $('#store_wrapper').fadeIn();
 }
-
 function closeStore()
 {
     $('#store_wrapper').fadeOut();
 }
-
+function scrollStoreRight()
+{
+    var s = $('#store .product_list').scrollLeft();
+    $('#store .product_list').animate({ scrollLeft: s + 298*3 });
+}
+function scrollStoreLeft()
+{
+    var s = $('#store .product_list').scrollLeft();
+    $('#store .product_list').animate({ scrollLeft: s - 298*3 });
+}
 
