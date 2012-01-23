@@ -1674,6 +1674,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     text-align: left;
     background-color: #CCC;
     border: none;
+    white-space: nowrap;
+}
+#store .cart .header div {
+    display: inline-block;
 }
 #store .cart .cart_line  {
     height: 40px;
@@ -1683,6 +1687,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-weight: normal;
     text-align: left;
     border-bottom: 1px solid #555;
+    white-space: nowrap;
+}
+#store .cart .header div {
+    display: inline-block;
 }
 #store .cart .remove_button {
     padding-top: 4px;
