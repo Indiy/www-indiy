@@ -1580,6 +1580,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #store .product {
     display: inline-block;
     position: relative;
+    vertical-align: top;
     width: 260px;
     height: 350px;
     padding-top: 7px;
