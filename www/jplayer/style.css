@@ -64,7 +64,7 @@ body { background-color: black; font-size: 12px; color: #fff; font-family: Helve
 
 .page h1, .comments h1, .store h1, .contact h1, .videos h1 { color: #fff; }
 .page p, .comments p, .store p, .contact p, .videos p { color: #fff; font-size: 11px; } /* #ccc // 14 */
-.aClose { cursor: pointer; z-index: 46; position: absolute; top: 143px; left: 50%; padding: 0px; width: 45px; height: 45px; margin: -45px 0px 0px 300px; background: url('images/close.png') 0px 0px no-repeat; }
+.aClose { cursor: pointer; z-index: 46; position: absolute; top: 143px; left: 50%; padding: 0px; width: 45px; height: 45px; margin: -40px 0px 0px 300px; background: url('images/close.png') 0px 0px no-repeat; }
 .image {  margin: 0px auto 0px 100px;}
 .video { display: block; padding: 15px 0px; width: 600px; }
 .pageload { margin: 0px auto; padding: 25px; width: 16px; height: 11px; }
@@ -87,7 +87,7 @@ body { background-color: black; font-size: 12px; color: #fff; font-family: Helve
 .videos .video-row-1 { display:block; }
 .videos .row-button { background:url('images/video_row_button.png') no-repeat center top; width:7px; height:8px; display:inline-block; margin-right:10px; cursor:pointer; }
 .videos .row-button-1 { background-position:center bottom; }
-.videos .row-buttons { float:right; margin-top:7px; margin-right:40px; }
+.videos .row-buttons { float:right; margin-top:0px; margin-right:40px; }
 .videos .row-buttons span { display:none; }
 .videos .left-arrow, .videos .right-arrow { display:block; height:45px; width:45px; position:absolute; top:75px; z-index:-1; }
 .videos .left-arrow { background:url('images/video_left_arrow.png') no-repeat; left:-20px; }
