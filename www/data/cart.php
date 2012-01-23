@@ -76,7 +76,8 @@
     }
     elseif( $_SERVER['REQUEST_METHOD'] == 'DELETE' )
     {
-        $cart_item_id = $_REQUEST['cart_item_id'];
+        parse_str(file_get_contents('php://input'), $params);
+        $cart_item_id = $params['cart_item_id'];
         mq("DELETE FROM mydna_musicplayer_ecommerce_cart WHERE id='$cart_item_id' AND userid='$cart_userid'");
         echo json_encode(get_cart());
         exit();
