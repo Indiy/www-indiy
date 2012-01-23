@@ -1688,7 +1688,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border-bottom: 1px solid #555;
     white-space: nowrap;
 }
-#store .cart .header div {
+#store .cart .cart_line div {
     display: inline-block;
 }
 #store .cart .remove_button {
