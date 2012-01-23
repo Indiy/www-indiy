@@ -1,32 +1,48 @@
 
 function showCart(fade)
 {
-    $("ul.products").hide();
+    $("#store_products").hide();
     if( fade )
-        $(".cart").fadeIn();
+        $("#store_cart").fadeIn();
     else
-        $(".cart").show();
+        $("#store_cart").show();
 }
 
 function showProducts(fade)
 {
-    $(".cart").hide();
+    $("#store_cart").hide();
     if( fade )
-        $("ul.products").fadeIn();
+        $("#store_products").fadeIn();
     else
-        $("ul.products").show();
+        $("#store_products").show();
 }
 
+var g_cartList = false;
 function buySong(product_id)
 {
-    var cart = "&cart=true";
-    cart += "&paypal=" + g_paypalEmail;
-    cart += "&artist=" + g_artistId;
-    cart += "&product=" + product_id;
+    var cart = "&artist_id=" + g_artistId;
+    cart += "&product_id=" + product_id;
     
-    $.post("jplayer/ajax.php", cart, function(items) 
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: "/data/cart.php",
+        data: cart,
+        dataType: 'json',
+        success: function(data) 
+        {
+            g_cartList = data;
+            showCart();
+        },
+        error: function()
+        {
+            //window.alert("Error!");
+        }
+    });
+    
+    $.post(, cart, function(items) 
            {
-           $('.cart').html(items);
+                $('.cart').html(items);
            showCart(false);
            });
     
