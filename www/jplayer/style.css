@@ -1660,22 +1660,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 
 #store .cart {
     display: none;
-    text-align: center;
-}
-#cart table {
     width: 600px;
 }
 
-#store .cart thead tr {
-    background-color: #CCC;
-    color: black;
-    font-size: 14px;
-    font-family: Helvetica, sans-serif;
-    font-weight: normal;
-    text-align: left;
-    border: none;
-}
-#store .cart thead th {
+#store .cart .header {
     padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -1684,9 +1672,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-family: Helvetica, sans-serif;
     font-weight: normal;
     text-align: left;
+    background-color: #CCC;
     border: none;
 }
-#store .cart tbody tr {
+#store .cart .cart_line  {
     height: 40px;
     color: white;
     font-size: 12px;
@@ -1695,17 +1684,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     text-align: left;
     border-bottom: 1px solid #555;
 }
-#store .cart tbody td {
-    padding-left: 4px;
-    padding-top: 4px;
-    padding-bottom: 2px;
-    color: white;
-    font-size: 12px;
-    font-family: Helvetica, sans-serif;
-    font-weight: normal;
-    text-align: left;
-    border: none;
-}
 #store .cart .remove_button {
     padding-top: 4px;
     padding-bottom: 4px;
@@ -1713,7 +1691,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-right: 10px;
     margin-top: 4px;
     color: white;
-    font-size: 11px;
+    font-size: 12px;
     font-family: Helvetica, sans-serif;
     font-weight: lighter;
     border-radius: 4px;
@@ -1723,11 +1701,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background-color: #c00;
     cursor: pointer;
 }
-#store .cart tbody .image img {
+#store .cart .image_holder img {
     max-height: 40px;
     max-width: 50px;
 }
-#store .cart .image {
+#store .cart .image_holder,
+#store .cart .header .image {
     width: 75px;
 }
 #store .cart .name {
@@ -1738,5 +1717,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #store .cart .remove {
     width: 75px;
+    text-align: center;
 }
 

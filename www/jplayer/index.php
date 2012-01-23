@@ -667,18 +667,14 @@ String.prototype.format = function() {
                         </div>
                     </div>
                     <div id='store_cart' class='cart'>
-                        <table cellspacing="0" cellpadding="0">
-                            <thead>
-                                <tr>
-                                    <th class='image'>Image</th>
-                                    <th class='name'>Name</th>
-                                    <th class='price'>Price</th>
-                                    <th class='remove'>Remove</th>
-                                </tr>
-                            </thead>
-                            <tbody id='cart_tbody'>
-                            </tbody>
-                        </table>
+                        <div class='header'>
+                            <div class='image'>Image</div>
+                            <div class='name'>Name</div>
+                            <div class='price'>Price</div>
+                            <div class='remove'>Remove</div>
+                        </div>
+                        <div id='store_cart_body' class='body'>
+                        </div>
                     </div>
                 </div>
             </div>
