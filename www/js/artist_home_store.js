@@ -18,7 +18,8 @@ function showProducts(fade)
 }
 
 var g_cartList = false;
-function buySong(product_id)
+
+function buyProductId(product_id)
 {
     var cart = "&artist_id=" + g_artistId;
     cart += "&product_id=" + product_id;
@@ -32,6 +33,7 @@ function buySong(product_id)
         success: function(data) 
         {
             g_cartList = data;
+            renderCart();
             showCart();
         },
         error: function()
@@ -39,7 +41,10 @@ function buySong(product_id)
             //window.alert("Error!");
         }
     });
-    
+}
+function buySong(product_id)
+{
+    buyProductId(product_id);
     showStore();
 }
 
@@ -67,5 +72,39 @@ function scrollStoreLeft()
     g_currentStoreScroll -= 3;
     g_currentStoreScroll = Math.max(0,g_currentStoreScroll);
     $('#store .product_list').animate({ scrollLeft: 298*g_currentStoreScroll });
+}
+
+function renderCart()
+{
+    $('#cart_tbody').empty();
+    for( var k in g_cartList )
+    {
+        var c = g_cartList[k];
+        var id = c['id'];
+        var name = c['name'];
+        var image = c['image'];
+        var price = c['price'];
+        var shipping = c['shipping'];
+        
+        var html = "<tr>";
+        html += "<td class='image'><img src='{0}'></td>".format(image);
+        html += "<td class='name'>{0}</td>".format(name);
+        html += "<td class='price'>";
+        html += "<div class='price_price'>${0}</div>".format(price.toFixed(2));
+        if( shipping )
+            html += "<div class='price_shipping'>Shipping: ${0}</div>".format(shipping.toFixed(2));
+        html += "</td>";
+        html += "<td class='delete'>";
+        html += "<div class='delete_button' onclick='deleteCart({0});'>".format(id);;
+        html += "</td>";
+        html += "</tr>";
+        $('#cart_tbody').append(html);
+    }
+}
+
+function addToCart(i)
+{
+    var product = g_productList[i];
+    buyProductId(product['id']);
 }
 
