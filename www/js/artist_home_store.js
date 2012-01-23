@@ -197,6 +197,6 @@ function storeCheckout()
     }
     html += "</form>";
     $('#store_cart_form_holder').append(html);
-    window.setTimeout(submitCheckoutForm,100);
+    $('#store_cart_form').submit();
 }
 
