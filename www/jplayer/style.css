@@ -1573,7 +1573,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #store .product_list {
     overflow: hidden;
-    max-width: 900px;
+    max-width: 894px;
     white-space: nowrap;
     text-align: center;
 }
