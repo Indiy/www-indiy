@@ -1658,13 +1658,29 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background-color: #f00;
 }
 
+#store .cart {
+    text-align: center;
+}
+
 #store .cart thead tr {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     background-color: #CCC;
     color: black;
     font-size: 14px;
     font-family: Helvetica, sans-serif;
     font-weight: normal;
     text-align: left;
+    border: none;
+}
+#store .cart thead th {
+    color: black;
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: left;
+    border: none;
 }
 #store .cart tbody tr {
     color: white;
@@ -1672,17 +1688,18 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-family: Helvetica, sans-serif;
     font-weight: normal;
     text-align: left;
+    border: none;
 }
 #store .cart .image {
-    width: 50px;
-}
-#store .cart .name {
-    width: 200px;
-}
-#store .cart .price {
     width: 75px;
 }
+#store .cart .name {
+    width: 300px;
+}
+#store .cart .price {
+    width: 100px;
+}
 #store .cart .remove {
-    width: 50px;
+    width: 75px;
 }
 
