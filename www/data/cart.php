@@ -14,6 +14,7 @@
     
     function get_cart()
     {
+        global $cart_userid;
         $cart_list = array();
         $q = mq("SELECT * FROM `mydna_musicplayer_ecommerce_cart` WHERE `userid`='$cart_userid' ORDER BY `id` ASC");
         while($cart = mf($q)) 
