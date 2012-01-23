@@ -28,7 +28,7 @@
             
             $item = array("id" => $id,
                           "product_id" => $product_id,
-                          "price" => $price,
+                          "price" => floatval($price),
                           "name" => $name,
                           "image" => $image,
                           "shipping" => $shipping,
