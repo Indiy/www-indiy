@@ -86,18 +86,19 @@ function renderCart()
         var price = c['price'];
         var shipping = c['shipping'];
         
-        var html = "<tr>";
-        html += "<td class='image'><img src='{0}'></td>".format(image);
-        html += "<td class='name'>{0}</td>".format(name);
-        html += "<td class='price'>";
-        html += "<div class='price_price'>${0}</div>".format(price.toFixed(2));
+        var html = "";
+        html += "<div class='cart_line'>";
+        html += " <div class='image_holder'><img src='{0}'></div>".format(image);
+        html += " <div class='name'>{0}</div>".format(name);
+        html += " <div class='price_shipping'>";
+        html += "  <div class='price'>${0}</div>".format(price.toFixed(2));
         if( shipping )
-            html += "<div class='price_shipping'>Shipping: ${0}</div>".format(shipping.toFixed(2));
-        html += "</td>";
-        html += "<td class='remove'>";
-        html += "<div class='remove_button' onclick='deleteCart({0});'>remove</div>".format(id);
-        html += "</td>";
-        html += "</tr>";
+            html += "  <div class='shipping'>Shipping: ${0}</div>".format(shipping.toFixed(2));
+        html += " </div>";
+        html += " <div class='remove_holder'>";
+        html += "  <div class='remove_button' onclick='deleteCart({0});'>remove</div>".format(id);
+        html += " </div>";
+        html += "</div>";
         $('#cart_tbody').append(html);
     }
 }
