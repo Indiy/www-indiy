@@ -1729,7 +1729,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 100px;
 }
 #store .cart .remove_holder {
-    width: 100px;
-    text-align: center;
+    width: 75px;
 }
 
