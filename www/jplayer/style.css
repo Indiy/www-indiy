@@ -1717,6 +1717,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     text-align: center;
     cursor: pointer;
 }
+#store .cart .remove_button:hover {
+    background-color: #f00;
+}
 #store .cart .image_holder img {
     max-height: 34px;
     max-width: 50px;
@@ -1798,6 +1801,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     text-align: center;
     cursor: pointer;
     margin-right: 3px;
+}
+#store .cart .checkout:hover {
+    background-color: #f00;
 }
 
 
