@@ -1690,7 +1690,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-family: Helvetica, sans-serif;
     font-weight: normal;
     text-align: left;
-    border: none;
+    border-bottom: 1px solid #555;
 }
 #store .cart tbody td {
     padding-left: 4px;
