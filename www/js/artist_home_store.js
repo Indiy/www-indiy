@@ -19,6 +19,26 @@ function showProducts(fade)
 
 var g_cartList = false;
 
+function getCartContents()
+{
+    jQuery.ajax(
+    {
+        type: 'GET',
+        url: "/data/cart.php",
+        dataType: 'json',
+        success: function(data) 
+        {
+            g_cartList = data;
+            renderCart();
+        },
+        error: function()
+        {
+            //window.alert("Error!");
+        }
+    });
+}
+$(document).ready(getCartContents);
+
 function buyProductId(product_id)
 {
     var cart = "&artist_id=" + g_artistId;
