@@ -629,7 +629,7 @@ String.prototype.endsWith = function(suffix) {
                         <button onclick='showProducts();'>Store</button>
                         <button onclick='showCart();'>Cart</button>
                     </div>
-                    <div id='product_slider' class='product_list'>
+                    <div id='store_products' class='product_list'>
                         <? 
                             //echo "<ul id='product_slider_ul' class='product_slider'>\n";
                             foreach( $product_list as $i => $product )
@@ -655,7 +655,20 @@ String.prototype.endsWith = function(suffix) {
                         ?>
                         </ul>
                     </div>
-                    <div class='cart'></div>
+                    <div id='store_cart' class='cart'>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class='image'>Image</th>
+                                    <th class='name'>Name</th>
+                                    <th class='price'>Price</th>
+                                    <th class='remove'>Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody id='cart_tbody'>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         <? endif; ?>
