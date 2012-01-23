@@ -1659,7 +1659,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 
 #store .cart {
     display: none;
-    width: 600px;
 }
 
 #store .cart .header {
@@ -1692,6 +1691,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     display: inline-block;
 }
 #store .cart .remove_button {
+    display: block;
     padding-top: 4px;
     padding-bottom: 4px;
     padding-left: 10px;
@@ -1716,7 +1716,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 75px;
 }
 #store .cart .name {
-    width: 400px;
+    width: 330px;
 }
 #store .cart .price {
     width: 100px;
