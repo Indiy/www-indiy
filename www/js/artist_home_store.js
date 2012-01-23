@@ -179,11 +179,10 @@ function submitCheckoutForm()
 function storeCheckout()
 {
     $('#store_cart_form_holder').empty();
-    var html = "<form id='store_cart_form' action='https://www.paypal.com/cgi-bin/webscr' method='post'>";
+    var html = "<form id='store_cart_form' target='_blank' action='https://www.paypal.com/cgi-bin/webscr' method='post'>";
     html += "<input type='hidden' name='cmd' value='_cart'>";
     html += "<input type='hidden' name='upload' value='1'>";
     html += "<input type='hidden' name='business' value='{0}'>".format(g_paypalEmail);
-    $('#store_cart_form_holder').append(html);
     for( var k in g_cartList )
     {
         var c = g_cartList[k];
@@ -193,11 +192,11 @@ function storeCheckout()
         var price = c['price'];
         var shipping = c['shipping']; 
         var amount = price + shipping;
-        var html = "";
         html += "<input type='hidden' name='item_name_{0}' value='{1}'>".format(k,name);
         html += "<input type='hidden' name='amount_{0}' value='{1}'>".format(k,amount);
-        $('#store_cart_form_holder').append(html);
     }
+    html += "</form>";
+    $('#store_cart_form_holder').append(html);
     window.setTimeout(submitCheckoutForm,100);
 }
 
