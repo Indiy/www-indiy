@@ -47,14 +47,17 @@ function closeStore()
 {
     $('#store_wrapper').fadeOut();
 }
+var g_currentStoreScroll = 0;
 function scrollStoreRight()
 {
-    var s = $('#store .product_list').scrollLeft();
-    $('#store .product_list').animate({ scrollLeft: s + 298*3 });
+    g_currentStoreScroll += 3;
+    g_currentStoreScroll = Math.max(g_currentStoreScroll,g_productList.length-3);
+    $('#store .product_list').animate({ scrollLeft: 298*g_currentStoreScroll });
 }
 function scrollStoreLeft()
 {
-    var s = $('#store .product_list').scrollLeft();
-    $('#store .product_list').animate({ scrollLeft: s - 298*3 });
+    g_currentStoreScroll += 3;
+    g_currentStoreScroll = Math.min(0,g_currentStoreScroll);
+    $('#store .product_list').animate({ scrollLeft: 298*g_currentStoreScroll });
 }
 
