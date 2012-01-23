@@ -671,7 +671,7 @@ String.prototype.format = function() {
                             <div class='image_holder'>Image</div>
                             <div class='name'>Name</div>
                             <div class='price'>Price</div>
-                            <div class='remove'>Remove</div>
+                            <div class='remove_holder'>Remove</div>
                         </div>
                         <div id='store_cart_body' class='body'>
                         </div>
