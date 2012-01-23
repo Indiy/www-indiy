@@ -137,6 +137,9 @@ function renderCart()
         html += " <div class='label'>Total:</div>";
         html += " <div class='value'>${0}</div>".format(total.toFixed(2));
         html += "</div>\n";
+        html += "<div class='checkout_holder'>";
+        html += " <div class='checkout' onclick='storeCheckout();'>checkout</div>";
+        html += "</div>\n";
         $('#store_cart_body').append(html);
     }
     
