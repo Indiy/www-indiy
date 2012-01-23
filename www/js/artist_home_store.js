@@ -51,13 +51,13 @@ var g_currentStoreScroll = 0;
 function scrollStoreRight()
 {
     g_currentStoreScroll += 3;
-    g_currentStoreScroll = Math.max(g_currentStoreScroll,g_productList.length-3);
+    g_currentStoreScroll = Math.min(g_currentStoreScroll,g_productList.length-3);
     $('#store .product_list').animate({ scrollLeft: 298*g_currentStoreScroll });
 }
 function scrollStoreLeft()
 {
-    g_currentStoreScroll += 3;
-    g_currentStoreScroll = Math.min(0,g_currentStoreScroll);
+    g_currentStoreScroll -= 3;
+    g_currentStoreScroll = Math.max(0,g_currentStoreScroll);
     $('#store .product_list').animate({ scrollLeft: 298*g_currentStoreScroll });
 }
 
