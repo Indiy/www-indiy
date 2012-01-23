@@ -129,6 +129,7 @@ function renderCart()
     if( sub_total > 0.0 )
     {
         var total = shipping_total + sub_total;
+        var html = "";
         html += "<div class='shipping_label_value'>";
         html += " <div class='label'>Shipping:</div>";
         html += " <div class='value'>${0}</div>".format(shipping_total.toFixed(2));
