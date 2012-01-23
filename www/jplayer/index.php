@@ -618,42 +618,44 @@ String.prototype.endsWith = function(suffix) {
             <div id='store_wrapper'>
                 <div id='store'>
                     <div class='close' onclick='closeStore();'></div>
-                    <?
-                        if( $need_product_page_arrows )
-                        {
-                            echo "<div class='scroll_button right disabled' onclick='scrollStoreRight();'></div>\n";
-                            echo "<div class='scroll_button left disabled' onclick='scrollStoreLeft();'></div>\n";
-                        }
-                    ?>
                     <div class='cart_nav'>
                         <button onclick='showProducts();'>Store</button>
                         <button onclick='showCart();'>Cart</button>
                     </div>
-                    <div id='store_products' class='product_list'>
-                        <? 
-                            //echo "<ul id='product_slider_ul' class='product_slider'>\n";
-                            foreach( $product_list as $i => $product )
+                    <div id='store_products'>
+                        <?
+                            if( $need_product_page_arrows )
                             {
-                                $name = $product['name'];
-                                $image = $product['image'];
-                                $description = $product['description'];
-                                $price = $product['price'];
-                                //echo "<li>";
-                                echo " <div class='product'>";
-                                echo "  <div class='image_holder'>";
-                                echo "   <img src='$image'>";
-                                echo "  </div>";
-                                echo "  <div class='name'>$name</div>";
-                                echo "  <div class='description'>$description</div>";
-                                echo "  <div class='price_cart'>";
-                                echo "   <div class='price'>\$$price</div>";
-                                echo "   <div class='add_to_card' onclick='addToCart($i);'>Buy Now</div>";
-                                echo "  </div>";
-                                echo " </div>";
-                                //echo "</li>\n";
+                                echo "<div class='scroll_button right disabled' onclick='scrollStoreRight();'></div>\n";
+                                echo "<div class='scroll_button left disabled' onclick='scrollStoreLeft();'></div>\n";
                             }
                         ?>
-                        </ul>
+                        <div class='product_list'>
+                            <? 
+                                //echo "<ul id='product_slider_ul' class='product_slider'>\n";
+                                foreach( $product_list as $i => $product )
+                                {
+                                    $name = $product['name'];
+                                    $image = $product['image'];
+                                    $description = $product['description'];
+                                    $price = $product['price'];
+                                    //echo "<li>";
+                                    echo " <div class='product'>";
+                                    echo "  <div class='image_holder'>";
+                                    echo "   <img src='$image'>";
+                                    echo "  </div>";
+                                    echo "  <div class='name'>$name</div>";
+                                    echo "  <div class='description'>$description</div>";
+                                    echo "  <div class='price_cart'>";
+                                    echo "   <div class='price'>\$$price</div>";
+                                    echo "   <div class='add_to_card' onclick='addToCart($i);'>Buy Now</div>";
+                                    echo "  </div>";
+                                    echo " </div>";
+                                    //echo "</li>\n";
+                                }
+                            ?>
+                            </ul>
+                        </div>
                     </div>
                     <div id='store_cart' class='cart'>
                         <table cellspacing="0" cellpadding="0">
