@@ -76,7 +76,7 @@ function scrollStoreLeft()
 
 function renderCart()
 {
-    $('#cart_tbody').empty();
+    $('#store_cart_body').empty();
     for( var k in g_cartList )
     {
         var c = g_cartList[k];
@@ -99,7 +99,7 @@ function renderCart()
         html += "  <div class='remove_button' onclick='deleteCart({0});'>remove</div>".format(id);
         html += " </div>";
         html += "</div>";
-        $('#cart_tbody').append(html);
+        $('#store_cart_body').append(html);
     }
 }
 
