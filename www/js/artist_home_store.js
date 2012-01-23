@@ -128,4 +128,24 @@ function addToCart(i)
     var product = g_productList[i];
     buyProductId(product['id']);
 }
-
+function deleteCart(id)
+{
+    var post = "&cart_item_id=" + id;
+    jQuery.ajax(
+    {
+        type: 'DELETE',
+        url: "/data/cart.php",
+        data: post,
+        dataType: 'json',
+        success: function(data) 
+        {
+            g_cartList = data;
+            renderCart();
+            showCart();
+        },
+        error: function()
+        {
+            //window.alert("Error!");
+        }
+    });
+}
