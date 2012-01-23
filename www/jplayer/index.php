@@ -667,6 +667,7 @@ String.prototype.format = function() {
                         </div>
                     </div>
                     <div id='store_cart' class='cart'>
+                        <div id='store_cart_form_holder'></div>
                         <div class='header'>
                             <div class='image_holder'>Image</div>
                             <div class='name'>Name</div>
