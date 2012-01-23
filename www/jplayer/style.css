@@ -1676,6 +1676,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #store .cart .header div {
     display: inline-block;
+    vertical-align: top;
 }
 #store .cart .cart_line  {
     height: 40px;
@@ -1689,6 +1690,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #store .cart .cart_line div {
     display: inline-block;
+    vertical-align: top;
 }
 #store .cart .remove_button {
     display: block;
