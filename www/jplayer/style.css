@@ -1718,7 +1718,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     cursor: pointer;
 }
 #store .cart .image_holder img {
-    max-height: 40px;
+    max-height: 34px;
     max-width: 50px;
 }
 #store .cart .image_holder {
@@ -1733,6 +1733,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #store .cart .remove_holder {
     width: 75px;
     text-align: center;
+}
+#store .cart .cart_line .remove_holder
+{
+    text-align: right;
 }
 #store .cart .shipping_label_value {
     height: 30px;
