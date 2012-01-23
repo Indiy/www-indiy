@@ -193,6 +193,7 @@ function storeCheckout()
         var price = c['price'];
         var shipping = c['shipping']; 
         var amount = price + shipping;
+        var html = "";
         html += "<input type='hidden' name='item_name_{0}' value='{1}'>".format(k,name);
         html += "<input type='hidden' name='amount_{0}' value='{1}'>".format(k,amount);
         $('#store_cart_form_holder').append(html);
