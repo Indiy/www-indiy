@@ -1732,8 +1732,11 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #store .cart .remove_holder {
     width: 75px;
+    text-align: center;
 }
 #store .cart .shipping_label_value {
+    height: 30px;
+    padding-top: 10px;
     color: white;
     font-size: 14px;
     font-family: Helvetica, sans-serif;
@@ -1748,9 +1751,11 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #store .cart .shipping_label_value .value {
     float: right;
     text-align: left;
-    width: 200px;
+    width: 205px;
 }
 #store .cart .total_label_value {
+    height: 30px;
+    padding-top: 10px;
     color: white;
     font-size: 16px;
     font-family: Helvetica, sans-serif;
@@ -1765,12 +1770,13 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #store .cart .total_label_value .value {
     float: right;
     text-align: left;
-    width: 200px;
+    width: 205px;
 }
 #store .cart .checkout_holder {
-    text-align: right;
+    height: 28px;
 }
 #store .cart .checkout {
+    float: right;
     padding-top: 4px;
     padding-bottom: 4px;
     padding-left: 10px;
@@ -1787,6 +1793,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background-color: #c00;
     text-align: center;
     cursor: pointer;
+    margin-right: 3px;
 }
 
 
