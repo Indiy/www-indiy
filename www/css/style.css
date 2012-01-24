@@ -732,7 +732,10 @@ div.search_text {
     padding-top: 5px; 
     color: #666;
 }
-.searchListItem:hover .heading, .searchListItemMatch .heading { color: #ddd; display: inline-block; }
+.searchListItem:hover .heading, .searchListItemMatch .heading 
+{ 
+    color: #ddd; 
+}
 
 
 .ui-error{ float:none; color:#FF0000; text-transform:uppercase; font-weight:bold; font-size:12px; width:100%}
