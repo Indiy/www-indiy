@@ -1556,7 +1556,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #store .scroll_button.left {
     right: 68px;
-    background: #c00 url('/images/store_page_arrows.png') 0px 0px no-repeat;
+    background: #c00 url('/images/store_page_arrows.png') 1px 0px no-repeat;
+}
+#store .scroll_button:hover {
+    background-color: #e00;
 }
 #store .scroll_button.disabled {
     display: none;
