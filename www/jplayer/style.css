@@ -1869,18 +1869,20 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #comments .close:hover {
     background: transparent url('/images/video_close.png') 0px -32px no-repeat;
 }
-#comments .scrollable_container {
-    overflow: auto;
-    max-height: 400px;
-}
 #comments .title {
-    padding-bottom: 20px;
+    padding-bottom: 12px;
     color: white;
     font-size: 22px;
     font-family: Helvetica, sans-serif;
     font-weight: normal;
 }
-
-#fb_comments_container { width: 575px; background: #eee; border: 1px solid #888; padding: 10px; display: block; max-height: 470px; }
+#comments .scrollable_container {
+    max-height: 400px;
+    padding: 10px; 
+    background: #eee; 
+    border: 1px solid #888;
+    border-radius: 10px;
+    overflow: auto;
+}
 
 
