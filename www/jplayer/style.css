@@ -1344,7 +1344,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #user_page_wrapper {
     display: none;
     position: absolute;
-    width: 600px;
     right: 50%;
     position: absolute;
     max-height: 100%;
@@ -1355,7 +1354,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     position: relative;
     top: 130px;
     left: 50%;
-    width: 600px;
+    min-width: 600px;
+    max-width: 900px;
     min-height: 200px;
     max-height: 400px;
     padding-top: 20px;

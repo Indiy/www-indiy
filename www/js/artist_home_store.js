@@ -94,6 +94,14 @@ function scrollStoreLeft()
     $('#store .product_list').animate({ scrollLeft: 298*g_currentStoreScroll });
 }
 
+function myParseFloat(s,def)
+{
+    var f = parseFloat(s);
+    if( isNaN(f) )
+        return def;
+    return f;
+}
+
 function renderCart()
 {
     $('#store_cart_body').empty();
@@ -105,8 +113,8 @@ function renderCart()
         var id = c['id'];
         var name = c['name'];
         var image = c['image'];
-        var price = c['price'];
-        var shipping = c['shipping'];
+        var price = myParseFloat(c['price'],0.0);
+        var shipping = myParseFloat(c['shipping'],0.0);
         
         shipping_total += shipping;
         sub_total += price; 
