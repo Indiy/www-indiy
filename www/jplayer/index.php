@@ -607,7 +607,7 @@ String.prototype.format = function() {
                     <li><a onclick='showStore();'>Store</a></li>
                 <? endif; ?>
                 <? if( $show_comments ): ?>
-                    <li><a class="aComment">Comment</a></li>
+                    <li><a onclick='showComments();'>Comment</a></li>
                 <? endif; ?>
                 <? if( $artist_email ): ?>
                     <li><a class="aContact">Contact</a></li>
@@ -685,7 +685,29 @@ String.prototype.format = function() {
                 </div>
             </div>
         <? endif; ?>
-        
+        <? if( $show_comments ): ?>
+            <div id='comments_wrapper'>
+                <div id='comments'>
+                    <div class='close' onclick='closeComments();'></div>
+                    <div class='title'>Comment</div>
+                    <div class='scrollable_container'>
+                        <div id='fb_comments_container'>
+                            <div id="fb-root"></div>
+                            <script>(function(d, s, id) {
+                                     var js, fjs = d.getElementsByTagName(s)[0];
+                                     if (d.getElementById(id)) {return;}
+                                     js = d.createElement(s); js.id = id;
+                                     js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                                     fjs.parentNode.insertBefore(js, fjs);
+                                     }(document, 'script', 'facebook-jssdk'));
+                            </script>
+                            <div class="fb-comments" data-href="http://<?=$_SERVER['HTTP_HOST'];?>" data-num-posts="2" data-width="500"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <? endif; ?>
+
             
             <div id="jquery_jplayer" class="jp-jplayer"></div> 
 
@@ -757,25 +779,6 @@ String.prototype.format = function() {
                 <div class="box-footer"></div>
             </div>
             
-            <? if ($show_comments) { ?>
-            <div class="comments">
-                <div class="box-header"></div>
-                <h1>Comment</h1>
-                <div id='fb_comments_container'>
-                <div id="fb-root"></div>
-                    <script>(function(d, s, id) {
-                             var js, fjs = d.getElementsByTagName(s)[0];
-                             if (d.getElementById(id)) {return;}
-                             js = d.createElement(s); js.id = id;
-                             js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-                             fjs.parentNode.insertBefore(js, fjs);
-                             }(document, 'script', 'facebook-jssdk'));
-                    </script>
-                    <div class="fb-comments" data-href="http://<?=$_SERVER['HTTP_HOST'];?>" data-num-posts="2" data-width="500"></div>
-                </div>
-                <div class="box-footer"></div>
-            </div>
-            <? } ?>
             
             <? if ($artist_email) { ?>
             <div class="contact">
