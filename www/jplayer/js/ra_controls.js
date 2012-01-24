@@ -628,7 +628,7 @@ ra_ActiveSearch.prototype.renderItems=function()
 	
 
 	
-	this.showItemList(true);
+	//this.showItemList(true);
 	
 	this.listItemsChanged=false;
 	
