@@ -1542,20 +1542,21 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #store .scroll_button {
     position: absolute;
-    top: 10px;
-    height: 30px;
-    width: 30px;
-    border-radius: 10px;
+    top: 15px;
+    height: 25px;
+    width: 25px;
+    border-radius: 20px;
     cursor: pointer;
     z-index: 31;
+    box-shadow: 1px 1px 6px #600 inset;
 }
 #store .scroll_button.right {
-    right: 20px;
-    background-color: red;
+    right: 32px;
+    background: #c00 url('/images/store_page_arrows.png') -100px 0px no-repeat;
 }
 #store .scroll_button.left {
-    right: 60px;
-    background-color: red;
+    right: 68px;
+    background: #c00 url('/images/store_page_arrows.png') 0px 0px no-repeat;
 }
 #store .scroll_button.disabled {
     display: none;
