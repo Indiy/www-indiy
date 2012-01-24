@@ -204,11 +204,12 @@ function closeUserPage()
 
 function showComments()
 {
-    $('#comments_wrapper').show();
+    fadeAllPageElements();
+    $('#comments_wrapper').fadeIn();
 }
 function closeComments()
 {
-    $('#comments_wrapper').hide();
+    fadeAllPageElements();
 }
 
 function sendContactForm()
