@@ -229,10 +229,16 @@
         $audio_html .= "<button onclick='return onSongRemove();'></button>";
     }
 	
+    $buy_disabled = '';
 	if( $audio_download == "1" )
-        $yesDownload = " checked"; 
-    else 
-        $noDownload = " checked"; 
+    {
+        $yesDownload = " checked";
+        $buy_disabled = "disabled='disabled'";
+    }
+    else
+    {
+        $noDownload = " checked";
+    }
 	
     $audio_name = stripslashes($audio_name);
     
@@ -270,6 +276,22 @@ function onImageRemove()
         $('.image_image').hide();
     }
     return false;
+}
+
+function clickFree(yes)
+{
+    if( yes )
+    {
+        $('#amazon_url').attr('disabled',true);
+        $('#itunes_url').attr('disabled',true);
+        $('#mad_store').attr('disabled',true);
+    }
+    else
+    {
+        $('#amazon_url').removeAttr('disabled');
+        $('#itunes_url').removeAttr('disabled');
+        $('#mad_store').removeAttr('disabled');
+    }
 }
     
 </script>
@@ -330,21 +352,21 @@ function onImageRemove()
         <div class='input_container'>
             <div class='left_label'>Free Download <span id='tip_free_download' class='tooltip'>(?)</span></div>
             <div class='right_box'>
-                <input type="radio" name="download" value="1" class="radio"<?=$yesDownload;?> /> Yes
-                <input type="radio" name="download" value="0" class="radio"<?=$noDownload;?> /> No
+                <input type="radio" name="download" value="1" class="radio" <?=$yesDownload;?> onclick='clickFree(1);'/> Yes
+                <input type="radio" name="download" value="0" class="radio" <?=$noDownload;?> onclick='clickFree(0);'/> No
             </div>
         </div>
         <div class='input_container'>
             <div class='line_label'>Amazon MP3 URL</div>
-            <input id='amazon_url' type="text" name="amazon" value="<?=$audio_amazon;?>" class='line_text' />
+            <input id='amazon_url' type="text" name="amazon" value="<?=$audio_amazon;?>" class='line_text' <?=$buy_disabled;?> />
         </div>
         <div class='input_container'>
             <div class='line_label'>iTunes URL</div>
-            <input id='itunes_url' type="text" name="itunes" value="<?=$audio_itunes;?>" class='line_text' />
+            <input id='itunes_url' type="text" name="itunes" value="<?=$audio_itunes;?>" class='line_text' <?=$buy_disabled;?> />
         </div>
         <div class='input_container'>
             <div class='left_label'>MyArtistDNA Store <span id='tip_store' class='tooltip'>(?)</span></div>
-            <input id='mad_store' type="checkbox" name="mad_store" <? if($mad_store) echo 'checked'; ?> class='right_box'/>
+            <input id='mad_store' type="checkbox" name="mad_store" <? if($mad_store) echo 'checked'; ?> class='right_box' <?=$buy_disabled;?> />
         </div>
         <div class='submit_branding_container'>
             <input type="submit" name="WriteTags" value="submit" class='left_submit' />
