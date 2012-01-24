@@ -871,7 +871,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     right: 180px;
     max-width: 805px;
     height: 30px;
-    z-index: 1;
+    z-index: 2;
 }
 #progress_vote_bar .container {
     position: relative;
@@ -884,7 +884,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     left: 0px;
     right: 100px;
     height: 15px;
-    z-index: 1;
     background-color: #292929;
     border-radius: 6px;
 }
@@ -895,7 +894,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     right: 0px;
     height: 30px;
     width: 100px;
-    z-index: 2;
 }
 #progress_vote_bar .vote_buttons .vote_up {
     height: 19px;
