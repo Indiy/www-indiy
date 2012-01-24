@@ -266,7 +266,7 @@ $(document).ready(showFirstInstruction);
                     else
                     {
                         echo "<a href='social_config.php?artist_id=$artistID' rel='facebox[.bolder]'>";
-                        echo "<img class='social_icon' src='/images/fb_icon_gey.png'/>";
+                        echo "<img class='social_icon' src='/images/fb_icon_grey.png'/>";
                         echo "</a>\n";
                     }
                     if( $twitter )
@@ -278,7 +278,7 @@ $(document).ready(showFirstInstruction);
                     else
                     {
                         echo "<a href='social_config.php?artist_id=$artistID' rel='facebox[.bolder]'>";
-                        echo "<img class='social_icon' src='/images/tw_icon_gey.png'/>";
+                        echo "<img class='social_icon' src='/images/tw_icon_grey.png'/>";
                         echo "</a>\n";
                     }
                     echo "</span>";
