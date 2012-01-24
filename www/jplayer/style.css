@@ -865,13 +865,18 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-top: 5px;*/
 }
 #progress_vote_bar {
-    position: relative;
+    position: absolute;
     top: 10px;
     left: 57px;
     right: 180px;
     max-width: 805px;
     height: 30px;
     z-index: 1;
+}
+#progress_vote_bar .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 #progress_vote_bar .progress_bg { 
     position: absolute;
