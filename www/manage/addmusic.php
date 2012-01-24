@@ -109,6 +109,9 @@
             }
             else
             {
+                $src = "../artists/images/$audio_logo";
+                $dst = "../artists/products/$audio_logo";
+                @copy($src,$dst);
                 $columns = "artistid|name|description|image|price|sku";
                 $values = "$artistid|$audio_name|Single|$audio_logo|0.99|MADSONG";
                 insert('mydna_musicplayer_ecommerce_products',$columns,$values);
@@ -184,9 +187,7 @@
             }
         }
         
-		exit;		
-
-		refresh("1","?p=home");
+		exit();
 	}
     $audio_bgcolor = '000000';
     $bg_style = 'STRETCH';
