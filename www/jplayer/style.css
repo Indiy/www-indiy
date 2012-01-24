@@ -222,10 +222,10 @@ ul.products .option { display: block; padding: 3px; width: 250px; margin: 5px 0p
 /* NAVIGATION */
 #navigation { 
     background-color: rgba(0,0,0,0.7); 
-    position: fixed; 
+    position: absolute; 
     top: 54px; 
     left: 0; 
-    width: 100%; 
+    width: 300%; 
     height: 30px;
     padding: 10px 10px 5px 170px; 
 }
