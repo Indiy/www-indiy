@@ -11,56 +11,14 @@ function setupPageLinks()
     });
 
     $('#image').hide();
-    $('.page').hide();
-    $('.comments').hide();
-    $('.contact').hide();
     $('.aClose').hide();
-    $('.store').hide();
-    $('.checkout').hide();
     $('.videos').hide();
-    $('.store_Close').hide();
-    $('.contact_Close').hide();
     
     /* Close */
     $('.aClose').click(function() {
         fadeAllPageElements();
     });
 
-    $('.store_Close').click(function() {
-                       fadeAllPageElements();
-                       });
-
-    /* Comment */
-    $('.aComment').click(function() {
-        fadeAllPageElements();
-        setTimeout(function(){ 
-            $('.comments').fadeIn();
-            $('.aClose').fadeIn();
-        }, 450);
-    });
-    
-    /* Contact */
-    $('.aContact').click(function() {
-        fadeAllPageElements();
-        setTimeout(function(){ 
-            $('.contact').fadeIn();
-            $('.contact_Close').fadeIn();
-        }, 450);
-    });
-    
-    /* Store */
-    $('.aStore').click(function() {
-        fadeAllPageElements();
-        setTimeout(function(){ 
-            $('.store').fadeIn();
-            $('.store_Close').fadeIn();
-        }, 450);
-        var cart = "&paypal=" + escape(g_paypalEmail) + "&cart=true&artist=" + g_artistId;
-        $.post("jplayer/ajax.php", cart, function(items) {
-              $(".cart").html(items);
-              });
-    });
-    
     /* Videos */
     $('.aVideos').click(function() {
         fadeAllPageElements();
@@ -69,7 +27,6 @@ function setupPageLinks()
             $('.aClose').fadeIn();
         }, 450);
     });         
-    
     
     /* Playlist Controller */
     $("#playlistaction").click(function(){
@@ -80,23 +37,6 @@ function setupPageLinks()
     });
     $("#playlisthide").click(function(){
         hidePlaylist();
-    });
-    
-    // Shopping Cart Functionality
-    $("div.addtocart").click(function(event){
-        var pro = $(this).text();
-        var cart = "&paypal=" + escape(g_paypalEmail) + "&cart=true&artist=" + g_artistId + "&product=" + escape(pro);
-        $.post("jplayer/ajax.php", cart, function(items) {
-            $(".cart").html(items);
-            showCart(false);
-        });
-    });
-    
-    $(".showstore").click(function(event){
-        showProducts(true);
-    });
-    $(".showcart").click(function(event){
-        showCart(true);
     });
     
     $("a.jp-previous").mouseover(function(event){
@@ -121,13 +61,6 @@ function setupPageLinks()
         $(this).animate({
             right: "-138px"
         }, 250);
-    });
-    
-    // All new socialize tab functionality
-        
-    $(".submitform").click(function(event){
-    
-        
     });
     
     if( typeof g_userName != "undefined" && g_userName )
@@ -165,12 +98,7 @@ function fadeAllPageElements()
 {
     $('.dragger_container').fadeOut();
     $('.aClose').fadeOut();
-    $('.comments').fadeOut();
-    $('.contact').fadeOut();
-    $('.page').fadeOut();
     $('.videos').fadeOut();
-    $('.store_Close').fadeOut();
-    $('.contact_Close').fadeOut();
     $('#user_page_wrapper').fadeOut();
     $('#store_wrapper').fadeOut();
     $('#comments_wrapper').fadeOut();
