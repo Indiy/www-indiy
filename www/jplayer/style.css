@@ -868,8 +868,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     position: absolute;
     top: 10px;
     left: 57px;
-    right: 180px;
-    max-width: 805px;
+    right: 140px;
+    max-width: 845px;
     height: 30px;
     z-index: 2;
 }
@@ -882,7 +882,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     position: absolute;
     top: 2px;
     left: 0px;
-    right: 100px;
+    right: 140px;
     height: 15px;
     background-color: #292929;
     border-radius: 6px;
@@ -890,7 +890,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 
 #progress_vote_bar .vote_buttons {
     position: absolute;
-    top: 10px;
+    top: 0px;
     right: 0px;
     height: 30px;
     width: 100px;
