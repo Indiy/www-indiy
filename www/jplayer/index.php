@@ -610,7 +610,7 @@ String.prototype.format = function() {
                     <li><a onclick='showComments();'>Comment</a></li>
                 <? endif; ?>
                 <? if( $artist_email ): ?>
-                    <li><a class="aContact">Contact</a></li>
+                    <li><a onclick='showContact();'>Contact</a></li>
                 <? endif; ?>
             </ul>
             <div class="clear"></div>
@@ -705,6 +705,74 @@ String.prototype.format = function() {
                 </div>
             </div>
         <? endif; ?>
+        <? if( $artist_email ): ?>
+            <div id='contact_wrapper'>
+                <div class="contact">
+                    <div class='close' onclick='closeContact();'></div>
+                    <div class="right">
+                        <h1>BOOKINGS&nbsp;</h1>
+                        <table>
+                            <tr>
+                                <td><span class="red">*</span> Date of Event:</td>
+                                <td><input id="booking_date" type="text" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="red">*</span> Location:</td>
+                                <td><input id="booking_location" type="text" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="red">*</span> Budget:</td>
+                                <td>
+                                    <select id='booking_budget'>
+                                        <option>$0 - $500</option>
+                                        <option>$500 - $1,000</option>
+                                        <option>$1,000 - $5,000</option>
+                                        <option>$5,000 - $10,000</option>
+                                        <option>$10,000+</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="message"><span class="red">*</span> Message:</td>
+                                <td><textarea name="comments" class="textarea" id="booking_comments"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><span class="red">*</span> required</td>
+                                <td>
+                                    <button id="contact_submit" onclick="sendBookingForm();">submit</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="left">
+                        <h1>CONTACT <span class="slashes">//</span> <?=$artist_name;?></h1>
+                        <table>
+                            <tr>
+                                <td><span class="red">*</span> Name:</td>
+                                <td><input type="text" value="Name..." name="name" id="contact_name" onfocus="clickclear(this, 'Name...')" onblur="clickrecall(this, 'Name...')" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="red">*</span> E-Mail:</td>
+                                <td><input type="text" value="Email..." name="email" id="contact_email" onfocus="clickclear(this, 'Email...')" onblur="clickrecall(this, 'Email...')" /></td>
+                            </tr>
+                            <tr>
+                                <td class="message"><span class="red">*</span> Message:</td>
+                                <td><textarea name="comments" class="textarea" id="contact_comments"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><span class="red">*</span> required</td>
+                                <td>
+                                    <button id="contact_submit" onclick="sendContactForm();">submit</button>
+                                    <button id="contact_clear" onclick="clearContactForm();">clear form</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <div id="contact_thanks" style="height: 180px; display: none;">Thank you for your message.</div>
+                    </div>
+                </div>
+            </div>
+        <? endif; ?>
 
             
             <div id="jquery_jplayer" class="jp-jplayer"></div> 
@@ -778,75 +846,7 @@ String.prototype.format = function() {
             </div>
             
             
-            <? if ($artist_email) { ?>
-            <div class="contact">
-                <div class="box-header"></div>
-                
-                
-                <div class="right">
-                    <h1>BOOKINGS&nbsp;</h1>
-                    <table>
-                        <tr>
-                            <td><span class="red">*</span> Date of Event:</td>
-                            <td><input id="booking_date" type="text" value="" /></td>
-                        </tr>
-                        <tr>
-                            <td><span class="red">*</span> Location:</td>
-                            <td><input id="booking_location" type="text" value="" /></td>
-                        </tr>
-                        <tr>
-                            <td><span class="red">*</span> Budget:</td>
-                            <td>
-                                <select id='booking_budget'>
-                                    <option>$0 - $500</option>
-                                    <option>$500 - $1,000</option>
-                                    <option>$1,000 - $5,000</option>
-                                    <option>$5,000 - $10,000</option>
-                                    <option>$10,000+</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="message"><span class="red">*</span> Message:</td>
-                            <td><textarea name="comments" class="textarea" id="booking_comments"></textarea></td>
-                        </tr>
-                        <tr>
-                            <td><span class="red">*</span> required</td>
-                            <td>
-                                <button id="contact_submit" onclick="sendBookingForm();">submit</button>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                
-                <div class="left">
-                    <h1>CONTACT <span class="slashes">//</span> <?=$artist_name;?></h1>
-                    <table>
-                        <tr>
-                            <td><span class="red">*</span> Name:</td>
-                            <td><input type="text" value="Name..." name="name" id="contact_name" onfocus="clickclear(this, 'Name...')" onblur="clickrecall(this, 'Name...')" /></td>
-                        </tr>
-                        <tr>
-                            <td><span class="red">*</span> E-Mail:</td>
-                            <td><input type="text" value="Email..." name="email" id="contact_email" onfocus="clickclear(this, 'Email...')" onblur="clickrecall(this, 'Email...')" /></td>
-                        </tr>
-                        <tr>
-                            <td class="message"><span class="red">*</span> Message:</td>
-                            <td><textarea name="comments" class="textarea" id="contact_comments"></textarea></td>
-                        </tr>
-                        <tr>
-                            <td><span class="red">*</span> required</td>
-                            <td>
-                                <button id="contact_submit" onclick="sendContactForm();">submit</button>
-                                <button id="contact_clear" onclick="clearContactForm();">clear form</button>
-                            </td>
-                        </tr>
-                    </table>
-                    <div id="contact_thanks" style="height: 180px; display: none;">Thank you for your message.</div>
-                </div>
-                <div class="box-footer"></div>
-            </div>
-            <? } ?>
+            
             
             
             <? if ($artist_videos) { ?>

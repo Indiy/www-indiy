@@ -174,6 +174,7 @@ function fadeAllPageElements()
     $('#user_page_wrapper').fadeOut();
     $('#store_wrapper').fadeOut();
     $('#comments_wrapper').fadeOut();
+    $('#contact_wrapper').fadeOut();
     hidePlaylist();
 }
 
@@ -209,6 +210,15 @@ function showComments()
     window.setTimeout(function() { $('#comments_wrapper').fadeIn(); },300);
 }
 function closeComments()
+{
+    fadeAllPageElements();
+}
+function showContact()
+{
+    fadeAllPageElements();
+    window.setTimeout(function() { $('#contact_wrapper').fadeIn(); },300);
+}
+function closeContact()
 {
     fadeAllPageElements();
 }
