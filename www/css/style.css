@@ -682,7 +682,8 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
  searchbox related stuff
 */
 #theSearchBox {
-    position:relative; 
+    position:relative;
+    float: right; 
     margin:10px 0 5px 0px;
     z-index:10; 
 }
@@ -695,7 +696,7 @@ div.searchList {
     display: none; 
     position: absolute; 
     left: -110px;
-    width: 300px; 
+    width: 330px; 
     background-color: #DDDEE0; 
     text-align: left; 
     border: solid 1px #000; 
@@ -720,11 +721,23 @@ div.searchListItem:hover {
 div.searchListItemMatch {background-color:#767676; border-top-style:solid; border-bottom-style:solid;  border-top-width:1px; border-bottom-width:1px; border-top-color:#000099;  border-bottom-color:#000099;font-family:"Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif; color:#fff; font-size:11px; }
 
 
-div.searchListItemCategory {background-color:#d2d2d2; border:inset 1px #ccc; padding:0 0 0 5px; }
+div.searchListItemCategory {
+    background-color: #d2d2d2;
+    border: inset 1px #ccc;
+    height: 0px;
+    overflow: hidden;
+}
 
 img.search_thumbnail { width:64px; height:64px; padding-left: 5px; padding-top:5px; }
 div.search_text { 
-    height:64px; width: 245px; text-align:left; float:right; padding:3px; font-size:13px; font-family: Helvetica, Arial, sans-serif; }
+    float: right;
+    height: 64px;
+    width: 245px;
+    padding: 3px;
+    font-size: 13px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: left;
+}
 
 .searchListItem .heading { 
     display: inline-block; 
@@ -732,11 +745,16 @@ div.search_text {
     padding-top: 5px; 
     color: #666;
 }
-.searchListItem:hover .heading, .searchListItemMatch .heading 
-{ 
+.searchListItem:hover .heading { 
+    display: inline-block; 
+    padding-bottom: 5px; 
+    padding-top: 5px; 
     color: #ddd; 
 }
-
+.searchListItemMatch .heading {
+    display: inline-block; 
+    color: #ddd;
+}
 
 .ui-error{ float:none; color:#FF0000; text-transform:uppercase; font-weight:bold; font-size:12px; width:100%}
 
