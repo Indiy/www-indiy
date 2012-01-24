@@ -689,7 +689,7 @@ String.prototype.format = function() {
             <div id='comments_wrapper'>
                 <div id='comments'>
                     <div class='close' onclick='closeComments();'></div>
-                    <div class='title'>Comment</div>
+                    <div class='title'>COMMENT</div>
                     <div class='scrollable_container'>
                         <div id="fb-root"></div>
                         <script>(function(d, s, id) {

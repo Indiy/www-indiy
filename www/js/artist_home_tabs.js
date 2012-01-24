@@ -206,7 +206,7 @@ function closeUserPage()
 function showComments()
 {
     fadeAllPageElements();
-    $('#comments_wrapper').fadeIn();
+    window.setTimeout(function() { $('#comments_wrapper').fadeIn(); },300);
 }
 function closeComments()
 {
