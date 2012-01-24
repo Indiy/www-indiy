@@ -246,18 +246,6 @@ ul.products .option { display: block; padding: 3px; width: 250px; margin: 5px 0p
     color: #ccc; 
 }
 
-#progressbg { 
-    position: absolute;
-    top: 12px;
-    left: 57px;
-    right: 280px;
-    max-width: 705px;
-    height: 15px;
-    z-index: 1;
-    background-color: #292929;
-    border-radius: 6px;
-}
-
 /* CONTROLS */
 ul { padding: 0px; margin: 0px; }
 ul li { padding: 0px; margin: 0px; }
@@ -876,15 +864,35 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
    /* height: 15px;
     padding-top: 5px;*/
 }
-#vote_buttons {
+#progress_vote_bar {
+    position: relative;
+    top: 10px;
+    left: 57px;
+    right: 180px;
+    max-width: 805px;
+    height: 30px;
+    z-index: 1;
+}
+#progress_vote_bar .progress_bg { 
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    right: 100px;
+    height: 15px;
+    z-index: 1;
+    background-color: #292929;
+    border-radius: 6px;
+}
+
+#progress_vote_bar .vote_buttons {
     position: absolute;
     top: 10px;
-    right: 260px;
+    right: 0px;
     height: 30px;
     width: 100px;
     z-index: 2;
 }
-#vote_buttons .vote_up {
+#progress_vote_bar .vote_buttons .vote_up {
     height: 19px;
     width: 30px;
     background: #333 url('/images/thumbs_up.png') no-repeat 10px 3px;
@@ -892,10 +900,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border: none;
     cursor: pointer;
 }
-#vote_buttons .vote_up:hover {
+#progress_vote_bar .vote_buttons .vote_up:hover {
     background: #CCC url('/images/thumbs_up.png') no-repeat -11px 3px;
 }
-#vote_buttons .vote_down {
+#progress_vote_bar .vote_buttons .vote_down {
     height: 19px;
     width: 30px;
     margin-left: 7px;
@@ -904,7 +912,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border: none;
     cursor: pointer;
 }
-#vote_buttons .vote_down:hover {
+#progress_vote_bar .vote_buttons .vote_down:hover {
     background: #CCC url('/images/thumbs_down.png') no-repeat -11px 4px;
 }
 
