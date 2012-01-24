@@ -173,6 +173,7 @@ function fadeAllPageElements()
     $('.contact_Close').fadeOut();
     $('#user_page_wrapper').fadeOut();
     $('#store_wrapper').fadeOut();
+    $('#comments_wrapper').fadeOut();
     hidePlaylist();
 }
 
