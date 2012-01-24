@@ -412,9 +412,12 @@ String.prototype.format = function() {
                 </a>
             </div>
         </div>
-        <div id='vote_buttons'>
-            <button class='vote_up' title='Thumbs Up Song' onclick='songVote(1);'></button>
-            <button class='vote_down'  title='Thumbs Down Song' onclick='songVote(0);'></button>
+        <div id='progress_vote_bar'>
+            <div class='progress_bg'></div>
+            <div class='vote_buttons'>
+                <button class='vote_up' title='Thumbs Up Song' onclick='songVote(1);'></button>
+                <button class='vote_down'  title='Thumbs Down Song' onclick='songVote(0);'></button>
+            </div>
         </div>
         <div id='vote_results'></div>
         <div id='video_player'>
@@ -729,7 +732,7 @@ String.prototype.format = function() {
             </div>
             
             <div id="volumebg"></div>
-            <div id="progressbg"></div>
+            
             
             <div class="space"></div>
             <div class="aClose"></div>
