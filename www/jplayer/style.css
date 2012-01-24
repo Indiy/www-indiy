@@ -1577,6 +1577,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     text-decoration: underline;
     background-color: transparent;
     border: none;
+    cursor: pointer;
+}
+#store .cart_nav button:hover {
+    color: #ddd;
 }
 #store .product_list {
     overflow: hidden;
