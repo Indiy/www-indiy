@@ -202,6 +202,15 @@ function closeUserPage()
     fadeAllPageElements();
 }
 
+function showComments()
+{
+    $('#comments_wrapper').show();
+}
+function closeComments()
+{
+    $('#comments_wrapper').hide();
+}
+
 function sendContactForm()
 {
     var artist_id = g_artistId;
