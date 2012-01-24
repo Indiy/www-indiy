@@ -224,10 +224,11 @@ ul.products .option { display: block; padding: 3px; width: 250px; margin: 5px 0p
     background-color: rgba(0,0,0,0.7); 
     position: absolute; 
     top: 54px; 
-    left: 0; 
-    width: 300%; 
+    left: 0px; 
+    right: 0px; 
     height: 30px;
     padding: 10px 10px 5px 170px; 
+    overflow: hidden;
 }
 #navigation ul { list-style: none; }
 #navigation ul li { padding: 0px; margin: 0px 5px; float: left; }
