@@ -1542,19 +1542,23 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #store .scroll_button {
     position: absolute;
-    top: 150px;
-    height: 45px;
-    width: 45px;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
     cursor: pointer;
     z-index: 31;
 }
 #store .scroll_button.right {
-    right: -22px;
-    background: transparent url('/jplayer/images/video_right_arrow.png') 0px 0px no-repeat;
+    right: 20px;
+    background-color: red;
 }
 #store .scroll_button.left {
-    left: -22px;
-    background: transparent url('/jplayer/images/video_left_arrow.png') 0px 0px no-repeat;
+    right: 60px;
+    background-color: red;
+}
+#store .scroll_button.disabled {
+    display: none;
 }
 #store .cart_nav {
 }

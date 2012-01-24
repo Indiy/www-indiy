@@ -635,8 +635,8 @@ String.prototype.format = function() {
                         <?
                             if( $need_product_page_arrows )
                             {
-                                echo "<div class='scroll_button right disabled' onclick='scrollStoreRight();'></div>\n";
-                                echo "<div class='scroll_button left disabled' onclick='scrollStoreLeft();'></div>\n";
+                                echo "<div class='scroll_button right' onclick='scrollStoreRight();'></div>\n";
+                                echo "<div class='scroll_button left' onclick='scrollStoreLeft();'></div>\n";
                             }
                         ?>
                         <div class='product_list'>
