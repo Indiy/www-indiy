@@ -96,118 +96,6 @@ body { background-color: black; font-size: 12px; color: #fff; font-family: Helve
 
 /* Contact Overlay Styling */
 
-.contact 
-{ 
-    max-height:650px; display:none; position:relative; 
-    -webkit-box-shadow: 0 0 5px #000; box-shadow: 0 0 5px #000; 
-    z-index: 1; width: 750px; margin: -5px auto 100px auto; 
-    padding-left: 25px; padding-right: 25px; padding-top: 25px; padding-bottom: 50px;
-    background-color: rgba(0, 0, 0, 0.9); 
-    font-family:Helvetica, Arial, sans-serif; 
-}
-
-.contact_Close 
-{ 
-    cursor: pointer; z-index: 46; position: absolute; 
-    top: 143px; left: 50%; padding: 0px; width: 45px; height: 45px; 
-    margin: -45px 0px 0px 375px; 
-    background: url('images/close.png') 0px 0px no-repeat; 
-}
-
-.contact .red { color:#ff0000; }
-.contact table tr td:first-child { text-align:right; font-size:11px; padding-right:5px; padding-left:5px; }
-.contact table tr td.message { vertical-align:top; }
-.box-header, .box-footer { position:absolute; left:0; width:100%; }
-.box-header { background:url('images/box/header.png') no-repeat; top:-8px; height:8px; background-size: 100%; }
-.box-footer { background:url('images/box/footer.png') no-repeat; bottom:-14px; height:14px;  background-size: 100%; }
-#contact_submit { border:2px solid #292929; background-color:#000; font-size:11px; text-align:center; width:100px; padding:5px 0; 
-    -moz-border-radius: 5px; border-radius: 5px; color: white; cursor: pointer;}
-#contact_submit:hover { background: #ff0000; }
-
-#contact_clear { float:right; text-decoration:underline; color:#fff; font-weight:bold; font-size:11px; 
-    cursor: pointer; background: transparent; border: 0; display: none; }
-
-.contact h1 { margin-left:80px; }
-.contact .right 
-{ 
-    float:right; 
-    border-left:1px solid #3c3c3c; 
-    padding-left:20px; 
-    width:350px;
-    padding-bottom: 0px;
-}
-.contact h1, .contact h2, .contact h3 { text-transform:none; margin-bottom:5px; font-weight:bold; color:#fff; letter-spacing:0.5px; }
-.contact table { width:330px; }
-.contact table tr td { padding-bottom:8px; }
-.contact h1 { font-size:14px; }
-.contact h2 { font-size:11px; }
-.contact .right ul span { color:#666; }
-.contact .right ul li { margin-bottom:2px; font-size:11px;}
-.contact .slashes { color:#666; }
-.contact input, .contact .textarea { background:url('images/box/input_bg.png') repeat-y right; border:2px solid #060606; -moz-border-radius: 4px; border-radius: 4px; color:#fff; font-size:11px; font-weight:bold; padding:5px; letter-spacing:0.5px; width:100%; }
-
-.contact select { width:220px; display:block; padding:2px 3px; margin:5px auto; }
-
-#contact_thanks 
-{
-    padding-top: 40px;
-    padding-left: 40px;
-}
-
-/* Store Stuff */
-/*
-.store { max-height:650px; display:none; position:relative; 
-        -webkit-box-shadow: 0 0 5px #000; box-shadow: 0 0 5px #000; 
-        z-index: 1; padding: 25px; width: 900px; margin: -5px auto 100px auto; 
-        background-color: rgba(0, 0, 0, 0.9);
-}
-
-.store_Close { cursor: pointer; z-index: 46; position: absolute; 
-        top: 143px; left: 50%; padding: 0px; width: 45px; height: 45px; 
-        margin: -45px 0px 0px 450px; 
-        background: url('images/close.png') 0px 0px no-repeat; }
-
-ul.products { list-style: none; }
-ul.products li { color: #ccc; width: 250px; border: 5px solid #fff; background: #000; padding: 10px; margin: 10px; float: left; }
-ul.products li h2 { color: #fff; }
-div.productimage { height: 170px; margin-bottom: 10px; text-align: center;  }
-ul.products li img { height: 170px; }
-ul.products li div.price { width: 125px; float: left; font-size: 18px; font-weight: 400; color: #fff; }
-ul.products li div.addtocart { display: block; width: 109px; height: 23px; background: url('images/addtocart.jpg') 0 0 no-repeat; float: right; cursor: pointer; text-indent: -9999px; }
-
-.cartnav { margin: 5px 35px 5px 0px; }
-.cartnav span { font-size: 14px; color: #fff; font-weight: 400; text-decoration: underline; margin-left: 15px; cursor: pointer;}
-
-
-ul.products .option { display: block; padding: 3px; width: 250px; margin: 5px 0px; }
-.productdetails { height: 80px; }
-
-.remove { width: 47px; height: 23px; display: block; background: url('images/remove.jpg') 0 0 no-repeat; text-indent: -9999px; margin: 0 auto; cursor: pointer; }
-
-.shoppingcartstyle { width: 97%; background: #000; padding: 15px; }
-.shoppingcartstyle span { display: block; }
-.shoppingcartstyle p, .shoppingcartstyle .two p { color: #eee !important; }
-.shoppingcartstyle .productimage { width: 45px; }
-.shoppingcartstyle .clear { clear: both; }
-.shoppingcartstyle .left { text-align: left; }
-.shoppingcartstyle .right { text-align: right; }
-.shoppingcartstyle .center { text-align: center; }
-.shoppingcartstyle .one { float: left; width: 65px; padding: 5px; margin: 0px; border-top: 1px solid #555; color: #eee; }
-.shoppingcartstyle .two { float: left; width: 585px; padding: 5px; border-top: 1px solid #555; color: #eee; }
-.shoppingcartstyle .three { float: left; width: 100px; padding: 5px; border-top: 1px solid #555; color: #eee;  }
-.shoppingcartstyle .one img { border: 1px solid #ccc; }
-.shoppingcartstyle .four { float: left; width: 80px; padding: 5px; text-align: center; border-top: 1px solid #555; }
-.shoppingcartstyle .half { float: left; width: 265px; padding: 5px; margin: 0px; border-top: 1px solid #999; }
-.shoppingcartstyle .half { float: left; width: 265px; padding: 5px; margin: 0px; border-top: 1px solid #999; }
-.shoppingcartstyle .full { clear: both; width: 97%; padding: 5px; margin: 0px; border-top: 1px solid #999; }
-.shoppingcartstyle .heading { font-weight: 700; font-size: 14px; color: #333; background: #ccc; border-bottom: 1px solid #777; margin: 0px; padding: 5px; }
-.shoppingcartstyle .paypal { float: none; clear: both; border: 0; width: 565px; }
-.shoppingcartstyle .paypal .submit { margin: 0px 210px; display: block; }
-.shoppingcartstyle .totals span { padding: 5px 0px 10px 0px; font-size: 14px; color: #fff; }
-.shoppingcartstyle .totals span.total { font-size: 18px; color: #fff; }
-.shoppingcartstyle .submit { padding: 5px 10px; background: #990000; color: #fff; border: 1px solid #fff; cursor: pointer; float: right; margin: 5px 0px 0px 0px; }
-.shoppingcartstyle .submit:hover { background: #FF0000; }
-*/
 
 /* Close the pages */
 .aClose { display: none; }
@@ -1836,7 +1724,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     display: none;
     position: absolute;
     right: 50%;
-    position: absolute;
     max-height: 100%;
     max-width: 100%;
     z-index: -1;
@@ -1884,6 +1771,73 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border: 1px solid #888;
     border-radius: 10px;
     overflow: auto;
+}
+
+#contact_wrapper {
+    display: none;
+    position: absolute;
+    right: 50%;
+    max-height: 100%;
+    max-width: 100%;
+    z-index: -1;
+}
+
+.contact {
+    position: relative; 
+    top: 130px;
+    left: 50%;
+    max-height: 650px; 
+    z-index: 30; 
+    /* width: 750px; */ 
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    padding-left: 20px; 
+    padding-right: 20px; 
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 20px;
+    border: 1px solid #555;
+    z-index: 30;
+    font-family:Helvetica, Arial, sans-serif; 
+}
+
+.contact .red { color:#ff0000; }
+.contact table tr td:first-child { text-align:right; font-size:11px; padding-right:5px; padding-left:5px; }
+.contact table tr td.message { vertical-align:top; }
+.box-header, .box-footer { position:absolute; left:0; width:100%; }
+.box-header { background:url('images/box/header.png') no-repeat; top:-8px; height:8px; background-size: 100%; }
+.box-footer { background:url('images/box/footer.png') no-repeat; bottom:-14px; height:14px;  background-size: 100%; }
+#contact_submit { border:2px solid #292929; background-color:#000; font-size:11px; text-align:center; width:100px; padding:5px 0; 
+    -moz-border-radius: 5px; border-radius: 5px; color: white; cursor: pointer;}
+#contact_submit:hover { background: #ff0000; }
+
+#contact_clear { float:right; text-decoration:underline; color:#fff; font-weight:bold; font-size:11px; 
+    cursor: pointer; background: transparent; border: 0; display: none; }
+
+.contact h1 { margin-left:80px; }
+.contact .right 
+{ 
+    float:right; 
+    border-left:1px solid #3c3c3c; 
+    padding-left:20px; 
+    width:350px;
+    padding-bottom: 0px;
+}
+.contact h1, .contact h2, .contact h3 { text-transform:none; margin-bottom:5px; font-weight:bold; color:#fff; letter-spacing:0.5px; }
+.contact table { width:330px; }
+.contact table tr td { padding-bottom:8px; }
+.contact h1 { font-size:14px; }
+.contact h2 { font-size:11px; }
+.contact .right ul span { color:#666; }
+.contact .right ul li { margin-bottom:2px; font-size:11px;}
+.contact .slashes { color:#666; }
+.contact input, .contact .textarea { background:url('images/box/input_bg.png') repeat-y right; border:2px solid #060606; -moz-border-radius: 4px; border-radius: 4px; color:#fff; font-size:11px; font-weight:bold; padding:5px; letter-spacing:0.5px; width:100%; }
+
+.contact select { width:220px; display:block; padding:2px 3px; margin:5px auto; }
+
+#contact_thanks 
+{
+    padding-top: 40px;
+    padding-left: 40px;
 }
 
 
