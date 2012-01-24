@@ -250,9 +250,10 @@ ul.products .option { display: block; padding: 3px; width: 250px; margin: 5px 0p
     position: absolute;
     top: 12px;
     left: 57px;
-    z-index: 1;
-    width: 705px;
+    right: 280px;
+    max-width: 705px;
     height: 15px;
+    z-index: 1;
     background-color: #292929;
     border-radius: 6px;
 }
@@ -275,13 +276,14 @@ div#playlister { width: 165px; display: block; z-index: 1; position: fixed; top:
 div#playlister .playlist-main { width: 165px; height: 100px; background: #101011; }
 div#playlister .playlist-bottom { width: 165px; height: 14px; background: url('images/new/playlistBottom.png') 0 0 no-repeat; }
 div.jp-progress { 
-    position: fixed; 
-    z-index: 100; 
+    position: absolute; 
+    z-index: 2; 
     overflow: hidden; 
     top: 17px; 
-    left: 147px; 
+    left: 147px;
+    right: 295px;
     display: block; 
-    width: 595px; 
+    max-width: 595px; 
     height: 4px;
     border: 1px solid #444;
     background-color: black;
@@ -877,7 +879,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #vote_buttons {
     position: absolute;
     top: 10px;
-    left: 778px;
+    right: 260px;
     height: 30px;
     width: 100px;
     z-index: 2;
