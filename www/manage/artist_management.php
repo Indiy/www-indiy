@@ -62,7 +62,7 @@
 	$find_artistContent = "SELECT * FROM mydna_musicplayer_content  WHERE artistid='".$artistID."' ORDER BY `order` ASC, `id` DESC";
 	$result_artistContent = mysql_query($find_artistContent) or die(mysql_error());
 	
-	$find_artistProduct = "SELECT * FROM mydna_musicplayer_ecommerce_products  WHERE artistid='".$artistID."' ORDER BY `order` ASC, `id` DESC";
+	$find_artistProduct = "SELECT * FROM mydna_musicplayer_ecommerce_products  WHERE artistid='$artistID' AND sku != 'MADSONG' ORDER BY `order` ASC, `id` DESC";
 	$result_artistProduct = mysql_query($find_artistProduct) or die(mysql_error());
 	//echo "<pre />";
 	//print_r($record_artistDetail);
