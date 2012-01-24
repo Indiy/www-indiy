@@ -257,12 +257,30 @@ $(document).ready(showFirstInstruction);
 						echo	"<span class='preview'>N/A</span>";
                     */
                     echo "<span class='socialize'>";
-                    echo "<a href='socialize.php?artist_id=".$artistID."&song_id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>";
                     if( $facebook )
+                    {
+                        echo "<a href='socialize.php?artist_id=".$artistID."&song_id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>";
                         echo "<img class='social_icon' src='/images/fb_icon_color.png'/>";
+                        echo "</a>\n";
+                    }
+                    else
+                    {
+                        echo "<a href='social_config.php?artist_id=$artistID' rel='facebox[.bolder]'>";
+                        echo "<img class='social_icon' src='/images/fb_icon_gey.png'/>";
+                        echo "</a>\n";
+                    }
                     if( $twitter )
+                    {
+                        echo "<a href='socialize.php?artist_id=".$artistID."&song_id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>";
                         echo "<img class='social_icon' src='/images/tw_icon_color.png'/>";
-                    echo "</a>\n";
+                        echo "</a>\n";
+                    }
+                    else
+                    {
+                        echo "<a href='social_config.php?artist_id=$artistID' rel='facebox[.bolder]'>";
+                        echo "<img class='social_icon' src='/images/tw_icon_gey.png'/>";
+                        echo "</a>\n";
+                    }
                     echo "</span>";
 
 					echo 	"<span class='delete'><a href='#' onclick='if(confirm(\"Are you sure you want delete this item?\"))location.href=\"artist_management.php?userId=$userId&action=1&song_id=".$record_artistAudio['id']."\";' ></a></span>";
