@@ -119,20 +119,23 @@ function renderCart()
         shipping_total += shipping;
         sub_total += price; 
         
-        var html = "";
-        html += "<div class='cart_line'>";
-        html += " <div class='image_holder'><img src='{0}'></div>".format(image);
-        html += " <div class='name'>{0}</div>".format(name);
-        html += " <div class='price_shipping'>";
-        html += "  <div class='price'>${0}</div>".format(price.toFixed(2));
-        if( shipping )
-            html += "  <div class='shipping'>Shipping: ${0}</div>".format(shipping.toFixed(2));
-        html += " </div>";
-        html += " <div class='remove_holder'>";
-        html += "  <div class='remove_button' onclick='deleteCart({0});'>remove</div>".format(id);
-        html += " </div>";
-        html += "</div>";
-        $('#store_cart_body').append(html);
+        if( name && image )
+        {
+            var html = "";
+            html += "<div class='cart_line'>";
+            html += " <div class='image_holder'><img src='{0}'></div>".format(image);
+            html += " <div class='name'>{0}</div>".format(name);
+            html += " <div class='price_shipping'>";
+            html += "  <div class='price'>${0}</div>".format(price.toFixed(2));
+            if( shipping )
+                html += "  <div class='shipping'>Shipping: ${0}</div>".format(shipping.toFixed(2));
+            html += " </div>";
+            html += " <div class='remove_holder'>";
+            html += "  <div class='remove_button' onclick='deleteCart({0});'>remove</div>".format(id);
+            html += " </div>";
+            html += "</div>";
+            $('#store_cart_body').append(html);
+        }
     }
     if( sub_total > 0.0 )
     {
