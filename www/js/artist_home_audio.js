@@ -146,48 +146,47 @@ function playListChange( index )
     $('span.showitunes').hide();
     $('span.show_mystore').hide();
     
-    // Display Image            
-    $('#loader').show();
-    $('#image').hide();
-    
-    // Get Current Image
-    var sellamazon = song.amazon;
-    var sellitunes = song.itunes;
-    var mystore_product_id = song.product_id;
-    
-    var trackname = song.name;
     var image = song.image;
-    
     var color = song.bgcolor;
     var bg_style = song.bg_style;
     
-    $('#image').css("background-color", "#"+color);
-    if( bg_style == 'STRETCH' )
+    if( !song.loaded )
     {
-        var img_url = "/timthumb.php?src=" + image + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
-        var style = "width: 100%; height: 100%;";
-        var html = "<img src='" + img_url + "' style='" + style + "'/>";
-        $('#image').html(html);
-        $('#image').css("background-image","none");
-        $('#image').css("background-repeat","no-repeat");
-        $('#image').css("background-position","center center");
+        $('#loader').show();
+
+        song.loaded = true;
+        var holder = $('#image_holder_' + g_currentSongIndex);
+        
+        holder.css("background-color", "#"+color);
+        if( bg_style == 'STRETCH' )
+        {
+            var img_url = "/timthumb.php?src=" + image + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
+            var style = "width: 100%; height: 100%;";
+            var html = "<img src='" + img_url + "' style='" + style + "'/>";
+            holder.html(html);
+            holder.css("background-image","none");
+            holder.css("background-repeat","no-repeat");
+            holder.css("background-position","center center");
+        }
+        else if( bg_style == 'CENTER' )
+        {
+            holder.css("background-image","url(" + image + ")");
+            holder.css("background-repeat","no-repeat");
+            holder.css("background-position","center center");
+        }
+        else if( bg_style == 'TILE' )
+        {
+            holder.css("background-image","url(" + image + ")");
+            holder.css("background-repeat","repeat");
+            holder.css("background-position","center center");
+        }
+        
+        window.setTimeout(function() { $('#loader').hide(); }, 1500);
     }
-    else if( bg_style == 'CENTER' )
-    {
-        $('#image').html("");
-        $('#image').css("background-image","url(" + image + ")");
-        $('#image').css("background-repeat","no-repeat");
-        $('#image').css("background-position","center center");
-    }
-    else if( bg_style == 'TILE' )
-    {
-        $('#image').html("");
-        $('#image').css("background-image","url(" + image + ")");
-        $('#image').css("background-repeat","repeat");
-        $('#image').css("background-position","center center");
-    }
-    $('#image').fadeIn();
     
+    var sellamazon = song.amazon;
+    var sellitunes = song.itunes;
+    var mystore_product_id = song.product_id;
     if( song.download )
     {
         $('#buynow_free a').attr("href",'/download.php?artist=' + g_artistId + '&id=' + song.id);
@@ -224,12 +223,12 @@ function playListChange( index )
             $('#buynow_mad_store').hide();
         }
     }
-    
+    var trackname = song.name;
     $('#current_track_name').text(trackname);
     g_totalListens++;
     updateListens(song.id);
     
-    window.setTimeout(function() { $('#loader').hide(); }, 1500);
+    
 }
 function songVote(vote)
 {
