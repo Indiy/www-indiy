@@ -57,6 +57,16 @@ body { background-color: black; font-size: 12px; color: #fff; font-family: Helve
     z-index: 0; 
 }
 
+#image #image_slider {
+    height: 100%;
+    width: 100%;
+}
+
+#image #image_slider .container {
+    height: 100%;
+    width: 100%;
+}
+
 #image .image_holder {
     display: none;
     height: 100%;
