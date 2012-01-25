@@ -7,6 +7,8 @@ var HOSTNAME_REGEX = new RegExp('^(?=.{1,255}$)[0-9A-Za-z](?:(?:[0-9A-Za-z]|\\b-
 
 var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
 
+var FB_REGEX = new RegExp('http://www.facebook.com/(.*)','i');
+
 function hideTooltip()
 {
     $('#link_tooltip').hide();
@@ -430,14 +432,13 @@ function onSocializePublish()
     });
     return false;
 }
-function onSocialConfigSave()
+function socialConfigSubmit()
 {
     showProgress();
-
     var fb_setting = $('input[name=fb_setting]:checked').val();
     var tw_setting = $('input[name=tw_setting]:checked').val();
     var fb_page_url = $('#fb_page_url').val();
-    
+
     var post_url = "/manage/social_config.php?";
     post_url += "&artist_id=" + escape(g_artistId);
     post_url += "&fb_setting=" + fb_setting;
@@ -457,7 +458,56 @@ function onSocialConfigSave()
             showFailure();
         }
     });
-    return false;
+    return false;    
+}
+
+function onSocialConfigSave()
+{
+    var fb_page_url = $('#fb_page_url').val();
+    
+    if( fb_page_url && fb_page_url.length > 0 )
+    {
+        var match = FB_REGEX.exec(fb_page_url);
+        if( match && match.length > 2 )
+        {
+            var username = match[1];
+        }
+        else
+        {
+            window.alert("Please enter a valid Facebook Page URL");
+            return false;
+        }
+        var fql = 'SELECT page_id FROM page WHERE username = "' + username + '"';
+        var check_url = "https://api.facebook.com/method/fql.query?";
+        check_url += "&query=" + escape(fql);
+        check_url += "&format=json";
+        jQuery.ajax(
+        {
+            type: 'GET',
+            url: check_url,
+            dataType: 'jsonp',
+            success: function(data) 
+            {
+                if( data && data.length > 0 )
+                {
+                    socialConfigSubmit();
+                }
+                else
+                {
+                    window.alert("Please enter a valid Facebook Page URL");
+                }
+            },
+            error: function()
+            {
+                socialConfigSubmit();
+            }
+        });
+        return false;
+    }
+    else
+    {
+        socialConfigSubmit();
+    }
 }
 function onAccountSettingsSubmit()
 {
