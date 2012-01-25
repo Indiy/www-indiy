@@ -17,7 +17,7 @@ function showProducts(fade)
         $("#store_products").show();
 }
 
-var g_cartList = false;
+var g_cartList = [];
 
 function getCartContents()
 {
