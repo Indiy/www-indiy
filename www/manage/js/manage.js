@@ -468,7 +468,7 @@ function onSocialConfigSave()
     if( fb_page_url && fb_page_url.length > 0 )
     {
         var match = FB_REGEX.exec(fb_page_url);
-        if( match && match.length > 2 )
+        if( match && match.length > 1 )
         {
             var username = match[1];
         }
