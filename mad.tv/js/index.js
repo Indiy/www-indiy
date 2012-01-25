@@ -25,7 +25,7 @@ function showVideo(n)
     var video = g_videoList[n];
     var video_file = video.video_file;
     var video_file_ogv = video_file.replace(".mp4",".ogv");
-    var poster = video.image_file;
+    var poster = video.poster;
 
     $('#video_title').text(video.name);
     $('#artist_name').text(video.artist);
