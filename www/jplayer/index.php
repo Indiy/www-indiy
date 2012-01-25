@@ -590,6 +590,7 @@ String.prototype.format = function() {
             
         <div id='image'></div>
         <div id='loader'><img src="/jplayer/images/ajax-loader.gif" /></div>
+        
         <div id='navigation'>
             <ul>
                 <?
@@ -822,32 +823,6 @@ String.prototype.format = function() {
             </div>
             
             <div id="volumebg"></div>
-            
-            
-            <div class="space"></div>
-            <div class="aClose"></div>
-            <div class="page">
-                <div class="box-header"></div>
-                
-                <div id="mcs2_container">
-                    <div class="customScrollBox">
-                        <div class="container">
-                            <div class="content">
-
-                            </div>
-                        </div>
-                        <div class="dragger_container">
-                            <div class="dragger">&#9618;</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="box-footer"></div>
-            </div>
-            
-            
-            
-            
             
             <? if ($artist_videos) { ?>
             <div class="videos">
