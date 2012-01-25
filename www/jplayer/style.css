@@ -1374,7 +1374,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     position: absolute;
     max-height: 100%;
     max-width: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 #user_page {
     position: relative;
@@ -1437,7 +1437,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     position: absolute;
     max-height: 100%;
     max-width: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 #store {
     position: relative;
@@ -1752,7 +1752,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     right: 50%;
     max-height: 100%;
     max-width: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 #comments {
     position: relative;
@@ -1805,7 +1805,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     right: 50%;
     max-height: 100%;
     max-width: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
 .contact {
