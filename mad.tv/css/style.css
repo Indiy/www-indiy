@@ -1,0 +1,276 @@
+@charset "UTF-8";
+/* CUSTOM FONTS */
+@font-face { font-family: 'BebasNeueRegular'; src: url("fonts/bebasneue-webfont.eot"); src: local("BebasNeueRegular"), url("fonts/bebasneue-webfont.woff") format("woff"), url("fonts/bebasneue-webfont.ttf") format("truetype"), url("fonts/bebasneue-webfont.svg#webfontTRIx6ZGq") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'HattoriHanzoLightItalic'; src: url('fonts/hattori_hanzo_italic-webfont.eot#') format('embedded-opentype'), url('fonts/hattori_hanzo_italic-webfont.woff') format('woff'), url('fonts/hattori_hanzo_italic-webfont.ttf') format('truetype'), url('fonts/hattori_hanzo_italic-webfont.svg#webfontcNsGe3Rz') format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'HattoriHanzoLight'; src: url('fonts/hattori_hanzo-webfont.eot#') format('embedded-opentype'), url('fonts/hattori_hanzo-webfont.woff') format('woff'), url('fonts/hattori_hanzo-webfont.ttf') format('truetype'), url('fonts/hattori_hanzo-webfont.svg#webfontbrBDfpL8') format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Teletex Light'; src: url('fonts/Teletex_Light.eot#') format('opentype'), url('fonts/Teletex_Light.otf') format('woff'); font-weight: normal; font-style: normal; }
+
+@font-face {
+    font-family: 'Neuzeit Grotesk';
+    src: url('/css/Neuzeit-Grotesk.eot');
+    src: local('Neuzeit-Grotesk'), url('/css/Neuzeit-Grotesk.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Neuzeit Grotesk Light';
+    src: url('/css/Neuzeit-Grotesk-Light.eot');
+    src: local('Neuzeit-Grotesk-Light'), url('/css/Neuzeit-Grotesk-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body { 
+    background-color: black; 
+    font-size: 12px; 
+    color: #fff; 
+    font-family: Helvetica, sans-serif; 
+}
+
+
+#video_player {
+    display: none; 
+    position: fixed; 
+    top: 0px; 
+    left: 0px; 
+    width: 100%; 
+    height: 100%; 
+    z-index: 200; 
+    background-color: black; 
+}
+
+#video_player .top_bar {
+    width: 100%;
+    height: 60px;
+}
+#video_player .logo_title_artist {
+    float: left;
+    height: 60px;
+}
+#video_player .logo {
+    float: left;
+    width: 90px;
+    height: 60px;
+}
+#video_player .logo img {
+    height: 60px;
+}
+#video_player .title_artist {
+    float: left;
+    height: 60px;
+}
+#video_player .title {
+    height: 24px;
+    width: 400px;
+    padding-top: 8px;
+    margin-left: 5px;
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+    color: white;
+}
+#video_player .artist_label {
+    float: left;
+    margin-top: 7px;
+    margin-left: 5px;
+    color: #777;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+}
+#video_player .artist {
+    float: left;
+    margin-top: 7px;
+    margin-left: 5px;
+    color: #CCC;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+}
+#video_player .close_button {
+    float: right;
+    margin-right: 100px;
+    margin-top: 17px;
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+    color: white;
+    cursor: pointer;
+}
+#video_player .close_button:hover {
+    color: #aaa;
+}
+#video_player .close_text {
+    float: left;
+    padding-top: 2px;
+}
+#video_player .close_img {
+    float: left;
+    width: 28px;
+    height: 28px;
+    margin-left: 4px;
+    background: transparent url('/images/video_close.png') 0px 0px no-repeat;
+}
+#video_player .close_button:hover .close_img {
+    background: transparent url('/images/video_close.png') 0px -32px no-repeat;
+}
+
+#video_player .player_body {
+    width: 100%;
+    bottom: 0px;
+}
+
+.mad_video_css .vjs-controls {
+    height: 50px; 
+    opacity: 0.9; 
+    color: #fff;
+    background-color: rgba(0,0,0,0.6);
+    /* display: block !important; */
+}
+.mad_video_css .vjs-controls > div {
+    height: 32px; top: 18px; padding: 0; text-align: center; background: rgba(23, 35, 34, 0.746094);
+    border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0;
+    box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;
+}
+/* Placement of Control Items */
+
+/* Play/Pause
+ -------------------------------------------------------------------------------- */
+.mad_video_css .vjs-controls .vjs-play-control { 
+    top: 6px;
+    left: 120px;
+    height: 40px;
+    width: 36px;
+    margin: 0;
+    background: transparent;
+}
+.mad_video_css.vjs-paused .vjs-play-control { 
+    background: url('/images/player_buttons.png') 0px 0px no-repeat;
+}
+.mad_video_css.vjs-paused .vjs-play-control:hover { 
+    background: url('/images/player_buttons.png') 0px -42px no-repeat;
+}
+.mad_video_css.vjs-playing .vjs-play-control { 
+    background: url('/images/player_buttons.png') -36px 0px no-repeat;
+}
+.mad_video_css.vjs-playing .vjs-play-control:hover { 
+    background: url('/images/player_buttons.png') -36px -42px no-repeat;
+}
+.mad_video_css .vjs-play-control span {
+    display: none;
+}
+
+/* Progress
+ -------------------------------------------------------------------------------- */
+.mad_video_css .vjs-controls .vjs-progress-control {
+    top: 15px;
+    left: 180px;
+    right: 0px;
+    height: 18px;
+    background-color: #222;
+    opacity: 1.0;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+.mad_video_css .vjs-progress-control .vjs-progress-holder { 
+    height: 5px;
+    margin-top: 6px;
+    margin-left: 80px;
+    margin-right: 210px;
+    border: 1px solid #555;
+    border-radius: 0;
+}
+.mad_video_css .vjs-progress-control .vjs-play-progress { 
+    height: 8px; 
+    background: white; 
+    border-radius: 0; 
+}
+.mad_video_css .vjs-progress-control .vjs-load-progress { 
+    height: 8px;
+    background: #777;
+    border-radius: 0;  
+}
+
+/* Time Display
+ -------------------------------------------------------------------------------- */
+.mad_video_css .vjs-controls .vjs-time-control { 
+    top: 9px;
+    left: 183px;
+    width: 75px;
+    font-size: 11px;
+    line-height: 32px;
+    background-color: transparent;
+}
+
+/* Volume
+ -------------------------------------------------------------------------------- */
+.mad_video_css .vjs-controls > div.vjs-volume-control { 
+    width: 50px;
+    right: 135px;
+    top: 9px;
+    border-radius: 10px;
+    background-color: #222;
+}
+.mad_video_css .vjs-volume-control div { padding: 7px 0 0 5px; width: 30px; }
+.mad_video_css .vjs-volume-control div span {
+    float: left; margin: 0 2px 0 0; padding: 0; width: 3px; height: 3px; border-bottom: 12px solid #666666;
+    -webkit-transition: all 100ms linear; -moz-transition: all 100ms linear;
+}
+.mad_video_css .vjs-volume-control div span.vjs-volume-level-on { border-color: #EEE; }
+.mad_video_css .vjs-volume-control div span:hover { height: 0; border-bottom-width: 15px; }
+
+/* Fullscreen
+ -------------------------------------------------------------------------------- */
+.mad_video_css .vjs-controls .vjs-fullscreen-control {
+    right: 91px;
+    top: 9px;
+    width: 32px;
+    height: 32px;
+    border-radius: 14px;
+    background: #222 url('/images/player_expand.png') 4px 4px no-repeat;
+}
+.mad_video_css .vjs-controls .vjs-fullscreen-control:hover {
+    background: #222 url('/images/player_expand.png') -23px 4px no-repeat;
+}
+
+.mad_video_css .vjs-controls .vjs-fullscreen-control div {
+    display: none;
+}
+
+/* Making default fullscreen icon smaller */
+.mad_video_css .vjs-fullscreen-control div span:nth-child(1) { margin: 0 4px 4px 0; border: none; border-top: 4px solid #fff; border-right: 4px solid rgba(0,0,0,0); }
+.mad_video_css .vjs-fullscreen-control div span:nth-child(2) { border: none; border-top: 4px solid #fff; border-left: 4px solid rgba(0,0,0,0); }
+.mad_video_css .vjs-fullscreen-control div span:nth-child(3) { clear: both; margin: 0 4px 0 0; border: none; border-bottom: 4px solid #fff; border-right: 4px solid rgba(0,0,0,0); }
+.mad_video_css .vjs-fullscreen-control div span:nth-child(4) { border: none; border-bottom: 4px solid #fff; border-left: 4px solid rgba(0,0,0,0); }
+.mad_video_css.vjs-fullscreen .vjs-fullscreen-control div span:nth-child(1) { border: none; border-bottom: 4px solid #fff; border-left: 4px solid rgba(0,0,0,0); }
+.mad_video_css.vjs-fullscreen .vjs-fullscreen-control div span:nth-child(2) { border: none; border-bottom: 4px solid #fff; border-right: 4px solid rgba(0,0,0,0); }
+.mad_video_css.vjs-fullscreen .vjs-fullscreen-control div span:nth-child(3) { border: none; border-top: 4px solid #fff; border-left: 4px solid rgba(0,0,0,0); }
+.mad_video_css.vjs-fullscreen .vjs-fullscreen-control div span:nth-child(4) { border: none; border-top: 4px solid #fff; border-right: 4px solid rgba(0,0,0,0); }
+/* Fullscreen control hovering */
+.mad_video_css .vjs-fullscreen-control:hover div span:nth-child(3), .mad_video_css .vjs-fullscreen-control:hover div span:nth-child(4), .mad_video_css.vjs-fullscreen .vjs-fullscreen-control:hover div span:nth-child(1), .mad_video_css.vjs-fullscreen .vjs-fullscreen-control:hover div span:nth-child(2) { border-bottom-color: #00ADEF; }
+.mad_video_css .vjs-fullscreen-control:hover div span:nth-child(1), .mad_video_css .vjs-fullscreen-control:hover div span:nth-child(2), .mad_video_css.vjs-fullscreen .vjs-fullscreen-control:hover div span:nth-child(3), .mad_video_css.vjs-fullscreen .vjs-fullscreen-control:hover div span:nth-child(4) { border-top-color: #00ADEF; }
+
+/* Big Play Button (at start)
+ ---------------------------------------------------------*/
+.mad_video_css div.vjs-big-play-button {
+    width: 130px; height: 80px; margin: -40px 0 0 -65px;
+    border: none; opacity: 0.9;
+    border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px;
+    
+    background: rgba(23, 35, 34, 0.746094);
+    
+    /* CSS Shadows */
+    box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;
+}
+.mad_video_css div.vjs-big-play-button:hover {
+    background: #555;
+    opacity: 1;
+}
+.mad_video_css div.vjs-big-play-button span {
+    margin: 22px 0 0 48px;
+    /* Drawing the play triangle with borders - http://www.infimum.dk/HTML/slantinfo.html */
+    border-left: 36px solid #fff; /* Width & Color of play icon */
+    /* Height of play icon is total top & bottom border widths. Color is transparent. */
+    border-top: 18px solid rgba(0,0,0,0); border-bottom: 18px solid rgba(0,0,0,0);
+}
+
+
