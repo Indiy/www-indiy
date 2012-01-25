@@ -126,7 +126,6 @@ function loadSongImage(song,index)
 function updateListens(song_id)
 {
     var url = "/data/listens.php?song_id=" + song_id;
-
     jQuery.ajax(
     {
         type: 'POST',
@@ -136,7 +135,7 @@ function updateListens(song_id)
         {
             g_totalListens = data['total_listens'];
             var track_listens = data['track_listens'];
-            //$('#total_listens').text(g_totalListens);
+            $('#total_listens_val').text(g_totalListens);
             $('#current_track_listens').text(track_listens);
         },
         error: function()
@@ -246,10 +245,10 @@ function playListChange( index )
     }
     var trackname = song.name;
     $('#current_track_name').text(trackname);
+    
     g_totalListens++;
+    $('#total_listens_val').text(g_totalListens);
     updateListens(song.id);
-    
-    
 }
 function songVote(vote)
 {
