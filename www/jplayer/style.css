@@ -1148,6 +1148,11 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #right_box .logo_box_top_spacer {
     height: 10px;
 }
+#right_box .total_listens {
+    padding-top: 8px;
+    padding-bottom: 4px;
+    text-align: center;
+}
 #right_box .logo_box_bottom_spacer {
     height: 6px;
 }
