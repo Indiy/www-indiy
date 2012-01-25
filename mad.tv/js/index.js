@@ -2,9 +2,10 @@
 
 var g_videoList = [ {
    video_file: 'http://www.madd3v.com/__MASTER.mp4',
-   poster: 'http://demo.madd3v.com/artists/images/199_52582_madbold.png',
+   poster: 'http://www.madd3v.com/images/mad_poster.png',
    name: 'Test Video',
-   artist: 'MyArtistDNA'
+   artist: 'MyArtistDNA',
+   logo: 'http://www.madd3v.com/artists/images/199_52582_madbold.png'
 }];
 
 $(document).ready(setupVideoPlayer)
@@ -28,6 +29,7 @@ function showVideo(n)
 
     $('#video_title').text(video.name);
     $('#artist_name').text(video.artist);
+    $('#logo_img').attr('src',video.logo);
 
     var html = '';
     html += '<div class="video-js-box mad_video_css" style="width:100%; height: 100%;">';
