@@ -219,7 +219,6 @@ else
 <link href="/css/video-js.css"rel="stylesheet" type="text/css" />
 <link href="/css/lionbars.css" rel="stylesheet" type="text/css" />
 <link href="/jplayer/style.css" rel="stylesheet" type="text/css" /> 
-<link href="/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
@@ -838,6 +837,9 @@ String.prototype.format = function() {
             
             <div id="volumebg"></div>
             
+            <div class="space"></div>
+            <div class="aClose"></div>
+            
             <? if ($artist_videos) { ?>
             <div class="videos">
                 <!--<div class="box-header"></div>-->
@@ -863,11 +865,6 @@ String.prototype.format = function() {
                 <!--<div class="box-footer"></div>-->
             </div>
             <? } ?>
-
-            
-            <div class="store_Close"></div>
-            <div class="contact_Close" onclick='closeContactTab();'></div>
-            
 
             <div class="footerfade">
                 <div class="logo_img"><a href="<?=trueSiteUrl();?>/artists.php" /></a></div>
@@ -984,48 +981,6 @@ String.prototype.format = function() {
     <!-- Mask to cover the whole screen --> 
     <div id="mask"></div> 
     </div>
-
-
-<!-- Custom scrollbar Starts -->
-<script>
-$(window).load(function() {
-    mCustomScrollbars();
-});
-
-function mCustomScrollbars(){
-    /* 
-    malihu custom scrollbar function parameters: 
-    1) scroll type (values: "vertical" or "horizontal")
-    2) scroll easing amount (0 for no easing) 
-    3) scroll easing type 
-    4) extra bottom scrolling space for vertical scroll type only (minimum value: 1)
-    5) scrollbar height/width adjustment (values: "auto" or "fixed")
-    6) mouse-wheel support (values: "yes" or "no")
-    7) scrolling via buttons support (values: "yes" or "no")
-    8) buttons scrolling speed (values: 1-20, 1 being the slowest)
-    */
-    $("#mcs2_container").mCustomScrollbar("vertical",0,"easeOutCirc",1.05,"auto","yes","no",0); 
-}
-
-/* function to fix the -10000 pixel limit of jquery.animate */
-$.fx.prototype.cur = function(){
-    if ( this.elem[this.prop] != null && (!this.elem.style || this.elem.style[this.prop] == null) ) {
-      return this.elem[ this.prop ];
-    }
-    var r = parseFloat( jQuery.css( this.elem, this.prop ) );
-    return typeof r == 'undefined' ? 0 : r;
-}
-
-/* function to load new content dynamically */
-function LoadNewContent(id,file){
-    $("#"+id+" .customScrollBox .content").load(file,function(){
-        mCustomScrollbars();
-    });
-}
-
-</script>
-<script src="js/jquery.mCustomScrollbar.js" type="text/javascript"></script>
-<!-- Custom scrollbar Ends -->
 
 <!-- Tracking code Starts --> 
 <script type="text/javascript">

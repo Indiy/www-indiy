@@ -10,7 +10,6 @@ function setupPageLinks()
         $("#jquery_jplayer").jPlayer("pause");
     });
 
-    $('#image').hide();
     $('.aClose').hide();
     $('.videos').hide();
     

@@ -42,7 +42,7 @@ body { background-color: black; font-size: 12px; color: #fff; font-family: Helve
     width: 32px;
     height: 32px;
     margin: -16px -16px 0px 0px;
-    z-index: -3;
+    z-index: 1;
 }
 
 #image { 
