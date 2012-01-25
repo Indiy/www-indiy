@@ -2,6 +2,8 @@
 
 g_playListShown = false;
 
+var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
+
 $(document).ready(setupAudioPlayer);
 
 function setupAudioPlayer()
@@ -36,6 +38,14 @@ function setupAudioPlayer()
     });
     
     $('#image_holder_' + g_currentSongIndex).show();
+    
+    if( IS_IPAD )
+    {
+        $('#jplayer_previous').hide();
+        $('#jplayer_next').hide();
+    }
+    
+    window.setTimeout(preloadImages,1000);
 }
 
 function imageChange(event, index, elem)
@@ -61,6 +71,56 @@ function jplayerReady()
 {
     playListChange(g_currentSongIndex);
     setupSwipe();
+}
+
+function preloadImages()
+{
+    for( var k in g_songPlayList )
+    {
+        var song = g_songPlayList[k];
+        loadSongImage(song,k);
+    }
+}
+
+function loadSongImage(song,index)
+{
+    var image = song.image;
+    var color = song.bgcolor;
+    var bg_style = song.bg_style;
+    
+    if( !song.loaded )
+    {
+        //$('#loader').show();
+        
+        song.loaded = true;
+        var holder = $('#image_holder_' + index);
+        
+        holder.css("background-color", "#" + color);
+        if( bg_style == 'STRETCH' )
+        {
+            var img_url = "/timthumb.php?src=" + image + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
+            var style = "width: 100%; height: 100%;";
+            var html = "<img src='" + img_url + "' style='" + style + "'/>";
+            holder.html(html);
+            holder.css("background-image","none");
+            holder.css("background-repeat","no-repeat");
+            holder.css("background-position","center center");
+        }
+        else if( bg_style == 'CENTER' )
+        {
+            holder.css("background-image","url(" + image + ")");
+            holder.css("background-repeat","no-repeat");
+            holder.css("background-position","center center");
+        }
+        else if( bg_style == 'TILE' )
+        {
+            holder.css("background-image","url(" + image + ")");
+            holder.css("background-repeat","repeat");
+            holder.css("background-position","center center");
+        }
+        
+        //window.setTimeout(function() { $('#loader').hide(); }, 1500);
+    }
 }
 
 function updateListens(song_id)
@@ -142,48 +202,9 @@ function playListChange( index )
     
     g_currentSongId = song.id;
     window.location.hash = '#song_id=' + g_currentSongId; 
-    $('span.showamazon').hide();
-    $('span.showitunes').hide();
-    $('span.show_mystore').hide();
-    
-    var image = song.image;
-    var color = song.bgcolor;
-    var bg_style = song.bg_style;
-    
-    if( !song.loaded )
-    {
-        //$('#loader').show();
 
-        song.loaded = true;
-        var holder = $('#image_holder_' + g_currentSongIndex);
-        
-        holder.css("background-color", "#"+color);
-        if( bg_style == 'STRETCH' )
-        {
-            var img_url = "/timthumb.php?src=" + image + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
-            var style = "width: 100%; height: 100%;";
-            var html = "<img src='" + img_url + "' style='" + style + "'/>";
-            holder.html(html);
-            holder.css("background-image","none");
-            holder.css("background-repeat","no-repeat");
-            holder.css("background-position","center center");
-        }
-        else if( bg_style == 'CENTER' )
-        {
-            holder.css("background-image","url(" + image + ")");
-            holder.css("background-repeat","no-repeat");
-            holder.css("background-position","center center");
-        }
-        else if( bg_style == 'TILE' )
-        {
-            holder.css("background-image","url(" + image + ")");
-            holder.css("background-repeat","repeat");
-            holder.css("background-position","center center");
-        }
-        
-        //window.setTimeout(function() { $('#loader').hide(); }, 1500);
-    }
-    
+    loadSongImage(song,index);
+
     var sellamazon = song.amazon;
     var sellitunes = song.itunes;
     var mystore_product_id = song.product_id;
