@@ -194,7 +194,7 @@ body {
 /* Time Display
  -------------------------------------------------------------------------------- */
 .mad_video_css .vjs-controls .vjs-time-control { 
-    top: 9px;
+    top: 12px;
     left: 183px;
     width: 75px;
     font-size: 11px;
