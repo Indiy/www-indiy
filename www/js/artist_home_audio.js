@@ -300,7 +300,10 @@ function playListNext()
 
 function playListPrev() 
 {
-    g_songSwipe.prev();
+    if( g_currentSongIndex == 0 )
+        g_songSwipe.slide(g_songPlayList.length - 1,0);
+    else
+        g_songSwipe.prev();
 }
 
 function hidePlaylist()
