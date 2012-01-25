@@ -469,10 +469,10 @@ String.prototype.format = function() {
                 <div class='button_holder'>
                     <div class='email button' onclick='toggleSocialEmail();'></div>
                 </div>
-                <div id='socalize_fb_holder' class='button_holder' <?=$hide_fb;?> >
+                <div id='socalize_fb_holder' class='button_holder' <?=$hide_tw;?> >
                     <div class='twitter button' onclick='toggleSocialTW();'></div>
                 </div>
-                <div id='socalize_tw_holder' class='button_holder' <?=$hide_tw;?> >
+                <div id='socalize_tw_holder' class='button_holder' <?=$hide_fb;?> >
                     <div class='facebook button' onclick='toggleSocialFB();'></div>
                 </div>
             </div>
