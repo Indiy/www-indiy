@@ -50,11 +50,12 @@ body {
 }
 #video_player .logo {
     float: left;
-    width: 90px;
     height: 60px;
+    width: 90px;
 }
 #video_player .logo img {
-    height: 60px;
+    max-height: 60px;
+    max-width: 90px;
 }
 #video_player .title_artist {
     float: left;

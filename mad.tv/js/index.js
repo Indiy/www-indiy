@@ -2,7 +2,7 @@
 
 var g_videoList = [ {
    video_file: 'http://www.madd3v.com/__MASTER.mp4',
-   poster: 'http://www.madd3v.com/images/mad_poster.png',
+   poster: 'http://demo.madd3v.com/artists/images/199_52582_madbold.png',
    name: 'Test Video',
    artist: 'MyArtistDNA'
 }];
