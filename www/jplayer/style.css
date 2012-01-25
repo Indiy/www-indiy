@@ -56,10 +56,18 @@ body { background-color: black; font-size: 12px; color: #fff; font-family: Helve
     background-position: center center;
     z-index: 0; 
 }
-#image img { 
-    position: absolute; 
-    top: 0px;
-    left: 0px;
+
+#image .image_holder {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#image .image_holder img { 
+    height: 100%;
+    width: 100%;
 }
 
 #login_signup, #login_signup button 

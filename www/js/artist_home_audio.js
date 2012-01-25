@@ -11,7 +11,7 @@ function setupAudioPlayer()
 
     $("#jquery_jplayer").jPlayer({
         ready: function() {
-            playListInit(true); // Parameter is a boolean for autoplay.
+            jplayerReady(); // Parameter is a boolean for autoplay.
         },
         solution: "html, flash",
         supplied: "mp3, oga",
@@ -34,14 +34,33 @@ function setupAudioPlayer()
         $(this).blur();
         return false;
     });
+    
+    $('#image_holder_' + g_currentSongIndex).show();
 }
 
-function playListInit(autoplay) 
+function imageChange(event, index, elem)
 {
-    if(autoplay)
-        playListChange( playItem );
-    else
-        playListConfig( playItem );
+    if( g_currentSongIndex != index )
+    {
+        playListChange( index );
+    }
+}
+var g_mySwipe = false;
+function setupSwipe()
+{
+    var element = document.getElementById('slider');
+    var settings = {
+        startSlide: g_currentSongIndex,
+        callback: imageChange
+    }
+    g_mySwipe = new Swipe(element,settings);
+}
+
+
+function jplayerReady() 
+{
+    playListChange(g_currentSongIndex);
+    setupSwipe();
 }
 
 function updateListens(song_id)
@@ -68,9 +87,9 @@ function updateListens(song_id)
 }
 
 
-function playListConfig( index ) 
+function playListChange( index ) 
 {
-    playItem = index;
+    g_currentSongIndex = index;
     var song = g_songPlayList[index];
     $("#playlist .song_list_item").removeClass("current");
     $("#playlist #song_list_item_" + song.id).addClass("current");
@@ -275,20 +294,15 @@ function getWindowHeight()
     return windowHeight;
 }
 
-function playListChange( index ) 
-{
-    playListConfig( index );
-}
-
 function playListNext() 
 {
-    var index = (playItem+1 < g_songPlayList.length) ? playItem+1 : 0;
+    var index = (g_currentSongIndex+1 < g_songPlayList.length) ? g_currentSongIndex+1 : 0;
     playListChange( index );
 }
 
 function playListPrev() 
 {
-    var index = (playItem-1 >= 0) ? playItem-1 : g_songPlayList.length-1;
+    var index = (g_currentSongIndex-1 >= 0) ? g_currentSongIndex-1 : g_songPlayList.length-1;
     playListChange( index );
 }
 
@@ -323,7 +337,7 @@ function playlistScrollDown()
 function changeSong(i)
 {
     $('#song_buy_popup').hide();
-    playListConfig(i);
+    playListChange(i);
 }
 
 function songBuyPopup(i)

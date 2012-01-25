@@ -112,6 +112,7 @@ else
                       "amazon" => $music_amazon,
                       "itunes" => $music_itunes,
                       "product_id" => $music_product_id,
+                      "loaded" => FALSE,
                       );
         $music_list[] = $item;
     }
@@ -282,7 +283,7 @@ function clickrecall(thisfield, defaulttext)
     }
 }       
 
-var playItem = 0;
+var g_currentSongIndex = 0;
 
 var anchor = self.document.location.hash.substring(1);
 var anchor_elements = anchor.split('&');
@@ -307,7 +308,7 @@ if( 'song_id' in g_anchor_map )
         var song = g_songPlayList[k];
         if( song['id'] == song_id )
         {
-            playItem = Number(k);
+            g_currentSongIndex = Number(k);
             break;
         }
     }
@@ -588,7 +589,20 @@ String.prototype.format = function() {
             </div>
         </div> 
             
-        <div id='image'></div>
+        <div id='image'>
+            <div id='image_slider'>
+                <div class='container'>
+                    <?
+                        foreach( $music_list as $k => $song )
+                        {
+                            echo "<div id='image_holder_$k' class='image_holder'>";
+                            echo "</div>\n";
+                        }
+                    ?>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id='loader'><img src="/jplayer/images/ajax-loader.gif" /></div>
         
         <div id='navigation'>
