@@ -45,7 +45,7 @@ function imageChange(event, index, elem)
         playListChange( index );
     }
 }
-var g_mySwipe = false;
+var g_songSwipe = false;
 function setupSwipe()
 {
     var element = document.getElementById('slider');
@@ -53,7 +53,7 @@ function setupSwipe()
         startSlide: g_currentSongIndex,
         callback: imageChange
     }
-    g_mySwipe = new Swipe(element,settings);
+    g_songSwipe = new Swipe(element,settings);
 }
 
 
@@ -152,7 +152,7 @@ function playListChange( index )
     
     if( !song.loaded )
     {
-        $('#loader').show();
+        //$('#loader').show();
 
         song.loaded = true;
         var holder = $('#image_holder_' + g_currentSongIndex);
@@ -181,7 +181,7 @@ function playListChange( index )
             holder.css("background-position","center center");
         }
         
-        window.setTimeout(function() { $('#loader').hide(); }, 1500);
+        //window.setTimeout(function() { $('#loader').hide(); }, 1500);
     }
     
     var sellamazon = song.amazon;
@@ -295,14 +295,12 @@ function getWindowHeight()
 
 function playListNext() 
 {
-    var index = (g_currentSongIndex+1 < g_songPlayList.length) ? g_currentSongIndex+1 : 0;
-    playListChange( index );
+    g_songSwipe.next();
 }
 
 function playListPrev() 
 {
-    var index = (g_currentSongIndex-1 >= 0) ? g_currentSongIndex-1 : g_songPlayList.length-1;
-    playListChange( index );
+    g_songSwipe.prev();
 }
 
 function hidePlaylist()
@@ -336,7 +334,7 @@ function playlistScrollDown()
 function changeSong(i)
 {
     $('#song_buy_popup').hide();
-    playListChange(i);
+    g_songSwipe.slide(i,500)
 }
 
 function songBuyPopup(i)
