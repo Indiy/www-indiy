@@ -301,7 +301,7 @@ function playListNext()
 function playListPrev() 
 {
     if( g_currentSongIndex == 0 )
-        g_songSwipe.slide(g_songPlayList.length - 1,0);
+        g_songSwipe.slide(g_songPlayList.length - 1,100);
     else
         g_songSwipe.prev();
 }
