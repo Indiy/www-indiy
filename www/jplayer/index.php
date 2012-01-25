@@ -449,6 +449,10 @@ String.prototype.format = function() {
             <? if ($artist_logo) { ?>
                 <img class='logo' src="/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&w=145" />
             <? } ?>
+                <div class='total_listens'>
+                    Total Views: 
+                    <span id='total_listens_val'><?=$total_listens;?></span>
+                </div>
                 <div class='logo_box_bottom_spacer'></div>
             </div>
             <div class='up_down_arrow' onclick='toggleRightBox();'></div>
