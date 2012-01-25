@@ -315,13 +315,16 @@ function getWindowHeight()
 
 function playListNext() 
 {
-    g_songSwipe.next();
+    if( g_currentSongIndex == g_songPlayList.length - 1 )
+        g_songSwipe.slide(0,3000);
+    else
+        g_songSwipe.next();
 }
 
 function playListPrev() 
 {
     if( g_currentSongIndex == 0 )
-        g_songSwipe.slide(g_songPlayList.length - 1,100);
+        g_songSwipe.slide(g_songPlayList.length - 1,3000);
     else
         g_songSwipe.prev();
 }
