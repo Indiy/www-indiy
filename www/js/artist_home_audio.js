@@ -48,7 +48,7 @@ function imageChange(event, index, elem)
 var g_songSwipe = false;
 function setupSwipe()
 {
-    var element = document.getElementById('slider');
+    var element = document.getElementById('image_slider');
     var settings = {
         startSlide: g_currentSongIndex,
         callback: imageChange
