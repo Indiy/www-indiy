@@ -12,7 +12,7 @@ function toggleSocialTab()
             {
                 toggleSocialFB();
             }
-            else if(  $("#socalize_tw_holderr").is(':visible') )
+            else if(  $("#socalize_tw_holder").is(':visible') )
             {
                 toggleSocialTW();
             }
