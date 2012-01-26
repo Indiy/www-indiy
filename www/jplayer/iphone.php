@@ -20,7 +20,7 @@
 	if ($artist_listens == "1") 
         $show_listens = "true";
     else
-        $show_listens = "false"
+        $show_listens = "false";
 	
 	playerViews($artist_id);
 	
