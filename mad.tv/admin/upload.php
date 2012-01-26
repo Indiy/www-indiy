@@ -28,8 +28,10 @@ function handle_upload($name)
         $ext = explode(".",$_FILES[$name]['name']);
         $upload_ext = strtolower($ext[count($ext)-1]);
         $rand = rand(11111,99999);
+        echo "rand: $rand\n";
         $file_name = strtolower($name . $rand . "_." . $upload_ext);
         @move_uploaded_file($_FILES[$name]['tmp_name'], "../media/$file_name");
+        echo "file_name: $file_name\n";
         return $file_name;
     }
 
@@ -45,6 +47,8 @@ function mysql_insert($table,$inserts)
 
 if( $_POST['submit'] )
 {
+    echo "<html><body><pre>\n";
+
     $logo_file = handle_upload("logo");
     $poster_file = handle_upload("poster");
     $video_file = handle_upload("video_file");
@@ -67,7 +71,6 @@ if( $_POST['submit'] )
                      "video_file" => $video_file,
                      );
     
-    echo "<html><body><pre>\n";
     
     var_dump($inserts);
     
