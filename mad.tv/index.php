@@ -26,7 +26,16 @@
     $video_list = array();
     while( $row = mysql_fetch_array($q) )
     {
-        $video_list[] = $row;
+        $logo = $row['logo_file'];
+        $poster = $row['poster_file'];
+        $video_file = $row['video_file'];
+        $item = array("artist" => $row['artist'],
+                      "name" => $row['name'],
+                      "logo" => "/media/$logo",
+                      "poster" => "/media/$poster",
+                      "video_file" => "/media/$video_file",
+                      );
+        $video_list[] = $item;
     }
 
     $video_list_json = json_encode($video_list);
