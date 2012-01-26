@@ -28,7 +28,7 @@ function handle_upload($name)
         $ext = explode(".",$_FILES[$name]['name']);
         $upload_ext = strtolower($ext[count($ext)-1]);
         $rand = rand(11111,99999);
-        $file_name = strtolower("$name$rand_." . $upload_ext);
+        $file_name = strtolower($name . $rand . "_." . $upload_ext);
         @move_uploaded_file($_FILES[$name]['tmp_name'], "../media/$file_name");
         return $file_name;
     }
