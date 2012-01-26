@@ -79,11 +79,11 @@
 		2DE2142714C15540000C5142 /* artist_home_video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_home_video.js; sourceTree = "<group>"; };
 		2DE2142914C212E0000C5142 /* account_settings.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = account_settings.php; sourceTree = "<group>"; };
 		2DE8282E14D0B5F300A91FCE /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
-		2DE8283014D0B5F300A91FCE /* index.html */ = {isa = PBXFileReference; name = index.html; path = ../mad.tv/index.html; sourceTree = "<group>"; };
 		2DE8283214D0B5F300A91FCE /* holder.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = holder.txt; sourceTree = "<group>"; };
 		2DE8284114D0B84A00A91FCE /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		2DE8284214D0B84A00A91FCE /* video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = video.js; sourceTree = "<group>"; };
 		2DE8284314D0B85200A91FCE /* video-js.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "video-js.css"; sourceTree = "<group>"; };
+		2DE8284414D0C75F00A91FCE /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
 		2DF46F4C1440B77F005538C7 /* casestudies.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = casestudies.html; sourceTree = "<group>"; };
 		2DF46F4E1440B77F005538C7 /* -styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "-styles.css"; sourceTree = "<group>"; };
 		2DF46F4F1440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
@@ -1422,6 +1422,7 @@
 				2DE8282F14D0B5F300A91FCE /* images */,
 				2DE8283114D0B5F300A91FCE /* videos */,
 				2DE8284014D0B84A00A91FCE /* js */,
+				2DE8284414D0C75F00A91FCE /* index.php */,
 			);
 			name = mad.tv;
 			path = ../mad.tv;
@@ -1475,7 +1476,6 @@
 				2D380B98146F0A5700E36189 /* madna.co */,
 				2D98BF3A1480778500CE851D /* mad.fm */,
 				2DE8282B14D0B5F300A91FCE /* mad.tv */,
-				2DE8283014D0B5F300A91FCE /* index.html */,
 			);
 			sourceTree = "<group>";
 		};

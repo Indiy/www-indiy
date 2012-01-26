@@ -1,3 +1,37 @@
+<?
+
+    //Production 
+    error_reporting(0);
+    $dbhost		=	"localhost";
+    $dbusername	=	"madtv_user";
+    $dbpassword	=	"MyartistDNA!";
+    $dbname		=	"madtv_mysql";
+
+    //echo "<html><body><pre>\n";
+
+    /*
+     // MADDEV.COM
+     error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE); 
+     $dbhost		=	"localhost";
+     $dbusername	=	"maddvcom_user";
+     $dbpassword	=	"MyartistDNA!";
+     $dbname		=	"maddvcom_mysql";
+     */
+
+    $connect 	= 	mysql_connect($dbhost, $dbusername, $dbpassword);
+    mysql_select_db($dbname,$connect) or die ("Could not select database");
+
+    $sql = "SELECT * FROM videos ORDER BY `order` ASC, `id` DESC";
+    $q = mysql_query($sql);
+    $video_list = array();
+    while( $row = mysql_fetch_array($q) )
+    {
+        $video_list[] = $row;
+    }
+
+    $video_list_json = json_encode($video_list);
+?>
+
 <html>
 <head>
     <title>MyAritstDNA.tv</title>
@@ -11,9 +45,12 @@
     <![endif]-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
-        
+    
     <script src="js/video.js" type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var g_videoList = <?=$video_list_json;?>;
+    </script>
 </head>
 <body>
     <div id='video_player'>
