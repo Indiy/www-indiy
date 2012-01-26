@@ -81,7 +81,7 @@ if( $_POST['submit'] )
 <body>
 <h1>Fancy Upload interface</h1>
 
-<form method='post'>
+<form method='post' enctype="multipart/form-data" >
     Name: <input name='name'><br/>
     Artist: <input name='artist'><br/>
     Logo: <input type='file' name='logo'><br/>
