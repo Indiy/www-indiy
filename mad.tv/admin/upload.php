@@ -88,7 +88,7 @@ if( $_POST['submit'] )
     Poster: <input type='file' name='poster'><br/>
     Video File: <input type='file' name='video_file'><br/>
     <br/>
-    <input type='submit' value='Submit'><br/>
+    <input type='submit' name='submit' value='Submit'><br/>
 </form>
 
 </body>
