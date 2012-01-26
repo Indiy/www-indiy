@@ -50,6 +50,8 @@ if( $_POST['submit'] )
     $video_file = handle_upload("video_file");
     if( $video_file )
     {
+        ignore_user_abort(true);
+        set_time_limit(0);
         $video_input = "../media/$video_file";
         $video_input_ogv = str_replace('.mp4','.ogv',$video_input);
         @system("/usr/local/bin/ffmpeg2theora --videoquality 8 --audioquality 6 -o $video_input_ogv $video_input");

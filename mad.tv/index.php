@@ -21,7 +21,7 @@
     $connect 	= 	mysql_connect($dbhost, $dbusername, $dbpassword);
     mysql_select_db($dbname,$connect) or die ("Could not select database");
 
-    $sql = "SELECT * FROM videos ORDER BY `order` ASC, `id` DESC";
+    $sql = "SELECT * FROM videos ORDER BY `order` ASC, `id` ASC";
     $q = mysql_query($sql);
     $video_list = array();
     while( $row = mysql_fetch_array($q) )
