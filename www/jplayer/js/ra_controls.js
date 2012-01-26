@@ -353,18 +353,27 @@ ra_ActiveSearch.prototype.findItems=function(SEARCH)
 		
 	
 	this.listResultItems.sort(function(a,b)
-								 {
-								 var s1,s2;
-								 s1=a.category+" "+a.text;
-								 s2=b.category+" "+b.text;
-								 if(s1>s2)
-								 	return 1;
-								 else
-								 if(s1<s2)
-								    return -1;
-								 return 0;								 
-								 }
-								 );
+    {
+        var s1 = '';
+        var s2 = '';
+        if( 'category' in a )
+            s1 += a.category;
+        s1 = " ";
+        if( 'text' in a )
+            s1 += a.text;
+        
+        if( 'category' in b )
+            s2 += b.category;
+        s2 = " ";
+        if( 'text' in b )
+            s2 += b.text;
+            
+        if(s1>s2)
+            return 1;
+        else if(s1<s2)
+            return -1;
+        return 0;								 
+    });
 	
 	// create regular expressions
 	// 1. create two lists
