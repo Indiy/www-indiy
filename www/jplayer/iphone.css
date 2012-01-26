@@ -321,7 +321,7 @@ div.jp-playlist-player div.jp-playlist a:hover { color:#000 !important; }
 div.jp-playlist-player div.jp-playlist a.jp-playlist-current { color:#FF0000 !important; }
 div.current-track { position: fixed; top: 33px; left: 10px; z-index: 12; font-size: 12px; font-weight: bold; color: #fff; }
 
-span.playlist-visibility { font-size:11px; float:left; margin-left:87px; margin-top:3px; cursor:pointer; }
+span.playlist-visibility { font-size:11px; font-weight: bold; float:left; margin-left:87px; margin-top:3px; cursor:pointer; }
 span.playlist-visibility span.hide { display:none; }
 span.playlist-visibility span.show { display:block; }
 
