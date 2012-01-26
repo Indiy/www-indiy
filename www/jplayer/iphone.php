@@ -277,13 +277,13 @@ function playListConfig( index ) {
     
     if (sellamazon == "" && sellitunes == "") 
     {
-        $('div.mighthide').fadeOut();
+        $('div.mighthide').hide();
         if( g_showListens )
             $('.listens').fadeIn();
     } 
     else 
     {
-        $('.listens').fadeOut();
+        $('.listens').hide();
         $('div.mighthide').fadeIn();
         if (sellamazon != "") {
             $('span.showamazon').html("<a href='" + sellamazon + "' class='buynow amazon' target='_blank'></a>");
