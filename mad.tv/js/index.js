@@ -65,7 +65,7 @@ function setupVideoJS()
                                   flashVersion: 9,
                                   linksHiding: true
                                   });
-    g_videoPlayer.addEvent("ended",nextVideo);
+    g_videoPlayer.onEnded(nextVideo);
 }
 function closeVideo()
 {
