@@ -66,6 +66,7 @@ function setupVideoJS()
                                   linksHiding: true
                                   });
     g_videoPlayer.onEnded(nextVideo);
+    g_videoPlayer.play();
 }
 function closeVideo()
 {
