@@ -17,7 +17,10 @@
 	$artist_facebook = $row["facebook"];
 	$artist_appid = $row["appid"];
 	$artist_listens = $row["listens"];
-	if ($artist_listens == "1") { $show_listens = "true"; }
+	if ($artist_listens == "1") 
+        $show_listens = "true";
+    else
+        $show_listens = "false"
 	
 	playerViews($artist_id);
 	
@@ -112,6 +115,7 @@
 <script type="text/javascript"> 
 <!--
 
+var g_showListens = <?=$show_listens;?>;
 var g_hasPlayed = false;
 var playItem = 0;
 
@@ -271,21 +275,27 @@ function playListConfig( index ) {
     //$('#image').fadeIn();
     $('span.trackname').text(trackname);
     
-    if (sellamazon == "" && sellitunes == "") {
+    if (sellamazon == "" && sellitunes == "") 
+    {
         $('div.mighthide').fadeOut();
-    } else {
+        if( g_showListens )
+            $('.listens').fadeIn();
+    } 
+    else 
+    {
+        $('.listens').fadeOut();
         $('div.mighthide').fadeIn();
+        if (sellamazon != "") {
+            $('span.showamazon').html("<a href='" + sellamazon + "' class='buynow amazon' target='_blank'></a>");
+            $('span.showamazon').show();
+        }
+        
+        if (sellitunes != "") {
+            $('span.showitunes').html("<a href='" + sellitunes + "' class='buynow itunes' target='_blank'></a>");
+            $('span.showitunes').show();
+        }
     }
     
-    if (sellamazon != "") {
-        $('span.showamazon').html("<a href='" + sellamazon + "' class='buynow amazon' target='_blank'></a>");
-        $('span.showamazon').show();
-    }
-    
-    if (sellitunes != "") {
-        $('span.showitunes').html("<a href='" + sellitunes + "' class='buynow itunes' target='_blank'></a>");
-        $('span.showitunes').show();
-    }
     
     // Display Current Track Title
     var track = "&track="+image;
@@ -495,19 +505,19 @@ $(document).ready(onReady);
     <div id="loader"><img src="/jplayer/images/ajax-loader.gif" /></div>
 
     <div class="mighthide">
-        <div class="buynow"></div>
+        <div class="buynow">BUY NOW:</div>
         <!-- <a href="#" class="buynow mystore"></a> -->
         <span class="showamazon"></span>
         <span class="showitunes"></span>
         <div class="clear"></div>
     </div>
+    <div class="listens">
+        <span>Total Listens: </span><span id='current_track_listens'><?=$total_listens;?></span>
+    </div>
     
     <div id="progressbg"></div>
     <div id="jquery_jplayer"></div> 
     <div class="top-bg"></div>
-    <div class="listens">
-        <span style='<? if( !$show_listens ) echo "display: none;"; ?>'>Total Listens: </span><span id='current_track_listens'><?=$total_listens?></span>
-    </div>
     <div id="playlister">
         <div class="playlist-main"></div>
         <div class="playlist-bottom"></div>
