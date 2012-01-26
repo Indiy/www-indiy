@@ -5,7 +5,15 @@ $(document).ready(setupVideoPlayer)
 
 function setupVideoPlayer()
 {
-    showVideo(g_currentVideoIndex);
+    showVideo(0);
+}
+
+function nextVideo()
+{
+    var next = g_currentVideoIndex + 1;
+    if( next >= g_videoList.length )
+        next = 0;
+    showVideo(next);
 }
 
 function showVideo(n)
@@ -57,6 +65,7 @@ function setupVideoJS()
                                   flashVersion: 9,
                                   linksHiding: true
                                   });
+    g_videoPlayer.addEvent("ended",nextVideo);
 }
 function closeVideo()
 {
