@@ -29,7 +29,7 @@ function handle_upload($name)
         $upload_ext = strtolower($ext[count($ext)-1]);
         $rand = rand(11111,99999);
         $file_name = strtolower("$name$rand_." . $upload_ext);
-        @move_uploaded_file($_FILES[$name]['tmp_name'], '../media/' . $file_name);
+        @move_uploaded_file($_FILES[$name]['tmp_name'], "../media/$file_name");
         return $file_name;
     }
 
@@ -50,8 +50,9 @@ if( $_POST['submit'] )
     $video_file = handle_upload("video_file");
     if( $video_file )
     {
-        $video_file_ogv = str_replace('.mp4','.ogv',$video_file);
-        @system("/usr/local/bin/ffmpeg2theora --videoquality 8 --audioquality 6 -o $video_file_ogv $video_file");
+        $video_input = "../media/$video_file";
+        $video_input_ogv = str_replace('.mp4','.ogv',$video_input);
+        @system("/usr/local/bin/ffmpeg2theora --videoquality 8 --audioquality 6 -o $video_input_ogv $video_input");
     }
     
     $name = $_POST['name'];
@@ -63,7 +64,11 @@ if( $_POST['submit'] )
                      "poster_file" => $poster_file,
                      "video_file" => $video_file,
                      );
-                     
+    
+    echo "<html><body><pre>\n";
+    
+    var_dump($inserts);
+    
     mysql_insert('videos',$inserts);
     
     echo "Upload successful\n";
@@ -83,7 +88,7 @@ if( $_POST['submit'] )
     Poster: <input type='file' name='poster'><br/>
     Video File: <input type='file' name='video_file'><br/>
     <br/>
-    <input type='submit' value='Submit'><br/>
+    <input type='submit' name='submit' value='Submit'><br/>
 </form>
 
 </body>
