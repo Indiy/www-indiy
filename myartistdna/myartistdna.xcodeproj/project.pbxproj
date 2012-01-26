@@ -84,6 +84,7 @@
 		2DE8284214D0B84A00A91FCE /* video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = video.js; sourceTree = "<group>"; };
 		2DE8284314D0B85200A91FCE /* video-js.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "video-js.css"; sourceTree = "<group>"; };
 		2DE8284414D0C75F00A91FCE /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
+		2DE8284514D0DC8300A91FCE /* upload.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = upload.php; sourceTree = "<group>"; };
 		2DF46F4C1440B77F005538C7 /* casestudies.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = casestudies.html; sourceTree = "<group>"; };
 		2DF46F4E1440B77F005538C7 /* -styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "-styles.css"; sourceTree = "<group>"; };
 		2DF46F4F1440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
@@ -1431,6 +1432,7 @@
 		2DE8282C14D0B5F300A91FCE /* admin */ = {
 			isa = PBXGroup;
 			children = (
+				2DE8284514D0DC8300A91FCE /* upload.php */,
 			);
 			path = admin;
 			sourceTree = "<group>";
