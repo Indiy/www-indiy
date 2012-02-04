@@ -111,12 +111,16 @@ function loadSongImage(song,index)
             holder.css("background-image","url(" + image + ")");
             holder.css("background-repeat","no-repeat");
             holder.css("background-position","center center");
+            var html = "<div style='width: 100%; height: " + getWindowHeight() + "px;'></div>";
+            holder.html(html);
         }
         else if( bg_style == 'TILE' )
         {
             holder.css("background-image","url(" + image + ")");
             holder.css("background-repeat","repeat");
             holder.css("background-position","center center");
+            var html = "<div style='width: 100%; height: " + getWindowHeight() + "px;'></div>";
+            holder.html(html);
         }
         
         //window.setTimeout(function() { $('#loader').hide(); }, 1500);
