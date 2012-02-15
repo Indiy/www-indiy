@@ -98,12 +98,12 @@ function onSignupClick()
     var password = $('#signup_password').val();
     var agree = $('#signup_agree').attr('checked');
 
-    if( !EMAIL_REGEX.match(email) )
+    if( !email.match(EMAIL_REGEX) )
     {
         $('#signup_error').show();
         $('#signup_error').text("Please enter a valid email address.");
     }
-    else if( !USERNAME_REGEX.match(username) )
+    else if( !username.match(USERNAME_REGEX) )
     {
         $('#signup_error').show();
         $('#signup_error').text("Please enter a valid username, A-Z, a-z, 0-9 are allowed.");
