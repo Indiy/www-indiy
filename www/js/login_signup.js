@@ -1,4 +1,8 @@
 
+var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
+
+var USERNAME_REGEX = new RegExp('^[A-Za-z0-9]*$'); 
+
 function showPopup(name)
 {
     var maskHeight = $(document).height();
@@ -94,7 +98,22 @@ function onSignupClick()
     var password = $('#signup_password').val();
     var agree = $('#signup_agree').attr('checked');
 
-    if( agree && name.length > 0 && email.length > 0 && username.length > 0 && password.length > 0 )
+    if( !EMAIL_REGEX.match(email) )
+    {
+        $('#signup_error').show();
+        $('#signup_error').text("Please enter a valid email address.");
+    }
+    else if( !USERNAME_REGEX.match(username) )
+    {
+        $('#signup_error').show();
+        $('#signup_error').text("Please enter a valid username, A-Z, a-z, 0-9 are allowed.");
+    }
+    else if( agree 
+            && name.length > 0 
+            && email.length > 0 
+            && username.length > 0 
+            && password.length > 0 
+            )
     {
         var dict = {
             'name': name,
