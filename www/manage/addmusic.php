@@ -311,7 +311,7 @@ function clickFree(yes)
         <input id='song_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id">
         
         <div class='input_container'>
-            <div class='line_label'>Name</div>
+            <div class='line_label'>Name<span class='required'>*</span></div>
             <input id='song_name' type="text" name="name" value="<?=$audio_name;?>" class="line_text" />
         </div>
         <div class='input_container' style='height: 50px;'>
@@ -323,7 +323,7 @@ function clickFree(yes)
         </div>
         <div class='input_container' style='height: 50px;'>
             <div class='left_image_label'>
-                <div class='image_label'>Image <span id='tip_image' class='tooltip'>(?)</span></div>
+                <div class='image_label'>Image <span id='tip_image' class='tooltip'>(?)</span><span class='required'>*</span></div>
                 <div class='image_image'><?=$image_html;?></div>
             </div>
             <input id='song_image' type="file" name="logo" class='right_file' />

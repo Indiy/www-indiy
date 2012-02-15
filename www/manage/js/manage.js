@@ -354,6 +354,12 @@ function onAddMusicSubmit()
         window.alert("Please upload an image for the page.");
         return false;
     }
+    var song_name = $('#song_name').val();
+    if( song_name.length == 0 )
+    {
+        window.alert("Please enter a name for your page.");
+        return false;
+    }
 
     function fillMusicForm(form_data)
     {
@@ -630,6 +636,13 @@ function validateEditProfile()
     if( !email.match(EMAIL_REGEX) )
     {
         window.alert("Please enter a valid email address.");
+        return false;
+    }
+    
+    var artist = $('#artist').val();
+    if( artist.length == 0 )
+    {
+        window.alert("Please enter an artist name.");
         return false;
     }
     return true;

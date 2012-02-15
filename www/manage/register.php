@@ -125,7 +125,7 @@
         <input id='artist_id' type="hidden" name="artistid" value="<?=$artistid?>">
         
         <div class='input_container'>
-            <div class='left_label'>Name</div>
+            <div class='left_label'>Name<span class='required'>*</span></div>
             <input id='artist' type="text" class="right_text" value="<?=$artist?>" name="artist">
             <div class="clear"></div>
         </div>
