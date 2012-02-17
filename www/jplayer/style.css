@@ -864,6 +864,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 176px;
     background: url('/images/thank_you_for_your_vote.png') center;
     text-align: center;
+    z-index: 1000;
 }
 
 #video_player {
