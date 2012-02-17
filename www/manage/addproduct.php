@@ -203,7 +203,7 @@
                 <div class='image_label'>Image<span class='required'>*</span></div>
                 <div class='image_image'><?=$image_html;?></div>
             </div>
-            <input id='product_image' type="file" name="file" value="" class='right_file'/> 
+            <input id='product_image' type="file" name="file" value="" class='right_file' onchange='onImageChange(this);'/> 
         </div>
         <div class='input_container'>
             <div class='left_label'>Price<span class='required'>*</span></div>

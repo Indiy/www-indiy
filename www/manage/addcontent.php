@@ -201,7 +201,7 @@ function onImageRemove()
                 <div class='image_label'>Image</div>
                 <div class='image_image'><?=$image_html;?></div>
             </div>
-            <input id='content_image' type="file" name="logo" class='right_file' />
+            <input id='content_image' type="file" name="logo" class='right_file' onchange='onImageChange(this);' />
         </div>
         <div class='editor_container yui-skin-sam'>
             <textarea id="body" name="body"><?=$content_body;?></textarea>
