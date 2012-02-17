@@ -45,6 +45,9 @@ function setupAudioPlayer()
         $('#jplayer_next').hide();
     }
     
+    $("#playlist").mouseover(mouseoverPlaylist);
+    $("#playlist").mouseout(mouseoutPlaylist);
+    
     window.setTimeout(preloadImages,1000);
 }
 
@@ -373,6 +376,21 @@ function playlistScrollDown()
     var top = $('#playlist .lb-wrap').scrollTop();
     $('#playlist .lb-wrap').scrollTop(top + 25);
 }
+var g_playlistHideTimer = false;
+function mouseoverPlaylist()
+{
+    if( g_playlistHideTimer !== false )
+    {
+        window.clearTimeout(g_playlistHideTimer);
+        g_playlistHideTimer = false;
+    }
+    showPlaylist();
+}
+function mouseoutPlaylist()
+{
+    g_playlistHideTimer = window.setTimeout(hidePlaylist,500);
+}
+
 function changeSong(i)
 {
     $('#song_buy_popup').hide();
