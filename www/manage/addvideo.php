@@ -170,6 +170,11 @@
         $video_html .= "<button onclick='return onVideoRemove();'></button>";
     }
 
+    if( $_GET["id"] != "" )
+        $needs_image = 'false';
+    else
+        $needs_image = 'true';
+
 ?>
 
 <script type="text/javascript">
@@ -178,6 +183,7 @@ $(document).ready(setupQuestionTolltips);
 
 var g_removeVideo = false;
 var g_removeVideoImage = false;
+var g_needsImage = <?=$needs_image;?>;
 
 function onVideoRemove()
 {
@@ -216,18 +222,18 @@ function onVideoImageRemove()
         <input id='song_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id"/>
 
         <div class='input_container'>
-            <div class='left_label'>Name</div>
+            <div class='left_label'>Name<span class='required'>*</span></div>
             <input id='video_name' type="text" name="name" value="<?=$video_name;?>" class='right_text' />
         </div>
         <div class='input_container' style='height: 50px;'>
             <div class='left_image_label'>
-                <div class='image_label'>Image <span id='tip_video_image' class='tooltip'>(?)</span></div>
+                <div class='image_label'>Image <span id='tip_video_image' class='tooltip'>(?)</span><span class='required'>*</span></div>
                 <div class='image_image'><?=$image_html;?></div>
             </div>
             <input id='video_image_file' type="file" name="logo" class='right_file' />
         </div>
         <div class='input_container' style='height: 50px;'>
-            <div class='left_label'>Video <span id='tip_video' class='tooltip'>(?)</span></div>
+            <div class='left_label'>Video <span id='tip_video' class='tooltip'>(?)</span><span class='required'>*</span></div>
             <div class='right_file_filename'>
                 <input id='video_file' type="file" name="audio" onchange='onVideoChange();' />
                 <div class='filename'><?=$video_html;?></div>
