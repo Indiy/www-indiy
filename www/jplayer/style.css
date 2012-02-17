@@ -1457,6 +1457,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-bottom: 10px;
     text-align: center;
 }
+#user_page .image_holder img {
+    max-width: 900px;
+}
 #user_page .page_content {
     color: white;
     font-size: 14px;
