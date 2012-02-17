@@ -144,7 +144,7 @@ function updateListens(song_id,index)
         {
             g_totalListens = data['total_listens'];
             var track_listens = data['track_listens'];
-            var g_songPlayList[index].listens = track_listens;
+            g_songPlayList[index].listens = track_listens;
             $('#total_listens_val').text(g_totalListens);
             $('#current_track_listens').text(track_listens);
         },
