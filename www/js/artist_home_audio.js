@@ -126,9 +126,14 @@ function loadSongImage(song,index)
         //window.setTimeout(function() { $('#loader').hide(); }, 1500);
     }
 }
-
+var g_listenUpdated = {};
 function updateListens(song_id)
 {
+    if( song_id in g_listenUpdated )
+        return;
+
+    g_listenUpdated[song_id] = true;
+
     var url = "/data/listens.php?song_id=" + song_id;
     jQuery.ajax(
     {
