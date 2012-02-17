@@ -339,9 +339,8 @@ function onAddVideoSubmit()
     var url = '/manage/addvideo.php';
     return startAjaxUpload(url,fillVideoForm);
 }
-function checkFileExtensions(element_id,extensions,error_string)
+function checkElementFileExtensions(file,extensions,error_string)
 {
-    var file = document.getElementById(element_id);
     if( file.files && file.files.length > 0 )
     {
         var file_name = file.files[0].fileName;
@@ -358,11 +357,21 @@ function checkFileExtensions(element_id,extensions,error_string)
             }
             window.alert(error_string);
         }
-    }
+    }    
+}
+function checkFileExtensions(element_id,extensions,error_string)
+{
+    var file = document.getElementById(element_id);
+    checkFileExtensions(file,extensions,error_string);
 }
 function onVideoChange()
 {
     checkFileExtensions('video_file',['mov','mp4'],"Please upload video in MP4 or MOV format.");
+}
+
+function onImageChange(file)
+{
+    checkElementFileExtensions(file,['png','jpg','gif','jpeg'],"Please upload images in PNG, JPG, or GIF format.");
 }
 
 function onAddMusicSubmit()
