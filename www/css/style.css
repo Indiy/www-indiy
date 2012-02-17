@@ -579,6 +579,14 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #popup .sign_up fieldset ul li span a {color:#4ecdc4; text-decoration:none}
 #popup .sign_up fieldset ul li span a:hover {color:#4ecdc4; text-decoration:underline}
 
+#popup .sign_up a.t_c_link {
+    color: #556270;
+    text-decoration: underline;
+}
+#popup .sign_up a.t_c_link:hover {
+    color: black;
+    text-decoration: underline;
+}
 
 #popup .payments { width:304px; float:left; padding:30px 79px 20px 79px}
 #popup .payments h5 { padding-bottom:5px}
