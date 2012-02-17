@@ -69,12 +69,12 @@ $(document).ready(function(){
 </div>
 <section id="bgtopbar">
 	<section id="topbar">
-		<p>Logged in as <a href="#"><?php echo $_SESSION['sess_userName']; ?></a> | <a href="logout.php">Logout</a></p>
+		<p>Logged in as <?php echo $_SESSION['sess_userName']; ?> | <a href="logout.php">Logout</a></p>
 	</section>
 </section>
 <section id="headerinner">
 <header>
-    <h1><a href="#"><img src="images/MYARTISTDNA.png" alt="MYARTISTDNA"></a></h1>
+    <h1><a href="/"><img src="images/MYARTISTDNA.png" alt="MYARTISTDNA"></a></h1>
 	<nav>
     <ul>
         <?php 
