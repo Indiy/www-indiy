@@ -141,9 +141,17 @@
     }
 //// Include Template Design ///////////////////////
 
+    if( strlen($image_html) > 0 )
+        $needs_image = 'false';
+    else
+        $needs_image = 'true';
+
+
 ?>
 
 <script type="text/javascript">
+    var g_needsImage = <?=$needs_image;?>;
+
     $(document).ready(setupQuestionTolltips);
 </script>
 
@@ -165,10 +173,11 @@
         <? } ?>
 
         <div class='input_container'>
-            <div class='line_label'>Name</div>
+            <div class='line_label'>Name<span class='required'>*</span></div>
             <input id='name' type="text" name="name" class='line_text' value="<?=$pname;?>" class="input" />
         </div>
 
+        <!--
         <div class='input_container'>
             <div class='left_label'>Category</div>
             <select name="origin" id="category" class='right_drop'>
@@ -184,25 +193,28 @@
                 ?>						
             </select>
         </div>
+        -->
         <div class='flow_container'>
             <div class='line_label'>Description</div>
             <textarea id='description' name="description" class="textarea" style="height: 40px; width: 325px;"><?=$pproductdescription;?></textarea>
         </div>
         <div class='input_container' style='height: 50px;'>
             <div class='left_image_label'>
-                <div class='image_label'>Image</div>
+                <div class='image_label'>Image<span class='required'>*</span></div>
                 <div class='image_image'><?=$image_html;?></div>
             </div>
             <input id='product_image' type="file" name="file" value="" class='right_file'/> 
         </div>
         <div class='input_container'>
-            <div class='left_label'>Price</div>
+            <div class='left_label'>Price<span class='required'>*</span></div>
             <input id='price' type="text" name="price" value="<?=$pprice;?>" class='right_text' />
         </div>
+        <!--
         <div class='input_container'>
             <div class='left_label'>SKU  <span id='tip_sku' class='tooltip'>(?)</span></div>
             <input id='sku' type="text" name="sku" value="<?=$psku;?>" class='right_text' />
         </div>
+        -->
         <div class='input_container'>
             <div class='left_label'>Size <small><small>(Separated by commas)</small></small></div>
             <input id='size' type="text" name="size" value="<?=$psize;?>" class='right_text' />
