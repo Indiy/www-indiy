@@ -15,6 +15,11 @@
 			$old_logo = $row["image"];
 		}
 		
+        $remove_image = $_POST["remove_image"] == 'true';
+        
+        if( $remove_image )
+            $old_logo = '';
+        
 		$content_name = my($_POST["name"]);
 		$content_video = $_POST["video"];
 		$content_body = my($_POST["body"]);
@@ -68,6 +73,7 @@
 	if( $content_logo != "" ) 
     {
 		$image_html = "<img src='../artists/images/$content_logo' style='height: 25px;'/>";
+        $image_html .= "<button onclick='return onImageRemove();'></button>";
 	}
 	
 	$content_name = stripslashes($content_name);
@@ -157,6 +163,19 @@ function onReady()
 }
 
 $(document).ready(onReady);
+
+var g_removeImage = false;
+function onImageRemove()
+{
+    var result = window.confirm("Remove image from page?");
+    if( result )
+    {
+        g_removeImage = true;
+        $('.image_image').hide();
+    }
+    return false;
+}
+
 
 </script>
 
