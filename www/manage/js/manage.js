@@ -301,13 +301,13 @@ function startAjaxUpload(url,fillForm)
 
 function onAddVideoSubmit()
 {
-    var video_image_file = document.getElementById('video_image_file').files[0];
+    var video_image_file = document.getElementById('video_image_file');
     if( g_needsImage && ( !video_image_file || !video_image_file.value || video_image_file.value.length == 0 ) )
     {
         window.alert("Please upload a poster image for the video.");
         return false;
     }
-    var video_file = document.getElementById('video_file').files[0];
+    var video_file = document.getElementById('video_file');
     if( g_needsImage && ( !video_file || !video_file.value || video_file.value.length == 0 ) )
     {
         window.alert("Please upload a video.");
