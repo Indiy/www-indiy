@@ -301,6 +301,25 @@ function startAjaxUpload(url,fillForm)
 
 function onAddVideoSubmit()
 {
+    var video_image_file = document.getElementById('video_image_file').files[0];
+    if( g_needsImage && ( !video_image_file || !video_image_file.value || video_image_file.value.length == 0 ) )
+    {
+        window.alert("Please upload a poster image for the video.");
+        return false;
+    }
+    var video_file = document.getElementById('video_file').files[0];
+    if( g_needsImage && ( !video_file || !video_file.value || video_file.value.length == 0 ) )
+    {
+        window.alert("Please upload a video.");
+        return false;
+    }
+    var video_name = $('#video_name').val();
+    if( video_name.length == 0 )
+    {
+        window.alert("Please enter a name for your video.");
+        return false;
+    }
+
     function fillVideoForm(form_data)
     {
         var artist_id = $('#artist_id').val();
@@ -480,7 +499,7 @@ function onSocialConfigSave()
         }
         else
         {
-            window.alert("Please enter a valid Facebook Page URL");
+            window.alert("Please enter a valid Facebook Page URL.  Must be a Facebook Page, this tab does not support Facebook Profiles.  Please see the FAQ for more information.");
             return false;
         }
         var fql = 'SELECT page_id FROM page WHERE username = "' + username + '"';
@@ -500,7 +519,7 @@ function onSocialConfigSave()
                 }
                 else
                 {
-                    window.alert("Please enter a valid Facebook Page URL");
+                    window.alert("Please enter a valid Facebook Page URL.  Must be a Facebook Page, this tab does not support Facebook Profiles.  Please see the FAQ for more information.");
                 }
             },
             error: function()
@@ -549,7 +568,7 @@ function onAddProductSubmit()
     var price = parseFloat($('#price').val());
     if( ! ( price > 0.0 ) )
     {
-        window.alert("Please enter a price for your product.");
+        window.alert("Please enter a price for your product, must be greater than $0.00.");
         return false;
     }
     
@@ -599,6 +618,12 @@ function onAddProductSubmit()
 }
 function onAddContentSubmit()
 {
+    var name = $('#name').val();
+    if( name.length == 0 )
+    {
+        window.alert("Please enter a name for your tab.");
+        return false;
+    }
     function fillContentForm(form_data)
     {
         g_editor.saveHTML();
