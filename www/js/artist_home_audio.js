@@ -130,7 +130,7 @@ var g_listenUpdated = {};
 function updateListens(song_id,index)
 {
     if( song_id in g_listenUpdated )
-        return;
+        return false;
 
     g_listenUpdated[song_id] = true;
 
@@ -153,6 +153,7 @@ function updateListens(song_id,index)
             //alert('Failed to get listens!');
         }
     });
+    return true;
 }
 
 
