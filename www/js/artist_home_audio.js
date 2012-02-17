@@ -127,7 +127,7 @@ function loadSongImage(song,index)
     }
 }
 var g_listenUpdated = {};
-function updateListens(song_id)
+function updateListens(song_id,index)
 {
     if( song_id in g_listenUpdated )
         return;
@@ -144,6 +144,7 @@ function updateListens(song_id)
         {
             g_totalListens = data['total_listens'];
             var track_listens = data['track_listens'];
+            var g_songPlayList[index].listens = track_listens;
             $('#total_listens_val').text(g_totalListens);
             $('#current_track_listens').text(track_listens);
         },
@@ -254,10 +255,15 @@ function playListChange( index )
     }
     var trackname = song.name;
     $('#current_track_name').text(trackname);
-    
-    g_totalListens++;
-    $('#total_listens_val').text(g_totalListens);
-    updateListens(song.id);
+ 
+    var listens = song.listens;
+    $('#current_track_listens').text(listens);
+ 
+    if( updateListens(song.id,index) )
+    {
+        g_totalListens++;
+        $('#total_listens_val').text(g_totalListens);
+    }
 }
 function songVote(vote)
 {
