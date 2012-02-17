@@ -352,7 +352,7 @@ String.prototype.format = function() {
             echo "<a href='/download.php?artist=$artist_id&id=$song_id' title='Free Song Download'>FREE</a>";
             echo "</div>";
         }
-        elseif( $song['amazon'] || $song['itunes'] || $song['product_id'] )
+        elseif( $song['amazon'] || $song['itunes'] || ( $song['product_id'] && $store_enabled ) )
         {
             echo "<div class='song_name_store' onclick='changeSong($i);'>";
             echo $song_name;
