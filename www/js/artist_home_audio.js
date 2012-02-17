@@ -237,7 +237,7 @@ function playListChange( index )
         {
             $('#buynow_itunes').hide();
         }
-        if( mystore_product_id )
+        if( mystore_product_id && g_paypalEmail.length > 0 )
         {
             $('#buynow_mad_store a').attr("href",'javascript:buySong(' + mystore_product_id + ');');
             $('#buynow_mad_store').show();
@@ -375,7 +375,7 @@ function songBuyPopup(i)
     var left = pos.left;
     
     var song = g_songPlayList[i];
-    if( song.product_id )
+    if( song.product_id && g_paypalEmail.length > 0 )
     {
         $('#song_buy_popup_mystore').show();
         $('#song_buy_popup_mystore').attr('href','javascript:buySong(' + song.product_id + ');');
