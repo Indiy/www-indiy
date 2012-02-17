@@ -540,6 +540,26 @@ function onAccountSettingsSubmit()
 }
 function onAddProductSubmit()
 {
+    var name = $('#name').val();
+    if( name.length == 0 )
+    {
+        window.alert("Please enter a name for your product.");
+        return false;
+    }
+    var price = parseFloat($('#price').val());
+    if( ! ( price > 0.0 ) )
+    {
+        window.alert("Please enter a price for your product.");
+        return false;
+    }
+    
+    var product_image = document.getElementById('product_image');
+    if( g_needsImage && ( !product_image || !product_image.value || product_image.value.length == 0 ) )
+    {
+        window.alert("Please upload an image for your product.");
+        return false;
+    }
+
     function fillProductForm(form_data)
     {
         var artist_id = $('#artist_id').val();
