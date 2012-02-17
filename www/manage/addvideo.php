@@ -230,7 +230,7 @@ function onVideoImageRemove()
                 <div class='image_label'>Image <span id='tip_video_image' class='tooltip'>(?)</span><span class='required'>*</span></div>
                 <div class='image_image'><?=$image_html;?></div>
             </div>
-            <input id='video_image_file' type="file" name="logo" class='right_file' />
+            <input id='video_image_file' type="file" name="logo" class='right_file' onchange='onImageChange(this);'  />
         </div>
         <div class='input_container' style='height: 50px;'>
             <div class='left_label'>Video <span id='tip_video' class='tooltip'>(?)</span><span class='required'>*</span></div>
