@@ -111,6 +111,7 @@ function internalShowUserPage(i)
     if( page['image'] )
     {
         $('#page_image').attr('src',page['image']);
+        $('#page_image_holder').show();
     }
     else
     {
