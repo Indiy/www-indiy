@@ -113,6 +113,7 @@ else
                       "itunes" => $music_itunes,
                       "product_id" => $music_product_id,
                       "loaded" => FALSE,
+                      "listens" => $music_listens,
                       );
         $music_list[] = $item;
     }
