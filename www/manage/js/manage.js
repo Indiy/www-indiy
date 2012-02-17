@@ -636,6 +636,7 @@ function onAddContentSubmit()
         form_data.append('id',content_id);
         form_data.append('name',name);
         form_data.append('body',body);
+        form_data.append('remove_image',g_removeImage);
         
         var content_image = document.getElementById('content_image');
         if( content_image.files && content_image.files.length > 0 )
