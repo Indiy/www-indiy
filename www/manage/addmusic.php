@@ -326,7 +326,7 @@ function clickFree(yes)
                 <div class='image_label'>Image <span id='tip_image' class='tooltip'>(?)</span><span class='required'>*</span></div>
                 <div class='image_image'><?=$image_html;?></div>
             </div>
-            <input id='song_image' type="file" name="logo" class='right_file' />
+            <input id='song_image' type="file" name="logo" class='right_file' onchange='onImageChange(this);' />
         </div>
         <div class='input_container'>
             <div class='left_label'>Background Style <span id='tip_bg_style' class='tooltip'>(?)</span></div>

@@ -147,7 +147,7 @@
         <? endif; ?>
         <div class='input_container'>
             <div class='left_label'>Logo <span id='tip_artist_logo' class='tooltip'>(?)</span></div>
-            <input id='logo' type="file" class="right_file" name="logo">
+            <input id='logo' type="file" class="right_file" name="logo" onchange='onImageChange(this);' >
         </div>
         <div class='input_container'>
             <div class='left_label'>Show "Listen" Count <span id='tip_listen_count' class='tooltip'>(?)</span></div>
