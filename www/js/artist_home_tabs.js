@@ -62,6 +62,9 @@ function setupPageLinks()
         }, 250);
     });
     
+    $('#right_box').mouseover(mouseoverRightBox);
+    $('#right_box').mouseout(mouseoutRightBox);
+    
     if( typeof g_userName != "undefined" && g_userName )
     {
         var html = "<a href='" + g_siteUrl + "/manage/artist_management.php'>";
@@ -77,18 +80,44 @@ $(document).ready(setupPageLinks);
 
 var g_rightBoxOpen = false;
 
+function openRightBox()
+{
+    if( !g_rightBoxOpen )
+    {
+        g_rightBoxOpen = true;
+        $('#right_box .logo_box').animate({ height: "190px" }, 300);
+        $('#right_box .up_down_arrow').addClass('open');
+    }
+}
+function closeRightBox()
+{
+    if( g_rightBoxOpen )
+    {
+        g_rightBoxOpen = false;
+        $('#right_box .logo_box').animate({ height: "10px" }, 300);
+        $('#right_box .up_down_arrow').removeClass('open');
+    }
+}
 function toggleRightBox()
 {
-    if( !g_rightBoxOpen ) 
+    if( g_rightBoxOpen ) 
+        closeRightBox();
+    else
+        openRightBox();
+}
+var g_rightBoxTimer = false;
+function mouseoverRightBox()
+{
+    if( g_rightBoxTimer !== false )
     {
-        $('#right_box .logo_box').animate({ height: "190px" }, 300);
-    } 
-    else 
-    {
-        $('#right_box .logo_box').animate({ height: "10px" }, 300);
+        window.clearTimeout(g_rightBoxTimer);
+        g_rightBoxTimer = false;
     }
-    $('#right_box .up_down_arrow').toggleClass('open');
-    g_rightBoxOpen = !g_rightBoxOpen;
+    openRightBox();
+}
+function mouseoutRightBox()
+{
+    g_rightBoxTimer = window.setTimeout(closeRightBox,500);
 }
 
 function fadeAllPageElements()
