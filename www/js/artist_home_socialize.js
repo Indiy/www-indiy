@@ -5,7 +5,7 @@ var g_currentSocialTab = '';
 function setupSocialTab()
 {
     $('#socialize').mouseover(mouseoverSocialTab);
-    $('#socialize').mouseover(mouseoutSocialTab);
+    $('#socialize').mouseout(mouseoutSocialTab);
 }
 
 $(document).ready(setupSocialTab);
