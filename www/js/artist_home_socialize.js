@@ -19,27 +19,20 @@ function toggleSocialTab()
 }
 function openSocialTab() 
 {
+    if( g_currentSocialTab == '' )
+    {
+        if( $("#socalize_fb_holder").is(':visible') )
+            toggleSocialFB();
+        else if(  $("#socalize_tw_holder").is(':visible') )
+            toggleSocialTW();
+        else
+            toggleSocialEmail();
+    }
     $("#socialize .button").removeClass("active");
     $("#socialize .button." + g_currentSocialTab).addClass("active");
     if( g_socialMinimized )
     {
         g_socialMinimized = false;
-        
-        if( g_currentSocialTab == '' )
-        {
-            if( $("#socalize_fb_holder").is(':visible') )
-            {
-                toggleSocialFB();
-            }
-            else if(  $("#socalize_tw_holder").is(':visible') )
-            {
-                toggleSocialTW();
-            }
-            else
-            {
-                toggleSocialEmail();
-            }
-        }
         $("#socialize").animate({ height: "400px" }, 300);
     }
 }
