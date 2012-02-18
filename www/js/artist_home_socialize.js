@@ -13,7 +13,16 @@ $(document).ready(setupSocialTab);
 function toggleSocialTab() 
 {
     if( g_socialMinimized )
+        openSocialTab();
+    else
+        closeSocialTab();
+}
+function openSocialTab() 
+{
+    if( g_socialMinimized )
     {
+        g_socialMinimized = false;
+        
         if( g_currentSocialTab == '' )
         {
             if( $("#socalize_fb_holder").is(':visible') )
@@ -29,21 +38,7 @@ function toggleSocialTab()
                 toggleSocialEmail();
             }
         }
-        else
-        {
-            openSocialTab();
-        }
-    }
-    else
-    {
-        closeSocialTab();
-    }
-}
-function openSocialTab() 
-{
-    if( g_socialMinimized )
-    {
-        g_socialMinimized = false;
+        
         $("#socialize .button").removeClass("active");
         $("#socialize .button." + g_currentSocialTab).addClass("active");
         $("#socialize").animate({ height: "400px" }, 300);
