@@ -2,6 +2,14 @@
 var g_socialMinimized = true;
 var g_currentSocialTab = '';
 
+function setupSocialTab()
+{
+    $('#socialize').mouseover(mouseoverSocialTab);
+    $('#socialize').mouseover(mouseoutSocialTab);
+}
+
+$(document).ready(setupSocialTab);
+
 function toggleSocialTab() 
 {
     if( g_socialMinimized )
@@ -33,17 +41,23 @@ function toggleSocialTab()
 }
 function openSocialTab() 
 {
-    g_socialMinimized = false;
-    $("#socialize .button").removeClass("active");
-    $("#socialize .button." + g_currentSocialTab).addClass("active");
-    $("#socialize").animate({ height: "400px" }, 300);
+    if( g_socialMinimized )
+    {
+        g_socialMinimized = false;
+        $("#socialize .button").removeClass("active");
+        $("#socialize .button." + g_currentSocialTab).addClass("active");
+        $("#socialize").animate({ height: "400px" }, 300);
+    }
 }
 
 function closeSocialTab() 
 {
-    g_socialMinimized = true;
-    $("#socialize .button").removeClass("active");
-    $("#socialize").animate({ height: "40px" }, 300);
+    if( !g_socialMinimized )
+    {
+        g_socialMinimized = true;
+        $("#socialize .button").removeClass("active");
+        $("#socialize").animate({ height: "40px" }, 300);
+    }
 }
 
 function setActiveSocialTab(name)
@@ -68,20 +82,31 @@ function toggleSocialFB()
 {
     setActiveSocialTab('facebook');
 }
-
 function toggleSocialTW() 
 {
     setActiveSocialTab('twitter');
 }
-
 function toggleSocialEmail()
 {
     setActiveSocialTab('email');
 }
-
 function toggleSocialShare() 
 {
     setActiveSocialTab('share');
+}
+var g_socialTabTimer = false;
+function mouseoverSocialTab()
+{
+    if( g_socialTabTimer !== false )
+    {
+        window.cancelTimeout(g_socialTabTimer);
+        g_socialTabTimer = false;
+    }
+    openSocialTab();
+}
+function mouseoutSocialTab()
+{
+    g_socialTabTimer = window.setTimeout(closeSocialTab,500);
 }
 
 function submitNewsletter()

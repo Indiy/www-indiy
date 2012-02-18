@@ -350,14 +350,20 @@ function playListPrev()
 
 function hidePlaylist()
 {
-    $('#playlist').animate({"left": "-280px"}, "fast");
-    $('#song_buy_popup').hide();
-    g_playListShown = false;
+    if( g_playListShown )
+    {
+        g_playListShown = false;
+        $('#playlist').animate({"left": "-280px"}, "fast");
+        $('#song_buy_popup').hide();
+    }
 }
 function showPlaylist()
 {
-    $('#playlist').animate({"left": "0px"}, "fast");
-    g_playListShown = true;
+    if( !g_playListShown )
+    {
+        g_playListShown = true;
+        $('#playlist').animate({"left": "0px"}, "fast");
+    }
 }
 function togglePlaylistVisibility()
 {
