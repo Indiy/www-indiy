@@ -99,7 +99,7 @@ function mouseoverSocialTab()
 {
     if( g_socialTabTimer !== false )
     {
-        window.cancelTimeout(g_socialTabTimer);
+        window.clearTimeout(g_socialTabTimer);
         g_socialTabTimer = false;
     }
     openSocialTab();
