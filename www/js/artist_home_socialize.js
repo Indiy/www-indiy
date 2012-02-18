@@ -19,6 +19,8 @@ function toggleSocialTab()
 }
 function openSocialTab() 
 {
+    $("#socialize .button").removeClass("active");
+    $("#socialize .button." + g_currentSocialTab).addClass("active");
     if( g_socialMinimized )
     {
         g_socialMinimized = false;
@@ -38,19 +40,16 @@ function openSocialTab()
                 toggleSocialEmail();
             }
         }
-        
-        $("#socialize .button").removeClass("active");
-        $("#socialize .button." + g_currentSocialTab).addClass("active");
         $("#socialize").animate({ height: "400px" }, 300);
     }
 }
 
 function closeSocialTab() 
 {
+    $("#socialize .button").removeClass("active");
     if( !g_socialMinimized )
     {
         g_socialMinimized = true;
-        $("#socialize .button").removeClass("active");
         $("#socialize").animate({ height: "40px" }, 300);
     }
 }
@@ -61,10 +60,7 @@ function setActiveSocialTab(name)
     $("#socialize .tab#" + name).show();  
     if( g_currentSocialTab == name ) 
     {
-        if( g_socialMinimized )
-            openSocialTab();
-        else
-            closeSocialTab();
+        toggleSocialTab();
     }
     else 
     {
