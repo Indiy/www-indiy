@@ -51,11 +51,32 @@ function closeSignup()
     $('#mask').fadeOut(100);
 }
 
+function onPasswordKeyPress(myfield,e)
+{
+    var keycode = 0;
+    if( window.event ) 
+        keycode = window.event.keyCode;
+    else if( e ) 
+        keycode = e.which;
+    
+    if( keycode == 13 )
+    {
+        var username = $('#login_dialog #username').val();
+        var password = $('#login_dialog #password').val();
+        if( username.length > 0 && password.length > 0 )
+            onLoginClick();
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
 
 function onLoginClick()
 {           
-    var username = escape( $('#login_username').val() );
-    var password = escape( $('#login_password').val() );
+    var username = escape( $('#login_dialog #username').val() );
+    var password = escape( $('#login_dialog #password').val() );
 
     // Send the ajax request.
     jQuery.ajax(
