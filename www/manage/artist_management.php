@@ -194,7 +194,9 @@ $(document).ready(showFirstInstruction);
             <ul>
                 <li><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Music + Photo</a></li>
                 <li><a href="addvideo.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Video</a></li>
-                <li><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Tab</a></li>
+                <? if( mysql_num_rows($result_artistContent) < 9 ): ?>
+                    <li><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Tab</a></li>
+                <? endif; ?>
                 <li><a href="stats.php?userId=<?=$artistID;?>">View Analytics</a></li>
                 <li><a href="fan_connections.php?artist_id=<?=$artistID;?>" rel="facebox[.bolder]">Fan Connections</a></li>
             </ul>
@@ -369,8 +371,12 @@ $(document).ready(showFirstInstruction);
         
         <div class="pages">
             <div class="heading">
-            <h5>TABS</h5>
-            <div class="buttonadd"><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Tab</a></div>
+                <h5>TABS</h5>
+                <div class="buttonadd">
+                    <? if( mysql_num_rows($result_artistContent) < 9 ): ?>
+                        <a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Tab</a>
+                    <? endif; ?>
+                </div>
         	</div> 
             
             <div class="list" style='display: none;'>
