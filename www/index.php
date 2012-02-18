@@ -53,7 +53,7 @@
     }
     else
     {
-        //include 'home.php';
-        include 'landing.html';
+        include 'home.php';
+        //include 'landing.html';
     }
 ?>
