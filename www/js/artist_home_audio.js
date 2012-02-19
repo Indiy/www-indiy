@@ -108,22 +108,22 @@ function playerPlayPause()
     else
         $("#jquery_jplayer").jPlayer("play");
 }
-var g_isPlayerVisible = true;
+var g_isPlayerOpen = true;
 function playerToggle()
 {
-    if( g_isPlayerVisible )
+    if( g_isPlayerOpen )
         playerClose();
     else
         playerOpen();
 }
 function playerOpen()
 {
-    g_isPlayerVisible = true;
+    g_isPlayerOpen = true;
     $('#player').animate({"left": "0px"}, "fast");
 }
 function playerClose()
 {
-    g_isPlayerVisible = false;
+    g_isPlayerOpen = false;
     $('#player').animate({"left": "-450px"}, "fast");
 }
 var g_playerHideTimer = false;
@@ -139,6 +139,23 @@ function mouseoverPlayer()
 function mouseoutPlayer()
 {
     g_playerHideTimer = window.setTimeout(playerClose,500);
+}
+var g_isPlayerHidden = false;
+function playerHide()
+{
+    if( !g_isPlayerHidden )
+    {
+        g_isPlayerHidden = true;
+        $('#player').animate({"left": "-485px"}, "fast");
+    }
+}
+function playerUnhide()
+{
+    if( g_isPlayerHidden )
+    {
+        g_isPlayerHidden = false;
+        playerClose();
+    }
 }
 
 var g_songSwipe = false;
@@ -256,42 +273,12 @@ function playListChange( index )
     {
         $("#jquery_jplayer").jPlayer("setMedia", media);
         $("#jquery_jplayer").jPlayer("play");
-        $('#jplayer_stop').show();
-        $('#jplayer_pause').show();
-        $('#jplayer_play').show();
-        $('#jplayer_volume_bar').show();
-        $('.current-track').show();
-        $('#jplayer_play_time').show();
-        $('.slash').show();
-        $('#jplayer_total_time').show();
-        $('.jp-progress').show();
-        $('#volumebg').show();
-        $('#progressbg').show();
-        $('.jp-play-fake').show();
-        $('.jp-pause-fake').show();
-        $('.playlist-main').show();
-        $('.playlist-bottom').show();
-        $('.jp-controls-to-hide').show();
+        playerUnhide();
     }
     else
     {
         $("#jquery_jplayer").jPlayer("stop");
-        $('#jplayer_stop').hide();
-        $('#jplayer_pause').hide();
-        $('#jplayer_play').hide();
-        $('#jplayer_volume_bar').hide();
-        $('.current-track').hide();
-        $('#jplayer_play_time').hide();
-        $('.slash').hide();
-        $('#jplayer_total_time').hide();
-        $('.jp-progress').hide();
-        $('#volumebg').hide();
-        $('#progressbg').hide();
-        $('.jp-play-fake').hide();
-        $('.jp-pause-fake').hide();
-        $('.playlist-main').hide();
-        $('.playlist-bottom').hide();
-        $('.jp-controls-to-hide').hide();
+        playerHide();
     }
     
     g_currentSongId = song.id;
