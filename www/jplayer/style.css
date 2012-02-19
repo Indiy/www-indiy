@@ -1933,7 +1933,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     z-index: 2;
 }
 #player .album {
-    float: right;
+    float: left;
     height: 50px;
     width: 50px;
     padding-top: 5px;
