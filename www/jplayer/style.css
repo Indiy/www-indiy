@@ -2001,10 +2001,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     float: left;
     width: 178px;
     height: 5px;
-    background-color: #EEE;
+    background-color: #d7d7d7;
     border-radius: 3px;
     margin-top: 4px;
-    border: 1px solid #CCC;
+    border: 1px solid #bababa;
 }
 #player .seek_bar .current {
     position: absolute;
