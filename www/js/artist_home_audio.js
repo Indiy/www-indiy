@@ -123,6 +123,20 @@ function playerClose()
     g_isPlayerVisible = false;
     $('#player').animate({"left": "-450px"}, "fast");
 }
+var g_playerHideTimer = false;
+function mouseoverPlayer()
+{
+    if( g_playerHideTimer !== false )
+    {
+        window.clearTimeout(g_playerHideTimer);
+        g_playerHideTimer = false;
+    }
+    playerOpen();
+}
+function mouseoutPlayer()
+{
+    g_playerHideTimer = window.setTimeout(playerClose,500);
+}
 
 var g_songSwipe = false;
 function setupSwipe()
