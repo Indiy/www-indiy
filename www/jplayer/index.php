@@ -837,14 +837,14 @@ String.prototype.format = function() {
             <div class='next_track'></div>
             <div class='seperator'></div>
             <div class='song_track'>
-                <div class='artist_song'></div>
+                <div class='artist_song'>Jim Lake - Octopus</div>
                 <div class='seek_time'>
                     <div class='seek_bar'>
                         <div class='loaded'></div>
                         <div class='current'></div>
                     </div>
                     <div class='time'>0:00/0:00</div>
-                <div>
+                </div>
             </div>
             <div class='open_close_button'></div>
         </div>
