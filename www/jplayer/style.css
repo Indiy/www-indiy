@@ -1926,7 +1926,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
     border-right: 1px solid gray;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(230,230,230,0.85);
     z-index: 2;
 }
 #player .album {
@@ -1943,7 +1943,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 40px;
     margin-top: 10px;
     width: 1px;
-    background-color: black;
+    background-color: #bbb;
 }
 #player .prev_track {
     float: left;
@@ -1974,13 +1974,13 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     float: left;
     height: 60px;
     width: 250px;
-    padding-right: 15px;
+    padding-left: 15px;
     
 }
 #player .artist_song {
     height: 20px;
     padding-top: 10px;
-    color: #EEE;
+    color: #777;
     font-size: 12px;
     font-family: Helvetica,sans-serif;
 }
@@ -1990,10 +1990,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #player .seek_bar {
     position: relative;
     float: left;
-    width: 180px;
-    height: 4px;
-    background-color: white;
-    border-radius: 3px;
+    width: 178px;
+    height: 5px;
+    background-color: #EEE;
+    border-radius: 5px;
+    margin-top: 8px;
+    border: 1px solid #CCC;
 }
 #player .seek_bar .current {
     position: absolute;
@@ -2007,17 +2009,20 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     float: right;
     width: 70px;
     height: 15px;
+    padding-top: 5px;
     text-align: right;
-    color: #EEE;
+    color: #777;
     font-size: 12px;
     font-family: Helvetica,sans-serif;
 }
 #player .open_close_button {
     float: right;
-    height: 60px;
-    width: 25px;
-    margin-right: 2px;
-    background-color: white;
+    height: 50px;
+    width: 20px;
+    margin-top: 5px;
+    margin-right: 5px;
+    background-color: #EEE;
+    border-radius: 5px;
 }
 
 
