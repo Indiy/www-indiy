@@ -1952,6 +1952,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     margin-top: 18px;
     margin-left: 7px;
     background: url('/images/retracting_player_buttons.png') 0px 0px no-repeat;
+    cursor: pointer;
 }
 #player .play_pause {
     float: left;
@@ -1959,6 +1960,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 30px;
     margin-top: 18px;
     background: url('/images/retracting_player_buttons.png') -27px 0px no-repeat;
+    cursor: pointer;
 }
 #player .play_pause.pause {
     float: left;
@@ -1966,6 +1968,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 30px;
     margin-top: 18px;
     background: url('/images/retracting_player_buttons.png') -27px 0px no-repeat;
+    cursor: pointer;
 }
 #player .next_track {
     float: left;
@@ -1974,6 +1977,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     margin-top: 18px;
     margin-right: 12px;
     background: url('/images/retracting_player_buttons.png') -58px 0px no-repeat;
+    cursor: pointer;
 }
 #player .song_track {
     float: left;

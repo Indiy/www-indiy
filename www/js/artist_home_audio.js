@@ -21,10 +21,10 @@ function setupAudioPlayer()
         verticalVolume: true,
         wmode: "window"
     })
-    .bind($.jPlayer.event.ended, function() {
-        playListNext();
-    })
-    .bind($.jPlayer.event.timeupdate,jplayerTimeUpdate);
+    .bind($.jPlayer.event.ended,jplayerEnded)
+    .bind($.jPlayer.event.timeupdate,jplayerTimeUpdate)
+    .bind($.jPlayer.event.play,jplayerPlay)
+    .bind($.jPlayer.event.pause,jplayerPause);
      
     $("#jplayer_previous").click( function() {
         playListPrev();
@@ -51,6 +51,7 @@ function setupAudioPlayer()
     
     window.setTimeout(preloadImages,1000);
 }
+
 function formatMinSeconds(seconds)
 {
     seconds = Math.floor(seconds);
@@ -72,7 +73,20 @@ function jplayerTimeUpdate(event)
     $('#player .time').text(time);
     $('#player .seek_bar .current').css('width',percent + '%');
 }
-
+var g_playerIsPlaying = false;
+function jplayerPlay()
+{
+    g_playerIsPlaying = true;
+}
+function jplayerPause()
+{
+    g_playerIsPlaying = false;    
+}
+function jplayerEnded()
+{
+    g_playerIsPlaying = false;
+    playListNext();
+}
 function imageChange(event, index, elem)
 {
     if( g_currentSongIndex != index )
@@ -80,6 +94,16 @@ function imageChange(event, index, elem)
         playListChange( index );
     }
 }
+
+function playerPlayPause()
+{
+    if( g_playerIsPlaying )
+        $("#jquery_jplayer").jPlayer("pause");
+    else
+        $("#jquery_jplayer").jPlayer("play");
+}
+
+
 var g_songSwipe = false;
 function setupSwipe()
 {
@@ -90,8 +114,6 @@ function setupSwipe()
     }
     g_songSwipe = new Swipe(element,settings);
 }
-
-
 function jplayerReady() 
 {
     playListChange(g_currentSongIndex);
@@ -361,7 +383,6 @@ function playListNext()
     else
         g_songSwipe.next();
 }
-
 function playListPrev() 
 {
     if( g_currentSongIndex == 0 )
@@ -369,7 +390,6 @@ function playListPrev()
     else
         g_songSwipe.prev();
 }
-
 function hidePlaylist()
 {
     if( g_playListShown )
