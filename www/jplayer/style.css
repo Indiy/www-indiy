@@ -196,9 +196,6 @@ ul li a:hover { color: #ccc; }
 
 
 div.top-bg { z-index: 1; display: block; position: fixed; top: 0px; left: 0px; width: 100%; height: 55px; background-color: #101011; }
-div#playlister { width: 165px; display: block; z-index: 1; position: fixed; top: 0; left: 0; height: 114px; }
-div#playlister .playlist-main { width: 165px; height: 100px; background: #101011; }
-div#playlister .playlist-bottom { width: 165px; height: 14px; background: url('images/new/playlistBottom.png') 0 0 no-repeat; }
 div.jp-progress { 
     position: absolute; 
     z-index: 2; 
@@ -543,7 +540,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 
 #playlist {
     position: absolute;
-    top: 145px;
+    top: 147px;
     left: -280px;
     width: 310px;
     height: 200px;
@@ -2017,6 +2014,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #player .open_close_button {
     float: right;
+    height: 60px;
     width: 25px;
     margin-right: 2px;
     background-color: white;
