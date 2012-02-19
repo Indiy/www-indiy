@@ -1954,7 +1954,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background: url('/images/retracting_player_buttons.png') 0px 0px no-repeat;
     cursor: pointer;
 }
-#player .play_pause {
+#player .play_pause.playing {
     float: left;
     height: 30px;
     width: 30px;
@@ -1962,7 +1962,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background: url('/images/retracting_player_buttons.png') -27px 0px no-repeat;
     cursor: pointer;
 }
-#player .play_pause.pause {
+#player .play_pause {
     float: left;
     height: 30px;
     width: 30px;

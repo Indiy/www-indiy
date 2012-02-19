@@ -847,7 +847,7 @@ String.prototype.format = function() {
                     <div class='time'>0:00/0:00</div>
                 </div>
             </div>
-            <div class='open_close_button'></div>
+            <div class='open_close_button' onclick='playerToggle();'></div>
         </div>
             
         <div class="footerfade">
