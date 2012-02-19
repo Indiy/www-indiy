@@ -547,9 +547,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-top: 4px;
     padding-bottom: 6px;
     background-color: rgba(220,220,220,0.9);
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-    border-right: 1px solid gray;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    border-right: 1px solid #aaa;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     z-index: 1;
@@ -1925,9 +1925,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 60p;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-    border-right: 1px solid gray;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    border-right: 1px solid #aaa;
     background-color: rgba(220,220,220,0.9);
     z-index: 2;
 }
