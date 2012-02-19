@@ -23,8 +23,9 @@ function setupAudioPlayer()
     })
     .bind($.jPlayer.event.ended, function() {
         playListNext();
-    });
- 
+    })
+    .bind($.jPlayer.event.timeupdate,jplayerTimeUpdate);
+     
     $("#jplayer_previous").click( function() {
         playListPrev();
         $(this).blur();
@@ -49,6 +50,26 @@ function setupAudioPlayer()
     $("#playlist").mouseout(mouseoutPlaylist);
     
     window.setTimeout(preloadImages,1000);
+}
+function formatMinSeconds(seconds)
+{
+    var mins = Math.floor(seconds / 60);
+    var seconds = seconds % 60;
+    var seconds_string = '';
+    if( seconds < 10 )
+        seconds_string += "0";
+    seconds_string += seconds;
+    return mins + ":" + seconds_string;
+}
+function jplayerTimeUpdate(event)
+{
+    var percent = event.jPlayer.status.currentPercentAbsolute;
+    var total_time = event.jPlayer.status.duration;
+    var curr_time = event.jPlayer.status.currentTime;
+    
+    var time = formatMinSeconds(curr_time) + '/' + formatMinSeconds(total_time);
+    $('#player .time').text(time);
+    $('#player .seek_bar .current').css('width',percent + '%');
 }
 
 function imageChange(event, index, elem)
@@ -258,7 +279,7 @@ function playListChange( index )
         }
     }
     var trackname = song.name;
-    $('#current_track_name').text(trackname);
+    $('#player .artist_song').text(g_artistName + ' - ' + trackname);
  
     var listens = song.listens;
     $('#current_track_listens').text(listens);
