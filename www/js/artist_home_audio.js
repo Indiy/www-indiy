@@ -53,6 +53,7 @@ function setupAudioPlayer()
 }
 function formatMinSeconds(seconds)
 {
+    seconds = Math.floor(seconds);
     var mins = Math.floor(seconds / 60);
     var seconds = seconds % 60;
     var seconds_string = '';
