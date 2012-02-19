@@ -1940,35 +1940,40 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #player .seperator {
     float: left;
-    height: 40px;
-    margin-top: 10px;
+    height: 32px;
+    margin-top: 14px;
     width: 1px;
     background-color: #bbb;
 }
 #player .prev_track {
     float: left;
-    height: 60px;
+    height: 30px;
     width: 30px;
+    margin-top: 20px;
+    margin-left: 5px;
     background: url('/images/retracting_player_buttons.png') 0px 0px no-repeat;
 }
 #player .play_pause {
     float: left;
-    height: 60px;
+    height: 30px;
     width: 30px;
-    background: url('/images/retracting_player_buttons.png') 0px 0px no-repeat;
+    margin-top: 20px;
+    background: url('/images/retracting_player_buttons.png') -27px 0px no-repeat;
 }
-#player .play_pause {
+#player .play_pause.pause {
     float: left;
-    height: 60px;
+    height: 30px;
     width: 30px;
-    background: url('/images/retracting_player_buttons.png') 0px 0px no-repeat;
+    margin-top: 20px;
+    background: url('/images/retracting_player_buttons.png') -27px 0px no-repeat;
 }
 #player .next_track {
     float: left;
-    height: 60px;
+    height: 30px;
     width: 30px;
+    margin-top: 20px;
     margin-right: 7px;
-    background: url('/images/retracting_player_buttons.png') 0px 0px no-repeat;
+    background: url('/images/retracting_player_buttons.png') -58px 0px no-repeat;
 }
 #player .song_track {
     float: left;
@@ -2005,7 +2010,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 100%;
     background-color: black;
     border-top-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 #player .time {
     float: right;
