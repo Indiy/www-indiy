@@ -1979,7 +1979,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #player .artist_song {
     height: 20px;
-    padding-top: 10px;
+    padding-top: 14px;
     color: #777;
     font-size: 12px;
     font-family: Helvetica,sans-serif;
@@ -1993,8 +1993,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 178px;
     height: 5px;
     background-color: #EEE;
-    border-radius: 5px;
-    margin-top: 8px;
+    border-radius: 3px;
+    margin-top: 4px;
     border: 1px solid #CCC;
 }
 #player .seek_bar .current {
@@ -2004,12 +2004,14 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 50%;
     height: 100%;
     background-color: black;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 #player .time {
     float: right;
     width: 70px;
     height: 15px;
-    padding-top: 5px;
+    padding-top: 0px;
     text-align: right;
     color: #777;
     font-size: 12px;
