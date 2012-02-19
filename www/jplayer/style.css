@@ -1989,7 +1989,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #player .artist_song {
     height: 20px;
     padding-top: 14px;
-    color: #777;
+    color: #555;
     font-size: 12px;
     font-family: Helvetica,sans-serif;
 }
@@ -2022,7 +2022,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 15px;
     padding-top: 0px;
     text-align: right;
-    color: #777;
+    color: #555;
     font-size: 12px;
     font-family: Helvetica,sans-serif;
 }
@@ -2034,6 +2034,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     margin-right: 4px;
     background-color: #EEE;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 
