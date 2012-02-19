@@ -381,6 +381,7 @@ String.prototype.format = function() {
             </div>
         </div>
         
+        <!--
         <div id='current_song_info'>
             <div class='label'>Artist:</div> 
             <div id='current_track_artist_name' class='value'><?=$artist_name;?></div> 
@@ -423,6 +424,7 @@ String.prototype.format = function() {
                 </div>
             </div>
         </div>
+        -->
         <div id='vote_results'></div>
         <div id='video_player'>
             <div class='top_bar'>
