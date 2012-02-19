@@ -115,10 +115,12 @@ function playerToggle()
 }
 function playerOpen()
 {
+    g_isPlayerVisible = true;
     $('#player').animate({"left": "0px"}, "fast");
 }
 function playerClose()
 {
+    g_isPlayerVisible = false;
     $('#player').animate({"left": "-450px"}, "fast");
 }
 
