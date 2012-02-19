@@ -69,7 +69,7 @@ function jplayerTimeUpdate(event)
     var total_time = event.jPlayer.status.duration;
     var curr_time = event.jPlayer.status.currentTime;
     
-    var time = formatMinSeconds(curr_time) + '/' + formatMinSeconds(total_time);
+    var time = formatMinSeconds(curr_time) + ' / ' + formatMinSeconds(total_time);
     $('#player .time').text(time);
     $('#player .seek_bar .current').css('width',percent + '%');
 }
@@ -77,14 +77,17 @@ var g_playerIsPlaying = false;
 function jplayerPlay()
 {
     g_playerIsPlaying = true;
+    $('#player .play_pause').addClass('playing');
 }
 function jplayerPause()
 {
     g_playerIsPlaying = false;    
+    $('#player .play_pause').removeClass('playing');
 }
 function jplayerEnded()
 {
     g_playerIsPlaying = false;
+    $('#player .play_pause').removeClass('playing');
     playListNext();
 }
 function imageChange(event, index, elem)
@@ -102,7 +105,22 @@ function playerPlayPause()
     else
         $("#jquery_jplayer").jPlayer("play");
 }
-
+var g_isPlayerVisible = true;
+function playerToggle()
+{
+    if( g_isPlayerVisible )
+        playerClose();
+    else
+        playerOpen();
+}
+function playerOpen()
+{
+    $('#player').animate({"left": "0px"}, "fast");
+}
+function playerClose()
+{
+    $('#player').animate({"left": "-450px"}, "fast");
+}
 
 var g_songSwipe = false;
 function setupSwipe()
