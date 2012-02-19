@@ -118,27 +118,31 @@ function playerToggle()
 }
 function playerOpen()
 {
-    g_isPlayerOpen = true;
-    $('#player').animate({"left": "0px"}, "fast");
+    if( !g_isPlayerHidden )
+    {
+        g_isPlayerOpen = true;
+        $('#player').animate({"left": "0px"}, "fast");
+    }
 }
 function playerClose()
 {
     g_isPlayerOpen = false;
-    $('#player').animate({"left": "-450px"}, "fast");
+    if( !g_isPlayerHidden )
+        $('#player').animate({"left": "-450px"}, "fast");
 }
-var g_playerHideTimer = false;
+var g_playerCloseTimer = false;
 function mouseoverPlayer()
 {
-    if( g_playerHideTimer !== false )
+    if( g_playerCloseTimer !== false )
     {
-        window.clearTimeout(g_playerHideTimer);
-        g_playerHideTimer = false;
+        window.clearTimeout(g_playerCloseTimer);
+        g_playerCloseTimer = false;
     }
     playerOpen();
 }
 function mouseoutPlayer()
 {
-    g_playerHideTimer = window.setTimeout(playerClose,500);
+    g_playerCloseTimer = window.setTimeout(playerClose,500);
 }
 var g_isPlayerHidden = false;
 function playerHide()
@@ -146,6 +150,11 @@ function playerHide()
     if( !g_isPlayerHidden )
     {
         g_isPlayerHidden = true;
+        if( g_playerCloseTimer !== false )
+        {
+            window.clearTimeout(g_playerCloseTimer);
+            g_playerCloseTimer = false;
+        }
         $('#player').animate({"left": "-485px"}, "fast");
     }
 }
