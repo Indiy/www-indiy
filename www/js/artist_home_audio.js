@@ -108,7 +108,7 @@ function playerPlayPause()
     else
         $("#jquery_jplayer").jPlayer("play");
 }
-var g_isPlayerOpen = true;
+var g_isPlayerOpen = false;
 function playerToggle()
 {
     if( g_isPlayerOpen )
