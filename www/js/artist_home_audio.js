@@ -46,8 +46,11 @@ function setupAudioPlayer()
         $('#jplayer_next').hide();
     }
     
-    $("#playlist").mouseover(mouseoverPlaylist);
-    $("#playlist").mouseout(mouseoutPlaylist);
+    $('#playlist').mouseover(mouseoverPlaylist);
+    $('#playlist').mouseout(mouseoutPlaylist);
+
+    $('#player').mouseover(mouseoverPlayer);
+    $('#player').mouseout(mouseoutPlayer);
     
     window.setTimeout(preloadImages,1000);
 }
