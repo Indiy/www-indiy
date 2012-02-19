@@ -1926,7 +1926,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
     border-right: 1px solid gray;
-    background-color: rgba(230,230,230,0.85);
+    background-color: rgba(220,220,220,0.9);
     z-index: 2;
 }
 #player .album {
@@ -1949,7 +1949,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     float: left;
     height: 30px;
     width: 30px;
-    margin-top: 20px;
+    margin-top: 18px;
     margin-left: 5px;
     background: url('/images/retracting_player_buttons.png') 0px 0px no-repeat;
 }
@@ -1957,21 +1957,21 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     float: left;
     height: 30px;
     width: 30px;
-    margin-top: 20px;
+    margin-top: 18px;
     background: url('/images/retracting_player_buttons.png') -27px 0px no-repeat;
 }
 #player .play_pause.pause {
     float: left;
     height: 30px;
     width: 30px;
-    margin-top: 20px;
+    margin-top: 18px;
     background: url('/images/retracting_player_buttons.png') -27px 0px no-repeat;
 }
 #player .next_track {
     float: left;
     height: 30px;
     width: 30px;
-    margin-top: 20px;
+    margin-top: 18px;
     margin-right: 7px;
     background: url('/images/retracting_player_buttons.png') -58px 0px no-repeat;
 }
@@ -2024,10 +2024,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #player .open_close_button {
     float: right;
-    height: 50px;
+    height: 52px;
     width: 20px;
-    margin-top: 5px;
-    margin-right: 5px;
+    margin-top: 4px;
+    margin-right: 4px;
     background-color: #EEE;
     border-radius: 5px;
 }
