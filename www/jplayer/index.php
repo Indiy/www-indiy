@@ -794,59 +794,7 @@ String.prototype.format = function() {
             </div>
         <? endif; ?>
 
-            
-            <div id="jquery_jplayer" class="jp-jplayer"></div> 
-
-            <div class="top-bg"></div>
-            <div id="playlister">
-                <div class="playlist-main"></div>
-                <div class="playlist-bottom"></div>
-            </div>          
-            
-            <div class="jp-audio">
-                <div class="jp-playlist-player">
-                
-                    <div id="jp_container_1" class="jp-interface">
-                        <ul class="jp-controls">
-                            <li class='jp-controls-to-hide'>
-                                <a href="#" id="jplayer_play" class="jp-play" tabindex="1">play</a>
-                            </li>
-                            <li class='jp-controls-to-hide'>
-                                <a href="#" id="jplayer_pause" class="jp-pause" tabindex="1">pause</a>
-                            </li>
-                            <li class='jp-controls-to-hide'>
-                                <a href="#" id="jplayer_stop" class="jp-stop" tabindex="1">stop</a>
-                            </li>
-
-                            <li><a href="#" id="jplayer_previous" class="jp-previous vtip" tabindex="1">previous</a></li>
-                            <li><a href="#" id="jplayer_next" class="jp-next vtip" tabindex="1">next</a></li>
-                        </ul>
-
-                        <div id="jplayer_volume_bar" class="jp-volume-bar">
-                            <div id="jplayer_volume_bar_value" class="jp-volume-bar-value"></div>
-                        </div>
-
-                        
-                        <div id="jplayer_play_time" class="jp-current-time"></div>
-                        <div class="slash">/</div>
-                        <div id="jplayer_total_time" class="jp-duration"></div> 
-                        <div class="clear"></div>
-                        
-                        <div class="jp-progress">
-                            <div id="jplayer_load_bar" class="jp-seek-bar jp-load-bar">
-                                <div id="jplayer_play_bar" class="jp-play-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="volumebg"></div>
-            
-            <div class="space"></div>
-            <div class="aClose"></div>
-            
-            <? if ($artist_videos) { ?>
+        <? if ($artist_videos) { ?>
             <div class="videos">
                 <!--<div class="box-header"></div>-->
                 <h1><? write_row_buttons(); ?>Videos</h1>
@@ -870,123 +818,51 @@ String.prototype.format = function() {
                 <div class="clear"></div>
                 <!--<div class="box-footer"></div>-->
             </div>
-            <? } ?>
+        <? } ?>
+        
+        <div class="aClose"></div>
 
-            <div class="footerfade">
-                <div class="logo_img"><a href="<?=trueSiteUrl();?>/artists.php" /></a></div>
-                <div id="theSearchBox"></div>
-            </div> 
+        
+        <div id="jquery_jplayer" class="jp-jplayer"></div>
 
-            <a class="jp-play-fake"></a>
-            <a class="jp-pause-fake"></a>
+        <div id='player'>
+            <div class='album'>
+                <img src='/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&w=50'></img>
             </div>
+            <div class='seperator'></div>
+            <div class='prev_track'></div>
+            <div class='play_pause'></div>
+            <div class='next_track'></div>
+            <div class='seperator'></div>
+            <div class='song_track'>
+                <div class='artist_song'></div>
+                <div class='seek_time'>
+                    <div class='seek_bar'>
+                        <div class='loaded'></div>
+                        <div class='current'></div>
+                    </div>
+                    <div class='time'>0:00/0:00</div>
+                <div>
+            </div>
+            <div class='open_close_button'></div>
         </div>
-    </div>
             
-
-    <div id='song_buy_popup'>
-        <a id='song_buy_popup_mystore' class='store_icon mystore' title='Buy on MyArtistDNA Store'></a>
-        <a id='song_buy_popup_amazon' href='#' class='store_icon amazon' title='Buy on Amazon'></a>
-        <a id='song_buy_popup_itunes' href='#' class='store_icon itunes' title='Download on iTunes'></a>
-    </div>
-
-    <!-- SIGNUP FORM -->
-    <div id="signup_dialog" class="window">
-    <div id="popup">
-        <div class="topbox">
-        <h3>SIGN UP FOR MYARTISTDNA</h3>
-        <div class="close"><a href="#" onclick='closeSignup();'>CLOSE</a></div>
+        <div class="footerfade">
+            <div class="logo_img"><a href="<?=trueSiteUrl();?>/artists.php" /></a></div>
+            <div id="theSearchBox"></div>
         </div>
-        
-       <!-- <div class="offer">
-        <h2><span>You selected:</span> <br> Basic Package</h2>
-        <h3>FREE</h3>
-        </div> -->
-        
-        <div class="sign_up">
-        <article>
-        <h5>GET STARTED NOW</h5>
-        <p>Log in  and get started easily using your existing Facebook <br /> or Twitter account </p>
-        <div class="socialmedia">
-        <ul>
-        <li><a href="Login_Twitbook/login-facebook.php"><img src="images/facebook.jpg" alt=""></a></li>
-        <li><a href="Login_Twitbook/login-twitter.php"><img src="images/twitter.jpg" alt=""></a></li>
-        </ul>
+
+        <div id='song_buy_popup'>
+            <a id='song_buy_popup_mystore' class='store_icon mystore' title='Buy on MyArtistDNA Store'></a>
+            <a id='song_buy_popup_amazon' href='#' class='store_icon amazon' title='Buy on Amazon'></a>
+            <a id='song_buy_popup_itunes' href='#' class='store_icon itunes' title='Download on iTunes'></a>
         </div>
-        </article>
-        <div class="or">OR</div>
-        <span id='signup_error' class="error" style="display:none">Please fill up all required fields.</span>
-        <span id='signup_success' style="display:none">Registration Successfull.</span>
 
-        <article>
-        <h5>Create Login</h5>    
-         <form>
-            <fieldset>
-            <ul>
-                <li><label>Name</label> <input name="name" id='signup_name' type="text" class="input" value="" /></li>          
-                <li><label>Email Address</label> <input name="email" id='signup_email' type="text" class="input" value="" /></li>
-                <li><label>Username</label> <input name="username" id='signup_username' type="text" class="input" value="" /></li>
-                <li><label>Password</label> <input name="password" id='signup_password' type="password" class="input" value="" /></li>
-                <li>
-                    <input name="agree" id='signup_agree' type="checkbox" value="agree">
-                    <span>I agree to the Terms &amp; Conditions of MyArtistDNA</span>
-                </li>
-            </ul>
-            <div class="button"><a href="#" onclick='onSignupClick();'>Complete Signup</a></div>
-            </fieldset>
-        </form>
-        </article>
+        <? include_once "includes/login_signup.html"; ?>
+
+        <!-- Mask to cover the whole screen --> 
+        <div id="mask"></div> 
         </div>
-    </div><!-- pop up -->
-    </div>
-    <!-- END SIGNUP FORM -->
-
-    <!-- LOGIN FORM -->
-    <div id="login_dialog" class="window">
-        <div id="popup">
-            <div class="topbox">
-                <h3>LOG IN TO MYARTISTDNA</h3>
-                <div class="close"><a href="#" onclick='closeLogin();'>CLOSE</a></div>
-            </div>
-
-            <div class="loginpop">
-                <div id="validate-login"></div>
-                <form action="" name="loginPopup" method="post">
-                <fieldset>
-                <ul>
-                <li><label>Email Address</label> <input id='login_username' name="username" type="text" class="input" value="" /></li>
-                <li><label>Password</label> <input id='login_password' name="password" type="password" class="input" value="" /></li>
-                </ul>
-                <p class="password"><a href="/forgot_password.html">Forgot your password?</a></p>
-                <div class="button"><a href="#-1" onclick='onLoginClick();'>LOGIN</a></div>
-                </fieldset>
-                </form>
-                <h5 class="option">OR</h5>
-
-                <article>
-                <h5>LOG IN WITH YOUR SOCIAL ACCOUNT</h5>
-                <p>Log in  and get started easily using your existing Facebook <br /> or Twitter account</p>
-
-                <div class="socialmedia">
-                <ul>
-                <li><a href="Login_Twitbook/login-facebook.php"><img src="images/facebook.jpg" alt="Facebook"></a></li>
-                <li><a href="Login_Twitbook/login-twitter.php"><img src="images/twitter.jpg" alt="Twitter"></a></li>
-                </ul>
-                </div>
-                </article>
-
-                <div class="bottombox">
-                <h3>NOT A MEMBER Yet?</h3>
-                <div class="buttonsignup"><a href="#" onclick="showSignup();">SIGN UP</a></div>
-            </div>
-            </div>
-        </div><!-- pop up -->
-    </div> 
-    <!-- END LOGIN FORM -->
-
-    <!-- Mask to cover the whole screen --> 
-    <div id="mask"></div> 
-    </div>
 
 <!-- Tracking code Starts --> 
 <script type="text/javascript">

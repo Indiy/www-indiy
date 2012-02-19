@@ -1919,4 +1919,124 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-left: 40px;
 }
 
+#player {
+    position: absolute;
+    top: 82px;
+    left: 0px;
+    width: 480px;
+    height: 60p;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+    background-color: rgba(255,255,255,0.8);
+}
+#player .album {
+    float: right;
+    height: 50px;
+    width: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+#player .seperator {
+    float: left;
+    height: 40px;
+    margin-top: 10px;
+    width: 1px;
+    background-color: black;
+}
+#player .prev_track {
+    float: left;
+    height: 60px;
+    width: 30px;
+    background: url('/images/retracting_player_buttons.png') 0px 0px no-repeat;
+}
+#player .play_pause {
+    float: left;
+    height: 60px;
+    width: 30px;
+    background: url('/images/retracting_player_buttons.png') 0px 0px no-repeat;
+}
+#player .play_pause {
+    float: left;
+    height: 60px;
+    width: 30px;
+    background: url('/images/retracting_player_buttons.png') 0px 0px no-repeat;
+}
+#player .next_track {
+    float: left;
+    height: 60px;
+    width: 30px;
+    margin-right: 7px;
+    background: url('/images/retracting_player_buttons.png') 0px 0px no-repeat;
+}
+#player .song_track {
+    float: left;
+    height: 60px;
+    width: 250px;
+    padding-right: 15px;
+    
+}
+#player .artist_song {
+    height: 20px;
+    padding-top: 10px;
+    color: #EEE;
+    font-size: 12px;
+    font-family: Helvetica,sans-serif;
+}
+#player .seek_time {
+    height: 22px;
+}
+#player .seek_bar {
+    position: relative;
+    float: left;
+    width: 180px;
+    height: 4px;
+    background-color: white;
+    border-radius: 3px;
+}
+#player .seek_bar .current {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+}
+#player .time {
+    float: right;
+    width: 70px;
+    height: 15px;
+    text-align: right;
+    color: #EEE;
+    font-size: 12px;
+    font-family: Helvetica,sans-serif;
+}
+#player .open_close_button {
+    float: right;
+    width: 25px;
+    margin-right: 2px;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
