@@ -546,11 +546,13 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 200px;
     padding-top: 4px;
     padding-bottom: 6px;
-    background-color: rgba(230, 230, 230, 0.6);
-    z-index: 1;
+    background-color: rgba(220,220,220,0.9);
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    border: 1px solid #DDD;
+    z-index: 1;
 }
 #playlist .song_list {
     float: left;
