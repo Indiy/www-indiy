@@ -1127,6 +1127,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     color: #777;
 }
 #right_box .label_name {
+    margin-left: 15px;
+    margin-bottom: 2px;
     color: #888;
     text-decoration: none;
     font-family: Helvetica, sans-serif;
@@ -1138,6 +1140,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #right_box .vote_buttons {
     text-align: center;
+    margin-top: 5px;
     margin-bottom: 10px;
 }
 #right_box .vote_buttons .vote_up {
@@ -1167,15 +1170,15 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     text-align: center;
 }
 #right_box .buynow_mad_store button {
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     padding-right: 20px;
     padding-left: 20px;
     margin-bottom: 10px;
     color: white;
     font-family: Helvetica, sans-serif;
     font-size: 12px;
-    font-weight: normal;    
+    font-weight: bold;    
     background-color: #b80f08;
     border-radius: 5px;
     border: none;
@@ -1195,8 +1198,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     text-align: center;
     color: white;
     font-family: Helvetica, sans-serif;
-    font-size: 12px;
-    font-weight: normal;
+    font-size: 11px;
+    font-weight: bold;
 }
 
 /*

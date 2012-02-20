@@ -490,7 +490,6 @@ String.prototype.format = function() {
                     <button id='buynow_amazon' title='Buy from Amazon'>
                         <img src='/images/buynow_amazon.png'/>
                     </button>
-                    </div>
                     <button id='buynow_itunes' title='Download on iTunes'>
                         <img src='/images/buynow_itunes.jpg'/>
                     </button>

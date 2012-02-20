@@ -370,6 +370,7 @@ function playListChange( index )
     }
     var trackname = song.name;
     $('#player .artist_song').text(g_artistName + ' - ' + trackname);
+    $('#current_track_name').text(trackname);
  
     var listens = song.listens;
     $('#current_track_listens').text(listens);
