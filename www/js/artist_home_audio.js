@@ -144,7 +144,7 @@ function mouseoverPlayer()
 }
 function mouseoutPlayer()
 {
-    g_playerCloseTimer = window.setTimeout(playerClose,500);
+    g_playerCloseTimer = window.setTimeout(playerClose,800);
 }
 var g_isPlayerHidden = false;
 function playerHide()
