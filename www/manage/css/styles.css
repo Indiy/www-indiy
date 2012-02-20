@@ -802,7 +802,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #adminblock .pages .list ul li.odd { background:#eeeff0 url(../images/bg_pagelist.gif) repeat-y}
 #adminblock .pages .list ul li.listheading { background:#d9dadc url(../images/bg_pagelist2.gif) repeat-y; font-size:13px; font-weight:bold; padding:15px 0}
 #adminblock .pages .list ul li.listheading .title { padding-top:0}
-#adminblock .pages .list ul li .title { width:512px; float:left; padding:4px 0 0 17px}
+#adminblock .pages .list ul li .title { width:600px; float:left; padding:4px 0 0 17px}
 #adminblock .pages .list ul li a { color:#383838; text-decoration:none}
 #adminblock .pages .list ul li .preview { width:110px; float:left; text-align:center}
 #adminblock .pages .list ul li .preview a { float:left; background:#3c4147 url(../images/icon_preview.gif) no-repeat; font-size:11px; color:#FFFFFF; text-decoration:none; padding:4px 8px 6px 32px; margin-left:20px}
