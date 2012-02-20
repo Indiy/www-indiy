@@ -2151,6 +2151,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background-color: rgba(0,0,0,0.8);
     cursor: pointer;
 }
+@-moz-document url-prefix() {
+    /* Fonts look lame in FF if bold */
+    #navigation .tab,#navigation .artist_name {
+        font-weight: normal;
+    }
+}
 
 
 
