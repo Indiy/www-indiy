@@ -26,6 +26,7 @@ function setupPageLinks()
     
     $('#navigation').mouseover(mouseoverNavigation);
     $('#navigation').mouseout(mouseoutNavigation);
+    scrollNavigation();
     $(window).resize(scrollNavigation);
 }
 
