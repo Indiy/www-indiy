@@ -56,11 +56,11 @@ function setupAudioPlayer()
     $('#player .seek_bar').click(playerSeek);
     $('#player .volume').click(playerVolume);
     
-    $('#prev_track').mouseover(function(){ $(this).animate({left: "0px"}, 250);});
-    $('#prev_track').mouseout(function(){ $(this).animate({left: "-169px"}, 250);});
+    $('#prev_track').mouseover(function(){ $(this).animate({width: "200px"}, 250);});
+    $('#prev_track').mouseout(function(){ $(this).animate({width: "31px"}, 250);});
 
-    $('#next_track').mouseover(function(){ $(this).animate({right: "0px"}, 250);});
-    $('#next_track').mouseout(function(){ $(this).animate({right: "-169px"}, 250);});
+    $('#next_track').mouseover(function(){ $(this).animate({width: "200px"}, 250);});
+    $('#next_track').mouseout(function(){ $(this).animate({width: "31px"}, 250);});
     
     window.setTimeout(preloadImages,1000);
 }

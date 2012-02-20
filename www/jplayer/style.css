@@ -2064,7 +2064,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #prev_track {
     position: absolute;
     top: 390px;
-    left: -169px;
+    left: 0px;
     width: 200px;
     height: 71px;
     background: url('images/new/nextprev.png') -172px 0px no-repeat;
@@ -2079,7 +2079,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #next_track {
     position: absolute;
     top: 390px;
-    right: -169px;
+    right: 0px;
     width: 200px;
     height: 71px;
     background: url('images/new/nextprev.png') 0px 0px no-repeat;
