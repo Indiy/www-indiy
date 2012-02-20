@@ -189,9 +189,9 @@ function playerSeek(event)
 }
 function playerVolume(event)
 {
-    var x = event.offsetY;
+    var y = event.pageY - $('#player .volume').offset().top;
     var height = $('#player .volume').height();
-    var vol_ratio = x / height;
+    var vol_ratio = 1 - y / height;
     $("#jquery_jplayer").jPlayer("volume",vol_ratio);
 }
 
