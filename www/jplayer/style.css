@@ -1920,7 +1920,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #player {
     position: absolute;
     top: 60px;
-    left: -450px;
+    left: 0px;
     width: 480px;
     height: 60p;
     border-top-right-radius: 8px;
@@ -1958,6 +1958,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     margin-top: 20px;
 }
 #player .volume {
+    float: left;
     position: relative;
     height: 52px;
     width: 4px;
