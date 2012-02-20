@@ -1457,7 +1457,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     text-align: center;
 }
 #user_page .image_holder img {
-    max-width: 900px;
+    max-width: 880px;
 }
 #user_page .page_content {
     color: white;
@@ -2051,7 +2051,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 20px;
     margin-top: 4px;
     margin-right: 4px;
-    background: #EEE url('/images/retracting_player_buttons.png') -128px -118px no-repeat;
+    background: #EEE url('/images/retracting_player_buttons.png') -26px -124px no-repeat;
     border-radius: 5px;
     cursor: pointer;
 }
