@@ -1951,6 +1951,32 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 1px;
     background-color: #aaa;
 }
+#player .volume_icon {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+}
+#player .volume {
+    position: relative;
+    height: 52px;
+    width: 4px;
+    margin-top: 4px;
+    margin-right: 11px;
+    background-color: #d7d7d7;
+    border 1px solid #cdcdcd;
+    border-radius: 3px;
+}
+#player .volume .current {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 50%;
+    width: 100%;
+    background-color: black;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
 #player .prev_track {
     float: left;
     height: 30px;
