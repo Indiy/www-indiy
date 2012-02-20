@@ -24,7 +24,8 @@ function setupAudioPlayer()
     .bind($.jPlayer.event.ended,jplayerEnded)
     .bind($.jPlayer.event.timeupdate,jplayerTimeUpdate)
     .bind($.jPlayer.event.play,jplayerPlay)
-    .bind($.jPlayer.event.pause,jplayerPause);
+    .bind($.jPlayer.event.pause,jplayerPause)
+    .bind($.jPlayer.event.volumechange,jplayerVolume);
      
     $("#jplayer_previous").click( function() {
         playListPrev();
@@ -53,6 +54,7 @@ function setupAudioPlayer()
     $('#player').mouseout(mouseoutPlayer);
     
     $('#player .seek_bar').click(playerSeek);
+    $('#player .volume').click(playerVolume);
     
     window.setTimeout(preloadImages,1000);
 }
@@ -76,7 +78,7 @@ function jplayerTimeUpdate(event)
     
     var time = formatMinSeconds(curr_time) + ' / ' + formatMinSeconds(total_time);
     $('#player .time').text(time);
-    $('#player .seek_bar .current').css('width',percent + '%');
+    $('#player .seek_bar .current').css('width',percent + "%");
 }
 var g_playerIsPlaying = false;
 function jplayerPlay()
@@ -94,6 +96,11 @@ function jplayerEnded()
     g_playerIsPlaying = false;
     $('#player .play_pause').removeClass('playing');
     playListNext();
+}
+function jplayerVolume(event)
+{
+    var vol = event.jPlayer.status.volume;
+    $('#player .volume .current').css('height',vol * 100 + "%");
 }
 function imageChange(event, index, elem)
 {
@@ -179,6 +186,13 @@ function playerSeek(event)
     var duration = $("#jquery_jplayer").data("jPlayer").status.duration;
     var seek_secs = progress * duration;
     $("#jquery_jplayer").jPlayer("play",seek_secs);
+}
+function playerVolume(event)
+{
+    var x = event.offsetY;
+    var height = $('#player .volume').height();
+    var vol_ratio = x / height;
+    $("#jquery_jplayer").jPlayer("volume",vol_ratio);
 }
 
 var g_songSwipe = false;
