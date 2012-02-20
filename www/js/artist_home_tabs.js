@@ -52,7 +52,7 @@ function mouseoverNavigation()
 {
     if( g_navigationTimer !== false )
     {
-        window.clearTimout(g_navigationTimer);
+        window.clearTimeout(g_navigationTimer);
         g_navigationTimer = false;
     }
     openNavigation();
