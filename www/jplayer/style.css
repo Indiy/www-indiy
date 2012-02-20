@@ -2090,7 +2090,34 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     cursor: pointer;
 }
 
-
+#prev_track {
+    position: absolute;
+    top: 360px;
+    left: 0px;
+    width: 200px;
+    height: 71px;
+    background: url('images/new/nextprev.png') -172px 0px no-repeat;
+    color: white;
+    text-align: right;
+    font-size: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    z-index: 22;
+}
+#next_track {
+    position: absolute;
+    top: 360px;
+    right: 0px;
+    width: 200px;
+    height: 71px;
+    background: url('images/new/nextprev.png') 0px 0px no-repeat;
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    z-index: 22;
+}
 
 
 

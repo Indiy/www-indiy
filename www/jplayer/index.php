@@ -854,6 +854,9 @@ String.prototype.format = function() {
             </div>
             <div class='open_close_button' onclick='playerToggle();'></div>
         </div>
+        
+        <div id='prev_track'></div>
+        <div id='next_track'></div>
             
         <div class="footerfade">
             <div class="logo_img"><a href="<?=trueSiteUrl();?>/artists.php" /></a></div>
