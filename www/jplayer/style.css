@@ -1454,6 +1454,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #user_page .image_holder {
     padding-bottom: 10px;
+    padding-right: 20px;
     text-align: center;
 }
 #user_page .image_holder img {
