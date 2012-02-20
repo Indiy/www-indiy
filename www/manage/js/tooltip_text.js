@@ -3,7 +3,7 @@
 var g_tooltipText = 
 {
     "tip_mp3": "Song to play. Please upload in MP3 format.",
-    "tip_image": "Image to display on the background of the player page. Suggested size: >=1280x720.",
+    "tip_image": "Image to display on the background of the player page. Suggested size: 1280x720 or smaller.",
     "tip_store": "Sell this song in the MyArtistDNA Store on your page.  Make sure you add a paypal email address to enable the store.",
     "tip_artist_url": "The url that your page will be available under.  e.g.: myname.myartistdna.com.",
     "tip_sku": "The stock keeping unit for your product.",
