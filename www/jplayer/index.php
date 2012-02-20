@@ -616,6 +616,7 @@ String.prototype.format = function() {
         <div id='navigation'>
             <div class='tab_bar_container'>
                 <div class='tab_bar'>
+                    <div class='tab_spacer'></div>
                     <?
                         foreach( $pages_list as $i => $page )
                         {
@@ -636,6 +637,7 @@ String.prototype.format = function() {
                     <? if( $artist_email ): ?>
                         <div class='tab' onclick='showContact();'>Contact</div>
                     <? endif; ?>
+                    <div class='tab_spacer'></div>
                 </div>
             </div>
             <div class='artist_name_holder'>
