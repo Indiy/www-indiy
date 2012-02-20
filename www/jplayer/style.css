@@ -2051,7 +2051,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 20px;
     margin-top: 4px;
     margin-right: 4px;
-    background-color: #EEE;
+    background: #EEE url('/images/retracting_player_buttons.png') -128px -118px no-repeat;
     border-radius: 5px;
     cursor: pointer;
 }
