@@ -52,6 +52,8 @@ function setupAudioPlayer()
     $('#player').mouseover(mouseoverPlayer);
     $('#player').mouseout(mouseoutPlayer);
     
+    $('#player .seek_bar').click(playerSeek);
+    
     window.setTimeout(preloadImages,1000);
 }
 
@@ -168,6 +170,10 @@ function playerUnhide()
         g_isPlayerOpen = true;
         playerClose();
     }
+}
+function playerSeek(event)
+{
+    var e = event;
 }
 
 var g_songSwipe = false;
