@@ -2103,11 +2103,13 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     z-index: 1;
 }
 #navigation .tab_bar_container {
-    padding-right: 200px;
     background-color: rgba(0,0,0,0.8);
+    overflow: hidden;
 }
 #navigation .tab_bar {
     height: 40px;
+    padding-right: 200px;
+    padding-left: 200px;
     text-align: center;
     white-space: nowrap;
     overflow-x: auto;
