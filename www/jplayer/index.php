@@ -614,27 +614,29 @@ String.prototype.format = function() {
         <div id='loader'><img src="/jplayer/images/ajax-loader.gif" /></div>
         
         <div id='navigation'>
-            <div class='tab_bar'>
-                <?
-                    foreach( $pages_list as $i => $page )
-                    {
-                        $title = $page['title'];
-                        echo "<div class='tab' onclick='showUserPage($i);'>$title</div>\n";
-                    }
-                ?>
-                <? if( $artist_videos ): ?>
-                    <div class='tab' onclick='showVideos();'>Videos</div>
-                <? endif; ?>             
-                <?=$pagesList;?>
-                <? if( $store_enabled != "" ): ?>
-                    <div class='tab' onclick='showStore();'>Store</div>
-                <? endif; ?>
-                <? if( $show_comments ): ?>
-                    <div class='tab' onclick='showComments();'>Comment</div>
-                <? endif; ?>
-                <? if( $artist_email ): ?>
-                    <div class='tab' onclick='showContact();'>Contact</div>
-                <? endif; ?>
+            <div class='tab_bar_container'>
+                <div class='tab_bar'>
+                    <?
+                        foreach( $pages_list as $i => $page )
+                        {
+                            $title = $page['title'];
+                            echo "<div class='tab' onclick='showUserPage($i);'>$title</div>\n";
+                        }
+                    ?>
+                    <? if( $artist_videos ): ?>
+                        <div class='tab' onclick='showVideos();'>Videos</div>
+                    <? endif; ?>             
+                    <?=$pagesList;?>
+                    <? if( $store_enabled != "" ): ?>
+                        <div class='tab' onclick='showStore();'>Store</div>
+                    <? endif; ?>
+                    <? if( $show_comments ): ?>
+                        <div class='tab' onclick='showComments();'>Comment</div>
+                    <? endif; ?>
+                    <? if( $artist_email ): ?>
+                        <div class='tab' onclick='showContact();'>Contact</div>
+                    <? endif; ?>
+                </div>
             </div>
             <div class='artist_name_holder'>
                 <div class='artist_name'><?=$artist_name;?></div>

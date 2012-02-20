@@ -2102,12 +2102,16 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     overflow: hidden;
     z-index: 1;
 }
+#navigation .tab_bar_container {
+    padding-right: 200px;
+    background-color: rgba(0,0,0,0.8);
+}
 #navigation .tab_bar {
     height: 40px;
-    background-color: rgba(0,0,0,0.8);
     text-align: center;
     white-space: nowrap;
     overflow-x: auto;
+    overflow-y: hidden;
 }
 #navigation .tab { 
     display: inline-block; 
