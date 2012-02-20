@@ -2095,7 +2095,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 /* NAVIGATION */
 #navigation { 
     position: absolute; 
-    top: 0px; 
+    top: -40px; 
     left: 0px; 
     right: 0px; 
     height: 80px;
