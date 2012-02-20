@@ -201,7 +201,7 @@ $(document).ready(showFirstInstruction);
                 <li><a href="fan_connections.php?artist_id=<?=$artistID;?>" rel="facebox[.bolder]">Fan Connections</a></li>
             </ul>
             
-            <h6>Ecommerce</h6>
+            <h6>Monetize</h6>
             <ul>
                 <li><a href="store_settings.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Edit Settings</a></li>
                 <li><a href="addproduct.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Product</a></li>
