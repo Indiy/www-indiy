@@ -39,7 +39,7 @@ function openNavigation()
         $('#navigation').animate({ top: "0px" }, 300);
     }
 }
-function closeNavigation();
+function closeNavigation()
 {
     if( g_navigationOpen )
     {
