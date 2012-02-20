@@ -60,7 +60,7 @@ function setupAudioPlayer()
     $('#prev_track').mouseout(function(){ $(this).animate({left: "-169px"}, 250);});
 
     $('#next_track').mouseover(function(){ $(this).animate({right: "0px"}, 250);});
-    $('#next_track').mouseout(function(){ $(this).animate({right: "-138px"}, 250);});
+    $('#next_track').mouseout(function(){ $(this).animate({right: "-169px"}, 250);});
     
     window.setTimeout(preloadImages,1000);
 }
