@@ -2106,8 +2106,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 40px;
     background-color: rgba(0,0,0,0.8);
     text-align: center;
+    white-space: nowrap;
+    overflow-x: auto;
 }
 #navigation .tab { 
+    display: inline-block; 
+    max-width: 190px;
     padding-right: 10px;
     padding-left: 10px;
     padding-top: 10px;
@@ -2118,7 +2122,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-weight: bold; 
     text-transform: uppercase; 
     text-decoration: none; 
-    display: inline-block; 
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     cursor: pointer;
 }
 #navigation .tab:hover { 
