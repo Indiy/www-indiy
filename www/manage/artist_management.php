@@ -23,6 +23,8 @@
             exit();
         }
     }
+    
+    $MAX_TABS = 5;
 	
 	$query_artistDetail = "SELECT * FROM mydna_musicplayer WHERE id='".$artistID."' ";
 	$result_artistDetail = mysql_query($query_artistDetail) or die(mysql_error());
@@ -194,7 +196,7 @@ $(document).ready(showFirstInstruction);
             <ul>
                 <li><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Music + Photo</a></li>
                 <li><a href="addvideo.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Video</a></li>
-                <? if( mysql_num_rows($result_artistContent) < 9 ): ?>
+                <? if( mysql_num_rows($result_artistContent) < $MAX_TABS ): ?>
                     <li><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Tab</a></li>
                 <? endif; ?>
                 <li><a href="stats.php?userId=<?=$artistID;?>">View Analytics</a></li>
@@ -373,7 +375,7 @@ $(document).ready(showFirstInstruction);
             <div class="heading">
                 <h5>TABS</h5>
                 <div class="buttonadd">
-                    <? if( mysql_num_rows($result_artistContent) < 9 ): ?>
+                    <? if( mysql_num_rows($result_artistContent) < $MAX_TABS ): ?>
                         <a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Tab</a>
                     <? endif; ?>
                 </div>
