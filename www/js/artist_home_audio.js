@@ -129,7 +129,7 @@ function playerClose()
     if( !g_isPlayerHidden && g_isPlayerOpen )
     {
         g_isPlayerOpen = false;
-        $('#player').animate({"left": "-454px"}, 300);
+        $('#player').animate({"left": "-462px"}, 300);
     }
 }
 var g_playerCloseTimer = false;
@@ -157,7 +157,7 @@ function playerHide()
             window.clearTimeout(g_playerCloseTimer);
             g_playerCloseTimer = false;
         }
-        $('#player').animate({"left": "-485px"}, 300);
+        $('#player').animate({"left": "-495px"}, 300);
     }
 }
 function playerUnhide()
