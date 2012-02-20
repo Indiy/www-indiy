@@ -173,7 +173,12 @@ function playerUnhide()
 }
 function playerSeek(event)
 {
-    var e = event;
+    var x = event.offsetX;
+    var width = $('#player .seek_bar').width();
+    var progress = x / width;
+    var duration = $("#jquery_jplayer").data("jPlayer").status.duration;
+    var seek_secs = progress * duration;
+    $("#jquery_jplayer").jPlayer("play",seek_secs);
 }
 
 var g_songSwipe = false;
