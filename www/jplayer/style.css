@@ -1965,7 +1965,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     margin-top: 4px;
     margin-right: 11px;
     background-color: #d7d7d7;
-    border 1px solid #cdcdcd;
+    border: 1px solid #cdcdcd;
     border-radius: 3px;
 }
 #player .volume .current {
@@ -1985,33 +1985,33 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     margin-top: 18px;
     margin-left: 8px;
     margin-right: 12px;
-    background: url('/images/retracting_player_buttons.png') -26px -18px no-repeat;
+    background: url('/images/retracting_player_buttons.png') -32px -18px no-repeat;
     cursor: pointer;
 }
 #player .prev_track:hover {
-    background: url('/images/retracting_player_buttons.png') -26px -78px no-repeat;
+    background: url('/images/retracting_player_buttons.png') -32px -78px no-repeat;
 }
 #player .play_pause.playing {
     float: left;
     height: 40px;
     width: 16px;
     margin-top: 8px;
-    background: url('/images/retracting_player_buttons.png') -69px -190px no-repeat;
+    background: url('/images/retracting_player_buttons.png') -77px -190px no-repeat;
     cursor: pointer;
 }
 #player .play_pause.playing:hover {
-    background: url('/images/retracting_player_buttons.png') -69px -128px no-repeat;
+    background: url('/images/retracting_player_buttons.png') -77px -128px no-repeat;
 }
 #player .play_pause {
     float: left;
     height: 40px;
     width: 22px;
     margin-top: 8px;
-    background: url('/images/retracting_player_buttons.png') -71px -8px no-repeat;
+    background: url('/images/retracting_player_buttons.png') -77px -8px no-repeat;
     cursor: pointer;
 }
 #player .play_pause:hover {
-    background: url('/images/retracting_player_buttons.png') -71px -68px no-repeat;
+    background: url('/images/retracting_player_buttons.png') -77px -68px no-repeat;
 }
 #player .next_track {
     float: left;
@@ -2020,11 +2020,11 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     margin-top: 18px;
     margin-left: 10px;
     margin-right: 8px;
-    background: url('/images/retracting_player_buttons.png') -118px -18px no-repeat;
+    background: url('/images/retracting_player_buttons.png') -128px -18px no-repeat;
     cursor: pointer;
 }
 #player .next_track:hover {
-    background: url('/images/retracting_player_buttons.png') -118px -78px no-repeat;
+    background: url('/images/retracting_player_buttons.png') -128px -78px no-repeat;
 }
 #player .song_track {
     float: left;
@@ -2070,7 +2070,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-top: 0px;
     text-align: right;
     color: #555;
-    font-size: 11px;
+    font-size: 12px;
     font-family: Helvetica,sans-serif;
 }
 #player .open_close_button {
