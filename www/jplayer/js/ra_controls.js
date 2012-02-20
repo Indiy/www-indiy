@@ -204,24 +204,21 @@ this.selectListItem=function(i)
 	}
 
 this.getInstanceName=function(id)
+{
+	for( var i in window )
 	{
-	for(var i in window)
-	{
-	try
-	{
-	// alert("window["+i+"]");
-	if(window[i].instance_id==id)
-		{
-		this.instance_name=i;
-		return i;		
-		}
-	}
-	catch(e)
-		{
-		}
-	}
-	return null;
-	}
+        try
+        {
+            if( window[i] && window[i].instance_id == id )
+            {
+                this.instance_name = i;
+                return i;
+            }
+        }
+        catch(e) { }
+    }
+    return null;
+}
 
 // alert("this="+typeof(this)+" "+this.toString()+" "+this.__proto__.arguments[0].name);
 ra_ActiveSearch.prototype.removePunctuation=function(S)
