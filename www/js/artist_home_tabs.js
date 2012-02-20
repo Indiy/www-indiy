@@ -23,11 +23,44 @@ function setupPageLinks()
         html += "<a href='" + g_siteUrl + "/manage/logout.php'>Logout</a>";
         $("#login_signup").html(html);
     }
+    
+    $('#navigation').mouseover(mouseoverNavigation);
+    $('#navigation').mouseout(mouseoutNavigation);
 }
 
 $(document).ready(setupPageLinks);
 
-function 
+var g_navigationOpen = false;
+function openNavigation()
+{
+    if( !g_navigationOpen )
+    {
+        g_navigationOpen = true;
+        $('#navigation').animate({ top: "0px" }, 300);
+    }
+}
+function closeNavigation();
+{
+    if( g_navigationOpen )
+    {
+        g_navigationOpen = false
+        $('#navigation').animate({ top: "-40px" }, 300);
+    }
+}
+var g_navigationTimer = false;
+function mouseoverNavigation()
+{
+    if( g_navigationTimer !== false )
+    {
+        window.clearTimout(g_navigationTimer);
+        g_navigationTimer = false;
+    }
+    openNavigation();
+}
+function mouseoutNavigation()
+{
+    g_navigationTimer = window.setTimeout(closeNavigation,700);
+}
 
 var g_rightBoxOpen = false;
 function openRightBox()
