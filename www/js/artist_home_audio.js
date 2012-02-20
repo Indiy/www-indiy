@@ -118,7 +118,7 @@ function playerToggle()
 }
 function playerOpen()
 {
-    if( !g_isPlayerHidden )
+    if( !g_isPlayerHidden && !g_isPlayerOpne )
     {
         g_isPlayerOpen = true;
         $('#player').animate({"left": "0px"}, 300);
@@ -127,7 +127,7 @@ function playerOpen()
 function playerClose()
 {
     g_isPlayerOpen = false;
-    if( !g_isPlayerHidden )
+    if( !g_isPlayerHidden && g_isPlayerOpen )
         $('#player').animate({"left": "-450px"}, 300);
 }
 var g_playerCloseTimer = false;
