@@ -1075,7 +1075,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     top: 0px;
     right: 13px;
     width: 175px;
-    background: #252525;
+    background: #111;
     border-bottom: 1px solid #555;
     border-right: 1px solid #555;
     border-left: 1px solid #555;
@@ -1154,7 +1154,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #right_box .buynow_mad_store button {
     padding-top: 3px;
-    padding-bottom: 3px;
+    padding-bottom: 4px;
     padding-right: 20px;
     padding-left: 20px;
     margin-bottom: 10px;
@@ -1178,6 +1178,15 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     margin-right: 5px;
     border: none;
     background-color: transparent;
+}
+#right_box .logo_container {
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+#right_box .logo {
+    max-width: 145px;
+    max-height: 145px;
 }
 #right_box .total_listens {
     padding-bottom: 8px;

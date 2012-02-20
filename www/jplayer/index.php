@@ -495,7 +495,11 @@ String.prototype.format = function() {
                 <div id='buynow_free' class='buynow_free'>
                     <button title='Download for Free'>Free Download</button>
                 </div>
-                            
+                <? if ($artist_logo): ?>
+                    <div class='logo_container'>
+                        <img class='logo' src="/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&w=145" />
+                    </div>
+                <? endif; ?>
                 <? if( $show_listens ): ?>
                     <div class='total_listens'>
                         TOTAL VIEWS:
