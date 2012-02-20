@@ -121,14 +121,14 @@ function playerOpen()
     if( !g_isPlayerHidden )
     {
         g_isPlayerOpen = true;
-        $('#player').animate({"left": "0px"}, "fast");
+        $('#player').animate({"left": "0px"}, 300);
     }
 }
 function playerClose()
 {
     g_isPlayerOpen = false;
     if( !g_isPlayerHidden )
-        $('#player').animate({"left": "-450px"}, "fast");
+        $('#player').animate({"left": "-450px"}, 300);
 }
 var g_playerCloseTimer = false;
 function mouseoverPlayer()
@@ -155,7 +155,7 @@ function playerHide()
             window.clearTimeout(g_playerCloseTimer);
             g_playerCloseTimer = false;
         }
-        $('#player').animate({"left": "-485px"}, "fast");
+        $('#player').animate({"left": "-485px"}, 300);
     }
 }
 function playerUnhide()
@@ -428,7 +428,7 @@ function hidePlaylist()
     if( g_playListShown )
     {
         g_playListShown = false;
-        $('#playlist').animate({"left": "-280px"}, "fast");
+        $('#playlist').animate({"left": "-280px"}, 300);
         $('#song_buy_popup').hide();
     }
 }
@@ -437,7 +437,7 @@ function showPlaylist()
     if( !g_playListShown )
     {
         g_playListShown = true;
-        $('#playlist').animate({"left": "0px"}, "fast");
+        $('#playlist').animate({"left": "0px"}, 300);
     }
 }
 function togglePlaylistVisibility()
