@@ -26,6 +26,7 @@ function setupPageLinks()
     
     $('#navigation').mouseover(mouseoverNavigation);
     $('#navigation').mouseout(mouseoutNavigation);
+    $(window).resize(scrollNavigation);
 }
 
 $(document).ready(setupPageLinks);
@@ -60,6 +61,10 @@ function mouseoverNavigation()
 function mouseoutNavigation()
 {
     g_navigationTimer = window.setTimeout(closeNavigation,700);
+}
+function scrollNavigation()
+{
+    $('#navigation .tab_bar').scrollLeft(200);
 }
 
 var g_rightBoxOpen = false;
