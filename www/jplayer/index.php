@@ -614,30 +614,33 @@ String.prototype.format = function() {
         <div id='loader'><img src="/jplayer/images/ajax-loader.gif" /></div>
         
         <div id='navigation'>
-            <ul>
+            <div class='tab_bar'>
                 <?
                     foreach( $pages_list as $i => $page )
                     {
                         $title = $page['title'];
-                        echo "<li><a onclick='showUserPage($i);'>$title</a></li>\n";
+                        echo "<div class='tab' onclick='showUserPage($i);'>$title</div>\n";
                     }
                 ?>
                 <? if( $artist_videos ): ?>
-                    <li><a class="aVideos">Videos</a></li>
+                    <div class='tab' onclick='showVideos();'>Videos</div>
                 <? endif; ?>             
                 <?=$pagesList;?>
                 <? if( $store_enabled != "" ): ?>
-                    <li><a onclick='showStore();'>Store</a></li>
+                    <div class='tab' onclick='showStore();'>Store</div>
                 <? endif; ?>
                 <? if( $show_comments ): ?>
-                    <li><a onclick='showComments();'>Comment</a></li>
+                    <div class='tab' onclick='showComments();'>Comment</div>
                 <? endif; ?>
                 <? if( $artist_email ): ?>
-                    <li><a onclick='showContact();'>Contact</a></li>
+                    <div class='tab' onclick='showContact();'>Contact</div>
                 <? endif; ?>
-            </ul>
-            <div class="clear"></div>
+            </div>
+            <div class='artist_name_holder'>
+                <div class='artist_name'><?=$artist_name;?></div>
+            </div>
         </div>
+        
         <div id='user_page_wrapper'>
             <div id='user_page'>
                 <div class='close' onclick='closeUserPage();'></div>

@@ -153,35 +153,6 @@ body { background-color: black; font-size: 12px; color: #fff; font-family: Helve
 /* Close the pages */
 
 
-/* NAVIGATION */
-#navigation { 
-    background-color: rgba(0,0,0,0.7); 
-    position: absolute; 
-    top: 0px; 
-    left: 0px; 
-    right: 0px; 
-    height: 30px;
-    padding: 10px 10px auto auto; 
-    overflow: hidden;
-    z-index: 1;
-}
-#navigation ul { list-style: none; }
-#navigation ul li { padding: 0px; margin: 0px 5px; float: left; }
-#navigation ul li a { 
-    padding: 5px; 
-    font-size: 18px;
-    font-family: Helvetica, Arial, sans-serif; 
-    font-weight: normal; 
-    text-transform: uppercase; 
-    color: #fff; 
-    text-decoration: none; 
-    display: block; 
-    cursor: pointer;
-}
-#navigation ul li a:hover { 
-    color: #ccc; 
-}
-
 /* CONTROLS */
 ul { padding: 0px; margin: 0px; }
 ul li { padding: 0px; margin: 0px; }
@@ -2121,7 +2092,55 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     color: white;
 }
 
-
+/* NAVIGATION */
+#navigation { 
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    right: 0px; 
+    height: 80px;
+    overflow: hidden;
+    z-index: 1;
+}
+#navifation .tab_bar {
+    height: 40px;
+    background-color: rgba(0,0,0,0.7);
+    text-align: center;
+}
+#navigation .tab { 
+    padding: 5px; 
+    color: #fff; 
+    font-size: 18px;
+    font-family: Helvetica, Arial, sans-serif; 
+    font-weight: normal; 
+    text-transform: uppercase; 
+    text-decoration: none; 
+    display: inline-block; 
+    cursor: pointer;
+}
+#navigation .tab:hover { 
+    color: #ccc; 
+}
+#navigation .artist_name_holder {
+    height: 40px;
+    text-align: center;
+}
+#navigation .artist_name {
+    height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: inline-block;
+    color: #fff; 
+    font-size: 20px;
+    font-family: Helvetica, Arial, sans-serif; 
+    font-weight: normal; 
+    text-transform: uppercase;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(0,0,0,0.7);
+}
 
 
 

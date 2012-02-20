@@ -3,63 +3,12 @@ var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+
 
 function setupPageLinks()
 {
-    $(".dragger_container").fadeOut();
-    
-    // Pauses the audio player when a user opens a video                
-    $("div.playlist_video img").click(function(event){
-        $("#jquery_jplayer").jPlayer("pause");
-    });
-
     $('.aClose').hide();
     $('.videos').hide();
     
     /* Close */
     $('.aClose').click(function() {
         fadeAllPageElements();
-    });
-
-    /* Videos */
-    $('.aVideos').click(function() {
-        fadeAllPageElements();
-        setTimeout(function(){ 
-            $('.videos').fadeIn();
-            $('.aClose').fadeIn();
-        }, 450);
-    });         
-    
-    /* Playlist Controller */
-    $("#playlistaction").click(function(){
-        $(this).parent("pauseOthers");
-        $(this).parent(".jp-playlist").animate({"left": "0px"}, "fast");
-        $(this).hide();
-        $(this).parent(".jp-playlist").children("#playlisthide").show();
-    });
-    $("#playlisthide").click(function(){
-        hidePlaylist();
-    });
-    
-    $("a.jp-previous").mouseover(function(event){
-        $(this).animate({
-            left: "0px"
-        }, 250);                
-    });
-    
-    $("a.jp-previous").mouseout(function(event){
-        $(this).animate({
-            left: "-169px"
-        }, 250);
-    }); 
-    
-    $("a.jp-next").mouseover(function(event){
-        $(this).animate({
-            right: "0px"
-        }, 250);    
-    });
-    
-    $("a.jp-next").mouseout(function(event){
-        $(this).animate({
-            right: "-138px"
-        }, 250);
     });
     
     $('#right_box').mouseover(mouseoverRightBox);
@@ -176,6 +125,11 @@ function showContact()
 function closeContact()
 {
     fadeAllPageElements();
+}
+function showVideos()
+{
+    fadeAllPageElements();
+    window.setTimeout(function() { $('.videos').fadeIn(); $('.aClose').fadeIn(); },300);
 }
 
 function sendContactForm()
