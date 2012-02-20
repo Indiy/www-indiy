@@ -2092,7 +2092,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 
 #prev_track {
     position: absolute;
-    top: 360px;
+    top: 390px;
     left: 0px;
     width: 200px;
     height: 71px;
@@ -2103,10 +2103,11 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-family: Helvetica, Arial, sans-serif;
     text-decoration: none;
     z-index: 22;
+    cursor: pointer;
 }
 #next_track {
     position: absolute;
-    top: 360px;
+    top: 390px;
     right: 0px;
     width: 200px;
     height: 71px;
@@ -2117,6 +2118,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-family: Helvetica, Arial, sans-serif;
     text-decoration: none;
     z-index: 22;
+    color: white;
 }
 
 

@@ -43,8 +43,8 @@ function setupAudioPlayer()
     
     if( IS_IPAD )
     {
-        $('#jplayer_previous').hide();
-        $('#jplayer_next').hide();
+        $('#prev_track').hide();
+        $('#next_track').hide();
     }
     
     $('#playlist').mouseover(mouseoverPlaylist);
@@ -55,6 +55,12 @@ function setupAudioPlayer()
     
     $('#player .seek_bar').click(playerSeek);
     $('#player .volume').click(playerVolume);
+    
+    $('#prev_track').mouseover(function(){ $(this).animate({left: "0px"}, 250);});
+    $('#prev_track').mouseout(function(){ $(this).animate({left: "-169px"}, 250);});
+
+    $('#next_track').mouseover(function(){ $(this).animate({right: "0px"}, 250);});
+    $('#next_track').mouseout(function(){ $(this).animate({right: "-138px"}, 250);});
     
     window.setTimeout(preloadImages,1000);
 }
