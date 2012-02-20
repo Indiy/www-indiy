@@ -1920,7 +1920,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #player {
     position: absolute;
     top: 60px;
-    left: -454px;
+    left: -462px;
     width: 490px;
     height: 60p;
     border-top-right-radius: 8px;
@@ -1983,7 +1983,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     float: left;
     height: 30px;
     width: 16px;
-    margin-top: 18px;
+    margin-top: 19px;
     margin-left: 8px;
     margin-right: 12px;
     background: url('/images/retracting_player_buttons.png') -32px -18px no-repeat;
@@ -1996,7 +1996,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     float: left;
     height: 40px;
     width: 22px;
-    margin-top: 8px;
+    margin-top: 9px;
     background: url('/images/retracting_player_buttons.png') -74px -190px no-repeat;
     cursor: pointer;
 }
@@ -2007,7 +2007,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     float: left;
     height: 40px;
     width: 22px;
-    margin-top: 8px;
+    margin-top: 9px;
     background: url('/images/retracting_player_buttons.png') -77px -8px no-repeat;
     cursor: pointer;
 }
@@ -2018,7 +2018,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     float: left;
     height: 30px;
     width: 16px;
-    margin-top: 18px;
+    margin-top: 19px;
     margin-left: 10px;
     margin-right: 8px;
     background: url('/images/retracting_player_buttons.png') -128px -18px no-repeat;
