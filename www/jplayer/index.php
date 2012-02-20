@@ -482,9 +482,7 @@ String.prototype.format = function() {
                 </div>
                 
                 <div id='buynow_mad_store' class='buynow_mad_store'>
-                    <button title='Buy on MyArtistDNA Store'>
-                        Add to Cart
-                    </button>
+                    <button title='Buy on MyArtistDNA Store'>+ Add to Cart</button>
                 </div>
                 <div class='amazon_itunes_buttons'>
                     <button id='buynow_amazon' title='Buy from Amazon'>
