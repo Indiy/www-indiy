@@ -2108,12 +2108,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #navigation .tab_bar {
     height: 40px;
-    padding-right: 200px;
-    padding-left: 200px;
     text-align: center;
     white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 #navigation .tab { 
     display: inline-block; 
@@ -2135,6 +2132,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #navigation .tab:hover { 
     color: #ccc; 
+}
+#navigation .tab_spacer {
+    display: inline-block; 
+    width: 200px;
 }
 #navigation .artist_name_holder {
     height: 40px;
