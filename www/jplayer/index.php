@@ -833,6 +833,11 @@ String.prototype.format = function() {
                 <img src='/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&w=50'></img>
             </div>
             <div class='seperator'></div>
+            <div class='volume_icon'></div>
+            <div class='volume'>
+                <div class='current'></div>
+            </div>
+            <div class='seperator'></div>
             <div class='prev_track' onclick='playListPrev();'></div>
             <div class='play_pause' onclick='playerPlayPause();'></div>
             <div class='next_track' onclick='playListNext();'></div>
