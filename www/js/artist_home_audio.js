@@ -126,9 +126,11 @@ function playerOpen()
 }
 function playerClose()
 {
-    g_isPlayerOpen = false;
     if( !g_isPlayerHidden && g_isPlayerOpen )
+    {
+        g_isPlayerOpen = false;
         $('#player').animate({"left": "-450px"}, 300);
+    }
 }
 var g_playerCloseTimer = false;
 function mouseoverPlayer()
