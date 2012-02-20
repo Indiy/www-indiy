@@ -2053,6 +2053,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     margin-top: 4px;
     border: 1px solid #bababa;
     box-shadow: 0px 1px 0px 0px #EEE;
+    cursor: pointer;
 }
 #player .seek_bar .current {
     position: absolute;
@@ -2063,6 +2064,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background-color: black;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
+    cursor: pointer;
 }
 #player .time {
     float: right;
