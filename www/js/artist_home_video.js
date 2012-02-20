@@ -51,6 +51,7 @@ function showVideoRow(page)
 
 function showVideo(n)
 {
+    $('#jquery_jplayer').jPlayer("pause");
     $('#video_player').show();
 
     var h = $('#video_player').height();
