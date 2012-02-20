@@ -80,25 +80,6 @@ body { background-color: black; font-size: 12px; color: #fff; font-family: Helve
     width: 100%;
 }
 
-#login_signup, #login_signup button 
-{ 
-    width: 100%;
-    font-size: 13px;
-    font-weight: bold;
-    text-align: center;
-    padding-bottom: 8px; 
-    border: none; 
-    cursor: pointer; 
-    color: white; 
-    background-color: transparent; 
-} 
-
-#login_signup a 
-{ 
-    text-decoration: none;
-    color: white;
-}
-
 /* PAGE */
 .anchor { display: block; width: 100px; height: 1px; text-indent: -9999px; }
 .space { width: 100%; height: 70px; }
@@ -1185,13 +1166,15 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     box-shadow: 1px 1px 4px 1px;
 }
 #right_box .amazon_itunes_buttons {
-    margin-bottom: 10px;
     text-align: center;
 }
 #right_box .amazon_itunes_buttons button {
+    margin-top: 5px;
+    margin-bottom: 10px;
     margin-left: 5px;
     margin-right: 5px;
     border: none;
+    background-color: transparent;
 }
 #right_box .total_listens {
     padding-bottom: 4px;

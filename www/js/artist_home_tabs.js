@@ -20,7 +20,7 @@ function setupPageLinks()
         html += g_userName;
         html += "</a>";
         html += " | ";
-        html += "<a href='" + g_siteUrl + "/manage/logout.php'>Logout</a>";
+        html += "<a href='" + g_siteUrl + "/manage/logout.php'>LOGOUT</a>";
         $("#login_signup").html(html);
     }
     
