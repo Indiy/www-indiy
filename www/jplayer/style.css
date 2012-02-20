@@ -2029,7 +2029,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #player .song_track {
     float: left;
     height: 60px;
-    width: 242px;
+    width: 250px;
     padding-left: 10px;
 }
 #player .artist_song {
@@ -2045,7 +2045,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #player .seek_bar {
     position: relative;
     float: left;
-    width: 178px;
+    width: 168px;
     height: 5px;
     background-color: #d7d7d7;
     border-radius: 3px;
@@ -2065,12 +2065,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #player .time {
     float: right;
-    width: 70px;
+    width: 60px;
     height: 15px;
     padding-top: 0px;
     text-align: right;
     color: #555;
-    font-size: 12px;
+    font-size: 11px;
     font-family: Helvetica,sans-serif;
 }
 #player .open_close_button {
