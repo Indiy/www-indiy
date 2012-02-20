@@ -447,16 +447,64 @@ String.prototype.format = function() {
             <div id='player_body' class='player_body'></div>
         </div>
         <div id='right_box'>
-            <div id="login_signup" class='login_signup'><button onclick='showLogin();'>Log in | Sign Up</button></div>
-            <div class='logo_box'>
+            <div id="login_signup" class='login_signup'>
+                <button onclick='showSignup();'>SIGN UP</button>
+                 | 
+                <button onclick='showLogin();'>LOG IN</button>
+            </div>
+            <div class='label_name'>
+                Artist:
+                <span><?=$artist_name;?></span>
+            </div>
+            <div class='label_name'>
+                Song:
+                <span id='current_track_name'></span>
+            </div>
+            <div class='expand_box'>
+                <!--
                 <div class='logo_box_top_spacer'></div>
-            <? if ($artist_logo) { ?>
-                <img class='logo' src="/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&w=145" />
-            <? } ?>
-                <div class='total_listens'>
-                    Total Views: 
-                    <span id='total_listens_val'><?=$total_listens;?></span>
+                <? if ($artist_logo): ?>
+                    <img class='logo' src="/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&w=145" />
+                <? endif; ?>
+                <div class=''>
                 </div>
+                -->
+                
+                <? if( $show_listens ): ?>
+                    <div class='label_name'>
+                        Views:
+                        <span id='current_track_listens'><?=$first_track_listens;?></span>
+                    </div>
+                <? endif; ?>
+                <div class='vote_buttons'>
+                    <button class='vote_up' title='Thumbs Up Song' onclick='songVote(1);'></button>
+                    <button class='vote_down'  title='Thumbs Down Song' onclick='songVote(0);'></button>
+                </div>
+                
+                <div id='buynow_mad_store' class='buynow_mad_store'>
+                    <button title='Buy on MyArtistDNA Store'>
+                        Add to Cart
+                    </button>
+                </div>
+                <div class='amazon_itunes_buttons'>
+                    <button id='buynow_amazon' title='Buy from Amazon'>
+                        <img src='/images/buynow_amazon.png'/>
+                    </button>
+                    </div>
+                    <button id='buynow_itunes' title='Download on iTunes'>
+                        <img src='/images/buynow_itunes.jpg'/>
+                    </button>
+                </div>
+                <div id='buynow_free' class='buynow_free'>
+                    <button title='Download for Free'>Free Download</button>
+                </div>
+                            
+                <? if( $show_listens ): ?>
+                    <div class='total_listens'>
+                        TOTAL VIEWS:
+                        <span id='total_listens_val'><?=$total_listens;?></span>
+                    </div>
+                <? endif; ?>
                 <div class='logo_box_bottom_spacer'></div>
             </div>
             <div class='up_down_arrow' onclick='toggleRightBox();'></div>

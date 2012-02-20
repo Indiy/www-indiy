@@ -1108,7 +1108,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 100%;
     padding-top: 10px;
     margin-bottom: 6px;
-    color: #DDD;
+    color: #EEE;
     text-align: center;
     text-decoration: none;
     font-family: Helvetica, sans-serif;
@@ -1116,17 +1116,90 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-weight: normal;
     cursor: pointer;
 }
-#right_box .login_signup a, #right_box .login_signup button {
-    color: #DDD;
-    text-align: center;
+#right_box .login_signup button {
+    color: #EEE;
     text-decoration: none;
     font-family: Helvetica, sans-serif;
     font-size: 12px;
     font-weight: normal;
 }
-#right_box .login_signup a:hover, #right_box .login_signup button:hover {
+#right_box .login_signup button:hover {
     color: #777;
 }
+#right_box .label_name {
+    color: #888;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+#right_box .label_name span {
+    color: white;
+}
+#right_box .vote_buttons {
+    text-align: center;
+    margin-bottom: 10px;
+}
+#right_box .vote_buttons .vote_up {
+    height: 19px;
+    width: 30px;
+    background: #333 url('/images/thumbs_up.png') no-repeat 10px 3px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+#right_box .vote_buttons .vote_up:hover {
+    background: #CCC url('/images/thumbs_up.png') no-repeat -11px 3px;
+}
+#right_box .vote_buttons .vote_down {
+    height: 19px;
+    width: 30px;
+    margin-left: 7px;
+    background: #333 url('/images/thumbs_down.png') no-repeat 10px 4px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+#right_box .vote_buttons .vote_down:hover {
+    background: #CCC url('/images/thumbs_down.png') no-repeat -11px 4px;
+}
+#right_box .buynow_mad_store {
+    text-align: center;
+}
+#right_box .buynow_mad_store button {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;    
+    background-color: #b80f08;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 4px 1px;
+}
+#right_box .amazon_itunes_buttons {
+    margin-bottom: 10px;
+    text-align: center;
+}
+#right_box .amazon_itunes_buttons {
+    margin-left: 5px;
+    margin-right: 5px;
+    border: none;
+}
+#right_box .total_listens {
+    padding-bottom: 4px;
+    text-align: center;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+/*
 #right_box .logo_box {
     padding-left: 15px;
     padding-right: 15px;
@@ -1136,17 +1209,13 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #right_box .logo_box_top_spacer {
     height: 10px;
 }
-#right_box .total_listens {
-    padding-top: 8px;
-    padding-bottom: 4px;
-    text-align: center;
-}
 #right_box .logo_box_bottom_spacer {
     height: 6px;
 }
 #right_box .logo {
     width: 100%;
 }
+*/
 #right_box .up_down_arrow {
     height: 18px;
     margin-top: 4px;
