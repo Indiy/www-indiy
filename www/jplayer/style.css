@@ -1088,21 +1088,23 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #right_box .login_signup {
     width: 100%;
     padding-top: 10px;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     color: #EEE;
     text-align: center;
     text-decoration: none;
     font-family: Helvetica, sans-serif;
-    font-size: 12px;
-    font-weight: normal;
-    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
 }
 #right_box .login_signup button {
     color: #EEE;
     text-decoration: none;
     font-family: Helvetica, sans-serif;
-    font-size: 12px;
-    font-weight: normal;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 #right_box .login_signup button:hover {
     color: #777;
@@ -1159,11 +1161,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     color: white;
     font-family: Helvetica, sans-serif;
     font-size: 12px;
-    font-weight: bold;    
+    font-weight: bold;
+    text-shadow: 0px -1px black;
     background-color: #b80f08;
     border-radius: 5px;
     border: none;
-    box-shadow: 1px 1px 4px 1px;
+    box-shadow: -1px -1px 7px -1px #200 inset;
 }
 #right_box .amazon_itunes_buttons {
     text-align: center;
@@ -1177,7 +1180,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background-color: transparent;
 }
 #right_box .total_listens {
-    padding-bottom: 4px;
+    padding-bottom: 8px;
     text-align: center;
     color: white;
     font-family: Helvetica, sans-serif;
