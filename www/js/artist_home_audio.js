@@ -118,7 +118,7 @@ function playerToggle()
 }
 function playerOpen()
 {
-    if( !g_isPlayerHidden && !g_isPlayerOpne )
+    if( !g_isPlayerHidden && !g_isPlayerOpen )
     {
         g_isPlayerOpen = true;
         $('#player').animate({"left": "0px"}, 300);
