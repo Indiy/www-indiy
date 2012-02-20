@@ -27,8 +27,9 @@ function setupPageLinks()
 
 $(document).ready(setupPageLinks);
 
-var g_rightBoxOpen = false;
+function 
 
+var g_rightBoxOpen = false;
 function openRightBox()
 {
     if( !g_rightBoxOpen )

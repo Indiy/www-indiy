@@ -2104,15 +2104,18 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #navigation .tab_bar {
     height: 40px;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.8);
     text-align: center;
 }
 #navigation .tab { 
-    padding: 5px; 
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 0px;
     color: #fff; 
-    font-size: 18px;
+    font-size: 17px;
     font-family: Helvetica, Arial, sans-serif; 
-    font-weight: normal; 
+    font-weight: bold; 
     text-transform: uppercase; 
     text-decoration: none; 
     display: inline-block; 
@@ -2135,11 +2138,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     color: #fff; 
     font-size: 20px;
     font-family: Helvetica, Arial, sans-serif; 
-    font-weight: normal; 
+    font-weight: bold; 
     text-transform: uppercase;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.8);
+    cursor: pointer;
 }
 
 
