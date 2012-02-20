@@ -99,7 +99,7 @@ function jplayerEnded()
 }
 function jplayerVolume(event)
 {
-    var vol = event.jPlayer.status.volume;
+    var vol = event.jPlayer.options.volume;
     $('#player .volume .current').css('height',vol * 100 + "%");
 }
 function imageChange(event, index, elem)
