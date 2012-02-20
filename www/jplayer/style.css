@@ -1956,6 +1956,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 20px;
     height: 20px;
     margin-top: 20px;
+    background: url('/images/retracting_player_buttons.png') -127px -200px no-repeat;
 }
 #player .volume {
     float: left;
@@ -2005,7 +2006,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #player .play_pause {
     float: left;
     height: 40px;
-    width: 22px;
+    width: 16px;
     margin-top: 8px;
     background: url('/images/retracting_player_buttons.png') -77px -8px no-repeat;
     cursor: pointer;
