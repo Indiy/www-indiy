@@ -165,6 +165,7 @@ function playerUnhide()
     if( g_isPlayerHidden )
     {
         g_isPlayerHidden = false;
+        g_isPlayerOpen = true;
         playerClose();
     }
 }
