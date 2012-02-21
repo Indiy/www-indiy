@@ -363,7 +363,7 @@ function playListChange( index )
         }
         if( mystore_product_id && g_paypalEmail.length > 0 )
         {
-            $('#buynow_mad_store a').attr("oncl",'javascript:buySong(' + mystore_product_id + ');');
+            $('#buynow_mad_store a').attr("href",'javascript:buySong(' + mystore_product_id + ');');
             $('#buynow_mad_store').show();
         }
         else
