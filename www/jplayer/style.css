@@ -1124,6 +1124,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #right_box .label_name span {
     color: white;
 }
+#right_box .expand_box {
+    overflow: hidden;
+    height: 0px;
+}
 #right_box .vote_buttons {
     text-align: center;
     margin-top: 9px;

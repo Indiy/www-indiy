@@ -74,7 +74,8 @@ function openRightBox()
     if( !g_rightBoxOpen )
     {
         g_rightBoxOpen = true;
-        $('#right_box .logo_box').animate({ height: "190px" }, 300);
+        var height = $('#right_box .expand_box')[0].scrollHeight;
+        $('#right_box .expand_box').animate({ height: height + "px" }, 300);
         $('#right_box .up_down_arrow').addClass('open');
     }
 }
@@ -83,7 +84,7 @@ function closeRightBox()
     if( g_rightBoxOpen )
     {
         g_rightBoxOpen = false;
-        $('#right_box .logo_box').animate({ height: "10px" }, 300);
+        $('#right_box .expand_box').animate({ height: "0px" }, 300);
         $('#right_box .up_down_arrow').removeClass('open');
     }
 }
