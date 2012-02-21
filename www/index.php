@@ -74,7 +74,7 @@
         }
         if( strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
         {
-            include 'landing.html';
+            include 'landing.php';
         }
         else
         {

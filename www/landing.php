@@ -1,3 +1,14 @@
+<?
+
+$value_user_name = '';
+if( strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
+{
+    $email = $_COOKIE['LOGIN_EMAIL'];
+    $value_user_name = " value='$email' ";
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -417,7 +428,7 @@ $(document).ready(function()
                         <div class='email_header'>
                             Email Address
                         </div>
-                        <input id='login_username' type='text'/>
+                        <input id='login_username' type='text' <?=$value_user_name;?>/>
                         <div class='password_header'>
                             Password
                         </div>
