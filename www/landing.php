@@ -424,15 +424,15 @@ $(document).ready(function()
                     <div class="login_header">
                         LOG IN TO MYARTISTDNA
                     </div>
-                    <div>
+                    <div id='login_dialog'>
                         <div class='email_header'>
                             Email Address
                         </div>
-                        <input id='login_username' type='text' <?=$value_user_name;?>/>
+                        <input id='username' name='username' type='text' <?=$value_user_name;?>/>
                         <div class='password_header'>
                             Password
                         </div>
-                        <input id='login_password' type='password'/>
+                        <input id='password' name='password' type='password'/>
                         <div id='validate-login' class='validate_login'>
                         </div>
                         <div class='forgot_login_box'>
