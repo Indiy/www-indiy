@@ -1096,7 +1096,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-size: 11px;
     font-weight: bold;
 }
-#right_box .login_signup button {
+#right_box .login_signup button,#right_box .login_signup a {
     color: #EEE;
     text-decoration: none;
     font-family: Helvetica, sans-serif;
@@ -1106,7 +1106,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border: none;
     cursor: pointer;
 }
-#right_box .login_signup button:hover {
+#right_box .login_signup button:hover,#right_box .login_signup a:hover {
     color: #777;
 }
 #right_box .login_sep {
