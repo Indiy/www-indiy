@@ -317,7 +317,7 @@ $(document).ready(showFirstInstruction);
                 
                 if( mysql_num_rows($result_artistProduct) == 0 && !$paypalEmail )
                 {
-                    echo "<div>Add a payment method. ";
+                    echo "<div class='need_paypal'>Add a payment method. ";
                     echo "<a href='store_settings.php?artist_id=$artistID' rel='facebox[.bolder]'>Monetize Settings</a>";
                     echo "</div>\n";
                 }
