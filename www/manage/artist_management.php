@@ -23,6 +23,7 @@
             exit();
         }
     }
+    setcookie('LOGIN_EMAIL',$_SESSION['sess_userEmail'], time() + 30*24*60*60);
     
     $MAX_TABS = 5;
 	
