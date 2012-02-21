@@ -452,6 +452,7 @@ String.prototype.format = function() {
                  | 
                 <button onclick='showLogin();'>LOG IN</button>
             </div>
+            <div class='login_sep'></div>
             <!--
             <div class='label_name'>
                 Artist:

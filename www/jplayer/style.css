@@ -1109,6 +1109,15 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #right_box .login_signup button:hover {
     color: #777;
 }
+#right_box .login_sep {
+    height: 1px;
+    width: 140px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    background-color: #ccc;
+}
 #right_box .label_name {
     margin-left: 12px;
     margin-bottom: 3px;
