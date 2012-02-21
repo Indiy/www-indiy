@@ -1120,6 +1120,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-weight: normal;
     white-space: nowrap;
     text-overflow: ellipsis;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 #right_box .label_name span {
     color: white;
