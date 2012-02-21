@@ -1167,15 +1167,15 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #right_box .vote_buttons .vote_down:hover {
     background: #CCC url('/images/thumbs_down.png') no-repeat -11px 4px;
 }
-#right_box .buynow_mad_store {
+#right_box .buynow_mad_store div {
     text-align: center;
+    margin-bottom: 10px;
 }
 #right_box .buynow_mad_store a {
     padding-top: 3px;
     padding-bottom: 4px;
     padding-right: 20px;
     padding-left: 20px;
-    margin-bottom: 10px;
     color: white;
     font-family: Helvetica, sans-serif;
     font-size: 12px;
@@ -1195,7 +1195,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #right_box .amazon_itunes_buttons div {
     display: inline-block;
-    margin-top: 5px;
+    margin-top: 15px;
     margin-bottom: 10px;
     margin-left: 5px;
     margin-right: 5px;
@@ -1205,15 +1205,15 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #right_box .amazon_itunes_buttons div a {
     cursor: pointer;
 }
-#right_box .buynow_free {
+#right_box .buynow_free div {
     text-align: center;
+    margin-bottom: 10px;
 }
 #right_box .buynow_free a {
     padding-top: 5px;
     padding-bottom: 3px;
     padding-right: 20px;
     padding-left: 20px;
-    margin-bottom: 10px;
     color: white;
     font-family: Helvetica, sans-serif;
     font-size: 12px;
