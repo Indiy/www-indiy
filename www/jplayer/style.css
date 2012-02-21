@@ -1088,7 +1088,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #right_box .login_signup {
     width: 100%;
     padding-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     color: #EEE;
     text-align: center;
     text-decoration: none;
@@ -1114,9 +1114,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 140px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    background-color: #ccc;
+    margin-bottom: 6px;
+    background-color: #555;
 }
 #right_box .label_name {
     margin-left: 12px;
