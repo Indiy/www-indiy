@@ -94,8 +94,9 @@
             ?>
         </div>
         <div class='input_container'>
-            <div class='line_label'>Facebook Page URL <span id='tip_fb_page_url' class='tooltip'>(?)</span></div>
-            <input id='fb_page_url' type="text" name="name" value="<?=$fb_page_url;?>" class='line_text' />
+            <div class='line_label'>Facebook Fan Page URL <span id='tip_fb_page_url' class='tooltip'>(?)</span></div>
+            <input id='fb_page_url' class='line_text' type="text" name="name" value="<?=$fb_page_url;?>" 
+                    placeholder='You can only embed a Facebook Fan Page not a Profile Page!'/>
         </div>
         <div class='input_container'>
             <div class='left_label'>Facebook Update <span id='tip_fb_setting' class='tooltip'>(?)</span></div>
