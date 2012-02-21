@@ -98,6 +98,9 @@
     
     if( $record_artistDetail['fb_access_token'] && $record_artistDetail['facebook'] )
         $facebook = TRUE;
+        
+    $store_check = mf(mq("SELECT * FROM `[p]musicplayer_ecommerce` WHERE `userid`='{$artist_id}' LIMIT 1"));
+    $paypalEmail = $store_check["paypal"];
 
     require_once 'header.php';
 ?>
@@ -311,6 +314,14 @@ $(document).ready(showFirstInstruction);
             <ul class="products_sortable">
            <?php
 				$count = 1;
+                
+                if( mysql_num_rows($result_artistProduct) == 0 && !$paypalEmail )
+                {
+                    echo "<div>Add a payment method. ";
+                    echo "<a href='store_settings.php?artist_id=$artistID' rel='facebox[.bolder]'>Monetize Settings</a>";
+                    echo "</div>\n";
+                }
+                
 				while($record_artistProduct = mysql_fetch_array($result_artistProduct))
 				{
                     $product_id = $record_artistProduct['id'];
