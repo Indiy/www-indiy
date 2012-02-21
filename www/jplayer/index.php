@@ -485,18 +485,18 @@ String.prototype.format = function() {
                 </div>
                 
                 <div id='buynow_mad_store' class='buynow_mad_store'>
-                    <button title='Buy on MyArtistDNA Store'>+ Add to Cart</button>
+                    <a title='Buy on MyArtistDNA Store'>+ Add to Cart</a>
                 </div>
                 <div class='amazon_itunes_buttons'>
-                    <button id='buynow_amazon' title='Buy from Amazon'>
+                    <a id='buynow_amazon' title='Buy from Amazon'>
                         <img src='/images/buynow_amazon.png'/>
                     </button>
-                    <button id='buynow_itunes' title='Download on iTunes'>
+                    <a id='buynow_itunes' title='Download on iTunes'>
                         <img src='/images/buynow_itunes.jpg'/>
-                    </button>
+                    </an>
                 </div>
                 <div id='buynow_free' class='buynow_free'>
-                    <button title='Download for Free'>Free Download</button>
+                    <a title='Download for Free'>Free Download</a>
                 </div>
                 <? if ($artist_logo): ?>
                     <div class='logo_container'>
