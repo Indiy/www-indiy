@@ -74,7 +74,7 @@ $(document).ready(function(){
 </section>
 <section id="headerinner">
 <header>
-    <h1><a href="/"><img src="images/MYARTISTDNA.png" alt="MYARTISTDNA"></a></h1>
+    <h1><a href="/home.php"><img src="images/MYARTISTDNA.png" alt="MYARTISTDNA"></a></h1>
 	<nav>
     <ul>
         <?php 
