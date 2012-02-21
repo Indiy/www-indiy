@@ -460,7 +460,7 @@ String.prototype.format = function() {
             </div>
             -->
             <div class='label_name'>
-                Song:
+                Title:
                 <span id='current_track_name'></span>
             </div>
             <div class='expand_box'>
