@@ -1193,13 +1193,17 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #right_box .amazon_itunes_buttons {
     text-align: center;
 }
-#right_box .amazon_itunes_buttons a {
+#right_box .amazon_itunes_buttons div {
+    display: inline-block;
     margin-top: 5px;
     margin-bottom: 10px;
     margin-left: 5px;
     margin-right: 5px;
     border: none;
     background-color: transparent;
+}
+#right_box .amazon_itunes_buttons div a {
+    cursor: pointer;
 }
 #right_box .buynow_free {
     text-align: center;

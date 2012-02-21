@@ -488,12 +488,16 @@ String.prototype.format = function() {
                     <a title='Buy on MyArtistDNA Store'>+ Add to Cart</a>
                 </div>
                 <div class='amazon_itunes_buttons'>
-                    <a id='buynow_amazon' title='Buy from Amazon'>
-                        <img src='/images/buynow_amazon.png'/>
-                    </button>
-                    <a id='buynow_itunes' title='Download on iTunes'>
-                        <img src='/images/buynow_itunes.jpg'/>
-                    </an>
+                    <div id='buynow_amazon'>
+                        <a  title='Buy from Amazon'>
+                            <img src='/images/buynow_amazon.png'/>
+                        </a>
+                    </div>
+                    <div id='buynow_itunes'>
+                        <a title='Download on iTunes'>
+                            <img src='/images/buynow_itunes.jpg'/>
+                        </a>
+                    </div>
                 </div>
                 <div id='buynow_free' class='buynow_free'>
                     <a title='Download for Free'>Free Download</a>
