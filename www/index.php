@@ -53,7 +53,32 @@
     }
     else
     {
-        include 'home.php';
-        //include 'landing.html';
+        if( $_SESSION['sess_userId'] > 0 )
+        {
+            $user_id =  $_SESSION['sess_userId'];
+            if( $_SESSION['sess_userType'] == 'ARTIST' )
+            {
+                header("Location: /manage/artist_management.php?userId=$user_id");
+                die();
+            }
+            else if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' )
+            {
+                header("Location: /manage/dashboard.php");
+                die();
+            }
+            else if( $_SESSION['sess_userType'] == 'LABEL' )
+            {
+                header("Location: /manage/dashboard.php");
+                die();
+            }
+        }
+        if( strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
+        {
+            include 'landing.html';
+        }
+        else
+        {
+            include 'home.php';
+        }
     }
 ?>
