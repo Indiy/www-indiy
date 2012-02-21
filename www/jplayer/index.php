@@ -485,7 +485,9 @@ String.prototype.format = function() {
                 </div>
                 
                 <div id='buynow_mad_store' class='buynow_mad_store'>
-                    <a title='Buy on MyArtistDNA Store'>+ Add to Cart</a>
+                    <div>
+                        <a title='Buy on MyArtistDNA Store'>+ Add to Cart</a>
+                    </div>
                 </div>
                 <div class='amazon_itunes_buttons'>
                     <div id='buynow_amazon'>
@@ -500,7 +502,9 @@ String.prototype.format = function() {
                     </div>
                 </div>
                 <div id='buynow_free' class='buynow_free'>
-                    <a title='Download for Free'>Free Download</a>
+                    <div>
+                        <a title='Download for Free'>Free Download</a>
+                    </div>
                 </div>
                 <? if ($artist_logo): ?>
                     <div class='logo_container'>
