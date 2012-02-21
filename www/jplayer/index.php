@@ -453,11 +453,9 @@ String.prototype.format = function() {
                 <button onclick='showLogin();'>LOG IN</button>
             </div>
             <div class='label_name'>
-                Artist:
                 <span><?=$artist_name;?></span>
             </div>
             <div class='label_name'>
-                Song:
                 <span id='current_track_name'></span>
             </div>
             <div class='expand_box'>
