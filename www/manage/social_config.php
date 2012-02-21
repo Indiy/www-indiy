@@ -54,8 +54,32 @@
 ?>
 
 <script type="text/javascript"> 
-    var g_artistId = '<?=$artist_id;?>';
-    $(document).ready(setupQuestionTolltips);
+var g_artistId = '<?=$artist_id;?>';
+$(document).ready(setupQuestionTolltips);
+
+var FB_PLACEHOLDER = "You can only embed a Facebook Fan Page not a Profile Page!";
+
+function blurFBPageURL(field)
+{
+    var val = $('#fb_page_url').val()
+    if( val == '' )
+    {
+        $('#fb_page_url').val(FB_PLACEHOLDER);
+        $('#fb_page_url').addClass('placeholder');
+    }
+}
+function focusFBPageURL(field)
+{
+    var val = $('#fb_page_url').val();
+    if( val == FB_PLACEHOLDER )
+    {
+        $('#fb_page_url').val('');
+    }
+    $('#fb_page_url').removeClass('placeholder');
+}
+
+$(document).ready(blurFBPageURL);
+    
 </script>
 
 <div id="popup">
@@ -96,7 +120,7 @@
         <div class='input_container'>
             <div class='line_label'>Facebook Fan Page URL <span id='tip_fb_page_url' class='tooltip'>(?)</span></div>
             <input id='fb_page_url' class='line_text' type="text" name="name" value="<?=$fb_page_url;?>" 
-                    placeholder='You can only embed a Facebook Fan Page not a Profile Page!'/>
+                    onfocus="focusFBPageURL();" onblur="blurFBPageURL();"/>
         </div>
         <div class='input_container'>
             <div class='left_label'>Facebook Update <span id='tip_fb_setting' class='tooltip'>(?)</span></div>
