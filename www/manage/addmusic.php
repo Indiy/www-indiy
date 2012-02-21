@@ -191,11 +191,11 @@
 	}
     $audio_bgcolor = '000000';
     $bg_style = 'STRETCH';
+    $artistid = $_REQUEST['artist_id'];
 	
 	if ($_GET["id"] != "") {
-		$artistid=$_REQUEST['artist_id'];
-		$row = mf(mq("select * from {$database} where id='{$_GET["id"]}' and artistid='{$artistid}'"));
-		$audio_id = $row["id"];
+		$audio_id = $_GET["id"];
+		$row = mf(mq("select * from {$database} where id='$audio_id' and artistid='$artistid'"));
 		$audio_name = $row["name"];
 		$audio_logo = $row["image"];
 		$audio_bgcolor = $row["bgcolor"];
@@ -246,6 +246,14 @@
         $needs_image = 'false';
     else
         $needs_image = 'true';
+        
+    if($mad_store)
+        $mad_store_checked = '$checked';
+    else
+        $mad_store_checked = '';
+        
+    $store_check = mf(mq("SELECT * FROM `[p]musicplayer_ecommerce` WHERE `userid`='$artistid' LIMIT 1"));
+    $paypalEmail = $store_check["paypal"];
 ?>
 	
 <script type="text/javascript">
@@ -255,6 +263,7 @@ $(document).ready(setupQuestionTolltips);
 var g_removeSong = false;
 var g_removeImage = false;
 var g_needsImage = <?=$needs_image;?>;
+var g_paypalEmail = "<?=$paypalEmail;?>";
 
 function onSongRemove()
 {
@@ -291,6 +300,14 @@ function clickFree(yes)
         $('#amazon_url').removeAttr('disabled');
         $('#itunes_url').removeAttr('disabled');
         $('#mad_store').removeAttr('disabled');
+    }
+}
+
+function clickMadStore()
+{
+    if( g_paypalEmail.length == 0 )
+    {
+        window.alert("You will need to add a Paypal Email address in Monetize settings to sell music in the MyArtistDNA Store.");
     }
 }
     
@@ -366,7 +383,7 @@ function clickFree(yes)
         </div>
         <div class='input_container'>
             <div class='left_label'>MyArtistDNA Store <span id='tip_store' class='tooltip'>(?)</span></div>
-            <input id='mad_store' type="checkbox" name="mad_store" <? if($mad_store) echo 'checked'; ?> class='right_box' <?=$buy_disabled;?> />
+            <input id='mad_store' class='right_box' type="checkbox" name="mad_store" onclick='clickMadStore();' <?=$mad_store_checked;?> <?=$buy_disabled;?> />
         </div>
         <div class='submit_branding_container'>
             <input type="submit" name="WriteTags" value="submit" class='left_submit' />
