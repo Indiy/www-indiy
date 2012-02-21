@@ -1110,13 +1110,16 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     color: #777;
 }
 #right_box .label_name {
-    margin-left: 15px;
+    margin-left: 12px;
     margin-bottom: 3px;
+    width: 160px;
     color: #888;
     text-decoration: none;
     font-family: Helvetica, sans-serif;
     font-size: 12px;
     font-weight: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 #right_box .label_name span {
     color: white;
