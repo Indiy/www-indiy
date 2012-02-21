@@ -1186,7 +1186,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #right_box .logo {
     max-width: 145px;
-    max-height: 130px;
+    max-height: 100px;
 }
 #right_box .total_listens {
     padding-bottom: 8px;
