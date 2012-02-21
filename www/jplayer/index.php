@@ -491,12 +491,12 @@ String.prototype.format = function() {
                 </div>
                 <div class='amazon_itunes_buttons'>
                     <div id='buynow_amazon'>
-                        <a  title='Buy from Amazon'>
+                        <a  title='Buy from Amazon' target='_blank'>
                             <img src='/images/buynow_amazon.png'/>
                         </a>
                     </div>
                     <div id='buynow_itunes'>
-                        <a title='Download on iTunes'>
+                        <a title='Download on iTunes' target='_blank'>
                             <img src='/images/buynow_itunes.jpg'/>
                         </a>
                     </div>
