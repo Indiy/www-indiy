@@ -2,7 +2,7 @@
 
 function loginArtistFromRow($row)
 {
-    setcookie('LOGIN_EMAIL',$row['email'], time() + 30*24*60*60);
+    setcookie('LOGIN_EMAIL',$row['email'], time() + 30*24*60*60,'/');
 
     $myid = $row['id'];
     $_SESSION['sess_userId'] =	$myid;		
