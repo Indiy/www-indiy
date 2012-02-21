@@ -99,7 +99,7 @@
     if( $record_artistDetail['fb_access_token'] && $record_artistDetail['facebook'] )
         $facebook = TRUE;
         
-    $store_check = mf(mq("SELECT * FROM `[p]musicplayer_ecommerce` WHERE `userid`='{$artist_id}' LIMIT 1"));
+    $store_check = mf(mq("SELECT * FROM `[p]musicplayer_ecommerce` WHERE `userid`='$artistID' LIMIT 1"));
     $paypalEmail = $store_check["paypal"];
 
     require_once 'header.php';
@@ -315,7 +315,7 @@ $(document).ready(showFirstInstruction);
            <?php
 				$count = 1;
                 
-                if( mysql_num_rows($result_artistProduct) == 0 && !$paypalEmail )
+                if( mysql_num_rows($result_artistProduct) == 0 && strlen($paypalEmail) == 0 )
                 {
                     echo "<div class='need_paypal'>Add a payment method. ";
                     echo "<a href='store_settings.php?artist_id=$artistID' rel='facebox[.bolder]'>Monetize Settings</a>";
