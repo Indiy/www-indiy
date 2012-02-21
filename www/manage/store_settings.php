@@ -45,7 +45,7 @@
 
 <div id="popup">
     <div class='top_bar'>
-        <h2>Store Settings</h2>
+        <h2>Monetize Settings</h2>
         <button onclick='$.facebox.close();'>CLOSE</button>
     </div>
 
