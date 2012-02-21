@@ -336,6 +336,9 @@ function playListChange( index )
     {
         $('#buynow_free a').attr("href",'/download.php?artist=' + g_artistId + '&id=' + song.id);
         $('#buynow_free').show();
+        $('#buynow_itunes').hide();
+        $('#buynow_amazon').hide();
+        $('#buynow_mad_store').hide();
     }
     else
     {
@@ -360,7 +363,7 @@ function playListChange( index )
         }
         if( mystore_product_id && g_paypalEmail.length > 0 )
         {
-            $('#buynow_mad_store a').attr("href",'javascript:buySong(' + mystore_product_id + ');');
+            $('#buynow_mad_store a').attr("oncl",'javascript:buySong(' + mystore_product_id + ');');
             $('#buynow_mad_store').show();
         }
         else
