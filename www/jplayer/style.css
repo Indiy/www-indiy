@@ -1124,7 +1124,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #right_box .vote_buttons {
     text-align: center;
     margin-top: 9px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 #right_box .vote_buttons .vote_up {
     height: 19px;
