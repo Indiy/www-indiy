@@ -38,7 +38,9 @@
     }
 
     $updates = array("password" => md5($new_password));
-    mysql_update("mydna_musicplayer",$updates,"id",$artist_id);
+    $ret = mysql_update("mydna_musicplayer",$updates,"id",$artist_id);
+    print_r($ret);
+    print "rows: " . mysql_rows_updated();
 
     echo "{ \"success\": 1 }\n";
 ?>
