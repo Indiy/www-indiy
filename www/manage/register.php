@@ -76,7 +76,7 @@
 	}
 	
 	if ($_SESSION['sess_userId'] != "") {
-		$artistid=$_REQUEST['artist_id'];
+		$artistid = $_REQUEST['artist_id'];
 		$row = mf(mq("select * from {$database} where id='{$artistid}'"));
 		$artist = $row["artist"];
 		$email = $row["email"];
@@ -110,6 +110,8 @@
 				
 <script type="text/javascript">
     $(document).ready(setupQuestionTolltips);
+    
+    var g_artistId = <?=$artistid;?>;
 </script>
 
 <div id="popup">
@@ -127,7 +129,6 @@
         <div class='input_container'>
             <div class='left_label'>Name<span class='required'>*</span></div>
             <input id='artist' type="text" class="right_text" value="<?=$artist?>" name="artist">
-            <div class="clear"></div>
         </div>
         
         <div class='input_container'>
@@ -167,6 +168,23 @@
             <button class="submit" onclick='onEditProfileSubmit();'>Submit</button>
         </div>
     </form>
+    <div id='change_password' style='display: none;'>
+        <div class='input_container'>
+            <div class='left_label'>Old Password</div>
+            <input id='old_password' type="password" class="right_text">
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>New Password</div>
+            <input id='new_password' type="password" class="right_text">
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Confirm Password</div>
+            <input id='confirm_password' type="password" class="right_text">
+        </div>
+        <div class='submit_container'>
+            <button class="submit" onclick='submitChangePassword();'>Submit</button>
+        </div>
+    </div>
     
     <? include_once 'include/popup_messages.html'; ?>
     
