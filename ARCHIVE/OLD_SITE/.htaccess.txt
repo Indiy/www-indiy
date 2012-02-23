@@ -1,2 +1,0 @@
-AuthName "MAD-FM"
-AuthUserFile "/home/myartist/.htpasswds/public_html/passwd"
