@@ -159,7 +159,7 @@
         <div class='input_container' style='height: 55px;'>
             <div class='left_label'>Password</div>
             <div class='right_box'>
-                <button class='submit' onclick='showChangePassword();'>Change Password/button>
+                <button class='submit' onclick='showChangePassword();'>Change Password</button>
             </div>
         </div>
 
