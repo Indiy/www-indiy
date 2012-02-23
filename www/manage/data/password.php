@@ -8,6 +8,7 @@
     if( $_SESSION['sess_userId'] == "" )
     {
         header("HTTP/1.0 403 Forbidden");
+        print "Not logged in";
         exit();
     }
     
@@ -23,11 +24,13 @@
     if( strlen($artist['password']) == 0 && strlen($old_password) != 0 )
     {
         header("HTTP/1.0 403 Forbidden");
+        print "old_password not blank but password is";
         exit();
     }
     else if( md5($old_password) != $artist['password'] )
     {
         header("HTTP/1.0 403 Forbidden");
+        print "old_password doesnt match password";
         exit();
     }
 
