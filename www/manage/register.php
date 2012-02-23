@@ -156,9 +156,11 @@
                 <input type="radio" class="radio" value="0" name="listens"> No<br>
             </div>
         </div>
-        <div class='input_container'>
-            <div class='left_label'>New Password</div>
-            <input id='newpass' type="password" class="right_text" value="" name="newpass">
+        <div class='input_container' style='height: 55px;'>
+            <div class='left_label'>Password</div>
+            <div class='right_box'>
+                <button class='submit' onclick='showChangePassword();'>Change Password/button>
+            </div>
         </div>
 
         <div class='submit_container'>
