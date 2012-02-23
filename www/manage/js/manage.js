@@ -811,7 +811,7 @@ function submitChangePassword()
         jQuery.ajax(
         {
             type: 'POST',
-            url: '/manage/register.php',
+            url: '/manage/data/password.php',
             contentType: 'application/json',
             data: postData,
             processData: false,
