@@ -21,16 +21,19 @@
 
     $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE `id` = '$artist_id' LIMIT 1"));
     
-    if( strlen($artist['password']) == 0 && strlen($old_password) != 0 )
+    if( strlen($artist['password']) == 0 ) )
     {
-        header("HTTP/1.0 403 Forbidden");
-        print "old_password not blank but password is";
-        exit();
+        if( strlen($old_password) != 0 )
+        {
+            header("HTTP/1.0 403 Forbidden");
+            print "old_password not blank but password is";
+            exit();
+        }
     }
     else if( md5($old_password) != $artist['password'] )
     {
         header("HTTP/1.0 403 Forbidden");
-        print "old_password doesnt match password";
+        print "old_password doesnt match password ()";
         exit();
     }
 
