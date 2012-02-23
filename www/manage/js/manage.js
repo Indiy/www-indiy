@@ -783,4 +783,52 @@ function setupQuestionTolltips()
     $('.tooltip').hover(hoverInQuestion,hoverOutQuestion);
 }
 
+function showChangePassword()
+{
+    $('#ajax_form').hide();
+    $('#change_password').show();
+}
+
+function submitChangePassword()
+{
+    var old_password = $('#old_password').val();
+    var new_password = $('#new_password').val();
+    var confirm_password = $('#confirm_password').val();
+    
+    if( new_password.length > 0 
+        && confirm_password.length > 0
+        && new_password == confirm_password )
+    {
+        $('#change_password').hide();
+        showProgress();
+        
+        var data = {
+            artist_id: g_artistId,
+            old_password: old_password, 
+            new_password: new_password 
+        };
+        var postData = JSON.stringify(data);
+        jQuery.ajax(
+        {
+            type: 'POST',
+            url: '/manage/register.php',
+            contentType: 'application/json',
+            data: postData,
+            processData: false,
+            dataType: 'text',
+            success: function(data) 
+            {
+                showSuccess("Password changed.");
+            },
+            error: function()
+            {
+                showSuccess("Password change failed!");
+            }
+        });
+    }
+    else
+    {
+        window.alert("Passwords do not match.");        
+    }
+}
 
