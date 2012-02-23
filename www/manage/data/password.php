@@ -21,7 +21,7 @@
 
     $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE `id` = '$artist_id' LIMIT 1"));
     
-    if( strlen($artist['password']) == 0 ) )
+    if( strlen($artist['password']) == 0 )
     {
         if( strlen($old_password) != 0 )
         {
