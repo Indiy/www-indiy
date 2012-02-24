@@ -46,21 +46,23 @@ function setupAudioPlayer()
         $('#prev_track').hide();
         $('#next_track').hide();
     }
-    
-    $('#playlist').mouseover(mouseoverPlaylist);
-    $('#playlist').mouseout(mouseoutPlaylist);
+    else
+    {
+        $('#playlist').mouseover(mouseoverPlaylist);
+        $('#playlist').mouseout(mouseoutPlaylist);
 
-    $('#player').mouseover(mouseoverPlayer);
-    $('#player').mouseout(mouseoutPlayer);
+        $('#player').mouseover(mouseoverPlayer);
+        $('#player').mouseout(mouseoutPlayer);
+        
+        $('#prev_track').mouseover(function(){ $(this).animate({width: "200px"}, 250);});
+        $('#prev_track').mouseout(function(){ $(this).animate({width: "31px"}, 250);});
+        
+        $('#next_track').mouseover(function(){ $(this).animate({width: "200px"}, 250);});
+        $('#next_track').mouseout(function(){ $(this).animate({width: "31px"}, 250);});
+    }
     
     $('#player .seek_bar').click(playerSeek);
     $('#player .volume').click(playerVolume);
-    
-    $('#prev_track').mouseover(function(){ $(this).animate({width: "200px"}, 250);});
-    $('#prev_track').mouseout(function(){ $(this).animate({width: "31px"}, 250);});
-
-    $('#next_track').mouseover(function(){ $(this).animate({width: "200px"}, 250);});
-    $('#next_track').mouseout(function(){ $(this).animate({width: "31px"}, 250);});
     
     window.setTimeout(preloadImages,1000);
 }

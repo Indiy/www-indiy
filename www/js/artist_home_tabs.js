@@ -11,8 +11,11 @@ function setupPageLinks()
         fadeAllPageElements();
     });
     
-    $('#right_box').mouseover(mouseoverRightBox);
-    $('#right_box').mouseout(mouseoutRightBox);
+    if( !IS_IPAD )
+    {
+        $('#right_box').mouseover(mouseoverRightBox);
+        $('#right_box').mouseout(mouseoutRightBox);
+    }
     
     if( typeof g_userName != "undefined" && g_userName )
     {
@@ -24,15 +27,31 @@ function setupPageLinks()
         $("#login_signup").html(html);
     }
     
-    $('#navigation').mouseover(mouseoverNavigation);
-    $('#navigation').mouseout(mouseoutNavigation);
+    if( !IS_IPAD )
+    {
+        $('#navigation').mouseover(mouseoverNavigation);
+        $('#navigation').mouseout(mouseoutNavigation);
+    }
     scrollNavigation();
     $(window).resize(scrollNavigation);
 }
 
 $(document).ready(setupPageLinks);
-
 var g_navigationOpen = false;
+var g_navigationTimer = false;
+function toggleNavigation()
+{
+    if( g_navigationTimer !== false )
+    {
+        window.clearTimeout(g_navigationTimer);
+        g_navigationTimer = false;
+    }
+    if( g_navigationOpen )
+        closeNavigation();
+    else
+        openNavigation();
+}
+
 function openNavigation()
 {
     if( !g_navigationOpen )
@@ -49,7 +68,6 @@ function closeNavigation()
         $('#navigation').animate({ top: "-40px" }, 300);
     }
 }
-var g_navigationTimer = false;
 function mouseoverNavigation()
 {
     if( g_navigationTimer !== false )

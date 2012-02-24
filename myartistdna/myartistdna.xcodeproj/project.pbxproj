@@ -865,7 +865,6 @@
 		2DF472B61440B77F005538C7 /* slide.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = slide.js; sourceTree = "<group>"; };
 		2DF472B71440B77F005538C7 /* supersized.3.1.3.core.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = supersized.3.1.3.core.min.js; sourceTree = "<group>"; };
 		2DF472C11440B77F005538C7 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
-		2DF472CC1440B77F005538C7 /* artist_home.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_home.js; sourceTree = "<group>"; };
 		2DF472D11440B77F005538C7 /* homepage_slideshow.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = homepage_slideshow.js; sourceTree = "<group>"; };
 		2DF472D21440B77F005538C7 /* html5.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = html5.js; sourceTree = "<group>"; };
 		2DF472D41440B77F005538C7 /* Jplayer.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jplayer.swf; sourceTree = "<group>"; };
@@ -2696,7 +2695,6 @@
 		2DF472C71440B77F005538C7 /* js */ = {
 			isa = PBXGroup;
 			children = (
-				2DF472CC1440B77F005538C7 /* artist_home.js */,
 				2DD94A3114C3A6C5002B1259 /* artist_home_audio.js */,
 				2DE2142714C15540000C5142 /* artist_home_video.js */,
 				2DD94A3214C49CA8002B1259 /* artist_home_tabs.js */,
