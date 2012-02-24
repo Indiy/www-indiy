@@ -1,3 +1,4 @@
+<!--
 <?
 
 $value_user_name = '';
@@ -8,6 +9,7 @@ if( strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
 }
 
 ?>
+-->
 
 <!DOCTYPE html>
 <html>
@@ -81,8 +83,7 @@ body
     padding: 0;
 }
 
-.left
-{
+.left {
     float: left;
     width: 50%;
     height: 250px;
@@ -90,9 +91,7 @@ body
     margin: 0;
     padding: 0;
 }
-
-.login_header
-{
+.login_header {
     width: 100%;
     height: 30px;
     font-size: 16px;
@@ -102,54 +101,56 @@ body
     color: #ddd;
     font-family:"Teletex Light",Arial, Helvetica, sans-serif; 
 }
-
-.email_header
-{
-    padding-top: 20px;
-    padding-left: 16px;
-    padding-bottom: 5px;
+#login_dialog {
+    position: relative;
+}
+.email_header {
+    position: absolute;
+    top: 28px;
+    left: 16px;
     font-size: 12px;
     font-family: sans-serif;
     color: #666;
 }
-
-input
-{
-    width: 365px;
-    margin-left: 16px;
+input {
+    width: 180px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
 }
-
-.password_header
-{
-    padding-left: 16px;
-    padding-top: 10px;
-    padding-bottom: 5px;
+input#username {
+    position: absolute;
+    top: 45px;
+    left: 16px;
+}
+.password_header {
+    position: absolute;
+    top: 28px;
+    left: 208px;
     font-size: 12px;
     font-family: sans-serif;
     color: #666;
 }
-
-.forgot_login_box
-{
-    margin-top: 2px;
-    width: 364px;
-    margin-left: 18px;
-    background: url('images/bg_sign_up.gif') no-repeat;
-    height: 40px;
+input#password {
+    position: absolute;
+    top: 45px;
+    left: 208px;
 }
-
-.forgot_password
-{
+.forgot_login_box {
+    position: absolute;
+    top: 146px;
+    left: 18px;
+    height: 40px;
+    width: 364px;
+    background: url('images/bg_sign_up.gif') no-repeat;
+}
+.forgot_password {
     float: left;
     padding-top: 12px;
     padding-left: 8px;
     font-size: 12px;
     font-family: sans-serif;
 }
-
 .forgot_password a
 {
     font-size: 12px;
@@ -157,9 +158,7 @@ input
     text-decoration: underline;
     color: #51C3C4;
 }
-
-.login
-{
+.login {
     height: 28px;
     float: right;
     font-size: 16px;
@@ -171,10 +170,7 @@ input
     background:url('images/button_signup.gif') no-repeat;
     background-size: auto 100%;
 }
-
-
-.login button
-{
+.login button {
     font-size: 16px;
     border: 0 none;
     margin: 0;
@@ -184,9 +180,51 @@ input
     cursor: pointer;
     font-family:"Teletex Light",Arial, Helvetica, sans-serif;
 }
-
-.right_header
-{
+.login_fb {
+    position: absolute;
+    top: 85px;
+    left: 20px;
+}
+.login_fb div {
+    height: 25px;
+    width: 155px;
+    background: url('images/openid_signin_banner.png') -137px -86px no-repeat;
+}
+.login_tw {
+    position: absolute;
+    top: 85px;
+    left: 233px;
+}
+.login_tw div {
+    height: 25px;
+    width: 155px;
+    background: url('images/openid_signin_banner.png') -138px -35px no-repeat
+}
+.dash {
+    position: absolute;
+    top: 97px;
+    left: 177px;
+    width: 13px;
+    height: 1px;
+    background-color: #D2E0EB;
+}
+.dash_or {
+    position: absolute;
+    top: 91px;
+    left: 194px;
+    color: #458EC5;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+}
+.dash2 {
+    position: absolute;
+    top: 97px;
+    left: 215px;
+    width: 13px;
+    height: 1px;
+    background-color: #D2E0EB;
+}
+.right_header {
     width: 100%;
     height: 30px;
     font-size: 16px;
@@ -443,7 +481,19 @@ $(document).ready(function()
                                 <button onclick='onLoginClick();'>LOG IN</button>
                             </div>
                         </div>
-                        
+                        <div class='login_fb'>
+                            <a href='/Login_Twitbook/login-facebook.php'>
+                                <div></div>
+                            </a>
+                        </div>
+                        <div class='dash'></div>
+                        <div class='dash_or'>OR</div>
+                        <div class='dash2'></div>
+                        <div class='login_tw'>
+                            <a href='/Login_Twitbook/login-twitter.php'>
+                                <div></div>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="right">
