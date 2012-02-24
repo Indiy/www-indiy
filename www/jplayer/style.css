@@ -2206,7 +2206,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     z-index: 22;
     color: white;
 }
-
+#nav_right_box {
+    position: relative;
+    z-index: 0;
+}
 /* NAVIGATION */
 #navigation { 
     position: absolute; 
