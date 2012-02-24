@@ -557,35 +557,37 @@ String.prototype.format = function() {
         </div>
         <div id='loader'><img src="/jplayer/images/ajax-loader.gif" /></div>
         
-        <div id='navigation'>
-            <div class='tab_bar_container'>
-                <div class='tab_bar'>
-                    <div class='tab_spacer'></div>
-                    <?
-                        foreach( $pages_list as $i => $page )
-                        {
-                            $title = $page['title'];
-                            echo "<div class='tab' onclick='showUserPage($i);'>$title</div>\n";
-                        }
-                    ?>
-                    <? if( $artist_videos ): ?>
-                        <div class='tab' onclick='showVideos();'>Videos</div>
-                    <? endif; ?>             
-                    <?=$pagesList;?>
-                    <? if( $store_enabled != "" ): ?>
-                        <div class='tab' onclick='showStore();'>Store</div>
-                    <? endif; ?>
-                    <? if( $show_comments ): ?>
-                        <div class='tab' onclick='showComments();'>Comment</div>
-                    <? endif; ?>
-                    <? if( $artist_email ): ?>
-                        <div class='tab' onclick='showContact();'>Contact</div>
-                    <? endif; ?>
-                    <div class='tab_spacer'></div>
+        <div id='nav_right_box'>
+            <div id='navigation'>
+                <div class='tab_bar_container'>
+                    <div class='tab_bar'>
+                        <div class='tab_spacer'></div>
+                        <?
+                            foreach( $pages_list as $i => $page )
+                            {
+                                $title = $page['title'];
+                                echo "<div class='tab' onclick='showUserPage($i);'>$title</div>\n";
+                            }
+                        ?>
+                        <? if( $artist_videos ): ?>
+                            <div class='tab' onclick='showVideos();'>Videos</div>
+                        <? endif; ?>             
+                        <?=$pagesList;?>
+                        <? if( $store_enabled != "" ): ?>
+                            <div class='tab' onclick='showStore();'>Store</div>
+                        <? endif; ?>
+                        <? if( $show_comments ): ?>
+                            <div class='tab' onclick='showComments();'>Comment</div>
+                        <? endif; ?>
+                        <? if( $artist_email ): ?>
+                            <div class='tab' onclick='showContact();'>Contact</div>
+                        <? endif; ?>
+                        <div class='tab_spacer'></div>
+                    </div>
                 </div>
-            </div>
-            <div class='artist_name_holder'>
-                <div class='artist_name' onclick='toggleNavigation();'><?=$artist_name;?></div>
+                <div class='artist_name_holder'>
+                    <div class='artist_name' onclick='toggleNavigation();'><?=$artist_name;?></div>
+                </div>
             </div>
             <div id='right_box'>
                 <div id="login_signup" class='login_signup'>
