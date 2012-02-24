@@ -221,6 +221,10 @@ else
 <link href="/css/lionbars.css" rel="stylesheet" type="text/css" />
 <link href="/jplayer/style.css" rel="stylesheet" type="text/css" /> 
 
+<? if strstr($_SERVER['HTTP_USER_AGENT'],'iPad') !== FALSE: ?>
+    <link href="/jplayer/ipad.css" rel="stylesheet" type="text/css" />
+<? endif; ?>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
 <!--[if lt IE 9]>
