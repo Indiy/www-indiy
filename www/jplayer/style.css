@@ -1126,8 +1126,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-family: Helvetica, sans-serif;
     font-size: 12px;
     font-weight: normal;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
