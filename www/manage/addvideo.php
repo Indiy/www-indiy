@@ -164,9 +164,9 @@
     if( $video_sound != '' )
     {
         if( $upload_video_filename && strlen($upload_video_filename) > 0 )
-            $video_html .= $upload_video_filename;
+            $video_html .= "<div>$upload_video_filename</div>";
         else
-            $video_html .= $video_sound;
+            $video_html .= "<div>$video_sound</div>";
         $video_html .= "<button onclick='return onVideoRemove();'></button>";
     }
 

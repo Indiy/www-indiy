@@ -223,9 +223,9 @@
     if( $audio_sound != '' )
     {
         if( $upload_audio_filename && strlen($upload_audio_filename) > 0 )
-            $audio_html .= $upload_audio_filename;
+            $audio_html .= "<div>$upload_audio_filename</div>";
         else
-            $audio_html .= $audio_sound;
+            $audio_html .= "<div>$audio_sound</div>";
         $audio_html .= "<button onclick='return onSongRemove();'></button>";
     }
 	
