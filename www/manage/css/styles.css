@@ -1150,6 +1150,13 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     font-size: 10px;
     padding-top: 4px;
 }
+#popup .filename div {
+    display: inline-block;
+    width: 175px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 #popup .filename button {
     width: 15px;
     height: 15px;
