@@ -113,7 +113,7 @@ body
     color: #666;
 }
 input {
-    width: 180px;
+    width: 175px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -126,7 +126,7 @@ input#username {
 .password_header {
     position: absolute;
     top: 28px;
-    left: 208px;
+    left: 206px;
     font-size: 12px;
     font-family: sans-serif;
     color: #666;
@@ -134,7 +134,7 @@ input#username {
 input#password {
     position: absolute;
     top: 45px;
-    left: 208px;
+    left: 206px;
 }
 .forgot_login_box {
     position: absolute;
