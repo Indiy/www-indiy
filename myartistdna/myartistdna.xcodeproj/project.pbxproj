@@ -864,7 +864,7 @@
 		2DF472B51440B77F005538C7 /* ra_controls.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = ra_controls.js; sourceTree = "<group>"; };
 		2DF472B61440B77F005538C7 /* slide.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = slide.js; sourceTree = "<group>"; };
 		2DF472B71440B77F005538C7 /* supersized.3.1.3.core.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = supersized.3.1.3.core.min.js; sourceTree = "<group>"; };
-		2DF472C11440B77F005538C7 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		2DF472C11440B77F005538C7 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DF472CC1440B77F005538C7 /* artist_home.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_home.js; sourceTree = "<group>"; };
 		2DF472D11440B77F005538C7 /* homepage_slideshow.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = homepage_slideshow.js; sourceTree = "<group>"; };
 		2DF472D21440B77F005538C7 /* html5.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = html5.js; sourceTree = "<group>"; };
