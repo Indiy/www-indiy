@@ -1086,6 +1086,10 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     position: relative;
     padding-right: 2px;
 }
+#popup .image_image img {
+    max-width: 32px;
+    max-height: 25px;
+}
 #popup .image_image button {
     width: 15px;
     height: 15px;

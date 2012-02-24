@@ -137,7 +137,7 @@
 	$image_html = '';
     if( $pimage != '' )
     {
-        $image_html = "<img src='/artists/products/$pimage' style='margin-top: 0px; height: 25px;' />";
+        $image_html = "<img src='/artists/products/$pimage' />";
     }
 //// Include Template Design ///////////////////////
 

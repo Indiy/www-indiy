@@ -98,7 +98,7 @@
 	}
 	
 	if ($artist_logo != "") {
-		$artist_logo = '<img src="../artists/images/'.$artist_logo.'" style=" margin-top: 5px; height: 25px;" />';
+		$artist_logo = "<img src='/../artists/images/$artist_logo' />";
 	}
 	
 	if ($artist_download == "1") { $yesDownload = " checked"; } else { $noDownload = " checked"; }

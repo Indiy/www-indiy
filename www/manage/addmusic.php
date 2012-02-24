@@ -216,7 +216,7 @@
     $image_html = '';
 	if( $audio_logo != "" )
     {
-		$image_html .= "<img src='../artists/images/$audio_logo' style='margin-top: 0px; height: 25px;' />";
+		$image_html .= "<img src='../artists/images/$audio_logo' />";
         $image_html .= "<button onclick='return onImageRemove();'></button>";
 	}
     $audio_html = '';
