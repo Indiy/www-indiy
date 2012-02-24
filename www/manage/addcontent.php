@@ -72,7 +72,7 @@
 	$image_html = '';
 	if( $content_logo != "" ) 
     {
-		$image_html = "<img src='../artists/images/$content_logo' style='height: 25px;'/>";
+		$image_html = "<img src='../artists/images/$content_logo' />";
         $image_html .= "<button onclick='return onImageRemove();'></button>";
 	}
 	

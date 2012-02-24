@@ -157,7 +157,7 @@
     $image_html = '';
 	if( $video_logo != "" )
     {
-		$image_html .= "<img src='../artists/images/$video_logo' style='height: 25px;' />";
+		$image_html .= "<img src='../artists/images/$video_logo' />";
         $image_html .= "<button onclick='return onVideoImageRemove();'></button>";
 	}
     $video_html = '';
