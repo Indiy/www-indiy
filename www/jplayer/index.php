@@ -256,7 +256,6 @@ var g_productList = <?=$product_list_json;?>;
 
 <script src="<?=trueSiteUrl();?>/js/logged_in.php" type="text/javascript"></script>
 
-<script src="/js/artist_home.js" type="text/javascript"></script>
 <script src="/js/artist_home_audio.js" type="text/javascript"></script>
 <script src="/js/artist_home_video.js" type="text/javascript"></script>
 <script src="/js/artist_home_tabs.js" type="text/javascript"></script>
@@ -381,51 +380,6 @@ String.prototype.format = function() {
                 <div class='playlist_label' onclick='togglePlaylistVisibility();'></div>
             </div>
         </div>
-        
-        <!--
-        <div id='current_song_info'>
-            <div class='label'>Artist:</div> 
-            <div id='current_track_artist_name' class='value'><?=$artist_name;?></div> 
-            <div class='slashes'>//</div>
-            <div class='label'>Track:</div>
-            <div id='current_track_name' class='value'></div>
-            <? if( $show_listens ): ?>
-                <div class='slashes'>//</div>
-                <div class='label'>Listens:</div>
-                <div id='current_track_listens' class='value'><?=$first_track_listens;?></div>
-            <? endif; ?>
-            <div class='space'></div>
-            <div id='buynow_mad_store' class='buynow_icon madna'>
-                <a href='#' title='Buy on MyArtistDNA Store'>
-                    <img src='/images/buynow_madna.png'/>
-                </a>
-            </div>
-            <div id='buynow_amazon' class='buynow_icon amazon'>
-                <a href='#' title='Buy from Amazon'>
-                    <img src='/images/buynow_amazon.png'/>
-                </a>
-            </div>
-            <div id='buynow_itunes' class='buynow_icon itunes'>
-                <a href='#' title='Download on iTunes'>
-                    <img src='/images/buynow_itunes.jpg'/>
-                </a>
-            </div>
-            <div id='buynow_free' class='buynow_text'>
-                <a href='#' title='Download for Free'>
-                    FREE DOWNLOAD
-                </a>
-            </div>
-        </div>
-        <div id='progress_vote_bar'>
-            <div class='container'>
-                <div class='progress_bg'></div>
-                <div class='vote_buttons'>
-                    <button class='vote_up' title='Thumbs Up Song' onclick='songVote(1);'></button>
-                    <button class='vote_down'  title='Thumbs Down Song' onclick='songVote(0);'></button>
-                </div>
-            </div>
-        </div>
-        -->
         <div id='vote_results'></div>
         <div id='video_player'>
             <div class='top_bar'>
@@ -700,7 +654,7 @@ String.prototype.format = function() {
                 </div>
             </div>
             <div class='artist_name_holder'>
-                <div class='artist_name'><?=$artist_name;?></div>
+                <div class='artist_name' onclick='toggleNavigation();'><?=$artist_name;?></div>
             </div>
         </div>
         

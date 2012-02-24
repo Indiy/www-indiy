@@ -4,8 +4,11 @@ var g_currentSocialTab = '';
 
 function setupSocialTab()
 {
-    $('#socialize').mouseover(mouseoverSocialTab);
-    $('#socialize').mouseout(mouseoutSocialTab);
+    if( !IS_IPAD )
+    {
+        $('#socialize').mouseover(mouseoverSocialTab);
+        $('#socialize').mouseout(mouseoutSocialTab);
+    }
 }
 
 $(document).ready(setupSocialTab);
