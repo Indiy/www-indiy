@@ -221,7 +221,7 @@ else
 <link href="/css/lionbars.css" rel="stylesheet" type="text/css" />
 <link href="/jplayer/style.css" rel="stylesheet" type="text/css" /> 
 
-<? if strstr($_SERVER['HTTP_USER_AGENT'],'iPad') !== FALSE: ?>
+<? if( strstr($_SERVER['HTTP_USER_AGENT'],'iPad') !== FALSE): ?>
     <link href="/jplayer/ipad.css" rel="stylesheet" type="text/css" />
 <? endif; ?>
 
