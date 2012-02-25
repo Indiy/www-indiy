@@ -1601,7 +1601,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border-radius: 20px;
     border: 1px solid #555;
     z-index: 30;
-    behavior: url(/css/PIE.htc);
+    /* behavior: url(/css/PIE.htc); */
 }
 #store .close {
     position: absolute;
