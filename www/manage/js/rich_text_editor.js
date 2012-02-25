@@ -1,6 +1,6 @@
 
 
-var state = 'off';
+var g_rawEditorState = 'off';
 var g_editor = false;
 
 var toolbar_config = 
@@ -116,8 +116,8 @@ function onToolbarLoaded()
                         var ta = this.get('element'),
                         iframe = this.get('iframe').get('element');
                         
-                        if (state == 'on') {
-                            state = 'off';
+                        if (g_rawEditorState == 'on') {
+                            g_rawEditorState = 'off';
                             this.toolbar.set('disabled', false);
                             var content = ta.value;
                             content = getEncodedBody(content);
@@ -132,7 +132,7 @@ function onToolbarLoaded()
                             this.show();
                             this._focusWindow();
                         } else {
-                            state = 'on';
+                            g_rawEditorState = 'on';
                             this.cleanHTML();
                             Dom.addClass(iframe, 'editor-hidden');
                             Dom.removeClass(ta, 'editor-hidden');

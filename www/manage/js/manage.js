@@ -635,13 +635,19 @@ function onAddContentSubmit()
     }
     function fillContentForm(form_data)
     {
-        g_editor.saveHTML();
+        if( g_rawEditorState == "on" )
+        {
+            g_editor.saveHTML();
+            var body = $('#body').val();
+            body = getRawBody(body);
+        }
+        else
+        {
+            var body = $('#body').val();
+        }
         var artist_id = $('#artist_id').val();
         var content_id = $('#content_id').val();
         var name = $('#name').val();
-        var body = $('#body').val();
-
-        body = getRawBody(body);
         
         form_data.append('artistid',artist_id);
         form_data.append('id',content_id);
