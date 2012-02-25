@@ -536,10 +536,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #playlist .song_list_item.first {
     border-top: none;
     border-top-right-radius: 4px;
+    behavior: url(/css/PIE.htc);
 }
 #playlist .song_list_item.last {
     border-bottom: none;
     border-bottom-right-radius: 4px;
+    behavior: url(/css/PIE.htc);
 }
 #playlist .song_list_item.current {
     background-color: white;
@@ -1094,6 +1096,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     z-index: 3;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
+    behavior: url(/css/PIE.htc);
 }
 
 #right_box .login_signup {
@@ -1313,6 +1316,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border-left: 1px solid #555;
     border-bottom: none;
     overflow: hidden;
+    behavior: url(/css/PIE.htc);
 }
 
 #socialize .header {
@@ -2052,6 +2056,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background: rgb(220,220,220);
     background: rgba(220,220,220,0.9);
     z-index: 2;
+    behavior: url(/css/PIE.htc);
 }
 #player .album {
     float: left;
