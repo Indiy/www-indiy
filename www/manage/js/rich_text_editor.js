@@ -101,7 +101,10 @@ function onToolbarLoaded()
                         if (state == 'on') {
                             state = 'off';
                             this.toolbar.set('disabled', false);
-                            this.setEditorHTML(ta.value);
+                            var content = ta.value;
+                            content.replace(/\<iframe\>/g,"&lt;iframe");
+                            content.replace(/\<\/iframe\>/g,"&lt;/iframe&gt;");
+                            this.setEditorHTML(content);
                             if (!this.browser.ie) {
                                 this._setDesignMode('on');
                             }
