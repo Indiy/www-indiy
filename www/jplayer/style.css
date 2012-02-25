@@ -1681,7 +1681,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border-radius: 10px;
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.7);
-    behavior: url(/css/PIE.htc);
 }
 #store .product_list .image_holder {
     height: 170px;
@@ -1743,7 +1742,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     text-shadow: 1px 1px black;
     background-color: #c00;
     cursor: pointer;
-    behavior: url(/css/PIE.htc);
 }
 #store .product_list .add_to_card:hover {
     background-color: #f00;
