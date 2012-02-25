@@ -392,9 +392,10 @@ input {
 }
 
         </style>
-        <!--[if IE]>
-         <script src="js/html5.js"></script>
-         <![endif]-->
+        
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 
         <link href="/css/video-js.css"rel="stylesheet" type="text/css" />
         <link href="/css/vim.css" rel="stylesheet" type="text/css" />
