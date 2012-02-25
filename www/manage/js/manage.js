@@ -640,9 +640,8 @@ function onAddContentSubmit()
         var content_id = $('#content_id').val();
         var name = $('#name').val();
         var body = $('#body').val();
-        
-        body = body.replace(/&lt;iframe([^&]*)&gt;/,"<iframe $1 >");
-        body = body.replace(/&lt;\/\s*iframe\s*&gt;/,"</iframe>");
+
+        body = getRawBody(body);
         
         form_data.append('artistid',artist_id);
         form_data.append('id',content_id);
