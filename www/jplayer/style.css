@@ -498,7 +498,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 200px;
     padding-top: 4px;
     padding-bottom: 6px;
-    background-color: rgba(220,220,220,0.9);
+    background: rgb(220,220,220);
+    background: rgba(220,220,220,0.9);
     border-top: 1px solid #aaa;
     border-bottom: 1px solid #aaa;
     border-right: 1px solid #aaa;
@@ -526,7 +527,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 	overflow: hidden;
 }
 #playlist .song_list_item:hover {
-    background-color: rgba(255, 255, 255, 0.6);
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.6);
     color: black;
     font-weight: 400;
 }
@@ -920,7 +922,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     height: 50px; 
     opacity: 0.9; 
     color: #fff;
-    background-color: rgba(0,0,0,0.6);
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.6);
     /* display: block !important; */
 }
 .mad_video_css .vjs-controls > div {
@@ -1508,7 +1511,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-bottom: 20px;
     padding-right: 20px;
     padding-left: 20px;
-    background-color: rgba(0,0,0,0.7);
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.7);
     border-radius: 20px;
     border: 1px solid #555;
     z-index: 30;
@@ -1574,7 +1578,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-bottom: 20px;
     padding-left: 30px;
     padding-right: 22px;
-    background-color: rgba(0,0,0,0.7);
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.7);
     border-radius: 20px;
     border: 1px solid #555;
     z-index: 30;
@@ -1654,7 +1659,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     text-align: left;
     border: 2px solid #555;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
 }
 #store .product_list .image_holder {
     height: 170px;
@@ -1889,7 +1895,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: rgba(0,0,0,0.7);
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.7);
     border-radius: 20px;
     border: 1px solid #555;
     z-index: 30;
@@ -1943,7 +1950,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-bottom: 20px;
     padding-left: 20px; 
     padding-right: 20px; 
-    background-color: rgba(0,0,0,0.7);
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.7);
     border-radius: 20px;
     border: 1px solid #555;
     z-index: 30;
@@ -2015,7 +2023,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border-top: 1px solid #aaa;
     border-bottom: 1px solid #aaa;
     border-right: 1px solid #aaa;
-    background-color: rgba(220,220,220,0.9);
+    background: rgb(220,220,220);
+    background: rgba(220,220,220,0.9);
     z-index: 2;
 }
 #player .album {
@@ -2221,7 +2230,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     z-index: 1;
 }
 #navigation .tab_bar_container {
-    background-color: rgba(0,0,0,0.8);
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.8);
     overflow: hidden;
 }
 #navigation .tab_bar {
@@ -2273,7 +2283,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     text-transform: uppercase;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: rgba(0,0,0,0.8);
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.8);
     cursor: pointer;
 }
 @-moz-document url-prefix() {
