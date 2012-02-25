@@ -184,6 +184,9 @@ function onReady()
 
 function onToolbarLoaded()
 {
+    var Dom = YAHOO.util.Dom;
+    var Event = YAHOO.util.Event;
+
     var codeConfig = {
         type: 'push', 
         label: 'Edit HTML Code', 
