@@ -94,6 +94,17 @@ textarea {
     padding: 0;
 }
 
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-editcode span.yui-toolbar-icon {
+    background-image: url( /images/html_editor.gif );
+    background-position: 0 1px;
+left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-button-editcode-selected span.yui-toolbar-icon {
+    background-image: url( /images/html_editor.gif );
+    background-position: 0 1px;
+left: 5px;
+}
+
 </style>
 
 <script type="text/javascript">
