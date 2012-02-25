@@ -118,7 +118,7 @@ function onToolbarLoaded()
                             this.toolbar.set('disabled', true);
                             this.toolbar.getButtonByValue('editcode').set('disabled', false);
                             this.toolbar.selectButton('editcode');
-                            this.dompath.innerHTML = 'Editing HTML Code';
+                            //this.dompath.innerHTML = 'Editing HTML Code';
                             this.hide();
                         }
                     return false;
