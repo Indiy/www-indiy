@@ -1309,8 +1309,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     position: absolute;
     z-index: 20; 
     background: #252525;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-radius: 12px 12px 0px 0px;
     border-top: 1px solid #555;
     border-right: 1px solid #555;
     border-left: 1px solid #555;
