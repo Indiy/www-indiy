@@ -80,6 +80,21 @@
 	$content_body = stripslashes($content_body);
 ?>
 
+<style type="text/css">
+
+.editor-hidden {
+    visibility: hidden;
+    top: -9999px;
+    left: -9999px;
+    position: absolute;
+}
+textarea {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+</style>
 
 <script type="text/javascript">
 
@@ -147,9 +162,11 @@ buttons: [
     ]
 };
 
+var state = 'off';
 var g_editor = false;
 function onReady()
 {
+
     g_editor = new YAHOO.widget.Editor('body', {
                                            height: '300px',
                                            width: '750px',
