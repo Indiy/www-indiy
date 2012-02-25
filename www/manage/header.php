@@ -17,6 +17,7 @@
     <script type="text/javascript" src="http://yui.yahooapis.com/combo?2.9.0/build/yahoo-dom-event/yahoo-dom-event.js&2.9.0/build/animation/animation-min.js&2.9.0/build/element/element-min.js&2.9.0/build/container/container-min.js&2.9.0/build/menu/menu-min.js&2.9.0/build/button/button-min.js&2.9.0/build/editor/editor-min.js"></script> 
 
     <script src="js/tooltip_text.js" type="text/javascript"></script>
+    <script src="js/rich_text_editor.js" type="text/javascript"></script>
     <script src="js/manage.js" type="text/javascript"></script>
     <script src="/js/ZeroClipboard.js" type="text/javascript"></script>
 
