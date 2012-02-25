@@ -2315,6 +2315,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background: rgb(0,0,0);
     background: rgba(0,0,0,0.8);
     cursor: pointer;
+    behavior: (/css/PIE.htc);
 }
 @-moz-document url-prefix() {
     /* Fonts look lame in FF if bold */
