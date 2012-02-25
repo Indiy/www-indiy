@@ -635,7 +635,7 @@ function onAddContentSubmit()
     }
     function fillContentForm(form_data)
     {
-        if( g_rawEditorState == "on" )
+        if( g_rawEditorState == "off" )
         {
             g_editor.saveHTML();
             var body = $('#body').val();
