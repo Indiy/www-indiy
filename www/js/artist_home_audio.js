@@ -15,7 +15,7 @@ var IS_OLD_IE = false;
         if( ie_version < 9.0 )
             IS_OLD_IE = true;
     }
-});
+})();
 
 $(document).ready(setupAudioPlayer);
 
