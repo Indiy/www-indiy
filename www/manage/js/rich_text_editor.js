@@ -67,8 +67,26 @@ var toolbar_config =
         ]
 };
 
+function getRawBody(body)
+{
+    body = body.replace(/&lt;iframe([^&]*)&gt;/,"<iframe $1 >");
+    body = body.replace(/&lt;\/\s*iframe\s*&gt;/,"</iframe>");
+    return body;
+}
+
+function getEncodedBody(body)
+{
+    body = body.replace(/\<iframe([^\>]*)\>/g,"&lt;iframe $1 &gt;");
+    body = body.replace(/\<\/iframe\>/g,"&lt;/iframe&gt;");
+    return body;
+}
+
 function setupRichTextEditor()
 {
+    var body = $('#body').val();
+    body = getEncodedBody(body);
+    $('#body').val(body);
+
     g_editor = new YAHOO.widget.Editor('body', {
                                        height: '300px',
                                        width: '750px',
@@ -102,8 +120,7 @@ function onToolbarLoaded()
                             state = 'off';
                             this.toolbar.set('disabled', false);
                             var content = ta.value;
-                            content = content.replace(/\<iframe([^\>]*)\>/g,"&lt;iframe $1 &gt;");
-                            content = content.replace(/\<\/iframe\>/g,"&lt;/iframe&gt;");
+                            content = getEncodedBody(content);
                             ta.value = content;
                             this.setEditorHTML(content);
                             if (!this.browser.ie) {
@@ -130,7 +147,9 @@ function onToolbarLoaded()
     
     this.on('cleanHTML', function(ev) 
             {
-                this.get('element').value = ev.html;
+                var content = ev.html;
+                content = getRawBody(content);
+                this.get('element').value = content;
             }, this, true);
     
     this.on('afterRender', function() 
