@@ -1,4 +1,3 @@
-<!--
 <?
 
 $value_user_name = '';
@@ -9,8 +8,6 @@ if( strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
 }
 
 ?>
--->
-
 <!DOCTYPE html>
 <html>
     <head>
