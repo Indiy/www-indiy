@@ -10,6 +10,11 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 	<link href="blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
 
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
 
@@ -21,9 +26,6 @@
     <script src="js/manage.js" type="text/javascript"></script>
     <script src="/js/ZeroClipboard.js" type="text/javascript"></script>
 
-    <!--[if IE]>
-        <script src="js/html5.js"></script>
-    <![endif]-->
 <!--PLAYLIST STARTS-->
 <script type="text/javascript"> 
 $(document).ready(function(){	
