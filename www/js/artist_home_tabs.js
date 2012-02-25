@@ -36,7 +36,7 @@ function setupPageLinks()
     $(window).resize(scrollNavigation);
     
     if( IS_OLD_IE )
-        closeRightBox();
+        $('#right_box .expand_box').hide();
 }
 
 $(document).ready(setupPageLinks);
