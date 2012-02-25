@@ -8,19 +8,18 @@
 <head>
 	<meta charset="utf-8" />
 	<title>MyArtistDNA - BE HEARD, BE SEEN, BE INDEPENDENT</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
     
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <link rel="icon"  href="favicon.ico" />
 
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
     <script type="text/javascript">
-    
-    var g_siteUrl = "<?=trueSiteUrl();?>";
-    
+        var g_siteUrl = "<?=trueSiteUrl();?>";
     </script>
 
-    <!--[if IE]>
-        <script src="js/html5.js"></script>
-    <![endif]-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
