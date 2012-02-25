@@ -102,8 +102,8 @@ function onToolbarLoaded()
                             state = 'off';
                             this.toolbar.set('disabled', false);
                             var content = ta.value;
-                            content.replace(/\<iframe\>/g,"&lt;iframe");
-                            content.replace(/\<\/iframe\>/g,"&lt;/iframe&gt;");
+                            content = content.replace(/\<iframe/g,"&lt;iframe");
+                            content = content.replace(/\<\/iframe\>/g,"&lt;/iframe&gt;");
                             this.setEditorHTML(content);
                             if (!this.browser.ie) {
                                 this._setDesignMode('on');
