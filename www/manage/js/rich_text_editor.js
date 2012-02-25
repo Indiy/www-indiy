@@ -104,6 +104,7 @@ function onToolbarLoaded()
                             var content = ta.value;
                             content = content.replace(/\<iframe([^\>]*)\>/g,"&lt;iframe $1 &gt;");
                             content = content.replace(/\<\/iframe\>/g,"&lt;/iframe&gt;");
+                            ta.value = content;
                             this.setEditorHTML(content);
                             if (!this.browser.ie) {
                                 this._setDesignMode('on');
