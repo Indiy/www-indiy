@@ -200,8 +200,23 @@ ul#accordion-slider li{ width:314px; height:257px; float:left; display: block; o
 #artistshome h2 span {font-weight:bold}
 
 #artistshome ul { width:960px; float:left; margin-right:-20px}
-#artistshome ul li {width:300px; float:left; padding:20px 20px 0 0}
-#artistshome ul li span { height:34px; float:left; font-size:14px; color:#323840; background:url(../images/bg_heading_artists.png) no-repeat top right; padding:16px 32px 0 17px; margin-top:-55px; position:relative}
+#artistshome ul li {
+    width:300px; 
+    float:left; 
+    padding:20px 20px 0 0; 
+    position: relative; 
+}
+#artistshome ul li span { 
+    position:relative;
+    top: 20px;
+    left: 10px;
+    
+    height:34px; 
+    font-size:14px; 
+    color:#323840; 
+    background:url(../images/bg_heading_artists.png) no-repeat top right; 
+    padding:16px 32px 0 17px; 
+}
 #artistshome ul li a { color:#323840; text-decoration:none}
 
 #artistshome .pagination { width:661px; float:left; padding:27px 0 0 279px}
