@@ -13,10 +13,11 @@ if( strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
     <head>
         <title>MyArtistDNA - BE HEARD, BE SEEN, BE INDEPENDENT</title>
         <link rel="icon" href="favicon.ico" />
-
+        
+        <link rel="stylesheet" href="http://f.fontdeck.com/s/css/D8Fz3XWt+VC0VDejQHe7Mks5Qzc/www.madd3v.com/16588.css" type="text/css" />
         <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>
         <style type="text/css">
-
+/*
 @font-face {
     font-family: 'Teletex Light';
     src: url('css/Teletex_Light.eot');
@@ -24,7 +25,7 @@ if( strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
     font-weight: normal;
     font-style: normal;
 }
-
+*/
 html, body 
 { 
     margin: 0; 
