@@ -208,14 +208,13 @@ ul#accordion-slider li{ width:314px; height:257px; float:left; display: block; o
 }
 #artistshome ul li span { 
     position:relative;
-    top: 20px;
-    left: 10px;
-    
+    top: -38px;
+    left: 0px;
     height:34px; 
     font-size:14px; 
     color:#323840; 
     background:url(../images/bg_heading_artists.png) no-repeat top right; 
-    padding:16px 32px 0 17px; 
+    padding:16px 32px 14px 17px; 
 }
 #artistshome ul li a { color:#323840; text-decoration:none}
 
