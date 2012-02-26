@@ -14,12 +14,13 @@ if( strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
         <title>MyArtistDNA - BE HEARD, BE SEEN, BE INDEPENDENT</title>
         <link rel="icon" href="favicon.ico" />
 
+        <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>
         <style type="text/css">
 
 @font-face {
     font-family: 'Teletex Light';
     src: url('css/Teletex_Light.eot');
-    src: local('css/Teletex_Light'), url('css/Teletex_Light.otf') format('opentype');
+    src: url('css/Teletex_Light.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -96,7 +97,7 @@ body
     padding-top: 15px;
     background: url('images/bg_sign_up.gif') no-repeat;
     color: #ddd;
-    font-family:"Teletex Light",Arial, Helvetica, sans-serif; 
+    font-family:"Teletex Light",'Habibi', Arial, Helvetica, sans-serif; 
 }
 #login_dialog {
     position: relative;
@@ -175,7 +176,7 @@ input#password {
     background-color: transparent;
     border:none; 
     cursor: pointer;
-    font-family:"Teletex Light",Arial, Helvetica, sans-serif;
+    font-family:"Teletex Light",'Habibi', Arial, Helvetica, sans-serif;
 }
 .login_fb {
     position: absolute;
@@ -228,7 +229,7 @@ input#password {
     padding-top: 15px;
     background: url('images/bg_sign_up.gif') no-repeat;
     color: #ccc;
-    font-family:"Teletex Light",Arial, Helvetica, sans-serif; 
+    font-family:"Teletex Light",'Habibi',Arial, Helvetica, sans-serif; 
 }
 
 .beta_line
@@ -245,7 +246,7 @@ input#password {
 {
     width: 360px;
     text-align: center;
-    font-family:"Teletex Light",Arial, Helvetica, sans-serif; 
+    font-family:"Teletex Light",'Habibi',Arial, Helvetica, sans-serif; 
     font-size: 18px;
     color: #ccc;
     background: url('images/bg_sign_up.gif') repeat;
@@ -342,7 +343,7 @@ input#password {
     background-color: transparent;
     border:none; 
     cursor: pointer;
-    font-family:"Teletex Light",Arial, Helvetica, sans-serif;
+    font-family:"Teletex Light",'Habibi',Arial, Helvetica, sans-serif;
 }
 
 input {
@@ -379,7 +380,7 @@ input {
 }
 .watch_video, .learn_more
 {
-    font-family: "Teletex Light",Arial, Helvetica, sans-serif;
+    font-family: "Teletex Light",'Habibi',Arial, Helvetica, sans-serif;
     font-size: 27px;
     color: white;
     margin-top: 16px;
