@@ -293,6 +293,7 @@ input#password {
     height: 100%;
     background: #080808;
     opacity: 0.65;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
 }
 
 .fb_icon, .tw_icon
