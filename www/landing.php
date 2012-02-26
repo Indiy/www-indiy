@@ -14,7 +14,6 @@ if( strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
         <title>MyArtistDNA - BE HEARD, BE SEEN, BE INDEPENDENT</title>
         <link rel="icon" href="favicon.ico" />
         
-        <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>
         <style type="text/css">
 
 @font-face {
