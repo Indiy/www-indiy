@@ -14,14 +14,14 @@ if( strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
         <title>MyArtistDNA - BE HEARD, BE SEEN, BE INDEPENDENT</title>
         <link rel="icon" href="favicon.ico" />
         
-        <link rel="stylesheet" href="http://f.fontdeck.com/s/css/D8Fz3XWt+VC0VDejQHe7Mks5Qzc/www.madd3v.com/16588.css" type="text/css" />
         <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>
         <style type="text/css">
-/*
+
 @font-face {
     font-family: 'Teletex Light';
     src: url('css/Teletex_Light.eot');
-    src: url('css/Teletex_Light.otf') format('opentype');
+    src: url('css/Teletex_Light.eot?$iefix') format('embedded-opentype'),
+    url('css/Teletex_Light.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
