@@ -272,13 +272,15 @@ input#password {
     font-size: 11px;
     color: #aaa;
 }
-.social
-{
+.social {
     padding-top: 12px; 
     float: right;
     font-family: sans-serif;
     font-size: 11px;
     color: #aaa;
+}
+.social a img {
+    border-style: none;
 }
 
 .gray_cover
