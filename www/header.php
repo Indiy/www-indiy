@@ -16,6 +16,9 @@
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/c/video.js"></script>
+
     <script type="text/javascript">
         var g_siteUrl = "<?=trueSiteUrl();?>";
     </script>
