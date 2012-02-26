@@ -216,7 +216,7 @@ ul#accordion-slider li{ width:314px; height:257px; float:left; display: block; o
     color:#323840; 
     background:url(../images/bg_heading_artists.png) no-repeat top right; 
     padding:16px 32px 0px 17px;
-    *height: 34px;
+    height: 34px\9;
 }
 #artistshome ul li a { color:#323840; text-decoration:none}
 
