@@ -384,6 +384,7 @@ input {
     font-size: 27px;
     color: white;
     margin-top: 16px;
+    margin-top: 10px\9;
     text-decoration: none;
 }
 
