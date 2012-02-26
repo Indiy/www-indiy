@@ -24,7 +24,6 @@ if( strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
     font-weight: normal;
     font-style: normal;
 }
-*/
 html, body 
 { 
     margin: 0; 
