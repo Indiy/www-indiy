@@ -78,6 +78,7 @@
 		2DD94A3214C49CA8002B1259 /* artist_home_tabs.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_home_tabs.js; sourceTree = "<group>"; };
 		2DD94A3314C49D68002B1259 /* artist_home_socialize.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_home_socialize.js; sourceTree = "<group>"; };
 		2DD94A3414C4E4E7002B1259 /* lionbars.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = lionbars.css; sourceTree = "<group>"; };
+		2DE1728F14FBF9F10018D708 /* swipe2.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = swipe2.js; sourceTree = "<group>"; };
 		2DE197A214F6133000305EAD /* password.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = password.php; sourceTree = "<group>"; };
 		2DE2142714C15540000C5142 /* artist_home_video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_home_video.js; sourceTree = "<group>"; };
 		2DE2142914C212E0000C5142 /* account_settings.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = account_settings.php; sourceTree = "<group>"; };
@@ -2698,6 +2699,7 @@
 		2DF472C71440B77F005538C7 /* js */ = {
 			isa = PBXGroup;
 			children = (
+				2DE1728F14FBF9F10018D708 /* swipe2.js */,
 				2DD94A3114C3A6C5002B1259 /* artist_home_audio.js */,
 				2DE2142714C15540000C5142 /* artist_home_video.js */,
 				2DD94A3214C49CA8002B1259 /* artist_home_tabs.js */,
