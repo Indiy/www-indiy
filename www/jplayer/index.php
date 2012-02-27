@@ -256,7 +256,7 @@ var g_productList = <?=$product_list_json;?>;
 <script src="/js/jquery.mousewheel.min.js" type="text/javascript"></script>
 <script src="/js/video.js" type="text/javascript"></script> 
 <script src="/js/jquery.lionbars.0.3.min.js" type="text/javascript"></script>
-<script src="/js/swipe.js" type="text/javascript"></script>
+<script src="/js/swipe2.js" type="text/javascript"></script>
 
 <script src="<?=trueSiteUrl();?>/js/logged_in.php" type="text/javascript"></script>
 
