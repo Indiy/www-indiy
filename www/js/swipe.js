@@ -76,10 +76,6 @@ Swipe.prototype = {
     // determine width of each slide
     this.width = this.container.getBoundingClientRect().width;
 
-    // For IE8
-    if (!this.width)
-        this.width = $(this.container).width();
-
     // return immediately if measurement fails
     if (!this.width) return null;
 
@@ -120,7 +116,9 @@ Swipe.prototype = {
 
     if( !this.browser.transitions )
     {
-        style.left = -(index * this.width);
+        $(this.element).children().hide();
+        $(this.element).children[index].show();
+        this.transitionEnd(false);
     }
 
   },
