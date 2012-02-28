@@ -117,7 +117,7 @@ Swipe.prototype = {
     if( !this.browser.transitions )
     {
         $(this.element).children().hide();
-        $(this.element).children[index].show();
+        $(this.element).children()[index].show();
         this.transitionEnd(false);
     }
 
