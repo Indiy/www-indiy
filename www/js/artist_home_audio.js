@@ -219,7 +219,7 @@ function playerVolume(event)
 var g_songSwipe = false;
 function setupSwipe()
 {
-    var element = document.getElementById('image_slider');
+    var element = document.getElementById('image_slider').children[0];
     var settings = {
         startSlide: g_currentSongIndex,
         callback: imageChange
