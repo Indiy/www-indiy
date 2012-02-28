@@ -13,6 +13,20 @@ window.Swipe = function(element, options) {
 
   var _this = this;
 
+    this.browser = {
+    touch: (function() {
+            return ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch;
+            })(),
+    transitions: (function() {
+                  var temp = document.createElement('swipe'),
+                  props = ['perspectiveProperty', 'WebkitPerspective', 'MozPerspective', 'OPerspective', 'msPerspective'];
+                  for ( var i in props ) {
+                  if (temp.style[ props[i] ] !== undefined) return true;
+                  }
+                  return false;
+                  })()
+    };
+
   // retreive options
   this.options = options || {};
   this.index = this.options.startSlide || 0;
@@ -99,6 +113,11 @@ Swipe.prototype = {
 
     // set new index to allow for expression arguments
     this.index = index;
+
+    if( !this.browser.transitions )
+    {
+        style.left = -(index * this.width);
+    }
 
   },
 
