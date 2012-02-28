@@ -123,13 +123,6 @@ function jplayerVolume(event)
     var vol = event.jPlayer.options.volume;
     $('#player .volume .current').css('height',vol * 100 + "%");
 }
-function imageChange(index, elem)
-{
-    if( g_currentSongIndex != index )
-    {
-        playListChange( index );
-    }
-}
 
 function playerPlayPause()
 {
@@ -219,13 +212,21 @@ function playerVolume(event)
 var g_songSwipe = false;
 function setupSwipe()
 {
-    var element = document.getElementById('image_slider').children[0];
+    var element = document.getElementById('image_slider');
     var settings = {
         startSlide: g_currentSongIndex,
         callback: imageChange
     }
     g_songSwipe = new Swipe(element,settings);
 }
+function imageChange(event, index, elem)
+{
+    if( g_currentSongIndex != index )
+    {
+        playListChange( index );
+    }
+}
+
 function jplayerReady() 
 {
     playListChange(g_currentSongIndex);
