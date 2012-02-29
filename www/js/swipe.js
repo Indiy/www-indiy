@@ -121,8 +121,7 @@ Swipe.prototype = {
 
             // set new index to allow for expression arguments
             this.index = index;
-        }
-    }
+      }
 
   },
 
