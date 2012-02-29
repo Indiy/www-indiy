@@ -102,23 +102,26 @@ Swipe.prototype = {
 
   slide: function(index, duration) {
 
-    var style = this.element.style;
-
-    // set duration speed (0 represents 1-to-1 scrolling)
-    style.webkitTransitionDuration = style.MozTransitionDuration = style.msTransitionDuration = style.OTransitionDuration = style.transitionDuration = duration + 'ms';
-
-    // translate to given index position
-    style.webkitTransform = 'translate3d(' + -(index * this.width) + 'px,0,0)';
-    style.msTransform = style.MozTransform = style.OTransform = 'translateX(' + -(index * this.width) + 'px)';
-
-    // set new index to allow for expression arguments
-    this.index = index;
-
-    if( !this.browser.transitions )
-    {
+      if( !this.width )
+      {
         $(this.element).children().hide();
         $(this.element).children()[index].style.display = "block";
         this.transitionEnd(false);
+      }
+      else
+      {
+            var style = this.element.style;
+
+            // set duration speed (0 represents 1-to-1 scrolling)
+            style.webkitTransitionDuration = style.MozTransitionDuration = style.msTransitionDuration = style.OTransitionDuration = style.transitionDuration = duration + 'ms';
+
+            // translate to given index position
+            style.webkitTransform = 'translate3d(' + -(index * this.width) + 'px,0,0)';
+            style.msTransform = style.MozTransform = style.OTransform = 'translateX(' + -(index * this.width) + 'px)';
+
+            // set new index to allow for expression arguments
+            this.index = index;
+        }
     }
 
   },
