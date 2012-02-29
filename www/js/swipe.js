@@ -115,9 +115,6 @@ Swipe.prototype = {
             // translate to given index position
             style.webkitTransform = 'translate3d(' + -(index * this.width) + 'px,0,0)';
             style.msTransform = style.MozTransform = style.OTransform = 'translateX(' + -(index * this.width) + 'px)';
-
-            // set new index to allow for expression arguments
-            this.index = index;
       }
       else
       {
@@ -125,6 +122,7 @@ Swipe.prototype = {
           $(this.element).children()[index].style.display = "block";
           this.transitionEnd(false);
       }
+      this.index = index;
   },
 
   getPos: function() {
