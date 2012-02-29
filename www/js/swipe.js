@@ -79,36 +79,33 @@ Swipe.prototype = {
     // return immediately if measurement fails
     if (!this.width) return null;
 
-    // hide slider element but keep positioning during setup
-    this.container.style.visibility = 'hidden';
+    if (this.browser.transitions)
+    {
+        // hide slider element but keep positioning during setup
+        this.container.style.visibility = 'hidden';
 
-    // dynamic css
-    this.element.style.width = (this.slides.length * this.width) + 'px';
-    var index = this.slides.length;
-    while (index--) {
-      var el = this.slides[index];
-      el.style.width = this.width + 'px';
-      el.style.display = 'table-cell';
-      el.style.verticalAlign = 'top';
+        // dynamic css
+        this.element.style.width = (this.slides.length * this.width) + 'px';
+        var index = this.slides.length;
+        while (index--) {
+          var el = this.slides[index];
+          el.style.width = this.width + 'px';
+          el.style.display = 'table-cell';
+          el.style.verticalAlign = 'top';
+        }
+
+        // set start position and force translate to remove initial flickering
+        this.slide(this.index, 0); 
+
+        // show slider element
+        this.container.style.visibility = 'visible';
     }
-
-    // set start position and force translate to remove initial flickering
-    this.slide(this.index, 0); 
-
-    // show slider element
-    this.container.style.visibility = 'visible';
 
   },
 
   slide: function(index, duration) {
 
-      if( !this.width )
-      {
-        $(this.element).children().hide();
-        $(this.element).children()[index].style.display = "block";
-        this.transitionEnd(false);
-      }
-      else
+      if( this.browser.transitions )
       {
             var style = this.element.style;
 
@@ -122,7 +119,12 @@ Swipe.prototype = {
             // set new index to allow for expression arguments
             this.index = index;
       }
-
+      else
+      {
+          $(this.element).children().hide();
+          $(this.element).children()[index].style.display = "block";
+          this.transitionEnd(false);
+      }
   },
 
   getPos: function() {
