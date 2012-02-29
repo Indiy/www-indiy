@@ -115,14 +115,15 @@ Swipe.prototype = {
             // translate to given index position
             style.webkitTransform = 'translate3d(' + -(index * this.width) + 'px,0,0)';
             style.msTransform = style.MozTransform = style.OTransform = 'translateX(' + -(index * this.width) + 'px)';
+            this.index = index;
       }
       else
       {
-          $(this.element).children().hide();
-          $(this.element).children()[index].style.display = "block";
-          this.transitionEnd(false);
+            $(this.element).children().hide();
+            $(this.element).children()[index].style.display = "block";
+            this.index = index;
+            this.transitionEnd(false);
       }
-      this.index = index;
   },
 
   getPos: function() {
