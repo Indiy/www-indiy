@@ -19,8 +19,9 @@ include ('header.php');
 <video width="638" height="358" id="my_video_1" class="video-js vjs-default-skin" controls
 preload="auto" poster="/images/myartistdna_video.jpg"
 data-setup="{}">
-    <source src="<?=trueSiteUrl();?>/__MASTER.mp4" type='video/mp4'>
-    <source src="<?=trueSiteUrl();?>/__MASTER.webm" type='video/webm'>
+    <source src="http://www.myartistdna.com/mad.webm" type="video/webm" />
+    <source src="http://www.myartistdna.com/mad.iphone.mp4" type="video/mp4" />
+    <source src="http://www.myartistdna.com/mad.ogv" type="video/ogg" />
 </video>
 
 
