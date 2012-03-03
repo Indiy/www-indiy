@@ -853,7 +853,7 @@ String.prototype.format = function() {
             <div class='next_track' onclick='playListNext();'></div>
             <div class='seperator'></div>
             <div class='song_track'>
-                <div class='artist_song'>Jim Lake - Octopus</div>
+                <div class='artist_song'></div>
                 <div class='seek_time'>
                     <div class='seek_bar'>
                         <div class='loaded'></div>
