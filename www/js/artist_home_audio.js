@@ -258,8 +258,8 @@ function loadSongImage(song,index)
         holder.css("background-color", "#" + color);
         if( bg_style == 'STRETCH' )
         {
-            var img_url = "/timthumb.php?src=" + image + "&w=" + getWindowWidth() + "&h="+ getWindowHeight() + "&zc=0&q=100";
-            var style = "width: 100%; height: 100%;";
+            var img_url = "/timthumb.php?src=" + image + "&w=" + getWindowWidth() + "&zc=0&q=100";
+            var style = "width: 100%;";
             var html = "<img src='" + img_url + "' style='" + style + "'/>";
             holder.html(html);
             holder.css("background-image","none");
