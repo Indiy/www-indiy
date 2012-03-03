@@ -638,13 +638,13 @@ String.prototype.format = function() {
                             <img class='logo' src="/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&w=145" />
                         </div>
                     <? endif; ?>
+                    <? if( $show_listens ): ?>
+                        <div class='total_listens'>
+                            TOTAL VIEWS:
+                            <span id='total_listens_val'><?=$total_listens;?></span>
+                        </div>
+                    <? endif; ?>
                 </div>
-                <? if( $show_listens ): ?>
-                    <div class='total_listens'>
-                        TOTAL VIEWS:
-                        <span id='total_listens_val'><?=$total_listens;?></span>
-                    </div>
-                <? endif; ?>
                 <div class='up_down_arrow' onclick='toggleRightBox();'></div>
             </div>
         </div>
