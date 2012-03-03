@@ -216,6 +216,10 @@ $(document).ready(showFirstInstruction);
                     <li><a href="addproduct.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Product</a></li>
                 <? endif ?>
             </ul>
+            <h6>Misc</h6>
+            <ul>
+                <li><a onclick='deleteAccount(<?=$artistID;?>);'>Delete Account</a></li>
+            </ul>
             <? if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' ): ?>
                 <h6>Super Admin</h6>
                 <ul>

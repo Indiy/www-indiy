@@ -854,3 +854,17 @@ function submitChangePassword()
     }
 }
 
+function deleteAccount(id)
+{
+    var ret = window.confirm("Are you sure you want to delete your account?");
+    if( ret )
+        ret = window.confirm("This action can not be undone, are you sure?");
+    if( ret )
+    {
+        var url = "/manage/delete_account.php?artist_id=" + id;
+        url += "&confirm=true";
+        window.location.href = url;
+    }
+}
+
+
