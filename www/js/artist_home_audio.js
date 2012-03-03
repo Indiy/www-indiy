@@ -307,15 +307,15 @@ function resizeBackground()
         {
             var height = win_height;
             var width = height * img_ratio;
-            //image.width(width);
-            //image.height(height);
+            image.width(width);
+            image.height(height);
         }
         else
         {
             var width = win_width;
             var height = width / img_ratio;
-            //image.width(width);
-            //image.height(height);
+            image.width(width);
+            image.height(height);
         }
     }
 }
