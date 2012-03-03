@@ -150,9 +150,12 @@
                 <input id='custom_domain' name="custom_domain" class='line_text' value="<?=$custom_domain;?>">
             </div>
         <? endif; ?>
-        <div class='input_container'>
-            <div class='left_label'>Logo <span id='tip_artist_logo' class='tooltip'>(?)</span><span class='required'>*</span></div>
-            <input id='logo' type="file" class="right_file" name="logo" onchange='onImageChange(this);' >
+        <div class='input_container' style='height: 50px;'>
+            <div class='left_image_label'>
+                <div class='image_label'>Logo <span id='tip_artist_logo' class='tooltip'>(?)</span><span class='required'>*</span></div>
+                <div class='image_image'><?=$artist_logo;?></div>
+            </div>
+            <input id='logo' type="file" name="logo" class='right_file' onchange='onImageChange(this);' />
         </div>
         <div class='input_container'>
             <div class='left_label'>Show "Listen" Count <span id='tip_listen_count' class='tooltip'>(?)</span></div>
