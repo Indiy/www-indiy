@@ -92,7 +92,6 @@ else
         $music_bgcolor = $music["bgcolor"];
         $bg_style = $music["bg_style"];
         $music_name = stripslashes($music["name"]);
-        $music_name = str_replace('"', '&quot;', $music_name);
         $music_artistid = $music["artistid"];
         $music_amazon = nohtml($music["amazon"]);
         $music_itunes = nohtml($music["itunes"]);
