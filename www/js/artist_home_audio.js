@@ -260,7 +260,9 @@ function loadSongImage(song,index)
         if( bg_style == 'STRETCH' )
         {
             var img_url = "/timthumb.php?src=" + image + "&w=" + getWindowWidth() + "&zc=0&q=100";
-            var html = "<img src='" + img_url + "' />";
+            var html = "<div style='height: " + getWindowHeight() + "px;'>";
+            html += "<img src='" + img_url + "' />";
+            html += "</div>"
             holder.html(html);
             holder.css("background-image","none");
             holder.css("background-repeat","no-repeat");
@@ -296,7 +298,7 @@ function resizeBackground()
         var win_width = getWindowWidth();
         var win_ratio = win_width / win_height;
 
-        var image = $('#image #image_holder_' + g_currentSongIndex + ' img');
+        var image = $('#image_holder_' + g_currentSongIndex + ' div img');
         var img_width = image.width();
         var img_height = image.height();
         var img_ratio = img_width/img_height;
