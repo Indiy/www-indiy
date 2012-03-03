@@ -67,10 +67,10 @@ function setupAudioPlayer()
         $('#player').mouseover(mouseoverPlayer);
         $('#player').mouseout(mouseoutPlayer);
         
-        $('#prev_track').mouseover(function(){ $(this).animate({width: "200px"}, 250);});
+        $('#prev_track').mouseover(function(){ $(this).animate({width: "140px"}, 250);});
         $('#prev_track').mouseout(function(){ $(this).animate({width: "31px"}, 250);});
         
-        $('#next_track').mouseover(function(){ $(this).animate({width: "200px"}, 250);});
+        $('#next_track').mouseover(function(){ $(this).animate({width: "140px"}, 250);});
         $('#next_track').mouseout(function(){ $(this).animate({width: "31px"}, 250);});
     }
     
