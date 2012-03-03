@@ -67,8 +67,9 @@
 	}
     $song_id = $_REQUEST['song_id'];
     $song = mf(mq("SELECT * FROM mydna_musicplayer_audio WHERE id = '$song_id'"));
+    $audio_name = $song['name'];
     $short_link = make_short_link($song['abbrev']);
-    $update_text = "Check out my new song: $short_link";
+    $update_text = "Check out my new song, $audio_name: $short_link via @myartistdna";
 ?>
 
 <script type="text/javascript"> 
