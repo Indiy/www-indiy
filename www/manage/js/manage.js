@@ -708,6 +708,12 @@ function validateEditProfile()
         window.alert("Please enter an artist name.");
         return false;
     }
+    var logo = document.getElementById('logo');
+    if( g_needsImage && ( !logo || !logo.value || logo.value.length == 0 ) )
+    {
+        window.alert("Please upload a logo image.");
+        return false;
+    } 
     return true;
 }
 function onEditProfileSubmit()
