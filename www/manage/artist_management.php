@@ -275,25 +275,25 @@ $(document).ready(showFirstInstruction);
                     echo "<span class='socialize'>";
                     if( $facebook )
                     {
-                        echo "<a href='socialize.php?artist_id=".$artistID."&song_id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>";
+                        echo "<a href='socialize.php?artist_id=".$artistID."&song_id=".$record_artistAudio['id']."' rel='facebox[.bolder]' title='Send a Facebook update for this page.'>";
                         echo "<img class='social_icon' src='/images/fb_icon_color.png'/>";
                         echo "</a>\n";
                     }
                     else
                     {
-                        echo "<a href='social_config.php?artist_id=$artistID' rel='facebox[.bolder]'>";
+                        echo "<a href='social_config.php?artist_id=$artistID' rel='facebox[.bolder]' title='Add a Facebook account.'>";
                         echo "<img class='social_icon' src='/images/fb_icon_grey.png'/>";
                         echo "</a>\n";
                     }
                     if( $twitter )
                     {
-                        echo "<a href='socialize.php?artist_id=".$artistID."&song_id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>";
+                        echo "<a href='socialize.php?artist_id=".$artistID."&song_id=".$record_artistAudio['id']."' rel='facebox[.bolder]' title='Send a tweet for this page.'>";
                         echo "<img class='social_icon' src='/images/tw_icon_color.png'/>";
                         echo "</a>\n";
                     }
                     else
                     {
-                        echo "<a href='social_config.php?artist_id=$artistID' rel='facebox[.bolder]'>";
+                        echo "<a href='social_config.php?artist_id=$artistID' rel='facebox[.bolder]' title='Add a Twitter account.'>";
                         echo "<img class='social_icon' src='/images/tw_icon_grey.png'/>";
                         echo "</a>\n";
                     }
