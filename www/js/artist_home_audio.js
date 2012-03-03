@@ -78,7 +78,7 @@ function setupAudioPlayer()
     $('#player .volume').click(playerVolume);
     
     window.setTimeout(preloadImages,1000);
-    $(window).resize(resizeBackground);
+    $(window).resize(resizeBackgrounds);
 }
 
 function formatMinSeconds(seconds)
@@ -283,41 +283,47 @@ function loadSongImage(song,index)
             holder.html(html);
         }
     }            
-    resizeBackground();
+    resizeBackgrounds();
 }
-function resizeBackground()
+function resizeBackgrounds()
 {
-    var song = g_songPlayList[g_currentSongIndex];
-    var bg_style = song.bg_style;
-    if( bg_style == 'STRETCH' )
+    for( var i = 0 ; i < g_songPlayList.length ; ++i )
     {
-        var win_height = getWindowHeight();
-        var win_width = getWindowWidth();
-        var win_ratio = win_width / win_height;
+        var song = g_songPlayList[i];
+        var bg_style = song.bg_style;
+        if( bg_style == 'STRETCH' )
+        {
+            var win_height = getWindowHeight();
+            var win_width = getWindowWidth();
+            var win_ratio = win_width / win_height;
 
-        var holder = $('#image_holder_' + g_currentSongIndex + ' div');
-        var image = $('#image_holder_' + g_currentSongIndex + ' div img');
-        var img_width = image.width();
-        var img_height = image.height();
-        var img_ratio = img_width/img_height;
-        
-        if( win_ratio < img_ratio )
-        {
-            var height = win_height;
-            var width = height * img_ratio;
-            image.width(width);
-            image.height(height);
-            holder.height(win_height);
-            holder.scrollLeft((width - win_width)/2);
-        }
-        else
-        {
-            var width = win_width;
-            var height = width / img_ratio;
-            image.width(width);
-            image.height(height);
-            holder.height(win_height);
-            holder.scrollTop((height - win_height)/2);
+            var holder = $('#image_holder_' + i + ' div');
+            var image = $('#image_holder_' + i + ' div img');
+            var img_width = image.width();
+            var img_height = image.height();
+            if( img_height > 0 && img_width > 0 )
+            {
+                var img_ratio = img_width/img_height;
+                
+                holder.height(win_height);
+                holder.width(win_width);
+                if( win_ratio < img_ratio )
+                {
+                    var height = win_height;
+                    var width = height * img_ratio;
+                    image.width(width);
+                    image.height(height);
+                    holder.scrollLeft((width - win_width)/2);
+                }
+                else
+                {
+                    var width = win_width;
+                    var height = width / img_ratio;
+                    image.width(width);
+                    image.height(height);
+                    holder.scrollTop((height - win_height)/2);
+                }
+            }
         }
     }
 }
