@@ -173,7 +173,7 @@
         {
             $song = mf(mq("SELECT * FROM mydna_musicplayer_audio WHERE id = '$new_song_id'"));
             $short_link = make_short_link($song['abbrev']);
-            $update_text = "Check out my new song: $short_link";
+            $update_text = "Check out my new song, $audio_name: $short_link via @myartistdna";
 
             $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE id = '$artistid'"));
             if( $artist['fb_setting'] == 'AUTO' )
