@@ -296,7 +296,7 @@ function resizeBackground()
         var win_width = getWindowWidth();
         var win_ratio = win_width / win_height;
 
-        var image = $('#image #image_holder_' + g_currentSongIndex);
+        var image = $('#image #image_holder_' + g_currentSongIndex + ' img');
         var img_width = image.width();
         var img_height = image.height();
         var img_ratio = img_width/img_height;
