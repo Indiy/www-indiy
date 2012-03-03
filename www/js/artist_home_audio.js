@@ -298,6 +298,7 @@ function resizeBackground()
         var win_width = getWindowWidth();
         var win_ratio = win_width / win_height;
 
+        var holder = $('#image_holder_' + g_currentSongIndex + ' div');
         var image = $('#image_holder_' + g_currentSongIndex + ' div img');
         var img_width = image.width();
         var img_height = image.height();
@@ -309,6 +310,7 @@ function resizeBackground()
             var width = height * img_ratio;
             image.width(width);
             image.height(height);
+            holder.height(win_height);
         }
         else
         {
@@ -316,6 +318,7 @@ function resizeBackground()
             var height = width / img_ratio;
             image.width(width);
             image.height(height);
+            holder.height(win_height);
         }
     }
 }
