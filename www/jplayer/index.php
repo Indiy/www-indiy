@@ -596,26 +596,10 @@ String.prototype.format = function() {
                     <button onclick='showLogin();'>LOG IN</button>
                 </div>
                 <div class='login_sep'></div>
-                <!--
-                <div class='label_name'>
-                    Artist:
-                    <span><?=$artist_name;?></span>
-                </div>
-                -->
-                <div class='label_name'>
-                    Title:
-                    <span id='current_track_name'></span>
-                </div>
                 <div class='expand_box'>
-                    <!--
-                    <div class='logo_box_top_spacer'></div>
-                    <? if ($artist_logo): ?>
-                        <img class='logo' src="/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&w=145" />
-                    <? endif; ?>
-                    <div class=''>
+                    <div class='label_name'>
+                        Title: <span id='current_track_name'></span>
                     </div>
-                    -->
-                    
                     <? if( $show_listens ): ?>
                         <div class='label_name'>
                             Views:
