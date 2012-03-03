@@ -97,8 +97,10 @@
 		$head_title = "Add";
 	}
 	
+    $needs_image = "true";
 	if ($artist_logo != "") {
 		$artist_logo = "<img src='/../artists/images/$artist_logo' />";
+        $needs_image = "false";
 	}
 	
 	if ($artist_download == "1") { $yesDownload = " checked"; } else { $noDownload = " checked"; }
@@ -112,6 +114,8 @@
     $(document).ready(setupQuestionTolltips);
     
     var g_artistId = <?=$artistid;?>;
+    
+    var g_needsImage = <?=$needs_image;?>;
 </script>
 
 <div id="popup">
@@ -147,7 +151,7 @@
             </div>
         <? endif; ?>
         <div class='input_container'>
-            <div class='left_label'>Logo <span id='tip_artist_logo' class='tooltip'>(?)</span></div>
+            <div class='left_label'>Logo <span id='tip_artist_logo' class='tooltip'>(?)</span><span class='required'>*</span></div>
             <input id='logo' type="file" class="right_file" name="logo" onchange='onImageChange(this);' >
         </div>
         <div class='input_container'>
