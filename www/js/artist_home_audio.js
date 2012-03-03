@@ -450,7 +450,6 @@ function songVote(vote)
 // Function that gets window width
 function getWindowWidth() 
 {
-    screenMinWidth = 1024; // Minimum screen width
     var windowWidth = 0;
     if (typeof(window.innerWidth) == 'number') 
     {
@@ -467,15 +466,12 @@ function getWindowWidth()
             windowWidth = document.body.clientWidth;
         }
     }
-    if( windowWidth < screenMinWidth ) 
-        windowWidth = screenMinWidth;
     return windowWidth;
 }
 
 // Function that gets window height
 function getWindowHeight() 
 {
-    screenMinHeight =  768; // Minimum screen height
     var windowHeight = 0;
     if (typeof(window.innerHeight) == 'number')
     {
@@ -492,8 +488,6 @@ function getWindowHeight()
             windowHeight = document.body.clientHeight;
         }
     }
-    if( windowHeight < screenMinHeight ) 
-        windowHeight = screenMinHeight;
     return windowHeight;
 }
 
