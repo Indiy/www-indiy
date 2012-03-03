@@ -75,7 +75,7 @@
         exit();
 	}
 	
-	if ($_SESSION['sess_userId'] != "") {
+	if ($_REQUEST['artist_id'] != "") {
 		$artistid = $_REQUEST['artist_id'];
 		$row = mf(mq("select * from {$database} where id='{$artistid}'"));
 		$artist = $row["artist"];
@@ -91,6 +91,7 @@
 		$appid = $row["appid"];
         $custom_domain = $row["custom_domain"];
         $account_type = $row["account_type"];
+        $artist_logo = $row["logo"];
         
 		$head_title = "Edit";
 	}else{
@@ -98,8 +99,9 @@
 	}
 	
     $needs_image = "true";
-	if ($artist_logo != "") {
-		$artist_logo = "<img src='/../artists/images/$artist_logo' />";
+	if( $artist_logo != "" ) 
+    {
+		$artist_logo = "<img src='/artists/images/$artist_logo' />";
         $needs_image = "false";
 	}
 	
