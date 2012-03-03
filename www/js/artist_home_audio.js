@@ -311,6 +311,7 @@ function resizeBackground()
             image.width(width);
             image.height(height);
             holder.height(win_height);
+            holder.scrollLeft((width - win_width)/2);
         }
         else
         {
@@ -319,6 +320,7 @@ function resizeBackground()
             image.width(width);
             image.height(height);
             holder.height(win_height);
+            holder.scrollTop((height - win_height)/2);
         }
     }
 }
