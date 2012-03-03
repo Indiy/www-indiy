@@ -78,6 +78,7 @@ function setupAudioPlayer()
     $('#player .volume').click(playerVolume);
     
     window.setTimeout(preloadImages,1000);
+    $(document).resize(resizeBackground);
 }
 
 function formatMinSeconds(seconds)
@@ -259,8 +260,7 @@ function loadSongImage(song,index)
         if( bg_style == 'STRETCH' )
         {
             var img_url = "/timthumb.php?src=" + image + "&w=" + getWindowWidth() + "&zc=0&q=100";
-            var style = "width: 100%;";
-            var html = "<img src='" + img_url + "' style='" + style + "'/>";
+            var html = "<img src='" + img_url + "' />";
             holder.html(html);
             holder.css("background-image","none");
             holder.css("background-repeat","no-repeat");
@@ -286,6 +286,38 @@ function loadSongImage(song,index)
         //window.setTimeout(function() { $('#loader').hide(); }, 1500);
     }
 }
+function resizeBackground()
+{
+    var song = g_songPlayList[g_currentSongIndex];
+    var bg_style = song.bg_style;
+    if( bg_style == 'STRETCH' )
+    {
+        var win_height = getWindowHeight();
+        var win_width = getWindowWidth();
+        var win_ratio = win_width / win_height;
+
+        var image = $('#image #image_holder_' + g_currentSongIndex);
+        var img_width = image.width();
+        var img_height = image.height();
+        var img_ratio = img_width/img_height;
+        
+        if( win_ratio < img_ratio )
+        {
+            var height = win_height;
+            var width = height * img_ratio;
+            image.width(width);
+            image.height(height);
+        }
+        else
+        {
+            var width = win_width;
+            var height = width / img_ratio;
+            image.width(width);
+            image.height(height);
+        }
+    }
+}
+
 var g_listenUpdated = {};
 function updateListens(song_id,index)
 {

@@ -68,16 +68,16 @@ body { background-color: black; font-size: 12px; color: #fff; font-family: Helve
 }
 
 #image .image_holder {
+    position: relative;
     display: none;
     height: 100%;
     width: 100%;
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center center;
+    overflow: hidden;
 }
 #image .image_holder img { 
-    height: 100%;
-    width: 100%;
 }
 
 /* PAGE */
