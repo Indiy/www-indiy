@@ -251,8 +251,6 @@ function loadSongImage(song,index)
     
     if( !song.loaded )
     {
-        //$('#loader').show();
-        
         song.loaded = true;
         var holder = $('#image_holder_' + index);
         
@@ -284,9 +282,8 @@ function loadSongImage(song,index)
             var html = "<div style='width: 100%; height: " + getWindowHeight() + "px;'></div>";
             holder.html(html);
         }
-        
-        //window.setTimeout(function() { $('#loader').hide(); }, 1500);
-    }
+    }            
+    resizeBackground();
 }
 function resizeBackground()
 {
