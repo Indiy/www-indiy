@@ -255,7 +255,7 @@ $(document).ready(showFirstInstruction);
 					echo "<li id='arrayorder_$song_id' class='playlist_sortable $class' >\n";
                     echo "<span class='title'>\n";
                     echo "<a href='addmusic.php?artist_id=".$artistID."&id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>";
-                    echo $record_artistAudio['name'];
+                    echo stripslashes($record_artistAudio['name']);
                     echo "</a>\n";
                     echo "</span>\n";
                     echo "<span class='share'>";

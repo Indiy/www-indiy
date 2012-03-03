@@ -329,7 +329,7 @@ function clickMadStore()
         
         <div class='input_container'>
             <div class='line_label'>Name<span class='required'>*</span></div>
-            <input id='song_name' type="text" name="name" value="<?=$audio_name;?>" class="line_text" />
+            <input id='song_name' type="text" name="name" value="<?=htmlentities($audio_name);?>" class="line_text" />
         </div>
         <div class='input_container' style='height: 50px;'>
             <div class='left_label'>MP3 File <span id='tip_mp3' class='tooltip'>(?)</span></div>
