@@ -2164,6 +2164,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     color: #555;
     font-size: 12px;
     font-family: Helvetica,sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #player .seek_time {
     height: 22px;
