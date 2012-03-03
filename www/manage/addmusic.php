@@ -165,7 +165,6 @@
 		$postedValues['postedValues'] = $_REQUEST;
 
 		//echo '{"Name":"'.$audio_name.'","imageSource":"artists/images/'.$audio_logo.'","":"","audio_sound":"artists/audio/'.$audio_sound.'","success":1}';
-		echo json_encode($postedValues);
         
         require_once 'include/utils.php';
         @create_abbrevs();
@@ -180,13 +179,16 @@
             if( $artist['fb_setting'] == 'AUTO' )
             {
                 send_fb_update($artist,$update_text);
+                $postedValues['fb_update'] = TRUE;
             }
             if( $artist['tw_setting'] == 'AUTO' )
             {
                 send_tweet($artist,$update_text);
+                $postedValues['tw_update'] = TRUE;
             }
         }
         
+		echo json_encode($postedValues);
 		exit();
 	}
     $audio_bgcolor = '000000';

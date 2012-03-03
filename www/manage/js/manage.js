@@ -250,9 +250,17 @@ function uploadReadyStateChange(xhr)
             {
                 var data = JSON.parse(text);
                 if( 'upload_error' in data )
+                {
                     showSuccess(data['upload_error']);
+                }
                 else
+                {
                     showSuccess();
+                    if( 'fb_update' in data )
+                        $('#success_msg .social_success.facebook').show();
+                    if( 'tw_update' in data )
+                        $('#success_msg .social_success.twitter').show();
+                }
             }
             else
             {
