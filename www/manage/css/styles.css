@@ -1359,6 +1359,15 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     font-weight: normal;
     color: #777;
 }
+#popup .social_success {
+    display: hidden;
+    padding-bottom: 10px;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #777;
+}
 #popup .upload_percent {
     padding-left: 140px;
 }
