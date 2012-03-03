@@ -78,7 +78,7 @@ function setupAudioPlayer()
     $('#player .volume').click(playerVolume);
     
     window.setTimeout(preloadImages,1000);
-    $(document).resize(resizeBackground);
+    $(window).resize(resizeBackground);
 }
 
 function formatMinSeconds(seconds)
