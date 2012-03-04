@@ -5,7 +5,7 @@ var g_tooltipText =
     "tip_mp3": "Audio to play. Please upload in MP3 format."
     "tip_image": "Image to display on the background of the account page. Suggested size: 1280x720 or larger. Please upload a jpeg or gif format.",
     "tip_store": "Sell this item in your MyArtistDNA Store on your page.  Make sure you add your paypal email address to enable the store. You are responsible for fulfillment for physical products.",
-    "tip_artist_url": "The url that your page will be available under.  e.g.: myname.myartistdna.com." No Spaces in your name. ,
+    "tip_artist_url": "The url that your page will be available under.  e.g.: myname.myartistdna.com. No Spaces in your name." ,
     "tip_sku": "The stock keeping unit for your product. if applicable",
     "tip_paypal_email": "The paypal email that you want to use to receive payments for selling merchandise on your site.",
     "tip_tw_account": "Link your Twitter account.  Allows you to post tweets to your twitter account when you add content to your MyArtistDNA account.  Also shows your tweets in your socialize tab on the account page.",
