@@ -77,7 +77,7 @@ function showVideo(n)
     html += '<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />';    
     html += '<param name="allowfullscreen" value="true" />';
     html += '<param name="flashvars" value=\'config={"playlist":["/images/mad_poster.png", {"url": "' + video_file + '","autoPlay":false,"autoBuffering":true}]}\' />';
-    html += '<img src="/images/mad_poster.png"  alt="Poster Image" title="No video playback capabilities." />';
+    html += '<img src="/images/mad_poster.png" title="No video playback capabilities." />';
     html += '</object>';
     html += '</video>';
     html += '<p class="vjs-no-video">';
@@ -108,6 +108,6 @@ function closeVideo()
         if( g_videoPlayer )
             g_videoPlayer.pause();
     }
-    catch()
+    catch(e)
     {}
 }
