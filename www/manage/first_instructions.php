@@ -11,7 +11,7 @@
     <div class='number_container'>
         <div class='left_number'>1</div>
         <div class='right_title_detail'>
-            <div class='right_title'>Make a name for youself</div>
+            <div class='right_title'>Make a name for yourself</div>
             <div class='right_detail'>
             Click on Edit Profile to select your URL and email address.
             </div>
@@ -20,7 +20,7 @@
     <div class='number_container'>
         <div class='left_number'>2</div>
         <div class='right_title_detail'>
-            <div class='right_title'>Share Your Are</div>
+            <div class='right_title'>Share Your Art</div>
             <div class='right_detail'>
             Click on Add Art to upload images and music.
             </div>
