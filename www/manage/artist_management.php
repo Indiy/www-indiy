@@ -194,7 +194,7 @@ $(document).ready(showFirstInstruction);
                 <li><a href="register.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Edit Profile</a></li>
                 <li><a href="social_config.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Social Connections</a></li>
                 <li><a href="invite_friends.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Invite Friends</a></li>
-                <li><a class='view_site' href="<?=$artist_url;?>">View Site</a></li>
+                <li><a class='view_site' href="<?=$artist_url;?>" target="_blank">View Site</a></li>
             </ul>
             <h6>Platform</h6>
             <ul>
