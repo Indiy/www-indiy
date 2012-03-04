@@ -34,6 +34,7 @@
         $remove_image = $_POST["remove_image"] == 'true';
         $remove_song = $_POST["remove_song"] == 'true';
         $bg_style = $_POST["bg_style"];
+        $audio_tags = $_POST["tags"];
 		
         if( $remove_song )
             $old_sound = '';
@@ -142,7 +143,8 @@
                         "itunes" => $audio_itunes,
                         "product_id" => $product_id,
                         "upload_audio_filename" => $upload_audio_filename,
-                        "bg_style" => $bg_style
+                        "bg_style" => $bg_style,
+                        "tags" => $audio_tags
                         );
 		
 		if ($_POST["id"] != "") 
@@ -211,6 +213,7 @@
         $mad_store = $row["product_id"];
         $upload_audio_filename = $row["upload_audio_filename"];
         $bg_style = $row["bg_style"];
+        $audio_tags = $row["tags"];
 	}else{
 		$head_title = "Add";
 	}
@@ -386,6 +389,10 @@ function clickMadStore()
         <div class='input_container'>
             <div class='left_label'>MyArtistDNA Store <span id='tip_store' class='tooltip'>(?)</span></div>
             <input id='mad_store' class='right_box' type="checkbox" name="mad_store" onclick='clickMadStore();' <?=$mad_store_checked;?> <?=$buy_disabled;?> />
+        </div>
+        <div class='input_container'>
+            <div class='line_label'>Tags <span id='tip_tags' class='tooltip'>(?)</span></div>
+            <input id='audio_tags' type="text" name="tags" value="<?=htmlentities($audio_tags);?>" class="line_text" />
         </div>
         <div class='submit_branding_container'>
             <input type="submit" name="WriteTags" value="submit" class='left_submit' />
