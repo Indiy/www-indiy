@@ -390,7 +390,7 @@ function clickMadStore()
             <div class='left_label'>MyArtistDNA Store <span id='tip_store' class='tooltip'>(?)</span></div>
             <input id='mad_store' class='right_box' type="checkbox" name="mad_store" onclick='clickMadStore();' <?=$mad_store_checked;?> <?=$buy_disabled;?> />
         </div>
-        <div class='input_container'>
+        <div class='input_container' style="height: 60px;">
             <div class='left_label'>Tags <span id='tip_tags' class='tooltip'>(?)</span></div>
             <div class='right_label'>Seperate tags with commas.</div>
             <div style='clear:both;'></div>
