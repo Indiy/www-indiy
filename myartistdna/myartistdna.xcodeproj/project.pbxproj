@@ -869,12 +869,9 @@
 		2DF472B71440B77F005538C7 /* supersized.3.1.3.core.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = supersized.3.1.3.core.min.js; sourceTree = "<group>"; };
 		2DF472C11440B77F005538C7 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DF472D11440B77F005538C7 /* homepage_slideshow.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = homepage_slideshow.js; sourceTree = "<group>"; };
-		2DF472D21440B77F005538C7 /* html5.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = html5.js; sourceTree = "<group>"; };
 		2DF472D41440B77F005538C7 /* Jplayer.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jplayer.swf; sourceTree = "<group>"; };
-		2DF472D51440B77F005538C7 /* jquery-1.4.1-and-plugins.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.4.1-and-plugins.min.js"; sourceTree = "<group>"; };
 		2DF472D81440B77F005538C7 /* jquery.custom.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.custom.js; sourceTree = "<group>"; };
 		2DF472DA1440B77F005538C7 /* jquery.kwicks-1.5.1.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery.kwicks-1.5.1.js"; sourceTree = "<group>"; };
-		2DF472DC1440B77F005538C7 /* jquery.tools.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.tools.js; sourceTree = "<group>"; };
 		2DF472DD1440B77F005538C7 /* main.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		2DF472DE1440B77F005538C7 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
 		2DF472E01440B77F005538C7 /* swfobject.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = swfobject.js; sourceTree = "<group>"; };
@@ -1333,17 +1330,10 @@
 		2DF47501144A2D84005538C7 /* page.inc.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = page.inc.php; sourceTree = "<group>"; };
 		2DF47502144A2D84005538C7 /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
 		2DF47504144A2D84005538C7 /* gen_validatorv31.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = gen_validatorv31.js; sourceTree = "<group>"; };
-		2DF47505144A2D84005538C7 /* html5.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = html5.js; sourceTree = "<group>"; };
 		2DF47506144A2D84005538C7 /* Jplayer.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jplayer.swf; sourceTree = "<group>"; };
-		2DF47507144A2D84005538C7 /* jquery-1.4.1-and-plugins.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.4.1-and-plugins.min.js"; sourceTree = "<group>"; };
-		2DF47508144A2D84005538C7 /* jquery-latest.pack.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-latest.pack.js"; sourceTree = "<group>"; };
 		2DF47509144A2D84005538C7 /* jquery.custom.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.custom.js; sourceTree = "<group>"; };
 		2DF4750A144A2D84005538C7 /* jquery.jplayer.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.jplayer.min.js; sourceTree = "<group>"; };
-		2DF4750B144A2D84005538C7 /* jquery.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
 		2DF4750C144A2D84005538C7 /* jquery.kwicks-1.5.1.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery.kwicks-1.5.1.js"; sourceTree = "<group>"; };
-		2DF4750D144A2D84005538C7 /* jquery.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
-		2DF4750E144A2D84005538C7 /* jquery.tools.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.tools.js; sourceTree = "<group>"; };
-		2DF4750F144A2D84005538C7 /* jquery1.6.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery1.6.js; sourceTree = "<group>"; };
 		2DF47510144A2D84005538C7 /* main.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		2DF47511144A2D84005538C7 /* playlists.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = playlists.php; sourceTree = "<group>"; };
 		2DF47512144A2D84005538C7 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
@@ -2711,11 +2701,8 @@
 				2DF472D11440B77F005538C7 /* homepage_slideshow.js */,
 				2DF472DD1440B77F005538C7 /* main.js */,
 				2DF472DE1440B77F005538C7 /* popup.js */,
-				2DF472D51440B77F005538C7 /* jquery-1.4.1-and-plugins.min.js */,
 				2DF472D81440B77F005538C7 /* jquery.custom.js */,
 				2DF472DA1440B77F005538C7 /* jquery.kwicks-1.5.1.js */,
-				2DF472DC1440B77F005538C7 /* jquery.tools.js */,
-				2DF472D21440B77F005538C7 /* html5.js */,
 				2DD94A2D14C384A8002B1259 /* jquery.jplayer.js */,
 				2DD94A2E14C384A9002B1259 /* jquery.jplayer.min.js */,
 				2DF472D41440B77F005538C7 /* Jplayer.swf */,
@@ -3476,17 +3463,10 @@
 			isa = PBXGroup;
 			children = (
 				2DF47504144A2D84005538C7 /* gen_validatorv31.js */,
-				2DF47505144A2D84005538C7 /* html5.js */,
 				2DF47506144A2D84005538C7 /* Jplayer.swf */,
-				2DF47507144A2D84005538C7 /* jquery-1.4.1-and-plugins.min.js */,
-				2DF47508144A2D84005538C7 /* jquery-latest.pack.js */,
 				2DF47509144A2D84005538C7 /* jquery.custom.js */,
 				2DF4750A144A2D84005538C7 /* jquery.jplayer.min.js */,
-				2DF4750B144A2D84005538C7 /* jquery.js */,
 				2DF4750C144A2D84005538C7 /* jquery.kwicks-1.5.1.js */,
-				2DF4750D144A2D84005538C7 /* jquery.min.js */,
-				2DF4750E144A2D84005538C7 /* jquery.tools.js */,
-				2DF4750F144A2D84005538C7 /* jquery1.6.js */,
 				2DF47510144A2D84005538C7 /* main.js */,
 				2DF47511144A2D84005538C7 /* playlists.php */,
 				2DF47512144A2D84005538C7 /* popup.js */,
