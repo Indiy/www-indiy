@@ -335,6 +335,7 @@ function onAddVideoSubmit()
         var video_name = $('#video_name').val();
         var video_image_file = document.getElementById('video_image_file').files[0];
         var video_file = document.getElementById('video_file').files[0];
+        var tags = $('#video_tags').val();
             
         form_data.append('artistid',artist_id);
         form_data.append('id',song_id);
@@ -343,6 +344,7 @@ function onAddVideoSubmit()
         form_data.append('video',video_file);
         form_data.append('remove_video',g_removeVideo);
         form_data.append('remove_video_image',g_removeVideoImage);
+        form_data.append('tags',tags);
     }
     var url = '/manage/addvideo.php';
     return startAjaxUpload(url,fillVideoForm);
@@ -740,6 +742,7 @@ function onEditProfileSubmit()
         var custom_domain = $('#custom_domain').val();
         var listens = $('input[name=listens]:checked').val()
         var newpass = $('#newpass').val();
+        var tags = $('#user_tags').val();
         
         form_data.append('artistid',artist_id);
         form_data.append('artist',artist);
@@ -748,6 +751,7 @@ function onEditProfileSubmit()
         form_data.append('custom_domain',custom_domain);
         form_data.append('listens',listens);
         form_data.append('newpass',newpass);
+        form_data.append('tags',tags);
         
         var logo = document.getElementById('logo');
         if( logo.files && logo.files.length > 0 )

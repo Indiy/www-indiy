@@ -21,6 +21,7 @@
 		}
 		
 		$video_name = my($_POST["name"]);
+        $video_tags = $_POST["tags"];
 
         if( $_POST["remove_video_image"] == 'true' )
             $old_logo = '';
@@ -104,8 +105,8 @@
 		}
 		
         
-		$tables = "artistid|name|image|video|upload_video_filename";
-		$values = "{$artistid}|{$video_name}|{$video_logo}|{$video_sound}|$upload_video_filename";
+		$tables = "artistid|name|image|video|upload_video_filename|tags";
+		$values = "{$artistid}|{$video_name}|{$video_logo}|{$video_sound}|$upload_video_filename|$video_tags";
 		
 		if ($_POST["id"] != "") 
         {
@@ -136,6 +137,7 @@
 		$video_logo = $row["image"];
 		$video_sound = $row["video"];
         $upload_video_filename = $row["upload_video_filename"];
+        $video_tags = $row["tags"];
 
 		$head_title	=	"Edit";
 	}
@@ -238,6 +240,12 @@ function onVideoImageRemove()
                 <input id='video_file' type="file" name="audio" onchange='onVideoChange();' />
                 <div class='filename'><?=$video_html;?></div>
             </div>
+        </div>
+        <div class='input_container' style="height: 60px;">
+            <div class='left_label'>Tags <span id='tip_tags' class='tooltip'>(?)</span></div>
+            <div class='right_label'>Seperate tags with commas.</div>
+            <div style='clear:both;'></div>
+            <input id='video_tags' type="text" name="tags" value="<?=htmlentities($video_tags);?>" class="line_text" />
         </div>
         <div class='submit_branding_container' style="padding-top: 25px;">
             <input type="submit" name="WriteTags" value="submit" class='left_submit' />

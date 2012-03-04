@@ -29,6 +29,7 @@
 		$appid = $_POST["appid"];
         $custom_domain = $_POST["custom_domain"];
 		$password = md5($_POST["newpass"]);
+        $user_tags = $_POST["tags"];
 		
 		// Upload Image
 		if(!empty($_FILES["logo"]["name"])){
@@ -52,8 +53,8 @@
 		}
 		
 		
-		$tables = "artist|email|gender|languages|location|music_likes|url|website|appid|password|IsArtist|logo|custom_domain";
-		$values = "{$artist}|{$email}|{$gender}|{$languages}|{$location}|{$music_likes}|{$url}|{$website}|{$appid}|{$password}|{$IsArtist}|{$logo}|{$custom_domain}";
+		$tables = "artist|email|gender|languages|location|music_likes|url|website|appid|password|IsArtist|logo|custom_domain|tags";
+		$values = "{$artist}|{$email}|{$gender}|{$languages}|{$location}|{$music_likes}|{$url}|{$website}|{$appid}|{$password}|{$IsArtist}|{$logo}|{$custom_domain}|$user_tags";
 		
 		if ($artistid != "") {
 			update($database,$tables,$values,"id",$artistid);
@@ -92,6 +93,7 @@
         $custom_domain = $row["custom_domain"];
         $account_type = $row["account_type"];
         $artist_logo = $row["logo"];
+        $user_tags = $row["tags"];
         
 		$head_title = "Edit";
 	}else{
@@ -172,7 +174,12 @@
                 <button class='regular_button' onclick='showChangePassword();'>Change Password</button>
             </div>
         </div>
-
+        <div class='input_container' style="height: 60px;">
+            <div class='left_label'>Tags <span id='tip_tags' class='tooltip'>(?)</span></div>
+            <div class='right_label'>Seperate tags with commas.</div>
+            <div style='clear:both;'></div>
+            <input id='user_tags' type="text" name="tags" value="<?=htmlentities($user_tags);?>" class="line_text" />
+        </div>
         <div class='submit_container'>
             <button class="submit" onclick='onEditProfileSubmit();'>Submit</button>
         </div>
