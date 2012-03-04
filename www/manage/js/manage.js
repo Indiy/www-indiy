@@ -408,6 +408,7 @@ function onAddMusicSubmit()
         var amazon_url = $('#amazon_url').val();
         var itunes_url = $('#itunes_url').val();
         var mad_store = $('#mad_store').is(':checked');
+        var tags = $('#audio_tags').val();
 
         form_data.append('artistid',artist_id);
         form_data.append('id',song_id);
@@ -420,6 +421,7 @@ function onAddMusicSubmit()
         form_data.append('mad_store',mad_store);
         form_data.append('remove_image',g_removeImage);
         form_data.append('remove_song',g_removeSong);
+        form_data.append('tags',tags);
 
         var song_image = document.getElementById('song_image');
         if( song_image.files && song_image.files.length > 0 )

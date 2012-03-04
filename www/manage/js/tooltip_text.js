@@ -22,7 +22,7 @@ var g_tooltipText =
     "tip_bg_style": "The style of the image on your page.  Stretch will resized the image to fit the entire page.  Center will place the image in the middle of the page.  Tile will cause the image to be repeated to cover the entire page.",
     "tip_free_download": "Make this song available for free download on your page.",
     "tip_video_image": "Image used as a thumbnail for the video and as the poster before the user plays the video. Suggested size: >=1280x720.",
-    "tip_video": "Video for your page.  MP4 or MOV format.  Suggested size: >=1280x720."
-    
+    "tip_video": "Video for your page.  MP4 or MOV format.  Suggested size: >=1280x720.",
+    "tip_tags": "Tags for your content to help people find your page."
 };
 
