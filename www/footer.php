@@ -39,10 +39,7 @@ background:#f6f6f6;
     <aside>
     <h5>SUPPORT</h5>
     <ul>
-    <li><a href="faq.php">FAQs</a></li>
     <li><a href="tour.php">Help</a></li>
-    <li><a href="privacy.php">Privacy</a></li>
-    <li><a href="terms_service.php">Terms</a></li>
     </ul>
     </aside>
 
