@@ -69,12 +69,12 @@ function showVideo(n)
     html += '<video id="mad_video_1" class="video-js" controls="controls" preload="auto" poster="' + poster + '">';
     html += '<source src="' + video_file + '" type="video/mp4" />';
     html += '<source src="' + video_file_ogv + '" type="video/ogg" />';
-    html += '<object id="flash_fallback_1" class="vjs-flash-fallback" width="640" height="264" type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">';
+    html += '<object id="flash_fallback_1" class="vjs-flash-fallback" type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">';
     
     html += '<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />';    
     html += '<param name="allowfullscreen" value="true" />';
     html += '<param name="flashvars" value=\'config={"playlist":["/images/mad_poster.png", {"url": "' + video_file + '","autoPlay":false,"autoBuffering":true}]}\' />';
-    html += '<img src="/images/mad_poster.png" width="853" height="480" alt="Poster Image" title="No video playback capabilities." />';
+    html += '<img src="/images/mad_poster.png" alt="Poster Image" title="No video playback capabilities." />';
     html += '</object>';
     html += '</video>';
     html += '<p class="vjs-no-video">';
@@ -100,6 +100,11 @@ function setupVideoJS()
 function closeVideo()
 {
     $('#video_player').fadeOut(300);
-    if( g_videoPlayer )
-        g_videoPlayer.pause();
+    try 
+    {
+        if( g_videoPlayer )
+            g_videoPlayer.pause();
+    }
+    catch()
+    {}
 }
