@@ -187,7 +187,11 @@ $(document).ready(showFirstInstruction);
     
     <div id="adminblock">
     	<div class="column1">
-            <figure><img src="<?=$img_url;?>" alt="<?php echo $record_artistDetail['artist']; ?>" title="<?php echo $record_artistDetail['artist']; ?>" /></figure>
+            <figure>
+                <a href="register.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">
+                    <img src="<?=$img_url;?>" alt="<?php echo $record_artistDetail['artist']; ?>" title="<?php echo $record_artistDetail['artist']; ?>" />
+                </a>
+            </figure>
             
             <h6>Manage Profile</h6>
             <ul>
