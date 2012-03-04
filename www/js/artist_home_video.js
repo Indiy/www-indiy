@@ -105,6 +105,6 @@ function closeVideo()
         if( g_videoPlayer )
             g_videoPlayer.pause();
     }
-    catch()
+    catch(e)
     {}
 }
