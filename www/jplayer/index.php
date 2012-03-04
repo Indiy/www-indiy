@@ -42,7 +42,7 @@ else
     $artist_facebook = $row["facebook"];
     $artist_listens = $row["listens"];
     $show_comments = TRUE;
-    array_push($meta_keywords,explode(',',$row["tags"]));
+    $meta_keywords = array_merge($meta_keywords,explode(',',$row["tags"]));
     
     $facebook_page = $row['fb_page_url'];
     
@@ -103,7 +103,7 @@ else
         if( !$music_product_id )
             $music_product_id = FALSE;
         
-        array_push($meta_keywords,explode(',',$music["tags"]));
+        $meta_keywords = array_merge($meta_keywords,explode(',',$music["tags"]));
 
         $item = array("id" => $music_id,
                       "name" => $music_name,
@@ -151,7 +151,7 @@ else
         $artist_videos .= '><div class="playlist_video"><img src="artists/images/'.$video_image.'" border="0" /></div></li>'."\n"; // Display video thumb
         ++$cv;
         
-        array_push($meta_keywords,explode(',',$video["tags"]));
+        $meta_keywords = array_merge($meta_keywords,explode(',',$video["tags"]));
         
         $video_list[$video_id] = array( 'video_file' => trueSiteUrl() . '/vid/' . $video['video'],
                                         'name' => $video['name'],
