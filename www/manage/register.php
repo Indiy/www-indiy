@@ -168,7 +168,7 @@
                 <input type="radio" class="radio" value="0" name="listens"> No<br>
             </div>
         </div>
-        <div class='input_container' style='height: 55px;'>
+        <div class='input_container' style='height: 40px;'>
             <div class='left_label'>Password</div>
             <div class='right_box'>
                 <button class='regular_button' onclick='showChangePassword();'>Change Password</button>
