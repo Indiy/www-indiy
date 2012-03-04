@@ -173,7 +173,7 @@
         <? } ?>
 
         <div class='input_container'>
-            <div class='line_label'>Name<span class='required'>*</span></div>
+            <div class='line_label'>Name of Product<span class='required'>*</span></div>
             <input id='name' type="text" name="name" class='line_text' value="<?=$pname;?>" class="input" />
         </div>
 

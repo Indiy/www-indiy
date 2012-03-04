@@ -224,7 +224,7 @@ function onVideoImageRemove()
         <input id='song_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id"/>
 
         <div class='input_container'>
-            <div class='left_label'>Name<span class='required'>*</span></div>
+            <div class='left_label'>Name of Video<span class='required'>*</span></div>
             <input id='video_name' type="text" name="name" value="<?=$video_name;?>" class='right_text' />
         </div>
         <div class='input_container' style='height: 50px;'>
