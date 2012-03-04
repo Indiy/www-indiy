@@ -1138,8 +1138,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #right_box .back_to_admin a {
     padding-top: 3px;
     padding-bottom: 3px;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-right: 3px;
     margin-left: 3px;
     border-radius: 5px;
