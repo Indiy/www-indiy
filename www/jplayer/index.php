@@ -604,7 +604,6 @@ String.prototype.format = function() {
                 </div>
                 <div id='back_to_admin' class='back_to_admin'>
                     <a href='<?=trueSiteUrl();?>/manage/artist_management.php'>MY PROFILE</a>
-                    <a href='<?=trueSiteUrl();?>/manage/logout.php'>LOGOUT</a>
                 </div>
                 <div class='expand_box'>
                     <div class='login_sep'></div>
