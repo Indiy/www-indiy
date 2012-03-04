@@ -19,12 +19,8 @@ function setupPageLinks()
     
     if( typeof g_userName != "undefined" && g_userName )
     {
-        var html = "<a href='" + g_siteUrl + "/manage/artist_management.php'>";
-        html += g_userName;
-        html += "</a>";
-        html += " | ";
-        html += "<a href='" + g_siteUrl + "/manage/logout.php'>LOGOUT</a>";
-        $("#login_signup").html(html);
+        $("#login_signup").hide();
+        $("#back_to_admin").show();
     }
     
     if( !IS_IPAD )
