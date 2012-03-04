@@ -249,7 +249,7 @@ function onVideoImageRemove()
         </div>
         <div class='submit_branding_container' style="padding-top: 25px;">
             <input type="submit" name="WriteTags" value="submit" class='left_submit' />
-            <div class='branding_tip'>Quality! We suggest using Canon camera products. Great product and cost.</div>
+            <div class='branding_tip'>Quality! We suggest using Canon camera products. Great product and cost. <a href="http://myartistdna.is" target="_blank">Need more?</a></div>
         </div>
     </form>
     
