@@ -597,8 +597,8 @@ String.prototype.format = function() {
                 <div id='back_to_admin' class='back_to_admin'>
                     <a href='<?=trueSiteUrl();?>/manage'>Edit Profile</a>
                 </div>
-                <div class='login_sep'></div>
                 <div class='expand_box'>
+                    <div class='login_sep'></div>
                     <div class='label_name'>
                         Title: <span id='current_track_name'></span>
                     </div>
