@@ -160,7 +160,7 @@ function onImageRemove()
         </div>
         <div class='submit_branding_container'>
             <input type="submit" name="submit" value="submit" class='left_submit' />
-            <div class='branding_tip'>Branding Tip: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+            <div class='branding_tip'>Videos - Quality, Quality, Quality. We suggest using Canon camera products. Great quality and cost.</div>
         </div>
     </form>
     
