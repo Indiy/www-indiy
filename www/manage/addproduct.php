@@ -226,7 +226,7 @@
         <div class='submit_branding_container'>
             <input id='situation' type="hidden" value="<?=$situation;?>" name="situation" />
             <input type="submit" name="submit" class='left_submit' value="<?=$situation;?>" />
-            <div class='branding_tip'>Monetize - Image is everything. People buy things that look good. Make your image as good as possible to increase sales.</div>
+            <div class='branding_tip'>Monetize - Image is everything. People buy things that look good. Make your image as good as possible to increase sales. <a href="http://myartistdna.is" target="_blank">Need more?</a></div>
         </div>
     </form>
 

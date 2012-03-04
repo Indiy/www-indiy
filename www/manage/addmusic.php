@@ -398,7 +398,7 @@ function clickMadStore()
         </div>
         <div class='submit_branding_container'>
             <input type="submit" name="WriteTags" value="submit" class='left_submit' />
-            <div class='branding_tip'>Be creative! This is your art collection, your magazine, your radio station.</div>
+            <div class='branding_tip'>Be creative! This is your art collection, your magazine, your radio station. <a href="http://myartistdna.is" target="_blank">Need more?</a></div>
         </div>
     </form>
 
