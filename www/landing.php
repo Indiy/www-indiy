@@ -551,20 +551,7 @@ $(document).ready(function()
                         <source src="http://www.myartistdna.com/mad.webm" type="video/webm" />
                         <source src="http://www.myartistdna.com/mad.iphone.mp4" type="video/mp4" />
                         <source src="http://www.myartistdna.com/mad.ogv" type="video/ogg" />
-                        <!-- Flash Fallback. Use any flash video player here. Make sure to keep the vjs-flash-fallback class. -->
-                        <object id="flash_fallback_1" class="vjs-flash-fallback" width="640" height="264" type="application/x-shockwave-flash"
-                            data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
-                            <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
-                            <param name="allowfullscreen" value="true" />
-                            <param name="flashvars" value='config={"playlist":["http://www.myartistdna.com/images/mad_poster.png", {"url": "http://www.myartistdna.com/mad.mp4","autoPlay":false,"autoBuffering":true}]}' />
-                            <!-- Image Fallback. Typically the same as the poster image. -->
-                            <img src="/images/mad_poster.png" width="853" height="480" alt="Poster Image"
-                            title="No video playback capabilities." />
-                        </object>
                     </video>
-                    <!-- Download links provided for devices that can't play video in the browser. -->
-                    <p class="vjs-no-video"><!-- <strong>Download Video:</strong> -->
-                    </p>
                 </div>
             </div>
         </div>
