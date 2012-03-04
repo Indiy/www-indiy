@@ -99,7 +99,7 @@ function setupVideoJS()
 }
 function closeVideo()
 {
+    $('#video_player').fadeOut(300);
     if( g_videoPlayer )
         g_videoPlayer.pause();
-    $('#video_player').fadeOut(300);
 }
