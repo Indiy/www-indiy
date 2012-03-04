@@ -1124,6 +1124,17 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #right_box .login_signup button:hover,#right_box .login_signup a:hover {
     color: #777;
 }
+#right_box .back_to_admin {
+    text-align: center;
+}
+#right_box .back_to_admin a {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #4ecdc7;
+    border-radius: 5px;
+}
 #right_box .login_sep {
     height: 1px;
     width: 140px;
