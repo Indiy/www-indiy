@@ -160,7 +160,7 @@ function onImageRemove()
         </div>
         <div class='submit_branding_container'>
             <input type="submit" name="submit" value="submit" class='left_submit' />
-            <div class='branding_tip'>Videos - Quality, Quality, Quality. We suggest using Canon camera products. Great quality and cost.</div>
+            <div class='branding_tip'>The more info you add about yourself the better chance your account will be found. </div>
         </div>
     </form>
     
