@@ -546,13 +546,11 @@ $(document).ready(function()
                         <button onclick='closeVideo();'>CLOSE</button>
                     </div>
                 </div>
-                <div class="video-js-box vim-css">
-                    <video id="mad_video_1" class="video-js" width="853" height="480" controls="controls" preload="auto" poster="/images/mad_poster.png">
-                        <source src="http://www.myartistdna.com/mad.webm" type="video/webm" />
-                        <source src="http://www.myartistdna.com/mad.iphone.mp4" type="video/mp4" />
-                        <source src="http://www.myartistdna.com/mad.ogv" type="video/ogg" />
-                    </video>
-                </div>
+                <video id="mad_video_1" class="video-js vjs-default-skin" width="853" height="480" controls="controls" preload="auto" poster="/images/mad_poster.png">
+                    <source src="http://www.myartistdna.com/mad.webm" type="video/webm" />
+                    <source src="http://www.myartistdna.com/mad.iphone.mp4" type="video/mp4" />
+                    <source src="http://www.myartistdna.com/mad.ogv" type="video/ogg" />
+                </video>
             </div>
         </div>
     </body>
