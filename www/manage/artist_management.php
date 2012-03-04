@@ -207,7 +207,7 @@ $(document).ready(showFirstInstruction);
                 <li><a href="fan_connections.php?artist_id=<?=$artistID;?>" rel="facebox[.bolder]">Fan Connections</a></li>
             </ul>
             
-            <h6>Monetize</h6>
+            <h6>Store</h6>
             <ul>
                 <li><a href="store_settings.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Edit Settings</a></li>
                 <? if( strlen($paypalEmail) == 0 ): ?>
@@ -314,9 +314,9 @@ $(document).ready(showFirstInstruction);
         <div class="products">
         
             <div class="heading">
-            <h5>MONETIZE</h5>
+            <h5>Store</h5>
             <? if( strlen($paypalEmail) == 0 ): ?>
-                <div class="buttonadd"><a href="store_settings.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Monetize Settings</a></div>
+                <div class="buttonadd"><a href="store_settings.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Store Settings</a></div>
             <? else: ?>
                 <div class="buttonadd"><a href="addproduct.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Product</a></div>
             <? endif ?>
