@@ -391,7 +391,9 @@ function clickMadStore()
             <input id='mad_store' class='right_box' type="checkbox" name="mad_store" onclick='clickMadStore();' <?=$mad_store_checked;?> <?=$buy_disabled;?> />
         </div>
         <div class='input_container'>
-            <div class='line_label'>Tags <span id='tip_tags' class='tooltip'>(?)</span></div>
+            <div class='left_label'>Tags <span id='tip_tags' class='tooltip'>(?)</span></div>
+            <div class='right_label'>Seperate tags with commas.</div>
+            <div style='clear:both;'></div>
             <input id='audio_tags' type="text" name="tags" value="<?=htmlentities($audio_tags);?>" class="line_text" />
         </div>
         <div class='submit_branding_container'>
