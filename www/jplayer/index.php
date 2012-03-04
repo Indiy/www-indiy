@@ -20,7 +20,7 @@ else if( $_GET["embed"] == "true" )
 } 
 else 
 {
-    $meta_keywords = array();
+    $meta_keywords = '';
 
     $row = mf(mq("SELECT * FROM `[p]musicplayer` WHERE `url`='$artist_url' LIMIT 1"));
     if( $row == FALSE )
@@ -42,7 +42,7 @@ else
     $artist_facebook = $row["facebook"];
     $artist_listens = $row["listens"];
     $show_comments = TRUE;
-    $meta_keywords = array_merge($meta_keywords,explode(',',$row["tags"]));
+    append_tags($meta_keywords,$row["tags"]);
     
     $facebook_page = $row['fb_page_url'];
     
@@ -103,8 +103,8 @@ else
         if( !$music_product_id )
             $music_product_id = FALSE;
         
-        $meta_keywords = array_merge($meta_keywords,explode(',',$music["tags"]));
-
+        append_tags($meta_keywords,$music["tags"]);
+        
         $item = array("id" => $music_id,
                       "name" => $music_name,
                       "mp3" => '/artists/audio/' . $music_audio,
@@ -151,7 +151,7 @@ else
         $artist_videos .= '><div class="playlist_video"><img src="artists/images/'.$video_image.'" border="0" /></div></li>'."\n"; // Display video thumb
         ++$cv;
         
-        $meta_keywords = array_merge($meta_keywords,explode(',',$video["tags"]));
+        append_tags($meta_keywords,$video["tags"]);
         
         $video_list[$video_id] = array( 'video_file' => trueSiteUrl() . '/vid/' . $video['video'],
                                         'name' => $video['name'],
@@ -222,7 +222,7 @@ else
 <head>
 <title><? echo siteTitle() . ' - ' . $artist_name; ?></title>
 <meta name="description" content="MyArtistDNA - <?=$artist_name;?> - Home Page - Come here to connect with your favorite artist.">
-<meta name="keywords" content="<?=implode(',',$meta_keywords);?>">
+<meta name="keywords" content="<?=$meta_keywords;?>">
 
 <link href="/css/video-js.css"rel="stylesheet" type="text/css" />
 <link href="/css/lionbars.css" rel="stylesheet" type="text/css" />
