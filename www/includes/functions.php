@@ -942,4 +942,12 @@
         return "http://madna.co/" . $abbrev;
     }
 	
+    function append_tags(&$tags,$s)
+    {
+        if( strlen(trim($s)) == 0 )
+            return;
+        if( strlen($tags) > 0 )
+            $tags .= ",";
+        $tags .= $s;
+    }
 ?>
