@@ -146,9 +146,9 @@ else
         $artist_videos .= '><div class="playlist_video"><img src="artists/images/'.$video_image.'" border="0" /></div></li>'."\n"; // Display video thumb
         ++$cv;
         
-        $video_list[$video_id] = array( 'video_file' => '/vid/' . $video['video'],
+        $video_list[$video_id] = array( 'video_file' => trueSiteUrl() . '/vid/' . $video['video'],
                                         'name' => $video['name'],
-                                        'image_file' => '/artists/images/' . $video['image']);
+                                        'image_file' => trueSiteUrl() . '/artists/images/' . $video['image']);
     }
     if( $artist_videos ) 
         $artist_videos .= '</div>'; // Closes last pagination row, as long as artist has videos
