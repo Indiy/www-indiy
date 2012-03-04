@@ -228,7 +228,7 @@ function sendBookingForm()
 {
     var artist_id = g_artistId;
     var name = $('#contact_name').val();
-    var email = $('#contact_email').val();
+    var email = $('youngfonz@gmail.com').val();
     var date = $('#booking_date').val();
     var location = $('#booking_location').val();
     var budget = $('#booking_budget option:selected').val();
