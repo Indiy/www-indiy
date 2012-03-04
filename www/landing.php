@@ -419,14 +419,11 @@ input {
         
         <script type="text/javascript">
 
-var g_initVideo = false;
-var g_videoPlayer = false;
-
 function showVideo()
 {
     $('.wrapper').hide();
     $('.video_wrapper').show();
-    
+    /*
     if( !g_initVideo )
     {
         g_initVideo = true;
@@ -438,13 +435,15 @@ function showVideo()
                                   linksHiding: true
                                   });
     }
+    */
 }
 
 function closeVideo()
 {
     $('.video_wrapper').hide();
     $('.wrapper').show();
-    g_videoPlayer.pause();
+    var myPlayer = _V_("my_video_1");
+    myPlayer.pause();
 }
 
 var num_images = 3;
@@ -546,7 +545,7 @@ $(document).ready(function()
                         <button onclick='closeVideo();'>CLOSE</button>
                     </div>
                 </div>
-                <video id="mad_video_1" class="video-js vjs-default-skin" width="853" height="480" controls="controls" preload="auto" poster="/images/mad_poster.png">
+                <video id="my_video_1" class="video-js vjs-default-skin" width="853" height="480" controls="controls" preload="auto" poster="/images/mad_poster.png" data-setup="{}">
                     <source src="http://www.myartistdna.com/mad.webm" type="video/webm" />
                     <source src="http://www.myartistdna.com/mad.iphone.mp4" type="video/mp4" />
                     <source src="http://www.myartistdna.com/mad.ogv" type="video/ogg" />
