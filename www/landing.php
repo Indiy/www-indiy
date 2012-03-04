@@ -401,13 +401,21 @@ input {
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
+        <!--
         <link href="/css/video-js.css"rel="stylesheet" type="text/css" />
         <link href="/css/vim.css" rel="stylesheet" type="text/css" />
+        -->
+        
+        <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
         <script src="/js/login_signup.js" type="text/javascript"></script>
+        <!--
         <script src="/js/video.js" type="text/javascript"></script> 
+        -->
+
+        <script src="http://vjs.zencdn.net/c/video.js"></script>
         
         <script type="text/javascript">
 
