@@ -202,7 +202,7 @@ $(document).ready(showFirstInstruction);
             </ul>
             <h6>Platform</h6>
             <ul>
-                <li><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Music + Photo</a></li>
+                <li><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Audio + Photo</a></li>
                 <li><a href="addvideo.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Video</a></li>
                 <? if( mysql_num_rows($result_artistContent) < $MAX_TABS ): ?>
                     <li><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Tab</a></li>
@@ -237,7 +237,7 @@ $(document).ready(showFirstInstruction);
         <div class="playlist">
         	<div class="heading">
             <h5>PAGES</h5>
-            <div class="buttonadd"><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Music + Photo</a></div>
+            <div class="buttonadd"><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Audio + Photo</a></div>
             </div>
             
             <div class="list" style='display: none;'>

@@ -333,7 +333,7 @@ function clickMadStore()
         <input id='song_id' type='hidden' value="<?=$_REQUEST['id']?>" name="id">
         
         <div class='input_container'>
-            <div class='line_label'>Name<span class='required'>*</span></div>
+            <div class='line_label'>Name of Audio / Image<span class='required'>*</span></div>
             <input id='song_name' type="text" name="name" value="<?=htmlentities($audio_name);?>" class="line_text" />
         </div>
         <div class='input_container' style='height: 50px;'>
