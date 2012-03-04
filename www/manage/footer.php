@@ -23,10 +23,7 @@
     <aside>
     <h5>SUPPORT</h5>
     <ul>
-    <li><a href="faq.html">FAQs</a></li>
     <li><a href="tour.php">Help</a></li>
-    <li><a href="privacy.html">Privacy</a></li>
-    <li><a href="terms_service.html">Terms</a></li>
     </ul>
     </aside>
 
