@@ -308,6 +308,10 @@ $(document).ready(showFirstInstruction);
 						 
 					$count++;
 				}
+                if( $count == 1 ) 
+                {
+                    echo "<div class='empty_list'>You have not uploaded any pages yet.</div>";
+                }
 				
 			?>                      
 
@@ -373,29 +377,39 @@ $(document).ready(showFirstInstruction);
 				while($record_artistVideo = mysql_fetch_array($result_artistVideo))
 				{
                     $video_id = $record_artistVideo['id'];
-					if(!empty($record_artistVideo['image']) && file_exists("../artists/images/".$record_artistVideo['image'])){
+					if(!empty($record_artistVideo['image']) && file_exists("../artists/images/".$record_artistVideo['image']))
+                    {
 						$image = "../artists/images/".$record_artistVideo['image'];
-					}else{
+					}
+                    else
+                    {
 						$image = "images/photo_video_01.jpg";
 					}
                 ?>
-			<li id="arrayorder_<?=$video_id;?>" class="videos_sortable">
-            <figure>
-				<span class="close">
-					<a href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=<?=$userId?>&action=1&video_id=<?=$record_artistVideo['id']?>";'></a>
-				</span>
-				<a href="addvideo.php?artist_id=<?=$artistID?>&id=<?=$record_artistVideo['id']?>" rel="facebox[.bolder]">
-                    <img src="<?=$image?>" width="210" height="132" alt="">
-                </a>
-            </figure>
-            <span>
-                <a href="addvideo.php?artist_id=<?=$artistID?>&id=<?=$record_artistVideo['id']?>" rel="facebox[.bolder]">
-                    <?=stripslashes($record_artistVideo['name'])?>
-                </a>
-            </span>
-            <br>
-            </li>
-			<?}?>
+                    <li id="arrayorder_<?=$video_id;?>" class="videos_sortable">
+                    <figure>
+                        <span class="close">
+                            <a href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=<?=$userId?>&action=1&video_id=<?=$record_artistVideo['id']?>";'></a>
+                        </span>
+                        <a href="addvideo.php?artist_id=<?=$artistID?>&id=<?=$record_artistVideo['id']?>" rel="facebox[.bolder]">
+                            <img src="<?=$image?>" width="210" height="132" alt="">
+                        </a>
+                    </figure>
+                    <span>
+                        <a href="addvideo.php?artist_id=<?=$artistID?>&id=<?=$record_artistVideo['id']?>" rel="facebox[.bolder]">
+                            <?=stripslashes($record_artistVideo['name'])?>
+                        </a>
+                    </span>
+                    <br>
+                    </li>
+                <?
+                    }
+                    
+                    if( $count == 1 )
+                    {
+                        echo "<div class='empty_list'>You have not uploaded any videos yet.</div>";
+                    }
+                ?>
             </ul>
             </div>
         </div>
@@ -427,12 +441,18 @@ $(document).ready(showFirstInstruction);
                 
 					$class = (( $count%2) == 0) ? '' : 'odd';
 					?>
-            <li id="arrayorder_<?=$content_id;?>" class="pages_sortable <?=$class?>">
-            <span class="title"><a href="addcontent.php?artist_id=<?=$artistID?>&id=<?=$record_artistContent['id']?>" rel="facebox[.bolder]"><?=$record_artistContent['name']?></a></span>
-            <!-- <span class="preview"><a href="#">Preview</a></span> -->
-            <span class="delete"><a  href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=<?=$userId?>&action=1&content_id=<?=$record_artistContent['id']?>";'></a></span>
-            </li>
-            <?}?>
+                    <li id="arrayorder_<?=$content_id;?>" class="pages_sortable <?=$class?>">
+                    <span class="title"><a href="addcontent.php?artist_id=<?=$artistID?>&id=<?=$record_artistContent['id']?>" rel="facebox[.bolder]"><?=$record_artistContent['name']?></a></span>
+                    <!-- <span class="preview"><a href="#">Preview</a></span> -->
+                    <span class="delete"><a  href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=<?=$userId?>&action=1&content_id=<?=$record_artistContent['id']?>";'></a></span>
+                    </li>
+            <?
+                }
+                if( $count == 1 )
+                {
+                    echo "<div class='empty_list'>You have not uploaded any tab content yet.</div>";
+                }
+            ?>
             </ul>
             </div>
         </div>
