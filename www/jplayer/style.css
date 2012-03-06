@@ -2045,7 +2045,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     text-transform: uppercase;
 }
 #contact .label_input {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 #contact .label {
     float: left;
@@ -2091,7 +2091,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #contact .required_label {
     float: right;
     padding-top: 4px;
-    margin-right: 10px;
+    margin-right: 35px;
     color: #EEE;
     font-size: 13px;
     font-family: Helvetica, sans-serif;
@@ -2099,9 +2099,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 #contact .submit {
     float: left;
-    margin-left: 80px;
-    padding-left: 47px;
-    padding-right: 47px;
+    margin-left: 120px;
+    padding-left: 40px;
+    padding-right: 40px;
     padding-top: 6px;
     padding-bottom: 3px;
     color: white;
@@ -2114,14 +2114,21 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     text-shadow: 1px 1px black;
     behavior: url(/css/PIE.htc);
     background-color: #c00;
-    padding-left: 40px;
-    padding-right: 40px;
 }
 #contact .submit:hover {
     background-color: #f00;
 }
 #contact .booking_link {
-    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    font-family: Helvetica, sans-serif;
+}
+#contact .booking_link a {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #contact select { width:220px; display:block; padding:2px 3px; margin:5px auto; }
