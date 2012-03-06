@@ -279,6 +279,7 @@ function closeContactTab()
     $('#booking_location').val('');
     $('#booking_message').val('');
 
+    $('#contact_wrapper').hide();
     fadeAllPageElements();
 }
 
