@@ -751,68 +751,83 @@ String.prototype.format = function() {
         <? endif; ?>
         <? if( $artist_email ): ?>
             <div id='contact_wrapper'>
-                <div class="contact">
+                <div id="contact">
                     <div class='close' onclick='closeContact();'></div>
-                    <div class="right">
-                        <h1>BOOKINGS&nbsp;</h1>
-                        <table>
-                            <tr>
-                                <td><span class="red">*</span> Date of Event:</td>
-                                <td><input id="booking_date" type="text" value="" /></td>
-                            </tr>
-                            <tr>
-                                <td><span class="red">*</span> Location:</td>
-                                <td><input id="booking_location" type="text" value="" /></td>
-                            </tr>
-                            <tr>
-                                <td><span class="red">*</span> Budget:</td>
-                                <td>
-                                    <select id='booking_budget'>
+                    <div id='contact_bookings' class="bookings">
+                        <div class='title'>BOOKINGS</div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>Name:</div>
+                            <div class='input_container'>
+                                <input id='booking_name' />
+                            </div>
+                        </div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>Email:</div>
+                            <div class='input_container'>
+                                <input id='booking_email' />
+                            </div>
+                        </div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>Event Date:</div>
+                            <div class='input_container'>
+                                <input id='booking_date' />
+                            </div>
+                        </div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>Location:</div>
+                            <div class='input_container'>
+                                <input id='booking_location' />
+                            </div>
+                        </div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>Budget:</div>
+                            <div class='input_container'>
+                                <select id='booking_budget'>
                                         <option>$0 - $500</option>
                                         <option>$500 - $1,000</option>
                                         <option>$1,000 - $5,000</option>
                                         <option>$5,000 - $10,000</option>
                                         <option>$10,000+</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="message"><span class="red">*</span> Message:</td>
-                                <td><textarea name="comments" class="textarea" id="booking_comments"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td><span class="red">*</span> required</td>
-                                <td>
-                                    <button id="contact_submit" onclick="sendBookingForm();">submit</button>
-                                </td>
-                            </tr>
-                        </table>
+                                </select>
+                            </div>
+                        </div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>Message:</div>
+                            <div class='input_container'>
+                                <textarea id='booking_message'></textarea>
+                            </div>
+                        </div>
+                        <div class='submit_required'>
+                            <button class='submit green' onclick='sendBookingForm();'>send</button>
+                            <div class='required_label'><span class='required'>*</span>required</div>
+                        </div>
                     </div>
                     
-                    <div class="left">
-                        <h1>CONTACT <span class="slashes">//</span> <?=$artist_name;?></h1>
-                        <table>
-                            <tr>
-                                <td><span class="red">*</span> Name:</td>
-                                <td><input type="text" value="Name..." name="name" id="contact_name" onfocus="clickclear(this, 'Name...')" onblur="clickrecall(this, 'Name...')" /></td>
-                            </tr>
-                            <tr>
-                                <td><span class="red">*</span> E-Mail:</td>
-                                <td><input type="text" value="Email..." name="email" id="contact_email" onfocus="clickclear(this, 'Email...')" onblur="clickrecall(this, 'Email...')" /></td>
-                            </tr>
-                            <tr>
-                                <td class="message"><span class="red">*</span> Message:</td>
-                                <td><textarea name="comments" class="textarea" id="contact_comments"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td><span class="red">*</span> required</td>
-                                <td>
-                                    <button id="contact_submit" onclick="sendContactForm();">submit</button>
-                                    <button id="contact_clear" onclick="clearContactForm();">clear form</button>
-                                </td>
-                            </tr>
-                        </table>
-                        <div id="contact_thanks" style="height: 180px; display: none;">Thank you for your message.</div>
+                    <div id='contact_contact' class="contact">
+                        <div class='title'>CONTACT</div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>Name:</div>
+                            <div class='input_container'>
+                                <input id='contact_name' />
+                            </div>
+                        </div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>Email:</div>
+                            <div class='input_container'>
+                                <input id='contact_email' />
+                            </div>
+                        </div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>Message:</div>
+                            <div class='input_container'>
+                                <textarea id='contact_message'></textarea>
+                            </div>
+                        </div>
+                        <div class='submit_required'>
+                            <button class='submit green' onclick='sendContactForm();'>send</button>
+                            <div class='required_label'><span class='required'>*</span>required</div>
+                        </div>
+                        <div class='booking_link'>Are you interested in booking this artist? Click <a onclick='showBooking();'>here</a>.</div>
                     </div>
                 </div>
             </div>

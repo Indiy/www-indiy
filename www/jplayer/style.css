@@ -1999,7 +1999,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     z-index: 0;
 }
 
-.contact {
+#contact {
     position: relative; 
     top: 130px;
     left: 50%;
@@ -2019,7 +2019,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     behavior: url(/css/PIE.htc);
 }
 
-.contact .close {
+#contact .close {
     position: absolute;
     right: -10px;
     top: -10px;
@@ -2029,49 +2029,29 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     cursor: pointer;
     z-index: 31;
 }
-.contact .close:hover {
+#contact .close:hover {
     background: transparent url('/images/video_close.png') 0px -32px no-repeat;
 }
-
-
-.contact .red { color:#ff0000; }
-.contact table tr td:first-child { text-align:right; font-size:11px; padding-right:5px; padding-left:5px; }
-.contact table tr td.message { vertical-align:top; }
-.box-header, .box-footer { position:absolute; left:0; width:100%; }
-.box-header { background:url('images/box/header.png') no-repeat; top:-8px; height:8px; background-size: 100%; }
-.box-footer { background:url('images/box/footer.png') no-repeat; bottom:-14px; height:14px;  background-size: 100%; }
-#contact_submit { border:2px solid #292929; background-color:#000; font-size:11px; text-align:center; width:100px; padding:5px 0; 
-    -moz-border-radius: 5px; border-radius: 5px; color: white; cursor: pointer;}
-#contact_submit:hover { background: #ff0000; }
-
-#contact_clear { float:right; text-decoration:underline; color:#fff; font-weight:bold; font-size:11px; 
-    cursor: pointer; background: transparent; border: 0; display: none; }
-
-.contact h1 { margin-left:80px; }
-.contact .right 
-{ 
-    float:right; 
-    border-left:1px solid #3c3c3c; 
-    padding-left:20px; 
-    width:350px;
-    padding-bottom: 0px;
+#contact .bookings {
+    display: none;
 }
-.contact h1, .contact h2, .contact h3 { text-transform:none; margin-bottom:5px; font-weight:bold; color:#fff; letter-spacing:0.5px; }
-.contact table { width:330px; }
-.contact table tr td { padding-bottom:8px; }
-.contact h1 { font-size:14px; }
-.contact h2 { font-size:11px; }
-.contact .right ul span { color:#666; }
-.contact .right ul li { margin-bottom:2px; font-size:11px;}
-.contact .slashes { color:#666; }
-.contact input, .contact .textarea { background:url('images/box/input_bg.png') repeat-y right; border:2px solid #060606; -moz-border-radius: 4px; border-radius: 4px; color:#fff; font-size:11px; font-weight:bold; padding:5px; letter-spacing:0.5px; width:100%; }
-
-.contact select { width:220px; display:block; padding:2px 3px; margin:5px auto; }
-
-#contact_thanks {
-    padding-top: 40px;
-    padding-left: 40px;
+#contact .contact {
+    display: block;
 }
+#contact .title {
+    
+}
+#contact .label_input {
+    
+}
+#contact .label_input .label {
+    
+}
+#contact .label_input .input_container {
+    
+}
+
+#contact select { width:220px; display:block; padding:2px 3px; margin:5px auto; }
 
 #player {
     position: absolute;
