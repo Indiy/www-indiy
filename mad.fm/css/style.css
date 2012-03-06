@@ -70,10 +70,20 @@ a
 }
 #player .progress {
     position: absolute;
-    height: 60px;
+    height: 59px;
     width: 470px;
-    top: 11px;
+    top: 6px;
     left: 129px;
-    background-color: 0x202020;
+    border-bottom: 1px solid #353535;  
+    border-right: 1px solid #353535;  
+    background-color: #202020;
+    border-radius: 6px;
 }
+
+
+
+
+
+
+
 
