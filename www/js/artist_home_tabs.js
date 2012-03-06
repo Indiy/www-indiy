@@ -184,41 +184,41 @@ function showContact()
     fadeAllPageElements();
     window.setTimeout(function() { $('#contact_wrapper').fadeIn(); },300);
 }
-function closeContact()
-{
-    fadeAllPageElements();
-}
 function showVideos()
 {
     fadeAllPageElements();
     window.setTimeout(function() { $('.videos').fadeIn(); $('.aClose').fadeIn(); },300);
 }
 
-function showBookings()
+function showBookingsForm()
 {
     $('#contact .contact').hide();
     $('#contact .bookings').fadeIn('fast');
 }
+function showContactForm()
+{
+    $('#contact .bookings').hide();
+    $('#contact .contact').fadeIn('fast');
+}
+
 function sendContactForm()
 {
     var artist_id = g_artistId;
     var name = $('#contact_name').val();
     var email = $('#contact_email').val();
-    var comments = $('#contact_comments').val();
+    var comments = $('#contact_message').val();
 
     if( name.length == 0 
-       || name == 'Name...'
        || comments.length == 0 
        || !email.match(EMAIL_REGEX) 
-       || email == 'Email...'
        )
     {
-        window.alert('Please enter all required fields.');
+        window.alert("Please enter all required fields.");
     }
     else
     {
-        $('.contact table').hide();
-        $('#contact_thanks').show();
+        closeContactTab();
+        window.alert("Thank you.  Your message will be forwarded to the artist.");
         
         var submit = "&form=send";
         submit += "&artist_id=" + artist_id;
@@ -232,28 +232,26 @@ function sendContactForm()
 function sendBookingForm()
 {
     var artist_id = g_artistId;
-    var name = $('#contact_name').val();
-    var email = $('#contact_email').val();
+    var name = $('#booking_name').val();
+    var email = $('#booking_email').val();
     var date = $('#booking_date').val();
     var location = $('#booking_location').val();
     var budget = $('#booking_budget option:selected').val();
-    var comments = $('#booking_comments').val();
+    var comments = $('#booking_message').val();
     
     if( name.length == 0 
-       || name == 'Name...'
        || comments.length == 0 
        || !email.match(EMAIL_REGEX) 
-       || email == 'Email...'
        || location.length == 0
        || date.length == 0
        )
     {
-        window.alert('Please enter all required fields.');
+        window.alert("Please enter all required fields.");
     }
     else
     {
-        $('.contact table').hide();
-        $('#contact_thanks').show();
+        closeContactTab();
+        window.alert("Thank you for your request.  Someone will contact you within 7 days.");
 
         var submit = "";
         submit += "&artist_id=" + artist_id;
@@ -269,15 +267,18 @@ function sendBookingForm()
 }
 function closeContactTab()
 {
-    $('#contact_thanks').hide();
+    showContactForm();
+
     $('#contact_name').val('');
     $('#contact_email').val('');
-    $('#contact_comments').val('');
-    $('#contact_name').val('');
-    $('#contact_email').val('');
+    $('#contact_message').val('');
+
+    $('#booking_name').val('');
+    $('#booking_email').val('');
     $('#booking_date').val('');
     $('#booking_location').val('');
-    $('#booking_comments').val('');
+    $('#booking_message').val('');
+
     fadeAllPageElements();
 }
 
