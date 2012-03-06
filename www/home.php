@@ -62,23 +62,51 @@
         <h2>Artists who use MY<span>ARTIST</span>DNA</h2>
     
         <ul>
-        <li><img src="images/nvg.jpg" alt="">
-        <span>Navegante</span></li>
+        <li><img src="images/mason.jpg" alt="">
+        <span>Mason Garments</span></li>
         
-        <li><img src="images/youngc.jpg" alt="">
-        <span>Young Chris</span></li>
+        <li><img src="images/yankee.jpg" alt="">
+        <span>Dirty Souf Yankee</span></li>
         
-        <li><img src="images/marc.jpg" alt="">
+        <li><img src="images/ecko.jpg" alt="">
         <span>Marc Ecko</span></li>
         
-        <li><img src="images/blakroc.jpg" alt="">
+        <li><img src="images/vanessa.jpg" alt="">
+        <span>Vanessa Cantave</span></li>
+        
+        <li><img src="images/damage.jpg" alt="">
+        <span>DJ Damage</span></li>
+        
+  		 <li><img src="images/blakroc.jpg" alt="">
         <span>Blakroc</span></li>
+
+        <li><img src="images/youngc.jpg" alt="">
+        <span>Young Chris</span></li>
+       
+        <li><img src="images/navegante.jpg" alt="">
+        <span>Navegante</span></li>        
         
-        <li><img src="images/mmjb.jpg" alt="">
-        <span>Money Making Jam Boys</span></li>
+        <li><img src="images/jamal.jpg" alt="">
+        <span>Jamal White</span></li>
         
-  		 <li><img src="images/jen.jpg" alt="">
-        <span>Jen</span></li>
+        <li><img src="images/basil.jpg" alt="">
+        <span>Basil</span></li>
+        
+        <li><img src="images/3dsign.jpg" alt="">
+        <span>3d Sign</span></li>
+        
+  		 <li><img src="images/bobby.jpg" alt="">
+        <span>Bobby Spears</span></li>
+       
+        <li><img src="images/chad.jpg" alt="">
+        <span>Chad West</span></li>
+        
+        <li><img src="images/wayno.jpg" alt="">
+        <span>Cool Mentality</span></li>
+        
+        <li><img src="images/dan.jpg" alt="">
+        <span>Soundmine Records</span></li>
+        
         
         </ul>
         
