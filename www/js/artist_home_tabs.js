@@ -194,6 +194,11 @@ function showVideos()
     window.setTimeout(function() { $('.videos').fadeIn(); $('.aClose').fadeIn(); },300);
 }
 
+function showBookings()
+{
+    $('#contact .contact').hide();
+    $('#contact .bookings').fadeIn('fast');
+}
 function sendContactForm()
 {
     var artist_id = g_artistId;
@@ -264,7 +269,6 @@ function sendBookingForm()
 }
 function closeContactTab()
 {
-    $('.contact table').show();
     $('#contact_thanks').hide();
     $('#contact_name').val('');
     $('#contact_email').val('');
