@@ -56,3 +56,15 @@ a
     text-decoration: none;
     color: white;
 }
+
+#player {
+    position: absolute;
+    height: 72px;
+    width: 860px;
+    top: 50%;
+    margin-top: -36px;
+    margin-right: auto;
+    margin-left: auto;
+    background: url("../images/grey_checked_bg.png");
+}
+
