@@ -2005,7 +2005,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     left: 50%;
     max-height: 650px; 
     height: 230px;
-    width: 400px;
+    width: 600px;
     padding-top: 20px; 
     padding-bottom: 20px;
     padding-left: 20px; 
@@ -2039,16 +2039,55 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     display: block;
 }
 #contact .title {
-    
+    padding-bottom: 12px;
+    color: white;
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 #contact .label_input {
-    
+    margin-bottom: 12px;
 }
-#contact .label_input .label {
-    
+#contact .label {
+    float: left;
+    width: 70px;
+    padding-right: 10px;
+    padding-top: 2px;
+    text-align: right;
+    color: #EEE;
+    font-size: 11px;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
 }
-#contact .label_input .input_container {
-    
+#contact .input_container {
+    float: left;
+}
+#contact .input_container input,
+#contact .input_container textarea {
+    width: 180px;
+    height: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 4px;
+    padding-left: 4px;
+    margin-bottom: 12px;
+    color: #EEE;
+    font-size: 11px;
+    background-color: #444;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 1px 1px 8px -3px black inset;
+    behavior: url(/css/PIE.htc);
+}
+#contact .input_container textarea {
+    height: 78px;
+    padding-top: 4px;
+    resize: none;
+}
+#contact .required {
+    color: red;
+    padding-right: 5px;
 }
 
 #contact select { width:220px; display:block; padding:2px 3px; margin:5px auto; }
