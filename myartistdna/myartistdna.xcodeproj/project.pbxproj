@@ -65,7 +65,7 @@
 		2D98BF461480778500CE851D /* ffmp3-tiny.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ffmp3-tiny.swf"; sourceTree = "<group>"; };
 		2D98BF471480778500CE851D /* ffmp3.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ffmp3.swf; sourceTree = "<group>"; };
 		2D98BF481480778500CE851D /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		2D98BF4B14807CED00CE851D /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		2D98BF4B14807CED00CE851D /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D98BF4D14807CED00CE851D /* madfm_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = madfm_bg.jpg; sourceTree = "<group>"; };
 		2D98BF4E1480C4C600CE851D /* madfm_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = madfm_bg.png; sourceTree = "<group>"; };
 		2D9B38CC149FFC6E008BDB40 /* base_facebook.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = base_facebook.php; sourceTree = "<group>"; };
