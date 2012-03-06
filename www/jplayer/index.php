@@ -760,24 +760,28 @@ String.prototype.format = function() {
                             <div class='input_container'>
                                 <input id='booking_name' />
                             </div>
+                            <div style='clear: both'></div>
                         </div>
                         <div class='label_input'>
                             <div class='label'><span class='required'>*</span>Email:</div>
                             <div class='input_container'>
                                 <input id='booking_email' />
                             </div>
+                            <div style='clear: both'></div>
                         </div>
                         <div class='label_input'>
                             <div class='label'><span class='required'>*</span>Event Date:</div>
                             <div class='input_container'>
                                 <input id='booking_date' />
                             </div>
+                            <div style='clear: both'></div>
                         </div>
                         <div class='label_input'>
                             <div class='label'><span class='required'>*</span>Location:</div>
                             <div class='input_container'>
                                 <input id='booking_location' />
                             </div>
+                            <div style='clear: both'></div>
                         </div>
                         <div class='label_input'>
                             <div class='label'><span class='required'>*</span>Budget:</div>
@@ -790,16 +794,19 @@ String.prototype.format = function() {
                                         <option>$10,000+</option>
                                 </select>
                             </div>
+                            <div style='clear: both'></div>
                         </div>
                         <div class='label_input'>
                             <div class='label'><span class='required'>*</span>Message:</div>
                             <div class='input_container'>
                                 <textarea id='booking_message'></textarea>
                             </div>
+                            <div style='clear: both'></div>
                         </div>
                         <div class='submit_required'>
                             <button class='submit green' onclick='sendBookingForm();'>send</button>
                             <div class='required_label'><span class='required'>*</span>required</div>
+                            <div style='clear: both'></div>
                         </div>
                     </div>
                     
@@ -810,22 +817,26 @@ String.prototype.format = function() {
                             <div class='input_container'>
                                 <input id='contact_name' />
                             </div>
+                            <div style='clear: both'></div>
                         </div>
                         <div class='label_input'>
                             <div class='label'><span class='required'>*</span>Email:</div>
                             <div class='input_container'>
                                 <input id='contact_email' />
                             </div>
+                            <div style='clear: both'></div>
                         </div>
                         <div class='label_input'>
                             <div class='label'><span class='required'>*</span>Message:</div>
                             <div class='input_container'>
                                 <textarea id='contact_message'></textarea>
                             </div>
+                            <div style='clear: both'></div>
                         </div>
                         <div class='submit_required'>
                             <button class='submit green' onclick='sendContactForm();'>send</button>
                             <div class='required_label'><span class='required'>*</span>required</div>
+                            <div style='clear: both'></div>
                         </div>
                         <div class='booking_link'>Are you interested in booking this artist? Click <a onclick='showBooking();'>here</a>.</div>
                     </div>
