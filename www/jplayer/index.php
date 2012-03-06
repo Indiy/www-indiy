@@ -753,7 +753,7 @@ String.prototype.format = function() {
             <div id='contact_wrapper'>
                 <div id="contact">
                     <div class='close' onclick='closeContact();'></div>
-                    <div id='contact_bookings' class="bookings">
+                    <div class="bookings">
                         <div class='title'>BOOKINGS</div>
                         <div class='label_input'>
                             <div class='label'><span class='required'>*</span>Name:</div>
@@ -810,7 +810,7 @@ String.prototype.format = function() {
                         </div>
                     </div>
                     
-                    <div id='contact_contact' class="contact">
+                    <div class="contact">
                         <div class='title'>CONTACT</div>
                         <div class='label_input'>
                             <div class='label'><span class='required'>*</span>Name:</div>
@@ -838,7 +838,7 @@ String.prototype.format = function() {
                             <div class='required_label'><span class='required'>*</span>required</div>
                             <div style='clear: both'></div>
                         </div>
-                        <div class='booking_link'>Are you interested in booking this artist? Click <a onclick='showBooking();'>here</a>.</div>
+                        <div class='booking_link'>Are you interested in booking this artist? Click <a onclick='showBookings();'>here</a>.</div>
                     </div>
                 </div>
             </div>
