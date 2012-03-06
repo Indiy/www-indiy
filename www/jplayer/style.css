@@ -1261,27 +1261,25 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     margin-bottom: 17px;
 }
 #right_box .buynow_free a {
-    padding-top: 3px;
+    padding-top: 4px;
     padding-bottom: 3px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-right: 3px;
-    margin-left: 3px;
-    margin-top: 8px;
-    margin-bottom: 8px;
     border-radius: 5px;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 11px;
     font-weight: bold;
-    border: 1px solid #2EADA7;
+    border: 1px solid #1E4D77;
     color: white;
-    background-color: #0E6D67;
+    background-color: #0E3D67;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
     behavior: url(/css/PIE.htc);
 }
 #right_box .buynow_free a:hover {
-    background-color: blue;
+    color: black;
+    background-color: #1E4D77;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.5);    
 }
 #right_box .logo_container {
     text-align: center;
