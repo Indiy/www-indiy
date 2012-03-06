@@ -564,100 +564,6 @@ String.prototype.format = function() {
         </div>
         <div id='loader'><img src="/jplayer/images/ajax-loader.gif" /></div>
         
-        <div id='nav_right_box'>
-            <div id='navigation'>
-                <div class='tab_bar_container'>
-                    <div class='tab_bar'>
-                        <div class='tab_spacer'></div>
-                        <?
-                            foreach( $pages_list as $i => $page )
-                            {
-                                $title = $page['title'];
-                                echo "<div class='tab' onclick='showUserPage($i);'>$title</div>\n";
-                            }
-                        ?>
-                        <? if( $artist_videos ): ?>
-                            <div class='tab' onclick='showVideos();'>Videos</div>
-                        <? endif; ?>             
-                        <?=$pagesList;?>
-                        <? if( $store_enabled != "" ): ?>
-                            <div class='tab' onclick='showStore();'>Store</div>
-                        <? endif; ?>
-                        <? if( $show_comments ): ?>
-                            <div class='tab' onclick='showComments();'>Comment</div>
-                        <? endif; ?>
-                        <? if( $artist_email ): ?>
-                            <div class='tab' onclick='showContact();'>Contact</div>
-                        <? endif; ?>
-                        <div class='tab_spacer'></div>
-                    </div>
-                </div>
-                <div class='artist_name_holder'>
-                    <div class='artist_name' onclick='toggleNavigation();'><?=$artist_name;?></div>
-                </div>
-            </div>
-            <div id='right_box'>
-                <div id="login_signup" class='login_signup'>
-                    <button onclick='showSignup();'>SIGN UP</button>
-                     | 
-                    <button onclick='showLogin();'>LOG IN</button>
-                </div>
-                <div id='back_to_admin' class='back_to_admin'>
-                    <a href='<?=trueSiteUrl();?>/manage/artist_management.php'>MY PROFILE</a>
-                </div>
-                <div class='expand_box'>
-                    <div class='login_sep'></div>
-                    <div class='label_name'>
-                        Title: <span id='current_track_name'></span>
-                    </div>
-                    <? if( $show_listens ): ?>
-                        <div class='label_name'>
-                            Views:
-                            <span id='current_track_listens'><?=$first_track_listens;?></span>
-                        </div>
-                    <? endif; ?>
-                    <div class='vote_buttons'>
-                        <button class='vote_up' title='Thumbs Up Song' onclick='songVote(1);'></button>
-                        <button class='vote_down'  title='Thumbs Down Song' onclick='songVote(0);'></button>
-                    </div>
-                    
-                    <div id='buynow_mad_store' class='buynow_mad_store'>
-                        <div>
-                            <a title='Buy on MyArtistDNA Store'>+ Add to Cart</a>
-                        </div>
-                    </div>
-                    <div class='amazon_itunes_buttons'>
-                        <div id='buynow_amazon'>
-                            <a  title='Buy from Amazon' target='_blank'>
-                                <img src='/images/buynow_amazon.png'/>
-                            </a>
-                        </div>
-                        <div id='buynow_itunes'>
-                            <a title='Download on iTunes' target='_blank'>
-                                <img src='/images/buynow_itunes.jpg'/>
-                            </a>
-                        </div>
-                    </div>
-                    <div id='buynow_free' class='buynow_free'>
-                        <div>
-                            <a title='Download for Free'>Free Download</a>
-                        </div>
-                    </div>
-                    <? if ($artist_logo): ?>
-                        <div class='logo_container'>
-                            <img class='logo' src="/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&w=145" />
-                        </div>
-                    <? endif; ?>
-                    <? if( $show_listens ): ?>
-                        <div class='total_listens'>
-                            TOTAL VIEWS:
-                            <span id='total_listens_val'><?=$total_listens;?></span>
-                        </div>
-                    <? endif; ?>
-                </div>
-                <div class='up_down_arrow' onclick='toggleRightBox();'></div>
-            </div>
-        </div>
         
         <div id='user_page_wrapper'>
             <div id='user_page'>
@@ -873,6 +779,102 @@ String.prototype.format = function() {
         <? } ?>
         
         <div class="aClose"></div>
+
+
+        <div id='nav_right_box'>
+            <div id='navigation'>
+                <div class='tab_bar_container'>
+                    <div class='tab_bar'>
+                        <div class='tab_spacer'></div>
+                        <?
+                            foreach( $pages_list as $i => $page )
+                            {
+                                $title = $page['title'];
+                                echo "<div class='tab' onclick='showUserPage($i);'>$title</div>\n";
+                            }
+                        ?>
+                        <? if( $artist_videos ): ?>
+                            <div class='tab' onclick='showVideos();'>Videos</div>
+                        <? endif; ?>             
+                        <?=$pagesList;?>
+                        <? if( $store_enabled != "" ): ?>
+                            <div class='tab' onclick='showStore();'>Store</div>
+                        <? endif; ?>
+                        <? if( $show_comments ): ?>
+                            <div class='tab' onclick='showComments();'>Comment</div>
+                        <? endif; ?>
+                        <? if( $artist_email ): ?>
+                            <div class='tab' onclick='showContact();'>Contact</div>
+                        <? endif; ?>
+                        <div class='tab_spacer'></div>
+                    </div>
+                </div>
+                <div class='artist_name_holder'>
+                    <div class='artist_name' onclick='toggleNavigation();'><?=$artist_name;?></div>
+                </div>
+            </div>
+            <div id='right_box'>
+                <div id="login_signup" class='login_signup'>
+                    <button onclick='showSignup();'>SIGN UP</button>
+                     | 
+                    <button onclick='showLogin();'>LOG IN</button>
+                </div>
+                <div id='back_to_admin' class='back_to_admin'>
+                    <a href='<?=trueSiteUrl();?>/manage/artist_management.php'>MY PROFILE</a>
+                </div>
+                <div class='expand_box'>
+                    <div class='login_sep'></div>
+                    <div class='label_name'>
+                        Title: <span id='current_track_name'></span>
+                    </div>
+                    <? if( $show_listens ): ?>
+                        <div class='label_name'>
+                            Views:
+                            <span id='current_track_listens'><?=$first_track_listens;?></span>
+                        </div>
+                    <? endif; ?>
+                    <div class='vote_buttons'>
+                        <button class='vote_up' title='Thumbs Up Song' onclick='songVote(1);'></button>
+                        <button class='vote_down'  title='Thumbs Down Song' onclick='songVote(0);'></button>
+                    </div>
+                    
+                    <div id='buynow_mad_store' class='buynow_mad_store'>
+                        <div>
+                            <a title='Buy on MyArtistDNA Store'>+ Add to Cart</a>
+                        </div>
+                    </div>
+                    <div class='amazon_itunes_buttons'>
+                        <div id='buynow_amazon'>
+                            <a  title='Buy from Amazon' target='_blank'>
+                                <img src='/images/buynow_amazon.png'/>
+                            </a>
+                        </div>
+                        <div id='buynow_itunes'>
+                            <a title='Download on iTunes' target='_blank'>
+                                <img src='/images/buynow_itunes.jpg'/>
+                            </a>
+                        </div>
+                    </div>
+                    <div id='buynow_free' class='buynow_free'>
+                        <div>
+                            <a title='Download for Free'>Free Download</a>
+                        </div>
+                    </div>
+                    <? if ($artist_logo): ?>
+                        <div class='logo_container'>
+                            <img class='logo' src="/timthumb.php?src=/artists/images/<?=$artist_logo;?>&q=100&w=145" />
+                        </div>
+                    <? endif; ?>
+                    <? if( $show_listens ): ?>
+                        <div class='total_listens'>
+                            TOTAL VIEWS:
+                            <span id='total_listens_val'><?=$total_listens;?></span>
+                        </div>
+                    <? endif; ?>
+                </div>
+                <div class='up_down_arrow' onclick='toggleRightBox();'></div>
+            </div>
+        </div>
 
         
         <div id="jquery_jplayer" class="jp-jplayer"></div>
