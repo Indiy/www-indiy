@@ -752,7 +752,39 @@ String.prototype.format = function() {
         <? if( $artist_email ): ?>
             <div id='contact_wrapper'>
                 <div id="contact">
-                    <div class='close' onclick='closeContact();'></div>
+                    <div class='close' onclick='closeContactTab();'></div>
+                    
+                    <div class="contact">
+                        <div class='title'>CONTACT</div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>Name:</div>
+                            <div class='input_container'>
+                                <input id='contact_name' />
+                            </div>
+                            <div style='clear: both'></div>
+                        </div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>Email:</div>
+                            <div class='input_container'>
+                                <input id='contact_email' />
+                            </div>
+                            <div style='clear: both'></div>
+                        </div>
+                        <div class='label_input'>
+                            <div class='label'><span class='required'>*</span>Message:</div>
+                            <div class='input_container'>
+                                <textarea id='contact_message'></textarea>
+                            </div>
+                            <div style='clear: both'></div>
+                        </div>
+                        <div class='submit_required'>
+                            <button class='submit green' onclick='sendContactForm();'>send</button>
+                            <div class='required_label'><span class='required'>*</span>required</div>
+                            <div style='clear: both'></div>
+                        </div>
+                        <div class='booking_link'>Are you interested in booking this artist? Click <a onclick='showBookingsForm();'>here</a>.</div>
+                    </div>
+                    
                     <div class="bookings">
                         <div class='title'>BOOKINGS</div>
                         <div class='label_input'>
@@ -810,36 +842,6 @@ String.prototype.format = function() {
                         </div>
                     </div>
                     
-                    <div class="contact">
-                        <div class='title'>CONTACT</div>
-                        <div class='label_input'>
-                            <div class='label'><span class='required'>*</span>Name:</div>
-                            <div class='input_container'>
-                                <input id='contact_name' />
-                            </div>
-                            <div style='clear: both'></div>
-                        </div>
-                        <div class='label_input'>
-                            <div class='label'><span class='required'>*</span>Email:</div>
-                            <div class='input_container'>
-                                <input id='contact_email' />
-                            </div>
-                            <div style='clear: both'></div>
-                        </div>
-                        <div class='label_input'>
-                            <div class='label'><span class='required'>*</span>Message:</div>
-                            <div class='input_container'>
-                                <textarea id='contact_message'></textarea>
-                            </div>
-                            <div style='clear: both'></div>
-                        </div>
-                        <div class='submit_required'>
-                            <button class='submit green' onclick='sendContactForm();'>send</button>
-                            <div class='required_label'><span class='required'>*</span>required</div>
-                            <div style='clear: both'></div>
-                        </div>
-                        <div class='booking_link'>Are you interested in booking this artist? Click <a onclick='showBookings();'>here</a>.</div>
-                    </div>
                 </div>
             </div>
         <? endif; ?>

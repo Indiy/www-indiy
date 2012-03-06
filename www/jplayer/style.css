@@ -2130,8 +2130,12 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     text-decoration: underline;
     cursor: pointer;
 }
-
-#contact select { width:220px; display:block; padding:2px 3px; margin:5px auto; }
+#contact select { 
+    display: block;
+    width: 140px; 
+    padding: 2px 3px;
+    margin:5px auto;
+}
 
 #player {
     position: absolute;
