@@ -62,9 +62,18 @@ a
     height: 72px;
     width: 860px;
     top: 50%;
+    left: 50%;
     margin-top: -36px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-left: -430px;
     background: url("../images/grey_checked_bg.png");
+    border-radius: 8px;
+}
+#player .progress {
+    position: absolute;
+    height: 60px;
+    width: 470px;
+    top: 11px;
+    left: 129px;
+    background-color: 0x202020;
 }
 
