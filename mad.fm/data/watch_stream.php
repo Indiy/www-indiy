@@ -15,7 +15,7 @@ $json = file_get_contents($FILE);
 if( $json )
 {
     print "loading old data\n";
-    $data = json_decode($json);
+    $data = json_decode($json,TRUE);
     if( $data['history'] )
         $history = $data['history'];
     if( $data['track_info'] )
