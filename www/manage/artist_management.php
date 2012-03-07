@@ -376,6 +376,7 @@ $(document).ready(showFirstInstruction);
 				$count = 1;
 				while($record_artistVideo = mysql_fetch_array($result_artistVideo))
 				{
+                    $count++;
                     $video_id = $record_artistVideo['id'];
 					if(!empty($record_artistVideo['image']) && file_exists("../artists/images/".$record_artistVideo['image']))
                     {
@@ -437,6 +438,7 @@ $(document).ready(showFirstInstruction);
 				$count = 1;
 				while($record_artistContent = mysql_fetch_array($result_artistContent))
 				{
+                    $count++;
                     $content_id = $record_artistContent['id'];
                 
 					$class = (( $count%2) == 0) ? '' : 'odd';

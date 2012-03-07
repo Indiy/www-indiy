@@ -2347,7 +2347,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     color: white;
 }
 #nav_right_box {
-    position: relative;
     z-index: 0;
 }
 /* NAVIGATION */
