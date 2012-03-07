@@ -25,7 +25,7 @@ Be Heard. Be Seen. Be Independent.
 
 END;
 
-    $to = "jim@blueskylabs.com";
+    $to = "info@myartistdna.com";
     $from = "no-reply@myartistdna.com";
     $headers = "From:" . $from;
 
