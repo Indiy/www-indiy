@@ -9,7 +9,7 @@
 
     $name = $data['name'];
     $email = $data['email'];
-    $subject = $data['subject'];
+    $form_subject = $data['subject'];
 
     $subject = 'Contact form from mad.co';
 
@@ -19,7 +19,7 @@ Contact form from mad.co:
 
 Name: $name 
 Email: $email
-Subject: $subject
+Subject: $form_subject
 
 Be Heard. Be Seen. Be Independent.
 
