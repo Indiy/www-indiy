@@ -1,6 +1,14 @@
 
 /* Styles */
 
+@font-face {
+    font-family: 'Neuzeit Grotesk';
+    src: url('Neuzeit-Grotesk.eot');
+    src: local('Neuzeit-Grotesk'), url('Neuzeit-Grotesk.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .overlay_container
 {
     height: 100%; 
@@ -69,11 +77,11 @@ a
     border-radius: 8px;
 }
 #player .progress {
-    position: absolute;
+    float: left;
+    position: relative;
     height: 59px;
     width: 470px;
-    top: 6px;
-    left: 129px;
+    margin-top: 6px;
     border-bottom: 1px solid #353535;  
     border-right: 1px solid #353535;  
     background-color: #202020;
@@ -81,11 +89,11 @@ a
 }
 #player .progress .title {
     position: absolute;
-    top: 19px;
+    top: 21px;
     left: 16px;
     color: #EEE;
-    font-size: 18px;
-    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
     text-align: left;
@@ -93,19 +101,98 @@ a
 }
 #player .progress .duration {
     position: absolute;
-    top: 19px;
+    top: 21px;
     right: 15px;
     color: #666;
-    font-size: 18px;
-    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
     text-align: right;
     background-color: transparent;
 }
+#player .play,
+#player .left_arrow,
+#player .right_arrow,
+#player .genre,
+#player .plus,
+#player .heart {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-top: 21px;
+    margin-left: 17px;
+    margin-right: 16px;
+    color: white;
+    cursor: pointer;
+}
+#player .sep {
+    float: left;
+    width: 1px;
+    height: 32px;
+    margin-top: 20px;
+    background-color: #292928;
+    border-left: 1px solid #3c3c3a;
+}
+#player .right_arrow {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-top: 21px;
+    margin-left: 17px;
+    margin-right: 17px;
+    color: white;
+    cursor: pointer;
+}
+#player .left_arrow {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-top: 21px;
+    margin-left: 16px;
+    margin-right: 17px;
+    color: white;
+    cursor: pointer;
+}
+#player .genre {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-top: 21px;
+    margin-left: 16px;
+    margin-right: 17px;
+    color: white;
+    cursor: pointer;    
+}
 
+#mad_fm_logo {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    height: 64px;
+    width: 194px;
+    background: url("../images/mad_fm_logo.png");
+}
 
-
-
-
-
+#bottom {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 49px;
+    background-color: #2e8085;
+    color: white;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#bottom .copyright {
+    position: absolute;
+    top: 20px;
+    right: 270px;
+}
+#bottom .be_heard {
+    position: absolute;
+    top: 20px;
+    left: 270px;
+}
