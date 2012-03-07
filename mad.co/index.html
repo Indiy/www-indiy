@@ -5,9 +5,11 @@
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>MyArtistDNA.co | Be Seen. Be Heard. Be Independent.</title>
-        <link rel="icon"  href="mad_co.ico" />
+        <link rel="icon"  href="favicon.ico" />
+    <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
-    
+
+    <script src="http://vjs.zencdn.net/c/video.js"></script>
 </head>
 
 <body>
@@ -32,7 +34,18 @@
     
     
     <div id="banner">
-    	<div class="photo"><iframe width="959" height="529" src="http://www.youtube.com/embed/qrJDvvnHsKY" frameborder="0" allowfullscreen></iframe></div>
+    	<div class="photo">
+        
+            <video width="959" height="529" id="my_video_1" class="video-js vjs-default-skin" controls
+                preload="auto" poster="images/myartistdna_video.jpg" data-setup="{}">
+                <source src="http://www.myartistdna.co/mad_030112b.webm" type="video/webm" />
+                <source src="http://www.myartistdna.co/mad_030112b.iphone.mp4" type="video/mp4" />
+                <source src="http://www.myartistdna.co/mad_030112b.mp4" type="video/mp4" />
+                <source src="http://www.myartistdna.co/mad_030112b.ogv" type="video/ogg" />
+            </video>
+            
+            <!-- <iframe width="959" height="529" src="http://www.youtube.com/embed/qrJDvvnHsKY" frameborder="0" allowfullscreen></iframe> -->
+        </div>
     </div><!-- banner -->
     
     <div id="bgcontent">
