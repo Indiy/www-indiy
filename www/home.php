@@ -16,21 +16,21 @@
 			<br />
     
     <div class="signup">
-    <h3>A BRAND NETWORKING AND MONETIZING TOOL</h3>
+    <h3>YOUR ART BRAND BUILDING AND NETWORKING TOOL</h3>
     <div class="button"><a href="#" onclick="showSignup();">SIGN UP!</a></div>
     </div><!-- signup -->
     
     
     <div id="benefitshome">
     <article>
-        <h2>WHAT IS MY<span>ARTIST</span>DNA ALL ABOUT?</h2>
+        <h2>MY<span>ARTIST</span>DNA EMPOWERS YOU!</h2>
     
         <aside>
         <ul>
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">HEARD</span></span></li>
         </ul>
-        <h5><a href="be-heard.php">Build your brand, fan by fan</a></h5>
+        <h5><a href="be-heard.php">Audio Player: Give your talent a voice</a></h5>
         </aside>
     
         <aside class="seen">
@@ -38,7 +38,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">SEEN</span></span></li>
         </ul>
-        <h5><a href="be-seen.php">Helping you get products to consumers</a></h5>
+        <h5><a href="be-seen.php">Show off your Art</a></h5>
         </aside>
     
         <aside class="independent">
@@ -46,7 +46,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">INDEPENDENT</span></span></li>
         </ul>
-        <h5><a href="be-independent.php">Cut out the middleman. Take control!</a></h5>
+        <h5><a href="be-independent.php">Freedom to express yourself </a></h5>
         </aside>
     </article>
     </div><!-- benefit -->
@@ -59,7 +59,7 @@
         
         
     <div id="artistshome">
-        <h2>Artists who use MY<span>ARTIST</span>DNA</h2>
+        <h2>Check out our MY<span>ARTIST</span>DNA creative community</h2>
     
         <ul>
         <li><img src="images/mason.jpg" alt="">
