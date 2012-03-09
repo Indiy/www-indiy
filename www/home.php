@@ -100,7 +100,7 @@
         <span>Bobby Spears</span></li>
        
         <li><img src="images/chad.jpg" alt="">
-        <span>Chad West</span></li>
+        <span>Chad Wes</span></li>
         
         <li><img src="images/wayno.jpg" alt="">
         <span>Cool Mentality</span></li>
