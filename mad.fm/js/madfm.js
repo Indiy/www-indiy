@@ -15,7 +15,7 @@ function ffmp3Callback(event,value)
 function onReady()
 {
     loadSteamInfo();
-    window.setInterval(updateTrackInfo,500);
+    window.setInterval(updateTrackInfo,200);
     window.setInterval(scrollTrackTitle,50);
 }
 $(document).ready(onReady);
@@ -51,6 +51,8 @@ function updateTrackInfo()
     if( $('#track_title').text() != title )
     {
         $('#track_title').text(title);
+        g_scrollingRight = true;
+        $('#track_title').scrollLeft(0);
     }
     
     var duration = track.duration;
