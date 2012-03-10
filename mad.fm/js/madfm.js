@@ -4,9 +4,8 @@ var PROGRESS_BAR_WIDTH = 468;
 var PROGRESS_ROUND_LENGTH = 462;
 
 var g_streamInfo = false;
-
 var g_scrollingRight = true;
-
+var g_lastStreamLoad = 0;
 
 function ffmp3Callback(event,value)
 {
@@ -20,6 +19,11 @@ function onReady()
     window.setInterval(scrollTrackTitle,50);
 }
 $(document).ready(onReady);
+
+function msTime()
+{
+    (new Date()).getTime();
+}
 
 function scrollTrackTitle()
 {
@@ -58,7 +62,7 @@ function updateTrackInfo()
     
     var duration = track.duration;
     var start = track.start;
-    var curr_pos = (new Date()).getTime()/1000 - start;
+    var curr_pos = msTime()/1000 - start;
     if( curr_pos > duration )
         curr_pos = duration;
     
@@ -76,7 +80,14 @@ function updateTrackInfo()
         $('#player .progress .bar').css('border-radius','6px 0px 0px 6px');
 
     if( curr_pos + 10 > duration )
-        loadSteamInfo();
+    {
+        var delta = msTime() - g_lastStreamLoad;
+        if( delta > 500 )
+        {
+            g_lastStreamLoad = msTime();
+            loadSteamInfo();
+        }
+    }
 }
 
 function loadSteamInfo()
