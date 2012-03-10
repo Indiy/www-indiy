@@ -6,9 +6,10 @@
 <section id="content">
 
 	<div class="header_wrapper"> <!-- Naming of the header classes must stay consistent: header_1, header_2, etc. Naming of the images is arbitrary -->
-		<div class='header_1'><a href="http://youngchris.myartistdna.com/"><img alt="Young Chris" height="257" width="940" src="images/header_images/01.jpg" /></a></div>
-		<div class='header_2'><a href="http://ladygaga.myartistdna.com/"><img alt="Lady Gaga" height="257" width="940" src="images/header_images/03.jpg" /></a></div>
-		<div class='header_3'><a href="http://ladygaga.myartistdna.com/"><img alt="Lady Gaga" height="257" width="940" src="images/header_images/05.jpg" /></a></div>
+		<div class='header_1'><img alt="Be Heard. Be Seen. Be Independent." height="257" width="940" src="images/header_images/01.jpg" /></div>
+		<div class='header_2'><img alt="Build, Control & Monetize your Brand" height="257" width="940" src="images/header_images/05.jpg" /></div>
+		<div class='header_3'><img alt="Myartistdna.co" height="257" width="940" src="images/header_images/03.jpg" /></div>
+
 
 	</div>
 		    
@@ -16,21 +17,21 @@
 			<br />
     
     <div class="signup">
-    <h3>A BRAND NETWORKING AND MONETIZING TOOL</h3>
+    <h3>YOUR ART BRAND BUILDING AND NETWORKING TOOL</h3>
     <div class="button"><a href="#" onclick="showSignup();">SIGN UP!</a></div>
     </div><!-- signup -->
     
     
     <div id="benefitshome">
     <article>
-        <h2>WHAT IS MY<span>ARTIST</span>DNA ALL ABOUT?</h2>
+        <h2>MY<span>ARTIST</span>DNA EMPOWERS YOU!</h2>
     
         <aside>
         <ul>
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">HEARD</span></span></li>
         </ul>
-        <h5><a href="be-heard.php">Build your brand, fan by fan</a></h5>
+        <h5><a href="be-heard.php">Audio Player: Give your talent a voice</a></h5>
         </aside>
     
         <aside class="seen">
@@ -38,7 +39,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">SEEN</span></span></li>
         </ul>
-        <h5><a href="be-seen.php">Helping you get products to consumers</a></h5>
+        <h5><a href="be-seen.php">Show off your Art</a></h5>
         </aside>
     
         <aside class="independent">
@@ -46,7 +47,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">INDEPENDENT</span></span></li>
         </ul>
-        <h5><a href="be-independent.php">Cut out the middleman. Take control!</a></h5>
+        <h5><a href="be-independent.php">Freedom to express yourself </a></h5>
         </aside>
     </article>
     </div><!-- benefit -->
@@ -59,7 +60,7 @@
         
         
     <div id="artistshome">
-        <h2>Artists who use MY<span>ARTIST</span>DNA</h2>
+        <h2>Check out our MY<span>ARTIST</span>DNA creative community</h2>
     
         <ul>
         <li><img src="images/mason.jpg" alt="">
@@ -99,7 +100,7 @@
         <span>Bobby Spears</span></li>
        
         <li><img src="images/chad.jpg" alt="">
-        <span>Chad West</span></li>
+        <span>Chad Wes</span></li>
         
         <li><img src="images/wayno.jpg" alt="">
         <span>Cool Mentality</span></li>

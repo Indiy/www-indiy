@@ -20,9 +20,9 @@ background:#f6f6f6;
     <aside>
     <h5>ARTIST</h5>
     <ul>
-    <li><a href="artists.php">All</a></li>
-    <li><a href="music.php">Music</a></li>
-    <li><a href="art.php">Art</a></li>
+    <li><a href="#">All</a></li>
+    <li><a href="#">Music</a></li>
+    <li><a href="#">Art</a></li>
   
     </ul>
     </aside>
@@ -46,9 +46,11 @@ background:#f6f6f6;
     <aside>
     <h5>AFFILIATES</h5>
     <ul>
+    <li><a href="http://myartistdna.co">MAD.co</a></li>
     <li><a href="http://myartistdna.is">MAD.is</a></li>
-    <li><a href="http://myartistdna.fm">MAD.fm</a></li>
     <li><a href="http://myartistdna.tv">MAD.tv</a></li>
+    <li><a href="http://myartistdna.fm">MAD.fm</a></li>
+
     </ul>
     </aside>
 
@@ -63,7 +65,7 @@ background:#f6f6f6;
     </article>
 
     <div class="logo"><a href="home.php"><img src="images/MYARTISTDNA_footer.gif" alt="MYARTISTDNA"></a></div>
-    <p>&copy; 2011 <a href="http://levasent.com">Levas Entertainment</a>, All rights reserved</p>
+    <p>&copy; 2012 <a href="http://levasent.com">Levas Entertainment</a>, All rights reserved</p>
 
 </footer>
 </section>

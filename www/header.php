@@ -59,7 +59,7 @@
 
     <nav>
     <ul>
-    <li><a href="artists.php">ARTISTS</a>
+   <!--  <li><a href="artists.php">ARTISTS</a>
 		<span>
         <ul>
         <li><a href="artists.php">All</a></li>
@@ -67,7 +67,7 @@
         <li><a href="art.php">ART</a></li>
         </ul>
 		</span>
-    </li>                      
+    </li> -->                      
     <li><a href="be-heard.php">BENEFITS</a><span>
         <ul>
         <li></li>
