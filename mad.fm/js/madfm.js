@@ -14,7 +14,7 @@ $(document).ready(onReady);
 
 function mins_secs(secs)
 {
-    var mins = Math.floor(time / 60);
+    var mins = Math.floor(secs / 60);
     secs -= mins * 60;
     return sprintf("%02d:%02d",mins,secs); 
 }
