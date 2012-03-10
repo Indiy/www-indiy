@@ -12,7 +12,7 @@ function onReady()
 }
 $(document).ready(onReady);
 
-function min_secs(secs)
+function mins_secs(secs)
 {
     var mins = Math.floor(time / 60);
     secs -= mins * 60;
