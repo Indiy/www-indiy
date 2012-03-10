@@ -48,7 +48,7 @@ while( TRUE )
         print "new track: $track, duration: $duration\n";
         $data = array("artist" => $artist,
                       "song" => $song,
-                      "start" => $time,
+                      "start" => $start,
                       "duration" => $duration);
     
         array_unshift($history,$data);
