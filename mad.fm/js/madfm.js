@@ -1,6 +1,7 @@
 
 
-var PROGRESS_BAR_WIDTH = 405;
+var PROGRESS_BAR_WIDTH = 468;
+var PROGRESS_ROUND_LENGTH = 462;
 
 var g_streamInfo = false;
 
@@ -69,6 +70,10 @@ function updateTrackInfo()
     var percent = curr_pos/duration;
     var width = percent * PROGRESS_BAR_WIDTH;
     $('#player .progress .bar').width(width);
+    if( width >= PROGRESS_ROUND_LENGTH )
+        $('#player .progress .bar').css('border-radius','6px 6px 6px 6px');
+    else
+        $('#player .progress .bar').css('border-radius','6px 0px 0px 6px');
 
     if( curr_pos + 10 > duration )
         loadSteamInfo();
