@@ -84,6 +84,8 @@ html {
     text-transform: uppercase;
     text-align: right;
     background-color: transparent;
+    white-space: nowrap;
+    overflow: hidden;
 }
 #player .play,
 #player .left_arrow,
