@@ -1,6 +1,8 @@
 
 var g_streamInfo = false;
 
+var g_scrollingRight = true;
+
 var SCROLL_SETTINGS = {
     autoScroll: "always", 
     autoScrollDirection: "backandforth", 
@@ -18,9 +20,23 @@ function onReady()
 {
     loadSteamInfo();
     window.setInterval(updateTrackInfo,500);
+    window.setInterval(scrollTrackTitle,50);
     $('#trackTitle').smoothDivScroll(SCROLL_SETTINGS);
 }
 $(document).ready(onReady);
+
+function scrollTrackTitle()
+{
+    var old_pos = $('#title_scoller').scrollLeft();
+    var new_pos = old_pos;
+    if( g_scrollingRight )
+        new_pos--;
+    else
+        new_pos++;
+    $('#title_scoller').scrollLeft(new_pos);
+    if( old_pos == $('#title_scoller').scrollLeft() )
+        g_scrollingRight = !g_scrollingRight;
+}
 
 function mins_secs(secs)
 {
@@ -29,18 +45,17 @@ function mins_secs(secs)
     return sprintf("%02d:%02d",mins,secs); 
 }
 
-
 function updateTrackInfo()
 {
     if( !g_streamInfo )
         return;
     
     var track = g_streamInfo['history'][0];
-    var name = track.artist + " - " + track.song;
+    var title = track.artist + " - " + track.song;
     
-    if( $('#track_title').text() != name )
+    if( $('#track_title').text() != title )
     {
-        $('#track_title').text(name);
+        $('#track_title').text(title);
     }
     
     var duration = track.duration;
