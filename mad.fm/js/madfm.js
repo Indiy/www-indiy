@@ -22,7 +22,7 @@ $(document).ready(onReady);
 
 function msTime()
 {
-    (new Date()).getTime();
+    return (new Date()).getTime();
 }
 
 function scrollTrackTitle()
