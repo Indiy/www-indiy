@@ -1,14 +1,10 @@
 
+
+var PROGRESS_BAR_WIDTH = 405;
+
 var g_streamInfo = false;
 
 var g_scrollingRight = true;
-
-var SCROLL_SETTINGS = {
-    autoScroll: "always", 
-    autoScrollDirection: "backandforth", 
-    autoScrollInterval: 10, 
-    autoScrollStep: 1
-};
 
 
 function ffmp3Callback(event,value)
@@ -19,9 +15,8 @@ function ffmp3Callback(event,value)
 function onReady()
 {
     loadSteamInfo();
-    window.setInterval(updateTrackInfo,500);
+    window.setInterval(updateTrackInfo,200);
     window.setInterval(scrollTrackTitle,50);
-    $('#trackTitle').smoothDivScroll(SCROLL_SETTINGS);
 }
 $(document).ready(onReady);
 
@@ -56,6 +51,8 @@ function updateTrackInfo()
     if( $('#track_title').text() != title )
     {
         $('#track_title').text(title);
+        g_scrollingRight = true;
+        $('#track_title').scrollLeft(0);
     }
     
     var duration = track.duration;
@@ -69,6 +66,10 @@ function updateTrackInfo()
     {
         $('#track_duration').text(s);
     }
+    var percent = curr_pos/duration;
+    var width = percent * PROGRESS_BAR_WIDTH;
+    $('#player .progress .bar').width(width);
+
     if( curr_pos + 10 > duration )
         loadSteamInfo();
 }
