@@ -7,6 +7,7 @@ var g_streamInfo = false;
 var g_scrollingRight = true;
 var g_lastStreamLoad = 0;
 var g_playing = true;
+var g_intervalUpdateTrack = false;
 
 function ffmp3Callback(event,value)
 {
@@ -16,7 +17,7 @@ function ffmp3Callback(event,value)
 function onReady()
 {
     loadSteamInfo();
-    window.setInterval(updateTrackInfo,200);
+    g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
     window.setInterval(scrollTrackTitle,50);
 }
 $(document).ready(onReady);
@@ -103,12 +104,14 @@ function playerPlay()
     g_playing = true;
     var player = (document.ffmp3_player) ? document.ffmp3_player : document.getElementById('ffmp3_player');
     player.playSound();
+    g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
 }
 function playerPause()
 {
     g_playing = false;
     var player = (document.ffmp3_player) ? document.ffmp3_player : document.getElementById('ffmp3_player');
     player.stopSound();
+    window.clearInterval(g_intervalUpdateTrack);
 }
 
 function loadSteamInfo()
