@@ -6,6 +6,7 @@ var PROGRESS_ROUND_LENGTH = 462;
 var g_streamInfo = false;
 var g_scrollingRight = true;
 var g_lastStreamLoad = 0;
+var g_playing = true;
 
 function ffmp3Callback(event,value)
 {
@@ -88,6 +89,26 @@ function updateTrackInfo()
             loadSteamInfo();
         }
     }
+}
+
+function playerToggle()
+{
+    if( g_playing )
+        playerPause();
+    else
+        playerPlay();
+}
+function playerPlay()
+{
+    g_playing = true;
+    var player = (document.ffmp3_player) ? document.ffmp3_player : document.getElementById('ffmp3_player');
+    player.playSound();
+}
+function playerPause()
+{
+    g_playing = false;
+    var player = (document.ffmp3_player) ? document.ffmp3_player : document.getElementById('ffmp3_player');
+    player.stopSound();
 }
 
 function loadSteamInfo()
