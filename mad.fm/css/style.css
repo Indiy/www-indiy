@@ -182,6 +182,7 @@ html {
 }
 #history .content {
     background-color: #191e24;
+    border-radius: 0px 0px 6px 6px;
 }
 #history .content .row {
     height: 64px;
@@ -209,6 +210,9 @@ html {
     font-weight: bold;
     text-transform: uppercase;
     text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     border-top: 1px solid #20262e;
     border-bottom: 1px solid #161a20;
     border-left: 1px solid #20262e;
