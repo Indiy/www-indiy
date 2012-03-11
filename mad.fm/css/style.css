@@ -128,9 +128,28 @@ html {
 #player .heart {
     background: transparent url("../images/controls.png") -802px -86px no-repeat;
 }
+#player .play:hover {
+    background: transparent url("../images/controls.png") -5px -16px no-repeat;
+}
+#player .right_arrow:hover {
+    background: transparent url("../images/controls.png") -71px -16px no-repeat;
+}
+#player .left_arrow:hover {
+    background: transparent url("../images/controls.png") -606px -16px no-repeat;
+}
+#player .genre:hover {
+    background: transparent url("../images/controls.png") -670px -16px no-repeat;
+}
+#player .plus:hover {
+    background: transparent url("../images/controls.png") -740px -16px no-repeat;
+}
+#player .heart:hover {
+    background: transparent url("../images/controls.png") -802px -16px no-repeat;
+}
+
 
 #player #history {
-    display: none;
+    display: block;
     position: absolute;
     top: 64px;
     left: 0px;
@@ -244,6 +263,14 @@ html {
     border-top: 1px solid #20262e;
     border-bottom: 1px solid #161a20;
     border-left: 1px solid #20262e;
+}
+#history .content .row .loved div {
+    height: 100%;
+    width: 100%;
+    background: transparent url("../images/controls.png") -802px -86px no-repeat;
+}
+#history .content .row .loved div:hover {
+    background: transparent url("../images/controls.png") -802px -16px no-repeat;
 }
 
 #mad_fm_logo {
