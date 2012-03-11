@@ -149,7 +149,7 @@ html {
 
 
 #player #history {
-    display: block;
+    display: none;
     position: absolute;
     top: 64px;
     left: 0px;
