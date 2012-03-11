@@ -39,7 +39,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">SEEN</span></span></li>
         </ul>
-        <h5><a href="be-seen.php">Show off your Art</a></h5>
+        <h5><a href="be-seen.php">Video Player: Show off your Art</a></h5>
         </aside>
     
         <aside class="independent">
@@ -47,15 +47,15 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">INDEPENDENT</span></span></li>
         </ul>
-        <h5><a href="be-independent.php">Freedom to express yourself </a></h5>
+        <h5><a href="be-independent.php">Control: Freedom to express yourself </a></h5>
         </aside>
     </article>
     </div><!-- benefit -->
     
     
     <div class="signup">
-    <h3>A NEW WAY TO BUILD YOUR ONLINE BRAND</h3>
-    <div class="button"><a href="http://demo.madd3v.com">SEE EXAMPLES</a></div>
+    <h3>SIGN UP FOR YOUR ARTIST'S KIT</h3>
+    <div class="button"><a href="#" onclick="showSignup();">START NOW!</a></div>
     </div><!-- signup -->
         
         
