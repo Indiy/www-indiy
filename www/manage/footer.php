@@ -47,7 +47,7 @@
     </article>
 
     <div class="logo"><a href="http://myartistdna.is"><img src="images/MYARTISTDNA_footer.gif" alt="MYARTISTDNA"></a></div>
-    <p>&copy; 2011 <a href="http://levasent.com">Levas Entertainment</a>, All rights reserved</p>
+    <p>&copy; 2011 <a href="http://myartistdna.com">MyArtistDNA</a></p>
 
 </footer>
 </section><!-- footer -->
