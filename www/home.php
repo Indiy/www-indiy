@@ -60,7 +60,7 @@
         
         
     <div id="artistshome">
-        <h2>Check out our MY<span>ARTIST</span>DNA creative community</h2>
+        <h2>Check out the MY<span>ARTIST</span>DNA creative community</h2>
     
         <ul>
         <li><img src="images/mason.jpg" alt="">
