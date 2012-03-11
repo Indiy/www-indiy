@@ -129,6 +129,119 @@ html {
     background: transparent url("../images/controls.png") -802px -86px no-repeat;
 }
 
+#player #history {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0px;
+    width: 860px;
+    z-index: -1;
+}
+
+#history .header {
+    padding-top: 8px;
+    height: 37px;
+    width: 100%;
+    background: black url("../images/history_header.png") repeat-x;
+    border-bottom: 1px solid #161a20;
+}
+
+#history .header .title {
+    float: left;
+    height: 22px;
+    width: 702px;
+    padding-top: 15px;
+    padding-left: 10px;
+    color: #414c5c;
+    font-size: 11px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: left;
+}
+#history .header .length {
+    float: left;
+    height: 22px;
+    width: 74px;
+    padding-top: 15px;
+    color: #414c5c;
+    font-size: 11px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+#history .header .loved {
+    float: left;
+    height: 22px;
+    width: 74px;
+    padding-top: 15px;
+    color: #414c5c;
+    font-size: 11px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+#history .content {
+    background-color: #191e24;
+}
+#history .content .row {
+    height: 64px;
+}
+#history .content .row .icon {
+    float: left;
+    height: 46px;
+    width: 46px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 11px;
+    padding-right: 11px;
+    border-top: 1px solid #20262e;
+    border-bottom: 1px solid #161a20;
+    border-right: 1px solid #161a20;
+}
+#history .content .row .title {
+    float: left;
+    width: 626px;
+    padding-top: 23px;
+    padding-left: 16px;
+    color: #90aacc;
+    font-size: 15px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+    border-top: 1px solid #20262e;
+    border-bottom: 1px solid #161a20;
+    border-left: 1px solid #20262e;
+    border-right: 1px solid #161a20;
+}
+#history .content .row .length {
+    float: left;
+    width: 71px;
+    padding-top: 23px;
+    color: #90aacc;
+    font-size: 15px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    border-top: 1px solid #20262e;
+    border-bottom: 1px solid #161a20;
+    border-left: 1px solid #20262e;
+    border-right: 1px solid #161a20;
+}
+#history .content .row .loved {
+    float: left;
+    height: 30px;
+    width: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 21px;
+    padding-right: 21px;
+    border-top: 1px solid #20262e;
+    border-bottom: 1px solid #161a20;
+    border-left: 1px solid #20262e;
+}
+
 #mad_fm_logo {
     position: absolute;
     top: 40px;

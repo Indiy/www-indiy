@@ -8,6 +8,7 @@ var g_scrollingRight = true;
 var g_lastStreamLoad = 0;
 var g_playing = true;
 var g_intervalUpdateTrack = false;
+var g_historyShown = false;
 
 function ffmp3Callback(event,value)
 {
@@ -72,6 +73,7 @@ function updateTrackInfo()
     if( $('#track_duration').text() != s )
     {
         $('#track_duration').text(s);
+        updateHistory();
     }
     var percent = curr_pos/duration;
     var width = percent * PROGRESS_BAR_WIDTH;
@@ -90,6 +92,41 @@ function updateTrackInfo()
             loadSteamInfo();
         }
     }
+}
+function updateHistory()
+{
+    $('#history .content').empty();
+    for( var i = 1 ; i < 4 ; ++i )
+    {
+        var track = g_streamInfo['history'][i];
+        var title = track.artist + " - " + track.song;
+        var duration = mins_secs(track.duration);
+        var html = "<div class='row'>";
+        html += "<div class='icon'><img src=''></div>";
+        html += "<div class='title'>" + title + "</div>";
+        html += "<div class='length'>" + duration + "</div>";
+        html += "<div class='loved'></div>";
+        html += "</div>";
+        $('#history .content').append(html);
+    }
+}
+function loadSteamInfo()
+{
+    jQuery.ajax(
+    {
+        type: 'GET',
+        url: "data/stream_info.php",
+        dataType: 'json',
+        success: function(data) 
+        {
+            g_streamInfo = data;
+            updateTrackInfo();
+        },
+        error: function()
+        {
+            //window.alert("Error!");
+        }
+    });
 }
 
 function playerToggle()
@@ -114,25 +151,24 @@ function playerPause()
     window.clearInterval(g_intervalUpdateTrack);
 }
 
-function loadSteamInfo()
+function toggleHistory()
 {
-    jQuery.ajax(
-    {
-        type: 'GET',
-        url: "data/stream_info.php",
-        dataType: 'json',
-        success: function(data) 
-        {
-            g_streamInfo = data;
-            updateTrackInfo();
-        },
-        error: function()
-        {
-            //window.alert("Error!");
-        }
-    });
+    if( g_historyShown )
+        hideHistory();
+    else
+        showHistory();
 }
-
+function showHistory()
+{
+    g_historyShown = true;
+    $('#history').fadeIn();
+    updateHistory();
+}
+function hideHistory()
+{
+    g_historyShown = false;
+    $('#history').fadeOut();
+}
 
 
 
