@@ -110,35 +110,23 @@ html {
     background-color: #292928;
     border-left: 1px solid #3c3c3a;
 }
+#player .play {
+    background: transparent url("../images/controls.png") -5px -86px no-repeat;
+}
 #player .right_arrow {
-    float: left;
-    width: 30px;
-    height: 30px;
-    margin-top: 21px;
-    margin-left: 17px;
-    margin-right: 17px;
-    color: white;
-    cursor: pointer;
+    background: transparent url("../images/controls.png") -71px -86px no-repeat;
 }
 #player .left_arrow {
-    float: left;
-    width: 30px;
-    height: 30px;
-    margin-top: 21px;
-    margin-left: 16px;
-    margin-right: 17px;
-    color: white;
-    cursor: pointer;
+    background: transparent url("../images/controls.png") -606px -86px no-repeat;
 }
 #player .genre {
-    float: left;
-    width: 30px;
-    height: 30px;
-    margin-top: 21px;
-    margin-left: 16px;
-    margin-right: 17px;
-    color: white;
-    cursor: pointer;    
+    background: transparent url("../images/controls.png") -670px -86px no-repeat;
+}
+#player .plus {
+    background: transparent url("../images/controls.png") -740px -86px no-repeat;
+}
+#player .heart {
+    background: transparent url("../images/controls.png") -802px -86px no-repeat;
 }
 
 #mad_fm_logo {

@@ -14,36 +14,35 @@
 
 <body>
 
-    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="190" height="62">
+    <object id='ffmp3_player' classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="190" height="62">
         <param name="movie" value="ffmp3-config.swf" />
         <param name="flashvars" value="url=http://myartistdna.fm:8000/stream&lang=en&codec=mp3&volume=100&autoplay=true&traking=true&jsevents=true&buffering=5&skin=ffmp3-darkconsole.xml&title=MyAritstDNA.fm&welcome=Welcome%20to%20MAD.fm" />
         <param name="wmode" value="transparent" />
         <param name="allowscriptaccess" value="always" />
         <param name="scale" value="noscale" />
-        <embed src="ffmp3-config.swf" flashvars="url=http://myartistdna.fm:8000/stream&lang=en&codec=mp3&volume=100&autoplay=true&traking=true&jsevents=true&buffering=5&skin=ffmp3-darkconsole.xml&title=MyAritstDNA.fm&welcome=Welcome%20to%20MAD.fm" width="190" scale="noscale" height="62" wmode="transparent" allowscriptaccess="always" type="application/x-shockwave-flash" />
+        <embed name='ffmp3_player' src="ffmp3-config.swf" flashvars="url=http://myartistdna.fm:8000/stream&lang=en&codec=mp3&volume=100&autoplay=true&traking=true&jsevents=true&buffering=5&skin=ffmp3-darkconsole.xml&title=MyAritstDNA.fm&welcome=Welcome%20to%20MAD.fm" width="190" scale="noscale" height="62" wmode="transparent" allowscriptaccess="always" type="application/x-shockwave-flash" />
     </object>
 
     <div class='overlay_container'>
         <div id='mad_fm_logo'></div>
         <div id='player'>
-            <div class='play'>P</div>
+            <div class='play' onclick='playerToggle();'></div>
             <div class='sep'></div>
-            <div class='right_arrow'>&gt;</div>
+            <div class='right_arrow'></div>
             <div class='progress'>
                 <div id='track_bar' class='bar'></div>
                 <div id='title_scoller' class='title'><span id='track_title'>A very very very very long title<span></div>
                 <div id='track_duration' class='duration'></div>
             </div>
             
-            <div class='left_arrow'>&lt;</div>
+            <div class='left_arrow' onclick='toggleHistory();'></div>
             <div class='sep'></div>
-            <div class='genre'>G</div>
+            <div class='genre' onclick='toggleGenre();'></div>
             <div class='sep'></div>
-            <div class='plus'>+</div>
+            <div class='plus' onclick='showAddMusic();'></div>
             <div class='sep'></div>
-            <div class='heart'>H</div>
+            <div class='heart' onclick='showLoved();'></div>
         </div>
-        <!-- <img id='bg_image' class='bg_image' src='images/madfm_bg.png'/> -->
         <div id='bottom'>
             <div class='be_heard'>BE HEARD. BE SEEN. BE INDEPENDANT.</div>
             <div class='copyright'>&copy;2012 MYARTISTDNA</div>
