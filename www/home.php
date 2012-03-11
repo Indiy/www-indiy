@@ -54,7 +54,7 @@
     
     
     <div class="signup">
-    <h3>SIGN UP FOR YOUR ARTIST'S KIT</h3>
+    <h3>SIGN UP FOR YOUR ARTIST KIT</h3>
     <div class="button"><a href="#" onclick="showSignup();">START NOW!</a></div>
     </div><!-- signup -->
         
