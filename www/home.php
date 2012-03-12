@@ -6,11 +6,10 @@
 <section id="content">
 
 	<div class="header_wrapper"> <!-- Naming of the header classes must stay consistent: header_1, header_2, etc. Naming of the images is arbitrary -->
-		<div class='header_1'><img alt="Be Heard. Be Seen. Be Independent." height="257" width="940" src="images/header_images/01.jpg" /></div>
-		<div class='header_2'><img alt="Build, Control & Monetize your Brand" height="257" width="940" src="images/header_images/05.jpg" /></div>
-		<div class='header_3'><img alt="Myartistdna.co" height="257" width="940" src="images/header_images/03.jpg" /></div>
-
-		<div class='header_4'><img alt="The Arts League" height="257" width="940" src="images/header_images/06.png" /></div>
+		<div class='header_1'><a href="#" onclick="showSignup();"><img alt="Be Heard. Be Seen. Be Independent." height="257" width="940" src="images/header_images/01.jpg" /></a></div>
+		<div class='header_2'><a href="#" onclick="showSignup();"><img alt="Build, Control & Monetize your Brand" height="257" width="940" src="images/header_images/05.jpg" /></a></div>
+		<div class='header_3'><a href="#" onclick="showSignup();"><img alt="Myartistdna.co" height="257" width="940" src="images/header_images/03.jpg" /></a></div>
+		<div class='header_4'><a href="#" onclick="showSignup();"><img alt="The Arts League" height="257" width="940" src="images/header_images/06.png" /></a></div>
 
 
 	</div>
