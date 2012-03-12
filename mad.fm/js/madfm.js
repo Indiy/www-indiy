@@ -170,6 +170,13 @@ function hideHistory()
     $('#history').fadeOut();
 }
 
-
+function showAddMusic()
+{
+    $('#add_music').fadeIn();
+}
+function hideAddMusic()
+{
+    $('#add_music').fadeOut();
+}
 
 
