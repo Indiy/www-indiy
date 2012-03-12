@@ -77,7 +77,7 @@ include "header.php";
 			</aside>
 			</article>
 			
-			<article class="custom">
+			<article class="socialize">
 			<figure><img src="images/benefits_custom_events.jpg" alt="benefits_custom_events"></figure>
 			<aside>
 			<h4>Grow Your Brand<br /> <span>Do deals with us</span></h4>
