@@ -55,7 +55,7 @@ include "header.php";
 			<figure><img src="images/benefits_e_commerce.jpg" alt="E-commerce"></figure>
 			<aside>
 			<h4>E-commerce <span>Sell your own merch, thats where the money is! </span></h4>
-			<p>Sell merch 24/7. tshirts, vinyl whatever.</p>
+			<p>Whenever you want, 24/7.</p>
 			</aside>
 			</article>
 			</div>
