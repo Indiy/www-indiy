@@ -772,6 +772,9 @@ div.search_text {
     font-size: 13px;
     font-family: Helvetica, Arial, sans-serif;
     text-align: left;
+    text-transform: lowercase;
+    overflow: hidden;
+    text-overflow: hidden;
 }
 
 .searchListItem .heading { 
