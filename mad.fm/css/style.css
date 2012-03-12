@@ -304,3 +304,139 @@ html {
     top: 20px;
     left: 270px;
 }
+
+#add_music {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+}
+
+#add_music .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+#add_music .dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 382px;
+    width: 668px;
+    margin-top: -191px;
+    margin-left: -334px;
+    background: #242424;
+    border-radius: 8px;
+}
+#add_music .dialog .header {
+    position: relative;
+    height: 58px;
+    background: url("../images/madfm_striped.png");
+    border-radius: 8px 8px 0px 0px;
+}
+#add_music .dialog .header .title {
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#add_music .dialog .header .title span {
+    color: #4dbbb9;
+}
+#add_music .dialog .header .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    cursor: pointer;
+}
+#add_music .dialog .description {
+    height: 60px;
+    padding-top: 30px;
+    padding-left: 52px;
+    padding-right: 52px;
+    color: #626262;
+    font-size: 16px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#add_music .dialog .pictures {
+    height: 140px;
+    padding-left: 29px;
+    border-bottom: 1px solid #1e1e1e;
+}
+#add_music .dialog .item {
+    float: left;
+    width: 140px;
+    height: 118px;
+    padding-right: 18px;
+}
+#add_music .dialog .item img {
+    width: 140px;
+    height: 93px;
+}
+#add_music .dialog .item div {
+    padding-top: 17px;
+    width: 140px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#add_music .dialog .join_container {
+    border-top: 1px solid #2e2e2e;
+}
+#add_music .dialog .join_container .be_heard {
+    float: left;
+    padding-top: 37px;
+    padding-left: 50px;
+    color: #636363;
+    font-size: 13px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#add_music .dialog .join_container .be_heard span {
+    color: white;
+}
+#add_music .dialog .join_container .join {
+    float: right;
+    margin-right: 60px;
+    margin-top: 18px;
+    width: 250px;
+    height: 43px;
+    background-color: #257677;
+}
+#add_music .dialog .join_container .join .icon {
+    float: left;
+    width: 45px;
+    height: 43px;
+    background: url("../images/madfm_aqua_icon.png");
+}
+#add_music .dialog .join_container .join .title {
+    float: left;
+    padding-top: 16px;
+    padding-left: 26px;
+    color: white;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    cursor: pointer;
+}
+#add_music .dialog .join_container .join .title:hover {
+    color: #CCC;
+}
+
+
+
+
+
+
+
+
+
