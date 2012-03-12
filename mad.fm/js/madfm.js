@@ -223,11 +223,11 @@ function showLoved(artist,song)
     url += "&description=" + encodeURIComponent(msg);
     $('#pin_link').attr('href',url);
     
-    var url = "https://m.google.com/app/plus/x/?v=compose&content=" + encodeURIComponent(msg);
-    url += "%20" + encodeURIComponent(link_url);
+    var url = "https://plusone.google.com/_/+1/confirm?hl=en&url=" + encodeURIComponent(link_url);
     $('#google_link').attr('href',url);
     
     var url = "mailto:?&subject=" + encodeURIComponent(msg);
+    $('#email_link').attr('href',url);
     
     $('#song_love').fadeIn();
 }
