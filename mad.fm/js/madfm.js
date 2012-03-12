@@ -1,5 +1,4 @@
 
-
 var PROGRESS_BAR_WIDTH = 468;
 var PROGRESS_ROUND_LENGTH = 462;
 
@@ -19,6 +18,7 @@ function ffmp3Callback(event,value)
 
 function onReady()
 {
+    loadLoved();
     loadSteamInfo();
     g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
     window.setInterval(scrollTrackTitle,50);
@@ -49,6 +49,10 @@ function mins_secs(secs)
     secs -= mins * 60;
     return sprintf("%02d:%02d",mins,secs); 
 }
+function titleFromTrack(track)
+{
+    return track.artist + " - " + track.song;
+}
 
 function updateTrackInfo()
 {
@@ -56,7 +60,7 @@ function updateTrackInfo()
         return;
     
     var track = g_streamInfo['history'][0];
-    var title = track.artist + " - " + track.song;
+    var title = titleFromTrack(track);
     
     if( $('#track_title').text() != title )
     {
@@ -67,6 +71,7 @@ function updateTrackInfo()
             $('#player .heart').addClass('love');
         else
             $('#player .heart').removeClass('love');
+        updateHistory();
     }
     
     var duration = track.duration;
@@ -79,7 +84,6 @@ function updateTrackInfo()
     if( $('#track_duration').text() != s )
     {
         $('#track_duration').text(s);
-        updateHistory();
     }
     var percent = curr_pos/duration;
     var width = percent * PROGRESS_BAR_WIDTH;
@@ -105,13 +109,19 @@ function updateHistory()
     for( var i = 1 ; i < 4 ; ++i )
     {
         var track = g_streamInfo['history'][i];
-        var title = track.artist + " - " + track.song;
+        var title = titleFromTrack(track);
         var duration = mins_secs(track.duration);
+        var love = "";
+        if( title in g_loveMap )
+            love = "love";
+        
         var html = "<div class='row'>";
         html += "<div class='icon'><img src=''></div>";
         html += "<div class='title'>" + title + "</div>";
         html += "<div class='length'>" + duration + "</div>";
-        html += "<div class='loved'><div></div></div>";
+        html += "<div id='history_loved_" + i + "' class='loved " + love + "'>";
+        html += "<div onclick='toggleLoveHistory(this," + i + ");'></div>";
+        html += "</div>";
         html += "</div>";
         $('#history .content').append(html);
     }
@@ -121,7 +131,7 @@ function loadSteamInfo()
     jQuery.ajax(
     {
         type: 'GET',
-        url: "data/stream_info.php",
+        url: "http://www.myartistdna.fm/test/data/stream_info.php",
         dataType: 'json',
         success: function(data) 
         {
@@ -185,25 +195,67 @@ function hideAddMusic()
     $('#add_music').fadeOut();
 }
 
-function toggleLoveCurrentSong()
+function toggleLoveTrack(track)
 {
-    var title = $('#track_title').text();
+    var title = titleFromTrack(track)
     if( title in g_loveMap )
     {
         delete g_loveMap[title];
-        $('#player .heart').removeClass('love');
+        return false;
     }
     else 
     {
-        $('#player .heart').addClass('love');
-        g_loveMap[title] = true;
-        var track = g_streamInfo['history'][0];
-        showLoved(track.artist.artist,track.song);
+        addLoved(title);
+        showLoved(track);
+        return true;
     }
 }
-
-function showLoved(artist,song)
+function toggleLoveCurrentSong()
 {
+    var track = g_streamInfo['history'][0];
+    if( toggleLoveTrack(track) )
+        $('#player .heart').addClass('love');
+    else
+        $('#player .heart').removeClass('love');
+}
+function toggleLoveHistory(self,i)
+{
+    var track = g_streamInfo['history'][i];
+    if( toggleLoveTrack(track) )
+        $('#history_loved_' + i).addClass('love');
+    else
+        $('#history_loved_' + i).removeClass('love');
+}
+
+function addLoved(title)
+{
+    try
+    {
+        g_loveMap[title] = true;
+        var json = JSON.stringify(g_loveMap);
+        window.localStorage["love_map"] = json;
+    }
+    catch(e) {}
+}
+function loadLoved()
+{
+    try 
+    {
+        var json = window.localStorage["love_map"];
+        var map = JSON.parse(json);
+        if( map )
+        {
+            g_loveMap = map;
+        }
+    }
+    catch(e) {}
+}
+
+function showLoved(track)
+{
+    var artist = track.artist;
+    var song = track.song;
+    
     $('#song_love .dialog .header .title span').text('"' + song + '"');
     
     var link_url = "http://www.myartistdna.fm"
