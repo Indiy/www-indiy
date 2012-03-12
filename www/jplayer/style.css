@@ -337,7 +337,17 @@ input.searchText:focus { }
 div.searchList { display:none; width:220px; background-color:#d2d2d2; text-align:left; }
 
 div.searchListItemMatch { }
-div.search_text { height:64px; width:144px; text-align:left; float:right; font-size:11px; color:#fff; }
+div.search_text { 
+    height:64px; 
+    width:144px; 
+    text-align:left; 
+    float:right; 
+    font-size:11px; 
+    color:#fff; 
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-transform: lowercase;
+}
 
 #div_searchList_theSearchBox { position:absolute; bottom:30px; left:0px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
 #theSearchBox, #div_searchList_theSearchBox { background-color:#121212; padding: 3px; }
