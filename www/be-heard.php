@@ -78,7 +78,7 @@ include "header.php";
 			</article>
 			
 			<article class="socialize">
-			<figure><img src="images/benefits_custom_events.jpg" alt="benefits_custom_events"></figure>
+			<figure><img src="images/benefits_deal.jpg" alt="benefits_custom_events"></figure>
 			<aside>
 			<h4>Grow Your Brand<br /> <span>Do deals with us</span></h4>
 			<p>Hit brand milestones and spread your audio content out to other outlets through opportunities we will provide.</p>
