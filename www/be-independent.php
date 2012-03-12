@@ -31,7 +31,7 @@ include "header.php";
 			<div class="radagun"><img src="images/benefits_radagun.jpg" alt="RADAGUN"></div>
 			
 			<div class="admin">
-			<h4>E Admin</h4>
+			<h4>Easy Admin</h4>
 			<p>Control your account by updating content and viewing your analytics whenever you want</p>
 			</div>
 			
