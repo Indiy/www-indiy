@@ -272,9 +272,16 @@ html {
     height: 100%;
     width: 100%;
     background: transparent url("../images/controls.png") -802px -86px no-repeat;
+    cursor: pointer;
 }
 #history .content .row .loved div:hover {
     background: transparent url("../images/controls.png") -802px -16px no-repeat;
+}
+#history .content .row .loved.love div {
+    background: transparent url("../images/controls.png") -802px -16px no-repeat;
+}
+#history .content .row .loved.love div:hover {
+    background: transparent url("../images/controls.png") -802px -86px no-repeat;
 }
 
 #mad_fm_logo {
@@ -479,6 +486,7 @@ html {
 }
 #song_love .dialog .header .title span {
     color: #f22030;
+    text-transform: uppercase;
 }
 #song_love .dialog .header .close {
     position: absolute;
@@ -557,7 +565,7 @@ html {
     color: white;
     font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     vertical-align: top;
 }
 #song_love .dialog .sep {
@@ -602,7 +610,7 @@ html {
     color: white;
     font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     vertical-align: top;
 }
 
