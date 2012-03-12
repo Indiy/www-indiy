@@ -111,7 +111,7 @@ function updateHistory()
         html += "<div class='icon'><img src=''></div>";
         html += "<div class='title'>" + title + "</div>";
         html += "<div class='length'>" + duration + "</div>";
-        html += "<div class='heart'><div></div></div>";
+        html += "<div class='loved'><div></div></div>";
         html += "</div>";
         $('#history .content').append(html);
     }
