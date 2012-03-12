@@ -20,7 +20,7 @@
     
     <div class="signup">
     <h3>Sign Up For Your Artist Kit</h3>
-    <div class="button"><a href="#" onclick="showSignup();"></a>START NOW!</div>
+    <div class="button"><a href="#" onclick="showSignup();">START NOW!</a></div>
     </div><!-- signup -->
     
     
