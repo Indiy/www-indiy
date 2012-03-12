@@ -18,7 +18,7 @@
     
     <div class="signup">
     <h3>Sign Up For Your Artist Kit</h3>
-    <div class="button"><a href="#" onclick="showSignup();">Start Now!</a></div>
+    <div class="button"><a href="#" onclick="showSignup();">START NOW!</a></div>
     </div><!-- signup -->
     
     
@@ -54,13 +54,13 @@
     
     
     <div class="signup">
-    <h3>Create, Build, Control Your Brand/h3>
+    <h3>Create, Build, Control Your Brand</h3>
     <div class="button"><a href="#" onclick="showSignup();">START NOW!</a></div>
     </div><!-- signup -->
         
         
     <div id="artistshome">
-        <h2>Check out the MY<span>ARTIST</span>DNA creative community</h2>
+        <h2>Checkout the MY<span>ARTIST</span>DNA creative community</h2>
     
         <ul>
         <li><img src="images/mason.jpg" alt="">
