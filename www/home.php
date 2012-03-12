@@ -10,6 +10,8 @@
 		<div class='header_2'><img alt="Build, Control & Monetize your Brand" height="257" width="940" src="images/header_images/05.jpg" /></div>
 		<div class='header_3'><img alt="Myartistdna.co" height="257" width="940" src="images/header_images/03.jpg" /></div>
 
+		<div class='header_4'><img alt="The Arts League" height="257" width="940" src="images/header_images/06.png" /></div>
+
 
 	</div>
 		    
@@ -18,7 +20,7 @@
     
     <div class="signup">
     <h3>Sign Up For Your Artist Kit</h3>
-    <div class="button"><a href="#" onclick="showSignup();">START NOW!</a></div>
+    <div class="button"><a href="#" onclick="showSignup();">SIGN UP!</a></div>
     </div><!-- signup -->
     
     
@@ -60,7 +62,7 @@
         
         
     <div id="artistshome">
-        <h2>Checkout the MY<span>ARTIST</span>DNA creative community</h2>
+        <h2>The MY<span>ARTIST</span>DNA creative community</h2>
     
         <ul>
         <li><img src="images/mason.jpg" alt="">
