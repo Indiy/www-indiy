@@ -53,7 +53,7 @@ include "header.php";
 			</article>
 
 			<article class="playlist">
-			<figure><img src="images/benefits_updatable_playlist.jpg" alt="Benefits Updatable Playlist"></figure>
+			<figure><img src="images/benefits-fm.jpg" alt="Benefits MyArtistDNA FM"></figure>
 			<aside>
 			<h4>Gain visibility for your videos</h4>
 			<p>.TV - Have your videos added to our online TV station for greater visibility. </p>
