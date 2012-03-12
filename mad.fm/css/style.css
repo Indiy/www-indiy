@@ -256,7 +256,7 @@ html {
     border-left: 1px solid #20262e;
     border-right: 1px solid #161a20;
 }
-#history .content .row .heart {
+#history .content .row .loved {
     float: left;
     height: 30px;
     width: 30px;
@@ -268,12 +268,12 @@ html {
     border-bottom: 1px solid #161a20;
     border-left: 1px solid #20262e;
 }
-#history .content .row .heart div {
+#history .content .row .loved div {
     height: 100%;
     width: 100%;
     background: transparent url("../images/controls.png") -802px -86px no-repeat;
 }
-#history .content .row .heart div:hover {
+#history .content .row .loved div:hover {
     background: transparent url("../images/controls.png") -802px -16px no-repeat;
 }
 
