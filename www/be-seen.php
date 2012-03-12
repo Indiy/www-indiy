@@ -45,7 +45,7 @@ include "header.php";
 			</article>
 			
 			<article class="playlist">
-			<figure><img src="images/benefits_updatable_playlist.jpg" alt="Benefits Updatable Playlist"></figure>
+			<figure><img src="images/benefits_embed.jpg" alt="Benefits Embed"></figure>
 			<aside>
 			<h4>Put your brand everywhere</h4>
 			<p>Embedded your account widget across the web everywhere for everyone to see.</p>
