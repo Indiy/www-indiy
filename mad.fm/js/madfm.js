@@ -208,7 +208,7 @@ function showLoved(artist,song)
     
     var link_url = "http://www.myartistdna.fm"
     var host = "www.myartistdna.fm"
-    var msg = 'Check out ' + artist + 'song "' + song + '" on MyArtistDNA.FM';
+    var msg = 'Check out ' + artist + '\'s song "' + song + '" on MyArtistDNA.FM';
     var name = 'MyArtistDNA.FM';
     
     $('#fb_link').attr('href','http://www.facebook.com/sharer/sharer.php?u=' + host);
