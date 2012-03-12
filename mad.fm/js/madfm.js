@@ -10,6 +10,8 @@ var g_playing = true;
 var g_intervalUpdateTrack = false;
 var g_historyShown = false;
 
+var g_loveMap = {};
+
 function ffmp3Callback(event,value)
 {
     console.log('event: (' + event + '), value: (' + value + ')');
@@ -61,6 +63,10 @@ function updateTrackInfo()
         $('#track_title').text(title);
         g_scrollingRight = true;
         $('#track_title').scrollLeft(0);
+        if( title in g_loveMap )
+            $('#player .heart').addClass('love');
+        else
+            $('#player .heart').removeClass('love');
     }
     
     var duration = track.duration;
@@ -105,7 +111,7 @@ function updateHistory()
         html += "<div class='icon'><img src=''></div>";
         html += "<div class='title'>" + title + "</div>";
         html += "<div class='length'>" + duration + "</div>";
-        html += "<div class='loved'><div></div></div>";
+        html += "<div class='heart'><div></div></div>";
         html += "</div>";
         $('#history .content').append(html);
     }
@@ -177,6 +183,58 @@ function showAddMusic()
 function hideAddMusic()
 {
     $('#add_music').fadeOut();
+}
+
+function toggleLoveCurrentSong()
+{
+    var title = $('#track_title').text();
+    if( title in g_loveMap )
+    {
+        delete g_loveMap[title];
+        $('#player .heart').removeClass('love');
+    }
+    else 
+    {
+        $('#player .heart').addClass('love');
+        g_loveMap[title] = true;
+        var track = g_streamInfo['history'][0];
+        showLoved(track.artist.artist,track.song);
+    }
+}
+
+function showLoved(artist,song)
+{
+    $('#song_love .dialog .header .title span').text('"' + song + '"');
+    
+    var link_url = "http://www.myartistdna.fm"
+    var host = "www.myartistdna.fm"
+    var msg = 'Check out ' + artist + 'song "' + song + '" on MyArtistDNA.FM';
+    var name = 'MyArtistDNA.FM';
+    
+    $('#fb_link').setattr('href','http://www.facebook.com/sharer/sharer.php?u=' + host);
+    $('#tw_link').setattr('href','http://twitter.com/?status=' + encodeURIComponent(msg));
+
+    var url = "http://www.tumblr.com/share/link?url=" + encodeURIComponent(link_url);
+    url += "&name=" + encodeURIComponent(name);
+    url += "&description=" + encodeURIComponent(msg);
+    $('#tumblr_link').setattr('href',url);
+    
+    var url = "http://pinterest.com/pin/create/button/?url=" + encodeURIComponent(link_url);
+    url += "&description=" + encodeURIComponent(msg);
+    $('#pin_link').setattr('href',url);
+    
+    var url = "https://m.google.com/app/plus/x/?v=compose&content=" + encodeURIComponent(msg);
+    url += "%20" + encodeURIComponent(link_url);
+    $('#google_link').setattr('href',url);
+    
+    var url = "mailto:?&subject=" + encodeURIComponent(msg);
+    
+    $('#song_love').fadeIn();
+}
+
+function hideLoved()
+{
+    $('#song_love').fadeOut();
 }
 
 

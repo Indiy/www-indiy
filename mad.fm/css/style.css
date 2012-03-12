@@ -146,8 +146,12 @@ html {
 #player .heart:hover {
     background: transparent url("../images/controls.png") -802px -16px no-repeat;
 }
-
-
+#player .heart.love {
+    background: transparent url("../images/controls.png") -802px -16px no-repeat;
+}
+#player .heart.love:hover {
+    background: transparent url("../images/controls.png") -802px -86px no-repeat;
+}
 #player #history {
     display: none;
     position: absolute;
@@ -252,7 +256,7 @@ html {
     border-left: 1px solid #20262e;
     border-right: 1px solid #161a20;
 }
-#history .content .row .loved {
+#history .content .row .heart {
     float: left;
     height: 30px;
     width: 30px;
@@ -264,12 +268,12 @@ html {
     border-bottom: 1px solid #161a20;
     border-left: 1px solid #20262e;
 }
-#history .content .row .loved div {
+#history .content .row .heart div {
     height: 100%;
     width: 100%;
     background: transparent url("../images/controls.png") -802px -86px no-repeat;
 }
-#history .content .row .loved div:hover {
+#history .content .row .heart div:hover {
     background: transparent url("../images/controls.png") -802px -16px no-repeat;
 }
 
@@ -433,6 +437,173 @@ html {
 }
 
 
+#song_love {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+}
+
+#song_love .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+#song_love .dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 360px;
+    width: 668px;
+    margin-top: -191px;
+    margin-left: -334px;
+    background: #242424;
+    border-radius: 8px;
+}
+#song_love .dialog .header {
+    position: relative;
+    height: 58px;
+    background: url("../images/madfm_striped.png");
+    border-radius: 8px 8px 0px 0px;
+}
+#song_love .dialog .header .title {
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#song_love .dialog .header .title span {
+    color: #f22030;
+}
+#song_love .dialog .header .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    cursor: pointer;
+}
+#song_love .dialog .description {
+    height: 40px;
+    padding-top: 30px;
+    color: #626262;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+#song_love .dialog .links {
+    height: 62px;
+    padding-left: 86px;
+}
+#song_love .dialog .links .item {
+    float: left;
+    width: 148px;
+    height: 44px;
+    margin-right: 30px;
+    white-space: nowrap;
+}
+#song_love .dialog .links .item .icon {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background-color: gray;
+}
+#song_love .dialog .links .item.facebook {
+    background-color: #283981;
+}
+#song_love .dialog .links .item.twitter {
+    background-color: #009cb7;
+}
+#song_love .dialog .links .item.tumblr {
+    background-color: #466c95;
+}
+#song_love .dialog .links .item.pinterest {
+    background-color: #af124c;
+}
+#song_love .dialog .links .item.google {
+    background-color: #831219;
+}
+#song_love .dialog .links .item.email {
+    background-color: #e07329;
+}
+#song_love .dialog .links .item.facebook .icon {
+    background: url("../images/fb_icon.png");
+}
+#song_love .dialog .links .item.twitter .icon {
+    background: url("../images/tw_icon.png");
+}
+#song_love .dialog .links .item.tumblr .icon {
+    background: url("../images/tumblr_icon.png");
+}
+#song_love .dialog .links .item.pinterest .icon {
+    background: url("../images/pin_icon.png");
+}
+#song_love .dialog .links .item.google .icon {
+    background: url("../images/google_icon.png");
+}
+#song_love .dialog .links .item.email .icon {
+    background: url("../images/email_icon.png");
+}
+#song_love .dialog .links .item .name {
+    display: inline-block;
+    padding-top: 18px;
+    width: 102px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    vertical-align: top;
+}
+#song_love .dialog .sep {
+    height: 7px;
+    border-bottom: 1px solid #1e1e1e;
+}
+#song_love .dialog .buy_container {
+    border-top: 1px solid #2e2e2e;
+}
+#song_love .dialog .buy_container .support {
+    float: left;
+    padding-top: 42px;
+    padding-left: 54px;
+    color: white;
+    font-size: 13px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#song_love .dialog .buy_container .support span {
+    color: #636363;
+}
+#song_love .dialog .buy_container .buy {
+    float: right;
+    width: 148px;
+    height: 44px;
+    margin-right: 78px;
+    margin-top: 24px;
+    white-space: nowrap;
+    background-color: #373737;
+}
+#song_love .dialog .buy_container .buy .icon {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background: url("../images/itunes_icon.png");    
+}
+#song_love .dialog .buy_container .buy .name {
+    display: inline-block;
+    padding-top: 18px;
+    width: 102px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    vertical-align: top;
+}
 
 
 
