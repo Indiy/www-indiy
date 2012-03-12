@@ -31,7 +31,7 @@ include "header.php";
 			<div class="flashplayer">
 			<figure><img src="images/benefits_custom_video.jpg" alt="Flash Player"></figure>
 			<div class="flash">
-			<h4>Fullscreen HTML5 Video Player. <span>Works on desktops and mobile devices.</span></h4>
+			<h4>Fullscreen HTML5 Video Player. <span><br>Works on desktops and mobile devices.</span></h4>
 			<p>Upload video and watch anywhere.</p>
 			</div>
 			</div>
