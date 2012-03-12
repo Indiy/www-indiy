@@ -52,7 +52,7 @@ include "header.php";
 			</aside>
 			</article>
 
-			<article class="playlist">
+			<article class="analytics">
 			<figure><img src="images/benefits-fm.jpg" alt="Benefits MyArtistDNA FM"></figure>
 			<aside>
 			<h4>Gain visibility for your videos</h4>
