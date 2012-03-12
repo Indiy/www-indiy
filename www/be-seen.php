@@ -37,7 +37,7 @@ include "header.php";
 			</div>
 			
 			<article class="analytics">
-			<figure><img src="images/benefits_analytics.jpg" alt="Benefits Analytics"></figure>
+			<figure><img src="images/benefits_custom_fullscreen.jpg" alt="Benefits Fullscreen"></figure>
 			<aside>
 			<h4>Image is everything</h4>
 			<p>Dynamic full screen image space to show off your photos, art or magazine style layouts!</p>
