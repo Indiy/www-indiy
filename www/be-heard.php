@@ -72,15 +72,15 @@ include "header.php";
 			<article class="custom">
 			<figure><img src="images/benefits_custom_events.jpg" alt="benefits_custom_events"></figure>
 			<aside>
-			<h4>Custom Events Tab <br /> <span>ArtistData.com API Integration</span></h4>
-			<p>.FM Have your music added to our online radio station</p>
+			<h4>Exposure <br /> <span>Online Audio Streaming</span></h4>
+			<p>.FM have your music added to our online radio station</p>
 			</aside>
 			</article>
 			
-			<article class="custom">
+			<article class="socialize">
 			<figure><img src="images/benefits_custom_events.jpg" alt="benefits_custom_events"></figure>
 			<aside>
-			<h4>Custom Events Tab <br /> <span>ArtistData.com API Integration</span></h4>
+			<h4>Grow Your Brand<br /> <span>Do deals with us</span></h4>
 			<p>Hit brand milestones and spread your audio content out to other outlets through opportunities we will provide.</p>
 			</aside>
 			</article>
