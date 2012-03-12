@@ -5,9 +5,7 @@
     <h5>ARTIST</h5>
     <ul>
     <li><a href="artists.php">All</a></li>
-    <li><a href="music.php">Music</a></li>
-    <li><a href="art.php">Art</a></li>
-  
+   
     </ul>
     </aside>
 

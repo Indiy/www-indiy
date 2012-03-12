@@ -21,8 +21,6 @@ background:#f6f6f6;
     <h5>ARTIST</h5>
     <ul>
     <li><a href="#">All</a></li>
-    <li><a href="#">Music</a></li>
-    <li><a href="#">Art</a></li>
   
     </ul>
     </aside>

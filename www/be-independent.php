@@ -31,8 +31,8 @@ include "header.php";
 			<div class="radagun"><img src="images/benefits_radagun.jpg" alt="RADAGUN"></div>
 			
 			<div class="admin">
-			<h4>CMS Admin</h4>
-			<p>Control your own platform. Upload music, delete videos, add content. Whenever you want.</p>
+			<h4>E Admin</h4>
+			<p>Control your account by updating content and viewing your analytics whenever you want</p>
 			</div>
 			
 			<article class="customname">

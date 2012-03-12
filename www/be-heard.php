@@ -31,7 +31,7 @@ include "header.php";
 		<div class="playbar">
 			<div class="extras"><img src="images/bg_extras.jpg" alt="EXTRAS"></div>
 			<h4>Play Bar</h4>
-			<p>Release new music on the drop of a dime. Easy to use player makes listening to new music fun.</p>
+			<p>Upload audio to bring your brand to life. Songs, interviews, narration....whatever!</p>
 			</div>
 			
 			
@@ -39,7 +39,7 @@ include "header.php";
 			<figure><img src="images/benefits_centralized.jpg" alt="benefits_centralized"></figure>
 			<aside>
 			<h4>One centralized place for you to call home</h4>
-			<p>Instead of sending ppl tons of Youtube and Vimeo and FB, send them one spot that has all your content organized.</p>
+			<p>Instead of sending ppl tons of Youtube, Vimeo, Twitter and Facebook links, send them one spot that has all your content organized.</p>
 			</aside>
 			</article>
 			
@@ -65,18 +65,25 @@ include "header.php";
 			<figure><img src="images/benefits_socialize.jpg" alt="benefits_socialize"></figure>
 			<aside>
 			<h4>Socialize Tab</h4>
-			<p>facebook and twitter stream integrated. Also fans can signup for the mailist here.</p>
+			<p>Facebook and Twitter stream integrated. Sign fans up to your mailing list.</p>
 			</aside>
 			</article>
 			
 			<article class="custom">
 			<figure><img src="images/benefits_custom_events.jpg" alt="benefits_custom_events"></figure>
 			<aside>
-			<h4>Custom Events Tab <br /> <span>ArtistData.com API Integration</span></h4>
-			<p>ArtistData is simple. You post your shows in our dashboard, and then can then automatically send them to all of the places below.</p>
+			<h4>Exposure <br /> <span>Online Audio Streaming</span></h4>
+			<p>.FM have your music added to our online radio station</p>
 			</aside>
 			</article>
 			
+			<article class="socialize">
+			<figure><img src="images/benefits_custom_events.jpg" alt="benefits_custom_events"></figure>
+			<aside>
+			<h4>Grow Your Brand<br /> <span>Do deals with us</span></h4>
+			<p>Hit brand milestones and spread your audio content out to other outlets through opportunities we will provide.</p>
+			</aside>
+			</article>
 		</div><!-- rightpanel -->    
 		
 		

@@ -17,8 +17,8 @@
 			<br />
     
     <div class="signup">
-    <h3>YOUR ART BRAND BUILDING AND NETWORKING TOOL</h3>
-    <div class="button"><a href="#" onclick="showSignup();">SIGN UP!</a></div>
+    <h3>Sign Up For Your Artist Kit</h3>
+    <div class="button"><a href="#" onclick="showSignup();">Start Now!</a></div>
     </div><!-- signup -->
     
     
@@ -54,7 +54,7 @@
     
     
     <div class="signup">
-    <h3>SIGN UP FOR YOUR ARTIST'S KIT</h3>
+    <h3>Create, Build, Control Your Brand/h3>
     <div class="button"><a href="#" onclick="showSignup();">START NOW!</a></div>
     </div><!-- signup -->
         
