@@ -31,32 +31,47 @@ include "header.php";
 			<div class="flashplayer">
 			<figure><img src="images/benefits_flash_player.jpg" alt="Flash Player"></figure>
 			<div class="flash">
-			<h4>Fullscreen Flash/HTML5 Player <span>Works on iPad and Desktop.</span></h4>
-			<p>Upload video and watch anywhere. On cpu or tablet. Mobile ready.</p>
+			<h4>Fullscreen HTML5 Video Player. <span>Works on desktops and mobile devices.</span></h4>
+			<p>Upload video and watch anywhere.</p>
 			</div>
 			</div>
 			
 			<article class="analytics">
 			<figure><img src="images/benefits_analytics.jpg" alt="Benefits Analytics"></figure>
 			<aside>
-			<h4>Real-time Analytics</h4>
-			<p>See how many people are visiting your platform and listening to your music. Real time stats. Find out how many listens each song has, or total songs, or downloads, or visits.</p>
+			<h4>Image is everything</h4>
+			<p>Dynamic full screen image space to show off your photos, art or magazine style layouts!</p>
 			</aside>
 			</article>
 			
 			<article class="playlist">
 			<figure><img src="images/benefits_updatable_playlist.jpg" alt="Benefits Updatable Playlist"></figure>
 			<aside>
-			<h4>Updatable Playlist</h4>
-			<p>Upload content, ajax drag and drop playlist organizer. Easy as 1,2,3.
-</p>
+			<h4>Put your brand everywhere</h4>
+			<p>Embedded your account widget across the web everywhere for everyone to see.</p>
+			</aside>
+			</article>
+
+			<article class="playlist">
+			<figure><img src="images/benefits_updatable_playlist.jpg" alt="Benefits Updatable Playlist"></figure>
+			<aside>
+			<h4>Gain visibility for your videos</h4>
+			<p>.TV - Have your videos added to our online TV station for greater visibility. </p>
+			</aside>
+			</article>
+
+			<article class="playlist">
+			<figure><img src="images/benefits_updatable_playlist.jpg" alt="Benefits Updatable Playlist"></figure>
+			<aside>
+			<h4>Leverage your content to gain value</h4>
+			<p>Grow the popularity of your videos and images to be able to qualify for major distribution of your content.</p>
 			</aside>
 			</article>
 			
         </div><!-- rightpanel -->
     
 		<div class="signup">
-			<h3>Be heard, be seen, be independent.</h3>
+			<h3>Be heard. be seen. be independent.</h3>
 			<div class="button"><a href="#" onclick="showSignup();">SIGN UP NOW</a></div>
 		</div><!-- signup -->
 		
