@@ -211,21 +211,21 @@ function showLoved(artist,song)
     var msg = 'Check out ' + artist + 'song "' + song + '" on MyArtistDNA.FM';
     var name = 'MyArtistDNA.FM';
     
-    $('#fb_link').setattr('href','http://www.facebook.com/sharer/sharer.php?u=' + host);
-    $('#tw_link').setattr('href','http://twitter.com/?status=' + encodeURIComponent(msg));
+    $('#fb_link').attr('href','http://www.facebook.com/sharer/sharer.php?u=' + host);
+    $('#tw_link').attr('href','http://twitter.com/?status=' + encodeURIComponent(msg));
 
     var url = "http://www.tumblr.com/share/link?url=" + encodeURIComponent(link_url);
     url += "&name=" + encodeURIComponent(name);
     url += "&description=" + encodeURIComponent(msg);
-    $('#tumblr_link').setattr('href',url);
+    $('#tumblr_link').attr('href',url);
     
     var url = "http://pinterest.com/pin/create/button/?url=" + encodeURIComponent(link_url);
     url += "&description=" + encodeURIComponent(msg);
-    $('#pin_link').setattr('href',url);
+    $('#pin_link').attr('href',url);
     
     var url = "https://m.google.com/app/plus/x/?v=compose&content=" + encodeURIComponent(msg);
     url += "%20" + encodeURIComponent(link_url);
-    $('#google_link').setattr('href',url);
+    $('#google_link').attr('href',url);
     
     var url = "mailto:?&subject=" + encodeURIComponent(msg);
     
