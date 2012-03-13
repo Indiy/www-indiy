@@ -86,7 +86,9 @@ function updateTrackInfo()
     {
         $('#track_duration').text(s);
     }
-    var percent = curr_pos/duration;
+    var percent = 0;
+    if( duration > 0 )
+        var percent = curr_pos/duration;
     var width = percent * PROGRESS_BAR_WIDTH;
     $('#player .progress .bar').width(width);
     if( width >= PROGRESS_ROUND_LENGTH )
@@ -104,10 +106,19 @@ function updateTrackInfo()
         }
     }
 }
+function emptyTrackInfo()
+{
+    $('#track_title').empty();
+    $('#track_duration').empty();
+    $('#player .progress .bar').width(0);
+    $('#player .progress .bar').css('border-radius','6px 0px 0px 6px');
+    $('#history .content').empty();
+}
+
 function updateHistory()
 {
     $('#history .content').empty();
-    for( var i = 1 ; i < 4 ; ++i )
+    for( var i = 1 ; i < Math.min(g_streamInfo['history'].length,4) ; ++i )
     {
         var track = g_streamInfo['history'][i];
         var title = titleFromTrack(track);
@@ -346,5 +357,8 @@ function changeGenre(new_genre)
     html += '<embed name="ffmp3_player" src="ffmp3-config.swf" flashvars="url=' + url + '&lang=en&codec=mp3&volume=100&autoplay=true&traking=true&jsevents=true&buffering=5&skin=ffmp3-darkconsole.xml&title=MyAritstDNA.fm&welcome=Welcome%20to%20MAD.fm" width="190" scale="noscale" height="62" wmode="transparent" allowscriptaccess="always" type="application/x-shockwave-flash" />';
     html += '</object>';
     $('#player_container').html(html);
+    
+    loadSteamInfo();
+    emptyStreamInfo();
 }
 
