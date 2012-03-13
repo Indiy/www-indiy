@@ -2,6 +2,7 @@
 var PROGRESS_BAR_WIDTH = 468;
 var PROGRESS_ROUND_LENGTH = 462;
 
+var g_genreInfo = false;
 var g_streamInfo = false;
 var g_scrollingRight = true;
 var g_lastStreamLoad = 0;
@@ -135,7 +136,8 @@ function loadSteamInfo()
         dataType: 'json',
         success: function(data) 
         {
-            g_streamInfo = data;
+            g_genreInfo = data;
+            g_streamInfo = g_genreInfo[g_genre];
             updateTrackInfo();
         },
         error: function()
