@@ -76,8 +76,7 @@ function get_stream_info($genre)
         print "\n";
         $start = time();
         $calc_duration = $start - $last_start;
-        
-        print "last_start: $last_start, start: $start, calc_duration: $calc_duration\n";
+        //print "last_start: $last_start, start: $start, calc_duration: $calc_duration\n";
         
         if( $last_start > 0 && $last_track && $calc_duration < 20*60 )
         {
@@ -98,7 +97,7 @@ function get_stream_info($genre)
         array_unshift($history,$data);
         $history = array_slice($history,0,20);
         
-        var_dump($track_info);
+        //var_dump($track_info);
         $data = array("history" => $history,
                       "track_info" => $track_info);
         
