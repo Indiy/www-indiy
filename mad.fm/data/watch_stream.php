@@ -1,51 +1,88 @@
 <?
 
 $SERVER = 'http://myartistdna.fm:8000'; 
-$STATS_FILE = '/status.xsl';
+$STATS_FILE_PREFIX = '/status.xsl?mount=/stream_';
 
-$FILE = "/tmp/mad_fm.json";
+$FILE = "/tmp/mad_fm_genre_data.json";
 
 print "Starting run forever\n";
 
-$history = array();
-$track_info = array();
+$g_data = array("rock" => array(),
+                "dance" => array(),
+                "chill" => array(),
+                "bounce" => array(),
+                );
+
 
 $json = file_get_contents($FILE);
-
 if( $json )
 {
     print "loading old data\n";
     $data = json_decode($json,TRUE);
-    if( $data['history'] )
-        $history = $data['history'];
-    if( $data['track_info'] )
-        $track_info = $data['track_info'];
+    foreach( $g_data as $k => $v )
+    {
+        if( $data[$k] )
+            $g_data[$k] = $data[$k];
+    }
 }
 
-$last_track = FALSE;
-$last_start = 0;
 while( TRUE )
 {
-    $radio_info = get_radio_info();
+    $changed = FALSE;
+    foreach( $g_data as $k => $v )
+        $changed |= get_stream_info($k);
+    if( $changed )
+        write_data();
+    sleep(5);
+}
+print "Done done\n";
+
+function get_stream_info($genre)
+{
+    global $g_data;
+
+    $last_track = FALSE;
+    $last_start = 0;
+    $history = array();
+    $track_info = array();
+
+    $data = $g_data[$genre];
+    if( $data )
+    {
+        $history = $data['history'];
+        $track_info = $data['track_info'];
+        $top = $history[0];
+        if( $top )
+        {
+            $last_start = $top['start'];
+            $artist = $top['artist'];
+            $song = $top['song'];
+            $last_track = $artist . ' - ' . $song;
+        }
+    }
+    
+    $radio_info = get_radio_info($genre);
+    //var_dump($radio_info);
 
     $artist = $radio_info['now_playing']['artist'];
     $song = $radio_info['now_playing']['track'];
 
     $track = $artist . ' - ' . $song;
+    //print "\ntrack: $track\n";
 
     if( $track != $last_track )
     {
         print "\n";
         $start = time();
-        if( $last_start > 0 && $last_track )
-            $track_info[$last_track] = $start - $last_start;
-        $last_start = $start;
+        $calc_duration = $start - $last_start;
+        if( $last_start > 0 && $last_track && $calc_duration < 20*60 )
+            $track_info[$last_track] = $calc_duration;
         
         $duration = 0;
         if( $track_info[$track] )
             $duration = $track_info[$track];
 
-        print "new track: $track, duration: $duration\n";
+        print "genre: $genre, new track: $track, duration: $duration\n";
         $data = array("artist" => $artist,
                       "song" => $song,
                       "start" => $start,
@@ -54,27 +91,33 @@ while( TRUE )
         array_unshift($history,$data);
         $history = array_slice($history,0,20);
         
-        $last_track = $track;
-        
         $data = array("history" => $history,
                       "track_info" => $track_info);
-        $json = json_encode($data);
-        file_put_contents($FILE,$json,LOCK_EX);
-        print "updated file\n";
+        
+        $g_data[$genre] = $data;
+        
+        return TRUE;
     }
-    
     print ".";
-    sleep(5);
+    return FALSE;
+}
+function write_data()
+{
+    global $g_data;
+    global $FILE;
+    
+    $json = json_encode($g_data);
+    file_put_contents($FILE,$json,LOCK_EX);
+    print "updated file\n";
 }
 
-print "Done done\n";
-
-function get_radio_info()
+function get_radio_info($genre)
 {
     global $SERVER;
-    global $STATS_FILE;
+    global $STATS_FILE_PREFIX;
 
-    $url = $SERVER.$STATS_FILE;
+    $url = $SERVER . $STATS_FILE_PREFIX . $genre;
+    //var_dump($url);
     $ch = curl_init();
     curl_setopt($ch,CURLOPT_URL,$url);
     curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);

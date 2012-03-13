@@ -155,15 +155,23 @@ function playerToggle()
 function playerPlay()
 {
     g_playing = true;
-    var player = (document.ffmp3_player) ? document.ffmp3_player : document.getElementById('ffmp3_player');
-    player.playSound();
+    try 
+    {
+        var player = (document.ffmp3_player) ? document.ffmp3_player : document.getElementById('ffmp3_player');
+        player.playSound();
+    }
+    catch(e) {}
     g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
 }
 function playerPause()
 {
     g_playing = false;
-    var player = (document.ffmp3_player) ? document.ffmp3_player : document.getElementById('ffmp3_player');
-    player.stopSound();
+    try 
+    {
+        var player = (document.ffmp3_player) ? document.ffmp3_player : document.getElementById('ffmp3_player');
+        player.stopSound();
+    }
+    catch(e) {}
     window.clearInterval(g_intervalUpdateTrack);
 }
 
