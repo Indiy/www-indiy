@@ -1,4 +1,4 @@
-<?
+<?php
 
     if( isset($_GET['genre']) )
     {
@@ -8,4 +8,6 @@
     {
         include_once 'splash.html';
     }
+
 ?>
+

@@ -109,7 +109,6 @@
 		2D6DF95514BA955000D0750E /* feedback.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = feedback.php; sourceTree = "<group>"; };
 		2D760A31149DA72200BFE196 /* social_config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = social_config.php; sourceTree = "<group>"; };
 		2D760A32149DA74A00BFE196 /* socialize.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = socialize.php; sourceTree = "<group>"; };
-		2D98BF3B1480778500CE851D /* ffmp3-config.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ffmp3-config.swf"; sourceTree = "<group>"; };
 		2D98BF3D1480778500CE851D /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		2D98BF3E1480778500CE851D /* holder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holder.png; sourceTree = "<group>"; };
 		2D98BF3F1480778500CE851D /* play.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = play.jpg; sourceTree = "<group>"; };
@@ -118,10 +117,6 @@
 		2D98BF421480778500CE851D /* statusstop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusstop.png; sourceTree = "<group>"; };
 		2D98BF431480778500CE851D /* stop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stop.jpg; sourceTree = "<group>"; };
 		2D98BF441480778500CE851D /* stopclick.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stopclick.jpg; sourceTree = "<group>"; };
-		2D98BF451480778500CE851D /* ffmp3-darkconsole.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ffmp3-darkconsole.xml"; sourceTree = "<group>"; };
-		2D98BF461480778500CE851D /* ffmp3-tiny.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ffmp3-tiny.swf"; sourceTree = "<group>"; };
-		2D98BF471480778500CE851D /* ffmp3.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ffmp3.swf; sourceTree = "<group>"; };
-		2D98BF481480778500CE851D /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		2D98BF4B14807CED00CE851D /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D98BF4D14807CED00CE851D /* madfm_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = madfm_bg.jpg; sourceTree = "<group>"; };
 		2D98BF4E1480C4C600CE851D /* madfm_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = madfm_bg.png; sourceTree = "<group>"; };
@@ -1409,6 +1404,8 @@
 		2DF4FB92150E9EB9007600CB /* splash.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = splash.html; sourceTree = "<group>"; };
 		2DF4FB94150EA095007600CB /* splash.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = splash.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DF4FB95150EC86C007600CB /* splash.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = splash.js; sourceTree = "<group>"; };
+		2DF4FBA4150F30CB007600CB /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
+		2DF4FBA5150F30CB007600CB /* player.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -1543,12 +1540,9 @@
 				2D98BF4A14807CED00CE851D /* css */,
 				2D98BF4C14807CED00CE851D /* images */,
 				2D98BF3C1480778500CE851D /* ffmp3-darkconsole */,
-				2D98BF3B1480778500CE851D /* ffmp3-config.swf */,
-				2D98BF451480778500CE851D /* ffmp3-darkconsole.xml */,
-				2D98BF461480778500CE851D /* ffmp3-tiny.swf */,
-				2D98BF471480778500CE851D /* ffmp3.swf */,
-				2D98BF481480778500CE851D /* index.html */,
 				2DF4FB92150E9EB9007600CB /* splash.html */,
+				2DF4FBA5150F30CB007600CB /* player.html */,
+				2DF4FBA4150F30CB007600CB /* index.php */,
 			);
 			name = mad.fm;
 			path = ../mad.fm;
