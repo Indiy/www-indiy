@@ -1408,6 +1408,7 @@
 		2DF4AA60147A058500CA819B /* download_newsletter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = download_newsletter.php; sourceTree = "<group>"; };
 		2DF4FB92150E9EB9007600CB /* splash.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = splash.html; sourceTree = "<group>"; };
 		2DF4FB94150EA095007600CB /* splash.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = splash.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2DF4FB95150EC86C007600CB /* splash.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = splash.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -1426,6 +1427,7 @@
 			children = (
 				2D3EE24E15053A2800A9D171 /* madfm.js */,
 				2D3EE2A6150C07E800A9D171 /* sprintf.js */,
+				2DF4FB95150EC86C007600CB /* splash.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
@@ -1570,8 +1572,8 @@
 		2D98BF4A14807CED00CE851D /* css */ = {
 			isa = PBXGroup;
 			children = (
-				2DF4FB94150EA095007600CB /* splash.css */,
 				2D98BF4B14807CED00CE851D /* style.css */,
+				2DF4FB94150EA095007600CB /* splash.css */,
 			);
 			path = css;
 			sourceTree = "<group>";

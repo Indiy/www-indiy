@@ -52,6 +52,8 @@ a {
     top: 0px;
     left: 194px;
     width: 346px;
+    height: 64px;
+    overflow: hidden;
 }
 #play_container .item_container .item {
     position: relative;
