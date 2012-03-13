@@ -22,7 +22,12 @@
     <div class='overlay_container'>
         <div id='mad_fm_logo'></div>
         <div id='player'>
-            <div class='play' onclick='playerToggle();'></div>
+            <div class='play' onclick='playerToggle();'>
+                <div id='tip_play_pause' class='tooltip'>
+                    <div class='carrot'></div>
+                    <span>PAUSE</span>
+                </div>
+            </div>
             <div class='sep'></div>
             <div class='right_arrow'></div>
             <div class='progress'>
@@ -31,13 +36,33 @@
                 <div id='track_duration' class='duration'></div>
             </div>
             
-            <div class='left_arrow' onclick='toggleHistory();'></div>
+            <div class='left_arrow' onclick='toggleHistory();'>
+                <div id='tip_history' class='tooltip'>
+                    <div class='carrot'></div>
+                    HISTORY
+                </div>
+            </div>
             <div class='sep'></div>
-            <div class='genre' onclick='toggleGenrePicker();'></div>
+            <div class='genre' onclick='toggleGenrePicker();'>
+                <div id='tip_genre' class='tooltip'>
+                    <div class='carrot'></div>
+                    GENRE
+                </div>
+            </div>
             <div class='sep'></div>
-            <div class='plus' onclick='showAddMusic();'></div>
+            <div class='plus' onclick='showAddMusic();'>
+                <div id='tip_add_music' class='tooltip'>
+                    <div class='carrot'></div>
+                    ADD YOUR MUSIC
+                </div>
+            </div>
             <div class='sep'></div>
-            <div class='heart' onclick='toggleLoveCurrentSong();'></div>
+            <div class='heart' onclick='toggleLoveCurrentSong();'>
+                <div id='tip_love' class='tooltip'>
+                    <div class='carrot'></div>
+                    LOVE
+                </div>
+            </div>
             <div id='history'>
                 <div class='header'>
                     <div class='title'>LAST 3 SONGS PLAYED</div>
@@ -56,6 +81,7 @@
                     <div class='bounce' onclick='changeGenre("bounce");'>BOUNCE</div>
                 </div>
             </div>
+            
         </div>
         <div id='bottom'>
             <div class='be_heard'>BE HEARD. BE SEEN. BE INDEPENDANT.</div>

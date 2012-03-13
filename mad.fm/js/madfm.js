@@ -182,6 +182,7 @@ function playerPlay()
         player.playSound();
     }
     catch(e) {}
+    $('#player #tip_play_pause span').text('PAUSE');
     g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
 }
 function playerPause()
@@ -193,6 +194,7 @@ function playerPause()
         player.stopSound();
     }
     catch(e) {}
+    $('#player #tip_play_pause span').text('PLAY');
     window.clearInterval(g_intervalUpdateTrack);
 }
 
