@@ -1406,6 +1406,8 @@
 		2DF47527144BD7CB005538C7 /* send_friend.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = send_friend.php; sourceTree = "<group>"; };
 		2DF47528144BFF7A005538C7 /* timthumb.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = timthumb.php; sourceTree = "<group>"; };
 		2DF4AA60147A058500CA819B /* download_newsletter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = download_newsletter.php; sourceTree = "<group>"; };
+		2DF4FB92150E9EB9007600CB /* splash.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = splash.html; sourceTree = "<group>"; };
+		2DF4FB94150EA095007600CB /* splash.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = splash.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -1544,6 +1546,7 @@
 				2D98BF461480778500CE851D /* ffmp3-tiny.swf */,
 				2D98BF471480778500CE851D /* ffmp3.swf */,
 				2D98BF481480778500CE851D /* index.html */,
+				2DF4FB92150E9EB9007600CB /* splash.html */,
 			);
 			name = mad.fm;
 			path = ../mad.fm;
@@ -1567,6 +1570,7 @@
 		2D98BF4A14807CED00CE851D /* css */ = {
 			isa = PBXGroup;
 			children = (
+				2DF4FB94150EA095007600CB /* splash.css */,
 				2D98BF4B14807CED00CE851D /* style.css */,
 			);
 			path = css;

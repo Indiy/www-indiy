@@ -1,6 +1,6 @@
 <?
 
-$FILE = "/tmp/mad_fm.json";
+$FILE = "/tmp/mad_fm_genre_data.json";
 
 header("Content-Type: application/json");
 header("Cache-Control: no-cache");
