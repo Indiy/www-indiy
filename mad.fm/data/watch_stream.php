@@ -72,13 +72,20 @@ function get_stream_info($genre)
 
     if( $track != $last_track )
     {
+    
         print "\n";
         $start = time();
         $calc_duration = $start - $last_start;
-        if( $last_start > 0 && $last_track && $calc_duration < 20*60 )
-            $track_info[$last_track] = $calc_duration;
         
-        $duration = 0;
+        print "last_start: $last_start, start: $start, calc_duration: $calc_duration\n";
+        
+        if( $last_start > 0 && $last_track && $calc_duration < 20*60 )
+        {
+            print "Update track info for ($last_track): $calc_duration\n";
+            $track_info[$last_track] = $calc_duration;
+        }
+        
+        $duration = 2*60;
         if( $track_info[$track] )
             $duration = $track_info[$track];
 
@@ -91,6 +98,7 @@ function get_stream_info($genre)
         array_unshift($history,$data);
         $history = array_slice($history,0,20);
         
+        var_dump($track_info);
         $data = array("history" => $history,
                       "track_info" => $track_info);
         
