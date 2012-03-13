@@ -19,6 +19,14 @@ function ffmp3Callback(event,value)
 
 function onReady()
 {
+    var vars = {};
+    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,k,v){vars[k] = v;});
+
+    if( 'genre' in vars )
+        g_genre = vars['genre'];
+
+    changeGenre(g_genre);
+
     loadLoved();
     loadSteamInfo();
     g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
@@ -358,7 +366,7 @@ function changeGenre(new_genre)
     html += '</object>';
     $('#player_container').html(html);
     
+    emptyTrackInfo();
     loadSteamInfo();
-    emptyStreamInfo();
 }
 
