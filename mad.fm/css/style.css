@@ -113,6 +113,22 @@ html {
 #player .play {
     background: transparent url("../images/controls.png") -5px -86px no-repeat;
 }
+#player .play.paused,
+#player .play.paused:hover {
+    background: transparent;
+}
+#player .play.paused .icon {
+    margin-left: 8px;
+    margin-top: 4px;
+    height: 0px;
+    width: 0px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 20px solid #747474;
+}
+#player .play.paused:hover .icon {
+    border-left: 20px solid #43b2aa;
+}
 #player .right_arrow {
     background: transparent url("../images/controls.png") -71px -86px no-repeat;
 }
@@ -690,7 +706,11 @@ html {
     display: block;
 }
 
-#player #tip_play_pause {
+#player #tip_play {
+    top: -24px;
+    left: -1px;
+}
+#player #tip_pause {
     top: -24px;
     left: -6px;
 }
@@ -710,5 +730,16 @@ html {
     top: -24px;
     left: 789px;
 }
-
+#player .play.paused:hover #tip_pause {
+    display: none;
+}
+#player .play.paused:hover #tip_play {
+    display: block;
+}
+#player .play:hover #tip_pause {
+    display: block;
+}
+#player .play:hover #tip_play {
+    display: none;
+}
 
