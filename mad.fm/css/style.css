@@ -38,7 +38,7 @@ html {
     float: left;
     position: relative;
     height: 59px;
-    width: 470px;
+    width: 534px;
     margin-top: 6px;
     border-bottom: 1px solid #353535;  
     border-right: 1px solid #353535;  
@@ -51,14 +51,14 @@ html {
     left: 1px;
     height: 57px;
     width: 50%;
-    background-color: #333;
+    background: url("../images/madfm_striped.png");
     border-radius: 6px 0px 0px 6px;
 }
 #player .progress .title {
     position: absolute;
     top: 21px;
     left: 16px;
-    width: 307px;
+    width: 370px;
     color: #EEE;
     font-size: 20px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
@@ -112,6 +112,12 @@ html {
 }
 #player .play {
     background: transparent url("../images/controls.png") -5px -86px no-repeat;
+}
+#player .play.paused {
+    background: transparent url("../images/play.png") 9px 6px no-repeat;
+}
+#player .play.paused:hover {
+    background: transparent url("../images/play-hover.png") 9px 6px no-repeat;
 }
 #player .right_arrow {
     background: transparent url("../images/controls.png") -71px -86px no-repeat;
@@ -268,21 +274,44 @@ html {
     border-bottom: 1px solid #161a20;
     border-left: 1px solid #20262e;
 }
-#history .content .row .loved div {
-    height: 100%;
-    width: 100%;
+#history .content .row .loved .love_icon {
+    position: relative;
+    height: 30px;
+    width: 30px;
     background: transparent url("../images/controls.png") -802px -86px no-repeat;
     cursor: pointer;
 }
-#history .content .row .loved div:hover {
+#history .content .row .loved .love_icon:hover {
     background: transparent url("../images/controls.png") -802px -16px no-repeat;
 }
-#history .content .row .loved.love div {
+#history .content .row .loved.love .love_icon {
     background: transparent url("../images/controls.png") -802px -16px no-repeat;
 }
-#history .content .row .loved.love div:hover {
+#history .content .row .loved.love .love_icon:hover {
     background: transparent url("../images/controls.png") -802px -86px no-repeat;
 }
+#history .content .row .loved .love_icon .tooltip.love_tip {
+    left: -22px;
+    top: -44px;
+}
+#history .content .row .loved .love_icon .tooltip.unlove_tip {
+    left: -31px;
+    top: -44px;
+}
+#history .content .row .loved.love .love_icon:hover .tooltip.love_tip {
+    display: none;
+}
+#history .content .row .loved.love .love_icon:hover .tooltip.unlove_tip {
+    display: block;
+}
+#history .content .row .loved .love_icon:hover .tooltip.love_tip {
+    display: block;
+}
+#history .content .row .loved .love_icon:hover .tooltip.unlove_tip {
+    display: none;
+}
+
+
 
 #mad_fm_logo {
     position: absolute;
@@ -361,10 +390,15 @@ html {
 }
 #add_music .dialog .header .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
+    top: 19px;
+    right: 14px;
+    width: 19px;
+    height: 19px;
+    background: url("../images/close.png");
     cursor: pointer;
+}
+#add_music .dialog .header .close:hover {
+    background: url("../images/close-hover.png");
 }
 #add_music .dialog .description {
     height: 60px;
@@ -490,10 +524,15 @@ html {
 }
 #song_love .dialog .header .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
+    top: 19px;
+    right: 14px;
+    width: 19px;
+    height: 19px;
+    background: url("../images/close.png");
     cursor: pointer;
+}
+#song_love .dialog .header .close:hover {
+    background: url("../images/close-hover.png");
 }
 #song_love .dialog .description {
     height: 40px;
@@ -674,6 +713,7 @@ html {
     border-radius: 6px;
     background-color: #191919;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
+    z-index: 10002;
 }
 #player .tooltip .carrot {
     position: absolute;
@@ -686,11 +726,15 @@ html {
 	border-right: 10px solid transparent;
 	border-top: 10px solid #434343;
 }
-#player div:hover .tooltip {
+#player .tooltiped:hover .tooltip {
     display: block;
 }
 
-#player #tip_play_pause {
+#player #tip_play {
+    top: -24px;
+    left: -1px;
+}
+#player #tip_pause {
     top: -24px;
     left: -6px;
 }
@@ -710,5 +754,34 @@ html {
     top: -24px;
     left: 789px;
 }
+#player #tip_unlove {
+    top: -24px;
+    left: 780px;
+}
+#player .play.paused:hover #tip_pause {
+    display: none;
+}
+#player .play.paused:hover #tip_play {
+    display: block;
+}
+#player .play:hover #tip_pause {
+    display: block;
+}
+#player .play:hover #tip_play {
+    display: none;
+}
+#player .heart.love:hover #tip_love {
+    display: none;
+}
+#player .heart.love:hover #tip_unlove {
+    display: block;
+}
+#player .heart:hover #tip_unlove {
+    display: none;
+}
+#player .heart:hover #tip_love {
+    display: block;
+}
+
 
 

@@ -22,45 +22,56 @@
     <div class='overlay_container'>
         <div id='mad_fm_logo'></div>
         <div id='player'>
-            <div class='play' onclick='playerToggle();'>
-                <div id='tip_play_pause' class='tooltip'>
+            <div class='play tooltiped' onclick='playerToggle();'>
+                <div class='icon'></div>
+                <div id='tip_play' class='tooltip'>
                     <div class='carrot'></div>
-                    <span>PAUSE</span>
+                    PLAY
+                </div>
+                <div id='tip_pause' class='tooltip'>
+                    <div class='carrot'></div>
+                    PAUSE
                 </div>
             </div>
+            <!--
             <div class='sep'></div>
             <div class='right_arrow'></div>
+            -->
             <div class='progress'>
                 <div id='track_bar' class='bar'></div>
                 <div id='title_scoller' class='title'><span id='track_title'><span></div>
                 <div id='track_duration' class='duration'></div>
             </div>
             
-            <div class='left_arrow' onclick='toggleHistory();'>
+            <div class='left_arrow tooltiped' onclick='toggleHistory();'>
                 <div id='tip_history' class='tooltip'>
                     <div class='carrot'></div>
                     HISTORY
                 </div>
             </div>
             <div class='sep'></div>
-            <div class='genre' onclick='toggleGenrePicker();'>
+            <div class='genre tooltiped' onclick='toggleGenrePicker();'>
                 <div id='tip_genre' class='tooltip'>
                     <div class='carrot'></div>
                     GENRE
                 </div>
             </div>
             <div class='sep'></div>
-            <div class='plus' onclick='showAddMusic();'>
+            <div class='plus tooltiped' onclick='showAddMusic();'>
                 <div id='tip_add_music' class='tooltip'>
                     <div class='carrot'></div>
                     ADD YOUR MUSIC
                 </div>
             </div>
             <div class='sep'></div>
-            <div class='heart' onclick='toggleLoveCurrentSong();'>
+            <div class='heart tooltiped' onclick='toggleLoveCurrentSong();'>
                 <div id='tip_love' class='tooltip'>
                     <div class='carrot'></div>
                     LOVE
+                </div>
+                <div id='tip_unlove' class='tooltip'>
+                    <div class='carrot'></div>
+                    UNLOVE
                 </div>
             </div>
             <div id='history'>
@@ -93,7 +104,7 @@
         <div class='dialog'>
             <div class='header'>
                 <div class='title'>ADD YOUR MUSIC TO <span>MYARTISTDNA.FM</span></div>
-                <div class='close' onclick='hideAddMusic();'>X</div>
+                <div class='close' onclick='hideAddMusic();'></div>
             </div>
             <div class='description'>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
@@ -130,7 +141,7 @@
         <div class='dialog'>
             <div class='header'>
                 <div class='title'>YOU JUST LOVED <span>""</span></div>
-                <div class='close' onclick='hideLoved();'>X</div>
+                <div class='close' onclick='hideLoved();'></div>
             </div>
             <div class='description'>
                 NOW PROCLAIM YOUR NEWFOUND LOVE TO THE WORLD
