@@ -284,21 +284,44 @@ html {
     border-bottom: 1px solid #161a20;
     border-left: 1px solid #20262e;
 }
-#history .content .row .loved div {
-    height: 100%;
-    width: 100%;
+#history .content .row .loved .love_icon {
+    position: relative;
+    height: 30px;
+    width: 30px;
     background: transparent url("../images/controls.png") -802px -86px no-repeat;
     cursor: pointer;
 }
-#history .content .row .loved div:hover {
+#history .content .row .loved .love_icon:hover {
     background: transparent url("../images/controls.png") -802px -16px no-repeat;
 }
-#history .content .row .loved.love div {
+#history .content .row .loved.love .love_icon {
     background: transparent url("../images/controls.png") -802px -16px no-repeat;
 }
-#history .content .row .loved.love div:hover {
+#history .content .row .loved.love .love_icon:hover {
     background: transparent url("../images/controls.png") -802px -86px no-repeat;
 }
+#history .content .row .loved .love_icon .tooltip.love_tip {
+    left: -22px;
+    top: -44px;
+}
+#history .content .row .loved .love_icon .tooltip.unlove_tip {
+    left: -31px;
+    top: -44px;
+}
+#history .content .row .loved.love .love_icon:hover .tooltip.love_tip {
+    display: none;
+}
+#history .content .row .loved.love .love_icon:hover .tooltip.unlove_tip {
+    display: block;
+}
+#history .content .row .loved .love_icon:hover .tooltip.love_tip {
+    display: block;
+}
+#history .content .row .loved .love_icon:hover .tooltip.unlove_tip {
+    display: none;
+}
+
+
 
 #mad_fm_logo {
     position: absolute;
@@ -702,7 +725,7 @@ html {
 	border-right: 10px solid transparent;
 	border-top: 10px solid #434343;
 }
-#player div:hover .tooltip {
+#player .tooltiped:hover .tooltip {
     display: block;
 }
 
@@ -730,6 +753,10 @@ html {
     top: -24px;
     left: 789px;
 }
+#player #tip_unlove {
+    top: -24px;
+    left: 780px;
+}
 #player .play.paused:hover #tip_pause {
     display: none;
 }
@@ -742,4 +769,18 @@ html {
 #player .play:hover #tip_play {
     display: none;
 }
+#player .heart.love:hover #tip_love {
+    display: none;
+}
+#player .heart.love:hover #tip_unlove {
+    display: block;
+}
+#player .heart:hover #tip_unlove {
+    display: none;
+}
+#player .heart:hover #tip_love {
+    display: block;
+}
+
+
 
