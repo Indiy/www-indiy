@@ -135,13 +135,23 @@ function updateHistory()
         if( title in g_loveMap )
             love = "love";
         
-        var html = "<div class='row'>";
-        html += "<div class='icon'><img src=''></div>";
-        html += "<div class='title'>" + title + "</div>";
-        html += "<div class='length'>" + duration + "</div>";
-        html += "<div id='history_loved_" + i + "' class='loved " + love + "'>";
-        html += "<div onclick='toggleLoveHistory(this," + i + ");'></div>";
-        html += "</div>";
+        var html = "";
+        html += "<div class='row'>";
+        html += " <div class='icon'><img src=''></div>";
+        html += " <div class='title'>" + title + "</div>";
+        html += " <div class='length'>" + duration + "</div>";
+        html += " <div id='history_loved_" + i + "' class='loved " + love + "'>";
+        html += "  <div class='love_icon' onclick='toggleLoveHistory(this," + i + ");'>";
+        html += "   <div class='tooltip love_tip'>";
+        html += "    <div class='carrot'></div>";
+        html += "    LOVE";
+        html += "   </div>";
+        html += "   <div class='tooltip unlove_tip'>";
+        html += "    <div class='carrot'></div>";
+        html += "    UNLOVE";
+        html += "   </div>";
+        html += "  </div>";
+        html += " </div>";
         html += "</div>";
         $('#history .content').append(html);
     }

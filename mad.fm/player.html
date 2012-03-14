@@ -22,15 +22,15 @@
     <div class='overlay_container'>
         <div id='mad_fm_logo'></div>
         <div id='player'>
-            <div class='play' onclick='playerToggle();'>
+            <div class='play tooltiped' onclick='playerToggle();'>
                 <div class='icon'></div>
                 <div id='tip_play' class='tooltip'>
                     <div class='carrot'></div>
-                    <span>PLAY</span>
+                    PLAY
                 </div>
                 <div id='tip_pause' class='tooltip'>
                     <div class='carrot'></div>
-                    <span>PAUSE</span>
+                    PAUSE
                 </div>
             </div>
             <div class='sep'></div>
@@ -41,31 +41,35 @@
                 <div id='track_duration' class='duration'></div>
             </div>
             
-            <div class='left_arrow' onclick='toggleHistory();'>
+            <div class='left_arrow tooltiped' onclick='toggleHistory();'>
                 <div id='tip_history' class='tooltip'>
                     <div class='carrot'></div>
                     HISTORY
                 </div>
             </div>
             <div class='sep'></div>
-            <div class='genre' onclick='toggleGenrePicker();'>
+            <div class='genre tooltiped' onclick='toggleGenrePicker();'>
                 <div id='tip_genre' class='tooltip'>
                     <div class='carrot'></div>
                     GENRE
                 </div>
             </div>
             <div class='sep'></div>
-            <div class='plus' onclick='showAddMusic();'>
+            <div class='plus tooltiped' onclick='showAddMusic();'>
                 <div id='tip_add_music' class='tooltip'>
                     <div class='carrot'></div>
                     ADD YOUR MUSIC
                 </div>
             </div>
             <div class='sep'></div>
-            <div class='heart' onclick='toggleLoveCurrentSong();'>
+            <div class='heart tooltiped' onclick='toggleLoveCurrentSong();'>
                 <div id='tip_love' class='tooltip'>
                     <div class='carrot'></div>
                     LOVE
+                </div>
+                <div id='tip_unlove' class='tooltip'>
+                    <div class='carrot'></div>
+                    UNLOVE
                 </div>
             </div>
             <div id='history'>
