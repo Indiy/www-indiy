@@ -113,21 +113,11 @@ html {
 #player .play {
     background: transparent url("../images/controls.png") -5px -86px no-repeat;
 }
-#player .play.paused,
+#player .play.paused {
+    background: transparent url("../images/play.png") 9px 6px no-repeat;
+}
 #player .play.paused:hover {
-    background: transparent;
-}
-#player .play.paused .icon {
-    margin-left: 8px;
-    margin-top: 4px;
-    height: 0px;
-    width: 0px;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 20px solid #747474;
-}
-#player .play.paused:hover .icon {
-    border-left: 20px solid #43b2aa;
+    background: transparent url("../images/play-hover.png") 9px 6px no-repeat;
 }
 #player .right_arrow {
     background: transparent url("../images/controls.png") -71px -86px no-repeat;
@@ -400,10 +390,15 @@ html {
 }
 #add_music .dialog .header .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
+    top: 19px;
+    right: 14px;
+    width: 19px;
+    height: 19px;
+    background: url("../images/close.png");
     cursor: pointer;
+}
+#add_music .dialog .header .close:hover {
+    background: url("../images/close-hover.png");
 }
 #add_music .dialog .description {
     height: 60px;
@@ -529,10 +524,15 @@ html {
 }
 #song_love .dialog .header .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
+    top: 19px;
+    right: 14px;
+    width: 19px;
+    height: 19px;
+    background: url("../images/close.png");
     cursor: pointer;
+}
+#song_love .dialog .header .close:hover {
+    background: url("../images/close-hover.png");
 }
 #song_love .dialog .description {
     height: 40px;
