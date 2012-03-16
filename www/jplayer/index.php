@@ -822,6 +822,11 @@ String.prototype.format = function() {
                 <div id='back_to_admin' class='back_to_admin'>
                     <a href='<?=trueSiteUrl();?>/manage/artist_management.php'>MY PROFILE</a>
                 </div>
+                <div id='buynow_free' class='buynow_free'>
+                    <div>
+                        <a title='Download for Free'>Free Download</a>
+                    </div>
+                </div>
                 <div class='expand_box'>
                     <div class='login_sep'></div>
                     <div class='label_name'>
@@ -853,11 +858,6 @@ String.prototype.format = function() {
                             <a title='Download on iTunes' target='_blank'>
                                 <img src='/images/buynow_itunes.jpg'/>
                             </a>
-                        </div>
-                    </div>
-                    <div id='buynow_free' class='buynow_free'>
-                        <div>
-                            <a title='Download for Free'>Free Download</a>
                         </div>
                     </div>
                     <? if ($artist_logo): ?>

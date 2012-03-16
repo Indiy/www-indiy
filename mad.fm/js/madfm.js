@@ -161,7 +161,7 @@ function loadSteamInfo()
     jQuery.ajax(
     {
         type: 'GET',
-        url: "http://www.myartistdna.fm/test/data/stream_info.php",
+        url: "/data/stream_info.php",
         dataType: 'json',
         success: function(data) 
         {
