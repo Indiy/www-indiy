@@ -1266,11 +1266,13 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #right_box .amazon_itunes_buttons div a {
     cursor: pointer;
 }
-#right_box .buynow_free div {
+#right_box .buynow_free  {
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
-    margin-bottom: 17px;
 }
 #right_box .buynow_free a {
+    display: inline-block;
     padding-top: 4px;
     padding-bottom: 3px;
     padding-left: 10px;
