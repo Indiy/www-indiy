@@ -445,8 +445,9 @@ function playListChange( index )
     var playlist_item = $('#song_list_item_' + song.id);
     
     var pi_top = playlist_item.position().top;
+    var pi_height = playlist_item.height();
     var pi_scroll_top = $('#playlist .lb-wrap').scrollTop();
-    var pi_scroll_height = $('#playlist .lb-wrap').height() - playlist_item.height();
+    var pi_scroll_height = $('#playlist .lb-wrap').height() - pi_height;
     var pi_scroll_bottom = pi_scroll_top + pi_scroll_height;
     if( pi_top < pi_scroll_top )
     {
@@ -454,7 +455,7 @@ function playListChange( index )
     }
     else if( pi_top > pi_scroll_bottom )
     {
-        $('#playlist .lb-wrap').scrollTop(pi_top - pi_scroll_height);
+        $('#playlist .lb-wrap').scrollTop(pi_top - pi_scroll_height + pi_height);
     }
     
 }
