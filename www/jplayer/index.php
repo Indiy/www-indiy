@@ -515,7 +515,7 @@ String.prototype.format = function() {
             <div id='share' class="tab">
                 <div class="sub_title">SHARE AROUND THE WEB<span class='slashes'>//</span></div>
                 <div class='content'>
-                    <div class='like_buttons'>
+                    <div class='like_button_container'>
                         <div class='like_button facebook'>
                             <div class="fb-like" data-href="http://<?=$_SERVER['HTTP_HOST'];?>" data-send="false" data-layout="button_count" data-width="46" data-show-faces="false" data-font="lucida grande"></div>
                         </div>
