@@ -447,7 +447,7 @@ function playListChange( index )
     var pi_rel_top = playlist_item.position().top;
     var pi_height = playlist_item.height();
     var pi_scroll_top = $('#playlist .lb-wrap').scrollTop();
-    var pi_scroll_height = $('#playlist .lb-wrap').height() - pi_height;
+    var pi_scroll_height = $('#playlist .lb-wrap').height() - 2*pi_height;
     if( pi_rel_top < 0 )
     {
         $('#playlist .lb-wrap').scrollTop(pi_scroll_top + pi_rel_top);
