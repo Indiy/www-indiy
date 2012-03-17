@@ -444,18 +444,17 @@ function playListChange( index )
     
     var playlist_item = $('#song_list_item_' + song.id);
     
-    var pi_top = playlist_item.position().top;
+    var pi_rel_top = playlist_item.position().top;
     var pi_height = playlist_item.height();
     var pi_scroll_top = $('#playlist .lb-wrap').scrollTop();
     var pi_scroll_height = $('#playlist .lb-wrap').height() - pi_height;
-    var pi_scroll_bottom = pi_scroll_top + pi_scroll_height;
-    if( pi_top < pi_scroll_top )
+    if( pi_rel_top < 0 )
     {
-        $('#playlist .lb-wrap').scrollTop(pi_top);
+        $('#playlist .lb-wrap').scrollTop(pi_scroll_top + pi_rel_top);
     }
-    else if( pi_top > pi_scroll_bottom )
+    else if( pi_rel_top > pi_scroll_height )
     {
-        $('#playlist .lb-wrap').scrollTop(pi_top - pi_scroll_height + pi_height);
+        $('#playlist .lb-wrap').scrollTop(pi_scroll_top + pi_rel_top - pi_scroll_height);
     }
     
 }
