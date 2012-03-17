@@ -441,6 +441,22 @@ function playListChange( index )
         g_totalListens++;
         $('#total_listens_val').text(g_totalListens);
     }
+    
+    var playlist_item = $('#song_list_item_' + song.id);
+    
+    var pi_top = playlist_item.top();
+    var pi_scroll_top = $('#playlist .lb-wrap').scrollTop();
+    var pi_scroll_height = $('#playlist .lb-wrap').height() - playlist_item.height();
+    var pi_scroll_bottom = pi_scroll_top + pi_scroll_height;
+    if( pi_top < pi_scroll_top )
+    {
+        $('#playlist .lb-wrap').scrollTop(pi_top);
+    }
+    else if( pi_top > pi_scroll_bottom )
+    {
+        $('#playlist .lb-wrap').scrollTop(pi_top - pi_scroll_height);
+    }
+    
 }
 function songVote(vote)
 {
