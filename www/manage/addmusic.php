@@ -221,16 +221,16 @@
     $image_html = '';
 	if( $audio_logo != "" )
     {
-		$image_html .= "<img src='../artists/images/$audio_logo' />";
+		$image_html = "<img src='../artists/images/$audio_logo' />";
         $image_html .= "<button onclick='return onImageRemove();'></button>";
 	}
     $audio_html = '<div>(We only accept MP3 Files)</div>';
     if( $audio_sound != '' )
     {
         if( $upload_audio_filename && strlen($upload_audio_filename) > 0 )
-            $audio_html .= "<div>$upload_audio_filename</div>";
+            $audio_html = "<div>$upload_audio_filename</div>";
         else
-            $audio_html .= "<div>$audio_sound</div>";
+            $audio_html = "<div>$audio_sound</div>";
         $audio_html .= "<button onclick='return onSongRemove();'></button>";
     }
 	
