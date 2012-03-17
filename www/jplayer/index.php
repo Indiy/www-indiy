@@ -517,7 +517,7 @@ String.prototype.format = function() {
                 <div class='content'>
                     <div class='like_buttons'>
                         <div class='facebook'>
-                            <div class="fb-like" data-href="http://<?=$_SERVER['HTTP_HOST'];?>" data-send="false" data-layout="button_count" data-width="46" data-show-faces="false" data-colorscheme="dark" data-font="lucida grande"></div>
+                            <div class="fb-like" data-href="http://<?=$_SERVER['HTTP_HOST'];?>" data-send="false" data-layout="button_count" data-width="46" data-show-faces="false" data-font="lucida grande"></div>
                         </div>
                     </div>
                 
