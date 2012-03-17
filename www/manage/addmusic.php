@@ -340,7 +340,7 @@ function clickMadStore()
             <div class='left_label'>MP3 File <span id='tip_mp3' class='tooltip'>(?)</span></div>
             <div class='right_file_filename'>
                 <input id='song_audio' type="file" name="audio" onchange='onSongChange();'/>
-                <div class='filename'>(For best results use 1200 x 800 size photos)</div>
+                <div class='filename'><?=$audio_html;?></div>
             </div>
         </div>
         <div class='input_container' style='height: 50px;'>
@@ -350,7 +350,7 @@ function clickMadStore()
             </div>
             <div class='right_file_filename'>
                 <input id='song_image' type="file" name="logo" class='right_file' onchange='onImageChange(this);' />
-                <div class='filename'>()</div>
+                <div class='filename'>(For best results use 1200 x 800 size photos)</div>
             </div>
         </div>
         <div class='input_container'>
