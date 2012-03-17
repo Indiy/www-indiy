@@ -2367,7 +2367,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     top: -40px; 
     left: 0px; 
     right: 0px; 
-    height: 80px;
     overflow: hidden;
     z-index: 1;
 }
@@ -2408,7 +2407,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     width: 200px;
 }
 #navigation .artist_name_holder {
-    height: 40px;
     text-align: center;
 }
 #navigation .artist_name {
