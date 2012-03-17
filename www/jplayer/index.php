@@ -523,7 +523,7 @@ String.prototype.format = function() {
                             <a href="https://twitter.com/share" class="twitter-share-button" data-via="myartistdna" data-hashtags="myartistdna">Tweet</a>
                         </div>
                         <div class='like_button google'>
-                            <g:plusone href="http://<?=$_SERVER['HTTP_HOST'];?>"></g:plusone>
+                            <div class="g-plusone" data-size="medium" data-href="http://<?=$_SERVER['HTTP_HOST'];?>"></div>
                         </div>
                     </div>
                 
