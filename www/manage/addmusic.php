@@ -224,7 +224,7 @@
 		$image_html .= "<img src='../artists/images/$audio_logo' />";
         $image_html .= "<button onclick='return onImageRemove();'></button>";
 	}
-    $audio_html = '';
+    $audio_html = '<div>(We only accept MP3 Files)</div>';
     if( $audio_sound != '' )
     {
         if( $upload_audio_filename && strlen($upload_audio_filename) > 0 )
@@ -340,7 +340,7 @@ function clickMadStore()
             <div class='left_label'>MP3 File <span id='tip_mp3' class='tooltip'>(?)</span></div>
             <div class='right_file_filename'>
                 <input id='song_audio' type="file" name="audio" onchange='onSongChange();'/>
-                <div class='filename'><?=$audio_html;?></div>
+                <div class='filename'>(For best results use 1200 x 800 size photos)</div>
             </div>
         </div>
         <div class='input_container' style='height: 50px;'>
@@ -348,7 +348,10 @@ function clickMadStore()
                 <div class='image_label'>Image <span id='tip_image' class='tooltip'>(?)</span><span class='required'>*</span></div>
                 <div class='image_image'><?=$image_html;?></div>
             </div>
-            <input id='song_image' type="file" name="logo" class='right_file' onchange='onImageChange(this);' />
+            <div class='right_file_filename'>
+                <input id='song_image' type="file" name="logo" class='right_file' onchange='onImageChange(this);' />
+                <div class='filename'>()</div>
+            </div>
         </div>
         <div class='input_container'>
             <div class='left_label'>Background Style <span id='tip_bg_style' class='tooltip'>(?)</span></div>
