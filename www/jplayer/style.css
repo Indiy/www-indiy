@@ -1362,7 +1362,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     border-right: 1px solid #555;
     border-left: 1px solid #555;
     border-bottom: none;
-    overflow: hidden;
     behavior: url(/css/PIE.htc);
 }
 
@@ -1445,7 +1444,6 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #socialize .content {
     padding-left: 12px;
     padding-right: 12px;
-    overflow: hidden;
 }
 #socialize .instructions {
     padding-left: 5px;
