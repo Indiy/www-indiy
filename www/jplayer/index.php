@@ -215,6 +215,8 @@ else
         echo "</div>";
     }
     
+    $page_url = "http://" . $_SERVER['HOST'];
+    
 ?>
 
 <!DOCTYPE html>
@@ -517,13 +519,18 @@ String.prototype.format = function() {
                 <div class='content'>
                     <div class='like_button_container'>
                         <div class='like_button facebook'>
-                            <div class="fb-like" data-href="http://<?=$_SERVER['HTTP_HOST'];?>" data-send="false" data-layout="button_count" data-width="46" data-show-faces="false" data-font="lucida grande"></div>
+                            <div class="fb-like" data-href="<?=$page_url;?>" data-send="false" data-layout="button_count" data-width="46" data-show-faces="false" data-font="lucida grande"></div>
                         </div>
                         <div class='like_button twitter'>
                             <a href="https://twitter.com/share" class="twitter-share-button" data-via="myartistdna" data-hashtags="myartistdna">Tweet</a>
                         </div>
+                    </div>
+                    <div class='like_button_container'>
                         <div class='like_button google'>
-                            <div class="g-plusone" data-size="medium" data-href="http://<?=$_SERVER['HTTP_HOST'];?>"></div>
+                            <div class="g-plusone" data-size="medium" data-href="<?=$page_url;?>"></div>
+                        </div>
+                        <div class='like_button pinterest'>
+                            <a href="http://pinterest.com/pin/create/button/?url=<?=urlencode($page_url);?>" class="pin-it-button" count-layout="horizontal">Pin It</a>
                         </div>
                     </div>
                 
@@ -971,6 +978,7 @@ String.prototype.format = function() {
  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
  })();
 </script>
+<script type="text/javascript" src="http://assets.pinterest.com/js/pinit.js"></script>
 
 </body>
 </html>
