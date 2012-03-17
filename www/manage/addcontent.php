@@ -161,6 +161,7 @@ function onImageRemove()
         <div class='submit_branding_container'>
             <input type="submit" name="submit" value="submit" class='left_submit' />
             <div class='branding_tip' style='width: 400px;'>The more info you add about yourself the better chance your account will be found. <a href="http://myartistdna.is" target="_blank">Need more?</a> </div>
+            <div style='clear: both;'></div>
         </div>
     </form>
     
