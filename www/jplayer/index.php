@@ -515,6 +515,12 @@ String.prototype.format = function() {
             <div id='share' class="tab">
                 <div class="sub_title">SEND TO A FRIEND<span class='slashes'>//</span></div>
                 <div class='content'>
+                    <div class='like_buttons'>
+                        <div class='facebook'>
+                            <div class="fb-like" data-href="http://<?=$_SERVER['HTTP_HOST'];?>" data-send="false" data-layout="button_count" data-width="46" data-show-faces="false" data-colorscheme="dark" data-font="lucida grande"></div>
+                        </div>
+                    </div>
+                
                     <div id='send_friend_form'>
                         <div class='instructions'>Fill out the form below to send a copy of the message to your friend.</div>
                         <div class='disclaimer'>Please note that your friend will not be subscribed to any email list nor will his / her name or email address be permanently recorded.</div>
@@ -642,14 +648,7 @@ String.prototype.format = function() {
                     <div class='title'>COMMENT</div>
                     <div class='scrollable_container'>
                         <div id="fb-root"></div>
-                        <script>(function(d, s, id) {
-                                 var js, fjs = d.getElementsByTagName(s)[0];
-                                 if (d.getElementById(id)) {return;}
-                                 js = d.createElement(s); js.id = id;
-                                 js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-                                 fjs.parentNode.insertBefore(js, fjs);
-                                 }(document, 'script', 'facebook-jssdk'));
-                        </script>
+                        
                         <div class="fb-comments" data-href="http://<?=$_SERVER['HTTP_HOST'];?>" data-num-posts="2" data-width="500"></div>
                     </div>
                 </div>
@@ -942,6 +941,15 @@ String.prototype.format = function() {
 
 </script>
 <!-- Tracking code Ends -->
+<script>(function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=120524971363318";
+         fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+</script>
+
 </body>
 </html>
 <? } ?>
