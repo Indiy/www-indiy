@@ -353,7 +353,7 @@ function checkElementFileExtensions(file,extensions,error_string)
 {
     if( file.files && file.files.length > 0 )
     {
-        var file_name = file.files[0].fileName;
+        var file_name = file.files[0].name;
         if( file_name && file_name.length > 0 )
         {
             file_name = file_name.toLowerCase();
@@ -363,11 +363,25 @@ function checkElementFileExtensions(file,extensions,error_string)
             {
                 var valid_ext = extensions[k];
                 if( valid_ext == ext )
-                    return;
+                    return false;
             }
+            window.alert(error_string);
+            return true;
+        }
+    }
+    return false;
+}
+function checkElementSize(file,size_limit,error_string)
+{
+    if( file.files && file.files.length > 0 )
+    {
+        var size = file.files[0].size;
+        if( size && size > size_limit )
+        {
             window.alert(error_string);
         }
     }    
+
 }
 function checkFileExtensions(element_id,extensions,error_string)
 {
@@ -381,7 +395,9 @@ function onVideoChange()
 
 function onImageChange(file)
 {
-    checkElementFileExtensions(file,['png','jpg','gif','jpeg'],"Please upload images in PNG, JPG, or GIF format.");
+    if( checkElementFileExtensions(file,['png','jpg','gif','jpeg'],"Please upload images in PNG, JPG, or GIF format.") )
+        return;
+    checkImageSize(file,2*1024*1024,"Please upload images 1280x800 and less than 2MB in size.");
 }
 
 function onAddMusicSubmit()
