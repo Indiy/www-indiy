@@ -215,7 +215,7 @@ else
         echo "</div>";
     }
     
-    $page_url = "http://" . $_SERVER['HOST'];
+    $page_url = "http://" . $_SERVER['HTTP_HOST'];
     
 ?>
 
