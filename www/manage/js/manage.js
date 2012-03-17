@@ -380,8 +380,7 @@ function checkElementSize(file,size_limit,error_string)
         {
             window.alert(error_string);
         }
-    }    
-
+    }
 }
 function checkFileExtensions(element_id,extensions,error_string)
 {
