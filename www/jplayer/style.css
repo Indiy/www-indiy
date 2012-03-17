@@ -2424,18 +2424,13 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-weight: bold; 
     text-transform: uppercase;
     border-radius: 0px 0px 10px 10px;
-    background: rgb(0,0,0);
-    background: rgba(0,0,0,0.8);
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+    background-image: url("/images/tab_arrow.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
     cursor: pointer;
     behavior: url(/css/PIE.htc);
-}
-#navigation .artist_name_holder .pull_down {
-    display: inline-block;
-    width: 27px;
-    height: 13px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background: url("/images/tab_arrow.jpg");
 }
 
 @-moz-document url-prefix() {

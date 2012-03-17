@@ -809,9 +809,8 @@ String.prototype.format = function() {
                         <div class='tab_spacer'></div>
                     </div>
                 </div>
-                <div class='artist_name_holder' onclick='toggleNavigation();'>
-                    <div class='artist_name'><?=$artist_name;?></div>
-                    <div class='pull_down'></div>
+                <div class='artist_name_holder'>
+                    <div class='artist_name' onclick='toggleNavigation();'><?=$artist_name;?></div>
                 </div>
             </div>
             <div id='right_box'>
