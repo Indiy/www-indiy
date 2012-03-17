@@ -1188,8 +1188,9 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     margin-left: -5px;
 }
 #popup .filename {
-    font-size: 10px;
+    font-size: 9px;
     padding-top: 4px;
+    font-style: italic;
 }
 #popup .filename div {
     display: inline-block;
