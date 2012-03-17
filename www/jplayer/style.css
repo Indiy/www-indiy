@@ -1554,10 +1554,15 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #socialize .submit.red:hover {
     background-color: #f00;
 }
-#socialize #share .content .like_buttons {
-    height: 40px;
+#socialize #share .content .like_button_container {
+    height: 35px;
+    padding-top: 5px;
 }
-
+#socialize #share .like_button {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px; 
+}
 
 #user_page_wrapper {
     display: none;
