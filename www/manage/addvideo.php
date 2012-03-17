@@ -162,13 +162,13 @@
 		$image_html .= "<img src='../artists/images/$video_logo' />";
         $image_html .= "<button onclick='return onVideoImageRemove();'></button>";
 	}
-    $video_html = '';
+    $video_html = '<div>(We only accept .mov and .mp4 files)</div>';
     if( $video_sound != '' )
     {
         if( $upload_video_filename && strlen($upload_video_filename) > 0 )
-            $video_html .= "<div>$upload_video_filename</div>";
+            $video_html = "<div>$upload_video_filename</div>";
         else
-            $video_html .= "<div>$video_sound</div>";
+            $video_html = "<div>$video_sound</div>";
         $video_html .= "<button onclick='return onVideoRemove();'></button>";
     }
 
