@@ -513,7 +513,7 @@ String.prototype.format = function() {
             </div>
 
             <div id='share' class="tab">
-                <div class="sub_title">BE SOCIAL. SHARE AROUND THE WEB<span class='slashes'>//</span></div>
+                <div class="sub_title">SHARE AROUND THE WEB<span class='slashes'>//</span></div>
                 <div class='content'>
                     <div class='like_buttons'>
                         <div class='like_button facebook'>
