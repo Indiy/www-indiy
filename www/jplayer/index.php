@@ -522,6 +522,9 @@ String.prototype.format = function() {
                         <div class='like_button twitter'>
                             <a href="https://twitter.com/share" class="twitter-share-button" data-via="myartistdna" data-hashtags="myartistdna">Tweet</a>
                         </div>
+                        <div class='like_button google'>
+                            <g:plusone href="http://<?=$_SERVER['HTTP_HOST'];?>"></g:plusone>
+                        </div>
                     </div>
                 
                     <div id='send_friend_form'>
@@ -958,6 +961,15 @@ String.prototype.format = function() {
 
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+(function() {
+ var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+ po.src = 'https://apis.google.com/js/plusone.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+ })();
 </script>
 
 </body>
