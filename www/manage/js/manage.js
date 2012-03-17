@@ -397,7 +397,7 @@ function onImageChange(file)
 {
     if( checkElementFileExtensions(file,['png','jpg','gif','jpeg'],"Please upload images in PNG, JPG, or GIF format.") )
         return;
-    checkImageSize(file,2*1024*1024,"Please upload images 1280x800 and less than 2MB in size.");
+    checkElementSize(file,2*1024*1024,"Please upload images 1280x800 and less than 2MB in size.");
 }
 
 function onAddMusicSubmit()
