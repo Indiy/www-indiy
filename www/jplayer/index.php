@@ -81,6 +81,8 @@ else
     }
     $pages_list_json = json_encode($pages_list);
 
+
+    $media_url = FALSE;
     // Build Music
     $loadmusic = mq("SELECT * FROM `[p]musicplayer_audio` WHERE `artistid`='{$artist_id}' ORDER BY `order` ASC, `id` DESC");
     $music_list = array();
@@ -120,6 +122,9 @@ else
                       "listens" => $music_listens,
                       );
         $music_list[] = $item;
+        
+        if( !$media_url )
+            $media_url = "http://" . $_SERVER['HTTP_HOST'] . '/artists/images/' . $music_image;
     }
     $music_list_json = json_encode($music_list);
 
@@ -531,7 +536,7 @@ String.prototype.format = function() {
                             <div class="g-plusone" data-size="medium" data-href="<?=$page_url;?>"></div>
                         </div>
                         <div class='like_button pinterest'>
-                            <a href="http://pinterest.com/pin/create/button/?url=<?=urlencode($page_url);?>" class="pin-it-button" count-layout="horizontal">Pin It</a>
+                            <a href="http://pinterest.com/pin/create/button/?url=<?=urlencode($page_url);?>&media=<?=urlencode($media_url);?>" class="pin-it-button" count-layout="horizontal">Pin It</a>
                         </div>
                     </div>
                 
