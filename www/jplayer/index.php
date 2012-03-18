@@ -416,7 +416,8 @@ String.prototype.format = function() {
         
 
         <div id='shop_results'></div>
-            
+        
+        <div id='social_container'>
         <div id='socialize'>
             <div class="header">
                 <div class="title" onclick='toggleSocialTab();'>SOCIALIZE</div>
@@ -567,7 +568,8 @@ String.prototype.format = function() {
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
+        </div>
             
         <div id='image'>
             <div id='image_slider'>

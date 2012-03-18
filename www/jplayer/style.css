@@ -1348,7 +1348,14 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #right_box .up_down_arrow.open:hover {
     background: #111 url('/images/right_box_up_down_selected.png') no-repeat center 4px;
 }
-
+#social_container {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+}
 #socialize {
     height: 40px;
     width: 300px;
