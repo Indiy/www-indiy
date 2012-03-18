@@ -199,8 +199,14 @@ a.www:hover { filter:alpha(opacity=100); opacity:1.0; }
 div.footerfade { z-index: 2; position: fixed; width: 100%; height: 200px; top: 100%; left: 0; margin: -50px 0 0 0; background: url('images/bg.png'); }
 
 div.footerfade .logo_img { float:right; }
-div.footerfade .logo_img a { width:176px; height:34px; display:block; background: url('images/new/footer_logo.png') no-repeat center top; margin:8px; }
-div.footerfade .logo_img a:hover { }
+div.footerfade .logo_img a {
+    display:block; 
+    width:176px; 
+    height:34px; 
+    background: url('images/new/footer_logo.png') no-repeat center top; 
+    margin:8px; 
+    cursor: pointer;
+}
 
 
 div.facebookstream { z-index: 0; position: fixed; width: 200px; padding: 0px; top: 100%; left: 0; margin: -40px 0px 0px 40px; }
