@@ -200,7 +200,7 @@ div.footerfade { z-index: 2; position: fixed; width: 100%; height: 200px; top: 1
 
 div.footerfade .logo_img { float:right; }
 div.footerfade .logo_img a { width:176px; height:34px; display:block; background: url('images/new/footer_logo.png') no-repeat center top; margin:8px; }
-div.footerfade .logo_img a:hover { background-position:center bottom; }
+div.footerfade .logo_img a:hover { }
 
 
 div.facebookstream { z-index: 0; position: fixed; width: 200px; padding: 0px; top: 100%; left: 0; margin: -40px 0px 0px 40px; }

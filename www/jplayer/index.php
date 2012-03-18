@@ -931,7 +931,7 @@ String.prototype.format = function() {
         <div id='next_track' onclick='playListNext();'></div>
             
         <div class="footerfade">
-            <div class="logo_img"><a href="<?=trueSiteUrl();?>/artists.php" /></a></div>
+            <div class="logo_img"><a href="<?=trueSiteUrl();?>"></a></div>
             <div id="theSearchBox"></div>
         </div>
 
