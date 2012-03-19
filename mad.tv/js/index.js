@@ -1,10 +1,12 @@
 
-var g_currentVideoIndex = 0;
+var g_videoHistory = false;
 
 $(document).ready(setupVideoPlayer)
 
 function setupVideoPlayer()
 {
+    loadSteamInfo(startVideoInProgress);
+
     //showVideo(0);
     $(window).resize(onWindowResize);
     
@@ -32,6 +34,29 @@ function hideControls()
 {
     g_controlsShown = false;
     $("#overlay_container").fadeOut();
+}
+
+function loadSteamInfo(callback)
+{
+    jQuery.ajax(
+    {
+        type: 'GET',
+        url: "http://www.myartistdna.tv/test/data/stream_info.php",
+        dataType: 'json',
+        success: function(data) 
+        {
+            g_videoHistory = data;
+            updateVideo();
+        },
+        error: function()
+        {
+            //window.alert("Error!");
+        }
+    });
+}
+function startVideoInProgress()
+{
+    
 }
 
 var g_playing = true;
@@ -101,15 +126,13 @@ function hideAddVideo()
 
 
 var g_videoPlayer = false;
-function showVideo(n)
+function startVideo(in_progress)
 {
-    g_currentVideoIndex = n;
 
     var h = $('#video_container').height();
     var w = $('#video_container').width();
 
-    /*
-    var video = g_videoList[n];
+    var video = g_videoHistory[n];
     var video_file = video.video_file;
     var video_file_ogv = video_file.replace(".mp4",".ogv");
     var poster = video.poster;
@@ -117,7 +140,6 @@ function showVideo(n)
     $('#video_title').text(video.name);
     $('#artist_name').text(video.artist);
     $('#logo_img').attr('src',video.logo);
-    */
     
     
     var w_h = " width='" + w + "' height='" + h + "' ";

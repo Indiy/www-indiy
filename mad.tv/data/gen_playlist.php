@@ -2,6 +2,8 @@
 
     $FILE = "/tmp/madtv_history_data.json";
 
+    $root_url = "http://www.myartistdna.tv";
+
     //Production 
     error_reporting(0);
     $dbhost		=	"localhost";
@@ -28,9 +30,9 @@
         $item = array("artist" => $artist,
                       "name" => $name,
                       "track" => "$artist - $name",
-                      "logo" => "/media/$logo",
-                      "poster" => "/media/$poster",
-                      "video_file" => "/media/$video_file",
+                      "logo" => "$root_url/media/$logo",
+                      "poster" => "$root_url/media/$poster",
+                      "video_file" => "$root_url/media/$video_file",
                       "duration" => $duration
                       );
         $video_list[] = $item;
