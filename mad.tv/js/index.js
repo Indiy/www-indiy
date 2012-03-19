@@ -257,11 +257,11 @@ function onVideoReady()
 }
 function videoLoadStart()
 {
-    seekVideo();
+    //seekVideo();
 }
 function videoDownloadProgress()
 {
-    seekVideo();
+    //seekVideo();
 }
 function videoTimeUpdate()
 {
@@ -275,14 +275,14 @@ function videoDurationChange()
 }
 function videoPlayStarted()
 {
-    seekVideo();
+    //seekVideo();
 }
 
 function seekVideo()
 {
     if( g_seekOnPlay !== false )
     {
-        var pos = g_videoPlayer.currentTime();
+        var pos = g_videoPlayer.currentTime() + 1;
         if( pos >= g_seekOnPlay )
             g_seekOnPlay = false;
         else
