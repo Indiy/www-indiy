@@ -45,7 +45,7 @@
         $history = $data;
     }
 
-    for( $i = count($history) ; $i < 3 ; ++i )
+    for( $i = count($history) ; $i < 3 ; ++$i )
     {
         $file = get_new_file();
         $file["start_time"] = 0;
@@ -68,7 +68,7 @@
         file_put_contents($FILE,$json,LOCK_EX);
 
         $duration = $file["duration"];
-        print "Sleeping %d seconds\n\n");
+        print "Sleeping %d seconds\n\n";
         sleep($duration);
     }
 
@@ -82,13 +82,13 @@
         $half_video_list = intval(floor(count($video_list)/2));
         $dup_search_len = min($half_video_list,$history_len);
         
-        for( $i = 0 ; $i < 100 ; $i++ )
+        for( $i = 0 ; $i < 100 ; ++$i )
         {
             $index = mt_rand(0,count($video_list)-1);
             $next = $video_list[$index]; 
             
             $found = FALSE;
-            for( $j = 0 ; $j < $dup_search_len ; $j++ )
+            for( $j = 0 ; $j < $dup_search_len ; ++$j )
             {
                 $h = $history[$j];
                 if( $h["track"] == $next["track"] )
