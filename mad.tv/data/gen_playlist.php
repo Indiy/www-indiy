@@ -36,7 +36,7 @@
         $video_list[] = $item;
     }
 
-    $history = [];
+    $history = array();
     $json = file_get_contents($FILE);
     if( $json )
     {
