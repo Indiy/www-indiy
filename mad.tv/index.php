@@ -39,44 +39,7 @@
     }
 
     $video_list_json = json_encode($video_list);
+    
+    include_once "player.html";
 ?>
 
-<html>
-<head>
-    <title>MyAritstDNA.tv</title>
-    <link href="css/video-js.css"rel="stylesheet" type="text/css" />
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-        
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-        
-    <!--[if lt IE 9]>
-        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
-    
-    <script src="js/video.js" type="text/javascript"></script>
-    <script src="js/index.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        var g_videoList = <?=$video_list_json;?>;
-    </script>
-</head>
-<body>
-    <div id='video_player'>
-        <div class='top_bar'>
-            <div class='logo_title_artist'>
-                <div class='logo'>
-                    <img id='logo_img'>
-                </div>
-                <div class='title_artist'>
-                    <div id='video_title' class='title'></div>
-                    <div class='artist_label'>Artist:</div>
-                    <div id='artist_name' class='artist'></div>
-                </div>
-            </div>
-        </div>
-        <div id='player_body' class='player_body'>
-        </div>
-    </div>
-</body>
-</html>

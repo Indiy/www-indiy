@@ -5,25 +5,110 @@ $(document).ready(setupVideoPlayer)
 
 function setupVideoPlayer()
 {
-    showVideo(0);
+    //showVideo(0);
+    $(window).resize(onWindowResize);
+    
+    //$(document).mousemove(showControls);
+    //showControls();
+    $("#overlay_container").fadeIn();
 }
-
-function nextVideo()
+var g_controlsShown = false;
+var g_hideControlsTimeout = false;
+function showControls()
 {
-    var next = g_currentVideoIndex + 1;
-    if( next >= g_videoList.length )
-        next = 0;
-    showVideo(next);
+    if( !g_controlsShown )
+    {
+        g_controlsShown = true;
+        $("#overlay_container").fadeIn();
+    }
+    if( g_hideControlsTimeout !== false )
+    {
+        window.clearTimeout(g_hideControlsTimeout);
+        g_hideControlsTimeout = false;
+    }
+    g_hideControlsTimeout = window.setTimeout(hideControls,2000);
+}
+function hideControls()
+{
+    g_controlsShown = false;
+    $("#overlay_container").fadeOut();
 }
 
+var g_playing = true;
+function playerToggle()
+{
+    if( g_playing )
+        playerPause();
+    else
+        playerPlay();
+}
+function playerPlay()
+{
+    g_playing = true;
+    try 
+    {
+        g_videoPlayer.start();
+    }
+    catch(e) {}
+    //g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
+    $('#player .play').removeClass('paused');
+}
+function playerPause()
+{
+    g_playing = false;
+    try 
+    {
+        g_videoPlayer.stop();
+    }
+    catch(e) {}
+    //window.clearInterval(g_intervalUpdateTrack);
+    $('#player .play').addClass('paused');
+}
+var g_historyShown = false;
+function toggleHistory()
+{
+    if( g_historyShown )
+        hideHistory();
+    else
+        showHistory();
+}
+function showHistory()
+{
+    //hideGenrePicker();
+    g_historyShown = true;
+    $('#history').fadeIn();
+    updateHistory();
+}
+function hideHistory()
+{
+    g_historyShown = false;
+    $('#history').fadeOut();
+}
+function updateHistory()
+{
+    
+}
+function showAddVideo()
+{
+    //hideGenrePicker();
+    $('#add_video').fadeIn();
+}
+function hideAddVideo()
+{
+    $('#add_video').fadeOut();
+}
+
+
+
+var g_videoPlayer = false;
 function showVideo(n)
 {
     g_currentVideoIndex = n;
-    $('#video_player').show();
 
-    var h = $('#video_player').height();
-    $('#player_body').css('height',h-60);
+    var h = $('#video_container').height();
+    var w = $('#video_container').width();
 
+    /*
     var video = g_videoList[n];
     var video_file = video.video_file;
     var video_file_ogv = video_file.replace(".mp4",".ogv");
@@ -32,45 +117,40 @@ function showVideo(n)
     $('#video_title').text(video.name);
     $('#artist_name').text(video.artist);
     $('#logo_img').attr('src',video.logo);
-
-    var html = '';
-    html += '<div class="video-js-box mad_video_css" style="width:100%; height: 100%;">';
-    html += '<video id="mad_video_1" class="video-js" width="100%" height="100%" controls="controls" preload="auto" poster="' + poster + '">';
-    html += '<source src="' + video_file + '" type="video/mp4" />';
-    html += '<source src="' + video_file_ogv + '" type="video/ogg" />';
-    html += '<object id="flash_fallback_1" class="vjs-flash-fallback" width="640" height="264" type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">';
+    */
     
-    html += '<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />';    
-    html += '<param name="allowfullscreen" value="true" />';
-    html += '<param name="flashvars" value=\'config={"playlist":["' + poster +'", {"url": "' + video_file + '","autoPlay":false,"autoBuffering":true}]}\' />';
-    html += '<img src="' + poster + '" width="853" height="480" alt="Poster Image" title="No video playback capabilities." />';
-    html += '</object>';
+    
+    var w_h = " width='" + w + "' height='" + h + "' ";
+    
+    var html = '';
+    html += '<video id="my_video_1" ' + w_h + ' class="video-js vjs-default-skin" preload="auto" poster="http://www.myartistdna.co/images/mad_poster.png">';
+    html += '<source src="http://www.myartistdna.co/mad_030112b.webm" type="video/webm" />';
+    html += '<source src="http://www.myartistdna.co/mad_030112b.mp4" type="video/mp4" />';
+    html += '<source src="http://www.myartistdna.co/mad_030112b.iphone.mp4" type="video/mp4" />';
+    html += '<source src="http://www.myartistdna.co/mad_030112b.ogv" type="video/ogg" />';
     html += '</video>';
-    html += '<p class="vjs-no-video">';
-    html += '</p>';
-    html += '</div>';
 
-    $('#player_body').html(html);
-    window.setTimeout(setupVideoJS,10);
+    $('#video_container').empty();
+    $('#video_container').html(html);
+    g_videoPlayer = _V_("my_video_1");
+    g_videoPlayer.ready(onVideoReady);
 }
 
-var g_videoPlayer = false;
-
-function setupVideoJS()
+function onVideoReady()
 {
-    g_videoPlayer = VideoJS.setup("mad_video_1",{
-                                  controlsBelow: false,
-                                  controlsHiding: true,
-                                  defaultVolume: 0.85,
-                                  flashVersion: 9,
-                                  linksHiding: true
-                                  });
-    g_videoPlayer.onEnded(nextVideo);
     g_videoPlayer.play();
 }
-function closeVideo()
+
+function onWindowResize()
 {
     if( g_videoPlayer )
-        g_videoPlayer.pause();
-    $('#video_player').fadeOut(300);
+    {
+        var h = $('#video_container').height();
+        var w = $('#video_container').width();
+        g_videoPlayer.size(w,h);
+    }
 }
+
+
+
+
