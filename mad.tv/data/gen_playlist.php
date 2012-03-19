@@ -107,7 +107,7 @@
 
     function get_duration($video_file)
     {
-        $output = exec("/usr/bin/ffmpeg -i ../$video_file");
+        $output = shell_exec("/usr/bin/ffmpeg -i ../$video_file");
         
         preg_match('/Duration: (.*?),/', $output, $matches);
         $duration = $matches[1];
