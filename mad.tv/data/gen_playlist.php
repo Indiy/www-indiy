@@ -84,7 +84,7 @@
         
         for( $i = 0 ; $i < 100 ; $i++ )
         {
-            $index = rand(0,count($video_list));
+            $index = mt_rand(0,count($video_list)-1);
             $next = $video_list[$index]; 
             
             $found = FALSE;
