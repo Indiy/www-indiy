@@ -1406,6 +1406,7 @@
 		2DF4FBA4150F30CB007600CB /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
 		2DF4FBA5150F30CB007600CB /* player.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player.html; sourceTree = "<group>"; };
 		2DF614051516B07B00DBFBC8 /* gen_playlist.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = gen_playlist.php; path = data/gen_playlist.php; sourceTree = "<group>"; };
+		2DF614061516D29200DBFBC8 /* stream_info.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = stream_info.php; path = data/stream_info.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -3655,6 +3656,7 @@
 			isa = PBXGroup;
 			children = (
 				2DF614051516B07B00DBFBC8 /* gen_playlist.php */,
+				2DF614061516D29200DBFBC8 /* stream_info.php */,
 			);
 			name = data;
 			sourceTree = "<group>";
