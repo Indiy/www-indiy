@@ -107,16 +107,15 @@
 
     function get_duration($video_file)
     {
-        $output = @shell_exec("/usr/bin/ffmpeg -i ../$video_file 2>&1");
+        $output = @shell_exec("/usr/bin/ffmpeg -i ~/public_html/media/$video_file 2>&1");
         
         preg_match('/Duration: (.*?),/', $output, $matches);
         $duration = $matches[1];
         $duration_array = split(':', $duration);
         $duration = $duration_array[0] * 3600 + $duration_array[1] * 60 + $duration_array[2];
-        
+        $duration = intval(floor($duration));
         print "file: $video_file, duration: $duration\n";
-        
-        return intval(floor($duration));
+        return $duration;
     }
 
 
