@@ -73,7 +73,7 @@
     }
 
 
-    function get_next_file();
+    function get_next_file()
     {
         global $history;
         global $video_list;
