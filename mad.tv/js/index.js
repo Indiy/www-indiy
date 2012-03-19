@@ -285,9 +285,9 @@ function seekVideo()
     {
         var curr_time = new Date().getTime();
         var delta = curr_time - g_lastSeek;
-        if( delta < 300 )
+        if( delta < 100 )
         {
-            window.setTimeout(seekVideo,200);
+            window.setTimeout(seekVideo,100);
             return;
         }
         g_lastSeek = curr_time;
