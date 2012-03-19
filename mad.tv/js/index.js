@@ -246,22 +246,48 @@ function startVideo(in_progress)
 var g_seekOnPlay = false;
 function onVideoReady()
 {
-    g_videoPlayer.addEvent("timeupdate",videoProgress);
-    g_videoPlayer.addEvent("ended",videoEnded);
-    g_videoPlayer.addEvent("durationchange",videoProgress);
+    g_videoPlayer.addEvent("loadstart",videoLoadStart);
     g_videoPlayer.addEvent("play",videoPlayStarted);
+    g_videoPlayer.addEvent("timeupdate",videoTimeUpdate);
+    g_videoPlayer.addEvent("ended",videoEnded);
+    g_videoPlayer.addEvent("durationchange",videoDurationChange);
+    g_videoPlayer.addEvent("progress",videoDownloadProgress);
 
     g_videoPlayer.play();
 }
+function videoLoadStart()
+{
+    seekVideo();
+}
+function videoDownloadProgress()
+{
+    seekVideo();
+}
+function videoTimeUpdate()
+{
+    seekVideo();
+    videoProgress();
+}
+function videoDurationChange()
+{
+    seekVideo();
+    videoProgress();
+}
 function videoPlayStarted()
 {
-    if( g_seekOnPlay !== false )
-        window.setTimeout(seekVideo,100);
+    seekVideo();
 }
+
 function seekVideo()
 {
-    g_videoPlayer.currentTime(g_seekOnPlay);
-    g_seekOnPlay = false;
+    if( g_seekOnPlay !== false )
+    {
+        var pos = g_videoPlayer.currentTime();
+        if( pos >= g_seekOnPlay )
+            g_seekOnPlay = false;
+        else
+            g_videoPlayer.currentTime(g_seekOnPlay);
+    }
 }
 
 function onWindowResize()
