@@ -68,7 +68,7 @@
         file_put_contents($FILE,$json,LOCK_EX);
 
         $duration = $file["duration"];
-        print "Sleeping %d seconds\n\n";
+        print "Sleeping $duration seconds\n\n";
         sleep($duration);
     }
 
@@ -107,7 +107,7 @@
 
     function get_duration($video_file)
     {
-        $output = @shell_exec("/usr/bin/ffmpeg -i ../$video_file");
+        $output = @shell_exec("/usr/bin/ffmpeg -i ../$video_file 2>&1");
         
         preg_match('/Duration: (.*?),/', $output, $matches);
         $duration = $matches[1];
