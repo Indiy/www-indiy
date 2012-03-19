@@ -278,10 +278,20 @@ function videoPlayStarted()
     //seekVideo();
 }
 
+var g_lastSeek = 0;
 function seekVideo()
 {
     if( g_seekOnPlay !== false )
     {
+        var curr_time = new Date().getTime();
+        var delta = curr_time - g_lastSeek;
+        if( delta < 300 )
+        {
+            window.setTimeout(seekVideo,200);
+            return;
+        }
+        g_lastSeek = curr_time;
+    
         var pos = g_videoPlayer.currentTime() + 1;
         if( pos >= g_seekOnPlay )
             g_seekOnPlay = false;
