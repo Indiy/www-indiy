@@ -47,7 +47,7 @@
 
     for( $i = count($history) ; $i < 3 ; ++$i )
     {
-        $file = get_new_file();
+        $file = get_next_file();
         $file["start_time"] = 0;
         print "new history track: " . $file["track"] . "\n";
         
@@ -56,7 +56,7 @@
 
     while(TRUE)
     {
-        $file = get_new_file();
+        $file = get_next_file();
         $file["start_time"] = time();
 
         print "new track: " . $file["track"] . "\n";
@@ -107,12 +107,15 @@
 
     function get_duration($video_file)
     {
-        $output = shell_exec("/usr/bin/ffmpeg -i ../$video_file");
+        $output = @shell_exec("/usr/bin/ffmpeg -i ../$video_file");
         
         preg_match('/Duration: (.*?),/', $output, $matches);
         $duration = $matches[1];
         $duration_array = split(':', $duration);
         $duration = $duration_array[0] * 3600 + $duration_array[1] * 60 + $duration_array[2];
+        
+        print "file: $video_file, duration: $duration\n";
+        
         return intval(floor($duration));
     }
 
