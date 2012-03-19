@@ -29,7 +29,7 @@
         
         $item = array("artist" => $artist,
                       "name" => $name,
-                      "track" => "$artist - $name",
+                      "title" => "$artist - $name",
                       "logo" => "$root_url/media/$logo",
                       "poster" => "$root_url/media/$poster",
                       "video_file" => "$root_url/media/$video_file",
@@ -51,7 +51,7 @@
     {
         $file = get_next_file();
         $file["start_time"] = 0;
-        print "new history track: " . $file["track"] . "\n";
+        print "new history track: " . $file["title"] . "\n";
         
         array_unshift($history,$file);
     }
@@ -61,7 +61,7 @@
         $file = get_next_file();
         $file["start_time"] = time();
 
-        print "new track: " . $file["track"] . "\n";
+        print "new track: " . $file["title"] . "\n";
         
         array_unshift($history,$file);
         $history = array_slice($history,0,20);
@@ -93,7 +93,7 @@
             for( $j = 0 ; $j < $dup_search_len ; ++$j )
             {
                 $h = $history[$j];
-                if( $h["track"] == $next["track"] )
+                if( $h["title"] == $next["title"] )
                 {
                     $found = TRUE;
                     break;
