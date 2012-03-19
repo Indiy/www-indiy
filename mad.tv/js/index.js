@@ -1,6 +1,6 @@
 
-var PROGRESS_BAR_WIDTH = 468;
-var PROGRESS_ROUND_LENGTH = 462;
+var PROGRESS_BAR_WIDTH = 534 - 2;
+var PROGRESS_ROUND_LENGTH = PROGRESS_BAR_WIDTH - 6;
 
 var g_videoHistory = false;
 
@@ -8,13 +8,10 @@ $(document).ready(setupVideoPlayer)
 
 function setupVideoPlayer()
 {
-    loadSteamInfo(startVideoInProgress);
-
-    //showVideo(0);
     $(window).resize(onWindowResize);
-    
-    //$(document).mousemove(showControls);
-    //showControls();
+    loadSteamInfo(startVideoInProgress);
+    $(document).mousemove(showControls);
+    showControls();
     $("#overlay_container").fadeIn();
 }
 var g_controlsShown = false;
@@ -61,6 +58,10 @@ function startVideoInProgress()
 {
     startVideo(true);
 }
+function startVideoFromBegining()
+{
+    startVideo(false);
+}
 
 function mins_secs(secs)
 {
@@ -84,7 +85,7 @@ function videoProgress(a)
     if( duration > 0 )
         var percent = curr_pos/duration;
     var width = percent * PROGRESS_BAR_WIDTH;
-    $('#player .progress .bar').css(width);
+    $('#player .progress .bar').width(width);
     if( width >= PROGRESS_ROUND_LENGTH )
         $('#player .progress .bar').css('border-radius','6px 6px 6px 6px');
     else
@@ -93,7 +94,7 @@ function videoProgress(a)
 }
 function videoEnded()
 {
-    
+    loadSteamInfo(startVideoFromBegining);
 }
 
 var g_playing = true;
@@ -136,7 +137,7 @@ function toggleHistory()
 }
 function showHistory()
 {
-    //hideGenrePicker();
+    hideGenrePicker();
     g_historyShown = true;
     $('#history').fadeIn();
     updateHistory();
@@ -148,11 +149,43 @@ function hideHistory()
 }
 function updateHistory()
 {
-    
+    if( !g_videoHistory )
+        return;
+
+    $('#history .content').empty();
+    for( var i = 1 ; i < Math.min(g_videoHistory.length,4) ; ++i )
+    {
+        var track = g_videoHistory[i];
+        var title = track.title;
+        var duration = mins_secs(track.duration);
+        var love = "";
+        if( title in g_loveMap )
+            love = "love";
+        
+        var html = "";
+        html += "<div class='row'>";
+        html += " <div class='icon'><img src=''></div>";
+        html += " <div class='title'>" + title + "</div>";
+        html += " <div class='length'>" + duration + "</div>";
+        html += " <div id='history_loved_" + i + "' class='loved " + love + "'>";
+        html += "  <div class='love_icon' onclick='toggleLoveHistory(this," + i + ");'>";
+        html += "   <div class='tooltip love_tip'>";
+        html += "    <div class='carrot'></div>";
+        html += "    LOVE";
+        html += "   </div>";
+        html += "   <div class='tooltip unlove_tip'>";
+        html += "    <div class='carrot'></div>";
+        html += "    UNLOVE";
+        html += "   </div>";
+        html += "  </div>";
+        html += " </div>";
+        html += "</div>";
+        $('#history .content').append(html);
+    }
 }
 function showAddVideo()
 {
-    //hideGenrePicker();
+    hideGenrePicker();
     $('#add_video').fadeIn();
 }
 function hideAddVideo()
@@ -161,31 +194,40 @@ function hideAddVideo()
 }
 
 
-
 var g_videoPlayer = false;
+var g_videoPlayerIndex = 0;
 function startVideo(in_progress)
 {
     var h = $('#video_container').height();
     var w = $('#video_container').width();
 
     var video = g_videoHistory[0];
+    var title = video.title;
     var url = video.video_file;
     var url_ogv = url.replace(".mp4",".ogv");
 
-    $('#track_title').text(video.title);
+    $('#track_title').text(title);
+    if( title in g_loveMap )
+        $('#player .heart').addClass('love');
+    else
+        $('#player .heart').removeClass('love');
     
     var w_h = " width='" + w + "' height='" + h + "' ";
     
+    if( g_videoPlayer !== false )
+        g_videoPlayer.pause();
+    
+    var vid_name = "madtv_player_" + g_videoPlayerIndex;
+    g_videoPlayerIndex++;
     var html = '';
-    html += '<video id="my_video_1" ' + w_h + ' class="video-js vjs-default-skin" preload="auto">';
+    html += '<video id="' + vid_name + '" ' + w_h + ' class="video-js vjs-default-skin" preload="auto">';
     html += '<source src="' + url + '" type="video/mp4" />';
     html += '<source src="' + url_ogv + '" type="video/ogg" />';
     html += '</video>';
 
     $('#video_container').empty();
     $('#video_container').html(html);
-    g_videoPlayer = _V_("my_video_1");
-    var seek = 0;
+    g_videoPlayer = _V_(vid_name);
     if( in_progress )
     {
         var time_progress = Math.floor((new Date().getTime())/1000 - video.start_time);
@@ -193,18 +235,33 @@ function startVideo(in_progress)
         if( time_progress > video.duration * 0.9 )
             time_progress = Math.floor(video.duration * 0.9);
             
-        seek = time_progress;
+        g_seekOnPlay = time_progress;
     }
-    g_videoPlayer.ready(function() { onVideoReady(seek); } );
+    else
+    {
+        g_seekOnPlay = false;
+    }
+    g_videoPlayer.ready(function() { onVideoReady(); } );
 }
-
-function onVideoReady(seek)
+var g_seekOnPlay = false;
+function onVideoReady()
 {
     g_videoPlayer.addEvent("timeupdate",videoProgress);
     g_videoPlayer.addEvent("ended",videoEnded);
     g_videoPlayer.addEvent("durationchange",videoProgress);
+    g_videoPlayer.addEvent("play",videoPlayStarted);
 
-    g_videoPlayer.currentTime(seek);
+    g_videoPlayer.play();
+}
+function videoPlayStarted()
+{
+    if( g_seekOnPlay !== false )
+        window.setTimeout(seekVideo,100);
+}
+function seekVideo()
+{
+    g_videoPlayer.currentTime(g_seekOnPlay);
+    g_seekOnPlay = false;
 }
 
 function onWindowResize()
