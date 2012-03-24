@@ -40,12 +40,13 @@ function jPlayerReady()
 {
     changeGenre(g_genre);
 }
-function jPlayerStartMedia()
+function jplayerStartMedia()
 {
     var media = {
         mp3: "http://www.myartistdna.com:8000/stream_" + g_genre
     };
-    $("#jquery_jplayer_1").jPlayer("setMedia",media).jPlayer("play");
+    $("#jquery_jplayer_1").jPlayer("setMedia",media);
+    $("#jquery_jplayer_1").JPlayer("play");
 }
 function jplayerPlay()
 {
@@ -381,7 +382,7 @@ function changeGenre(new_genre)
 {
     hideGenrePicker();
     g_genre = new_genre;
-    jPlayerStartMedia();
+    jplayerStartMedia();
     emptyTrackInfo();
     loadSteamInfo();
 }
