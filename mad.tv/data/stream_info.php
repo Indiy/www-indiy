@@ -15,7 +15,7 @@
     $connect 	= 	mysql_connect($dbhost, $dbusername, $dbpassword);
     mysql_select_db($dbname,$connect) or die ("Could not select database");
     
-    $sql = "SELECT DISTINCT genre FROM videos";
+    $sql = "SELECT * FROM genres ORDER BY `order` ASC";
     $q = mysql_query($sql);
     $genre_list = array();
     while( $row = mysql_fetch_array($q) )

@@ -678,7 +678,7 @@ body {
 #player .genre_picker {
     display: none;
     position: absolute;
-    top: -110px;
+    bottom: 65px;
     left: 615px;
     width: 150px;
     padding: 4px;
@@ -710,6 +710,7 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
     text-shadow: 0px 1px rgba(0,0,0,0.5);
+    text-transform: uppercase;
     border-bottom: 1px solid #2b2b2b;
     cursor: pointer;
 }
