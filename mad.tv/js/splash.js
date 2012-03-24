@@ -73,7 +73,8 @@ function openPlaylist()
     if( !g_playlistOpen )
     {
         g_playlistOpen = true;
-        $('#play_container .item_container').animate({ height: "256px" }, 300);
+        var height = g_genreList.length * 64;
+        $('#play_container .item_container').animate({ height: height + "px" }, 300);
     }
 }
 function closePlaylist()
