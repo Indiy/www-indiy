@@ -44,8 +44,10 @@ function setup_genre_data()
     $q = mysql_query($sql);
     $genre_list = array();
     while( $row = mysql_fetch_array($q) )
-        $g_data[] = $row['stream_name'];
-        
+    {
+        $stream_name = $row['stream_name'];
+        $g_data[$stream_name] = array();
+    }    
     mysql_close();
     
     $json = file_get_contents($FILE);
