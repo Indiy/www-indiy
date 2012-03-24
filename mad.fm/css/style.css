@@ -152,7 +152,7 @@ html {
 .no_touch #player .heart:hover {
     background: transparent url("../images/controls.png") -802px -16px no-repeat;
 }
-.no_touch #player .heart.love {
+#player .heart.love {
     background: transparent url("../images/controls.png") -802px -16px no-repeat;
 }
 .no_touch #player .heart.love:hover {
