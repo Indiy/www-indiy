@@ -3,11 +3,18 @@ var PROGRESS_BAR_WIDTH = 534 - 2;
 var PROGRESS_ROUND_LENGTH = PROGRESS_BAR_WIDTH - 6;
 
 var g_videoHistory = false;
+var g_genreList = ['rock'];
 
 $(document).ready(setupVideoPlayer)
 
 function setupVideoPlayer()
 {
+    var vars = {};
+    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,k,v){vars[k] = v;});
+    
+    if( 'genre' in vars )
+        g_genre = vars['genre'];
+
     $(window).resize(onWindowResize);
     loadSteamInfo(startVideoInProgress);
     $(document).mousemove(showControls);
@@ -41,11 +48,12 @@ function loadSteamInfo(callback)
     jQuery.ajax(
     {
         type: 'GET',
-        url: "http://www.myartistdna.tv/test/data/stream_info.php",
+        url: "http://www.myartistdna.tv/test/data/stream_info.php?genre=" + g_genre,
         dataType: 'json',
         success: function(data) 
         {
-            g_videoHistory = data;
+            g_videoHistory = data.history;
+            g_genreList = data.genre_list;
             callback();
         },
         error: function()
@@ -198,6 +206,8 @@ var g_videoPlayer = false;
 var g_videoPlayerIndex = 0;
 function startVideo(in_progress)
 {
+    updateHistory();
+
     var h = $('#video_container').height();
     var w = $('#video_container').width();
 

@@ -13,9 +13,20 @@ function showGenrePicker()
 {
     if( !g_genrePickerShown )
     {
+        $('#genre_container').empty();
+        for( var i = 0 ; i < g_genreList.length ; ++i )
+        {
+            var g = g_genreList[i];
+            if( g != g_genre )
+            {
+                var html = "<div onclick=\"changeGenre('" + g + "');\">";
+                html += g;
+                html += "</div>";
+                $('#genre_container').append(html);
+            }
+        }
+    
         g_genrePickerShown = true;
-        $('#genre_container div').show();
-        $('#genre_container .' + g_genre).hide();
         $('#player .genre_picker').fadeIn();
         $('#player #tip_genre').addClass("inhibit");
     }
@@ -36,10 +47,9 @@ function changeGenre(new_genre)
     g_genre = new_genre;
     if( g_videoPlayer )
         g_videoPlayer.pause();
-    //$('#video_container').empty();
-    
-    //emptyTrackInfo();
-    //loadSteamInfo();
+    $('#video_container').empty();
+    $('#history .content').empty();
+    loadSteamInfo(startVideoInProgress);
 }
 
 

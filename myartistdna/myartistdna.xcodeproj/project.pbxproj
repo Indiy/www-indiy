@@ -1409,6 +1409,9 @@
 		2DF614061516D29200DBFBC8 /* stream_info.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = stream_info.php; path = data/stream_info.php; sourceTree = "<group>"; };
 		2DF614071516ED4300DBFBC8 /* love.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = love.js; sourceTree = "<group>"; };
 		2DF614081516F53A00DBFBC8 /* genre.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = genre.js; sourceTree = "<group>"; };
+		2DF61FD9151D9A4D00DBFBC8 /* splash.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = splash.html; sourceTree = "<group>"; };
+		2DF61FDB151D9A7D00DBFBC8 /* splash.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = splash.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2DF61FDC151D9B3D00DBFBC8 /* splash.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = splash.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -1603,6 +1606,7 @@
 				2DE8284014D0B84A00A91FCE /* js */,
 				2DE8284414D0C75F00A91FCE /* index.php */,
 				2D9BE7AC15166969008580F2 /* player.html */,
+				2DF61FD9151D9A4D00DBFBC8 /* splash.html */,
 			);
 			name = mad.tv;
 			path = ../mad.tv;
@@ -1620,6 +1624,7 @@
 		2DE8282D14D0B5F300A91FCE /* css */ = {
 			isa = PBXGroup;
 			children = (
+				2DF61FDB151D9A7D00DBFBC8 /* splash.css */,
 				2DE8282E14D0B5F300A91FCE /* style.css */,
 			);
 			path = css;
@@ -1646,6 +1651,7 @@
 				2DE8284114D0B84A00A91FCE /* index.js */,
 				2DF614071516ED4300DBFBC8 /* love.js */,
 				2DF614081516F53A00DBFBC8 /* genre.js */,
+				2DF61FDC151D9B3D00DBFBC8 /* splash.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
