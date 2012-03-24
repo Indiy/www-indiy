@@ -45,8 +45,7 @@ function jplayerStartMedia()
     var media = {
         mp3: "http://www.myartistdna.com:8000/stream_" + g_genre
     };
-    $("#jquery_jplayer_1").jPlayer("setMedia",media);
-    $("#jquery_jplayer_1").JPlayer("play");
+    $("#jquery_jplayer_1").jPlayer("setMedia",media).jPlayer("play");
 }
 function jplayerPlay()
 {
