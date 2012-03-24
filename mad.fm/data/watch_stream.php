@@ -10,35 +10,57 @@ $FILE = "/tmp/mad_fm_genre_data.json";
 
 print "Starting run forever\n";
 
-$g_data = array("rock" => array(),
-                "dance" => array(),
-                "chill" => array(),
-                "bounce" => array(),
-                );
-
-
-$json = file_get_contents($FILE);
-if( $json )
-{
-    print "loading old data\n";
-    $data = json_decode($json,TRUE);
-    foreach( $g_data as $k => $v )
-    {
-        if( $data[$k] )
-            $g_data[$k] = $data[$k];
-    }
-}
-
 while( TRUE )
 {
-    $changed = FALSE;
-    foreach( $g_data as $k => $v )
-        $changed |= get_stream_info($k);
-    if( $changed )
-        write_data();
-    sleep(5);
+    setup_genre_data();
+    for( $i = 0 ; $i < 60*12 ; ++$i )
+    {
+        $changed = FALSE;
+        foreach( $g_data as $k => $v )
+            $changed |= get_stream_info($k);
+        if( $changed )
+            write_data();
+        sleep(5);
+    }
 }
 print "Done done\n";
+
+function setup_genre_data()
+{
+    global $g_data;
+    global $FILE;
+    
+    $g_data = array();
+
+    $dbhost		=	"localhost";
+    $dbusername	=	"madfm_user";
+    $dbpassword	=	"madfm_password";
+    $dbname		=	"madfm";
+    
+    $connect 	= 	mysql_connect($dbhost, $dbusername, $dbpassword);
+    mysql_select_db($dbname,$connect) or die ("Could not select database");
+    
+    $sql = "SELECT * FROM genres ORDER BY `order` ASC";
+    $q = mysql_query($sql);
+    $genre_list = array();
+    while( $row = mysql_fetch_array($q) )
+        $g_data[] = $row['stream_name'];
+        
+    mysql_close();
+    
+    $json = file_get_contents($FILE);
+    if( $json )
+    {
+        print "loading old data\n";
+        $data = json_decode($json,TRUE);
+        foreach( $g_data as $k => $v )
+        {
+            if( $data[$k] )
+                $g_data[$k] = $data[$k];
+        }
+    }
+    print "Found genres: " . implode(', ',$g_data) . "\n";
+}
 
 function get_stream_info($genre)
 {
