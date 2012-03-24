@@ -6,7 +6,7 @@ var g_genreInfo = false;
 var g_streamInfo = false;
 var g_scrollingRight = true;
 var g_lastStreamLoad = 0;
-var g_playing = true;
+var g_playing = false;
 var g_intervalUpdateTrack = false;
 var g_historyShown = false;
 var g_loveMap = {};
@@ -48,11 +48,13 @@ function jplayerStartMedia()
 }
 function jplayerPlay()
 {
+    g_playing = true;
     g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
     $('#player .play').removeClass('paused');
 }
 function jplayerPause()
 {
+    g_playing = false;
     if( g_intervalUpdateTrack !== false )
     {
         window.clearInterval(g_intervalUpdateTrack);
@@ -216,12 +218,10 @@ function playerToggle()
 }
 function playerPlay()
 {
-    g_playing = true;
     $("#jquery_jplayer_1").jPlayer("play");
 }
 function playerPause()
 {
-    g_playing = false;
     $("#jquery_jplayer_1").jPlayer("stop");
 }
 
