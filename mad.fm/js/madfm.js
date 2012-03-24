@@ -1,6 +1,6 @@
 
-var PROGRESS_BAR_WIDTH = 468;
-var PROGRESS_ROUND_LENGTH = 462;
+var PROGRESS_BAR_WIDTH = 534 - 2;
+var PROGRESS_ROUND_LENGTH = PROGRESS_BAR_WIDTH - 6;
 
 var g_genreInfo = false;
 var g_streamInfo = false;
@@ -9,30 +9,59 @@ var g_lastStreamLoad = 0;
 var g_playing = true;
 var g_intervalUpdateTrack = false;
 var g_historyShown = false;
-
 var g_loveMap = {};
-
-function ffmp3Callback(event,value)
-{
-    console.log('event: (' + event + '), value: (' + value + ')');
-}
 
 function onReady()
 {
     var vars = {};
     window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,k,v){vars[k] = v;});
 
+    var config = {
+        solution: "html, flash",
+        ready: jPlayerReady,
+        swfPath: "/swf/",
+        supplied: "mp3",
+        wmode: "window"
+    };
+    $("#jquery_jplayer_1").jPlayer(config)
+    .bind($.jPlayer.event.play,jplayerPlay)
+    .bind($.jPlayer.event.pause,jplayerPause)
+
     if( 'genre' in vars )
         g_genre = vars['genre'];
 
-    changeGenre(g_genre);
-
     loadLoved();
     loadSteamInfo();
-    g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
     window.setInterval(scrollTrackTitle,50);
 }
 $(document).ready(onReady);
+
+function jPlayerReady()
+{
+    changeGenre(g_genre);
+}
+function jplayerStartMedia()
+{
+    var media = {
+        mp3: "http://www.myartistdna.com:8000/stream_" + g_genre
+    };
+    $("#jquery_jplayer_1").jPlayer("setMedia",media);
+    $("#jquery_jplayer_1").JPlayer("play");
+}
+function jplayerPlay()
+{
+    g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
+    $('#player .play').removeClass('paused');
+}
+function jplayerPause()
+{
+    if( g_intervalUpdateTrack !== false )
+    {
+        window.clearInterval(g_intervalUpdateTrack);
+        g_intervalUpdateTrack = false;
+    }
+    $('#player .play').addClass('paused');
+}
 
 function msTime()
 {
@@ -158,10 +187,14 @@ function updateHistory()
 }
 function loadSteamInfo()
 {
+    var url = "/data/stream_info.php";
+    if( window.location.href.indexOf('localhost') >= 0 )
+        url = "http://www.myartistdna.fm/data/stream_info.php";
+
     jQuery.ajax(
     {
         type: 'GET',
-        url: "/data/stream_info.php",
+        url: url,
         dataType: 'json',
         success: function(data) 
         {
@@ -186,28 +219,12 @@ function playerToggle()
 function playerPlay()
 {
     g_playing = true;
-    try 
-    {
-        var player = (document.ffmp3_player) ? document.ffmp3_player : document.getElementById('ffmp3_player');
-        player.playSound();
-    }
-    catch(e) {}
-    $('#player #tip_play_pause span').text('PAUSE');
-    g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
-    $('#player .play').removeClass('paused');
+    changeGenre(g_genre);
 }
 function playerPause()
 {
     g_playing = false;
-    try 
-    {
-        var player = (document.ffmp3_player) ? document.ffmp3_player : document.getElementById('ffmp3_player');
-        player.stopSound();
-    }
-    catch(e) {}
-    $('#player #tip_play_pause span').text('PLAY');
-    window.clearInterval(g_intervalUpdateTrack);
-    $('#player .play').addClass('paused');
+    $("#jquery_jplayer_1").jPlayer("stop");
 }
 
 function toggleHistory()
@@ -365,22 +382,9 @@ function changeGenre(new_genre)
 {
     hideGenrePicker();
     g_genre = new_genre;
-    $('#player_container').empty();
-    
-    var url = "http://myartistdna.fm:8000/stream_" + new_genre;
-    
-    var html = "";
-    html += '<object id="ffmp3_player" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="190" height="62">';
-    html += ' <param name="movie" value="ffmp3-config.swf" />';
-    html += ' <param name="flashvars" value="url=' + url + '&lang=en&codec=mp3&volume=100&autoplay=true&traking=true&jsevents=true&buffering=5&skin=ffmp3-darkconsole.xml&title=MyAritstDNA.fm&welcome=Welcome%20to%20MAD.fm" />';
-    html += '<param name="wmode" value="transparent" />';
-    html += '<param name="allowscriptaccess" value="always" />';
-    html += '<param name="scale" value="noscale" />';
-    html += '<embed name="ffmp3_player" src="ffmp3-config.swf" flashvars="url=' + url + '&lang=en&codec=mp3&volume=100&autoplay=true&traking=true&jsevents=true&buffering=5&skin=ffmp3-darkconsole.xml&title=MyAritstDNA.fm&welcome=Welcome%20to%20MAD.fm" width="190" scale="noscale" height="62" wmode="transparent" allowscriptaccess="always" type="application/x-shockwave-flash" />';
-    html += '</object>';
-    $('#player_container').html(html);
-    
+    jplayerStartMedia();
     emptyTrackInfo();
     loadSteamInfo();
 }
+
 

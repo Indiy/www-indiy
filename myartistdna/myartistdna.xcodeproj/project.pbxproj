@@ -1412,6 +1412,7 @@
 		2DF61FD9151D9A4D00DBFBC8 /* splash.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = splash.html; sourceTree = "<group>"; };
 		2DF61FDB151D9A7D00DBFBC8 /* splash.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = splash.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DF61FDC151D9B3D00DBFBC8 /* splash.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = splash.js; sourceTree = "<group>"; };
+		2DF61FDD151E40CE00DBFBC8 /* jquery.jplayer.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.jplayer.min.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -1428,6 +1429,7 @@
 		2D3EE24C150539FD00A9D171 /* js */ = {
 			isa = PBXGroup;
 			children = (
+				2DF61FDD151E40CE00DBFBC8 /* jquery.jplayer.min.js */,
 				2D3EE24E15053A2800A9D171 /* madfm.js */,
 				2D3EE2A6150C07E800A9D171 /* sprintf.js */,
 				2DF4FB95150EC86C007600CB /* splash.js */,
