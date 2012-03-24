@@ -13,6 +13,9 @@ var g_loveMap = {};
 
 function onReady()
 {
+    if( !('ontouchstart' in document) )
+        $('body').addClass('no_touch');
+
     var vars = {};
     window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,k,v){vars[k] = v;});
 
