@@ -169,7 +169,7 @@ function updateHistory()
         
         var html = "";
         html += "<div class='row'>";
-        html += " <div class='icon'><img src=''></div>";
+        html += " <div class='icon'></div>";
         html += " <div class='title'>" + title + "</div>";
         html += " <div class='length'>" + duration + "</div>";
         html += " <div id='history_loved_" + i + "' class='loved " + love + "'>";
