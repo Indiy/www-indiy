@@ -13,6 +13,9 @@ var g_loveMap = {};
 
 function onReady()
 {
+    if( typeof(g_genreList) == 'undefined' )
+        g_genreList = [];
+
     if( !('ontouchstart' in document) )
         $('body').addClass('no_touch');
 
@@ -201,7 +204,8 @@ function loadSteamInfo()
         dataType: 'json',
         success: function(data) 
         {
-            g_genreInfo = data;
+            g_genreInfo = data['genre_data'];
+            g_genreList = data['genre_list'];
             g_streamInfo = g_genreInfo[g_genre];
             updateTrackInfo();
         },
@@ -365,6 +369,19 @@ function showGenrePicker()
 {
     if( !g_genrePickerShown )
     {
+        $('#genre_container').empty();
+        for( var i = 0 ; i < g_genreList.length ; ++i )
+        {
+            var g = g_genreList[i];
+            if( g.stream_name != g_genre )
+            {
+                var html = "<div onclick=\"changeGenre('" + g.stream_name + "');\">";
+                html += g.genre;
+                html += "</div>";
+                $('#genre_container').append(html);
+            }
+        }
+    
         g_genrePickerShown = true;
         $('#genre_container div').show();
         $('#genre_container .' + g_genre).hide();
