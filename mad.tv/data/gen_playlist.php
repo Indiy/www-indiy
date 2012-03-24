@@ -1,11 +1,17 @@
 <?php
 
-    $FILE = "/tmp/madtv_history_data.json";
+    ignore_user_abort(true);
+    set_time_limit(0);
+    
+    $genre = $argv[1];
+    if( !$genre )
+        $genre = 'rock';
+
+    $FILE = "/tmp/madtv_history_data_$genre.json";
 
     $root_url = "http://www.myartistdna.tv";
 
     //Production 
-    error_reporting(0);
     $dbhost		=	"localhost";
     $dbusername	=	"madtv_user";
     $dbpassword	=	"MyartistDNA!";
@@ -14,7 +20,7 @@
     $connect 	= 	mysql_connect($dbhost, $dbusername, $dbpassword);
     mysql_select_db($dbname,$connect) or die ("Could not select database");
     
-    $sql = "SELECT * FROM videos ORDER BY `order` ASC, `id` ASC";
+    $sql = "SELECT * FROM videos WHERE genre = '$genre'";
     $q = mysql_query($sql);
     $video_list = array();
     while( $row = mysql_fetch_array($q) )
@@ -37,6 +43,8 @@
                       );
         $video_list[] = $item;
     }
+    if( count($video_list) == 0 )
+        die("No videos for genre: $genre");
 
     $history = array();
     $json = file_get_contents($FILE);

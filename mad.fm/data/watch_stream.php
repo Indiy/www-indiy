@@ -1,5 +1,8 @@
 <?
 
+ignore_user_abort(true);
+set_time_limit(0);
+
 $SERVER = 'http://myartistdna.fm:8000'; 
 $STATS_FILE_PREFIX = '/status.xsl?mount=/stream_';
 
