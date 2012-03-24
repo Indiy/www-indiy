@@ -37,9 +37,9 @@ function renderGenreList()
     for( var i = 0 ; i < g_genreList.length ; ++i )
     {
         var g = g_genreList[i];
-        var html = "<a href='player.html?genre=" + g + "'>";
+        var html = "<a href='player.html?genre=" + g.stream_name + "'>";
         html += "<div class='item " + cls + "'>";
-        html += "<div class='label'>I WANT " + g + "</div>";
+        html += "<div class='label'>I WANT " + g.genre + "</div>";
         html += "<div class='icon'></div>";
         html += "</div>";
         html += "</a>";
