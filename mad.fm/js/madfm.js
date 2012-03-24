@@ -31,7 +31,6 @@ function onReady()
         g_genre = vars['genre'];
 
     loadLoved();
-    loadSteamInfo();
     window.setInterval(scrollTrackTitle,50);
 }
 $(document).ready(onReady);
@@ -218,7 +217,7 @@ function playerToggle()
 function playerPlay()
 {
     g_playing = true;
-    changeGenre(g_genre);
+    $("#jquery_jplayer_1").jPlayer("play");
 }
 function playerPause()
 {
