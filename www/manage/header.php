@@ -43,6 +43,10 @@ $(document).ready(function(){
 			$('.heading').removeClass('active').next().slideUp(); //Remove all .heading classes and slide up the immediate next container
 			$(this).toggleClass('active').next().slideDown(); //Add .heading class to clicked trigger and slide down the immediate next container
 		}
+        else
+        {
+            $('.heading').removeClass('active').next().slideUp();
+        }
 		return false; //Prevent the browser jump to the link anchor
 	}); 
 });
