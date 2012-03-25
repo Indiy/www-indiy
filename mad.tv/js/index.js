@@ -6,11 +6,19 @@ var g_videoHistory = false;
 var g_genreList = ['rock'];
 var g_controlsShown = false;
 var g_hideControlsTimeout = false;
+var g_touchDevice = false;
 
 function setupVideoPlayer()
 {
     if( !('ontouchstart' in document) )
+    {
         $('body').addClass('no_touch');
+        g_touchDevice = false;
+    }
+    else
+    {
+        g_touchDevice = true;
+    }
 
     var vars = {};
     window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,k,v){vars[k] = v;});
@@ -121,7 +129,14 @@ function playerPlay()
     g_playing = true;
     try 
     {
-        loadSteamInfo(startVideoInProgress);
+        if( g_touchDevice )
+        {
+            g_videoPlayer.play();
+        }
+        else
+        {
+            loadSteamInfo(startVideoInProgress);
+        }
     }
     catch(e) {}
     //g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
