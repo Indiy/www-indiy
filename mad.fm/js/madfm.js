@@ -46,6 +46,7 @@ function onReady()
         };
         $("#jquery_jplayer_1").jPlayer(config)
         .bind($.jPlayer.event.play,jplayerPlay)
+        .bind($.jPlayer.event.playing,jplayerPlaying)
         .bind($.jPlayer.event.pause,jplayerPause);
     }
 
@@ -73,6 +74,10 @@ function jplayerPlay()
     g_playing = true;
     g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
     $('#player .play').removeClass('paused');
+}
+function jplayerPlaying()
+{
+    console.log("jplayerPlaying");
 }
 function jplayerPause()
 {
