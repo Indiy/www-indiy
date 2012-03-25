@@ -447,6 +447,7 @@ function changeGenre(new_genre)
     if( g_flash )
     {
         embedFlash();
+        jplayerPlay();
     }
     else
     {
