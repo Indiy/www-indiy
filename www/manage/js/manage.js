@@ -467,7 +467,7 @@ function onSongChange()
     var fn_div = $('#song_audio').parent().parent().children('.filename');
     if( fn_div.html().indexOf('<button>') == -1 )
     {
-        fn_div.append("<button onclick='clearSongElement();'></button>");
+        fn_div.append("<button onclick='return clearSongElement();'></button>");
     }
 }
 function clearSongElement()
