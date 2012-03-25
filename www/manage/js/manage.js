@@ -382,6 +382,11 @@ function checkElementSize(file,size_limit,error_string)
         }
     }
 }
+function checkFileExtensions(element_id,extensions,error_string)
+{
+    var file = $('#' + element_id)[0];
+    checkElementFileExtensions(file,extensions,error_string);
+}
 function onVideoChange()
 {
     checkFileExtensions('video_file',['mov','mp4'],"Please upload video in MP4 or MOV format.");
