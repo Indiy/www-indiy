@@ -38,6 +38,8 @@ function onReady()
 
     loadLoved();
     window.setInterval(scrollTrackTitle,50);
+    
+    $("img").error(function() { $(this).hide(); });
 }
 $(document).ready(onReady);
 
@@ -170,9 +172,11 @@ function updateHistory()
         if( title in g_loveMap )
             love = "love";
         
+        var img_url = "/media/" + title.replace(/ /g,"_"); 
+        var img = "<img src='" + img_url + "'>";
         var html = "";
         html += "<div class='row'>";
-        html += " <div class='icon'></div>";
+        html += " <div class='icon'>" + img + "</div>";
         html += " <div class='title'>" + title + "</div>";
         html += " <div class='length'>" + duration + "</div>";
         html += " <div id='history_loved_" + i + "' class='loved " + love + "'>";
