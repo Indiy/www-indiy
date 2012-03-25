@@ -466,14 +466,16 @@ function onSongChange()
     checkFileExtensions('song_audio',['mp3'],"Please upload songs in MP3 format.");
     var fn_div = $('#song_audio').parent().parent().children('.filename');
     if( fn_div.html().indexOf('<button>') == -1 )
-    {
         fn_div.append("<button onclick='return clearSongElement();'></button>");
-    }
+    else
+        fn_div.children("button").show();
 }
 function clearSongElement()
 {
     var html = $('#song_audio').parent().html();
     $('#song_audio').parent().html(html);
+    var fn_div = $('#song_audio').parent().parent().children('.filename');
+    fn_div.children("button").hide();
     return false;
 }
 
