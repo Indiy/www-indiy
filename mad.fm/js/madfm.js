@@ -15,7 +15,14 @@ var g_flash = false;
 
 function ffmp3Callback(event,value)
 {
-    console.log('event: (' + event + '), value: (' + value + ')');
+    if( event == 'buffering' )
+    {
+        jplayerPlay();
+    }
+    else if( event == 'play' )
+    {
+        jplayerPlaying();
+    }
 }
 
 function onReady()
@@ -72,12 +79,12 @@ function jplayerStartMedia()
 function jplayerPlay()
 {
     g_playing = true;
-    g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
     $('#player .play').removeClass('paused');
+    $('#track_title').text("BUFFERING STREAM");
 }
 function jplayerPlaying()
 {
-    console.log("jplayerPlaying");
+    g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
 }
 function jplayerPause()
 {
@@ -256,7 +263,6 @@ function playerPlay()
             player.playSound();
         }
         catch(e) {}
-        jplayerPlay();
     }
     else
     {
