@@ -2,9 +2,17 @@
 
 function onSplashReady()
 {
-    $('#play_container').mouseover(mouseoverPlaylist);
-    $('#play_container').mouseout(mouseoutPlaylist);
-    
+    if( !('ontouchstart' in document) )
+    {
+        $('body').addClass('no_touch');
+        $('#play_container').mouseover(mouseoverPlaylist);
+        $('#play_container').mouseout(mouseoutPlaylist);
+    }
+    else
+    {
+        mouseoverPlaylist();
+    }
+        
     if( typeof(g_genreList) == "undefined" )
         loadGenreList();
     else
