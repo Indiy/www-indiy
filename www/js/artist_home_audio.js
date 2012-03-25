@@ -299,8 +299,8 @@ function resizeBackgrounds()
 
             var holder = $('#image_holder_' + i + ' div');
             var image = $('#image_holder_' + i + ' div img');
-            var img_width = image.width();
-            var img_height = image.height();
+            var img_width = song.image_data.width;
+            var img_height = song.image_data.height;
             if( img_height > 0 && img_width > 0 )
             {
                 var img_ratio = img_width/img_height;
