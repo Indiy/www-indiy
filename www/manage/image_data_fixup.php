@@ -21,7 +21,7 @@
         $total++;
         $id = $row['id'];
         $image = $row['image'];
-        $image_path = "../artist/images/$image";
+        $image_path = "../artists/images/$image";
         $data = getimagesize($image_path);
         if( count($data) > 3 )
         {
