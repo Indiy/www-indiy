@@ -950,4 +950,26 @@
             $tags .= ",";
         $tags .= $s;
     }
+
+    function get_image_data($image_path)
+    {
+        $data = getimagesize($image_path);
+        if( count($data) > 3 )
+        {
+            $width = $data[0];
+            $height = $data[1];
+            if( $width > 0 && $height > 0 )
+            {
+                $image_data = array("width" => $width,
+                                    "height" => $height);
+                
+                $json = json_encode($image_data);
+                return $json;
+            }
+        }
+        return NULL;
+    }
+
 ?>
+
+
