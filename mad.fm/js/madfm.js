@@ -23,9 +23,9 @@ function onReady()
     window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,k,v){vars[k] = v;});
 
     var config = {
-        solution: "html, flash",
+        solution: "flash",
         ready: jPlayerReady,
-        swfPath: "/swf/",
+        swfPath: "/js/Jplayer.swf",
         supplied: "mp3",
         wmode: "window"
     };
