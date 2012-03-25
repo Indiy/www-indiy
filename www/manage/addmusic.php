@@ -19,6 +19,7 @@
 			$old_sound = $row["audio"];
             $old_product_id = $row["product_id"];
             $upload_audio_filename = $row["upload_audio_filename"];
+            $old_image_data = $row["image_data"];
 		}
 		
 		extract($_REQUEST);
@@ -35,24 +36,30 @@
         $remove_song = $_POST["remove_song"] == 'true';
         $bg_style = $_POST["bg_style"];
         $audio_tags = $_POST["tags"];
+        $image_data = $old_image_data;
 		
         if( $remove_song )
             $old_sound = '';
         if( $remove_image )
             $old_logo = '';
+
+        $audio_logo = $old_logo;
         
 		// Upload Image
 		if(!empty($_FILES["logo"]["name"])){
 			if (is_uploaded_file($_FILES["logo"]["tmp_name"])) {
-				$audio_logo = $artistid."_".strtolower(rand(11111,99999)."_".basename(cleanup($_FILES["logo"]["name"])));
-				@move_uploaded_file($_FILES['logo']['tmp_name'], '../artists/images/' . $audio_logo);
-			} else {
-				if ($old_logo != $audio_logo) {
-					$audio_logo = $old_logo;
-				}
+                $image_data = get_image_data($_FILES["logo"]["tmp_name"]);
+                if( $image_data != NULL )
+                {
+                    $audio_logo = $artistid."_".strtolower(rand(11111,99999)."_".basename(cleanup($_FILES["logo"]["name"])));
+                    @move_uploaded_file($_FILES['logo']['tmp_name'], '../artists/images/' . $audio_logo);
+                }
+                else
+                {
+                    $image_data = $old_image_data;
+                    $postedValues['image_error'] = "Image format not recognized.";
+                }
 			}
-		}else{
-			$audio_logo = $old_logo;
 		}
 		//echo "{'img':'<img src=artists/images/$audio_logo>'}";
 		
@@ -144,7 +151,8 @@
                         "product_id" => $product_id,
                         "upload_audio_filename" => $upload_audio_filename,
                         "bg_style" => $bg_style,
-                        "tags" => $audio_tags
+                        "tags" => $audio_tags,
+                        "image_data" => $image_data,
                         );
 		
 		if ($_POST["id"] != "") 
