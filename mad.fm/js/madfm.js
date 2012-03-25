@@ -39,7 +39,10 @@ function onReady()
     loadLoved();
     window.setInterval(scrollTrackTitle,50);
     
-    $("img").error(function() { $(this).hide(); });
+    $("img").error(function() 
+    { 
+        $(this).hide(); 
+    });
 }
 $(document).ready(onReady);
 
