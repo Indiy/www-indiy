@@ -86,6 +86,7 @@ function jplayerPlay()
 function jplayerPlaying()
 {
     g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
+    loadSteamInfo();
 }
 function stopUpdateTrack()
 {
@@ -459,6 +460,7 @@ function hideGenrePicker()
 function changeGenre(new_genre)
 {
     hideGenrePicker();
+    emptyTrackInfo();
     g_genre = new_genre;
     if( g_flash )
     {
@@ -469,8 +471,6 @@ function changeGenre(new_genre)
     {
         jplayerStartMedia();
     }
-    emptyTrackInfo();
-    loadSteamInfo();
 }
 
 function embedFlash()
