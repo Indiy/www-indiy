@@ -10,9 +10,17 @@ var g_playing = false;
 var g_intervalUpdateTrack = false;
 var g_historyShown = false;
 var g_loveMap = {};
+var g_genre = 'rock';
+var g_flash = false;
+
+function ffmp3Callback(event,value)
+{
+    console.log('event: (' + event + '), value: (' + value + ')');
+}
 
 function onReady()
 {
+    g_flash = swfobject.hasFlashPlayerVersion("9.0.0");
     if( typeof(g_genreList) == 'undefined' )
         g_genreList = [];
 
@@ -22,32 +30,34 @@ function onReady()
     var vars = {};
     window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,k,v){vars[k] = v;});
 
-    var config = {
-        solution: "html, flash",
-        preload: "none",
-        ready: jPlayerReady,
-        swfPath: "/swf/Jplayer.swf",
-        supplied: "mp3",
-        wmode: "window"
-    };
-    $("#jquery_jplayer_1").jPlayer(config)
-    .bind($.jPlayer.event.play,jplayerPlay)
-    .bind($.jPlayer.event.pause,jplayerPause)
+    if( g_flash )
+    {
+        jplayerReady();
+    }
+    else
+    {
+        var config = {
+            solution: "html, flash",
+            preload: "none",
+            ready: jplayerReady,
+            swfPath: "/swf/Jplayer.swf",
+            supplied: "mp3",
+            wmode: "window"
+        };
+        $("#jquery_jplayer_1").jPlayer(config)
+        .bind($.jPlayer.event.play,jplayerPlay)
+        .bind($.jPlayer.event.pause,jplayerPause);
+    }
 
     if( 'genre' in vars )
         g_genre = vars['genre'];
 
     loadLoved();
     window.setInterval(scrollTrackTitle,50);
-    
-    $("img").error(function() 
-    { 
-        $(this).hide(); 
-    });
 }
 $(document).ready(onReady);
 
-function jPlayerReady()
+function jplayerReady()
 {
     changeGenre(g_genre);
 }
@@ -233,11 +243,37 @@ function playerToggle()
 }
 function playerPlay()
 {
-    $("#jquery_jplayer_1").jPlayer("play");
+    if( g_flash )
+    {
+        try 
+        {
+            var player = (document.ffmp3_player) ? document.ffmp3_player : document.getElementById('ffmp3_player');
+            player.playSound();
+        }
+        catch(e) {}
+        jplayerPlay();
+    }
+    else
+    {
+        $("#jquery_jplayer_1").jPlayer("play");
+    }
 }
 function playerPause()
 {
-    $("#jquery_jplayer_1").jPlayer("stop");
+    if( g_flash )
+    {
+        try 
+        {
+            var player = (document.ffmp3_player) ? document.ffmp3_player : document.getElementById('ffmp3_player');
+            player.stopSound();
+        }
+        catch(e) {}
+        jplayerPause();
+    }
+    else
+    {
+        $("#jquery_jplayer_1").jPlayer("stop");
+    }
 }
 
 function toggleHistory()
@@ -408,9 +444,33 @@ function changeGenre(new_genre)
 {
     hideGenrePicker();
     g_genre = new_genre;
-    jplayerStartMedia();
+    if( g_flash )
+    {
+        embedFlash();
+    }
+    else
+    {
+        jplayerStartMedia();
+    }
     emptyTrackInfo();
     loadSteamInfo();
 }
 
+function embedFlash()
+{
+    $('#player_container').empty();
+    
+    var url = "http://myartistdna.fm:8000/stream_" + g_genre;
+    
+    var html = "";
+    html += '<object id="ffmp3_player" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="190" height="62">';
+    html += ' <param name="movie" value="ffmp3-config.swf" />';
+    html += ' <param name="flashvars" value="url=' + url + '&lang=en&codec=mp3&volume=100&autoplay=true&traking=true&jsevents=true&buffering=5&skin=ffmp3-darkconsole.xml&title=MyAritstDNA.fm&welcome=Welcome%20to%20MAD.fm" />';
+    html += '<param name="wmode" value="transparent" />';
+    html += '<param name="allowscriptaccess" value="always" />';
+    html += '<param name="scale" value="noscale" />';
+    html += '<embed name="ffmp3_player" src="ffmp3-config.swf" flashvars="url=' + url + '&lang=en&codec=mp3&volume=100&autoplay=true&traking=true&jsevents=true&buffering=5&skin=ffmp3-darkconsole.xml&title=MyAritstDNA.fm&welcome=Welcome%20to%20MAD.fm" width="190" scale="noscale" height="62" wmode="transparent" allowscriptaccess="always" type="application/x-shockwave-flash" />';
+    html += '</object>';
+    $('#player_container').html(html);
+}
 
