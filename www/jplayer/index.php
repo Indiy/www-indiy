@@ -158,7 +158,8 @@ else
         
         append_tags($meta_keywords,$video["tags"]);
         
-        $video_list[$video_id] = array( 'video_file' => trueSiteUrl() . '/vid/' . $video['video'],
+        $video_list[$video_id] = array( 'id' => $video[id],
+                                        'video_file' => trueSiteUrl() . '/vid/' . $video['video'],
                                         'name' => $video['name'],
                                         'image_file' => trueSiteUrl() . '/artists/images/' . $video['image']);
     }
@@ -262,8 +263,8 @@ var g_productList = <?=$product_list_json;?>;
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/js/string.utils.js"  type="text/javascript"></script>
 
-<script src="/js/swfobject.js"  type="text/javascript"></script>
 <script src="/js/jquery.jplayer.js" type="text/javascript"></script> 
 
 <script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
