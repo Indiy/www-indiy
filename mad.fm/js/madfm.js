@@ -176,7 +176,7 @@ function updateHistory()
             love = "love";
         
         var img_url = "/media/" + title.replace(/ /g,"_") + ".png";  
-        var img = "<img src='" + img_url + "'>";
+        var img = "<img onerror='$(this).hide();' src='" + img_url + "'>";
         var html = "";
         html += "<div class='row'>";
         html += " <div class='icon'>" + img + "</div>";
