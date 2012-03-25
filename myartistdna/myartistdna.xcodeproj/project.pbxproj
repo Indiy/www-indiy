@@ -1413,6 +1413,7 @@
 		2DF61FDB151D9A7D00DBFBC8 /* splash.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = splash.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DF61FDC151D9B3D00DBFBC8 /* splash.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = splash.js; sourceTree = "<group>"; };
 		2DF61FDD151E40CE00DBFBC8 /* jquery.jplayer.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.jplayer.min.js; sourceTree = "<group>"; };
+		2DF61FE2151ED3DE00DBFBC8 /* string.utils.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = string.utils.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -2896,6 +2897,7 @@
 				2DD94A2F14C384A9002B1259 /* swipe.js */,
 				2D34E23614ABFF15004473F9 /* video.js */,
 				2DD94A3014C384A9002B1259 /* ZeroClipboard.js */,
+				2DF61FE2151ED3DE00DBFBC8 /* string.utils.js */,
 			);
 			path = js;
 			sourceTree = "<group>";

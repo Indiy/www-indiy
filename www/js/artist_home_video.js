@@ -51,13 +51,17 @@ function showVideoRow(page)
 
 function showVideo(n)
 {
+    var video = g_videoList[n];
+
+    var hash = '#song_id={0}&video_id={1}'.format(g_currentSongId,video.id);
+    window.location.hash = hash;
+
     $('#jquery_jplayer').jPlayer("pause");
     $('#video_player').show();
 
     var h = $('#video_player').height();
     $('#player_body').css('height',h-60);
 
-    var video = g_videoList[n];
     var video_file = video.video_file;
     var video_file_ogv = video_file.replace(".mp4",".ogv");
     var poster = video.image_file;
@@ -103,6 +107,8 @@ function setupVideoJS()
 function closeVideo()
 {
     $('#video_player').fadeOut(300);
+    var hash = '#song_id={0}'.format(g_currentSongId);
+    window.location.hash = hash;
     try 
     {
         if( g_videoPlayer )
