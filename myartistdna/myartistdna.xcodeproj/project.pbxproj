@@ -1414,6 +1414,7 @@
 		2DF61FDC151D9B3D00DBFBC8 /* splash.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = splash.js; sourceTree = "<group>"; };
 		2DF61FDD151E40CE00DBFBC8 /* jquery.jplayer.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.jplayer.min.js; sourceTree = "<group>"; };
 		2DF61FE2151ED3DE00DBFBC8 /* string.utils.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = string.utils.js; sourceTree = "<group>"; };
+		2DF61FE3151F946F00DBFBC8 /* image_data_fixup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = image_data_fixup.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -3395,6 +3396,7 @@
 				2DF4AA60147A058500CA819B /* download_newsletter.php */,
 				2D6DF95314BA62A900D0750E /* mad_newsletter.php */,
 				2D3ED6D41502D5A400A9D171 /* delete_account.php */,
+				2DF61FE3151F946F00DBFBC8 /* image_data_fixup.php */,
 			);
 			path = manage;
 			sourceTree = "<group>";
