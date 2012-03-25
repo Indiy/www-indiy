@@ -120,6 +120,7 @@ else
                       "product_id" => $music_product_id,
                       "loaded" => FALSE,
                       "listens" => $music_listens,
+                      "image_data" => json_decode($music['image_data']),
                       );
         $music_list[] = $item;
         
