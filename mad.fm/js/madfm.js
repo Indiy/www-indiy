@@ -25,7 +25,7 @@ function onReady()
     var config = {
         solution: "flash",
         ready: jPlayerReady,
-        swfPath: "/js/Jplayer.swf",
+        swfPath: "/swf/Jplayer.swf",
         supplied: "mp3",
         wmode: "window"
     };
