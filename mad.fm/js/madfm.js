@@ -12,6 +12,7 @@ var g_historyShown = false;
 var g_loveMap = {};
 var g_genre = 'rock';
 var g_flash = false;
+var g_buffering = false;
 
 function ffmp3Callback(event,value)
 {
@@ -79,12 +80,14 @@ function jplayerStartMedia()
 }
 function jplayerPlay()
 {
+    g_buffering = true;
     g_playing = true;
     $('#player .play').removeClass('paused');
     $('#track_title').text("BUFFERING STREAM");
 }
 function jplayerPlaying()
 {
+    g_buffering = false;
     g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
     loadSteamInfo();
 }
@@ -136,7 +139,10 @@ function updateTrackInfo()
 {
     if( !g_streamInfo )
         return;
-    
+ 
+    if( g_buffering )
+        return;
+       
     var track = g_streamInfo['history'][0];
     var title = titleFromTrack(track);
     
