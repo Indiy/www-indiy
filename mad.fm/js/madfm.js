@@ -39,7 +39,7 @@ function onReady()
         var config = {
             solution: "html, flash",
             preload: "none",
-            ready: jPlayerReady,
+            ready: jplayerReady,
             swfPath: "/swf/Jplayer.swf",
             supplied: "mp3",
             wmode: "window"
@@ -57,7 +57,7 @@ function onReady()
 }
 $(document).ready(onReady);
 
-function jPlayerReady()
+function jplayerReady()
 {
     changeGenre(g_genre);
 }
