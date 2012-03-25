@@ -38,6 +38,8 @@ function onReady()
 
     var vars = {};
     window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,k,v){vars[k] = v;});
+    if( 'genre' in vars )
+        g_genre = vars['genre'];
 
     if( g_flash )
     {
@@ -58,9 +60,6 @@ function onReady()
         .bind($.jPlayer.event.playing,jplayerPlaying)
         .bind($.jPlayer.event.pause,jplayerPause);
     }
-
-    if( 'genre' in vars )
-        g_genre = vars['genre'];
 
     loadLoved();
     window.setInterval(scrollTrackTitle,50);

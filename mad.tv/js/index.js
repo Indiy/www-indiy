@@ -4,11 +4,14 @@ var PROGRESS_ROUND_LENGTH = PROGRESS_BAR_WIDTH - 6;
 
 var g_videoHistory = false;
 var g_genreList = ['rock'];
-
-$(document).ready(setupVideoPlayer)
+var g_controlsShown = false;
+var g_hideControlsTimeout = false;
 
 function setupVideoPlayer()
 {
+    if( !('ontouchstart' in document) )
+        $('body').addClass('no_touch');
+
     var vars = {};
     window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,k,v){vars[k] = v;});
     
@@ -21,8 +24,8 @@ function setupVideoPlayer()
     showControls();
     $("#overlay_container").fadeIn();
 }
-var g_controlsShown = false;
-var g_hideControlsTimeout = false;
+$(document).ready(setupVideoPlayer);
+
 function showControls()
 {
     if( !g_controlsShown )
