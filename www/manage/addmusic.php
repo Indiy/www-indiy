@@ -276,7 +276,7 @@ function onSongRemove()
     if( result )
     {
         g_removeSong = true;
-        $('.filename').hide();
+        $('#song_filename_container').empty();
     }
     return false;
 }
@@ -287,7 +287,7 @@ function onImageRemove()
     if( result )
     {
         g_removeImage = true;
-        $('.image_image').hide();
+        $('#image_filename_container').hide();
     }
     return false;
 }
@@ -340,7 +340,7 @@ function clickMadStore()
             <div class='left_label'>MP3 File <span id='tip_mp3' class='tooltip'>(?)</span></div>
             <div class='right_file_filename'>
                 <span><input id='song_audio' type="file" name="audio" onchange='onSongChange();'/></span>
-                <div class='filename'><?=$audio_html;?></div>
+                <div id='song_filename_container' class='filename'><?=$audio_html;?></div>
             </div>
         </div>
         <div class='input_container' style='height: 50px;'>
@@ -350,7 +350,7 @@ function clickMadStore()
             </div>
             <div class='right_file_filename'>
                 <input id='song_image' type="file" name="logo" onchange='onImageChange(this);' />
-                <div class='filename'>(For best results use 1200 x 800 size photos)</div>
+                <div id='image_filename_container' class='filename'>(For best results use 1200 x 800 size photos)</div>
             </div>
         </div>
         <div class='input_container'>
