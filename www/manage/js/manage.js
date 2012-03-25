@@ -464,6 +464,16 @@ String.prototype.endsWith = function(suffix) {
 function onSongChange()
 {
     checkFileExtensions('song_audio',['mp3'],"Please upload songs in MP3 format.");
+    var fn_div = $('#song_audio').parent().parent().children('.filename');
+    if( fn_div.html().indexOf('<button>') == -1 )
+    {
+        fn_div.append("<button onclick='clearSongElement();'></button>");
+    }
+}
+function clearSongElement()
+{
+    var html = $('#song_audio').parent().html();
+    $('#song_audio').parent().html(html);
 }
 
 function onSocializePublish()
