@@ -11,10 +11,14 @@
     echo "<html><body><pre>\n";
     
     $q = "SELECT * FROM mydna_musicplayer_audio WHERE image_data IS NULL";
-    $rows = mf(mq($q));
+    $image_q = mq($q);
 
-    for( $rows as $row )
+    $total = 0;
+    $good = 0;
+
+    while( $row = mf($image_q) )
     {
+        $total++;
         $id = $row['id'];
         $image = $row['image'];
         $image_path = "../artist/images/$image";
@@ -34,6 +38,7 @@
                              array("image_data" => $json),
                              "id",$id);
                 print "image: $image, w: $width, h: $height\n";
+                $good++;
             }
             else
             {
@@ -44,8 +49,10 @@
         {
             print "bad image: $image??\n";
         }
-        
     }
+    
+    print "total: $total, good: $good\n";
+    print "done done\n\n";
     
 ?>
 
