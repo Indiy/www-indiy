@@ -17,6 +17,7 @@ function ffmp3Callback(event,value)
 {
     if( event == 'buffering' )
     {
+        stopUpdateTrack();
         jplayerPlay();
     }
     else if( event == 'play' )
@@ -86,14 +87,18 @@ function jplayerPlaying()
 {
     g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
 }
-function jplayerPause()
+function stopUpdateTrack()
 {
-    g_playing = false;
     if( g_intervalUpdateTrack !== false )
     {
         window.clearInterval(g_intervalUpdateTrack);
         g_intervalUpdateTrack = false;
     }
+}
+function jplayerPause()
+{
+    g_playing = false;
+    stopUpdateTrack();
     $('#player .play').addClass('paused');
 }
 
