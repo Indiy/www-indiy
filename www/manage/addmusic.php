@@ -339,7 +339,7 @@ function clickMadStore()
         <div class='input_container' style='height: 50px;'>
             <div class='left_label'>MP3 File <span id='tip_mp3' class='tooltip'>(?)</span></div>
             <div class='right_file_filename'>
-                <input id='song_audio' type="file" name="audio" onchange='onSongChange();'/>
+                <span><input id='song_audio' type="file" name="audio" onchange='onSongChange();'/></span>
                 <div class='filename'><?=$audio_html;?></div>
             </div>
         </div>
