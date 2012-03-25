@@ -354,11 +354,11 @@ function clickMadStore()
         <div class='input_container' style='height: 50px;'>
             <div class='left_image_label'>
                 <div class='image_label'>Image <span id='tip_image' class='tooltip'>(?)</span><span class='required'>*</span></div>
-                <div class='image_image'><?=$image_html;?></div>
+                <div id='image_filename_container' class='image_image'><?=$image_html;?></div>
             </div>
             <div class='right_file_filename'>
                 <input id='song_image' type="file" name="logo" onchange='onImageChange(this);' />
-                <div id='image_filename_container' class='filename'>(For best results use 1200 x 800 size photos)</div>
+                <div class='filename'>(For best results use 1200 x 800 size photos)</div>
             </div>
         </div>
         <div class='input_container'>
