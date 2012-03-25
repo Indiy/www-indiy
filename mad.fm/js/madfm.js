@@ -172,7 +172,7 @@ function updateHistory()
         if( title in g_loveMap )
             love = "love";
         
-        var img_url = "/media/" + title.replace(/ /g,"_"); 
+        var img_url = "/media/" + title.replace(/ /g,"_") + ".png";  
         var img = "<img src='" + img_url + "'>";
         var html = "";
         html += "<div class='row'>";
