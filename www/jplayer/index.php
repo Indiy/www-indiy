@@ -334,19 +334,11 @@ if( 'song_id' in g_anchor_map )
     }
 }
 
-var g_currentVideoIndex = false;
+var g_currentVideoId = false;
 if( 'video_id' in g_anchor_map )
 {
     var video_id = g_anchor_map['video_id'];
-    for( var i = 0 ; i < g_videoList.length ; ++i )
-    {
-        var video = g_videoList[i];
-        if( video.id == video_id )
-        {
-            g_currentVideoIndex = i;
-            break;
-        }
-    }
+    g_currentVideoId = video_id;
 }
 
 
