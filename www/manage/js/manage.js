@@ -474,6 +474,7 @@ function clearSongElement()
 {
     var html = $('#song_audio').parent().html();
     $('#song_audio').parent().html(html);
+    return false;
 }
 
 function onSocializePublish()
