@@ -108,7 +108,7 @@ function videoEnded()
     loadSteamInfo(startVideoFromBegining);
 }
 
-var g_playing = true;
+var g_playing = false;
 function playerToggle()
 {
     if( g_playing )
@@ -288,7 +288,8 @@ function videoDurationChange()
 }
 function videoPlayStarted()
 {
-    //seekVideo();
+    g_playing = true;
+    $('#player .play').removeClass('paused');
 }
 
 var g_lastSeek = 0;
