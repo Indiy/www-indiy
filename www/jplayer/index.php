@@ -334,18 +334,21 @@ if( 'song_id' in g_anchor_map )
     }
 }
 
-String.prototype.endsWith = function(suffix) {
-    return this.indexOf(suffix, this.length - suffix.length) !== -1;
-};
-String.prototype.format = function() {
-    var args = arguments;
-    return this.replace(/{(\d+)}/g, function(match, number) { 
-                        return typeof args[number] != 'undefined'
-                        ? args[number]
-                        : '{' + number + '}'
-                        ;
-                        });
-};            
+var g_currentVideoIndex = false;
+if( 'video_id' in g_anchor_map )
+{
+    var video_id = g_anchor_map['video_id'];
+    for( var i = 0 ; i < g_videoList.length ; ++i )
+    {
+        var video = g_videoList[i];
+        if( video.id == video_id )
+        {
+            g_currentVideoIndex = i;
+            break;
+        }
+    }
+}
+
 
 </script> 
     </head>

@@ -457,6 +457,12 @@ function playListChange( index )
         $('#playlist .lb-wrap').scrollTop(pi_scroll_top + pi_rel_top - pi_scroll_height);
     }
     
+    if( g_currentVideoIndex !== false )
+    {
+        showVideo(g_currentVideoIndex);
+        g_currentVideoIndex = false;
+    }
+    
 }
 function songVote(vote)
 {
