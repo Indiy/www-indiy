@@ -29,9 +29,16 @@ function setupVideoPlayer()
 
     $(window).resize(onWindowResize);
     loadSteamInfo(startVideoInProgress);
-    $(document).mousemove(showControls);
+    if( g_touchDevice )
+    {
+        $(document).on("touchstart",showControls);
+        $(document).on("touchend",timeoutControls);
+    }
+    else
+    {
+        $(document).mousemove(showAndTimeoutControls);
+    }
     showControls();
-    $("#overlay_container").fadeIn();
 }
 $(document).ready(setupVideoPlayer);
 
@@ -42,6 +49,10 @@ function showControls()
         g_controlsShown = true;
         $("#overlay_container").fadeIn();
     }
+}
+function showAndTimeoutControls()
+{
+    showControls();
     timeoutControls();
 }
 function timeoutControls()
