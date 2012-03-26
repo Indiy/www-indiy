@@ -103,7 +103,7 @@ function playerPlay()
     g_playing = true;
     try 
     {
-        if( g_touchDevice )
+        if( true || g_touchDevice )
         {
             g_videoPlayer[0].play();
         }
@@ -272,7 +272,7 @@ function onVideoReady()
     g_videoPlayer.on("durationchange",videoDurationChange);
     g_videoPlayer.on("progress",videoDownloadProgress);
 
-    g_videoPlayer[0].play();
+    //g_videoPlayer[0].play();
 }
 function videoLoadStart()
 {
