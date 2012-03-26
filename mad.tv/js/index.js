@@ -268,7 +268,7 @@ function createVideoTagVideoJS()
     var html = '';
     html += '<video id="madtv_player" ' + w_h + ' class="video-js vjs-default-skin" preload="auto">';
     html += '<source src="' + url + '" type="video/mp4" />';
-    //html += '<source src="' + url_ogv + '" type="video/ogg" />';
+    html += '<source src="' + url_ogv + '" type="video/ogg" />';
     html += '</video>';
     
     $('#video_container').empty();
@@ -328,7 +328,8 @@ function updateVideoElement(delay_play)
     else
     {
         var media = [
-             { type: "video/mp4", src: url }
+             { type: "video/mp4", src: url },
+             { type: "video/ogg", src: url_ogv }
         ];
         g_videoPlayer.src(media);
         g_videoPlayer.play();
