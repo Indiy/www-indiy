@@ -221,7 +221,7 @@ function startVideo(in_progress)
 
     $('#video_container').empty();
     $('#video_container').html(html);
-    g_videoPlayer = _V_(vid_name);
+    g_videoPlayer = $("video");
     if( in_progress )
     {
         var time_progress = Math.floor((new Date().getTime())/1000 - video.start_time);
@@ -258,21 +258,21 @@ function updateVideoElement()
          { type: "video/mp4", src: url },
          { type: "video/ogg", src: url_ogv }        
     ];
-    g_videoPlayer.src(media);
-    g_videoPlayer.play();
+    g_videoPlayer.attr('src',url);
+    g_videoPlayer[0].play();
 }
 
 var g_seekOnPlay = false;
 function onVideoReady()
 {
-    g_videoPlayer.addEvent("loadstart",videoLoadStart);
-    g_videoPlayer.addEvent("play",videoPlayStarted);
-    g_videoPlayer.addEvent("timeupdate",videoTimeUpdate);
-    g_videoPlayer.addEvent("ended",videoEnded);
-    g_videoPlayer.addEvent("durationchange",videoDurationChange);
-    g_videoPlayer.addEvent("progress",videoDownloadProgress);
+    g_videoPlayer.on("loadstart",videoLoadStart);
+    g_videoPlayer.on("play",videoPlayStarted);
+    g_videoPlayer.on("timeupdate",videoTimeUpdate);
+    g_videoPlayer.on("ended",videoEnded);
+    g_videoPlayer.on("durationchange",videoDurationChange);
+    g_videoPlayer.on("progress",videoDownloadProgress);
 
-    g_videoPlayer.play();
+    g_videoPlayer[0].play();
 }
 function videoLoadStart()
 {
@@ -299,8 +299,8 @@ function videoPlayStarted()
 }
 function videoProgress(a)
 {
-    var curr_pos = g_videoPlayer.currentTime();
-    var duration = g_videoPlayer.duration();
+    var curr_pos = g_videoPlayer[0].currentTime;
+    var duration = g_videoPlayer[0].duration;
     
     var s = mins_secs(curr_pos) 
     if( duration )
@@ -338,11 +338,11 @@ function seekVideo()
         }
         g_lastSeek = curr_time;
     
-        var pos = g_videoPlayer.currentTime() + 1;
+        var pos = g_videoPlayer[0].currentTime + 1;
         if( pos >= g_seekOnPlay )
             g_seekOnPlay = false;
         else
-            g_videoPlayer.currentTime(g_seekOnPlay);
+            g_videoPlayer[0].currentTime = g_seekOnPlay;
     }
 }
 
@@ -352,7 +352,8 @@ function onWindowResize()
     {
         var h = $('#video_container').height();
         var w = $('#video_container').width();
-        g_videoPlayer.size(w,h);
+        g_videoPlayer.width(w);
+        g_videoPlayer.height(h);
     }
 }
 
