@@ -46,7 +46,8 @@ function showControls()
         window.clearTimeout(g_hideControlsTimeout);
         g_hideControlsTimeout = false;
     }
-    g_hideControlsTimeout = window.setTimeout(hideControls,2000);
+    if( g_playing )
+        g_hideControlsTimeout = window.setTimeout(hideControls,2000);
 }
 function hideControls()
 {
