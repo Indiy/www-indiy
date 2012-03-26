@@ -189,9 +189,10 @@ function updateHistory()
         if( title in g_loveMap )
             love = "love";
         
+        var img = "<img onerror='$(this).hide();' src='{0}'>".format(track.logo);
         var html = "";
         html += "<div class='row'>";
-        html += " <div class='icon'><img src=''></div>";
+        html += " <div class='icon'>{0}</div>".format(img);
         html += " <div class='title'>" + title + "</div>";
         html += " <div class='length'>" + duration + "</div>";
         html += " <div id='history_loved_" + i + "' class='loved " + love + "'>";
