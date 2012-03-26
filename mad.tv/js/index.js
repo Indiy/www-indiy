@@ -209,18 +209,15 @@ function startVideo(in_progress)
 
     updateVideoDisplay();
     
-    var w_h = " width='" + w + "' height='" + h + "' ";
-    
     if( g_videoPlayer !== false )
         g_videoPlayer.pause();
     
     var vid_name = "madtv_player_" + g_videoPlayerIndex;
     g_videoPlayerIndex++;
     var html = '';
-    html += '<video id="' + vid_name + '" ' + w_h + ' class="video-js vjs-default-skin" preload="auto">';
-    html += '<source src="' + url + '" type="video/mp4" />';
-    html += '<source src="' + url_ogv + '" type="video/ogg" />';
-    html += '</video>';
+    html += "<video id='{0}' width='{1}' height='{2}' src='{3}' class='video-js vjs-default-skin' preload='metadata' >"
+        .format(vid_name,w,h,url);
+    html += "</video>";
 
     $('#video_container').empty();
     $('#video_container').html(html);
