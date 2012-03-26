@@ -49,19 +49,24 @@ function showControls()
         g_controlsShown = true;
         $("#overlay_container").fadeIn();
     }
+    clearTimeoutControls();
 }
 function showAndTimeoutControls()
 {
     showControls();
     timeoutControls();
 }
-function timeoutControls()
+function clearTimeoutControls()
 {
     if( g_hideControlsTimeout !== false )
     {
         window.clearTimeout(g_hideControlsTimeout);
         g_hideControlsTimeout = false;
     }
+}
+function timeoutControls()
+{
+    clearTimeoutControls();
     if( g_playing )
         g_hideControlsTimeout = window.setTimeout(hideControls,2000);
 }
