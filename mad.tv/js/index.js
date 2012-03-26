@@ -105,7 +105,7 @@ function playerPlay()
     {
         if( g_touchDevice )
         {
-            g_videoPlayer.play();
+            g_videoPlayer[0].play();
         }
         else
         {
@@ -121,7 +121,7 @@ function playerPause()
     g_playing = false;
     try 
     {
-        g_videoPlayer.pause();
+        g_videoPlayer[0].pause();
     }
     catch(e) {}
     //window.clearInterval(g_intervalUpdateTrack);
