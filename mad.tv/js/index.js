@@ -41,6 +41,10 @@ function showControls()
         g_controlsShown = true;
         $("#overlay_container").fadeIn();
     }
+    timeoutControls();
+}
+function timeoutControls()
+{
     if( g_hideControlsTimeout !== false )
     {
         window.clearTimeout(g_hideControlsTimeout);
@@ -76,11 +80,7 @@ function loadSteamInfo(callback)
 }
 function startVideoInProgress()
 {
-    startVideo(true);
-}
-function startVideoFromBegining()
-{
-    startVideo(false);
+    createVideoTag();
 }
 
 function mins_secs(secs)
@@ -104,7 +104,7 @@ function playerPlay()
     g_playing = true;
     try 
     {
-        if( true || g_touchDevice )
+        if( g_touchDevice )
         {
             g_videoPlayer[0].play();
         }
@@ -114,7 +114,6 @@ function playerPlay()
         }
     }
     catch(e) {}
-    //g_intervalUpdateTrack = window.setInterval(updateTrackInfo,200);
     $('#player .play').removeClass('paused');
 }
 function playerPause()
@@ -122,10 +121,17 @@ function playerPause()
     g_playing = false;
     try 
     {
-        g_videoPlayer[0].pause();
+        if( g_touchDevice )
+        {
+            g_videoPlayer[0].pause();
+        }
+        else
+        {
+            g_videoPlayer.pause();
+        }
     }
     catch(e) {}
-    //window.clearInterval(g_intervalUpdateTrack);
+    showControls();
     $('#player .play').addClass('paused');
 }
 var g_historyShown = false;
@@ -196,48 +202,77 @@ function hideAddVideo()
 
 
 var g_videoPlayer = false;
-var g_videoPlayerIndex = 0;
-function startVideo(in_progress)
+function createVideoTag()
 {
     updateHistory();
-
-    var h = $('#video_container').height();
-    var w = $('#video_container').width();
+    updateVideoDisplay();
 
     var video = g_videoHistory[0];
-    var url = video.video_file;
-    var url_ogv = url.replace(".mp4",".ogv");
-
-    updateVideoDisplay();
+    var time_progress = Math.floor((new Date().getTime())/1000 - video.start_time);
+    if( time_progress > video.duration * 0.9 )
+        time_progress = Math.floor(video.duration * 0.9);
     
-    if( g_videoPlayer !== false )
-        g_videoPlayer.pause();
-    
-    var vid_name = "madtv_player_" + g_videoPlayerIndex;
-    g_videoPlayerIndex++;
-    var html = '';
-    html += "<video id='{0}' width='{1}' height='{2}' src='{3}' class='video-js vjs-default-skin' preload='metadata' >"
-        .format(vid_name,w,h,url);
-    html += "</video>";
+    g_seekOnPlay = time_progress;
 
-    $('#video_container').empty();
-    $('#video_container').html(html);
-    g_videoPlayer = $("video");
-    if( in_progress )
+    if( g_touchDevice )
     {
-        var time_progress = Math.floor((new Date().getTime())/1000 - video.start_time);
-        
-        if( time_progress > video.duration * 0.9 )
-            time_progress = Math.floor(video.duration * 0.9);
-            
-        g_seekOnPlay = time_progress;
+        createVideoTagForTouch();
     }
     else
     {
-        g_seekOnPlay = false;
+        createVideoTagVideoJS();
     }
-    g_videoPlayer.ready(function() { onVideoReady(); } );
 }
+function createVideoTagVideoJS()
+{
+    var h = $('#video_container').height();
+    var w = $('#video_container').width();
+    
+    var video = g_videoHistory[0];
+    var title = video.title;
+    var url = video.video_file;
+    var url_ogv = url.replace(".mp4",".ogv");
+    
+    $('#track_title').text(title);
+    if( title in g_loveMap )
+        $('#player .heart').addClass('love');
+    else
+        $('#player .heart').removeClass('love');
+    
+    var w_h = " width='" + w + "' height='" + h + "' ";
+    
+    var html = '';
+    html += '<video id="madtv_player" ' + w_h + ' class="video-js vjs-default-skin" preload="auto">';
+    html += '<source src="' + url + '" type="video/mp4" />';
+    html += '<source src="' + url_ogv + '" type="video/ogg" />';
+    html += '</video>';
+    
+    $('#video_container').empty();
+    $('#video_container').html(html);
+    g_videoPlayer = _V_('madtv_player');
+    g_videoPlayer.ready(onVideoReadyVideoJS);
+
+}
+function createVideoTagForTouch()
+{
+    var h = $('#video_container').height();
+    var w = $('#video_container').width();
+    
+    var video = g_videoHistory[0];
+    var url = video.video_file;
+    var url_ogv = url.replace(".mp4",".ogv");
+    
+    var html = '';
+    html += "<video id='madtv_player' width='{1}' height='{2}' src='{3}' class='video-js vjs-default-skin' preload='metadata' >"
+    .format(vid_name,w,h,url);
+    html += "</video>";
+    
+    $('#video_container').empty();
+    $('#video_container').html(html);    
+    g_videoPlayer = $("video");
+    g_videoPlayer.ready(onVideoReadyTouch);
+}
+
 function updateVideoDisplay()
 {
     var video = g_videoHistory[0];
@@ -255,16 +290,24 @@ function updateVideoElement()
     var url_ogv = url.replace(".mp4",".ogv");
 
     updateVideoDisplay();
-    var media = [
-         { type: "video/mp4", src: url },
-         { type: "video/ogg", src: url_ogv }        
-    ];
-    g_videoPlayer.attr('src',url);
-    g_videoPlayer[0].play();
+    if( g_touchDevice )
+    {
+        g_videoPlayer.attr('src',url);
+        g_videoPlayer[0].play();
+    }
+    else
+    {
+        var media = [
+             { type: "video/mp4", src: url },
+             { type: "video/ogg", src: url_ogv }        
+        ];
+        g_videoPlayer.src(media);
+        g_videoPlayer.play();
+    }
 }
 
 var g_seekOnPlay = false;
-function onVideoReady()
+function onVideoReadyTouch()
 {
     g_videoPlayer.on("loadstart",videoLoadStart);
     g_videoPlayer.on("play",videoPlayStarted);
@@ -272,8 +315,17 @@ function onVideoReady()
     g_videoPlayer.on("ended",videoEnded);
     g_videoPlayer.on("durationchange",videoDurationChange);
     g_videoPlayer.on("progress",videoDownloadProgress);
-
-    //g_videoPlayer[0].play();
+}
+function onVideoReadyVideoJS()
+{
+    g_videoPlayer.addEvent("loadstart",videoLoadStart);
+    g_videoPlayer.addEvent("play",videoPlayStarted);
+    g_videoPlayer.addEvent("timeupdate",videoTimeUpdate);
+    g_videoPlayer.addEvent("ended",videoEnded);
+    g_videoPlayer.addEvent("durationchange",videoDurationChange);
+    g_videoPlayer.addEvent("progress",videoDownloadProgress);
+    
+    g_videoPlayer.play();
 }
 function videoLoadStart()
 {
@@ -297,11 +349,12 @@ function videoPlayStarted()
 {
     g_playing = true;
     $('#player .play').removeClass('paused');
+    timeoutControls();
 }
-function videoProgress(a)
+function videoProgress()
 {
-    var curr_pos = g_videoPlayer[0].currentTime;
-    var duration = g_videoPlayer[0].duration;
+    var curr_pos = getCurrentTime();
+    var duration = getDuration();
     
     var s = mins_secs(curr_pos) 
     if( duration )
@@ -339,12 +392,34 @@ function seekVideo()
         }
         g_lastSeek = curr_time;
     
-        var pos = g_videoPlayer[0].currentTime + 1;
+        var pos = getCurrentTime() + 1;
         if( pos >= g_seekOnPlay )
             g_seekOnPlay = false;
         else
-            g_videoPlayer[0].currentTime = g_seekOnPlay;
+            setCurrentTime(g_seekOnPlay);
     }
+}
+
+function setCurrentTime(new_time)
+{
+    if( g_touchDevice )
+        g_videoPlayer[0].currentTime = new_time;
+    else
+        g_videoPlayer.currentTime(new_time);
+}
+function getCurrentTime()
+{
+    if( g_touchDevice )
+        return g_videoPlayer[0].currentTime;
+    else
+        return g_videoPlayer.currentTime();
+}
+function getDuration()
+{
+    if( g_touchDevice )
+        return g_videoPlayer[0].duration
+    else
+        return g_videoPlayer.duration();
 }
 
 function onWindowResize()
@@ -353,8 +428,15 @@ function onWindowResize()
     {
         var h = $('#video_container').height();
         var w = $('#video_container').width();
-        g_videoPlayer.width(w);
-        g_videoPlayer.height(h);
+        if( g_touchDevice )
+        {
+            g_videoPlayer.width(w);
+            g_videoPlayer.height(h);
+        }
+        else
+        {
+            g_videoPlayer.size(w,h);
+        }
     }
 }
 
