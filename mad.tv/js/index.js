@@ -21,6 +21,7 @@ function setupVideoPlayer()
         g_touchDevice = true;
     }
     //g_touchDevice = true;
+    //$(document).mousemove(showAndTimeoutControls)
 
     var vars = {};
     window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,k,v){vars[k] = v;});
@@ -129,7 +130,7 @@ function playerPlay()
         }
         else
         {
-            loadSteamInfo(startVideoInProgress);
+            loadSteamInfo(updateVideoElementInProgress);
         }
     }
     catch(e) {}
@@ -267,7 +268,7 @@ function createVideoTagVideoJS()
     var html = '';
     html += '<video id="madtv_player" ' + w_h + ' class="video-js vjs-default-skin" preload="auto">';
     html += '<source src="' + url + '" type="video/mp4" />';
-    html += '<source src="' + url_ogv + '" type="video/ogg" />';
+    //html += '<source src="' + url_ogv + '" type="video/ogg" />';
     html += '</video>';
     
     $('#video_container').empty();
@@ -308,10 +309,10 @@ function updateVideoDisplay()
 }
 function updateVideoElementInProgress()
 {
-    updateVideoElement();
+    updateVideoElement(true);
     calcVideoProgress();
 }
-function updateVideoElement()
+function updateVideoElement(delay_play)
 {
     g_videoHistory = g_genreHistory[g_genre];
     var video = g_videoHistory[0];
@@ -327,8 +328,7 @@ function updateVideoElement()
     else
     {
         var media = [
-             { type: "video/mp4", src: url },
-             { type: "video/ogg", src: url_ogv }        
+             { type: "video/mp4", src: url }
         ];
         g_videoPlayer.src(media);
         g_videoPlayer.play();

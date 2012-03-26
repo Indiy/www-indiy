@@ -52,7 +52,6 @@ function changeGenre(new_genre)
     }
     else
     {
-        g_videoPlayer.pause();
         loadSteamInfo(updateVideoElementInProgress);
     }
 }
