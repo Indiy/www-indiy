@@ -19,6 +19,7 @@ function setupVideoPlayer()
     {
         g_touchDevice = true;
     }
+    //g_touchDevice = true;
 
     var vars = {};
     window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,k,v){vars[k] = v;});
@@ -263,8 +264,8 @@ function createVideoTagForTouch()
     var url_ogv = url.replace(".mp4",".ogv");
     
     var html = '';
-    html += "<video id='madtv_player' width='{1}' height='{2}' src='{3}' class='video-js vjs-default-skin' preload='metadata' >"
-    .format(vid_name,w,h,url);
+    html += "<video id='madtv_player' width='{0}' height='{1}' src='{2}' preload='metadata' >"
+    .format(w,h,url);
     html += "</video>";
     
     $('#video_container').empty();
