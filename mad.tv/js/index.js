@@ -7,6 +7,7 @@ var g_genreList = ['rock'];
 var g_controlsShown = false;
 var g_hideControlsTimeout = false;
 var g_touchDevice = false;
+var g_genreHistory = false;
 
 function setupVideoPlayer()
 {
@@ -85,8 +86,9 @@ function loadSteamInfo(callback)
         dataType: 'json',
         success: function(data) 
         {
-            g_videoHistory = data.history;
+            g_videoHistory = data.history[g_genre];
             g_genreList = data.genre_list;
+            g_genreHistory = data.history;
             callback();
         },
         error: function()
@@ -224,12 +226,8 @@ function createVideoTag()
     updateHistory();
     updateVideoDisplay();
 
-    var video = g_videoHistory[0];
-    var time_progress = Math.floor((new Date().getTime())/1000 - video.start_time);
-    if( time_progress > video.duration * 0.9 )
-        time_progress = Math.floor(video.duration * 0.9);
+    calcVideoProgress();
     
-    g_seekOnPlay = time_progress;
 
     if( g_touchDevice )
     {
@@ -239,6 +237,14 @@ function createVideoTag()
     {
         createVideoTagVideoJS();
     }
+}
+function calcVideoProgress()
+{
+    var video = g_videoHistory[0];
+    var time_progress = Math.floor((new Date().getTime())/1000 - video.start_time);
+    if( time_progress > video.duration * 0.9 )
+        time_progress = Math.floor(video.duration * 0.9);
+    g_seekOnPlay = time_progress;
 }
 function createVideoTagVideoJS()
 {
@@ -300,8 +306,14 @@ function updateVideoDisplay()
     else
         $('#player .heart').removeClass('love');
 }
+function updateVideoElementInProgress()
+{
+    updateVideoElement();
+    calcVideoProgress();
+}
 function updateVideoElement()
 {
+    g_videoHistory = g_genreHistory[g_genre];
     var video = g_videoHistory[0];
     var url = video.video_file;
     var url_ogv = url.replace(".mp4",".ogv");

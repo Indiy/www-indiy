@@ -19,17 +19,17 @@
     while( $row = mysql_fetch_array($q) )
         $genre_list[] = $row['genre'];
 
-    
-    $genre = $_GET['genre'];
-    if( !$genre )
-        $genre = 'rock';
-
-    $file = "/tmp/madtv_history_data_$genre.json";
-    $json = file_get_contents($file);
 
     $ret = array();
-    $ret['history'] = json_decode($json);
+    $ret['history'] = array();
     $ret['genre_list'] = $genre_list;
+
+    foreach( $genre_list as $genre )
+    {
+        $file = "/tmp/madtv_history_data_$genre.json";
+        $json = file_get_contents($file);
+        $ret['history'][$genre] = json_decode($json);
+    }
     
     print json_encode($ret);
 

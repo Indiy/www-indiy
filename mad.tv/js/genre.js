@@ -45,11 +45,16 @@ function changeGenre(new_genre)
 {
     hideGenrePicker();
     g_genre = new_genre;
-    if( g_videoPlayer )
-        g_videoPlayer.pause();
-    $('#video_container').empty();
     $('#history .content').empty();
-    loadSteamInfo(startVideoInProgress);
+    if( g_touchDevice )
+    {
+        updateVideoElementInProgress();
+    }
+    else
+    {
+        g_videoPlayer.pause();
+        loadSteamInfo(updateVideoElementInProgress);
+    }
 }
 
 
