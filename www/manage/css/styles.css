@@ -89,7 +89,7 @@ header nav {width:701px; height:50px; float:left; background:url(../images/bg_na
 header nav ul {float:left; padding:20px 0 0 0}
 header nav ul li { float:left; font-family:"Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; color:#D5D5D5; text-transform:uppercase; background:url(../images/divider_nav.png) no-repeat right 4px; padding:0 18px}
 header nav ul li.nodivider { background:none}
-header nav ul li a { float:left; color:#D5D5D5; text-decoration:none; padding-bottom:14px; z-index:10}
+header nav ul li a { float:left; color:#D5D5D5; text-decoration:none; padding-bottom:14px; z-index:10; cursor: pointer; }
 header nav ul li a:hover { background:url(../images/arrow_nav.gif) no-repeat bottom center}
 header nav ul li:hover a { background:url(../images/arrow_nav.gif) no-repeat bottom center}
 header nav ul li a.active { background:url(../images/arrow_nav.gif) no-repeat bottom center}
@@ -100,7 +100,7 @@ header nav ul li:hover span  { display:block}
 header nav ul li ul { width:570px; margin:0 auto; float:none; padding-top:16px}
 
 header nav ul li ul li {float:left; font-size:11px; color:#556270; background:none; padding:0px 0px 0 52px}
-header nav ul li ul li a { color:#556270; text-decoration:none; padding:0}
+header nav ul li ul li a { color:#556270; text-decoration:none; padding:0; cursor: pointer; }
 header nav ul li ul li a:hover {background:none; text-decoration:underline}
 header nav ul li:hover ul li a { background:none}
 
@@ -629,16 +629,16 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #adminblock .playlist .list ul li.listheading .share { padding-top:0}
 #adminblock .playlist .list ul li.listheading .socialize { padding-top:0}
 #adminblock .playlist .list ul li.odd {background:#eeeff0 url(../images/bg_playlist.gif) repeat-y}
-#adminblock .playlist .list ul li a { color:#383838; text-decoration:none}
+#adminblock .playlist .list ul li a { color:#383838; text-decoration:none; cursor: pointer; }
 #adminblock .playlist .list ul li a:hover { color:#383838; text-decoration:underline} 
 
 #adminblock .playlist .list ul li .title { width:440px; float:left; padding:4px 0 0 15px}
 #adminblock .playlist .list ul li .share { width:86px; float:left; text-align:center; padding-top:4px}
 #adminblock .playlist .list ul li .socialize { width:96px; float:left; text-align:center; padding-top:4px}
-#adminblock .playlist .list ul li .preview { width:100px; float:left; text-align:center}
+#adminblock .playlist .list ul li .preview { width:100px; float:left; text-align:center; cursor: pointer; }
 #adminblock .playlist .list ul li .preview a { float:left; background:#3c4147 url(../images/arrow_visit_admin_list.gif) no-repeat; font-size:11px; color:#FFFFFF; text-decoration:none; padding:4px 8px 6px 32px; margin-left:20px}
 #adminblock .playlist .list ul li .delete { width:70px; float:left; text-align:center}
-#adminblock .playlist .list ul li .delete a { width:30px; height:25px; float:left; background:url(../images/icon_delete_admin.gif) no-repeat; margin-left:23px}
+#adminblock .playlist .list ul li .delete a { width:30px; height:25px; float:left; background:url(../images/icon_delete_admin.gif) no-repeat; margin-left:23px; cursor: pointer; }
 #adminblock .playlist .list ul li .delete a:hover { background:url(../images/icon_delete_hover_admin.gif) no-repeat}
 
 .short_link_clip { margin-left: 10px; margin-bottom: -5px; width: 25px; height: 25px; }
@@ -701,7 +701,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #adminblock .videolist .list ul li .close a:hover { background:url(../images/icon_delete_hover_admin.gif) no-repeat}
 #adminblock .videolist .list ul li figure { float:left; line-height:.7em; margin-bottom:8px; position:relative}
 #adminblock .videolist .list ul li span { font-weight:bold}
-#adminblock .videolist .list ul li a { color:#383838; text-decoration:none}
+#adminblock .videolist .list ul li a { color:#383838; text-decoration:none; cursor: pointer; }
 #adminblock .videolist .list ul li a:hover { color:#383838; text-decoration:underline}
 
 
@@ -717,7 +717,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #adminblock .pages .list ul li.listheading { background:#d9dadc url(../images/bg_pagelist2.gif) repeat-y; font-size:13px; font-weight:bold; padding:15px 0}
 #adminblock .pages .list ul li.listheading .title { padding-top:0}
 #adminblock .pages .list ul li .title { width:610px; float:left; padding:4px 0 0 17px}
-#adminblock .pages .list ul li a { color:#383838; text-decoration:none}
+#adminblock .pages .list ul li a { color:#383838; text-decoration:none; cursor: pointer; }
 #adminblock .pages .list ul li .preview { width:110px; float:left; text-align:center}
 #adminblock .pages .list ul li .preview a { float:left; background:#3c4147 url(../images/icon_preview.gif) no-repeat; font-size:11px; color:#FFFFFF; text-decoration:none; padding:4px 8px 6px 32px; margin-left:20px}
 #adminblock .pages .list ul li .delete { width:70px; float:left; text-align:center}
@@ -758,7 +758,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #adminblock .products .list ul li .close a:hover { background:url(../images/icon_delete_hover_admin.gif) no-repeat}
 #adminblock .products .list ul li figure { float:left; line-height:.7em; margin-bottom:8px; position:relative}
 #adminblock .products .list ul li span { font-weight:bold}
-#adminblock .products .list ul li a { color:#383838; text-decoration:none}
+#adminblock .products .list ul li a { color:#383838; text-decoration:none; cursor: pointer; }
 #adminblock .products .list ul li a:hover { color:#383838; text-decoration:underline}
 
 #adminblock .products .need_paypal {
