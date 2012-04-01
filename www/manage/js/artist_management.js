@@ -96,7 +96,37 @@ function updateStoreList()
 
 function updateVideoList()
 {
+    $('#video_list_ul').empty();
     
+    for( var i = 0 ; i < g_videoList.length ; ++i )
+    {
+        var video = g_videoList[i];
+    
+        var html = "";
+        html += "<li id='arrayorder_{0}' class='videos_sortable'>".format(video.id);
+        html += "<figure>
+        html += "<span class='close'>
+        html += "<a href='#' onclick='deleteVideo({0});'></a>".format(video.id);
+        html += "</span>";
+        html += "<a href='addvideo.php?artist_id={0}&id={1}' rel='facebox[.bolder]'>".format(g_artistId,video.id);
+        html += "<img src='{0}' width='210' height='132' alt=''>".format(video.image);
+        html += "</a>";
+        html += "</figure>";
+        html += "<span>";
+        html += "<a href='addvideo.php?artist_id={0}&id={1}' rel='facebox[.bolder]'>".format(g_artistId,video.id);
+        html += video.name;
+        html += "</a>";
+        html += "</span>";
+        html += "<br>";
+        html += "</li>";
+    }
+
+    if( g_videoList.length == 0 )
+    {
+        var html = "<div class='empty_list'>You have not uploaded any videos yet.</div>";
+        $('#video_list_ul').append(html);
+    }
+
 }
 
 function updateTabList()
@@ -110,6 +140,14 @@ function deletePage(song_id)
     if(ret)
     {
         window.location.href = "artist_management.php?userId={0}&action=1&song_id={1}".format(g_artistId,song_id);
+    }
+}
+function deleteVideo(video_id)
+{
+    var ret = window.confirm("Are you sure you want delete this item?");
+    if(ret)
+    {
+        window.location.href = "artist_management.php?userId={0}&action=1&video_id={1}".format(g_artistId,video_id);
     }
 }
 
