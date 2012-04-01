@@ -876,13 +876,18 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     display: none;
     position: absolute;
     top: 100px;
+    left: 0px;
+    right: 0px;
+}
+.popup_wrapper.inner_wrapper {
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #edit_page_wrapper #popup {
-    position: absolute;
-    width: 300px;
-    margin-right: auto;
-    margin-left: auto;
+    display: inline-block;
+    background-color: white;
 }
 
 #popup { width: 100%; }
