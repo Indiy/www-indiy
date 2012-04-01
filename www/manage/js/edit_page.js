@@ -30,12 +30,14 @@ function showPagePopup(page_index)
         $('#song_bgcolor').val(song.bgcolor);
         if( song.download )
         {
-            $('input[@value=1]:checked').attr('checked','checked');
+            $('input[name=download]:eq(0)').attr('checked','checked');
+            $('input[name=download]:eq(1)').removeAttr('checked');
             clickFree(1);
         }
         else
         {
-            $('input[@value=0]:checked').attr('checked','checked');
+            $('input[name=download]:eq(1)').attr('checked','checked');
+            $('input[name=download]:eq(0)').removeAttr('checked');
             clickFree(0);
         }
         $('#amazon_url').val(song.amazon_url);
