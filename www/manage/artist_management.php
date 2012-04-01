@@ -117,7 +117,7 @@
 var g_pageList = <?=$page_list_json;?>;
 var g_facebook = <?=$facebook;?>;
 var g_twitter = <?=$twitter;?>;
-var g_paypalEmail = <?=$paypalEmail;?>;
+var g_paypalEmail = "<?=$paypalEmail;?>";
 
 function setupSortableLists()
 {
