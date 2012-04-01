@@ -104,8 +104,8 @@ function updateVideoList()
     
         var html = "";
         html += "<li id='arrayorder_{0}' class='videos_sortable'>".format(video.id);
-        html += "<figure>
-        html += "<span class='close'>
+        html += "<figure>";
+        html += "<span class='close'>";
         html += "<a href='#' onclick='deleteVideo({0});'></a>".format(video.id);
         html += "</span>";
         html += "<a href='addvideo.php?artist_id={0}&id={1}' rel='facebox[.bolder]'>".format(g_artistId,video.id);
@@ -119,6 +119,7 @@ function updateVideoList()
         html += "</span>";
         html += "<br>";
         html += "</li>";
+        $('#video_list_ul').append(html);
     }
 
     if( g_videoList.length == 0 )
