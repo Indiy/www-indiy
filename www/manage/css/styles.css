@@ -873,12 +873,13 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 */
 
 .popup_wrapper {
+    display: none;
     position: absolute;
     top: 100px;
-    width: 1000px;
 }
 
-#popup.edit_page_popup {
+#edit_page_wrapper #popup {
+    position: absolute;
     width: 300px;
     margin-right: auto;
     margin-left: auto;

@@ -27,7 +27,7 @@ $(document).ready(artistManagementReady);
 
 function showPopup(name)
 {
-    $('.' + name).show();
+    $('#' + name).show();
 }
 
 function updatePageList()
@@ -42,7 +42,7 @@ function updatePageList()
         var html = "";
         html += "<li id='arrayorder_{0}' class='playlist_sortable {1}'>".format(song.id,class_name);
         html += "<span class='title'>\n";
-        html += "<a onclick='showPopup(\"edit_page_popup\");'>".format(g_artistId,song.id);
+        html += "<a onclick='showPopup(\"edit_page_wrapper\");'>".format(g_artistId,song.id);
         html += song.name;
         html += "</a>\n";
         html += "</span>\n";
