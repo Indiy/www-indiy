@@ -878,11 +878,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     top: 100px;
     left: 0px;
     right: 0px;
-}
-.popup_wrapper .inner_wrapper {
-    width: auto;
-    margin-right: auto;
-    margin-left: auto;
+    text-align: center;
 }
 
 #edit_page_wrapper #popup {
@@ -891,7 +887,10 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     background-color: white;
 }
 
-#popup { width: 100%; }
+#popup { 
+    width: 100%; 
+    text-align: left;
+}
 
 #popup .top_bar {
     width: 100%;
