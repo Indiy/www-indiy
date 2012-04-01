@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.9.0/build/assets/skins/sam/skin.css"> 
 
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-	<link href="blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+    <link href="facefiles/facebox.css" media="screen" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -21,46 +21,16 @@
     <!-- Combo-handled YUI JS files: --> 
     <script type="text/javascript" src="http://yui.yahooapis.com/combo?2.9.0/build/yahoo-dom-event/yahoo-dom-event.js&2.9.0/build/animation/animation-min.js&2.9.0/build/element/element-min.js&2.9.0/build/container/container-min.js&2.9.0/build/menu/menu-min.js&2.9.0/build/button/button-min.js&2.9.0/build/editor/editor-min.js"></script> 
 
+    <script src="/js/string.utils.js" type="text/javascript"></script>
     <script src="js/tooltip_text.js" type="text/javascript"></script>
     <script src="js/rich_text_editor.js" type="text/javascript"></script>
     <script src="js/manage.js" type="text/javascript"></script>
+    <script src="js/artist_management.js" type="text/javascript"></script>
     <script src="/js/ZeroClipboard.js" type="text/javascript"></script>
 
-<!--PLAYLIST STARTS-->
-<script type="text/javascript"> 
-$(document).ready(function(){	
-	//Set default open/close settings
-	$('.list').hide(); //Hide/close all containers
-	<?
-        $active_tab = 'branding_tips';
-        if( isset($_SESSION['tabOpen']) )
-            $active_tab = $_SESSION['tabOpen'];
-        
-    ?>
-	$('.<?=$active_tab?> .heading').addClass('active').next().show(); 
-	$('.heading').click(function(){
-		if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
-			$('.heading').removeClass('active').next().slideUp(); //Remove all .heading classes and slide up the immediate next container
-			$(this).toggleClass('active').next().slideDown(); //Add .heading class to clicked trigger and slide down the immediate next container
-		}
-        else
-        {
-            $('.heading').removeClass('active').next().slideUp();
-        }
-		return false; //Prevent the browser jump to the link anchor
-	}); 
-});
-</script>
-<!-- ADD BY ME 16-09-2011-->
-<link href="facefiles/facebox.css" media="screen" rel="stylesheet" type="text/css" />
-<script src="facefiles/facebox.js" type="text/javascript"></script>
-<script src="color/jscolor.js" type="text/javascript"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function($) {
-      $('a[rel*=facebox]').facebox() ;	  
-    })
-</script>
-<!--PLAYLIST ENDS-->
+    <script src="facefiles/facebox.js" type="text/javascript"></script>
+    <script src="color/jscolor.js" type="text/javascript"></script>
+
 </head>
 <body>
 <div id='mask' style='display: none;'></div>
