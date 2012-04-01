@@ -879,19 +879,17 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     left: 0px;
     right: 0px;
     text-align: center;
+    z-index: 100;
 }
-
-#edit_page_wrapper #popup {
+.popup_wrapper #popup {
     display: inline-block;
     width: auto;
     background-color: white;
 }
-
 #popup { 
     width: 100%; 
     text-align: left;
 }
-
 #popup .top_bar {
     width: 100%;
     height: 50px;
