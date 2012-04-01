@@ -58,6 +58,13 @@
 	
 	$find_artistAudio = "SELECT * FROM mydna_musicplayer_audio  WHERE artistid='".$artistID."' AND `type`='0' ORDER BY `order` ASC, `id` DESC";
 	$result_artistAudio = mysql_query($find_artistAudio) or die(mysql_error());
+    $page_list = array();
+    for( $row = mysql_fetch_array($result_artistAudio) )
+    {
+        $row['short_link'] = make_short_link($row['abbrev']);
+        $page_list[] = $row;
+    }
+    $page_list_json = json_encode($page_list);
 	
 	$find_artistVideo = "SELECT * FROM mydna_musicplayer_video  WHERE artistid='".$artistID."' ORDER BY `order` ASC, `id` DESC";
 	$result_artistVideo = mysql_query($find_artistVideo) or die(mysql_error());
@@ -91,13 +98,13 @@
         }
     }
     
-    $twitter = FALSE;
-    $facebook = FALSE;
+    $twitter = 'false';
+    $facebook = 'false';
     if( $record_artistDetail['oauth_token'] && $record_artistDetail['oauth_secret'] && $record_artistDetail['twitter'] )
-        $twitter = TRUE;
+        $twitter = 'true';
     
     if( $record_artistDetail['fb_access_token'] && $record_artistDetail['facebook'] )
-        $facebook = TRUE;
+        $facebook = 'true';
         
     $store_check = mf(mq("SELECT * FROM `[p]musicplayer_ecommerce` WHERE `userid`='$artistID' LIMIT 1"));
     $paypalEmail = $store_check["paypal"];
@@ -106,6 +113,11 @@
 ?>
 
 <script type="text/javascript">
+
+var g_pageList = <?=$page_list_json;?>;
+var g_facebook = <?=$facebook;?>;
+var g_twitter = <?=$twitter;?>;
+var g_paypalEmail = <?=$paypalEmail;?>;
 
 function setupSortableLists()
 {
@@ -156,7 +168,7 @@ function setupSortableLists()
 
 $(document).ready(setupSortableLists);
 
-<? if( $show_first_instruction ) {?>
+<? if( $show_first_instruction ): ?>
 
 function showFirstInstruction()
 {
@@ -166,7 +178,7 @@ function showFirstInstruction()
 
 $(document).ready(showFirstInstruction);
 
-<? } ?>
+<? endif; ?>
 
 </script>
 
@@ -236,86 +248,22 @@ $(document).ready(showFirstInstruction);
         
         <div class="playlist">
         	<div class="heading">
-            <h5>PAGES</h5>
-            <div class="buttonadd"><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Audio + Photo</a></div>
+                <h5>PAGES</h5>
+                <div class="buttonadd">
+                    <a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Audio + Photo</a>
+                </div>
             </div>
-            
             <div class="list" style='display: none;'>
-            <ul>
-            <li class="listheading">
-            <span class="title">Title</span>
-            <span class="share">Share</span>
-            <span class="socialize">Socialize</span>
-            <span class="delete">Delete</span>
-            </li>
-            </ul>
-            <ul class="playlist_sortable">
-            
-            <?php
-				$count = 1;
-				while($record_artistAudio = mysql_fetch_array($result_artistAudio))
-				{
-                    $song_id = $record_artistAudio['id'];
-					$class = (( $count%2) == 0) ? '' : 'odd';
-                    $short_link = make_short_link($record_artistAudio['abbrev']);
-                    $link_name = "madna.co/" . $record_artistAudio['abbrev'];
-					
-					echo "<li id='arrayorder_$song_id' class='playlist_sortable $class' >\n";
-                    echo "<span class='title'>\n";
-                    echo "<a href='addmusic.php?artist_id=".$artistID."&id=".$record_artistAudio['id']."' rel='facebox[.bolder]'>";
-                    echo stripslashes($record_artistAudio['name']);
-                    echo "</a>\n";
-                    echo "</span>\n";
-                    echo "<span class='share'>";
-                    echo "<a href='$short_link' target='_blank'>Link</a>";
-                    echo "</span>\n";
-					
-                    /*
-					if(!empty($record_artistAudio['audio']))
-						echo	"<span class='preview'><a href='play_music.php?song=".$record_artistAudio['audio']."' rel='facebox[.bolder]' >Play</a></span>";
-					else
-						echo	"<span class='preview'>N/A</span>";
-                    */
-                    echo "<span class='socialize'>";
-                    if( $facebook )
-                    {
-                        echo "<a href='socialize.php?artist_id=".$artistID."&song_id=".$record_artistAudio['id']."' rel='facebox[.bolder]' title='Send a Facebook update for this page.'>";
-                        echo "<img class='social_icon' src='/images/fb_icon_color.png'/>";
-                        echo "</a>\n";
-                    }
-                    else
-                    {
-                        echo "<a href='social_config.php?artist_id=$artistID' rel='facebox[.bolder]' title='Add a Facebook account.'>";
-                        echo "<img class='social_icon' src='/images/fb_icon_grey.png'/>";
-                        echo "</a>\n";
-                    }
-                    if( $twitter )
-                    {
-                        echo "<a href='socialize.php?artist_id=".$artistID."&song_id=".$record_artistAudio['id']."' rel='facebox[.bolder]' title='Send a tweet for this page.'>";
-                        echo "<img class='social_icon' src='/images/tw_icon_color.png'/>";
-                        echo "</a>\n";
-                    }
-                    else
-                    {
-                        echo "<a href='social_config.php?artist_id=$artistID' rel='facebox[.bolder]' title='Add a Twitter account.'>";
-                        echo "<img class='social_icon' src='/images/tw_icon_grey.png'/>";
-                        echo "</a>\n";
-                    }
-                    echo "</span>";
-
-					echo 	"<span class='delete'><a href='#' onclick='if(confirm(\"Are you sure you want delete this item?\"))location.href=\"artist_management.php?userId=$userId&action=1&song_id=".$record_artistAudio['id']."\";' ></a></span>";
-                    echo "</li>\n";
-						 
-					$count++;
-				}
-                if( $count == 1 ) 
-                {
-                    echo "<div class='empty_list'>You have not uploaded any pages yet.</div>";
-                }
-				
-			?>                      
-
-            </ul>
+                <ul>
+                    <li class="listheading">
+                        <span class="title">Title</span>
+                        <span class="share">Share</span>
+                        <span class="socialize">Socialize</span>
+                        <span class="delete">Delete</span>
+                    </li>
+                </ul>
+                <ul id='page_list_ul' class="playlist_sortable">
+                </ul>
             </div>
         </div>
         

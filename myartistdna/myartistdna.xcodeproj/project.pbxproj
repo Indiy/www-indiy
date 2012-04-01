@@ -1418,6 +1418,7 @@
 		2DF61FE4151FBA3900DBFBC8 /* swfobject.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = swfobject.js; sourceTree = "<group>"; };
 		2DF61FE8151FEF4900DBFBC8 /* string.utils.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = string.utils.js; sourceTree = "<group>"; };
 		2DF61FEA1520264500DBFBC8 /* convert_videos.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = convert_videos.php; sourceTree = "<group>"; };
+		2DF61FEE1527FFE300DBFBC8 /* artist_management.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_management.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -3670,6 +3671,7 @@
 				2D380B8B1468AC0500E36189 /* manage.js */,
 				2D34E22E14A59976004473F9 /* tooltip_text.js */,
 				2D64FD1114F8735800C5C468 /* rich_text_editor.js */,
+				2DF61FEE1527FFE300DBFBC8 /* artist_management.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
