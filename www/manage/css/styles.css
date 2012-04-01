@@ -879,7 +879,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     left: 0px;
     right: 0px;
 }
-.popup_wrapper.inner_wrapper {
+.popup_wrapper .inner_wrapper {
     width: auto;
     margin-right: auto;
     margin-left: auto;
@@ -887,6 +887,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 
 #edit_page_wrapper #popup {
     display: inline-block;
+    width: auto;
     background-color: white;
 }
 
