@@ -979,17 +979,17 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 ----------------------------------------
 */
 
-#popup .addmusic { /*width:418px;*/ float:left; /*padding:28px 22px*/}
-#popup .addmusic fieldset { width:304px; float:left; padding:0 57px 25px 57px}
-#popup .addmusic fieldset.yet {padding-bottom:42px}
-#popup .addmusic h2 {color:#fff; width:100%; height:50px; float:left; background: url(../images/bg_login01.gif) repeat-x; padding:10px 0 0 10px; overflow: hidden;}
-#popup .addmusic form {padding-left:10px}
-#popup .addmusic #form_field .text { /*width:312px;*/ float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; width:178; max-width: 178px; min-width:178px; padding:3px 5px; margin-top:10px /*margin-right:50px*/}
-#popup .addmusic #form_field .color { /*width:312px;*/ float:left; border:1px solid #cdcdcd; font-size:13px; font-family: Arial, Helvetica, sans-serif; color:#1e2226; box-shadow:inset #E9E9E9 -2px 2px 3px; box-shadow:inset #E9E9E9 -2px 2px 3px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; behavior: url(PIE.htc); position:relative; width:178; max-width: 178px; min-width:178px; padding:3px 5px; margin-top:10px /*margin-right:50px*/}
-#popup .addmusic #form_field label {padding-top:15px; width:150px}
-#popup .addmusic #form_field .floatbox {float:left; color:#556270; font-family:Arial, Helvetica, sans-serif; font-size:12px; padding-top:15px}
-#popup .addmusic #form_field .submit {float:left; margin-top:20px; background:none repeat scroll 0 0 #1E2226; color:#4ECDC4; border:1px solid #A0A1A3; font-size:14px; font-family:"Neuzeit Grotesk",Arial,Helvetica,sans-serif; text-transform:uppercase; padding:10px 60px }
-#popup .addmusic #form_field .input {float:left; color:#4ecdc4; text-decoration:none; background:#1e2226; font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif; padding:10px 20px; text-transform:uppercase; border:1px solid #a0a1a3}
+.popup_wrapper {
+    position: absolute;
+    top: 100px;
+    width: 1000px;
+}
+
+#popup.edit_page_popup {
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 #popup { width: 100%; }
 
