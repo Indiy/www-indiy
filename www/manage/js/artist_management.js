@@ -33,6 +33,7 @@ function showPopup(name)
 function closePopup()
 {
     $('.popup_wrapper').fadeOut();
+    $('#mask').fadeOut();
 }
 
 function updatePageList()
