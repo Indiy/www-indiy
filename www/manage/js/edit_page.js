@@ -9,12 +9,38 @@ function showPagePopup(page_index)
         var song = g_pageList[page_index];
         
         $('#song_name').val(song.name);
+        if( song.audio )
+        {
+            var html = "";
+            if( song.upload_audio_filename )
+                html += "<div>{0}</div>".format(song.upload_audio_filename);
+            else
+                html += "<div>{0}</div>".format(song.audio);
+            html += "<button onclick='return onSongRemove();'></button>";
+            $('#song_filename_container').html(html);
+        }
+        if( song.image )
+        {
+            var html = "<img src='../artists/images/{0}' />".format(song.image);
+            html += "<button onclick='return onImageRemove();'></button>";
+            $('#image_filename_container').html(html);
+        }
+        
+        $('#bg_style').val(song.bg_style);
         $('#song_bgcolor').val(song.bgcolor);
-        //var bg_style = $('#bg_style option:selected').val();
-        //var free_download = $('input[@name=download]:checked').val();
+        if( song.download )
+        {
+            $('input[@value=1]:checked').attr('checked','checked');
+            clickFree(1);
+        }
+        else
+        {
+            $('input[@value=0]:checked').attr('checked','checked');
+            clickFree(0);
+        }
         $('#amazon_url').val(song.amazon_url);
         $('#itunes_url').val(song.itunes_url);
-        var mad_store = $('#mad_store').is(':checked');
+        $('#mad_store').prop('checked',song.product_id);
         $('#audio_tags').val(song.audio_tags);
     }
     showPopup('edit_page_wrapper');
