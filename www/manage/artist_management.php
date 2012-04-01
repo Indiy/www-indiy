@@ -59,9 +59,15 @@
 	$find_artistAudio = "SELECT * FROM mydna_musicplayer_audio  WHERE artistid='".$artistID."' AND `type`='0' ORDER BY `order` ASC, `id` DESC";
 	$result_artistAudio = mysql_query($find_artistAudio) or die(mysql_error());
     $page_list = array();
+    
+    function cleanup_row_element(&$value,$key) {
+        $value = stripslashes($value);
+    }
+    
     while( $row = mysql_fetch_array($result_artistAudio) )
     {
         $row['short_link'] = make_short_link($row['abbrev']);
+        array_walk($row,cleanup_row_element);
         $page_list[] = $row;
     }
     $page_list_json = json_encode($page_list);
