@@ -127,23 +127,6 @@ function updateStoreList()
             $('#product_list_ul').append(html);
         }
     }
-    
-    if( mysql_num_rows($result_artistProduct) == 0 && strlen($paypalEmail) == 0 )
-    {
-    }
-    
-    while($record_artistProduct = mysql_fetch_array($result_artistProduct))
-    {
-        $product_id = $record_artistProduct['id'];
-        
-        if(!empty($record_artistProduct['image']) && file_exists("../artists/products/".$record_artistProduct['image'])){
-            $image = "../artists/products/".$record_artistProduct['image'];
-        }else{
-            $image = "images/photo_video_01.jpg";
-        }
-        ?>
-        
-    
 }
 
 function updateVideoList()
