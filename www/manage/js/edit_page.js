@@ -1,8 +1,24 @@
 
 var g_removeSong = false;
 var g_removeImage = false;
-var g_needsImage = <?=$needs_image;?>;
-var g_paypalEmail = "<?=$paypalEmail;?>";
+
+function showPagePopup(page_index)
+{
+    if( song_index !== false )
+    {
+        var song = g_pageList[page_index];
+        
+        $('#song_name').val(song.name);
+        $('#song_bgcolor').val(song.bgcolor);
+        //var bg_style = $('#bg_style option:selected').val();
+        //var free_download = $('input[@name=download]:checked').val();
+        $('#amazon_url').val(song.amazon_url);
+        $('#itunes_url').val(song.itunes_url);
+        var mad_store = $('#mad_store').is(':checked');
+        $('#audio_tags').val(song.audio_tags);
+    }
+    showPopup('edit_page_wrapper');
+}
 
 function onSongRemove()
 {
@@ -14,7 +30,6 @@ function onSongRemove()
     }
     return false;
 }
-
 function onImageRemove()
 {
     var result = window.confirm("Remove image from page?");
@@ -25,7 +40,6 @@ function onImageRemove()
     }
     return false;
 }
-
 function clickFree(yes)
 {
     if( yes )
@@ -41,7 +55,6 @@ function clickFree(yes)
         $('#mad_store').removeAttr('disabled');
     }
 }
-
 function clickMadStore()
 {
     if( g_paypalEmail.length == 0 )
