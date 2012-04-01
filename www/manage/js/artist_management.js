@@ -27,11 +27,12 @@ $(document).ready(artistManagementReady);
 
 function showPopup(name)
 {
-    $('#' + name).show();
+    $('#' + name).fadeIn();
+    $('#mask').fadeIn();
 }
 function closePopup()
 {
-    $('.popup_wrapper').hide();
+    $('.popup_wrapper').fadeOut();
 }
 
 function updatePageList()
