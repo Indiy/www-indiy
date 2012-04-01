@@ -245,7 +245,7 @@ $(document).ready(showFirstInstruction);
         	<div class="heading">
                 <h5>PAGES</h5>
                 <div class="buttonadd">
-                    <a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Audio + Photo</a>
+                    <a onclick='showPagePopup(false);'>Add Audio + Photo</a>
                 </div>
             </div>
             <div class="list" style='display: none;'>

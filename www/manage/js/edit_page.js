@@ -43,6 +43,19 @@ function showPagePopup(page_index)
         $('#mad_store').prop('checked',song.product_id);
         $('#audio_tags').val(song.audio_tags);
     }
+    else
+    {
+        $('#song_name').val('');
+        $('#song_filename_container').empty();
+        $('#image_filename_container').empty();
+        $('#bg_style').val('STRETCH');
+        $('input[name=download]:eq(1)').attr('checked','checked');
+        clickFree(0);
+        $('#amazon_url').val('');
+        $('#itunes_url').val('');
+        $('#mad_store').prop('checked',false);
+        $('#audio_tags').val('');
+    }
     showPopup('edit_page_wrapper');
 }
 
