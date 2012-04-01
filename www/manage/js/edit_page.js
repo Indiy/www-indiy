@@ -31,13 +31,11 @@ function showPagePopup(page_index)
         if( song.download )
         {
             $('input[name=download]:eq(0)').attr('checked','checked');
-            $('input[name=download]:eq(1)').removeAttr('checked');
             clickFree(1);
         }
         else
         {
             $('input[name=download]:eq(1)').attr('checked','checked');
-            $('input[name=download]:eq(0)').removeAttr('checked');
             clickFree(0);
         }
         $('#amazon_url').val(song.amazon_url);
