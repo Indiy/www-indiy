@@ -78,7 +78,6 @@
     while( $row = mysql_fetch_array($result_artistVideo) )
     {
         array_walk($row,cleanup_row_element);
-        
         $image_path = "../artists/images/" . $row['image'];
         if( !empty($row['image']) && file_exists($image_path) )
             $row['image'] = $image_path;
@@ -91,13 +90,29 @@
 
 	$find_artistContent = "SELECT * FROM mydna_musicplayer_content  WHERE artistid='".$artistID."' ORDER BY `order` ASC, `id` DESC";
 	$result_artistContent = mysql_query($find_artistContent) or die(mysql_error());
+    $tab_list = array();
+    while( $row = mysql_fetch_array($result_artistContent) )
+    {
+        array_walk($row,cleanup_row_element);
+        $tab_list[] = $row;
+    }
+    $tab_list_json = json_encode($tab_list);
 	
 	$find_artistProduct = "SELECT * FROM mydna_musicplayer_ecommerce_products  WHERE artistid='$artistID' AND sku != 'MADSONG' ORDER BY `order` ASC, `id` DESC";
 	$result_artistProduct = mysql_query($find_artistProduct) or die(mysql_error());
-	//echo "<pre />";
-	//print_r($record_artistDetail);
-	
-	///Timthumb for profile images 
+	$product_list = array();
+    while( $row = mysql_fetch_array($result_artistProduct) )
+    {
+        array_walk($row,cleanup_row_element);
+        $image_path = "../artists/images/" . $row['image'];
+        if( !empty($row['image']) && file_exists($image_path) )
+            $row['image'] = $image_path;
+        else
+            $row['image'] = "images/photo_video_01.jpg";
+        $product_list[] = $row;
+    }
+    $product_list_json = json_encode($product_list);
+     
 	
 	if($record_artistDetail['logo'] == '')
 		$artist_img_logo = 'images/NoPhoto.jpg';
@@ -141,6 +156,8 @@ var g_paypalEmail = "<?=$paypalEmail;?>";
 
 var g_pageList = <?=$page_list_json;?>;
 var g_videoList = <?=$video_list_json;?>;
+var g_tabList = <?=$tab_list_json;?>;
+var g_productList = <?=$product_list_json;?>;
 
 <? if( $show_first_instruction ): ?>
 
@@ -254,34 +271,7 @@ $(document).ready(showFirstInstruction);
             </div>
         
             <div class="list" style='display: none;'>
-            <ul class="products_sortable">
-           <?php
-				$count = 1;
-                
-                if( mysql_num_rows($result_artistProduct) == 0 && strlen($paypalEmail) == 0 )
-                {
-                    echo "<div class='need_paypal'>Add a payment method. ";
-                    echo "<a href='store_settings.php?artist_id=$artistID' rel='facebox[.bolder]'>Monetize Settings</a>";
-                    echo "</div>\n";
-                }
-                
-				while($record_artistProduct = mysql_fetch_array($result_artistProduct))
-				{
-                    $product_id = $record_artistProduct['id'];
-                
-					if(!empty($record_artistProduct['image']) && file_exists("../artists/products/".$record_artistProduct['image'])){
-						$image = "../artists/products/".$record_artistProduct['image'];
-					}else{
-						$image = "images/photo_video_01.jpg";
-					}
-					?>
-			<li id="arrayorder_<?=$product_id;?>"class="products_sortable">
-            <figure><span class="close"><a href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=<?=$userId?>&action=1&prod_id=<?=$record_artistProduct['id']?>";'></a></span>
-           <a href="addproduct.php?artist_id=<?=$artistID?>&id=<?=$record_artistProduct['id']?>" rel="facebox[.bolder]"><img src="<?=$image?>" width="207" height="130" alt=""></a></figure>
-            <span><a href="addproduct.php?artist_id=<?=$artistID?>&id=<?=$record_artistProduct['id']?>" rel="facebox[.bolder]"><?=$record_artistProduct['name']?></a></span><br>$<?=$record_artistProduct['price']?>
-            </li>
-				<?}?>
-           
+            <ul id="product_list_ul" class="products_sortable">
             </ul>
             </div>
         </div>
@@ -312,32 +302,10 @@ $(document).ready(showFirstInstruction);
             <ul>
             <li class="listheading">
             <span class="title">Title</span>
-           <!--  <span class="preview">Preview</span> -->
             <span class="delete">Delete</span>
             </li>
             </ul>
-            <ul class="pages_sortable">
-            <?php
-				$count = 1;
-				while($record_artistContent = mysql_fetch_array($result_artistContent))
-				{
-                    $count++;
-                    $content_id = $record_artistContent['id'];
-                
-					$class = (( $count%2) == 0) ? '' : 'odd';
-					?>
-                    <li id="arrayorder_<?=$content_id;?>" class="pages_sortable <?=$class?>">
-                    <span class="title"><a href="addcontent.php?artist_id=<?=$artistID?>&id=<?=$record_artistContent['id']?>" rel="facebox[.bolder]"><?=$record_artistContent['name']?></a></span>
-                    <!-- <span class="preview"><a href="#">Preview</a></span> -->
-                    <span class="delete"><a  href='#' onclick='if(confirm("Are you sure you want delete this item?"))location.href="artist_management.php?userId=<?=$userId?>&action=1&content_id=<?=$record_artistContent['id']?>";'></a></span>
-                    </li>
-            <?
-                }
-                if( $count == 1 )
-                {
-                    echo "<div class='empty_list'>You have not uploaded any tab content yet.</div>";
-                }
-            ?>
+            <ul id='tab_list_ul' class="pages_sortable">
             </ul>
             </div>
         </div>

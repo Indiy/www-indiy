@@ -28,7 +28,6 @@ $(document).ready(artistManagementReady);
 function updatePageList()
 {
     $('#page_list_ul').empty();
-
     for( var i = 0 ; i < g_pageList.length ; ++i )
     {
         var song = g_pageList[i];
@@ -80,7 +79,6 @@ function updatePageList()
         
         $('#page_list_ul').append(html);
     }
-    
     if( g_pageList.length == 0 )
     {
         var html = "<div class='empty_list'>You have not uploaded any pages yet.</div>";
@@ -91,17 +89,70 @@ function updatePageList()
 
 function updateStoreList()
 {
+    $('#product_list_ul').empty();
+    for( var i = 0 ; i < g_productList.length ; ++i )
+    {
+        var product = g_productList[i];
+        var html = "";
+        html += "<li id='arrayorder_{0}' class='products_sortable'>".format(product.id);
+        html += "<figure>";
+        html += "<span class='close'><a href='#' onclick='deleteProduct({0});'></a></span>".format(product.id);
+        html += "<a href='addproduct.php?artist_id=<{0}&id={1}' rel='facebox[.bolder]'>".format(g_artistId,product.id);
+        html += "<img src='{0}' width='207' height='130' alt=''>".format(product.image);
+        html += "</a>";
+        html += "</figure>";
+        html += "<span>";
+        html += "<a href='addproduct.php?artist_id={0}&id={1}' rel='facebox[.bolder]'>".format(g_artistId,product.id);
+        html += product.name;
+        html += "</a>";
+        html += "</span>";
+        html += "<br>${0}".format(product.price);
+        html += "</li>";
+        $('#product_list_ul').append(html);
+    }
+    if( g_tabList.length == 0 )
+    {
+        if( g_paypalEmail.length == 0 )
+        {
+            var html = "";
+            html += "<div class='need_paypal'>";
+            html += "Add a payment method. ";
+            html += "<a href='store_settings.php?artist_id={0}' rel='facebox[.bolder]'>Monetize Settings</a>".format(g_artistId);
+            html += "</div>";
+            $('#product_list_ul').append(html);
+        }
+        else
+        {
+            var html = "<div class='empty_list'>You have not added any products yet.</div>";
+            $('#product_list_ul').append(html);
+        }
+    }
+    
+    if( mysql_num_rows($result_artistProduct) == 0 && strlen($paypalEmail) == 0 )
+    {
+    }
+    
+    while($record_artistProduct = mysql_fetch_array($result_artistProduct))
+    {
+        $product_id = $record_artistProduct['id'];
+        
+        if(!empty($record_artistProduct['image']) && file_exists("../artists/products/".$record_artistProduct['image'])){
+            $image = "../artists/products/".$record_artistProduct['image'];
+        }else{
+            $image = "images/photo_video_01.jpg";
+        }
+        ?>
+        
     
 }
 
 function updateVideoList()
 {
     $('#video_list_ul').empty();
-    
     for( var i = 0 ; i < g_videoList.length ; ++i )
     {
         var video = g_videoList[i];
-    
+        
         var html = "";
         html += "<li id='arrayorder_{0}' class='videos_sortable'>".format(video.id);
         html += "<figure>";
@@ -121,18 +172,37 @@ function updateVideoList()
         html += "</li>";
         $('#video_list_ul').append(html);
     }
-
     if( g_videoList.length == 0 )
     {
         var html = "<div class='empty_list'>You have not uploaded any videos yet.</div>";
         $('#video_list_ul').append(html);
     }
-
 }
 
 function updateTabList()
 {
-    
+    $('#tab_list_ul').empty();
+    for( var i = 0 ; i < g_tabList.length ; ++i )
+    {
+        var tab = g_tabList[i];
+        var class_name = i % 2 == 0 ? 'odd' : '';
+        var html = "";
+
+        html += "<li id='arrayorder_{0}' class='pages_sortable {1}'>".format(tab.id,class_name);
+        html += "<span class='title'>";
+        html += "<a href='addcontent.php?artist_id=<{0}&id={1}' rel='facebox[.bolder]'>".format(g_artistId,tab.id);
+        html += tab.name;
+        html += "</a>";
+        html += "</span>";
+        html += "<span class='delete'><a  href='#' onclick='deleteTab({0});'></a></span>".format(tab.id);
+        html += "</li>";
+        $('#tab_list_ul').append(html);
+    }
+    if( g_tabList.length == 0 )
+    {
+        var html = "<div class='empty_list'>You have not uploaded any tab content yet.</div>";
+        $('#tab_list_ul').append(html);
+    }
 }
 
 function deletePage(song_id)
@@ -149,6 +219,14 @@ function deleteVideo(video_id)
     if(ret)
     {
         window.location.href = "artist_management.php?userId={0}&action=1&video_id={1}".format(g_artistId,video_id);
+    }
+}
+function deleteTab(tab_id)
+{
+    var ret = window.confirm("Are you sure you want delete this item?");
+    if(ret)
+    {
+        window.location.href = "artist_management.php?userId={0}&action=1&content_id={1}".format(g_artistId,tab_id);
     }
 }
 
