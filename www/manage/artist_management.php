@@ -68,6 +68,8 @@
     {
         $row['short_link'] = make_short_link($row['abbrev']);
         array_walk($row,cleanup_row_element);
+        $row['download'] = $row['download'] == "0" ? FALSE : TRUE;
+        $row['product_id'] = $row['product_id'] > 0 ? intval($row['product_id']) : FALSE;
         $page_list[] = $row;
     }
     $page_list_json = json_encode($page_list);
