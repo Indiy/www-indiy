@@ -4,7 +4,7 @@ var g_removeImage = false;
 
 function showPagePopup(page_index)
 {
-    if( song_index !== false )
+    if( page_index !== false )
     {
         var song = g_pageList[page_index];
         
