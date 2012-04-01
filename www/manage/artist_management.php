@@ -114,59 +114,13 @@
 
 <script type="text/javascript">
 
+var g_artistId = <?=$artistID?>;
 var g_pageList = <?=$page_list_json;?>;
 var g_facebook = <?=$facebook;?>;
 var g_twitter = <?=$twitter;?>;
 var g_paypalEmail = "<?=$paypalEmail;?>";
 
-function setupSortableLists()
-{
-    $(function() {
-        $("ul.playlist_sortable").sortable({opacity: 0.8, cursor: 'move', update: function() {
-            //$("#response").html("Loading...");
-                var order = $(this).sortable("serialize") + '&order=order&type=musicplayer_audio';
-                $.post("/includes/ajax.php", order, function(theResponse){
-                    //$("#response").html(theResponse);
-                });
-            }
-        });
-    });
 
-    $(function() {
-        $("ul.pages_sortable").sortable({opacity: 0.8, cursor: 'move', update: function() {
-            //$("#response").html("Loading...");
-                var order = $(this).sortable("serialize") + '&order=order&type=musicplayer_content';
-                $.post("/includes/ajax.php", order, function(theResponse){
-                    //$("#response").html(theResponse);
-                });
-            }
-        });
-    });
-
-    $(function() {
-        $("ul.videos_sortable").sortable({opacity: 0.8, cursor: 'move', update: function() {
-            //$("#response").html("Loading...");
-                var order = $(this).sortable("serialize") + '&order=order&type=musicplayer_video';
-                $.post("/includes/ajax.php", order, function(theResponse){
-                    //$("#response").html(theResponse);
-                });
-            }
-        });
-    });			
-
-    $(function() {
-        $("ul.products_sortable").sortable({opacity: 0.8, cursor: 'move', update: function() {
-            //$("#response").html("Loading...");
-                var order = $(this).sortable("serialize") + '&order=order&type=musicplayer_ecommerce_products';
-                $.post("/includes/ajax.php", order, function(theResponse){
-                    //$("#response").html(theResponse);
-                });
-            }
-        });
-    });
-}
-
-$(document).ready(setupSortableLists);
 
 <? if( $show_first_instruction ): ?>
 
