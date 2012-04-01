@@ -29,6 +29,10 @@ function showPopup(name)
 {
     $('#' + name).show();
 }
+function closePopup()
+{
+    $('.popup_wrapper').hide();
+}
 
 function updatePageList()
 {
