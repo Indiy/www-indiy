@@ -1,0 +1,90 @@
+
+
+
+<div id="popup" class="edit_page_popup" style="display: none;">
+    <div class='top_bar'>
+        <h2><Edit Page</h2>
+        <button onclick='closePopup();'>CLOSE</button>
+    </div>
+
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+
+    <form method="post" enctype="multipart/form-data" action="addmusic.php" onsubmit='return onAddMusicSubmit();'>
+        <input id='artist_id' type='hidden' value="" name="artistid">
+        <input id='song_id' type='hidden' value="" name="id">
+        
+        <div class='input_container'>
+            <div class='line_label'>Name of Audio / Image<span class='required'>*</span></div>
+            <input id='song_name' type="text" name="name" value="" class="line_text" />
+        </div>
+        <div class='input_container' style='height: 50px;'>
+            <div class='left_label'>MP3 File <span id='tip_mp3' class='tooltip'>(?)</span></div>
+            <div class='right_file_filename'>
+                <span><input id='song_audio' type="file" name="audio" onchange='onSongChange();'/></span>
+                <div id='song_filename_container' class='filename'></div>
+            </div>
+        </div>
+        <div class='input_container' style='height: 50px;'>
+            <div class='left_image_label'>
+                <div class='image_label'>Image <span id='tip_image' class='tooltip'>(?)</span><span class='required'>*</span></div>
+                <div id='image_filename_container' class='image_image'></div>
+            </div>
+            <div class='right_file_filename'>
+                <input id='song_image' type="file" name="logo" onchange='onImageChange(this);' />
+                <div class='filename'>(For best results use 1200 x 800 size photos)</div>
+            </div>
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Background Style <span id='tip_bg_style' class='tooltip'>(?)</span></div>
+            <select id='bg_style' name="bg_style" class='right_drop'>
+            <?php
+                $styles = array('STRETCH','CENTER','TILE');
+                foreach( $styles as $style ) 
+                    echo "<option value='$style' $selected>$display_style</option>\n";
+            ?>
+            </select>
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Background Color</div>
+            <input id='song_bgcolor' type="text" name="bgcolor" maxlength="6" size="6" class='color' value="" />
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Free Download <span id='tip_free_download' class='tooltip'>(?)</span></div>
+            <div class='right_box'>
+                <input type="radio" name="download" value="1" class="radio" onclick='clickFree(1);'/> Yes
+                <input type="radio" name="download" value="0" class="radio" onclick='clickFree(0);'/> No
+            </div>
+        </div>
+        <div class='input_container'>
+            <div class='line_label'>Amazon MP3 URL</div>
+            <input id='amazon_url' type="text" name="amazon" value="" class='line_text' />
+        </div>
+        <div class='input_container'>
+            <div class='line_label'>iTunes URL</div>
+            <input id='itunes_url' type="text" name="itunes" value="" class='line_text' />
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>MyArtistDNA Store <span id='tip_store' class='tooltip'>(?)</span></div>
+            <input id='mad_store' class='right_box' type="checkbox" name="mad_store" onclick='clickMadStore();' />
+        </div>
+        <div class='input_container' style="height: 60px;">
+            <div class='left_label'>Tags <span id='tip_tags' class='tooltip'>(?)</span></div>
+            <div class='right_label'>Seperate tags with commas.</div>
+            <div style='clear:both;'></div>
+            <input id='audio_tags' type="text" name="tags" value="" class="line_text" />
+        </div>
+        <div class='submit_branding_container'>
+            <input type="submit" name="WriteTags" value="submit" class='left_submit' />
+            <div class='branding_tip'>Be creative! This is your art collection, your magazine, your radio station. <a href="http://myartistdna.is" target="_blank">Need more?</a></div>
+            <div style='clear: both;'></div>
+        </div>
+    </form>
+
+    <?php include 'popup_messages.html'; ?>
+        
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
+</div>
+
+

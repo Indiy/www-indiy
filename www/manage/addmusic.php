@@ -273,56 +273,6 @@
 
 $(document).ready(setupQuestionTolltips);
 
-var g_removeSong = false;
-var g_removeImage = false;
-var g_needsImage = <?=$needs_image;?>;
-var g_paypalEmail = "<?=$paypalEmail;?>";
-
-function onSongRemove()
-{
-    var result = window.confirm("Remove song from page?");
-    if( result )
-    {
-        g_removeSong = true;
-        $('#song_filename_container').empty();
-    }
-    return false;
-}
-
-function onImageRemove()
-{
-    var result = window.confirm("Remove image from page?");
-    if( result )
-    {
-        g_removeImage = true;
-        $('#image_filename_container').hide();
-    }
-    return false;
-}
-
-function clickFree(yes)
-{
-    if( yes )
-    {
-        $('#amazon_url').attr('disabled',true);
-        $('#itunes_url').attr('disabled',true);
-        $('#mad_store').attr('disabled',true);
-    }
-    else
-    {
-        $('#amazon_url').removeAttr('disabled');
-        $('#itunes_url').removeAttr('disabled');
-        $('#mad_store').removeAttr('disabled');
-    }
-}
-
-function clickMadStore()
-{
-    if( g_paypalEmail.length == 0 )
-    {
-        window.alert("You will need to add a Paypal Email address in Monetize settings to sell music in the MyArtistDNA Store.");
-    }
-}
     
 </script>
 

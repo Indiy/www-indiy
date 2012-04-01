@@ -25,6 +25,11 @@ function artistManagementReady()
 }
 $(document).ready(artistManagementReady);
 
+function showPopup(name)
+{
+    $('.' + name).show();
+}
+
 function updatePageList()
 {
     $('#page_list_ul').empty();
@@ -37,7 +42,7 @@ function updatePageList()
         var html = "";
         html += "<li id='arrayorder_{0}' class='playlist_sortable {1}'>".format(song.id,class_name);
         html += "<span class='title'>\n";
-        html += "<a href='addmusic.php?artist_id={0}&id={1}' rel='facebox[.bolder]'>".format(g_artistId,song.id);
+        html += "<a onclick='showPopup(\"edit_page_popup\");'>".format(g_artistId,song.id);
         html += song.name;
         html += "</a>\n";
         html += "</span>\n";

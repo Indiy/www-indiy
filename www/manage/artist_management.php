@@ -145,6 +145,8 @@
     $paypalEmail = $store_check["paypal"];
 
     require_once 'header.php';
+    
+    include_once 'include/edit_page.html';
 ?>
 
 <script type="text/javascript">
