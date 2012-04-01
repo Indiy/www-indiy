@@ -38,8 +38,8 @@ function showPagePopup(page_index)
             $('input[name=download]:eq(1)').attr('checked','checked');
             clickFree(0);
         }
-        $('#amazon_url').val(song.amazon_url);
-        $('#itunes_url').val(song.itunes_url);
+        $('#amazon_url').val(song.amazon);
+        $('#itunes_url').val(song.itunes);
         $('#mad_store').prop('checked',song.product_id);
         $('#audio_tags').val(song.audio_tags);
     }
