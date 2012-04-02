@@ -106,7 +106,20 @@ function onAddProductSubmit()
     }
     
     var url = '/manage/addproduct.php';
-    return startAjaxUpload(url,fillProductForm);
+    return startAjaxUpload(url,fillProductForm,onProductSuccess);
 }
+function onProductSuccess(data)
+{
+    if( g_productIndex !== false )
+    {
+        g_productList[g_productIndex] = data.product_data;
+    }
+    else
+    {
+        g_productList.unshift(data.product_data);
+    }
+    updateStoreList();
+}
+
 
 
