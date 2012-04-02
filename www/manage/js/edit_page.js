@@ -201,7 +201,7 @@ function onPageSuccess(data)
     }
     else
     {
-        g_pageList.append(data.page_data);
+        g_pageList.push(data.page_data);
     }
     updatePageList();
 }
