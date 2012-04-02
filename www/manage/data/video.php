@@ -142,11 +142,11 @@
         
         if( $video_id != "") 
         {
-            update($database,$tables,$values,"id",$video_id);
+            update('mydna_musicplayer_video',$tables,$values,"id",$video_id);
         } 
         else 
         {
-            insert($database,$tables,$values);
+            insert('mydna_musicplayer_video',$tables,$values);
             $video_id = mysql_insert_id();
         }
         
