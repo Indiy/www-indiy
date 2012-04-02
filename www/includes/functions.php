@@ -970,4 +970,9 @@
         return NULL;
     }
 
+    function cleanup_row_element(&$value,$key) 
+    {
+        $value = stripslashes($value);
+    }
+
 ?>
