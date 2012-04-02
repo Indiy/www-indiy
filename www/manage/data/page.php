@@ -1,11 +1,11 @@
 <?php  
     
-    require_once '../includes/config.php';
-	require_once '../includes/functions.php';
+    require_once '../../includes/config.php';
+	require_once '../../includes/functions.php';
 	
     if( $_SESSION['sess_userId'] == "" )
 	{
-		header("Location: index.php");
+		header("Location: /index.php");
 		exit();
 	}
 
@@ -15,7 +15,7 @@
         print "Bad method\n";
 
     exit();
-/*
+
 function do_POST()
 {
     $artist_id = $_POST['artistid'];
@@ -212,8 +212,7 @@ function do_POST()
             $postedValues['tw_update'] = TRUE;
         }
     }
-    
-    
+
     if( $_POST['ajax'] )
     {
         echo json_encode($postedValues);
@@ -221,9 +220,9 @@ function do_POST()
     }
     else
     {
-        header("Location: /manage/artist_management.php?userId=$
+        header("Location: /manage/artist_management.php?userId=$artist_id");
+        exit();
     }
-    
 }
-*/
+
 ?>
