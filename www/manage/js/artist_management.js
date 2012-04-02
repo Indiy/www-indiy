@@ -20,6 +20,7 @@ function artistManagementReady()
         }
 		return false;
 	});
+    $('.heading a').click(function(e) { e.stopPropagation(); });
     
     setupSortableLists();
 }
