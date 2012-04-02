@@ -1,7 +1,5 @@
 
 
-var g_hideTooltipTimer = false;
-var g_clip = false;
 
 var HOSTNAME_REGEX = new RegExp('^(?=.{1,255}$)[0-9A-Za-z](?:(?:[0-9A-Za-z]|\\b-){0,61}[0-9A-Za-z])?(?:\\.[0-9A-Za-z](?:(?:[0-9A-Za-z]|\\b-){0,61}[0-9A-Za-z])?)*\\.?$');
 
@@ -9,118 +7,35 @@ var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+
 
 var FB_REGEX = new RegExp('http://www.facebook.com/(.*)','i');
 
-function hideTooltip()
-{
-    $('#link_tooltip').hide();
-}
-function startTooltipTimer()
-{
-    clearTooltipTimer();
-    g_hideTooltipTimer = setTimeout(hideTooltip,1000);
-}
-function clearTooltipTimer()
-{
-    if( g_hideTooltipTimer )
-    {
-        clearTimeout(g_hideTooltipTimer);
-        g_hideTooltipTimer = false;
-    }
-}
-
-function mouseenterLink(self)
-{
-    $('.link_copy').text('Copy');
-    clearTooltipTimer();
-    var url = self.href;
-    g_clip.setText(url);
-    var short_url = url.substring(7);
-    $('#link_url').text(short_url);
-    
-    $('#link_tooltip').show();
-    var new_offset = $(self).offset();
-    new_offset.left -= $('#link_tooltip').width()/2;
-    new_offset.top -= $('#link_tooltip').height() + 5; 
-    $('#link_tooltip').offset(new_offset)
-
-    var link_tooltip = $('#link_tooltip').get(0);
-    if( g_clip.div ) 
-    {
-        g_clip.reposition(link_tooltip);
-    }
-    else
-    {
-        g_clip.glue(link_tooltip);
-    }
-}
-function mouseleaveLink()
-{
-    startTooltipTimer();
-}
-
-function clipMouseOver()
-{
-    clearTooltipTimer();   
-}
-function clipMouseOut()
-{
-    startTooltipTimer();
-}
-function clipComplete()
-{
-    $('.link_copy').text('Copied');
-}
-function mouseenterToolTip()
-{
-    clearTooltipTimer();
-}
-function mouseleaveToolTip()
-{
-    startTooltipTimer();
-}
-
-function setupClipboard()
-{
-    ZeroClipboard.setMoviePath('/flash/ZeroClipboard.swf');
-    g_clip = new ZeroClipboard.Client();
-    g_clip.setHandCursor(true);
-    g_clip.addEventListener('onMouseOver',clipMouseOver);
-    g_clip.addEventListener('onMouseOut',clipMouseOut);
-    g_clip.addEventListener('onComplete',clipComplete);
-    $('.share a').mouseenter(function() { mouseenterLink(this); });
-    $('.share a').mouseleave(mouseleaveLink);
-    $('#link_tooltip').mouseenter(mouseenterToolTip);
-    $('#link_tooltip').mouseleave(mouseleaveToolTip);
-}
-
-$(document).ready(setupClipboard);
 
 function showProgress(text)
 {
-    $('#ajax_form').hide();
-    $('.status_container').hide();
-    if( text && text.length > 0 )
-    {
-        $('#progress_msg .status').text(text);
-    }
-    $('#progress_msg').show();
+    showMessagePopup('#progress',text);
 }
 function showSuccess(text)
 {
-    $('.status_container').hide();
-    if( text && text.length > 0 )
-    {
-        $('#success_msg .status').text(text);
-    }
-    $('#success_msg').show();
+    $('#message_popup #success_msg .social_success').hide();
+    showMessagePopup('#success',text);
 }
 function showFailure(text)
 {
-    $('.status_container').hide();
-    if( text && text.length > 0 )
-    {
-        $('#failure_msg .status').text(text);
-    }
-    $('#failure_msg').show();
+    showMessagePopup('#failure',text);
+}
+function showProcessing()
+{
+    showMessagePopup('#processing');
+}
+function showUploading()
+{
+    showMessagePopup('#uploading');
+}
+function showMessagePopup(selector,text)
+{
+    showPopup('#message_popup');
+    $('#message_popup .status_container').hide();
+    if( text )
+        $('#message_popup ' + selector + ' .status').text(text);
+    $('#message_popup ' + selector).show();
 }
 
 function onAddUserSubmit()
@@ -148,7 +63,7 @@ function onAddUserSubmit()
         },
         error: function()
         {
-            showFailure();
+            showFailure("Update Failed");
         }
     });
     return false;
@@ -177,7 +92,7 @@ function onAddLabelSubmit()
         },
         error: function()
         {
-            showFailure();
+            showFailure("Update Failed");
         }
     });
     return false;
@@ -185,7 +100,7 @@ function onAddLabelSubmit()
 
 function onStoreSettingsSubmit()
 {
-    showProgress();
+    showProgress("Updating record...");
 
     var paypal_email = $('#paypal_email').val();
     
@@ -204,7 +119,7 @@ function onStoreSettingsSubmit()
         },
         error: function()
         {
-            showFailure();
+            showFailure("Update Failed");
         }
     });
     return false;    
@@ -231,12 +146,11 @@ function onUploadProgress(evt)
 }
 function onUploadDone(evt)
 {
-    $('.status_container').hide();
-    $('#processing_msg').show();
+    showProcessing();
 }
 function onUploadFailed(evt)
 {
-    showFailure();
+    showFailure("Update Failed");
 }
 function uploadReadyStateChange(xhr)
 {
@@ -255,7 +169,7 @@ function uploadReadyStateChange(xhr)
                 }
                 else
                 {
-                    showSuccess();
+                    showSuccess("Update Success");
                     if( 'fb_update' in data )
                         $('#success_msg .social_success.facebook').show();
                     if( 'tw_update' in data )
@@ -267,21 +181,19 @@ function uploadReadyStateChange(xhr)
             }
             else
             {
-                showFailure();
+                showFailure("Update Failed");
             }
         }
         catch(e)
         {
-            showFailure();
+            showFailure("Update Failed");
         }
     }
 }
 
 function startAjaxUpload(url,fillForm,successCallback)
 {
-    $('#ajax_form').hide();
-    $('.status_container').hide();
-    
+    showProgress();
     try
     {
         var xhr = new XMLHttpRequest();
@@ -300,12 +212,12 @@ function startAjaxUpload(url,fillForm,successCallback)
         
         xhr.open("POST",url);
         xhr.send(form_data);
-        $('#uploading_msg').show();
+        showUploading();
         return false;
     }
     catch(e)
     {
-        $('#progress_msg').show();
+        showProgress();
         return true;
     }
     
@@ -388,12 +300,12 @@ function checkElementSize(file,size_limit,error_string)
 }
 function checkFileExtensions(element_id,extensions,error_string)
 {
-    var file = $('#' + element_id)[0];
+    var file = $(element_id)[0];
     checkElementFileExtensions(file,extensions,error_string);
 }
 function onVideoChange()
 {
-    checkFileExtensions('video_file',['mov','mp4'],"Please upload video in MP4 or MOV format.");
+    checkFileExtensions('#video_file',['mov','mp4'],"Please upload video in MP4 or MOV format.");
 }
 
 function onImageChange(file)
@@ -432,7 +344,7 @@ function onSocializePublish()
 }
 function socialConfigSubmit()
 {
-    showProgress();
+    showProgress("Updating record...");
     var fb_setting = $('input[name=fb_setting]:checked').val();
     var tw_setting = $('input[name=tw_setting]:checked').val();
     var fb_page_url = $('#fb_page_url').val();
@@ -449,11 +361,11 @@ function socialConfigSubmit()
         dataType: 'text',
         success: function(data) 
         {
-            showSuccess();
+            showSuccess("Update Success");
         },
         error: function()
         {
-            showFailure();
+            showFailure("Update Failed");
         }
     });
     return false;    
@@ -509,7 +421,7 @@ function onSocialConfigSave()
 }
 function onAccountSettingsSubmit()
 {
-    showProgress();
+    showProgress("Updating record...");
 
     var post_url = "/manage/account_settings.php?";
     post_url += $('#ajax_form').serialize();
@@ -521,11 +433,11 @@ function onAccountSettingsSubmit()
         dataType: 'text',
         success: function(data) 
         {
-            showSuccess();
+            showSuccess("Update Success");
         },
         error: function()
         {
-            showFailure();
+            showFailure("Update Failed");
         }
     });
     return false;
@@ -659,7 +571,7 @@ function onEditProfileSubmit()
 }
 function onInviteFriends()
 {
-    showProgress();
+    showProgress("Updating record...");
 
     var friends = $('#friends_text').val();
     
@@ -683,26 +595,7 @@ function onInviteFriends()
     return false;
 }
 
-function hoverInQuestion(event)
-{
-    $('#question_tooltip').show();
-    var id = $(event.target).attr('id');
-    $('#question_tooltip').text(g_tooltipText[id]);
 
-    var new_offset = $(event.target).offset();
-    new_offset.left -= $('#question_tooltip').width()/2 - 40;
-    new_offset.top -= $('#question_tooltip').height() + 20;
-    $('#question_tooltip').offset(new_offset);
-    
-}
-function hoverOutQuestion(event)
-{
-    $('#question_tooltip').hide();
-}
-function setupQuestionTolltips()
-{
-    $('.tooltip').hover(hoverInQuestion,hoverOutQuestion);
-}
 
 function showChangePassword()
 {
@@ -721,7 +614,7 @@ function submitChangePassword()
         && new_password == confirm_password )
     {
         $('#change_password').hide();
-        showProgress();
+        showProgress("Updating record...");
         
         var data = {
             artist_id: g_artistId,

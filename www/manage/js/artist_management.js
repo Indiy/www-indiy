@@ -25,9 +25,10 @@ function artistManagementReady()
 }
 $(document).ready(artistManagementReady);
 
-function showPopup(name)
+function showPopup(selector)
 {
-    $('#' + name).fadeIn();
+    $('.popup_wrapper').hide();
+    $(selector).fadeIn();
     $('#mask').fadeIn();
 }
 function closePopup()

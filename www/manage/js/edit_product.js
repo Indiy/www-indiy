@@ -4,49 +4,46 @@ var g_productIndex = false;
 
 function showProductPopup(product_index)
 {
-    $('.status_container').hide();
-    $('#ajax_form').show();
-    
     g_productIndex = product_index;
     g_removeSong = false;
     g_removeImage = false;
     
-    $('#artist_id').val(g_artistId);
-    clearFileElement('#product_image');
+    $('#edit_product #artist_id').val(g_artistId);
+    clearFileElement('#edit_product #product_image');
 
     if( product_index !== false )
     {
         var product = g_productList[product_index];
         
-        $('#product_id').val(product.id);
-        $('#name').val(product.name);
+        $('#edit_product #product_id').val(product.id);
+        $('#edit_product #name').val(product.name);
         if( product.image )
         {
             var html = "<img src='{0}' />".format(product.image);
             html += "<button onclick='return onImageRemove();'></button>";
-            $('#product_image_container').html(html);
+            $('#edit_product #product_image_container').html(html);
         }
         else
         {
-            $('#product_image_container').empty();
+            $('#edit_product #product_image_container').empty();
         }
         
-        $('#description').val(product.description);
-        $('#price').val(product.price);
-        $('#size').val(product.size);
-        $('#color').val(product.color);
+        $('#edit_product #description').val(product.description);
+        $('#edit_product #price').val(product.price);
+        $('#edit_product #size').val(product.size);
+        $('#edit_product #color').val(product.color);
     }
     else
     {
-        $('#product_id').val("");
-        $('#name').val("");
-        $('#product_image_container').empty();
-        $('#description').val("");
-        $('#price').val("");
-        $('#size').val("");
-        $('#color').val("");
+        $('#edit_product #product_id').val("");
+        $('#edit_product #name').val("");
+        $('#edit_product #product_image_container').empty();
+        $('#edit_product #description').val("");
+        $('#edit_product #price').val("");
+        $('#edit_product #size').val("");
+        $('#edit_product #color').val("");
     }
-    showPopup('edit_product_wrapper');
+    showPopup('#edit_product');
 }
 
 function onAddProductSubmit()
@@ -63,20 +60,20 @@ function onAddProductSubmit()
             needs_image = true;
     }
 
-    var name = $('#name').val();
+    var name = $('#edit_product #name').val();
     if( name.length == 0 )
     {
         window.alert("Please enter a name for your product.");
         return false;
     }
-    var price = parseFloat($('#price').val());
+    var price = parseFloat($('#edit_product #price').val());
     if( ! ( price > 0.0 ) )
     {
         window.alert("Please enter a price for your product, must be greater than $0.00.");
         return false;
     }
     
-    var product_image = document.getElementById('product_image');
+    var product_image = $('#edit_product #product_image')[0];
     if( needs_image && ( !product_image || !product_image.value || product_image.value.length == 0 ) )
     {
         window.alert("Please upload an image for your product.");
@@ -85,13 +82,13 @@ function onAddProductSubmit()
     
     function fillProductForm(form_data)
     {
-        var artist_id = $('#artist_id').val();
-        var product_id = $('#product_id').val();
-        var name = $('#name').val();
-        var description = $('#description').val();
-        var price = $('#price').val();
-        var size = $('#size').val();
-        var color = $('#color').val();
+        var artist_id = $('#edit_product #artist_id').val();
+        var product_id = $('#edit_product #product_id').val();
+        var name = $('#edit_product #name').val();
+        var description = $('#edit_product #description').val();
+        var price = $('#edit_product #price').val();
+        var size = $('#edit_product #size').val();
+        var color = $('#edit_product #color').val();
         
         form_data.append('artistid',artist_id);
         form_data.append('id',product_id);
@@ -105,7 +102,7 @@ function onAddProductSubmit()
         form_data.append('color',color);
         form_data.append('ajax',true);
         
-        var product_image = document.getElementById('product_image');
+        var product_image = $('#edit_product #product_image')[0];
         if( product_image.files && product_image.files.length > 0 )
         {
             form_data.append('file',product_image.files[0]);
