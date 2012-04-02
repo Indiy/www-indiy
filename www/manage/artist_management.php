@@ -27,11 +27,6 @@
     
     $MAX_TABS = 5;
     
-    function cleanup_row_element(&$value,$key) 
-    {
-        $value = stripslashes($value);
-    }
-	
 	$query_artistDetail = "SELECT * FROM mydna_musicplayer WHERE id='".$artistID."' ";
 	$result_artistDetail = mysql_query($query_artistDetail) or die(mysql_error());
 	$record_artistDetail = mysql_fetch_array($result_artistDetail);
