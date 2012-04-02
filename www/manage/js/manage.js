@@ -260,6 +260,9 @@ function uploadReadyStateChange(xhr)
                         $('#success_msg .social_success.facebook').show();
                     if( 'tw_update' in data )
                         $('#success_msg .social_success.twitter').show();
+                    
+                    if( xhr.successCallback )
+                        successCallback(data);
                 }
             }
             else
@@ -274,7 +277,7 @@ function uploadReadyStateChange(xhr)
     }
 }
 
-function startAjaxUpload(url,fillForm)
+function startAjaxUpload(url,fillForm,successCallback)
 {
     $('#ajax_form').hide();
     $('.status_container').hide();
@@ -282,6 +285,7 @@ function startAjaxUpload(url,fillForm)
     try
     {
         var xhr = new XMLHttpRequest();
+        xhr.successCallback = successCallback;
         xhr.onreadystatechange = function() { uploadReadyStateChange(this); };
         var upload = xhr.upload;
         if( upload )

@@ -183,7 +183,20 @@ function onAddMusicSubmit()
     }
     
     var url = '/manage/data/page.php';
-    return startAjaxUpload(url,fillMusicForm);
+    return startAjaxUpload(url,fillMusicForm,onPageSuccess);
+}
+
+function onPageSuccess(data)
+{
+    if( g_songIndex !== false )
+    {
+        g_pageList[g_pageIndex] = data.page_data;
+    }
+    else
+    {
+        g_pageList.append(data.page_data);
+    }
+    updatePageList();
 }
 
 function onSongChange()
