@@ -1,10 +1,13 @@
 <?php
 
-    require_once '../Login_Twitbook/twitter/twitteroauth.php';
-    require_once '../Login_Twitbook/config/twconfig.php';
+    if( !defined(PATH_TO_ROOT) )
+        define("PATH_TO_ROOT","../");
+
+    require_once PATH_TO_ROOT . 'Login_Twitbook/twitter/twitteroauth.php';
+    require_once PATH_TO_ROOT . 'Login_Twitbook/config/twconfig.php';
     
-    require_once '../Login_Twitbook/facebook/facebook.php';
-    require_once '../Login_Twitbook/config/fbconfig.php';
+    require_once PATH_TO_ROOT . 'Login_Twitbook/facebook/facebook.php';
+    require_once PATH_TO_ROOT . 'Login_Twitbook/config/fbconfig.php';
 
 
     $table = '';
