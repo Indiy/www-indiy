@@ -273,7 +273,7 @@ $(document).ready(showFirstInstruction);
             <? if( strlen($paypalEmail) == 0 ): ?>
                 <div class="buttonadd"><a href="store_settings.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Store Settings</a></div>
             <? else: ?>
-                <div class="buttonadd"><a onclick='showProductPopup(false);'>Add Product</a></div>
+                <div class="buttonadd"><a onclick='return showProductPopup(false);'>Add Product</a></div>
             <? endif ?>
 
             </div>

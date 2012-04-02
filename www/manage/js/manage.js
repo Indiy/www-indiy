@@ -31,7 +31,7 @@ function showUploading()
 }
 function showMessagePopup(selector,text)
 {
-    showPopup('#message_popup');
+    showPopup('#message_popup',true);
     $('#message_popup .status_container').hide();
     if( text )
         $('#message_popup ' + selector + ' .status').text(text);

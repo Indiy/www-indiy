@@ -25,11 +25,19 @@ function artistManagementReady()
 }
 $(document).ready(artistManagementReady);
 
-function showPopup(selector)
+function showPopup(selector,immediate)
 {
     $('.popup_wrapper').hide();
-    $(selector).fadeIn();
-    $('#mask').fadeIn();
+    if( immediate )
+    {
+        $(selector).show();
+        $('#mask').show();
+    }
+    else
+    {
+        $(selector).fadeIn();
+        $('#mask').fadeIn();
+    }
 }
 function closePopup()
 {
