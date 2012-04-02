@@ -18,6 +18,18 @@
 
     exit();
 
+function get_page_data($page_id)
+{
+    $row = mf(mq("SELECT * FROM mydna_musicplayer_audio WHERE id='$page_id'"));
+    
+    $row['short_link'] = make_short_link($row['abbrev']);
+    array_walk($row,cleanup_row_element);
+    $row['download'] = $row['download'] == "0" ? FALSE : TRUE;
+    $row['product_id'] = $row['product_id'] > 0 ? intval($row['product_id']) : FALSE;
+    
+    return $row;
+}
+
 function do_POST()
 {
     $artist_id = $_POST['artistid'];
@@ -181,7 +193,7 @@ function do_POST()
     else 
     {
         mysql_insert('mydna_musicplayer_audio',$values);
-        $new_song_id = mysql_insert_id();
+        $song_id = mysql_insert_id();
     }
     
     $successMessage = "<div id='notify'>Success! You are being redirected...</div>";
@@ -217,6 +229,8 @@ function do_POST()
 
     if( $_POST['ajax'] )
     {
+        $page_data = get_page_data($song_id);
+        $postedValues['page_data'] = $page_data;
         echo json_encode($postedValues);
         exit();
     }
