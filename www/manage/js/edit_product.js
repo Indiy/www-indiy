@@ -51,6 +51,18 @@ function showProductPopup(product_index)
 
 function onAddProductSubmit()
 {
+    var needs_image = false;
+    if( g_productIndex === false )
+    {
+        needs_image = true;
+    }
+    else
+    {
+        var product  = g_productList[g_productIndex];
+        if( !product.image )
+            needs_image = true;
+    }
+
     var name = $('#name').val();
     if( name.length == 0 )
     {
@@ -65,7 +77,7 @@ function onAddProductSubmit()
     }
     
     var product_image = document.getElementById('product_image');
-    if( g_needsImage && ( !product_image || !product_image.value || product_image.value.length == 0 ) )
+    if( needs_image && ( !product_image || !product_image.value || product_image.value.length == 0 ) )
     {
         window.alert("Please upload an image for your product.");
         return false;
