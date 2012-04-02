@@ -39,7 +39,7 @@ function showPagePopup(page_index)
         }
         if( song.image )
         {
-            var html = "<img src='../artists/images/{0}' />".format(song.image);
+            var html = "<img src='{0}' />".format(song.image);
             html += "<button onclick='return onImageRemove();'></button>";
             $('#image_filename_container').html(html);
         }

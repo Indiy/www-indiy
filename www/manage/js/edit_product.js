@@ -20,9 +20,9 @@ function showProductPopup(product_index)
         
         $('#product_id').val(product.id);
         $('#name').val(product.name);
-        if( products.image )
+        if( product.image )
         {
-            var html = "<img src='../artists/images/{0}' />".format(products.image);
+            var html = "<img src='{0}' />".format(product.image);
             html += "<button onclick='return onImageRemove();'></button>";
             $('#product_image_container').html(html);
         }
