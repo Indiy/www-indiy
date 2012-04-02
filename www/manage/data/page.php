@@ -5,7 +5,7 @@
 	
     if( $_SESSION['sess_userId'] == "" )
 	{
-		header("location: index.php");
+		header("Location: index.php");
 		exit();
 	}
 
@@ -15,7 +15,7 @@
         print "Bad method\n";
 
     exit();
-
+/*
 function do_POST()
 {
     $artist_id = $_POST['artistid'];
@@ -54,8 +54,10 @@ function do_POST()
     
     $audio_logo = $old_logo;
     
-    if(!empty($_FILES["logo"]["name"])){
-        if (is_uploaded_file($_FILES["logo"]["tmp_name"])) {
+    if(!empty($_FILES["logo"]["name"]))
+    {
+        if (is_uploaded_file($_FILES["logo"]["tmp_name"])) 
+        {
             $image_data = get_image_data($_FILES["logo"]["tmp_name"]);
             if( $image_data != NULL )
             {
@@ -106,12 +108,17 @@ function do_POST()
                     $audio_sound = '';
                 }
             }
-        } else {
-            if ($old_sound != $audio_sound) {
+        } 
+        else 
+        {
+            if ($old_sound != $audio_sound) 
+            {
                 $audio_sound = $old_sound;
             }
         }
-    }else{
+    }
+    else
+    {
         $audio_sound = $old_sound;
     }
     if( $mad_store )
@@ -218,5 +225,5 @@ function do_POST()
     }
     
 }
-
+*/
 ?>
