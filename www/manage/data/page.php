@@ -191,7 +191,7 @@ function do_POST()
     
     $postedValues['postedValues'] = $_REQUEST;
     
-    require_once 'include/utils.php';
+    require_once '../include/utils.php';
     @create_abbrevs();
     
     if( $new_song_id )
