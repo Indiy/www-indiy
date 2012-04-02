@@ -76,7 +76,7 @@ function do_POST()
             if( $image_data != NULL )
             {
                 $audio_logo = $artist_id."_".strtolower(rand(11111,99999)."_".basename(cleanup($_FILES["logo"]["name"])));
-                @move_uploaded_file($_FILES['logo']['tmp_name'], '../artists/images/' . $audio_logo);
+                @move_uploaded_file($_FILES['logo']['tmp_name'], PATH_TO_ROOT . "artists/images/$audio_logo");
             }
             else
             {
@@ -100,8 +100,8 @@ function do_POST()
             $audio_sound_ogg = $filename . "ogg";
             
             $upload_file = $_FILES['audio']['tmp_name'];
-            $mp3_file = '../artists/audio/' . $audio_sound;
-            $ogg_file = '../artists/audio/' . $audio_sound_ogg;
+            $mp3_file = PATH_TO_ROOT . "artists/audio/$audio_sound";
+            $ogg_file = PATH_TO_ROOT . "artists/audio/$audio_sound_ogg";
             if( $ext == "mp3" )
             {
                 @move_uploaded_file($upload_file, $mp3_file);
@@ -143,8 +143,8 @@ function do_POST()
         }
         else
         {
-            $src = "../artists/images/$audio_logo";
-            $dst = "../artists/products/$audio_logo";
+            $src = PATH_TO_ROOT . "artists/images/$audio_logo";
+            $dst = PATH_TO_ROOT . "artists/products/$audio_logo";
             @copy($src,$dst);
             $values = array("artistid" => $artist_id,
                             "name" => $audio_name,
@@ -199,8 +199,8 @@ function do_POST()
     $successMessage = "<div id='notify'>Success! You are being redirected...</div>";
     
     //showing the post value after the upload //	
-    $postedValues['imageSource'] = "../artists/images/".$audio_logo;
-    $postedValues['audio_sound'] = "../artists/audio/".$audio_sound;
+    $postedValues['imageSource'] = $audio_logo;
+    $postedValues['audio_sound'] = $audio_sound;
     $postedValues['success'] = "1";
     
     $postedValues['postedValues'] = $_REQUEST;
