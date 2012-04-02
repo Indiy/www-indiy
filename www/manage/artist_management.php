@@ -216,8 +216,8 @@ $(document).ready(showFirstInstruction);
             </ul>
             <h6>Platform</h6>
             <ul>
-                <li><a href="addmusic.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Audio + Photo</a></li>
-                <li><a href="addvideo.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Video</a></li>
+                <li><a onclick='showPagePopup(false);'>Add Audio + Photo</a></li>
+                <li><a onclick='showVideoPopup(false);'>Add Video</a></li>
                 <? if( mysql_num_rows($result_artistContent) < $MAX_TABS ): ?>
                     <li><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Tab</a></li>
                 <? endif; ?>
@@ -231,7 +231,7 @@ $(document).ready(showFirstInstruction);
                 <? if( strlen($paypalEmail) == 0 ): ?>
                     <li><a href="store_settings.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Product</a></li>
                 <? else: ?>
-                    <li><a href="addproduct.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Product</a></li>
+                    <li><a onclick='showProductPopup(false);'>Add Product</a></li>
                 <? endif ?>
             </ul>
             <h6>Misc</h6>
@@ -276,7 +276,7 @@ $(document).ready(showFirstInstruction);
             <? if( strlen($paypalEmail) == 0 ): ?>
                 <div class="buttonadd"><a href="store_settings.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Store Settings</a></div>
             <? else: ?>
-                <div class="buttonadd"><a onclick='return showProductPopup(false);'>Add Product</a></div>
+                <div class="buttonadd"><a onclick='showProductPopup(false);'>Add Product</a></div>
             <? endif ?>
 
             </div>
@@ -290,7 +290,7 @@ $(document).ready(showFirstInstruction);
         <div class="videolist">
             <div class="heading">
             <h5>Videos</h5>
-            <div class="buttonadd"><a href="addvideo.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Video</a></div>
+            <div class="buttonadd"><a onclick='showVideoPopup(false);'>Add Video</a></div>
             </div>
         
             <div class="list" style='display: none;'>
