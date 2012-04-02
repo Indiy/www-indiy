@@ -44,6 +44,7 @@ function showProductPopup(product_index)
         $('#edit_product #color').val("");
     }
     showPopup('#edit_product');
+    return false;
 }
 
 function onAddProductSubmit()
