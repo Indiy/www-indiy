@@ -108,7 +108,7 @@ function updateStoreList()
         html += "<li id='arrayorder_{0}' class='products_sortable'>".format(product.id);
         html += "<figure>";
         html += "<span class='close'><a href='#' onclick='deleteProduct({0});'></a></span>".format(product.id);
-        html += "<a href='addproduct.php?artist_id=<{0}&id={1}' rel='facebox[.bolder]'>".format(g_artistId,product.id);
+        html += "<a onclick='showProductPopup({0});'>".format(i);
         html += "<img src='{0}' width='207' height='130' alt=''>".format(product.image);
         html += "</a>";
         html += "</figure>";

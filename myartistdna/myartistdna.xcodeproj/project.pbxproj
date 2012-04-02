@@ -138,6 +138,9 @@
 		2DE2142914C212E0000C5142 /* account_settings.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = account_settings.php; sourceTree = "<group>"; };
 		2DE6BFCD1528390900C3E0EF /* popup_messages2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup_messages2.html; sourceTree = "<group>"; };
 		2DE6BFCF15291E5A00C3E0EF /* page.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = page.php; sourceTree = "<group>"; };
+		2DE6BFD0152971B700C3E0EF /* edit_product.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_product.js; sourceTree = "<group>"; };
+		2DE6BFD11529722200C3E0EF /* edit_product.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = edit_product.html; sourceTree = "<group>"; };
+		2DE6BFD215297A5E00C3E0EF /* product.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = product.php; sourceTree = "<group>"; };
 		2DE8282E14D0B5F300A91FCE /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DE8283214D0B5F300A91FCE /* holder.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = holder.txt; sourceTree = "<group>"; };
 		2DE8284114D0B84A00A91FCE /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
@@ -1605,6 +1608,7 @@
 			children = (
 				2DE197A214F6133000305EAD /* password.php */,
 				2DE6BFCF15291E5A00C3E0EF /* page.php */,
+				2DE6BFD215297A5E00C3E0EF /* product.php */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -3659,6 +3663,7 @@
 				2D5DD4AE14CA08A000566E9A /* popup_messages.html */,
 				2DE6BFCD1528390900C3E0EF /* popup_messages2.html */,
 				2DF61FF11528241C00DBFBC8 /* edit_page.html */,
+				2DE6BFD11529722200C3E0EF /* edit_product.html */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -3680,6 +3685,7 @@
 				2D64FD1114F8735800C5C468 /* rich_text_editor.js */,
 				2DF61FEE1527FFE300DBFBC8 /* artist_management.js */,
 				2DF61FF01528235500DBFBC8 /* edit_page.js */,
+				2DE6BFD0152971B700C3E0EF /* edit_product.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
