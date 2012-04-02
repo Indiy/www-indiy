@@ -112,7 +112,7 @@ function onAddProductSubmit()
         }
     }
     
-    var url = '/manage/addproduct.php';
+    var url = '/manage/data/product.php';
     return startAjaxUpload(url,fillProductForm,onProductSuccess);
 }
 function onProductSuccess(data)
