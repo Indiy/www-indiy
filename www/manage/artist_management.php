@@ -152,7 +152,7 @@
     include_once 'include/edit_page.html';
     include_once 'include/edit_product.html';
     
-    include_once 'include/popup_message2.html';
+    include_once 'include/popup_messages2.html';
 ?>
 
 <script type="text/javascript">
