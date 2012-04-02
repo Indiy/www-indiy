@@ -26,7 +26,11 @@ function get_page_data($page_id)
     array_walk($row,cleanup_row_element);
     $row['download'] = $row['download'] == "0" ? FALSE : TRUE;
     $row['product_id'] = $row['product_id'] > 0 ? intval($row['product_id']) : FALSE;
-    
+    $image_path = "../artists/images/" . $row['image'];
+    if( !empty($row['image']) )
+        $row['image'] = $image_path;
+    else
+        $row['image'] = "images/photo_video_01.jpg";
     return $row;
 }
 
