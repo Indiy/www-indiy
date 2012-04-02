@@ -43,6 +43,10 @@ function showPagePopup(page_index)
             html += "<button onclick='return onImageRemove();'></button>";
             $('#image_filename_container').html(html);
         }
+        else
+        {
+            $('#image_filename_container').empty();
+        }
         
         $('#bg_style').val(song.bg_style);
         $('#song_bgcolor').val(song.bgcolor);
