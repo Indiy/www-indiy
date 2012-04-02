@@ -9,6 +9,10 @@ function showPagePopup(page_index)
 {
     $('#artist_id').val(g_artistId);
     g_pageIndex = page_index;
+    
+    $('.status_container').hide();
+    $('#ajax_form').show();
+    
     if( page_index !== false )
     {
         var song = g_pageList[page_index];
