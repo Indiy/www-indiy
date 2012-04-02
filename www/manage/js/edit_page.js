@@ -2,12 +2,17 @@
 var g_removeSong = false;
 var g_removeImage = false;
 
+var g_songId = '';
+
 function showPagePopup(page_index)
 {
+    $('#artist_id').val(g_artistId);
     if( page_index !== false )
     {
         var song = g_pageList[page_index];
         
+        g_songId = song.id;
+        $('#song_id').val(song.id);
         $('#song_name').val(song.name);
         if( song.audio )
         {
@@ -45,6 +50,8 @@ function showPagePopup(page_index)
     }
     else
     {
+        g_songId = '';
+        $('#song_id').val('');
         $('#song_name').val('');
         $('#song_filename_container').empty();
         $('#image_filename_container').empty();
@@ -120,8 +127,7 @@ function onAddMusicSubmit()
     
     function fillMusicForm(form_data)
     {
-        var artist_id = $('#artist_id').val();
-        var song_id = $('#song_id').val();
+        var song_id = g_songId;
         var song_name = $('#song_name').val();
         var song_bgcolor = $('#song_bgcolor').val();
         var bg_style = $('#bg_style option:selected').val();
@@ -131,7 +137,7 @@ function onAddMusicSubmit()
         var mad_store = $('#mad_store').is(':checked');
         var tags = $('#audio_tags').val();
         
-        form_data.append('artistid',artist_id);
+        form_data.append('artistid',g_artistId);
         form_data.append('id',song_id);
         form_data.append('name',song_name);
         form_data.append('bgcolor',song_bgcolor);
@@ -143,6 +149,7 @@ function onAddMusicSubmit()
         form_data.append('remove_image',g_removeImage);
         form_data.append('remove_song',g_removeSong);
         form_data.append('tags',tags);
+        form_data.append('ajax',true);
         
         var song_image = document.getElementById('song_image');
         if( song_image.files && song_image.files.length > 0 )
@@ -157,7 +164,7 @@ function onAddMusicSubmit()
         form_data.append('WriteTags','submit');
     }
     
-    var url = '/manage/addmusic.php';
+    var url = '/manage/data/page.php';
     return startAjaxUpload(url,fillMusicForm);
 }
 
