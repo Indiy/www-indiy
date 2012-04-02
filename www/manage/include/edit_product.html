@@ -1,0 +1,57 @@
+
+<div id='edit_product_wrapper' class='popup_wrapper'>
+<div id="popup">
+    <div class='top_bar'>
+        <h2>Edit Product</h2>
+        <button onclick='closePopup();'>CLOSE</button>
+    </div>
+    
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+    
+    <form id='ajax_form' method="post" enctype="multipart/form-data" action="data/product.php" onsubmit='return onAddProductSubmit();'>
+        <input id='artist_id' type='hidden' value="" name="artistid">
+        <input id='product_id' type='hidden' value="" name="id" >
+        
+        <div class='input_container'>
+            <div class='line_label'>Name of Product<span class='required'>*</span></div>
+            <input id='name' type="text" name="name" class='line_text' value="" class="input" />
+        </div>
+        
+        <div class='flow_container'>
+            <div class='line_label'>Description</div>
+            <textarea id='description' name="description" class="textarea" style="height: 40px; width: 325px;"></textarea>
+        </div>
+        <div class='input_container' style='height: 50px;'>
+            <div class='left_image_label'>
+                <div class='image_label'>Image<span class='required'>*</span></div>
+                <div id='product_image_container' class='image_image'></div>
+            </div>
+            <input id='product_image' type="file" name="file" value="" class='right_file' onchange='onImageChange(this);'/> 
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Price<span class='required'>*</span></div>
+            <input id='price' type="text" name="price" value="" class='right_text' />
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Size <small><small>(Separated by commas)</small></small></div>
+            <input id='size' type="text" name="size" value="" class='right_text' />
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Colors <small><small>(Separated by commas)</small></small></div>
+            <input id='color' type="text" name="color" value="" class='right_text' />
+        </div>
+        <div class='submit_branding_container'>
+            <input type="submit" name="submit" class='left_submit' value="Submit" />
+            <div class='branding_tip'>Monetize - Image is everything. People buy things that look good. Make your image as good as possible to increase sales. <a href="http://myartistdna.is" target="_blank">Need more?</a></div>
+            <div style='clear: both;'></div>
+        </div>
+    </form>
+    
+    <?php include_once 'include/popup_messages.html'; ?>
+    
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
+</div>
+</div>
+

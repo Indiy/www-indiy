@@ -1,0 +1,112 @@
+
+
+var g_productIndex = false;
+
+function showProductPopup(product_index)
+{
+    $('.status_container').hide();
+    $('#ajax_form').show();
+    
+    g_productIndex = product_index;
+    g_removeSong = false;
+    g_removeImage = false;
+    
+    $('#artist_id').val(g_artistId);
+    clearFileElement('#product_image');
+
+    if( product_index !== false )
+    {
+        var product = g_productList[product_index];
+        
+        $('#product_id').val(product.id);
+        $('#name').val(product.name);
+        if( products.image )
+        {
+            var html = "<img src='../artists/images/{0}' />".format(products.image);
+            html += "<button onclick='return onImageRemove();'></button>";
+            $('#product_image_container').html(html);
+        }
+        else
+        {
+            $('#product_image_container').empty();
+        }
+        
+        $('#description').val(product.description);
+        $('#price').val(product.price);
+        $('#size').val(product.size);
+        $('#color').val(product.color);
+    }
+    else
+    {
+        $('#product_id').val("");
+        $('#name').val("");
+        $('#product_image_container').empty();
+        $('#description').val("");
+        $('#price').val("");
+        $('#size').val("");
+        $('#color').val("");
+    }
+    showPopup('edit_product_wrapper');
+}
+
+function onAddProductSubmit()
+{
+    var name = $('#name').val();
+    if( name.length == 0 )
+    {
+        window.alert("Please enter a name for your product.");
+        return false;
+    }
+    var price = parseFloat($('#price').val());
+    if( ! ( price > 0.0 ) )
+    {
+        window.alert("Please enter a price for your product, must be greater than $0.00.");
+        return false;
+    }
+    
+    var product_image = document.getElementById('product_image');
+    if( g_needsImage && ( !product_image || !product_image.value || product_image.value.length == 0 ) )
+    {
+        window.alert("Please upload an image for your product.");
+        return false;
+    }
+    
+    function fillProductForm(form_data)
+    {
+        var artist_id = $('#artist_id').val();
+        var product_id = $('#product_id').val();
+        var name = $('#name').val();
+        var category = $('#category option:selected').val();
+        var description = $('#description').val();
+        var price = $('#price').val();
+        var sku = $('#sku').val();
+        var size = $('#size').val();
+        var color = $('#color').val();
+        var situation = $('#situation').val();
+        
+        form_data.append('artistid',artist_id);
+        form_data.append('id',product_id);
+        form_data.append('filename',filename);
+        form_data.append('name',name);
+        form_data.append('origin',category);
+        form_data.append('description',description);
+        form_data.append('price',price);
+        form_data.append('sku',sku);
+        form_data.append('size',size);
+        form_data.append('color',color);
+        form_data.append('situation',situation);
+        form_data.append('ajax',true);
+        
+        var product_image = document.getElementById('product_image');
+        if( product_image.files && product_image.files.length > 0 )
+        {
+            form_data.append('file',product_image.files[0]);
+        }
+        form_data.append('submit',situation);
+    }
+    
+    var url = '/manage/addproduct.php';
+    return startAjaxUpload(url,fillProductForm);
+}
+
+

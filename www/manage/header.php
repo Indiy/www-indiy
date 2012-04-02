@@ -27,6 +27,7 @@
     <script src="js/manage.js" type="text/javascript"></script>
     <script src="js/artist_management.js" type="text/javascript"></script>
     <script src="js/edit_page.js" type="text/javascript"></script>
+    <script src="js/edit_product.js" type="text/javascript"></script>
     <script src="/js/ZeroClipboard.js" type="text/javascript"></script>
 
     <script src="facefiles/facebox.js" type="text/javascript"></script>
