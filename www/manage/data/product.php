@@ -86,7 +86,7 @@ function do_POST()
         insert("mydna_musicplayer_ecommerce_products",$tables,$values);
         $getid = mysql_insert_id();
     }
-    $postedValues['imageSource'] = "../artists/products/".$productimage;
+    $postedValues['imageSource'] = $productimage;
     $postedValues['success'] = "1";
     $postedValues['postedValues'] = $_REQUEST;
 
