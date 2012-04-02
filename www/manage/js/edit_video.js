@@ -1,9 +1,7 @@
 
 var g_removeVideo = false;
 var g_removeVideoImage = false;
-var g_needsImage = <?=$needs_image;?>;
 var g_videoIndex = false;
-
 
 function showVideoPopup(video_index)
 {
