@@ -1,8 +1,10 @@
 <?php  
+
+    define("PATH_TO_ROOT","../../");
     
     require_once '../../includes/config.php';
 	require_once '../../includes/functions.php';
-	
+    
     if( $_SESSION['sess_userId'] == "" )
 	{
 		header("Location: /index.php");
@@ -191,6 +193,7 @@ function do_POST()
     
     $postedValues['postedValues'] = $_REQUEST;
     
+    require_once '../
     require_once '../include/utils.php';
     @create_abbrevs();
     
