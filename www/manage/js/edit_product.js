@@ -88,25 +88,21 @@ function onAddProductSubmit()
         var artist_id = $('#artist_id').val();
         var product_id = $('#product_id').val();
         var name = $('#name').val();
-        var category = $('#category option:selected').val();
         var description = $('#description').val();
         var price = $('#price').val();
-        var sku = $('#sku').val();
         var size = $('#size').val();
         var color = $('#color').val();
-        var situation = $('#situation').val();
         
         form_data.append('artistid',artist_id);
         form_data.append('id',product_id);
-        form_data.append('filename',filename);
+        form_data.append('filename','');
         form_data.append('name',name);
-        form_data.append('origin',category);
+        form_data.append('origin','');
         form_data.append('description',description);
         form_data.append('price',price);
-        form_data.append('sku',sku);
+        form_data.append('sku','');
         form_data.append('size',size);
         form_data.append('color',color);
-        form_data.append('situation',situation);
         form_data.append('ajax',true);
         
         var product_image = document.getElementById('product_image');
