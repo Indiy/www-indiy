@@ -31,15 +31,18 @@ function showVideoPopup(video_index)
         }
         else
         {
-            $('#edit_video .image_image').empty;
+            $('#edit_video .image_image').empty();
         }
         var html = "<div>(We only accept .mov and .mp4 files)</div>";
         if( video.video != '' )
         {
-            html = "<div>{0}</div>".format(video.upload_video_filename);
-            $video_html .= "<button onclick='return onVideoRemove();'></button>";
+            if( video.upload_video_filename )
+                html = "<div>{0}</div>".format(video.upload_video_filename);
+            else
+                html = "<div>{0}</div>".format(video.video);
+            html += "<button onclick='return onVideoRemove();'></button>";
         }
-        
+        $('#edit_video .filename').html(html);
     }
     else
     {
