@@ -271,3 +271,10 @@ function setupSortableLists()
     });
 }
 
+function clearFileElement(selector)
+{
+    var html = $(selector).parent().html();
+    $(selector).parent().html(html);
+}
+
+
