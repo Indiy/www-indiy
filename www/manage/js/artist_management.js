@@ -164,7 +164,7 @@ function updateVideoList()
         html += "<a href='#' onclick='deleteVideo({0});'></a>".format(video.id);
         html += "</span>";
         html += "<a onclick='showVideoPopup({0});'>".format(i);
-        html += "<img src='{0}' width='210' height='132' alt=''>".format(video.image);
+        html += "<img src='{0}' width='210' height='132' alt=''>".format(video.image_url);
         html += "</a>";
         html += "</figure>";
         html += "<span>";

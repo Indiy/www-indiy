@@ -23,7 +23,7 @@ function showVideoPopup(video_index)
         
         if( video.image )
         {
-            var html = "<img src='{0}' />".format(video.image);
+            var html = "<img src='{0}' />".format(video.image_url);
             html += "<button onclick='return onVideoImageRemove();'></button>";
             $('#edit_video .image_image').html(html);
         }
