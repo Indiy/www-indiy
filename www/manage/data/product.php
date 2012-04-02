@@ -42,7 +42,7 @@ function do_POST()
     if( is_uploaded_file($_FILES["file"]["tmp_name"]) ) 
     {
         $productimage = strtolower(rand(111,999)."_".basename($_FILES["file"]["name"]));
-        @move_uploaded_file($_FILES['file']['tmp_name'], '../artists/products/' . $productimage);
+        @move_uploaded_file($_FILES['file']['tmp_name'], PATH_TO_ROOT . "artists/products/$productimage");
         $image = $productimage;
     } 
     else 
