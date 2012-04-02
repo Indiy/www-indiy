@@ -108,6 +108,7 @@ function setupQuestionTolltips()
 {
     $('.tooltip').hover(hoverInQuestion,hoverOutQuestion);
 }
+$(document).ready(setupQuestionTolltips);
 
 
 

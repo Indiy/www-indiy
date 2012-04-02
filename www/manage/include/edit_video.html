@@ -1,0 +1,48 @@
+
+<div id='edit_video' class='popup_wrapper'>
+<div id="popup">
+    <div class='top_bar'>
+        <h2>Edit Video</h2>
+        <button onclick='closePopup();'>CLOSE</button>
+    </div>
+    
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+    <form id='ajax_form' method="post" enctype="multipart/form-data" action="data/video.php" onsubmit='return onAddVideoSubmit();'>
+        <input id='artist_id' type='hidden' value="" name="artistid"/>
+        <input id='song_id' type='hidden' value="" name="id"/>
+        
+        <div class='input_container'>
+            <div class='left_label'>Name of Video<span class='required'>*</span></div>
+            <input id='video_name' type="text" name="name" value="" class='right_text' />
+        </div>
+        <div class='input_container' style='height: 50px;'>
+            <div class='left_image_label'>
+                <div class='image_label'>Image <span id='tip_video_image' class='tooltip'>(?)</span><span class='required'>*</span></div>
+                <div class='image_image'></div>
+            </div>
+            <input id='video_image_file' type="file" name="logo" class='right_file' onchange='onImageChange(this);'  />
+        </div>
+        <div class='input_container' style='height: 50px;'>
+            <div class='left_label'>Video <span id='tip_video' class='tooltip'>(?)</span><span class='required'>*</span></div>
+            <div class='right_file_filename'>
+                <input id='video_file' type="file" name="audio" onchange='onVideoChange();' />
+                <div class='filename'></div>
+            </div>
+        </div>
+        <div class='input_container' style="height: 60px;">
+            <div class='left_label'>Tags <span id='tip_tags' class='tooltip'>(?)</span></div>
+            <div class='right_label'>Seperate tags with commas.</div>
+            <div style='clear:both;'></div>
+            <input id='video_tags' type="text" name="tags" value="" class="line_text" />
+        </div>
+        <div class='submit_branding_container' style="padding-top: 25px;">
+            <input type="submit" name="WriteTags" value="submit" class='left_submit' />
+            <div class='branding_tip'>Quality! We suggest using Canon camera products. Great product and cost. <a href="http://myartistdna.is" target="_blank">Need more?</a></div>
+            <div style='clear: both;'></div>
+        </div>
+    </form>
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
+</div>
+</div>
