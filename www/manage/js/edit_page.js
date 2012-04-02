@@ -188,7 +188,7 @@ function onAddMusicSubmit()
 
 function onPageSuccess(data)
 {
-    if( g_songIndex !== false )
+    if( g_pageIndex !== false )
     {
         g_pageList[g_pageIndex] = data.page_data;
     }
