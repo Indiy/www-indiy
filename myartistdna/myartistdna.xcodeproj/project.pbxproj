@@ -141,7 +141,7 @@
 		2DE6BFD0152971B700C3E0EF /* edit_product.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_product.js; sourceTree = "<group>"; };
 		2DE6BFD11529722200C3E0EF /* edit_product.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = edit_product.html; sourceTree = "<group>"; };
 		2DE6BFD215297A5E00C3E0EF /* product.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = product.php; sourceTree = "<group>"; };
-		2DE6BFD31529F7A600C3E0EF /* mange_tooltips.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mange_tooltips.js; sourceTree = "<group>"; };
+		2DE6BFD31529F7A600C3E0EF /* manage_tooltips.js */ = {isa = PBXFileReference; path = manage_tooltips.js; sourceTree = "<group>"; };
 		2DE6BFD41529F7B300C3E0EF /* manage_upload.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = manage_upload.js; sourceTree = "<group>"; };
 		2DE8282E14D0B5F300A91FCE /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DE8283214D0B5F300A91FCE /* holder.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = holder.txt; sourceTree = "<group>"; };
@@ -3691,7 +3691,7 @@
 				2D34E22E14A59976004473F9 /* tooltip_text.js */,
 				2D64FD1114F8735800C5C468 /* rich_text_editor.js */,
 				2DF61FEE1527FFE300DBFBC8 /* artist_management.js */,
-				2DE6BFD31529F7A600C3E0EF /* mange_tooltips.js */,
+				2DE6BFD31529F7A600C3E0EF /* manage_tooltips.js */,
 				2DE6BFD41529F7B300C3E0EF /* manage_upload.js */,
 				2DF61FF01528235500DBFBC8 /* edit_page.js */,
 				2DE6BFD0152971B700C3E0EF /* edit_product.js */,
