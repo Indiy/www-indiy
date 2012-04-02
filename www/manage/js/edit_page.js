@@ -15,6 +15,11 @@ function showPagePopup(page_index)
     g_removeImage = false;
 
     $('#artist_id').val(g_artistId);
+    
+    
+    clearFileElement('#song_audio');
+    clearFileElement('#song_image');
+    
     if( page_index !== false )
     {
         var song = g_pageList[page_index];
