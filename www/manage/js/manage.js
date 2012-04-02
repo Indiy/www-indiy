@@ -262,7 +262,7 @@ function uploadReadyStateChange(xhr)
                         $('#success_msg .social_success.twitter').show();
                     
                     if( xhr.successCallback )
-                        successCallback(data);
+                        xhr.successCallback(data);
                 }
             }
             else
