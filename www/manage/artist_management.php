@@ -81,6 +81,8 @@
     while( $row = mysql_fetch_array($result_artistVideo) )
     {
         array_walk($row,cleanup_row_element);
+        if( empty($row['upload_video_filename'] )
+           $row['upload_video_filename'] = $row['image'];
         $image_path = "../artists/images/" . $row['image'];
         if( !empty($row['image']) && file_exists($image_path) )
             $row['image'] = $image_path;
@@ -151,6 +153,7 @@
     
     include_once 'include/edit_page.html';
     include_once 'include/edit_product.html';
+    include_once 'include/edit_video.html';
     
     include_once 'include/popup_messages2.html';
 ?>
