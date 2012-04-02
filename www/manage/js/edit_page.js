@@ -3,10 +3,12 @@ var g_removeSong = false;
 var g_removeImage = false;
 
 var g_songId = '';
+var g_pageIndex = false;
 
 function showPagePopup(page_index)
 {
     $('#artist_id').val(g_artistId);
+    g_pageIndex = page_index;
     if( page_index !== false )
     {
         var song = g_pageList[page_index];
@@ -113,13 +115,13 @@ function clickMadStore()
 function onAddMusicSubmit()
 {
     var needs_image = false;
-    if( g_songId == '' )
+    if( g_pageIndex === false )
     {
         needs_image = true;
     }
     else
     {
-        var song  = g_pageList[g_songId];
+        var song  = g_pageList[g_pageIndex];
         if( !song.image )
             needs_image = true;
     }   
