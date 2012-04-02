@@ -112,8 +112,20 @@ function clickMadStore()
 
 function onAddMusicSubmit()
 {
+    var needs_image = false;
+    if( g_songId == '' )
+    {
+        needs_image = true;
+    }
+    else
+    {
+        var song  = g_pageList[g_songId];
+        if( !song.image )
+            needs_image = true;
+    }   
+    
     var song_image = document.getElementById('song_image');
-    if( g_needsImage && ( !song_image || !song_image.value || song_image.value.length == 0 ) )
+    if( needs_image && ( !song_image || !song_image.value || song_image.value.length == 0 ) )
     {
         window.alert("Please upload an image for the page.");
         return false;
