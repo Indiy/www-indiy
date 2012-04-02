@@ -30,9 +30,9 @@
 
         $image_path = "../artists/images/" . $row['image'];
         if( !empty($row['image']) )
-            $row['image'] = $image_path;
+            $row['image_url'] = $image_path;
         else
-            $row['image'] = "images/photo_video_01.jpg";
+            $row['image_url'] = "images/photo_video_01.jpg";
        
         return $row;
     }
