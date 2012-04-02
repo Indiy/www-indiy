@@ -193,7 +193,6 @@ function do_POST()
     
     $postedValues['postedValues'] = $_REQUEST;
     
-    require_once '../
     require_once '../include/utils.php';
     @create_abbrevs();
     
