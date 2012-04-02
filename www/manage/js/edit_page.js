@@ -52,7 +52,7 @@ function showPagePopup(page_index)
         $('#amazon_url').val(song.amazon);
         $('#itunes_url').val(song.itunes);
         $('#mad_store').prop('checked',song.product_id);
-        $('#audio_tags').val(song.audio_tags);
+        $('#audio_tags').val(song.tags);
     }
     else
     {
