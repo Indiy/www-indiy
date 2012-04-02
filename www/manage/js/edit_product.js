@@ -110,7 +110,6 @@ function onAddProductSubmit()
         {
             form_data.append('file',product_image.files[0]);
         }
-        form_data.append('submit',situation);
     }
     
     var url = '/manage/addproduct.php';
