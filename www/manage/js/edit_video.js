@@ -120,6 +120,7 @@ function onAddVideoSubmit()
         form_data.append('remove_video',g_removeVideo);
         form_data.append('remove_video_image',g_removeVideoImage);
         form_data.append('tags',tags);
+        form_data.append('ajax',true);
     }
     var url = '/manage/data/video.php';
     return startAjaxUpload(url,fillVideoForm,onVideoSuccess);
