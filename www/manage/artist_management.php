@@ -31,9 +31,6 @@
 	$result_artistDetail = mysql_query($query_artistDetail) or die(mysql_error());
 	$record_artistDetail = mysql_fetch_array($result_artistDetail);
 
-    
-    array_walk
-
 	if(isset($_REQUEST['action'])){
 		if(isset($_REQUEST['song_id']))
 			$type = "audio";
