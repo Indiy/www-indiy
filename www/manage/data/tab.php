@@ -24,7 +24,7 @@
     
     function get_data($id)
     {
-        $row = mf(mq("SELECT * FROM mydna_musicplayer_video WHERE id='$id'"));
+        $row = mf(mq("SELECT * FROM mydna_musicplayer_content WHERE id='$id'"));
         
         array_walk($row,cleanup_row_element);
         

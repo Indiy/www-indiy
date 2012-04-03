@@ -97,6 +97,12 @@
     while( $row = mysql_fetch_array($result_artistContent) )
     {
         array_walk($row,cleanup_row_element);
+        $image_path = "../artists/images/" . $row['image'];
+        if( !empty($row['image']) )
+            $row['image_url'] = $image_path;
+        else
+            $row['image_url'] = "images/photo_video_01.jpg";
+        
         $tab_list[] = $row;
     }
     $tab_list_json = json_encode($tab_list);
@@ -338,7 +344,7 @@ $(document).ready(showFirstInstruction);
                     <li class="branding_tips">
                         <span class='branding_left'>Tip #4 - </span>
                         <span class='branding_right'>Tabs - The more info in the form of text you add about yourself the better chance your account will be found. Learn the term "Metadata". 
-</span>
+                        </span>
                     </li>
                 </ul>
             </div>
