@@ -37,7 +37,6 @@
         return $row;
     }
     
-    
     function do_POST()
     {
         $artist_id = $_POST["artistid"];
