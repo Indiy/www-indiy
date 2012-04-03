@@ -13,7 +13,6 @@ function showVideoPopup(video_index)
     clearFileElement('#edit_video #video_image_file');
     clearFileElement('#edit_video #video_file');
     
-    $('#edit_video #artist_id').val(g_artistId);
     if( video_index !== false )
     {
         var video = g_videoList[video_index];
@@ -44,7 +43,7 @@ function showVideoPopup(video_index)
     }
     else
     {
-        $('#edit_video #song_id').val(''.id);
+        $('#edit_video #song_id').val('');
         $('#edit_video #video_name').val('');
         $('#edit_video #video_tags').val('');
     }
@@ -135,7 +134,6 @@ function onVideoSuccess(data)
         g_videoList.unshift(data.video_data);
     }
     updateVideoList();
-    
 }
 
 

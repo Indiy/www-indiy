@@ -152,6 +152,7 @@
     include_once 'include/edit_page.html';
     include_once 'include/edit_product.html';
     include_once 'include/edit_video.html';
+    include_once 'include/edit_tab.html';
     
     include_once 'include/popup_messages2.html';
 ?>
@@ -216,9 +217,7 @@ $(document).ready(showFirstInstruction);
             <ul>
                 <li><a onclick='showPagePopup(false);'>Add Audio + Photo</a></li>
                 <li><a onclick='showVideoPopup(false);'>Add Video</a></li>
-                <? if( mysql_num_rows($result_artistContent) < $MAX_TABS ): ?>
-                    <li><a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Tab</a></li>
-                <? endif; ?>
+                <li id='add_tab_list_item'><a onclick='showTabPopup(false);'>Add Tab</a></li>
                 <li><a href="stats.php?userId=<?=$artistID;?>">View Analytics</a></li>
                 <li><a href="fan_connections.php?artist_id=<?=$artistID;?>" rel="facebox[.bolder]">Fan Connections</a></li>
             </ul>
@@ -301,9 +300,7 @@ $(document).ready(showFirstInstruction);
             <div class="heading">
                 <h5>TABS</h5>
                 <div class="buttonadd">
-                    <? if( mysql_num_rows($result_artistContent) < $MAX_TABS ): ?>
-                        <a href="addcontent.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Tab</a>
-                    <? endif; ?>
+                    <a id='add_tab_link' onclick='showTabPopup(false);'>Add Tab</a>
                 </div>
         	</div> 
             
