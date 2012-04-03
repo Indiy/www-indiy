@@ -176,7 +176,7 @@
     include_once 'include/edit_product.html';
     include_once 'include/edit_video.html';
     include_once 'include/edit_tab.html';
-    include_once 'include/social_config.html';
+    include_once 'include/edit_social_config.html';
     
     include_once 'include/popup_messages2.html';
 ?>
