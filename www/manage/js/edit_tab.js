@@ -31,12 +31,23 @@ function showTabPopup(tab_index)
         $('#edit_tab #name').val(tab.name);
         var body = getEncodedBody(tab.body)
         g_editor.setEditorHTML(body);
+        if( tab.image )
+        {
+            var html = "<img src='{0}' />".format(tab.image_url);
+            html += "<button onclick='return onTabImageRemove();'></button>";
+            $('#edit_tab .image_image').html(html);
+        }
+        else
+        {
+            $('#edit_tab .image_image').empty();
+        }
     }
     else
     {
         $('#edit_tab #content_id').val("");
         $('#edit_tab #name').val("");
         g_editor.setEditorHTML("");
+        $('#edit_tab .image_image').empty();
     }
     showPopup('#edit_tab');
     return false;
@@ -70,7 +81,7 @@ function onAddContentSubmit()
         form_data.append('id',content_id);
         form_data.append('name',name);
         form_data.append('body',body);
-        form_data.append('remove_image',g_removeImage);
+        form_data.append('remove_image',g_removeTabImage);
         
         var content_image = $('#edit_tab #content_image')[0];
         if( content_image.files && content_image.files.length > 0 )
