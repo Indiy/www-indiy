@@ -80,7 +80,7 @@ function socialConfigSubmit()
     {
         type: 'POST',
         url: post_url,
-        dataType: 'text',
+        dataType: 'json',
         success: function(data) 
         {
             showSuccess("Update Success");

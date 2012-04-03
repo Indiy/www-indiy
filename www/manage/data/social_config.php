@@ -53,7 +53,7 @@
 
         $postedValues['success'] = "1";
         $postedValues['postedValues'] = $_REQUEST;
-        if( $_POST['ajax'] )
+        if( $_REQUEST['ajax'] )
         {
             $postedValues['artist_data'] = get_data($artist_id);
             echo json_encode($postedValues);
