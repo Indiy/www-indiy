@@ -89,6 +89,7 @@ function onAddContentSubmit()
             form_data.append('logo',content_image.files[0]);
         }
         form_data.append('submit','submit');
+        form_data.append('ajax',true);
     }
     
     var url = '/manage/data/tab.php';
