@@ -194,6 +194,8 @@ var g_videoList = <?=$video_list_json;?>;
 var g_tabList = <?=$tab_list_json;?>;
 var g_productList = <?=$product_list_json;?>;
 
+var g_playerUrl = "<?=playerUrl();?>";
+
 <? if( $show_first_instruction ): ?>
 
 function showFirstInstruction()
