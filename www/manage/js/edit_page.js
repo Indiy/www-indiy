@@ -5,7 +5,7 @@ var g_removeImage = false;
 var g_songId = '';
 var g_pageIndex = false;
 
-
+$(document).ready(function() { jscolor.init(); });
 
 function showPagePopup(page_index)
 {

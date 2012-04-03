@@ -31,6 +31,7 @@
     <script src="js/edit_page.js" type="text/javascript"></script>
     <script src="js/edit_product.js" type="text/javascript"></script>
     <script src="js/edit_video.js" type="text/javascript"></script>
+    <script src="js/edit_tab.js" type="text/javascript"></script>
     <script src="/js/ZeroClipboard.js" type="text/javascript"></script>
 
     <script src="facefiles/facebox.js" type="text/javascript"></script>
