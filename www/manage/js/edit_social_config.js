@@ -36,6 +36,12 @@ function showSocialConfigPopup()
     setSocialNetworkMode('#social_config input[name=fb_setting]',g_artistData.fb_setting);
     setSocialNetworkMode('#social_config input[name=tw_setting]',g_artistData.tw_setting);
 
+    var artist_url = g_artistData.url;
+    var embed_url = "{0}{1}&embed=true".format(g_playerUrl,artist_url);
+    var embed = '<iframe src="{0}" border="0" width="400" height="600" frameborder="0" name="{1}"></iframe>'.format(embed_url,artist_url);
+
+    $('#social_config #embed_code').val(embed);
+
     if( g_artistData.twitter )
     {
         $('#social_config #tw_account_name').val(g_artistData.twitter);
