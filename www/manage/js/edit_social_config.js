@@ -70,7 +70,7 @@ function socialConfigSubmit()
     var tw_setting = $('#social_config input[name=tw_setting]:checked').val();
     var fb_page_url = $('#social_config #fb_page_url').val();
 
-    var post_url = "/manage/social_config.php?";
+    var post_url = "/manage/data/social_config.php?";
     post_url += "&artist_id=" + escape(g_artistId);
     post_url += "&fb_setting=" + fb_setting;
     post_url += "&tw_setting=" + tw_setting;
