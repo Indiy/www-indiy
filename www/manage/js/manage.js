@@ -202,83 +202,7 @@ function onSocializePublish()
     });
     return false;
 }
-function socialConfigSubmit()
-{
-    showProgress("Updating record...");
-    var fb_setting = $('input[name=fb_setting]:checked').val();
-    var tw_setting = $('input[name=tw_setting]:checked').val();
-    var fb_page_url = $('#fb_page_url').val();
 
-    var post_url = "/manage/social_config.php?";
-    post_url += "&artist_id=" + escape(g_artistId);
-    post_url += "&fb_setting=" + fb_setting;
-    post_url += "&tw_setting=" + tw_setting;
-    post_url += "&fb_page_url=" + escape(fb_page_url);
-    jQuery.ajax(
-    {
-        type: 'POST',
-        url: post_url,
-        dataType: 'text',
-        success: function(data) 
-        {
-            showSuccess("Update Success");
-        },
-        error: function()
-        {
-            showFailure("Update Failed");
-        }
-    });
-    return false;    
-}
-
-function onSocialConfigSave()
-{
-    var fb_page_url = $('#fb_page_url').val();
-    
-    if( fb_page_url && fb_page_url.length > 0 )
-    {
-        var match = FB_REGEX.exec(fb_page_url);
-        if( match && match.length > 1 )
-        {
-            var username = match[1];
-        }
-        else
-        {
-            window.alert("Please enter a valid Facebook Page URL.  Must be a Facebook Page, this tab does not support Facebook Profiles.  Please see the FAQ for more information.");
-            return false;
-        }
-        var fql = 'SELECT page_id FROM page WHERE username = "' + username + '"';
-        var check_url = "https://api.facebook.com/method/fql.query?";
-        check_url += "&query=" + escape(fql);
-        check_url += "&format=json";
-        jQuery.ajax(
-        {
-            type: 'GET',
-            url: check_url,
-            dataType: 'jsonp',
-            success: function(data) 
-            {
-                if( data && data.length > 0 )
-                {
-                    socialConfigSubmit();
-                }
-                else
-                {
-                    window.alert("Please enter a valid Facebook Page URL.  Must be a Facebook Page, this tab does not support Facebook Profiles.  Please see the FAQ for more information.");
-                }
-            },
-            error: function()
-            {
-                socialConfigSubmit();
-            }
-        });
-        return false;
-    }
-    else
-    {
-        socialConfigSubmit();
-    }
-}
 function onAccountSettingsSubmit()
 {
     showProgress("Updating record...");
@@ -301,25 +225,6 @@ function onAccountSettingsSubmit()
         }
     });
     return false;
-}
-function clickAddFacebook()
-{
-    showProgress("Adding Facebook account...");
-
-    var url = "/manage/add_network.php?";
-    url += "&artist_id=" + escape(g_artistId);
-    url += "&network=facebook";
-    window.location.href = url;
-}
-
-function clickAddTwitter()
-{
-    showProgress("Adding Twitter account...");
-
-    var url = "/manage/add_network.php?";
-    url += "&artist_id=" + escape(g_artistId);
-    url += "&network=twitter";
-    window.location.href = url;
 }
 
 function validateEditProfile()

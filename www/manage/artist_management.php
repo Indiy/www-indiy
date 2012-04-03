@@ -31,6 +31,9 @@
 	$result_artistDetail = mysql_query($query_artistDetail) or die(mysql_error());
 	$record_artistDetail = mysql_fetch_array($result_artistDetail);
 
+    
+    array_walk
+
 	if(isset($_REQUEST['action'])){
 		if(isset($_REQUEST['song_id']))
 			$type = "audio";
@@ -145,13 +148,30 @@
     $twitter = 'false';
     $facebook = 'false';
     if( $record_artistDetail['oauth_token'] && $record_artistDetail['oauth_secret'] && $record_artistDetail['twitter'] )
+    {
+        array_walk($record_artistDetail,cleanup_row_element);
         $twitter = 'true';
-    
+    }
+    else
+    {
+        $record_artistDetail['twitter'] = FALSE;
+    }
     if( $record_artistDetail['fb_access_token'] && $record_artistDetail['facebook'] )
+    {
         $facebook = 'true';
-        
+    }
+    else
+    {
+        $record_artistDetail['facebook'] = FALSE;
+    }
+    
     $store_check = mf(mq("SELECT * FROM `[p]musicplayer_ecommerce` WHERE `userid`='$artistID' LIMIT 1"));
     $paypalEmail = $store_check["paypal"];
+    $record_artistDetail['paypal_email'] = $paypalEmail;
+
+    array_walk($record_artistDetail,cleanup_row_element);
+    $artist_data_json = json_encode($record_artistDetail);
+
 
     require_once 'header.php';
     
@@ -159,6 +179,7 @@
     include_once 'include/edit_product.html';
     include_once 'include/edit_video.html';
     include_once 'include/edit_tab.html';
+    include_once 'include/social_config.html';
     
     include_once 'include/popup_messages2.html';
 ?>
@@ -169,6 +190,7 @@ var g_artistId = <?=$artistID?>;
 var g_facebook = <?=$facebook;?>;
 var g_twitter = <?=$twitter;?>;
 var g_paypalEmail = "<?=$paypalEmail;?>";
+var g_artistData = <?=$artist_data_json;?>;
 
 var g_pageList = <?=$page_list_json;?>;
 var g_videoList = <?=$video_list_json;?>;
