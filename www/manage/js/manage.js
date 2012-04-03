@@ -302,47 +302,6 @@ function onAccountSettingsSubmit()
     });
     return false;
 }
-function onAddContentSubmit()
-{
-    var name = $('#name').val();
-    if( name.length == 0 )
-    {
-        window.alert("Please enter a name for your tab.");
-        return false;
-    }
-    function fillContentForm(form_data)
-    {
-        if( g_rawEditorState == "off" )
-        {
-            g_editor.saveHTML();
-            var body = $('#body').val();
-            body = getRawBody(body);
-        }
-        else
-        {
-            var body = $('#body').val();
-        }
-        var artist_id = $('#artist_id').val();
-        var content_id = $('#content_id').val();
-        var name = $('#name').val();
-        
-        form_data.append('artistid',artist_id);
-        form_data.append('id',content_id);
-        form_data.append('name',name);
-        form_data.append('body',body);
-        form_data.append('remove_image',g_removeImage);
-        
-        var content_image = document.getElementById('content_image');
-        if( content_image.files && content_image.files.length > 0 )
-        {
-            form_data.append('logo',content_image.files[0]);
-        }
-        form_data.append('submit','submit');
-    }
-    
-    var url = '/manage/addcontent.php';
-    return startAjaxUpload(url,fillContentForm);
-}
 function clickAddFacebook()
 {
     showProgress("Adding Facebook account...");

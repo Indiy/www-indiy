@@ -194,7 +194,7 @@ function updateTabList()
 
         html += "<li id='arrayorder_{0}' class='pages_sortable {1}'>".format(tab.id,class_name);
         html += "<span class='title'>";
-        html += "<a href='addcontent.php?artist_id=<{0}&id={1}' rel='facebox[.bolder]'>".format(g_artistId,tab.id);
+        html += "<a onclick='showTabPopup({0});'>".format(i);
         html += tab.name;
         html += "</a>";
         html += "</span>";
