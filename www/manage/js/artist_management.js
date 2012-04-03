@@ -76,7 +76,7 @@ function updatePageList()
         }
         else
         {
-            html += "<a href='social_config.php?artist_id={0}' rel='facebox[.bolder]' title='Add a Facebook account.'>".format(g_artistId);
+            html += "<a onclick='showSocialConfigPopup();' title='Add a Facebook account.'>".format(g_artistId);
             html += "<img class='social_icon' src='/images/fb_icon_grey.png'/>";
             html += "</a>\n";
         }
@@ -89,7 +89,7 @@ function updatePageList()
         }
         else
         {
-            html += "<a href='social_config.php?artist_id={0}' rel='facebox[.bolder]' title='Add a Twitter account.'>".format(g_artistId);
+            html += "<a onclick='showSocialConfigPopup();' title='Add a Twitter account.'>".format(g_artistId);
             html += "<img class='social_icon' src='/images/tw_icon_grey.png'/>";
             html += "</a>\n";
         }
