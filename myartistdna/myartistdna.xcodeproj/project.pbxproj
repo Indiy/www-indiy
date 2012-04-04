@@ -100,6 +100,10 @@
 		2D41C012152ACD8200F18000 /* profile.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = profile.php; sourceTree = "<group>"; };
 		2D41C014152ACDD100F18000 /* edit_profile.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_profile.js; sourceTree = "<group>"; };
 		2D41C015152ACDEB00F18000 /* edit_profile.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = edit_profile.html; sourceTree = "<group>"; };
+		2D41C019152BD87D00F18000 /* edit_social_config.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = edit_social_config.html; sourceTree = "<group>"; };
+		2D41C01A152BD87D00F18000 /* edit_tab.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = edit_tab.html; sourceTree = "<group>"; };
+		2D41C01C152BD8A600F18000 /* edit_social_config.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_social_config.js; sourceTree = "<group>"; };
+		2D41C01D152BD8A600F18000 /* edit_tab.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_tab.js; sourceTree = "<group>"; };
 		2D5DD4AE14CA08A000566E9A /* popup_messages.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup_messages.html; sourceTree = "<group>"; };
 		2D5DD4B014CC93FC00566E9A /* artist_home_store.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_home_store.js; sourceTree = "<group>"; };
 		2D5DD4B114CCE4AF00566E9A /* cart.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = cart.php; sourceTree = "<group>"; };
@@ -1435,10 +1439,6 @@
 		2DFCE0ED152A296300F9ABEE /* edit_video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_video.js; sourceTree = "<group>"; };
 		2DFCE0EE152A2B8500F9ABEE /* video.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = video.php; sourceTree = "<group>"; };
 		2DFCE0EF152A75B300F9ABEE /* tab.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = tab.php; sourceTree = "<group>"; };
-		2DFCE0F0152A776800F9ABEE /* edit_tab.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = edit_tab.html; sourceTree = "<group>"; };
-		2DFCE0F1152A782600F9ABEE /* edit_tab.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_tab.js; sourceTree = "<group>"; };
-		2DFCE0F5152BA9C400F9ABEE /* edit_social_config.html */ = {isa = PBXFileReference; path = edit_social_config.html; sourceTree = "<group>"; };
-		2DFCE0F7152BA9DD00F9ABEE /* edit_social_config.js */ = {isa = PBXFileReference; path = edit_social_config.js; sourceTree = "<group>"; };
 		2DFCE0F8152BAA2700F9ABEE /* social_config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = social_config.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -3680,10 +3680,12 @@
 				2D34E22414A05F05004473F9 /* utils.php */,
 				2D5DD4AE14CA08A000566E9A /* popup_messages.html */,
 				2DE6BFCD1528390900C3E0EF /* popup_messages2.html */,
+				2D41C01A152BD87D00F18000 /* edit_tab.html */,
 				2DF61FF11528241C00DBFBC8 /* edit_page.html */,
 				2DE6BFD11529722200C3E0EF /* edit_product.html */,
 				2DFCE0EB152A295500F9ABEE /* edit_video.html */,
 				2D41C015152ACDEB00F18000 /* edit_profile.html */,
+				2D41C019152BD87D00F18000 /* edit_social_config.html */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -3706,10 +3708,12 @@
 				2DF61FEE1527FFE300DBFBC8 /* artist_management.js */,
 				2DE6BFD31529F7A600C3E0EF /* manage_tooltips.js */,
 				2DE6BFD41529F7B300C3E0EF /* manage_upload.js */,
+				2D41C01D152BD8A600F18000 /* edit_tab.js */,
 				2DF61FF01528235500DBFBC8 /* edit_page.js */,
 				2DE6BFD0152971B700C3E0EF /* edit_product.js */,
 				2DFCE0ED152A296300F9ABEE /* edit_video.js */,
 				2D41C014152ACDD100F18000 /* edit_profile.js */,
+				2D41C01C152BD8A600F18000 /* edit_social_config.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
