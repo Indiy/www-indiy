@@ -43,7 +43,7 @@
         $paypalEmail = $store_check["paypal"];
         $row['paypal_email'] = $paypalEmail;
         
-        $logo = $record_artistDetail['logo'];
+        $logo = $row['logo'];
         $logo_path = "../artists/images/$logo";
         if( $row['logo'] )
             $row['logo_url'] = $logo_path;
