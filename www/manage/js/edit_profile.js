@@ -90,7 +90,7 @@ function onEditProfileSubmit()
         form_data.append('listens',listens);
         form_data.append('tags',tags);
         
-        var logo = document.getElementById('logo');
+        var logo = $('#edit_profile #logo')[0];
         if( logo.files && logo.files.length > 0 )
         {
             form_data.append('logo',logo.files[0]);
