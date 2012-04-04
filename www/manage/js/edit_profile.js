@@ -98,7 +98,7 @@ function onEditProfileSubmit()
         form_data.append('WriteTags','submit');
     }
     
-    var url = '/manage/data/edit_profile.php';
+    var url = '/manage/data/profile.php';
     return startAjaxUpload(url,fillProfileForm);
 }
 
@@ -108,6 +108,7 @@ function showChangePassword()
     $('#change_password #new_password').val("");
     $('#change_password #confirm_password').val("");
     showPopup('#change_password');
+    return false;
 }
 
 function submitChangePassword()
