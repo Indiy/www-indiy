@@ -98,7 +98,11 @@ function onEditProfileSubmit()
     }
     
     var url = '/manage/data/profile.php';
-    return startAjaxUpload(url,fillProfileForm);
+    return startAjaxUpload(url,fillProfileForm,onProfileSuccess);
+}
+function onProfileSuccess(data)
+{
+    g_artistData = data.artist_data;
 }
 
 function showChangePassword()
