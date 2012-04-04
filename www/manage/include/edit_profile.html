@@ -1,0 +1,97 @@
+
+<div id="edit_profile" class="popup_wrapper">
+<div id="popup">
+    <div class='top_bar'>
+        <h2>Edit Profile</h2>
+        <button onclick='closePopup();'>CLOSE</button>
+    </div>
+    
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+    <form id='ajax_form' onsubmit="return onEditProfileSubmit();">
+        <input id='artist_id' type="hidden" name="artistid" value="<?=$artistid?>">
+            
+        <div class='input_container'>
+            <div class='left_label'>Name<span class='required'>*</span></div>
+            <input id='artist' type="text" class="right_text" value="" name="artist">
+        </div>
+        
+        <div class='input_container'>
+            <div class='left_label'>Email<span class='required'>*</span></div>
+            <input id='email' type="text" class="right_text" value="" name="email">
+        </div>
+        
+        <div class='input_container'>
+            <div class='left_label'>URL <span id='tip_artist_url' class='tooltip'>(?)</span><span class='required'>*</span></div>
+            <input id='url' class="right_text" value="" name="url">
+        </div>
+        <div class='input_container'>
+            <div class='line_label'>Custom Domain <span id='tip_custom_domain' class='tooltip'>(?)</span></div>
+            <input id='custom_domain' name="custom_domain" class='line_text' value="">
+        </div>
+        <div class='input_container' style='height: 50px;'>
+            <div class='left_image_label'>
+                <div class='image_label'>Logo <span id='tip_artist_logo' class='tooltip'>(?)</span><span class='required'>*</span></div>
+                <div class='image_image'></div>
+            </div>
+            <input id='logo' type="file" name="logo" class='right_file' onchange='onImageChange(this);' />
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Show "Listen" Count <span id='tip_listen_count' class='tooltip'>(?)</span></div>
+            <div class="right_box">
+                <input type="radio" class="radio" value="1" name="listens"> Yes
+                <input type="radio" class="radio" value="0" name="listens"> No<br>
+            </div>
+        </div>
+        <div class='input_container' style='height: 40px;'>
+            <div class='left_label'>Password</div>
+            <div class='right_box'>
+                <button class='regular_button' onclick='showChangePassword();'>Change Password</button>
+            </div>
+        </div>
+        <div class='input_container' style="height: 60px;">
+            <div class='left_label'>Tags <span id='tip_tags' class='tooltip'>(?)</span></div>
+            <div class='right_label'>Seperate tags with commas.</div>
+            <div style='clear:both;'></div>
+            <input id='user_tags' type="text" name="tags" value="" class="line_text" />
+        </div>
+        <div class='submit_container'>
+            <button class="submit">Submit</button>
+        </div>
+    </form>
+    
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
+</div>
+</div>
+
+<div id='change_password' class='popup_wrapper'>
+<div id="popup">
+    <div class='top_bar'>
+        <h2>Change Password</h2>
+        <button onclick='closePopup();'>CLOSE</button>
+    </div>
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+
+    <div class='input_container'>
+        <div class='left_label'>Old Password</div>
+        <input id='old_password' type="password" class="right_text">
+    </div>
+    <div class='input_container'>
+        <div class='left_label'>New Password</div>
+        <input id='new_password' type="password" class="right_text">
+    </div>
+    <div class='input_container'>
+        <div class='left_label'>Confirm Password</div>
+        <input id='confirm_password' type="password" class="right_text">
+    </div>
+    <div class='submit_container'>
+        <button class="submit" onclick='submitChangePassword();'>Submit</button>
+    </div>
+
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
+</div>
+</div>
+

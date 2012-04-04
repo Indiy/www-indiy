@@ -1,0 +1,56 @@
+
+<div id='social_config' class='popup_wrapper'>
+<div id="popup">
+    <div class='top_bar'>
+        <h2>Social Connections</h2>
+        <button onclick='closePopup();'>CLOSE</button>
+    </div>
+    
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+    <div class='input_container' style='height: 55px;'>
+        <div class='left_label'>Twitter Account <span id='tip_tw_account' class='tooltip'>(?)</span></div>
+        <input id='tw_account_name' type='text' disabled='disabled' value='$twitter' class='right_text' />
+        <div id='tw_account_add_container' class='right_box'>
+            <button class='submit' onclick='clickAddTwitter();'>Add Twitter</button>
+        </div>
+    </div>
+    <div class='input_container' style='height: 55px;'>
+        <div class='left_label'>Facebook Account <span id='tip_fb_account' class='tooltip'>(?)</span></div>
+        <input id='fb_account_name' type='text' disabled='disabled' value='' class='right_text' />
+        <div id='fb_account_add_container' class='right_box'>
+            <button class='submit' onclick='clickAddFacebook();'>Add Facebook</button>
+        </div>
+    </div>
+    <div class='input_container'>
+        <div class='line_label'>Facebook Fan Page URL <span id='tip_fb_page_url' class='tooltip'>(?)</span></div>
+        <input id='fb_page_url' class='line_text' type="text" name="name" value="" onfocus="focusFBPageURL();" onblur="blurFBPageURL();"/>
+    </div>
+    <div class='input_container'>
+        <div class='left_label'>Facebook Update <span id='tip_fb_setting' class='tooltip'>(?)</span></div>
+        <div class='right_box'>
+            <input id='fb_setting' type="radio" name="fb_setting" value="AUTO" class="radio" /> Auto
+            <input id='fb_setting' type="radio" name="fb_setting" value="MANUAL" class="radio" /> Manual
+            <input id='fb_setting' type="radio" name="fb_setting" value="DISABLED" class="radio" /> Disabled
+        </div>
+    </div>
+    <div class='input_container'>
+        <div class='left_label'>Tweet <span id='tip_tw_setting' class='tooltip'>(?)</span></div>
+        <div class='right_box'>
+            <input id='tw_setting' type="radio" name="tw_setting" value="AUTO" class="radio" /> Auto
+            <input id='tw_setting' type="radio" name="tw_setting" value="MANUAL" class="radio" /> Manual
+            <input id='tw_setting' type="radio" name="tw_setting" value="DISABLED" class="radio" /> Disabled
+        </div>
+    </div>
+    <div class='flow_container'>
+        <div class='line_label'>Embed Widget <span id='tip_embed' class='tooltip'>(?)</span></div>
+        <textarea id='embed_code' style='height: 40px; width: 320px;'></textarea>
+    </div>
+    <div class='submit_container'>
+        <button class="submit" onclick='onSocialConfigSave();'>Save</button>
+    </div>
+    
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
+</div>
+</div>

@@ -145,13 +145,30 @@
     $twitter = 'false';
     $facebook = 'false';
     if( $record_artistDetail['oauth_token'] && $record_artistDetail['oauth_secret'] && $record_artistDetail['twitter'] )
+    {
+        array_walk($record_artistDetail,cleanup_row_element);
         $twitter = 'true';
-    
+    }
+    else
+    {
+        $record_artistDetail['twitter'] = FALSE;
+    }
     if( $record_artistDetail['fb_access_token'] && $record_artistDetail['facebook'] )
+    {
         $facebook = 'true';
-        
+    }
+    else
+    {
+        $record_artistDetail['facebook'] = FALSE;
+    }
+    
     $store_check = mf(mq("SELECT * FROM `[p]musicplayer_ecommerce` WHERE `userid`='$artistID' LIMIT 1"));
     $paypalEmail = $store_check["paypal"];
+    $record_artistDetail['paypal_email'] = $paypalEmail;
+
+    array_walk($record_artistDetail,cleanup_row_element);
+    $artist_data_json = json_encode($record_artistDetail);
+
 
     require_once 'header.php';
     
@@ -159,6 +176,7 @@
     include_once 'include/edit_product.html';
     include_once 'include/edit_video.html';
     include_once 'include/edit_tab.html';
+    include_once 'include/edit_social_config.html';
     
     include_once 'include/popup_messages2.html';
 ?>
@@ -169,11 +187,14 @@ var g_artistId = <?=$artistID?>;
 var g_facebook = <?=$facebook;?>;
 var g_twitter = <?=$twitter;?>;
 var g_paypalEmail = "<?=$paypalEmail;?>";
+var g_artistData = <?=$artist_data_json;?>;
 
 var g_pageList = <?=$page_list_json;?>;
 var g_videoList = <?=$video_list_json;?>;
 var g_tabList = <?=$tab_list_json;?>;
 var g_productList = <?=$product_list_json;?>;
+
+var g_playerUrl = "<?=playerUrl();?>";
 
 <? if( $show_first_instruction ): ?>
 
@@ -215,7 +236,7 @@ $(document).ready(showFirstInstruction);
             <h6>Manage Profile</h6>
             <ul>
                 <li><a href="register.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Edit Profile</a></li>
-                <li><a href="social_config.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Social Connections</a></li>
+                <li><a onclick='showSocialConfigPopup();'>Social Connections</a></li>
                 <li><a href="invite_friends.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Invite Friends</a></li>
                 <li><a class='view_site' href="<?=$artist_url;?>" target="_blank">View Site</a></li>
             </ul>
