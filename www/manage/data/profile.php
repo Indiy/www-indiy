@@ -57,7 +57,7 @@
     
     function do_POST()
     {
-        $artist_id = $_REQUEST['artist_id'];
+        $artist_id = $_REQUEST['artistid'];
         
         $row = mf(mq("SELECT id,logo,password FROM mydna_musicplayer WHERE id='$artist_id'"));
         $old_logo = $row["logo"];
