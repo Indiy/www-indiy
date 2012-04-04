@@ -8,7 +8,7 @@
     
     <div class='top_blue_bar'></div>
     <div class='top_sep'></div>
-    <form id='ajax_form'  method="post" enctype="multipart/form-data" action="data/edit_profile.php" onsubmit="return onEditProfileSubmit();">
+    <form id='ajax_form'  method="post" enctype="multipart/form-data" action="data/profile.php" onsubmit="return onEditProfileSubmit();">
         <input id='artist_id' type="hidden" name="artistid" value="">
             
         <div class='input_container'>
@@ -39,7 +39,7 @@
         <div class='input_container' style='height: 40px;'>
             <div class='left_label'>Password</div>
             <div class='right_box'>
-                <button class='regular_button' onclick='showChangePassword();'>Change Password</button>
+                <button class='regular_button' onclick='return showChangePassword();'>Change Password</button>
             </div>
         </div>
         <div class='input_container' style="height: 60px;">
