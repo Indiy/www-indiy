@@ -79,7 +79,6 @@ function onEditProfileSubmit()
         var email = $('#edit_profile #email').val();
         var url = $('#edit_profile #url').val();
         var custom_domain = $('#edit_profile #custom_domain').val();
-        var listens = $('#edit_profile input[name=listens]:checked').val()
         var tags = $('#edit_profile #user_tags').val();
         
         form_data.append('artistid',g_artistId);
@@ -87,7 +86,6 @@ function onEditProfileSubmit()
         form_data.append('email',email);
         form_data.append('url',url);
         form_data.append('custom_domain',custom_domain);
-        form_data.append('listens',listens);
         form_data.append('tags',tags);
         
         var logo = $('#edit_profile #logo')[0];
@@ -96,6 +94,7 @@ function onEditProfileSubmit()
             form_data.append('logo',logo.files[0]);
         }
         form_data.append('WriteTags','submit');
+        form_data.append('ajax',true);
     }
     
     var url = '/manage/data/profile.php';
