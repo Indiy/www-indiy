@@ -146,7 +146,6 @@
     $facebook = 'false';
     if( $record_artistDetail['oauth_token'] && $record_artistDetail['oauth_secret'] && $record_artistDetail['twitter'] )
     {
-        array_walk($record_artistDetail,cleanup_row_element);
         $twitter = 'true';
     }
     else
