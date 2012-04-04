@@ -226,73 +226,6 @@ function onAccountSettingsSubmit()
     });
     return false;
 }
-
-function validateEditProfile()
-{
-    var url = $('#url').val();
-    if( !url.match(HOSTNAME_REGEX) )
-    {
-        window.alert("Please enter a valid URL.  A-Z, a-z, -, ., 0-9 are allowed.");
-        return false;
-    }
-
-    var email = $('#email').val();
-    if( !email.match(EMAIL_REGEX) )
-    {
-        window.alert("Please enter a valid email address.");
-        return false;
-    }
-    
-    var artist = $('#artist').val();
-    if( artist.length == 0 )
-    {
-        window.alert("Please enter an artist name.");
-        return false;
-    }
-    var logo = document.getElementById('logo');
-    if( g_needsImage && ( !logo || !logo.value || logo.value.length == 0 ) )
-    {
-        window.alert("Please upload a logo image.");
-        return false;
-    } 
-    return true;
-}
-function onEditProfileSubmit()
-{
-    if( !validateEditProfile() )
-        return false;
-
-    function fillProfileForm(form_data)
-    {
-        var artist_id = $('#artist_id').val();
-        var artist = $('#artist').val();
-        var email = $('#email').val();
-        var url = $('#url').val();
-        var custom_domain = $('#custom_domain').val();
-        var listens = $('input[name=listens]:checked').val()
-        var newpass = $('#newpass').val();
-        var tags = $('#user_tags').val();
-        
-        form_data.append('artistid',artist_id);
-        form_data.append('artist',artist);
-        form_data.append('email',email);
-        form_data.append('url',url);
-        form_data.append('custom_domain',custom_domain);
-        form_data.append('listens',listens);
-        form_data.append('newpass',newpass);
-        form_data.append('tags',tags);
-        
-        var logo = document.getElementById('logo');
-        if( logo.files && logo.files.length > 0 )
-        {
-            form_data.append('logo',logo.files[0]);
-        }
-        form_data.append('WriteTags','submit');
-    }
-    
-    var url = '/manage/register.php';
-    return startAjaxUpload(url,fillProfileForm);
-}
 function onInviteFriends()
 {
     showProgress("Updating record...");
@@ -317,57 +250,6 @@ function onInviteFriends()
         }
     });
     return false;
-}
-
-
-
-function showChangePassword()
-{
-    $('#ajax_form').hide();
-    $('#change_password').show();
-}
-
-function submitChangePassword()
-{
-    var old_password = $('#old_password').val();
-    var new_password = $('#new_password').val();
-    var confirm_password = $('#confirm_password').val();
-    
-    if( new_password.length > 0 
-        && confirm_password.length > 0
-        && new_password == confirm_password )
-    {
-        $('#change_password').hide();
-        showProgress("Updating record...");
-        
-        var data = {
-            artist_id: g_artistId,
-            old_password: old_password, 
-            new_password: new_password 
-        };
-        var postData = JSON.stringify(data);
-        jQuery.ajax(
-        {
-            type: 'POST',
-            url: '/manage/data/password.php',
-            contentType: 'application/json',
-            data: postData,
-            processData: false,
-            dataType: 'text',
-            success: function(data) 
-            {
-                showSuccess("Password changed.");
-            },
-            error: function()
-            {
-                showSuccess("Password change failed!");
-            }
-        });
-    }
-    else
-    {
-        window.alert("Passwords do not match.");        
-    }
 }
 
 function deleteAccount(id)

@@ -8,8 +8,8 @@
     
     <div class='top_blue_bar'></div>
     <div class='top_sep'></div>
-    <form id='ajax_form' onsubmit="return onEditProfileSubmit();">
-        <input id='artist_id' type="hidden" name="artistid" value="<?=$artistid?>">
+    <form id='ajax_form'  method="post" enctype="multipart/form-data" action="data/edit_profile.php" onsubmit="return onEditProfileSubmit();">
+        <input id='artist_id' type="hidden" name="artistid" value="">
             
         <div class='input_container'>
             <div class='left_label'>Name<span class='required'>*</span></div>
@@ -25,7 +25,7 @@
             <div class='left_label'>URL <span id='tip_artist_url' class='tooltip'>(?)</span><span class='required'>*</span></div>
             <input id='url' class="right_text" value="" name="url">
         </div>
-        <div class='input_container'>
+        <div id='custom_domain_container' class='input_container'>
             <div class='line_label'>Custom Domain <span id='tip_custom_domain' class='tooltip'>(?)</span></div>
             <input id='custom_domain' name="custom_domain" class='line_text' value="">
         </div>
@@ -35,13 +35,6 @@
                 <div class='image_image'></div>
             </div>
             <input id='logo' type="file" name="logo" class='right_file' onchange='onImageChange(this);' />
-        </div>
-        <div class='input_container'>
-            <div class='left_label'>Show "Listen" Count <span id='tip_listen_count' class='tooltip'>(?)</span></div>
-            <div class="right_box">
-                <input type="radio" class="radio" value="1" name="listens"> Yes
-                <input type="radio" class="radio" value="0" name="listens"> No<br>
-            </div>
         </div>
         <div class='input_container' style='height: 40px;'>
             <div class='left_label'>Password</div>

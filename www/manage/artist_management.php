@@ -165,6 +165,13 @@
     $store_check = mf(mq("SELECT * FROM `[p]musicplayer_ecommerce` WHERE `userid`='$artistID' LIMIT 1"));
     $paypalEmail = $store_check["paypal"];
     $record_artistDetail['paypal_email'] = $paypalEmail;
+    
+    $logo = $record_artistDetail['logo'];
+    $logo_path = "../artists/images/$logo";
+    if( $record_artistDetail['logo'] && file_exists($logo_path))
+        $record_artistDetail['logo_url'] = $logo_path;
+    else
+        $record_artistDetail['logo_url'] = 'images/NoPhoto.jpg';
 
     array_walk($record_artistDetail,cleanup_row_element);
     $artist_data_json = json_encode($record_artistDetail);
@@ -177,6 +184,7 @@
     include_once 'include/edit_video.html';
     include_once 'include/edit_tab.html';
     include_once 'include/edit_social_config.html';
+    include_once 'include/edit_profile.html';
     
     include_once 'include/popup_messages2.html';
 ?>
@@ -228,14 +236,14 @@ $(document).ready(showFirstInstruction);
     <div id="adminblock">
     	<div class="column1">
             <figure>
-                <a href="register.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">
+                <a onclick='showEditProfile();'>
                     <img src="<?=$img_url;?>" alt="<?php echo $record_artistDetail['artist']; ?>" title="<?php echo $record_artistDetail['artist']; ?>" />
                 </a>
             </figure>
             
             <h6>Manage Profile</h6>
             <ul>
-                <li><a href="register.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Edit Profile</a></li>
+                <li><a onclick='showEditProfile();'>Edit Profile</a></li>
                 <li><a onclick='showSocialConfigPopup();'>Social Connections</a></li>
                 <li><a href="invite_friends.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Invite Friends</a></li>
                 <li><a class='view_site' href="<?=$artist_url;?>" target="_blank">View Site</a></li>

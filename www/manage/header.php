@@ -33,6 +33,7 @@
     <script src="js/edit_video.js" type="text/javascript"></script>
     <script src="js/edit_tab.js" type="text/javascript"></script>
     <script src="js/edit_social_config.js" type="text/javascript"></script>
+    <script src="js/edit_profile.js" type="text/javascript"></script>
     <script src="/js/ZeroClipboard.js" type="text/javascript"></script>
 
     <script src="facefiles/facebox.js" type="text/javascript"></script>
@@ -85,7 +86,7 @@
              echo "<a href='http://$artist_home_host'>VIEW SITE</a>";
              echo "</li>";
              echo "<li>";
-             echo "<a href='register.php?artist_id=$artist_id' rel='facebox[.bolder]'>EDIT PROFILE</a>";
+             echo "<a onclick='showEditProfile();'>EDIT PROFILE</a>";
              echo "</li>";
              echo "<li class='nodivider'>";
              echo "<a href='invite_friends.php?artist_id=$artist_id' rel='facebox[.bolder]'>INVITE FRIENDS</a>";
