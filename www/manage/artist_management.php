@@ -184,6 +184,12 @@
     include_once 'include/edit_tab.html';
     include_once 'include/edit_social_config.html';
     include_once 'include/edit_profile.html';
+    include_once 'include/invite_friends.html';
+    include_once 'include/fan_connections.html';
+    include_once 'include/first_instructions.html';
+    
+    if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' )
+        include_once 'include/edit_account_settings.html';
     
     include_once 'include/popup_messages2.html';
 ?>
@@ -205,12 +211,6 @@ var g_playerUrl = "<?=playerUrl();?>";
 
 <? if( $show_first_instruction ): ?>
 
-function showFirstInstruction()
-{
-    $.facebox.loading(true);
-    $.get('/manage/first_instructions.php',function(data) { $.facebox.reveal(data, "bolder"); });
-}
-
 $(document).ready(showFirstInstruction);
 
 <? endif; ?>
@@ -221,20 +221,11 @@ $(document).ready(showFirstInstruction);
 <section id="content">
 	
     <div id="admin">
-    <h2><a href="<?=$artist_url;?>"><?php echo $record_artistDetail['artist']; ?></a></h2>
-    
-    <!--
-    <div class="search">
-    <fieldset>
-    <input name="" value="SEARCH" type="text" class="input" />
-    <input name="" type="image" src="images/icon_search.gif" class="button">
-    </fieldset>
-    </div>
-    -->
-    
+    <h2><a id='profile_name_anchor' href="<?=$artist_url;?>" target="_blank"><?php echo $record_artistDetail['artist']; ?></a></h2>
+        
     <div id="adminblock">
     	<div class="column1">
-            <figure>
+            <figure id='profile_figure'>
                 <a onclick='showEditProfile();'>
                     <img src="<?=$img_url;?>" alt="<?php echo $record_artistDetail['artist']; ?>" title="<?php echo $record_artistDetail['artist']; ?>" />
                 </a>
@@ -244,8 +235,8 @@ $(document).ready(showFirstInstruction);
             <ul>
                 <li><a onclick='showEditProfile();'>Edit Profile</a></li>
                 <li><a onclick='showSocialConfigPopup();'>Social Connections</a></li>
-                <li><a href="invite_friends.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Invite Friends</a></li>
-                <li><a class='view_site' href="<?=$artist_url;?>" target="_blank">View Site</a></li>
+                <li><a onclick='showInvitePopup();'>Invite Friends</a></li>
+                <li><a id='view_site_anchor' class='view_site' href="<?=$artist_url;?>" target="_blank">View Site</a></li>
             </ul>
             <h6>Platform</h6>
             <ul>
@@ -253,14 +244,14 @@ $(document).ready(showFirstInstruction);
                 <li><a onclick='showVideoPopup(false);'>Add Video</a></li>
                 <li id='add_tab_list_item'><a onclick='showTabPopup(false);'>Add Tab</a></li>
                 <li><a href="stats.php?userId=<?=$artistID;?>">View Analytics</a></li>
-                <li><a href="fan_connections.php?artist_id=<?=$artistID;?>" rel="facebox[.bolder]">Fan Connections</a></li>
+                <li><a onclick='showFanConnections();'>Fan Connections</a></li>
             </ul>
             
             <h6>Store</h6>
             <ul>
-                <li><a href="store_settings.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Edit Settings</a></li>
+                <li><a onclick='showStoreSettings();'>Edit Settings</a></li>
                 <? if( strlen($paypalEmail) == 0 ): ?>
-                    <li><a href="store_settings.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Add Product</a></li>
+                    <li><a onclick='showStoreSettings();'>Add Product</a></li>
                 <? else: ?>
                     <li><a onclick='showProductPopup(false);'>Add Product</a></li>
                 <? endif ?>
@@ -272,7 +263,7 @@ $(document).ready(showFirstInstruction);
             <? if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' ): ?>
                 <h6>Super Admin</h6>
                 <ul>
-                <li><a href="account_settings.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Account Settings</a></li>
+                <li><a onclick='showAccountSettings();'>Account Settings</a></li>
                 </ul>
             <? endif; ?>
         </div>
@@ -305,7 +296,7 @@ $(document).ready(showFirstInstruction);
             <div class="heading">
             <h5>Store</h5>
             <? if( strlen($paypalEmail) == 0 ): ?>
-                <div class="buttonadd"><a href="store_settings.php?artist_id=<?=$artistID?>" rel="facebox[.bolder]">Store Settings</a></div>
+                <div class="buttonadd"><a onclick='showStoreSettings();'>Store Settings</a></div>
             <? else: ?>
                 <div class="buttonadd"><a onclick='showProductPopup(false);'>Add Product</a></div>
             <? endif ?>
