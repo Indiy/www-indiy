@@ -98,33 +98,6 @@ function onAddLabelSubmit()
     return false;
 }
 
-function onStoreSettingsSubmit()
-{
-    showProgress("Updating record...");
-
-    var paypal_email = $('#paypal_email').val();
-    
-    var post_url = "/manage/store_settings.php?";
-    post_url += "&artist_id=" + escape(g_artistId);
-    post_url += "&paypal_email=" + escape(paypal_email);
-    post_url += "&submit=1";
-    jQuery.ajax(
-    {
-        type: 'POST',
-        url: post_url,
-        dataType: 'text',
-        success: function(data) 
-        {
-            showSuccess("Settings updated.");
-        },
-        error: function()
-        {
-            showFailure("Update Failed");
-        }
-    });
-    return false;    
-}
-
 function checkElementFileExtensions(file,extensions,error_string)
 {
     if( file.files && file.files.length > 0 )
@@ -203,12 +176,16 @@ function onSocializePublish()
     return false;
 }
 
+function showAccountSettings()
+{
+    showPopup('#account_settings');
+}
 function onAccountSettingsSubmit()
 {
     showProgress("Updating record...");
 
-    var post_url = "/manage/account_settings.php?";
-    post_url += $('#ajax_form').serialize();
+    var post_url = "/manage/data/account_settings.php?";
+    post_url += $('#account_settings #ajax_form').serialize();
     
     jQuery.ajax(
     {
@@ -222,31 +199,6 @@ function onAccountSettingsSubmit()
         error: function()
         {
             showFailure("Update Failed");
-        }
-    });
-    return false;
-}
-function onInviteFriends()
-{
-    showProgress("Updating record...");
-
-    var friends = $('#friends_text').val();
-    
-    var post_url = "/manage/invite_friends.php?";
-    post_url += "&artist_id=" + escape(g_artistId);
-    post_url += "&friends=" + escape(friends);
-    jQuery.ajax(
-    {
-        type: 'POST',
-        url: post_url,
-        dataType: 'text',
-        success: function(data) 
-        {
-            showSuccess("Thank you, your friends will be invited.");
-        },
-        error: function()
-        {
-            showSuccess("Thank you, your friends will be invited.");
         }
     });
     return false;
@@ -265,4 +217,12 @@ function deleteAccount(id)
     }
 }
 
+function showFanConnections()
+{
+    showPopup('#fan_connections');
+}
+function showFirstInstructions()
+{
+    showPopup('#first_instructions');
+}
 
