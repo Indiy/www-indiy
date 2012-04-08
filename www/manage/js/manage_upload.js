@@ -39,7 +39,7 @@ function checkPopupNumber(popupNumber)
     }
     else
     {
-        console.log("popupNumber({0}) != g_popupNumber{{1})",xhr.popupNumber,g_popupNumber);
+        console.log("popupNumber({0}) != g_popupNumber{{1})",popupNumber,g_popupNumber);
         return false;
     }
 }
