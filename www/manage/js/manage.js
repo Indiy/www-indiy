@@ -8,36 +8,6 @@ var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+
 var FB_REGEX = new RegExp('http://www.facebook.com/(.*)','i');
 
 
-function showProgress(text)
-{
-    showMessagePopup('#progress',text);
-}
-function showSuccess(text)
-{
-    $('#message_popup #success_msg .social_success').hide();
-    showMessagePopup('#success',text);
-}
-function showFailure(text)
-{
-    showMessagePopup('#failure',text);
-}
-function showProcessing()
-{
-    showMessagePopup('#processing');
-}
-function showUploading()
-{
-    showMessagePopup('#uploading');
-}
-function showMessagePopup(selector,text)
-{
-    showPopup('#message_popup',true);
-    $('#message_popup .status_container').hide();
-    if( text )
-        $('#message_popup ' + selector + ' .status').text(text);
-    $('#message_popup ' + selector).show();
-}
-
 function onAddUserSubmit()
 {
     showProgress("Adding user...");
