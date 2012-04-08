@@ -1,0 +1,32 @@
+
+<div id='social_post' class='popup_wrapper'>
+<div id="popup">
+    <div class='top_bar'>
+        <h2>Socialize</h2>
+        <button onclick='closePopup();'>CLOSE</button>
+    </div>
+    
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+    <div class='flow_container'>
+        <div class='left_label'>Type your text below</div>
+        <textarea id="update_text" style="height: 40px;"></textarea>
+        <p>**Warning - You can not undo once you publish**</p>
+    </div>
+    <div class='input_container'>
+        <div class='left_label'>Select a platform</div>
+        <div class='right_box' style="margin-top: 4px;">
+            <input type="radio" name="network" value="twitter" class="img_radio" checked="checked"/>
+            <img src='/images/tw_icon_color.png'>
+            <input type="radio" name="network" value="facebook" class="img_radio" />
+            <img src='/images/fb_icon_color.png'>
+        </div>
+    </div>
+    <div class='submit_container'>
+        <button id='socialize_publish' class="submit" onclick='onSocializePublish();'>Publish</button>
+    </div>
+    
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
+</div>
+

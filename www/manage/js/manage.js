@@ -148,34 +148,6 @@ function onImageChange(file)
     checkElementSize(file,2*1024*1024,"Please upload images 1280x800 and less than 2MB in size.");
 }
 
-function onSocializePublish()
-{
-    showProgress("Posting update...");
-    
-    var update_text = $('#update_text').val();
-    var network = $('input[name=network]:checked').val();
-    
-    var post_url = "/manage/socialize.php?";
-    post_url += "&artist_id=" + escape(g_artistId);
-    post_url += "&update_text=" + escape(update_text);
-    post_url += "&network=" + network;
-    jQuery.ajax(
-    {
-        type: 'POST',
-        url: post_url,
-        dataType: 'text',
-        success: function(data) 
-        {
-            showSuccess("Updated Posted.");
-        },
-        error: function()
-        {
-            showFailure("Update Failed.");
-        }
-    });
-    return false;
-}
-
 function showAccountSettings()
 {
     showPopup('#account_settings');

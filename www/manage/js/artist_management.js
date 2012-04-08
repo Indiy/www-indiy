@@ -69,8 +69,7 @@ function updatePageList()
         html += "<span class='socialize'>";
         if( g_facebook )
         {
-            html += "<a href='socialize.php?artist_id={0}&song_id={1}' rel='facebox[.bolder]' title='Send a Facebook update for this page.'>"
-                        .format(g_artistId,song.id);
+            html += "<a onclick='showSocialPost({0});' title='Send a Facebook update for this page.'>".format(i);
             html += "<img class='social_icon' src='/images/fb_icon_color.png'/>";
             html += "</a>\n";
         }
@@ -82,8 +81,7 @@ function updatePageList()
         }
         if( g_twitter )
         {
-            html += "<a href='socialize.php?artist_id={0}&song_id={1}' rel='facebox[.bolder]' title='Send a tweet for this page.'>"
-                        .format(g_artistId,song.id);
+            html += "<a onclick='showSocialPost({0});' title='Send a tweet for this page.'>".format(i);
             html += "<img class='social_icon' src='/images/tw_icon_color.png'/>";
             html += "</a>\n";
         }
@@ -95,7 +93,7 @@ function updatePageList()
         }
         html += "</span>";
         
-        html += "<span class='delete'><a href='#' onclick='deletePage({0});' ></a></span>".format(song.id);
+        html += "<span class='delete'><a onclick='deletePage({0});' ></a></span>".format(song.id);
         html += "</li>\n";
         
         $('#page_list_ul').append(html);
