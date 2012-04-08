@@ -6,8 +6,14 @@
     
     define("PATH_TO_ROOT","../../");
     
-    require_once '../../includes/config.php';
-    require_once '../../includes/functions.php';
+    require_once PATH_TO_ROOT . 'includes/config.php';
+    require_once PATH_TO_ROOT . 'includes/functions.php';
+
+    require_once PATH_TO_ROOT . 'Login_Twitbook/twitter/twitteroauth.php';
+    require_once PATH_TO_ROOT . 'Login_Twitbook/config/twconfig.php';
+    
+    require_once PATH_TO_ROOT . 'Login_Twitbook/facebook/facebook.php';
+    require_once PATH_TO_ROOT . 'Login_Twitbook/config/fbconfig.php';
     
     if( $_SESSION['sess_userId'] == "" )
     {
