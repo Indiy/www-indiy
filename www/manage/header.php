@@ -41,6 +41,7 @@
     <script src="js/edit_profile.js" type="text/javascript"></script>
     <script src="js/invite_friends.js" type="text/javascript"></script>
     <script src="js/edit_store.js" type="text/javascript"></script>
+    <script src="js/social_post.js" type="text/javascript"></script>
 
 </head>
 <body>

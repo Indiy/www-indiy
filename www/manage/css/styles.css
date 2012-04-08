@@ -589,6 +589,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 
 #adminblock { width:940px; float:left; background:#FFFFFF; padding:10px;margin:30px -10px 0 -10px}
 
+#adminblock .column1 a { cursor: pointer; }
 #adminblock .column1 { width:220px; float:left; }
 #adminblock .column1 figure { float:left; line-height:.7em; padding-bottom:15px; }
 #adminblock .column1 h6 { font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#383838; border-bottom:1px solid #dddee0; padding-bottom:5px; }
