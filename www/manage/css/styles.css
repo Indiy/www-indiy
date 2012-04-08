@@ -1153,6 +1153,15 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     font-size: 14px;
     font-family: sans-serif;
     cursor: pointer;
+    text-decoration: none;
+}
+#popup a.submit {
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 #popup .submit_branding_container {
     width: 100%;
