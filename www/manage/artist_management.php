@@ -128,7 +128,7 @@
 	else
 		$artist_img_logo = '../artists/images/'.$record_artistDetail['logo'];
 
-	$img_url = "timthumb.php?src=$artist_img_logo&w=220&zc=1&q=100";
+	$img_url = $artist_img_logo;
 
     $artist_url = str_replace("http://www.","http://".$record_artistDetail['url'].".",trueSiteUrl());
 
