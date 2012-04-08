@@ -166,7 +166,7 @@
     $record_artistDetail['paypal_email'] = $paypalEmail;
     
     $artist_data = get_artist_data($artistID);
-    $artist_data_json = json_encode($record_artistDetail);
+    $artist_data_json = json_encode($artist_data);
 
     require_once 'header.php';
     
