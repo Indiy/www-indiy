@@ -24,6 +24,8 @@ function onStoreSettingsSubmit()
         success: function(data) 
         {
             showSuccess("Settings updated.");
+            g_artistData = data.artist_data;
+            updateProfile();
         },
         error: function()
         {

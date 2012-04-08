@@ -25,16 +25,6 @@
     }
     exit();
 
-
-    function get_data($id)
-    {
-        $row = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$id'"));
-        
-        array_walk($row,cleanup_row_element);
-        
-        return $row;
-    }
-
     function do_POST()
     {
         $artist_id = $_REQUEST['artist_id'];
@@ -55,7 +45,7 @@
         $postedValues['postedValues'] = $_REQUEST;
         if( $_REQUEST['ajax'] )
         {
-            $postedValues['artist_data'] = get_data($artist_id);
+            $postedValues['artist_data'] = get_artist_data($artist_id);
             echo json_encode($postedValues);
             exit();
         }

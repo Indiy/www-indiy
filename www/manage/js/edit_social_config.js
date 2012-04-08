@@ -91,6 +91,7 @@ function socialConfigSubmit()
         {
             showSuccess("Update Success");
             g_artistData = data.artist_data;
+            updateProfile();
         },
         error: function()
         {
