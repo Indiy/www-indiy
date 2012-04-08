@@ -103,6 +103,7 @@ function onEditProfileSubmit()
 function onProfileSuccess(data)
 {
     g_artistData = data.artist_data;
+    updateProfile();
 }
 
 function showChangePassword()

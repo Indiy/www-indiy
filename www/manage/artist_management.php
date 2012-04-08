@@ -165,16 +165,8 @@
     $paypalEmail = $store_check["paypal"];
     $record_artistDetail['paypal_email'] = $paypalEmail;
     
-    $logo = $record_artistDetail['logo'];
-    $logo_path = "../artists/images/$logo";
-    if( $record_artistDetail['logo'] && file_exists($logo_path))
-        $record_artistDetail['logo_url'] = $logo_path;
-    else
-        $record_artistDetail['logo_url'] = 'images/NoPhoto.jpg';
-
-    array_walk($record_artistDetail,cleanup_row_element);
+    $artist_data = get_artist_data($artistID);
     $artist_data_json = json_encode($record_artistDetail);
-
 
     require_once 'header.php';
     
@@ -227,7 +219,7 @@ $(document).ready(showFirstInstruction);
     	<div class="column1">
             <figure id='profile_figure'>
                 <a onclick='showEditProfile();'>
-                    <img src="<?=$img_url;?>" alt="<?php echo $record_artistDetail['artist']; ?>" title="<?php echo $record_artistDetail['artist']; ?>" />
+                    <img src="<?=$img_url;?>" />
                 </a>
             </figure>
             

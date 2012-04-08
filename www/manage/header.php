@@ -40,6 +40,7 @@
     <script src="js/edit_social_config.js" type="text/javascript"></script>
     <script src="js/edit_profile.js" type="text/javascript"></script>
     <script src="js/invite_friends.js" type="text/javascript"></script>
+    <script src="js/edit_store.js" type="text/javascript"></script>
 
 </head>
 <body>

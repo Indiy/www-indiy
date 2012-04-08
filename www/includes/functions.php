@@ -974,5 +974,37 @@
     {
         $value = stripslashes($value);
     }
+    
+    function get_artist_data($id)
+    {
+        $row = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$id'"));
+        
+        if( $row['oauth_token'] && $row['oauth_secret'] && $row['twitter'] )
+            $twitter = 'true';
+        else
+            $row['twitter'] = FALSE;
+        if( $row['fb_access_token'] && $row['facebook'] )
+            $facebook = 'true';
+        else
+            $row['facebook'] = FALSE;
+        
+        $store_check = mf(mq("SELECT * FROM mydna_musicplayer_ecommerce WHERE userid='$id' LIMIT 1"));
+        $paypalEmail = $store_check["paypal"];
+        $row['paypal_email'] = $paypalEmail;
+        
+        $logo = $row['logo'];
+        $logo_path = "/artists/images/$logo";
+        if( $row['logo'] )
+            $row['logo_url'] = $logo_path;
+        else
+            $row['logo_url'] = 'images/NoPhoto.jpg';
+        
+        $url = $row['url'];
+        $row['player_url'] = str_replace("http://www.","http://$url.",trueSiteUrl());
+        
+        array_walk($row,cleanup_row_element);
+        
+        return $row;
+    }
 
 ?>

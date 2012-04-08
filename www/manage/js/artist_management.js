@@ -209,6 +209,15 @@ function updateTabList()
     }
 }
 
+function updateProfile()
+{
+    $('#profile_figure img').attr('src',g_artistData.logo_url);
+    $('#profile_name_anchor').attr('href',g_artistData.player_url);
+    $('#profile_name_anchor').text(g_artistData.artist);
+    $('#view_site_anchor').attr('href',g_artistData.player_url);
+    updatePageList();
+}
+
 function deletePage(song_id)
 {
     var ret = window.confirm("Are you sure you want delete this item?");
