@@ -18,7 +18,7 @@
 			<br />
     
     <div class="signup">
-    <h3>Sign Up For Your Artist Kit</h3>
+    <h3>Create a Home for Your Brand!</h3>
     <div class="button"><a href="#" onclick="showSignup();">START NOW!</a></div>
     </div><!-- signup -->
     
@@ -32,7 +32,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">HEARD</span></span></li>
         </ul>
-        <h5><a href="be-heard.php">Audio Player: Give your talent a voice</a></h5>
+        <h5><a href="be-heard.php">A centralized hub for your art - Don't make your fans chase you.  Forget the zoo of YouTube, Vimeo, and Flickr links. With MyArtistDNA, you can host all your content on one site, branded uniquely for you.</a></h5>
         </aside>
     
         <aside class="seen">
@@ -40,7 +40,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">SEEN</span></span></li>
         </ul>
-        <h5><a href="be-seen.php">Video Player: Show off your Art</a></h5>
+        <h5><a href="be-seen.php">Image is everything - Our beautiful, full-screen format is made to show off your photos, layouts and art in the highest possible quality. HTML5 Video - Our versatile fullscreen design lets you upload instantly and lets your fans watch wherever—laptops, tablets, mobiles, you name it.  </a></h5>
         </aside>
     
         <aside class="independent">
@@ -48,14 +48,14 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">INDEPENDENT</span></span></li>
         </ul>
-        <h5><a href="be-independent.php">Control: Freedom to express yourself </a></h5>
+        <h5><a href="be-independent.php">Effortless site creation and management - You're the webmaster now.  MyArtistDNA puts you in control, making it easy for you to upload music and videos, premiere new songs, edit content—all without having to know a single line of code. </a></h5>
         </aside>
     </article>
     </div><!-- benefit -->
     
     
     <div class="signup">
-    <h3>Create, Build, Control Your Brand</h3>
+    <h3>Use Our Artist Kit to Build Your Brand</h3>
     <div class="button"><a href="#" onclick="showSignup();">SIGN UP!</a></div>
     </div><!-- signup -->
         
