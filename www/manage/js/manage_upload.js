@@ -115,8 +115,6 @@ function uploadReadyStateChange(xhr)
     }
 }
 
-var g_popupNumber = 0;
-
 function startAjaxUpload(url,fillForm,successCallback)
 {
     g_popupNumber++;

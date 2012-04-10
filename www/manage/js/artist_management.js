@@ -1,4 +1,6 @@
 
+var g_popupNumber = 0;
+
 function artistManagementReady()
 {
     updatePageList();
@@ -44,6 +46,7 @@ function closePopup()
 {
     $('.popup_wrapper').fadeOut();
     $('#mask').fadeOut();
+    g_popupNumber++;
 }
 
 function updatePageList()
