@@ -1283,13 +1283,13 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #popup #uploading .upload_bar
 {
     position: relative;
-    height: 20px;
+    height: 24px;
     width: 275px;
     margin-left: auto;
     margin-right: auto;
     background: url('/images/upload_progress_bg.png');
-    border-radius: 5px;
-    box-shadow: -4px 4px 7px #c7c7c7; 
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px #c7c7c7; 
 }
 #popup #uploading .upload_bar .upload_progress_bar {
     position: absolute;
@@ -1298,21 +1298,21 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     height: 100%;
     width: 50%;
     background-color: #5693fd;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 #popup #uploading .upload_bar .upload_label {
     color: white;
     position: absolute;
     top: 4px;
     left: 7px;
-    font-size: 11px;
+    font-size: 12px;
 }
 #popup #uploading .upload_bar .percent {
     color: white;
     position: absolute;
     top: 4px;
     right: 7px;
-    font-size: 11px;
+    font-size: 12px;
 }
 #popup .upload_bar_progress_done
 {

@@ -58,8 +58,8 @@ function onUploadProgress(evt,xhr)
         if( checkPopupNumber(xhr.popupNumber) )
         {
             var percentage = evt.loaded / evt.total * 100.0;
-            var text = "" + percentage.toFixed(0);
-            $('#upload_percent').text(text);
+            $('#upload_progress_bar').css("width: {0}%;".format(percentage));
+            $('#upload_percent').text(percentage.toFixed(0));
         }
     }
     else
