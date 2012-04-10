@@ -178,12 +178,12 @@ ul#accordion-slider li{ width:314px; height:257px; float:left; display: block; o
 #benefitshome h5 a {color:#36421b; text-decoration:none}
 #benefitshome h5 a:hover {color:#36421b; text-decoration:underline}
 
-#benefitshome .seen { width:300px; height:115px; float:left; background:url(../images/bg_benefits_home.gif) no-repeat; padding:15px 20px 0 0}
+#benefitshome .seen { width:300px; height:125px; float:left; background:url(../images/bg_benefits_home.gif) no-repeat; padding:15px 20px 0 0}
 #benefitshome .seen ul li .be {background:url(../images/bg_green.png) repeat}
 #benefitshome .seen ul li .heard {background:url(../images/bg_green.png) repeat}
 #benefitshome .seen h5 {background:url(../images/bg_green1.png) repeat}
 
-#benefitshome .independent { width:300px; height:115px; float:left; background:url(../images/bg_benefits_home.gif) no-repeat; padding:15px 0px 0 0}
+#benefitshome .independent { width:300px; height:125px; float:left; background:url(../images/bg_benefits_home.gif) no-repeat; padding:15px 0px 0 0}
 #benefitshome .independent ul li .be {background:url(../images/bg_pink.png) repeat}
 #benefitshome .independent ul li .heard {background:url(../images/bg_pink.png) repeat}
 #benefitshome .independent h5 {background:url(../images/bg_pink1.png) repeat}
