@@ -1343,6 +1343,15 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #popup .regular_button {
     padding: 2px 12px 3px;
 }
+#popup .dismiss {
+    text-align: center;
+    font-size: 12px;
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 #spinner
 {
