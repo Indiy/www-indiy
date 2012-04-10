@@ -20,6 +20,7 @@
 		header("HTTP/1.1 403 Not Authorized");
 		exit();
 	}
+    session_write_close();
 
     
     if( $_SERVER['REQUEST_METHOD'] == 'POST' )
