@@ -31,7 +31,6 @@
     <script src="js/manage.js" type="text/javascript"></script>
     <script src="js/manage_upload.js" type="text/javascript"></script>
     <script src="js/manage_tooltips.js" type="text/javascript"></script>
-    <script src="js/artist_management.js" type="text/javascript"></script>
     
     <script src="js/edit_page.js" type="text/javascript"></script>
     <script src="js/edit_product.js" type="text/javascript"></script>
