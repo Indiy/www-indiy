@@ -38,19 +38,23 @@
         </aside>
     
         <aside class="seen">
+        <a href="be-seen.php">
         <ul>
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">SEEN</span></span></li>
         </ul>
-        <h5><a href="be-seen.php">Show off your Art</a></h5>
+        <h5>Show off your Art</h5>
+        </a>
         </aside>
     
         <aside class="independent">
+        <a href="be-independent.php">
         <ul>
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">INDEPENDENT</span></span></li>
         </ul>
-        <h5><a href="be-independent.php">Freedom to express yourself </a></h5>
+        <h5>Freedom to express yourself </h5>
+        </a>
         </aside>
     </article>
     </div><!-- benefit -->
