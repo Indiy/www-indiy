@@ -9,7 +9,7 @@ include "header.php";
 	
 	<div id="artists">
 	<div class="heading">
-    <h2>MUSIC</h2>
+    <h2>THE ARTIST KIT</h2>
     
     <!-- <div class="sort">
         <a class="sub" href="#">Hip Hop</a>
@@ -23,50 +23,44 @@ include "header.php";
     </div><!-- features -->
     
     <div class="signup">
-    <h3>Experience MyArtistDNA</h3>
-    <div class="button"><a href="http://navegante.myartistdna.com">EXPLORE NOW</a></div>
+    <h3>Use Our Artist Kit to Build Your Brand</h3>
+    <div class="button"><a href="http://navegante.myartistdna.com">In 4 Steps!</a></div>
     </div><!-- signup -->
 
 	
     <div id="artistshome">
-	<h2>ARTISTS USING MY<span>ARTIST</span>DNA</h2>
+	<h2>STEP 1 Publish your content: MY<span>ARTIST</span>DNA.com</h2>
     	<ul>
          <li><img src="images/bv.jpg" alt="">
-        <span>Black Violin</span></li>
-        
-        <li><img src="images/coolMent.jpg" alt="">
-        <span>Cool Mentality</span></li>
-        
-        <li><img src="images/wondaland.jpg" alt="">
-        <span>Wondaland Arts Society</span></li>
-        
-        <li><img src="images/artists_04.jpg" alt="">
-        <span>Kithe Brewster</span></li>
-        
-        <li><img src="images/bc.jpg" alt="">
-        <span>Babylon Cartel</span></li>
-        
-        <li><img src="images/artists_03.jpg" alt="">
-        <span>Hierosonic</span></li>
-		
-		<li><img src="images/nvg.jpg" alt="">
-        <span>Navegante</span></li>
-        
-        <li><img src="images/youngc.jpg" alt="">
-        <span>Young Chris</span></li>
-        
-        <li><img src="images/marc.jpg" alt="">
-        <span>Marc Ecko</span></li>
-        
-        <li><img src="images/blakroc.jpg" alt="">
-        <span>Blakroc</span></li>
-        
-        <li><img src="images/mmjb.jpg" alt="">
-        <span>Money Making Jam Boys</span></li>
-        
-  		        
+        <span>This is the on boarding publishing tool that allows you to create a presence for your audio, video or image art in seconds</span></li>
         </ul>
+
 	</div>	
+	
+	<h2>STEP 2 Brand your content: MY<span>ARTIST</span>DNA.is</h2>
+    	<ul>
+         <li><img src="images/bv.jpg" alt="">
+        <span>This is the branding agency that helps users brand their art</span></li>
+        </ul>
+	
+	<h2>STEP 3 Be Heard: MY<span>ARTIST</span>DNA.fm</h2>
+    	<ul>
+         <li><img src="images/bv.jpg" alt="">
+        <span>This is an audio streaming network that brings the best audio content from myartistdna.com to create limitless audio stream channels for fans to listen.</span></li>
+        </ul>
+	
+	<h2>STEP 4 Be Seen: MY<span>ARTIST</span>DNA.tv</h2>
+    	<ul>
+         <li><img src="images/bv.jpg" alt="">
+        <span>This is a video streaming network that brings the best video content from myartistdna.com to create limitless video stream channels for fans to watch.</span></li>
+        </ul>
+
+	</div>	
+
+	</div>	
+
+	</div>	
+
     </div><!-- artists -->
     
     <div class="signup">
