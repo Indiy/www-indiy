@@ -64,8 +64,8 @@
         <h2>The MY<span>ARTIST</span>DNA creative community</h2>
     
         <ul>
-        <li><img src="images/mason.jpg" alt="">
-        <span>Mason Garments</span></li>
+        <li><a href="http://"><img src="images/mason.jpg" alt="">
+        <span>Mason Garments</span></a></li>
         
         <li><img src="images/yankee.jpg" alt="">
         <span>Dirty Souf Yankee</span></li>
