@@ -174,13 +174,13 @@ function updateVideoList()
         var html = "";
         html += "<li id='arrayorder_{0}' class='videos_sortable'>".format(video.id);
         html += "<figure>";
-        if( error )
-            html += "<div class='error'>!</div>";
         html += "<span class='close'>";
         html += "<a href='#' onclick='deleteVideo({0});'></a>".format(video.id);
         html += "</span>";
         html += "<a title='{0}' onclick='showVideoPopup({1});'>".format(tip,i);
-        html += "<img src='{0}' width='210' height='132' alt=''>".format(video.image_url);
+        html += "<img src='{0}' width='210' height='132'>".format(video.image_url);
+        if( error )
+            html += "<div class='error'>!</div>";
         html += "</a>";
         html += "</figure>";
         html += "<span>";
