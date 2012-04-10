@@ -150,7 +150,7 @@ include "header.php";
 		<h5>How do I cancel service?</h5> 
 		<p>Etiam sagittis purus a velit elementum at sollicitudin nulla condimentum. Donec est enim, elementum ut scelerisque ut, euismod vel justo. Cras non diam eu mi rhoncus placerat. Nullam pulvinar vehicula sapien, vitae rhoncus lacus tristique vel. In malesuada rutrum nisl in tincidunt.</p> 
 		</article>
-		</div> -->
+		</div>
 		
 		<div class="signup">
 		<h3>Be heard, be seen, be independent.</h3>
