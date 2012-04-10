@@ -167,14 +167,14 @@ ul#accordion-slider li{ width:314px; height:257px; float:left; display: block; o
 #benefitshome h2 {width:940px; float:left; text-align:center; background:url(../images/borderdesign.gif) repeat-x; padding-top:51px; padding-bottom:38px}
 #benefitshome h2 span {font-weight:bold}
 
-#benefitshome aside { width:300px; height:115px; float:left; background:url(../images/bg_benefits_home.gif) no-repeat; padding:15px 20px 0 0}
+#benefitshome aside { width:300px; height:125px; float:left; background:url(../images/bg_benefits_home.gif) no-repeat; padding:15px 20px 0 0}
 #benefitshome ul { width:294px; float:left; padding:0px 0 5px 6px}
 #benefitshome ul li { width:294px; float:left;font-family:"Teletex Light",Arial, Helvetica, sans-serif; font-size:28px; color:#FFFFFF; line-height:.9em}
 #benefitshome ul li span { float:left; background:url(../images/bg_gray_home.png) repeat; padding:0 0 0px 8px}
 #benefitshome ul li .be { float:left; background:url(../images/bg_blue1.png) repeat; padding:3px 6px; margin-top:-6px}
 #benefitshome ul li .heard { float:left; font-size:40px; letter-spacing:-1px; background:url(../images/bg_blue1.png) repeat; padding:7px 6px; margin:0 -6px 6px 0}
 
-#benefitshome h5 {width:260px; height:27px; float:left; background:url(../images/bg_blue1.png) repeat; padding:13px 0 0 40px; margin-top:0px}
+#benefitshome h5 {width:260px; height:37px; float:left; background:url(../images/bg_blue1.png) repeat; padding:13px 0 0 40px; margin-top:0px}
 #benefitshome h5 a {color:#36421b; text-decoration:none}
 #benefitshome h5 a:hover {color:#36421b; text-decoration:underline}
 
