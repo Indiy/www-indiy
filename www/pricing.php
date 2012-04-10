@@ -22,7 +22,7 @@ include "header.php";
 		</aside>
 		
 		<aside class="middle"> 
-			<h2><span class="dollor">$</span><span>9</span> <span class="rs">99</span> <span class="yr">yr</span></h2> 
+			<h2><span class="dollor">$</span><span>19</span> <span class="rs">99</span> <span class="yr">month</span></h2> 
 		  <ul> 
 			<li>Feature of the Middle package one</li> 
 			<li>Feature of the Middle package two</li> 
@@ -40,20 +40,7 @@ include "header.php";
 			<div class="choose"><a href="#">CHOOSE</a></div>	
 			</div> 
 		</aside>
-		
-		<aside class="best"> 
-			<h2><span class="dollor">$</span><span>14</span> <span class="rs">99</span> <span class="yr">yr</span></h2> 
-		  <ul> 
-			<li>Feature of the Best package one</li> 
-			<li>Feature of the Best package two</li> 
-			<li class="last">Feature of the Best package two</li> 
-			</ul> 
-			<div class="peckage"> 
-			<h3>Best <br /> Package</h3> 
-			<div class="choose"><a href="#">CHOOSE</a></div>	
-			</div> 
-		</aside>
-		
+			
 		<aside class="platinum"> 
 			<h2>CUSTOM</h2> 
 			<div class="content">
