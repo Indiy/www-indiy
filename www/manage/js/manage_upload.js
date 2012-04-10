@@ -26,6 +26,8 @@ function showProcessing()
 }
 function showUploading()
 {
+    $('#upload_progress_bar').css("width","0%");
+    $('#upload_percent').text("0");
     showMessagePopup('#uploading');
 }
 
@@ -58,7 +60,7 @@ function onUploadProgress(evt,xhr)
         if( checkPopupNumber(xhr.popupNumber) )
         {
             var percentage = evt.loaded / evt.total * 100.0;
-            $('#upload_progress_bar').css("width: {0}%;".format(percentage));
+            $('#upload_progress_bar').css("width","{0}%".format(percentage));
             $('#upload_percent').text(percentage.toFixed(0));
         }
     }
