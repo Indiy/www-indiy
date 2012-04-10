@@ -77,30 +77,30 @@ include "header.php";
         <aside>
         <a href="be-heard.php">
         <ul>
-        <li><span><span class="be">BE</span></span></li>
-        <li><span><span class="heard">HEARD</span></span></li>
+        <li><span><span class="be">IDENTITY + STRATEGY</span></span></li>
+        <li><span><span class="heard">= BRAND DNA</span></span></li>
         </ul>
-        <h5>IDENTITY + STRATEGY = BRAND DNA</h5>
+        <h5> </h5>
         </a>
         </aside>
     
         <aside class="seen">
         <a href="be-seen.php">
         <ul>
-        <li><span><span class="be">BE</span></span></li>
-        <li><span><span class="heard">SEEN</span></span></li>
+        <li><span><span class="be">DESIGN + DEVELOPMENT</span></span></li>
+        <li><span><span class="heard">= DIGITAL INDEPENDENCE</span></span></li>
         </ul>
-        <h5>DESIGN + DEVELOPMENT = DIGITAL INDEPENDENCE</h5>
+        <h5> </h5>
         </a>
         </aside>
     
         <aside class="independent">
         <a href="be-independent.php">
         <ul>
-        <li><span><span class="be">BE</span></span></li>
-        <li><span><span class="heard">INDEPENDENT</span></span></li>
+        <li><span><span class="be">ORIGINAL</span></span></li>
+        <li><span><span class="heard">CONTENT</span></span></li>
         </ul>
-        <h5>YOUR CONTENT + MAD CREATORS = ORIGINAL VIDEO</h5>
+        <h5> </h5>
         </a>
         </aside>
     </article>
