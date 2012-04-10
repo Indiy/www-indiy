@@ -53,9 +53,46 @@ include "header.php";
 			</div> 
 		</aside>
 		</div>
+      
+      <div id="benefitshome">
+    <article>
+        <h2>MY<span>ARTIST</span>DNA EMPOWERS YOU!</h2>
     
-		<div class="testimonial">
-		<h2>What our Artists are Saying</h2> 
+        <aside>
+        <a href="be-heard.php">
+        <ul>
+        <li><span><span class="be">BE</span></span></li>
+        <li><span><span class="heard">HEARD</span></span></li>
+        </ul>
+        <h5>Get Your Audio Content in Rotation: MyArtistDNA.fm</h5>
+        </a>
+        </aside>
+    
+        <aside class="seen">
+        <a href="be-seen.php">
+        <ul>
+        <li><span><span class="be">BE</span></span></li>
+        <li><span><span class="heard">SEEN</span></span></li>
+        </ul>
+        <h5>Bring Your Videos to Your Fans: MyArtistDNA.tv</h5>
+        </a>
+        </aside>
+    
+        <aside class="independent">
+        <a href="be-independent.php">
+        <ul>
+        <li><span><span class="be">BE</span></span></li>
+        <li><span><span class="heard">INDEPENDENT</span></span></li>
+        </ul>
+        <h5>Create Your Art Collection in Seconds: MyArtistDNA.com</h5>
+        </a>
+        </aside>
+    </article>
+    </div><!-- benefit -->
+
+    
+		<!-- <div class="testimonial">
+		<h2>NEED MORE BRANDING HELP?</h2> 
 		<div class="list">
 		<article> 
 		<figure><a href="#"><img src="images/signup_01.jpg" alt=""></a></figure> 
@@ -90,10 +127,9 @@ include "header.php";
 		</article>
 		</div>
 		
+		</div> -->
 		
-		</div> 
-		
-		<div class="questions"> 
+        <div class="questions"> 
 		<h2>Any Questions?</h2> 
 		<article> 
 		<h5>How long are your contracts?</h5> 
@@ -114,7 +150,7 @@ include "header.php";
 		<h5>How do I cancel service?</h5> 
 		<p>Etiam sagittis purus a velit elementum at sollicitudin nulla condimentum. Donec est enim, elementum ut scelerisque ut, euismod vel justo. Cras non diam eu mi rhoncus placerat. Nullam pulvinar vehicula sapien, vitae rhoncus lacus tristique vel. In malesuada rutrum nisl in tincidunt.</p> 
 		</article>
-		</div> 
+		</div> -->
 		
 		<div class="signup">
 		<h3>Be heard, be seen, be independent.</h3>
