@@ -22,7 +22,7 @@ include "header.php";
 		</aside>
 		
 		<aside class="middle"> 
-			<h2><span class="dollor">$</span><span>19</span> <span class="rs">99</span> <span class="yr">month</span></h2> 
+			<h2><span class="dollor">$</span><span>20</span><span class="yr">mo.</span></h2> 
 		  <ul> 
 			<li>Feature of the Middle package one</li> 
 			<li>Feature of the Middle package two</li> 
