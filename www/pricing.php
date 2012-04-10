@@ -43,7 +43,7 @@ include "header.php";
 		
 		
 		<aside class="best"> 
-			<h2><span class="dollor">$</span><span>14</span> <span class="rs">99</span> <span class="yr">yr</span></h2> 
+			<h2>CUSTOM</h2> 
 		  <ul> 
 			<li>Feature of the Best package one</li> 
 			<li>Feature of the Best package two</li> 
@@ -56,7 +56,7 @@ include "header.php";
 		</aside>
 		
 		<aside class="platinum"> 
-			<h2>CUSTOM</h2> 
+			<h2>MAD.IS</h2> 
 			<div class="content">
 			<p>Mauris ut arcu et turpis aliquet vulputate a ut libero. Integer sit amet nulla enim, non luctus sem. Sed sed dui lacus.</p> 
 			<p><span>Aspire to be Independent.</span></p>
