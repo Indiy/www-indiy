@@ -41,7 +41,7 @@ include "header.php";
 			</div> 
 		</aside>
 
-<aside class="middle"> 
+<aside class="best"> 
 			<h2><span class="dollor">$</span><span>20</span><span class="yr">mo.</span></h2> 
 		  <ul> 
 			<li>Feature of the Middle package one</li> 
@@ -62,7 +62,7 @@ include "header.php";
 		</aside>
 
 			
-		<aside class="best"> 
+		<aside class="platinum"> 
 			<h2>CUSTOM</h2> 
 			<div class="content">
 			<p>Mauris ut arcu et turpis aliquet vulputate a ut libero. Integer sit amet nulla enim, non luctus sem. Sed sed dui lacus.</p> 
