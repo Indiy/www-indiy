@@ -22,7 +22,7 @@ include "header.php";
 		</aside>
 		
 		<aside class="middle"> 
-			<h2><span class="dollor">$</span><span>20</span><span class="yr">mo.</span></h2> 
+			<h2><span class="dollor">$</span><span>9</span> <span class="rs">99</span> <span class="yr">yr</span></h2> 
 		  <ul> 
 			<li>Feature of the Middle package one</li> 
 			<li>Feature of the Middle package two</li> 
@@ -40,28 +40,20 @@ include "header.php";
 			<div class="choose"><a href="#">CHOOSE</a></div>	
 			</div> 
 		</aside>
-
-<aside class="best"> 
-			<h2><span class="dollor">$</span><span>20</span><span class="yr">mo.</span></h2> 
+		
+		<aside class="best"> 
+			<h2><span class="dollor">$</span><span>14</span> <span class="rs">99</span> <span class="yr">yr</span></h2> 
 		  <ul> 
-			<li>Feature of the Middle package one</li> 
-			<li>Feature of the Middle package two</li> 
-			<li class="last">Feature of the Middle package two
-            <span class="tooltip">
-            <span class="box">
-            <h5>FEATURE NAME</h5>
-            <p>Cras vel sem consequat neque aliquam sagittis venenatis quis tortor</p>
-            </span>
-            </span>
-            </li> 
+			<li>Feature of the Best package one</li> 
+			<li>Feature of the Best package two</li> 
+			<li class="last">Feature of the Best package two</li> 
 			</ul> 
 			<div class="peckage"> 
-			<h3>Middle <br /> Package</h3> 
+			<h3>Best <br /> Package</h3> 
 			<div class="choose"><a href="#">CHOOSE</a></div>	
 			</div> 
 		</aside>
-
-			
+		
 		<aside class="platinum"> 
 			<h2>CUSTOM</h2> 
 			<div class="content">
@@ -76,7 +68,8 @@ include "header.php";
 		</div>
       
       <div id="benefitshome">
-    <article>
+    
+   <article>
         <h2>NEED MORE BRANDING HELP? MY<span>ARTIST</span>DNA.IS</h2>
     
         <aside>
