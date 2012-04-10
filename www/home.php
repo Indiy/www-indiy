@@ -28,11 +28,13 @@
         <h2>MY<span>ARTIST</span>DNA EMPOWERS YOU!</h2>
     
         <aside>
+        <a href="be-heard.php">
         <ul>
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">HEARD</span></span></li>
         </ul>
-        <h5><a href="be-heard.php">Give your talent a voice</a></h5>
+        <h5>Give your talent a voice</h5>
+        </a>
         </aside>
     
         <aside class="seen">
