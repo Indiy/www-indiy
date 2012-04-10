@@ -33,7 +33,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">HEARD</span></span></li>
         </ul>
-        <h5>Get your audio content in rotation: <a href="http://MyArtistDNA.fm"/>MyArtistDNA.fm</a></h5>
+        <h5>Get Your Audio Content in Rotation: <a href="http://MyArtistDNA.fm"/>MyArtistDNA.fm</a></h5>
         </a>
         </aside>
     
