@@ -28,7 +28,7 @@ include "header.php";
 
 	
     <div id="artistshome">
-	<h2>STEP 1 Publish your content: MY<span>ARTIST</span>DNA.com</h2>
+	<h2><img src="images/bv.jpg" alt="">STEP 1 Publish your content: MY<span>ARTIST</span>DNA.com</h2>
     	<ul>
         <span>This is the on boarding publishing tool that allows you to create a presence for your audio, video or image art in seconds</span></li>
         </ul>
