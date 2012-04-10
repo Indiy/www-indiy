@@ -716,10 +716,10 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #adminblock .videolist .list { width:711px; float:left}
 #adminblock .videolist .list ul { width:689px; float:left; border:1px solid #dddee0; border-top:none; padding:0px 0 20px 20px}
 #adminblock .videolist .list ul li { width:210px; float:left; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#383838; margin:20px 19px 0 0}
-#adminblock .videolist .list ul li .close { float:right; position:absolute; top:0; right:0}
-#adminblock .videolist .list ul li .close a { width:30px; height:25px; float:left; background:url(../images/icon_close_video.gif) no-repeat}
-#adminblock .videolist .list ul li .close a:hover { background:url(../images/icon_delete_hover_admin.gif) no-repeat}
-#adminblock .videolist .list ul li figure { float:left; line-height:.7em; margin-bottom:8px; position:relative}
+#adminblock .videolist .list ul li .close { float:right; position:absolute; top:0; right:0; z-index: 1; }
+#adminblock .videolist .list ul li .close a { width:30px; height:25px; float:left; background:url(../images/icon_close_video.gif) no-repeat; }
+#adminblock .videolist .list ul li .close a:hover { background:url(../images/icon_delete_hover_admin.gif) no-repeat; }
+#adminblock .videolist .list ul li figure { float:left; line-height:.7em; margin-bottom:8px; position:relative; }
 #adminblock .videolist .list ul li figure .error {
     position: absolute;
     top: 0px;
