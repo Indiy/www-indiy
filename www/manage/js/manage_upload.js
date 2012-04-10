@@ -1,4 +1,8 @@
 
+function showDismissableProcessing()
+{
+    showMessagePopup('#dismissable_processing');
+}
 function showProgress(text)
 {
     showMessagePopup('#progress',text);
@@ -63,7 +67,7 @@ function onUploadProgress(evt,xhr)
 function onUploadDone(evt,xhr)
 {
     if( checkPopupNumber(xhr.popupNumber) )
-        showProcessing();
+        showDismissableProcessing();
 }
 function onUploadFailed(evt,xhr)
 {
