@@ -32,8 +32,6 @@ include "header.php";
     	<ul>
         <span>This is the on boarding publishing tool that allows you to create a presence for your audio, video or image art in seconds</span></li>
         </ul>
-
-	</div>	
 	
 	<h2>STEP 2 Brand your content: MY<span>ARTIST</span>DNA.is</h2>
     	<ul>
