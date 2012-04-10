@@ -158,18 +158,33 @@ function updateVideoList()
     {
         var video = g_videoList[i];
         
+        var tip = "Edit Video";
+        var error = false;
+        if( video.error && video.error.length > 0 )
+        {
+            error = true;
+            tip = video.error
+        }
+        else if( video.video == null || video.video.length == 0 )
+        {
+            error = true;
+            tip = "Item needs video!"
+        }
+        
         var html = "";
         html += "<li id='arrayorder_{0}' class='videos_sortable'>".format(video.id);
         html += "<figure>";
+        if( error )
+            html += "<div class='error'>!</div>";
         html += "<span class='close'>";
         html += "<a href='#' onclick='deleteVideo({0});'></a>".format(video.id);
         html += "</span>";
-        html += "<a onclick='showVideoPopup({0});'>".format(i);
+        html += "<a title='{0}' onclick='showVideoPopup({1});'>".format(tip,i);
         html += "<img src='{0}' width='210' height='132' alt=''>".format(video.image_url);
         html += "</a>";
         html += "</figure>";
         html += "<span>";
-        html += "<a href='addvideo.php?artist_id={0}&id={1}' rel='facebox[.bolder]'>".format(g_artistId,video.id);
+        html += "<a title='{0}' onclick='showVideoPopup({1});'>".format(tip,i);
         html += video.name;
         html += "</a>";
         html += "</span>";
