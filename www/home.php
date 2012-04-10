@@ -19,7 +19,7 @@
     
     <div class="signup">
     <h3>Create A Home for Your Brand</h3>
-    <div class="button"><a href="#" onclick="showSignup();">START NOW!</a></div>
+    <div class="button"><a href="#" onclick="showSignup();">SIGN UP!</a></div>
     </div><!-- signup -->
     
     
