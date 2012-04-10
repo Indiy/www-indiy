@@ -33,7 +33,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">HEARD</span></span></li>
         </ul>
-        <h5>Get your audio content in rotation: MyArtistDNA.fm</h5>
+        <h5>Get your audio content in rotation: <a href="http://MyArtistDNA.fm"/>MyArtistDNA.fm</a></h5>
         </a>
         </aside>
     
@@ -43,7 +43,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">SEEN</span></span></li>
         </ul>
-        <h5>Bring Your Videos to Your Fans: MyArtistDNA.tv</h5>
+        <h5>Bring Your Videos to Your Fans: <a href="http://MyArtistDNA.fm"/>MyArtistDNA.tv</a></h5>
         </a>
         </aside>
     
