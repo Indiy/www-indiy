@@ -65,6 +65,7 @@ include "header.php";
 			<div class="choose"><a href="#">LEARN MORE</a></div>	
 			</div> 
 		</aside>
+		<br/><br/>
 		</div>
       
       <div id="benefitshome">
