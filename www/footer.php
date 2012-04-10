@@ -37,6 +37,7 @@ background:#f6f6f6;
     <aside>
     <h5>SUPPORT</h5>
     <ul>
+    <li><a href="pricing.php">Pricing</a></li>
     <li><a href="faq.php">FAQ</a></li>
     <li><a href="tour.php">Help</a></li>
     </ul>
