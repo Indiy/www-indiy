@@ -14,6 +14,7 @@
 		header("Location: /index.php");
 		exit();
 	}
+    session_write_close();
 
     if( $_SERVER['REQUEST_METHOD'] == 'POST' )
         do_POST();
