@@ -33,7 +33,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">HEARD</span></span></li>
         </ul>
-        <h5>Give your talent a voice</h5>
+        <h5>Get your audio content in rotation: MyArtistdna.fm</h5>
         </a>
         </aside>
     
@@ -43,7 +43,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">SEEN</span></span></li>
         </ul>
-        <h5>Show off your Art</h5>
+        <h5>Bring Your Videos to Your Fans: MyArtistDNA.tv</h5>
         </a>
         </aside>
     
@@ -53,7 +53,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">INDEPENDENT</span></span></li>
         </ul>
-        <h5>Freedom to express yourself </h5>
+        <h5>Create Your Art Collection in Seconds: MyArtistDNA.com</h5>
         </a>
         </aside>
     </article>
