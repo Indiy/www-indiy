@@ -56,7 +56,7 @@ include "header.php";
       
       <div id="benefitshome">
     <article>
-        <h2>MY<span>ARTIST</span>DNA EMPOWERS YOU!</h2>
+        <h2>NEED MORE BRANDING HELP? MY<span>ARTIST</span>DNA.IS</h2>
     
         <aside>
         <a href="be-heard.php">
