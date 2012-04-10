@@ -77,9 +77,9 @@
        
         </ul>
 		</span>     
+    
     <li><a href="http://demo.madd3v.com" target="_self">DEMO</a></li>                       
-    
-    
+    <li><a href="be-heard.php" target="_self">ARTIST KIT</a></li>
     <li><a href="tour.php">What Is It?</a></li>                     
     <li class="nodivider"><a class="login" href="#" onclick='showLogin();'>LOGIN</a></li>
     </ul>
