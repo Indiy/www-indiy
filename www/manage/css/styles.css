@@ -720,6 +720,14 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #adminblock .videolist .list ul li .close a { width:30px; height:25px; float:left; background:url(../images/icon_close_video.gif) no-repeat}
 #adminblock .videolist .list ul li .close a:hover { background:url(../images/icon_delete_hover_admin.gif) no-repeat}
 #adminblock .videolist .list ul li figure { float:left; line-height:.7em; margin-bottom:8px; position:relative}
+#adminblock .videolist .list ul li figure .error {
+    width: 100%;
+    padding-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    color: red;
+    background-color: rgba(0,0,0,0.4);
+}
 #adminblock .videolist .list ul li span { font-weight:bold}
 #adminblock .videolist .list ul li a { color:#383838; text-decoration:none; cursor: pointer; }
 #adminblock .videolist .list ul li a:hover { color:#383838; text-decoration:underline}
