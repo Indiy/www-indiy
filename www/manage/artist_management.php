@@ -187,6 +187,7 @@
     include_once 'include/popup_messages2.html';
 ?>
 
+<script src="js/artist_management.js" type="text/javascript"></script>
 <script type="text/javascript">
 
 var g_artistId = <?=$artistID?>;
