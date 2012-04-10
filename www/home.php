@@ -18,8 +18,8 @@
 			<br />
     
     <div class="signup">
-    <h3></h3>
-    <div class="button">Create A Home for Your Brand<a href="#" onclick="showSignup();">START NOW!</a></div>
+    <h3>Create A Home for Your Brand</h3>
+    <div class="button"><a href="#" onclick="showSignup();">START NOW!</a></div>
     </div><!-- signup -->
     
     
@@ -32,7 +32,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">HEARD</span></span></li>
         </ul>
-        <h5><a href="be-heard.php">Audio Player: Give your talent a voice</a></h5>
+        <h5><a href="be-heard.php">Give your talent a voice</a></h5>
         </aside>
     
         <aside class="seen">
@@ -40,7 +40,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">SEEN</span></span></li>
         </ul>
-        <h5><a href="be-seen.php">Video Player: Show off your Art</a></h5>
+        <h5><a href="be-seen.php">Show off your Art</a></h5>
         </aside>
     
         <aside class="independent">
@@ -48,7 +48,7 @@
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">INDEPENDENT</span></span></li>
         </ul>
-        <h5><a href="be-independent.php">Control: Freedom to express yourself </a></h5>
+        <h5><a href="be-independent.php">Freedom to express yourself </a></h5>
         </aside>
     </article>
     </div><!-- benefit -->
