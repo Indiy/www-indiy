@@ -42,7 +42,7 @@ include "header.php";
     	<ul>
         <span>This is an audio streaming network that brings the best audio content from myartistdna.com to create limitless audio stream channels for fans to listen</span></li>
         </ul>
-	<br/><br/>
+	<br/><br/><br/>
 	<h2>STEP 4 Be Seen: MY<span>ARTIST</span>DNA.tv</h2>
     	<ul>
         <span>This is a video streaming network that brings the best video content from myartistdna.com to create limitless video stream channels for fans to watch.</span></li>
