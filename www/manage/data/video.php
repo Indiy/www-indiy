@@ -58,6 +58,7 @@
         
         $video_name = my($_POST["name"]);
         $video_tags = $_POST["tags"];
+        $error = NULL;
         
         if( $_POST["remove_video_image"] == 'true' )
             $old_logo = '';
@@ -123,7 +124,8 @@
                 }
                 else
                 {
-                    $postedValues['upload_error'] = 'Please upload video files in MP4 or MOV format.';
+                    $error = 'Please upload video files in MP4 or MOV format.';
+                    $postedValues['upload_error'] = $error;
                     $video_sound = '';
                 }
             } 
@@ -141,8 +143,8 @@
         }
         
         
-        $tables = "artistid|name|image|video|upload_video_filename|tags";
-        $values = "$artist_id|$video_name|$video_logo|$video_sound|$upload_video_filename|$video_tags";
+        $tables = "artistid|name|image|video|upload_video_filename|tags|error";
+        $values = "$artist_id|$video_name|$video_logo|$video_sound|$upload_video_filename|$video_tags|$error";
         
         if( $video_id != "") 
         {

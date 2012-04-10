@@ -132,7 +132,7 @@ else
     $total_q = mf(mq("SELECT SUM(views) FROM `[p]musicplayer_audio` WHERE `artistid`='{$music_artistid}'"));
     $total_listens = intval($total_q[0]);
     
-    $loadvideo = mq("SELECT * from `[p]musicplayer_video` WHERE `artistid`='{$artist_id}' ORDER BY `order` ASC, `id` DESC");
+    $loadvideo = mq("SELECT * from `[p]musicplayer_video` WHERE `artistid`='$artist_id' AND error IS NULL AND LENGTH(video) > 0 ORDER BY `order` ASC, `id` DESC");
     $cv = 0;
     /* Video Overlay Pagination Code Begins */
     $row_counter = 0; // Counts the number of video pages left to right
