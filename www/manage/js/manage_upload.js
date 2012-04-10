@@ -1,4 +1,7 @@
 
+var g_backgroundCount = 0;
+var g_uploadCount = 0;
+
 function showDismissableProcessing()
 {
     showMessagePopup('#dismissable_processing');
@@ -66,11 +69,13 @@ function onUploadProgress(evt,xhr)
 }
 function onUploadDone(evt,xhr)
 {
+    g_uploadCount--;
     if( checkPopupNumber(xhr.popupNumber) )
         showDismissableProcessing();
 }
 function onUploadFailed(evt,xhr)
 {
+    g_uploadCount--;
     if( checkPopupNumber(xhr.popupNumber) )
         showFailure("Update Failed");
 }
@@ -78,6 +83,7 @@ function uploadReadyStateChange(xhr)
 {
     if( xhr.readyState == 4 )
     {
+        g_backgroundCount--;
         var status_code = xhr.status;
         var text = xhr.responseText;
         try
@@ -147,6 +153,8 @@ function startAjaxUpload(url,fillForm,successCallback)
         xhr.open("POST",url);
         xhr.send(form_data);
         showUploading();
+        g_backgroundCount++;
+        g_uploadCount++;
         return false;
     }
     catch(e)
@@ -157,4 +165,11 @@ function startAjaxUpload(url,fillForm,successCallback)
     
 }
 
+window.onbeforeunload = function() 
+{
+    if( g_uploadCount > 0 )
+        return 'You have files uploading in the background, are you sure you want to cancel them?';
+    if( g_backgroundCount > 0 )
+        return 'You have uploads processing in the background.';
+};
 
