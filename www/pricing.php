@@ -77,8 +77,8 @@ include "header.php";
         <aside>
         <a href="be-heard.php">
         <ul>
-        <li><span><span class="be">IDENTITY + STRATEGY</span></span></li>
-        <li><span><span class="heard">= BRAND DNA</span></span></li>
+        <li><span><span class="be">BRAND</span></span></li>
+        <li><span><span class="heard">DNA</span></span></li>
         </ul>
         <h5> </h5>
         </a>
@@ -87,8 +87,8 @@ include "header.php";
         <aside class="seen">
         <a href="be-seen.php">
         <ul>
-        <li><span><span class="be">DESIGN + DEVELOPMENT</span></span></li>
-        <li><span><span class="heard">= DIGITAL INDEPENDENCE</span></span></li>
+        <li><span><span class="be">DIGITAL</span></span></li>
+        <li><span><span class="heard">INDEPENDENCE</span></span></li>
         </ul>
         <h5> </h5>
         </a>
