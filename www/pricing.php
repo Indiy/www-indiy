@@ -67,6 +67,7 @@ include "header.php";
 			</div> 
 		</aside>		<br/><br/>
 		</div>
+		</div>
       
       <div id="benefitshome">
     
