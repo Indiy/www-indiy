@@ -41,21 +41,20 @@ include "header.php";
 			</div> 
 		</aside>
 		
-		<aside class="best"> 
-			<h5>CUSTOM</h5> 
-		  <ul> 
-			<li>Feature of the Best package one</li> 
-			<li>Feature of the Best package two</li> 
-			<li class="last">Feature of the Best package two</li> 
-			</ul> 
+			<aside class="platinum"> 
+			<h2>CUSTOM</h2> 
+			<div class="content">
+			<p>Mauris ut arcu et turpis aliquet vulputate a ut libero. Integer sit amet nulla enim, non luctus sem. Sed sed dui lacus.</p> 
+			<p><span>Aspire to be Independent.</span></p>
+			</div>
 			<div class="peckage"> 
-			<h3>Best <br /> Package</h3> 
-			<div class="choose"><a href="#">CHOOSE</a></div>	
+			<h3>PLATINUM <br /> Package</h3> 
+			<div class="choose"><a href="#">LEARN MORE</a></div>	
 			</div> 
 		</aside>
 		
 		<aside class="platinum"> 
-			<h5>MyArtistDNA.IS</h5> 
+			<h2>MAD.IS</h2> 
 			<div class="content">
 			<p>Mauris ut arcu et turpis aliquet vulputate a ut libero. Integer sit amet nulla enim, non luctus sem. Sed sed dui lacus.</p> 
 			<p><span>Aspire to be Independent.</span></p>
