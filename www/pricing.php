@@ -42,7 +42,7 @@ include "header.php";
 		</aside>
 		
 		<aside class="best"> 
-			<h2>CUSTOM</h2> 
+			<h5>CUSTOM</h5> 
 		  <ul> 
 			<li>Feature of the Best package one</li> 
 			<li>Feature of the Best package two</li> 
@@ -55,7 +55,7 @@ include "header.php";
 		</aside>
 		
 		<aside class="platinum"> 
-			<h2>MYARTISTDNA.IS</h2> 
+			<h5>MyArtistDNA.IS</h5> 
 			<div class="content">
 			<p>Mauris ut arcu et turpis aliquet vulputate a ut libero. Integer sit amet nulla enim, non luctus sem. Sed sed dui lacus.</p> 
 			<p><span>Aspire to be Independent.</span></p>
