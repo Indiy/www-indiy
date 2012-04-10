@@ -40,8 +40,29 @@ include "header.php";
 			<div class="choose"><a href="#">CHOOSE</a></div>	
 			</div> 
 		</aside>
+
+<aside class="middle"> 
+			<h2><span class="dollor">$</span><span>20</span><span class="yr">mo.</span></h2> 
+		  <ul> 
+			<li>Feature of the Middle package one</li> 
+			<li>Feature of the Middle package two</li> 
+			<li class="last">Feature of the Middle package two
+            <span class="tooltip">
+            <span class="box">
+            <h5>FEATURE NAME</h5>
+            <p>Cras vel sem consequat neque aliquam sagittis venenatis quis tortor</p>
+            </span>
+            </span>
+            </li> 
+			</ul> 
+			<div class="peckage"> 
+			<h3>Middle <br /> Package</h3> 
+			<div class="choose"><a href="#">CHOOSE</a></div>	
+			</div> 
+		</aside>
+
 			
-		<aside class="platinum"> 
+		<aside class="best"> 
 			<h2>CUSTOM</h2> 
 			<div class="content">
 			<p>Mauris ut arcu et turpis aliquet vulputate a ut libero. Integer sit amet nulla enim, non luctus sem. Sed sed dui lacus.</p> 
