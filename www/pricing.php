@@ -80,7 +80,7 @@ include "header.php";
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">HEARD</span></span></li>
         </ul>
-        <h5>Get Your Audio Content in Rotation: MyArtistDNA.fm</h5>
+        <h5>IDENTITY + STRATEGY = BRAND DNA</h5>
         </a>
         </aside>
     
@@ -90,7 +90,7 @@ include "header.php";
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">SEEN</span></span></li>
         </ul>
-        <h5>Bring Your Videos to Your Fans: MyArtistDNA.tv</h5>
+        <h5>DESIGN + DEVELOPMENT = DIGITAL INDEPENDENCE</h5>
         </a>
         </aside>
     
@@ -100,7 +100,7 @@ include "header.php";
         <li><span><span class="be">BE</span></span></li>
         <li><span><span class="heard">INDEPENDENT</span></span></li>
         </ul>
-        <h5>Create Your Art Collection in Seconds: MyArtistDNA.com</h5>
+        <h5>YOUR CONTENT + MAD CREATORS = ORIGINAL VIDEO</h5>
         </a>
         </aside>
     </article>
