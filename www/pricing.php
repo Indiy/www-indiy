@@ -10,12 +10,7 @@ include "header.php";
 		<div id="package">
 		<aside class="basic"> 
 			<h2>FREE</h2> 
-			<ul> 
-			<li>Feature of the basic package one</li> 
-			<li>Feature of the basic package two</li> 
-			<li class="last">Feature of the basic package two</li> 
-			</ul> 
-			<div class="peckage"> 
+						<div class="peckage"> 
 			<h3>Basic<br> Package</h3> 
 			<div class="choose"><a href="#">CHOOSE</a></div>	
 			</div> 
@@ -23,18 +18,7 @@ include "header.php";
 		
 		<aside class="middle"> 
 			<h2><span class="dollor">$</span><span>20</span><span class="yr">mo</span></h2> 
-		  <ul> 
-			<li>Feature of the Middle package one</li> 
-			<li>Feature of the Middle package two</li> 
-			<li class="last">Feature of the Middle package two
-            <span class="tooltip">
-            <span class="box">
-            <h5>FEATURE NAME</h5>
-            <p>Cras vel sem consequat neque aliquam sagittis venenatis quis tortor</p>
-            </span>
-            </span>
-            </li> 
-			</ul> 
+		
 			<div class="peckage"> 
 			<h3>Middle <br /> Package</h3> 
 			<div class="choose"><a href="#">CHOOSE</a></div>	
@@ -43,11 +27,7 @@ include "header.php";
 		
 		<aside class="best"> 
 			<h2><span class="yr">CUSTOM</span></h2> 
-		  <ul> 
-			<li>Feature of the Best package one</li> 
-			<li>Feature of the Best package two</li> 
-			<li class="last">Feature of the Best package two</li> 
-			</ul> 
+		
 			<div class="peckage"> 
 			<h3>Best <br /> Package</h3> 
 			<div class="choose"><a href="#">CHOOSE</a></div>	
@@ -56,10 +36,7 @@ include "header.php";
 		
 		<aside class="platinum"> 
 			<h2><span class="yr">MYARTISTDNA.IS</span></h2> 
-			<div class="content">
-			<p>Mauris ut arcu et turpis aliquet vulputate a ut libero. Integer sit amet nulla enim, non luctus sem. Sed sed dui lacus.</p> 
-			<p><span>Aspire to be Independent.</span></p>
-			</div>
+		
 			<div class="peckage"> 
 			<h3>PLATINUM <br /> Package</h3> 
 			<div class="choose"><a href="#">LEARN MORE</a></div>	
