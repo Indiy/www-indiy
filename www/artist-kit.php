@@ -18,13 +18,13 @@ include "header.php";
 	
     <div class="features">
    
-    <img src="images/musicBanner.jpg" alt="">
+    <img src="images/header_images/03.jpg" alt="Artist Kit">
   
     </div><!-- features -->
     
     <div class="signup">
     <h3>Use Our Artist Kit to Build Your Brand</h3>
-    <div class="button"><a href="http://navegante.myartistdna.com">In 4 Steps!</a></div>
+    <div class="button">In 4 Steps!</div>
     </div><!-- signup -->
 
 	
@@ -46,7 +46,7 @@ include "header.php";
 	<h2>STEP 3 Be Heard: MY<span>ARTIST</span>DNA.fm</h2>
     	<ul>
          <li><img src="images/bv.jpg" alt="">
-        <span>This is an audio streaming network that brings the best audio content from myartistdna.com to create limitless audio stream channels for fans to listen.</span></li>
+        <span>This is an audio streaming network that brings the best audio content from myartistdna.com to create limitless audio stream channels for fans to listen</span></li>
         </ul>
 	
 	<h2>STEP 4 Be Seen: MY<span>ARTIST</span>DNA.tv</h2>
