@@ -40,7 +40,7 @@ include "header.php";
 	<br/><br/>
 	<h2><a href="http://myartistdna.fm" target="_blank"><img src="images/madfm-logo.jpg" alt=""></a>&nbsp;&nbsp;&nbsp;STEP 3 Be Heard: <a href="http://myartistdna.fm" target="_blank">MY<span>ARTIST</span>DNA.fm</a></h2>
     	<ul>
-        <span>Set up a MyArtistDNA.com account, promote your account and gain enough "Loves" from your fans to vote your audio content onto MyArtistDNA.fm. This is an audio streaming network that brings the best audio content from myartistdna.com to create limitless audio stream channels for fans to listen.<br/></span></li>
+        <span>Set up a MyArtistDNA.com account, promote your account and gain enough "Loves" from your fans to vote your audio content onto MyArtistDNA.fm. This is an audio streaming network that brings the best audio content from myartistdna.com to create limitless audio stream channels for fans to listen.<br/><br/></span></li>
         </ul>
 	<br/><br/><br/>
 	<h2><a href="http://myartistdna.tv" target="_blank"><img src="images/madtv-logo.jpg" alt=""></a>&nbsp;&nbsp;&nbsp;STEP 4 Be Seen: <a href="http://myartistdna.tv" target="_blank">MY<span>ARTIST</span>DNA.tv</a></h2>
