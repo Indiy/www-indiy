@@ -477,7 +477,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 
 #package { width:940px;  padding-bottom:40px;}
 #package aside.basic { width:180px; min-height:275px; float:left; background:#556270; border-top:10px solid #4ecdc4; padding:25px 20px 0 20px; margin-right:15px}
-#package h2 { width:180px; height:75px; font-size:58px; float:left; color:#FFFFFF; background:url(../images/dottedborder01.gif) repeat-x bottom left; text-align:center; line-height:.8em}
+#package h2 { width:180px; height:75px; font-size:50px; float:left; color:#FFFFFF; background:url(../images/dottedborder01.gif) repeat-x bottom left; text-align:center; line-height:.8em}
 #package ul { width:170px; height:150px; float:left; font-size:12px; padding:22px 0 0 10px}
 #package ul li {color:#FFFFFF; font-size:12px; line-height:1.2em; background:url(../images/icon_tick01.gif) no-repeat 0 1px; padding:0 0 12px 25px; position:relative}
 
