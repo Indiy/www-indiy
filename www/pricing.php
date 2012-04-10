@@ -42,8 +42,8 @@ include "header.php";
 		</aside>
 		
 		
-		<aside class="best"> 
-			<h2><span class="dollor">CUSTOM</span></h2> 
+		<aside class="basic"> 
+			<h2>CUSTOM</h2> 
 		  <ul> 
 			<li>Feature of the Best package one</li> 
 			<li>Feature of the Best package two</li> 
