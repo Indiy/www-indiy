@@ -70,50 +70,50 @@
         <h2>The MY<span>ARTIST</span>DNA creative community</h2>
     
         <ul>
-        <li><a href="http://"><img src="images/mason.jpg" alt="">
+        <li><a href="http://bobbyspearsjr.myartistdna.com/"><img src="images/mason.jpg" alt="">
         <span>Mason Garments</span></a></li>
         
-        <li><img src="images/yankee.jpg" alt="">
-        <span>Dirty Souf Yankee</span></li>
+        <li><a href="http://"><img src="images/yankee.jpg" alt="">
+        <span>Dirty Souf Yankee</span></a></li>
         
-        <li><img src="images/ecko.jpg" alt="">
-        <span>Marc Ecko</span></li>
+        <li><a href="http://marcecko.myartistdna.com/"><img src="images/ecko.jpg" alt="">
+        <span>Marc Ecko</span></a></li>
         
-        <li><img src="images/vanessa.jpg" alt="">
-        <span>Vanessa Cantave</span></li>
+        <li><a href="http://"><img src="images/vanessa.jpg" alt="">
+        <span>Vanessa Cantave</span></a></li>
         
-        <li><img src="images/damage.jpg" alt="">
-        <span>DJ Damage</span></li>
+        <li><a href="http://djdamage.myartistdna.com/"><img src="images/damage.jpg" alt="">
+        <span>DJ Damage</span></a></li>
         
-  		 <li><img src="images/blakroc.jpg" alt="">
-        <span>Blakroc</span></li>
+  		<li><a href="http://blakroc.myartistdna.com/"><img src="images/blakroc.jpg" alt="">
+        <span>Blakroc</span></a></li>
 
-        <li><img src="images/youngc.jpg" alt="">
-        <span>Young Chris</span></li>
+        <li><a href="http://youngchris.myartistdna.com/"><img src="images/youngc.jpg" alt="">
+        <span>Young Chris</span></a></li>
        
-        <li><img src="images/navegante.jpg" alt="">
-        <span>Navegante</span></li>        
+        <li><a href="http://navegante.myartistdna.com/"><img src="images/navegante.jpg" alt="">
+        <span>Navegante</span></a></li>        
         
-        <li><img src="images/jamal.jpg" alt="">
-        <span>Jamal White</span></li>
+        <li><a href="http://jamalhill.myartistdna.com/"><img src="images/jamal.jpg" alt="">
+        <span>Jamal Hill</span></a></li>
         
-        <li><img src="images/basil.jpg" alt="">
-        <span>Basil</span></li>
+        <li><a href="http://spikejordan.myartistdna.com/"><img src="images/basil.jpg" alt="">
+        <span>Basil</span></a></li>
         
-        <li><img src="images/3dsign.jpg" alt="">
-        <span>3d Sign</span></li>
+        <li><a href="http://"><img src="images/3dsign.jpg" alt="">
+        <span>3d Sign</span></a></li>
         
-  		 <li><img src="images/bobby.jpg" alt="">
-        <span>Bobby Spears</span></li>
+  		<li><a href="http://bobbyspearsjr.myartistdna.com/"><img src="images/bobby.jpg" alt="">
+        <span>Bobby Spears</span></a></li>
        
-        <li><img src="images/chad.jpg" alt="">
-        <span>Chad Wes</span></li>
+        <li><a href="http://chadwes.myartistdna.com/"><img src="images/chad.jpg" alt="">
+        <span>Chad Wes</span></a></li>
         
-        <li><img src="images/wayno.jpg" alt="">
-        <span>Cool Mentality</span></li>
+        <li><a href= "http://coolmentality.myartistdna.com/"><img src="images/wayno.jpg" alt="">
+        <span>Cool Mentality</span></a></li>
         
-        <li><img src="images/dan.jpg" alt="">
-        <span>Soundmine Records</span></li>
+        <li><a href="http://smw.myartistdna.com/"><img src="images/dan.jpg" alt="">
+        <span>Soundmine Records</span></a></li>
         
         
         </ul>
