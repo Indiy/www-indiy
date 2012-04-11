@@ -26,7 +26,7 @@ include "header.php";
 			<ul> 
 			<li>Sell your products in your own store</li> 
 			<li>Collab - Get booked or book other artists</li> 
-			<li class="last">Unlimited Storageo</li> 
+			<li class="last">Unlimited Storage</li> 
 			</ul> 
 			<div class="peckage"> 
 			<h3>Launch<br /> Package</h3> 
