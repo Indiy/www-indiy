@@ -28,7 +28,7 @@ include "header.php";
 	<div id="rightpanel">
 		
 			<div class="cmsadmin">
-			<div class="radagun"><img src="images/benefits_radagun.jpg" alt="RADAGUN"></div>
+			<div class="radagun"><img src="images/benefits_logo.jpg" alt="MyArtistDNA.com"></div>
 			
 			<div class="admin">
 			<h4>MyArtistDNA.com<br /><span>Create your own art collection in seconds </span></h4>
