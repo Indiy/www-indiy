@@ -39,8 +39,7 @@ include "header.php";
 			<figure><img src="images/benefits_centralized.jpg" alt="benefits_centralized"></figure>
 			<aside>
 			<h4>A centralized hub for your art</h4>
-			<p>Don't make your fans chase you.  Forget the zoo of YouTube, Vimeo, and Flickr links. With MyArtistDNA, you can host all your content on one site, branded uniquely for you.
-</p>
+			<p>Don't make your fans chase you.  Forget the zoo of YouTube, Vimeo, and Flickr links. With MyArtistDNA, you can host all your content on one site, branded uniquely for you.<br/><br/></p>
 			</aside>
 			</article>
 			
