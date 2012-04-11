@@ -48,7 +48,7 @@ include "header.php";
 		</aside>
 		
 		<aside class="platinum"> 
-			<h2><span class="yr">AGENCY</span></h2> 
+			<h2><span class="yr">MYARTISTDNA.IS</span></h2> 
 		<div class="content">
 			<p>Mauris ut arcu et turpis aliquet vulputate a ut libero. Integer sit amet nulla enim, non luctus sem. Sed sed dui lacus.</p> 
 			<p><span>Aspire to be Independent.</span></p>
