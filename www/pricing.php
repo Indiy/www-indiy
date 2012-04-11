@@ -141,22 +141,23 @@ include "header.php";
 		<br/><br/>
 		<article> 
 		<h5>How long are your contracts?</h5> 
-		<p>Etiam sagittis purus a velit elementum at sollicitudin nulla condimentum. Donec est enim, elementum ut scelerisque ut, euismod vel justo. Cras non diam eu mi rhoncus placerat. Nullam pulvinar vehicula sapien, vitae rhoncus lacus tristique vel. In malesuada rutrum nisl in tincidunt.</p> 
+		<p>You can cancel whenever you want. We do offer cheaper cost if you pay upfront. We do not provide refunds.</p> 
 		</article> 
 		
 		<article> 
 		<h5>What is meant by unlimited?</h5> 
-		<p>Etiam sagittis purus a velit elementum at sollicitudin nulla condimentum. Donec est enim, elementum ut scelerisque ut, euismod vel justo. Cras non diam eu mi rhoncus placerat. Nullam pulvinar vehicula sapien, vitae rhoncus lacus tristique vel. In malesuada rutrum nisl in tincidunt.</p> 
+		<p>We will not stop you from uploading all your content. Upload all the photo, audio and video files you want.</p> 
 		</article> 
 		
 		<article> 
 		<h5>Can I switch plans?</h5> 
-		<p>Etiam sagittis purus a velit elementum at sollicitudin nulla condimentum. Donec est enim, elementum ut scelerisque ut, euismod vel justo. Cras non diam eu mi rhoncus placerat. Nullam pulvinar vehicula sapien, vitae rhoncus lacus tristique vel. In malesuada rutrum nisl in tincidunt.</p> 
+		<p>Yes! Whenever you want.</p> 
 		</article> 
 		
 		<article> 
 		<h5>How do I cancel service?</h5> 
-		<p>Etiam sagittis purus a velit elementum at sollicitudin nulla condimentum. Donec est enim, elementum ut scelerisque ut, euismod vel justo. Cras non diam eu mi rhoncus placerat. Nullam pulvinar vehicula sapien, vitae rhoncus lacus tristique vel. In malesuada rutrum nisl in tincidunt.</p> 
+		<p>With in your admin there is a “delete” button. Once deleted it is gone from our system.
+.</p> 
 		</article>
 		</div>
 		
