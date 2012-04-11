@@ -43,7 +43,7 @@ include "header.php";
         <span>Set up a MyArtistDNA.com account, promote your account and gain enough "Loves" from your fans to vote your audio content onto MyArtistDNA.fm. This is an audio streaming network that brings the best audio content from myartistdna.com to create limitless audio stream channels for fans to listen.<br/><br/></span></li>
         </ul>
 	<br/><br/><br/>
-	<h2><a href="http://myartistdna.tv" target="_blank"><img src="images/madtv-logo.jpg" alt=""></a>&nbsp;&nbsp;&nbsp;STEP 4 Be Seen</h2>
+	<h2><a href="http://myartistdna.tv" target="_blank"><img src="images/madtv-logo.jpg" alt=""></a>&nbsp;&nbsp;&nbsp;STEP 4: Be Seen</h2>
     	<ul>
         <span>Set up a MyArtistDNA.com account, promote your account and gain enough "Loves" from your fans to vote your video content onto MyArtistDNA.tv. This is a video streaming network that brings the best video content from myartistdna.com to create limitless video stream channels for fans to watch.</span></li>
         </ul>
