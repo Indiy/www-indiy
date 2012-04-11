@@ -51,7 +51,7 @@ include "header.php";
 			</article>
 			
 			<article class="data">
-			<figure><img src="images/benefits_meta_data.jpg" alt="benefits_meta_data"></figure>
+			<figure><img src="images/benefits_tabs.jpg" alt="benefits_tabs"></figure>
 			<aside>
 			<h4>Personalized tabs <br /></h4>
 			<p>Easily create customized tabs that emphasize the most important aspects of your art and your brand.  If you’re a painter, create a tab that shows off all the galleries your work has appeared in.  A musician? Create an events tab so fans know about upcoming concerts. </p>
