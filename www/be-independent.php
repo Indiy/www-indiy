@@ -35,12 +35,14 @@ include "header.php";
 			<p>This publishing tool was made with the artists in mind. You now have the control to produce your brand with elegance, the way you want in seconds. By making your MyArtistDNA.com account you decided to take your brand growth serious. This is your brand home for all your photo, audio and video content. Welcome home.</p>
 			</div>
 
-			<br/><br/>
-			<div class="admin">
-			<div class="radagun"><img src="images/benefits_radagun.jpg" alt="RADAGUN"></div>
+
+		    <article class="customname">
+			<figure><img src="images/benefits_radagun.jpg" alt="RADAGUN"></figure>
+			<aside>
 			<h4>Effortless site creation and management<br/><span>You're the webmaster now.</span> </h4>
 			<p>MyArtistDNA puts you in control, making it easy for you to upload music and videos, premiere new songs, edit content—all without having to know a single line of code.</p>
-			</div>
+			</aside>
+			</article>
 			
 			<article class="customname">
 			<figure><img src="images/benefits_custom_name.jpg" alt="benefits_custom_name"></figure>
