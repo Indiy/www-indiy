@@ -71,7 +71,7 @@ include "header.php";
         <li><span><span class="be">BRAND</span></span></li>
         <li><span><span class="heard">DNA</span></span></li>
         </ul>
-        <h5> </h5>
+        <h5>Create a powerful foundation for your brand.</h5>
         </a>
         </aside>
     
@@ -81,7 +81,7 @@ include "header.php";
         <li><span><span class="be">DIGITAL</span></span></li>
         <li><span><span class="heard">INDEPENDENCE</span></span></li>
         </ul>
-        <h5> </h5>
+        <h5>Translate your ideas into a beautiful product.</h5>
         </a>
         </aside>
     
@@ -91,7 +91,7 @@ include "header.php";
         <li><span><span class="be">ORIGINAL</span></span></li>
         <li><span><span class="heard">CONTENT</span></span></li>
         </ul>
-        <h5> </h5>
+        <h5>A one-stop shop content production house.</h5>
         </a>
         </aside>
     </article>
