@@ -43,7 +43,7 @@ include "header.php";
 			</ul>
 			<div class="peckage"> 
 			<h3>MADE<br /> Package</h3> 
-			<div class="choose"><a href="#">Price Upon Reqest</a></div>	
+			<div class="choose"><a href="#">Price Upon Request</a></div>	
 			</div> 
 		</aside>
 		
@@ -55,7 +55,7 @@ include "header.php";
 			</div>
 			<div class="peckage"> 
 			<h3>BRANDING<br /> Package</h3> 
-			<div class="choose"><a href="#">Price Upon Reqest</a></div>	
+			<div class="choose"><a href="#">Price Upon Request</a></div>	
 			</div> 
 		</aside>
 		</div>
