@@ -82,7 +82,7 @@ include "header.php";
 			</article>
 			
 						
-			<article class="socialize">
+			<article class="fanfacebook">
 			<figure><img src="images/benefits_deal.jpg" alt="benefits_deals"></figure>
 			<aside>
 			<h4>Growing your brand</h4>
