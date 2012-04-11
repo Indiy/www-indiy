@@ -77,10 +77,9 @@
        
         </ul>
 		</span>     
-    
-    <li><a href="http://demo.madd3v.com" target="_self">DEMO</a></li>                       
-    <li><a href="artist-kit.php" target="_self">ARTIST KIT</a></li>
     <li><a href="tour.php">ABOUT US</a></li>                     
+    <li><a href="artist-kit.php" target="_self">ARTIST KIT</a></li>
+    <li><a href="pricing.php" target="_self">PRICING</a></li>                       
     <li class="nodivider"><a class="login" href="#" onclick='showLogin();'>LOGIN</a></li>
     </ul>
     <div id="theSearchBox">  </div>
