@@ -38,14 +38,14 @@ include "header.php";
 			
 			<div class="admin">
 			<div class="radagun"><img src="images/benefits_radagun.jpg" alt="RADAGUN"></div>
-			<h4><br/><br/>Effortless site creation and management<br/><span>You're the webmaster now.</span> </h4>
+			<h4><br/><br/>Effortless site creation and management<br/><span>You're the webmaster now</span> </h4>
 			<p>MyArtistDNA puts you in control, making it easy for you to upload music and videos, premiere new songs, edit content—all without having to know a single line of code.</p>
 			</div>
 			
 			<article class="customname">
 			<figure><img src="images/benefits_custom_name.jpg" alt="benefits_custom_name"></figure>
 			<aside>
-			<h4>Custom Name <br /> <span>Be Yourself.</span></h4>
+			<h4>Custom Name <br /> <span>Be Yourself</span></h4>
 			<p>We want you in the spotlight. Choose your own domain name for the site, or use one you already have.</p>
 			</aside>
 			</article>
@@ -61,7 +61,7 @@ include "header.php";
 			<article class="customname">
 			<figure><img src="images/benefits_meta_data.jpg" alt="benefits_meta_data"></figure>
 			<aside>
-			<h4>Meta Data <br /> <span>Tag your hard work correctly so you get recognized and paid for it.</span></h4>
+			<h4>Meta Data <br /> <span>Tag your hard work</span></h4>
 			<p>Don't let your work get lost in cyberspace.  Complete metadata is the best way to make sure that your fans can get to your site, and MyArtistDNA makes it simple to tag all your content and make it findable on search engines. </p>
 			</aside>
 			</article>
