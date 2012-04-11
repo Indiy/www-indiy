@@ -58,7 +58,7 @@ include "header.php";
 			</aside>
 			</article>
 			
-			<article class="data">
+			<article class="customname">
 			<figure><img src="images/benefits_meta_data.jpg" alt="benefits_meta_data"></figure>
 			<aside>
 			<h4>Meta Data <br /> <span>Tag your hard work correctly so you can get recognized and paid for it.</span></h4>
