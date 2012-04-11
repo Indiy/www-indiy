@@ -31,15 +31,29 @@ include "header.php";
 			<div class="radagun"><img src="images/benefits_radagun.jpg" alt="RADAGUN"></div>
 			
 			<div class="admin">
-			<h4>Easy Admin</h4>
-			<p>Control your account by updating content and viewing your analytics whenever you want</p>
+			<h4>MAD.COM - Create your own art collection in seconds </h4>
+			<p>This publishing tool was made with the artists in mind. You now have the control to produce your brand with elegance, the way you want in seconds. By making your MyArtistDNA.com account you decided to take your brand growth serious. This is your brand home for all your photo, audio and video content. Welcome home.</p>
+			</div>
+
+			
+			<div class="admin">
+			<h4>Effortless site creation and management </h4>
+			<p>You're the webmaster now.  MyArtistDNA puts you in control, making it easy for you to upload music and videos, premiere new songs, edit content—all without having to know a single line of code.</p>
 			</div>
 			
 			<article class="customname">
 			<figure><img src="images/benefits_custom_name.jpg" alt="benefits_custom_name"></figure>
 			<aside>
 			<h4>Custom Name <br /> <span>Be Yourself.</span></h4>
-			<p>You dont have to use our domain name. If you have one already we can use that!</p>
+			<p>We want you in the spotlight. Choose your own domain name for the site, or use one you already have.</p>
+			</aside>
+			</article>
+			
+			<article class="data">
+			<figure><img src="images/benefits_meta_data.jpg" alt="benefits_meta_data"></figure>
+			<aside>
+			<h4>Personalized tabs <br /></h4>
+			<p>Easily create customized tabs that emphasize the most important aspects of your art and your brand.  If you’re a painter, create a tab that shows off all the galleries your work has appeared in.  A musician? Create an events tab so fans know about upcoming concerts. </p>
 			</aside>
 			</article>
 			
@@ -47,7 +61,7 @@ include "header.php";
 			<figure><img src="images/benefits_meta_data.jpg" alt="benefits_meta_data"></figure>
 			<aside>
 			<h4>Meta Data <br /> <span>Tag your hard work correctly so you can get recognized and paid for it.</span></h4>
-			<p>Log all your music professional, so its not lost in cyberspace.</p>
+			<p>Don't let your work get lost in cyberspace.  Complete metadata is the best way to make sure that your fans can get to your site, and MyArtistDNA makes it simple to tag all your content and make it findable on search engines. </p>
 			</aside>
 			</article>
 			
@@ -55,7 +69,7 @@ include "header.php";
 			<figure><img src="images/benefits_e_commerce.jpg" alt="E-commerce"></figure>
 			<aside>
 			<h4>E-commerce <span>Sell your own merch, thats where the money is! </span></h4>
-			<p>Whenever you want, 24/7.</p>
+			<p>Integrate e-commerce straight into your site, for easy and secure purchasing of artwork, crafts, CDs, apparel, accessories…whatever you dream up.</p>
 			</aside>
 			</article>
 			</div>
