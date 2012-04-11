@@ -81,24 +81,17 @@ include "header.php";
 			</aside>
 			</article>
 			
-			<article class="custom">
-			<figure><img src="images/benefits_custom_events.jpg" alt="benefits_custom_events"></figure>
-			<aside>
-			<h4>Exposure <br /> <span>Online Audio Streaming</span></h4>
-			<p>.FM have your music added to our online radio station</p>
-			</aside>
-			</article>
-			
+						
 			<article class="socialize">
 			<figure><img src="images/benefits_deal.jpg" alt="benefits_deals"></figure>
 			<aside>
-			<h4><span>Keep growing your brand that is currently on the site.</span></h4>
+			<h4><span>Growing your brand</span></h4>
 			<p>Hit brand milestones and spread your audio content out to other outlets through opportunities we will provide.</p>
 			</aside>
 			</article>
 		</div><!-- rightpanel -->    
 		
-		
+		</div>
 		<div class="signup">
 			<h3>Be heard, be seen, be independent.</h3>
 			<div class="button"><a href="#" onclick="showSignup();">SIGN UP NOW</a></div>
