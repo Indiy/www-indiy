@@ -27,12 +27,20 @@ include "header.php";
     <div id="rightpanel">
 		
 		
+			<div class="flashplayer">
+			<figure><img src="images/benefits_custom_video.jpg" alt="Flash Player"></figure>
+			<div class="flash">
+			<h4>MAD.TV -<span><br>Gain Visibility for your videos</span></h4>
+			<p>Now that you have produced your own video channel on your MyArtistDNA.com account, promote it so it can be distributed to MyArtistDNA.tv to been seen everyday daily. MyArtistDNA.tv brings the hottest videos directly to the fans. Market your videos so we can distribute your talent to the world. Your MyArtistDNA.com account is your channel, MyArtistDNA.tv is the network powered by you. Need More Info?</p>
+			</div>
+			</div>
+			
 		
 			<div class="flashplayer">
 			<figure><img src="images/benefits_custom_video.jpg" alt="Flash Player"></figure>
 			<div class="flash">
-			<h4>Fullscreen HTML5 Video Player. <span><br>Works on desktops and mobile devices.</span></h4>
-			<p>Upload video and watch anywhere.</p>
+			<h4>Fullscreen HTML5 Video Player<span><br></span></h4>
+			<p>Our versatile video player lets you upload instantly and lets your fans watch wherever—laptops, tablets, mobiles, you name it</p>
 			</div>
 			</div>
 			
@@ -40,7 +48,7 @@ include "header.php";
 			<figure><img src="images/benefits_custom_fullscreen.jpg" alt="Benefits Fullscreen"></figure>
 			<aside>
 			<h4>Image is everything</h4>
-			<p>Dynamic full screen image space to show off your photos, art or magazine style layouts!</p>
+			<p>Our beautiful, full-screen format is made to show off your photos, layouts and art in the highest possible quality.</p>
 			</aside>
 			</article>
 			
@@ -56,14 +64,14 @@ include "header.php";
 			<figure><img src="images/benefits-fm.jpg" alt="Benefits MyArtistDNA FM"></figure>
 			<aside>
 			<h4>Gain visibility for your videos</h4>
-			<p>.TV - Have your videos added to our online TV station for greater visibility. </p>
+			<p>You shouldn't have to guess what your fans are thinking. Our analytic software makes it simple to see how many people are visiting your platform, viewing your videos, and listening to your music, so you can use real time stats to figure out what's working and what's not.</p>
 			</aside>
 			</article>
 
 			<article class="playlist">
 			<figure><img src="images/benefits_custom_value.jpg" alt="Benefits Gain Value"></figure>
 			<aside>
-			<h4>Leverage your content to gain value</h4>
+			<h4>Keep the Leverage your content to gain value thats currently on the site.</h4>
 			<p>Grow the popularity of your videos and images to be able to qualify for major distribution of your content.</p>
 			</aside>
 			</article>
