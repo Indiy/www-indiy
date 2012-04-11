@@ -63,7 +63,7 @@ include "header.php";
       <div id="benefitshome">
     
    <article>
-        <h2>NEED MORE BRANDING HELP? MY<span>ARTIST</span>DNA.IS</h2>
+        <h2>NEED MORE BRANDING HELP? <span>MAD.IS</span></h2>
     
         <aside>
         <a href="be-heard.php">
