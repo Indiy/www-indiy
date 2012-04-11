@@ -30,20 +30,31 @@ include "header.php";
 		
 		<div class="playbar">
 			<div class="extras"><img src="images/bg_extras.jpg" alt="EXTRAS"></div>
-			<h4>Play Bar</h4>
-			<p>Upload audio to bring your brand to life. Songs, interviews, narration....whatever!</p>
+			<h4>MAD.FM - Exposure - Get in Rotation</h4>
+			<p>Using your MyArtistDNA.com account is just that start of how we help you be heard. We give you the opportunity to get your popular audio art placed on our 24/7 audio stream on MyArtistDNA.fm that will place your work in front of an unlimited amount of people daily. If your audio content is one of the most popular on there, we will offer you even bigger opportunities. It's like web radio, we created it for artists like you to get the exposure you deserve. Need More Info?</p>
 			</div>
-			
-			
+		
+		
 			<article class="centralized">
 			<figure><img src="images/benefits_centralized.jpg" alt="benefits_centralized"></figure>
 			<aside>
-			<h4>One centralized place for you to call home</h4>
-			<p>Instead of sending ppl tons of Youtube, Vimeo, Twitter and Facebook links, send them one spot that has all your content organized.</p>
+			<h4>A centralized hub for your art</h4>
+			<p>Don't make your fans chase you.  Forget the zoo of YouTube, Vimeo, and Flickr links. With MyArtistDNA, you can host all your content on one site, branded uniquely for you.
+</p>
 			</aside>
 			</article>
 			
-			<!--
+
+		
+		
+		<div class="playbar">
+			<div class="extras"><img src="images/bg_extras.jpg" alt="EXTRAS"></div>
+			<h4>Play Bar</h4>
+			<p>A built-in player that's powerful and intuitive to use, letting you post new content, including new interviews, podcasts, videos and more as soon as it’s done.</p>
+			</div>
+			
+			
+					<!--
 			<article class="analytics1">
 			<figure><img src="images/benefits_analytics.jpg" alt="benefits_analytics"></figure>
 			<aside>
@@ -56,7 +67,7 @@ include "header.php";
 			<figure><img src="images/benefits_fan_feedback.jpg" alt="Benefits Fan Feedback"></figure>
 			<aside>
 			<h4>Fan Feedback</h4>
-			<p>Learn what your fans think about your art. Through comments with FB you can get real responses.</p>
+			<p>Let your fans talk back with simple feedback mechanisms, or get a real conversation started by enabling Facebook commenting on your site.</p>
 			</aside>
 			</article>
 			
@@ -65,7 +76,7 @@ include "header.php";
 			<figure><img src="images/benefits_socialize.jpg" alt="benefits_socialize"></figure>
 			<aside>
 			<h4>Socialize Tab</h4>
-			<p>Facebook and Twitter stream integrated. Sign fans up to your mailing list.</p>
+			<p>Dynamically integrating your existing social media profiles into your site means that you can promote your entire digital presence at once and encourage fans to stay engaged with you on their own social networks..</p>
 			</aside>
 			</article>
 			
@@ -80,7 +91,7 @@ include "header.php";
 			<article class="socialize">
 			<figure><img src="images/benefits_deal.jpg" alt="benefits_deals"></figure>
 			<aside>
-			<h4>Grow Your Brand<br /> <span>Do deals with us</span></h4>
+			<h4><span>Keep growing your brand that is currently on the site.</span></h4>
 			<p>Hit brand milestones and spread your audio content out to other outlets through opportunities we will provide.</p>
 			</aside>
 			</article>
