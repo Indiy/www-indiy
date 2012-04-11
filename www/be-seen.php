@@ -60,14 +60,7 @@ include "header.php";
 			</aside>
 			</article>
 
-			<article class="analytics">
-			<figure><img src="images/benefits-fm.jpg" alt="Benefits MyArtistDNA FM"></figure>
-			<aside>
-			<h4>Gain visibility for your videos</h4>
-			<p>You shouldn't have to guess what your fans are thinking. Our analytic software makes it simple to see how many people are visiting your platform, viewing your videos, and listening to your music, so you can use real time stats to figure out what's working and what's not.</p>
-			</aside>
-			</article>
-
+			
 			<article class="playlist">
 			<figure><img src="images/benefits_custom_value.jpg" alt="Benefits Gain Value"></figure>
 			<aside>
