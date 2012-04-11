@@ -77,7 +77,7 @@ include "header.php";
 			<figure><img src="images/benefits_socialize.jpg" alt="benefits_socialize"></figure>
 			<aside>
 			<h4>Socialize Tab</h4>
-			<p>Dynamically integrating your existing social media profiles into your site means that you can promote your entire digital presence at once and encourage fans to stay engaged with you on their own social networks..</p>
+			<p>Dynamically integrating your existing social media profiles into your site means that you can promote your entire digital presence at once and encourage fans to stay engaged with you on their own social networks.</p>
 			</aside>
 			</article>
 			
