@@ -10,15 +10,24 @@ include "header.php";
 		<div id="package">
 		<aside class="basic"> 
 			<h2>FREE</h2> 
-						<div class="peckage"> 
+			<ul> 
+			<li>Feature of the basic package one</li> 
+			<li>Feature of the basic package two</li> 
+			<li class="last">Feature of the basic package two</li> 
+			</ul>
+			<div class="peckage"> 
 			<h3>Basic<br> Package</h3> 
 			<div class="choose"><a href="#">CHOOSE</a></div>	
 			</div> 
 		</aside>
 		
 		<aside class="middle"> 
-			<h2><span class="dollor">$</span><span>20</span><span class="yr">mo</span></h2> 
-		
+			<h2><span class="dollor">$</span><span>20</span><span class="yr">mo</span></h2>  
+			<ul> 
+			<li>Feature of the basic package one</li> 
+			<li>Feature of the basic package two</li> 
+			<li class="last">Feature of the basic package two</li> 
+			</ul> 
 			<div class="peckage"> 
 			<h3>Middle <br /> Package</h3> 
 			<div class="choose"><a href="#">CHOOSE</a></div>	
@@ -27,7 +36,11 @@ include "header.php";
 		
 		<aside class="best"> 
 			<h2><span class="yr">CUSTOM</span></h2> 
-		
+			<ul> 
+			<li>Feature of the basic package one</li> 
+			<li>Feature of the basic package two</li> 
+			<li class="last">Feature of the basic package two</li> 
+			</ul>
 			<div class="peckage"> 
 			<h3>Best <br /> Package</h3> 
 			<div class="choose"><a href="#">CHOOSE</a></div>	
