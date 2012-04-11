@@ -11,12 +11,12 @@ include "header.php";
 		<aside class="basic"> 
 			<h2>FREE</h2> 
 			<ul> 
-			<li>Feature of the basic package one</li> 
-			<li>Feature of the basic package two</li> 
-			<li class="last">Feature of the basic package two</li> 
+			<li>Create a home for your brand in seconds</li> 
+			<li>Gain and Track fans / Network and Discover Artists</li> 
+			<li class="last">Distribute your content</li> 
 			</ul>
 			<div class="peckage"> 
-			<h3>Basic<br> Package</h3> 
+			<h3>Welcome<br> Package</h3> 
 			<div class="choose"><a href="#">CHOOSE</a></div>	
 			</div> 
 		</aside>
@@ -24,12 +24,12 @@ include "header.php";
 		<aside class="middle"> 
 			<h2><span class="dollor">$</span><span>20</span><span class="yr">mo</span></h2>  
 			<ul> 
-			<li>Feature of the basic package one</li> 
-			<li>Feature of the basic package two</li> 
-			<li class="last">Feature of the basic package two</li> 
+			<li>Sell your products in your own store</li> 
+			<li>Collab - Get booked or book other artists</li> 
+			<li class="last">Unlimited Storageo</li> 
 			</ul> 
 			<div class="peckage"> 
-			<h3>Middle <br /> Package</h3> 
+			<h3>Launch<br /> Package</h3> 
 			<div class="choose"><a href="#">CHOOSE</a></div>	
 			</div> 
 		</aside>
@@ -37,12 +37,12 @@ include "header.php";
 		<aside class="best"> 
 			<h2><span class="yr">CUSTOM</span></h2> 
 			<ul> 
-			<li>Feature of the basic package one</li> 
-			<li>Feature of the basic package two</li> 
-			<li class="last">Feature of the basic package two</li> 
+			<li>Enterprise accounts</li> 
+			<li>Multi accounts projects</li> 
+			<li class="last">Special needs / Anything</li> 
 			</ul>
 			<div class="peckage"> 
-			<h3>Best <br /> Package</h3> 
+			<h3>MADE<br /> Package</h3> 
 			<div class="choose"><a href="#">CHOOSE</a></div>	
 			</div> 
 		</aside>
@@ -50,11 +50,11 @@ include "header.php";
 		<aside class="platinum"> 
 			<h2><span class="yr">AGENCY</span></h2> 
 		<div class="content">
-			<p>Mauris ut arcu et turpis aliquet vulputate a ut libero. Integer sit amet nulla enim, non luctus sem. Sed sed dui lacus.</p> 
-			<p><span>Aspire to be Independent.</span></p>
+			<p>MyArtistDNA started as a digital branding agency. This is our core. Through MyArtistDNA.is we can elevate your brand to the professional level. We also can work with brands / advertisers to create a solid package of polish and exposure.</p> 
+			<p><span>MyArtistDNA.is</span></p>
 			</div>
 			<div class="peckage"> 
-			<h3>PLATINUM <br /> Package</h3> 
+			<h3>BRANDING<br /> Package</h3> 
 			<div class="choose"><a href="#">LEARN MORE</a></div>	
 			</div> 
 		</aside>
