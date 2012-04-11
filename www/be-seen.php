@@ -26,10 +26,10 @@ include "header.php";
 		</div><!-- leftpanel -->
     <div id="rightpanel">
 		
+			<div class="cmsadmin">
 		
-			<div class="flashplayer">
-			<figure><img src="images/benefits_logo_tv.jpg" alt="MyArtistDNA.tv"></figure>
-			<div class="flash">
+			<div class="radagun"><img src="images/benefits_logo_tv.jpg" alt="MyArtistDNA.tv"></div>
+			<div class="admin">
 			<h4>MyArtistDNA.tv<span><br>Gain Visibility for your videos</span></h4>
 			<p>Now that you have produced your own video channel on your MyArtistDNA.com account, promote it so it can be distributed to MyArtistDNA.tv to been seen everyday daily. MyArtistDNA.tv brings the hottest videos directly to the fans. Market your videos so we can distribute your talent to the world. Your MyArtistDNA.com account is your channel, MyArtistDNA.tv is the network powered by you. Need More Info?</p>
 			</div>
