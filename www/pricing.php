@@ -50,7 +50,7 @@ include "header.php";
 		<aside class="platinum"> 
 			<h2><span class="yr">AGENCY</span></h2> 
 		<div class="content">
-			<p>MyArtistDNA started as a digital branding agency. This is our core. Through MyArtistDNA.is we can elevate your brand to the professional level. We also can work with brands / advertisers to create a solid package of polish and exposure.</p> 
+			<p>MyArtistDNA started as a digital branding agency. Through MyArtistDNA.is we can elevate your brand to the professional level. We also can work with brands / advertisers to create a solid package of polish and exposure.</p> 
 			<p><span>MyArtistDNA.is</span></p>
 			</div>
 			<div class="peckage"> 
@@ -60,7 +60,7 @@ include "header.php";
 		</aside>
 		</div>
 	
-	  <div id="benefitshome"> <img src="images/pricing-table.png "> </div>
+	  <div id="benefitshome_"> <img src="images/pricing-table.png "> </div>
 	
 		
       <div id="benefitshome">
