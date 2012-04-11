@@ -61,7 +61,7 @@ include "header.php";
 			<article class="customname">
 			<figure><img src="images/benefits_meta_data.jpg" alt="benefits_meta_data"></figure>
 			<aside>
-			<h4>Meta Data <br /> <span>Tag your hard work correctly so you can get recognized and paid for it.</span></h4>
+			<h4>Meta Data <br /> <span>Tag your hard work correctly so you get recognized and paid for it.</span></h4>
 			<p>Don't let your work get lost in cyberspace.  Complete metadata is the best way to make sure that your fans can get to your site, and MyArtistDNA makes it simple to tag all your content and make it findable on search engines. </p>
 			</aside>
 			</article>
@@ -69,7 +69,7 @@ include "header.php";
 			<article class="commerce">
 			<figure><img src="images/benefits_e_commerce.jpg" alt="E-commerce"></figure>
 			<aside>
-			<h4>E-commerce <span>Sell your own merch, thats where the money is! </span></h4>
+			<h4>E-commerce<br /> <span>SELL YOUR OWN MERCH, THATS WHERE THE MONEY IS!</span></h4>
 			<p>Integrate e-commerce straight into your site, for easy and secure purchasing of artwork, crafts, CDs, apparel, accessories…whatever you dream up.</p>
 			</aside>
 			</article>
