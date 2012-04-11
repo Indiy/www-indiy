@@ -59,6 +59,9 @@ include "header.php";
 			</div> 
 		</aside>
 		</div>
+	
+	  <div id="benefitshome"> <img src="images/pricing-table.png "> </div>
+	
 		
       <div id="benefitshome">
     
