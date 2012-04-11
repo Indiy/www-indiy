@@ -61,7 +61,7 @@ include "header.php";
 			</article>
 
 			
-			<article class="playlist">
+			<article class="analytics">
 			<figure><img src="images/benefits_custom_value.jpg" alt="Benefits Gain Value"></figure>
 			<aside>
 			<h4>Leverage your content to gain value thats currently on the site.</h4>
