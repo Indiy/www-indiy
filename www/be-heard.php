@@ -29,8 +29,8 @@ include "header.php";
 		
 		
 		<div class="playbar">
-			<div class="extras"><img src="images/benefit_logo_fm.jpg" alt="EXTRAS"></div>
-			<h4>MyArtistDNA.fm<span>Exposure - Get in Rotation</span></h4>
+			<div class="extras"><img src="images/benefits_logo_fm.jpg" alt="EXTRAS"></div>
+			<h4>MyArtistDNA.fm<br/><span>Exposure - Get in Rotation</span></h4>
 			<p>Using your MyArtistDNA.com account is just that start of how we help you be heard. We give you the opportunity to get your popular audio art placed on our 24/7 audio stream on MyArtistDNA.fm that will place your work in front of an unlimited amount of people daily. If your audio content is one of the most popular on there, we will offer you even bigger opportunities. It's like web radio, we created it for artists like you to get the exposure you deserve. Need More Info?</p>
 			</div>
 		
