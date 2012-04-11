@@ -29,8 +29,8 @@ include "header.php";
 		
 		
 		<div class="playbar">
-			<div class="extras"><img src="images/bg_extras.jpg" alt="EXTRAS"></div>
-			<h4>MAD.FM - Exposure - Get in Rotation</h4>
+			<div class="extras"><img src="images/benefit_logo_fm.jpg" alt="EXTRAS"></div>
+			<h4>MyArtistDNA.fm<span>Exposure - Get in Rotation</span></h4>
 			<p>Using your MyArtistDNA.com account is just that start of how we help you be heard. We give you the opportunity to get your popular audio art placed on our 24/7 audio stream on MyArtistDNA.fm that will place your work in front of an unlimited amount of people daily. If your audio content is one of the most popular on there, we will offer you even bigger opportunities. It's like web radio, we created it for artists like you to get the exposure you deserve. Need More Info?</p>
 			</div>
 		
@@ -39,8 +39,7 @@ include "header.php";
 			<figure><img src="images/benefits_centralized.jpg" alt="benefits_centralized"></figure>
 			<aside>
 			<h4>A centralized hub for your art</h4>
-			<p>Don't make your fans chase you.  Forget the zoo of YouTube, Vimeo, and Flickr links. With MyArtistDNA, you can host all your content on one site, branded uniquely for you.
-</p>
+			<p>Don't make your fans chase you.  Forget the zoo of YouTube, Vimeo, and Flickr links. With MyArtistDNA, you can host all your content on one site, branded uniquely for you.<br/><br/></p>
 			</aside>
 			</article>
 			
