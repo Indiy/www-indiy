@@ -163,9 +163,9 @@ ul#accordion-slider li{ width:314px; height:257px; float:left; display: block; o
 ---------------------------------------------
 */
 
-#benefitshome_ {width:940px; float:left; padding-bottom:51px; margin-bottom:40px}
+
 #benefitshome {width:940px; float:left; background:url(../images/borderdesign.gif) repeat-x bottom left; padding-bottom:51px; margin-bottom:40px}
-#benefitshome h2 {width:940px; float:left; text-align:center; background:url(../images/borderdesign.gif) repeat-x; padding-top:51px; padding-bottom:38px}
+#benefitshome h2 {width:940px; float:left; text-align:center; padding-top:51px; padding-bottom:38px}
 #benefitshome h2 span {font-weight:bold}
 
 #benefitshome aside { width:300px; height:125px; float:left; background:url(../images/bg_benefits_home.gif) no-repeat; padding:15px 20px 0 0}
