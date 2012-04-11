@@ -30,12 +30,12 @@ include "header.php";
     <div id="artistshome">
 	<h2><img src="images/madcom-logo.jpg" alt="">&nbsp;&nbsp;&nbsp;STEP 1: Publish your content</h2>
     	<ul>
-        <span>This is the on boarding publishing tool that allows you to create a presence for your audio, video or image art in seconds</span></li>
+        <span>This is the on boarding publishing tool that allows you to create a presence for your audio, video or image art in seconds.</span></li>
         </ul>
 	<br/><br/>
 	<h2><a href="http://myartistdna.is" target="_blank"><img src="images/madis-logo.jpg" alt=""></a>&nbsp;&nbsp;&nbsp;STEP 2: Brand your content</a></h2>
     	<ul>
-        <span>Your effort plus our experience allows you to maximize your brand awareness. This is the branding agency that helps users brand their art</span></li>
+        <span>Your effort plus our experience allows you to maximize your brand awareness. This is the branding agency that helps users brand their art.</span></li>
         </ul>
 	<br/><br/>
 	<h2><a href="http://myartistdna.fm" target="_blank"><img src="images/madfm-logo.jpg" alt=""></a>&nbsp;&nbsp;&nbsp;STEP 3: Be Heard</h2>
