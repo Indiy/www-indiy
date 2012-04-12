@@ -1,0 +1,249 @@
+
+
+@font-face {
+    font-family: 'Neuzeit Grotesk';
+    src: url('Neuzeit-Grotesk.eot');
+    src: local('Neuzeit-Grotesk'), url('Neuzeit-Grotesk.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Neuzeit Grotesk Light';
+    src: url('Neuzeit-Grotesk-Light.eot');
+    src: local('Neuzeit-Grotesk-Light'), url('Neuzeit-Grotesk-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Teletex Light';
+    src: url('Teletex_Light.eot');
+    src: local('Teletex_Light'), url('Teletex_Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lucida Grande';
+    src: url('Lucida Grande.eot');
+    src: local('Lucida Grande'), url('Lucida Grande.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+#bg {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0px;
+    padding: 0px;
+    background: black url('../images/madcom_bg.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+#top_bar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 48px;
+    background: black url('../images/topbar_texture.png') repeat-x;
+    overflow: hidden;
+}
+#top_bar .mad_logo {
+    float: left;
+    width: 73px;
+    height: 48px;
+    background: black url('../images/madcom_logo.png');
+    cursor: pointer;
+}
+#top_bar .artist_name {
+    float: left;
+    padding-left: 20px;
+    padding-top: 18px;
+    color: white;
+    font-size: 16px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+}
+#top_bar .search {
+    float: right;
+    width: 28px;
+    height: 24px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+#top_bar .sep {
+    float: right;
+    width: 2px;
+    height: 48px;
+    background: black url('../images/topbar_sep.png') no-repeat;
+}
+#top_bar .content_tabs {
+    float: right;
+    padding-right: 14px;
+    padding-top: 13px;
+    white-space: nowrap;
+}
+#top_bar .content_tabs .tab {
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 12px;
+    margin-left: 12px;
+    color: #888;
+    font-size: 13px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 0px -1px #0e0e0e;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 3px;
+}
+#top_bar .content_tabs .tab:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+#bottom_bar {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 49px;
+    background-color: black;
+    overflow: hidden;
+    color: #484848;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#bottom_bar .be_heard, #bottom_bar .slash, #bottom_bar .sign_up {
+    display: inline-block;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+#bottom_bar .slash {
+    padding-left: 2px;
+    letter-spacing: -1px;  
+}
+#bottom_bar .sign_up {
+    padding-left: 2px;
+    cursor: pointer;
+}
+#bottom_bar .sign_up:hover {
+    color: white;
+}
+#bottom_bar .copyright {
+    float: right;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+#tracker_bar {
+    position: absolute;
+    bottom: 48px;
+    left: 0px;
+    right: 0px;
+    height: 55px;
+    overflow: hidden;
+    background: black url('../images/tracker_bar_bg.png') repeat-x;
+}
+#tracker_bar .media_controls {
+    position: relative;
+    display: block;
+    height: 55px;
+    width: auto;
+    overflow: hidden;
+}
+#tracker_bar .media_controls .play_pause {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 55px;
+    width: 54px;
+    color: white;
+}
+#tracker_bar .media_controls .progress_bar {
+    position: absolute;
+    left: 54px;
+    right: 2px;
+    top: 9px;
+    height: 38px;
+    background: black url('../images/progress_bg.png') repeat-x;
+    border-radius: 5px;
+}
+#tracker_bar .media_controls .progress_bar .track_name {
+    position: absolute;
+    left: 17px;
+    top: 13px;
+    color: #eee;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal; 
+}
+#tracker_bar .media_controls .progress_bar .progress_play_times {
+    position: absolute;
+    right: 16px;
+    top: 13px;
+    color: #676767;
+    font-size: 13px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    white-space: nowrap;
+}
+#tracker_bar .media_controls .progress_bar .progress_play_times div {
+    display: inline-block;
+}
+#tracker_bar .media_controls .progress_bar .current_bar_holder {
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    bottom: 2px;
+}
+#tracker_bar .media_controls .progress_bar .current_bar_holder .current_bar {
+    width: 50%;
+    height: 100%;
+    background: black url('../images/progress_current_bg.png') repeat-x;
+    border-radius: 2px;
+}
+#tracker_bar .buttons {
+    float: right;
+    height: 55px;
+    white-space: nowrap;
+}
+#tracker_bar .buttons .button {
+    display: inline-block;
+    height: 55px;
+    width: 59px;
+}
+#tracker_bar .buttons .button .icon {
+    color: white;
+}
+#tracker_bar .buttons .sep {
+    display: inline-block;
+    height: 55px;
+    width: 2px;
+    background-color: white;
+}
+
+.tooltip {
+    display: none;
+}
+
+
+
