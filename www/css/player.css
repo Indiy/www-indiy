@@ -153,11 +153,16 @@ body {
     padding-right: 20px;
     padding-top: 20px;
 }
-#tracker_bar {
+#bottom_container {
     position: absolute;
     bottom: 48px;
+    height: 275px;
     left: 0px;
     right: 0px;
+    overflow: hidden;
+}
+#tracker_bar {
+    width: 100%;
     height: 55px;
     overflow: hidden;
     background: black url('../images/tracker_bar_bg.png') repeat-x;
@@ -238,12 +243,52 @@ body {
     display: inline-block;
     height: 55px;
     width: 2px;
-    background-color: white;
+    background: black url('../images/tracker_bar_sep.png') no-repeat;
 }
 
 .tooltip {
     display: none;
 }
 
-
+#media_social_boxes {
+    height: 220px;
+    width: 100%;
+    background-color: white;
+}
+#media_social_boxes .social_boxes {
+    float: right;
+    width: 580px;
+    height: 100%;
+    background-color: orange;
+}
+#media_social_boxes .social_boxes .social_buttons {
+    float: left;
+    background: blue;
+    width: 174px;
+}
+#media_social_boxes .social_boxes .social_content {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    background-color: red;
+}
+#media_social_boxes .media_boxes {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    background-color: green;
+}
+#media_social_boxes .media_boxes .media_buttons {
+    float: left;
+    width: 175px;
+    background-color: #004;
+    height: 100%;
+}
+#media_social_boxes .media_boxes .media_content {
+    width: auto;
+    height: 100%;
+    overflow: none;
+}
+#media_social_boxes .media_boxes {
+}
 
