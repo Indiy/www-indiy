@@ -101,6 +101,8 @@
 		2D4116BB1534E44900F18000 /* privacy.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = privacy.php; sourceTree = "<group>"; };
 		2D4116BC1534E44A00F18000 /* terms_service.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = terms_service.php; sourceTree = "<group>"; };
 		2D4116BD1534E9BB00F18000 /* player.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = player.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2D4116BE15376E6100F18000 /* artist-kit.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "artist-kit.php"; sourceTree = "<group>"; };
+		2D4116BF15376E6300F18000 /* pricing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = pricing.php; sourceTree = "<group>"; };
 		2D41C012152ACD8200F18000 /* profile.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = profile.php; sourceTree = "<group>"; };
 		2D41C014152ACDD100F18000 /* edit_profile.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_profile.js; sourceTree = "<group>"; };
 		2D41C015152ACDEB00F18000 /* edit_profile.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = edit_profile.html; sourceTree = "<group>"; };
@@ -996,7 +998,6 @@
 		2DF473281440B77F005538C7 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		2DF473291440B77F005538C7 /* php.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = php.ini; sourceTree = "<group>"; };
 		2DF4732A1440B77F005538C7 /* PIE.htc */ = {isa = PBXFileReference; lastKnownFileType = text; path = PIE.htc; sourceTree = "<group>"; };
-		2DF4732C1440B77F005538C7 /* pricing.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = pricing.html; sourceTree = "<group>"; };
 		2DF4732F1440B77F005538C7 /* .ftpquota */ = {isa = PBXFileReference; lastKnownFileType = text; path = .ftpquota; sourceTree = "<group>"; };
 		2DF473321440B77F005538C7 /* .listing */ = {isa = PBXFileReference; lastKnownFileType = text; path = .listing; sourceTree = "<group>"; };
 		2DF473331440B77F005538C7 /* dwsync.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = dwsync.xml; sourceTree = "<group>"; };
@@ -1740,6 +1741,8 @@
 				2DF472C71440B77F005538C7 /* js */,
 				2D4116BA1534E44800F18000 /* player.html */,
 				2DF470401440B77F005538C7 /* artists.php */,
+				2D4116BE15376E6100F18000 /* artist-kit.php */,
+				2D4116BF15376E6300F18000 /* pricing.php */,
 				2DF470411440B77F005538C7 /* be-heard.php */,
 				2DF470421440B77F005538C7 /* be-independent.php */,
 				2DF470431440B77F005538C7 /* be-seen.php */,
@@ -1760,7 +1763,6 @@
 				2DF473291440B77F005538C7 /* php.ini */,
 				2D4116BB1534E44900F18000 /* privacy.php */,
 				2DF4732A1440B77F005538C7 /* PIE.htc */,
-				2DF4732C1440B77F005538C7 /* pricing.html */,
 				2DF473961440B77F005538C7 /* s_inf.php */,
 				2DF473971440B77F005538C7 /* searchbox.php */,
 				2D4116BC1534E44A00F18000 /* terms_service.php */,
