@@ -17,7 +17,7 @@ include "header.php";
 			</ul>
 			<div class="peckage"> 
 			<h3>Welcome<br> Package</h3> 
-			<div class="choose"><a href="#">CHOOSE</a></div>	
+			<div class="choose"><a href="#" onclick="showSignup();">CHOOSE</a></div>	
 			</div> 
 		</aside>
 		
@@ -30,7 +30,7 @@ include "header.php";
 			</ul> 
 			<div class="peckage"> 
 			<h3>Launch<br /> Package</h3> 
-			<div class="choose"><a href="#">CHOOSE</a></div>	
+			<div class="choose"><a href="http://paypal.com">CHOOSE</a></div>	
 			</div> 
 		</aside>
 		
@@ -43,7 +43,7 @@ include "header.php";
 			</ul>
 			<div class="peckage"> 
 			<h3>MADE<br /> Package</h3> 
-			<div class="choose"><a href="#">PRICE UPON REQUEST</a></div>	
+			<div class="choose"><a href="http://myartistdna.is/whoweare.html">PRICE UPON REQUEST</a></div>	
 			</div> 
 		</aside>
 		
@@ -55,7 +55,7 @@ include "header.php";
 			</div>
 			<div class="peckage"> 
 			<h3>BRANDING<br /> Package</h3> 
-			<div class="choose"><a href="#">PRICE UPON REQUEST</a></div>	
+			<div class="choose"><a href="http://myartistdna.is/whoweare.html">PRICE UPON REQUEST</a></div>	
 			</div> 
 		</aside>
 		</div>

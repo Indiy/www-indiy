@@ -31,7 +31,7 @@ include "header.php";
 			<div class="radagun"><img src="images/benefits_logo_tv.jpg" alt="MyArtistDNA.tv"></div>
 			<div class="admin">
 			<h4>MyArtistDNA.tv<span><br>Gain Visibility for your videos</span></h4>
-			<p>Now that you have produced your own video channel on your MyArtistDNA.com account, promote it so it can be distributed to MyArtistDNA.tv to been seen everyday daily. MyArtistDNA.tv brings the hottest videos directly to the fans. Market your videos so we can distribute your talent to the world. Your MyArtistDNA.com account is your channel, MyArtistDNA.tv is the network powered by you. Need More Info?</p>
+			<p>Now that you have produced your own video channel on your MyArtistDNA.com account, promote it so it can be distributed to MyArtistDNA.tv to been seen everyday daily. MyArtistDNA.tv brings the hottest videos directly to the fans. Market your videos so we can distribute your talent to the world. Your MyArtistDNA.com account is your channel, MyArtistDNA.tv is the network powered by you. <a href="artist-kit.php">Need More Info?</a></p>
 			</div>
 			</div>
 			
@@ -40,7 +40,7 @@ include "header.php";
 			<figure><img src="images/benefits_custom_video.jpg" alt="Flash Player"></figure>
 			<div class="flash">
 			<h4>Fullscreen HTML5 Video Player<span><br></span></h4>
-			<p>Our versatile video player lets you upload instantly and lets your fans watch wherever—laptops, tablets, mobiles, you name it</p>
+			<p>Our versatile video player lets you upload instantly and lets your fans watch wherever—laptops, tablets, mobiles, you name it.</p>
 			</div>
 			</div>
 			
@@ -48,7 +48,7 @@ include "header.php";
 			<figure><img src="images/benefits_custom_fullscreen.jpg" alt="Benefits Fullscreen"></figure>
 			<aside>
 			<h4>Image is everything</h4>
-			<p>Our beautiful, full-screen format is made to show off your photos, layouts and art in the highest possible quality</p>
+			<p>Our beautiful, full-screen format is made to show off your photos, layouts and art in the highest possible quality.</p>
 			</aside>
 			</article>
 			
@@ -56,7 +56,7 @@ include "header.php";
 			<figure><img src="images/benefits_custom_embed.jpg" alt="Benefits Embed"></figure>
 			<aside>
 			<h4>Put your brand everywhere</h4>
-			<p>Embedded your account widget across the web everywhere for everyone to see</p>
+			<p>Embedded your account widget across the web everywhere for everyone to see.</p>
 			</aside>
 			</article>
 
@@ -65,7 +65,7 @@ include "header.php";
 			<figure><img src="images/benefits_custom_value.jpg" alt="Benefits Gain Value"></figure>
 			<aside>
 			<h4>Leverage your content to gain value thats currently on the site</h4>
-			<p>Grow the popularity of your videos and images to be able to qualify for major distribution of your content</p>
+			<p>Grow the popularity of your videos and images to be able to qualify for major distribution of your content.</p>
 			</aside>
 			</article>
 			

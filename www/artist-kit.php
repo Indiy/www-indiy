@@ -23,7 +23,7 @@ include "header.php";
     
     <div class="signup">
     <h3>USE OUR ARTIST KIT TO BUILD YOUR BRAND</h3>
-    <div class="button"><a href="#">IN 4 STEPS!</a></div>
+    <div class="button"><a href="#" onclick="showSignup();">IN 4 STEPS!</a></div>
     </div><!-- signup -->
 
 	
