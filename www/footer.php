@@ -48,8 +48,8 @@ background:#f6f6f6;
     <ul>
     <li><a href="http://myartistdna.co">MAD.co</a></li>
     <li><a href="http://myartistdna.is">MAD.is</a></li>
-    <li><a href="http://myartistdna.tv">MAD.tv</a></li>
     <li><a href="http://myartistdna.fm">MAD.fm</a></li>
+    <li><a href="http://myartistdna.tv">MAD.tv</a></li>
 
     </ul>
     </aside>
