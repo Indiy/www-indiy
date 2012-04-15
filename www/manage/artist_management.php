@@ -176,6 +176,7 @@
     include_once 'include/edit_tab.html';
     include_once 'include/edit_social_config.html';
     include_once 'include/edit_profile.html';
+    include_once 'include/edit_store.html';
     include_once 'include/invite_friends.html';
     include_once 'include/fan_connections.html';
     include_once 'include/first_instructions.html';
