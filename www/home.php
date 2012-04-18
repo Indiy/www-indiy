@@ -70,16 +70,16 @@
         <h2>The MY<span>ARTIST</span>DNA creative community</h2>
     
         <ul>
-        <li><a href="http://bobbyspearsjr.myartistdna.com/"><img src="images/mason.jpg" alt="">
+        <li><a href="http://masongarments.myartistdna.com/"><img src="images/mason.jpg" alt="">
         <span>Mason Garments</span></a></li>
         
-        <li><a href="http://"><img src="images/yankee.jpg" alt="">
+        <li><a href="#"><img src="images/yankee.jpg" alt="">
         <span>Dirty Souf Yankee</span></a></li>
         
         <li><a href="http://marcecko.myartistdna.com/"><img src="images/ecko.jpg" alt="">
         <span>Marc Ecko</span></a></li>
         
-        <li><a href="http://"><img src="images/vanessa.jpg" alt="">
+        <li><a href="#"><img src="images/vanessa.jpg" alt="">
         <span>Vanessa Cantave</span></a></li>
         
         <li><a href="http://djdamage.myartistdna.com/"><img src="images/damage.jpg" alt="">
@@ -100,7 +100,7 @@
         <li><a href="http://spikejordan.myartistdna.com/"><img src="images/basil.jpg" alt="">
         <span>Basil</span></a></li>
         
-        <li><a href="http://"><img src="images/3dsign.jpg" alt="">
+        <li><a href="#"><img src="images/3dsign.jpg" alt="">
         <span>3d Sign</span></a></li>
         
   		<li><a href="http://bobbyspearsjr.myartistdna.com/"><img src="images/bobby.jpg" alt="">
