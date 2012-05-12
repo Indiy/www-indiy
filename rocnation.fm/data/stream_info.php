@@ -4,6 +4,8 @@
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
     header("Access-Control-Allow-Origin: *");
 
+    $FILE = "/tmp/rn_fm_genre_data.json";
+    
     $dbhost		=	"localhost";
     $dbusername	=	"rnfm_user";
     $dbpassword	=	"rnfm_password";
@@ -18,7 +20,6 @@
     while( $row = mysql_fetch_array($q) )
         $genre_list[] = $row;
 
-    $FILE = "/tmp/mad_fm_genre_data.json";
     $json = file_get_contents($FILE);
     
     $ret = array();

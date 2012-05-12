@@ -6,7 +6,7 @@ set_time_limit(0);
 $SERVER = 'http://myartistdna.fm:8000'; 
 $STATS_FILE_PREFIX = '/status.xsl?mount=/stream_';
 
-$FILE = "/tmp/mad_fm_genre_data.json";
+$FILE = "/tmp/rn_fm_genre_data.json";
 
 print "Starting run forever\n";
 
