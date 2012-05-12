@@ -1443,8 +1443,8 @@
 		2DFC2AFA155E2E9000528D3A /* Neuzeit-Grotesk-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk-Light.otf"; sourceTree = "<group>"; };
 		2DFC2AFB155E2E9000528D3A /* Neuzeit-Grotesk.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk.eot"; sourceTree = "<group>"; };
 		2DFC2AFC155E2E9000528D3A /* Neuzeit-Grotesk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk.otf"; sourceTree = "<group>"; };
-		2DFC2AFD155E2E9000528D3A /* splash.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = splash.css; sourceTree = "<group>"; };
-		2DFC2AFE155E2E9000528D3A /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		2DFC2AFD155E2E9000528D3A /* splash.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = splash.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2DFC2AFE155E2E9000528D3A /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DFC2B00155E2E9000528D3A /* stream_info.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = stream_info.php; sourceTree = "<group>"; };
 		2DFC2B01155E2E9000528D3A /* watch_stream.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = watch_stream.php; sourceTree = "<group>"; };
 		2DFC2B02155E2E9000528D3A /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
