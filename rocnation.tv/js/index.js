@@ -262,7 +262,12 @@ function calcVideoProgress()
     var time_progress = Math.floor((new Date().getTime())/1000 - video.start_time);
     if( time_progress > video.duration * 0.9 )
         time_progress = Math.floor(video.duration * 0.9);
-    g_seekOnPlay = time_progress;
+
+    time_progress -= 5;
+    if( time_progress > 0 )
+        g_seekOnPlay = time_progress;
+    else
+        g_seekOnPlay = false;
 }
 function createVideoTagVideoJS()
 {

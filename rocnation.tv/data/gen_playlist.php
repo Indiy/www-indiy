@@ -78,8 +78,9 @@
         file_put_contents($FILE,$json,LOCK_EX);
 
         $duration = $file["duration"];
-        print "Sleeping $duration seconds\n\n";
-        sleep($duration);
+        $sleep_duration = $duration - 5;
+        print "Sleeping $sleep_duration seconds\n\n";
+        sleep($sleep_duration);
     }
 
 
