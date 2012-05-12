@@ -34,8 +34,8 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 540px;
-    margin-left: -270px;
+    width: 640px;
+    margin-left: -320px;
     margin-top: -134px;
     background-color: transparent;
 }
@@ -51,14 +51,14 @@ a {
     position: absolute;
     top: 0px;
     left: 194px;
-    width: 346px;
+    width: 446px;
     height: 64px;
     overflow: hidden;
 }
 #play_container .item_container .item {
     position: relative;
     height: 64px;
-    width: 346px;
+    width: 446px;
     background-color: #3f3658;
 }
 #play_container .item_container .item .label {
