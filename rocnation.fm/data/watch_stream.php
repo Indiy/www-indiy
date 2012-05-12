@@ -13,7 +13,7 @@ print "Starting run forever\n";
 while( TRUE )
 {
     setup_genre_data();
-    for( $i = 0 ; $i < 60*12 ; ++$i )
+    for( $i = 0 ; $i < 5*12 ; ++$i )
     {
         $changed = FALSE;
         foreach( $g_data as $k => $v )
