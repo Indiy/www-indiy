@@ -3,9 +3,9 @@
 //Production 
 error_reporting(0);
 $dbhost		=	"localhost";
-$dbusername	=	"madtv_user";
-$dbpassword	=	"MyartistDNA!";
-$dbname		=	"madtv_mysql";
+$dbusername	=	"rntv_user";
+$dbpassword	=	"rntv_password";
+$dbname		=	"rocnationtv";
 
 //echo "<html><body><pre>\n";
 

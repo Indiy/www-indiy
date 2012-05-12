@@ -97,7 +97,7 @@
 		2D3EE28C150734BA00A9D171 /* watch_stream.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = watch_stream.php; path = data/watch_stream.php; sourceTree = "<group>"; };
 		2D3EE28E15074B2A00A9D171 /* stream_info.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = stream_info.php; path = data/stream_info.php; sourceTree = "<group>"; };
 		2D3EE2A6150C07E800A9D171 /* sprintf.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = sprintf.js; sourceTree = "<group>"; };
-		2D4116BA1534E44800F18000 /* player.html */ = {isa = PBXFileReference; path = player.html; sourceTree = "<group>"; };
+		2D4116BA1534E44800F18000 /* player.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player.html; sourceTree = "<group>"; };
 		2D4116BB1534E44900F18000 /* privacy.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = privacy.php; sourceTree = "<group>"; };
 		2D4116BC1534E44A00F18000 /* terms_service.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = terms_service.php; sourceTree = "<group>"; };
 		2D4116BD1534E9BB00F18000 /* player.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = player.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
@@ -1439,6 +1439,114 @@
 		2DF61FEE1527FFE300DBFBC8 /* artist_management.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_management.js; sourceTree = "<group>"; };
 		2DF61FF01528235500DBFBC8 /* edit_page.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_page.js; sourceTree = "<group>"; };
 		2DF61FF11528241C00DBFBC8 /* edit_page.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = edit_page.html; sourceTree = "<group>"; };
+		2DFC2AF9155E2E9000528D3A /* Neuzeit-Grotesk-Light.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk-Light.eot"; sourceTree = "<group>"; };
+		2DFC2AFA155E2E9000528D3A /* Neuzeit-Grotesk-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk-Light.otf"; sourceTree = "<group>"; };
+		2DFC2AFB155E2E9000528D3A /* Neuzeit-Grotesk.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk.eot"; sourceTree = "<group>"; };
+		2DFC2AFC155E2E9000528D3A /* Neuzeit-Grotesk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk.otf"; sourceTree = "<group>"; };
+		2DFC2AFD155E2E9000528D3A /* splash.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = splash.css; sourceTree = "<group>"; };
+		2DFC2AFE155E2E9000528D3A /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		2DFC2B00155E2E9000528D3A /* stream_info.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = stream_info.php; sourceTree = "<group>"; };
+		2DFC2B01155E2E9000528D3A /* watch_stream.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = watch_stream.php; sourceTree = "<group>"; };
+		2DFC2B02155E2E9000528D3A /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
+		2DFC2B03155E2E9000528D3A /* ffmp3-config.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ffmp3-config.swf"; sourceTree = "<group>"; };
+		2DFC2B05155E2E9000528D3A /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		2DFC2B06155E2E9000528D3A /* holder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holder.png; sourceTree = "<group>"; };
+		2DFC2B07155E2E9000528D3A /* play.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = play.jpg; sourceTree = "<group>"; };
+		2DFC2B08155E2E9000528D3A /* playclick.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = playclick.jpg; sourceTree = "<group>"; };
+		2DFC2B09155E2E9000528D3A /* statusplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusplay.png; sourceTree = "<group>"; };
+		2DFC2B0A155E2E9000528D3A /* statusstop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusstop.png; sourceTree = "<group>"; };
+		2DFC2B0B155E2E9000528D3A /* stop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stop.jpg; sourceTree = "<group>"; };
+		2DFC2B0C155E2E9000528D3A /* stopclick.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stopclick.jpg; sourceTree = "<group>"; };
+		2DFC2B0D155E2E9000528D3A /* ffmp3-darkconsole.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ffmp3-darkconsole.xml"; sourceTree = "<group>"; };
+		2DFC2B0E155E2E9000528D3A /* ffmp3-tiny.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ffmp3-tiny.swf"; sourceTree = "<group>"; };
+		2DFC2B0F155E2E9000528D3A /* ffmp3.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ffmp3.swf; sourceTree = "<group>"; };
+		2DFC2B11155E2E9000528D3A /* basil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basil.png; sourceTree = "<group>"; };
+		2DFC2B12155E2E9000528D3A /* blackroc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackroc.png; sourceTree = "<group>"; };
+		2DFC2B13155E2E9000528D3A /* close-hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-hover.png"; sourceTree = "<group>"; };
+		2DFC2B14155E2E9000528D3A /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		2DFC2B15155E2E9000528D3A /* controls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controls.png; sourceTree = "<group>"; };
+		2DFC2B16155E2E9000528D3A /* email_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email_icon.png; sourceTree = "<group>"; };
+		2DFC2B17155E2E9000528D3A /* fb_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_icon.png; sourceTree = "<group>"; };
+		2DFC2B18155E2E9000528D3A /* google_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google_icon.png; sourceTree = "<group>"; };
+		2DFC2B19155E2E9000528D3A /* grey_checked_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey_checked_bg.png; sourceTree = "<group>"; };
+		2DFC2B1A155E2E9000528D3A /* history_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history_header.png; sourceTree = "<group>"; };
+		2DFC2B1B155E2E9000528D3A /* itunes_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = itunes_icon.png; sourceTree = "<group>"; };
+		2DFC2B1C155E2E9000528D3A /* jen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jen.png; sourceTree = "<group>"; };
+		2DFC2B1D155E2E9000528D3A /* mad_fm_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mad_fm_logo.png; sourceTree = "<group>"; };
+		2DFC2B1E155E2E9000528D3A /* madfm_aqua_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = madfm_aqua_icon.png; sourceTree = "<group>"; };
+		2DFC2B1F155E2E9000528D3A /* madfm_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = madfm_bg.jpg; sourceTree = "<group>"; };
+		2DFC2B20155E2E9000528D3A /* madfm_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = madfm_bg.png; sourceTree = "<group>"; };
+		2DFC2B21155E2E9000528D3A /* madfm_striped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = madfm_striped.png; sourceTree = "<group>"; };
+		2DFC2B22155E2E9000528D3A /* pin_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_icon.png; sourceTree = "<group>"; };
+		2DFC2B23155E2E9000528D3A /* play-hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-hover.png"; sourceTree = "<group>"; };
+		2DFC2B24155E2E9000528D3A /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		2DFC2B25155E2E9000528D3A /* second_gradiant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second_gradiant.png; sourceTree = "<group>"; };
+		2DFC2B26155E2E9000528D3A /* splash_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash_bg.jpg; sourceTree = "<group>"; };
+		2DFC2B27155E2E9000528D3A /* top_gradiant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_gradiant.png; sourceTree = "<group>"; };
+		2DFC2B28155E2E9000528D3A /* tumblr_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tumblr_icon.png; sourceTree = "<group>"; };
+		2DFC2B29155E2E9000528D3A /* tw_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tw_icon.png; sourceTree = "<group>"; };
+		2DFC2B2A155E2E9000528D3A /* young_chris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = young_chris.png; sourceTree = "<group>"; };
+		2DFC2B2B155E2E9000528D3A /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
+		2DFC2B2D155E2E9000528D3A /* jquery.jplayer.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.jplayer.min.js; sourceTree = "<group>"; };
+		2DFC2B2E155E2E9000528D3A /* madfm.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = madfm.js; sourceTree = "<group>"; };
+		2DFC2B2F155E2E9000528D3A /* splash.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = splash.js; sourceTree = "<group>"; };
+		2DFC2B30155E2E9000528D3A /* sprintf.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = sprintf.js; sourceTree = "<group>"; };
+		2DFC2B31155E2E9000528D3A /* swfobject.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = swfobject.js; sourceTree = "<group>"; };
+		2DFC2B32155E2E9000528D3A /* player.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player.html; sourceTree = "<group>"; };
+		2DFC2B33155E2E9000528D3A /* splash.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = splash.html; sourceTree = "<group>"; };
+		2DFC2B35155E2E9000528D3A /* Jplayer.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jplayer.swf; sourceTree = "<group>"; };
+		2DFC2B38155E2E9000528D3A /* convert_videos.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = convert_videos.php; sourceTree = "<group>"; };
+		2DFC2B39155E2E9000528D3A /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
+		2DFC2B3A155E2E9000528D3A /* upload.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = upload.php; sourceTree = "<group>"; };
+		2DFC2B3C155E2E9000528D3A /* Neuzeit-Grotesk-Light.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk-Light.eot"; sourceTree = "<group>"; };
+		2DFC2B3D155E2E9000528D3A /* Neuzeit-Grotesk-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk-Light.otf"; sourceTree = "<group>"; };
+		2DFC2B3E155E2E9000528D3A /* Neuzeit-Grotesk.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk.eot"; sourceTree = "<group>"; };
+		2DFC2B3F155E2E9000528D3A /* Neuzeit-Grotesk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk.otf"; sourceTree = "<group>"; };
+		2DFC2B40155E2E9000528D3A /* splash.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = splash.css; sourceTree = "<group>"; };
+		2DFC2B41155E2E9000528D3A /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		2DFC2B43155E2E9000528D3A /* gen_playlist.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = gen_playlist.php; sourceTree = "<group>"; };
+		2DFC2B44155E2E9000528D3A /* stream_info.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = stream_info.php; sourceTree = "<group>"; };
+		2DFC2B45155E2E9000528D3A /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
+		2DFC2B47155E2E9000528D3A /* basil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basil.png; sourceTree = "<group>"; };
+		2DFC2B48155E2E9000528D3A /* blackroc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackroc.png; sourceTree = "<group>"; };
+		2DFC2B49155E2E9000528D3A /* close-hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-hover.png"; sourceTree = "<group>"; };
+		2DFC2B4A155E2E9000528D3A /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		2DFC2B4B155E2E9000528D3A /* controls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controls.png; sourceTree = "<group>"; };
+		2DFC2B4C155E2E9000528D3A /* email_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email_icon.png; sourceTree = "<group>"; };
+		2DFC2B4D155E2E9000528D3A /* fb_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_icon.png; sourceTree = "<group>"; };
+		2DFC2B4E155E2E9000528D3A /* google_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google_icon.png; sourceTree = "<group>"; };
+		2DFC2B4F155E2E9000528D3A /* grey_checked_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey_checked_bg.png; sourceTree = "<group>"; };
+		2DFC2B50155E2E9000528D3A /* history_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history_header.png; sourceTree = "<group>"; };
+		2DFC2B51155E2E9000528D3A /* itunes_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = itunes_icon.png; sourceTree = "<group>"; };
+		2DFC2B52155E2E9000528D3A /* jen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jen.png; sourceTree = "<group>"; };
+		2DFC2B53155E2E9000528D3A /* mad_fm_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mad_fm_logo.png; sourceTree = "<group>"; };
+		2DFC2B54155E2E9000528D3A /* madfm_aqua_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = madfm_aqua_icon.png; sourceTree = "<group>"; };
+		2DFC2B55155E2E9000528D3A /* madfm_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = madfm_bg.jpg; sourceTree = "<group>"; };
+		2DFC2B56155E2E9000528D3A /* madfm_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = madfm_bg.png; sourceTree = "<group>"; };
+		2DFC2B57155E2E9000528D3A /* madfm_striped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = madfm_striped.png; sourceTree = "<group>"; };
+		2DFC2B58155E2E9000528D3A /* madtv_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = madtv_bg.png; sourceTree = "<group>"; };
+		2DFC2B59155E2E9000528D3A /* madtv_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = madtv_logo.png; sourceTree = "<group>"; };
+		2DFC2B5A155E2E9000528D3A /* madtv_purple_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = madtv_purple_icon.png; sourceTree = "<group>"; };
+		2DFC2B5B155E2E9000528D3A /* pin_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_icon.png; sourceTree = "<group>"; };
+		2DFC2B5C155E2E9000528D3A /* play-hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-hover.png"; sourceTree = "<group>"; };
+		2DFC2B5D155E2E9000528D3A /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		2DFC2B5E155E2E9000528D3A /* player_buttons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_buttons.png; sourceTree = "<group>"; };
+		2DFC2B5F155E2E9000528D3A /* player_expand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_expand.png; sourceTree = "<group>"; };
+		2DFC2B60155E2E9000528D3A /* second_gradiant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second_gradiant.png; sourceTree = "<group>"; };
+		2DFC2B61155E2E9000528D3A /* splash_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash_bg.jpg; sourceTree = "<group>"; };
+		2DFC2B62155E2E9000528D3A /* top_gradiant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_gradiant.png; sourceTree = "<group>"; };
+		2DFC2B63155E2E9000528D3A /* tumblr_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tumblr_icon.png; sourceTree = "<group>"; };
+		2DFC2B64155E2E9000528D3A /* tw_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tw_icon.png; sourceTree = "<group>"; };
+		2DFC2B65155E2E9000528D3A /* young_chris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = young_chris.png; sourceTree = "<group>"; };
+		2DFC2B66155E2E9000528D3A /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
+		2DFC2B68155E2E9000528D3A /* genre.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = genre.js; sourceTree = "<group>"; };
+		2DFC2B69155E2E9000528D3A /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		2DFC2B6A155E2E9000528D3A /* love.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = love.js; sourceTree = "<group>"; };
+		2DFC2B6B155E2E9000528D3A /* splash.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = splash.js; sourceTree = "<group>"; };
+		2DFC2B6C155E2E9000528D3A /* string.utils.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = string.utils.js; sourceTree = "<group>"; };
+		2DFC2B6E155E2E9000528D3A /* holder.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = holder.txt; sourceTree = "<group>"; };
+		2DFC2B6F155E2E9000528D3A /* player.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player.html; sourceTree = "<group>"; };
+		2DFC2B70155E2E9000528D3A /* splash.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = splash.html; sourceTree = "<group>"; };
 		2DFCE0EB152A295500F9ABEE /* edit_video.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = edit_video.html; sourceTree = "<group>"; };
 		2DFCE0ED152A296300F9ABEE /* edit_video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_video.js; sourceTree = "<group>"; };
 		2DFCE0EE152A2B8500F9ABEE /* video.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = video.php; sourceTree = "<group>"; };
@@ -1718,6 +1826,8 @@
 				2D98BF3A1480778500CE851D /* mad.fm */,
 				2DE8282B14D0B5F300A91FCE /* mad.tv */,
 				2D3EE24F1506E8C200A9D171 /* mad.co */,
+				2DFC2AF7155E2E9000528D3A /* rocnation.fm */,
+				2DFC2B36155E2E9000528D3A /* rocnation.tv */,
 			);
 			sourceTree = "<group>";
 		};
@@ -3701,6 +3811,226 @@
 				2DF614061516D29200DBFBC8 /* stream_info.php */,
 			);
 			name = data;
+			sourceTree = "<group>";
+		};
+		2DFC2AF7155E2E9000528D3A /* rocnation.fm */ = {
+			isa = PBXGroup;
+			children = (
+				2DFC2AF8155E2E9000528D3A /* css */,
+				2DFC2AFF155E2E9000528D3A /* data */,
+				2DFC2B02155E2E9000528D3A /* favicon.ico */,
+				2DFC2B03155E2E9000528D3A /* ffmp3-config.swf */,
+				2DFC2B04155E2E9000528D3A /* ffmp3-darkconsole */,
+				2DFC2B0D155E2E9000528D3A /* ffmp3-darkconsole.xml */,
+				2DFC2B0E155E2E9000528D3A /* ffmp3-tiny.swf */,
+				2DFC2B0F155E2E9000528D3A /* ffmp3.swf */,
+				2DFC2B10155E2E9000528D3A /* images */,
+				2DFC2B2B155E2E9000528D3A /* index.php */,
+				2DFC2B2C155E2E9000528D3A /* js */,
+				2DFC2B32155E2E9000528D3A /* player.html */,
+				2DFC2B33155E2E9000528D3A /* splash.html */,
+				2DFC2B34155E2E9000528D3A /* swf */,
+			);
+			name = rocnation.fm;
+			path = ../rocnation.fm;
+			sourceTree = "<group>";
+		};
+		2DFC2AF8155E2E9000528D3A /* css */ = {
+			isa = PBXGroup;
+			children = (
+				2DFC2AF9155E2E9000528D3A /* Neuzeit-Grotesk-Light.eot */,
+				2DFC2AFA155E2E9000528D3A /* Neuzeit-Grotesk-Light.otf */,
+				2DFC2AFB155E2E9000528D3A /* Neuzeit-Grotesk.eot */,
+				2DFC2AFC155E2E9000528D3A /* Neuzeit-Grotesk.otf */,
+				2DFC2AFD155E2E9000528D3A /* splash.css */,
+				2DFC2AFE155E2E9000528D3A /* style.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		2DFC2AFF155E2E9000528D3A /* data */ = {
+			isa = PBXGroup;
+			children = (
+				2DFC2B00155E2E9000528D3A /* stream_info.php */,
+				2DFC2B01155E2E9000528D3A /* watch_stream.php */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		2DFC2B04155E2E9000528D3A /* ffmp3-darkconsole */ = {
+			isa = PBXGroup;
+			children = (
+				2DFC2B05155E2E9000528D3A /* bg.jpg */,
+				2DFC2B06155E2E9000528D3A /* holder.png */,
+				2DFC2B07155E2E9000528D3A /* play.jpg */,
+				2DFC2B08155E2E9000528D3A /* playclick.jpg */,
+				2DFC2B09155E2E9000528D3A /* statusplay.png */,
+				2DFC2B0A155E2E9000528D3A /* statusstop.png */,
+				2DFC2B0B155E2E9000528D3A /* stop.jpg */,
+				2DFC2B0C155E2E9000528D3A /* stopclick.jpg */,
+			);
+			path = "ffmp3-darkconsole";
+			sourceTree = "<group>";
+		};
+		2DFC2B10155E2E9000528D3A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2DFC2B11155E2E9000528D3A /* basil.png */,
+				2DFC2B12155E2E9000528D3A /* blackroc.png */,
+				2DFC2B13155E2E9000528D3A /* close-hover.png */,
+				2DFC2B14155E2E9000528D3A /* close.png */,
+				2DFC2B15155E2E9000528D3A /* controls.png */,
+				2DFC2B16155E2E9000528D3A /* email_icon.png */,
+				2DFC2B17155E2E9000528D3A /* fb_icon.png */,
+				2DFC2B18155E2E9000528D3A /* google_icon.png */,
+				2DFC2B19155E2E9000528D3A /* grey_checked_bg.png */,
+				2DFC2B1A155E2E9000528D3A /* history_header.png */,
+				2DFC2B1B155E2E9000528D3A /* itunes_icon.png */,
+				2DFC2B1C155E2E9000528D3A /* jen.png */,
+				2DFC2B1D155E2E9000528D3A /* mad_fm_logo.png */,
+				2DFC2B1E155E2E9000528D3A /* madfm_aqua_icon.png */,
+				2DFC2B1F155E2E9000528D3A /* madfm_bg.jpg */,
+				2DFC2B20155E2E9000528D3A /* madfm_bg.png */,
+				2DFC2B21155E2E9000528D3A /* madfm_striped.png */,
+				2DFC2B22155E2E9000528D3A /* pin_icon.png */,
+				2DFC2B23155E2E9000528D3A /* play-hover.png */,
+				2DFC2B24155E2E9000528D3A /* play.png */,
+				2DFC2B25155E2E9000528D3A /* second_gradiant.png */,
+				2DFC2B26155E2E9000528D3A /* splash_bg.jpg */,
+				2DFC2B27155E2E9000528D3A /* top_gradiant.png */,
+				2DFC2B28155E2E9000528D3A /* tumblr_icon.png */,
+				2DFC2B29155E2E9000528D3A /* tw_icon.png */,
+				2DFC2B2A155E2E9000528D3A /* young_chris.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		2DFC2B2C155E2E9000528D3A /* js */ = {
+			isa = PBXGroup;
+			children = (
+				2DFC2B2D155E2E9000528D3A /* jquery.jplayer.min.js */,
+				2DFC2B2E155E2E9000528D3A /* madfm.js */,
+				2DFC2B2F155E2E9000528D3A /* splash.js */,
+				2DFC2B30155E2E9000528D3A /* sprintf.js */,
+				2DFC2B31155E2E9000528D3A /* swfobject.js */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+		2DFC2B34155E2E9000528D3A /* swf */ = {
+			isa = PBXGroup;
+			children = (
+				2DFC2B35155E2E9000528D3A /* Jplayer.swf */,
+			);
+			path = swf;
+			sourceTree = "<group>";
+		};
+		2DFC2B36155E2E9000528D3A /* rocnation.tv */ = {
+			isa = PBXGroup;
+			children = (
+				2DFC2B37155E2E9000528D3A /* admin */,
+				2DFC2B3B155E2E9000528D3A /* css */,
+				2DFC2B42155E2E9000528D3A /* data */,
+				2DFC2B45155E2E9000528D3A /* favicon.ico */,
+				2DFC2B46155E2E9000528D3A /* images */,
+				2DFC2B66155E2E9000528D3A /* index.php */,
+				2DFC2B67155E2E9000528D3A /* js */,
+				2DFC2B6D155E2E9000528D3A /* media */,
+				2DFC2B6F155E2E9000528D3A /* player.html */,
+				2DFC2B70155E2E9000528D3A /* splash.html */,
+			);
+			name = rocnation.tv;
+			path = ../rocnation.tv;
+			sourceTree = "<group>";
+		};
+		2DFC2B37155E2E9000528D3A /* admin */ = {
+			isa = PBXGroup;
+			children = (
+				2DFC2B38155E2E9000528D3A /* convert_videos.php */,
+				2DFC2B39155E2E9000528D3A /* index.php */,
+				2DFC2B3A155E2E9000528D3A /* upload.php */,
+			);
+			path = admin;
+			sourceTree = "<group>";
+		};
+		2DFC2B3B155E2E9000528D3A /* css */ = {
+			isa = PBXGroup;
+			children = (
+				2DFC2B3C155E2E9000528D3A /* Neuzeit-Grotesk-Light.eot */,
+				2DFC2B3D155E2E9000528D3A /* Neuzeit-Grotesk-Light.otf */,
+				2DFC2B3E155E2E9000528D3A /* Neuzeit-Grotesk.eot */,
+				2DFC2B3F155E2E9000528D3A /* Neuzeit-Grotesk.otf */,
+				2DFC2B40155E2E9000528D3A /* splash.css */,
+				2DFC2B41155E2E9000528D3A /* style.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		2DFC2B42155E2E9000528D3A /* data */ = {
+			isa = PBXGroup;
+			children = (
+				2DFC2B43155E2E9000528D3A /* gen_playlist.php */,
+				2DFC2B44155E2E9000528D3A /* stream_info.php */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		2DFC2B46155E2E9000528D3A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2DFC2B47155E2E9000528D3A /* basil.png */,
+				2DFC2B48155E2E9000528D3A /* blackroc.png */,
+				2DFC2B49155E2E9000528D3A /* close-hover.png */,
+				2DFC2B4A155E2E9000528D3A /* close.png */,
+				2DFC2B4B155E2E9000528D3A /* controls.png */,
+				2DFC2B4C155E2E9000528D3A /* email_icon.png */,
+				2DFC2B4D155E2E9000528D3A /* fb_icon.png */,
+				2DFC2B4E155E2E9000528D3A /* google_icon.png */,
+				2DFC2B4F155E2E9000528D3A /* grey_checked_bg.png */,
+				2DFC2B50155E2E9000528D3A /* history_header.png */,
+				2DFC2B51155E2E9000528D3A /* itunes_icon.png */,
+				2DFC2B52155E2E9000528D3A /* jen.png */,
+				2DFC2B53155E2E9000528D3A /* mad_fm_logo.png */,
+				2DFC2B54155E2E9000528D3A /* madfm_aqua_icon.png */,
+				2DFC2B55155E2E9000528D3A /* madfm_bg.jpg */,
+				2DFC2B56155E2E9000528D3A /* madfm_bg.png */,
+				2DFC2B57155E2E9000528D3A /* madfm_striped.png */,
+				2DFC2B58155E2E9000528D3A /* madtv_bg.png */,
+				2DFC2B59155E2E9000528D3A /* madtv_logo.png */,
+				2DFC2B5A155E2E9000528D3A /* madtv_purple_icon.png */,
+				2DFC2B5B155E2E9000528D3A /* pin_icon.png */,
+				2DFC2B5C155E2E9000528D3A /* play-hover.png */,
+				2DFC2B5D155E2E9000528D3A /* play.png */,
+				2DFC2B5E155E2E9000528D3A /* player_buttons.png */,
+				2DFC2B5F155E2E9000528D3A /* player_expand.png */,
+				2DFC2B60155E2E9000528D3A /* second_gradiant.png */,
+				2DFC2B61155E2E9000528D3A /* splash_bg.jpg */,
+				2DFC2B62155E2E9000528D3A /* top_gradiant.png */,
+				2DFC2B63155E2E9000528D3A /* tumblr_icon.png */,
+				2DFC2B64155E2E9000528D3A /* tw_icon.png */,
+				2DFC2B65155E2E9000528D3A /* young_chris.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		2DFC2B67155E2E9000528D3A /* js */ = {
+			isa = PBXGroup;
+			children = (
+				2DFC2B68155E2E9000528D3A /* genre.js */,
+				2DFC2B69155E2E9000528D3A /* index.js */,
+				2DFC2B6A155E2E9000528D3A /* love.js */,
+				2DFC2B6B155E2E9000528D3A /* splash.js */,
+				2DFC2B6C155E2E9000528D3A /* string.utils.js */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+		2DFC2B6D155E2E9000528D3A /* media */ = {
+			isa = PBXGroup;
+			children = (
+				2DFC2B6E155E2E9000528D3A /* holder.txt */,
+			);
+			path = media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
