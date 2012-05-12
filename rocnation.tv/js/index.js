@@ -27,7 +27,7 @@ function setupVideoPlayer()
     window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,k,v){vars[k] = v;});
     
     if( 'genre' in vars )
-        g_genre = vars['genre'];
+        g_genre = unescape(vars['genre']);
 
     $(window).resize(onWindowResize);
     loadSteamInfo(startVideoInProgress);
