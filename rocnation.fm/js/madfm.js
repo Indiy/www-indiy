@@ -482,7 +482,8 @@ function embedFlash()
 {
     $('#player_container').empty();
     
-    var url = "http://myartistdna.fm:8000/stream_" + g_genre;
+    var host = window.location.hostname;
+    var url = "http://" + host + ":8000/stream_" + g_genre;
     
     var html = "";
     html += '<object id="ffmp3_player" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="190" height="62">';
