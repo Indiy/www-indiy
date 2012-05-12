@@ -26,7 +26,7 @@ function loadGenreList()
     jQuery.ajax(
     {
         type: 'GET',
-        url: "http://www.myartistdna.tv/test/data/stream_info.php",
+        url: "/data/stream_info.php",
         dataType: 'json',
         success: function(data) 
         {

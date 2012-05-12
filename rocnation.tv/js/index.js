@@ -99,7 +99,7 @@ function loadSteamInfo(callback)
     jQuery.ajax(
     {
         type: 'GET',
-        url: "/data/stream_info.php?genre=" + g_genre,
+        url: "/data/stream_info.php?genre=" + escape(g_genre),
         dataType: 'json',
         success: function(data) 
         {
