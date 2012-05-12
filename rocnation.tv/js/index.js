@@ -41,8 +41,24 @@ function setupVideoPlayer()
         $(document).mousemove(showAndTimeoutControls);
     }
     showControls();
+    window.setInterval(scrollTrackTitle,50);
 }
 $(document).ready(setupVideoPlayer);
+
+var g_scrollingRight = true;
+function scrollTrackTitle()
+{
+    var old_pos = $('#title_scroller').scrollLeft();
+    var new_pos = old_pos;
+    if( g_scrollingRight )
+        new_pos--;
+    else
+        new_pos++;
+    $('#title_scroller').scrollLeft(new_pos);
+    if( old_pos == $('#title_scroller').scrollLeft() )
+        g_scrollingRight = !g_scrollingRight;
+}
+
 
 function showControls()
 {
