@@ -83,7 +83,7 @@ function loadSteamInfo(callback)
     jQuery.ajax(
     {
         type: 'GET',
-        url: "http://www.myartistdna.tv/test/data/stream_info.php?genre=" + g_genre,
+        url: "/data/stream_info.php?genre=" + g_genre,
         dataType: 'json',
         success: function(data) 
         {

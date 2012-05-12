@@ -51,7 +51,7 @@
         else
         {
             print "Encoding file...";
-            @system("/usr/local/bin/ffmpeg2theora --videoquality 8 --audioquality 6 -o $path_ogv $path_mp4");
+            @system("/usr/local/bin/ffmpeg2theora --videoquality 8 --audioquality 6 -o \"$path_ogv\" \"$path_mp4\"");
             print "Done\n";
         }
         print "---------------------\n";
