@@ -7,9 +7,9 @@
     else
     {
         $dbhost		=	"localhost";
-        $dbusername	=	"madtv_user";
-        $dbpassword	=	"MyartistDNA!";
-        $dbname		=	"madtv_mysql";
+        $dbusername	=	"rntv_user";
+        $dbpassword	=	"rntv_password";
+        $dbname		=	"rocnationtv";
         
         $connect 	= 	mysql_connect($dbhost, $dbusername, $dbpassword);
         mysql_select_db($dbname,$connect) or die ("Could not select database");

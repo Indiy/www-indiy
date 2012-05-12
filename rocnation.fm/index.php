@@ -1,9 +1,9 @@
 <?php
 
     $dbhost		=	"localhost";
-    $dbusername	=	"madfm_user";
-    $dbpassword	=	"madfm_password";
-    $dbname		=	"madfm";
+    $dbusername	=	"rnfm_user";
+    $dbpassword	=	"rnfm_password";
+    $dbname		=	"rocnationfm";
     
     $connect 	= 	mysql_connect($dbhost, $dbusername, $dbpassword);
     mysql_select_db($dbname,$connect) or die ("Could not select database");
