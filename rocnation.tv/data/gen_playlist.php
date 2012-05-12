@@ -7,15 +7,15 @@
     if( !$genre )
         $genre = 'rock';
 
-    $FILE = "/tmp/madtv_history_data_$genre.json";
+    $FILE = "/tmp/rntv_history_data_$genre.json";
 
-    $root_url = "http://www.myartistdna.tv";
+    $root_url = "http://www.rocnation.tv";
 
     //Production 
     $dbhost		=	"localhost";
-    $dbusername	=	"madtv_user";
-    $dbpassword	=	"MyartistDNA!";
-    $dbname		=	"madtv_mysql";
+    $dbusername	=	"rntv_user";
+    $dbpassword	=	"rntv_password";
+    $dbname		=	"rocnationtv";
     
     $connect 	= 	mysql_connect($dbhost, $dbusername, $dbpassword);
     mysql_select_db($dbname,$connect) or die ("Could not select database");

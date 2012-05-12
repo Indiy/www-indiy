@@ -6,9 +6,9 @@
     header("Access-Control-Allow-Origin: *");
 
     $dbhost		=	"localhost";
-    $dbusername	=	"madtv_user";
-    $dbpassword	=	"MyartistDNA!";
-    $dbname		=	"madtv_mysql";
+    $dbusername	=	"rntv_user";
+    $dbpassword	=	"rntv_password";
+    $dbname		=	"rocnationtv";
     
     $connect 	= 	mysql_connect($dbhost, $dbusername, $dbpassword);
     mysql_select_db($dbname,$connect) or die ("Could not select database");
@@ -26,7 +26,7 @@
 
     foreach( $genre_list as $genre )
     {
-        $file = "/tmp/madtv_history_data_$genre.json";
+        $file = "/tmp/rntv_history_data_$genre.json";
         $json = file_get_contents($file);
         $ret['history'][$genre] = json_decode($json);
     }
