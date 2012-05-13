@@ -218,7 +218,7 @@ function updateHistory()
         if( title in g_loveMap )
             love = "love";
         
-        var img_url = "/media/" + title.replace(/ /g,"_") + ".png";  
+        var img_url = "/images/" + g_genre.replace(/ /g,"_") + "_icon.png";  
         var img = "<img onerror='$(this).hide();' src='" + img_url + "'>";
         var html = "";
         html += "<div class='row'>";
