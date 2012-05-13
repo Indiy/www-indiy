@@ -248,8 +248,8 @@ body {
     border-right: 1px solid #161a20;
 }
 #history .content .row .icon img {
-    max-height: 46px;
-    max-width: 46px;
+    height: 46px;
+    width: 46px;
     margin: auto;
 }
 #history .content .row .title {
