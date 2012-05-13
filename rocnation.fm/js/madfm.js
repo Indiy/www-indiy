@@ -63,6 +63,10 @@ function onReady()
 
     loadLoved();
     window.setInterval(scrollTrackTitle,50);
+    
+    var img = "/images/" + g_genre + ".png";
+    var bg_css = "black url(\"" + img + "\") center center no-repeat";
+    $('.overlay_container').css('background',bg_css);
 }
 $(document).ready(onReady);
 
