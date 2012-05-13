@@ -46,6 +46,8 @@ function changeGenre(new_genre)
     hideGenrePicker();
     g_genre = new_genre;
     $('#history .content').empty();
+    if( g_historyShown )
+        hideHistory();
     if( g_touchDevice )
     {
         updateVideoElementInProgress();
