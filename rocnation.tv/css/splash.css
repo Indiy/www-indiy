@@ -80,7 +80,11 @@ a {
     background: url("../images/second_gradiant.png");
 }
 #play_container .item_container .item.reg {
+<<<<<<< HEAD
     border-top: 1px solid #222;
+=======
+    border-top: 1px solid #1e1e1e;
+>>>>>>> new imgs
 }
 #play_container .item_container .item .icon {
     position: absolute;
