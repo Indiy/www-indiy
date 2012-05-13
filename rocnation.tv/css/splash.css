@@ -80,7 +80,7 @@ a {
     background: url("../images/second_gradiant.png");
 }
 #play_container .item_container .item.reg {
-    border-top: 1px solid #312a46;
+    border-top: 1px solid #222;
 }
 #play_container .item_container .item .icon {
     position: absolute;
@@ -99,7 +99,7 @@ a {
     left: 0px;
     right: 0px;
     height: 49px;
-    background-color: #282828;
+    background-color: #333;
     color: white;
     font-size: 12px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
