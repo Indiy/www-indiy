@@ -86,8 +86,8 @@ function onEditProfileSubmit()
         var location = $('#edit_profile #artist_location').val();
         var gender = $('#edit_profile #artist_location').val();
         var artist_location = $('#edit_profile #artist_location').val();
-        var artist_type = $('#edit_page #artist_type option:selected').val();
-        var artist_gender = $('#edit_page input[@name=artist_gender]:checked').val();
+        var artist_type = $('#edit_profile #artist_type option:selected').val();
+        var artist_gender = $('#edit_profile input[@name=artist_gender]:checked').val();
         
         form_data.append('artistid',g_artistId);
         form_data.append('artist',artist);
