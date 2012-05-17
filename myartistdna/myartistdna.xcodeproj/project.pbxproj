@@ -1552,6 +1552,10 @@
 		2DFCE0EE152A2B8500F9ABEE /* video.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = video.php; sourceTree = "<group>"; };
 		2DFCE0EF152A75B300F9ABEE /* tab.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = tab.php; sourceTree = "<group>"; };
 		2DFCE0F8152BAA2700F9ABEE /* social_config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = social_config.php; sourceTree = "<group>"; };
+		2DFF87E3156572F0008EA18C /* add_user.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = add_user.html; sourceTree = "<group>"; };
+		2DFF87E5156572FB008EA18C /* add_label.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = add_label.html; sourceTree = "<group>"; };
+		2DFF87E615658D8F008EA18C /* user_admin.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = user_admin.php; sourceTree = "<group>"; };
+		2DFF87E715658E15008EA18C /* user_admin.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = user_admin.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -1750,6 +1754,7 @@
 				2D41C02E15309DD900F18000 /* store.php */,
 				2D41C0341530A73A00F18000 /* account_settings.php */,
 				2D41C0361531E94700F18000 /* social_post.php */,
+				2DFF87E615658D8F008EA18C /* user_admin.php */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -3769,6 +3774,8 @@
 				2D41C0321530A66200F18000 /* first_instructions.html */,
 				2D41C0331530A71500F18000 /* edit_account_settings.html */,
 				2D41C0371531E95A00F18000 /* social_post.html */,
+				2DFF87E3156572F0008EA18C /* add_user.html */,
+				2DFF87E5156572FB008EA18C /* add_label.html */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -3800,6 +3807,7 @@
 				2D41C02D153098AC00F18000 /* invite_friends.js */,
 				2D41C02F15309DEB00F18000 /* edit_store.js */,
 				2D41C0351531E93800F18000 /* social_post.js */,
+				2DFF87E715658E15008EA18C /* user_admin.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
