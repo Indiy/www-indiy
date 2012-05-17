@@ -206,7 +206,7 @@ var g_playerUrl = "<?=playerUrl();?>";
 
 <? if( $show_first_instruction ): ?>
 
-$(document).ready(showFirstInstruction);
+$(document).ready(showFirstInstructions);
 
 <? endif; ?>
 
