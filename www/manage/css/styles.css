@@ -1263,6 +1263,9 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     font-size: 12px;
     font-family: sans-serif;
 }
+#popup .right_detail a {
+    text-decoration: underline;
+}
 #popup .need_help {
     font-size: 12px;
     font-family: sans-serif;
