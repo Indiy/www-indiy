@@ -44,6 +44,7 @@
 		$appid = $_POST["appid"];
         $custom_domain = $_POST["custom_domain"];
         $user_tags = $_POST["tags"];
+        $artist_type = $_POST["artist_type"];
 		
 		if(!empty($_FILES["logo"]["name"]))
         {
@@ -66,10 +67,23 @@
 			$logo = $old_logo;
 		}
 		
-		$tables = "artist|email|gender|languages|location|music_likes|url|website|appid|IsArtist|logo|custom_domain|tags";
-		$values = "{$artist}|{$email}|{$gender}|{$languages}|{$location}|{$music_likes}|{$url}|{$website}|{$appid}|{$IsArtist}|{$logo}|{$custom_domain}|$user_tags";
+        $values = array("artist" => $artist,
+                        "email" => $email,
+                        "gender" => $gender,
+                        "languages" => $languages,
+                        "location" => $location,
+                        "music_likes" => $music_likes,
+                        "url" => $url,
+                        "website" => $website,
+                        "appid" => $appid,
+                        "IsArtist" => $IsArtist,
+                        "logo" => $logo,
+                        "custom_domain" => $custom_domain,
+                        "user_tags" => $user_tags,
+                        "artist_type" => $artist_type,
+                        );
 		
-        update("mydna_musicplayer",$tables,$values,"id",$artist_id);
+        mysql_update("mydna_musicplayer",$values,"id",$artist_id);
 		
 		$postedValues['imageSource'] = "../artists/images/".$artist_logo;
 		$postedValues['success'] = "1";

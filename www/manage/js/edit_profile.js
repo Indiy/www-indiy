@@ -8,6 +8,9 @@ function showEditProfile()
     $('#edit_profile #artist').val(g_artistData.artist);
     $('#edit_profile #email').val(g_artistData.email);
     $('#edit_profile #url').val(g_artistData.url);
+    $('#edit_profile #artist_location').val(g_artistData.location);
+    $('#edit_profile #artist_type').val(g_artistData.artist_type);
+    $('#edit_profile input[name=artist_gender]:eq(' + g_artistData.gender + ')').attr('checked','checked');
     
     if( g_artistData.logo )
     {
@@ -80,6 +83,11 @@ function onEditProfileSubmit()
         var url = $('#edit_profile #url').val();
         var custom_domain = $('#edit_profile #custom_domain').val();
         var tags = $('#edit_profile #user_tags').val();
+        var location = $('#edit_profile #artist_location').val();
+        var gender = $('#edit_profile #artist_location').val();
+        var artist_location = $('#edit_profile #artist_location').val();
+        var artist_type = $('#edit_page #artist_type option:selected').val();
+        var artist_gender = $('#edit_page input[@name=artist_gender]:checked').val();
         
         form_data.append('artistid',g_artistId);
         form_data.append('artist',artist);
@@ -87,6 +95,9 @@ function onEditProfileSubmit()
         form_data.append('url',url);
         form_data.append('custom_domain',custom_domain);
         form_data.append('tags',tags);
+        form_data.append('artist_location',artist_location);
+        form_data.append('artist_type',artist_type);
+        form_data.append('artist_gender',artist_gender);
         
         var logo = $('#edit_profile #logo')[0];
         if( logo.files && logo.files.length > 0 )
