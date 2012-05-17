@@ -228,32 +228,32 @@ $(document).ready(showFirstInstructions);
             
             <h6>Manage Profile</h6>
             <ul>
-                <li><a onclick='showEditProfile();'>Edit Profile</a></li>
-                <li><a onclick='showSocialConfigPopup();'>Social Connections</a></li>
-                <li><a onclick='showInvitePopup();'>Invite Friends</a></li>
-                <li><a id='view_site_anchor' class='view_site' href="<?=$artist_url;?>" target="_blank">View Site</a></li>
+                <li><a onclick='showEditProfile();' title='Edit basic information about your profile'>Edit Profile</a></li>
+                <li><a onclick='showSocialConfigPopup();' title='Add Facebook and Twitter account information'>Social Connections</a></li>
+                <li><a onclick='showInvitePopup();' title='Invite your friends to MyArtistDNA'>Invite Friends</a></li>
+                <li><a id='view_site_anchor' class='view_site' href="<?=$artist_url;?>" target="_blank" title='View your site'>View Site</a></li>
             </ul>
             <h6>Platform</h6>
             <ul>
-                <li><a onclick='showPagePopup(false);'>Add Audio + Photo</a></li>
-                <li><a onclick='showVideoPopup(false);'>Add Video</a></li>
-                <li id='add_tab_list_item'><a onclick='showTabPopup(false);'>Add Tab</a></li>
-                <li><a href="stats.php?userId=<?=$artistID;?>">View Analytics</a></li>
-                <li><a onclick='showFanConnections();'>Fan Connections</a></li>
+                <li><a onclick='showPagePopup(false);' title='Add a page to your site'>Add Audio + Photo</a></li>
+                <li><a onclick='showVideoPopup(false);' title='Add a video to your site'>Add Video</a></li>
+                <li id='add_tab_list_item'><a onclick='showTabPopup(false);' title='Add a tab to your site'>Add Tab</a></li>
+                <li><a href="stats.php?userId=<?=$artistID;?>" title='View website analytics for you site'>View Analytics</a></li>
+                <li><a onclick='showFanConnections();' title='Get a list of Fans of your site'>Fan Connections</a></li>
             </ul>
             
             <h6>Store</h6>
             <ul>
-                <li><a onclick='showStoreSettings();'>Edit Settings</a></li>
+                <li><a onclick='showStoreSettings();' title='Edit Store Settings'>Edit Settings</a></li>
                 <? if( strlen($paypalEmail) == 0 ): ?>
-                    <li><a onclick='showStoreSettings();'>Add Product</a></li>
+                    <li><a onclick='showStoreSettings();' title='Add a product to your store'>Add Product</a></li>
                 <? else: ?>
-                    <li><a onclick='showProductPopup(false);'>Add Product</a></li>
+                    <li><a onclick='showProductPopup(false);' title='Add a product to your store'>Add Product</a></li>
                 <? endif ?>
             </ul>
             <h6>Misc</h6>
             <ul>
-                <li><a onclick='deleteAccount(<?=$artistID;?>);'>Delete Account</a></li>
+                <li><a onclick='deleteAccount(<?=$artistID;?>);' title='Delete your account'>Delete Account</a></li>
             </ul>
             <? if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' ): ?>
                 <h6>Super Admin</h6>
@@ -269,7 +269,7 @@ $(document).ready(showFirstInstructions);
         	<div class="heading">
                 <h5>PAGES</h5>
                 <div class="buttonadd">
-                    <a onclick='showPagePopup(false);'>Add Audio + Photo</a>
+                    <a onclick='showPagePopup(false);' title='Add a page to your site'>Add Audio + Photo</a>
                 </div>
             </div>
             <div class="list" style='display: none;'>
@@ -291,9 +291,9 @@ $(document).ready(showFirstInstructions);
             <div class="heading">
             <h5>Store</h5>
             <? if( strlen($paypalEmail) == 0 ): ?>
-                <div class="buttonadd"><a onclick='showStoreSettings();'>Store Settings</a></div>
+                <div class="buttonadd"><a onclick='showStoreSettings();' title='Edit your store settings'>Store Settings</a></div>
             <? else: ?>
-                <div class="buttonadd"><a onclick='showProductPopup(false);'>Add Product</a></div>
+                <div class="buttonadd"><a onclick='showProductPopup(false);' title='Add a product to your store'>Add Product</a></div>
             <? endif ?>
 
             </div>
@@ -307,7 +307,7 @@ $(document).ready(showFirstInstructions);
         <div class="videolist">
             <div class="heading">
             <h5>Videos</h5>
-            <div class="buttonadd"><a onclick='showVideoPopup(false);'>Add Video</a></div>
+            <div class="buttonadd"><a onclick='showVideoPopup(false);' title='Add a video to your site'>Add Video</a></div>
             </div>
         
             <div class="list" style='display: none;'>
@@ -320,7 +320,7 @@ $(document).ready(showFirstInstructions);
             <div class="heading">
                 <h5>TABS</h5>
                 <div class="buttonadd">
-                    <a id='add_tab_link' onclick='showTabPopup(false);'>Add Tab</a>
+                    <a id='add_tab_link' onclick='showTabPopup(false);' title='Add a tab to your site'>Add Tab</a>
                 </div>
         	</div> 
             
