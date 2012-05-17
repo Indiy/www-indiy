@@ -13,7 +13,7 @@
         <div class='right_title_detail'>
             <div class='right_title'>Make a name for yourself</div>
             <div class='right_detail'>
-            Click on Edit Profile to select your URL and email address.
+            Click on <a onclick='showEditProfile();'>Edit Profile</a> to select your URL and email address.
             </div>
         </div>
     </div>
