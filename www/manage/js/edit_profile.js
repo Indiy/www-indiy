@@ -10,7 +10,10 @@ function showEditProfile()
     $('#edit_profile #url').val(g_artistData.url);
     $('#edit_profile #artist_location').val(g_artistData.location);
     $('#edit_profile #artist_type').val(g_artistData.artist_type);
-    $('#edit_profile input[name=artist_gender]:eq(' + g_artistData.gender + ')').attr('checked','checked');
+    if( g_artistData.gender == 'male' )
+        $('#edit_profile input[name=artist_gender]:eq(0)').attr('checked','checked');
+    else
+        $('#edit_profile input[name=artist_gender]:eq(1)').attr('checked','checked');
     
     if( g_artistData.logo )
     {
