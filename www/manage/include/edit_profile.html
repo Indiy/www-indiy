@@ -1,4 +1,29 @@
 
+<?php
+
+$artist_type_list = array(
+"Actor",
+"Art Department",
+"Athlete",
+"Author",
+"Casting",
+"Choreographer",
+"Cinematographer",
+"Comedian",
+"Costume & Wardrobe",
+"Creative Professional",
+"DJ",
+"Dancer",
+"Director",
+"Editor, Film/Video",
+"Editor, Sound",
+"Fashion",
+"Model",
+"Musician",
+);
+
+?>
+
 <div id="edit_profile" class="popup_wrapper">
 <div id="popup">
     <div class='top_bar'>
@@ -36,6 +61,32 @@
             </div>
             <input id='logo' type="file" name="logo" class='right_file' onchange='onImageChange(this);' />
         </div>
+
+        <div class='input_container'>
+            <div class='left_label'>Location</div>
+            <input id='artist_location' type="text" class="right_text" value="" name="location">
+        </div>
+            
+        <div class='input_container'>
+            <div class='left_label'>Sex</div>
+            <div id='artist_sex' class='right_box'>
+                <input type="radio" name="sex" value="1" class="radio" /> Male
+                <input type="radio" name="sex" value="0" class="radio" /> Female
+            </div>
+        </div>
+
+        <div class='input_container'>
+            <div class='left_label'>Artist Type</div>
+            <select id='artist_type' name="artist_type" class='right_drop'>
+                <?php
+                    foreach( $artist_type_list as $artist_type )
+                    {
+                        echo "<option value='$artist_type'>$artist_type</option>\n";
+                    }
+                ?>
+            </select>
+        </div>
+
         <div class='input_container' style='height: 40px;'>
             <div class='left_label'>Password</div>
             <div class='right_box'>
