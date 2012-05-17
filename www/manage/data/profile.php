@@ -43,7 +43,7 @@
 		$website = $_POST["website"];
 		$appid = $_POST["appid"];
         $custom_domain = $_POST["custom_domain"];
-        $user_tags = $_POST["tags"];
+        $tags = $_POST["tags"];
         $artist_type = $_POST["artist_type"];
 		
 		if(!empty($_FILES["logo"]["name"]))
@@ -79,7 +79,7 @@
                         "IsArtist" => $IsArtist,
                         "logo" => $logo,
                         "custom_domain" => $custom_domain,
-                        "user_tags" => $user_tags,
+                        "tags" => $tags,
                         "artist_type" => $artist_type,
                         );
 		
