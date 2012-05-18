@@ -72,15 +72,15 @@
         {
             ?>
                 <li><a class="active" href="dashboard.php">DASHBOARD</a></li>
-                <li><a onclick='showAddArtist();'>ADD ARTIST</a></li>
-                <li class="nodivider"><a onclick='showAddLabel();'>ADD LABEL</a></li>
+                <li><a onclick="showAddArtist();">ADD ARTIST</a></li>
+                <li class="nodivider"><a onclick="showAddLabel();">ADD LABEL</a></li>
             <?php
         }
         else if( $_SESSION['sess_userType'] == 'LABEL' )
         {
             ?>
                 <li><a class="active" href="dashboard.php">DASHBOARD</a></li>
-                <li class="nodivider"><a onclick='showAddArtist();'>ADD ARTIST</a></li>
+                <li class="nodivider"><a onclick="showAddArtist();">ADD ARTIST</a></li>
             <?php
         }
          else
@@ -107,15 +107,15 @@
 </header>
 </section><!-- header -->
 
+<?php
+
+    if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' ) 
+    {
+        include_once 'include/add_user.html';
+        include_once 'include/add_label.html';
+    }
+    else if( $_SESSION['sess_userType'] == 'LABEL' )
+    {
+        include_once 'include/add_user.html';
+    }
 ?>
-
-if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' ) 
-{
-    include_once 'include/add_user.html';
-    include_once 'include/add_label.html';
-}
-else if( $_SESSION['sess_userType'] == 'LABEL' )
-{
-    include_once 'include/add_user.html';
-}
-
