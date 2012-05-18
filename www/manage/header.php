@@ -119,4 +119,6 @@
     {
         include_once 'include/add_user.html';
     }
+
+    include_once 'include/popup_messages2.html';
 ?>
