@@ -59,7 +59,19 @@
             header("HTTP/1.0 403 Forbidden");
             exit();
         }
-
+        
+        $name = $_REQUEST['name'];
+        $email = $_REQUEST['email'];
+        $password = md5($_REQUEST['password']);
+        
+        $tables = "name|email|password";
+		$values = "{$name}|{$email}|{$password}";
+        insert('myartist_users',$tables,$values);
+        
+        $postedValues['success'] = "1";
+		$postedValues['postedValues'] = $_REQUEST;
+		echo json_encode($postedValues);
+		exit();
     }
 
 ?>

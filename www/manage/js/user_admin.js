@@ -1,4 +1,13 @@
 
+function showAddArtist()
+{
+    showPopup('#add_user');
+}
+function showAddLabel()
+{
+    showPopup('#add_label');
+}
+
 function onAddUserSubmit()
 {
     showProgress("Adding user...");
