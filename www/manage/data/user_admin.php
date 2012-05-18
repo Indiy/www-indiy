@@ -16,7 +16,7 @@
     }
     session_write_close();
     
-    if( $_REQUEST['add_artist'] )
+    if( $_REQUEST['add_user'] )
     {
         do_add_user();
     }
