@@ -12,10 +12,10 @@ function onAddUserSubmit()
 {
     showProgress("Adding user...");
 
-    var artist = $('#artist').val();
-    var url = $('#url').val();
-    var email = $('#email').val();
-    var password = $('#password').val();
+    var artist = $('#add_user #artist').val();
+    var url = $('#add_user #url').val();
+    var email = $('#add_user #email').val();
+    var password = $('#add_user #password').val();
     
     var post_url = "/manage/data/user_admin.php?";
     post_url += "&add_user=1";
@@ -44,9 +44,9 @@ function onAddLabelSubmit()
 {
     showProgress("Adding label...");
 
-    var name = $('#name').val();
-    var email = $('#email').val();
-    var password = $('#password').val();
+    var name = $('#add_label #name').val();
+    var email = $('#add_label #email').val();
+    var password = $('#add_label #password').val();
     
     var post_url = "/manage/data/user_admin.php?";
     post_url += "&add_label=1";
