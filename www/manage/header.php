@@ -42,6 +42,8 @@
     <script src="js/edit_store.js" type="text/javascript"></script>
     <script src="js/social_post.js" type="text/javascript"></script>
 
+    <script src="js/user_admin.js" type="text/javascript"></script>
+
 </head>
 <body>
 <div id='mask' style='display: none;'></div>
@@ -68,14 +70,18 @@
         <?php 
         if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' ) 
         {
-            echo '<li><a class="active" href="dashboard.php">DASHBOARD</a></li>';
-            echo '<li><a href="add_user.php" rel="facebox[.bolder]">ADD ARTIST</a></li>';
-            echo '<li class="nodivider"><a href="add_label.php" rel="facebox[.bolder]">ADD LABEL</a></li>';
+            ?>
+                <li><a class="active" href="dashboard.php">DASHBOARD</a></li>
+                <li><a onclick='showAddArtist();'>ADD ARTIST</a></li>
+                <li class="nodivider"><a onclick='showAddLabel();'>ADD LABEL</a></li>
+            <?php
         }
         else if( $_SESSION['sess_userType'] == 'LABEL' )
         {
-            echo '<li><a class="active" href="dashboard.php">DASHBOARD</a></li>';
-            echo '<li class="nodivider"><a href="add_user.php" rel="facebox[.bolder]">ADD ARTIST</a></li>';
+            ?>
+                <li><a class="active" href="dashboard.php">DASHBOARD</a></li>
+                <li class="nodivider"><a onclick='showAddArtist();'>ADD ARTIST</a></li>
+            <?php
         }
          else
          {
@@ -100,3 +106,16 @@
     </nav>
 </header>
 </section><!-- header -->
+
+?>
+
+if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' ) 
+{
+    include_once 'include/add_user.html';
+    include_once 'include/add_label.html';
+}
+else if( $_SESSION['sess_userType'] == 'LABEL' )
+{
+    include_once 'include/add_user.html';
+}
+
