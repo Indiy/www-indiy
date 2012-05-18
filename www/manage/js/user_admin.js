@@ -8,6 +8,11 @@ function showAddLabel()
     showPopup('#add_label');
 }
 
+function myClose()
+{
+    window.location.reload();
+}
+
 function onAddUserSubmit()
 {
     showProgress("Adding user...");
@@ -31,7 +36,7 @@ function onAddUserSubmit()
         success: function(data) 
         {
             showSuccess("User added.");
-            g_onCloseCallback = window.location.reload;
+            g_onCloseCallback = myClose;
         },
         error: function()
         {
