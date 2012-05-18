@@ -185,7 +185,6 @@
     if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' )
         include_once 'include/edit_account_settings.html';
     
-    include_once 'include/popup_messages2.html';
 ?>
 
 <script src="js/artist_management.js" type="text/javascript"></script>
