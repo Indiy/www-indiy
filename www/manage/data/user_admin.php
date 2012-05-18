@@ -24,6 +24,12 @@
     {
         do_add_label();
     }
+    else
+    {
+        header("HTTP/1.0 400 Bad Request");
+        print "Unknown request\n";
+        var_dump($_REQUEST);
+    }
     
     function do_add_user()
     {
