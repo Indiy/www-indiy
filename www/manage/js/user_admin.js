@@ -31,6 +31,7 @@ function onAddUserSubmit()
         success: function(data) 
         {
             showSuccess("User added.");
+            g_onCloseCallback = window.location.reload;
         },
         error: function()
         {
