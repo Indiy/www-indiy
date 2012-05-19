@@ -227,6 +227,13 @@ else
     
     $page_url = "http://" . $_SERVER['HTTP_HOST'];
     
+    $page_viewer_email = '';
+    if( isset($_COOKIE['PAGE_VIEWER_EMAIL']) )
+    {
+        $page_viewer_email = $_COOKIE['PAGE_VIEWER_EMAIL'];
+    }
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -262,6 +269,7 @@ var g_songPlayList = <?=$music_list_json;?>;
 var g_currentSongId = 0;
 var g_pageList = <?=$pages_list_json;?>;
 var g_productList = <?=$product_list_json;?>;
+var g_pageViewerEmail = "<?=$page_viewer_email;?>";
 
 </script>
 
@@ -368,7 +376,7 @@ if( 'video_id' in g_anchor_map )
             echo $song_name;
             echo "</div>";
             echo "<div class='song_free'>";
-            echo "<a href='/download.php?artist=$artist_id&id=$song_id' title='Free Song Download'>FREE</a>";
+            echo "<a onclick='freeSongDownload($i);' title='Free Song Download'>FREE</a>";
             echo "</div>";
         }
         elseif( $song['amazon'] || $song['itunes'] || ( $song['product_id'] && $store_enabled ) )
@@ -602,6 +610,20 @@ if( 'video_id' in g_anchor_map )
                         <img id='page_image'/>
                     </div>
                     <div id='page_content' class='page_content'></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id='email_entry_wrapper'>
+            <div id='email_entry_popup'>
+                <div class='close' onclick='hideEmailEntry();'></div>
+                <div class='description'>Please enter your email address to download this file</div>
+                <div class='label'>Email:</div>
+                <div class='input_container'>
+                    <input>
+                </div>
+                <div class='submit_container'>
+                    <button onclick='submitEmailEntry();'>submit</button>
                 </div>
             </div>
         </div>
@@ -845,7 +867,7 @@ if( 'video_id' in g_anchor_map )
                 </div>
                 <div id='buynow_free' class='buynow_free'>
                     <div>
-                        <a title='Download for Free'>Free Download</a>
+                        <a onclick='freeSongDownload(false);' title='Download for Free'>Free Download</a>
                     </div>
                 </div>
                 <div class='expand_box'>
