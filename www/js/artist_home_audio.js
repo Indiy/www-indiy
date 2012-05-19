@@ -392,7 +392,6 @@ function playListChange( index )
     var mystore_product_id = song.product_id;
     if( song.download )
     {
-        $('#buynow_free a').attr("href",'/download.php?artist=' + g_artistId + '&id=' + song.id);
         $('#buynow_free').show();
         $('#buynow_itunes').hide();
         $('#buynow_amazon').hide();
@@ -630,4 +629,47 @@ function songBuyPopup(i)
     $('#song_buy_popup').css('left',left);
     $('#song_buy_popup').toggle();
 }
+
+function hideEmailEntry()
+{
+    $('#email_entry_wrapper').fadeIn();
+}
+
+function submitEmailEntry()
+{
+    var email = $('#email_entry_popup input').val();
+    
+    if( email.length > 0 && email.match(EMAIL_REGEX) )
+    {
+        g_pageViewerEmail = email;
+        freeSongDownload(g_songIndexMidDownload);
+    }
+    else
+    {
+        window.alert("Please enter your email address.");
+    }
+}
+
+var g_songIndexMidDownload = false;
+
+function freeSongDownload(index)
+{
+    if( index === false )
+        index = g_currentSongIndex;
+    
+    if( g_pageViewerEmail.length == 0 )
+    {
+        g_songIndexMidDownload = index;
+        $('#email_entry_popup input').empty();
+        $('#email_entry_wrapper').fadeIn();
+    }
+    else
+    {
+        var song_id = g_songPlayList[index].id;
+        var email = escape(g_pageViewerEmail);
+        var url = "/download.php?artist={0}&id={1}&email={2}".format(g_artistId,song_id,email);
+        window.location.href = url;
+    }
+}
+
 
