@@ -2460,7 +2460,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     }
 }
 
-#email_entry_wrapper {
+#download_email_wrapper {
     display: none;
     position: absolute;
     right: 50%;
@@ -2468,7 +2468,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     max-width: 100%;
     z-index: 0;
 }
-#email_entry_popup {
+#download_email_popup {
     position: relative;
     top: 130px;
     left: 50%;
@@ -2485,7 +2485,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     z-index: 30;
     behavior: url(/css/PIE.htc);
 }
-#email_entry_popup .close {
+#download_email_popup .close {
     position: absolute;
     right: -10px;
     top: -10px;
@@ -2495,25 +2495,25 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     cursor: pointer;
     z-index: 31;
 }
-#email_entry_popup .close:hover {
+#download_email_popup .close:hover {
     background: transparent url('/images/video_close.png') 0px -32px no-repeat;
 }
-#email_entry_popup .description {
+#download_email_popup .description {
     padding-bottom: 20px;
     color: white;
     font-size: 14px;
     font-family: Helvetica, sans-serif;
     font-weight: normal;
 }
-#email_entry_popup .submit_container {
+#download_email_popup .submit_container {
     width: 100%;
     text-align: center;
 }
-#email_entry_popup .submit_container button {
+#download_email_popup .submit_container button {
     max-width: 880px;
 }
 
-#email_entry_popup .submit_container button {
+#download_email_popup .submit_container button {
     float: left;
     margin-left: 80px;
     padding-left: 47px;
@@ -2531,14 +2531,14 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background-color: green;
     behavior: url(/css/PIE.htc);
 }
-#email_entry_popup .submit_container button:hover {
+#download_email_popup .submit_container button:hover {
     background-color: #0a0;
 }
 
-#email_entry_popup .label_input {
+#download_email_popup .label_input {
     margin-bottom: 12px;
 }
-#email_entry_popup .label {
+#download_email_popup .label {
     float: left;
     width: 70px;
     padding-right: 10px;
@@ -2549,10 +2549,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-family: Helvetica, sans-serif;
     font-weight: lighter;
 }
-#email_entry_popup .input_container {
+#download_email_popup .input_container {
     float: left;
 }
-#email_entry_popup .input_container input {
+#download_email_popup .input_container input {
     width: 180px;
     height: 20px;
     padding-top: 2px;
@@ -2570,6 +2570,117 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 }
 
 
+#viewer_email_wrapper {
+    display: none;
+    position: absolute;
+    right: 50%;
+    max-height: 100%;
+    max-width: 100%;
+    z-index: 0;
+}
+#viewer_email_popup {
+    position: relative;
+    top: 130px;
+    left: 50%;
+    width: 300px;
+    height: 128px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.7);
+    border-radius: 20px;
+    border: 1px solid #555;
+    z-index: 30;
+    behavior: url(/css/PIE.htc);
+}
+#viewer_email_popup .close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    height: 28px;
+    width: 28px;
+    background: transparent url('/images/video_close.png') 0px 0px no-repeat;
+    cursor: pointer;
+    z-index: 31;
+}
+#viewer_email_popup .close:hover {
+    background: transparent url('/images/video_close.png') 0px -32px no-repeat;
+}
+#viewer_email_popup .description {
+    padding-bottom: 20px;
+    color: white;
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+}
+#viewer_email_popup .submit_container {
+    width: 100%;
+    text-align: center;
+}
+#viewer_email_popup .submit_container button {
+    max-width: 880px;
+}
+
+#viewer_email_popup .submit_container button {
+    float: left;
+    margin-left: 80px;
+    padding-left: 47px;
+    padding-right: 47px;
+    padding-top: 6px;
+    padding-bottom: 3px;
+    color: white;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+    border-radius: 4px;
+    border: 1px solid #333;
+    box-shadow: 1px 1px 7px black inset;
+    text-shadow: 1px 1px black;
+    background-color: green;
+    behavior: url(/css/PIE.htc);
+}
+#viewer_email_popup .submit_container button:hover {
+    background-color: #0a0;
+}
+
+#viewer_email_popup .label_input {
+    margin-bottom: 12px;
+}
+#viewer_email_popup .label {
+    float: left;
+    width: 70px;
+    padding-right: 10px;
+    padding-top: 2px;
+    text-align: right;
+    color: white;
+    font-size: 11px;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+}
+#viewer_email_popup .input_container {
+    float: left;
+}
+#viewer_email_popup .input_container input {
+    width: 180px;
+    height: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 4px;
+    padding-left: 4px;
+    margin-bottom: 12px;
+    color: #EEE;
+    font-size: 11px;
+    background-color: #444;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 1px 1px 8px -3px black inset;
+    behavior: url(/css/PIE.htc);
+}
+#viewer_email_popup .thanks {
+    display: none;
+}
 
 
 

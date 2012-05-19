@@ -1,6 +1,7 @@
 
 
-g_playListShown = false;
+var g_playListShown = false;
+var g_songsPlayed = 0;
 
 var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
 
@@ -361,6 +362,10 @@ function updateListens(song_id,index)
 
 function playListChange( index ) 
 {
+    g_songsPlayed++;
+    if( g_songsPlayed == 3 )
+        maybeAskForEmail();
+
     g_currentSongIndex = index;
     var song = g_songPlayList[index];
     $("#playlist .song_list_item").removeClass("current");
@@ -630,20 +635,20 @@ function songBuyPopup(i)
     $('#song_buy_popup').toggle();
 }
 
-function hideEmailEntry()
+function hideDownloadEmailPopup()
 {
-    $('#email_entry_wrapper').fadeOut();
+    $('#download_email_popup').fadeOut();
 }
 
-function submitEmailEntry()
+function submitDownloadEmailPopup()
 {
-    var email = $('#email_entry_popup input').val();
+    var email = $('#download_email_popup input').val();
     
     if( email.length > 0 && email.match(EMAIL_REGEX) )
     {
         g_pageViewerEmail = email;
         freeSongDownload(g_songIndexMidDownload);
-        hideEmailEntry();
+        hideDownloadEmailPopup();
     }
     else
     {
@@ -661,8 +666,8 @@ function freeSongDownload(index)
     if( g_pageViewerEmail.length == 0 )
     {
         g_songIndexMidDownload = index;
-        $('#email_entry_popup input').empty();
-        $('#email_entry_wrapper').fadeIn();
+        $('#download_email_popup input').empty();
+        $('#download_email_wrapper').fadeIn();
     }
     else
     {
@@ -671,6 +676,52 @@ function freeSongDownload(index)
         var url = "/download.php?artist={0}&id={1}&email={2}".format(g_artistId,song_id,email);
         window.location.href = url;
     }
+}
+
+function hideViewerEmailPopup()
+{
+    $('#viewer_email_wrapper').fadeOut();
+}
+
+function maybeAskForEmail()
+{
+    if( g_pageViewerEmail.length == 0 )
+    {
+        $('#viewer_email_popup input').empty();
+        $('#viewer_email_wrapper').fadeIn();
+    }
+}
+
+function submitViewerEmailPopup()
+{
+    var email = $('#viewer_email_popup input').val();
+    
+    if( email.length == 0 || !email.match(EMAIL_REGEX) )
+    {
+        window.alert("Please enter your email address");
+        return;
+    }
+    $('#viewer_email_popup .request_form').hide();
+    $('#viewer_email_popup .thanks').show();
+    
+    var args = {
+        'email': email,
+        'artist_id': g_artistId
+    };
+    
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: '/data/viewer_data.php',
+        data: args,
+        success: function(data) 
+        {
+            
+        },
+        error: function()
+        {
+        }
+    });
 }
 
 

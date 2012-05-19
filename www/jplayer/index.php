@@ -614,9 +614,9 @@ if( 'video_id' in g_anchor_map )
             </div>
         </div>
         
-        <div id='email_entry_wrapper'>
-            <div id='email_entry_popup'>
-                <div class='close' onclick='hideEmailEntry();'></div>
+        <div id='download_email_wrapper'>
+            <div id='download_email_popup'>
+                <div class='close' onclick='hideDownloadEmailPopup();'></div>
                 <div class='description'>Please enter your email address to download this file:</div>
                 <div class='label_input'>
                     <div class='label'>Email:</div>
@@ -625,10 +625,40 @@ if( 'video_id' in g_anchor_map )
                     </div>
                 </div>
                 <div class='submit_container'>
-                    <button onclick='submitEmailEntry();'>submit</button>
+                    <button onclick='submitDownloadEmailPopup();'>submit</button>
                 </div>
             </div>
         </div>
+
+        <div id='viewer_email_wrapper'>
+            <div id='viewer_email_popup'>
+                <div class='close' onclick='hideViewerEmailPopup();'></div>
+                <div class='request_form'>
+                    <div class='description'>Would you like to recieve updates from this artist?</div>
+                    <div class='label_input'>
+                        <div class='label'>Email:</div>
+                        <div class='input_container'>
+                            <input>
+                        </div>
+                    </div>
+                    <div class='submit_nothanks'>
+                        <div class='submit_container'>
+                            <button onclick='submitViewerEmailPopup();'>submit</button>
+                        </div>
+                        <div class='nothanks_container'>
+                            <button onclick='hideViewerEmailPopup();'>no thanks</button>
+                        </div>
+                    </div>
+                </div>
+                <div class='thanks'>
+                    <div class='description'>Thank you for your email address.</div>
+                    <div class='close_container'>
+                        <button onclick='hideViewerEmailPopup();'>close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         
         <? if( $store_enabled ): ?>
             <div id='store_wrapper'>
