@@ -2473,7 +2473,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     top: 130px;
     left: 50%;
     width: 300px;
-    height: 200px;
+    height: 128px;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 20px;
@@ -2499,9 +2499,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background: transparent url('/images/video_close.png') 0px -32px no-repeat;
 }
 #email_entry_popup .description {
-    padding-bottom: 12px;
+    padding-bottom: 20px;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
     font-family: Helvetica, sans-serif;
     font-weight: normal;
 }
@@ -2544,7 +2544,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     padding-right: 10px;
     padding-top: 2px;
     text-align: right;
-    color: #EEE;
+    color: white;
     font-size: 11px;
     font-family: Helvetica, sans-serif;
     font-weight: lighter;
