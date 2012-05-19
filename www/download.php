@@ -9,7 +9,7 @@
     
     if( $email )
     {
-        setcookie('LOGIN_EMAIL',$email,time() + 365*24*60*60,'/');
+        setcookie('PAGE_VIEWER_EMAIL',$email,time() + 365*24*60*60,'/');
     }
     
 	trackDownloads($getid);
