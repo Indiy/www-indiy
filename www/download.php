@@ -5,6 +5,13 @@
 
 	$artist = $_GET['artist'];
 	$getid = $_GET['id'];
+    $email = $_GET['email'];
+    
+    if( $email )
+    {
+        setcookie('LOGIN_EMAIL',$email,time() + 365*24*60*60,'/');
+    }
+    
 	trackDownloads($getid);
 	$music = mf(mq("select * from `[p]musicplayer_audio` where `artistid`='{$artist}' and `id`='{$getid}'"));
 	$filename = 'artists/audio/'.$music["audio"];
