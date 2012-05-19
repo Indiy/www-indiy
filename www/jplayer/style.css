@@ -2468,7 +2468,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     max-width: 100%;
     z-index: 0;
 }
-#email_entry {
+#email_entry_popup {
     position: relative;
     top: 130px;
     left: 50%;
@@ -2485,7 +2485,7 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     z-index: 30;
     behavior: url(/css/PIE.htc);
 }
-#email_entry .close {
+#email_entry_popup .close {
     position: absolute;
     right: -10px;
     top: -10px;
@@ -2495,25 +2495,25 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     cursor: pointer;
     z-index: 31;
 }
-#email_entry .close:hover {
+#email_entry_popup .close:hover {
     background: transparent url('/images/video_close.png') 0px -32px no-repeat;
 }
-#email_entry .description {
+#email_entry_popup .description {
     padding-bottom: 12px;
     color: white;
     font-size: 12px;
     font-family: Helvetica, sans-serif;
     font-weight: normal;
 }
-#email_entry .submit_container {
+#email_entry_popup .submit_container {
     width: 100%;
     text-align: center;
 }
-#email_entry .submit_container button {
+#email_entry_popup .submit_container button {
     max-width: 880px;
 }
 
-#email_entry .submit_container button {
+#email_entry_popup .submit_container button {
     float: left;
     margin-left: 80px;
     padding-left: 47px;
@@ -2531,14 +2531,14 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background-color: green;
     behavior: url(/css/PIE.htc);
 }
-#email_entry .submit_container button:hover {
+#email_entry_popup .submit_container button:hover {
     background-color: #0a0;
 }
 
-#email_entry .label_input {
+#email_entry_popup .label_input {
     margin-bottom: 12px;
 }
-#email_entry .label {
+#email_entry_popup .label {
     float: left;
     width: 70px;
     padding-right: 10px;
@@ -2549,10 +2549,10 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     font-family: Helvetica, sans-serif;
     font-weight: lighter;
 }
-#email_entry .input_container {
+#email_entry_popup .input_container {
     float: left;
 }
-#email_entry .input_container input {
+#email_entry_popup .input_container input {
     width: 180px;
     height: 20px;
     padding-top: 2px;
