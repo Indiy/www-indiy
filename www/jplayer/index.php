@@ -617,7 +617,7 @@ if( 'video_id' in g_anchor_map )
         <div id='email_entry_wrapper'>
             <div id='email_entry_popup'>
                 <div class='close' onclick='hideEmailEntry();'></div>
-                <div class='description'>Please enter your email address to download this file</div>
+                <div class='description'>Please enter your email address to download this file:</div>
                 <div class='label_input'>
                     <div class='label'>Email:</div>
                     <div class='input_container'>
