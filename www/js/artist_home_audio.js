@@ -632,7 +632,7 @@ function songBuyPopup(i)
 
 function hideEmailEntry()
 {
-    $('#email_entry_wrapper').fadeIn();
+    $('#email_entry_wrapper').fadeOut();
 }
 
 function submitEmailEntry()
@@ -643,6 +643,7 @@ function submitEmailEntry()
     {
         g_pageViewerEmail = email;
         freeSongDownload(g_songIndexMidDownload);
+        hideEmailEntry();
     }
     else
     {
