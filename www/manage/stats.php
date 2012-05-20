@@ -48,7 +48,7 @@
 		$buildmaxe .= $mu["views"].",";
 	}
 	$msize = 100 / max(num($loadmuse),1);
-    $msize = max($msize,8.0);
+    $msize = max($msize,10.0);
 	$sizee = round(($msize) / 2, 2);
 	$buildmaxe = explode(",", $buildmaxe);
 	$maxe = max($buildmaxe);

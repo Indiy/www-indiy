@@ -734,7 +734,7 @@
 		2DF471C01440B77F005538C7 /* layout.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = layout.js; sourceTree = "<group>"; };
 		2DF471C11440B77F005538C7 /* swfobject.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = swfobject.js; sourceTree = "<group>"; };
 		2DF471C21440B77F005538C7 /* utils.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = utils.js; sourceTree = "<group>"; };
-		2DF471C31440B77F005538C7 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		2DF471C31440B77F005538C7 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DF471C61440B77F005538C7 /* video.f4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.f4v; sourceTree = "<group>"; };
 		2DF471C71440B77F005538C7 /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
 		2DF471CC1440B77F005538C7 /* ajax.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = ajax.php; sourceTree = "<group>"; };
