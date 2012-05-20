@@ -104,6 +104,7 @@
 
     if( strlen($songList) > 0 )
     {
+        $songListHtml .= '<div class="sep"></div>';
         $songListHtml .= '<div class="graph">';
         $songListHtml .= '<div style="height: 10px;">&nbsp;</div>';
         $songListHtml .= $songList;
