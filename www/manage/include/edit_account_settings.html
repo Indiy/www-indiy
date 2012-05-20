@@ -12,17 +12,13 @@
         <input id='artist_id' name='artist_id' type='hidden' value="">
         <div class='input_container'>
             <div class='left_label'>Account Type</div>
-            <select name='account_type' class='right_drop'>
+            <select id='account_type' name='account_type' class='right_drop'>
                 <?
                 $options = array("REGULAR","PREMIUM");
                 foreach ($options as $option) 
                 {
-                    if($account_type == $option) 
-                        $selected = " selected ";
-                    else 
-                        $selected = "";
                     $option_value = ucfirst(strtolower($option));
-                    echo "<option value='$option' $selected>$option_value</option>\n";
+                    echo "<option value='$option'>$option_value</option>\n";
                 }
                 ?>
             </select>
