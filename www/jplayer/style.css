@@ -2626,8 +2626,8 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 #viewer_email_popup .submit_container button {
     float: left;
     margin-left: 80px;
-    padding-left: 47px;
-    padding-right: 47px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-top: 6px;
     padding-bottom: 3px;
     color: white;
@@ -2647,9 +2647,9 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
 
 #viewer_email_popup .nothanks_container button {
     float: left;
-    margin-left: 80px;
-    padding-left: 47px;
-    padding-right: 47px;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 6px;
     padding-bottom: 3px;
     color: white;
