@@ -44,7 +44,7 @@ function showVideoPopup(video_index)
     else
     {
         if( g_artistData.account_type == 'REGULAR' 
-           && g_videoList.length > VIDEO_REGULAR_LIMIT )
+           && g_videoList.length >= VIDEO_REGULAR_LIMIT )
         {
             showAccountLimitPopup();
             return;
