@@ -36,6 +36,10 @@ function showPagePopup(page_index)
             html += "<button onclick='return onPageSongRemove();'></button>";
             $('#edit_page #song_filename_container').html(html);
         }
+        else
+        {
+            $('#edit_page #song_filename_container').empty();
+        }
         if( song.image )
         {
             var html = "<img src='{0}' />".format(song.image);
