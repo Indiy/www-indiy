@@ -7,9 +7,14 @@
 	$getid = $_GET['id'];
     $email = $_GET['email'];
     
-    if( $email )
+    if( $email && $artist )
     {
         setcookie('PAGE_VIEWER_EMAIL',$email,time() + 365*24*60*60,'/');
+
+        $values = array('artistid' => $artist,
+                        'email' => $email,
+                        );
+        mysql_insert("mydna_musicplayer_subscribers",$values);
     }
     
 	trackDownloads($getid);
