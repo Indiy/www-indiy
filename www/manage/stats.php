@@ -85,7 +85,7 @@
 		++$c;
         if( $c == 10 )
         {
-            $songListHtml .= '<div class="sep">';
+            $songListHtml .= '<div class="sep"></div>';
             $songListHtml .= '<div class="graph">';
             $songListHtml .= '<div style="height: 10px;">&nbsp;</div>';
             $songListHtml .= $songList;
