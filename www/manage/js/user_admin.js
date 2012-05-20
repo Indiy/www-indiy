@@ -79,22 +79,29 @@ function onAddLabelSubmit()
 function showAccountSettings()
 {
     $('#account_settings #artist_id').val(g_artistId);
+    $('#account_settings #account_type').val(g_artistData.account_type);
+    
     showPopup('#account_settings');
 }
 function onAccountSettingsSubmit()
 {
     showProgress("Updating record...");
-    
-    var post_url = "/manage/data/account_settings.php?";
-    post_url += $('#account_settings #ajax_form').serialize();
+
+    var account_type = $('#account_settings #account_type').val();
+    var args = {
+        'artist_id': g_artistId,
+        'account_type': account_type
+    };
     
     jQuery.ajax(
     {
         type: 'POST',
-        url: post_url,
+        url:  '/manage/data/account_settings.php',
+        data: args,
         dataType: 'text',
         success: function(data) 
         {
+            g_artistData.account_type = account_type;
             showSuccess("Update Success");
         },
         error: function()
