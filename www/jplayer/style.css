@@ -2645,6 +2645,28 @@ img.search_thumbnail { width:55px; height:55px; display:inline-block; border:1px
     background-color: #0a0;
 }
 
+#viewer_email_popup .nothanks_container button {
+    float: left;
+    margin-left: 80px;
+    padding-left: 47px;
+    padding-right: 47px;
+    padding-top: 6px;
+    padding-bottom: 3px;
+    color: white;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+    border-radius: 4px;
+    border: 1px solid #333;
+    box-shadow: 1px 1px 7px black inset;
+    text-shadow: 1px 1px black;
+    background-color: #c00;
+    behavior: url(/css/PIE.htc);
+}
+#viewer_email_popup .nothanks_container button:hover {
+    background-color: #f00;
+}
+
 #viewer_email_popup .label_input {
     margin-bottom: 12px;
 }
