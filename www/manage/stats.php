@@ -48,7 +48,7 @@
 		$buildmaxe .= $mu["views"].",";
 	}
 	$msize = 100 / max(num($loadmuse),1);
-    $msize = max($msize,10.0);
+    $msize = max($msize,100.0/6);
 	$sizee = round(($msize) / 2, 2);
 	$buildmaxe = explode(",", $buildmaxe);
 	$maxe = max($buildmaxe);
@@ -83,7 +83,7 @@
 		';		
         
 		++$c;
-        if( $c == 10 )
+        if( $c == 6 )
         {
             $songListHtml .= '<div class="sep"></div>';
             $songListHtml .= '<div class="graph">';
