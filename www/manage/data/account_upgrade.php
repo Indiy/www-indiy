@@ -33,7 +33,8 @@
         $email = $_REQUEST['email'];
         
         $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id' LIMIT 1"));
-        $artist_name = $artist['name'];
+        $artist_name = $artist['artist'];
+        $artist_url = $artist['url'];
     
         $to = "jim@blueskylabs.com";
         $subject = "Upgrade for $artist_name";
@@ -44,6 +45,7 @@ Account upgrade request:
 ----------------------------------
 
 Artist: $artist_name
+URL: $artist_url
 Email: $email
 
 ----------------------------------
