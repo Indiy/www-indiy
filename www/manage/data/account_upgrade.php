@@ -36,7 +36,7 @@
         $artist_name = $artist['artist'];
         $artist_url = $artist['url'];
     
-        $to = "jim@blueskylabs.com";
+        $to = "info@myartistdna.com";
         $subject = "Upgrade for $artist_name";
         $message = <<<END
         
