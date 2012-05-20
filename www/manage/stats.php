@@ -18,7 +18,6 @@
 	
 	// Build Page Graph
 	$loadpages = mq("select `views` from `[p]musicplayer_content` where `artistid`='{$id}' order by `order` asc, `id` desc");
-	$c=1;
 	while ($pa = mf($loadpages)) {
 		$buildmax .= $pa["views"].",";
 	}
@@ -40,13 +39,11 @@
 		$pageNames .= '
 			<div style="width: '.$size.'%; float: left; text-align: center;">'.$page_name.'</div>
 		';
-		++$c;
 	}
 
 	
 	// Build Song Graph
 	$loadmuse = mq("select `views` from `[p]musicplayer_audio` where `artistid`='{$id}' and `type`='0' order by `order` asc, `id` desc");
-	$c=1;
 	while ($mu = mf($loadmuse)) {
 		$buildmaxe .= $mu["views"].",";
 	}
@@ -55,6 +52,11 @@
 	$sizee = round(($msize) / 2, 2);
 	$buildmaxe = explode(",", $buildmaxe);
 	$maxe = max($buildmaxe);
+    
+    $c=0;
+    $songListHtml = '';
+    $songList = '';
+    $songNames = '';
 
 	$loadmusic = mq("select * from `[p]musicplayer_audio` where `artistid`='{$id}' and `type`='0' order by `order` asc, `id` desc");
 	while ($p = mf($loadmusic)) {
@@ -79,9 +81,38 @@
 				<small>'.$p_name.'</small>
 			</div>
 		';		
+        
+        if( $c == 10 )
+        {
+            $songListHtml .= '<div class="graph">';
+            $songListHtml .= '<div style="height: 10px;">&nbsp;</div>';
+            $songListHtml .= $songList;
+            $songListHtml .= '<div class="clear"></div>';
+            $songListHtml .= '</div>';
+            $songListHtml .= '<div class="names">';
+            $songListHtml .= $songNames;
+            $songListHtml .= '<div class="clear"></div>';
+            $songListHtml .= '</div>';
+            
+            $songList = '';
+            $songNames = '';
+        }
+
 		++$c;
 	}
 
+    if( strlen($songList) > 0 )
+    {
+        $songListHtml .= '<div class="graph">';
+        $songListHtml .= '<div style="height: 10px;">&nbsp;</div>';
+        $songListHtml .= $songList;
+        $songListHtml .= '<div class="clear"></div>';
+        $songListHtml .= '</div>';
+        $songListHtml .= '<div class="names">';
+        $songListHtml .= $songNames;
+        $songListHtml .= '<div class="clear"></div>';
+        $songListHtml .= '</div>';
+    }
 	
 
 	
@@ -219,16 +250,7 @@ jQuery(document).ready(function($) {
 							
 						<h4>Song Plays and Downloads</h4>
 						
-							<div class="graph">
-								<div style="height: 10px;">&nbsp;</div>
-								<?=$songList;?>
-								<div class="clear"></div>
-							</div>
-							<div class="names">
-								<?=$songNames;?>
-								<div class="clear"></div>
-							</div>
-							
+                        <?=$songListHtml;?>
 							
 						<h4>Love / Hate</h4>
 						
