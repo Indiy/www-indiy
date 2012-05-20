@@ -44,6 +44,12 @@ function showTabPopup(tab_index)
     }
     else
     {
+        if( g_tabList.length > TAB_LIMIT )
+        {
+            window.alert("Sorry, you can only have " + TAB_LIMIT + " tabs.");
+            return;
+        }
+    
         $('#edit_tab #content_id').val("");
         $('#edit_tab #name').val("");
         g_editor.setEditorHTML("");

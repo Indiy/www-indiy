@@ -1,0 +1,28 @@
+
+<div id='basic_limit_popup' class='popup_wrapper'>
+    <div id="popup">
+        <div class='top_bar'>
+            <h2>Account Limit</h2>
+            <button onclick='closePopup();'>CLOSE</button>
+        </div>
+        
+        <div class='top_blue_bar'></div>
+        <div class='top_sep'></div>
+        
+        <div class='description'>
+            You've hit the limits of the basic user account.  Please enter your
+            email address below and someone will contact you about upgrading your
+            account.
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Email</div>
+            <input id='email' type="text" name="email" value="" class='right_text' />
+        </div>
+        <div class='submit_container'>
+            <button class="submit" onclick='onAccountLimitSubmit();'>Submit</button>
+        </div>
+        
+        <div class='bottom_sep'></div>
+        <div class='bottom_blue_bar'></div>
+    </div>
+</div>

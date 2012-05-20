@@ -76,3 +76,33 @@ function onAddLabelSubmit()
     return false;
 }
 
+function showAccountSettings()
+{
+    $('#account_settings #artist_id').val(g_artistId);
+    showPopup('#account_settings');
+}
+function onAccountSettingsSubmit()
+{
+    showProgress("Updating record...");
+    
+    var post_url = "/manage/data/account_settings.php?";
+    post_url += $('#account_settings #ajax_form').serialize();
+    
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: post_url,
+        dataType: 'text',
+        success: function(data) 
+        {
+            showSuccess("Update Success");
+        },
+        error: function()
+        {
+            showFailure("Update Failed");
+        }
+    });
+    return false;
+}
+
+

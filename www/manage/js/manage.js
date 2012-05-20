@@ -57,34 +57,6 @@ function onImageChange(file)
     checkElementSize(file,2*1024*1024,"Please upload images 1280x800 and less than 2MB in size.");
 }
 
-function showAccountSettings()
-{
-    showPopup('#account_settings');
-}
-function onAccountSettingsSubmit()
-{
-    showProgress("Updating record...");
-
-    var post_url = "/manage/data/account_settings.php?";
-    post_url += $('#account_settings #ajax_form').serialize();
-    
-    jQuery.ajax(
-    {
-        type: 'POST',
-        url: post_url,
-        dataType: 'text',
-        success: function(data) 
-        {
-            showSuccess("Update Success");
-        },
-        error: function()
-        {
-            showFailure("Update Failed");
-        }
-    });
-    return false;
-}
-
 function deleteAccount(id)
 {
     var ret = window.confirm("Are you sure you want to delete your account?");

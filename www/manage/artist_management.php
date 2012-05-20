@@ -181,6 +181,7 @@
     include_once 'include/fan_connections.html';
     include_once 'include/first_instructions.html';
     include_once 'include/social_post.html';
+    include_once 'include/account_limit.html';
     
     if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' )
         include_once 'include/edit_account_settings.html';

@@ -66,6 +66,13 @@ function showPagePopup(page_index)
     }
     else
     {
+        if( g_artistData.account_type == 'REGULAR' 
+           && g_pageList.length > SONG_REGULAR_LIMIT )
+        {
+            showAccountLimitPopup();
+            return;
+        }
+    
         g_songId = '';
         $('#edit_page #song_id').val('');
         $('#edit_page #song_name').val('');
