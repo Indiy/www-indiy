@@ -43,6 +43,13 @@ function showVideoPopup(video_index)
     }
     else
     {
+        if( g_artistData.account_type == 'REGULAR' 
+           && g_videoList.length > VIDEO_REGULAR_LIMIT )
+        {
+            showAccountLimitPopup();
+            return;
+        }
+    
         $('#edit_video #song_id').val('');
         $('#edit_video #video_name').val('');
         $('#edit_video #video_tags').val('');

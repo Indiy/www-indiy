@@ -149,6 +149,9 @@
 		2D9B38CC149FFC6E008BDB40 /* base_facebook.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = base_facebook.php; sourceTree = "<group>"; };
 		2D9BE7AC15166969008580F2 /* player.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player.html; sourceTree = "<group>"; };
 		2D9E2FD31568685B00A76906 /* viewer_data.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = viewer_data.php; sourceTree = "<group>"; };
+		2D9E2FD5156985B400A76906 /* account_limit.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = account_limit.js; sourceTree = "<group>"; };
+		2D9E2FD615698A5900A76906 /* account_upgrade.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = account_upgrade.php; sourceTree = "<group>"; };
+		2D9E2FD715698C7000A76906 /* account_limit.html */ = {isa = PBXFileReference; path = account_limit.html; sourceTree = "<group>"; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
 		2DD94A2B14C368DF002B1259 /* vim.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = vim.css; sourceTree = "<group>"; };
@@ -1756,6 +1759,7 @@
 				2D41C0341530A73A00F18000 /* account_settings.php */,
 				2D41C0361531E94700F18000 /* social_post.php */,
 				2DFF87E615658D8F008EA18C /* user_admin.php */,
+				2D9E2FD615698A5900A76906 /* account_upgrade.php */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -3778,6 +3782,7 @@
 				2D41C0371531E95A00F18000 /* social_post.html */,
 				2DFF87E3156572F0008EA18C /* add_user.html */,
 				2DFF87E5156572FB008EA18C /* add_label.html */,
+				2D9E2FD715698C7000A76906 /* account_limit.html */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -3810,6 +3815,7 @@
 				2D41C02F15309DEB00F18000 /* edit_store.js */,
 				2D41C0351531E93800F18000 /* social_post.js */,
 				2DFF87E715658E15008EA18C /* user_admin.js */,
+				2D9E2FD5156985B400A76906 /* account_limit.js */,
 			);
 			path = js;
 			sourceTree = "<group>";

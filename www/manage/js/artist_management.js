@@ -1,5 +1,9 @@
 
 
+var TAB_LIMIT = 6;
+var SONG_REGULAR_LIMIT  = 5;
+var VIDEO_REGULAR_LIMIT = 5;
+
 function artistManagementReady()
 {
     updatePageList();
