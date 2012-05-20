@@ -8,6 +8,9 @@
 <head>
 	<meta charset="utf-8" />
 	<title>MyArtistDNA - BE HEARD, BE SEEN, BE INDEPENDENT</title>
+    <meta name="description" CONTENT="MyArtistDNA empowers artists to be heard, be seen & be independent, by giving them the tools, technology & outlet needed to create a powerful web presence." />
+    
+     <meta name="keywords" content="photographer websites, brand websites, simple websites, band websites, music websites, artist websites, musician websites" />
     
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link rel="icon"  href="favicon.ico" />
