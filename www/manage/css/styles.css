@@ -1452,7 +1452,15 @@ textarea {
     left: 5px;
 }
 
-
+#popup .description {
+    width: 375px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 14px;
+    font-family: Helvetica,sans-serif;
+}
 
 
 
