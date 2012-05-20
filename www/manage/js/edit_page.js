@@ -71,7 +71,7 @@ function showPagePopup(page_index)
     else
     {
         if( g_artistData.account_type == 'REGULAR' 
-           && g_pageList.length > SONG_REGULAR_LIMIT )
+           && g_pageList.length >= SONG_REGULAR_LIMIT )
         {
             showAccountLimitPopup();
             return;
