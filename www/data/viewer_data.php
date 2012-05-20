@@ -11,10 +11,11 @@
 
     if( $email && $artist_id )
     {
+        setcookie('PAGE_VIEWER_EMAIL',$email,time() + 365*24*60*60,'/');
+    
         $values = array('artistid' => $artist_id,
                         'email' => $email,
                         );
-
         mysql_insert("mydna_musicplayer_subscribers",$values);
 
         echo "{ \"success\": 1 }\n";
