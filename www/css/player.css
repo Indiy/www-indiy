@@ -86,6 +86,7 @@ body {
     color: white;
     font-size: 20px;
     cursor: pointer;
+    background: transparent url('../images/player_icons.png') no-repeat 0px 0px;
 }
 #top_bar .sep {
     float: right;
