@@ -87,7 +87,7 @@ body {
     background: transparent url('../images/player_icons.png') no-repeat -304px -67px;
 }
 #top_bar .search:hover {
-    background: transparent url('../images/player_icons.png') no-repeat -304px 0px;
+    background: transparent url('../images/player_icons.png') no-repeat -301px -2px;
 }
 #top_bar .sep {
     float: right;
