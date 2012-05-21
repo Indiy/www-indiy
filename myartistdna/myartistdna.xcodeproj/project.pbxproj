@@ -153,6 +153,7 @@
 		2D9E2FD715698C7000A76906 /* account_limit.html */ = {isa = PBXFileReference; path = account_limit.html; sourceTree = "<group>"; };
 		2D9E2FD91569F13700A76906 /* player.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player.html; sourceTree = "<group>"; };
 		2D9E2FDA1569F17D00A76906 /* player2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player2.php; sourceTree = "<group>"; };
+		2D9E2FDB156A0F2B00A76906 /* player_general.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_general.js; sourceTree = "<group>"; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
 		2DD94A2B14C368DF002B1259 /* vim.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = vim.css; sourceTree = "<group>"; };
@@ -3031,6 +3032,7 @@
 				2D34E23614ABFF15004473F9 /* video.js */,
 				2DD94A3014C384A9002B1259 /* ZeroClipboard.js */,
 				2DF61FE2151ED3DE00DBFBC8 /* string.utils.js */,
+				2D9E2FDB156A0F2B00A76906 /* player_general.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
