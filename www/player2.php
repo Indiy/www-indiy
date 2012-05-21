@@ -85,6 +85,18 @@
         header("HTTP/1.0 404 Not Found");
         die();
     }
+    $artist_name = $artist_data['artist'];
+    $artist_email = $artist_data['email'];
+    
+    $store_enabled = FALSE;
+    $artist_paypal = '';
+    
+    $ecommerce_check = mf(mq("SELECT * FROM mydna_musicplayer_ecommerce WHERE userid='$artist_id' LIMIT 1"));
+    if( $ecommerce_check )
+    {
+        $artist_paypal = $ecommerce_check["paypal"];
+        $store_enabled = $artist_paypal != '';
+    }
     
     
     $q_tabs = mq("SELECT * FROM mydna_musicplayer_content WHERE artistid='$artist_id' ORDER BY `order` ASC, `id` DESC");
@@ -121,16 +133,12 @@
     {
         $content_tabs_html .= "<div class='tab' onclick='showStore();'>Store</div>";
     }
-    if( $show_comments )
-    {
-        $content_tabs_html .= "<div class='tab' onclick='showComments();'>Comment</div>";
-    }
+    $content_tabs_html .= "<div class='tab' onclick='showComments();'>Comment</div>";
     if( $artist_email )
     {
         $content_tabs_html .= "<div class='tab' onclick='showContact();'>Contact</div>";
     }
     
-    $artist_name = $artist_data['artist'];
     
     include_once 'templates/player.html';
 
