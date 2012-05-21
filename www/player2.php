@@ -79,6 +79,14 @@
         die();
     }
     
+    $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE url='$artist_url' LIMIT 1"));
+    if( $artist_data == FALSE )
+    {
+        header("HTTP/1.0 404 Not Found");
+        die();
+    }
+    
+    
     $q_tabs = mq("SELECT * FROM mydna_musicplayer_content WHERE artistid='$artist_id' ORDER BY `order` ASC, `id` DESC");
     $tab_list = array();
     while( $tab = mf($q_tabs) )
@@ -122,6 +130,7 @@
         $content_tabs_html .= "<div class='tab' onclick='showContact();'>Contact</div>";
     }
     
+    $artist_name = $artist_data['artist'];
     
     include_once 'templates/player.html';
 
