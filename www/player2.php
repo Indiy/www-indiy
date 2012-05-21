@@ -85,6 +85,7 @@
         header("HTTP/1.0 404 Not Found");
         die();
     }
+    $artist_id = $artist_data['id'];
     $artist_name = $artist_data['artist'];
     $artist_email = $artist_data['email'];
     $artist_views = $artist_data['views'];
