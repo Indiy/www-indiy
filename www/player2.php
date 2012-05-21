@@ -87,6 +87,7 @@
     }
     $artist_name = $artist_data['artist'];
     $artist_email = $artist_data['email'];
+    $artist_views = $artist_data['views'];
     
     $store_enabled = FALSE;
     $artist_paypal = '';
