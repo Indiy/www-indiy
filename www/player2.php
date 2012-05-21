@@ -126,10 +126,6 @@
         $content_tabs_html .= "<div class='tab' onclick='showUserPage($i);'>$title</div>\n";
     }
     
-    if( $artist_videos )
-    {
-        $content_tabs_html .= "<div class='tab' onclick='showVideos();'>Videos</div>";
-    }
     if( $store_enabled )
     {
         $content_tabs_html .= "<div class='tab' onclick='showStore();'>Store</div>";

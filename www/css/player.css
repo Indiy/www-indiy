@@ -175,7 +175,7 @@ body {
 #bottom_container {
     position: absolute;
     bottom: 48px;
-    height: 275px;
+    height: 55px;
     left: 0px;
     right: 0px;
     overflow: hidden;
@@ -260,6 +260,14 @@ body {
 #tracker_bar .buttons .button .icon {
     color: white;
 }
+#tracker_bar .buttons .photos.button .icon
+{
+    background: transparent url('../images/player_icons.png') no-repeat -10px -37px;
+}
+#tracker_bar .buttons .photos.button .icon:hover {
+    background: transparent url('../images/player_icons.png') no-repeat -10px 0px;
+}
+
 #tracker_bar .buttons .sep {
     display: inline-block;
     height: 55px;
