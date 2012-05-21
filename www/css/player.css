@@ -112,6 +112,7 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
     text-shadow: 0px -1px #0e0e0e;
+    text-transform: uppercase;
     white-space: nowrap;
     cursor: pointer;
     border-radius: 3px;
