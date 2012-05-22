@@ -272,22 +272,22 @@ body {
     background: transparent url('../images/player_icons.png') no-repeat -54px 9px;
 }
 #tracker_bar .buttons .music.button .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -54px -61px;
+    background: transparent url('../images/player_icons.png') no-repeat -118px -61px;
 }
 #tracker_bar .buttons .music.button .icon:hover {
-    background: transparent url('../images/player_icons.png') no-repeat -54px 9px;
+    background: transparent url('../images/player_icons.png') no-repeat -118px 7px;
 }
 #tracker_bar .buttons .video.button .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -54px -61px;
+    background: transparent url('../images/player_icons.png') no-repeat -178px -61px;
 }
 #tracker_bar .buttons .video.button .icon:hover {
-    background: transparent url('../images/player_icons.png') no-repeat -54px 9px;
+    background: transparent url('../images/player_icons.png') no-repeat -178px 7px;
 }
 #tracker_bar .buttons .love.button .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -54px -61px;
+    background: transparent url('../images/player_icons.png') no-repeat -241px -61px;
 }
 #tracker_bar .buttons .love.button .icon:hover {
-    background: transparent url('../images/player_icons.png') no-repeat -54px 9px;
+    background: transparent url('../images/player_icons.png') no-repeat -241px 7px;
 }
 
 #tracker_bar .buttons .sep {
