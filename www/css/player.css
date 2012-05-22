@@ -211,10 +211,10 @@ body {
     padding-bottom: 12px;
 }
 #tracker_bar .media_controls .play_pause .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -54px -61px;
+    background: transparent url('../images/player_icons.png') no-repeat 1px -61px;
 }
 #tracker_bar .media_controls .play_pause .icon:hover {
-    background: transparent url('../images/player_icons.png') no-repeat -54px 6px;
+    background: transparent url('../images/player_icons.png') no-repeat 1px 9px;
 }
 #tracker_bar .media_controls .progress_bar {
     position: absolute;
