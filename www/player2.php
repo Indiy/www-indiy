@@ -140,7 +140,7 @@
     $q_music = mq("SELECT * FROM mydna_musicplayer_audio WHERE artistid='$artist_id' ORDER BY `order` ASC, `id` DESC");
     $music_list = array();
     $music_list_html = "";
-    $i = 1;
+    $i = 0;
     while( $music = mf($q_music) )
     {
         $music_image = '/artists/images/' . $music["image"];
@@ -170,7 +170,9 @@
         if( $music["amazon"] || $music["itunes"] || $music["product_id"] )
             $buy = TRUE;
         
-        if( $i % 2 == 1 )
+        $num = $i + 1
+        
+        if( $num % 2 == 1 )
             $odd = "odd";
         else
             $odd = "";
@@ -179,7 +181,7 @@
         $html .= "<div class='play_line $odd'>";
         $html .= " <div class='love_song_name'>";
         $html .= "  <div class='love'></div>";
-        $html .= "  <div class='song_name'>$i. $music_name</div>";
+        $html .= "  <div onclick='musicChange($i);' class='song_name'>$num. $music_name</div>";
         $html .= " </div>";
         $html .= " <div class='buy_length_listens'>";
         if( $music_free_download )
