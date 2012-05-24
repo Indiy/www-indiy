@@ -37,5 +37,11 @@ function closeBottom()
     $('#bottom_container').animate({ height: '55px' });
 }
 
+function maybeAskForEmail()
+{
+    
+}
+
+
 
 
