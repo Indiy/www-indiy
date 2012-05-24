@@ -137,6 +137,30 @@
         $content_tabs_html .= "<div class='tab' onclick='showContact();'>Contact</div>";
     }
     
+    $q_music = mq("SELECT * FROM mydna_musicplayer_audio WHERE artistid='$artist_id' ORDER BY `order` ASC, `id` DESC");
+    $music_list = array();
+    while( $music = mf($q_music) )
+    {
+        $music_image = '/artists/images/' . $music["image"]
+        $music_audio = '/artists/audio/' . $music["audio"];
+        
+        $item = array("id" => $music["id"],
+                      "name" => stripslashes($music["name"]);,
+                      "mp3" => $music_audio,
+                      "download" => $music["download"] != "0",
+                      "image" => $music_image,
+                      "bgcolor" => $music["bgcolor"],
+                      "bg_style" => $music["bg_style"],
+                      "amazon" => $music["amazon"],
+                      "itunes" => $music["itunes"],
+                      "product_id" => $music["product_id"],
+                      "loaded" => FALSE,
+                      "listens" => $music["views"],
+                      "image_data" => json_decode($music['image_data']),
+                      );
+        $music_list[] = $item;
+    }
+    $music_list_json = json_encode($music_list);
     
     include_once 'templates/player.html';
 
