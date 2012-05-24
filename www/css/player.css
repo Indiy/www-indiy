@@ -579,13 +579,13 @@ body {
     right: 44px;
     left: 44px;
     height: 100%;
-    overflow-x: scroll;
+    overflow: hidden;
     white-space: nowrap;
 }
 #video_list .content .item {
     display: inline-block;
     width: 33%;
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
 }
 #video_list .content .item .picture {
@@ -596,7 +596,7 @@ body {
 }
 #video_list .content .item .picture img {
     max-width: 100%;
-    max-height: 100px;
+    max-height: 130px;
 }
 #video_list .content .item .label {
     width: 100%;
