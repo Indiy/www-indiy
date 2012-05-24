@@ -141,7 +141,7 @@
     $music_list = array();
     while( $music = mf($q_music) )
     {
-        $music_image = '/artists/images/' . $music["image"]
+        $music_image = '/artists/images/' . $music["image"];
         $music_audio = '/artists/audio/' . $music["audio"];
         
         $item = array("id" => $music["id"],
