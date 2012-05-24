@@ -148,11 +148,12 @@
         
         $music_name = stripslashes($music["name"]);
         $music_listens = $music["views"];
+        $music_free_download = $music["download"] != "0";
         
         $item = array("id" => $music["id"],
                       "name" => $music_name,
                       "mp3" => $music_audio,
-                      "download" => $music["download"] != "0",
+                      "free_download" => $music_free_download,
                       "image" => $music_image,
                       "bgcolor" => $music["bgcolor"],
                       "bg_style" => $music["bg_style"],
@@ -181,7 +182,9 @@
         $html .= "  <div class='song_name'>$i. $music_name</div>";
         $html .= " </div>";
         $html .= " <div class='buy_length_listens'>";
-        if( $buy )
+        if( $music_free_download )
+            $html .= "  <div class='buy'>FREE</div>";
+        else if( $buy )
             $html .= "  <div class='buy'>BUY</div>";
         $html .= "  <div class='sep'></div>";
         $html .= "  <div class='length'>4:05</div>";
