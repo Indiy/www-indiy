@@ -5,24 +5,28 @@
     <!--[if lt IE 9]>
      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
      <![endif]-->
-    <link href="css/player.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/player.css" rel="stylesheet" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
-    <script src='js/jquery.jplayer.min.js' type="text/javascript"></script>
-    <script src='js/string.utils.js' type="text/javascript"></script>
-    <script src='js/player_general.js' type="text/javascript"></script>
+    <script src="/js/jquery.jplayer.min.js" type="text/javascript"></script>
+    <script src="/js/string.utils.js" type="text/javascript"></script>
+    <script src="/js/player_general.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var g_tabList = <?=$tab_list_json;?>;
+        var g_musicList = <?=$music_list_json;?>;
+    </script>
 </head>
 
 <body>
     <div id='bg' class='bg'></div>
-    <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+    <div id="jquery_jplayer" class="jp-jplayer"></div>
     
     <div id='top_bar'>
         <div class='mad_logo'></div>
         <div class='artist_name'><?=$artist_name;?></div>
         <div class='search'></div>
         <div class='sep'></div>
-        <div id='player_view_count' class='view_count'>VIEWED <?=number_format($artist_views);?></div>
+        <div id='player_view_count' class='view_count'>VIEWED <span id='total_view_count'><?=number_format($artist_views);?></span></div>
         <div class='sep'></div>
         <div id='content_tabs' class='content_tabs'>
             <?=$content_tabs_html;?>
@@ -74,7 +78,7 @@
                 </div>
             </div>
             <div class='media_controls'>
-                <div class='play_pause tooltiped paused'>
+                <div id='track_play_pause_button' class='play_pause tooltiped'>
                     <div class='icon'></div>
                     <div id='tip_play' class='tooltip'>
                         <div class='carrot'></div>
@@ -87,9 +91,9 @@
                 </div>
                 <div class='progress_bar'>
                     <div class='current_bar_holder'>
-                        <div class='current_bar'></div>
+                        <div id='track_current_bar' class='current_bar'></div>
                     </div>
-                    <div class='track_name'>SONG NAME ONE</div>
+                    <div id='track_name' class='track_name'></div>
                     <div class='progress_play_times'>
                         <div id='track_progress' class='progress'>4:22 / 4:42</div>
                         <div class='play_times'> - PLAYED <div id='track_play_count'>2000</div> TIMES</div>

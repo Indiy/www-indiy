@@ -150,7 +150,7 @@
 		2D9E2FD31568685B00A76906 /* viewer_data.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = viewer_data.php; sourceTree = "<group>"; };
 		2D9E2FD5156985B400A76906 /* account_limit.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = account_limit.js; sourceTree = "<group>"; };
 		2D9E2FD615698A5900A76906 /* account_upgrade.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = account_upgrade.php; sourceTree = "<group>"; };
-		2D9E2FD715698C7000A76906 /* account_limit.html */ = {isa = PBXFileReference; path = account_limit.html; sourceTree = "<group>"; };
+		2D9E2FD715698C7000A76906 /* account_limit.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = account_limit.html; sourceTree = "<group>"; };
 		2D9E2FD91569F13700A76906 /* player.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player.html; sourceTree = "<group>"; };
 		2D9E2FDA1569F17D00A76906 /* player2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player2.php; sourceTree = "<group>"; };
 		2D9E2FDB156A0F2B00A76906 /* player_general.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_general.js; sourceTree = "<group>"; };
@@ -1562,6 +1562,7 @@
 		2DFF87E5156572FB008EA18C /* add_label.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = add_label.html; sourceTree = "<group>"; };
 		2DFF87E615658D8F008EA18C /* user_admin.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = user_admin.php; sourceTree = "<group>"; };
 		2DFF87E715658E15008EA18C /* user_admin.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = user_admin.js; sourceTree = "<group>"; };
+		2DFF87EB156EB98C008EA18C /* player_music.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_music.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -3033,6 +3034,7 @@
 				2DD94A3014C384A9002B1259 /* ZeroClipboard.js */,
 				2DF61FE2151ED3DE00DBFBC8 /* string.utils.js */,
 				2D9E2FDB156A0F2B00A76906 /* player_general.js */,
+				2DFF87EB156EB98C008EA18C /* player_music.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
