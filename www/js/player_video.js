@@ -30,6 +30,7 @@ function scrollVideoToIndex()
 {
     var item_width = $('#video_list .item').width();
     var dest = item_width * g_videoLeftIndex;
-    $('#video_list .content').scrollLeft(dest);
+    //$('#video_list .content').scrollLeft(dest);
+    $('#video_list .content').animate({scrollLeft: dest});
 }
 
