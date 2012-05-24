@@ -1,10 +1,10 @@
 
 g_playerIsPlaying = false;
 
+$(document).ready(setupAudioPlayer);
+
 function setupAudioPlayer()
 {
-    $('#playlist .song_list').lionbars(/*{ autohide: true }*/);
-    $('#playlist .lb-wrap').css('height','200px');
 
     $('#jquery_jplayer').jPlayer({
         ready: jplayerReady,
