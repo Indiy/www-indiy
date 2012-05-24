@@ -145,7 +145,7 @@
         $music_audio = '/artists/audio/' . $music["audio"];
         
         $item = array("id" => $music["id"],
-                      "name" => stripslashes($music["name"]);,
+                      "name" => stripslashes($music["name"]),
                       "mp3" => $music_audio,
                       "download" => $music["download"] != "0",
                       "image" => $music_image,
