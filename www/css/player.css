@@ -571,10 +571,16 @@ body {
     left: 44px;
     height: 100%;
     overflow-x: scroll;
+    white-space: nowrap;
 }
 #video_list .content .item {
+    display: inline-block;
     width: 33%;
     text-align: center;
+}
+#video_list .content .item .picture {
+    padding: 3px;
+    background-color: white;
 }
 #video_list .content .item .picture img {
     max-width: 100px;
