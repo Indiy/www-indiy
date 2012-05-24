@@ -392,19 +392,19 @@ body {
 #media_social_boxes .media_boxes .media_buttons .photos.button .icon {
     background: transparent url('../images/player_icons.png') no-repeat -54px -61px;
 }
-#media_social_boxes .media_boxes .media_buttons .photos.button .icon:hover {
+#media_social_boxes .media_boxes .media_buttons .photos.button:hover .icon {
     background: transparent url('../images/player_icons.png') no-repeat -54px 9px;
 }
 #media_social_boxes .media_boxes .media_buttons .music.button .icon {
     background: transparent url('../images/player_icons.png') no-repeat -118px -61px;
 }
-#media_social_boxes .media_boxes .media_buttons .music.button .icon:hover {
+#media_social_boxes .media_boxes .media_buttons .music.button:hover .icon {
     background: transparent url('../images/player_icons.png') no-repeat -118px 7px;
 }
 #media_social_boxes .media_boxes .media_buttons .video.button .icon {
     background: transparent url('../images/player_icons.png') no-repeat -178px -61px;
 }
-#media_social_boxes .media_boxes .media_buttons .video.button .icon:hover {
+#media_social_boxes .media_boxes .media_buttons .video.button:hover .icon {
     background: transparent url('../images/player_icons.png') no-repeat -178px 7px;
 }
 
@@ -419,6 +419,9 @@ body {
     font-weight: normal;
     text-shadow: 0px -1px #0e0e0e;
     vertical-align: top;
+}
+#media_social_boxes .media_boxes .media_buttons .button:hover .label {
+    color: white;
 }
 #media_social_boxes .media_boxes .media_buttons .sep {
     height: 2px;
