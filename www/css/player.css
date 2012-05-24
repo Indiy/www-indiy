@@ -390,6 +390,26 @@ body {
     width: 18px;
     background-color: white;
 }
+#media_social_boxes .media_boxes .media_buttons .photos.button .icon {
+    background: transparent url('../images/player_icons.png') no-repeat -54px -61px;
+}
+#media_social_boxes .media_boxes .media_buttons .photos.button .icon:hover {
+    background: transparent url('../images/player_icons.png') no-repeat -54px 9px;
+}
+#media_social_boxes .media_boxes .media_buttons .music.button .icon {
+    background: transparent url('../images/player_icons.png') no-repeat -118px -61px;
+}
+#media_social_boxes .media_boxes .media_buttons .music.button .icon:hover {
+    background: transparent url('../images/player_icons.png') no-repeat -118px 7px;
+}
+#media_social_boxes .media_boxes .media_buttons .video.button .icon {
+    background: transparent url('../images/player_icons.png') no-repeat -178px -61px;
+}
+#media_social_boxes .media_boxes .media_buttons .video.button .icon:hover {
+    background: transparent url('../images/player_icons.png') no-repeat -178px 7px;
+}
+
+
 #media_social_boxes .media_boxes .media_buttons .button .label {
     display: inline-block;
     margin-top: 30px;
