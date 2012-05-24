@@ -384,11 +384,10 @@ body {
 }
 #media_social_boxes .media_boxes .media_buttons .button .icon {
     display: inline-block;
-    margin-top: 30px;
-    margin-left: 42px;
-    height: 15px;
-    width: 18px;
-    background-color: white;
+    margin-top: 8px;
+    margin-left: 24px;
+    width: 45px;
+    height: 48px;
 }
 #media_social_boxes .media_boxes .media_buttons .photos.button .icon {
     background: transparent url('../images/player_icons.png') no-repeat -54px -61px;
