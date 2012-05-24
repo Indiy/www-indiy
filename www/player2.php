@@ -139,13 +139,18 @@
     
     $q_music = mq("SELECT * FROM mydna_musicplayer_audio WHERE artistid='$artist_id' ORDER BY `order` ASC, `id` DESC");
     $music_list = array();
+    $music_list_html = "";
+    $i = 1;
     while( $music = mf($q_music) )
     {
         $music_image = '/artists/images/' . $music["image"];
         $music_audio = '/artists/audio/' . $music["audio"];
         
+        $music_name = stripslashes($music["name"]);
+        $music_listens = $music["views"];
+        
         $item = array("id" => $music["id"],
-                      "name" => stripslashes($music["name"]),
+                      "name" => $music_name,
                       "mp3" => $music_audio,
                       "download" => $music["download"] != "0",
                       "image" => $music_image,
@@ -155,10 +160,38 @@
                       "itunes" => $music["itunes"],
                       "product_id" => $music["product_id"],
                       "loaded" => FALSE,
-                      "listens" => $music["views"],
+                      "listens" => $music_listens,
                       "image_data" => json_decode($music['image_data']),
                       );
         $music_list[] = $item;
+
+        $buy = FALSE;
+        if( $music["amazon"] || $music["itunes"] || $music["product_id"] )
+            $buy = TRUE;
+        
+        if( $i % 2 == 1 )
+            $odd = "odd";
+        else
+            $odd = "";
+        
+        $html = "";
+        $html .= "<div class='play_line $odd'>";
+        $html .= " <div class='love_song_name'>";
+        $html .= "  <div class='love'></div>";
+        $html .= "  <div class='song_name'>$i. $music_name</div>";
+        $html .= " </div>";
+        $html .= " <div class='buy_length_listens'>";
+        if( $buy )
+            $html .= "  <div class='buy'>BUY</div>";
+        $html .= "  <div class='sep'></div>";
+        $html .= "  <div class='length'>4:05</div>";
+        $html .= "  <div class='sep'></div>";
+        $html .= "  <div class='played'>$music_listens</div>";
+        $html .= " </div>";
+        $html .= "</div>";
+        $music_list_html .= $html;
+    
+        $i++;
     }
     $music_list_json = json_encode($music_list);
     
