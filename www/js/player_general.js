@@ -16,6 +16,7 @@ var IS_OLD_IE = false;
 
 
 var g_bottomOpen = false;
+var g_mediaContent = "music";
 
 function toggleBottom()
 {
@@ -42,6 +43,40 @@ function maybeAskForEmail()
     
 }
 
+function clickMusicIcon()
+{
+    clickBottomIcon("music",clickMusicMediaButton);
+}
+function clickVideoIcon()
+{
+    clickBottomIcon("video",clickVideoMediaButton);
+}
+function clickBottomIcon(name,callback)
+{
+    if( g_bottomOpen && g_mediaContent == name )
+    {
+        closeBottom();
+    }
+    else 
+    {
+        if( !g_bottomOpen )
+            openBottom();
+        
+        callback();
+    }
+}
 
+function clickMusicMediaButton()
+{
+    $('#media_content_lists .media_list').hide();
+    $('#music_list').show();
+    g_mediaContent = "music";
+}
+function clickVideoMediaButton()
+{
+    $('#media_content_lists .media_list').hide();
+    $('#video_list').show();
+    g_mediaContent = "video";
+}
 
 

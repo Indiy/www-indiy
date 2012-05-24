@@ -433,6 +433,9 @@ body {
     overflow-y: auto;
     background: black url('../images/media_even_texture.png') repeat;
 }
+#media_social_boxes .media_list {
+    display: none;
+}
 #media_social_boxes .sep_line {
     height: 2px;
     width: 100%;

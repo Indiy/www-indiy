@@ -44,14 +44,14 @@
         <div id='tracker_bar'>
             <div class='buttons'>
                 <div class='photos tooltiped button'>
-                    <div class='icon' onclick='toggleBottom("photos");'></div>
+                    <div class='icon' onclick=''></div>
                     <div id='tip_photos' class='tooltip'>
                         <div class='carrot'></div>
                         PHOTOS
                     </div>
                 </div>
                 <div class='sep'></div>
-                <div class='music tooltiped button'>
+                <div class='music tooltiped button' onclick='clickMusicIcon();'>
                     <div class='icon'></div>
                     <div id='tip_music' class='tooltip'>
                         <div class='carrot'></div>
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class='sep'></div>
-                <div class='video tooltiped button'>
+                <div class='video tooltiped button' onclick='clickVideoIcon();'>
                     <div class='icon'></div>
                     <div id='tip_video' class='tooltip'>
                         <div class='carrot'></div>
@@ -136,18 +136,18 @@
                         <div class='label'>PHOTOS</div>
                     </div>
                     <div class='sep'></div>
-                    <div class='button music'>
+                    <div class='button music' onclick='clickMusicMediaButton();'>
                         <div class='icon'></div>
                         <div class='label'>MUSIC</div>
                     </div>
                     <div class='sep'></div>
-                    <div class='button video'>
+                    <div class='button video' onclick='clickVideoMediaButton();'>
                         <div class='icon'></div>
                         <div class='label'>VIDEO</div>
                     </div>
                 </div>
-                <div class='media_content'>
-                    <div id='music_list'>
+                <div id='media_content_lists' class='media_content'>
+                    <div id='music_list' class='media_list'>
                         <div class='play_line'>
                             <div class='love_song_name'>
                                 <div class='song_title'>SONG TITLE</div>
@@ -162,6 +162,24 @@
                         </div>
                         <div class='sep_line'></div>
                         <?=$music_list_html;?>
+                    </div>
+                    <div id='video_list' class='media_list picture_list'>
+                        <div class='left_nav'></div>
+                        <div class='right_nav'></div>
+                        <div class='content'>
+                            <div class='item'>
+                                <div class='picture'></div>
+                                <div class='label'>Photo 1</div>
+                            </div>
+                            <div class='item'>
+                                <div class='picture'></div>
+                                <div class='label'>Photo 1</div>
+                            </div>
+                            <div class='item'>
+                                <div class='picture'></div>
+                                <div class='label'>Photo 1</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
