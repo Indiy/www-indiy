@@ -170,7 +170,7 @@
         if( $music["amazon"] || $music["itunes"] || $music["product_id"] )
             $buy = TRUE;
         
-        $num = $i + 1
+        $num = $i + 1;
         
         if( $num % 2 == 1 )
             $odd = "odd";
