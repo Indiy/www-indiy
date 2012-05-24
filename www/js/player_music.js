@@ -60,7 +60,7 @@ function jplayerEnded()
 {
     g_playerIsPlaying = false;
     $('#track_play_pause_button').removeClass('playing');
-    playListNext();
+    musicNext();
 }
 function jplayerVolume(event)
 {
@@ -78,14 +78,14 @@ function playerPlayPause()
 
 function jplayerReady() 
 {
-    playListChange(0);
+    musicChange(0);
 }
 
 var g_songsPlayed = 0;
 var g_currentSongId = 0;
 var g_currentSongIndex = 0;
 
-function playListChange( index ) 
+function musicChange( index ) 
 {
     g_songsPlayed++;
     if( g_songsPlayed == 3 )
@@ -124,10 +124,15 @@ function playListChange( index )
     }
 }
 
-function maybeAskForEmail()
+function musicNext()
 {
+    var index = g_currentSongIndex + 1;
+    if( index == g_musicList.length )
+        index = 0;
     
+    musicChange(index);
 }
+
 
 var g_listenUpdated = {};
 function updateListens(song_id,index)
