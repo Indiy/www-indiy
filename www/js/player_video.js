@@ -25,7 +25,7 @@ function videoListScrollRight()
     }
 }
 
-$(window).resize(scrollVideoToIndex);
+$(window).resize(function() { scrollVideoToIndex(false); });
 
 function scrollVideoToIndex(animate)
 {
