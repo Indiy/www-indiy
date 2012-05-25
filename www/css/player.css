@@ -586,11 +586,12 @@ body {
     display: inline-block;
     width: 33%;
     margin-top: 30px;
+    padding: 3px;
     text-align: center;
 }
 #video_list .content .item .picture {
     margin-left: 4px;
-    margin-right: 4px; 
+    margin-right: 4px;
 }
 #video_list .content .item .picture img {
     max-width: 100%;
