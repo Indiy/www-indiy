@@ -29,8 +29,8 @@ $(window).resize(function() { scrollVideoToIndex(false); });
 
 function scrollVideoToIndex(animate)
 {
-    var x0 = $('#video_list .item')[0].position().left;
-    var x1 = $('#video_list .item')[1].position().left;
+    var x0 = $('#video_list .item:eq(0)').position().left;
+    var x1 = $('#video_list .item:eq(1)').position().left;
     var item_width = x1 - x0;
     var dest = item_width * g_videoLeftIndex;
     if( animate )
