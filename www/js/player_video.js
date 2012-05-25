@@ -8,7 +8,7 @@ function videoListScrollLeft()
         g_videoLeftIndex -= 3;
         if( g_videoLeftIndex < 0 )
             g_videoLeftIndex = 0;
-        scrollVideoToIndex();
+        scrollVideoToIndex(true);
     }
 }
 
@@ -21,17 +21,19 @@ function videoListScrollRight()
         g_videoLeftIndex += 3;
         if( g_videoLeftIndex > max_left )
             g_videoLeftIndex = max_left;
-        scrollVideoToIndex();
+        scrollVideoToIndex(true);
     }
 }
 
 $(window).resize(scrollVideoToIndex);
 
-function scrollVideoToIndex()
+function scrollVideoToIndex(animate)
 {
     var item_width = $('#video_list .item').width();
     var dest = item_width * g_videoLeftIndex;
-    //$('#video_list .content').scrollLeft(dest);
-    $('#video_list .content').animate({scrollLeft: dest});
+    if( animate )
+        $('#video_list .content').animate({scrollLeft: dest});
+    else
+        $('#video_list .content').scrollLeft(dest);
 }
 
