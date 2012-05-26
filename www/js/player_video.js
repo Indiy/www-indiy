@@ -20,7 +20,7 @@ function videoListScrollLeft()
 
 function videoListScrollRight()
 {
-    var max_left = 3;
+    var max_left = g_videoList.length - 1;
     
     if( g_videoLeftIndex <= max_left )
     {
