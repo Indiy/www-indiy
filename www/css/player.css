@@ -594,6 +594,7 @@ body {
     padding-right: 6px;
 }
 #video_list .content .item .picture img {
+    max-width: 200px;
     width: 100%;
     padding: 3px;
     background-color: white;
