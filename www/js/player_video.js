@@ -1,6 +1,12 @@
 
 var g_videoLeftIndex = 0;
 
+function clickVideoIcon()
+{
+    clickBottomIcon("video",clickVideoMediaButton);
+    scrollVideoToIndex();
+}
+
 function videoListScrollLeft()
 {
     if( g_videoLeftIndex > 0 )
