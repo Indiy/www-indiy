@@ -150,16 +150,16 @@
         $music_listens = $music["views"];
         $music_free_download = $music["download"] != "0";
         
-        $item = array("id" => $music["id"],
+        $item = array("id" => $music['id'],
                       "name" => $music_name,
                       "mp3" => $music_audio,
                       "free_download" => $music_free_download,
                       "image" => $music_image,
-                      "bgcolor" => $music["bgcolor"],
-                      "bg_style" => $music["bg_style"],
-                      "amazon" => $music["amazon"],
-                      "itunes" => $music["itunes"],
-                      "product_id" => $music["product_id"],
+                      "bgcolor" => $music['bgcolor'],
+                      "bg_style" => $music['bg_style'],
+                      "amazon" => $music['amazon'],
+                      "itunes" => $music['itunes'],
+                      "product_id" => $music['product_id'],
                       "loaded" => FALSE,
                       "listens" => $music_listens,
                       "image_data" => json_decode($music['image_data']),
@@ -199,6 +199,44 @@
         $i++;
     }
     $music_list_json = json_encode($music_list);
+    
+    
+    $q_video = mq("SELECT * from mydna_musicplayer_video WHERE artistid='$artist_id' AND LENGTH(video) > 0 ORDER BY `order` ASC, `id` DESC");
+    $video_list = array();
+    $video_list_html = "";
+    $i = 0;
+    while( $video = mf($q_video) )
+    {
+        $vid_error = $video["error"];
+        if( strlen($vid_error) > 0 )
+            continue;
+        
+        $video_file = '/vid/' . $video['video'];
+        $video_image = '/artists/images/' . $video['image'];
+        $video_name = $video['name'];
+        
+        
+        $item = array("id" => $video['id'],
+                      "name" => $video_name,
+                      "image" => $video_image,
+                      "video_file" => $video_file,
+                      "views" => $video['views'],
+                      );
+        $video_list[] = $item;
+        
+        $html = "";
+        $html .= "<div class='item' onclick='viewVideo($i);'>";
+        $html .= " <div class='picture'>";
+        $html .= "  <img src='$video_image'/>";
+        $html .= " </div>";
+        $html .= " <div class='label'>$video_name</div>";
+        $html .= "</div>";
+        $video_list_html .= $html;
+        
+        $i++;
+        
+    }
+    $video_list_json = json_encode($video_list);
     
     include_once 'templates/player.html';
 
