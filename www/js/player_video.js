@@ -29,6 +29,18 @@ $(window).resize(function() { scrollVideoToIndex(false); });
 
 function scrollVideoToIndex(animate)
 {
+    var content_height = $('#video_list .content').height();
+    var max_h = 0;
+
+    $('#video_list .content .item').each(function() 
+    {
+        var h = $(this).height();
+        max_h = max(h,max_h);
+    });
+
+    var margin = (content_height - max_h)/2
+    $('#video_list .content .item').css('margin-top',margin + "px");
+
     var x0 = $('#video_list .item:eq(0)').position().left;
     var x1 = $('#video_list .item:eq(1)').position().left;
     var item_width = x1 - x0;
