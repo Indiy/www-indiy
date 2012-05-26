@@ -25,7 +25,9 @@ function videoListScrollRight()
     }
 }
 
-$(window).resize(function() { scrollVideoToIndex(false); });
+$(window).resize(scrollVideoToIndex);
+
+$(document).ready(scrollVideoToIndex);
 
 function scrollVideoToIndex(animate)
 {
@@ -45,7 +47,7 @@ function scrollVideoToIndex(animate)
     var x1 = $('#video_list .item:eq(1)').position().left;
     var item_width = x1 - x0;
     var dest = item_width * g_videoLeftIndex;
-    if( animate )
+    if( animate === true )
         $('#video_list .content').animate({scrollLeft: dest});
     else
         $('#video_list .content').scrollLeft(dest);
