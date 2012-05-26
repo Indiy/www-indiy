@@ -601,12 +601,15 @@ body {
     background-color: white;
 }
 #video_list .content .item .label {
+    max-width: 200px;
     width: 100%;
     padding-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
     color: #888;
     font-size: 12px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
-    white-space: normal;  
+    white-space: normal;
 }
 
