@@ -586,6 +586,7 @@ body {
     display: inline-block;
     width: 33%;
     text-align: center;
+    cursor: pointer;
 }
 #video_list .content .item .picture {
     margin-right: 4px;
@@ -603,6 +604,7 @@ body {
     color: #888;
     font-size: 12px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-    font-weight: normal;    
+    font-weight: normal;
+    white-space: normal;  
 }
 
