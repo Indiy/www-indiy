@@ -585,6 +585,7 @@ body {
 #video_list .content .item {
     display: inline-block;
     width: 33%;
+    padding-right: 2px;
     text-align: center;
     cursor: pointer;
     vertical-align: top;
