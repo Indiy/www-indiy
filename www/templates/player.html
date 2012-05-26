@@ -165,8 +165,10 @@
                         <?=$music_list_html;?>
                     </div>
                     <div id='video_list' class='media_list picture_list'>
-                        <div class='left_nav' onclick='videoListScrollLeft();'></div>
-                        <div class='right_nav' onclick='videoListScrollRight();'></div>
+                        <? if( $video_nav_show ): ?>
+                            <div class='left_nav' onclick='videoListScrollLeft();'></div>
+                            <div class='right_nav' onclick='videoListScrollRight();'></div>
+                        <? endif; ?>
                         <div class='content'>
                             <?=$video_list_html;?>
                         </div>
