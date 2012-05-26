@@ -35,7 +35,7 @@ function scrollVideoToIndex(animate)
     $('#video_list .content .item').each(function() 
     {
         var h = $(this).height();
-        max_h = max(h,max_h);
+        max_h = Math.max(h,max_h);
     });
 
     var margin = (content_height - max_h)/2
