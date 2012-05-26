@@ -234,9 +234,11 @@
         $video_list_html .= $html;
         
         $i++;
-        
     }
     $video_list_json = json_encode($video_list);
+    $video_nav_show = FALSE;
+    if( count($video_list) > 3 )
+        $video_nav_show = TRUE;
     
     include_once 'templates/player.html';
 
