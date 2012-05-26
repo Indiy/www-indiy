@@ -581,13 +581,13 @@ body {
     height: 100%;
     overflow: hidden;
     white-space: nowrap;
-    vertical-align: top;
 }
 #video_list .content .item {
     display: inline-block;
     width: 33%;
     text-align: center;
     cursor: pointer;
+    vertical-align: top;
 }
 #video_list .content .item .picture {
     margin-right: 4px;
