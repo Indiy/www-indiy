@@ -37,6 +37,10 @@ $(document).ready(scrollVideoToIndex);
 
 function scrollVideoToIndex(animate)
 {
+    var img_w = $('#video_list .content .item .picture img').width();
+    var img_h = img_w/1.4;
+    $('#video_list .content .item .picture img').css('height',img_h + 'px');
+
     var content_height = $('#video_list .content').height();
     var max_h = 0;
 
