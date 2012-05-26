@@ -47,10 +47,6 @@ function clickMusicIcon()
 {
     clickBottomIcon("music",clickMusicMediaButton);
 }
-function clickVideoIcon()
-{
-    clickBottomIcon("video",clickVideoMediaButton);
-}
 function clickBottomIcon(name,callback)
 {
     if( g_bottomOpen && g_mediaContent == name )
