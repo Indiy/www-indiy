@@ -38,7 +38,7 @@ function scrollVideoToIndex(animate)
         max_h = Math.max(h,max_h);
     });
 
-    var margin = (content_height - max_h)/2
+    var margin = (content_height - max_h)/2 + 10;
     $('#video_list .content .item').css('margin-top',margin + "px");
 
     var x0 = $('#video_list .item:eq(0)').position().left;
