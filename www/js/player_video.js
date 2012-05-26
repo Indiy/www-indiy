@@ -53,10 +53,8 @@ function scrollVideoToIndex(animate)
     var margin = (content_height - max_h)/2 + 10;
     $('#video_list .content .item').css('margin-top',margin + "px");
 
-    var x0 = $('#video_list .item:eq(0)').position().left;
-    var x1 = $('#video_list .item:eq(1)').position().left;
-    var item_width = x1 - x0;
-    var dest = item_width * g_videoLeftIndex;
+    var sel = '#video_list .item:eq({0})'.format(g_videoLeftIndex);
+    var dest = $(sel).position().left;
     if( animate === true )
         $('#video_list .content').animate({scrollLeft: dest});
     else
