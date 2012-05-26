@@ -584,7 +584,7 @@ body {
 }
 #video_list .content .item {
     display: inline-block;
-    width: 33%;
+    width: 33.333%;
     padding-right: 2px;
     text-align: center;
     cursor: pointer;
