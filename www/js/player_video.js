@@ -54,7 +54,8 @@ function scrollVideoToIndex(animate)
     $('#video_list .content .item').css('margin-top',margin + "px");
 
     var sel = '#video_list .item:eq({0})'.format(g_videoLeftIndex);
-    var dest = $(sel).position().left;
+    var curr_scroll = $('#video_list .content').scrollLeft();
+    var dest = curr_scroll + $(sel).position().left;
     if( animate === true )
         $('#video_list .content').animate({scrollLeft: dest});
     else
