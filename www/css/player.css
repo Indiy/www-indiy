@@ -440,7 +440,7 @@ body {
 #media_social_boxes .sep_line {
     height: 2px;
     width: 100%;
-    background: white;
+    background: #444;
 }
 #media_social_boxes .play_line {
     height: 32px;
@@ -521,7 +521,7 @@ body {
     display: inline-block;
     width: 2px;
     height: 32px;
-    background: white;
+    background: #444;
     vertical-align: top;
 }
 #media_social_boxes .play_line .buy_length_listens .length {
