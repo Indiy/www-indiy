@@ -208,6 +208,10 @@ function musicResizeBackgrounds()
         {
             var win_height = $('#music_bg').height();
             var win_width = $('#music_bg').width();
+            
+            var holder = $('#image_holder_' + i + '');
+            var image = $('#image_holder_' + i + ' img');
+            
             holder.height(win_height);
             holder.width(win_width);
             
