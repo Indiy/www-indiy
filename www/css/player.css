@@ -49,6 +49,18 @@ body {
     background-size: 100% 100%;
 }
 
+#video_container {
+    display: none;
+    position: fixed;
+    top: 0px;
+    bottom: 49px;
+    left: 0px;
+    right: 0px;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
 #top_bar {
     position: absolute;
     top: 0px;
