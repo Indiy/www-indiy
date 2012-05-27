@@ -88,7 +88,7 @@
     $artist_id = $artist_data['id'];
     $artist_name = $artist_data['artist'];
     $artist_email = $artist_data['email'];
-    $artist_views = $artist_data['views'];
+    $artist_views = artist_get_total_views($artist_id);
     
     $store_enabled = FALSE;
     $artist_paypal = '';

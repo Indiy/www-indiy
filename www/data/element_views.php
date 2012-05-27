@@ -29,15 +29,11 @@
         update("mydna_musicplayer_video",array("views" => $views),"id",$video['id']);
     }
     
-   $music_sum = mf(mq("SELECT SUM(views) FROM mydna_musicplayer_audio WHERE `artistid`='$artist_id'"));
-   $video_sum = mf(mq("SELECT SUM(views) FROM mydna_musicplayer_video WHERE `artistid`='$artist_id'"));
-   
-   $total = intval($music_sum[0]);
-   $total += intval($video_sum[0]);
-   
-   $output = array("total_views" => $total,
+    artist_get_total_views($artist_id);
+    
+    $output = array("total_views" => $total,
                    "element_views" => $views);
 
-   print json_encode($output);
+    print json_encode($output);
 
 ?>
