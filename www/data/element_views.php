@@ -19,7 +19,7 @@
         update("mydna_musicplayer_audio",array("views" => $views),"id",$music['id']);
 
     }
-    else if( isset($_GET['video_id') )
+    else if( isset($_GET['video_id']) )
     {
         $video_id = $_GET['video_id'];
 
