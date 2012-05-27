@@ -22,7 +22,7 @@ function clickVideoIcon()
 function videoHide()
 {
     if( g_videoPlayer )
-        g_videoPlayer.stop();
+        g_videoPlayer.pause();
     $('#video_container').hide();
 }
 
