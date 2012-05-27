@@ -1,4 +1,7 @@
 
+
+var HIDE_CONTROLS_TIMEOUT = 2000;
+
 var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
 
 var IS_IE = false;
@@ -18,6 +21,50 @@ var IS_OLD_IE = false;
 var g_bottomOpen = false;
 var g_mediaContent = "music";
 var g_playerMode = "music";
+var g_controlsShown = true;
+var g_hideControlsTimeout = false;
+
+$(document).read8(generalOnReady);
+function generalOnReady()
+{
+    $(document).mousemove(showAndTimeoutControls);
+}
+
+function showControls()
+{
+    if( !g_controlsShown )
+    {
+        g_controlsShown = true;
+        $(".idle_fade_out").stop();
+        $(".idle_fade_out").fadeIn();
+    }
+    clearTimeoutControls();
+}
+function showAndTimeoutControls()
+{
+    showControls();
+    timeoutControls();
+}
+function clearTimeoutControls()
+{
+    if( g_hideControlsTimeout !== false )
+    {
+        window.clearTimeout(g_hideControlsTimeout);
+        g_hideControlsTimeout = false;
+    }
+}
+function timeoutControls()
+{
+    clearTimeoutControls();
+    g_hideControlsTimeout = window.setTimeout(hideControls,HIDE_CONTROLS_TIMEOUT);
+}
+function hideControls()
+{
+    g_controlsShown = false;
+    $(".idle_fade_out").stop();
+    $(".idle_fade_out").fadeOut();
+}
+
 
 function toggleBottom()
 {
