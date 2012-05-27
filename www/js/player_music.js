@@ -238,27 +238,27 @@ function musicGetBackgroundParams(song)
     
     var height = 0;
     var width = 0;
-    var left_margin = 0;
-    var top_margin = 0;
+    var margin_left = 0;
+    var margin_top = 0;
     
     if( win_ratio < img_ratio )
     {
         height = win_height;
         width = height * img_ratio;
-        left_margin = (width - win_width)/2;
+        margin_left = (width - win_width)/2;
     }
     else
     {
         width = win_width;
         height = width / img_ratio;
-        top_margin = (height - win_height)/2;
+        margin_top = (height - win_height)/2;
     }
 
     var ret = {
         'width': width,
         'height': height,
-        'top_margin': top_margin,
-        'left_margin': left_margin
+        'margin_top': margin_top,
+        'margin_left': margin_left
     };
     return ret;
 }
