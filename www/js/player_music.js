@@ -163,9 +163,10 @@ function musicLoadImage(song,index)
             var img_style = "width: {0}px; height: {1}px;".format(image_params.width,image_params.height);
             var img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(image,win_width);
 
-            var html = "<div style='height: {0}px;'>".format(win_height);
+            var html = "";
+            //html += "<div style='height: {0}px;'>".format(win_height);
             html += "<img src='{0}' style='{1}' />".format(img_url,img_style);
-            html += "</div>"
+            //html += "</div>"
             holder.html(html);
             holder.css("background-image","none");
             holder.css("background-repeat","no-repeat");
@@ -212,8 +213,8 @@ function musicResizeBackgrounds()
             var holder = $('#image_holder_' + i + '');
             var image = $('#image_holder_' + i + ' img');
             
-            holder.height(win_height);
-            holder.width(win_width);
+            //holder.height(win_height);
+            //holder.width(win_width);
             
             var image_params = musicGetBackgroundParams(song);
             
