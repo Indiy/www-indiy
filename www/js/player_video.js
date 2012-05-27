@@ -9,7 +9,10 @@ function videoOnReady()
     if( g_videoList.length > 0 )
     {
         videoCreateTag();
+        scrollVideoToIndex();
+        
         $(window).resize(videoOnWindowResize);
+        $(window).resize(scrollVideoToIndex);
     }
 }
 
@@ -49,10 +52,6 @@ function videoListScrollRight()
         scrollVideoToIndex(true);
     }
 }
-
-$(window).resize(scrollVideoToIndex);
-
-$(document).ready(scrollVideoToIndex);
 
 function scrollVideoToIndex(animate)
 {
