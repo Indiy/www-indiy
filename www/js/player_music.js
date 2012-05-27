@@ -198,7 +198,6 @@ function musicLoadImage(song,index)
             holder.html(html);
         }
     }            
-    musicResizeBackgrounds();
 }
 
 function musicResizeBackgrounds()
