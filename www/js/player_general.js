@@ -1,6 +1,7 @@
 
 
-var HIDE_CONTROLS_TIMEOUT = 2000;
+var HIDE_CONTROLS_TIMEOUT = 4000;
+var HIDE_BOTTOM_TIMEOUT = 10000;
 
 var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
 
@@ -23,6 +24,7 @@ var g_mediaContent = "music";
 var g_playerMode = "music";
 var g_controlsShown = true;
 var g_hideControlsTimeout = false;
+var g_hideBottomTimeout = false;
 
 $(document).ready(generalOnReady);
 function generalOnReady()
@@ -52,11 +54,18 @@ function clearTimeoutControls()
         window.clearTimeout(g_hideControlsTimeout);
         g_hideControlsTimeout = false;
     }
+    if( g_hideBottomTimeout !== false )
+    {
+        window.clearTimeout(g_hideBottomTimeout);
+        g_hideBottomTimeout = false;
+    }
 }
 function timeoutControls()
 {
     clearTimeoutControls();
     g_hideControlsTimeout = window.setTimeout(hideControls,HIDE_CONTROLS_TIMEOUT);
+    if( g_bottomOpen )
+        g_hideBottomTimeout = window.setTimeout(closeBottom,HIDE_BOTTOM_TIMEOUT);
 }
 function hideControls()
 {
@@ -77,12 +86,14 @@ function toggleBottom()
 function openBottom()
 {
     g_bottomOpen = true;
+    $('#bottom_container').stop();
     $('#bottom_container').animate({ height: '275px' });
 }
 
 function closeBottom()
 {
     g_bottomOpen = false;
+    $('#bottom_container').stop();
     $('#bottom_container').animate({ height: '55px' });
 }
 
