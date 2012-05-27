@@ -24,7 +24,7 @@ var g_playerMode = "music";
 var g_controlsShown = true;
 var g_hideControlsTimeout = false;
 
-$(document).read8(generalOnReady);
+$(document).ready(generalOnReady);
 function generalOnReady()
 {
     $(document).mousemove(showAndTimeoutControls);
