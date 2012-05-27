@@ -89,7 +89,6 @@ function videoPlayIndex(index)
     setPlayerMode("video");
     $('#video_container').show();
     
-    
     var video = g_videoList[index];
     
     playerTrackInfo(video.name,video.views);
