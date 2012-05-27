@@ -109,7 +109,7 @@ function musicChange( index )
     }
     musicLoadImage(song,index);
     $('#music_bg .image_holder').hide();
-    $('#music_bg .image_holder_' + index).show();
+    $('#music_bg #image_holder_' + index).show();
     
     g_currentSongId = song.id;
     window.location.hash = '#song_id=' + g_currentSongId; 
