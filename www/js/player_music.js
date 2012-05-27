@@ -24,7 +24,7 @@ function musicOnReady()
     .bind($.jPlayer.event.pause,jplayerPause)
     .bind($.jPlayer.event.volumechange,jplayerVolume);
      
-    //window.setTimeout(musicPreloadImages,MUSIC_IMAGE_PRELOAD_TIMEOUT);
+    window.setTimeout(musicPreloadImages,MUSIC_IMAGE_PRELOAD_TIMEOUT);
     $(window).resize(musicResizeBackgrounds);
 }
 
@@ -134,10 +134,10 @@ function musicNext()
 
 function musicPreloadImages()
 {
-    for( var k in g_songPlayList )
+    for( var i = 0 ; i < g_musicList.length ; ++i  )
     {
-        var song = g_musicList[k];
-        musicLoadImage(song,k);
+        var song = g_musicList[i];
+        musicLoadImage(song,i);
     }
 }
 
@@ -185,11 +185,6 @@ function musicLoadImage(song,index)
         }
     }            
     musicResizeBackgrounds();
-}
-
-function musicGetImageParams()
-{
-    
 }
 
 function musicResizeBackgrounds()
