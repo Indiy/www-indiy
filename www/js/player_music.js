@@ -1,5 +1,7 @@
 
-g_musicIsPlaying = false;
+var MUSIC_IMAGE_PRELOAD_TIMEOUT = 3000;
+
+var g_musicIsPlaying = false;
 
 $(document).ready(musicOnReady);
 
@@ -20,8 +22,8 @@ function musicOnReady()
     .bind($.jPlayer.event.pause,jplayerPause)
     .bind($.jPlayer.event.volumechange,jplayerVolume);
      
-    //window.setTimeout(preloadImages,1000);
-    //$(window).resize(resizeBackgrounds);
+    window.setTimeout(musicPreloadImages,MUSIC_IMAGE_PRELOAD_TIMEOUT);
+    $(window).resize(musicResizeBackgrounds);
 }
 
 function musicHide()
@@ -156,6 +158,99 @@ function musicUpdateListens(song_id,index)
     return true;
 }
 
+function musicPreloadImages()
+{
+    for( var k in g_songPlayList )
+    {
+        var song = g_musicList[k];
+        musicLoadImage(song,k);
+    }
+}
+
+function musicLoadImage(song,index)
+{
+    var image = song.image;
+    var color = song.bgcolor;
+    var bg_style = song.bg_style;
+    
+    if( !song.loaded )
+    {
+        song.loaded = true;
+        var holder = $('#image_holder_' + index);
+        
+        holder.css("background-color", "#" + color);
+        if( bg_style == 'STRETCH' )
+        {
+            var img_url = "/timthumb.php?src=" + image + "&w=" + getWindowWidth() + "&zc=0&q=100";
+            var html = "<div style='height: " + getWindowHeight() + "px;'>";
+            html += "<img src='" + img_url + "' />";
+            html += "</div>"
+            holder.html(html);
+            holder.css("background-image","none");
+            holder.css("background-repeat","no-repeat");
+            holder.css("background-position","center center");
+        }
+        else if( bg_style == 'CENTER' )
+        {
+            holder.css("background-image","url(" + image + ")");
+            holder.css("background-repeat","no-repeat");
+            holder.css("background-position","center center");
+            var html = "<div style='width: 100%; height: " + getWindowHeight() + "px;'></div>";
+            holder.html(html);
+        }
+        else if( bg_style == 'TILE' )
+        {
+            holder.css("background-image","url(" + image + ")");
+            holder.css("background-repeat","repeat");
+            holder.css("background-position","center center");
+            var html = "<div style='width: 100%; height: " + getWindowHeight() + "px;'></div>";
+            holder.html(html);
+        }
+    }            
+    musicResizeBackgrounds();
+}
+function musicResizeBackgrounds()
+{
+    for( var i = 0 ; i < g_musicList.length ; ++i )
+    {
+        var song = g_musicList[i];
+        var bg_style = song.bg_style;
+        if( bg_style == 'STRETCH' )
+        {
+            var win_height = getWindowHeight();
+            var win_width = getWindowWidth();
+            var win_ratio = win_width / win_height;
+            
+            var holder = $('#image_holder_' + i + ' div');
+            var image = $('#image_holder_' + i + ' div img');
+            var img_width = song.image_data.width;
+            var img_height = song.image_data.height;
+            if( img_height > 0 && img_width > 0 )
+            {
+                var img_ratio = img_width/img_height;
+                
+                holder.height(win_height);
+                holder.width(win_width);
+                if( win_ratio < img_ratio )
+                {
+                    var height = win_height;
+                    var width = height * img_ratio;
+                    image.width(width);
+                    image.height(height);
+                    holder.scrollLeft((width - win_width)/2);
+                }
+                else
+                {
+                    var width = win_width;
+                    var height = width / img_ratio;
+                    image.width(width);
+                    image.height(height);
+                    holder.scrollTop((height - win_height)/2);
+                }
+            }
+        }
+    }
+}
 
 
 

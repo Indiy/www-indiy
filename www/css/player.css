@@ -49,6 +49,45 @@ body {
     background-size: 100% 100%;
 }
 
+#music_bg { 
+    position: fixed; 
+    top: 0px;
+    bottom: 49px;
+    left: 0px;
+    right: 0px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+/*
+#image #image_slider {
+    height: 100%;
+    width: 100%;
+}
+
+#image #image_slider .container {
+    height: 100%;
+    width: 100%;
+}
+*/
+#music_bg .image_holder {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+#music_bg .image_holder div { 
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 #video_container {
     display: none;
     position: fixed;
