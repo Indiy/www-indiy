@@ -158,14 +158,21 @@ function musicLoadImage(song,index)
         holder.css("background-color", "#" + color);
         if( bg_style == 'STRETCH' )
         {
+            var image_params = musicGetBackgroundParams(song);
+            
+            var img_style = "width: {0}px; height: {1}px;".format(image_params.width,image_params.height);
             var img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(image,win_width);
+
             var html = "<div style='height: {0}px;'>".format(win_height);
-            html += "<img src='{0}' />".format(img_url);
+            html += "<img src='{0}' style='{1}' />".format(img_url,img_style);
             html += "</div>"
             holder.html(html);
             holder.css("background-image","none");
             holder.css("background-repeat","no-repeat");
             holder.css("background-position","center center");
+            
+            holder.css("margin-left",image_params.margin_left + "px");
+            holder.css("margin-top",image_params.margin_top + "px");
         }
         else if( bg_style == 'CENTER' )
         {
@@ -184,7 +191,7 @@ function musicLoadImage(song,index)
             holder.html(html);
         }
     }            
-    musicResizeBackgrounds();
+    //musicResizeBackgrounds();
 }
 
 function musicResizeBackgrounds()
@@ -201,39 +208,56 @@ function musicResizeBackgrounds()
         {
             var win_height = $('#music_bg').height();
             var win_width = $('#music_bg').width();
-            var win_ratio = win_width / win_height;
+            holder.height(win_height);
+            holder.width(win_width);
             
-            var holder = $('#image_holder_' + i + ' div');
-            var image = $('#image_holder_' + i + ' div img');
-            var img_width = song.image_data.width;
-            var img_height = song.image_data.height;
-            if( img_height > 0 && img_width > 0 )
-            {
-                var img_ratio = img_width/img_height;
-                
-                holder.height(win_height);
-                holder.width(win_width);
-                if( win_ratio < img_ratio )
-                {
-                    var height = win_height;
-                    var width = height * img_ratio;
-                    image.width(width);
-                    image.height(height);
-                    holder.scrollLeft((width - win_width)/2);
-                }
-                else
-                {
-                    var width = win_width;
-                    var height = width / img_ratio;
-                    image.width(width);
-                    image.height(height);
-                    holder.scrollTop((height - win_height)/2);
-                }
-            }
+            var image_params = musicGetBackgroundParams(song);
+            
+            image.width(image_params.width);
+            image.height(image_params.height);
+            holder.css("margin-left",image_params.margin_left + "px");
+            holder.css("margin-top",image_params.margin_top + "px");
         }
     }
 }
 
+function musicGetBackgroundParams(song)
+{
+    var win_height = $('#music_bg').height();
+    var win_width = $('#music_bg').width();
+    var win_ratio = win_width / win_height;
+    
+    var img_width = song.image_data.width;
+    var img_height = song.image_data.height;
+    var img_ratio = img_width/img_height;
+    
+    
+    var height = 0;
+    var width = 0;
+    var left_margin = 0;
+    var top_margin = 0;
+    
+    if( win_ratio < img_ratio )
+    {
+        height = win_height;
+        width = height * img_ratio;
+        left_margin = (width - win_width)/2;
+    }
+    else
+    {
+        width = win_width;
+        height = width / img_ratio;
+        top_margin = (height - win_height)/2;
+    }
+
+    var ret = {
+        'width': width,
+        'height': height,
+        'top_margin': top_margin,
+        'left_margin': left_margin
+    };
+    return ret;
+}
 
 var g_musicListenUpdated = {};
 function musicUpdateListens(song_id,index)
