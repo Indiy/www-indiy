@@ -16,7 +16,7 @@
         $music = mf(mq("SELECT * FROM mydna_musicplayer_audio WHERE id='$song_id'"));
         $artist_id = $music["artistid"];
         $views = intval($music["views"]) + 1;
-        update("mydna_musicplayer_audio",array("views" => $views),"id",$music['id']);
+        mysql_update("mydna_musicplayer_audio",array("views" => $views),"id",$music['id']);
 
     }
     else if( isset($_GET['video_id']) )
@@ -26,7 +26,7 @@
         $video = mf(mq("SELECT * FROM mydna_musicplayer_video WHERE id='$video_id'"));
         $artist_id = $video["artistid"];
         $views = intval($video["views"]) + 1;
-        update("mydna_musicplayer_video",array("views" => $views),"id",$video['id']);
+        mysql_update("mydna_musicplayer_video",array("views" => $views),"id",$video['id']);
     }
     
     artist_get_total_views($artist_id);
