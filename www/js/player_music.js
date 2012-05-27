@@ -111,7 +111,7 @@ function musicChange( index )
     
     if( musicUpdateListens(song.id,index) )
     {
-        g_totalListens++;
+        g_totalPageViews++;
         playerUpdateTotalViewCount();
     }
 }
@@ -134,7 +134,7 @@ function musicUpdateListens(song_id,index)
 
     g_musicListenUpdated[song_id] = true;
 
-    var url = "/data/listens.php?song_id=" + song_id;
+    var url = "/data/element_views.php?song_id=" + song_id;
     jQuery.ajax(
     {
         type: 'POST',
@@ -142,8 +142,8 @@ function musicUpdateListens(song_id,index)
         dataType: 'json',
         success: function(data) 
         {
-            g_totalListens = data['total_listens'];
-            var track_listens = data['track_listens'];
+            g_totalPageViews = data['total_views'];
+            var track_listens = data['element_views'];
             g_musicList[index].listens = track_listens;
             playerUpdateTotalViewCount();
             playerTrackInfo(false,track_listens);

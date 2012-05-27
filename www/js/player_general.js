@@ -119,7 +119,7 @@ function playerProgress(curr_time,total_time)
 
 function playerUpdateTotalViewCount()
 {
-    $('#total_view_count').html(g_totalListens);
+    $('#total_view_count').html(g_totalPageViews);
 }
 
 function playerTrackInfo(track_name,listens)

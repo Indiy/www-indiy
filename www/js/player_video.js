@@ -86,9 +86,14 @@ var g_videoCurrentIndex = 0;
 function videoPlayIndex(index)
 {
     g_videoCurrentIndex = index;
-    var video = g_videoList[index];
     setPlayerMode("video");
     $('#video_container').show();
+    
+    
+    var video = g_videoList[index];
+    
+    playerTrackInfo(video.name,video.views);
+    videoUpdateViews(video.id,index);
     
     var url = video.video_file;
     var url_ogv = url.replace(".mp4",".ogv");
@@ -210,5 +215,36 @@ function updateVideoElement(delay_play)
         g_videoPlayer.play();
     }
 }
+
+var g_videoViewsUpdated = {};
+function videoUpdateViews(id,index)
+{
+    if( id in g_videoViewsUpdated )
+        return false;
+
+    g_videoViewsUpdated[id] = true;
+
+    var url = "/data/element_views.php?video_id=" + id;
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: url,
+        dataType: 'json',
+        success: function(data) 
+        {
+            g_totalPageViews = data['total_views'];
+            var element_views = data['element_views'];
+            g_videoList[index].views = element_views;
+            playerUpdateTotalViewCount();
+            playerTrackInfo(false,element_views);
+        },
+        error: function()
+        {
+            //alert('Failed to get listens!');
+        }
+    });
+    return true;
+}
+
 
 

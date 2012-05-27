@@ -154,6 +154,7 @@
 		2D9E2FD91569F13700A76906 /* player.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player.html; sourceTree = "<group>"; };
 		2D9E2FDA1569F17D00A76906 /* player2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player2.php; sourceTree = "<group>"; };
 		2D9E2FDB156A0F2B00A76906 /* player_general.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_general.js; sourceTree = "<group>"; };
+		2D9E2FE51571E76D00A76906 /* element_views.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = element_views.php; sourceTree = "<group>"; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
 		2DD94A2B14C368DF002B1259 /* vim.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = vim.css; sourceTree = "<group>"; };
@@ -2192,6 +2193,7 @@
 				2D34E23414AADC6D004473F9 /* forgot_password.php */,
 				2D6DF95214BA5DA400D0750E /* add_mad_newsletter.php */,
 				2D9E2FD31568685B00A76906 /* viewer_data.php */,
+				2D9E2FE51571E76D00A76906 /* element_views.php */,
 			);
 			path = data;
 			sourceTree = "<group>";
