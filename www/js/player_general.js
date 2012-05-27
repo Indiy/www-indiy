@@ -37,7 +37,6 @@ function showControls()
     if( !g_controlsShown )
     {
         g_controlsShown = true;
-        $(".idle_fade_out").stop();
         $(".idle_fade_out").fadeIn();
     }
     clearTimeoutControls();
@@ -70,7 +69,6 @@ function timeoutControls()
 function hideControls()
 {
     g_controlsShown = false;
-    $(".idle_fade_out").stop();
     $(".idle_fade_out").fadeOut();
 }
 
