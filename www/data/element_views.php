@@ -29,7 +29,7 @@
         mysql_update("mydna_musicplayer_video",array("views" => $views),"id",$video['id']);
     }
     
-    artist_get_total_views($artist_id);
+    $total = artist_get_total_views($artist_id);
     
     $output = array("total_views" => $total,
                    "element_views" => $views);
