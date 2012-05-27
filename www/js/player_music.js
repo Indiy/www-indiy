@@ -165,8 +165,11 @@ function musicLoadImage(song,index)
 
             var div_holder_style = "";
             div_holder_style += "height: {0}px; ".format(win_height);
-            //div_holder_style += "margin-top: {0}px;".format(image_params.margin_top);
-            //div_holder_style += "margin-left: {0}px;".format(image_params.margin_left);
+            div_holder_style += "width: {0}px; ".format(win_width);
+            div_holder_style += "margin-top: {0}px; ".format(image_params.margin_top);
+            div_holder_style += "margin-left: {0}px; ".format(image_params.margin_left);
+            div_holder_style += "padding-bottom: {0}px; ".format(-image_params.margin_top);
+            div_holder_style += "padding-right: {0}px; ".format(-image_params.margin_left);
 
             var html = "";
             html += "<div style='{0}'>".format(div_holder_style);
@@ -226,8 +229,10 @@ function musicResizeBackgrounds()
             
             //div_holder.scrollLeft(-image_params.margin_left);
             //div_holder.scrollTop(-image_params.margin_top);
-            //div_holder.css("margin-left",image_params.margin_left + "px");
-            //div_holder.css("margin-top",image_params.margin_top + "px");
+            div_holder.css("margin-left",image_params.margin_left + "px");
+            div_holder.css("margin-top",image_params.margin_top + "px");
+            div_holder.css("padding-right",-image_params.margin_left + "px");
+            div_holder.css("padding-bottom",-image_params.margin_top + "px");
         }
     }
 }
