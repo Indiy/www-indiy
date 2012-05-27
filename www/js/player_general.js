@@ -17,6 +17,7 @@ var IS_OLD_IE = false;
 
 var g_bottomOpen = false;
 var g_mediaContent = "music";
+var g_playerMode = "music";
 
 function toggleBottom()
 {
@@ -75,4 +76,63 @@ function clickVideoMediaButton()
     g_mediaContent = "video";
 }
 
+function setPlayerMode(mode)
+{
+    g_playerMode = mode;
+    if( g_playerMode == "music" )
+    {
+        videoHide();
+    }
+    else if( g_playerMode == "video")
+    {
+        musicHide();
+    }
+}
 
+function playerPlayPause()
+{
+    if( g_playerMode == "music" )
+        musicPlayPause();
+    else if( g_mediaContent == "video" )
+        musicPlayPause();
+}
+
+function formatMinSeconds(seconds)
+{
+    seconds = Math.floor(seconds);
+    var mins = Math.floor(seconds / 60);
+    var seconds = seconds % 60;
+    var seconds_string = '';
+    if( seconds < 10 )
+        seconds_string += "0";
+    seconds_string += seconds;
+    return mins + ":" + seconds_string;
+}
+
+function playerProgress(curr_time,total_time)
+{
+    var percent = curr_time / total_time * 100.0;
+    var time = formatMinSeconds(curr_time) + " / " + formatMinSeconds(total_time);
+    $('#track_progress').html(time);
+    $('#track_current_bar').css('width',percent + "%");
+}
+
+function playerUpdateTotalViewCount()
+{
+    $('#total_view_count').html(g_totalListens);
+}
+
+function playerTrackInfo(track_name,listens)
+{
+    if( track_name )
+        $('#track_name').html(track_name);
+    $('#track_play_count').html(listens);
+}
+function playerSetPaused()
+{
+    $('#track_play_pause_button').removeClass('playing');
+}
+function playerSetPlaying()
+{
+    $('#track_play_pause_button').addClass('playing');
+}

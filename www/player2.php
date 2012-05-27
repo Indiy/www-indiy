@@ -211,7 +211,7 @@
         if( strlen($vid_error) > 0 )
             continue;
         
-        $video_file = '/vid/' . $video['video'];
+        $video_file = trueSiteUrl() . '/vid/' . $video['video'];
         $video_image = '/artists/images/' . $video['image'];
         $video_name = $video['name'];
         
@@ -225,7 +225,7 @@
         $video_list[] = $item;
         
         $html = "";
-        $html .= "<div class='item' onclick='viewVideo($i);'>";
+        $html .= "<div class='item' onclick='videoPlayIndex($i);'>";
         $html .= " <div class='picture'>";
         $html .= "  <img src='$video_image'/>";
         $html .= " </div>";
@@ -239,6 +239,19 @@
     $video_nav_show = FALSE;
     if( count($video_list) > 3 )
         $video_nav_show = TRUE;
+    $video0_image = "";
+    $video0_sources_html = "";
+    if( count($video_list) > 0 )
+    {
+        $video0 = $video_list[0];
+        $video0_image = $video0["image"];
+
+        $html = "";
+        $html .= "<source src='$video0_mp4' type='video/mp4' />";
+        $html .= "<source src='$video0_ogg' type='video/ogg' />";
+
+        $video0_sources_html = $html;
+    }
     
     include_once 'templates/player.html';
 
