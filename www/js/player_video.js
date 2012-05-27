@@ -21,7 +21,8 @@ function clickVideoIcon()
 
 function videoHide()
 {
-    g_videoPlayer.stop();
+    if( g_videoPlayer )
+        g_videoPlayer.stop();
     $('#video_container').hide();
 }
 
@@ -167,7 +168,7 @@ function videoCreateTag()
     var h = $('#video_container').height();
     var w = $('#video_container').width();
     
-    var video = g_videList[0];
+    var video = g_videoList[0];
     var url = video.video_file;
     var url_ogv = url.replace(".mp4",".ogv");
     var image = video.image;
