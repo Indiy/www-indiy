@@ -64,14 +64,16 @@ body {
 #top_bar {
     position: absolute;
     top: 0px;
-    left: 0px;
+    left: 73px;
     right: 0px;
     height: 48px;
     background: black url('../images/topbar_texture.png') repeat-x;
     overflow: hidden;
 }
-#top_bar .mad_logo {
-    float: left;
+#top_bar_mad_logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
     width: 73px;
     height: 48px;
     background: black url('../images/madcom_logo.png');
