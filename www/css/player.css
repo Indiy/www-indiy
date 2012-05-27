@@ -74,7 +74,7 @@ body {
 }
 */
 #music_bg .image_holder {
-    display: inline-block;
+    display: none;
     height: 100%;
     width: 100%;
     background-color: transparent;

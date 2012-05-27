@@ -7,6 +7,8 @@ $(document).ready(musicOnReady);
 
 function musicOnReady()
 {
+    if( g_musicList.length == 0 )
+        return;
 
     $('#jquery_jplayer').jPlayer({
         ready: jplayerReady,
@@ -22,7 +24,7 @@ function musicOnReady()
     .bind($.jPlayer.event.pause,jplayerPause)
     .bind($.jPlayer.event.volumechange,jplayerVolume);
      
-    window.setTimeout(musicPreloadImages,MUSIC_IMAGE_PRELOAD_TIMEOUT);
+    //window.setTimeout(musicPreloadImages,MUSIC_IMAGE_PRELOAD_TIMEOUT);
     $(window).resize(musicResizeBackgrounds);
 }
 
@@ -105,6 +107,9 @@ function musicChange( index )
     {
         $('#jquery_jplayer').jPlayer("stop");
     }
+    musicLoadImage(song,index);
+    $('#music_bg .image_holder').hide();
+    $('#music_bg .image_holder_' + index).show();
     
     g_currentSongId = song.id;
     window.location.hash = '#song_id=' + g_currentSongId; 
@@ -127,37 +132,6 @@ function musicNext()
     musicChange(index);
 }
 
-
-var g_musicListenUpdated = {};
-function musicUpdateListens(song_id,index)
-{
-    if( song_id in g_musicListenUpdated )
-        return false;
-
-    g_musicListenUpdated[song_id] = true;
-
-    var url = "/data/element_views.php?song_id=" + song_id;
-    jQuery.ajax(
-    {
-        type: 'POST',
-        url: url,
-        dataType: 'json',
-        success: function(data) 
-        {
-            g_totalPageViews = data['total_views'];
-            var track_listens = data['element_views'];
-            g_musicList[index].listens = track_listens;
-            playerUpdateTotalViewCount();
-            playerTrackInfo(false,track_listens);
-        },
-        error: function()
-        {
-            //alert('Failed to get listens!');
-        }
-    });
-    return true;
-}
-
 function musicPreloadImages()
 {
     for( var k in g_songPlayList )
@@ -178,12 +152,15 @@ function musicLoadImage(song,index)
         song.loaded = true;
         var holder = $('#image_holder_' + index);
         
+        var win_height = $('#music_bg').height();
+        var win_width = $('#music_bg').width();
+        
         holder.css("background-color", "#" + color);
         if( bg_style == 'STRETCH' )
         {
-            var img_url = "/timthumb.php?src=" + image + "&w=" + getWindowWidth() + "&zc=0&q=100";
-            var html = "<div style='height: " + getWindowHeight() + "px;'>";
-            html += "<img src='" + img_url + "' />";
+            var img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(image,win_width);
+            var html = "<div style='height: {0}px;'>".format(win_height);
+            html += "<img src='{0}' />".format(img_url);
             html += "</div>"
             holder.html(html);
             holder.css("background-image","none");
@@ -195,7 +172,7 @@ function musicLoadImage(song,index)
             holder.css("background-image","url(" + image + ")");
             holder.css("background-repeat","no-repeat");
             holder.css("background-position","center center");
-            var html = "<div style='width: 100%; height: " + getWindowHeight() + "px;'></div>";
+            var html = "<div style='width: 100%; height: {0}px;'></div>".format(win_height);
             holder.html(html);
         }
         else if( bg_style == 'TILE' )
@@ -203,22 +180,32 @@ function musicLoadImage(song,index)
             holder.css("background-image","url(" + image + ")");
             holder.css("background-repeat","repeat");
             holder.css("background-position","center center");
-            var html = "<div style='width: 100%; height: " + getWindowHeight() + "px;'></div>";
+            var html = "<div style='width: 100%; height: {0}px;'></div>".format(win_height);
             holder.html(html);
         }
     }            
     musicResizeBackgrounds();
 }
+
+function musicGetImageParams()
+{
+    
+}
+
 function musicResizeBackgrounds()
 {
     for( var i = 0 ; i < g_musicList.length ; ++i )
     {
         var song = g_musicList[i];
+        
+        if( !song.loaded )
+            continue;
+        
         var bg_style = song.bg_style;
         if( bg_style == 'STRETCH' )
         {
-            var win_height = getWindowHeight();
-            var win_width = getWindowWidth();
+            var win_height = $('#music_bg').height();
+            var win_width = $('#music_bg').width();
             var win_ratio = win_width / win_height;
             
             var holder = $('#image_holder_' + i + ' div');
@@ -252,5 +239,35 @@ function musicResizeBackgrounds()
     }
 }
 
+
+var g_musicListenUpdated = {};
+function musicUpdateListens(song_id,index)
+{
+    if( song_id in g_musicListenUpdated )
+        return false;
+
+    g_musicListenUpdated[song_id] = true;
+
+    var url = "/data/element_views.php?song_id=" + song_id;
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: url,
+        dataType: 'json',
+        success: function(data) 
+        {
+            g_totalPageViews = data['total_views'];
+            var track_listens = data['element_views'];
+            g_musicList[index].listens = track_listens;
+            playerUpdateTotalViewCount();
+            playerTrackInfo(false,track_listens);
+        },
+        error: function()
+        {
+            //alert('Failed to get listens!');
+        }
+    });
+    return true;
+}
 
 
