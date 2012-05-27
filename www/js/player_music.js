@@ -163,17 +163,20 @@ function musicLoadImage(song,index)
             var img_style = "width: {0}px; height: {1}px;".format(image_params.width,image_params.height);
             var img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(image,win_width);
 
+            var div_holder_style = "";
+            div_holder_style += "height: {0}px; ".format(win_height);
+            div_holder_style += "margin-top: {0}px;".format(image_params.margin_top);
+            div_holder_style += "margin-left: {0}px;".format(image_params.margin_left);
+
             var html = "";
-            //html += "<div style='height: {0}px;'>".format(win_height);
+            html += "<div style='{0}'>".format(div_holder_style);
             html += "<img src='{0}' style='{1}' />".format(img_url,img_style);
-            //html += "</div>"
+            html += "</div>"
             holder.html(html);
+            
             holder.css("background-image","none");
             holder.css("background-repeat","no-repeat");
             holder.css("background-position","center center");
-            
-            holder.css("margin-left",image_params.margin_left + "px");
-            holder.css("margin-top",image_params.margin_top + "px");
         }
         else if( bg_style == 'CENTER' )
         {
@@ -210,18 +213,18 @@ function musicResizeBackgrounds()
             var win_height = $('#music_bg').height();
             var win_width = $('#music_bg').width();
             
-            var holder = $('#image_holder_' + i + '');
-            var image = $('#image_holder_' + i + ' img');
+            var div_holder = $('#image_holder_' + i + ' div');
+            var image = $('#image_holder_' + i + ' div img');
             
-            //holder.height(win_height);
-            //holder.width(win_width);
+            div_holder.height(win_height);
+            div_holder.width(win_width);
             
             var image_params = musicGetBackgroundParams(song);
             
             image.width(image_params.width);
             image.height(image_params.height);
-            holder.css("margin-left",image_params.margin_left + "px");
-            holder.css("margin-top",image_params.margin_top + "px");
+            div_holder.css("margin-left",image_params.margin_left + "px");
+            div_holder.css("margin-top",image_params.margin_top + "px");
         }
     }
 }
