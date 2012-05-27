@@ -245,13 +245,13 @@ function musicGetBackgroundParams(song)
     {
         height = win_height;
         width = height * img_ratio;
-        margin_left = (width - win_width)/2;
+        margin_left = -(width - win_width)/2;
     }
     else
     {
         width = win_width;
         height = width / img_ratio;
-        margin_top = (height - win_height)/2;
+        margin_top = -(height - win_height)/2;
     }
 
     var ret = {
