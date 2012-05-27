@@ -224,8 +224,8 @@ function musicResizeBackgrounds()
             image.width(image_params.width);
             image.height(image_params.height);
             
-            div_holder.scrollLeft(-image_params.margin_left);
-            div_holder.scrollTop(-image_params.margin_top);
+            //div_holder.scrollLeft(-image_params.margin_left);
+            //div_holder.scrollTop(-image_params.margin_top);
             //div_holder.css("margin-left",image_params.margin_left + "px");
             //div_holder.css("margin-top",image_params.margin_top + "px");
         }
