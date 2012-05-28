@@ -156,7 +156,7 @@ function playerPlayPause()
 {
     if( g_playerMode == "music" )
         musicPlayPause();
-    else if( g_mediaContent == "video" )
+    else if( g_playerMode == "video" )
         videoPlayPause();
 }
 
