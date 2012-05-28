@@ -741,22 +741,22 @@ body {
     background-color: #e07329;
 }
 #social_share .links .item.facebook .icon {
-    background: url("../images/fb_icon.png");
+    background: url('/images/share_icons.png') 0px 0px;
 }
 #social_share .links .item.twitter .icon {
-    background: url("../images/tw_icon.png");
+    background: url('/images/share_icons.png') 0px 0px;
 }
 #social_share .links .item.tumblr .icon {
-    background: url("../images/tumblr_icon.png");
+    background: url('/images/share_icons.png') 0px 0px;
 }
 #social_share .links .item.pinterest .icon {
-    background: url("../images/pin_icon.png");
+    background: url('/images/share_icons.png') 0px 0px;
 }
 #social_share .links .item.google .icon {
-    background: url("../images/google_icon.png");
+    background: url('/images/share_icons.png') 0px 0px;
 }
 #social_share .links .item.email .icon {
-    background: url("../images/email_icon.png");
+    background: url('/images/share_icons.png') 0px 0px;
 }
 #social_share .links .item .name {
     display: inline-block;
