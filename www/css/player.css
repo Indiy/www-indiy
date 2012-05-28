@@ -706,14 +706,14 @@ body {
 #social_share .links {
     height: 36px;
     padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
+    padding-bottom: 4px;
+    padding-left: 10px;
 }
 #social_share .links .item {
     float: left;
     width: 126px;
     height: 36px;
-    margin-right: 10px;
+    margin-right: 4px;
     white-space: nowrap;
 }
 #social_share .links .item .icon {
