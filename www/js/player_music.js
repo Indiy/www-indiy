@@ -30,7 +30,13 @@ function musicOnReady()
 
 function musicHide()
 {
+    $('#music_bg').hide();
     $('#jquery_jplayer').jPlayer("stop");
+}
+
+function musicShow()
+{
+    $('#music_bg').show();
 }
 
 function jplayerTimeUpdate(event)

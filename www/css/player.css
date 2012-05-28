@@ -423,6 +423,7 @@ body {
 #media_social_boxes .media_boxes {
     width: auto;
     height: 100%;
+    background: black url('../images/inactive_button_texture.png') repeat;
     overflow: hidden;
 }
 #media_social_boxes .media_boxes .media_buttons {
