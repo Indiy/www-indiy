@@ -253,6 +253,8 @@
         $video0_sources_html = $html;
     }
     
+    $photo_list = array();
+    
     include_once 'templates/player.html';
 
 ?>
