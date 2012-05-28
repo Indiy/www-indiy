@@ -17,12 +17,15 @@
     <script src="/js/player_general.js" type="text/javascript"></script>
     <script src="/js/player_music.js" type="text/javascript"></script>
     <script src="/js/player_video.js" type="text/javascript"></script>
+    <script src="/js/player_love.js" type="text/javascript"></script>
 
     <script type="text/javascript">
         var g_tabList = <?=$tab_list_json;?>;
         var g_musicList = <?=$music_list_json;?>;
         var g_videoList = <?=$video_list_json;?>;
         var g_totalPageViews = <?=$artist_views;?>;
+        var g_pageUrl = "<?=trueSiteUrl();?>";
+        var g_artistName = "<?=$artist_name;?>";
     </script>
 </head>
 
@@ -87,7 +90,7 @@
                     </div>
                     <div class='sep'></div>
                 <? endif; ?>
-                <div class='love tooltiped button'>
+                <div id='love_button' class='love tooltiped button' onclick='clickLoveIcon();'>
                     <div class='icon'></div>
                     <div id='tip_love' class='tooltip'>
                         <div class='carrot'></div>
