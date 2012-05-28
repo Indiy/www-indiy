@@ -363,10 +363,10 @@ body {
     background: transparent url('/images/player_icons.png') no-repeat -241px 7px;
 }
 #tracker_bar .buttons .love.button.love_active .icon {
-    background: transparent url('/images/controls.png') no-repeat -241px -61px;
+    background: transparent url('/images/controls.png') no-repeat -789px -2px;
 }
 #tracker_bar .buttons .love.button.love_active .icon:hover {
-    background: transparent url('/images/controls.png') no-repeat -241px 7px;
+    background: transparent url('/images/player_icons.png') no-repeat -241px 7px;
 }
 
 
