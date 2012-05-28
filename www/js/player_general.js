@@ -157,7 +157,7 @@ function playerPlayPause()
     if( g_playerMode == "music" )
         musicPlayPause();
     else if( g_mediaContent == "video" )
-        musicPlayPause();
+        videoPlayPause();
 }
 
 function formatMinSeconds(seconds)
