@@ -97,8 +97,8 @@ function musicChange( index )
     
     g_currentSongIndex = index;
     var song = g_musicList[index];
-    //$("#playlist .song_list_item").removeClass("current");
-    //$("#playlist #song_list_item_" + song.id).addClass("current");
+
+    loveChangedMusic(song.id);
     
     var media = {
         mp3: song.mp3,

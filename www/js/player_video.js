@@ -112,6 +112,8 @@ function videoPlayIndex(index)
     
     var video = g_videoList[index];
     
+    loveChangedVideo(video.id);
+    
     playerTrackInfo(video.name,video.views);
     videoUpdateViews(video.id,index);
     
