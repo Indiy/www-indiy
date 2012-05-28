@@ -74,14 +74,16 @@
                         MUSIC
                     </div>
                 </div>
-                <div class='sep'></div>
-                <div class='video tooltiped button' onclick='clickVideoIcon();'>
-                    <div class='icon'></div>
-                    <div id='tip_video' class='tooltip'>
-                        <div class='carrot'></div>
-                        VIDEO
+                <? if( count($video_list) > 0 ): ?>
+                    <div class='sep'></div>
+                    <div class='video tooltiped button' onclick='clickVideoIcon();'>
+                        <div class='icon'></div>
+                        <div id='tip_video' class='tooltip'>
+                            <div class='carrot'></div>
+                            VIDEO
+                        </div>
                     </div>
-                </div>
+                <? endif; ?>
                 <div class='sep'></div>
                 <div class='love tooltiped button'>
                     <div class='icon'></div>
@@ -156,11 +158,13 @@
                         <div class='icon'></div>
                         <div class='label'>MUSIC</div>
                     </div>
-                    <div class='sep'></div>
-                    <div class='button video' onclick='clickVideoMediaButton();'>
-                        <div class='icon'></div>
-                        <div class='label'>VIDEO</div>
-                    </div>
+                    <? if( count($video_list) > 0 ): ?>
+                        <div class='sep'></div>
+                        <div class='button video' onclick='clickVideoMediaButton();'>
+                            <div class='icon'></div>
+                            <div class='label'>VIDEO</div>
+                        </div>
+                    <? endif; ?>
                 </div>
                 <div id='media_content_lists' class='media_content'>
                     <div id='music_list' class='media_list'>
