@@ -699,14 +699,15 @@ body {
     font-weight: normal;
 }
 #social_share .links {
+    height: 36px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 10px;
 }
 #social_share .links .item {
     float: left;
-    width: 148px;
-    height: 44px;
+    width: 126px;
+    height: 36px;
     margin-right: 10px;
     white-space: nowrap;
 }
