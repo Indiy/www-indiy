@@ -697,6 +697,7 @@ body {
 }
 #social_share .sub_title {
     padding-top: 12px;
+    padding-bottom: 10px;
     padding-left: 14px;
     color: white;
     font-size: 12px;
@@ -705,8 +706,7 @@ body {
 }
 #social_share .links {
     height: 36px;
-    padding-top: 10px;
-    padding-bottom: 4px;
+    padding-bottom: 5px;
     padding-left: 10px;
 }
 #social_share .links .item {
