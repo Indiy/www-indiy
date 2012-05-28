@@ -680,3 +680,89 @@ body {
     white-space: normal;
 }
 
+
+#social_share .title {
+    color: #555;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#social_share .sep {
+    height: 3px;
+    width: 100%;
+    background: black url('/images/share_sep.png') repeat-x;
+}
+#social_share .sub_title {
+    color: white;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#social_share .links {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+#social_share .links .item {
+    float: left;
+    width: 148px;
+    height: 44px;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+#social_share .links .item .icon {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background-color: gray;
+}
+#social_share .links .item.facebook {
+    background-color: #283981;
+}
+#social_share .links .item.twitter {
+    background-color: #009cb7;
+}
+#social_share .links .item.tumblr {
+    background-color: #466c95;
+}
+#social_share .links .item.pinterest {
+    background-color: #af124c;
+}
+#social_share .links .item.google {
+    background-color: #831219;
+}
+#social_share .links .item.email {
+    background-color: #e07329;
+}
+#social_share .links .item.facebook .icon {
+    background: url("../images/fb_icon.png");
+}
+#social_share .links .item.twitter .icon {
+    background: url("../images/tw_icon.png");
+}
+#social_share .links .item.tumblr .icon {
+    background: url("../images/tumblr_icon.png");
+}
+#social_share .links .item.pinterest .icon {
+    background: url("../images/pin_icon.png");
+}
+#social_share .links .item.google .icon {
+    background: url("../images/google_icon.png");
+}
+#social_share .links .item.email .icon {
+    background: url("../images/email_icon.png");
+}
+#social_share .links .item .name {
+    display: inline-block;
+    padding-top: 18px;
+    width: 102px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+
+
