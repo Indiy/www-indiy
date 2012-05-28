@@ -115,7 +115,7 @@ function updateLoveLinks(type,track_name)
     var link_url = g_pageUrl;
     var host = window.location.host;
 
-    var msg = "Check out {0}'s {1} \"{2}\" on MyArtistDNA".format(artist,type,track);
+    var msg = "Check out {0}'s {1} \"{2}\" on MyArtistDNA".format(artist,type,track_name);
     var name = host;
     
     var url = "http://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(host);
