@@ -37,7 +37,12 @@ function showControls()
     if( !g_controlsShown )
     {
         g_controlsShown = true;
-        $(".idle_fade_out").fadeIn();
+        $('.idle_fade_out').fadeIn();
+    }
+    else
+    {
+        $('.idle_fade_out').show();
+        $('.idle_fade_out').css("opacity",1.0);
     }
     clearTimeoutControls();
 }
@@ -69,7 +74,7 @@ function timeoutControls()
 function hideControls()
 {
     g_controlsShown = false;
-    $(".idle_fade_out").fadeOut();
+    $('.idle_fade_out').fadeOut();
 }
 
 
