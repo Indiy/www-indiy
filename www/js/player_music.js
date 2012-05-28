@@ -98,7 +98,7 @@ function musicChange( index )
     g_currentSongIndex = index;
     var song = g_musicList[index];
 
-    loveChangedMusic(song.id);
+    loveChangedMusic(song.id,song.name);
     
     var media = {
         mp3: song.mp3,
