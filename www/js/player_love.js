@@ -33,7 +33,7 @@ function loveToggleClass(is_loved)
         $("#love_button").removeClass("love_active");
 }
 
-var clickLoveIcon()
+function clickLoveIcon()
 {
     var is_loved = toggleLoveTag(g_currentLoveTag);
     loveToggleClass(is_loved);
