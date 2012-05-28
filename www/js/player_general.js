@@ -25,6 +25,7 @@ var g_playerMode = "music";
 var g_controlsShown = true;
 var g_hideControlsTimeout = false;
 var g_hideBottomTimeout = false;
+var g_socialContent = "share";
 
 $(document).ready(generalOnReady);
 function generalOnReady()
@@ -98,6 +99,12 @@ function closeBottom()
     g_bottomOpen = false;
     $('#bottom_container').stop();
     $('#bottom_container').animate({ height: '55px' });
+}
+
+function changeSocialContainer()
+{
+    $().
+    openBottom();
 }
 
 function maybeAskForEmail()
