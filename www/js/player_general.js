@@ -142,10 +142,12 @@ function setPlayerMode(mode)
     g_playerMode = mode;
     if( g_playerMode == "music" )
     {
+        musicShow();
         videoHide();
     }
     else if( g_playerMode == "video")
     {
+        videoShow();
         musicHide();
     }
 }

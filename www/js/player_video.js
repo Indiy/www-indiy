@@ -28,6 +28,11 @@ function videoHide()
         g_videoPlayer.pause();
     $('#video_container').hide();
 }
+function videoShow()
+{
+    $('#video_container').show();
+}
+
 
 function videoListScrollLeft()
 {
@@ -86,7 +91,6 @@ function videoPlayIndex(index)
 {
     g_videoCurrentIndex = index;
     setPlayerMode("video");
-    $('#video_container').show();
     
     var video = g_videoList[index];
     
