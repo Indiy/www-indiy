@@ -32,7 +32,13 @@ function videoShow()
 {
     $('#video_container').show();
 }
-
+function videoPlayPause()
+{
+    if( g_videoPlaying )
+        g_videoPlayer.pause();
+    else
+        g_videoPlayer.play();
+}
 
 function videoListScrollLeft()
 {
@@ -192,30 +198,6 @@ function videoCreateTag()
     $('#video_container').html(html);
     g_videoPlayer = _V_('video_player');
     g_videoPlayer.ready(onVideoReady);
-}
-
-function updateVideoElement(delay_play)
-{
-    g_videoHistory = g_genreHistory[g_genre];
-    var video = g_videoHistory[0];
-    var url = video.video_file;
-    var url_ogv = url.replace(".mp4",".ogv");
-
-    updateVideoDisplay();
-    if( g_touchDevice )
-    {
-        g_videoPlayer.attr('src',url);
-        g_videoPlayer[0].play();
-    }
-    else
-    {
-        var media = [
-             { type: "video/mp4", src: url },
-             { type: "video/ogg", src: url_ogv }
-        ];
-        g_videoPlayer.src(media);
-        g_videoPlayer.play();
-    }
 }
 
 var g_videoViewsUpdated = {};
