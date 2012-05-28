@@ -682,6 +682,9 @@ body {
 
 
 #social_share .title {
+    padding-top: 13px;
+    padding-left: 14px;
+    padding-bottom: 9px;
     color: #555;
     font-size: 12px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
@@ -693,6 +696,8 @@ body {
     background: black url('/images/share_sep.png') repeat-x;
 }
 #social_share .sub_title {
+    padding-top: 12px;
+    padding-left: 14px;
     color: white;
     font-size: 12px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
@@ -713,8 +718,8 @@ body {
 }
 #social_share .links .item .icon {
     display: inline-block;
-    width: 44px;
-    height: 44px;
+    width: 39px;
+    height: 36px;
     background-color: gray;
 }
 #social_share .links .item.facebook {
@@ -755,11 +760,11 @@ body {
 }
 #social_share .links .item .name {
     display: inline-block;
-    padding-top: 18px;
-    width: 102px;
+    padding-top: 13px;
+    width: 79px;
     text-align: center;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
     vertical-align: top;
