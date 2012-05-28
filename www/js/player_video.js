@@ -26,8 +26,7 @@ function videoHide()
 {
     if( g_videoPlayer )
     {
-        g_videoPlayer.pause();
-        g_videoPlaying = false;
+        videoPause();
     }
     $('#video_container').hide();
 }
@@ -39,13 +38,18 @@ function videoPlayPause()
 {
     if( g_videoPlaying )
     {
-        g_videoPlayer.pause();
-        g_videoPlaying = false;
+        videoPause();
     }
     else
     {
         g_videoPlayer.play();
     }
+}
+function videoPause()
+{
+    g_videoPlaying = false;
+    g_videoPlayer.pause();
+    playerSetPaused();
 }
 
 function videoListScrollLeft()
