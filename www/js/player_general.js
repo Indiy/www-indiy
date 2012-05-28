@@ -39,7 +39,7 @@ function showControls()
         g_controlsShown = true;
         $('.idle_fade_out').fadeIn();
     }
-    else
+    else if( !$('.idle_fade_out').is(':animated') )
     {
         $('.idle_fade_out').show();
         $('.idle_fade_out').css("opacity",1.0);
