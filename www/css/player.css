@@ -741,22 +741,22 @@ body {
     background-color: #e07329;
 }
 #social_share .links .item.facebook .icon {
-    background: url('/images/share_icons.png') 0px 0px;
+    background: url('/images/share_icons.png') -2px -2px;
 }
 #social_share .links .item.twitter .icon {
-    background: url('/images/share_icons.png') 0px 0px;
+    background: url('/images/share_icons.png') -43px -2px;
 }
 #social_share .links .item.tumblr .icon {
-    background: url('/images/share_icons.png') 0px 0px;
+    background: url('/images/share_icons.png') -84px -2px;
 }
 #social_share .links .item.pinterest .icon {
-    background: url('/images/share_icons.png') 0px 0px;
+    background: url('/images/share_icons.png') -2px -43px;
 }
 #social_share .links .item.google .icon {
-    background: url('/images/share_icons.png') 0px 0px;
+    background: url('/images/share_icons.png') -43px -43px;
 }
 #social_share .links .item.email .icon {
-    background: url('/images/share_icons.png') 0px 0px;
+    background: url('/images/share_icons.png') -84px -43px;
 }
 #social_share .links .item .name {
     display: inline-block;
