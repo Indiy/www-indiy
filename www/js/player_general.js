@@ -1,6 +1,6 @@
 
 
-var HIDE_CONTROLS_NORMAL_TIMEOUT = 4000;
+var HIDE_CONTROLS_NORMAL_TIMEOUT = 5000;
 var HIDE_CONTROLS_OPEN_TIMEOUT = 15000;
 
 var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
@@ -30,6 +30,8 @@ var g_socialContent = "share";
 $(document).ready(generalOnReady);
 function generalOnReady()
 {
+    clickMusicMediaButton();
+
     $(document).mousemove(showAndTimeoutControls);
 }
 
@@ -114,7 +116,6 @@ function closeBottom(animate)
 
 function changeSocialContainer()
 {
-    $().
     openBottom();
 }
 
