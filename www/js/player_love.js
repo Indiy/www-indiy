@@ -40,11 +40,7 @@ function clickLoveIcon()
 
     if( is_loved )
     {
-        window.alert("Is Loved");
-    }
-    else
-    {
-        window.alert("Is Not Loved");
+        openBottom();
     }
 }
 
