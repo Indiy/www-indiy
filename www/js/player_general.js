@@ -1,7 +1,7 @@
 
 
-var HIDE_CONTROLS_TIMEOUT = 4000;
-var HIDE_BOTTOM_TIMEOUT = 6000;
+var HIDE_CONTROLS_NORMAL_TIMEOUT = 4000;
+var HIDE_CONTROLS_OPEN_TIMEOUT = 6000;
 
 var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
 
@@ -68,14 +68,18 @@ function clearTimeoutControls()
 function timeoutControls()
 {
     clearTimeoutControls();
-    g_hideControlsTimeout = window.setTimeout(hideControls,HIDE_CONTROLS_TIMEOUT);
+    var timeout = HIDE_CONTROLS_NORMAL_TIMEOUT;
     if( g_bottomOpen )
-        g_hideBottomTimeout = window.setTimeout(closeBottom,HIDE_BOTTOM_TIMEOUT);
+        timeout = HIDE_CONTROLS_OPEN_TIMEOUT;
+    
+    g_hideControlsTimeout = window.setTimeout(hideControls,timeout);
+    //g_hideBottomTimeout = window.setTimeout(closeBottom,HIDE_BOTTOM_TIMEOUT);
 }
 function hideControls()
 {
     g_controlsShown = false;
     $('.idle_fade_out').fadeOut();
+    closeBottom(false);
 }
 
 
@@ -94,11 +98,18 @@ function openBottom()
     $('#bottom_container').animate({ height: '275px' });
 }
 
-function closeBottom()
+function closeBottom(animate)
 {
     g_bottomOpen = false;
-    $('#bottom_container').stop();
-    $('#bottom_container').animate({ height: '55px' });
+    if( animate === false )
+    {
+        $('#bottom_container').css('height','55px');
+    }
+    else
+    {
+        $('#bottom_container').stop();
+        $('#bottom_container').animate({ height: '55px' });
+    }
 }
 
 function changeSocialContainer()
