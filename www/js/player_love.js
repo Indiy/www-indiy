@@ -41,6 +41,7 @@ function clickLoveIcon()
     if( is_loved )
     {
         openBottom();
+        clickShareButton();
     }
 }
 

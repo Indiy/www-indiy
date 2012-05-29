@@ -31,6 +31,7 @@ $(document).ready(generalOnReady);
 function generalOnReady()
 {
     clickMusicMediaButton();
+    clickShareButton();
 
     $(document).mousemove(showAndTimeoutControls);
 }
