@@ -412,10 +412,10 @@ body {
     width: 22px;
 }
 #media_social_boxes .social_boxes .social_buttons .button.twitter .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -625px -84px;
+    background: transparent url('../images/player_icons.png') no-repeat -625px -85px;
 }
 #media_social_boxes .social_boxes .social_buttons .button.twitter .icon:hover {
-    background: transparent url('../images/player_icons.png') no-repeat -625px -16px;
+    background: transparent url('../images/player_icons.png') no-repeat -625px -14px;
 }
 #media_social_boxes .social_boxes .social_buttons .button.facebook .icon {
     background: transparent url('../images/player_icons.png') no-repeat -582px -84px;
