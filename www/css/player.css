@@ -432,7 +432,7 @@ body {
 #media_social_boxes .social_boxes .social_buttons .button.email .icon {
     background: transparent url('../images/player_icons.png') no-repeat -502px -86px;
 }
-#media_social_boxes .social_boxes .social_buttons .button.email.icon:hover  {
+#media_social_boxes .social_boxes .social_buttons .button.email .icon:hover  {
     background: transparent url('../images/player_icons.png') no-repeat -502px -15px;
 }
 
