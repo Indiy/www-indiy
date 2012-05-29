@@ -680,6 +680,9 @@ body {
     white-space: normal;
 }
 
+#media_social_boxes .social_boxes .social_content .social_item {
+    display: none;
+}
 
 #social_share .title {
     padding-top: 13px;
@@ -771,4 +774,53 @@ body {
 }
 
 
+#social_email .title {
+    padding-top: 13px;
+    padding-left: 14px;
+    padding-bottom: 9px;
+    color: #555;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#social_email .sep {
+    height: 3px;
+    width: 100%;
+    background: black url('/images/share_sep.png') repeat-x;
+}
+#social_email .sub_title {
+    padding-top: 12px;
+    padding-bottom: 10px;
+    padding-left: 14px;
+    color: white;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#social_email .detail {
+    
+}
+#social_email .input_button {
+    white-space: nowrap;
+}
+#social_email input {
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 8px;
+    width: 288px;
+    height: 22px;
+    padding-left: 12px;
+    padding-top: 7px;
+}
+#social_email button {
+    display: inline-block;
+    width: 66px;
+    padding-top: 7px;
+    height: 22px;
+    color: white;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    background-color: #00c5e8;
+}
 

@@ -129,27 +129,27 @@
         <div id='media_social_boxes'>
             <div class='social_boxes'>
                 <div class='social_buttons'>
-                    <div class='button'>
+                    <div class='button' onclick='clickTwitterButton();'>
                         <div class='icon'></div>
                         <div class='label'>TWITTER</div>
                     </div>
                     <div class='sep'></div>
-                    <div class='button'>
+                    <div class='button' onclick='clickFacebookButton();'>
                         <div class='icon'></div>
                         <div class='label'>FACEBOOK</div>
                     </div>
                     <div class='sep'></div>
-                    <div class='button'>
+                    <div class='button' onclick='clickShareButton();'>
                         <div class='icon'></div>
                         <div class='label'>SHARE</div>
                     </div>
                     <div class='sep'></div>
-                    <div class='button'>
+                    <div class='button' onclick='clickEmailButton();'>
                         <div class='icon'></div>
                         <div class='label'>EMAIL LIST</div>
                     </div>
                 </div>
-                <div class='social_content'>
+                <div id='social_content' class='social_content'>
                     <div id='social_share' class='social_item'>
                         <div class='title'>SHARE THIS ARTIST</div>
                         <div class='sep'></div>
@@ -193,6 +193,17 @@
                                     <div class='name'>EMAIL</div>
                                 </div>
                             </a>
+                        </div>
+                    </div>
+                    <div id='social_email' class='social_item'>
+                        <div class='title'>JOIN THIS ARTIST'S MAILING LIST</div>
+                        <div class='sep'></div>
+                        <div class='sub_title'>Join the Mailing List</div>
+                        <div class='detail'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                        
+                        <div class='input_button'>
+                            <input placeholder="Your Email Address">
+                            <button>JOIN</button>
                         </div>
                     </div>
                 </div>
