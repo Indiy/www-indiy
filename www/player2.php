@@ -93,6 +93,10 @@
     if( $artist_data['tw_setting'] != 'DISABLED' && $artist_data['twitter'] )
         $artist_twitter = $artist_data['twitter'];
     
+    $artist_facebook_page = FALSE;
+    if( $artist_data['fb_setting'] != 'DISABLED' && $artist_data['fb_page_url'] )
+        $artist_facebook_page = $artist_data['fb_page_url'];
+    
     $store_enabled = FALSE;
     $artist_paypal = '';
     
