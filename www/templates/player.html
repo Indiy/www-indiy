@@ -32,6 +32,15 @@
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) return;
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=256680924395123";
+             fjs.parentNode.insertBefore(js, fjs);
+             }(document, 'script', 'facebook-jssdk'));</script>
+
     <div id='music_bg'>
         <?php
             foreach( $music_list as $k => $song )
@@ -244,9 +253,11 @@
                             </script>
                         </div>
                     <? endif; ?>
-                    <div id='social_facebook' class='social_item'>
-                        Facebook holder
-                    </div>
+                    <? if( $artist_facebook_page ): ?>
+                        <div id='social_facebook' class='social_item'>
+                            <div class="fb-like-box" data-href="<?=$artist_facebook_page;?>" data-width="400" data-height="220" data-colorscheme="dark" data-show-faces="true" data-stream="true" data-header="false"></div>
+                        </div>
+                    <? endif; ?>
                 </div>
             </div>
             <div class='media_boxes'>
