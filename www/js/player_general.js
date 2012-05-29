@@ -162,7 +162,7 @@ function clickShareButton()
     $('#social_share').show();
     g_socialContent = "share";
 }
-function clickShareButton()
+function clickEmailButton()
 {
     $('#social_content .social_item').hide();
     $('#social_email').show();
