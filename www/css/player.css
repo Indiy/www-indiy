@@ -872,6 +872,7 @@ body {
     background-image: -ms-linear-gradient(bottom, #00859C 4%, #00D7F8 84%);
 }
 #social_email .success {
+    display: none;
     padding-left: 14px;
     padding-right: 18px;
     padding-top: 10px;
