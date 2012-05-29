@@ -126,9 +126,9 @@ function maybeAskForEmail()
 
 function clickMusicIcon()
 {
-    clickBottomIcon("music",clickMusicMediaButton);
+    clickMediaIcon("music",clickMusicMediaButton);
 }
-function clickBottomIcon(name,callback)
+function clickMediaIcon(name,callback)
 {
     if( g_bottomOpen && g_mediaContent == name )
     {
@@ -154,6 +154,19 @@ function clickVideoMediaButton()
     $('#media_content_lists .media_list').hide();
     $('#video_list').show();
     g_mediaContent = "video";
+}
+
+function clickShareButton()
+{
+    $('#social_content .social_item').hide();
+    $('#social_share').show();
+    g_socialContent = "share";
+}
+function clickShareButton()
+{
+    $('#social_content .social_item').hide();
+    $('#social_email').show();
+    g_socialContent = "email";
 }
 
 function setPlayerMode(mode)

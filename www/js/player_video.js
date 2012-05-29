@@ -18,7 +18,7 @@ function videoOnReady()
 
 function clickVideoIcon()
 {
-    clickBottomIcon("video",clickVideoMediaButton);
+    clickMediaIcon("video",clickVideoMediaButton);
     scrollVideoToIndex();
 }
 
