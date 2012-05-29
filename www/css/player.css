@@ -412,22 +412,22 @@ body {
     width: 22px;
 }
 #media_social_boxes .social_boxes .social_buttons .button.twitter .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -623px -86px;
+    background: transparent url('../images/player_icons.png') no-repeat -625px -86px;
 }
 #media_social_boxes .social_boxes .social_buttons .button.twitter:hover .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -623px -16px;
+    background: transparent url('../images/player_icons.png') no-repeat -625px -16px;
 }
 #media_social_boxes .social_boxes .social_buttons .button.facebook .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -580px -15px;
+    background: transparent url('../images/player_icons.png') no-repeat -582px -85px;
 }
 #media_social_boxes .social_boxes .social_buttons .button.facebook:hover .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -580px -85px;
+    background: transparent url('../images/player_icons.png') no-repeat -582px -15px;
 }
 #media_social_boxes .social_boxes .social_buttons .button.share .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -541px -85px;
+    background: transparent url('../images/player_icons.png') no-repeat -543px -85px;
 }
 #media_social_boxes .social_boxes .social_buttons .button.share:hover .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -541px -15px;
+    background: transparent url('../images/player_icons.png') no-repeat -543px -15px;
 }
 #media_social_boxes .social_boxes .social_buttons .button.email .icon {
     background: transparent url('../images/player_icons.png') no-repeat -502px -86px;
