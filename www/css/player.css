@@ -447,6 +447,9 @@ body {
     text-shadow: 0px -1px #0e0e0e;
     vertical-align: top;
 }
+#media_social_boxes .social_boxes .social_buttons .button:hover .label {
+    color: white;
+}
 #media_social_boxes .social_boxes .social_buttons .sep {
     height: 2px;
     background: black url('../images/vert_button_sep.png') repeat-x;
