@@ -862,8 +862,13 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     text-shadow: -1px -1px #0F8496;
-    background-color: #00c5e8;
     border: 0;
     border-radius: 4px;
+    background-color: #00c5e8;
+    background-image: linear-gradient(bottom, #00859C 4%, #00D7F8 84%);
+    background-image: -o-linear-gradient(bottom, #00859C 4%, #00D7F8 84%);
+    background-image: -moz-linear-gradient(bottom, #00859C 4%, #00D7F8 84%);
+    background-image: -webkit-linear-gradient(bottom, #00859C 4%, #00D7F8 84%);
+    background-image: -ms-linear-gradient(bottom, #00859C 4%, #00D7F8 84%);
 }
 
