@@ -131,11 +131,13 @@
         <div id='media_social_boxes'>
             <div class='social_boxes'>
                 <div class='social_buttons'>
-                    <div class='button twitter' onclick='clickTwitterButton();'>
-                        <div class='icon'></div>
-                        <div class='label'>TWITTER</div>
-                    </div>
-                    <div class='sep'></div>
+                    <? if( $artist_twitter ): ?>
+                        <div class='button twitter' onclick='clickTwitterButton();'>
+                            <div class='icon'></div>
+                            <div class='label'>TWITTER</div>
+                        </div>
+                        <div class='sep'></div>
+                    <? endif; ?>
                     <div class='button facebook' onclick='clickFacebookButton();'>
                         <div class='icon'></div>
                         <div class='label'>FACEBOOK</div>
@@ -210,36 +212,38 @@
                             Thank you for your submission!
                         </div>
                     </div>
-                    <div id='social_twitter' class='social_item'>
-                        <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-                        <script>
-                        new TWTR.Widget({
-                          version: 2,
-                          type: 'profile',
-                          rpp: 15,
-                          interval: 30000,
-                          width: 'auto',
-                          height: 220,
-                          theme: {
-                            shell: {
-                              background: '#000000',
-                              color: '#ffffff'
-                            },
-                            tweets: {
-                              background: '#000000',
-                              color: '#aaaaaa',
-                              links: '#ffffff'
-                            }
-                          },
-                          features: {
-                            scrollbar: true,
-                            loop: false,
-                            live: false,
-                            behavior: 'all'
-                          }
-                        }).render().setUser('ladygaga').start();
-                        </script>
-                    </div>
+                    <? if( $artist_twitter ): ?>
+                        <div id='social_twitter' class='social_item'>
+                            <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+                            <script>
+                            new TWTR.Widget({
+                              version: 2,
+                              type: 'profile',
+                              rpp: 15,
+                              interval: 30000,
+                              width: 'auto',
+                              height: 220,
+                              theme: {
+                                shell: {
+                                  background: '#000000',
+                                  color: '#ffffff'
+                                },
+                                tweets: {
+                                  background: '#000000',
+                                  color: '#aaaaaa',
+                                  links: '#ffffff'
+                                }
+                              },
+                              features: {
+                                scrollbar: true,
+                                loop: false,
+                                live: false,
+                                behavior: 'all'
+                              }
+                            }).render().setUser('<?=$artist_twitter;?>').start();
+                            </script>
+                        </div>
+                    <? endif; ?>
                     <div id='social_facebook' class='social_item'>
                         Facebook holder
                     </div>
