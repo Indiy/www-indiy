@@ -798,7 +798,13 @@ body {
     font-weight: normal;
 }
 #social_email .detail {
-    
+    padding-left: 14px;
+    padding-right: 18px;
+    padding-bottom: 8px;
+    color: #555;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
 }
 #social_email .input_button {
     white-space: nowrap;
