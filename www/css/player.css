@@ -814,19 +814,27 @@ body {
     margin-left: 15px;
     margin-right: 8px;
     width: 288px;
-    height: 22px;
     padding-left: 12px;
     padding-top: 7px;
+    padding-bottom: 10px;
+    border: 0;
+    background-color: #333;
+    color: #777;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
 }
 #social_email button {
     display: inline-block;
     width: 66px;
     padding-top: 7px;
-    height: 22px;
+    padding-bottom: 8px;
     color: white;
     font-size: 12px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     background-color: #00c5e8;
+    border: 0;
+    border-radius: 4px;
 }
 
