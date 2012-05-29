@@ -210,6 +210,39 @@
                             Thank you for your submission!
                         </div>
                     </div>
+                    <div id='social_twitter' class='social_item'>
+                        <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+                        <script>
+                        new TWTR.Widget({
+                          version: 2,
+                          type: 'profile',
+                          rpp: 15,
+                          interval: 30000,
+                          width: 'auto',
+                          height: 220,
+                          theme: {
+                            shell: {
+                              background: '#000000',
+                              color: '#ffffff'
+                            },
+                            tweets: {
+                              background: '#000000',
+                              color: '#aaaaaa',
+                              links: '#ffffff'
+                            }
+                          },
+                          features: {
+                            scrollbar: true,
+                            loop: false,
+                            live: false,
+                            behavior: 'all'
+                          }
+                        }).render().setUser('ladygaga').start();
+                        </script>
+                    </div>
+                    <div id='social_facebook' class='social_item'>
+                        Facebook holder
+                    </div>
                 </div>
             </div>
             <div class='media_boxes'>

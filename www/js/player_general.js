@@ -169,6 +169,18 @@ function clickEmailButton()
     $('#social_email').show();
     g_socialContent = "email";
 }
+function clickTwitterButton()
+{
+    $('#social_content .social_item').hide();
+    $('#social_twitter').show();
+    g_socialContent = "twitter";
+}
+function clickFacebookButton()
+{
+    $('#social_content .social_item').hide();
+    $('#social_facebook').show();
+    g_socialContent = "twitter";
+}
 
 function setPlayerMode(mode)
 {
