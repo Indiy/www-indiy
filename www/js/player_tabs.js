@@ -11,6 +11,7 @@ function showUserPage(i)
     }
     else
     {
+        hideAllTabs();
         showContentPage();
         g_currentUserPageIndex = i;
         
@@ -49,6 +50,7 @@ function showContact()
     }
     else
     {
+        hideAllTabs();
         showContentPage();
         $('#contact_tab').show();
     }
