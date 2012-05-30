@@ -138,8 +138,8 @@ function videoNext()
 function videoPrevious()
 {
     var next = g_videoCurrentIndex - 1;
-    if( next < 0)
-        next = g_videoCurrentIndex - 1;
+    if( next < 0 )
+        next = g_videoList.length  - 1;
     videoPlayIndex(next);
 }
 
