@@ -74,3 +74,45 @@ function clickContactBooking()
     $('#contact_tab .title.booking').addClass('active');
 }
 
+
+function submitContact()
+{
+    
+}
+
+function submitBooking()
+{
+    var artist_id = g_artistId;
+    var name = $('#contact_tab .booking_container #name').val();
+    var email = $('#contact_tab .booking_container #email').val();
+    var date = $('#contact_tab .booking_container #event_date').val();
+    var location = $('#contact_tab .booking_container #event_location').val();
+    var budget = $('#contact_tab .booking_container #event_budget').val();
+    var comments = $('#contact_tab .booking_container #message').val();
+    
+    if( name.length == 0 
+       || comments.length == 0 
+       || !email.match(EMAIL_REGEX) 
+       || location.length == 0
+       || date.length == 0
+       )
+    {
+        window.alert("Please enter all required fields.");
+    }
+    else
+    {
+        $('#contact_tab .booking_container .booking_form').hide();
+        $('#contact_tab .booking_container .success').show();
+        
+        var submit = "";
+        submit += "&artist_id=" + artist_id;
+        submit += "&name=" + escape(name);
+        submit += "&email=" + escape(email);
+        submit += "&date=" + escape(date);
+        submit += "&location=" + escape(location);
+        submit += "&budget=" + escape(budget);
+        submit += "&comments=" + escape(comments);
+        
+        $.post("/data/booking.php", submit, function(response) { });
+    }
+}
