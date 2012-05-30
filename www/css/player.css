@@ -1018,7 +1018,7 @@ body {
     color: white;
     font-size: 13px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-    font-weight: bold;
+    font-weight: normal;
     background-color: black;
     border: 1px solid #444;
     outline: 0;
@@ -1034,7 +1034,7 @@ body {
     color: white;
     font-size: 13px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-    font-weight: bold;
+    font-weight: normal;
     background-color: black;
     border: 1px solid #444;
     outline: 0;
