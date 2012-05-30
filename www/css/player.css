@@ -1058,6 +1058,7 @@ body {
     border: 0;
     outline: 0;
     border-radius: 3px;
+    cursor: pointer;
 }
 #contact_tab .success {
     display: none;
