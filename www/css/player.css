@@ -956,6 +956,7 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
     text-align: right;
+    cursor: pointer;
 }
 #contact_tab .left .title:hover,
 #contact_tab .left .title.active {
@@ -979,14 +980,18 @@ body {
     overflow: auto;
 }
 #contact_tab .headline {
+    max-width: 650px;
     padding-bottom: 30px;
+    padding-right: 30px;
     color: white;
     font-size: 20px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
 }
 #contact_tab .description {
+    max-width: 650px;
     padding-bottom: 30px;
+    padding-right: 30px;
     color: white;
     font-size: 13px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
