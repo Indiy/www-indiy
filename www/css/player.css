@@ -933,3 +933,107 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
 }
+
+#contact_tab {
+    display: none;
+    position: fixed;
+    top: 48px;
+    bottom: 103px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0,0,0,0.7);
+}
+#contact_tab .left {
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    width: 180px;
+}
+#contact_tab .left .title {
+    padding-bottom: 20px;
+    color: #aaa;
+    font-size: 20px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: right;
+}
+#contact_tab .left .title:hover,
+#contact_tab .left .title.active {
+    color: white;
+}
+#contact_tab .sep {
+    position: absolute;
+    left: 240px;
+    width: 2px;
+    top: 36px;
+    bottom: 0px;
+    background-color: #aaa;
+    background-color: rgba(255,255,255,0.4);
+}
+#contact_tab .contact_container {
+    position: absolute;
+    left: 278px;
+    right: 0px;
+    top: 36px;
+    bottom: 0px;
+    overflow: auto;
+}
+#contact_tab .headline {
+    padding-bottom: 30px;
+    color: white;
+    font-size: 20px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+}
+#contact_tab .description {
+    padding-bottom: 30px;
+    color: white;
+    font-size: 13px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#contact_tab .label {
+    padding-bottom: 12px;
+    color: white;
+    font-size: 13px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+}
+#contact_tab .input_container {
+    padding-bottom: 20px;
+}
+#contact_tab .input_container input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 620px;
+    color: white;
+    font-size: 13px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: black;
+    border: 1px solid #444;
+    outline: 0;
+}
+#contact_tab .input_container textarea {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 620px;
+    height: 150px;
+    color: white;
+    font-size: 13px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: black;
+    border: 1px solid #444;
+    outline: 0;
+}
+
+#contact_tab .booking_container {
+    display: none;
+}
+
+
