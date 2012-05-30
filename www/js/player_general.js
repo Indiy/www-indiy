@@ -26,6 +26,7 @@ var g_controlsShown = true;
 var g_hideControlsTimeout = false;
 var g_hideBottomTimeout = false;
 var g_socialContent = "share";
+var g_showingContentPage = false;
 
 $(document).ready(generalOnReady);
 function generalOnReady()
@@ -71,11 +72,15 @@ function clearTimeoutControls()
 function timeoutControls()
 {
     clearTimeoutControls();
-    var timeout = HIDE_CONTROLS_NORMAL_TIMEOUT;
-    if( g_bottomOpen )
-        timeout = HIDE_CONTROLS_OPEN_TIMEOUT;
     
-    g_hideControlsTimeout = window.setTimeout(hideControls,timeout);
+    if( !g_showingContentPage )
+    {
+        var timeout = HIDE_CONTROLS_NORMAL_TIMEOUT;
+        if( g_bottomOpen )
+            timeout = HIDE_CONTROLS_OPEN_TIMEOUT;
+        
+        g_hideControlsTimeout = window.setTimeout(hideControls,timeout);
+    }
     //g_hideBottomTimeout = window.setTimeout(closeBottom,HIDE_BOTTOM_TIMEOUT);
 }
 function hideControls()
@@ -180,6 +185,30 @@ function clickFacebookButton()
     $('#social_content .social_item').hide();
     $('#social_facebook').show();
     g_socialContent = "twitter";
+}
+
+function toggleContentPage()
+{
+    if( g_showingContentPage )
+    {
+        hideContentPage();
+        return false;
+    }
+    else
+    {
+        showContentPage();
+        return true;
+    }
+}
+
+function showContentPage()
+{
+    g_showingContentPage = true;
+    closeBottom();
+}
+function hideContentPage()
+{
+    g_showingContentPage = false;
 }
 
 function setPlayerMode(mode)

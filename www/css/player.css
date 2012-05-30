@@ -881,3 +881,48 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
 }
+
+#user_tab {
+    display: none;
+    position: fixed;
+    top: 48px;
+    bottom: 104px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0,0,0,0.6);
+}
+#user_tab .title {
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    width: 210px;
+}
+#user_tab .sep {
+    position: absolute;
+    left: 240px;
+    width: 2px;
+    top: 36px;
+    bottom: 0px;
+}
+#user_tab .scrollable_container {
+    position: absolute;
+    left: 278px;
+    right: 0px;
+    top: 36px;
+    bottom: 0px;
+    overflow: auto;
+}
+#user_tab .scrollable_container .image_holder {
+    padding-bottom: 34px;
+}
+#user_tab .scrollable_container .image_holder img {
+    max-width: 650px;
+}
+#user_tab .scrollable_container .page_content {
+    padding-right: 30px;
+    max-width: 650px;
+    color: white;
+    font-size: 13px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
