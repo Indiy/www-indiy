@@ -112,7 +112,8 @@
     $tab_list = array();
     while( $tab = mf($q_tabs) )
     {
-        $title = $tab['name'];
+        $title = stripslashes($tab['name']);
+        $content = stripslashes($tab['body']);
         $image = FALSE;
         if( $tab['image'] != '' )
         {
@@ -121,7 +122,7 @@
         $item = array("id" => $tab['id'],
                       "title" => $title,
                       "image" => $image,
-                      "content" => $tab['body'],
+                      "content" => $content,
                       );
         $tab_list[] = $item;
     }
