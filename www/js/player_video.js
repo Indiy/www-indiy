@@ -128,11 +128,18 @@ function videoPlayIndex(index)
     g_videoPlayer.src(media);
     g_videoPlayer.play();
 }
-function videoPlayNext()
+function videoNext()
 {
     var next = g_videoCurrentIndex + 1;
     if( next >= g_videoList.length )
         next = 0;
+    videoPlayIndex(next);
+}
+function videoPrevious()
+{
+    var next = g_videoCurrentIndex - 1;
+    if( next < 0)
+        next = g_videoCurrentIndex - 1;
     videoPlayIndex(next);
 }
 
@@ -177,7 +184,7 @@ function videoEnded()
 {
     g_videoPlaying = false;
     playerSetPaused();
-    videoPlayNext();
+    videoNext();
 }
 
 function videoOnWindowResize()

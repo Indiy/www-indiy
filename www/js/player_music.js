@@ -137,6 +137,14 @@ function musicNext()
     
     musicChange(index);
 }
+function musicPrevious()
+{
+    var index = g_currentSongIndex - 1;
+    if( index < 0 )
+        index = g_musicList.length - 1;
+    
+    musicChange(index);
+}
 
 function musicPreloadImages()
 {
