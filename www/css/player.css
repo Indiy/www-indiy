@@ -1008,6 +1008,7 @@ body {
 #contact_tab .input_container {
     max-width: 620px;
     padding-bottom: 20px;
+    margin-right: 50px;
 }
 #contact_tab .input_container input {
     padding-top: 10px;
@@ -1039,8 +1040,8 @@ body {
     outline: 0;
 }
 #contact_tab .submit_container {
-    max-width: 650px;
-    padding-right: 30px;
+    max-width: 645px;
+    padding-right: 26px;
     padding-bottom: 30px;
     text-align: right;
 }
