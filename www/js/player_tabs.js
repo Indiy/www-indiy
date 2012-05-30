@@ -37,6 +37,7 @@ function hideAllTabs()
     g_currentUserPageIndex = false;
     $('#user_tab').hide();
     $('#contact_tab').hide();
+    g_showingContactPage = false;
 }
 
 var g_showingContactPage = false;
@@ -45,11 +46,13 @@ function showContact()
 {
     if( g_showingContactPage )
     {
+        g_showingContactPage = false;
         hideContentPage();
         $('#contact_tab').hide();
     }
     else
     {
+        g_showingContactPage = true;
         hideAllTabs();
         showContentPage();
         $('#contact_tab').show();
