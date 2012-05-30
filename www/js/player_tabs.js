@@ -35,6 +35,7 @@ function hideAllTabs()
 {
     g_currentUserPageIndex = false;
     $('#user_tab').hide();
+    $('#contact_tab').hide();
 }
 
 var g_showingContactPage = false;
@@ -44,7 +45,7 @@ function showContact()
     if( g_showingContactPage )
     {
         hideContentPage();
-        hideContact();
+        $('#contact_tab').hide();
     }
     else
     {
@@ -52,3 +53,4 @@ function showContact()
         $('#contact_tab').show();
     }
 }
+
