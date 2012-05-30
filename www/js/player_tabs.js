@@ -6,6 +6,7 @@ function showUserPage(i)
     if( g_currentUserPageIndex == i && g_showingContentPage )
     {
         hideAllTabs();
+        hideContentPage();
     }
     else
     {
@@ -45,6 +46,7 @@ function showContact()
     if( g_showingContactPage )
     {
         hideAllTabs();
+        hideContentPage();
     }
     else
     {
