@@ -77,9 +77,32 @@ function clickContactBooking()
 
 function submitContact()
 {
+    var artist_id = g_artistId;
+    var name = $('#contact_tab .contact_container #name').val();
+    var email = $('#contact_tab .contact_container #email').val();
+    var comments = $('#contact_tab .contact_container #message').val();
     
+    if( name.length == 0 
+       || comments.length == 0 
+       || !email.match(EMAIL_REGEX) 
+       )
+    {
+        window.alert("Please enter all required fields.");
+    }
+    else
+    {
+        $('#contact_tab .contact_container .contact_form').hide();
+        $('#contact_tab .contact_container .success').show();
+        
+        var submit = "&form=send";
+        submit += "&artist_id=" + artist_id;
+        submit += "&name=" + escape(name);
+        submit += "&email=" + escape(email);
+        submit += "&comments=" + escape(comments);
+        
+        $.post("jplayer/ajax.php", submit, function(response) { });
+    }
 }
-
 function submitBooking()
 {
     var artist_id = g_artistId;
