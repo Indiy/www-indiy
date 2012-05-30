@@ -36,3 +36,19 @@ function hideAllTabs()
     g_currentUserPageIndex = false;
     $('#user_tab').hide();
 }
+
+var g_showingContactPage = false;
+
+function showContact()
+{
+    if( g_showingContactPage )
+    {
+        hideContentPage();
+        hideContact();
+    }
+    else
+    {
+        showContentPage();
+        $('#contact_tab').show();
+    }
+}
