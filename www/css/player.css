@@ -1077,11 +1077,11 @@ body {
     padding-right: 30px;
     padding-bottom: 30px;
 }
-#contact_tab .booking_container .left {
+#contact_tab .booking_container .left_input {
     float: left;
     width: 50%;
 }
-#contact_tab .booking_container .right {
+#contact_tab .booking_container .right_input {
     float: right;
     width: 50%;
 }
