@@ -952,7 +952,7 @@ body {
 #contact_tab .left .title {
     padding-bottom: 20px;
     color: #aaa;
-    font-size: 20px;
+    font-size: 24px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
     text-align: right;
@@ -984,9 +984,10 @@ body {
     padding-bottom: 30px;
     padding-right: 30px;
     color: white;
-    font-size: 20px;
+    font-size: 24px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
+    text-transform: uppercase;
 }
 #contact_tab .description {
     max-width: 650px;
@@ -1000,7 +1001,7 @@ body {
 #contact_tab .label {
     padding-bottom: 12px;
     color: white;
-    font-size: 13px;
+    font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
 }
@@ -1035,6 +1036,25 @@ body {
     background-color: black;
     border: 1px solid #444;
     outline: 0;
+}
+#contact_tab .submit_container {
+    max-width: 650px;
+    padding-right: 30px;
+    text-align: right;
+}
+#contact_tab .submit_container input {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 28px;
+    padding-right: 28px;
+    background-color: #b70216;
+    color: white;
+    font-size: 16px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+}
+#contact_tab .success {
+    display: none;
 }
 
 #contact_tab .booking_container {
