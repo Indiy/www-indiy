@@ -101,6 +101,8 @@ function toggleBottom()
 
 function openBottom()
 {
+    hideContentPage();
+    hideAllTabs();
     g_bottomOpen = true;
     $('#bottom_container').stop();
     $('#bottom_container').animate({ height: '275px' });
