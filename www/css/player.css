@@ -1065,6 +1065,35 @@ body {
 
 #contact_tab .booking_container {
     display: none;
+    position: absolute;
+    left: 278px;
+    right: 0px;
+    top: 36px;
+    bottom: 0px;
+    overflow: auto;
 }
+#contact_tab .booking_container .booking_form {
+    max-width: 645px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+#contact_tab .booking_container .left {
+    float: left;
+    width: 50%;
+}
+#contact_tab .booking_container .right {
+    float: right;
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
 
 
