@@ -886,18 +886,18 @@ body {
     display: none;
     position: fixed;
     top: 48px;
-    bottom: 104px;
+    bottom: 103px;
     left: 0px;
     right: 0px;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.7);
 }
 #user_tab .title {
     position: absolute;
     left: 30px;
     top: 60px;
-    width: 210px;
+    width: 180px;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
     text-align: right;
@@ -908,8 +908,8 @@ body {
     width: 2px;
     top: 36px;
     bottom: 0px;
-    background-color: white;
-    background-color: rgba(255,255,255,0.6);
+    background-color: #aaa;
+    background-color: rgba(255,255,255,0.4);
 }
 #user_tab .scrollable_container {
     position: absolute;
