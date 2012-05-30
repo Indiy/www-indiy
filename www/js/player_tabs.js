@@ -18,5 +18,6 @@ function showUserPage(i)
         $('#page_image_holder').hide();
     }
     $('#page_content').html(page.content);
+    $('#user_tab').show();
 }
 
