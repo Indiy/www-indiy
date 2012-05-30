@@ -896,6 +896,11 @@ body {
     left: 30px;
     top: 60px;
     width: 210px;
+    color: white;
+    font-size: 16px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: right;
 }
 #user_tab .sep {
     position: absolute;
@@ -903,6 +908,8 @@ body {
     width: 2px;
     top: 36px;
     bottom: 0px;
+    background-color: white;
+    background-color: rgba(255,255,255,0.6);
 }
 #user_tab .scrollable_container {
     position: absolute;
