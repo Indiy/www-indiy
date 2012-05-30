@@ -25,3 +25,7 @@ function showUserPage(i)
     }
 }
 
+function hideAllTabs()
+{
+    $('#user_tab').hide();
+}
