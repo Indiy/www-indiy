@@ -18,6 +18,8 @@ var IS_OLD_IE = false;
     }
 })();
 
+var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
+
 
 var g_bottomOpen = false;
 var g_mediaContent = "music";
