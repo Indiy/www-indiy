@@ -237,6 +237,20 @@ function playerPlayPause()
     else if( g_playerMode == "video" )
         videoPlayPause();
 }
+function playerPrevious()
+{
+    if( g_playerMode == "music" )
+        musicPrevious();
+    else if( g_playerMode == "video" )
+        videoPrevious();
+}
+function playerNext()
+{
+    if( g_playerMode == "music" )
+        musicNext();
+    else if( g_playerMode == "video" )
+        videoNext();
+}
 
 function formatMinSeconds(seconds)
 {
