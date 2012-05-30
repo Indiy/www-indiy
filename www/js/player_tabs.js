@@ -53,7 +53,24 @@ function showContact()
         hideAllTabs();
         showContentPage();
         g_showingContactPage = true;
+        clickContactContact();
         $('#contact_tab').show();
     }
+}
+
+function clickContactContact()
+{
+    $('#contact_tab .booking_container').hide();
+    $('#contact_tab .contact_container').show();
+    $('#contact_tab .title').removeClass('active');
+    $('#contact_tab .title.contact').addClass('active');
+}
+
+function clickContactBooking()
+{
+    $('#contact_tab .contact_container').hide();
+    $('#contact_tab .booking_container').show();
+    $('#contact_tab .title').removeClass('active');
+    $('#contact_tab .title.booking').addClass('active');
 }
 
