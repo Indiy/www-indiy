@@ -1055,6 +1055,8 @@ body {
     font-size: 16px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
+    border: 0;
+    outline: 0;
 }
 #contact_tab .success {
     display: none;
