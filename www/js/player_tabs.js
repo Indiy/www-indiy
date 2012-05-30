@@ -5,9 +5,7 @@ function showUserPage(i)
 {
     if( g_currentUserPageIndex == i && g_showingContentPage )
     {
-        hideContentPage();
-        g_currentUserPageIndex = false;
-        $('#user_tab').hide();
+        hideAllTabs();
     }
     else
     {
@@ -46,15 +44,13 @@ function showContact()
 {
     if( g_showingContactPage )
     {
-        g_showingContactPage = false;
-        hideContentPage();
-        $('#contact_tab').hide();
+        hideAllTabs();
     }
     else
     {
-        g_showingContactPage = true;
         hideAllTabs();
         showContentPage();
+        g_showingContactPage = true;
         $('#contact_tab').show();
     }
 }
