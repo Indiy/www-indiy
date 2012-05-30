@@ -1,9 +1,19 @@
 
+var g_currentUserPageIndex = false;
 
 function showUserPage(i)
 {
-    if( toggleContentPage() )
+    if( g_currentUserPageIndex == i && g_showingContentPage )
     {
+        hideContentPage();
+        g_currentUserPageIndex = false;
+        $('#user_tab').hide();
+    }
+    else
+    {
+        showContentPage();
+        g_currentUserPageIndex = i;
+        
         var page = g_tabList[i];
         
         $('#user_tab .title').html(page.title);
@@ -19,13 +29,10 @@ function showUserPage(i)
         $('#page_content').html(page.content);
         $('#user_tab').show();
     }
-    else
-    {
-        $('#user_tab').hide();
-    }
 }
 
 function hideAllTabs()
 {
+    g_currentUserPageIndex = false;
     $('#user_tab').hide();
 }
