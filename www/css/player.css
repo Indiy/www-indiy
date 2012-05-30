@@ -1073,9 +1073,8 @@ body {
     overflow: auto;
 }
 #contact_tab .booking_container .booking_form {
-    max-width: 645px;
+    max-width: 672px;
     padding-right: 30px;
-    padding-bottom: 30px;
 }
 #contact_tab .booking_container .left_input {
     float: left;
