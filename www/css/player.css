@@ -1047,16 +1047,17 @@ body {
 }
 #contact_tab .submit_container button {
     padding-top: 14px;
-    padding-bottom: 14px;
+    padding-bottom: 7px;
     padding-left: 28px;
     padding-right: 28px;
-    background-color: #b70216;
+    background-color: #B70216;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
     border: 0;
     outline: 0;
+    border-radius: 3px;
 }
 #contact_tab .success {
     display: none;
