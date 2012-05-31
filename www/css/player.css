@@ -1098,26 +1098,26 @@ body {
     top: 50%;
     left: 10px;
     margin-top: -22px;
-    height: 44px;
-    width: 44px;
+    height: 28px;
+    width: 28px;
     cursor: pointer;
-    background: transparent url('../images/player_icons.png') no-repeat -432px -61px;
+    background: transparent url('../images/player_icons.png') no-repeat -441px -76px;
 }
 #player_prev:hover {
-    background: transparent url('../images/player_icons.png') no-repeat -432px 4px;
+    background: transparent url('../images/player_icons.png') no-repeat -441px -11px;
 }
 #player_next {
     position: fixed;
     top: 50%;
     right: 10px;
-    margin-top: -22px;
-    height: 40px;
-    width: 40px;
+    margin-top: -14px;
+    height: 28px;
+    width: 28px;
     cursor: pointer;
-    background: transparent url('../images/player_icons.png') no-repeat -432px -61px;
+    background: transparent url('../images/player_icons.png') no-repeat -441px -76px;
 }
 #player_next:hover {
-    background: transparent url('../images/player_icons.png') no-repeat -432px 4px;
+    background: transparent url('../images/player_icons.png') no-repeat -441px -11px;
 }
 
 
