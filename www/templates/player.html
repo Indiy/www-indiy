@@ -26,9 +26,10 @@
         var g_musicList = <?=$music_list_json;?>;
         var g_videoList = <?=$video_list_json;?>;
         var g_totalPageViews = <?=$artist_views;?>;
-        var g_pageUrl = "<?=trueSiteUrl();?>";
+        var g_trueSiteUrl = "<?=trueSiteUrl();?>";
         var g_artistName = "<?=$artist_name;?>";
         var g_artistId = <?=$artist_id;?>;
+        var g_artistUrl = <?=$artist_url;?>;
     </script>
 </head>
 
@@ -396,6 +397,14 @@
             </div>
         </div>
     </div>
-    
+    <div id='comment_tab'>
+        <div class='left'>
+            <div class='title'>COMMENTS</div>
+        </div>
+        <div class='sep'></div>
+        <div class='comment_container'>
+            <div class="fb-comments" data-href="<?=;?>" data-num-posts="15" data-width="470" data-colorscheme="dark"></div>
+        </div>
+    </div>
 </body>
 </html>

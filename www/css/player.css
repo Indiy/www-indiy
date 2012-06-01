@@ -1120,7 +1120,9 @@ body {
     background: transparent url('../images/player_icons.png') no-repeat -441px -11px;
 }
 
-
+#commentt_tab {
+    display: none;
+}
 
 
 

@@ -99,6 +99,7 @@
     
     $store_enabled = FALSE;
     $artist_paypal = '';
+    $artist_url = "http://" . $_SERVER["HTTP_HOST"];
     
     $ecommerce_check = mf(mq("SELECT * FROM mydna_musicplayer_ecommerce WHERE userid='$artist_id' LIMIT 1"));
     if( $ecommerce_check )
