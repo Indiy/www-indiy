@@ -262,7 +262,37 @@
         $video0_sources_html = $html;
     }
     
+    $q_photo = mq("SELECT * from photos WHERE artist_id='$artist_id' ORDER BY `order` ASC, `id` DESC");
     $photo_list = array();
+    $photo_list_html = "";
+    $i = 0;
+    while( $photo = mf($q_photo) )
+    {
+        $photo_image = '/artists/photo/' . $photoo['image'];
+        $photo_name = $photo['name'];
+        
+        $item = array("id" => $photo['id'],
+                      "name" => $photo_name,
+                      "image" => $photo_image,
+                      "views" => $photo['views'],
+                      );
+        $photo_list[] = $item;
+        
+        $html = "";
+        $html .= "<div class='item' onclick='photoShowIndex($i);'>";
+        $html .= " <div class='picture'>";
+        $html .= "  <img src='$photo_image'/>";
+        $html .= " </div>";
+        $html .= " <div class='label'>$photo_name</div>";
+        $html .= "</div>";
+        $photo_list_html .= $html;
+        
+        $i++;
+    }
+    $photo_list_json = json_encode($video_list);
+    $photo_nav_show = FALSE;
+    if( count($photo_list) > 3 )
+        $photo_nav_show = TRUE;
     
     include_once 'templates/player.html';
 

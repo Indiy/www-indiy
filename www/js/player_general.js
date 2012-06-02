@@ -153,6 +153,12 @@ function clickMediaIcon(name,callback)
     }
 }
 
+function clickPhotoMediaButton()
+{
+    $('#media_content_lists .media_list').hide();
+    $('#photo_list').show();
+    g_mediaContent = "photo";
+}
 function clickMusicMediaButton()
 {
     $('#media_content_lists .media_list').hide();
