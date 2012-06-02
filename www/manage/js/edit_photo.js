@@ -23,8 +23,8 @@ function showPhotoPopup(photo_index)
         $('#edit_photo #location').val(photo.location);
         if( photo.image )
         {
-            var html = "<img src='{0}' />".format(song.image);
-            html += "<button onclick='return onPageImageRemove();'></button>";
+            var html = "<img src='{0}' />".format(photo.image);
+            html += "<button onclick='return onPhotoImageRemove();'></button>";
             $('#edit_photo #image_filename_container').html(html);
         }
         else
@@ -58,10 +58,9 @@ function showPhotoPopup(photo_index)
 
 function onPhotoImageRemove()
 {
-    var result = window.confirm("Remove image from page?");
+    var result = window.confirm("Remove image?");
     if( result )
     {
-        g_removeImage = true;
         $('#edit_photo #image_filename_container').hide();
     }
     return false;
@@ -132,7 +131,7 @@ function onPhotoSuccess(data)
     }
     else
     {
-        g_pageList.unshift(data.photo_data);
+        g_photoList.unshift(data.photo_data);
     }
     updatePhotoList();
 }
