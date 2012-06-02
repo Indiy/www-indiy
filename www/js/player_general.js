@@ -142,7 +142,7 @@ function clickVideoIcon()
 {
     clickMediaIcon("video",clickVideoMediaButton);
 }
-function clickVideoIcon()
+function clickPhotoIcon()
 {
     clickMediaIcon("photo",clickPhotoMediaButton);
 }
