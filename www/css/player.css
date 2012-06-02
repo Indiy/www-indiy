@@ -1122,6 +1122,44 @@ body {
 
 #comment_tab {
     display: none;
+    position: fixed;
+    top: 48px;
+    bottom: 103px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0,0,0,0.7);
+}
+#comment_tab .left {
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    width: 180px;
+}
+#comment_tab .left .title {
+    padding-bottom: 20px;
+    color: #aaa;
+    font-size: 24px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: right;
+    cursor: pointer;
+}
+#comment_tab .sep {
+    position: absolute;
+    left: 240px;
+    width: 2px;
+    top: 36px;
+    bottom: 0px;
+    background-color: #aaa;
+    background-color: rgba(255,255,255,0.4);
+}
+#comment_tab .comment_container {
+    position: absolute;
+    left: 278px;
+    right: 0px;
+    top: 36px;
+    bottom: 0px;
+    overflow: auto;
 }
 
 
