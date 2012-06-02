@@ -138,6 +138,15 @@ function clickMusicIcon()
 {
     clickMediaIcon("music",clickMusicMediaButton);
 }
+function clickVideoIcon()
+{
+    clickMediaIcon("video",clickVideoMediaButton);
+}
+function clickVideoIcon()
+{
+    clickMediaIcon("photo",clickPhotoMediaButton);
+}
+
 function clickMediaIcon(name,callback)
 {
     if( g_bottomOpen && g_mediaContent == name )
@@ -158,6 +167,7 @@ function clickPhotoMediaButton()
     $('#media_content_lists .media_list').hide();
     $('#photo_list').show();
     g_mediaContent = "photo";
+    scrollPhotoToIndex();
 }
 function clickMusicMediaButton()
 {
@@ -170,6 +180,7 @@ function clickVideoMediaButton()
     $('#media_content_lists .media_list').hide();
     $('#video_list').show();
     g_mediaContent = "video";
+    scrollVideoToIndex();
 }
 
 function clickShareButton()

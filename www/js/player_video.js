@@ -16,12 +16,6 @@ function videoOnReady()
     }
 }
 
-function clickVideoIcon()
-{
-    clickMediaIcon("video",clickVideoMediaButton);
-    scrollVideoToIndex();
-}
-
 function videoHide()
 {
     if( g_videoPlayer )
