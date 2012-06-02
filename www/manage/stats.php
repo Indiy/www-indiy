@@ -25,6 +25,8 @@
 	//$size = num($loadpages) / 100;
 	$buildmax = explode(",", $buildmax);
 	$max = max($buildmax);
+    if( $max == 0 )
+        $max = 1;
 
 	$loadpag = mq("select `id`,`name`,`artistid`,`order`,`views` from `[p]musicplayer_content` where `artistid`='{$id}' order by `order` asc, `id` desc");
 	while ($pages = mf($loadpag)) {
