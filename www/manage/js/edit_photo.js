@@ -49,8 +49,8 @@ function showPhotoPopup(photo_index)
         $('#edit_photo #photo_id').val('');
         $('#edit_photo #photo_name').val('');
         $('#edit_photo #image_filename_container').empty();
-        $('#edit_photo #bg_style').val('STRETCH');
-        $('#edit_photo #bg_color').val('000000');
+        $('#edit_photo #photo_bg_style').val('STRETCH');
+        $('#edit_photo #photo_bg_color').val('000000');
         $('#edit_photo #photo_tags').val('');
     }
     showPopup('#edit_photo');
