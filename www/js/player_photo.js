@@ -28,7 +28,7 @@ function photoListScrollRight()
 {
     var max_left = g_photoList.length - 3;
     
-    if( g_photoListIndex <= max_left )
+    if( g_photoListIndex < max_left )
     {
         g_photoListIndex += 3;
         if( g_photoListIndex > max_left )
