@@ -90,6 +90,22 @@
         $video_list[] = $row;
     }
     $video_list_json = json_encode($video_list);
+    
+    $sql_photo = "SELECT * FROM photos  WHERE artist_id='$artistID' ORDER BY `order` ASC, `id` DESC";
+	$q_photo = mysql_query($sql_photo) or die(mysql_error());
+    $photo_list = array();
+    while( $row = mysql_fetch_array($q_photo) )
+    {
+        array_walk($row,cleanup_row_element);
+        $image_path = "../artists/photo/" . $row['image'];
+        if( !empty($row['image']) && file_exists($image_path) )
+            $row['image_url'] = $image_path;
+        else
+            $row['image_url'] = "images/photo_video_01.jpg";
+        
+        $photo_list[] = $row;
+    }
+    $photo_list_json = json_encode($photo_list);
 
 	$find_artistContent = "SELECT * FROM mydna_musicplayer_content  WHERE artistid='".$artistID."' ORDER BY `order` ASC, `id` DESC";
 	$result_artistContent = mysql_query($find_artistContent) or die(mysql_error());
@@ -199,6 +215,7 @@ var g_paypalEmail = "<?=$paypalEmail;?>";
 var g_artistData = <?=$artist_data_json;?>;
 
 var g_pageList = <?=$page_list_json;?>;
+var g_photoList = <?=$photo_list_json;?>;
 var g_videoList = <?=$video_list_json;?>;
 var g_tabList = <?=$tab_list_json;?>;
 var g_productList = <?=$product_list_json;?>;
