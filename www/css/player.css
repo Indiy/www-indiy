@@ -641,12 +641,12 @@ body {
     vertical-align: top;
 }
 
-#video_list {
+.picture_list {
     position: relative;
     height: 100%;
     width: 100%;
 }
-#video_list .left_nav {
+.picture_list .left_nav {
     position: absolute;
     top: 80px;
     left: 0px;
@@ -654,10 +654,10 @@ body {
     height: 44px;
     background: transparent url('../images/player_icons.png') no-repeat -432px -61px;
 }
-#video_list .left_nav:hover {
+.picture_list .left_nav:hover {
     background: transparent url('../images/player_icons.png') no-repeat -432px 4px;
 }
-#video_list .right_nav {
+.picture_list .right_nav {
     position: absolute;
     top: 80px;
     right: 0px;
@@ -665,10 +665,10 @@ body {
     height: 44px;
     background: transparent url('../images/player_icons.png') no-repeat -432px -61px;
 }
-#video_list .right_nav:hover {
+.picture_list .right_nav:hover {
     background: transparent url('../images/player_icons.png') no-repeat -432px 4px;
 }
-#video_list .content {
+.picture_list .content {
     position: absolute;
     right: 44px;
     left: 44px;
@@ -676,7 +676,7 @@ body {
     overflow: hidden;
     white-space: nowrap;
 }
-#video_list .content .item {
+.picture_list .content .item {
     display: inline-block;
     width: 33.333%;
     padding-right: 2px;
@@ -684,17 +684,17 @@ body {
     cursor: pointer;
     vertical-align: top;
 }
-#video_list .content .item .picture {
+.picture_list .content .item .picture {
     margin-right: 4px;
     padding-right: 6px;
 }
-#video_list .content .item .picture img {
+.picture_list .content .item .picture img {
     max-width: 200px;
     width: 100%;
     padding: 3px;
     background-color: white;
 }
-#video_list .content .item .label {
+.picture_list .content .item .label {
     max-width: 200px;
     width: 100%;
     padding-top: 10px;
