@@ -171,8 +171,9 @@
     require_once 'header.php';
     
     include_once 'include/edit_page.html';
-    include_once 'include/edit_product.html';
     include_once 'include/edit_video.html';
+    include_once 'include/edit_photo.html';
+    include_once 'include/edit_product.html';
     include_once 'include/edit_tab.html';
     include_once 'include/edit_social_config.html';
     include_once 'include/edit_profile.html';
@@ -235,8 +236,9 @@ $(document).ready(showFirstInstructions);
             </ul>
             <h6>Platform</h6>
             <ul>
-                <li><a onclick='showPagePopup(false);' title='Add a page to your site'>Add Audio + Photo</a></li>
+                <li><a onclick='showPagePopup(false);' title='Add a song to your site'>Add Song</a></li>
                 <li><a onclick='showVideoPopup(false);' title='Add a video to your site'>Add Video</a></li>
+                <li><a onclick='showPhotoPopup(false);' title='Add a photo to your site'>Add Photo</a></li>
                 <li id='add_tab_list_item'><a onclick='showTabPopup(false);' title='Add a tab to your site'>Add Tab</a></li>
                 <li><a href="stats.php?userId=<?=$artistID;?>" title='View website analytics for you site'>View Analytics</a></li>
                 <li><a onclick='showFanConnections();' title='Get a list of Fans of your site'>Fan Connections</a></li>
@@ -267,9 +269,9 @@ $(document).ready(showFirstInstructions);
         
         <div class="playlist">
         	<div class="heading">
-                <h5>PAGES</h5>
+                <h5>SONGS</h5>
                 <div class="buttonadd">
-                    <a onclick='showPagePopup(false);' title='Add a page to your site'>Add Audio + Photo</a>
+                    <a onclick='showPagePopup(false);' title='Add a song to your site'>Add Song</a>
                 </div>
             </div>
             <div class="list" style='display: none;'>
@@ -283,6 +285,30 @@ $(document).ready(showFirstInstructions);
                 </ul>
                 <ul id='page_list_ul' class="playlist_sortable">
                 </ul>
+            </div>
+        </div>
+        
+        <div class="photolist">
+            <div class="heading">
+            <h5>Photos</h5>
+            <div class="buttonadd"><a onclick='showPhotoPopup(false);' title='Add a photo to your site'>Add Photo</a></div>
+            </div>
+        
+            <div class="list" style='display: none;'>
+            <ul id="photo_list_ul" class="photos_sortable">
+            </ul>
+            </div>
+        </div>
+        
+        <div class="videolist">
+            <div class="heading">
+            <h5>Videos</h5>
+            <div class="buttonadd"><a onclick='showVideoPopup(false);' title='Add a video to your site'>Add Video</a></div>
+            </div>
+        
+            <div class="list" style='display: none;'>
+            <ul id="video_list_ul" class="videos_sortable">
+            </ul>
             </div>
         </div>
         
@@ -303,19 +329,7 @@ $(document).ready(showFirstInstructions);
             </ul>
             </div>
         </div>
-        
-        <div class="videolist">
-            <div class="heading">
-            <h5>Videos</h5>
-            <div class="buttonadd"><a onclick='showVideoPopup(false);' title='Add a video to your site'>Add Video</a></div>
-            </div>
-        
-            <div class="list" style='display: none;'>
-            <ul id="video_list_ul" class="videos_sortable">
-            </ul>
-            </div>
-        </div>
-        
+
         <div class="pages">
             <div class="heading">
                 <h5>TABS</h5>

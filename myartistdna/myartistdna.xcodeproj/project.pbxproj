@@ -150,6 +150,8 @@
 		2D9E2FE715734A0000A76906 /* player_love.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_love.js; sourceTree = "<group>"; };
 		2D9E2FE8157495CB00A76906 /* player_social.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_social.js; sourceTree = "<group>"; };
 		2D9E2FE91575AC9800A76906 /* player_tabs.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_tabs.js; sourceTree = "<group>"; };
+		2D9E2FEA1579AD4600A76906 /* edit_photo.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = edit_photo.html; sourceTree = "<group>"; };
+		2D9E2FEB1579C11F00A76906 /* edit_photo.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_photo.js; sourceTree = "<group>"; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
 		2DD94A2B14C368DF002B1259 /* vim.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = vim.css; sourceTree = "<group>"; };
@@ -3764,6 +3766,7 @@
 				2DE6BFCD1528390900C3E0EF /* popup_messages2.html */,
 				2D41C01A152BD87D00F18000 /* edit_tab.html */,
 				2DF61FF11528241C00DBFBC8 /* edit_page.html */,
+				2D9E2FEA1579AD4600A76906 /* edit_photo.html */,
 				2DE6BFD11529722200C3E0EF /* edit_product.html */,
 				2DFCE0EB152A295500F9ABEE /* edit_video.html */,
 				2D41C015152ACDEB00F18000 /* edit_profile.html */,
@@ -3801,6 +3804,7 @@
 				2DE6BFD41529F7B300C3E0EF /* manage_upload.js */,
 				2D41C01D152BD8A600F18000 /* edit_tab.js */,
 				2DF61FF01528235500DBFBC8 /* edit_page.js */,
+				2D9E2FEB1579C11F00A76906 /* edit_photo.js */,
 				2DE6BFD0152971B700C3E0EF /* edit_product.js */,
 				2DFCE0ED152A296300F9ABEE /* edit_video.js */,
 				2D41C014152ACDD100F18000 /* edit_profile.js */,

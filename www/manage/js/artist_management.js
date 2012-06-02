@@ -7,9 +7,10 @@ var VIDEO_REGULAR_LIMIT = 5;
 function artistManagementReady()
 {
     updatePageList();
+    updatePhotoList();
+    updateVideoList();
     updateStoreList();
     updateTabList();
-    updateVideoList();
     
     $('a[rel*=facebox]').facebox();
     
@@ -88,7 +89,43 @@ function updatePageList()
         var html = "<div class='empty_list'>You have not uploaded any pages yet.</div>";
         $('#page_list_ul').append(html);
     }
-
+}
+function updatePhotoList()
+{
+    $('#photo_list_ul').empty();
+    for( var i = 0 ; i < g_photoList.length ; ++i )
+    {
+        var photo = g_photoList[i];
+        
+        var class_name = i % 2 == 0 ? 'odd' : '';
+        var error = false;
+        
+        var html = "";
+        html += "<li id='arrayorder_{0}' class='photos_sortable'>".format(photo.id);
+        html += "<figure>";
+        html += "<span class='close'>";
+        html += "<a href='#' onclick='deletePhoto({0});'></a>".format(photo.id);
+        html += "</span>";
+        html += "<a title='{0}' onclick='showPhotoPopup({1});'>".format("Edit Photo",i);
+        html += "<img src='{0}' width='210' height='132'>".format(photo.image_url);
+        if( error )
+            html += "<div class='error'>!</div>";
+        html += "</a>";
+        html += "</figure>";
+        html += "<span>";
+        html += "<a title='{0}' onclick='showPhotoPopup({1});'>".format("Edit Photo",i);
+        html += photo.name;
+        html += "</a>";
+        html += "</span>";
+        html += "<br>";
+        html += "</li>";
+        $('#photo_list_ul').append(html);
+    }
+    if( g_pageList.length == 0 )
+    {
+        var html = "<div class='empty_list'>You have not uploaded any pages yet.</div>";
+        $('#photo_list_ul').append(html);
+    }
 }
 
 function updateStoreList()
