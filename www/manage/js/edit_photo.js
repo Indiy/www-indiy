@@ -112,7 +112,7 @@ function onAddPhotoSubmit()
         form_data.append('tags',tags);
         form_data.append('ajax',true);
         
-        var image = $('#edit_photo #song_image')[0];
+        var image = $('#edit_photo #photo_image')[0];
         if( image.files && image.files.length > 0 )
         {
             form_data.append('image',image.files[0]);
