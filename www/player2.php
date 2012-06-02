@@ -289,7 +289,7 @@
         
         $i++;
     }
-    $photo_list_json = json_encode($video_list);
+    $photo_list_json = json_encode($photo_list);
     $photo_nav_show = FALSE;
     if( count($photo_list) > 3 )
         $photo_nav_show = TRUE;
