@@ -10,7 +10,7 @@
 		$database = $_REQUEST['type'];
 		$count = 1;
 		foreach ($array as $idval) {
-			update("[p]".$database,"order",$count,"id",$idval);
+			update($database,"order",$count,"id",$idval);
 			++$count;	
 		}
 		
