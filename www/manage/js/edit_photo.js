@@ -103,7 +103,7 @@ function onAddPhotoSubmit()
         var bg_style = $('#edit_photo #photo_bg_style option:selected').val();
         var tags = $('#edit_photo #photo_tags').val();
         
-        form_data.append('artistid',g_artistId);
+        form_data.append('artist_id',g_artistId);
         form_data.append('id',photo_id);
         form_data.append('name',name);
         form_data.append('location',location);
