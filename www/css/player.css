@@ -1161,7 +1161,9 @@ body {
     bottom: 0px;
     overflow: auto;
 }
-
+#comment_tab .comment_container .fb_container {
+    padding: 10px;
+}
 
 
 
