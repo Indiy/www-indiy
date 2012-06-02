@@ -268,7 +268,7 @@
     $i = 0;
     while( $photo = mf($q_photo) )
     {
-        $photo_image = '/artists/photo/' . $photoo['image'];
+        $photo_image = '/artists/photo/' . $photo['image'];
         $photo_name = $photo['name'];
         
         $item = array("id" => $photo['id'],
