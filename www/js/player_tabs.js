@@ -33,14 +33,17 @@ function showUserPage(i)
 
 function hideAllTabs()
 {
-    g_currentUserPageIndex = false;
     $('#user_tab').hide();
+    g_currentUserPageIndex = false;
+
     $('#contact_tab').hide();
     g_showingContactPage = false;
+
+    $('#comment_tab').hide();
+    g_showingCommentPage = false;
 }
 
 var g_showingContactPage = false;
-
 function showContact()
 {
     if( g_showingContactPage )
@@ -57,6 +60,22 @@ function showContact()
         $('#contact_tab').show();
     }
 }
+var g_showingCommentPage = false;
+function showComments()
+{
+    if( g_showingCommentPage )
+    {
+        hideAllTabs();
+        hideContentPage();
+    }
+    else
+    {
+        hideAllTabs();
+        showContentPage();
+        g_showingCommentPage = true;
+        $('#comment_tab').show();
+    }
+}
 
 function clickContactContact()
 {
@@ -65,7 +84,6 @@ function clickContactContact()
     $('#contact_tab .title').removeClass('active');
     $('#contact_tab .title.contact').addClass('active');
 }
-
 function clickContactBooking()
 {
     $('#contact_tab .contact_container').hide();
@@ -73,7 +91,6 @@ function clickContactBooking()
     $('#contact_tab .title').removeClass('active');
     $('#contact_tab .title.booking').addClass('active');
 }
-
 
 function submitContact()
 {
@@ -139,3 +156,4 @@ function submitBooking()
         $.post("/data/booking.php", submit, function(response) { });
     }
 }
+
