@@ -267,7 +267,7 @@
             <div class='media_boxes'>
                 <div class='media_buttons'>
                     <? if( count($photo_list) > 0): ?>
-                        <div class='button photos'>
+                        <div class='button photos' onclick='clickPhotoMediaButton();'>
                             <div class='icon'></div>
                             <div class='label'>PHOTOS</div>
                         </div>
@@ -286,6 +286,15 @@
                     <? endif; ?>
                 </div>
                 <div id='media_content_lists' class='media_content'>
+                    <div id='photo_list' class='media_list picture_list'>
+                        <? if( $photo_nav_show ): ?>
+                            <div class='left_nav' onclick='photoListScrollLeft();'></div>
+                            <div class='right_nav' onclick='photoListScrollRight();'></div>
+                        <? endif; ?>
+                        <div class='content'>
+                            <?=$photo_list_html;?>
+                        </div>
+                    </div>
                     <div id='music_list' class='media_list'>
                         <div class='play_line'>
                             <div class='love_song_name'>
