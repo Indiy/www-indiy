@@ -78,7 +78,7 @@
         
         $values = array("artist_id" => $artist_id,
                         "name" => $name,
-                        "location" => $location.
+                        "location" => $location,
                         "image" => $image,
                         "bg_color" => $bg_color,
                         "bg_style" => $bg_style,
