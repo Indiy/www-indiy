@@ -17,6 +17,11 @@ function loveChangedVideo(id,track_name)
     updateLoveLinks("video",track_name);
     loveChangedTag("video",id);
 }
+function loveChangedPhoto(id,name)
+{
+    updateLoveLinks("photo",name);
+    loveChangedTag("photo",id);
+}
 function loveChangedTag(type,id)
 {
     var tag = type + "_" + id;
