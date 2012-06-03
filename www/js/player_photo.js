@@ -9,6 +9,7 @@ function photoOnReady()
         scrollPhotoToIndex();
         
         $(window).resize(scrollPhotoToIndex);
+        $(window).resize(photoResizeBackgrounds);
     }
 }
 
