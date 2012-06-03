@@ -12,6 +12,14 @@ function photoOnReady()
     }
 }
 
+function photoHide()
+{
+    $('#photo_bg').hide();
+}
+function photoShow()
+{
+    $('#photo_bg').show();
+}
 
 function photoListScrollLeft()
 {
@@ -67,7 +75,6 @@ function scrollPhotoToIndex(animate)
 function photoChange( index ) 
 {
     setPlayerMode("photo");
-    
     
     g_currentPhotoIndex = index;
     var photo = g_photoList[index];
