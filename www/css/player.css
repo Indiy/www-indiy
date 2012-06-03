@@ -107,7 +107,7 @@ body {
     cursor: pointer;
 }
 #top_bar .artist_name {
-    float: left;
+    display: inline-block;
     padding-left: 20px;
     padding-top: 18px;
     color: white;
@@ -115,6 +115,11 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
+    background-color: green;
+}
+#top_bar .search_viewed_tabs {
+    display: block;
+    background-color: blue;
 }
 #top_bar .search {
     float: right;
