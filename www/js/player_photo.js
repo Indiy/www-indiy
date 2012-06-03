@@ -120,7 +120,7 @@ function photoPreloadImages()
 function photoLoadImage(photo,index)
 {
     var image = photo.image;
-    var color = photo.bgcolor;
+    var color = photo.bg_color;
     var bg_style = photo.bg_style;
     
     if( !photo.loaded )

@@ -274,6 +274,8 @@
         $item = array("id" => $photo['id'],
                       "name" => $photo_name,
                       "image" => $photo_image,
+                      "bg_color" => $photo['bg_color'],
+                      "bg_style" => $photo['bg_style'],
                       "views" => $photo['views'],
                       "loaded" => FALSE,
                       "image_data" => json_decode($photo['image_data']),
