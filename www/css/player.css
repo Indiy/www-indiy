@@ -244,6 +244,7 @@ body {
 }
 #tracker_bar .media_info_box {
     height: 55px;
+    overflow: hidden;
 }
 #tracker_bar .media_info_box .info_box {
     display: none;
