@@ -245,7 +245,7 @@ body {
 #tracker_bar .media_info_box {
     height: 55px;
 }
-#tracker_bar .media_info_box div {
+#tracker_bar .media_info_box .info_box {
     display: none;
 }
 #tracker_bar .media_info_box .photo_info {
