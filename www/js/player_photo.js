@@ -72,7 +72,7 @@ function scrollPhotoToIndex(animate)
         $('#photo_list .content').scrollLeft(dest);
 }
 
-function photoChange( index ) 
+function photoShowIndex( index ) 
 {
     setPlayerMode("photo");
     
@@ -97,7 +97,7 @@ function photoNext()
     if( index == g_photoList.length )
         index = 0;
     
-    photoChange(index);
+    photoShowIndex(index);
 }
 function photoPrevious()
 {
@@ -105,7 +105,7 @@ function photoPrevious()
     if( index < 0 )
         index = g_photoList.length - 1;
     
-    photoChange(index);
+    photoShowIndex(index);
 }
 
 function photoPreloadImages()
