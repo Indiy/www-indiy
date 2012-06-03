@@ -273,6 +273,7 @@
         
         $item = array("id" => $photo['id'],
                       "name" => $photo_name,
+                      "location" => $photo['location'],
                       "image" => $photo_image,
                       "bg_color" => $photo['bg_color'],
                       "bg_style" => $photo['bg_style'],
