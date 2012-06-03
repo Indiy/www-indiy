@@ -300,6 +300,10 @@ function playerProgress(curr_time,total_time)
     $('#track_progress').html(time);
     $('#track_current_bar').css('width',percent + "%");
 }
+function playerPhotoInfo(name,location,listens)
+{
+    playerTrackInfo(name,listens);
+}
 
 function playerUpdateTotalViewCount()
 {
