@@ -137,9 +137,10 @@ body {
 }
 #top_bar .sep {
     float: right;
-    width: 2px;
+    width: 0px;
     height: 48px;
-    background: black url('../images/topbar_sep.png') no-repeat;
+    border-left: 1px solid black;
+    border-right: 1px solid #333;
 }
 #top_bar .view_count {
     float: right;
