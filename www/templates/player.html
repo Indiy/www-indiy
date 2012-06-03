@@ -54,6 +54,15 @@
             }
         ?>
     </div>
+    <div id='photo_bg'>
+        <?php
+            foreach( $photo_list as $k => $photo )
+            {
+                echo "<div id='photo_image_holder_$k' class='image_holder'>";
+                echo "</div>\n";
+            }
+            ?>
+    </div>
     <div id="jquery_jplayer" class="jp-jplayer"></div>
     <div id='video_container'></div>
     <div id='player_prev' class='idle_fade_out' onclick='playerPrevious();'></div>

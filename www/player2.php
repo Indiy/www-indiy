@@ -275,6 +275,8 @@
                       "name" => $photo_name,
                       "image" => $photo_image,
                       "views" => $photo['views'],
+                      "loaded" => FALSE,
+                      "image_data" => json_decode($photo['image_data']),
                       );
         $photo_list[] = $item;
         
