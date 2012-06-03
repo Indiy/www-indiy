@@ -161,11 +161,16 @@ body {
     padding-right: 14px;
     padding-top: 13px;
     height: 35px;
-    white-space: nowrap;
     overflow: hidden;
     background-color: yellow;
 }
-#top_bar .content_tabs .tab {
+#top_bar .content_tabs .inner {
+    height: 35px;
+    white-space: nowrap;
+    text-align: right;
+    overflow: hidden;
+}
+#top_bar .content_tabs .inner .tab {
     display: inline-block;
     padding-top: 5px;
     padding-bottom: 0px;
@@ -183,7 +188,7 @@ body {
     cursor: pointer;
     border-radius: 3px;
 }
-#top_bar .content_tabs .tab:hover {
+#top_bar .content_tabs .inner .tab:hover {
     background-color: rgba(255,255,255,0.1);
     color: white;
 }
