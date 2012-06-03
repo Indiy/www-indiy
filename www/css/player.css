@@ -109,16 +109,15 @@ body {
 #top_bar .artist_name {
     float: left;
     padding-left: 20px;
+    padding-right: 20px;
     padding-top: 18px;
     color: white;
     font-size: 16px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
-    background-color: green;
 }
 #top_bar .search_viewed_tabs {
-    background-color: blue;
     height: 48px;
     overflow: hidden;
 }
@@ -162,7 +161,6 @@ body {
     padding-top: 13px;
     height: 35px;
     overflow: hidden;
-    background-color: yellow;
 }
 #top_bar .content_tabs .inner {
     height: 35px;
