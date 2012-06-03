@@ -312,11 +312,12 @@ body {
 #tracker_bar .media_controls .progress_bar {
     position: absolute;
     left: 54px;
-    right: 2px;
+    right: 15px;
     top: 9px;
     height: 38px;
     background: black url('../images/progress_bg.png') repeat-x;
     border-radius: 5px;
+    border-right: 1px solid #444;
 }
 #tracker_bar .media_controls .progress_bar .track_name {
     position: absolute;
@@ -409,8 +410,9 @@ body {
 #tracker_bar .buttons .sep {
     display: inline-block;
     height: 55px;
-    width: 2px;
-    background: black url('../images/tracker_bar_sep.png') no-repeat;
+    width: 0px;
+    border-left: 1px solid black;
+    border-right: 1px solid #444;
 }
 
 .tooltip {
