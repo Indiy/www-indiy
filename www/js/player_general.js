@@ -302,7 +302,10 @@ function playerProgress(curr_time,total_time)
 }
 function playerPhotoInfo(name,location,listens)
 {
-    playerTrackInfo(name,listens);
+    $('#media_controls').hide();
+    $('#photo_info').show();
+    $('#photo_info .name').html(name);
+    $('#photo_info .location').html(location);
 }
 
 function playerUpdateTotalViewCount()
@@ -312,6 +315,9 @@ function playerUpdateTotalViewCount()
 
 function playerTrackInfo(track_name,listens)
 {
+    $('#photo_info').hide();
+    $('#media_controls').show();
+
     if( track_name )
         $('#track_name').html(track_name);
     $('#track_play_count').html(listens);
