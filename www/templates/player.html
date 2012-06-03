@@ -45,7 +45,7 @@
              fjs.parentNode.insertBefore(js, fjs);
              }(document, 'script', 'facebook-jssdk'));</script>
 
-    <div id='music_bg'>
+    <div id='music_bg' class='full_screen_bg'>
         <?php
             foreach( $music_list as $k => $song )
             {
@@ -54,11 +54,11 @@
             }
         ?>
     </div>
-    <div id='photo_bg'>
+    <div id='photo_bg' class='full_screen_bg'>
         <?php
             foreach( $photo_list as $k => $photo )
             {
-                echo "<div id='photo_image_holder_$k' class='image_holder'>";
+                echo "<div id='image_holder_$k' class='image_holder'>";
                 echo "</div>\n";
             }
             ?>
