@@ -93,6 +93,7 @@
         <div id='tracker_bar'>
             <div class='buttons'>
                 <? if( count($photo_list) > 0): ?>
+                    <div class='sep'></div>
                     <div class='photos tooltiped button' onclick='clickPhotoIcon();'>
                         <div class='icon'></div>
                         <div id='tip_photos' class='tooltip'>
@@ -100,9 +101,9 @@
                             PHOTOS
                         </div>
                     </div>
-                    <div class='sep'></div>
                 <? endif; ?>
                 <? if( count($music_list) > 0): ?>
+                    <div class='sep'></div>
                     <div class='music tooltiped button' onclick='clickMusicIcon();'>
                         <div class='icon'></div>
                         <div id='tip_music' class='tooltip'>
@@ -110,9 +111,9 @@
                             MUSIC
                         </div>
                     </div>
-                    <div class='sep'></div>
                 <? endif; ?>
                 <? if( count($video_list) > 0 ): ?>
+                    <div class='sep'></div>
                     <div class='video tooltiped button' onclick='clickVideoIcon();'>
                         <div class='icon'></div>
                         <div id='tip_video' class='tooltip'>
@@ -120,8 +121,8 @@
                             VIDEO
                         </div>
                     </div>
-                    <div class='sep'></div>
                 <? endif; ?>
+                <div class='sep'></div>
                 <div id='love_button' class='love tooltiped button' onclick='clickLoveIcon();'>
                     <div class='icon'></div>
                     <div id='tip_love' class='tooltip'>
