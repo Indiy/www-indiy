@@ -134,27 +134,33 @@
                     </div>
                 </div>
             </div>
-            <div class='media_controls'>
-                <div id='track_play_pause_button' class='play_pause tooltiped' onclick='playerPlayPause();'>
-                    <div class='icon'></div>
-                    <div id='tip_play' class='tooltip'>
-                        <div class='carrot'></div>
-                        PLAY
+            <div class='media_info_box'>
+                <div id='media_controls' class='media_controls'>
+                    <div id='track_play_pause_button' class='play_pause tooltiped' onclick='playerPlayPause();'>
+                        <div class='icon'></div>
+                        <div id='tip_play' class='tooltip'>
+                            <div class='carrot'></div>
+                            PLAY
+                        </div>
+                        <div id='tip_pause' class='tooltip'>
+                            <div class='carrot'></div>
+                            PAUSE
+                        </div>
                     </div>
-                    <div id='tip_pause' class='tooltip'>
-                        <div class='carrot'></div>
-                        PAUSE
+                    <div class='progress_bar'>
+                        <div class='current_bar_holder'>
+                            <div id='track_current_bar' class='current_bar'></div>
+                        </div>
+                        <div id='track_name' class='track_name'></div>
+                        <div class='progress_play_times'>
+                            <div id='track_progress' class='progress'></div>
+                            <div class='play_times'> - PLAYED <div id='track_play_count'></div> TIMES</div>
+                        </div>
                     </div>
                 </div>
-                <div class='progress_bar'>
-                    <div class='current_bar_holder'>
-                        <div id='track_current_bar' class='current_bar'></div>
-                    </div>
-                    <div id='track_name' class='track_name'></div>
-                    <div class='progress_play_times'>
-                        <div id='track_progress' class='progress'></div>
-                        <div class='play_times'> - PLAYED <div id='track_play_count'></div> TIMES</div>
-                    </div>
+                <div id='photo_info' class='photo_info'>
+                    <div class='name'></div>
+                    <div class='location'></div>
                 </div>
             </div>
         </div>
