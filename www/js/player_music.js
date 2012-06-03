@@ -164,7 +164,7 @@ function musicLoadImage(song,index)
     if( !song.loaded )
     {
         song.loaded = true;
-        var holder = $('#image_holder_' + index);
+        var holder = $('#music_bg #image_holder_' + index);
         
         var win_height = $('#music_bg').height();
         var win_width = $('#music_bg').width();
@@ -229,8 +229,8 @@ function musicResizeBackgrounds()
             var win_height = $('#music_bg').height();
             var win_width = $('#music_bg').width();
             
-            var div_holder = $('#image_holder_' + i + ' div');
-            var image = $('#image_holder_' + i + ' div img');
+            var div_holder = $('#music_bg  #image_holder_' + i + ' div');
+            var image = $('#music_bg #image_holder_' + i + ' div img');
             
             div_holder.height(win_height);
             div_holder.width(win_width);

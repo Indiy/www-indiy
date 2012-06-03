@@ -237,13 +237,21 @@ function setPlayerMode(mode)
     g_playerMode = mode;
     if( g_playerMode == "music" )
     {
-        musicShow();
         videoHide();
+        photoHide();
+        musicShow();
     }
-    else if( g_playerMode == "video")
+    else if( g_playerMode == "video" )
     {
-        videoShow();
         musicHide();
+        photoHide();
+        videoShow();
+    }
+    else if( g_playerMode == "photo" )
+    {
+        musicHide();
+        videoHide();
+        photoShow();
     }
 }
 
@@ -260,6 +268,8 @@ function playerPrevious()
         musicPrevious();
     else if( g_playerMode == "video" )
         videoPrevious();
+    else if( g_playerMode == "photo" )
+        photoPrevious();
 }
 function playerNext()
 {
@@ -267,6 +277,8 @@ function playerNext()
         musicNext();
     else if( g_playerMode == "video" )
         videoNext();
+    else if( g_playerMode == "photo" )
+        photoNext();
 }
 
 function formatMinSeconds(seconds)
