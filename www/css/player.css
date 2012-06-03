@@ -107,7 +107,7 @@ body {
     cursor: pointer;
 }
 #top_bar .artist_name {
-    display: inline-block;
+    float: left;
     padding-left: 20px;
     padding-top: 18px;
     color: white;
@@ -118,8 +118,9 @@ body {
     background-color: green;
 }
 #top_bar .search_viewed_tabs {
-    display: block;
     background-color: blue;
+    height: 48px;
+    overflow: hidden;
 }
 #top_bar .search {
     float: right;
@@ -157,10 +158,12 @@ body {
     text-transform: uppercase;
 }
 #top_bar .content_tabs {
-    float: right;
     padding-right: 14px;
     padding-top: 13px;
+    height: 35px;
     white-space: nowrap;
+    overflow: hidden;
+    background-color: yellow;
 }
 #top_bar .content_tabs .tab {
     display: inline-block;
