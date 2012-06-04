@@ -296,7 +296,7 @@ body {
     top: 0px;
     height: 55px;
     border-left: 1px solid black;
-    border-right: 1px solid #333;
+    border-right: 1px solid #444;
 }
 #tracker_bar .media_controls .volume {
     position: absolute;
@@ -311,7 +311,7 @@ body {
     top: 0px;
     height: 55px;
     border-left: 1px solid black;
-    border-right: 1px solid #333;
+    border-right: 1px solid #444;
 }
 #tracker_bar .media_controls .play_pause .icon,
 #tracker_bar .media_controls .volume .icon {
