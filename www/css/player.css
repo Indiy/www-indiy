@@ -940,6 +940,7 @@ body {
     white-space: nowrap;
     text-align: right;
     cursor: pointer;
+    z-index: 2;
 }
 #user_tab .close .icon {
     display: inline-block;
