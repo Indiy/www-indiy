@@ -986,9 +986,8 @@ body {
     bottom: 0px;
 }
 #user_tab .scrollable_container {
-    margin-right: 95px;
+    padding-right: 95px;
     height: 100%;
-    padding-bottom: 30px;
     overflow: auto;
 }
 
@@ -1000,6 +999,7 @@ body {
 }
 #user_tab .scrollable_container .page_content {
     max-width: 650px;
+    padding-bottom: 30px;
     color: white;
     font-size: 13px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
