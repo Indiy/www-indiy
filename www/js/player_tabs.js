@@ -5,8 +5,7 @@ function showUserPage(i)
 {
     if( g_currentUserPageIndex == i && g_showingContentPage )
     {
-        hideAllTabs();
-        hideContentPage();
+        hideTab();
     }
     else
     {
@@ -30,6 +29,11 @@ function showUserPage(i)
         $('#user_tab').show();
     }
 }
+function hideTab()
+{
+    hideAllTabs();
+    hideContentPage();    
+}
 
 function hideAllTabs()
 {
@@ -48,8 +52,7 @@ function showContact()
 {
     if( g_showingContactPage )
     {
-        hideAllTabs();
-        hideContentPage();
+        hideTab();
     }
     else
     {
@@ -65,8 +68,7 @@ function showComments()
 {
     if( g_showingCommentPage )
     {
-        hideAllTabs();
-        hideContentPage();
+        hideTab();
     }
     else
     {
