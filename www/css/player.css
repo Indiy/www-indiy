@@ -140,7 +140,7 @@ body {
     width: 0px;
     height: 48px;
     border-left: 1px solid black;
-    border-right: 1px solid #333;
+    border-right: 1px solid #555;
 }
 #top_bar .view_count {
     float: right;
@@ -929,6 +929,32 @@ body {
     left: 0px;
     right: 0px;
     background-color: rgba(0,0,0,0.7);
+}
+#user_tab .close {
+    position: fixed;
+    top: 60px;
+    bottom: 100px;
+    left: 278px;
+    right: 0px;
+    max-width: 650px;
+    white-space: nowrap;
+    text-align: right;
+}
+#user_tab .close .icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+#user_tab .close .name {
+    display: inline-block;
+    padding-top: 10px;
+    height: 20px;
+    color: white;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
 }
 #user_tab .title {
     position: absolute;
