@@ -1280,8 +1280,9 @@ body {
 }
 
 #search {
+    display: none;
     position: absolute;
-    width: 338px;
+    width: 340px;
     top: 48px;
     right: 0px;
 }
@@ -1289,13 +1290,14 @@ body {
     background-color: black;
 }
 #search .search_box input {
-    width: 100%;
+    width: 300px;
     margin: 10px;
     padding-right: 10px;
-    padding-top: 10px;
-    height: 24px;
+    padding-left: 10px;
+    padding-top: 9px;
+    height: 25px;
     color: #777;
-    font-size: 11px;
+    font-size: 12px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     background-color: #333;
