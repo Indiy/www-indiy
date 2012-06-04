@@ -987,6 +987,8 @@ body {
 }
 #user_tab .scrollable_container {
     margin-right: 95px;
+    height: 100%;
+    padding-bottom: 30px;
     overflow: auto;
 }
 
@@ -994,7 +996,7 @@ body {
     padding-bottom: 34px;
 }
 #user_tab .scrollable_container .image_holder img {
-    max-width: 650px;
+    max-width: 100%;
 }
 #user_tab .scrollable_container .page_content {
     max-width: 650px;
