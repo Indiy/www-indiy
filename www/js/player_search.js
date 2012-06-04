@@ -1,10 +1,10 @@
 
 function closeSearch()
 {
-    $('#search').show();
+    $('#search').fadeOut();
 }
 
 function openSearch()
 {
-    $('#search').hide();
+    $('#search').fadeIn();
 }
