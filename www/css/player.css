@@ -932,11 +932,11 @@ body {
 }
 #user_tab .close {
     position: fixed;
-    top: 60px;
+    top: 110px;
     bottom: 100px;
     left: 278px;
-    right: 0px;
-    max-width: 650px;
+    right: 10px;
+    max-width: 750px;
     white-space: nowrap;
     text-align: right;
 }
@@ -944,12 +944,13 @@ body {
     display: inline-block;
     width: 25px;
     height: 25px;
-    margin-right: 6px;
+    margin-right: 2px;
     background-color: white;
+    border-radius: 50%;
 }
 #user_tab .close .name {
     display: inline-block;
-    padding-top: 5px;
+    padding-top: 8px;
     height: 20px;
     color: white;
     font-size: 14px;
@@ -992,7 +993,7 @@ body {
     max-width: 650px;
 }
 #user_tab .scrollable_container .page_content {
-    padding-right: 30px;
+    padding-right: 95px;
     max-width: 650px;
     color: white;
     font-size: 13px;
