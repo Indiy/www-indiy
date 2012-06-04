@@ -3,7 +3,7 @@ var g_currentUserPageIndex = false;
 
 function showUserPage(i)
 {
-    if( g_currentUserPageIndex == i && g_showingContentPage )
+    if( g_currentUserPageIndex === i && g_showingContentPage )
     {
         hideTab();
     }
