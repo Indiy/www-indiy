@@ -37,6 +37,7 @@ function generalOnReady()
     clickShareButton();
 
     $(document).mousemove(showAndTimeoutControls);
+    $(document).mousemove(showAndTimeoutControls);
 }
 
 function showControls()
