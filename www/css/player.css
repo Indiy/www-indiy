@@ -930,7 +930,7 @@ body {
     right: 0px;
     background-color: rgba(0,0,0,0.7);
 }
-#user_tab .close {
+.content_tab .close {
     position: fixed;
     top: 110px;
     left: 278px;
@@ -942,7 +942,7 @@ body {
     cursor: pointer;
     z-index: 2;
 }
-#user_tab .close .icon {
+.content_tab .close .icon {
     display: inline-block;
     width: 25px;
     height: 25px;
@@ -950,7 +950,7 @@ body {
     background-color: white;
     border-radius: 50%;
 }
-#user_tab .close .name {
+.content_tab .close .name {
     display: inline-block;
     padding-top: 8px;
     height: 20px;
@@ -960,7 +960,7 @@ body {
     font-weight: normal;
     vertical-align: top;
 }
-#user_tab .title {
+.content_tab .title {
     position: absolute;
     left: 30px;
     top: 60px;
