@@ -1053,10 +1053,12 @@ body {
     bottom: 0px;
     overflow: auto;
 }
+#contact_tab .contact_form {
+    padding-right: 95px;
+}
 #contact_tab .headline {
     max-width: 650px;
     padding-bottom: 30px;
-    padding-right: 30px;
     color: white;
     font-size: 24px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
@@ -1066,7 +1068,6 @@ body {
 #contact_tab .description {
     max-width: 650px;
     padding-bottom: 30px;
-    padding-right: 30px;
     color: white;
     font-size: 13px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
@@ -1082,7 +1083,7 @@ body {
 #contact_tab .input_container {
     max-width: 620px;
     padding-bottom: 20px;
-    margin-right: 50px;
+    margin-right: 20px;
 }
 #contact_tab .input_container input {
     padding-top: 10px;
@@ -1115,7 +1116,6 @@ body {
 }
 #contact_tab .submit_container {
     max-width: 645px;
-    padding-right: 26px;
     padding-bottom: 30px;
     text-align: right;
 }
@@ -1138,7 +1138,6 @@ body {
     display: none;
     max-width: 650px;
     padding-bottom: 30px;
-    padding-right: 30px;
     color: white;
     font-size: 16px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
@@ -1156,7 +1155,7 @@ body {
 }
 #contact_tab .booking_container .booking_form {
     max-width: 672px;
-    padding-right: 30px;
+    padding-right: 95px;
 }
 #contact_tab .booking_container .left_input {
     float: left;
