@@ -290,13 +290,24 @@ body {
     height: 55px;
     width: 54px;
 }
-#tracker_bar .media_controls .play_pause .icon {
+#tracker_bar .media_controls .volume {
+    position: absolute;
+    left: 57px;
+    top: 0px;
+    height: 55px;
+    width: 54px;
+}
+#tracker_bar .media_controls .play_pause .icon,
+#tracker_bar .media_controls .volume .icon {
     width: 28px;
     height: 24px;
     padding-left: 14px;
     padding-right: 14px;
     padding-top: 12px;
     padding-bottom: 12px;
+}
+#tracker_bar .media_controls .volume .icon {
+    color: white;
 }
 #tracker_bar .media_controls .play_pause .icon {
     background: transparent url('/images/player_icons.png') no-repeat 1px -61px;
@@ -310,12 +321,19 @@ body {
 #tracker_bar .media_controls .play_pause.playing .icon:hover {
     background: transparent url('/images/controls.png') no-repeat 4px -1px;
 }
-#tracker_bar .media_controls .progress_bar {
+#tracker_bar .media_controls .progress_container {
     position: absolute;
-    left: 54px;
+    left: 110px;
     right: 15px;
-    top: 9px;
-    height: 38px;
+    top: 0px;
+    bottom: 0px;
+}
+#tracker_bar .media_controls .progress_bar {
+    position: relative;
+    max-width: 780px;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
     background: black url('../images/progress_bg.png') repeat-x;
     border-radius: 5px;
     border-right: 1px solid #444;
