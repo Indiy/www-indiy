@@ -331,9 +331,10 @@ body {
 #tracker_bar .media_controls .progress_bar {
     position: relative;
     max-width: 780px;
-    margin-top: 5px;
+    margin-top: 9px;
     margin-right: auto;
     margin-left: auto;
+    height: 38px;
     background: black url('../images/progress_bg.png') repeat-x;
     border-radius: 5px;
     border-right: 1px solid #444;
