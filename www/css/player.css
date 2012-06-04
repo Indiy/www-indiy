@@ -933,9 +933,9 @@ body {
 #user_tab .close {
     position: fixed;
     top: 110px;
-    bottom: 100px;
     left: 278px;
     right: 10px;
+    height: 0px;
     max-width: 750px;
     white-space: nowrap;
     text-align: right;
