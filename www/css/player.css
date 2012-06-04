@@ -292,7 +292,7 @@ body {
 }
 #tracker_bar .media_controls .sep {
     position: absolute;
-    left: 56px;
+    left: 55px;
     top: 0px;
     height: 55px;
     border-left: 1px solid black;
@@ -300,7 +300,7 @@ body {
 }
 #tracker_bar .media_controls .volume {
     position: absolute;
-    left: 58px;
+    left: 57px;
     top: 0px;
     height: 55px;
     width: 55px;
