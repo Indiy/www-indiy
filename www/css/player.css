@@ -296,7 +296,7 @@ body {
     top: 0px;
     height: 55px;
     border-left: 1px solid black;
-    border-right: 1px solid #444;
+    border-right: 1px solid #333;
 }
 #tracker_bar .media_controls .volume {
     position: absolute;
@@ -311,7 +311,7 @@ body {
     top: 0px;
     height: 55px;
     border-left: 1px solid black;
-    border-right: 1px solid #444;
+    border-right: 1px solid #333;
 }
 #tracker_bar .media_controls .play_pause .icon,
 #tracker_bar .media_controls .volume .icon {
@@ -444,13 +444,12 @@ body {
     background: transparent url('/images/player_icons.png') no-repeat -241px 7px;
 }
 
-
 #tracker_bar .buttons .sep {
     display: inline-block;
     height: 55px;
     width: 0px;
     border-left: 1px solid black;
-    border-right: 1px solid #444;
+    border-right: 1px solid #333;
 }
 
 .tooltip {
