@@ -1198,19 +1198,15 @@ body {
     background-color: #aaa;
     background-color: rgba(255,255,255,0.4);
 }
-#comment_tab .scrollable_container {
+#comment_tab .comment_container {
     position: absolute;
     left: 278px;
-    right: 0px;
+    right: 95px;
     top: 36px;
     bottom: 0px;
     overflow: auto;
 }
-#comment_tab .scrollable_container .comment_container {
-    padding-right: 95px;
-    height: 100%;
-}
-#comment_tab .scrollable_container .comment_container .fb_container {
+#comment_tab .comment_container .fb_container {
     display: inline-block;
     padding: 10px;
     background-color: #333;
