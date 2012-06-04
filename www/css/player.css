@@ -288,11 +288,11 @@ body {
     left: 0px;
     top: 0px;
     height: 55px;
-    width: 54px;
+    width: 55px;
 }
 #tracker_bar .media_controls .sep {
     position: absolute;
-    left: 55px;
+    left: 56px;
     top: 0px;
     height: 55px;
     border-left: 1px solid black;
@@ -300,10 +300,18 @@ body {
 }
 #tracker_bar .media_controls .volume {
     position: absolute;
-    left: 57px;
+    left: 58px;
     top: 0px;
     height: 55px;
-    width: 54px;
+    width: 55px;
+}
+#tracker_bar .media_controls .sep2 {
+    position: absolute;
+    left: 112px;
+    top: 0px;
+    height: 55px;
+    border-left: 1px solid black;
+    border-right: 1px solid #333;
 }
 #tracker_bar .media_controls .play_pause .icon,
 #tracker_bar .media_controls .volume .icon {
@@ -331,8 +339,8 @@ body {
 }
 #tracker_bar .media_controls .progress_container {
     position: absolute;
-    left: 110px;
-    right: 15px;
+    left: 124px;
+    right: 20px;
     top: 0px;
     bottom: 0px;
 }
