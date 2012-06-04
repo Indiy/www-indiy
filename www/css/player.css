@@ -290,6 +290,14 @@ body {
     height: 55px;
     width: 54px;
 }
+#tracker_bar .media_controls .sep {
+    position: absolute;
+    left: 56px;
+    top: 0px;
+    height: 55px;
+    border-left: 1px solid black;
+    border-right: 1px solid #333;
+}
 #tracker_bar .media_controls .volume {
     position: absolute;
     left: 57px;
