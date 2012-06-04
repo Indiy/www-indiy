@@ -140,7 +140,7 @@ body {
     width: 0px;
     height: 48px;
     border-left: 1px solid black;
-    border-right: 1px solid #555;
+    border-right: 1px solid #333;
 }
 #top_bar .view_count {
     float: right;
