@@ -939,6 +939,7 @@ body {
     max-width: 750px;
     white-space: nowrap;
     text-align: right;
+    cursor: pointer;
 }
 #user_tab .close .icon {
     display: inline-block;
