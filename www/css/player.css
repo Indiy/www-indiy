@@ -981,7 +981,7 @@ body {
 #user_tab .scrollable_container {
     position: absolute;
     left: 278px;
-    right: 0px;
+    right: 95px;
     top: 36px;
     bottom: 0px;
     overflow: auto;
@@ -993,7 +993,6 @@ body {
     max-width: 650px;
 }
 #user_tab .scrollable_container .page_content {
-    padding-right: 95px;
     max-width: 650px;
     color: white;
     font-size: 13px;
