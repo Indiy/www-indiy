@@ -154,6 +154,7 @@
 		2D9E2FEB1579C11F00A76906 /* edit_photo.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_photo.js; sourceTree = "<group>"; };
 		2D9E2FEC1579D43D00A76906 /* photo.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = photo.php; sourceTree = "<group>"; };
 		2D9E2FED157A89C500A76906 /* player_photo.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_photo.js; sourceTree = "<group>"; };
+		2D9E2FEE157C836400A76906 /* player_search.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_search.js; sourceTree = "<group>"; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
 		2DD94A2B14C368DF002B1259 /* vim.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = vim.css; sourceTree = "<group>"; };
@@ -3036,6 +3037,7 @@
 				2D9E2FE8157495CB00A76906 /* player_social.js */,
 				2D9E2FE91575AC9800A76906 /* player_tabs.js */,
 				2D9E2FED157A89C500A76906 /* player_photo.js */,
+				2D9E2FEE157C836400A76906 /* player_search.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
