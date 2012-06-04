@@ -29,6 +29,7 @@ var g_hideControlsTimeout = false;
 var g_hideBottomTimeout = false;
 var g_socialContent = "share";
 var g_showingContentPage = false;
+var g_searchOpen = false;
 
 $(document).ready(generalOnReady);
 function generalOnReady()
@@ -76,7 +77,7 @@ function timeoutControls()
 {
     clearTimeoutControls();
     
-    if( !g_showingContentPage )
+    if( !g_showingContentPage && !g_searchOpen )
     {
         var timeout = HIDE_CONTROLS_NORMAL_TIMEOUT;
         if( g_bottomOpen )
@@ -128,6 +129,21 @@ function closeBottom(animate)
 function changeSocialContainer()
 {
     openBottom();
+}
+
+function toggleSearchBox()
+{
+    if( g_searchOpen )
+    {
+        g_searchOpen = false;
+        closeSearch();
+    }
+    else
+    {
+        g_searchOpen = true;
+        hideTab();
+        openSearch();
+    }
 }
 
 function maybeAskForEmail()

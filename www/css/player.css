@@ -1279,5 +1279,26 @@ body {
     vertical-align: top;
 }
 
+#search {
+    width: 338px;
+    top: 48px;
+    right: 0px;
+}
+#search .search_box {
+    background-color: black;
+}
+#search .search_box input {
+    margin: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    height: 24px;
+    color: #777;
+    font-size: 11px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    background-color: #333;
+    border: 0;
+    outline: 0;
+}
 
 
