@@ -39,7 +39,7 @@
             <div class='left_label'>Background Style <span id='tip_bg_style' class='tooltip'>(?)</span></div>
             <select id='bg_style' name="bg_style" class='right_drop'>
             <?php
-                $styles = array('STRETCH','CENTER','TILE');
+                $styles = array('STRETCH','CENTER','TILE','LETTERBOX');
                 foreach( $styles as $style ) 
                     echo "<option value='$style' $selected>$style</option>\n";
             ?>
