@@ -307,7 +307,7 @@ body {
 }
 #tracker_bar .media_controls .sep2 {
     position: absolute;
-    left: 134px;
+    left: 112px;
     top: 0px;
     height: 55px;
     border-left: 1px solid black;
@@ -339,7 +339,7 @@ body {
 }
 #tracker_bar .media_controls .progress_container {
     position: absolute;
-    left: 124px;
+    left: 134px;
     right: 20px;
     top: 0px;
     bottom: 0px;
