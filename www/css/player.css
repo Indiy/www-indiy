@@ -310,16 +310,16 @@ body {
     color: white;
 }
 #tracker_bar .media_controls .play_pause .icon {
-    background: transparent url('/images/player_icons.png') no-repeat 1px -61px;
+    background: transparent url('/images/player_icons.png') no-repeat 1px -63px;
 }
 #tracker_bar .media_controls .play_pause .icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat 1px 9px;
+    background: transparent url('/images/player_icons.png') no-repeat 1px 6px;
 }
 #tracker_bar .media_controls .play_pause.playing .icon {
-    background: transparent url('/images/controls.png') no-repeat 4px -71px;
+    background: transparent url('/images/controls.png') no-repeat 4px -73px;
 }
 #tracker_bar .media_controls .play_pause.playing .icon:hover {
-    background: transparent url('/images/controls.png') no-repeat 4px -1px;
+    background: transparent url('/images/controls.png') no-repeat 4px -3px;
 }
 #tracker_bar .media_controls .progress_container {
     position: absolute;
@@ -350,6 +350,8 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal; 
     text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
 }
 #tracker_bar .media_controls .progress_bar .progress_play_times {
     position: absolute;
