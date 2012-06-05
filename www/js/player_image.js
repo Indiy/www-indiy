@@ -9,8 +9,15 @@ function imageResizeBackgrounds(list,root_tag)
             continue;
         
         var bg_style = item.bg_style;
-        if( bg_style == 'STRETCH' )
+        if( bg_style == 'STRETCH' || bg_style == 'LETTERBOX' )
         {
+            var image_params;
+            
+            if( bg_style == 'STRETCH' )
+                image_params = imageGetStretchParams(item,root_tag);
+            else if( bg_style == 'LETTERBOX' )
+                image_params = imageGetLetterboxParams(item,root_tag);
+        
             var win_height = $(root_tag).height();
             var win_width = $(root_tag).width();
             
@@ -20,13 +27,9 @@ function imageResizeBackgrounds(list,root_tag)
             div_holder.height(win_height);
             div_holder.width(win_width);
             
-            var image_params = imageGetStretchParams(item,root_tag);
-            
             image.width(image_params.width);
             image.height(image_params.height);
             
-            //div_holder.scrollLeft(-image_params.margin_left);
-            //div_holder.scrollTop(-image_params.margin_top);
             div_holder.css("margin-left",image_params.margin_left + "px");
             div_holder.css("margin-top",image_params.margin_top + "px");
             div_holder.css("padding-right",-image_params.margin_left + "px");
