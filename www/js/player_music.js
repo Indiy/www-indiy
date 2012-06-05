@@ -195,6 +195,18 @@ function musicLoadImage(song,index)
             holder.css("background-repeat","no-repeat");
             holder.css("background-position","center center");
         }
+        else if( bg_style == 'LETTERBOX' )
+        {
+            var html = "";
+            html += "<div>";
+            html += "<img src='{0}' class='letterbox'/>".format(image);
+            html += "</div>"
+            holder.html(html);
+            
+            holder.css("background-image","none");
+            holder.css("background-repeat","no-repeat");
+            holder.css("background-position","center center");
+        }
         else if( bg_style == 'CENTER' )
         {
             holder.css("background-image","url(" + image + ")");
