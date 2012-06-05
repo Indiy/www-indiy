@@ -3,6 +3,7 @@
 var TAB_LIMIT = 6;
 var SONG_REGULAR_LIMIT  = 5;
 var VIDEO_REGULAR_LIMIT = 5;
+var PHOTO_REGULAR_LIMIT = 10;
 
 function artistManagementReady()
 {
