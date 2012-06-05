@@ -120,6 +120,9 @@ function photoPreloadImages()
 
 function photoLoadImage(photo,index)
 {
+    imageLoadItem(photo,index,'#photo_bg');
+    return;
+
     var image = photo.image;
     var color = photo.bg_color;
     var bg_style = photo.bg_style;
@@ -179,6 +182,9 @@ function photoLoadImage(photo,index)
 
 function photoResizeBackgrounds()
 {
+    imageResizeBackgrounds(g_photoList,'#photo_bg');
+    return;
+
     for( var i = 0 ; i < g_photoList.length ; ++i )
     {
         var photo = g_photoList[i];
