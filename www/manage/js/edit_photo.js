@@ -69,7 +69,7 @@ function onPhotoImageRemove()
 function onAddPhotoSubmit()
 {
     var needs_image = false;
-    if( g_pageIndex === false )
+    if( g_photoIndex === false )
     {
         needs_image = true;
     }
