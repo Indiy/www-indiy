@@ -157,6 +157,9 @@ function musicPreloadImages()
 
 function musicLoadImage(song,index)
 {
+    imageLoadItem(song,index,'#music_bg');
+    return;
+
     var image = song.image;
     var color = song.bgcolor;
     var bg_style = song.bg_style;
