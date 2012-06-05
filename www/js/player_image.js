@@ -8,9 +8,9 @@ function imageLoadItem(item,index,root_tag)
         color = item.bg_color;
     var bg_style = item.bg_style;
     
-    if( !song.loaded )
+    if( !item.loaded )
     {
-        song.loaded = true;
+        item.loaded = true;
         var holder = $(root_tag + ' #image_holder_' + index);
         
         var win_height = $(root_tag).height();
@@ -19,7 +19,7 @@ function imageLoadItem(item,index,root_tag)
         holder.css("background-color", "#" + color);
         if( bg_style == 'STRETCH' )
         {
-            var image_params = imageGetStretchParams(song,root_tag);
+            var image_params = imageGetStretchParams(item,root_tag);
             
             var img_style = "width: {0}px; height: {1}px;".format(image_params.width,image_params.height);
             var img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(image,win_width);
@@ -44,7 +44,7 @@ function imageLoadItem(item,index,root_tag)
         }
         else if( bg_style == 'LETTERBOX' )
         {
-            var image_params = imageGetLetterboxParams(song,root_tag);
+            var image_params = imageGetLetterboxParams(item,root_tag);
             
             var img_style = "width: {0}px; height: {1}px;".format(image_params.width,image_params.height);
             
