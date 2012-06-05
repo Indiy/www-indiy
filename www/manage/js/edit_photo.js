@@ -39,7 +39,7 @@ function showPhotoPopup(photo_index)
     else
     {
         if( g_artistData.account_type == 'REGULAR' 
-           && g_pageList.length >= SONG_REGULAR_LIMIT )
+           && g_photoList.length >= PHOTO_REGULAR_LIMIT )
         {
             showAccountLimitPopup();
             return;
@@ -49,7 +49,7 @@ function showPhotoPopup(photo_index)
         $('#edit_photo #photo_id').val('');
         $('#edit_photo #photo_name').val('');
         $('#edit_photo #image_filename_container').empty();
-        $('#edit_photo #photo_bg_style').val('STRETCH');
+        $('#edit_photo #photo_bg_style').val('LETTERBOX');
         $('#edit_photo #photo_bg_color').val('000000');
         $('#edit_photo #photo_tags').val('');
     }
