@@ -21,9 +21,9 @@ function showPhotoPopup(photo_index)
         $('#edit_photo #song_id').val(photo.id);
         $('#edit_photo #photo_name').val(photo.name);
         $('#edit_photo #location').val(photo.location);
-        if( photo.image )
+        if( photo.image_url )
         {
-            var html = "<img src='{0}' />".format(photo.image);
+            var html = "<img src='{0}' />".format(photo.image_url);
             html += "<button onclick='return onPhotoImageRemove();'></button>";
             $('#edit_photo #image_filename_container').html(html);
         }
@@ -75,8 +75,8 @@ function onAddPhotoSubmit()
     }
     else
     {
-        var photo  = g_photoList[g_photoIndex];
-        if( !photo.image )
+        var photo = g_photoList[g_photoIndex];
+        if( !photo.image_url )
             needs_image = true;
     }   
     
