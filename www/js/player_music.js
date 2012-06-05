@@ -240,6 +240,9 @@ function musicLoadImage(song,index)
 
 function musicResizeBackgrounds()
 {
+    imageResizeBackgrounds(g_musicList,'#music_bg');
+    return;
+
     for( var i = 0 ; i < g_musicList.length ; ++i )
     {
         var song = g_musicList[i];
