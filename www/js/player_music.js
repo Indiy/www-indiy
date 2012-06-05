@@ -197,9 +197,21 @@ function musicLoadImage(song,index)
         }
         else if( bg_style == 'LETTERBOX' )
         {
+            var image_params = imageGetLetterboxParams(song,'#music_bg');
+
+            var img_style = "width: {0}px; height: {1}px;".format(image_params.width,image_params.height);
+            
+            var div_holder_style = "";
+            div_holder_style += "height: {0}px; ".format(win_height);
+            div_holder_style += "width: {0}px; ".format(win_width);
+            div_holder_style += "margin-top: {0}px; ".format(image_params.margin_top);
+            div_holder_style += "margin-left: {0}px; ".format(image_params.margin_left);
+            div_holder_style += "padding-bottom: {0}px; ".format(-image_params.margin_top);
+            div_holder_style += "padding-right: {0}px; ".format(-image_params.margin_left);
+            
             var html = "";
-            html += "<div>";
-            html += "<img src='{0}' class='letterbox'/>".format(image);
+            html += "<div style='{0}'>".format(div_holder_style);
+            html += "<img src='{0}' style='{1}' />".format(image,img_style);
             html += "</div>"
             holder.html(html);
             
