@@ -1,4 +1,91 @@
 
+
+function imageLoadItem(item,index,root_tag)
+{
+    var image = item.image;
+    var color = item.bgcolor;
+    if( typeof color == 'undefined' )
+        color = item.bg_color;
+    var bg_style = item.bg_style;
+    
+    if( !song.loaded )
+    {
+        song.loaded = true;
+        var holder = $(root_tag + ' #image_holder_' + index);
+        
+        var win_height = $(root_tag).height();
+        var win_width = $(root_tag).width();
+        
+        holder.css("background-color", "#" + color);
+        if( bg_style == 'STRETCH' )
+        {
+            var image_params = imageGetStretchParams(song,root_tag);
+            
+            var img_style = "width: {0}px; height: {1}px;".format(image_params.width,image_params.height);
+            var img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(image,win_width);
+            
+            var div_holder_style = "";
+            div_holder_style += "height: {0}px; ".format(win_height);
+            div_holder_style += "width: {0}px; ".format(win_width);
+            div_holder_style += "margin-top: {0}px; ".format(image_params.margin_top);
+            div_holder_style += "margin-left: {0}px; ".format(image_params.margin_left);
+            div_holder_style += "padding-bottom: {0}px; ".format(-image_params.margin_top);
+            div_holder_style += "padding-right: {0}px; ".format(-image_params.margin_left);
+            
+            var html = "";
+            html += "<div style='{0}'>".format(div_holder_style);
+            html += "<img src='{0}' style='{1}' />".format(img_url,img_style);
+            html += "</div>"
+            holder.html(html);
+            
+            holder.css("background-image","none");
+            holder.css("background-repeat","no-repeat");
+            holder.css("background-position","center center");
+        }
+        else if( bg_style == 'LETTERBOX' )
+        {
+            var image_params = imageGetLetterboxParams(song,root_tag);
+            
+            var img_style = "width: {0}px; height: {1}px;".format(image_params.width,image_params.height);
+            
+            var div_holder_style = "";
+            div_holder_style += "height: {0}px; ".format(win_height);
+            div_holder_style += "width: {0}px; ".format(win_width);
+            div_holder_style += "margin-top: {0}px; ".format(image_params.margin_top);
+            div_holder_style += "margin-left: {0}px; ".format(image_params.margin_left);
+            div_holder_style += "padding-bottom: {0}px; ".format(-image_params.margin_top);
+            div_holder_style += "padding-right: {0}px; ".format(-image_params.margin_left);
+            
+            var html = "";
+            html += "<div style='{0}'>".format(div_holder_style);
+            html += "<img src='{0}' style='{1}' />".format(image,img_style);
+            html += "</div>"
+            holder.html(html);
+            
+            holder.css("background-image","none");
+            holder.css("background-repeat","no-repeat");
+            holder.css("background-position","center center");
+        }
+        else if( bg_style == 'CENTER' )
+        {
+            holder.css("background-image","url(" + image + ")");
+            holder.css("background-repeat","no-repeat");
+            holder.css("background-position","center center");
+            var html = "<div style='width: 100%; height: {0}px;'></div>".format(win_height);
+            holder.html(html);
+        }
+        else if( bg_style == 'TILE' )
+        {
+            holder.css("background-image","url(" + image + ")");
+            holder.css("background-repeat","repeat");
+            holder.css("background-position","center center");
+            var html = "<div style='width: 100%; height: {0}px;'></div>".format(win_height);
+            holder.html(html);
+        }
+    }            
+}
+
+
 function imageResizeBackgrounds(list,root_tag)
 {
     for( var i = 0 ; i < list.length ; ++i )
