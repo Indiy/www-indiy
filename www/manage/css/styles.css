@@ -644,7 +644,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     float:left; 
     color:#FFFFFF; 
     text-decoration:none; 
-    background:#3e3e53 url(../images/icon_add_product.gif) no-repeat; 
+    background:#444 url(../images/icon_add_product.gif) no-repeat; 
     padding:5px 10px 6px 33px;
 }
 #adminblock .playlist .list { width:711px; float:left}
@@ -787,7 +787,7 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #adminblock .products .heading { width:691px; float:left; background:#6C7177; padding:10px}
 #adminblock .products .heading h5 { float:left; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; color:#ffffff; text-transform:uppercase; padding:5px 0 0 9px}
 #adminblock .products .heading .buttonadd { float:right; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#ffffff}
-#adminblock .products .heading .buttonadd a { float:left; color:#FFFFFF; text-decoration:none; background:#3e3e53 url(../images/icon_add_product.gif) no-repeat; padding:5px 10px 6px 33px}
+#adminblock .products .heading .buttonadd a { float:left; color:#FFFFFF; text-decoration:none; background:#333 url(../images/icon_add_product.gif) no-repeat; padding:5px 10px 6px 33px}
 
 #adminblock .products .list { width:711px; float:left}
 #adminblock .products .list ul { width:689px; float:left; border:1px solid #dddee0; border-top:none; padding:0px 0 20px 20px}
