@@ -63,7 +63,7 @@ function searchChange()
 
 function searchRun(s)
 {
-    var re = new RegExp("($|\s)" + s);
+    var re = new RegExp("($|\s)" + s,"i");
 
     var artists = searchTestList(g_searchData.artists,re,true,"/artist/images/");
     var songs = searchTestList(g_searchData.songs,re,false,"/artist/images/");
