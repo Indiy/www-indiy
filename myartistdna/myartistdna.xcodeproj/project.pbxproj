@@ -3040,8 +3040,8 @@
 				2D9E2FE8157495CB00A76906 /* player_social.js */,
 				2D9E2FE91575AC9800A76906 /* player_tabs.js */,
 				2D9E2FED157A89C500A76906 /* player_photo.js */,
-				2D9E2FEE157C836400A76906 /* player_search.js */,
 				2D9E2FEF157DC38900A76906 /* player_image.js */,
+				2D9E2FEE157C836400A76906 /* player_search.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
