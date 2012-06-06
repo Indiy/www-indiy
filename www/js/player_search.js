@@ -5,6 +5,8 @@ var g_searchData = false;
 $(document).ready(searchOnReady);
 function searchOnReady()
 {
+    $('#search input').bind("propertychange keyup input paste",searchChange);
+
     jQuery.ajax(
     {
         type: 'GET',
@@ -32,6 +34,6 @@ function openSearch()
 function searchChange()
 {
     var s = $('#search input').val();
-    
+    console.log("search: " + s);
 }
 
