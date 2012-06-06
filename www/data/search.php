@@ -28,7 +28,7 @@
     {	
         $sql = "SELECT id,artistid,name,image FROM mydna_musicplayer_audio";
         $q = mysql_query($sql);
-        ret = array();
+        $ret = array();
         while( $row = mysql_fetch_assoc($q) )
         {
             $ret[] = array("id" => $row['id'],
@@ -44,7 +44,7 @@
     {	
         $sql = "SELECT id,artistid,name,image FROM mydna_musicplayer_video";
         $q = mysql_query($sql);
-        ret = array();
+        $ret = array();
         while( $row = mysql_fetch_assoc($q) )
         {
             $ret[] = array("id" => $row['id'],
@@ -60,7 +60,7 @@
     {	
         $sql = "SELECT id,artist_id,name,image FROM photos";
         $q = mysql_query($sql);
-        ret = array();
+        $ret = array();
         while( $row = mysql_fetch_assoc($q) )
         {
             $ret[] = array("id" => $row['id'],
