@@ -1,6 +1,7 @@
 
 
 var g_searchData = false;
+var g_lastSearch = false;
 
 $(document).ready(searchOnReady);
 function searchOnReady()
@@ -34,6 +35,10 @@ function openSearch()
 function searchChange()
 {
     var s = $('#search input').val();
-    console.log("search: " + s);
+    if( s === g_lastSearch )
+        return;
+    g_lastSearch = s;
+
+    console.log("search: " + s);    
 }
 
