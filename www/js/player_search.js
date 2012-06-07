@@ -3,6 +3,7 @@
 var TOP_BAR_HEIGHT = 48;
 var BOTTOM_BAR_HEIGHT = 49;
 var TRACK_BAR_HEIGHT = 55;
+var SEARCH_BOX_HEIGHT = 67;
 
 var g_searchData = false;
 var g_lastSearch = false;
@@ -55,6 +56,7 @@ function searchResize()
     h -= TOP_BAR_HEIGHT;
     h -= BOTTOM_BAR_HEIGHT;
     h -= TRACK_BAR_HEIGHT;
+    h -= 
     $('#search_results').css('max-height',"{0}px".format(h));
 }
 
