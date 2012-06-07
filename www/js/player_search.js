@@ -80,7 +80,7 @@ function searchRun(s)
     g_searchResults = results;
 }
 
-function searchTestList(re,list,is_artist,type,image_path)
+function searchTestList(list,re,is_artist,type,image_path)
 {
     var ret = [];
     
