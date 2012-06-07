@@ -56,7 +56,7 @@ function searchResize()
     h -= TOP_BAR_HEIGHT;
     h -= BOTTOM_BAR_HEIGHT;
     h -= TRACK_BAR_HEIGHT;
-    h -= 
+    h -= SEARCH_BOX_HEIGHT;
     $('#search_results').css('max-height',"{0}px".format(h));
 }
 
