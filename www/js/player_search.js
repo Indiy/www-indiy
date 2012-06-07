@@ -1,5 +1,9 @@
 
 
+var TOP_BAR_HEIGHT = 48;
+var BOTTOM_BAR_HEIGHT = 49;
+var TRACK_BAR_HEIGHT = 55;
+
 var g_searchData = false;
 var g_lastSearch = false;
 var g_searchResults = false;
@@ -30,6 +34,9 @@ function searchOnReady()
         {
         }
     });
+    
+    searchResize();
+    $(window).resize(searchResize);
 }
 
 function closeSearch()
@@ -41,6 +48,14 @@ function openSearch()
 {
     $('#search').fadeIn();
     $('#search input').val("");
+}
+function searchResize()
+{
+    var h = $(window).height();
+    h -= TOP_BAR_HEIGHT;
+    h -= BOTTOM_BAR_HEIGHT;
+    h -= TRACK_BAR_HEIGHT;
+    $('#search_results').css('max-height',"{0}px".format(h));
 }
 
 function searchChange()
