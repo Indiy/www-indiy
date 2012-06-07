@@ -65,10 +65,10 @@ function searchRun(s)
 {
     var re = new RegExp("(^|\\s)" + s,"i");
 
-    var artists = searchTestList(g_searchData.artists,re,true,"artist","/artist/images/");
-    var songs = searchTestList(g_searchData.songs,re,false,"song","/artist/images/");
-    var videos = searchTestList(g_searchData.videos,re,false,"video","/artist/images/");
-    var photos = searchTestList(g_searchData.photos,re,false,"photo","/artist/photos/");
+    var artists = searchTestList(g_searchData.artists,re,true,"artist","/artists/images/");
+    var songs = searchTestList(g_searchData.songs,re,false,"song","/artists/images/");
+    var videos = searchTestList(g_searchData.videos,re,false,"video","/artists/images/");
+    var photos = searchTestList(g_searchData.photos,re,false,"photo","/artists/photo/");
     
     var results = {
         'artists': artists,
