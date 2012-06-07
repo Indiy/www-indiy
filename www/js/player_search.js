@@ -141,12 +141,12 @@ function searchRenderResults()
         for( var i = 0 ; i < list.length ; ++i )
         {
             var item = list[i];
-            //html += "<a href='{0}'>".format(item.url);;
+            html += "<a href='{0}'>".format(item.url);;
             html += " <div class='item'>";
             html += "  <img src='{0}'/>".format(item.image);
             html += "  <div class='value'>{0}</div>".format(item.value);
             html += " </div>";
-            //html += "</a>";
+            html += "</a>";
         }
         
         html += "</div>";
