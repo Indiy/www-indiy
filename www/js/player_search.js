@@ -86,9 +86,11 @@ function searchTestList(list,re,is_artist,type,image_path)
     
     function createFromArtist(a)
     {
+        var url = g_trueSiteUrl.replace("http://www.","http://" + a.url + ".");
+        url += "/";
         var r = {
             'artist': a.artist,
-            'url': g_trueSiteUrl.replace("http://www.","http://" + a.url + ".")
+            'url': url
         };
         return r;
     }
@@ -141,7 +143,7 @@ function searchRenderResults()
             var item = list[i];
             //html += "<a href='{0}'>".format(item.url);;
             html += " <div class='item'>";
-            html += "  <img url='{0}'/>".format(item.image);
+            html += "  <img src='{0}'/>".format(item.image);
             html += "  <div class='value'>{0}</div>".format(item.value);
             html += " </div>";
             //html += "</a>";
