@@ -152,7 +152,13 @@ function searchRenderResults()
     }
     
     $('#search_results').empty();
-    renderList(g_searchResults.artists,"Artists");
+    if( g_searchResults )
+    {
+        renderList(g_searchResults.artists,"Artists");
+        renderList(g_searchResults.songs,"Songs");
+        renderList(g_searchResults.videos,"Videos");
+        renderList(g_searchResults.photos,"Photos");
+    }
 }
 
 
