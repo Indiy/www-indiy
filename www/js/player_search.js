@@ -65,10 +65,10 @@ function searchRun(s)
 {
     var re = new RegExp("(^|\\s)" + s,"i");
 
-    var artists = searchTestList(g_searchData.artists,re,true,"/artist/images/");
-    var songs = searchTestList(g_searchData.songs,re,false,"/artist/images/");
-    var videos = searchTestList(g_searchData.videos,re,false,"/artist/images/");
-    var photos = searchTestList(g_searchData.photos,re,false,"/artist/photos/");
+    var artists = searchTestList(g_searchData.artists,re,true,"artist","/artist/images/");
+    var songs = searchTestList(g_searchData.songs,re,false,"song","/artist/images/");
+    var videos = searchTestList(g_searchData.videos,re,false,"video","/artist/images/");
+    var photos = searchTestList(g_searchData.photos,re,false,"photo","/artist/photos/");
     
     var results = {
         'artists': artists,
@@ -88,7 +88,7 @@ function searchTestList(list,re,is_artist,type,image_path)
     {
         var r = {
             'artist': a.artist,
-            'url': g_trueSiteUrl.replace("http://www.","http://" + a.url)
+            'url': g_trueSiteUrl.replace("http://www.","http://" + a.url + ".")
         };
         return r;
     }
