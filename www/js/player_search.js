@@ -1,9 +1,9 @@
 
 
 var TOP_BAR_HEIGHT = 48;
-var BOTTOM_BAR_HEIGHT = 49;
+var BOTTOM_BAR_HEIGHT = 48;
 var TRACK_BAR_HEIGHT = 55;
-var SEARCH_BOX_HEIGHT = 67;
+var SEARCH_BOX_HEIGHT = 55;
 
 var g_searchData = false;
 var g_lastSearch = false;
