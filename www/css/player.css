@@ -1353,7 +1353,7 @@ body {
     padding-left: 12px;
     padding-top: 15px;
     width: 200px;
-    height: 40px;
+    height: 34px;
     color: #999;
     font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
@@ -1362,6 +1362,8 @@ body {
     text-align: left;
     vertical-align: top;
     word-wrap: normal;
+    white-space: normal;
+    overflow: hidden;
 }
 #search .result_group .item:hover .value {
     color: white;
