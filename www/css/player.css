@@ -1323,6 +1323,9 @@ body {
     font-weight: normal;
     background-color: #181818;
 }
+#search .result_group a {
+    text-decoration: none;
+}
 #search .result_group .item {
     padding-top: 10px;
     padding-left: 10px;
@@ -1348,7 +1351,6 @@ body {
     font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
-    background-color: #181818;
     text-decoration: none;
     text-align: left;
     vertical-align: center;
