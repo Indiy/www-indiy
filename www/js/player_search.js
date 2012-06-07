@@ -103,7 +103,7 @@ function searchTestList(list,re,is_artist,type,image_path)
                 var r = createFromArtist(item);
                 r['type'] = "artist";
                 r['image'] = image_path + item.logo;
-                r['value'] = a.artist;
+                r['value'] = item.artist;
                 ret.push(r);
             }
         }
