@@ -731,8 +731,8 @@ body {
     position: absolute;
     top: 80px;
     left: 0px;
-    width: 44px;
-    height: 44px;
+    width: 28px;
+    height: 28px;
     background: transparent url('../images/player_icons.png') no-repeat -440px -552px;
 }
 .picture_list .left_nav:hover {
@@ -742,8 +742,8 @@ body {
     position: absolute;
     top: 80px;
     right: 0px;
-    width: 44px;
-    height: 44px;
+    width: 28px;
+    height: 28px;
     background: transparent url('../images/player_icons.png') no-repeat -441px -677px;
 }
 .picture_list .right_nav:hover {
