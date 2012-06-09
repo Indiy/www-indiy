@@ -1188,10 +1188,10 @@ body {
     height: 28px;
     width: 28px;
     cursor: pointer;
-    background: transparent url('../images/player_icons.png') no-repeat -441px -76px;
+    background: transparent url('../images/player_icons.png') no-repeat -440px -552px;
 }
 #player_prev:hover {
-    background: transparent url('../images/player_icons.png') no-repeat -441px -11px;
+    background: transparent url('../images/player_icons.png') no-repeat -440px -487px;
 }
 #player_next {
     position: fixed;
@@ -1201,10 +1201,10 @@ body {
     height: 28px;
     width: 28px;
     cursor: pointer;
-    background: transparent url('../images/player_icons.png') no-repeat -441px -76px;
+    background: transparent url('../images/player_icons.png') no-repeat -441px -677px;
 }
 #player_next:hover {
-    background: transparent url('../images/player_icons.png') no-repeat -441px -11px;
+    background: transparent url('../images/player_icons.png') no-repeat -441px -612px;
 }
 
 #comment_tab {
