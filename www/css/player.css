@@ -1271,18 +1271,23 @@ body {
     width: 25px;
     height: 25px;
     margin-right: 2px;
-    background-color: white;
-    border-radius: 50%;
+    background: transparent url('../images/player_icons.png') no-repeat -168px -52px;
+}
+.content_tab .close:hover .icon {
+    background: transparent url('../images/player_icons.png') no-repeat -202px -52px;
 }
 .content_tab .close .name {
     display: inline-block;
     padding-top: 8px;
     height: 20px;
-    color: white;
+    color: #888;
     font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     vertical-align: top;
+}
+.content_tab .close:hover .name {
+    color: white;
 }
 
 #search {
