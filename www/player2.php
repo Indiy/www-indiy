@@ -187,9 +187,9 @@
             $odd = "";
         
         $html = "";
-        $html .= "<div class='play_line $odd'>";
+        $html .= "<div id='song_playlist_$i' class='play_line $odd'>";
         $html .= " <div class='love_song_name'>";
-        $html .= "  <div class='love'></div>";
+        $html .= "  <div class='love' onclick='musicToggleLoveIndex($i);'></div>";
         $html .= "  <div onclick='musicChange($i);' class='song_name'>$num. $music_name</div>";
         $html .= " </div>";
         $html .= " <div class='buy_length_listens'>";

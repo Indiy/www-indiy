@@ -165,6 +165,30 @@ function musicResizeBackgrounds()
     imageResizeBackgrounds(g_musicList,'#music_bg');
 }
 
+function musicToggleLoveIndex(index)
+{
+    var song = g_musicList[index];
+    toggleLoveMusic(song.id);
+    musicUpdatePlaylistLove();
+}
+
+function musicUpdatePlaylistLove()
+{
+    for( var i = 0 ; i < g_musicList.length ; ++i )
+    {
+        var song = g_musicList[i];
+        
+        if( isMusicLoved(song.id) )
+        {
+            $('#song_playlist_' + i).addClass('loved');
+        }
+        else
+        {
+            $('#song_playlist_' + i).removeClass('loved');            
+        }
+    }
+}
+
 var g_musicListenUpdated = {};
 function musicUpdateListens(song_id,index)
 {

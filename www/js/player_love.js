@@ -5,7 +5,13 @@ var g_loveMap = {};
 var g_currentLoveTag = false;
 var g_currentLoveType = false;
 
-$(document).ready(loadLoved);
+$(document).ready(loveOnReady);
+
+function loveOnReady()
+{
+    loadLoved();
+    musicUpdatePlaylistLove();
+}
 
 function loveChangedMusic(id,track_name)
 {
@@ -48,6 +54,13 @@ function clickLoveIcon()
         openBottom();
         clickShareButton();
     }
+    musicUpdatePlaylistLove();
+}
+
+function isMusicLoved(id)
+{
+   var tag = "music_" + id;
+   return isTagLoved(id); 
 }
 
 function toggleLoveMusic(id)
@@ -62,9 +75,14 @@ function toggleLoveVideo(id)
     return toggleLoveTag(tag);
 }
 
+function isTagLoved(tag)
+{
+    return tag in g_loveMap;
+}
+
 function toggleLoveTag(tag)
 {
-    if( tag in g_loveMap )
+    if( isTagLoved(tag) )
     {
         removeLoved(tag);
         return false;
