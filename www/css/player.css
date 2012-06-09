@@ -130,7 +130,7 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     cursor: pointer;
-    background: transparent url('../images/player_icons.png') no-repeat -302px -665px;
+    background: transparent url('../images/player_icons.png') no-repeat -304px -665px;
 }
 #top_bar .search:hover {
     background: transparent url('../images/player_icons.png') no-repeat -301px -600px;
