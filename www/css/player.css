@@ -444,10 +444,10 @@ body {
     background: transparent url('/images/player_icons.png') no-repeat -242px -534px;
 }
 #tracker_bar .buttons .love.button.love_active .icon {
-    background: transparent url('/images/controls.png') no-repeat -250px -594px;
+    background: transparent url('/images/player_icons.png') no-repeat -242px -594px;
 }
 #tracker_bar .buttons .love.button.love_active .icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat -250px -534px;
+    background: transparent url('/images/player_icons.png') no-repeat -242px -534px;
 }
 
 #tracker_bar .buttons .sep {
