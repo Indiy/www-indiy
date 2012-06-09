@@ -733,10 +733,10 @@ body {
     left: 0px;
     width: 44px;
     height: 44px;
-    background: transparent url('../images/player_icons.png') no-repeat -432px -61px;
+    background: transparent url('../images/player_icons.png') no-repeat -440px -552px;
 }
 .picture_list .left_nav:hover {
-    background: transparent url('../images/player_icons.png') no-repeat -432px 4px;
+    background: transparent url('../images/player_icons.png') no-repeat -440px -487px;
 }
 .picture_list .right_nav {
     position: absolute;
@@ -744,10 +744,10 @@ body {
     right: 0px;
     width: 44px;
     height: 44px;
-    background: transparent url('../images/player_icons.png') no-repeat -432px -61px;
+    background: transparent url('../images/player_icons.png') no-repeat -441px -677px;
 }
 .picture_list .right_nav:hover {
-    background: transparent url('../images/player_icons.png') no-repeat -432px 4px;
+    background: transparent url('../images/player_icons.png') no-repeat -441px -612px;
 }
 .picture_list .content {
     position: absolute;
