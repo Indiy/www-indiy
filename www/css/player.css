@@ -1271,10 +1271,10 @@ body {
     width: 25px;
     height: 25px;
     margin-right: 2px;
-    background: transparent url('../images/player_icons.png') no-repeat -168px -52px;
+    background: transparent url('../images/player_icons.png') no-repeat -171px -51px;
 }
 .content_tab .close:hover .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -202px -52px;
+    background: transparent url('../images/player_icons.png') no-repeat -206px -51px;
 }
 .content_tab .close .name {
     display: inline-block;
