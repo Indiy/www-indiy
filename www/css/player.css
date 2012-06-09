@@ -326,16 +326,16 @@ body {
     color: white;
 }
 #tracker_bar .media_controls .play_pause .icon {
-    background: transparent url('/images/player_icons.png') no-repeat 5px -63px;
+    background: transparent url('/images/player_icons.png') no-repeat 3px -660px;
 }
 #tracker_bar .media_controls .play_pause .icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat 5px 6px;
+    background: transparent url('/images/player_icons.png') no-repeat 3px -479px;
 }
 #tracker_bar .media_controls .play_pause.playing .icon {
-    background: transparent url('/images/player_icons.png') no-repeat 8px -73px;
+    background: transparent url('/images/player_icons.png') no-repeat 3px -531px;
 }
 #tracker_bar .media_controls .play_pause.playing .icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat 8px -3px;
+    background: transparent url('/images/player_icons.png') no-repeat 3px -479px;
 }
 #tracker_bar .media_controls .progress_container {
     position: absolute;
