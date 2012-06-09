@@ -566,22 +566,22 @@ body {
     height: 48px;
 }
 #media_social_boxes .media_boxes .media_buttons .photos.button .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -54px -61px;
+    background: transparent url('../images/player_icons.png') no-repeat -56px -661px;
 }
 #media_social_boxes .media_boxes .media_buttons .photos.button:hover .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -54px 9px;
+    background: transparent url('../images/player_icons.png') no-repeat -56px -591px;
 }
 #media_social_boxes .media_boxes .media_buttons .music.button .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -118px -61px;
+    background: transparent url('../images/player_icons.png') no-repeat -118px -660px;
 }
 #media_social_boxes .media_boxes .media_buttons .music.button:hover .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -118px 7px;
+    background: transparent url('../images/player_icons.png') no-repeat -118px -592px;
 }
 #media_social_boxes .media_boxes .media_buttons .video.button .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -178px -61px;
+    background: transparent url('../images/player_icons.png') no-repeat -179px -662px;
 }
 #media_social_boxes .media_boxes .media_buttons .video.button:hover .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -178px 7px;
+    background: transparent url('../images/player_icons.png') no-repeat -179px -594px;
 }
 
 #media_social_boxes .media_boxes .media_buttons .button .label {
@@ -729,8 +729,8 @@ body {
 }
 .picture_list .left_nav {
     position: absolute;
-    top: 80px;
-    left: 0px;
+    top: 98px;
+    left: 9px;
     width: 28px;
     height: 28px;
     background: transparent url('../images/player_icons.png') no-repeat -440px -552px;
@@ -740,8 +740,8 @@ body {
 }
 .picture_list .right_nav {
     position: absolute;
-    top: 80px;
-    right: 0px;
+    top: 98px;
+    right: 9px;
     width: 28px;
     height: 28px;
     background: transparent url('../images/player_icons.png') no-repeat -441px -677px;
