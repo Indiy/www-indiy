@@ -329,12 +329,18 @@ body {
     background: transparent url('/images/player_icons.png') no-repeat 1px -660px;
 }
 #tracker_bar .media_controls .play_pause .icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat 1px -479px;
+    background: transparent url('/images/player_icons.png') no-repeat 0px -593px;
 }
 #tracker_bar .media_controls .play_pause.playing .icon {
     background: transparent url('/images/player_icons.png') no-repeat 1px -531px;
 }
 #tracker_bar .media_controls .play_pause.playing .icon:hover {
+    background: transparent url('/images/player_icons.png') no-repeat 1px -479px;
+}
+#tracker_bar .media_controls .volume .icon {
+    background: transparent url('/images/player_icons.png') no-repeat 1px -531px;
+}
+#tracker_bar .media_controls .volume .icon:hover {
     background: transparent url('/images/player_icons.png') no-repeat 1px -479px;
 }
 #tracker_bar .media_controls .progress_container {
@@ -414,34 +420,34 @@ body {
     padding-bottom: 12px;
 }
 #tracker_bar .buttons .photos.button .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -54px -61px;
+    background: transparent url('/images/player_icons.png') no-repeat -67px -531px;
 }
 #tracker_bar .buttons .photos.button .icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat -54px 9px;
+    background: transparent url('/images/player_icons.png') no-repeat -67px -479px;
 }
 #tracker_bar .buttons .music.button .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -118px -61px;
+    background: transparent url('/images/player_icons.png') no-repeat -133px -531px;
 }
 #tracker_bar .buttons .music.button .icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat -118px 7px;
+    background: transparent url('/images/player_icons.png') no-repeat -133px -479px;
 }
 #tracker_bar .buttons .video.button .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -178px -61px;
+    background: transparent url('/images/player_icons.png') no-repeat -190px -531px;
 }
 #tracker_bar .buttons .video.button .icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat -178px 7px;
+    background: transparent url('/images/player_icons.png') no-repeat -190px -479px;
 }
 #tracker_bar .buttons .love.button .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -241px -61px;
+    background: transparent url('/images/player_icons.png') no-repeat -250px -531px;
 }
 #tracker_bar .buttons .love.button .icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat -241px 7px;
+    background: transparent url('/images/player_icons.png') no-repeat -250px -479px;
 }
 #tracker_bar .buttons .love.button.love_active .icon {
-    background: transparent url('/images/controls.png') no-repeat -788px -3px;
+    background: transparent url('/images/controls.png') no-repeat -250px -531px;
 }
 #tracker_bar .buttons .love.button.love_active .icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat -241px 7px;
+    background: transparent url('/images/player_icons.png') no-repeat -250px -479px;
 }
 
 #tracker_bar .buttons .sep {
