@@ -60,7 +60,7 @@ function clickLoveIcon()
 function isMusicLoved(id)
 {
    var tag = "music_" + id;
-   return isTagLoved(id); 
+   return isTagLoved(tag); 
 }
 
 function toggleLoveMusic(id)
