@@ -130,10 +130,10 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     cursor: pointer;
-    background: transparent url('../images/player_icons.png') no-repeat -304px -67px;
+    background: transparent url('../images/player_icons.png') no-repeat -310px -672px;
 }
 #top_bar .search:hover {
-    background: transparent url('../images/player_icons.png') no-repeat -301px -2px;
+    background: transparent url('../images/player_icons.png') no-repeat -310px -672px;
 }
 #top_bar .sep {
     float: right;
@@ -338,10 +338,10 @@ body {
     background: transparent url('/images/player_icons.png') no-repeat 1px -479px;
 }
 #tracker_bar .media_controls .volume .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -389px -387px;
+    background: transparent url('/images/player_icons.png') no-repeat -378px -385px;
 }
 #tracker_bar .media_controls .volume .icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat -389px -387px;
+    background: transparent url('/images/player_icons.png') no-repeat -337px -385px;
 }
 #tracker_bar .media_controls .progress_container {
     position: absolute;
