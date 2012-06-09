@@ -651,6 +651,9 @@ body {
     cursor: pointer;
     background: transparent url('../images/player_icons.png') no-repeat -261px -508px;
 }
+#media_social_boxes .play_line.loved .love_song_name .love {
+    background: transparent url('../images/player_icons.png') no-repeat -261px -480px;
+}
 #media_social_boxes .play_line .love_song_name .love:hover {
     background: transparent url('../images/player_icons.png') no-repeat -261px -454px;
 }
