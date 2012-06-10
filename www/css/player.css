@@ -1481,10 +1481,10 @@ body {
     position: absolute;
     top: 0px;
     right: 0px;
+    padding-top: 7px;
+    padding-bottom: 4px;
     padding-right: 9px;
     padding-left: 9px;
-    padding-top: 8px;
-    padding-bottom: 3px;
     color: white;
     font-size: 13px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
