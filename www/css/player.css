@@ -1417,12 +1417,14 @@ body {
     display: inline-block;
     height: 0px;
     width: 0px;
-    border: 10px 10px 0px 10px solid white;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid white;
 }
 #store_tab .left .back:hover .arrow {
-    border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-top: 10px solid white;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid #888;
 }
 #store_tab .left .back .text {
     display: inline-block;
