@@ -102,6 +102,7 @@
     $product_list = array();
     $product_list_html = "";
     $q_store = mq("SELECT * FROM mydna_musicplayer_ecommerce_products WHERE artistid='$artist_id' ORDER BY `order` ASC, `id` DESC");
+    $i = 0;
     while( $product = mf($q_store) )
     {
         $sizes = FALSE;
@@ -141,6 +142,8 @@
         $html .= "</div>";
         
         $product_list_html .= $html;
+        
+        $i++;
     }
     $product_list_json = json_encode($product_list);
     $store_enabled = FALSE;
