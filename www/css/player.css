@@ -1410,6 +1410,32 @@ body {
     text-align: right;
     cursor: pointer;
 }
+#store_tab .left .back {
+    text-align: right;
+}
+#store_tab .left .back .arrow {
+    display: inline-block;
+    height: 0px;
+    width: 0px;
+    border: 10px 10px 0px 10px solid white;
+}
+#store_tab .left .back:hover .arrow {
+    border: 10px 10px 0px 10px solid #888;
+}
+#store_tab .left .back .text {
+    display: inline-block;
+    padding-left: 5px;
+    color: white;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: right;
+    cursor: pointer;
+}
+#store_tab .left .back:hover .text {
+    color: #888;
+}
+
 #store_tab .sep {
     position: absolute;
     left: 240px;
@@ -1607,11 +1633,12 @@ body {
     overflow: hidden;
 }
 #store_tab .product_info .pi_left .img_holder {
-    padding: 3px;
-    background-color: white;
+    padding: 3px 3px 3px 6px;
 }
 #store_tab .product_info .pi_left .img_holder img {
     width: 100%;
+    padding: 3px;
+    background-color: white;
 }
 
 
