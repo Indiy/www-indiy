@@ -1434,6 +1434,8 @@ body {
     
 }
 #store_tab .product_list .store_title {
+    padding-top: 27px;
+    padding-bottom: 30px;
     color: white;
     font-size: 16px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
@@ -1461,7 +1463,7 @@ body {
     position: relative;
     width: 100%;
     height: 34px;
-    padding-top: 10px;
+    margin-top: 10px;
 }
 #store_tab .product_list .item .name_price .name {
     position: absolute;
@@ -1470,7 +1472,7 @@ body {
     bottom: 0px;
     width: 145px;
     color: white;
-    font-size: 12px;
+    font-size: 13px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     word-wrap: normal;
@@ -1481,10 +1483,10 @@ body {
     right: 0px;
     padding-right: 9px;
     padding-left: 9px;
-    padding-top: 6px;
+    padding-top: 8px;
     padding-bottom: 3px;
     color: white;
-    font-size: 12px;
+    font-size: 13px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     background-color: #c80012;
