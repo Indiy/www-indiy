@@ -45,6 +45,8 @@ function hideAllTabs()
 
     $('#comment_tab').hide();
     g_showingCommentPage = false;
+    
+    hideStore();
 }
 
 var g_showingContactPage = false;
