@@ -1495,4 +1495,6 @@ body {
     background-color: #c80012;
     border-radius: 3px;
 }
-
+#store_tab .product_info {
+    display: none;
+}
