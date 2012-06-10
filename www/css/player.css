@@ -1448,6 +1448,10 @@ body {
     width: 204px;
     margin-right: 18px;
     margin-bottom: 32px;
+    cursor: pointer;
+}
+#store_tab .product_list .item:hover {
+    background-color: #222;
 }
 #store_tab .product_list .item .image {
     width: 198px;
