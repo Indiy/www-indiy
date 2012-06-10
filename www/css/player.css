@@ -1472,25 +1472,20 @@ body {
     margin-top: 10px;
 }
 #store_tab .product_list .item .name_price .name {
-    position: absolute;
-    top: 0px;
-    left: 4px;
-    bottom: 0px;
-    width: 145px;
+    height: 32px;
     color: white;
     font-size: 13px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     word-wrap: normal;
+    overflow: hidden;
 }
 #store_tab .product_list .item .name_price .price {
-    position: absolute;
-    top: 0px;
-    right: 0px;
+    float: right;
     padding-top: 8px;
-    padding-bottom: 4px;
     padding-right: 9px;
     padding-left: 9px;
+    height: 17px;
     color: white;
     font-size: 13px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
