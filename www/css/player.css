@@ -1535,22 +1535,48 @@ body {
 }
 #store_tab .product_info .pi_right .price_share {
     padding-top: 14px;
+    height: 42px;
     padding-bottom: 13px;
 }
-#store_tab .product_info .pi_right .price_share .price {
+#store_tab .product_info .pi_right .price_share .dollar_price {
     float: left;
     padding-top: 2px;
-    height: 41px
+    height: 41px;
     color: white;
     font-size: 40px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
 }
+#store_tab .product_info .pi_right .price_share .dollar_price .dollar {
+    vertical-align: super;
+}
 #store_tab .product_info .pi_right .price_share .share {
+    position: relative;
     float: right;
     width: 109px;
     height: 43px;
     background-color: #004965;
+    border-radius: 0px 3px 0px 3px;
+}
+#store_tab .product_info .pi_right .price_share .share .icon {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 45px;
+    background-color: #006084;
+}
+#store_tab .product_info .pi_right .price_share .share .text {
+    position: absolute;
+    top: 0px;
+    left: 45px;
+    right: 0px;
+    padding-top: 15px;
+    color: white;
+    font-size: 13px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: center;
 }
 #store_tab .product_info .pi_right .buy {
     width: 175px;
