@@ -1417,14 +1417,16 @@ body {
     display: inline-block;
     height: 0px;
     width: 0px;
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid transparent;
-	border-right: 5px solid white;
+    margin-top: 4px;
+    vertical-align: top;
+	border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 10px solid white;
 }
 #store_tab .left .back:hover .arrow {
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid transparent;
-	border-right: 5px solid #888;
+	border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 10px solid #888;
 }
 #store_tab .left .back .text {
     display: inline-block;
