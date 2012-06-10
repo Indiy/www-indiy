@@ -30,6 +30,7 @@
         var g_photoList = <?=$photo_list_json;?>;
         var g_musicList = <?=$music_list_json;?>;
         var g_videoList = <?=$video_list_json;?>;
+        var g_productList = <?=$product_list_json;?>;
         var g_totalPageViews = <?=$artist_views;?>;
         var g_trueSiteUrl = "<?=trueSiteUrl();?>";
         var g_artistName = "<?=$artist_name;?>";
@@ -483,11 +484,11 @@
         </div>
         <div class='sep'></div>
         <div class='right'>
-            <div id='product_list' class='product_list'>
+            <div id='product_list' class='product_list store_content'>
                 <div class='store_title'><?=$artist_name;?> STORE</div>
                 <?=$product_list_html;?>
             </div>
-            <div id='product_info' class='product_info'>
+            <div id='product_info' class='product_info store_content'>
                 <div class='store_title'><?=$artist_name;?> > PRODUCT 1</div>
                 <div class='left'>
                     <div class='img_holder'>
