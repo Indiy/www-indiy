@@ -22,3 +22,7 @@ function hideStore()
     $('#store_tab').hide();
 }
 
+function storeShowProduct()
+{
+    
+}

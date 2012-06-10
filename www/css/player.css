@@ -1277,23 +1277,23 @@ body {
     width: 25px;
     height: 25px;
     margin-right: 2px;
-    background: transparent url('../images/player_icons.png') no-repeat -171px -51px;
+    background: transparent url('../images/player_icons.png') no-repeat -206px -51px;
 }
 .content_tab .close:hover .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -206px -51px;
+    background: transparent url('../images/player_icons.png') no-repeat -171px -51px;
 }
 .content_tab .close .name {
     display: inline-block;
     padding-top: 8px;
     height: 20px;
-    color: #888;
+    color: white;
     font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     vertical-align: top;
 }
 .content_tab .close:hover .name {
-    color: white;
+    color: #888;
 }
 
 #search {
@@ -1451,9 +1451,10 @@ body {
     margin-bottom: 20px;
     padding: 10px;
     cursor: pointer;
+    vertical-align: top;
 }
 #store_tab .product_list .item:hover {
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(80,80,80,0.6);
 }
 #store_tab .product_list .item .image {
     width: 198px;
@@ -1472,9 +1473,10 @@ body {
     margin-top: 10px;
 }
 #store_tab .product_list .item .name_price .name {
-    height: 32px;
+    padding-right: 5px;
+    height: 35px;
     color: white;
-    font-size: 13px;
+    font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     word-wrap: normal;
@@ -1485,9 +1487,9 @@ body {
     padding-top: 8px;
     padding-right: 9px;
     padding-left: 9px;
-    height: 17px;
+    height: 20px;
     color: white;
-    font-size: 13px;
+    font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     background-color: #c80012;
