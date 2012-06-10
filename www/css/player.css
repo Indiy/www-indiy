@@ -1497,4 +1497,90 @@ body {
 }
 #store_tab .product_info {
     display: none;
+    max-width: 745px;
+    padding-bottom: 30px;
+    padding-right: 95px;
 }
+#store_tab .product_info .store_title {
+    padding-top: 27px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    color: white;
+    font-size: 16px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    white-space: normal;
+}
+#store_tab .product_info .right {
+    float: right;
+    width: 290px;
+    padding-left: 20px;
+}
+#store_tab .product_info .right .name {
+    padding-top: 12px;
+    padding-bottom: 14px;
+    color: white;
+    font-size: 25px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    white-space: normal;
+}
+#store_tab .product_info .right .sep {
+    width: 100%;
+    height: 1px;
+    background-color: #555;
+    background-color: rgba(255,255,255,0.3);
+}
+#store_tab .product_info .right .price_share {
+    padding-top: 14px;
+    padding-bottom: 13px;
+}
+#store_tab .product_info .right .price_share .price {
+    float: left;
+    padding-top: 2px;
+    height: 41px
+    color: white;
+    font-size: 40px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#store_tab .product_info .right .price_share .share {
+    float: right;
+    width: 109px;
+    height: 43px;
+    background-color: #004965;
+}
+#store_tab .product_info .right .buy {
+    width: 175px;
+    height: 43px;
+    background-color: #ba0218;
+    text-align: center;
+    color: white;
+    font-size: 19px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#store_tab .product_info .right .description {
+    color: white;
+    font-size: 16px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    white-space: normal;
+}
+
+#store_tab .product_info .left {
+    overflow: hidden;
+}
+#store_tab .product_info .left .img_holder {
+    padding: 3px;
+    background-color: white;
+}
+#store_tab .product_info .left .img_holder img {
+    width: 100%;
+}
+
+
+
