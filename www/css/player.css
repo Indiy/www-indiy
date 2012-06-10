@@ -1422,7 +1422,7 @@ body {
 #store_tab .right {
     position: absolute;
     left: 268px;
-    right: 95px;
+    right: 0px;
     top: 36px;
     bottom: 0px;
     overflow: auto;
@@ -1431,7 +1431,7 @@ body {
 #store_tab .product_list {
     max-width: 650px;
     padding-bottom: 30px;
-    
+    padding-right: 95px;
 }
 #store_tab .product_list .store_title {
     padding-top: 27px;
@@ -1487,8 +1487,8 @@ body {
     position: absolute;
     top: 0px;
     right: 0px;
-    padding-top: 7px;
-    padding-bottom: 4px;
+    padding-top: 8px;
+    padding-bottom: 3px;
     padding-right: 9px;
     padding-left: 9px;
     color: white;
