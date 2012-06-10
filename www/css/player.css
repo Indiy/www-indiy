@@ -1429,7 +1429,7 @@ body {
 }
 
 #store_tab .product_list {
-    max-width: 650px;
+    max-width: 745px;
     padding-bottom: 30px;
     padding-right: 95px;
 }
@@ -1447,7 +1447,7 @@ body {
 #store_tab .product_list .item {
     display: inline-block;
     width: 204px;
-    margin-right: 10px;
+    margin-right: 0px;
     margin-bottom: 20px;
     padding: 10px;
     cursor: pointer;
