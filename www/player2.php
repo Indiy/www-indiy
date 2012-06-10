@@ -130,8 +130,8 @@
         $product_list[] = $item;
         
         $html = "";
-        $html .= "<div class='product_item'>";
-        $html .= " <div class='product_image'>";
+        $html .= "<div class='item'>";
+        $html .= " <div class='image'>";
         $html .= "  <img src='$image'/>";
         $html .= " </div>";
         $html .= " <div class='name_price'>";
