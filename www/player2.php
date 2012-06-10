@@ -135,8 +135,8 @@
         $html .= "  <img src='$image'/>";
         $html .= " </div>";
         $html .= " <div class='name_price'>";
-        $html .= "  <div class='name'>$name</div>";
         $html .= "  <div class='price'>\$$price</div>";
+        $html .= "  <div class='name'>$name</div>";
         $html .= " </div>";
         $html .= "</div>";
         
