@@ -1421,7 +1421,7 @@ body {
 }
 #store_tab .right {
     position: absolute;
-    left: 278px;
+    left: 268px;
     right: 95px;
     top: 36px;
     bottom: 0px;
@@ -1436,6 +1436,7 @@ body {
 #store_tab .product_list .store_title {
     padding-top: 27px;
     padding-bottom: 30px;
+    padding-left: 10px;
     color: white;
     font-size: 16px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
@@ -1446,12 +1447,13 @@ body {
 #store_tab .product_list .item {
     display: inline-block;
     width: 204px;
-    margin-right: 18px;
-    margin-bottom: 32px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
     cursor: pointer;
 }
 #store_tab .product_list .item:hover {
-    background-color: #222;
+    background-color: rgba(0,0,0,0.9);
 }
 #store_tab .product_list .item .image {
     width: 198px;
