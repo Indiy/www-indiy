@@ -11,6 +11,7 @@ function showStore()
     {
         hideAllTabs();
         showContentPage();
+        storeShowProductList();
         g_showingStore = true;
         $('#store_tab').show();
     }
@@ -23,6 +24,7 @@ function hideStore()
 }
 function storeShowProductList()
 {
+    $('#store_tab #store_back').hide();
     $('#store_tab .store_content').hide();
     $('#store_tab #product_list').show();
 }
@@ -37,6 +39,7 @@ function storeShowProduct(index)
     $('#product_info .description').html(product.description);
     
     $('#store_tab .store_content').hide();
+    $('#store_tab #store_back').show();
     $('#store_tab #product_info').show();
 }
 
