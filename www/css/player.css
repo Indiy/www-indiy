@@ -1420,7 +1420,9 @@ body {
     border: 10px 10px 0px 10px solid white;
 }
 #store_tab .left .back:hover .arrow {
-    border: 10px 10px 0px 10px solid #888;
+    border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid white;
 }
 #store_tab .left .back .text {
     display: inline-block;
@@ -1633,7 +1635,7 @@ body {
     overflow: hidden;
 }
 #store_tab .product_info .pi_left .img_holder {
-    padding: 3px 3px 3px 6px;
+    padding: 3px 6px 3px 3px;
 }
 #store_tab .product_info .pi_left .img_holder img {
     width: 100%;
