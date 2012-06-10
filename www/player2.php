@@ -97,17 +97,55 @@
     if( $artist_data['fb_setting'] != 'DISABLED' && $artist_data['fb_page_url'] )
         $artist_facebook_page = $artist_data['fb_page_url'];
     
-    $store_enabled = FALSE;
-    $artist_paypal = '';
     $artist_url = "http://" . $_SERVER["HTTP_HOST"];
-    
-    $ecommerce_check = mf(mq("SELECT * FROM mydna_musicplayer_ecommerce WHERE userid='$artist_id' LIMIT 1"));
-    if( $ecommerce_check )
+
+    $product_list = array();
+    $product_list_html = "";
+    $q_store = mq("select * from `[p]musicplayer_ecommerce_products` where `artistid`='{$artist_id}' order by `order` asc, `id` desc");
+    while( $product = mf($q_store) ) 
     {
-        $artist_paypal = $ecommerce_check["paypal"];
-        $store_enabled = $artist_paypal != '';
+        $sizes = FALSE;
+        if( $product["size"] != "" )
+            $sizes = explode(",", $pro["size"]);
+        
+        $colors = FALSE;
+        if( $product["color"] != "" )
+            $colors = explode(",", $pro["color"]);
+        
+        if( $product["image"] )
+            $image = "/artists/products/" . $product["image"];
+        else
+            $image = "/images/default_product_image.jpg";
+
+        $name = stripslashes($product['name']);
+        $price = $product['price'];
+        $item = array("id" => $product['id'],
+                      "image" => $image,
+                      "name" => $name,
+                      "description" => $product['description'],
+                      "price" => $price,
+                      "sizes" => $sizes,
+                      "colors" => $colors,
+                      );
+        $product_list[] = $item;
+        
+        $html = "";
+        $html .= "<div class='product_item'>";
+        $html .= " <div class='product_image'>";
+        $html .= "  <img src='$image'/>";
+        $html .= " </div>";
+        $html .= " <div class='name_price'>";
+        $html .= "  <div class='name'>$name</div>";
+        $html .= "  <div class='price'>\$$price</div>";
+        $html .= " </div>";
+        $html .= "</div>";
+        
+        $product_list_html .= $html;
     }
-    
+    $product_list_json = json_encode($product_list);
+    $store_enabled = FALSE;
+    if( count($product_list) > 0 )
+        $store_enabled = TRUE;
     
     $q_tabs = mq("SELECT * FROM mydna_musicplayer_content WHERE artistid='$artist_id' ORDER BY `order` ASC, `id` DESC");
     $tab_list = array();
@@ -298,6 +336,9 @@
     $photo_nav_show = FALSE;
     if( count($photo_list) > 3 )
         $photo_nav_show = TRUE;
+    
+    
+
     
     include_once 'templates/player.html';
 
