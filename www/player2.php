@@ -101,8 +101,8 @@
 
     $product_list = array();
     $product_list_html = "";
-    $q_store = mq("select * from `[p]musicplayer_ecommerce_products` where `artistid`='{$artist_id}' order by `order` asc, `id` desc");
-    while( $product = mf($q_store) ) 
+    $q_store = mq("SELECT * FROM mydna_musicplayer_ecommerce_products WHERE artistid='$artist_id' ORDER BY `order` ASC, `id` DESC");
+    while( $product = mf($q_store) )
     {
         $sizes = FALSE;
         if( $product["size"] != "" )
@@ -130,7 +130,7 @@
         $product_list[] = $item;
         
         $html = "";
-        $html .= "<div class='item'>";
+        $html .= "<div class='item' onclick='storeShowProduct($i);'>";
         $html .= " <div class='image'>";
         $html .= "  <img src='$image'/>";
         $html .= " </div>";

@@ -476,12 +476,40 @@
         </div>
         <div class='left'>
             <div class='title'>STORE</div>
+            <div class='back' onclick='storeShowProductList();'>
+                <div class='arrow'></div>
+                <div class='text'>BACK TO LIST</div>
+            </div>
         </div>
         <div class='sep'></div>
         <div class='right'>
-            <div class='product_list'>
+            <div id='product_list' class='product_list'>
                 <div class='store_title'><?=$artist_name;?> STORE</div>
                 <?=$product_list_html;?>
+            </div>
+            <div id='product_info' class='product_info'>
+                <div class='store_title'><?=$artist_name;?> > PRODUCT 1</div>
+                <div class='left'>
+                    <div class='img_holder'>
+                        <img src=''/>
+                    </div>
+                </div>
+                <div class='right'>
+                    <div class='name'></div>
+                    <div class='sep'></div>
+                    <div class='price_share'>
+                        <div class='price'></div>
+                        <div class='share'>
+                            <div class='icon'></div>
+                            <div class='text'>SHARE</div>
+                        </div>
+                    </div>
+                    <div class='sep'></div>
+                    <div class='buy'>BUY NOW</div>
+                    <div class='description'>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </div>
+                </div>
             </div>
         </div>
     </div>
