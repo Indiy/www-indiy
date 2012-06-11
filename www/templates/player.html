@@ -489,7 +489,7 @@
                 <?=$product_list_html;?>
             </div>
             <div id='product_info' class='product_info store_content'>
-                <div class='store_title'><?=$artist_name;?> > PRODUCT 1</div>
+                <div class='store_title'></div>
                 <div class='pi_right'>
                     <div class='name'></div>
                     <div class='hsep'></div>
@@ -501,16 +501,23 @@
                         </div>
                     </div>
                     <div class='hsep'></div>
-                    <div class='buy'>BUY NOW</div>
-                    <div class='description'>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </div>
+                    <div class='buy' onclick='storeBuyProduct();'>BUY NOW</div>
+                    <div class='description'></div>
                 </div>
                 <div class='pi_left'>
                     <div class='img_holder'>
                         <img src=''/>
                     </div>
                 </div>
+            </div>
+            <div id='buy_now_result' class='buy_now_result store_content'>
+                <div class='store_title'></div>
+                <div class='name'></div>
+                <div class='hsep'></div>
+                <div class='text'>Product added to cart.</div>
+                <div class='return_to_store button' onclick='storeShowProductList();'>RETURN TO STORE</div>
+                <div class='view_cart button' onclick='storeViewCart();'>VIEW CART</div>
+                <div class='checkout button' onclick='storeCheckout();'>CHECKOUT NOW</div>
             </div>
         </div>
     </div>
