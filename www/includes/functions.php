@@ -1024,8 +1024,11 @@
             return array();
         
         $sql = "";
-        $sql .= "SELECT cart_items.*";
-        $sql .= " mydna_musicplayer_ecommerce_products.name,mydna_musicplayer_ecommerce_products.image,mydna_musicplayer_ecommerce_products.price,mydna_musicplayer_ecommerce_products.shipping";
+        $sql .= "SELECT cart_items.*,";
+        $sql .= "  mydna_musicplayer_ecommerce_products.name,";
+        $sql .= "  mydna_musicplayer_ecommerce_products.image, ";
+        $sql .= "  mydna_musicplayer_ecommerce_products.price, ";
+        $sql .= "  mydna_musicplayer_ecommerce_products.shipping ";
         $sql .= " FROM cart_items";
         $sql .= " JOIN mydna_musicplayer_ecommerce_products ON cart_items.product_id = mydna_musicplayer_ecommerce_products.id";
         $sql .= " WHERE cart_id='$cart_id'";
