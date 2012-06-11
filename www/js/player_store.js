@@ -48,6 +48,8 @@ function storeShowProduct(index)
 function storeBuyProduct()
 {
     var product = g_productList[g_storeCurrentProductIndex];
+    
+    storeBuyProductId(product.id);
 
     $('#buy_now_result .store_title').html("{0} > {1}".format(g_artistName,product.name));
     $('#buy_now_result .name').html(product.name);
@@ -56,12 +58,36 @@ function storeBuyProduct()
     $('#store_tab #store_back').show();
     $('#store_tab #buy_now_result').show();    
 }
+function storeBuyProductId(product_id)
+{
+    var cart = "";
+    cart += "&artist_id=" + g_artistId;
+    cart += "&product_id=" + product_id;
+    cart += "&quantity=0";
+    
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: "/data/cart2.php",
+        data: cart,
+        dataType: 'json',
+        success: function(data) 
+        {
+            console.log(data);
+        },
+        error: function()
+        {
+            //window.alert("Error!");
+        }
+    });
+}
+
 function storeViewCart()
 {
-    
+    window.open("/cart.php",'_blank');
 }
 function storeCheckout()
 {
-    
+    window.open("/cart.php",'_blank');
 }
 
