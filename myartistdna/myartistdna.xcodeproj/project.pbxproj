@@ -157,6 +157,9 @@
 		2D9E2FEE157C836400A76906 /* player_search.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_search.js; sourceTree = "<group>"; };
 		2D9E2FEF157DC38900A76906 /* player_image.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_image.js; sourceTree = "<group>"; };
 		2D9E2FF7158413D900A76906 /* player_store.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_store.js; sourceTree = "<group>"; };
+		2D9E2FF91585917B00A76906 /* cart.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = cart.php; sourceTree = "<group>"; };
+		2D9E2FFA1585918700A76906 /* cart.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = cart.html; sourceTree = "<group>"; };
+		2D9E2FFB1585A36000A76906 /* cart2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = cart2.php; sourceTree = "<group>"; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
 		2DD94A2B14C368DF002B1259 /* vim.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = vim.css; sourceTree = "<group>"; };
@@ -1749,6 +1752,7 @@
 			isa = PBXGroup;
 			children = (
 				2D9E2FD91569F13700A76906 /* player.html */,
+				2D9E2FFA1585918700A76906 /* cart.html */,
 			);
 			path = templates;
 			sourceTree = "<group>";
@@ -1871,6 +1875,7 @@
 				2DF472C71440B77F005538C7 /* js */,
 				2D9E2FD81569F13600A76906 /* templates */,
 				2D9E2FDA1569F17D00A76906 /* player2.php */,
+				2D9E2FF91585917B00A76906 /* cart.php */,
 				2DF470401440B77F005538C7 /* artists.php */,
 				2D4116BE15376E6100F18000 /* artist-kit.php */,
 				2D4116BF15376E6300F18000 /* pricing.php */,
@@ -2181,6 +2186,7 @@
 			isa = PBXGroup;
 			children = (
 				2D5DD4B114CCE4AF00566E9A /* cart.php */,
+				2D9E2FFB1585A36000A76906 /* cart2.php */,
 				2D34E23914AD87E2004473F9 /* booking.php */,
 				2D6DF95514BA955000D0750E /* feedback.php */,
 				2DF47527144BD7CB005538C7 /* send_friend.php */,
