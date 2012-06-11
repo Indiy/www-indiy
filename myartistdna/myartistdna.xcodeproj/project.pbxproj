@@ -160,6 +160,7 @@
 		2D9E2FF91585917B00A76906 /* cart.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = cart.php; sourceTree = "<group>"; };
 		2D9E2FFA1585918700A76906 /* cart.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = cart.html; sourceTree = "<group>"; };
 		2D9E2FFB1585A36000A76906 /* cart2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = cart2.php; sourceTree = "<group>"; };
+		2D9E2FFC1585C8B600A76906 /* cart.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = cart.js; sourceTree = "<group>"; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
 		2DD94A2B14C368DF002B1259 /* vim.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = vim.css; sourceTree = "<group>"; };
@@ -3050,6 +3051,7 @@
 				2D9E2FEF157DC38900A76906 /* player_image.js */,
 				2D9E2FEE157C836400A76906 /* player_search.js */,
 				2D9E2FF7158413D900A76906 /* player_store.js */,
+				2D9E2FFC1585C8B600A76906 /* cart.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
