@@ -63,7 +63,7 @@ function storeBuyProductId(product_id)
     var cart = "";
     cart += "&artist_id=" + g_artistId;
     cart += "&product_id=" + product_id;
-    cart += "&quantity=0";
+    cart += "&quantity=1";
     
     jQuery.ajax(
     {

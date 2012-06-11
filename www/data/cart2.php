@@ -11,7 +11,7 @@
         $_SESSION['cart_id'] = rand(1111111,9999999);
     session_write_close();
 
-    $cart_id = $_SESSION['cart'];
+    $cart_id = $_SESSION['cart_id'];
     
     function get_cart()
     {
