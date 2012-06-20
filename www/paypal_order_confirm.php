@@ -20,7 +20,7 @@
         $_SESSION['paypal_token'] = $token;
         //session_write_close();
         
-        require_once ("paypalfunctions.php");
+        require_once 'includes/paypalfunctions.php';
         
         /*
          '------------------------------------
