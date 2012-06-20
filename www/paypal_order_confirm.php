@@ -10,6 +10,10 @@
         $token = $_REQUEST['token'];
     }
     
+    print "<html>";
+    print "<body>";
+    print "<div>HERE!</div>";
+    
     // If the Request object contains the variable 'token' then it means that the user is coming from PayPal site.	
     if ( $token != "" )
     {
@@ -86,5 +90,7 @@
             echo "Error Severity Code: " . $ErrorSeverityCode;
         }
     }
-    
-    ?>
+    print "<div>DONE DONE</div>";
+
+?>
+
