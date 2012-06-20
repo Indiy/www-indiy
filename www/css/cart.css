@@ -132,6 +132,7 @@ body {
     display: none;
 }
 #cart .total_lines .total {
+    width: 600px;
     text-align: right;
 }
 #cart .total_lines .total .amount {
