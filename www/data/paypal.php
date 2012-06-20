@@ -15,7 +15,7 @@
     
     $cart_id = $_SESSION['cart_id'];
     
-    $cart = store_get_cart());
+    $cart = store_get_cart();
     
     $paymentAmount = 0.0;
     for( $i = 0 ; $i < count($cart) ; $i++ )
