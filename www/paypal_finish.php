@@ -5,7 +5,11 @@
      */
     require_once 'includes/paypalfunctions.php';
     
-    if ( $PaymentOption == "PayPal" )
+    print "<html>";
+    print "<body>";
+    print "<div>HERE!</div>";
+    
+    if ( TRUE )
     {
         /*
          '------------------------------------
@@ -120,4 +124,5 @@
             echo "Error Severity Code: " . $ErrorSeverityCode;
         }
     }
+    print "<div>DONE DONE</div>";
 ?>
