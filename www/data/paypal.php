@@ -29,9 +29,9 @@
     $currencyCodeType = "USD";
     $paymentType = "Sale";
     
-    $returnURL = trueSiteUrl() . "paypal_order_confirm.php";
+    $returnURL = trueSiteUrl() . "/paypal_order_confirm.php";
     
-    $cancelURL = trueSiteUrl() . "cart.php";
+    $cancelURL = trueSiteUrl() . "/cart.php";
     
     $resArray = CallShortcutExpressCheckout ($paymentAmount, $currencyCodeType, $paymentType, $returnURL, $cancelURL);
     $ack = strtoupper($resArray["ACK"]);
