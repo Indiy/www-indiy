@@ -96,9 +96,17 @@ body {
 }
 #cart #cart_list .cart_line .description {
     display: inline-block;
-    width: 400px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 380px;
     vertical-align: top;    
     font-size: 14px;
+}
+#cart #cart_list .cart_line .description .delete {
+    padding-top: 5px;
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
 }
 #cart #cart_list .cart_line .price {
     display: inline-block;
@@ -113,13 +121,18 @@ body {
     text-align: center;
     font-size: 14px;
 }
+#cart #cart_list .cart_line .quantity_update .quantity input {
+    width: 80px;
+}
 #cart #cart_list .cart_line .quantity_update .update {
     display: none;
 }
 #cart #cart_list .cart_line .quantity_update .saved {
     display: none;
 }
-
+#cart #cart_empty {
+    display: none;
+}
 
 
 
