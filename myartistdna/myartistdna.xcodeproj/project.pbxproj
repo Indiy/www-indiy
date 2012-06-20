@@ -161,6 +161,7 @@
 		2D9E2FFA1585918700A76906 /* cart.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = cart.html; sourceTree = "<group>"; };
 		2D9E2FFB1585A36000A76906 /* cart2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = cart2.php; sourceTree = "<group>"; };
 		2D9E2FFC1585C8B600A76906 /* cart.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = cart.js; sourceTree = "<group>"; };
+		2D9E2FFD1588355100A76906 /* cart.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = cart.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
 		2DD94A2B14C368DF002B1259 /* vim.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = vim.css; sourceTree = "<group>"; };
@@ -2179,6 +2180,7 @@
 				2DF4704F1440B77F005538C7 /* style.css */,
 				2DF470501440B77F005538C7 /* styles.css */,
 				2D4116BD1534E9BB00F18000 /* player.css */,
+				2D9E2FFD1588355100A76906 /* cart.css */,
 			);
 			path = css;
 			sourceTree = "<group>";

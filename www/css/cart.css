@@ -1,0 +1,96 @@
+
+
+@font-face {
+    font-family: 'Neuzeit Grotesk';
+    src: url('Neuzeit-Grotesk.eot');
+    src: local('Neuzeit-Grotesk'), url('Neuzeit-Grotesk.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Neuzeit Grotesk Light';
+    src: url('Neuzeit-Grotesk-Light.eot');
+    src: local('Neuzeit-Grotesk-Light'), url('Neuzeit-Grotesk-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Teletex Light';
+    src: url('Teletex_Light.eot');
+    src: local('Teletex_Light'), url('Teletex_Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lucida Grande';
+    src: url('Lucida Grande.eot');
+    src: local('Lucida Grande'), url('Lucida Grande.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#cart .title {
+    color: black;
+    font-size: 24px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#cart .header {
+    padding-bottom: 10px;
+    color: black;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    white-space: nowrap;
+}
+
+#cart .header .description {
+    display: inline-block;
+    width: 500px;
+    
+}
+#cart .header .price {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+#cart .header .quantity {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+#cart .hsep {
+    height: 1px;
+    width: 700px;
+    background-color: #888;
+}
+#cart #cart_list .cart_line {
+    width: 700px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #888;
+}
+#cart #cart_list .cart_line .image_holder {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    vertical-align: top;
+}
+#cart #cart_list .cart_line .image_holder img {
+    width: 100%;
+    height: 100%;
+}
+#cart #cart_list .cart_line .description {
+    display: inline-block;
+    width: 400px;
+    vertical-align: top;    
+}
+#cart #cart_list .cart_line .description .
