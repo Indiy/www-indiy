@@ -129,6 +129,7 @@
 		2D8D96D915918C5A00AA3D1B /* paypal.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = paypal.php; sourceTree = "<group>"; };
 		2D8D96DB159197BC00AA3D1B /* paypalfunctions.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = paypalfunctions.php; sourceTree = "<group>"; };
 		2D8D96DC159199F000AA3D1B /* paypal_order_confirm.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = paypal_order_confirm.php; sourceTree = "<group>"; };
+		2D8D96DD1591A41D00AA3D1B /* paypal_finish.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = paypal_finish.php; sourceTree = "<group>"; };
 		2D98BF3D1480778500CE851D /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		2D98BF3E1480778500CE851D /* holder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holder.png; sourceTree = "<group>"; };
 		2D98BF3F1480778500CE851D /* play.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = play.jpg; sourceTree = "<group>"; };
@@ -1881,6 +1882,7 @@
 				2D9E2FD81569F13600A76906 /* templates */,
 				2D9E2FDA1569F17D00A76906 /* player2.php */,
 				2D8D96DC159199F000AA3D1B /* paypal_order_confirm.php */,
+				2D8D96DD1591A41D00AA3D1B /* paypal_finish.php */,
 				2D9E2FF91585917B00A76906 /* cart.php */,
 				2DF470401440B77F005538C7 /* artists.php */,
 				2D4116BE15376E6100F18000 /* artist-kit.php */,
