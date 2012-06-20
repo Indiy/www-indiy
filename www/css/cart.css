@@ -38,6 +38,7 @@ body {
 #cart {
     padding-left: 20px;
     padding-top: 20px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
 }
 
 #cart .title {
@@ -97,4 +98,26 @@ body {
     width: 400px;
     vertical-align: top;    
 }
-#cart #cart_list .cart_line .description .
+#cart #cart_list .cart_line .price {
+    display: inline-block;
+    width: 100px;
+    color: black;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-align: right;
+}
+#cart #cart_list .cart_line .quantity_update {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+#cart #cart_list .cart_line .quantity_update .update {
+    display: none;
+}
+#cart #cart_list .cart_line .quantity_update .saved {
+    display: none;
+}
+
+
+
+
