@@ -131,8 +131,12 @@ body {
 #cart #cart_list .cart_line .quantity_update .saved {
     display: none;
 }
+#cart .total_lines {
+    padding-top: 20px;
+    width: 750px;
+}
 #cart .total_lines .total {
-    width: 600px;
+    padding-bottom: 10px;
     text-align: right;
 }
 #cart .total_lines .total .amount {
