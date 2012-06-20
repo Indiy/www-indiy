@@ -8,12 +8,13 @@
     if (isset($_REQUEST['token']))
     {
         $token = $_REQUEST['token'];
-        
     }
     
     // If the Request object contains the variable 'token' then it means that the user is coming from PayPal site.	
     if ( $token != "" )
     {
+        $_SESSION['paypal_token'] = $token;
+        //session_write_close();
         
         require_once ("paypalfunctions.php");
         
@@ -55,6 +56,20 @@
             $addressStatus 		= $resArray["ADDRESSSTATUS"]; // ' Status of street address on file with PayPal   
             $invoiceNumber		= $resArray["INVNUM"]; // ' Your own invoice or tracking number, as set by you in the element of the same name in SetExpressCheckout request .
             $phonNumber			= $resArray["PHONENUM"]; // ' Payer's contact telephone number. Note:  PayPal returns a contact telephone number only if your Merchant account profile settings require that the buyer enter one. 
+        
+            
+           
+            
+            echo "<div>token: $token</div>";
+            echo "<div>email: $email</div>";
+            echo "<div>payerStatus: $payerStatus</div>";
+            echo "<div>shipToName: $shipToName</div>";
+            echo "<div>shipToStreet: $shipToStreet</div>";
+            echo "<div>addressStatus: $addressStatus</div>";
+            echo "<div>invoiceNumber: $invoiceNumber</div>";
+            
+            echo "<div><a href='paypal_finish.php'>Confirm Payment</a></div>";
+        
         } 
         else  
         {
