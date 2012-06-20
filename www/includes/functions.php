@@ -1043,7 +1043,7 @@
             $price = floatval($cart['price']);
             $name = $cart['name'];
             if(  $cart['image'] )
-                $image = '/artists/images/' . $cart['image'];
+                $image = '/artists/products/' . $cart['image'];
             else
                 $image = '/images/default_product_image.jpg';
             
