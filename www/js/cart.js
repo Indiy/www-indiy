@@ -69,3 +69,28 @@ function cartRender()
 
 }
 
+function paypalCheckout()
+{
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: "/data/paypal.php?checkout=1",
+        data: cart,
+        dataType: 'json',
+        success: function(data) 
+        {
+            console.log(data);
+            if( data['success'] )
+            {
+                var url = data['url'];
+                window.location.href = url;
+            }
+        },
+        error: function()
+        {
+            window.alert("Error!");
+        }
+    });
+}
+
+
