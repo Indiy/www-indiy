@@ -131,7 +131,7 @@ body {
 #cart #cart_list .cart_line .quantity_update .saved {
     display: none;
 }
-#cart #cart_empty {
+#cart_empty {
     display: none;
 }
 

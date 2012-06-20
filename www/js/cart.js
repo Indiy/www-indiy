@@ -25,6 +25,7 @@ function cartRender()
         $('#cart_empty').show();
         return;
     }
+    $('#cart_empty').hide();
 
     var shipping_total = 0.0;
     var sub_total = 0.0;
