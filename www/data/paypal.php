@@ -29,9 +29,9 @@
     $currencyCodeType = "USD";
     $paymentType = "Sale";
     
-    $returnURL = "http://www.madd3v.com/paypal_order_confirm.php";
+    $returnURL = trueSiteUrl() . "paypal_order_confirm.php";
     
-    $cancelURL = "http://www.madd3v.com/cart.php";
+    $cancelURL = trueSiteUrl() . "cart.php";
     
     $resArray = CallShortcutExpressCheckout ($paymentAmount, $currencyCodeType, $paymentType, $returnURL, $cancelURL);
     $ack = strtoupper($resArray["ACK"]);
