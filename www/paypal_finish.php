@@ -14,8 +14,11 @@
     if ( TRUE )
     {
         $cart_id = $_SESSION['cart_id'];
+        print "<div>cart_id: $cart_id</div>";
         
         $cart = store_get_cart();
+
+        var_dump($cart);
         
         $paymentAmount = 0.0;
         for( $i = 0 ; $i < count($cart) ; $i++ )
@@ -26,6 +29,7 @@
             $paymentAmount += $sub;
         }
         $finalPaymentAmount = $paymentAmount;
+        print "<div>finalPaymentAmount: $finalPaymentAmount</div>";
 		
         /*
          '------------------------------------
