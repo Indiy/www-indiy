@@ -122,7 +122,8 @@ body {
     font-size: 14px;
 }
 #cart #cart_list .cart_line .quantity_update .quantity input {
-    width: 80px;
+    width: 35px;
+    text-align: center;
 }
 #cart #cart_list .cart_line .quantity_update .update {
     display: none;
