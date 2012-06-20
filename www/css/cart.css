@@ -49,27 +49,27 @@ body {
 }
 
 #cart .header {
+    font-size: 0;
     padding-bottom: 10px;
     color: black;
-    font-size: 14px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-    white-space: nowrap;
 }
 
 #cart .header .description {
     display: inline-block;
     width: 500px;
-    
+    font-size: 14px;
 }
 #cart .header .price {
     display: inline-block;
     width: 100px;
     text-align: right;
+    font-size: 14px;
 }
 #cart .header .quantity {
     display: inline-block;
     width: 100px;
     text-align: center;
+    font-size: 14px;
 }
 
 #cart .hsep {
@@ -78,6 +78,7 @@ body {
     background-color: #888;
 }
 #cart #cart_list .cart_line {
+    font-size: 0;
     width: 700px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -97,19 +98,20 @@ body {
     display: inline-block;
     width: 400px;
     vertical-align: top;    
+    font-size: 14px;
 }
 #cart #cart_list .cart_line .price {
     display: inline-block;
     width: 100px;
     color: black;
     font-size: 14px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     text-align: right;
 }
 #cart #cart_list .cart_line .quantity_update {
     display: inline-block;
     width: 100px;
     text-align: center;
+    font-size: 14px;
 }
 #cart #cart_list .cart_line .quantity_update .update {
     display: none;
