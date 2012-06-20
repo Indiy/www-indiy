@@ -75,7 +75,6 @@ function paypalCheckout()
     {
         type: 'POST',
         url: "/data/paypal.php?checkout=1",
-        data: cart,
         dataType: 'json',
         success: function(data) 
         {
