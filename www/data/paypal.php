@@ -59,6 +59,7 @@
                      "ErrorShortMsg" => $ErrorShortMsg,
                      "ErrorLongMsg" => $ErrorLongMsg,
                      "ErrorSeverityCode" => $ErrorSeverityCode,
+                     "returnURL" => $returnURL,
                      );
         echo json_encode($ret);
         die();
