@@ -19,19 +19,21 @@
             var g_cartList = <?=$cart_list_json;?>;
             var g_trueSiteUrl = "<?=trueSiteUrl();?>";
             var g_artistId = <?=$artist_id;?>;
-        </script>
+            </script>
     </head>
     
     <body>
-        <div id='cart'>
-            <div class='title'>Shopping Cart</div>
+        <div id='order'>
+            <div class='title'>Confirm Your ORder</div>
             <div class='header'>
-                <div class='description'>Items to buy now</div>
+                <div class='description'>Items</div>
                 <div class='price'>Price</div>
                 <div class='quantity'>Quantity</div>
             </div>
             <div class='hsep'></div>
-            <div id='cart_list'></div>
+            <div id='item_list'>
+                
+            </div>
             <div class='total_lines'>
                 <div class='total'>
                     Shipping:

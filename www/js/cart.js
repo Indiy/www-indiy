@@ -71,10 +71,12 @@ function cartRender()
 
 function paypalCheckout()
 {
+    var url = "/data/paypal.php?checkout=1&artist_id={0}".format(g_artistId);
+
     jQuery.ajax(
     {
         type: 'POST',
-        url: "/data/paypal.php?checkout=1",
+        url: url,
         dataType: 'json',
         success: function(data) 
         {
