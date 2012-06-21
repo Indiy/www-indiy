@@ -1,96 +1,117 @@
 <?php
-    /*==================================================================
-     PayPal Express Checkout Call
-     ===================================================================
-     */
-    // Check to see if the Request object contains a variable named 'token'	
+
+    require_once 'includes/functions.php';   
+    require_once 'includes/config.php';
+    require_once 'includes/paypalfunctions.php';
+
     $token = "";
-    if (isset($_REQUEST['token']))
+    if( isset($_REQUEST['token']) )
     {
         $token = $_REQUEST['token'];
     }
     
-    print "<html>";
-    print "<body>";
-    print "<div>HERE!</div>";
-    
-    // If the Request object contains the variable 'token' then it means that the user is coming from PayPal site.	
-    if ( $token != "" )
+    if( $token == "" )
     {
-        $_SESSION['paypal_token'] = $token;
-        //session_write_close();
-        
-        require_once 'includes/paypalfunctions.php';
-        
-        /*
-         '------------------------------------
-         ' Calls the GetExpressCheckoutDetails API call
-         '
-         ' The GetShippingDetails function is defined in PayPalFunctions.jsp
-         ' included at the top of this file.
-         '-------------------------------------------------
-         */
-        
-        
-        $resArray = GetShippingDetails( $token );
-        $ack = strtoupper($resArray["ACK"]);
-        if( $ack == "SUCCESS" || $ack == "SUCESSWITHWARNING") 
-        {
-            /*
-             ' The information that is returned by the GetExpressCheckoutDetails call should be integrated by the partner into his Order Review 
-             ' page		
-             */
-            $email 				= $resArray["EMAIL"]; // ' Email address of payer.
-            $payerId 			= $resArray["PAYERID"]; // ' Unique PayPal customer account identification number.
-            $payerStatus		= $resArray["PAYERSTATUS"]; // ' Status of payer. Character length and limitations: 10 single-byte alphabetic characters.
-            $salutation			= $resArray["SALUTATION"]; // ' Payer's salutation.
-            $firstName			= $resArray["FIRSTNAME"]; // ' Payer's first name.
-            $middleName			= $resArray["MIDDLENAME"]; // ' Payer's middle name.
-            $lastName			= $resArray["LASTNAME"]; // ' Payer's last name.
-            $suffix				= $resArray["SUFFIX"]; // ' Payer's suffix.
-            $cntryCode			= $resArray["COUNTRYCODE"]; // ' Payer's country of residence in the form of ISO standard 3166 two-character country codes.
-            $business			= $resArray["BUSINESS"]; // ' Payer's business name.
-            $shipToName			= $resArray["PAYMENTREQUEST_0_SHIPTONAME"]; // ' Person's name associated with this address.
-            $shipToStreet		= $resArray["PAYMENTREQUEST_0_SHIPTOSTREET"]; // ' First street address.
-            $shipToStreet2		= $resArray["PAYMENTREQUEST_0_SHIPTOSTREET2"]; // ' Second street address.
-            $shipToCity			= $resArray["PAYMENTREQUEST_0_SHIPTOCITY"]; // ' Name of city.
-            $shipToState		= $resArray["PAYMENTREQUEST_0_SHIPTOSTATE"]; // ' State or province
-            $shipToCntryCode	= $resArray["PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE"]; // ' Country code. 
-            $shipToZip			= $resArray["PAYMENTREQUEST_0_SHIPTOZIP"]; // ' U.S. Zip code or other country-specific postal code.
-            $addressStatus 		= $resArray["ADDRESSSTATUS"]; // ' Status of street address on file with PayPal   
-            $invoiceNumber		= $resArray["INVNUM"]; // ' Your own invoice or tracking number, as set by you in the element of the same name in SetExpressCheckout request .
-            $phonNumber			= $resArray["PHONENUM"]; // ' Payer's contact telephone number. Note:  PayPal returns a contact telephone number only if your Merchant account profile settings require that the buyer enter one. 
-        
-            
-           
-            
-            echo "<div>token: $token</div>";
-            echo "<div>email: $email</div>";
-            echo "<div>payerStatus: $payerStatus</div>";
-            echo "<div>shipToName: $shipToName</div>";
-            echo "<div>shipToStreet: $shipToStreet</div>";
-            echo "<div>addressStatus: $addressStatus</div>";
-            echo "<div>invoiceNumber: $invoiceNumber</div>";
-            
-            echo "<div><a href='paypal_finish.php'>Confirm Payment</a></div>";
-        
-        } 
-        else  
-        {
-            //Display a user friendly Error on the page using any of the following error information returned by PayPal
-            $ErrorCode = urldecode($resArray["L_ERRORCODE0"]);
-            $ErrorShortMsg = urldecode($resArray["L_SHORTMESSAGE0"]);
-            $ErrorLongMsg = urldecode($resArray["L_LONGMESSAGE0"]);
-            $ErrorSeverityCode = urldecode($resArray["L_SEVERITYCODE0"]);
-            
-            echo "GetExpressCheckoutDetails API call failed. ";
-            echo "Detailed Error Message: " . $ErrorLongMsg;
-            echo "Short Error Message: " . $ErrorShortMsg;
-            echo "Error Code: " . $ErrorCode;
-            echo "Error Severity Code: " . $ErrorSeverityCode;
-        }
+        header("Location: /cart.php?abandon_order=1");
+        die();
     }
-    print "<div>DONE DONE</div>";
+    
+    $_SESSION['paypal_token'] = $token;
+    
+    $order_id = $_SESSION['in_process_order_id'];
+    
+    $resArray = GetShippingDetails( $token );
+    $ack = strtoupper($resArray["ACK"]);
+    if( $ack == "SUCCESS" || $ack == "SUCESSWITHWARNING" ) 
+    {
+        $paypal_info = array();
+        $shipping_info = array();
+        
+        $customer_email = $resArray["EMAIL"]; 
+        $paypal_info["PAYERID"] = $resArray["PAYERID"]; 
+        $paypal_info["PAYERSTATUS"] = $resArray["PAYERSTATUS"];
+        $salutation = $resArray["SALUTATION"];
+        $first_name = $resArray["FIRSTNAME"];
+        $middle_name = $resArray["MIDDLENAME"];
+        $last_name = $resArray["LASTNAME"];
+        $suffix = $resArray["SUFFIX"];
+
+        $customer_name = "$firstName $middleName $lastName";
+
+        $cntryCode = $resArray["COUNTRYCODE"]; // ' Payer's country of residence in the form of ISO standard 3166 two-character country codes.
+        $business = $resArray["BUSINESS"]; // ' Payer's business name.
+        
+        $shipping_info['name'] = $resArray["PAYMENTREQUEST_0_SHIPTONAME"]; 
+        $shipping_info['street1'] = $resArray["PAYMENTREQUEST_0_SHIPTOSTREET"];
+        $shipping_info['street2'] = $resArray["PAYMENTREQUEST_0_SHIPTOSTREET2"]; 
+        $shipping_info['city'] = $resArray["PAYMENTREQUEST_0_SHIPTOCITY"]; 
+        $shipping_info['state'] = $resArray["PAYMENTREQUEST_0_SHIPTOSTATE"];
+        $shipping_info['country_code'] = $resArray["PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE"];
+        $shipping_info['zip'] = $resArray["PAYMENTREQUEST_0_SHIPTOZIP"];
+        $shipping_info['paypal_address_status'] = $resArray["ADDRESSSTATUS"];
+        $shipping_info['phone_number'] =  $resArray["PHONENUM"];
+        
+        //$invoiceNumber = $resArray["INVNUM"];
+
+        $shipping_json = json_encode($shipping_info);
+        $paypal_json = json_encode($paypal_info);
+        
+        $updates = array("customer_name" => $customer_name,
+                         "customer_email" => $customer_email,
+                         "shipping_json" => $shipping_json,
+                         "payment_type" => "PAYPAL",
+                         "payment_json" => $paypal_json,
+                         );
+        mysql_update('orders',$updates,'id',$order_id);
+        
+        $order_data = mf(mq("SELECT * FROM orders WHERE id='$order_id'"));
+        $order_json = json_encode($order_data);
+
+        $order_items = array();
+        $order_item_html = "";
+        
+        $q_order_items = mq("SELECT * FROM order_items WHERE order_id='$order_id'");
+        while( $item = mf($q_order_items) )
+        {
+            $description = $item['description'];
+            $color = $item['color'];
+            $size = $item['size'];
+            $price = $item['price'];
+            $quantity = $item['quantity'];
+            $order_item = array("quantity" => $quantity,
+                                "description" => $description,
+                                "product_id" => $item['product_id'],
+                                "color" => $color,
+                                "size" => $size);
+            $html = "";
+            $html .= "";
+        }
+        
+        echo "<div>token: $token</div>";
+        echo "<div>email: $email</div>";
+        echo "<div>payerStatus: $payerStatus</div>";
+        echo "<div>shipToName: $shipToName</div>";
+        echo "<div>shipToStreet: $shipToStreet</div>";
+        echo "<div>addressStatus: $addressStatus</div>";
+        echo "<div>invoiceNumber: $invoiceNumber</div>";
+        
+        echo "<div><a href='paypal_finish.php'>Confirm Payment</a></div>";
+    
+        
+    
+    }
+    else  
+    {
+        echo "<html>";
+        echo "<body>";
+        echo "<h1>Checkout Failed</h1>";
+        echo "<pre>";
+        
+        echo "GetExpressCheckoutDetails API call failed. \n";
+        echo "Detailed Error Message: $ErrorLongMsg\n";
+        echo "Short Error Message: $ErrorShortMsg\n";
+        echo "Error Code: $ErrorCode\n";
+        echo "Error Severity Code: $ErrorSeverityCode\n";
+    }
 
 ?>
-
