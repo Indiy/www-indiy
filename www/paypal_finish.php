@@ -1,129 +1,114 @@
 <?php
-	/*==================================================================
-	 PayPal Express Checkout Call
-	 ===================================================================
-     */
+
     require_once 'includes/functions.php';   
     require_once 'includes/config.php';
     require_once 'includes/paypalfunctions.php';
     
-    print "<html>";
-    print "<body>";
-    print "<div>HERE!</div>";
     
-    if ( TRUE )
+    $order_id = $_SESSION['in_process_order_id'];
+    
+    $order_data = mf(mq("SELECT * FROM orders WHERE id='$order_id'"));
+    $order_json = json_encode($order_data);
+    
+    $shippping_amount = $order_data['shipping_amount'];
+    $charge_amount = $order_data['charge_amount'];
+    
+    
+    $resArray = ConfirmPayment( $order_data['charge_amount'] );
+    $ack = strtoupper($resArray["ACK"]);
+    if( $ack == "SUCCESS" || $ack == "SUCCESSWITHWARNING" )
     {
-        $cart_id = $_SESSION['cart_id'];
-        print "<div>cart_id: $cart_id</div>";
+        $transaction_id = $resArray["PAYMENTINFO_0_TRANSACTIONID"]; 
+        $transaction_type = $resArray["PAYMENTINFO_0_TRANSACTIONTYPE"];
+        $payment_type = $resArray["PAYMENTINFO_0_PAYMENTTYPE"];
+        $order_time 	= $resArray["PAYMENTINFO_0_ORDERTIME"];
+        $amt = $resArray["PAYMENTINFO_0_AMT"];
+        $currency_code = $resArray["PAYMENTINFO_0_CURRENCYCODE"];
+        $fee_amt = $resArray["PAYMENTINFO_0_FEEAMT"];
+        $settle_amt = $resArray["PAYMENTINFO_0_SETTLEAMT"];
+        $tax_amt = $resArray["PAYMENTINFO_0_TAXAMT"];
+        $exchange_rate = $resArray["PAYMENTINFO_0_EXCHANGERATE"];
+        $payment_status = strtoupper( $resArray["PAYMENTINFO_0_PAYMENTSTATUS"] ); 
+        $pending_reason = strtoupper( $resArray["PAYMENTINFO_0_PENDINGREASON"] );  
+        $reason_code = $resArray["PAYMENTINFO_0_REASONCODE"];
         
-        $cart = store_get_cart();
+        if( $payment_status == "COMPLETED" )
+            $state = "PENDING_SHIPMENT";
+        else if( $payment_status == "PENDING" )
+            $state = "PENDING_PAYMENT";
 
-        var_dump($cart);
+        $shipping_info = json_decode($order_data['shipping_json']);
+        $payment_info = json_decode($order_data['payment_json']);
         
-        $paymentAmount = 0.0;
-        for( $i = 0 ; $i < count($cart) ; $i++ )
-        {
-            $c = $cart[$i];
-            $qty = $c['quantity'];
-            $sub = $qty * ($c['price'] + $c['shipping']);
-            $paymentAmount += $sub;
-        }
-        $finalPaymentAmount = $paymentAmount;
-        print "<div>finalPaymentAmount: $finalPaymentAmount</div>";
-		
-        /*
-         '------------------------------------
-         ' Calls the DoExpressCheckoutPayment API call
-         '
-         ' The ConfirmPayment function is defined in the file PayPalFunctions.jsp,
-         ' that is included at the top of this file.
-         '-------------------------------------------------
-         */
+        $payment_info['transaction_id'] = $transaction_id;
+        $payment_info['transaction_type'] = $transaction_type;
+        $payment_info['payment_type'] = $payment_type;
+        $payment_info['order_time'] = $order_time;
+        $payment_info['amt'] = $amt;
+        $payment_info['payment_status'] = $payment_status;
+        $payment_info['pending_reason'] = $pending_reason;
         
-        $resArray = ConfirmPayment ( $finalPaymentAmount );
-        $ack = strtoupper($resArray["ACK"]);
-        if( $ack == "SUCCESS" || $ack == "SUCCESSWITHWARNING" )
+        $payment_json = json_encode($payment_info);
+        
+        $updates = array("tax_amount" => $tax_amt,
+                         "from_processor_amount" => $settle_amt,
+                         "to_artist_amount" => $settle_amt * ARTIST_PAYOUT_PERCENT,
+                         "state" => $state,
+                         "payment_json" => $payment_json,
+                         );
+
+        mysql_update('orders',$updates,'id',$order_id);
+
+        $_SESSION['in_process_order_id'] = FALSE;
+        $_SESSION['cart_id'] = '';
+        $_SESSION['paypal_token'] = FALSE;
+        
+        $order_items = array();
+        $order_item_html = "";
+        
+        $q_order_items = mq("SELECT * FROM order_items WHERE order_id='$order_id'");
+        while( $item = mf($q_order_items) )
         {
-            /*
-             '********************************************************************************************************************
-             '
-             ' THE PARTNER SHOULD SAVE THE KEY TRANSACTION RELATED INFORMATION LIKE 
-             '                    transactionId & orderTime 
-             '  IN THEIR OWN  DATABASE
-             ' AND THE REST OF THE INFORMATION CAN BE USED TO UNDERSTAND THE STATUS OF THE PAYMENT 
-             '
-             '********************************************************************************************************************
-             */
+            $description = $item['description'];
+            $color = $item['color'];
+            $size = $item['size'];
+            $price = $item['price'];
+            $quantity = $item['quantity'];
+            $order_item = array("quantity" => $quantity,
+                                "description" => $description,
+                                "product_id" => $item['product_id'],
+                                "color" => $color,
+                                "size" => $size);
+            $html = "";
+            $html .= "<div class='item'>";
+            $html .= " <div class='num'>$i</div>";
+            $html .= " <div class='description'>$description</div>";
+            $html .= " <div class='price'>$price</div>";
+            $html .= " <div class='quantity'>$quantity</div>";
+            $html .= "</div>";
             
-            $transactionId		= $resArray["PAYMENTINFO_0_TRANSACTIONID"]; // ' Unique transaction ID of the payment. Note:  If the PaymentAction of the request was Authorization or Order, this value is your AuthorizationID for use with the Authorization & Capture APIs. 
-            $transactionType 	= $resArray["PAYMENTINFO_0_TRANSACTIONTYPE"]; //' The type of transaction Possible values: l  cart l  express-checkout 
-            $paymentType		= $resArray["PAYMENTINFO_0_PAYMENTTYPE"];  //' Indicates whether the payment is instant or delayed. Possible values: l  none l  echeck l  instant 
-            $orderTime 			= $resArray["PAYMENTINFO_0_ORDERTIME"];  //' Time/date stamp of payment
-            $amt				= $resArray["PAYMENTINFO_0_AMT"];  //' The final amount charged, including any shipping and taxes from your Merchant Profile.
-            $currencyCode		= $resArray["PAYMENTINFO_0_CURRENCYCODE"];  //' A three-character currency code for one of the currencies listed in PayPay-Supported Transactional Currencies. Default: USD. 
-            $feeAmt				= $resArray["PAYMENTINFO_0_FEEAMT"];  //' PayPal fee amount charged for the transaction
-            $settleAmt			= $resArray["PAYMENTINFO_0_SETTLEAMT"];  //' Amount deposited in your PayPal account after a currency conversion.
-            $taxAmt				= $resArray["PAYMENTINFO_0_TAXAMT"];  //' Tax charged on the transaction.
-            $exchangeRate		= $resArray["PAYMENTINFO_0_EXCHANGERATE"];  //' Exchange rate if a currency conversion occurred. Relevant only if your are billing in their non-primary currency. If the customer chooses to pay with a currency other than the non-primary currency, the conversion occurs in the customer's account.
-            
-            /*
-             ' Status of the payment: 
-             'Completed: The payment has been completed, and the funds have been added successfully to your account balance.
-             'Pending: The payment is pending. See the PendingReason element for more information. 
-             */
-            
-            $paymentStatus	= $resArray["PAYMENTINFO_0_PAYMENTSTATUS"]; 
-            
-            /*
-             'The reason the payment is pending:
-             '  none: No pending reason 
-             '  address: The payment is pending because your customer did not include a confirmed shipping address and your Payment Receiving Preferences is set such that you want to manually accept or deny each of these payments. To change your preference, go to the Preferences section of your Profile. 
-             '  echeck: The payment is pending because it was made by an eCheck that has not yet cleared. 
-             '  intl: The payment is pending because you hold a non-U.S. account and do not have a withdrawal mechanism. You must manually accept or deny this payment from your Account Overview. 		
-             '  multi-currency: You do not have a balance in the currency sent, and you do not have your Payment Receiving Preferences set to automatically convert and accept this payment. You must manually accept or deny this payment. 
-             '  verify: The payment is pending because you are not yet verified. You must verify your account before you can accept this payment. 
-             '  other: The payment is pending for a reason other than those listed above. For more information, contact PayPal customer service. 
-             */
-            
-            $pendingReason	= $resArray["PAYMENTINFO_0_PENDINGREASON"];  
-            
-            /*
-             'The reason for a reversal if TransactionType is reversal:
-             '  none: No reason code 
-             '  chargeback: A reversal has occurred on this transaction due to a chargeback by your customer. 
-             '  guarantee: A reversal has occurred on this transaction due to your customer triggering a money-back guarantee. 
-             '  buyer-complaint: A reversal has occurred on this transaction due to a complaint about the transaction from your customer. 
-             '  refund: A reversal has occurred on this transaction because you have given the customer a refund. 
-             '  other: A reversal has occurred on this transaction due to a reason not listed above. 
-             */
-            
-            $reasonCode		= $resArray["PAYMENTINFO_0_REASONCODE"];
-            
-            echo "<div>transactionId: $transactionId</div>";
-            echo "<div>orderTime: $orderTime</div>";
-            echo "<div>feeAmt: $feeAmt</div>";
-            echo "<div>paymentStatus: $paymentStatus</div>";
-            echo "<div>pendingReason: $pendingReason</div>";
-            echo "<div>reasonCode: $reasonCode</div>";
-            echo "<div>amt: $amt</div>";
-            echo "<div>feeAmt: $feeAmt</div>";
-            echo "<div>settleAmtt: $settleAmt</div>";
-            echo "<div>taxAmt: $taxAmt</div>";
+            $order_item_html .= $html;
         }
-        else  
-        {
-            //Display a user friendly Error on the page using any of the following error information returned by PayPal
-            $ErrorCode = urldecode($resArray["L_ERRORCODE0"]);
-            $ErrorShortMsg = urldecode($resArray["L_SHORTMESSAGE0"]);
-            $ErrorLongMsg = urldecode($resArray["L_LONGMESSAGE0"]);
-            $ErrorSeverityCode = urldecode($resArray["L_SEVERITYCODE0"]);
-            
-            echo "GetExpressCheckoutDetails API call failed. ";
-            echo "Detailed Error Message: " . $ErrorLongMsg;
-            echo "Short Error Message: " . $ErrorShortMsg;
-            echo "Error Code: " . $ErrorCode;
-            echo "Error Severity Code: " . $ErrorSeverityCode;
-        }
+        
+        include_once 'templates/finish_order.php';
     }
-    print "<div>DONE DONE</div>";
+    else  
+    {
+        //Display a user friendly Error on the page using any of the following error information returned by PayPal
+        $ErrorCode = urldecode($resArray["L_ERRORCODE0"]);
+        $ErrorShortMsg = urldecode($resArray["L_SHORTMESSAGE0"]);
+        $ErrorLongMsg = urldecode($resArray["L_LONGMESSAGE0"]);
+        $ErrorSeverityCode = urldecode($resArray["L_SEVERITYCODE0"]);
+        
+        echo "<html>";
+        echo "<body>";
+        echo "<h1>Checkout Failed</h1>";
+        echo "<pre>";
+        
+        echo "GetExpressCheckoutDetails API call failed.\n";
+        echo "Detailed Error Message: $ErrorLongMsg\n";
+        echo "Short Error Message: $ErrorShortMsg\n";
+        echo "Error Code: $ErrorCode\n";
+        echo "Error Severity Code: $ErrorSeverityCode\n";
+    }
 ?>

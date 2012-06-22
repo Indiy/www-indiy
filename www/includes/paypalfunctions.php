@@ -15,9 +15,9 @@
 	//' Replace <API_PASSWORD> with your API Password
 	//' Replace <API_SIGNATURE> with your Signature
 	//'------------------------------------
-	$API_UserName="sdk-three_api1.sdk.com";
-	$API_Password="QFZCWN5HZM8VBG7Q";
-	$API_Signature="A-IzJhZZjhg29XQ2qnhapuwxIDzyAZQ92FRP5dqBzVesOkzbdUONzmOU";
+	$API_UserName="seller_1340382332_biz_api1.blueskylabs.com";
+	$API_Password="1340382355";
+	$API_Signature="A.y5rqTqB5ifaOYVWKnkml0FKPQbArK-Gh7moXyUYcw8P7WX.l8pOlqc";
 
 	// BN Code 	is only applicable for partners
 	$sBNCode = "PP-ECWizard";
