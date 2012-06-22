@@ -28,8 +28,6 @@
         $shipping = floatval($c['shipping']);
         $sub_total += $qty * $price;
         $shipping_total += $qty * $shipping;
-
-        print "i: $i, qty: $qty, price: $price, shipping: $shipping, sub_total: $sub_total, shipping_total: $shipping_total\n";
     }
     $payment_amount = $shipping_total + $sub_total;
     
@@ -39,9 +37,6 @@
                    "shipping_amount" => $shipping_total,
                    "charge_amount" => $payment_amount,
                    );
-    
-    print "shipping: $shipping_total\n";
-    print "payment_amount: $payment_amount\n";
     
     if( !mysql_insert('orders',$order) )
         die("Error in order processing");
