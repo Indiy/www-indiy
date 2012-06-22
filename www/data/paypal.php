@@ -42,15 +42,15 @@
     $order_id = mysql_insert_id();
 
 
-    for( $i = 0 ; $i < count($cart) ; ++i )
+    for( $i = 0 ; $i < count($cart) ; ++$i )
     {
         $c = $cart[$i];
         $color = $c['color'];
         $size = $c['size'];
         $description = $c['name'];
-        if( $color )
+        if( strlen($color) > 0 )
             $description .= " - $color";
-        if( $size )
+        if( strlen($size) > 0 )
             $description .= " - $size";
         
         $order_item = array("order_id" => $order_id,
