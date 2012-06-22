@@ -33,7 +33,7 @@
     
     $order = array("artist_id" => $artist_id,
                    "created_date" => date("Y-m-d H:i:s"),
-                   "state" => "PENDING_PAYMENT",
+                   "state" => "PENDING_CONFIRM",
                    "shipping_amount" => $shipping_total,
                    "charge_amount" => $payment_amount,
                    );
