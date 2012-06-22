@@ -23,9 +23,11 @@
     for( $i = 0 ; $i < count($cart) ; $i++ )
     {
         $c = $cart[$i];
-        $qty = $c['quantity'];
-        $sub_total += $qty * $c['price'];
-        $shipping_total += $qty * $c['shipping'];
+        $qty = intval($c['quantity']);
+        $price = floatval($c['price']);
+        $shipping = floatval($c['shipping']);
+        $sub_total += $qty * $price
+        $shipping_total += $qty * $shipping;
     }
     $payment_amount = $shipping_total + $sub_total;
     
@@ -47,6 +49,8 @@
         $c = $cart[$i];
         $color = $c['color'];
         $size = $c['size'];
+        $price = $c['price'];
+
         $description = $c['name'];
         if( strlen($color) > 0 )
             $description .= " - $color";
