@@ -23,11 +23,13 @@
     for( $i = 0 ; $i < count($cart) ; $i++ )
     {
         $c = $cart[$i];
-        $qty = intval($c['quantity']);
+        $qty = floatval($c['quantity']);
         $price = floatval($c['price']);
         $shipping = floatval($c['shipping']);
         $sub_total += $qty * $price;
         $shipping_total += $qty * $shipping;
+
+        print "i: $i, qty: $qty, price: $price, shipping: $shipping, sub_total: $sub_total, shipping_total: $shipping_total\n";
     }
     $payment_amount = $shipping_total + $sub_total;
     
@@ -35,14 +37,16 @@
                    "created_date" => date("Y-m-d H:i:s"),
                    "state" => "PENDING_PAYMENT",
                    "shipping_amount" => $shipping_total,
-                   "charge_amount" => $payment_amount
+                   "charge_amount" => $payment_amount,
                    );
+    
+    print "shipping: $shipping_total\n";
+    print "payment_amount: $payment_amount\n";
     
     if( !mysql_insert('orders',$order) )
         die("Error in order processing");
     
     $order_id = mysql_insert_id();
-
 
     for( $i = 0 ; $i < count($cart) ; ++$i )
     {
