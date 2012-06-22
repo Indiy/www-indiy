@@ -61,7 +61,11 @@
                             "description" => $description,
                             "price" => $price,
                             );
-        mysql_insert('order_items',$order_item);
+        $ret = mysql_insert('order_items',$order_item);
+        if( !$ret )
+        {
+            print "Failure: " . mysql_error();
+        }
     }
     
     $_SESSION['in_process_order_id'] = $order_id;
