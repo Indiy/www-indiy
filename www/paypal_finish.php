@@ -21,12 +21,12 @@
         $transaction_id = $resArray["PAYMENTINFO_0_TRANSACTIONID"]; 
         $transaction_type = $resArray["PAYMENTINFO_0_TRANSACTIONTYPE"];
         $payment_type = $resArray["PAYMENTINFO_0_PAYMENTTYPE"];
-        $order_time 	= $resArray["PAYMENTINFO_0_ORDERTIME"];
-        $amt = $resArray["PAYMENTINFO_0_AMT"];
+        $order_time = $resArray["PAYMENTINFO_0_ORDERTIME"];
+        $amt = floatval( $resArray["PAYMENTINFO_0_AMT"]);
         $currency_code = $resArray["PAYMENTINFO_0_CURRENCYCODE"];
-        $fee_amt = $resArray["PAYMENTINFO_0_FEEAMT"];
-        $settle_amt = $resArray["PAYMENTINFO_0_SETTLEAMT"];
-        $tax_amt = $resArray["PAYMENTINFO_0_TAXAMT"];
+        $fee_amt = floatval($resArray["PAYMENTINFO_0_FEEAMT"]);
+        $settle_amt = floatval($resArray["PAYMENTINFO_0_SETTLEAMT"]);
+        $tax_amt = floatval($resArray["PAYMENTINFO_0_TAXAMT"]);
         $exchange_rate = $resArray["PAYMENTINFO_0_EXCHANGERATE"];
         $payment_status = strtoupper( $resArray["PAYMENTINFO_0_PAYMENTSTATUS"] ); 
         $pending_reason = strtoupper( $resArray["PAYMENTINFO_0_PENDINGREASON"] );  
@@ -45,6 +45,9 @@
         $payment_info['payment_type'] = $payment_type;
         $payment_info['order_time'] = $order_time;
         $payment_info['amt'] = $amt;
+        $payment_info['fee_amt'] = $fee_amt;
+        $payment_info['settle_amt'] = $settle_amt;
+        $payment_info['tax_amt'] = $tax_amt;
         $payment_info['payment_status'] = $payment_status;
         $payment_info['pending_reason'] = $pending_reason;
         
