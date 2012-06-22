@@ -26,7 +26,7 @@
         $qty = intval($c['quantity']);
         $price = floatval($c['price']);
         $shipping = floatval($c['shipping']);
-        $sub_total += $qty * $price
+        $sub_total += $qty * $price;
         $shipping_total += $qty * $shipping;
     }
     $payment_amount = $shipping_total + $sub_total;
