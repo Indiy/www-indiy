@@ -37,8 +37,8 @@
         else if( $payment_status == "PENDING" )
             $state = "PENDING_PAYMENT";
 
-        $shipping_info = json_decode($order_data['shipping_json']);
-        $payment_info = json_decode($order_data['payment_json']);
+        $shipping_info = json_decode($order_data['shipping_json'],TRUE);
+        $payment_info = json_decode($order_data['payment_json'],TRUE);
         
         $payment_info['transaction_id'] = $transaction_id;
         $payment_info['transaction_type'] = $transaction_type;
