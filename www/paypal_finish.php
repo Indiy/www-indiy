@@ -90,7 +90,7 @@
             $order_item_html .= $html;
         }
         
-        include_once 'templates/finish_order.php';
+        include_once 'templates/finish_order.html';
     }
     else  
     {
