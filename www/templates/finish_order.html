@@ -24,7 +24,7 @@
     
     <body>
         <div id='order'>
-            <div class='title'>Confirm Your Order</div>
+            <div class='title'>Order Complete</div>
             <div class='header'>
                 <div class='description'>Items</div>
                 <div class='price'>Price</div>
@@ -52,9 +52,9 @@
                 <div class='address'><?=$shipping_info['city'];?>, <?=$shipping_info['state'];?>, <?=$shipping_info['zip'];?></div>
                 <div class='address'><?=$shipping_info['phone_number'];?></div>
             </div>
-            <div class='buttons'>
-                <div class='confirm'><a href='paypal_finish.php'>CONFIRM ORDER</a></div>
-                <div class='cancel'><a href='cart.php?abandon_order=1'>BACK TO CART</a></div>
+            <div class=''>Order Number: <?=$order_id;?></div>
+            <div class='description'>
+                Please write down your order number so you can check the status of your order in the future.
             </div>
         </div>
     </body>

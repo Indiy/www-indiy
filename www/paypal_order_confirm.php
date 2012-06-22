@@ -67,6 +67,9 @@
         $order_data = mf(mq("SELECT * FROM orders WHERE id='$order_id'"));
         $order_json = json_encode($order_data);
 
+        $shippping_amount = $order_data['shipping_amount'];
+        $charge_amount = $order_data['charge_amount'];
+
         $order_items = array();
         $order_item_html = "";
         
@@ -84,21 +87,17 @@
                                 "color" => $color,
                                 "size" => $size);
             $html = "";
-            $html .= "";
+            $html .= "<div class='item'>";
+            $html .= " <div class='num'>$i</div>";
+            $html .= " <div class='description'>$description</div>";
+            $html .= " <div class='price'>$price</div>";
+            $html .= " <div class='quantity'>$quantity</div>";
+            $html .= "</div>";
+            
+            $order_item_html .= $html;
         }
         
-        echo "<div>token: $token</div>";
-        echo "<div>email: $email</div>";
-        echo "<div>payerStatus: $payerStatus</div>";
-        echo "<div>shipToName: $shipToName</div>";
-        echo "<div>shipToStreet: $shipToStreet</div>";
-        echo "<div>addressStatus: $addressStatus</div>";
-        echo "<div>invoiceNumber: $invoiceNumber</div>";
-        
-        echo "<div><a href='paypal_finish.php'>Confirm Payment</a></div>";
-    
-        
-    
+        include_once 'templates/confirm_order.html';
     }
     else  
     {
@@ -107,7 +106,7 @@
         echo "<h1>Checkout Failed</h1>";
         echo "<pre>";
         
-        echo "GetExpressCheckoutDetails API call failed. \n";
+        echo "GetExpressCheckoutDetails API call failed.\n";
         echo "Detailed Error Message: $ErrorLongMsg\n";
         echo "Short Error Message: $ErrorShortMsg\n";
         echo "Error Code: $ErrorCode\n";
