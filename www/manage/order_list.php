@@ -7,7 +7,7 @@
 		header("Location: /index.php");
 		exit();
 	}
-	$artist_id = $_REQUEST['userId'];
+	$artist_id = $_REQUEST['artist_id'];
     if( !$artist_id )
     {
         if( $_SESSION['sess_userType'] == 'ARTIST' )
