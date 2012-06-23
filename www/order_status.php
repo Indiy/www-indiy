@@ -5,6 +5,7 @@
     require_once 'includes/paypalfunctions.php';
     
     
+    error_reporting(E_ALL);
     $order_id = $_REQUEST['order_id'];
     
     if( !$order_id )
