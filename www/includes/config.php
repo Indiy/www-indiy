@@ -1,6 +1,6 @@
 <?php
     
-    define(ARTIST_PAYOUT_PERCENT,0.8); 
+    define("ARTIST_PAYOUT_PERCENT",0.8); 
     
     
     $new_include_path = get_include_path() . PATH_SEPARATOR . dirname(__FILE__) . "/../..";
