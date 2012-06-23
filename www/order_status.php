@@ -7,6 +7,18 @@
     
     $order_id = $_REQUEST['order_id'];
     
+    if( !$order_id )
+    {
+        print "<html>";
+        print "<body>";
+        print "<form>"
+        print "Enter Order Number: <input name='order_id'/>";
+        print "</form>";
+        print "</body>";
+        print "</html>";
+        die();
+    }
+    
     $order_data = mf(mq("SELECT * FROM orders WHERE id='$order_id'"));
     
     if( !$order_data )
