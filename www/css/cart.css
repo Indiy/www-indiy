@@ -213,6 +213,7 @@ body {
     font-size: 15px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
+    text-align: center;
 }
 #order .item_list .item .description {
     display: inline-block;
@@ -229,6 +230,7 @@ body {
     font-size: 15px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
+    text-align: right;
 }
 #order .item_list .item .quantity {
     display: inline-block;
@@ -237,6 +239,7 @@ body {
     font-size: 15px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
+    text-align: center;
 }
 
 #order .total_lines {
