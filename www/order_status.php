@@ -1,11 +1,11 @@
 <?php
 
+    error_reporting(E_ALL);
     require_once 'includes/functions.php';   
     require_once 'includes/config.php';
     require_once 'includes/paypalfunctions.php';
     
     
-    error_reporting(E_ALL);
     $order_id = $_REQUEST['order_id'];
     
     if( !$order_id )
