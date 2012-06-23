@@ -135,7 +135,7 @@ function onSignupClick()
             && email.length > 0 
             && username.length > 0 
             && password.length > 0
-            && url.length > 0;
+            && url.length > 0
             )
     {
         var dict = {
