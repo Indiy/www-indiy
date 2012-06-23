@@ -84,10 +84,11 @@ function storeBuyProductId(product_id)
 
 function storeViewCart()
 {
-    window.open("/cart.php",'_blank');
+    var url = "/cart.php?artist_id={0}".format(g_artistId);
+    window.open(url,'_blank');
 }
 function storeCheckout()
 {
-    window.open("/cart.php",'_blank');
+    storeViewCart();
 }
 

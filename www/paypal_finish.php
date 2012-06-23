@@ -4,6 +4,7 @@
     require_once 'includes/config.php';
     require_once 'includes/paypalfunctions.php';
     
+    $artist_id = $_REQUEST['artist_id'];
     
     $order_id = $_SESSION['in_process_order_id'];
     
