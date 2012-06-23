@@ -12,24 +12,36 @@
     $data = json_decode($post_body,TRUE);
 
     $name = $data['name'];
+    $url = $data['url'];
     $email = $data['email'];
     $username = $data['username'];
     $password = md5($data['password']);
 
     $error = FALSE;
-    $url = '';
 
-    $sql = "SELECT * FROM mydna_musicplayer WHERE artist = '$name' OR username = '$username' OR url = '$username' OR email = '$email'";
+    $sql = "SELECT * FROM mydna_musicplayer";
+    $sql .= " WHERE artist = '$name' ";
+    $sql .= " OR username = '$username' ";
+    $sql .= " OR url = '$url' ";
+    $sql .= " OR email = '$email' ";
     $q = mysql_query($sql) or die("bad sql: '$sql'");
-    if( mysql_num_rows($q) != 0 )
+    $row = mf($q);
+    if( $row )
     {
-        $error = "User already exists with that name or email address.";
+        if( $row['url'] == $url )
+            $error = "That URL is already taken.";
+        else
+            $error = "User already exists with that name or email address.";
     }
     else
     {
-        $tables = "artist|url|email|username|password";
-        $values = "{$name}|{$username}|{$email}|{$username}|{$password}";
-        if( insert('[p]musicplayer',$tables,$values) )
+        $values = array("artist" => $name,
+                        "url" => $url,
+                        "email" => $email,
+                        "username" => $username,
+                        "password" => $password,
+                        );
+        if( mysql_insert('mydna_musicplayer',$values) )
         {
             $insert_id = mysql_insert_id();
             $q = mysql_query("SELECT * FROM mydna_musicplayer WHERE id = $insert_id");

@@ -114,6 +114,7 @@ function onLoginClick()
 function onSignupClick()
 {
     var name = $('#signup_name').val();
+    var url = $('#signup_url').val();
     var email = $('#signup_email').val();
     var username = $('#signup_username').val();
     var password = $('#signup_password').val();
@@ -133,11 +134,13 @@ function onSignupClick()
             && name.length > 0 
             && email.length > 0 
             && username.length > 0 
-            && password.length > 0 
+            && password.length > 0
+            && url.length > 0;
             )
     {
         var dict = {
             'name': name,
+            'url': url,
             'email': email,
             'username': username,
             'password': password
