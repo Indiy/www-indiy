@@ -213,6 +213,7 @@ function videoCreateTag()
     $('#video_container').html(html);
     g_videoPlayer = _V_('video_player');
     g_videoPlayer.ready(onVideoReady);
+    $('#video_container video').bind('contextmenu', function(e) { return false; });
 }
 
 var g_videoViewsUpdated = {};
