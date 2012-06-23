@@ -16,6 +16,8 @@
         die();
     }
     
+    $artist_id = $_REQUEST['artist_id'];
+    
     $_SESSION['paypal_token'] = $token;
     
     $order_id = $_SESSION['in_process_order_id'];
@@ -100,6 +102,9 @@
             $order_item_html .= $html;
             $i++;
         }
+        
+        $confirm_url = "paypal_finish.php?artist_id=$artist_id";
+        $cancel_url = "cart.php?abandon_order=1&artist_id=$artist_id";
         
         include_once 'templates/confirm_order.html';
     }

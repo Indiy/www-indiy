@@ -79,8 +79,8 @@
     
     $http_host = $_SERVER["HTTP_HOST"];
 
-    $returnURL = "http://$http_host/paypal_order_confirm.php";
-    $cancelURL = "http://$http_host/cart.php?abandon_order=1";
+    $returnURL = "http://$http_host/paypal_order_confirm.php?artist_id=$artist_id;
+    $cancelURL = "http://$http_host/cart.php?artist_id=$artist_id&abandon_order=1";
     
     $resArray = CallShortcutExpressCheckout($payment_amount, $currencyCodeType, $paymentType, $returnURL, $cancelURL);
     $ack = strtoupper($resArray["ACK"]);
