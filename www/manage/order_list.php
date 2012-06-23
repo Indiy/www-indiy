@@ -2,17 +2,17 @@
 
     require_once '../includes/config.php';
 	require_once '../includes/functions.php';	
-	if($_SESSION['sess_userId']=="")
+	if( $_SESSION['sess_userId'] == "" )
 	{
 		header("Location: /index.php");
 		exit();
 	}
-	$artistID = $_REQUEST['userId'];
-    if( !$artistID )
+	$artist_id = $_REQUEST['userId'];
+    if( !$artist_id )
     {
         if( $_SESSION['sess_userType'] == 'ARTIST' )
         {
-            $artistID = $_SESSION['sess_userId'];
+            $artist_id = $_SESSION['sess_userId'];
         }
         else
         {
@@ -21,7 +21,7 @@
         }
     }
 
-    $order_q = mq("SELECT * FROM orders WHERE id='$order_id'"));
+    $order_q = mq("SELECT * FROM orders WHERE artist_id='$artist_id'");
 
     $order_list_html = "";
 

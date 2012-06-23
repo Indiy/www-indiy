@@ -265,7 +265,7 @@ $(document).ready(showFirstInstructions);
             <ul>
                 <li><a onclick='showStoreSettings();' title='Edit Store Settings'>Edit Settings</a></li>
                 <li><a onclick='showStoreSettings();' title='Add a product to your store'>Add Product</a></li>
-                <li><a href="/order_list.php?artist_id=<?=$artistID;?>" title='List of Customer Orders'>Order List</a></li>
+                <li><a href="order_list.php?artist_id=<?=$artistID;?>" title='List of Customer Orders'>Order List</a></li>
             </ul>
             <h6>Misc</h6>
             <ul>
