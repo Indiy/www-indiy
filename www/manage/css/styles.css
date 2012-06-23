@@ -1523,13 +1523,12 @@ textarea {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
 }
-#order_list .header,
-#order_list .list {
-    padding-bottom: 10px;
+#order_list .header {
+    padding-bottom: 7px;
     font-size: 0;
     white-space: nowrap;
 }
-#order_list .header div {
+#order_list .header .header_item {
     color: black;
     font-size: 15px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
@@ -1538,15 +1537,15 @@ textarea {
 
 #order_list .order_num {
     display: inline-block;
-    width: 50px;
+    width: 100px;
 }
 #order_list .name {
     display: inline-block;
-    width: 200px;
+    width: 300px;
 }
 #order_list .email {
     display: inline-block;
-    width: 300px;
+    width: 400px;
 }
 #order_list .status {
     display: inline-block;
@@ -1557,7 +1556,7 @@ textarea {
     width: 50px;
     text-align: right;
 }
-#order_list .list div {
+#order_list .list .item div {
     color: black;
     font-size: 15px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
@@ -1565,6 +1564,10 @@ textarea {
 }
 
 #order_list .list .item {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 0;
+    white-space: nowrap;
     cursor: pointer;
 }
 
