@@ -1549,7 +1549,7 @@ textarea {
 }
 #order_list .status {
     display: inline-block;
-    width: 100px;
+    width: 150px;
     text-align: center;
 }
 #order_list .amount {

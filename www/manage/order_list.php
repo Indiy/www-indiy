@@ -54,7 +54,7 @@
             $order_status = "Unknown";
     
         $html = "";
-        $html .= "<a href='/order_status.html?order_id=$id'>";
+        $html .= "<a href='/order_status.php?order_id=$id'>";
         $html .= " <div class='item'>";
         $html .= "  <div class='order_num'>$id</div>";
         $html .= "  <div class='name'>$customer_name</div>";

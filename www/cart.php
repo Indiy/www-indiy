@@ -13,11 +13,6 @@
     $artist_id = $_REQUEST['artist_id'];
     
     $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id'"));
-    if( $artist_data == FALSE )
-    {
-        header("HTTP/1.0 404 Not Found");
-        die();
-    }
 
     $cart_list = store_get_cart();
     $cart_list_json = json_encode($cart_list);
