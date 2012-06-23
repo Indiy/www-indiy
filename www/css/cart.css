@@ -259,6 +259,9 @@ body {
 #order .total_lines {
     padding-top: 15px;
     width: 750px;
+    font-size: 15px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
 }
 #order .total_lines .total {
     padding-bottom: 7px;
