@@ -1550,10 +1550,11 @@ textarea {
 #order_list .status {
     display: inline-block;
     width: 100px;
+    text-align: center;
 }
 #order_list .amount {
     display: inline-block;
-    width: 50px;
+    width: 100px;
     text-align: right;
 }
 #order_list .list .item div {
