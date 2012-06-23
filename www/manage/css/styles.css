@@ -1512,6 +1512,9 @@ textarea {
 #adminblock .photolist .list ul li a { color:#383838; text-decoration:none; cursor: pointer; }
 #adminblock .photolist .list ul li a:hover { color:#383838; text-decoration:underline}
 
+#order_list {
+    padding-bottom: 200px;
+}
 
 #order_list a {
     text-decoration: none;
@@ -1541,11 +1544,13 @@ textarea {
 }
 #order_list .name {
     display: inline-block;
-    width: 300px;
+    width: 200px;
+    text-overflow: ellipsis;
 }
 #order_list .email {
     display: inline-block;
     width: 400px;
+    text-overflow: ellipsis;
 }
 #order_list .status {
     display: inline-block;
