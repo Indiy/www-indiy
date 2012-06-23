@@ -25,6 +25,7 @@
     $order_item_html = "";
     
     $q_order_items = mq("SELECT * FROM order_items WHERE order_id='$order_id'");
+    $i = 0;
     while( $item = mf($q_order_items) )
     {
         $description = $item['description'];
@@ -37,15 +38,18 @@
                             "product_id" => $item['product_id'],
                             "color" => $color,
                             "size" => $size);
+        $num = $i + 1;
         $html = "";
         $html .= "<div class='item'>";
-        $html .= " <div class='num'>$i</div>";
+        $html .= " <div class='num'>$num</div>";
         $html .= " <div class='description'>$description</div>";
         $html .= " <div class='price'>$price</div>";
         $html .= " <div class='quantity'>$quantity</div>";
         $html .= "</div>";
         
         $order_item_html .= $html;
+        
+        $i++;
     }
     
     include_once 'templates/order_status.html';
