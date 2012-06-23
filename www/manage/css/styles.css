@@ -1513,8 +1513,63 @@ textarea {
 #adminblock .photolist .list ul li a:hover { color:#383838; text-decoration:underline}
 
 
+#order_list a {
+    text-decoration: none;
+    color: inherit;
+}
+#order_list .title {
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#order_list .header,
+#order_list .list {
+    padding-bottom: 10px;
+    font-size: 0;
+    white-space: nowrap;
+}
+#order_list .header div {
+    color: black;
+    font-size: 15px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+}
 
+#order_list .order_num {
+    display: inline-block;
+    padding-left: 50px;
+    width: 50px;
+}
+#order_list .name {
+    display: inline-block;
+    width: 200px;
+}
+#order_list .email {
+    display: inline-block;
+    width: 300px;
+}
+#order_list .status {
+    display: inline-block;
+    width: 100px;
+}
+#order_list .amount {
+    display: inline-block;
+    width: 50px;
+    text-align: right;
+}
+#order_list .list div {
+    color: black;
+    font-size: 15px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
 
+#order_list .list .item {
+    cursor: pointer;
+}
 
-
+#order_list .list .item:hover {
+    background-color: #aaa;
+}
 
