@@ -166,14 +166,13 @@ body {
 
 #order .order_number {
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     color: black;
     font-size: 16px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
 }
 #order .status {
-    padding-top: 3px;
     padding-bottom: 15px;
     color: black;
     font-size: 16px;
