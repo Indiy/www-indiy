@@ -35,6 +35,8 @@
         $order_status = "Canceled";
     else if( $order_data['status'] == 'ABANDONED' )
         $order_status = "Order Abandoned";
+    else
+        $order_status = "Unknown";
 
     $order_items = array();
     $order_item_html = "";
