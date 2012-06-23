@@ -278,6 +278,15 @@ function deleteTab(tab_id)
         window.location.href = "artist_management.php?userId={0}&action=1&content_id={1}".format(g_artistId,tab_id);
     }
 }
+function deletePhoto(photo_id)
+{
+    var ret = window.confirm("Are you sure you want delete this item?");
+    if(ret)
+    {
+        window.location.href = "artist_management.php?userId={0}&action=1&photo_id={1}".format(g_artistId,photo_id);
+    }
+}
+
 
 function setupSortableLists()
 {
