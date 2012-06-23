@@ -1556,6 +1556,7 @@ textarea {
     display: inline-block;
     width: 150px;
     text-align: center;
+    white-space: normal;
 }
 #order_list .amount {
     display: inline-block;
@@ -1567,11 +1568,12 @@ textarea {
     font-size: 15px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
+    vertical-align: middle;
 }
 
 #order_list .list .item {
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: 5px;
+    padding-bottom: 0px;
     font-size: 0;
     white-space: nowrap;
     cursor: pointer;
