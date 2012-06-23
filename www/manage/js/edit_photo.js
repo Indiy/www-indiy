@@ -26,6 +26,7 @@ function showPhotoPopup(photo_index)
             var html = "<img src='{0}' />".format(photo.image_url);
             html += "<button onclick='return onPhotoImageRemove();'></button>";
             $('#edit_photo #image_filename_container').html(html);
+            $('#edit_photo #image_filename_container').show();
         }
         else
         {
