@@ -1,5 +1,5 @@
 
-var g_removeImage = false;
+var g_photoRemove = false;
 
 var g_photoId = '';
 var g_photoIndex = false;
@@ -7,7 +7,7 @@ var g_photoIndex = false;
 function showPhotoPopup(photo_index)
 {
     g_photoIndex = photo_index;
-    g_removeImage = false;
+    g_photoRemove = false;
     
     $('#edit_photo #artist_id').val(g_artistId);
     
@@ -62,6 +62,7 @@ function onPhotoImageRemove()
     if( result )
     {
         $('#edit_photo #image_filename_container').hide();
+        g_photoRemove = true;
     }
     return false;
 }
@@ -69,7 +70,7 @@ function onPhotoImageRemove()
 function onAddPhotoSubmit()
 {
     var needs_image = false;
-    if( g_photoIndex === false )
+    if( g_photoIndex === false || g_photoRemove )
     {
         needs_image = true;
     }
