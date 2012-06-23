@@ -134,6 +134,8 @@
 		2D8D96E11594EDE200AA3D1B /* finish_order.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = finish_order.html; sourceTree = "<group>"; };
 		2D8D96E31595391C00AA3D1B /* order_status.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = order_status.php; sourceTree = "<group>"; };
 		2D8D96E415953A2D00AA3D1B /* order_status.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = order_status.html; sourceTree = "<group>"; };
+		2D8D96E5159568E900AA3D1B /* order_list.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = order_list.php; sourceTree = "<group>"; };
+		2D8D96E71595692100AA3D1B /* order_list.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = order_list.html; path = templates/order_list.html; sourceTree = "<group>"; };
 		2D98BF3D1480778500CE851D /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		2D98BF3E1480778500CE851D /* holder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holder.png; sourceTree = "<group>"; };
 		2D98BF3F1480778500CE851D /* play.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = play.jpg; sourceTree = "<group>"; };
@@ -1707,6 +1709,14 @@
 			children = (
 			);
 			name = player;
+			sourceTree = "<group>";
+		};
+		2D8D96E6159568FA00AA3D1B /* templates */ = {
+			isa = PBXGroup;
+			children = (
+				2D8D96E71595692100AA3D1B /* order_list.html */,
+			);
+			name = templates;
 			sourceTree = "<group>";
 		};
 		2D98BF3A1480778500CE851D /* mad.fm */ = {
@@ -3537,7 +3547,9 @@
 				2DF474FD144A2D84005538C7 /* include */,
 				2DF47503144A2D84005538C7 /* js */,
 				2DE197A114F6130700305EAD /* data */,
+				2D8D96E6159568FA00AA3D1B /* templates */,
 				2D34E22714A06AC9004473F9 /* twitter_landing.php */,
+				2D8D96E5159568E900AA3D1B /* order_list.php */,
 				2DF4742D144A2D84005538C7 /* artist_management.php */,
 				2D34E23714AD5897004473F9 /* fan_connections.php */,
 				2DF47447144A2D84005538C7 /* dashboard.php */,
