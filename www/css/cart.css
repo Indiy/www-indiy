@@ -149,6 +149,11 @@ body {
     display: none;
 }
 
+#order {
+    padding-left: 10px;
+    padding-top: 30px;
+}
+
 
 #order .title {
     padding-top: 10px;
