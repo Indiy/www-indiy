@@ -264,11 +264,8 @@ $(document).ready(showFirstInstructions);
             <h6>Store</h6>
             <ul>
                 <li><a onclick='showStoreSettings();' title='Edit Store Settings'>Edit Settings</a></li>
-                <? if( strlen($paypalEmail) == 0 ): ?>
-                    <li><a onclick='showStoreSettings();' title='Add a product to your store'>Add Product</a></li>
-                <? else: ?>
-                    <li><a onclick='showProductPopup(false);' title='Add a product to your store'>Add Product</a></li>
-                <? endif ?>
+                <li><a onclick='showStoreSettings();' title='Add a product to your store'>Add Product</a></li>
+                <li><a href="/order_list.php?artist_id=<?=$artistID;?>" title='List of Customer Orders'>Order List</a></li>
             </ul>
             <h6>Misc</h6>
             <ul>

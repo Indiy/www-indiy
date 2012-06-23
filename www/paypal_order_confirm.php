@@ -39,6 +39,9 @@
         $suffix = $resArray["SUFFIX"];
 
         $customer_name = "$firstName $middleName $lastName";
+        
+        if( strlen(trim($customer_name)) == 0 )
+            $customer_name = $resArray["PAYMENTREQUEST_0_SHIPTONAME"];
 
         $cntryCode = $resArray["COUNTRYCODE"]; // ' Payer's country of residence in the form of ISO standard 3166 two-character country codes.
         $business = $resArray["BUSINESS"]; // ' Payer's business name.
