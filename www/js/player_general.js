@@ -41,6 +41,15 @@ function generalOnReady()
     $(document).mousemove(showAndTimeoutControls);
     $(document).mousemove(showAndTimeoutControls);
     $('#volume_slider .bar').click(clickVolume);
+    
+    var opts = {
+        'axis': "y",
+        'containment': "#volume_slider .bar",
+        'drag': volumeDrag,
+        'dragstop': volumeDragStop
+    };
+    
+    $('#volume_slider .bar .handle').draggable(opts);
 }
 
 function showControls()
@@ -348,6 +357,15 @@ function volumeSetLevel(vol_ratio)
     var volume_pos = height * vol_ratio;
     $('#volume_slider .bar .current').css({ height: volume_pos });
     $('#volume_slider .bar .handle').css({ bottom: volume_pos });
+}
+
+function volumeDrag(event,ui)
+{
+    console.log(event);
+}
+function volumeDragStop(event,ui)
+{
+    console.log(event);    
 }
 
 function formatMinSeconds(seconds)
