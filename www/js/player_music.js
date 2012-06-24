@@ -145,6 +145,10 @@ function musicPrevious()
     
     musicChange(index);
 }
+function musicVolume(vol_ratio)
+{
+    $('#jquery_jplayer').jPlayer("volume",vol_ratio);
+}
 
 function musicPreloadImages()
 {

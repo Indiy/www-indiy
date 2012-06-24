@@ -40,6 +40,7 @@ function generalOnReady()
 
     $(document).mousemove(showAndTimeoutControls);
     $(document).mousemove(showAndTimeoutControls);
+    $('#volume_slider .bar').click(clickVolume);
 }
 
 function showControls()
@@ -322,6 +323,19 @@ function playerVolume()
         $('#volume_slider').show();
         g_volumeShown = true;
     }
+}
+
+function clickVolume(event)
+{
+    var y = event.pageY - $('#volume_slider .bar').offset().top;
+    var height = $('#volume_slider .bar').height();
+    var vol_ratio = 1 - y / height;
+    if( g_playerMode == "music" )
+        musicVolume(vol_ratio);
+    else if( g_playerMode == "video" )
+        videoVolume(vol_ratio);
+    else if( g_playerMode == "photo" )
+        photoVolume(vol_ratio);
 }
 
 
