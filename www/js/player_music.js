@@ -17,7 +17,7 @@ function musicOnReady()
         swfPath: "/js/Jplayer.swf",
         verticalVolume: true,
         wmode: "window",
-        volume: 0.8,
+        volume: 0.8
     })
     .bind($.jPlayer.event.ended,jplayerEnded)
     .bind($.jPlayer.event.timeupdate,jplayerTimeUpdate)
