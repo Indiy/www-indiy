@@ -331,9 +331,7 @@ function clickVolume(event)
     var height = $('#volume_slider .bar').height();
     var vol_ratio = 1 - y / height;
 
-    var volume_pos = height - y;
-    $('#volume_slider .bar .current').css({ height: volume_pos });
-    $('#volume_slider .bar .handle').css({ bottom: volume_pos });
+    volumeSetPosition(vol_ratio);
 
     if( g_playerMode == "music" )
         musicVolume(vol_ratio);
@@ -341,6 +339,15 @@ function clickVolume(event)
         videoVolume(vol_ratio);
     else if( g_playerMode == "photo" )
         photoVolume(vol_ratio);
+}
+
+function volumeSetPosition(vol_ratio)
+{
+    var height = $('#volume_slider .bar').height();
+
+    var volume_pos = height * vol_ratio;
+    $('#volume_slider .bar .current').css({ height: volume_pos });
+    $('#volume_slider .bar .handle').css({ bottom: volume_pos });
 }
 
 function formatMinSeconds(seconds)
