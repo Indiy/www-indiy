@@ -106,24 +106,26 @@ function toggleBottom()
 
 function openBottom()
 {
+    hideVolume();
     hideContentPage();
     hideAllTabs();
     g_bottomOpen = true;
-    $('#media_social_boxes').stop();
-    $('#media_social_boxes').animate({ height: '220px' });
+    $('#bottom_container').stop();
+    $('#bottom_container').animate({ height: '275px' });
 }
 
 function closeBottom(animate)
 {
+    hideVolume();
     g_bottomOpen = false;
     if( animate === false )
     {
-        $('#media_social_boxes').css('height','0px');
+        $('#bottom_container').css('height','55px');
     }
     else
     {
-        $('#media_social_boxes').stop();
-        $('#media_social_boxes').animate({ height: '0px' });
+        $('#bottom_container').stop();
+        $('#bottom_container').animate({ height: '55px' });
     }
 }
 
@@ -299,19 +301,29 @@ function playerNext()
         photoNext();
 }
 
+function hideVolume()
+{
+    $('#volume_slider').hide();
+    g_volumeShown = false;
+}
+
 function playerVolume()
 {
     if( g_volumeShown )
     {
-        $('#volume_slider').hide();
-        g_volumeShown = false;
+        hideVolume();
     }
     else
     {
+        var offset = $('#tracker_bar .media_controls .volume').offset();
+        var top = offset.top - 100;
+        var left = offset.left;
+        $('#volume_slider').css({ top: top, left: left });
         $('#volume_slider').show();
         g_volumeShown = true;
     }
 }
+
 
 function formatMinSeconds(seconds)
 {
