@@ -361,11 +361,11 @@ function volumeSetLevel(vol_ratio)
 
 function volumeDrag(event,ui)
 {
-    console.log(event);
+    clickVolume(event);
 }
 function volumeDragStop(event,ui)
 {
-    console.log(event);    
+    clickVolume(event);
 }
 
 function formatMinSeconds(seconds)
