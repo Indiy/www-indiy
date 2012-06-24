@@ -3,6 +3,10 @@ var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+
 
 var USERNAME_REGEX = new RegExp('^[A-Za-z0-9]*$'); 
 
+
+var HOSTNAME_REGEX = new RegExp('^(?=.{1,255}$)[0-9A-Za-z](?:(?:[0-9A-Za-z]|\\b-){0,61}[0-9A-Za-z])?(?:\\.[0-9A-Za-z](?:(?:[0-9A-Za-z]|\\b-){0,61}[0-9A-Za-z])?)*\\.?$');
+
+
 function showPopup(name)
 {
     var maskHeight = $(document).height();
@@ -124,10 +128,10 @@ function onSignupClick()
         $('#signup_error').show();
         $('#signup_error').text("Please enter a valid email address.");
     }
-    else if( !username.match(USERNAME_REGEX) )
+    else if( !url.match(HOSTNAME_REGEX) )
     {
         $('#signup_error').show();
-        $('#signup_error').text("Please enter a valid username, A-Z, a-z, 0-9 are allowed.");
+        $('#signup_error').text("Please enter a valid URL.  A-Z, a-z, -, ., 0-9 are allowed.");
     }
     else if( agree 
             && name.length > 0 
