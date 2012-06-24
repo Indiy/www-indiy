@@ -109,8 +109,8 @@ function openBottom()
     hideContentPage();
     hideAllTabs();
     g_bottomOpen = true;
-    $('#bottom_container').stop();
-    $('#bottom_container').animate({ height: '275px' });
+    $('#media_social_boxes').stop();
+    $('#media_social_boxes').animate({ height: '220px' });
 }
 
 function closeBottom(animate)
@@ -118,12 +118,12 @@ function closeBottom(animate)
     g_bottomOpen = false;
     if( animate === false )
     {
-        $('#bottom_container').css('height','55px');
+        $('#media_social_boxes').css('height','0px');
     }
     else
     {
-        $('#bottom_container').stop();
-        $('#bottom_container').animate({ height: '55px' });
+        $('#media_social_boxes').stop();
+        $('#media_social_boxes').animate({ height: '0px' });
     }
 }
 
