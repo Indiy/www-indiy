@@ -30,6 +30,7 @@ var g_hideBottomTimeout = false;
 var g_socialContent = "share";
 var g_showingContentPage = false;
 var g_searchOpen = false;
+var g_volumeShown = false;
 
 $(document).ready(generalOnReady);
 function generalOnReady()
@@ -296,6 +297,20 @@ function playerNext()
         videoNext();
     else if( g_playerMode == "photo" )
         photoNext();
+}
+
+function playerVolume()
+{
+    if( g_volumeShown )
+    {
+        $('#volume_slider').hide();
+        g_volumeShown = false;
+    }
+    else
+    {
+        $('#volume_slider').show();
+        g_volumeShown = true;
+    }
 }
 
 function formatMinSeconds(seconds)
