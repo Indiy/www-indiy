@@ -116,7 +116,6 @@ function onSignupClick()
     var name = $('#signup_name').val();
     var url = $('#signup_url').val();
     var email = $('#signup_email').val();
-    var username = $('#signup_username').val();
     var password = $('#signup_password').val();
     var agree = $('#signup_agree').attr('checked');
 
@@ -133,7 +132,6 @@ function onSignupClick()
     else if( agree 
             && name.length > 0 
             && email.length > 0 
-            && username.length > 0 
             && password.length > 0
             && url.length > 0
             )
@@ -142,7 +140,6 @@ function onSignupClick()
             'name': name,
             'url': url,
             'email': email,
-            'username': username,
             'password': password
         };
         var data = JSON.stringify(dict);
