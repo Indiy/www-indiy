@@ -342,6 +342,11 @@ function clickVolume(event)
 
     volumeSetLevel(vol_ratio);
 
+    volumeChange(vol_ratio);
+}
+
+function volumeChange(vol_ratio)
+{
     if( g_playerMode == "music" )
         musicVolume(vol_ratio);
     else if( g_playerMode == "video" )
@@ -361,11 +366,21 @@ function volumeSetLevel(vol_ratio)
 
 function volumeDrag(event,ui)
 {
-    clickVolume(event);
+    var click_top = $('#volume_slider .bar .handle').offset().top;
+    var bar_top = $('#volume_slider .bar').offset().top;
+    
+    var y = click_top - bar_top;
+    var height = $('#volume_slider .bar').height();
+    var vol_ratio = 1 - y / height;
+    
+    var volume_pos = click_top;
+    
+    $('#volume_slider .bar .current').css({ height: volume_pos });
+    volumeChange(vol_ratio);
 }
 function volumeDragStop(event,ui)
 {
-    clickVolume(event);
+    volumeDrag(event,ui);
 }
 
 function formatMinSeconds(seconds)
