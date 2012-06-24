@@ -373,10 +373,12 @@ function volumeDrag(event,ui)
     var height = $('#volume_slider .bar').height();
     var vol_ratio = 1 - y / height;
     
-    var volume_pos = click_top;
+    var volume_pos = height * vol_ratio;
     
     $('#volume_slider .bar .current').css({ height: volume_pos });
     volumeChange(vol_ratio);
+
+    console.log(vol_ratio);
 }
 function volumeDragStop(event,ui)
 {
