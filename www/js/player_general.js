@@ -331,7 +331,7 @@ function clickVolume(event)
     var height = $('#volume_slider .bar').height();
     var vol_ratio = 1 - y / height;
 
-    volumeSetPosition(vol_ratio);
+    volumeSetLevel(vol_ratio);
 
     if( g_playerMode == "music" )
         musicVolume(vol_ratio);
@@ -341,7 +341,7 @@ function clickVolume(event)
         photoVolume(vol_ratio);
 }
 
-function volumeSetPosition(vol_ratio)
+function volumeSetLevel(vol_ratio)
 {
     var height = $('#volume_slider .bar').height();
 

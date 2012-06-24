@@ -68,7 +68,7 @@ function jplayerEnded()
 function jplayerVolume(event)
 {
     var vol_ratio = event.jPlayer.options.volume;
-    volumeSetPosition(vol_ratio);
+    volumeSetLevel(vol_ratio);
 }
 
 function musicPlayPause()
@@ -83,7 +83,7 @@ function jplayerReady()
 {
     musicChange(0);
     var vol_ratio = 0.8;
-    volumeSetPosition(vol_ratio);
+    volumeSetLevel(vol_ratio);
 }
 
 var g_songsPlayed = 0;
