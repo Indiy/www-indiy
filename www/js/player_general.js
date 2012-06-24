@@ -359,9 +359,10 @@ function volumeSetLevel(vol_ratio)
 {
     var height = $('#volume_slider .bar').height();
 
-    var volume_pos = height * vol_ratio;
-    $('#volume_slider .bar .current').css({ height: volume_pos });
-    $('#volume_slider .bar .handle').css({ bottom: volume_pos });
+    var curr_height = height * vol_ratio;
+    var handle_top = height - curr_height;
+    $('#volume_slider .bar .current').css({ height: curr_height });
+    $('#volume_slider .bar .handle').css({ top: handle_top });
 }
 
 function volumeDrag(event,ui)
@@ -373,9 +374,9 @@ function volumeDrag(event,ui)
     var height = $('#volume_slider .bar').height();
     var vol_ratio = 1 - y / height;
     
-    var volume_pos = height * vol_ratio;
+    var curr_height = height * vol_ratio;
     
-    $('#volume_slider .bar .current').css({ height: volume_pos });
+    $('#volume_slider .bar .current').css({ height: curr_height });
     volumeChange(vol_ratio);
 
     console.log(vol_ratio);
