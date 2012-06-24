@@ -14,14 +14,12 @@
     $name = $data['name'];
     $url = $data['url'];
     $email = $data['email'];
-    $username = $data['username'];
     $password = md5($data['password']);
 
     $error = FALSE;
 
     $sql = "SELECT * FROM mydna_musicplayer";
     $sql .= " WHERE artist = '$name' ";
-    $sql .= " OR username = '$username' ";
     $sql .= " OR url = '$url' ";
     $sql .= " OR email = '$email' ";
     $q = mysql_query($sql) or die("bad sql: '$sql'");
