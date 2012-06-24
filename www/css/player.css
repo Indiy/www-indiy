@@ -305,6 +305,52 @@ body {
     height: 55px;
     width: 55px;
 }
+#volume_slider {
+    display: none;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    height: 100px;
+    width: 32px;
+    border: 3px solid #434343;
+    border-radius: 3px; 
+}
+#volume_slider .carrot {
+    position: absolute;
+    top: 100px;
+    left: 16px;
+    width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #434343;
+}
+#volume_slider .bar {
+    position: absolute;
+    top: 6px;
+    left: 11px;
+    width: 9px;
+    height: 87px;
+    border-right: 1px solid #2b2b2b;
+    border-bottom: 1px solid #2b2b2b;
+}
+#volume_slider .bar .current {
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 50%;
+    background-color: #3a3a3a;
+}
+#volume_slider .bar .handle {
+    left: 0px;
+    bottom: 50px;
+    height: 8px;
+    width: 18px;
+    margin-left: -8px;
+    margin-top: -5px;
+    background-color: #5c5c5c;
+}
+
 #tracker_bar .media_controls .sep2 {
     position: absolute;
     left: 112px;
