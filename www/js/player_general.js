@@ -316,8 +316,8 @@ function playerVolume()
     else
     {
         var offset = $('#tracker_bar .media_controls .volume').offset();
-        var top = offset.top - 100;
-        var left = offset.left;
+        var top = offset.top - 103;
+        var left = offset.left + 10;
         $('#volume_slider').css({ top: top, left: left });
         $('#volume_slider').show();
         g_volumeShown = true;
