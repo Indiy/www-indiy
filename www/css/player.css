@@ -1723,7 +1723,8 @@ body {
     height: 100px;
     width: 32px;
     border: 3px solid #434343;
-    border-radius: 3px; 
+    border-radius: 3px;
+    background: #111 url('/images/tracker_bar_bg.png') repeat;
 }
 #volume_slider .carrot {
     position: absolute;
