@@ -279,9 +279,9 @@ body {
 
 #tracker_bar .media_controls {
     position: relative;
-    height: 55px;
+    /* height: 55px; */
     width: auto;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 #tracker_bar .media_controls .play_pause {
     position: absolute;
@@ -509,9 +509,10 @@ body {
 }
 
 #media_social_boxes {
-    height: 220px;
+    height: 0px;
     width: 100%;
     background-color: white;
+    overflow: hidden;
 }
 #media_social_boxes .social_boxes {
     float: right;
