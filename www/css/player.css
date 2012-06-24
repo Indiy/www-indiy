@@ -1751,7 +1751,7 @@ body {
     left: 0px;
     right: 0px;
     bottom: 0px;
-    height: 50%;
+    height: 50px;
     background-color: #3a3a3a;
 }
 #volume_slider .bar .handle {
