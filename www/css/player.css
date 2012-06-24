@@ -1744,8 +1744,10 @@ body {
     height: 87px;
     border-right: 1px solid #2b2b2b;
     border-bottom: 1px solid #2b2b2b;
+    background-color: black;
 }
 #volume_slider .bar .current {
+    position: absolute;
     left: 0px;
     right: 0px;
     bottom: 0px;
@@ -1753,6 +1755,7 @@ body {
     background-color: #3a3a3a;
 }
 #volume_slider .bar .handle {
+    position: absolute;
     left: 0px;
     bottom: 50px;
     height: 8px;
