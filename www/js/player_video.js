@@ -136,6 +136,10 @@ function videoPrevious()
         next = g_videoList.length  - 1;
     videoPlayIndex(next);
 }
+function videoVolume(vol_ratio)
+{
+    g_videoPlayer.volume(vol_ratio);
+}
 
 function onVideoReady()
 {

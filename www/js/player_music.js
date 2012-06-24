@@ -82,7 +82,7 @@ function musicPlayPause()
 function jplayerReady() 
 {
     musicChange(0);
-    var vol_ratio = $('#jquery_jplayer').data("jPlayer").status.volume;
+    var vol_ratio = 0.8;
     volumeSetPosition(vol_ratio);
 }
 
