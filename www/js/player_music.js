@@ -81,6 +81,8 @@ function musicPlayPause()
 function jplayerReady() 
 {
     musicChange(0);
+    var vol_ratio = $('#jquery_jplayer').data("jPlayer").status.volume;
+    volumeSetPosition(vol_ratio);
 }
 
 var g_songsPlayed = 0;
