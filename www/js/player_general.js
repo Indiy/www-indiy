@@ -330,6 +330,11 @@ function clickVolume(event)
     var y = event.pageY - $('#volume_slider .bar').offset().top;
     var height = $('#volume_slider .bar').height();
     var vol_ratio = 1 - y / height;
+
+    var volume_pos = height - y;
+    $('#volume_slider .bar .current').css({ height: volume_pos });
+    $('#volume_slider .bar .handle').css({ bottom: volume_pos });
+
     if( g_playerMode == "music" )
         musicVolume(vol_ratio);
     else if( g_playerMode == "video" )
@@ -337,7 +342,6 @@ function clickVolume(event)
     else if( g_playerMode == "photo" )
         photoVolume(vol_ratio);
 }
-
 
 function formatMinSeconds(seconds)
 {
