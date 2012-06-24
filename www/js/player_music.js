@@ -16,7 +16,8 @@ function musicOnReady()
         supplied: "mp3, oga",
         swfPath: "/js/Jplayer.swf",
         verticalVolume: true,
-        wmode: "window"
+        wmode: "window",
+        volume: 0.8,
     })
     .bind($.jPlayer.event.ended,jplayerEnded)
     .bind($.jPlayer.event.timeupdate,jplayerTimeUpdate)
