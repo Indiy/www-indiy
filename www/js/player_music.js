@@ -66,8 +66,8 @@ function jplayerEnded()
 }
 function jplayerVolume(event)
 {
-    var vol = event.jPlayer.options.volume;
-    //$('#player .volume .current').css('height',vol * 100 + "%");
+    var vol_ratio = event.jPlayer.options.volume;
+    volumeSetPosition(vol_ratio);
 }
 
 function musicPlayPause()
