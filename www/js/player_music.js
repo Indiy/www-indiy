@@ -2,6 +2,7 @@
 var MUSIC_IMAGE_PRELOAD_TIMEOUT = 3000;
 
 var g_musicIsPlaying = false;
+var g_musicVolRatio = 0.8;
 
 $(document).ready(musicOnReady);
 
@@ -93,6 +94,7 @@ var g_currentSongIndex = 0;
 function musicChange( index ) 
 {
     setPlayerMode("music");
+    volumeSetLevel(g_musicVolRatio);
 
     g_songsPlayed++;
     if( g_songsPlayed == 3 )
@@ -151,6 +153,7 @@ function musicPrevious()
 function musicVolume(vol_ratio)
 {
     $('#jquery_jplayer').jPlayer("volume",vol_ratio);
+    g_musicVolRatio = vol_ratio;
 }
 
 function musicPreloadImages()

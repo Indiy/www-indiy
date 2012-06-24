@@ -2,6 +2,7 @@
 var g_videoLeftIndex = 0;
 var g_videoPlayer = false;
 var g_videoPlaying = false;
+var g_videoVolRatio = 1.0;
 
 $(document).ready(videoOnReady);
 function videoOnReady()
@@ -103,6 +104,7 @@ function videoPlayIndex(index)
 {
     g_videoCurrentIndex = index;
     setPlayerMode("video");
+    volumeSetLevel(g_videoVolRatio);
     
     var video = g_videoList[index];
     
@@ -139,6 +141,7 @@ function videoPrevious()
 function videoVolume(vol_ratio)
 {
     g_videoPlayer.volume(vol_ratio);
+    g_videoVolRatio = vol_ratio;
 }
 
 function onVideoReady()
@@ -149,7 +152,6 @@ function onVideoReady()
     g_videoPlayer.addEvent("ended",videoEnded);
     g_videoPlayer.addEvent("durationchange",videoDurationChange);
     g_videoPlayer.addEvent("progress",videoDownloadProgress);
-    g_videoPlayer.addEvent("volumechange",videoVolumeChange);
 }
 function videoLoadStart()
 {
@@ -184,11 +186,6 @@ function videoEnded()
     g_videoPlaying = false;
     playerSetPaused();
     videoNext();
-}
-function videoVolumeChange()
-{
-    var vol_ratio = g_videoPlayer.volume();
-    volumeSetLevel(vol_ratio);
 }
 
 function videoOnWindowResize()
