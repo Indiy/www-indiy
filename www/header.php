@@ -44,7 +44,7 @@
     }
 
 ?>
-    
+    <script src="/js/string.utils.js" type="text/javascript"></script>
     <script src="/js/jquery.kwicks-1.5.1.js" type="text/javascript"></script>
     <script src="/js/search.js" type="text/javascript"></script>
     
