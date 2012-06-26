@@ -219,9 +219,16 @@ body {
     padding-left: 2px;
     cursor: pointer;
 }
-#bottom_bar .bottom_link:hover {
+#bottom_bar .bottom_link a {
+    color: #484848;
+    text-decoration: none;
+    outline: 0;
+}
+#bottom_bar .bottom_link:hover,
+#bottom_bar .bottom_link:hover a {
     color: white;
 }
+
 #bottom_bar .copyright {
     float: right;
     padding-right: 20px;
