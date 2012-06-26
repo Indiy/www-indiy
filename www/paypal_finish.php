@@ -4,6 +4,10 @@
     require_once 'includes/config.php';
     require_once 'includes/paypalfunctions.php';
     
+    $expire = time() + 60*24*60*60;
+    $cookie_domain = str_replace("http://www.","",trueSiteUrl());
+    setcookie("FAN_HAS_ORDERED","1",$expire,"/",$cookie_domain);
+    
     $artist_id = $_REQUEST['artist_id'];
     
     $order_id = $_SESSION['in_process_order_id'];
