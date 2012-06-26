@@ -746,6 +746,9 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     background-color: #DDDEE0; 
     text-align: left; 
     z-index: 9000;
+    max-height: 572px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 #search .result_group .title {
     padding-top: 6px;
