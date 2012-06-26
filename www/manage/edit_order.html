@@ -1,0 +1,44 @@
+
+<? include_once 'header.php'; ?>
+
+<section id="wrapper">
+<section id="content">
+</section>
+</section>
+
+<div id='order'>
+    <div class='title'>Order Status</div>
+    <div class='order_number'>Order Number: <?=$order_id;?></div>
+    <div class='status'>Order Status: <?=$order_status;?></div>
+    <div class='header'>
+        <div class='description'>Items</div>
+        <div class='price'>Price</div>
+        <div class='quantity'>Quantity</div>
+    </div>
+    <div class='hsep'></div>
+    <div class='item_list'>
+        <?=$order_item_html;?>
+    </div>
+    <div class='total_lines'>
+        <div class='total'>
+            Shipping:
+            <div class='amount'><?=$shippping_amount;?></div>
+        </div>
+        <div class='total'>
+            Total:
+            <div class='amount'><?=$charge_amount;?></div>
+        </div>
+    </div>
+    <div class='shipping'>
+        <div class='title'>Shipping Address:</div>
+        <div class='address'><?=$shipping_info['name'];?></div>
+        <div class='address'><?=$shipping_info['street1'];?></div>
+        <div class='address'><?=$shipping_info['street2'];?></div>
+        <div class='address'><?=$shipping_info['city'];?>, <?=$shipping_info['state'];?>, <?=$shipping_info['zip'];?></div>
+        <div class='address'><?=$shipping_info['phone_number'];?></div>
+    </div>
+    <button onclick='confirmRefund();'>Refund Order</button>
+    
+</div>
+
+<? include_once 'footer.php'; ?>
