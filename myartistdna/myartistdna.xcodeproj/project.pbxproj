@@ -136,6 +136,7 @@
 		2D8D96E415953A2D00AA3D1B /* order_status.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = order_status.html; sourceTree = "<group>"; };
 		2D8D96E5159568E900AA3D1B /* order_list.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = order_list.php; sourceTree = "<group>"; };
 		2D8D96E71595692100AA3D1B /* order_list.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = order_list.html; path = templates/order_list.html; sourceTree = "<group>"; };
+		2D8D96EC1597C40500AA3D1B /* search.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = search.js; sourceTree = "<group>"; };
 		2D98BF3D1480778500CE851D /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		2D98BF3E1480778500CE851D /* holder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holder.png; sourceTree = "<group>"; };
 		2D98BF3F1480778500CE851D /* play.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = play.jpg; sourceTree = "<group>"; };
@@ -1704,13 +1705,6 @@
 			name = data;
 			sourceTree = "<group>";
 		};
-		2D41C03C1534E2DA00F18000 /* player */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = player;
-			sourceTree = "<group>";
-		};
 		2D8D96E6159568FA00AA3D1B /* templates */ = {
 			isa = PBXGroup;
 			children = (
@@ -1894,7 +1888,6 @@
 				2DF473981440B77F005538C7 /* sfo */,
 				2DF4740F1440B77F005538C7 /* swf */,
 				2DF470471440B77F005538C7 /* css */,
-				2D41C03C1534E2DA00F18000 /* player */,
 				2DF472C71440B77F005538C7 /* js */,
 				2D9E2FD81569F13600A76906 /* templates */,
 				2D9E2FDA1569F17D00A76906 /* player2.php */,
@@ -3080,6 +3073,7 @@
 				2D9E2FEE157C836400A76906 /* player_search.js */,
 				2D9E2FF7158413D900A76906 /* player_store.js */,
 				2D9E2FFC1585C8B600A76906 /* cart.js */,
+				2D8D96EC1597C40500AA3D1B /* search.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
