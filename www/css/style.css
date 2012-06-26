@@ -707,18 +707,39 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 /*
  searchbox related stuff
 */
-#theSearchBox {
-    position:relative;
+#search 
+{
+    position: relative;
     float: right; 
-    margin:10px 0 5px 0px;
-    z-index:10; 
+    margin: 10px 0px 5px 0px;
+    z-index: 10; 
 }
-div.searchBox {display:block; width:220px; height:26px; border:solid 1px #000; background-image:url(../images/search_back.gif);}
-input.searchText { /*position:relative;*/ top:-50px; width:190px; height:23px; border:none; font-size:12px; font-family: Helvetica, sans-serif; color:#767676; background-color:#DDDEE0; padding:0 0 0 5px}
-input.searchText:focus { border:none;}
-span.hilite { font-weight:bold; font-style:italic;}
+#search .search_box {
+    display: block; 
+    width: 220px; 
+    height: 26px; 
+    border: solid 1px #000; 
+    background-image: url(../images/search_back.gif);
+}
+#search .search_box input { 
+    /*position:relative;*/ 
+    top: -50px; 
+    width: 190px; 
+    height: 23px; 
+    border: none; 
+    font-size: 12px; 
+    font-family: Helvetica, sans-serif; 
+    color: #767676; 
+    background-color: #DDDEE0; 
+    padding: 0px 0px 0px 5px;
+    border:none;
+}
+#search .search_box input:focus {
+    border: none;
+}
+#search span.hilite { font-weight:bold; font-style:italic;}
 
-div.searchList { 
+#search  .search_results { 
     display: none; 
     position: absolute; 
     left: -110px;
@@ -728,74 +749,63 @@ div.searchList {
     border: solid 1px #000; 
     z-index: 9000;
 }
-
-div.searchListItem {background-color:#DDDEE0; border-top-style:solid; border-bottom-style:solid;  border-top-width:1px; border-bottom-width:1px; border-top-color:#fff;  border-bottom-color:#fff; font-family: Helvetica, sans-serif; text-align:left;  font-size:11px; }
-
-div.searchListItem:hover {
-    background-color:#767676;
-    border-top-style: solid;
-    border-bottom-style: solid;
-    border-top-width:1px;
-    border-bottom-width:1px;
-/*    
-    border-top-color:#000099;
-    border-bottom-color:#000099; 
-*/
-    color: #fff;
+#search .result_group .title {
+    padding-top: 6px;
+    height: 22px;
+    color: white;
+    font-size: 15px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    background-color: #181818;
 }
-
-div.searchListItemMatch {
-    background-color:#767676; 
-    border-top-style:solid; 
-    border-bottom-style:solid;  
-    border-top-width:1px; 
-    border-bottom-width:1px;
-    /*
-    border-top-color:#000099;  
-    border-bottom-color:#000099;
-    */
-    font-family: Helvetica, sans-serif; color:#fff; font-size:11px; 
+#search .result_group .title {
+    padding-left: 10px;
+    padding-top: 6px;
+    height: 22px;
+    color: white;
+    font-size: 15px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    background-color: rgba(0,0,0,0.85);
 }
-
-
-div.searchListItemCategory {
-    background-color: #d2d2d2;
-    border: inset 1px #ccc;
-    height: 0px;
-    overflow: hidden;
+#search .result_group a {
+    text-decoration: none;
 }
-
-img.search_thumbnail { width:64px; height:64px; padding-left: 5px; padding-top:5px; }
-div.search_text { 
-    float: right;
-    height: 64px;
-    width: 245px;
+#search .result_group .item {
+    padding-top: 10px;
+    padding-left: 10px;
+    height: 57px;
+    background-color: rgba(0,0,0,0.75);
+    border-bottom: 1px solid #111;
+    white-space: nowrap;
+    cursor: pointer;
+}
+#search .result_group .item img {
+    display: inline-block;
+    height: 44px;
+    width: 65px;
     padding: 3px;
-    font-size: 13px;
-    font-family: Helvetica, Arial, sans-serif;
+    background-color: white;
+}
+#search .result_group .item .value {
+    display: inline-block;
+    padding-left: 12px;
+    padding-top: 15px;
+    width: 200px;
+    height: 34px;
+    color: #999;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    text-decoration: none;
     text-align: left;
-    text-transform: lowercase;
+    vertical-align: top;
+    word-wrap: normal;
+    white-space: normal;
     overflow: hidden;
-    text-overflow: hidden;
 }
-
-.searchListItem .heading { 
-    display: inline-block; 
-    padding-bottom: 5px; 
-    padding-top: 5px; 
-    color: #666;
-}
-.searchListItem:hover .heading { 
-    display: inline-block; 
-    padding-bottom: 5px; 
-    padding-top: 5px; 
-    color: #ddd; 
-}
-.searchListItemMatch .heading {
-    display: inline-block; 
-    padding-bottom: 5px; 
-    padding-top: 5px; 
-    color: #ddd;
+#search .result_group .item:hover .value {
+    color: white;
 }
 
 .ui-error{ float:none; color:#FF0000; text-transform:uppercase; font-weight:bold; font-size:12px; width:100%}
