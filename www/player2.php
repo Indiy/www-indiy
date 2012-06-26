@@ -340,7 +340,10 @@
     if( count($photo_list) > 3 )
         $photo_nav_show = TRUE;
     
-    
+    if( $_COOKIE['FAN_HAS_ORDERED'] == "1" )
+        $show_order_status = TRUE;
+    else
+        $show_order_status = FALSE;
 
     
     include_once 'templates/player.html';

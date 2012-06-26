@@ -90,7 +90,11 @@
     <div id='bottom_bar'>
         <div class='be_heard'>BE HEARD. BE SEEN. BE INDEPENDANT.</div>
         <div class='slash'>//</div>
-        <div class='sign_up'>SIGN UP NOW</div>
+        <div class='sign_up bottom_link'>SIGN UP NOW</div>
+        <? if( $show_order_status ): ?>
+            <div class='slash'>//</div>
+            <div class='order_status bottom_link'><a href='/order_status.php'>ORDER STATUS</a></div>
+        <? endif; ?>
         <div class='copyright'>&copy;2012 MYARTISTDNA</div>
     </div>
     <div id='bottom_container' class='idle_fade_out'>
