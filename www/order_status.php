@@ -9,13 +9,7 @@
     
     if( !$order_id )
     {
-        print "<html>";
-        print "<body>";
-        print "<form>";
-        print "Enter Order Number: <input name='order_id'/>";
-        print "</form>";
-        print "</body>";
-        print "</html>";
+        include_once 'templates/order_status.html';
         die();
     }
     
@@ -81,6 +75,6 @@
         $i++;
     }
     
-    include_once 'templates/order_status.html';
+    include_once 'templates/order_details.html';
 
 ?>

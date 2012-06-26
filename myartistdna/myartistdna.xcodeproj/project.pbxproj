@@ -137,6 +137,7 @@
 		2D8D96E5159568E900AA3D1B /* order_list.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = order_list.php; sourceTree = "<group>"; };
 		2D8D96E71595692100AA3D1B /* order_list.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = order_list.html; path = templates/order_list.html; sourceTree = "<group>"; };
 		2D8D96EC1597C40500AA3D1B /* search.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = search.js; sourceTree = "<group>"; };
+		2D8D96ED1599781A00AA3D1B /* order_details.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = order_details.html; sourceTree = "<group>"; };
 		2D98BF3D1480778500CE851D /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		2D98BF3E1480778500CE851D /* holder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holder.png; sourceTree = "<group>"; };
 		2D98BF3F1480778500CE851D /* play.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = play.jpg; sourceTree = "<group>"; };
@@ -1770,6 +1771,7 @@
 				2D64687B1593DD5400B9AD11 /* confirm_order.html */,
 				2D8D96E11594EDE200AA3D1B /* finish_order.html */,
 				2D8D96E415953A2D00AA3D1B /* order_status.html */,
+				2D8D96ED1599781A00AA3D1B /* order_details.html */,
 			);
 			path = templates;
 			sourceTree = "<group>";
