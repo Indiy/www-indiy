@@ -50,6 +50,9 @@
     
     <script src="/js/login_signup.js" type="text/javascript"></script>
     <script src="/js/footer.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var g_trueSiteUrl = "<?=trueSiteUrl();?>";
+    </script>
 </head>
 
 <body>
