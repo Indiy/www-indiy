@@ -97,6 +97,20 @@
 		   
 	    return $resArray;
 	}
+    
+    function CallRefundTransaction( $transactionId ) 
+	{
+		//------------------------------------------------------------------------------------------------------------------------------------
+		// Construct the parameter string that describes the SetExpressCheckout API call in the shortcut implementation
+		
+		$nvpstr = "&TRANSACTIONID=". $transactionId;
+		$nvpstr = $nvpstr . "&REFUNDTYPE=Full";
+		
+        
+	    $resArray=hash_call("RefundTransaction", $nvpstr);
+	    return $resArray;
+	}
+    
 
 	/*   
 	'-------------------------------------------------------------------------------------------------------------------------------------------
