@@ -13,8 +13,6 @@ function artistManagementReady()
     updateStoreList();
     updateTabList();
     
-    $('a[rel*=facebox]').facebox();
-    
     $('.heading').click(function(){
 		if( $(this).next().is(':hidden') ) 
         {
@@ -144,7 +142,7 @@ function updateStoreList()
         html += "</a>";
         html += "</figure>";
         html += "<span>";
-        html += "<a href='addproduct.php?artist_id={0}&id={1}' rel='facebox[.bolder]'>".format(g_artistId,product.id);
+        html += "<a onclick='showProductPopup({0});'>".format(i);
         html += product.name;
         html += "</a>";
         html += "</span>";
@@ -154,20 +152,8 @@ function updateStoreList()
     }
     if( g_tabList.length == 0 )
     {
-        if( g_paypalEmail.length == 0 )
-        {
-            var html = "";
-            html += "<div class='need_paypal'>";
-            html += "Add a payment method. ";
-            html += "<a href='store_settings.php?artist_id={0}' rel='facebox[.bolder]'>Monetize Settings</a>".format(g_artistId);
-            html += "</div>";
-            $('#product_list_ul').append(html);
-        }
-        else
-        {
-            var html = "<div class='empty_list'>You have not added any products yet.</div>";
-            $('#product_list_ul').append(html);
-        }
+        var html = "<div class='empty_list'>You have not added any products yet.</div>";
+        $('#product_list_ul').append(html);
     }
 }
 
