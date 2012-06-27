@@ -36,6 +36,9 @@
         $order_status = "Order Abandoned";
     else
         $order_status = "Unknown";
+        
+    $include_order = TRUE;
+    $include_editor = FALSE;
     
     include_once "templates/edit_order.html";
 

@@ -140,6 +140,8 @@
 		2D8D96ED1599781A00AA3D1B /* order_details.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = order_details.html; sourceTree = "<group>"; };
 		2D8D96EE159980A500AA3D1B /* edit_order.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = edit_order.php; sourceTree = "<group>"; };
 		2D8D96F015998C5000AA3D1B /* edit_order.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = edit_order.html; path = templates/edit_order.html; sourceTree = "<group>"; };
+		2D8D96F115998EBF00AA3D1B /* order.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = order.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2D8D96F2159AB7E600AA3D1B /* order.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = order.js; sourceTree = "<group>"; };
 		2D98BF3D1480778500CE851D /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		2D98BF3E1480778500CE851D /* holder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holder.png; sourceTree = "<group>"; };
 		2D98BF3F1480778500CE851D /* play.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = play.jpg; sourceTree = "<group>"; };
@@ -3623,6 +3625,7 @@
 				2DF47444144A2D84005538C7 /* styles.css */,
 				2DF47445144A2D84005538C7 /* Teletex_Light.eot */,
 				2DF47446144A2D84005538C7 /* Teletex_Light.otf */,
+				2D8D96F115998EBF00AA3D1B /* order.css */,
 			);
 			path = css;
 			sourceTree = "<group>";
@@ -3864,6 +3867,7 @@
 				2D41C0351531E93800F18000 /* social_post.js */,
 				2DFF87E715658E15008EA18C /* user_admin.js */,
 				2D9E2FD5156985B400A76906 /* account_limit.js */,
+				2D8D96F2159AB7E600AA3D1B /* order.js */,
 			);
 			path = js;
 			sourceTree = "<group>";

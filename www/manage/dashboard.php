@@ -71,6 +71,9 @@
 
     $label_name = $_SESSION['sess_userName'];
 
+    $include_order = FALSE;
+    $include_editor = TRUE;
+
 	include_once('header.php');	
 ?>
 <section id="wrapper">

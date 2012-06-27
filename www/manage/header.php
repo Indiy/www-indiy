@@ -8,44 +8,55 @@
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.9.0/build/assets/skins/sam/skin.css"> 
 
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link href="facefiles/facebox.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <? if( $include_order ): ?>
+        <link href="css/order.css" rel="stylesheet" type="text/css">
+    <? endif; ?>
 
     <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <script src="color/jscolor.js" type="text/javascript"></script>
+    <script src="/js/ZeroClipboard.js" type="text/javascript"></script>
+    <script src="/js/string.utils.js" type="text/javascript"></script>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
 
-    <!-- Combo-handled YUI JS files: --> 
-    <script type="text/javascript" src="http://yui.yahooapis.com/combo?2.9.0/build/yahoo-dom-event/yahoo-dom-event.js&2.9.0/build/animation/animation-min.js&2.9.0/build/element/element-min.js&2.9.0/build/container/container-min.js&2.9.0/build/menu/menu-min.js&2.9.0/build/button/button-min.js&2.9.0/build/editor/editor-min.js"></script> 
+    <? if( $include_editor !== FALSE ): ?>
 
-    <script src="facefiles/facebox.js" type="text/javascript"></script>
-    <script src="color/jscolor.js" type="text/javascript"></script>
-    <script src="/js/ZeroClipboard.js" type="text/javascript"></script>
-    <script src="/js/string.utils.js" type="text/javascript"></script>
-    <script src="js/tooltip_text.js" type="text/javascript"></script>
-    <script src="js/rich_text_editor.js" type="text/javascript"></script>
-    
-    <script src="js/popup.js" type="text/javascript"></script>
-    <script src="js/manage.js" type="text/javascript"></script>
-    <script src="js/manage_upload.js" type="text/javascript"></script>
-    <script src="js/manage_tooltips.js" type="text/javascript"></script>
-    
-    <script src="js/edit_page.js" type="text/javascript"></script>
-    <script src="js/edit_photo.js" type="text/javascript"></script>
-    <script src="js/edit_product.js" type="text/javascript"></script>
-    <script src="js/edit_video.js" type="text/javascript"></script>
-    <script src="js/edit_tab.js" type="text/javascript"></script>
-    <script src="js/edit_social_config.js" type="text/javascript"></script>
-    <script src="js/edit_profile.js" type="text/javascript"></script>
-    <script src="js/invite_friends.js" type="text/javascript"></script>
-    <script src="js/edit_store.js" type="text/javascript"></script>
-    <script src="js/social_post.js" type="text/javascript"></script>
-    <script src="js/account_limit.js" type="text/javascript"></script>
+        <!-- Combo-handled YUI JS files: --> 
+        <script type="text/javascript" src="http://yui.yahooapis.com/combo?2.9.0/build/yahoo-dom-event/yahoo-dom-event.js&2.9.0/build/animation/animation-min.js&2.9.0/build/element/element-min.js&2.9.0/build/container/container-min.js&2.9.0/build/menu/menu-min.js&2.9.0/build/button/button-min.js&2.9.0/build/editor/editor-min.js"></script> 
 
-    <script src="js/user_admin.js" type="text/javascript"></script>
+        <script src="js/tooltip_text.js" type="text/javascript"></script>
+        <script src="js/rich_text_editor.js" type="text/javascript"></script>
+        
+        <script src="js/popup.js" type="text/javascript"></script>
+        <script src="js/manage.js" type="text/javascript"></script>
+        <script src="js/manage_upload.js" type="text/javascript"></script>
+        <script src="js/manage_tooltips.js" type="text/javascript"></script>
+        
+        <script src="js/edit_page.js" type="text/javascript"></script>
+        <script src="js/edit_photo.js" type="text/javascript"></script>
+        <script src="js/edit_product.js" type="text/javascript"></script>
+        <script src="js/edit_video.js" type="text/javascript"></script>
+        <script src="js/edit_tab.js" type="text/javascript"></script>
+        <script src="js/edit_social_config.js" type="text/javascript"></script>
+        <script src="js/edit_profile.js" type="text/javascript"></script>
+        <script src="js/invite_friends.js" type="text/javascript"></script>
+        <script src="js/edit_store.js" type="text/javascript"></script>
+        <script src="js/social_post.js" type="text/javascript"></script>
+        <script src="js/account_limit.js" type="text/javascript"></script>
+
+        <script src="js/user_admin.js" type="text/javascript"></script>
+
+    <? endif; ?>
+    
+    <? if( $include_order ): ?>
+        <script src="js/order.js" type="text/javascript"></script>
+    <? endif; ?>
 
 </head>
 <body>
