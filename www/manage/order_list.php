@@ -67,6 +67,9 @@
         $order_list_html .= $html;
     }
     
+    $include_order = FALSE;
+    $include_editor = FALSE;
+    
     include_once "templates/order_list.html";
 
 ?>

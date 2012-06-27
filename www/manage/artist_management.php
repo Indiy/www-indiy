@@ -182,6 +182,10 @@
     
     $artist_data = get_artist_data($artistID);
     $artist_data_json = json_encode($artist_data);
+    
+    $include_order = FALSE;
+    $include_editor = TRUE;
+    
 
     require_once 'header.php';
     
