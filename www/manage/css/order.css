@@ -148,6 +148,9 @@
 }
 
 #order .edit_shipping .input_line {
+    font-size: 15px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
     padding-bottom: 10px;
 }
 
