@@ -172,5 +172,9 @@
     cursor: pointer;
 }
 
+#order .refund {
+    padding-bottom: 20px;
+}
+
 
 
