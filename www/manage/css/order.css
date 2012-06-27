@@ -138,6 +138,22 @@
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
 }
+#order .shipping {
+    padding-bottom: 20px;
+}
+
+#order .edit_shipping {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#order .edit_shipping .input_line {
+    padding-bottom: 10px;
+}
+
+#order .edit_shipping .tracking input {
+    width: 200px;
+}
 
 #order button {
     min-width: 180px;
