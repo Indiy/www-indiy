@@ -19,24 +19,24 @@
     $charge_amount = $order['charge_amount'];
     $shipping_info = json_decode($order['shipping_json'],TRUE);
     $payment_info = json_decode($order['payment_json'],TRUE);
+    $order_state = $order['state'];
     
-    if( $order['state'] == 'PENDING_CONFIRM' )
+    if( $order_state == 'PENDING_CONFIRM' )
         $order_status = "Waiting For Customer Confirmation";
-    else if( $order['state'] == 'PENDING_PAYMENT' )
+    else if( $order_state == 'PENDING_PAYMENT' )
         $order_status = "Payment Processing Pending";
-    else if( $order['state'] == 'PENDING_SHIPMENT' )
+    else if( $order_state == 'PENDING_SHIPMENT' )
         $order_status = "Waiting For Shipment";
-    else if( $order['state'] == 'SHIPPED' )
+    else if( $order_state == 'SHIPPED' )
         $order_status = "Shipped";
-    else if( $order['state'] == 'CLOSED' )
+    else if( $order_state == 'CLOSED' )
         $order_status = "Closed";
-    else if( $order['state'] == 'CANCELED' )
+    else if( $order_state == 'CANCELED' )
         $order_status = "Canceled";
-    else if( $order['state'] == 'ABANDONED' )
+    else if( $order_state == 'ABANDONED' )
         $order_status = "Order Abandoned";
     else
         $order_status = "Unknown";
-        
         
     $order_items = array();
     $order_item_html = "";

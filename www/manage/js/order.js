@@ -25,6 +25,7 @@ function refundOrder()
         success: function(data) 
         {
             $('#order .status').html("Canceled");
+            $('#order .refund').hide();
         },
         error: function()
         {

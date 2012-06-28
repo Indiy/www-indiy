@@ -41,9 +41,11 @@
     </div>
     <div class='hsep'></div>
     <div class='title'>Admin Operations</div>
-    <div class='refund'>
-        <button onclick='confirmRefund();'>Refund Order</button>
-    </div>
+    <? if( $order_state != "CANCELED" ): ?>
+        <div class='refund'>
+            <button onclick='confirmRefund();'>Refund Order</button>
+        </div>
+    <? endif; ?>
     <div class='hsep'></div>
     <div class='edit_shipping'>
         <div class='input_line'>
