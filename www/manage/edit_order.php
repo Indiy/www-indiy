@@ -20,6 +20,9 @@
     $shipping_info = json_decode($order['shipping_json'],TRUE);
     $payment_info = json_decode($order['payment_json'],TRUE);
     $order_state = $order['state'];
+    $ship_date = $order['ship_date'];
+    if( !$ship_date )
+        $ship_date = "None";
     
     if( $order_state == 'PENDING_CONFIRM' )
         $order_status = "Waiting For Customer Confirmation";
