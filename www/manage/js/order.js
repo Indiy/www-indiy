@@ -24,9 +24,10 @@ function refundOrder()
         dataType: 'json',
         success: function(data) 
         {
-            $('#order .status').html("Canceled");
+            $('#order #order_status').html("Canceled");
             $('#order .refund').hide();
             $('#order .edit_shipping').hide();
+            window.alert("Order refunded.");
         },
         error: function()
         {
