@@ -110,6 +110,23 @@
         $cancel_url = "cart.php?abandon_order=1&artist_id=$artist_id";
         
         include_once 'templates/confirm_order.html';
+        
+        $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id'"));
+
+        $to = $artist['email'];
+        $subject = "Order Made on MyArtistDNA";
+        $message = <<<END
+Your store on MyArtistDNA just got an order.  Login to your admin portal to see details on the order.
+
+http://www.myartistdna.com/manage
+
+Be Heard. Be Seen. Be Independent.
+        
+END;
+
+        $from = "no-reply@myartistdna.com";
+        $headers = "From:" . $from;
+        mail($to,$subject,$message,$headers);
     }
     else  
     {
