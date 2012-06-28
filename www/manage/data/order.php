@@ -27,9 +27,12 @@
     }
     exit();
     
+    $postedValues = array();
     
     function do_POST()
     {
+        global $postedValues;
+        
         $order_id = $_REQUEST["order_id"];
         $method = $_REQUEST["refund"];
         
@@ -55,12 +58,16 @@
     
     function do_refund($order_id)
     {
+        global $postedValues;
+
         $order = mf(mq("SELECT * FROM orders WHERE id='$order_id'"));
         
         $payment_info = json_decode($order['payment_json'],TRUE);
         $transation_id = $payment_info['transaction_id'];
         $resArray = CallRefundTransaction($transation_id);
         $ack = strtoupper($resArray["ACK"]);
+        $postedValues['paypal_res'] = $resArray;
+
         if( $ack == "SUCCESS" || $ack == "SUCESSWITHWARNING" )
         {
             $updates = array("state" => "CANCELED");
@@ -69,13 +76,14 @@
         }
         else
         {
-            var_dump($resArray);
             return TRUE;
         }
     }
     
     function do_ship($order_id)
     {
+        global $postedValues;
+
         $tracking_number = $_REQUEST['tracking_number'];
         $ship_time = strtotime($_REQUEST['ship_date']);
         if( $ship_time === FALSE )
