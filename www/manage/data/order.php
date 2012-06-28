@@ -60,7 +60,9 @@
         else if( $method == "ship" )
         {
             if( do_ship($order_id) )
-            
+                $postedValues['failure'] = "1";
+            else
+                $postedValues['success'] = "1";
         }
         
         $postedValues['postedValues'] = $_REQUEST;
@@ -71,8 +73,6 @@
     
     function do_refund($order_id)
     {
-        $postedValues = array();
-    
         $order = mf(mq("SELECT * FROM orders WHERE id='$order_id'"));
         
         $payment_info = json_decode($order['payment_json'],TRUE);
@@ -90,6 +90,32 @@
             var_dump($resArray);
             return TRUE;
         }
+    }
+    
+    function do_ship($order_id)
+    {
+        $tracking_number = $_REQUEST['tracking_number'];
+        $ship_time = strtotime($_REQUEST['ship_date']);
+        if( $ship_time === FALSE )
+            $ship_time = time();
+        
+        $ship_date = strftime("%F %T",$ship_time);
+
+        $updates = array("state" => "SHIPPED",
+                         "ship_date" => $ship_date,
+                         );
+
+        if( $tracking_number )
+        {
+            $order = mf(mq("SELECT * FROM orders WHERE id='$order_id'"));
+            $shipping_info = json_decode($order['shipping_json'],TRUE);
+            $shipping_info['tracking_number'] = $tracking_number;
+            $shipping_json = json_encode($shipping_info);
+            $updates['shipping_json'] = $shipping_json;
+        }
+        
+        mysql_update('orders',$updates,'id',$order_id);
+        return FALSE;
     }
     
 ?>
