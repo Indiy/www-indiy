@@ -28,27 +28,10 @@
     exit();
     
     
-    function get_data($id)
-    {
-        $row = mf(mq("SELECT * FROM mydna_musicplayer_content WHERE id='$id'"));
-        
-        array_walk($row,cleanup_row_element);
-        
-        $image_path = "../artists/images/" . $row['image'];
-        if( !empty($row['image']) )
-            $row['image_url'] = $image_path;
-        else
-            $row['image_url'] = "images/photo_video_01.jpg";
-        
-        return $row;
-    }
-    
-    
     function do_POST()
     {
         $order_id = $_REQUEST["order_id"];
         $method = $_REQUEST["refund"];
-
         
         if( $method == "refund" )
         {
@@ -66,7 +49,6 @@
         }
         
         $postedValues['postedValues'] = $_REQUEST;
-        $postedValues['tab_data'] = get_data($tab_id);
         echo json_encode($postedValues);
         exit();
     }
