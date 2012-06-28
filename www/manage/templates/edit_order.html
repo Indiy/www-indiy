@@ -45,17 +45,17 @@
         <div class='refund'>
             <button onclick='confirmRefund();'>Refund Order</button>
         </div>
+        <div class='hsep'></div>
+        <div class='edit_shipping'>
+            <div class='input_line'>
+                Order Ship Date: <input id='tracking_ship_date' />
+            </div>
+            <div class='input_line tracking'>
+                Tracking Number (optional): <input id='tracking_number' />
+            </div>
+            <button onclick='markShipped();'>Mark Order Shipped</button>
+        </div>
     <? endif; ?>
-    <div class='hsep'></div>
-    <div class='edit_shipping'>
-        <div class='input_line'>
-            Order Ship Date: <input id='tracking_ship_date'>
-        </div>
-        <div class='input_line tracking'>
-            Tracking Number (optional): <input id='tracking_number'>
-        </div>
-        <button onclick='markShipped();'>Mark Order Shipped</div>
-    </div>
 </div>
 
 </section>
