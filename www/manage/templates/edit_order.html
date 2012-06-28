@@ -33,11 +33,14 @@
     </div>
     <div class='shipping'>
         <div class='title'>Shipping Address:</div>
-        <div class='address'><?=$shipping_info['name'];?></div>
-        <div class='address'><?=$shipping_info['street1'];?></div>
-        <div class='address'><?=$shipping_info['street2'];?></div>
-        <div class='address'><?=$shipping_info['city'];?>, <?=$shipping_info['state'];?>, <?=$shipping_info['zip'];?></div>
-        <div class='address'><?=$shipping_info['phone_number'];?></div>
+        <div class='address'>Name: <?=$shipping_info['name'];?></div>
+        <div class='address'>Street Line 1: <?=$shipping_info['street1'];?></div>
+        <div class='address'>Street Line 2: <?=$shipping_info['street2'];?></div>
+        <div class='address'>City, State, Zip: <?=$shipping_info['city'];?>, <?=$shipping_info['state'];?>, <?=$shipping_info['zip'];?></div>
+        <div class='address'>Phone Number: <?=$shipping_info['phone_number'];?></div>
+        <? if( $shipping_info['tracking_number'] ): ?>
+            <div class='address'>Tracking Number: <?=$shipping_info['tracking_number'];?></div>
+        <? endif; ?>
     </div>
     <div class='hsep'></div>
     <div class='title'>Admin Operations</div>
