@@ -34,7 +34,7 @@
         global $postedValues;
         
         $order_id = $_REQUEST["order_id"];
-        $method = $_REQUEST["refund"];
+        $method = $_REQUEST["method"];
         
         if( $method == "refund" )
         {
@@ -49,6 +49,10 @@
                 $postedValues['failure'] = "1";
             else
                 $postedValues['success'] = "1";
+        }
+        else
+        {
+            header("HTTP/1.0 400 Unknown method");
         }
         
         $postedValues['postedValues'] = $_REQUEST;
