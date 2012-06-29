@@ -34,12 +34,32 @@
             <input id='price' type="text" name="price" value="" class='right_text' />
         </div>
         <div class='input_container'>
-            <div class='left_label'>Size <small><small>(Separated by commas)</small></small></div>
-            <input id='size' type="text" name="size" value="" class='right_text' />
+            <div class='left_label'>Product Type</div>
+            <div id='type_group' class='right_box'>
+                <input type="radio" name="product_type" value="DIGITAL" class="radio" onclick="clickProductType('DIGITAL');"/> Yes
+                <input type="radio" name="product_type" value="PHYSICAL" class="radio" onclick="clickProductType('PHYSICAL');"/> No
+            </div>
         </div>
-        <div class='input_container'>
-            <div class='left_label'>Colors <small><small>(Separated by commas)</small></small></div>
-            <input id='color' type="text" name="color" value="" class='right_text' />
+        <div id='type_digital'>
+            <div class='left_label'>Digital Download File</div>
+            <div class='right_file_filename'>
+                <span><input id='digital_download1' type="file" name="audio" /></span>
+                <div id='digital_download1_filename_container' class='filename'></div>
+            </div>
+        </div>
+        <div id='type_physical'>
+            <div class='input_container'>
+                <div class='left_label'>Shipping<span class='required'>*</span></div>
+                <input id='shipping' type="text" name="shipping" value="" class='right_text' />
+            </div>
+            <div class='input_container'>
+                <div class='left_label'>Size <small><small>(Separated by commas)</small></small></div>
+                <input id='size' type="text" name="size" value="" class='right_text' />
+            </div>
+            <div class='input_container'>
+                <div class='left_label'>Colors <small><small>(Separated by commas)</small></small></div>
+                <input id='color' type="text" name="color" value="" class='right_text' />
+            </div>
         </div>
         <div class='submit_branding_container'>
             <input type="submit" name="submit" class='left_submit' value="Submit" />

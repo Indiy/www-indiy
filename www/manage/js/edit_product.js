@@ -10,6 +10,7 @@ function showProductPopup(product_index)
     
     $('#edit_product #artist_id').val(g_artistId);
     clearFileElement('#edit_product #product_image');
+    clearFileElement('#edit_product #digital_download1');
 
     if( product_index !== false )
     {
@@ -32,6 +33,16 @@ function showProductPopup(product_index)
         $('#edit_product #price').val(product.price);
         $('#edit_product #size').val(product.size);
         $('#edit_product #color').val(product.color);
+        
+        if( product.type == 'DIGITAL' )
+        {
+            $('#edit_product input[name=product_type]:eq(0)').attr('checked','checked');
+        }
+        else
+        {
+            $('#edit_product input[name=product_type]:eq(1)').attr('checked','checked');
+        }
+        clickProductType(product.type);
     }
     else
     {
@@ -42,6 +53,10 @@ function showProductPopup(product_index)
         $('#edit_product #price').val("");
         $('#edit_product #size').val("");
         $('#edit_product #color').val("");
+        
+        $('#edit_product input[name=product_type]:eq(0)').attr('checked','checked');
+        clickProductType("DIGITAL");
+        
     }
     showPopup('#edit_product');
     return false;
@@ -90,6 +105,8 @@ function onAddProductSubmit()
         var price = $('#edit_product #price').val();
         var size = $('#edit_product #size').val();
         var color = $('#edit_product #color').val();
+        var type = $('#edit_page input[@name=product_type]:checked').val();
+        var shipping = $('#edit_product #shipping').val();
         
         form_data.append('artistid',artist_id);
         form_data.append('id',product_id);
@@ -101,12 +118,23 @@ function onAddProductSubmit()
         form_data.append('sku','');
         form_data.append('size',size);
         form_data.append('color',color);
+        form_data.append('type',type);
+        form_data.append('shipping',shipping);
         form_data.append('ajax',true);
         
         var product_image = $('#edit_product #product_image')[0];
         if( product_image.files && product_image.files.length > 0 )
         {
             form_data.append('file',product_image.files[0]);
+        }
+        
+        if( type == 'DIGITAL' )
+        {
+            var digital_download1 = $('#edit_product #digital_download1')[0];
+            if( digital_download1.files && digital_download1.files.length > 0 )
+            {
+                form_data.append('digital_download1',digital_download1.files[0]);
+            }
         }
     }
     
@@ -126,5 +154,17 @@ function onProductSuccess(data)
     updateStoreList();
 }
 
-
+function clickProductType(type)
+{
+    if( product.type == 'DIGITAL' )
+    {
+        $('#edit_product #type_physical').hide();
+        $('#edit_product #type_digital').show();
+    }
+    else
+    {
+        $('#edit_product #type_digital').hide();
+        $('#edit_product #type_physical').show();
+    }
+}
 

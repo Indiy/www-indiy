@@ -988,10 +988,6 @@
         else
             $row['facebook'] = FALSE;
         
-        $store_check = mf(mq("SELECT * FROM mydna_musicplayer_ecommerce WHERE userid='$id' LIMIT 1"));
-        $paypalEmail = $store_check["paypal"];
-        $row['paypal_email'] = $paypalEmail;
-        
         $logo = $row['logo'];
         $logo_path = "/artists/images/$logo";
         if( $row['logo'] )
