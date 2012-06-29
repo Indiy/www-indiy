@@ -176,10 +176,6 @@
         $record_artistDetail['facebook'] = FALSE;
     }
     
-    $store_check = mf(mq("SELECT * FROM `[p]musicplayer_ecommerce` WHERE `userid`='$artistID' LIMIT 1"));
-    $paypalEmail = $store_check["paypal"];
-    $record_artistDetail['paypal_email'] = $paypalEmail;
-    
     $artist_data = get_artist_data($artistID);
     $artist_data_json = json_encode($artist_data);
     
@@ -266,8 +262,7 @@ $(document).ready(showFirstInstructions);
             
             <h6>Store</h6>
             <ul>
-                <li><a onclick='showStoreSettings();' title='Edit Store Settings'>Edit Settings</a></li>
-                <li><a onclick='showStoreSettings();' title='Add a product to your store'>Add Product</a></li>
+                <li><a onclick='showProductPopup();' title='Add a product to your store'>Add Product</a></li>
                 <li><a href="order_list.php?artist_id=<?=$artistID;?>" title='List of Customer Orders'>Order List</a></li>
             </ul>
             <h6>Misc</h6>
