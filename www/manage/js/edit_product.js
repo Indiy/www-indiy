@@ -156,7 +156,7 @@ function onProductSuccess(data)
 
 function clickProductType(type)
 {
-    if( product.type == 'DIGITAL' )
+    if( type == 'DIGITAL' )
     {
         $('#edit_product #type_physical').hide();
         $('#edit_product #type_digital').show();
