@@ -31,6 +31,7 @@ function showProductPopup(product_index)
         
         $('#edit_product #description').val(product.description);
         $('#edit_product #price').val(product.price);
+        $('#edit_product #shipping').val(product.shipping);
         $('#edit_product #size').val(product.size);
         $('#edit_product #color').val(product.color);
         
@@ -51,6 +52,7 @@ function showProductPopup(product_index)
         $('#edit_product #product_image_container').empty();
         $('#edit_product #description').val("");
         $('#edit_product #price').val("");
+        $('#edit_product #shipping').val("0.00");
         $('#edit_product #size').val("");
         $('#edit_product #color').val("");
         
