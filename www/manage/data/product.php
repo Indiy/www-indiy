@@ -41,7 +41,7 @@ function get_product_data($product_id)
 
 function do_POST()
 {
-    $getid = $_POST["id"];
+    $product_id = $_POST["id"];
     $artist_id = $_POST["artistid"];
     
     if( is_uploaded_file($_FILES["file"]["tmp_name"]) ) 
@@ -52,10 +52,10 @@ function do_POST()
     } 
     else 
     {
-        if( $getid != "" ) 
+        if( $product_id != "" ) 
         {
-            $productss = mf(mq("SELECT `image` FROM mydna_musicplayer_ecommerce_products WHERE id='$getid'"));
-            $image = $productss["image"];	
+            $product = mf(mq("SELECT image FROM mydna_musicplayer_ecommerce_products WHERE id='$product_id'"));
+            $image = $product["image"];	
         } 
         else 
         {
@@ -63,41 +63,67 @@ function do_POST()
         }
     }
     
-    $origin = $_POST["origin"];
-    $sale = $_POST["sale"];
-    $page = $_POST["page"];
     $name = my($_POST["name"]);
-    $newvideo = $_POST["video"];		
-    $productdescription = my($_POST["description"]);
+    $description = my($_POST["description"]);
     $price = str_replace("$", "", $_POST["price"]);
-    $discount = $_POST["discount"];
-    $sku = $_POST["sku"];
-    $newsize = $_POST["size"];
-    $newcolor = $_POST["color"];
-    $newstock = "unlimited";
-    $manufacturer = $_POST["manufacturer"];
-    $newtags = my($_POST["tags"]);
-    $newfilename = "";
+    $shipping = str_replace("$", "", $_POST["shipping"]);
+    $size = $_POST["size"];
+    $color = $_POST["color"];
+    $tags = $_POST["tags"];
+    $type = $_POST["type"];
     
-    $tables = "artistid|page|stock|origin|subcat|name|filename|description|image|price|discount|sku|sale|manufacturer|tags|size|color";
-    $values = "$artist_id|$page|$newstock|$origin|$subcat|$name|$newfilename|$productdescription|$image|$price|$discount|$sku|$sale|$manufacturer|$newtags|$newsize|$newcolor";
+    $values = array("artistid" => $artist_id,
+                    "name" => $name,
+                    "description" => $description,
+                    "image" => $image,
+                    "price" => $price,
+                    "shipping" => $shipping,
+                    "tags" => $tags,
+                    "size" => $size,
+                    "color" => $color,
+                    "type" => $type,
+                    );
     
-    if( $getid != "" ) 
+    if( $product_id != "" ) 
     {
-        update("mydna_musicplayer_ecommerce_products",$tables,$values,"id",$getid);
+        mysql_update("mydna_musicplayer_ecommerce_products",$values,"id",$product_id);
     } 
     else 
     {
-        insert("mydna_musicplayer_ecommerce_products",$tables,$values);
-        $getid = mysql_insert_id();
+        mysql_insert("mydna_musicplayer_ecommerce_products",$values);
+        $product_id = mysql_insert_id();
     }
+    
+    if( $type == "DIGITAL" )
+    {
+        if( is_uploaded_file($_FILES["digital_download1"]["tmp_name"]) ) 
+        {
+            $upload_filename = basename($_FILES["digital_download1"]["name"]);
+            $extension = pathinfo($upload_filename,PATHINFO_EXTENSION);
+            $rand = rand(100000,999999);
+            $filename =  "$rand.$extension";
+            $dest = PATH_TO_ROOT . "artists/digital_downloads/$filename";
+            
+            @move_uploaded_file($_FILES['file']['tmp_name'],$dest);
+            $image = $productimage;
+            
+            $values = array("product_id" => $product_id,
+                            "upload_filename" => $upload_filename,
+                            "filename" => $filename,
+                            );
+                            
+            mysql_insert("product_files",$values);
+        }
+    }
+
+    
     $postedValues['imageSource'] = $productimage;
     $postedValues['success'] = "1";
     $postedValues['postedValues'] = $_REQUEST;
 
     if( $_POST['ajax'] )
     {
-        $postedValues['product_data'] = get_product_data($getid);
+        $postedValues['product_data'] = get_product_data($product_id);
         echo json_encode($postedValues);
         exit();
     }
