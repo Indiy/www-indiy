@@ -96,7 +96,7 @@
             if( $type == 'DIGITAL' )
                 $contains_digital_items = TRUE;
             else
-                $all_digital = FALSE:
+                $all_digital = FALSE;
             
             $order_item = array("quantity" => $quantity,
                                 "description" => $description,
