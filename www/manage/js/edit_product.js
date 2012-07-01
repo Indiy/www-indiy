@@ -1,12 +1,14 @@
 
 
 var g_productIndex = false;
+var g_digitalDownloadRemoveList = "";
 
 function showProductPopup(product_index)
 {
     g_productIndex = product_index;
     g_removeSong = false;
     g_removeImage = false;
+    g_digitalDownloadRemoveList = "";
     
     $('#edit_product #artist_id').val(g_artistId);
     clearFileElement('#edit_product #product_image');
@@ -143,6 +145,7 @@ function onAddProductSubmit()
         form_data.append('color',color);
         form_data.append('type',type);
         form_data.append('shipping',shipping);
+        form_data.append('remove_digital_downloads',g_digitalDownloadRemoveList);
         form_data.append('ajax',true);
         
         var product_image = $('#edit_product #product_image')[0];
@@ -193,6 +196,13 @@ function clickProductType(type)
 
 function removeDigitalFile(index)
 {
+    var product = g_productList[g_productIndex];
+    var file = product.digital_downloads[index];
+    var id = file.id;
+    $('#edit_product #downloads #file_' + index).hide();
+    if( g_digitalDownloadRemoveList.length > 0 )
+        g_digitalDownloadRemoveList += ",";
+    g_digitalDownloadRemoveList += id;
     return false;
 }
 
