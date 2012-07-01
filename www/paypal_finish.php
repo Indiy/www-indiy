@@ -18,7 +18,7 @@
     $shippping_amount = $order_data['shipping_amount'];
     $charge_amount = $order_data['charge_amount'];
     
-    $fan_email = $order_data['email'];
+    $fan_email = $order_data['customer_email'];
     
     
     $resArray = ConfirmPayment( $order_data['charge_amount'] );
@@ -96,7 +96,7 @@
             $quantity = $item['quantity'];
             $type = $items['type'];
             
-            print "product_type: $product_type\n";
+            print "product_type: $type\n";
             
             if( $type == 'DIGITAL' )
                 $contains_digital_items = TRUE;
@@ -170,6 +170,7 @@
         print "Contains digital: $contains_digital_items\n";
         print "Fan email: $fan_email\n";
         print "Fan needs register: $fan_needs_register\n";
+        print "All digital: $all_digital\n";
         
         include_once 'templates/finish_order.html';
         
