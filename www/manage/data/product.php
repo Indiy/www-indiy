@@ -57,6 +57,9 @@ function do_POST()
     $tags = $_POST["tags"];
     $type = $_POST["type"];
     
+    if( $type == "DIGITAL" )
+        $shipping = 0.0;
+    
     $values = array("artistid" => $artist_id,
                     "name" => $name,
                     "description" => $description,
