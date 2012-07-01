@@ -104,12 +104,15 @@ function do_POST()
         if( isset($_POST["remove_digital_downloads"]) )
         {
             $remove_digital_downloads = $_POST["remove_digital_downloads"];
-            $remove_list = explode(',',$remove_digital_downloads);
-            foreach( $remove_list as $file_id )
+            if( strlen($remove_digital_downloads) > 0 )
             {
-                $sql = "DELETE FROM product_files WHERE id='$file_id'";
-                mq($sql);
-                $postedValues['delete_sql'] = $sql;
+                $remove_list = explode(',',$remove_digital_downloads);
+                foreach( $remove_list as $file_id )
+                {
+                    $sql = "DELETE FROM product_files WHERE id='$file_id'";
+                    mq($sql);
+                    $postedValues['delete_sql'] = $sql;
+                }
             }
         }
     }
