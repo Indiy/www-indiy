@@ -55,6 +55,7 @@ function showProductPopup(product_index)
                 html += " <div class='name'></div>".format(file.upload_filename);
                 html += " <button onclick='removeDigitalFile({0});'><button>".format(i);
                 html += "</div>";
+                $('#edit_product #downloads').append(html);
             }
         }
         else
