@@ -53,6 +53,29 @@
             <div class='description'>
                 Please write down your order number so you can check the status of your order in the future.
             </div>
+            
+            <? if( $contains_digital_items ): ?>
+                <? if($fan_needs_register): ?>
+                    <div class='need_register'>
+                        Your order has digital items.  Please create a password for your account.<br/>
+                        <br/>
+                        Username: <?=$fan_email;?><br/>
+                        Password: <input id='password' type='password'/><br/>
+                        Confirm Password: <input id='confirm_password' type='password'><br/>
+                        <br/>
+                        <button onclick='orderCreateFanAccount();'>Create Account</button><br/>
+                        <br/>
+                        You can always log in to you account at <a href='<?=fan_site_url();?>'><?=fan_site_url();?></a>
+                    </div>
+                <? else: ?>
+                    <div class='has_digital'>
+                        Your order has digital items. You can log into your fan account to access your purchases.<br/>
+                        <br/>
+                        You can always log in to you account at <a href='<?=fan_site_url();?>'><?=fan_site_url();?></a>
+                    </div>
+                    
+                <? endif; ?>
+            <? endif; ?>
         </div>
     </body>
 </html>

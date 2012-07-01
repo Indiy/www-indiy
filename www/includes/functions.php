@@ -123,6 +123,11 @@
 	function trueSiteUrl() {
 		return $GLOBALS["trueSiteUrl"];
 	}
+    
+    function fan_site_url()
+    {
+        return trueSiteUrl . "/fan";
+    }
 	
 	/* Site Url */
 	function siteUrl() {
@@ -1073,7 +1078,7 @@
             $row['image'] = "/images/photo_video_01.jpg";
         
         $digital_downloads = array();
-        $q = mq("SELECT * FROM product_files WHERE product_id='$product_id'");
+        $q = mq("SELECT * FROM product_files WHERE product_id='$product_id' AND is_deleted=0");
         while( $file = mf($q) )
         {
             $digital_downloads[] = $file;
