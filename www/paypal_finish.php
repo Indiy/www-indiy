@@ -122,7 +122,7 @@
         
         print "<html><pre>\n";
         
-        print "Contains digital: $contains_digital_items\n"
+        print "Contains digital: $contains_digital_items\n";
         
         $fan_needs_register = TRUE;
         if( $contains_digital_items )
