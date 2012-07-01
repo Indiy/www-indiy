@@ -43,6 +43,25 @@ function showProductPopup(product_index)
         {
             $('#edit_product input[name=product_type]:eq(1)').attr('checked','checked');
         }
+        
+        if( product.digital_downloads && product.digital_downloads.length > 0 )
+        {
+            $('#edit_product #downloads').empty();
+            for( var i = 0 ; i < product.digital_downloads.length ; ++i )
+            {
+                var file = product.digital_downloads[i];
+                var html = "";
+                html += "<div class='file' id='file_{0}'>".format(i);
+                html += " <div class='name'></div>".format(file.upload_filename);
+                html += " <button onclick='removeDigitalFile({0});'><button>".format(i);
+                html += "</div>";
+            }
+        }
+        else
+        {
+            $('#edit_product #downloads').val("None");
+        }
+        
         clickProductType(product.type);
     }
     else
@@ -55,6 +74,7 @@ function showProductPopup(product_index)
         $('#edit_product #shipping').val("0.00");
         $('#edit_product #size').val("");
         $('#edit_product #color').val("");
+        $('#edit_product #downloads').val("None");
         
         $('#edit_product input[name=product_type]:eq(0)').attr('checked','checked');
         clickProductType("DIGITAL");
@@ -169,4 +189,11 @@ function clickProductType(type)
         $('#edit_product #type_physical').show();
     }
 }
+
+function removeDigitalFile(index)
+{
+    
+}
+
+
 
