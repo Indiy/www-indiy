@@ -101,7 +101,7 @@ function do_POST()
             mysql_insert("product_files",$values);
         }
         
-        if( $_POST["remove_digital_downloads"] )
+        if( isset($_POST["remove_digital_downloads"]) )
         {
             $remove_digital_downloads = $_POST["remove_digital_downloads"];
             $remove_list = explode(',',$remove_digital_downloads);
