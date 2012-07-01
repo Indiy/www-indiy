@@ -94,7 +94,7 @@
             $size = $item['size'];
             $price = $item['price'];
             $quantity = $item['quantity'];
-            $type = $items['type'];
+            $type = $item['type'];
             
             print "product_type: $type\n";
             
