@@ -18,6 +18,8 @@
     $shippping_amount = $order_data['shipping_amount'];
     $charge_amount = $order_data['charge_amount'];
     
+    $fan_email = $order_data['email'];
+    
     
     $resArray = ConfirmPayment( $order_data['charge_amount'] );
     $ack = strtoupper($resArray["ACK"]);
@@ -71,10 +73,16 @@
         $_SESSION['cart_id'] = '';
         $_SESSION['paypal_token'] = FALSE;
         
+        $contains_digital_items = FALSE;
+        $all_digital = TRUE;
+        
         $order_items = array();
         $order_item_html = "";
         
-        $q_order_items = mq("SELECT * FROM order_items WHERE order_id='$order_id'");
+        $sql = "SELECT * FROM order_items ";
+        $sql .= " JOIN mydna_musicplayer_ecommerce_products ON order_items.product_id = mydna_musicplayer_ecommerce_products.id ";
+        $sql .= " WHERE order_id='$order_id'";
+        $q_order_items = mq($sql);
         $i = 0;
         while( $item = mf($q_order_items) )
         {
@@ -83,11 +91,21 @@
             $size = $item['size'];
             $price = $item['price'];
             $quantity = $item['quantity'];
+            $type = $items['type'];
+            
+            if( $type == 'DIGITAL' )
+                $contains_digital_items = TRUE;
+            else
+                $all_digital = FALSE:
+            
             $order_item = array("quantity" => $quantity,
                                 "description" => $description,
                                 "product_id" => $item['product_id'],
                                 "color" => $color,
-                                "size" => $size);
+                                "size" => $size,
+                                "type" => $type,
+                                );
+            $order_items[] = $order_item;
                                 
             $num = $i + 1;
             $html = "";
@@ -100,6 +118,46 @@
             
             $order_item_html .= $html;
             $i++;
+        }
+        
+        $fan_needs_register = TRUE;
+        if( $contains_digital_items )
+        {
+            $fan_data = mf(mq("SELECT * FROM fans WHERE email='$fan_email'"));
+            if( $fan_data )
+            {
+                if( strlen($fan_data['password']) > 0 )
+                    $fan_needs_register = FALSE;
+            }
+            else
+            {
+                $fan_data = array("email" => $fan_email);
+                mysql_insert('fans',$fan_data);
+                $fan_data['id'] = mysql_insert_id();
+            }
+            $fan_id = $fan_data['id'];
+            
+            for( $i = 0 ; $i < count($order_items) ; $i++ )
+            {
+                $order_item = $order_items[$i];
+                $product_id = $order_item['product_id'];
+                $product = get_product_data($product_id);
+                $digital_downloads = $product['digital_downloads'];
+                for( $j = 0 ; $j < count($digital_downloads) ; ++$j )
+                {
+                    $download = $digital_downloads[$j];
+                    $product_file_id = $download['id'];
+                    $inserts = array("fan_id" => $fan_id,
+                                     "product_file_id" => $product_file_id,
+                                     );
+                    mysql_insert('fan_files',$inserts);
+                }
+            }
+            if( $all_digital )
+            {
+                $updates = array("state" => "CLOSED");
+                mysql_update('orders',$updates,'id',$order_id);
+            }
         }
         
         include_once 'templates/finish_order.html';

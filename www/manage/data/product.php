@@ -110,9 +110,8 @@ function do_POST()
                 $remove_list = explode(',',$remove_digital_downloads);
                 foreach( $remove_list as $file_id )
                 {
-                    $sql = "DELETE FROM product_files WHERE id='$file_id'";
-                    mq($sql);
-                    $postedValues['delete_sql'] = $sql;
+                    $updates = array("is_deleted" => 0);
+                    mysql_update('product_files',$updates,'id',$file_id);
                 }
             }
         }
