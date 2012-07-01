@@ -107,7 +107,7 @@ function onAddProductSubmit()
         var price = $('#edit_product #price').val();
         var size = $('#edit_product #size').val();
         var color = $('#edit_product #color').val();
-        var type = $('#edit_page input[@name=product_type]:checked').val();
+        var type = $('#edit_product input[@name=product_type]:checked').val();
         var shipping = $('#edit_product #shipping').val();
         
         form_data.append('artistid',artist_id);
