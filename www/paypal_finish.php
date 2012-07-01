@@ -79,6 +79,9 @@
         $order_items = array();
         $order_item_html = "";
         
+        print "<html><pre>\n";
+
+        
         $sql = "SELECT * FROM order_items ";
         $sql .= " JOIN mydna_musicplayer_ecommerce_products ON order_items.product_id = mydna_musicplayer_ecommerce_products.id ";
         $sql .= " WHERE order_id='$order_id'";
@@ -92,6 +95,8 @@
             $price = $item['price'];
             $quantity = $item['quantity'];
             $type = $items['type'];
+            
+            print "product_type: $product_type\n";
             
             if( $type == 'DIGITAL' )
                 $contains_digital_items = TRUE;
@@ -120,9 +125,7 @@
             $i++;
         }
         
-        print "<html><pre>\n";
         
-        print "Contains digital: $contains_digital_items\n";
         
         $fan_needs_register = TRUE;
         if( $contains_digital_items )
@@ -163,6 +166,10 @@
                 mysql_update('orders',$updates,'id',$order_id);
             }
         }
+
+        print "Contains digital: $contains_digital_items\n";
+        print "Fan email: $fan_email\n";
+        print "Fan needs register: $fan_needs_register\n";
         
         include_once 'templates/finish_order.html';
         
