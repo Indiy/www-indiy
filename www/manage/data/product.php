@@ -96,7 +96,8 @@ function do_POST()
     
     if( $type == "DIGITAL" )
     {
-        if( is_uploaded_file($_FILES["digital_download1"]["tmp_name"]) ) 
+        $tmp_file = $_FILES["digital_download1"]["tmp_name"];
+        if( is_uploaded_file($tmp_file) ) 
         {
             $upload_filename = basename($_FILES["digital_download1"]["name"]);
             $extension = pathinfo($upload_filename,PATHINFO_EXTENSION);
@@ -104,7 +105,7 @@ function do_POST()
             $filename =  "$rand.$extension";
             $dest = PATH_TO_ROOT . "artists/digital_downloads/$filename";
             
-            @move_uploaded_file($_FILES['file']['tmp_name'],$dest);
+            @move_uploaded_file($tmp_file,$dest);
             $image = $productimage;
             
             $values = array("product_id" => $product_id,
