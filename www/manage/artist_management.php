@@ -127,12 +127,8 @@
 	$product_list = array();
     while( $row = mysql_fetch_array($result_artistProduct) )
     {
-        array_walk($row,cleanup_row_element);
-        $image_path = "../artists/products/" . $row['image'];
-        if( !empty($row['image']) && file_exists($image_path) )
-            $row['image'] = $image_path;
-        else
-            $row['image'] = "images/photo_video_01.jpg";
+        $product_id = $row['id'];
+        $row = get_product_data($product_id);
         $product_list[] = $row;
     }
     $product_list_json = json_encode($product_list);

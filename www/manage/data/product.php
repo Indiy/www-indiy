@@ -24,21 +24,6 @@
     exit();
 
 
-function get_product_data($product_id)
-{
-    $row = mf(mq("SELECT * FROM mydna_musicplayer_ecommerce_products WHERE id='$product_id'"));
-    
-    array_walk($row,cleanup_row_element);
-    $image_path = "../artists/products/" . $row['image'];
-    if( !empty($row['image']) )
-        $row['image'] = $image_path;
-    else
-        $row['image'] = "images/photo_video_01.jpg";
-    
-    return $row;
-}
-
-
 function do_POST()
 {
     $product_id = $_POST["id"];
