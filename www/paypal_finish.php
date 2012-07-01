@@ -167,10 +167,10 @@
             }
         }
 
-        print "Contains digital: $contains_digital_items\n";
+        print "Contains digital: " . var_dump($contains_digital_items) . "\n";
         print "Fan email: $fan_email\n";
         print "Fan needs register: $fan_needs_register\n";
-        print "All digital: $all_digital\n";
+        print "All digital: " . var_dump($all_digital) . "\n";
         
         include_once 'templates/finish_order.html';
         
