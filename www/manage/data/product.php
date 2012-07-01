@@ -99,6 +99,7 @@ function do_POST()
                             );
                             
             mysql_insert("product_files",$values);
+            $postedValues['insert_sql'] = mysql_error();
         }
         
         if( isset($_POST["remove_digital_downloads"]) )
