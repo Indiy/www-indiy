@@ -1060,5 +1060,28 @@
         }
         return $cart_list;
     }
+    
+    function get_product_data($product_id)
+    {
+        $row = mf(mq("SELECT * FROM mydna_musicplayer_ecommerce_products WHERE id='$product_id'"));
+        
+        array_walk($row,cleanup_row_element);
+        $image_path = "/artists/products/" . $row['image'];
+        if( !empty($row['image']) )
+            $row['image'] = $image_path;
+        else
+            $row['image'] = "/images/photo_video_01.jpg";
+        
+        $digital_downloads = array();
+        $q = mq("SELECT * FROM product_files WHERE product_id='$product_id'");
+        while( $file = mf($q) )
+        {
+            $digital_downloads[] = $file;
+        }
+        $row['digital_downloads'] = $digital_downloads;
+        
+        return $row;
+    }
+
 
 ?>
