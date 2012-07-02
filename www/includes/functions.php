@@ -126,7 +126,7 @@
     
     function fan_site_url()
     {
-        return trueSiteUrl . "/fan";
+        return trueSiteUrl() . "/fan";
     }
 	
 	/* Site Url */
