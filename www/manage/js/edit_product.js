@@ -62,7 +62,7 @@ function showProductPopup(product_index)
         }
         else
         {
-            $('#edit_product #downloads').val("None");
+            $('#edit_product #downloads').html("None");
         }
         
         clickProductType(product.type);
@@ -77,7 +77,7 @@ function showProductPopup(product_index)
         $('#edit_product #shipping').val("0.00");
         $('#edit_product #size').val("");
         $('#edit_product #color').val("");
-        $('#edit_product #downloads').val("None");
+        $('#edit_product #downloads').html("None");
         
         $('#edit_product input[name=product_type]:eq(0)').attr('checked','checked');
         clickProductType("DIGITAL");
