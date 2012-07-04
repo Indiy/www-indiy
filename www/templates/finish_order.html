@@ -11,10 +11,12 @@
         
         <script src="/js/jquery.jplayer.js" type="text/javascript"></script>
         <script src="/js/string.utils.js" type="text/javascript"></script>
+        <script src="/js/order.js" type="text/javascript"></script>
         
         <script type="text/javascript">
             var g_trueSiteUrl = "<?=trueSiteUrl();?>";
             var g_artistId = <?=$artist_id;?>;
+            var g_registerToken = "<?=$register_token;?>";
         </script>
     </head>
     
@@ -63,7 +65,7 @@
                         Password: <input id='password' type='password'/><br/>
                         Confirm Password: <input id='confirm_password' type='password'><br/>
                         <br/>
-                        <button onclick='orderCreateFanAccount();'>Create Account</button><br/>
+                        <button onclick='createFanAccount();'>Create Account</button><br/>
                         <br/>
                         You can always log in to you account at <a href='<?=fan_site_url();?>'><?=fan_site_url();?></a>
                     </div>

@@ -79,8 +79,6 @@
         $order_items = array();
         $order_item_html = "";
         
-        //print "<html><pre>\n";
-        
         $sql = "SELECT * FROM order_items ";
         $sql .= " JOIN mydna_musicplayer_ecommerce_products ON order_items.product_id = mydna_musicplayer_ecommerce_products.id ";
         $sql .= " WHERE order_id='$order_id'";
@@ -94,8 +92,6 @@
             $price = $item['price'];
             $quantity = $item['quantity'];
             $type = $item['type'];
-            
-            //print "product_type: $type\n";
             
             if( $type == 'DIGITAL' )
                 $contains_digital_items = TRUE;
@@ -125,17 +121,30 @@
         }
         
         $fan_needs_register = TRUE;
+        $register_token = FALSE;
         if( $contains_digital_items )
         {
             $fan_data = mf(mq("SELECT * FROM fans WHERE email='$fan_email'"));
             if( $fan_data )
             {
                 if( strlen($fan_data['password']) > 0 )
+                {
                     $fan_needs_register = FALSE;
+                }
+                else
+                {
+                    $register_token = random_string(32);
+                    $fan_data['register_token'] = $register_token;
+                    $updates = array("register_token" => $register_token);
+                    mysql_update('fans',$updates,'id',$fan_data['id']);
+                }
             }
             else
             {
-                $fan_data = array("email" => $fan_email);
+                $register_token = random_string(32);
+                $fan_data = array("email" => $fan_email,
+                                  "register_token" => $register_token,
+                                  );
                 mysql_insert('fans',$fan_data);
                 $fan_data['id'] = mysql_insert_id();
             }
@@ -164,11 +173,6 @@
             }
         }
 
-        //print "Contains digital: "; var_dump($contains_digital_items);
-        //print "Fan email: $fan_email\n";
-        //print "Fan needs register: $fan_needs_register\n";
-        //print "All digital: "; var_dump($all_digital);
-        
         include_once 'templates/finish_order.html';
         
         $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id'"));
