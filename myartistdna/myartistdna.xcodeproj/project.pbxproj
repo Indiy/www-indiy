@@ -143,6 +143,17 @@
 		2D8D96F015998C5000AA3D1B /* edit_order.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = edit_order.html; path = templates/edit_order.html; sourceTree = "<group>"; };
 		2D8D96F115998EBF00AA3D1B /* order.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = order.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D8D96F2159AB7E600AA3D1B /* order.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = order.js; sourceTree = "<group>"; };
+		2D8D96FA15A1698200AA3D1B /* order.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = order.js; sourceTree = "<group>"; };
+		2D8D96FD15A26FE900AA3D1B /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
+		2D8D96FE15A27A8900AA3D1B /* fan_login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = fan_login_signup.js; sourceTree = "<group>"; };
+		2D8D970015A27DA000AA3D1B /* fan_index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fan_index.html; path = templates/fan_index.html; sourceTree = "<group>"; };
+		2D8D970115A27FA000AA3D1B /* login.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = login.php; sourceTree = "<group>"; };
+		2D8D970215A2818100AA3D1B /* fan_login.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fan_login.html; path = templates/fan_login.html; sourceTree = "<group>"; };
+		2D8D970415A281CB00AA3D1B /* fan_login_signup.css */ = {isa = PBXFileReference; name = fan_login_signup.css; path = css/fan_login_signup.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2D8D970515A4C55B00AA3D1B /* register.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = register.php; sourceTree = "<group>"; };
+		2D8D970615A4C56B00AA3D1B /* register.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = register.html; sourceTree = "<group>"; };
+		2D8D970915A5000800AA3D1B /* fan.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = fan.css; path = css/fan.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2D8D970A15A5007200AA3D1B /* login_signup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = login_signup.php; path = data/login_signup.php; sourceTree = "<group>"; };
 		2D98BF3D1480778500CE851D /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		2D98BF3E1480778500CE851D /* holder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holder.png; sourceTree = "<group>"; };
 		2D98BF3F1480778500CE851D /* play.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = play.jpg; sourceTree = "<group>"; };
@@ -1720,6 +1731,46 @@
 			name = templates;
 			sourceTree = "<group>";
 		};
+		2D8D96FC15A26FE900AA3D1B /* fan */ = {
+			isa = PBXGroup;
+			children = (
+				2D8D970715A4C73500AA3D1B /* data */,
+				2D8D970315A281B200AA3D1B /* css */,
+				2D8D96FF15A27D8600AA3D1B /* templates */,
+				2D8D96FD15A26FE900AA3D1B /* index.php */,
+				2D8D970115A27FA000AA3D1B /* login.php */,
+				2D8D970515A4C55B00AA3D1B /* register.php */,
+			);
+			path = fan;
+			sourceTree = "<group>";
+		};
+		2D8D96FF15A27D8600AA3D1B /* templates */ = {
+			isa = PBXGroup;
+			children = (
+				2D8D970015A27DA000AA3D1B /* fan_index.html */,
+				2D8D970215A2818100AA3D1B /* fan_login.html */,
+				2D8D970615A4C56B00AA3D1B /* register.html */,
+			);
+			name = templates;
+			sourceTree = "<group>";
+		};
+		2D8D970315A281B200AA3D1B /* css */ = {
+			isa = PBXGroup;
+			children = (
+				2D8D970915A5000800AA3D1B /* fan.css */,
+				2D8D970415A281CB00AA3D1B /* fan_login_signup.css */,
+			);
+			name = css;
+			sourceTree = "<group>";
+		};
+		2D8D970715A4C73500AA3D1B /* data */ = {
+			isa = PBXGroup;
+			children = (
+				2D8D970A15A5007200AA3D1B /* login_signup.php */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
 		2D98BF3A1480778500CE851D /* mad.fm */ = {
 			isa = PBXGroup;
 			children = (
@@ -1899,6 +1950,7 @@
 				2DF470471440B77F005538C7 /* css */,
 				2DF472C71440B77F005538C7 /* js */,
 				2D9E2FD81569F13600A76906 /* templates */,
+				2D8D96FC15A26FE900AA3D1B /* fan */,
 				2D9E2FDA1569F17D00A76906 /* player2.php */,
 				2D8D96E31595391C00AA3D1B /* order_status.php */,
 				2D8D96DC159199F000AA3D1B /* paypal_order_confirm.php */,
@@ -3083,6 +3135,8 @@
 				2D9E2FF7158413D900A76906 /* player_store.js */,
 				2D9E2FFC1585C8B600A76906 /* cart.js */,
 				2D8D96EC1597C40500AA3D1B /* search.js */,
+				2D8D96FA15A1698200AA3D1B /* order.js */,
+				2D8D96FE15A27A8900AA3D1B /* fan_login_signup.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
