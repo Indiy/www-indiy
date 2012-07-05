@@ -5,6 +5,12 @@
 
     $fan_id = $_SESSION['fan_id'];
     session_write_close();
+
+    if( !fan_id )
+    {
+        header("Location: /fan/");
+        die();
+    }
     
     $file_id = $_REQUEST['id'];
     $as_attachment = $_REQUEST['attachment'];
