@@ -120,6 +120,7 @@ function videoPlayIndex(index)
     volumeSetLevel(g_videoVolRatio);
     
     var video = g_videoList[index];
+    window.location.hash = '#video_id=' + video.id;
     
     loveChangedVideo(video.id,video.name);
     
