@@ -113,13 +113,13 @@ function fanSendRegToken()
             success: function(text) 
             {
                 var data = JSON.parse(text);
-                if( data['error'] )
+                if( data['success'] )
                 {
-                    window.alert("Failed to login, please check your email address and password.");
+                    $('#login_signup .register_token_sent').show();
                 }
                 else
                 {
-                    window.location = data['url'];
+                    window.alert("Failed to send alert email, please check your email address.");
                 }
             },
             error: function()
@@ -127,7 +127,7 @@ function fanSendRegToken()
                 window.alert("Failed to setup your account, please try again.");
             }
         });
-        $('#login_signup .register_token_sent').show();
+        
     }
     else
     {
