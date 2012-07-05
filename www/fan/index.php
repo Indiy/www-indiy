@@ -32,16 +32,15 @@
     $fan_files = array();
     $fan_files_html = "";
     
-    $sql = "SELECT * FROM fan_files ";
+    $sql = "SELECT fan_files.id AS id, product_files.upload_filename AS upload_filename ";
+    $sql .= " FROM fan_files ";
     $sql .= " JOIN product_files ON fan_files.product_file_id = product_files.id ";
-    $sql .= " WHERE fan_id='$fan_id' ";
+    $sql .= " WHERE fan_files.fan_id='$fan_id' ";
     $files_q = mq($sql);
     while( $file = mf($files_q) )
     {
         $file_id = $file['id'];
         $file_name = $file['upload_filename'];
-        $product_file_id = $file['product_file_id'];
-        
     
         $item = array("id" => $file_id,
                       "name" => $file_name,
