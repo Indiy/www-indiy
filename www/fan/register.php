@@ -5,25 +5,8 @@
     
     $register_token = $_REQUEST['token'];
     
-    if( !$register_token )
-    {
-        unknown_token();
-    }
-    
     $fan = mf(mq("SELECT * FROM fans WHERE register_token='$register_token'"));
-    
-    if( !fan )
-    {
-        unknown_token();
-    }
-    
-    $fan_email = $fan['email'];
-    
-    include_once 'templates/register.html';
-    
-    die();
-
-    function unknown_token()
+    if( !$fan )
     {
         echo <<<END
 
@@ -39,5 +22,9 @@
 END;
         die();
     }
-
+    
+    $fan_email = $fan['email'];
+    
+    include_once 'templates/register.html';
+    
 ?>
