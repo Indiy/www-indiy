@@ -20,6 +20,8 @@
     $fan_email = $fan['email'];
     
     include_once 'templates/register.html';
+    
+    die();
 
     function unknown_token()
     {
