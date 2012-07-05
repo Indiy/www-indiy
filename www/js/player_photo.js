@@ -73,6 +73,19 @@ function scrollPhotoToIndex(animate)
         $('#photo_list .content').scrollLeft(dest);
 }
 
+function photoChangeId( photo_id )
+{
+    for( var i = 0 ; i < g_photoList.length ; ++i )
+    {
+        var photo = g_photoList[i];
+        if( photo.id == photo_id )
+        {
+            photoShowIndex(i);
+            return;
+        }
+    }
+}
+
 function photoShowIndex( index ) 
 {
     setPlayerMode("photo");

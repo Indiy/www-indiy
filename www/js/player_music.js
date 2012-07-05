@@ -91,6 +91,19 @@ var g_songsPlayed = 0;
 var g_currentSongId = 0;
 var g_currentSongIndex = 0;
 
+function musicChangeId( song_id )
+{
+    for( var i = 0 ; i < g_musicList.length ; ++i )
+    {
+        var song = g_musicList[i];
+        if( song.id == song_id )
+        {
+            musicChange(i);
+            return;
+        }
+    }
+}
+
 function musicChange( index ) 
 {
     setPlayerMode("music");

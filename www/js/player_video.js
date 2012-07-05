@@ -100,6 +100,19 @@ function scrollVideoToIndex(animate)
 
 var g_videoCurrentIndex = 0;
 
+function videoChangeId(video_id)
+{
+    for( var i = 0 ; i < g_videoList.length ; ++i )
+    {
+        var video = g_videoList[i];
+        if( video.id == video_id )
+        {
+            videoPlayIndex(i);
+            return;
+        }
+    }
+}
+
 function videoPlayIndex(index)
 {
     g_videoCurrentIndex = index;
