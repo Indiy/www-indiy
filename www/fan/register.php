@@ -11,9 +11,9 @@
         echo <<<END
 
 <html>
-        Unknown Token<br/>
+        Unknown Registeration Code<br/>
         <form>
-            Enter Token: <input name='token'/><br/>
+            Enter Code: <input name='token'/><br/>
             <br/>
             <input type='submit' value='Submit'/><br/>
         </form>
