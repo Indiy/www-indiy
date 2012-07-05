@@ -99,6 +99,7 @@
         }
         
         $register_link = fan_site_url() . "/register.php?token=$register_token";
+        $register_generic_link = fan_site_url() . "/register.php";
         
         $to = $email;
         $subject = "MyArtistDNA Fan Account Registration";
@@ -109,6 +110,10 @@ Thank you for registering for a fan account at MyArtistDNA.
 Click the link below to verify your email address.
 
 $register_link
+
+Or go to $register_generic_link and enter the code:
+
+$register_token
 
 Be Heard. Be Seen. Be Independent.
 
