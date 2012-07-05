@@ -3,4 +3,4 @@
 RewriteEngine On
 RewriteRule . index.php
 
-XSendFile on
+#XSendFile on
