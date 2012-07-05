@@ -121,6 +121,7 @@
 		2D5DD4B114CCE4AF00566E9A /* cart.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = cart.php; sourceTree = "<group>"; };
 		2D64687B1593DD5400B9AD11 /* confirm_order.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = confirm_order.html; sourceTree = "<group>"; };
 		2D646885159B7BFF00B9AD11 /* order.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = order.php; sourceTree = "<group>"; };
+		2D64688A15A65B1C00B9AD11 /* player_tooltips.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_tooltips.js; sourceTree = "<group>"; };
 		2D64FD1014F8355E00C5C468 /* ipad.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = ipad.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D64FD1114F8735800C5C468 /* rich_text_editor.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = rich_text_editor.js; sourceTree = "<group>"; };
 		2D6DF95114BA4F4A00D0750E /* footer.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = footer.js; sourceTree = "<group>"; };
@@ -149,7 +150,7 @@
 		2D8D970015A27DA000AA3D1B /* fan_index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fan_index.html; path = templates/fan_index.html; sourceTree = "<group>"; };
 		2D8D970115A27FA000AA3D1B /* login.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = login.php; sourceTree = "<group>"; };
 		2D8D970215A2818100AA3D1B /* fan_login.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fan_login.html; path = templates/fan_login.html; sourceTree = "<group>"; };
-		2D8D970415A281CB00AA3D1B /* fan_login_signup.css */ = {isa = PBXFileReference; name = fan_login_signup.css; path = css/fan_login_signup.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2D8D970415A281CB00AA3D1B /* fan_login_signup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = fan_login_signup.css; path = css/fan_login_signup.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D8D970515A4C55B00AA3D1B /* register.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = register.php; sourceTree = "<group>"; };
 		2D8D970915A5000800AA3D1B /* fan.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = fan.css; path = css/fan.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D8D970A15A5007200AA3D1B /* login_signup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = login_signup.php; path = data/login_signup.php; sourceTree = "<group>"; };
@@ -3149,6 +3150,7 @@
 				2D9E2FEF157DC38900A76906 /* player_image.js */,
 				2D9E2FEE157C836400A76906 /* player_search.js */,
 				2D9E2FF7158413D900A76906 /* player_store.js */,
+				2D64688A15A65B1C00B9AD11 /* player_tooltips.js */,
 				2D9E2FFC1585C8B600A76906 /* cart.js */,
 				2D8D96EC1597C40500AA3D1B /* search.js */,
 				2D8D96FA15A1698200AA3D1B /* order.js */,
