@@ -71,7 +71,7 @@
         $_SESSION['fan_id'] = $fan['id'];
         $expire = time() + 60*24*60*60;
         $cookie_domain = str_replace("http://www.","",trueSiteUrl());
-        setcookie("FAN_EMAIL",fan['email'],$expire,"/",$cookie_domain);
+        setcookie("FAN_EMAIL",$fan['email'],$expire,"/",$cookie_domain);
         $output = array("success" => 1,
                         "url" => fan_site_url(),
                         );
@@ -88,7 +88,7 @@
         {
             $values = array("register_token" => $register_token,
                             );
-            mysql_update('fans',$values,'id',$fan_data['id']);
+            mysql_update('fans',$values,'id',$fan['id']);
         }
         else
         {
