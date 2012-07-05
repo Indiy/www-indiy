@@ -3,6 +3,8 @@ var MUSIC_IMAGE_PRELOAD_TIMEOUT = 3000;
 
 var g_musicIsPlaying = false;
 var g_musicVolRatio = 0.8;
+var g_jplayerReady = false;
+var g_musicStartIndex = 0;
 
 $(document).ready(musicOnReady);
 
@@ -10,24 +12,27 @@ function musicOnReady()
 {
     if( g_musicList.length == 0 )
         return;
+     
+    window.setTimeout(musicPreloadImages,MUSIC_IMAGE_PRELOAD_TIMEOUT);
+    $(window).resize(musicResizeBackgrounds);
+}
 
+function setupJplayer()
+{
     $('#jquery_jplayer').jPlayer({
-        ready: jplayerReady,
-        solution: "html, flash",
-        supplied: "mp3, oga",
-        swfPath: "/js/Jplayer.swf",
-        verticalVolume: true,
-        wmode: "window",
-        volume: 0.8
-    })
+                                 ready: jplayerReady,
+                                 solution: "html, flash",
+                                 supplied: "mp3, oga",
+                                 swfPath: "/js/Jplayer.swf",
+                                 verticalVolume: true,
+                                 wmode: "window",
+                                 volume: 0.8
+                                 })
     .bind($.jPlayer.event.ended,jplayerEnded)
     .bind($.jPlayer.event.timeupdate,jplayerTimeUpdate)
     .bind($.jPlayer.event.play,jplayerPlay)
     .bind($.jPlayer.event.pause,jplayerPause)
     .bind($.jPlayer.event.volumechange,jplayerVolume);
-     
-    window.setTimeout(musicPreloadImages,MUSIC_IMAGE_PRELOAD_TIMEOUT);
-    $(window).resize(musicResizeBackgrounds);
 }
 
 function musicHide()
@@ -82,7 +87,9 @@ function musicPlayPause()
 
 function jplayerReady() 
 {
-    musicChange(0);
+    g_jplayerReady = true;
+    
+    musicChange(g_musicStartIndex);
     var vol_ratio = 0.8;
     volumeSetLevel(vol_ratio);
 }
@@ -106,6 +113,13 @@ function musicChangeId( song_id )
 
 function musicChange( index ) 
 {
+    if( !g_jplayerReady )
+    {
+        g_musicStartIndex = index;
+        setupJplayer();
+        return;
+    }
+
     setPlayerMode("music");
     volumeSetLevel(g_musicVolRatio);
 

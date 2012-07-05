@@ -70,6 +70,15 @@ function generalOnReady()
         var photo_id = anchor_map['photo_id'];
         photoChangeId(photo_id);
     }
+    else
+    {
+        if( g_musicList.length > 0 )
+            musicChange(0);
+        else if( g_videoList.length > 0 )
+            videoPlayIndex(0);
+        else if( g_photoList.length > 0 )
+            photoShowIndex(0);
+    }
 }
 
 function showControls()
