@@ -48,9 +48,12 @@
                       );
         $fan_files[] = $item;
         
+        $url = "/fan/downloads/$file_name?id=$file_id";
+        
         $html = "";
         $html .= "<div class='file'>";
         $html .= " <div class='name'>$file_name</div>";
+        $html .= " <div class='download'><a href='$url'>download</a></div>";
         $html .= "</div>";
         $fan_files_html .= $html;
     }
