@@ -128,6 +128,11 @@
     {
         return trueSiteUrl() . "/fan";
     }
+    
+    function cart_base_url()
+    {
+        return $GLOBALS["cart_base_url"];
+    }
 	
 	/* Site Url */
 	function siteUrl() {
@@ -1018,10 +1023,10 @@
         
         return $total;
     }
-    function store_get_cart()
+    function store_get_cart($artist_id,$cart_id);
     {
-        $cart_id = $_SESSION['cart_id'];
-        if( !$cart_id )
+        $artist_cart_id = "$artist_id:$cart_id";
+        if( !$artist_cart_id )
             return array();
         
         $sql = "";
@@ -1032,7 +1037,7 @@
         $sql .= "  mydna_musicplayer_ecommerce_products.shipping ";
         $sql .= " FROM cart_items";
         $sql .= " JOIN mydna_musicplayer_ecommerce_products ON cart_items.product_id = mydna_musicplayer_ecommerce_products.id";
-        $sql .= " WHERE cart_id='$cart_id'";
+        $sql .= " WHERE cart_id='$artist_cart_id'";
         $sql .= " ORDER BY `id` ASC";
         $q = mq($sql);
         

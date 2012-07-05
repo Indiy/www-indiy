@@ -15,7 +15,7 @@
     $cart_id = $_SESSION['cart_id'];
     $artist_id = $_GET['artist_id'];
     
-    $cart = store_get_cart();
+    $cart = store_get_cart($artist_id,$cart_id);
     
     $payment_amount = 0.0;
     $subTotal = 0.0;

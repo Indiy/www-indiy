@@ -18,4 +18,6 @@
 	$siteUrl = $jibya["url"];
 	$playerUrl = $jibya["playerUrl"];
 	$siteTitle = $jibya["title"];
+    
+    $cart_base_url = $jibya["cart_base_url"];
 ?>
