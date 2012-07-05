@@ -9,7 +9,18 @@
     
     if( !fan )
     {
-        header("Location: /fan/login.php");
+        echo <<END
+
+<html>
+        Unknown Token<br/>
+        <form>
+        Enter Token: <input name='token'/><br/>
+        <br/>
+        <input type='submit' value='Submit'/><br/>
+        </form>
+</html>
+
+END;
         die();
     }
     
