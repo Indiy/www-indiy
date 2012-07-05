@@ -1023,7 +1023,7 @@
         
         return $total;
     }
-    function store_get_cart($artist_id,$cart_id);
+    function store_get_cart($artist_id,$cart_id)
     {
         $artist_cart_id = "$artist_id:$cart_id";
         if( !$artist_cart_id )
