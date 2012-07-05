@@ -17,8 +17,8 @@ function showTooltip(event)
         left: offset.left - 2,
         top: offset.top - 25
     };
-    $('#tooltip').offset(new_offset);
-    $('#tooltip').show();    
+    $('#tooltip').css({ left: new_offset.left, top: new_offset.top });
+    $('#tooltip').show();
 }
 
 function hideTooltip(event)
