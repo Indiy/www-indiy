@@ -24,6 +24,7 @@
     <script src="/js/player_tabs.js" type="text/javascript"></script>
     <script src="/js/player_search.js" type="text/javascript"></script>
     <script src="/js/player_store.js" type="text/javascript"></script>
+    <script src="/js/player_tooltips.js" type="text/javascript"></script>
 
     <script type="text/javascript">
         var g_tabList = <?=$tab_list_json;?>;
@@ -99,12 +100,16 @@
         <? endif; ?>
         <div class='copyright'>&copy;2012 MYARTISTDNA</div>
     </div>
+    <div id='tooltip'>
+        <div class='carrot'></div>
+        TEST
+    </div>
     <div id='bottom_container' class='idle_fade_out'>
         <div id='tracker_bar'>
             <div class='buttons'>
                 <? if( count($photo_list) > 0): ?>
                     <div class='sep'></div>
-                    <div class='photos tooltiped button' onclick='clickPhotoIcon();'>
+                    <div class='photos tooltiped button' onclick='clickPhotoIcon();' tooltip="PHOTOS">
                         <div class='icon'></div>
                         <div id='tip_photos' class='tooltip'>
                             <div class='carrot'></div>
