@@ -86,13 +86,38 @@
         $fan = mf(mq("SELECT * FROM fans WHERE email='$email'"));
         if( $fan )
         {
-            $updates = array("register_token" => $register_token);
-            mysql_update('fans',$updates,'id',$fan_data['id']);
+            $values = array("register_token" => $register_token,
+                            );
+            mysql_update('fans',$values,'id',$fan_data['id']);
         }
         else
         {
-                
+            $values = array("email" => $email,
+                            "register_token" => $register_token,
+                            );
+            mysql_insert('fans',$values);
         }
+        
+        $register_link = fan_site_url() . "/register.php?token=$register_token";
+        
+        $to = $email;
+        $subject = "MyArtistDNA Fan Account Registration";
+        $message = <<<END
+        
+Thank you for registering for a fan account at MyArtistDNA.
+
+Click the link below to verify your email address.
+
+$register_link
+
+Be Heard. Be Seen. Be Independent.
+
+END;
+        $from = "no-reply@myartistdna.com";
+        $headers = "From:" . $from;
+
+        mail($to,$subject,$message,$headers);
+        echo "{ \"success\": 1 }\n";
     }
 
 ?>
