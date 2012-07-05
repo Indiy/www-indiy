@@ -5,7 +5,7 @@
     
     $register_token = $_REQUEST['token'];
     
-    $fan = mf(mq("SELECT * FROM fans WHERE register_token='$register_token'");
+    $fan = mf(mq("SELECT * FROM fans WHERE register_token='$register_token'"));
     
     if( !fan )
     {
