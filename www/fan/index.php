@@ -49,7 +49,7 @@
         
         $encoded_file_name = urlencode($file_name);
         
-        $url = "/fan/downloads/$encoded_file_name?id=$file_id";
+        $url = "/fan/downloads/$encoded_file_name?id=$file_id&attachment=true";
         
         $html = "";
         $html .= "<div class='file'>";
