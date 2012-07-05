@@ -18,7 +18,7 @@
     if( !$file )
     {
         header("HTTP/1.0 404 Not Found");
-        die();
+        die("File not found");
     }
     
     $mime_type = mime_content_type($file['upload_filename']);
