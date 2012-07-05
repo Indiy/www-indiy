@@ -148,6 +148,10 @@ body {
 #cart_empty {
     display: none;
 }
+#cart .checkout {
+    cursor: pointer;
+}
+
 
 #order {
     padding-left: 10px;

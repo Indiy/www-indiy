@@ -65,12 +65,14 @@ function storeBuyProductId(product_id)
     cart += "&product_id=" + product_id;
     cart += "&quantity=1";
     
+    var url = "{0}/data/cart2.php".format(g_cartBaseUrl);
+    
     jQuery.ajax(
     {
         type: 'POST',
-        url: "/data/cart2.php",
+        url: url,
         data: cart,
-        dataType: 'json',
+        dataType: 'jsonp',
         success: function(data) 
         {
             console.log(data);
@@ -84,7 +86,7 @@ function storeBuyProductId(product_id)
 
 function storeViewCart()
 {
-    var url = "/cart.php?artist_id={0}".format(g_artistId);
+    var url = "{0}/cart.php?artist_id={1}".format(g_cartBaseUrl,g_artistId);
     window.open(url,'_blank');
 }
 function storeCheckout()
