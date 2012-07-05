@@ -61,6 +61,8 @@ function storeBuyProduct()
 function storeBuyProductId(product_id)
 {
     var cart = "";
+
+    cart += "&method=post";
     cart += "&artist_id=" + g_artistId;
     cart += "&product_id=" + product_id;
     cart += "&quantity=1";
