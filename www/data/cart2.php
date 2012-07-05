@@ -29,12 +29,12 @@
     {
         $artist_cart_id = "$artist_id:$cart_id";
     
-        $cart_item_id = $_POST['cart_item_id'];
-        $product_id = $_POST['product_id'];
+        $cart_item_id = $_REQUEST['cart_item_id'];
+        $product_id = $_REQUEST['product_id'];
 
-        $size = $_POST["size"];
-        $color = $_POST["color"];
-        $quantity = $_POST["quantity"];
+        $size = $_REQUEST["size"];
+        $color = $_REQUEST["color"];
+        $quantity = $_REQUEST["quantity"];
         
         $values = array("cart_id" => $artist_cart_id,
                         "product_id" => $product_id,
