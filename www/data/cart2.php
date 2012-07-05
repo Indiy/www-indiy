@@ -16,7 +16,7 @@
     $artist_id = $_REQUEST['artist_id'];
     
     if( isset($_REQUEST['method']) )
-        $method = $_REQUEST['method'];
+        $method = strtoupper($_REQUEST['method']);
     else
         $method = $_SERVER['REQUEST_METHOD'];
     
@@ -58,6 +58,10 @@
         
         send_store_cart($artist_id,$cart_id);
         exit();
+    }
+    else
+    {
+        print "{ error: \"unknown method\" }";
     }
     
     function send_store_cart($artist_id,$cart_id)
