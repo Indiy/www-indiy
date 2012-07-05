@@ -29,6 +29,8 @@
     
     $mime_type = mime_content_type($file['upload_filename']);
     
+    $upload_filename = $file['upload_filename'];
+    
     header("Content-Type: $mime_type");
     
     $filename = $file['filename'];
@@ -42,7 +44,7 @@
     header("Content-Length: $length");
     
     if( $as_attachment )
-        header("Content-Disposition: attachment; filename=\"$filename\"");
+        header("Content-Disposition: attachment; filename=\"$upload_filename\"");
     
     readfile($real_path);
     
