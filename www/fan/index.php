@@ -33,8 +33,8 @@
     $fan_files_html = "";
     
     $sql = "SELECT * FROM fan_files ";
-    $sql = " JOIN product_files ON fan_files.product_file_id = product_files.id ";
-    $sql .= " WHERE fan_id='$fan_id'";
+    $sql .= " JOIN product_files ON fan_files.product_file_id = product_files.id ";
+    $sql .= " WHERE fan_id='$fan_id' ";
     $files_q = mq($sql);
     while( $file = mf($files_q) )
     {
