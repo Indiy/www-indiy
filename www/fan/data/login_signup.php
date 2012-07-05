@@ -57,7 +57,7 @@
             $updates = array("password" => $hash_password);
             mysql_update("fans",$updates,'id',$fan['id']);
             
-            login_fan($fan);
+            fan_login($fan);
         }
         else
         {
@@ -66,7 +66,7 @@
         }
     }
     
-    function login_fan($fan)
+    function fan_login($fan)
     {
         $_SESSION['fan_id'] = $fan['id'];
         $expire = time() + 60*24*60*60;
