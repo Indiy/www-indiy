@@ -1,7 +1,7 @@
 <?php
 
-    require_once '../includes/config.php';
-    require_once '../includes/functions.php';
+    require_once '../../includes/config.php';
+    require_once '../../includes/functions.php';
 
     $fan_id = $_SESSION['fan_id'];
     session_write_close();
