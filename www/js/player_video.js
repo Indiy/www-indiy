@@ -3,6 +3,8 @@ var g_videoLeftIndex = 0;
 var g_videoPlayer = false;
 var g_videoPlaying = false;
 var g_videoVolRatio = 1.0;
+var g_videoReady = false;
+var g_playIndexOnReady = false;
 
 $(document).ready(videoOnReady);
 function videoOnReady()
@@ -115,6 +117,13 @@ function videoChangeId(video_id)
 
 function videoPlayIndex(index)
 {
+    if( !g_videoReady )
+    {
+        g_playIndexOnReady = index;
+        return;
+    }
+    g_playIndexOnReady = false;
+
     g_videoCurrentIndex = index;
     setPlayerMode("video");
     volumeSetLevel(g_videoVolRatio);
@@ -166,6 +175,12 @@ function onVideoReady()
     g_videoPlayer.addEvent("ended",videoEnded);
     g_videoPlayer.addEvent("durationchange",videoDurationChange);
     g_videoPlayer.addEvent("progress",videoDownloadProgress);
+    
+    g_videoReady = true;
+    if( g_playIndexOnReady )
+    {
+        videoPlayIndex(g_playIndexOnReady);
+    }
 }
 function videoLoadStart()
 {
