@@ -48,7 +48,9 @@
                       );
         $fan_files[] = $item;
         
-        $url = "/fan/downloads/$file_name?id=$file_id";
+        $encoded_file_name = urlencode($file_name);
+        
+        $url = "/fan/downloads/$encoded_file_name?id=$file_id";
         
         $html = "";
         $html .= "<div class='file'>";
