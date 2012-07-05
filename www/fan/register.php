@@ -9,7 +9,7 @@
     
     if( !fan )
     {
-        echo <<END
+        echo <<<END
 
 <html>
         Unknown Token<br/>
