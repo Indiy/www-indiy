@@ -7,6 +7,7 @@
     session_write_close();
     
     $file_id = $_REQUEST['id'];
+    $as_attachment = $_REQUEST['attachment'];
     
     $sql = "SELECT * FROM fan_files ";
     $sql .= " JOIN product_files ON fan_files.product_file_id = product_files.id ";
@@ -29,7 +30,16 @@
     
     $real_path = realpath($path);
 
-    header("X-Sendfile: $real_path");
+    //header("X-Sendfile: $real_path");
+    
+    $length = filesize($real_path);
+    header("Content-Length: $length");
+    
+    if( $as_attachment )
+        header("Content-Disposition: attachment; filename=\"$filename\"");
+    
+    readfile($real_path);
+    
     die();
 
 ?>
