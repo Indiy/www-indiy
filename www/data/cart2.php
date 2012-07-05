@@ -18,7 +18,7 @@
     if( isset($_REQUEST['method']) )
         $method = $_REQUEST['method'];
     else
-        $method = $_SERVER['REQUEST_METHOD']
+        $method = $_SERVER['REQUEST_METHOD'];
     
     if( $method == 'GET' )
     {
