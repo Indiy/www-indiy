@@ -6,16 +6,20 @@ function tooltipsOnReady()
     $('.photos.tooltiped').hover(showTooltip,hideTooltip);
 }
 
-function showTooltip(arg1,arg2)
+function showTooltip(event)
 {
-    console.log(arg1);
-    console.log(arg2);
-    console.log($(this));
+    var text = $(this).data('tooltip');
+    $('#tooltip span').html(text);
+
+    var offset = $(this).offset();
+    offset.left += 10;
+    offset.top -= 30;
+    $('#tooltip').offset(offset);
+
+    $('#tooltip').show();    
 }
 
-function hideTooltip(arg1,arg2)
+function hideTooltip(event)
 {
-    console.log(arg1);
-    console.log(arg2);
-    console.log($(this));    
+    //$('#tooltip').hide();
 }
