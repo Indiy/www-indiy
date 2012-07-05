@@ -8,12 +8,12 @@ function tooltipsOnReady()
 
 function showTooltip(event)
 {
-    var text = $(this).data('tooltip');
+    var text = $(this).attr('tooltip');
     $('#tooltip span').html(text);
 
     var offset = $(this).offset();
-    offset.left += 10;
-    offset.top -= 30;
+    offset.left -= 2;
+    offset.top -= 35;
     $('#tooltip').offset(offset);
 
     $('#tooltip').show();    
@@ -21,5 +21,5 @@ function showTooltip(event)
 
 function hideTooltip(event)
 {
-    //$('#tooltip').hide();
+    $('#tooltip').hide();
 }
