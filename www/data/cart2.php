@@ -15,12 +15,17 @@
     $cart_id = $_SESSION['cart_id'];
     $artist_id = $_REQUEST['artist_id'];
     
-    if( $_SERVER['REQUEST_METHOD'] == 'GET' )
+    if( isset($_REQUEST['method']) )
+        $method = $_REQUEST['method'];
+    else
+        $method = $_SERVER['REQUEST_METHOD']
+    
+    if( $method == 'GET' )
     {
         send_store_cart($artist_id,$cart_id);
         exit();
     }
-    elseif( $_SERVER['REQUEST_METHOD'] == 'POST' )
+    elseif( $method == 'POST' )
     {
         $artist_cart_id = "$artist_id:$cart_id";
     
@@ -45,7 +50,7 @@
         send_store_cart($artist_id,$cart_id);
         exit();
     }
-    elseif( $_SERVER['REQUEST_METHOD'] == 'DELETE' )
+    elseif( $method == 'DELETE' )
     {
         parse_str(file_get_contents('php://input'), $params);
         $cart_item_id = $params['cart_item_id'];
