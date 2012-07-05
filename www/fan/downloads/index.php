@@ -6,7 +6,7 @@
     $fan_id = $_SESSION['fan_id'];
     session_write_close();
 
-    if( !fan_id )
+    if( !$fan_id )
     {
         header("Location: /fan/");
         die();
