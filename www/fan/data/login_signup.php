@@ -33,7 +33,7 @@
         $fan = mf(mq($sql));
         if( $fan )
         {
-            fan_login();
+            fan_login($fan);
         }
         else
         {
