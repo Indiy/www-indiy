@@ -401,11 +401,11 @@ input {
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         
-        <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+        <link href="https://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
-        <script src="http://vjs.zencdn.net/c/video.js"></script>
+        <script src="https://vjs.zencdn.net/c/video.js"></script>
         <script src="/js/login_signup.js" type="text/javascript"></script>
         
         <script type="text/javascript">
@@ -524,9 +524,9 @@ $(document).ready(function()
                     </div>
                 </div>
                 <video id="my_video_1" class="video-js vjs-default-skin" width="853" height="480" controls="controls" preload="auto" poster="/images/mad_poster.png" data-setup="{}">
-                    <source src="http://www.myartistdna.com/mad.webm" type="video/webm" />
-                    <source src="http://www.myartistdna.com/mad.iphone.mp4" type="video/mp4" />
-                    <source src="http://www.myartistdna.com/mad.ogv" type="video/ogg" />
+                    <source src="https://www.myartistdna.com/mad.webm" type="video/webm" />
+                    <source src="https://www.myartistdna.com/mad.iphone.mp4" type="video/mp4" />
+                    <source src="https://www.myartistdna.com/mad.ogv" type="video/ogg" />
                 </video>
             </div>
         </div>
