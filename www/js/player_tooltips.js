@@ -12,10 +12,12 @@ function showTooltip(event)
     $('#tooltip span').html(text);
 
     var offset = $(this).offset();
-    offset.left -= 2;
-    offset.top -= 35;
-    $('#tooltip').offset(offset);
-
+    
+    var new_offset = {
+        left: offset.left - 2,
+        top: offset.top - 25
+    };
+    $('#tooltip').offset(new_offset);
     $('#tooltip').show();    
 }
 
