@@ -13,7 +13,7 @@
     $sql .= " JOIN product_files ON fan_files.product_file_id = product_files.id ";
     $sql .= " WHERE fan_files.fan_id='$fan_id' AND fan_files.id='$file_id' ";
     
-    $file = mf(mq($sql);
+    $file = mf(mq($sql));
     
     if( !$file )
     {
