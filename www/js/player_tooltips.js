@@ -6,6 +6,15 @@ function tooltipsOnReady()
     $('.tooltiped').hover(showTooltip,hideTooltip);
 }
 
+var TOOLTIP_OFFSET_MAP = {
+    'PHOTOS': -32,
+    'MUSIC': -30,
+    'VIDEO': -30,
+    'LOVE': -20,
+    'PLAY': -20,
+    'VOLUME': -30
+};
+
 function showTooltip(event)
 {
     var text = $(this).attr('tooltip');
@@ -13,12 +22,10 @@ function showTooltip(event)
 
     var offset = $(this).offset();
     
-    var width = $('#tooltip').width();
-    
-    var left = offset.left - width / 2 + 15;
+    var map_offset = TOOLTIP_OFFSET_MAP[text]; 
     
     var new_offset = {
-        left: left,
+        left: offset.left + map_offset,
         top: offset.top - 35
     };
     $('#tooltip').css({ left: new_offset.left, top: new_offset.top });
