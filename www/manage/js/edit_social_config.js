@@ -75,6 +75,10 @@ function socialConfigSubmit()
     var fb_setting = $('#social_config input[name=fb_setting]:checked').val();
     var tw_setting = $('#social_config input[name=tw_setting]:checked').val();
     var fb_page_url = $('#social_config #fb_page_url').val();
+    if( fb_page_url == FB_PLACEHOLDER )
+    {
+        fb_page_url = "";
+    }
 
     var post_url = "/manage/data/social_config.php?";
     post_url += "&artist_id=" + escape(g_artistId);
@@ -105,7 +109,7 @@ function onSocialConfigSave()
 {
     var fb_page_url = $('#social_config #fb_page_url').val();
     
-    if( fb_page_url && fb_page_url.length > 0 )
+    if( fb_page_url && fb_page_url.length > 0 && fb_page_url != FB_PLACEHOLDER )
     {
         var match = FB_REGEX.exec(fb_page_url);
         if( match && match.length > 1 )
