@@ -132,6 +132,7 @@ function hideControls()
     g_controlsShown = false;
     $('.idle_fade_out').fadeOut();
     closeBottom(false);
+    hideTooltip();
 }
 
 
@@ -145,6 +146,7 @@ function toggleBottom()
 
 function openBottom()
 {
+    hideTooltip();
     hideVolume();
     hideContentPage();
     hideAllTabs();
@@ -155,6 +157,7 @@ function openBottom()
 
 function closeBottom(animate)
 {
+    hideTooltip();
     hideVolume();
     g_bottomOpen = false;
     if( animate === false )
