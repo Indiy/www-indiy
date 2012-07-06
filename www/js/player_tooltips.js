@@ -3,7 +3,7 @@ $(document).ready(tooltipsOnReady);
 
 function tooltipsOnReady()
 {
-    $('.photos.tooltiped').hover(showTooltip,hideTooltip);
+    $('.tooltiped').hover(showTooltip,hideTooltip);
 }
 
 function showTooltip(event)
@@ -13,9 +13,11 @@ function showTooltip(event)
 
     var offset = $(this).offset();
     
+    var width = $('#tooltip').width();
+    
     var new_offset = {
         left: offset.left - 2,
-        top: offset.top - 25
+        top: offset.top - 35
     };
     $('#tooltip').css({ left: new_offset.left, top: new_offset.top });
     $('#tooltip').show();

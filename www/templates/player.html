@@ -111,65 +111,33 @@
                     <div class='sep'></div>
                     <div class='photos tooltiped button' onclick='clickPhotoIcon();' tooltip="PHOTOS">
                         <div class='icon'></div>
-                        <div id='tip_photos' class='tooltip'>
-                            <div class='carrot'></div>
-                            PHOTOS
-                        </div>
                     </div>
                 <? endif; ?>
                 <? if( count($music_list) > 0): ?>
                     <div class='sep'></div>
-                    <div class='music tooltiped button' onclick='clickMusicIcon();'>
+                    <div class='music tooltiped button' onclick='clickMusicIcon();' tooltip="MUSIC">
                         <div class='icon'></div>
-                        <div id='tip_music' class='tooltip'>
-                            <div class='carrot'></div>
-                            MUSIC
-                        </div>
                     </div>
                 <? endif; ?>
                 <? if( count($video_list) > 0 ): ?>
                     <div class='sep'></div>
-                    <div class='video tooltiped button' onclick='clickVideoIcon();'>
+                    <div class='video tooltiped button' onclick='clickVideoIcon();' tooltip="VIDEO">
                         <div class='icon'></div>
-                        <div id='tip_video' class='tooltip'>
-                            <div class='carrot'></div>
-                            VIDEO
-                        </div>
                     </div>
                 <? endif; ?>
                 <div class='sep'></div>
-                <div id='love_button' class='love tooltiped button' onclick='clickLoveIcon();'>
+                <div id='love_button' class='love tooltiped button' onclick='clickLoveIcon();' tooltip="LOVE">
                     <div class='icon'></div>
-                    <div id='tip_love' class='tooltip'>
-                        <div class='carrot'></div>
-                        LOVE
-                    </div>
-                    <div id='tip_unlove' class='tooltip'>
-                        <div class='carrot'></div>
-                        UNLOVE
-                    </div>
                 </div>
             </div>
             <div class='media_info_box'>
                 <div id='media_controls' class='media_controls info_box'>
-                    <div id='track_play_pause_button' class='play_pause tooltiped' onclick='playerPlayPause();'>
+                    <div id='track_play_pause_button' class='play_pause tooltiped' onclick='playerPlayPause();' tooltip="PLAY">
                         <div class='icon'></div>
-                        <div id='tip_play' class='tooltip'>
-                            <div class='carrot'></div>
-                            PLAY
-                        </div>
-                        <div id='tip_pause' class='tooltip'>
-                            <div class='carrot'></div>
-                            PAUSE
-                        </div>
                     </div>
                     <div class='sep'></div>
-                    <div class='volume tooltiped' onclick='playerVolume();'>
+                    <div class='volume tooltiped' onclick='playerVolume();' tooltip="VOLUME">
                         <div class='icon'></div>
-                        <div id='tip_volume' class='tooltip'>
-                            <div class='carrot'></div>
-                            VOLUME
-                        </div>
                     </div>
                     <div class='sep2'></div>
                     <div class='progress_container'>
