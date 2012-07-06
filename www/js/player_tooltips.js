@@ -15,8 +15,10 @@ function showTooltip(event)
     
     var width = $('#tooltip').width();
     
+    var left = offset.left - width / 2 + 15;
+    
     var new_offset = {
-        left: offset.left - 2,
+        left: left,
         top: offset.top - 35
     };
     $('#tooltip').css({ left: new_offset.left, top: new_offset.top });
