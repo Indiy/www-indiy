@@ -93,7 +93,11 @@
     <div id='bottom_bar'>
         <div class='be_heard'>BE HEARD. BE SEEN. BE INDEPENDANT.</div>
         <div class='slash'>//</div>
-        <div class='sign_up bottom_link'>SIGN UP NOW</div>
+        <? if( $show_login_link ): ?>
+            <div class='sign_up bottom_link'><a href='/landing.php'>LOGIN NOW</a></div>
+        <? else: ?>
+            <div class='sign_up bottom_link'><a href='/signup.php'>SIGN UP NOW</a></div>
+        <? endif; ?>
         <? if( $show_order_status ): ?>
             <div class='slash'>//</div>
             <div class='order_status bottom_link'><a target="_blank" href='/order_status.php'>ORDER STATUS</a></div>

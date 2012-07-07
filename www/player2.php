@@ -345,6 +345,11 @@
     else
         $show_order_status = FALSE;
 
+    $show_login_link = FALSE;
+    if( strlen($_COOKIE['FAN_EMAIL']) > 0 )
+        $show_login_link = TRUE;
+    if( strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
+        $show_login_link = TRUE;
     
     include_once 'templates/player.html';
 
