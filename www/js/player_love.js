@@ -46,6 +46,8 @@ function loveToggleClass(is_loved)
 
 function clickLoveIcon()
 {
+    hideTooltip();
+
     var is_loved = toggleLoveTag(g_currentLoveTag);
     loveToggleClass(is_loved);
 
