@@ -13,8 +13,8 @@ var TOOLTIP_OFFSET_MAP = {
     PLAY: 2,
     VIDEO: -11,
     VOLUME: -15,
-    PAUSE: -15,
-    UNLOVE: -9
+    PAUSE: 2,
+    UNLOVE: -30
 };
 
 function showTooltip(event)
@@ -23,7 +23,7 @@ function showTooltip(event)
     
     if( text == "PLAY" )
     {
-        if( !$('#track_play_pause_button').hasClass('playing') )
+        if( $('#track_play_pause_button').hasClass('playing') )
             text = "PAUSE";
     }
     else if( text == "LOVE" )
