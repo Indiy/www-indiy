@@ -345,11 +345,12 @@
     else
         $show_order_status = FALSE;
 
-    $show_login_link = FALSE;
-    if( strlen($_COOKIE['FAN_EMAIL']) > 0 )
-        $show_login_link = TRUE;
-    if( strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
-        $show_login_link = TRUE;
+    $login_url = FALSE;
+    if( strlen($_COOKIE['FAN_EMAIL']) > 0 
+       || strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
+        $login_url = trueSiteUrl() . "/landing.php";
+        
+    $signup_url = trueSiteUrl() . "/signup.php";
     
     include_once 'templates/player.html';
 
