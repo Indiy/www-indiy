@@ -12,12 +12,26 @@ var TOOLTIP_OFFSET_MAP = {
     PHOTOS: -15,
     PLAY: 2,
     VIDEO: -11,
-    VOLUME: -15
+    VOLUME: -15,
+    PAUSE: -15,
+    UNLOVE: -9
 };
 
 function showTooltip(event)
 {
     var text = $(this).attr('tooltip');
+    
+    if( text == "PLAY" )
+    {
+        if( !$('#track_play_pause_button').hasClass('playing') )
+            text = "PAUSE";
+    }
+    else if( text == "LOVE" )
+    {
+        if( $('#love_button').hasClass('love_active') )
+            text = "UNLOVE";
+    }
+    
     $('#tooltip span').html(text);
 
     var offset = $(this).offset();
