@@ -159,6 +159,7 @@
 		2D8D970D15A51A6900AA3D1B /* debug.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = debug.php; sourceTree = "<group>"; };
 		2D8D970F15A5284D00AA3D1B /* .htaccess */ = {isa = PBXFileReference; lastKnownFileType = text; name = .htaccess; path = downloads/.htaccess; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		2D8D971015A5289800AA3D1B /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = index.php; path = downloads/index.php; sourceTree = "<group>"; };
+		2D8D971415A8CF3900AA3D1B /* signup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = signup.php; sourceTree = "<group>"; };
 		2D98BF3D1480778500CE851D /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		2D98BF3E1480778500CE851D /* holder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holder.png; sourceTree = "<group>"; };
 		2D98BF3F1480778500CE851D /* play.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = play.jpg; sourceTree = "<group>"; };
@@ -1969,6 +1970,7 @@
 				2D9E2FD81569F13600A76906 /* templates */,
 				2D8D96FC15A26FE900AA3D1B /* fan */,
 				2D9E2FDA1569F17D00A76906 /* player2.php */,
+				2D8D971415A8CF3900AA3D1B /* signup.php */,
 				2D8D96E31595391C00AA3D1B /* order_status.php */,
 				2D8D96DC159199F000AA3D1B /* paypal_order_confirm.php */,
 				2D8D96DD1591A41D00AA3D1B /* paypal_finish.php */,
