@@ -5,8 +5,17 @@
 
     <a href="/fan">Signup for a Fan Account</a><br/>
     <br/>
-    <a onclick="showSignup();">Signup for an Artist Account</a>
-
+    <a href="#" onclick="showSignup();">Signup for an Artist Account</a><br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
 </section>
 </section>
         
