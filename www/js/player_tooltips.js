@@ -18,14 +18,14 @@ var TOOLTIP_OFFSET_MAP = {
 };
 
 var TOOLTIP_CARROT_MARGIN_MAP = {
-    LOVE: -9,
+    LOVE: -6,
     MUSIC: -9,
+    PAUSE: -21,
     PHOTOS: -9,
-    PLAY: -9,
+    PLAY: -16,
+    UNLOVE: 3,
     VIDEO: -9,
-    VOLUME: -9,
-    PAUSE: -9,
-    UNLOVE: 3
+    VOLUME: -9
 };
 
 function showTooltip(event)
@@ -51,8 +51,8 @@ function showTooltip(event)
     
     var left = offset.left + map_offset;
     var top = offset.top - 35;
-    
     $('#tooltip').css({ left: left, top: top });
+
     var margin = TOOLTIP_CARROT_MARGIN_MAP[text];
     var margin_px = "{0}px".format(margin);
     $('#tooltip .carrot').css({ 'margin-left': margin_px });
