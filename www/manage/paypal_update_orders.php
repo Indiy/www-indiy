@@ -35,7 +35,8 @@
         }
         else if( $state == 'PENDING_PAYMENT' 
                 || $state == 'PENDING_SHIPMENT' 
-                || $state == 'SHIPPED' 
+                || $state == 'SHIPPED'
+                || $state == 'CLOSED'
                 )
         {
             
