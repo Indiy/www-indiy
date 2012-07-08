@@ -58,8 +58,7 @@
             $from_processor_amount = $charge_amount - $fee_amount;
             $to_artist_amount = $from_processor_amount * ARTIST_PAYOUT_PERCENT;
 
-            $updates = array("fee_amount" => $fee_amount,
-                             "charge_amount" => $charge_amount,
+            $updates = array("charge_amount" => $charge_amount,
                              "tax_amount" => $tax_amount,
                              "from_processor_amount" => $from_processor_amount,
                              "to_artist_amount" => $to_artist_amount,
