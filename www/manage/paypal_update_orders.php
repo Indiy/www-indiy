@@ -20,13 +20,14 @@
         print "Order Number: $id\n";
         print " State: $state\n\n";
 
-        $updates = array();
 
         if( $state == 'CANCELED' )
         {
-            $updates['from_processor_amount'] = 0.0;
-            $updates['to_artist_amount'] = 0.0;
-            mysql_updates('orders',$updates,'id',$id);
+            $updates = array("from_processor_amount" => 0.0,
+                             "to_artist_amount" => 0.0,
+                             );
+            var_dump($updates);
+            //mysql_update('orders',$updates,'id',$id);
         }
         else if( $state == 'PENDING_CONFIRM' )
         {
