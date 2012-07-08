@@ -10,7 +10,7 @@
 	}
 
 
-    $order_q = mq("SELECT * FROM orders WHERE charge_amount > 0.0 AND from_processor_amount == 0.0");
+    $order_q = mq("SELECT * FROM orders WHERE charge_amount > 0.0 AND from_processor_amount = 0.0");
     while( $order = mf($order_q) )
     {
         $paypal_json = $order['payment_json'];
