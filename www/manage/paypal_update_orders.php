@@ -9,10 +9,14 @@
 		exit();
 	}
 
+    echo "<html><pre>";
 
     $order_q = mq("SELECT * FROM orders WHERE charge_amount > 0.0 AND from_processor_amount = 0.0");
     while( $order = mf($order_q) )
     {
+        print "Order Number: " . $order['id'] . "\n";
+        print " State: " . $order['state'] . "\n\n";
+    
         $paypal_json = $order['payment_json'];
         $paypal_info = json_decode($paypal_json,TRUE);
         
@@ -25,7 +29,7 @@
         
         var_dump($res);
         
-        break;
+        print "\n\n=============================\n\n";
     }
 
 ?>
