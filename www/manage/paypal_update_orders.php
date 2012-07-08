@@ -14,22 +14,67 @@
     $order_q = mq("SELECT * FROM orders WHERE charge_amount > 0.0 AND from_processor_amount = 0.0");
     while( $order = mf($order_q) )
     {
-        print "Order Number: " . $order['id'] . "\n";
-        print " State: " . $order['state'] . "\n\n";
+        $id = $order['id'];
+        $state = $order['state'];
     
-        $paypal_json = $order['payment_json'];
-        $paypal_info = json_decode($paypal_json,TRUE);
-        
-        $transaction_id = $paypal_info['transaction_id'];
-        
-        if( !$transaction_id )
-            continue;
-        
-        $res = CallGetTransactionDetails($transaction_id);
-        
-        var_dump($res);
-        
-        print "\n\n=============================\n\n";
+        print "Order Number: $id\n";
+        print " State: $state\n\n";
+
+        $updates = array();
+
+        if( $state == 'CANCELED' )
+        {
+            $updates['from_processor_amount'] = 0.0;
+            $updates['to_artist_amount'] = 0.0;
+            mysql_updates('orders',$updates,'id',$id);
+        }
+        else if( $state == 'PENDING_CONFIRM' )
+        {
+            
+        }
+        else if( $state == 'PENDING_PAYMENT' 
+                || $state == 'PENDING_SHIPMENT' 
+                || $state == 'SHIPPED' 
+                )
+        {
+            
+            $paypal_json = $order['payment_json'];
+            $paypal_info = json_decode($paypal_json,TRUE);
+            
+            $transaction_id = $paypal_info['transaction_id'];
+            
+            if( !$transaction_id )
+                continue;
+            
+            $res = CallGetTransactionDetails($transaction_id);
+            
+            $fee_amount = floatval($res['FEEAMT']);
+            $charge_amount = floatval($res['AMT']);
+            $tax_amount = floatval($res['TAXAMT']);
+
+            $from_processor_amount = $charge_amount - $fee_amount;
+            $to_artist_amount = $from_processor_amount * ARTIST_PAYOUT_PERCENT;
+
+            $updates = array("fee_amount" => $fee_amount,
+                             "charge_amount" => $charge_amount,
+                             "tax_amount" => $tax_amount,
+                             "from_processor_amount" => $from_processor_amount,
+                             "to_artist_amount" => $to_artist_amount,
+                             );
+            
+            var_dump($updates);
+            
+            print "\n\n=============================\n\n";
+            
+        }
+        else if( $state == 'CLOSED' )
+        {
+            
+        }
+        else if( $state == 'ABANDONED' )
+        {
+            
+        }
     }
 
 ?>
