@@ -27,7 +27,7 @@
                              "to_artist_amount" => 0.0,
                              );
             var_dump($updates);
-            //mysql_update('orders',$updates,'id',$id);
+            mysql_update('orders',$updates,'id',$id);
         }
         else if( $state == 'PENDING_CONFIRM' )
         {
@@ -66,10 +66,7 @@
             
             var_dump($updates);
             
-        }
-        else if( $state == 'CLOSED' )
-        {
-            
+            mysql_update('orders',$updates,'id',$id);
         }
         else if( $state == 'ABANDONED' )
         {
