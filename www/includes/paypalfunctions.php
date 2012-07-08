@@ -111,6 +111,18 @@
 	    return $resArray;
 	}
     
+    function CallGetTransactionDetails( $transactionId ) 
+	{
+		//------------------------------------------------------------------------------------------------------------------------------------
+		// Construct the parameter string that describes the SetExpressCheckout API call in the shortcut implementation
+		
+		$nvpstr = "&TRANSACTIONID=". $transactionId;
+		
+        
+	    $resArray=hash_call("GetTransactionDetails", $nvpstr);
+	    return $resArray;
+	}
+    
 
 	/*   
 	'-------------------------------------------------------------------------------------------------------------------------------------------
