@@ -84,6 +84,8 @@ function renderArtistSettlementOrders()
 function renderArtistSettlementOrderArray(orders,tag)
 {
     $(tag).empty();
+    var total_charge = 0.0;
+    var total_artist = 0.0;
     for( var i = 0 ; i < orders.length ; ++i )
     {
         var order = orders[i];
@@ -92,9 +94,20 @@ function renderArtistSettlementOrderArray(orders,tag)
         html += "<tr>";
         html += " <td class='order_id'>{0}</td>".format(order.id);
         html += " <td class='date'>{0}</td>".format(order.order_date);
-        html += " <td class='amount'>{0}</td>".format(order.charge_amount.toFixed(2));
-        html += " <td class='amount'>{0}</td>".format(order.to_artist_amount.toFixed(2));
+        html += " <td class='amount'>${0}</td>".format(order.charge_amount.toFixed(2));
+        html += " <td class='amount'>${0}</td>".format(order.to_artist_amount.toFixed(2));
         html += "</tr>";
         $(tag).append(html);
+        
+        total_charge += order.charge_amount;
+        total_artist += order.to_artist_amount;
     }
+    
+    var html = "";
+    html += "<tr class='total'>";
+    html += " <td></td>";
+    html += " <td></td>";
+    html += " <td class='amount'>${0}</td>".format(total_charge.toFixed(2));
+    html += " <td class='amount'>${0}</td>".format(total_artist.toFixed(2));
+    html += "</tr>";
 }
