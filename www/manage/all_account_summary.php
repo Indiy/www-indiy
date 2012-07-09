@@ -32,7 +32,7 @@
         $artist_id = $order['artist_id'];
         
         $artist_name = $order['artist_name'];
-        $order_count = $order['order_count'];
+        $order_count = floatval($order['order_count']);
         
         $charge_total = floatval($order['charge_total']);
         $artist_total = floatval($order['artist_total']);
