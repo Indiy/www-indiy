@@ -229,6 +229,11 @@
 #order_list table .title {
     padding-left: 5px;
     text-align: left;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+}
+#order_list .title td {
+    border: none;
 }
 
 
