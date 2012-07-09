@@ -49,6 +49,8 @@
     
     $artist_list_json = json_encode($artist_list);
     
+    $include_order = TRUE;
+    $include_editor = FALSE;
     include_once "templates/all_account_summary.html";
 
 ?>
