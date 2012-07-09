@@ -222,3 +222,13 @@
     text-align: right;
 }
 
+#order_list table tr.total {
+    font-weight: bold;
+}
+
+#order_list table .title {
+    padding-left: 5px;
+    text-align: left;
+}
+
+
