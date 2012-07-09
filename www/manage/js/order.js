@@ -132,8 +132,8 @@ function renderAllArtistSummary()
         html += "</tr>";
         $('#order_summary tbody').append(html);
         
-        total_charges += order.charge_total;
-        total_artist_payouts += order.artist_total;
+        total_charges += artist.charge_total;
+        total_artist_payouts += artist.artist_total;
         total_count += artist.order_count;
     }
     
