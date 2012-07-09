@@ -8,7 +8,7 @@
 		header("Location: /index.php");
 		exit();
 	}
-    if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' )
+    if( $_SESSION['sess_userType'] != 'SUPER_ADMIN' )
     {
 		header("Location: /index.php");
 		exit();
