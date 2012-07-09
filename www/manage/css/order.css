@@ -185,23 +185,30 @@
     font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
-    border: 1px solid #777;
+    border: 1px solid #999;
 } 
 
 #order_list table thead {
     font-weight: bold;
 }
+#order_list table td {
+    padding: 2px;
+}
+#order_list table tr {
+    border: 1px solid #999;
+}
 
 #order_list table .order_id {
+    padding-left: 10px;
     width: 50px;
     text-align: left;
 }
 #order_list table .date {
-    width: 150px;
+    width: 250px;
     text-align: left;
 }
 #order_list table .amount {
-    width: 100px;
+    width: 250px;
     text-align: right;
 }
 

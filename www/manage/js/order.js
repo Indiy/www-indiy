@@ -91,7 +91,7 @@ function renderArtistSettlementOrderArray(orders,tag)
         var html = "";
         html += "<tr>";
         html += " <td class='order_id'>{0}</td>".format(order.id);
-        html += " <td class='date'>{0}</td>".format(order.date);
+        html += " <td class='date'>{0}</td>".format(order.order_date);
         html += " <td class='amount'>{0}</td>".format(order.charge_amount);
         html += " <td class='amount'>{0}</td>".format(order.to_artist_amount);
         html += "</tr>";
