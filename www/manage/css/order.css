@@ -208,6 +208,11 @@
     border-bottom: 1px dotted #999;
 } 
 
+#order_list table .artist {
+    width: 250px;
+    text-align: left;
+}
+
 #order_list table .order_id {
     padding-left: 10px;
     width: 50px;

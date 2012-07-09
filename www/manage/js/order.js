@@ -125,7 +125,7 @@ function renderAllArtistSummary()
         
         var html = "";
         html += "<tr>";
-        html += " <td class='artist'>{0}</td>".format(artist.name);
+        html += " <td class='artist'>{0}</td>".format(artist.artist_name);
         html += " <td class='amount'>{0}</td>".format(artist.order_count);
         html += " <td class='amount'>${0}</td>".format(artist.charge_total.toFixed(2));
         html += " <td class='amount'>${0}</td>".format(artist.artist_total.toFixed(2));
