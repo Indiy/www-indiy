@@ -11,7 +11,9 @@
 
     echo "<html><pre>";
 
-    $order_q = mq("SELECT * FROM orders WHERE charge_amount > 0.0 AND from_processor_amount = 0.0");
+    $sql = "SELECT * FROM orders WHERE charge_amount > 0.0 AND from_processor_amount = 0.0";
+    $sql = "SELECT * FROM orders WHERE 1";
+    $order_q = mq($sql);
     while( $order = mf($order_q) )
     {
         $id = $order['id'];
@@ -27,7 +29,7 @@
                              "to_artist_amount" => 0.0,
                              );
             var_dump($updates);
-            $success = mysql_update('orders',$updates,'id',$id);
+            //$success = mysql_update('orders',$updates,'id',$id);
             print " Update success: $success\n";
         }
         else if( $state == 'PENDING_CONFIRM' )
@@ -51,6 +53,11 @@
             
             $res = CallGetTransactionDetails($transaction_id);
             
+            $order_time = strtotime($res['ORDERTIME']);
+            $order_date = strftime("%F %T",$order_time);
+            print "Order Date: $order_date\n";
+            continue;
+            
             $fee_amount = floatval($res['FEEAMT']);
             $charge_amount = floatval($res['AMT']);
             $tax_amount = floatval($res['TAXAMT']);
@@ -66,7 +73,7 @@
             
             var_dump($updates);
             
-            $success = mysql_update('orders',$updates,'id',$id);
+            //$success = mysql_update('orders',$updates,'id',$id);
             
             print " Update success: $success\n";
         }
