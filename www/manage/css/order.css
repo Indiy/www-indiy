@@ -223,7 +223,7 @@
 }
 
 #order_list table tr.total td {
-    padding-top: 5px;
+    padding-top: 10px;
     padding-bottom: 5px;
     border: none;
     font-weight: bold;
