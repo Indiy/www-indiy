@@ -71,7 +71,7 @@
         }
     }
     
-    $include_order = FALSE;
+    $include_order = TRUE;
     $include_editor = FALSE;
     
     $pending_shipment_orders_json = json_encode($pending_shipment_orders);
