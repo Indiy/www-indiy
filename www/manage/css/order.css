@@ -211,6 +211,7 @@
 #order_list table .artist {
     width: 250px;
     text-align: left;
+    padding-left: 10px;
 }
 
 #order_list table .order_id {
