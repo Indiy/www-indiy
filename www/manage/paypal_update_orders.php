@@ -25,11 +25,16 @@
 
         if( $state == 'CANCELED' )
         {
+            $order_time = strtotime($res['ORDERTIME']);
+            $order_date = strftime("%F %T",$order_time);
+            print "Order Date: $order_date\n";
+
             $updates = array("from_processor_amount" => 0.0,
                              "to_artist_amount" => 0.0,
+                             "order_date" => $order_date,
                              );
             var_dump($updates);
-            //$success = mysql_update('orders',$updates,'id',$id);
+            $success = mysql_update('orders',$updates,'id',$id);
             print " Update success: $success\n";
         }
         else if( $state == 'PENDING_CONFIRM' )
@@ -56,7 +61,7 @@
             $order_time = strtotime($res['ORDERTIME']);
             $order_date = strftime("%F %T",$order_time);
             print "Order Date: $order_date\n";
-            continue;
+            //continue;
             
             $fee_amount = floatval($res['FEEAMT']);
             $charge_amount = floatval($res['AMT']);
@@ -69,11 +74,12 @@
                              "tax_amount" => $tax_amount,
                              "from_processor_amount" => $from_processor_amount,
                              "to_artist_amount" => $to_artist_amount,
+                             "order_date" => $order_date,
                              );
             
             var_dump($updates);
             
-            //$success = mysql_update('orders',$updates,'id',$id);
+            $success = mysql_update('orders',$updates,'id',$id);
             
             print " Update success: $success\n";
         }
