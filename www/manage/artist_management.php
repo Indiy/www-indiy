@@ -270,6 +270,7 @@ $(document).ready(showFirstInstructions);
                 <h6>Super Admin</h6>
                 <ul>
                     <li><a onclick='showAccountSettings();'>Account Settings</a></li>
+                    <li><a href="all_account_summary.php" title="Summary of Accounts">Summary of Accounts</a></li>
                 </ul>
             <? endif; ?>
         </div>
