@@ -74,3 +74,27 @@ function markShipped()
     
 }
 
+
+function renderArtistSettlementOrders()
+{
+    renderArtistSettlementOrderArray(g_pendingShipmentOrders,'#pending_orders tbody');
+    renderArtistSettlementOrderArray(g_shippedOrders,'#shipped_orders tbody');
+}
+
+function renderArtistSettlementOrderArray(orders,tag)
+{
+    $(tag).empty();
+    for( var i = 0 ; i < orders.length ; ++i )
+    {
+        var order = orders[i];
+        
+        var html = "";
+        html += "<tr>";
+        html += " <td class='order_id'>{0}</td>".format(order.id);
+        html += " <td class='date'>{0}</td>".format(order.id);
+        html += " <td class='amount'>{0}</td>".format(order.charge_amount);
+        html += " <td class='amount'>{0}</td>".format(order.to_artist_amount);
+        html += "</tr>";
+        $(tag).append(html);
+    }
+}

@@ -33,11 +33,14 @@
         $customer_name = $order['customer_name'];
         $customer_email = $order['customer_email'];
         
+        $order_date = $order['order_date'];
+        
         $charge_amount = floatval($order['charge_amount']);
         $to_artist_amount = floatval($order['to_artist_amount']);
 
         $order = array("id" => $id,
                        "state" => $state,
+                       "order_date" => $order_date,
                        "customer_name" => $customer_name,
                        "customer_email" => $customer_email,
                        "charge_amount" => $charge_amount,
@@ -70,6 +73,9 @@
     
     $include_order = FALSE;
     $include_editor = FALSE;
+    
+    $pending_shipment_orders_json = json_encode($pending_shipment_orders);
+    $shipped_orders_json = json_encode($shipped_orders);
     
     include_once "templates/artist_settlement.html";
 
