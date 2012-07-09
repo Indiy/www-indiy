@@ -111,3 +111,38 @@ function renderArtistSettlementOrderArray(orders,tag)
     html += "</tr>";
     $(tag).append(html);
 }
+
+function renderAllArtistSummary()
+{
+    $('#order_summary tbody').empty();
+    
+    var total_charges = 0.0;
+    var total_artist_payouts = 0.0;
+    var total_count = 0;
+    for( var i = 0 ; i < g_artistList.length ; ++i )
+    {
+        var artist = g_artistList[i];
+        
+        var html = "";
+        html += "<tr>";
+        html += " <td class='artist'>{0}</td>".format(artist.name);
+        html += " <td class='amount'>{0}</td>".format(artist.order_count);
+        html += " <td class='amount'>${0}</td>".format(artist.charge_total.toFixed(2));
+        html += " <td class='amount'>${0}</td>".format(artist.artist_total.toFixed(2));
+        html += "</tr>";
+        $('#order_summary tbody').append(html);
+        
+        total_charges += order.charge_total;
+        total_artist_payouts += order.artist_total;
+        total_count += artist.order_count;
+    }
+    
+    var html = "";
+    html += "<tr class='total'>";
+    html += " <td class='title'>Total</td>";
+    html += " <td class='amount'>{0}</td>".format(total_count);
+    html += " <td class='amount'>${0}</td>".format(total_charges.toFixed(2));
+    html += " <td class='amount'>${0}</td>".format(total_artist_payouts.toFixed(2));
+    html += "</tr>";
+    $('#order_summary tbody').append(html);
+}
