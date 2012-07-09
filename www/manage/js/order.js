@@ -110,4 +110,5 @@ function renderArtistSettlementOrderArray(orders,tag)
     html += " <td class='amount'>${0}</td>".format(total_charge.toFixed(2));
     html += " <td class='amount'>${0}</td>".format(total_artist.toFixed(2));
     html += "</tr>";
+    $(tag).append(html);
 }
