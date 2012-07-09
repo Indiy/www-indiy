@@ -193,8 +193,9 @@
 #order_list table thead {
     font-weight: bold;
 }
-#order_list table thead tr {
+#order_list table thead tr th {
     padding-top: 5px;
+    border-bottom: 1px solid #999;
 }
 #order_list table td {
     padding: 2px;
@@ -202,6 +203,10 @@
 #order_list table tr {
     border: 1px solid #999;
 }
+
+#order_list table tbody tr td {
+    border-bottom: 1px dotted #999;
+} 
 
 #order_list table .order_id {
     padding-left: 10px;
