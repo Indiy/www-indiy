@@ -60,11 +60,18 @@
         
         $payment_json = json_encode($payment_info);
         
+        $from_processor_amount = $amt - $fee_amt;
+        $to_artist_amount = $from_processor_amount * ARTIST_PAYOUT_PERCENT;
+        
+        $time = strtotime($order_time);
+        $order_date = strftime("%F %T",$time);
+        
         $updates = array("tax_amount" => $tax_amt,
-                         "from_processor_amount" => $settle_amt,
-                         "to_artist_amount" => $settle_amt * ARTIST_PAYOUT_PERCENT,
+                         "from_processor_amount" => $from_processor_amount,
+                         "to_artist_amount" => $to_artist_amount,
                          "state" => $state,
                          "payment_json" => $payment_json,
+                         "order_date" => $order_date,
                          );
 
         mysql_update('orders',$updates,'id',$order_id);
