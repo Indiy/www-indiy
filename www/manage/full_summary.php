@@ -15,14 +15,14 @@
     }
 
     $sql = "";
-    $sql .= "SELECT SUM(*) AS order_count ";
+    $sql .= "SELECT COUNT(*) AS order_count ";
     $sql .= " ,orders.artist_id AS artist_id ";
     $sql .= " ,SUM(charge_amount) AS charge_total ";
     $sql .= " ,SUM(to_artist_amount) AS artist_total ";
     $sql .= " ,mydna_musicplayer.artist AS artist_name ";
     $sql .= " FROM orders ";
     $sql .= " JOIN mydna_musicplayer ON orders.artist_id = mydna_musicplayer.id ";
-    $sql .= " WHERE artist_id='$artist_id'";
+    $sql .= " WHERE orders.state='PENDING_SHIPMENT' OR orders.state='SHIPPED' OR orders.state='CLOSED' ";
     $sql .= " GROUP BY orders.artist_id "; 
 
     print "sql: $sql\n";
