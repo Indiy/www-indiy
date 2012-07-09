@@ -71,12 +71,11 @@
         }
     }
     
-    $include_order = TRUE;
-    $include_editor = FALSE;
-    
     $pending_shipment_orders_json = json_encode($pending_shipment_orders);
     $shipped_orders_json = json_encode($shipped_orders);
     
+    $include_order = TRUE;
+    $include_editor = FALSE;
     include_once "templates/artist_statement.html";
 
 ?>
