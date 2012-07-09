@@ -225,6 +225,7 @@
 }
 #order_list table .amount {
     width: 130px;
+    padding-right: 10px;
     text-align: right;
 }
 
