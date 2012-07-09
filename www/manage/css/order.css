@@ -186,10 +186,15 @@
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     border: 1px solid #999;
+    margin-top: 10px;
+    margin-bottom: 10px;
 } 
 
 #order_list table thead {
     font-weight: bold;
+}
+#order_list table thead tr {
+    padding-top: 5px;
 }
 #order_list table td {
     padding: 2px;
