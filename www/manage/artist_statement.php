@@ -77,6 +77,6 @@
     $pending_shipment_orders_json = json_encode($pending_shipment_orders);
     $shipped_orders_json = json_encode($shipped_orders);
     
-    include_once "templates/artist_settlement.html";
+    include_once "templates/artist_statement.html";
 
 ?>
