@@ -122,6 +122,7 @@
 		2D64687B1593DD5400B9AD11 /* confirm_order.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = confirm_order.html; sourceTree = "<group>"; };
 		2D646885159B7BFF00B9AD11 /* order.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = order.php; sourceTree = "<group>"; };
 		2D64688A15A65B1C00B9AD11 /* player_tooltips.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_tooltips.js; sourceTree = "<group>"; };
+		2D64689215ACE95200B9AD11 /* jquery.scroll.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.scroll.js; sourceTree = "<group>"; };
 		2D64FD1014F8355E00C5C468 /* ipad.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = ipad.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D64FD1114F8735800C5C468 /* rich_text_editor.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = rich_text_editor.js; sourceTree = "<group>"; };
 		2D6DF95114BA4F4A00D0750E /* footer.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = footer.js; sourceTree = "<group>"; };
@@ -163,7 +164,7 @@
 		2D8D971615AA16DF00AA3D1B /* paypal_update_orders.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = paypal_update_orders.php; sourceTree = "<group>"; };
 		2D8D971715AA498600AA3D1B /* artist_statement.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artist_statement.php; sourceTree = "<group>"; };
 		2D8D971915AA604300AA3D1B /* artist_statement.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = artist_statement.html; path = templates/artist_statement.html; sourceTree = "<group>"; };
-		2D8D971A15AA928500AA3D1B /* all_account_summary.php */ = {isa = PBXFileReference; path = all_account_summary.php; sourceTree = "<group>"; };
+		2D8D971A15AA928500AA3D1B /* all_account_summary.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = all_account_summary.php; sourceTree = "<group>"; };
 		2D8D971B15AAA2A900AA3D1B /* all_account_summary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = all_account_summary.html; path = templates/all_account_summary.html; sourceTree = "<group>"; };
 		2D98BF3D1480778500CE851D /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		2D98BF3E1480778500CE851D /* holder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holder.png; sourceTree = "<group>"; };
@@ -3127,6 +3128,7 @@
 		2DF472C71440B77F005538C7 /* js */ = {
 			isa = PBXGroup;
 			children = (
+				2D64689215ACE95200B9AD11 /* jquery.scroll.js */,
 				2DD94A3114C3A6C5002B1259 /* artist_home_audio.js */,
 				2DE2142714C15540000C5142 /* artist_home_video.js */,
 				2DD94A3214C49CA8002B1259 /* artist_home_tabs.js */,

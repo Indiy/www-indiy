@@ -27,6 +27,7 @@ function showUserPage(i)
         }
         $('#page_content').html(page.content);
         $('#user_tab').show();
+        $('#user_tab .scrollable_container').scrollbar( { arrows: false } );
     }
 }
 function hideTab()
