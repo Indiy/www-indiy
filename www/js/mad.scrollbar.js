@@ -182,7 +182,7 @@
             var content_range = this.contentHeight - visible_height;
             
             var content_percent = top / content_range;
-            var handle_range = content_range - handle_height;
+            var handle_range = handle_container_height - handle_height;
             var handle_top = handle_range * content_percent;
             
             this.handle.css({ top: handle_top });
@@ -278,12 +278,15 @@
          */
 
         onHandleDrag: function(ev) {
-            var height = this.handleContainer.height();
-            var bar_top = this.handleContainer.offset().top;
+            var handle_container_height = this.handleContainer.height();
+            var handle_height = this.handle.height();
+            var handle_container_top = this.handleContainer.offset().top;
             var handle_top = this.handle.offset().top;
             
-            var y = handle_top - bar_top;
-            var progress_percent = y / height;
+            var handle_pos = handle_top - handle_container_top;
+            var handle_range = handle_container_height - handle_height;
+
+            var progress_percent = handle_pos / handle_range;
             
             this.setContentPosition(progress_percent);
         },
