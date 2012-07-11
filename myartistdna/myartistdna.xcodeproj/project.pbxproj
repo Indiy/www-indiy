@@ -123,6 +123,7 @@
 		2D646885159B7BFF00B9AD11 /* order.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = order.php; sourceTree = "<group>"; };
 		2D64688A15A65B1C00B9AD11 /* player_tooltips.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_tooltips.js; sourceTree = "<group>"; };
 		2D64689215ACE95200B9AD11 /* jquery.scroll.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.scroll.js; sourceTree = "<group>"; };
+		2D64689715ADDA3300B9AD11 /* mad.scrollbar.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mad.scrollbar.js; sourceTree = "<group>"; };
 		2D64FD1014F8355E00C5C468 /* ipad.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = ipad.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D64FD1114F8735800C5C468 /* rich_text_editor.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = rich_text_editor.js; sourceTree = "<group>"; };
 		2D6DF95114BA4F4A00D0750E /* footer.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = footer.js; sourceTree = "<group>"; };
@@ -3166,6 +3167,7 @@
 				2D8D96FA15A1698200AA3D1B /* order.js */,
 				2D8D96FE15A27A8900AA3D1B /* fan_login_signup.js */,
 				2D64689215ACE95200B9AD11 /* jquery.scroll.js */,
+				2D64689715ADDA3300B9AD11 /* mad.scrollbar.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
