@@ -3128,7 +3128,6 @@
 		2DF472C71440B77F005538C7 /* js */ = {
 			isa = PBXGroup;
 			children = (
-				2D64689215ACE95200B9AD11 /* jquery.scroll.js */,
 				2DD94A3114C3A6C5002B1259 /* artist_home_audio.js */,
 				2DE2142714C15540000C5142 /* artist_home_video.js */,
 				2DD94A3214C49CA8002B1259 /* artist_home_tabs.js */,
@@ -3166,6 +3165,7 @@
 				2D8D96EC1597C40500AA3D1B /* search.js */,
 				2D8D96FA15A1698200AA3D1B /* order.js */,
 				2D8D96FE15A27A8900AA3D1B /* fan_login_signup.js */,
+				2D64689215ACE95200B9AD11 /* jquery.scroll.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
