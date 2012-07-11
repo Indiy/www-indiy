@@ -106,10 +106,10 @@ Changelog:
             //
             return this.each(function(){
 
-                var container = $(this)
+                var container = $(this);
 
                     // properties
-                  , props = {
+                var props = {
                         arrows: options.arrows
                     };
 
@@ -133,7 +133,7 @@ Changelog:
                 this.scrollbar = new $.fn.scrollbar.Scrollbar(container, props, options);
 
                 // build HTML, initialize Handle and append Events
-                this.scrollbar.buildHtml().setHandle().appendEvents();
+                this.scrollbar.setHandle().appendEvents();
 
                 // callback function after creation of scrollbar
                 if(typeof fn === "function"){
