@@ -22,7 +22,7 @@
                 this.scrollbar = new $.fn.scrollbar.Scrollbar(container, props, options);
 
                 // build HTML, initialize Handle and append Events
-                this.scrollbar.buildHtml().setHandle().appendEvents();
+                this.scrollbar.setupHtml().setHandle().appendEvents();
 
                 // callback function after creation of scrollbar
                 if(typeof fn === "function"){
