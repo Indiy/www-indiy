@@ -522,13 +522,11 @@
     //
     // determine content height
     //
-    $.fn.scrollbar.contentHeight = function(scroller){
-
-        var contents = scroller.wrapInner('<div>').children(); 
-        var height = contents.outerHeight(); 
-        contents.replaceWith(contents.html());
-        
-        return height;
+    $.fn.scrollbar.contentHeight = function(container){
+      var wrapper = container.wrapInner('<div/>').find(':first');
+      var height = wrapper.css({overflow:'hidden'}).height();
+      wrapper.replaceWith(wrapper.contents());
+      return height;
     };
 
 
