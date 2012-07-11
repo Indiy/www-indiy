@@ -193,7 +193,7 @@
             var content_range = this.contentHeight - visible_height;
             
             var new_top = content_range * percent;
-            console.log("content_range: " + content_range + ", new_top: " + new_top);
+            console.log("setContentPosition: " + percent + ", content_range: " + content_range + ", new_top: " + new_top);
             this.pane.scrollTop(new_top);
         },
 
