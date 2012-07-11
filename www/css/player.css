@@ -1823,7 +1823,7 @@ body {
 .scrollbar-handle {
     position: absolute;
     top: 50%;
-    height: 20px;
+    min-height: 20px;
     width: 20px;
     background: #999;
 }
