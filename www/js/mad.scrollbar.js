@@ -316,6 +316,7 @@
         },
         
         onMouseWheel: function(ev, delta, deltaX, deltaY) {
+            console.log("onMouseWheel: " + delta + ", dX: " + deltaX + ", dY: " + deltaY);
             // calculate new handle position
             var top = this.pane.scrollTop();
             var new_top = top + deltaX * 30;
