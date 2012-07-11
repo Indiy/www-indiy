@@ -39,9 +39,8 @@ function generalOnReady()
     clickShareButton();
 
     $(document).mousemove(showAndTimeoutControls);
-    $(document).mousemove(showAndTimeoutControls);
+
     $('#volume_slider .bar').click(clickVolume);
-    
     var opts = {
         'axis': "y",
         'containment': "#volume_slider .bar",
@@ -51,9 +50,7 @@ function generalOnReady()
     
     $('#volume_slider .bar .handle').draggable(opts);
     
-    
     var anchor_map = getAnchorMap();
-    
     
     if( 'song_id' in anchor_map )
     {
