@@ -1826,7 +1826,7 @@ body {
     position: absolute;
     right: 2px;
     top: 50%;
-    min-height: 20px;
+    min-height: 50px;
     width: 12px;
     background: #c5c5c5;
 }
