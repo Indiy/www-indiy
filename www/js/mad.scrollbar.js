@@ -317,7 +317,7 @@
             var y = handle_top - bar_top;
             var progress_percent = y / height;
             
-            console.log("progress_percent: " + progress_percent);
+            this.setContentPosition(progress_percent);
         },
         
         onHandleDragStop: function(ev) { onHandleDrag(ev); },
@@ -381,12 +381,11 @@
         //
         // set position of content
         //
-        setContentPosition: function(){
-
-            // derive position of content from position of handle
-            this.pane.top = -1 * this.props.handleContentRatio * this.handle.top;
-
-            this.pane[0].style.top = this.pane.top + 'px';
+        setContentPosition: function(percent){
+            var height = $.fn.scrollbar.contentHeight(this.pane);
+            var newTop = height * percent;
+            console.log("height: " + height + ", newTop: " + newTop);
+            this.pane.scrollTop(newTop);
         },
 
 
