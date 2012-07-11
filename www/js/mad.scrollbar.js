@@ -147,6 +147,7 @@
                 'dragstop': $.proxy(this, 'onHandleDragStop')
             };
             this.handle.draggable(opts);
+            this.pane.bind('mousewheel.madsb',$.proxy(this, 'onMouseWheel'));
             
             this.refreshHtml();
             
@@ -194,14 +195,19 @@
             this.handle.css({ top: handle_top });
             return this;
         },
-        setContentPosition: function(percent){
+        setContentPositionPercent: function(percent){
             var visible_height = this.pane.height();
             var content_range = this.contentHeight - visible_height;
             
             var new_top = content_range * percent;
-            console.log("setContentPosition: " + percent + ", content_range: " + content_range + ", new_top: " + new_top);
+            console.log("setContentPositionPercent: " + percent + ", content_range: " + content_range + ", new_top: " + new_top);
+            setContentPositionPx(new_top);
+        },
+        setContentPositionPx: function(new_top){
+            console.log("setContentPositionPx: new_top: " + new_top);
             this.pane.scrollTop(new_top);
         },
+        
 
         //
         // get mouse position helper
@@ -241,9 +247,8 @@
                 distance = Math.ceil(to.position().top / this.props.handleContentRatio);
             }
 
-            this.handle.top = distance;
+            this.setContentPositionPx(distance);
             this.setHandlePosition();
-            this.setContentPosition();
         },
         
         //
@@ -294,7 +299,7 @@
 
             var progress_percent = handle_pos / handle_range;
             
-            this.setContentPosition(progress_percent);
+            this.setContentPositionPercent(progress_percent);
         },
         
         onHandleDragStop: function(ev) { onHandleDrag(ev); },
@@ -309,6 +314,21 @@
 
             console.log("click progress_percent: " + progress_percent);
         },
+        
+        onMouseWheel: function(ev, delta, deltaX, deltaY) {
+            // calculate new handle position
+            var top = this.pane.scrollTop();
+            var new_top = top + deltaX * 30;
+
+            this.setContentPositionPx(new_top);
+
+            // prevent default scrolling of the entire document if handle is within [min, max]-range
+            //if(this.handle.top > this.props.handlePosition.min && this.handle.top < this.props.handlePosition.max){
+              //  ev.preventDefault();
+            //}
+        },
+        
+        
         /*
         //
         // on moving of handle
@@ -364,19 +384,7 @@
         //
         // mouse wheel movement
         //
-        onMouseWheel: function(ev, delta){
-
-            // calculate new handle position
-            this.handle.top -= delta;
-
-            this.setHandlePosition();
-            this.setContentPosition();
-
-            // prevent default scrolling of the entire document if handle is within [min, max]-range
-            if(this.handle.top > this.props.handlePosition.min && this.handle.top < this.props.handlePosition.max){
-                ev.preventDefault();
-            }
-        },
+        
 
 
         //
