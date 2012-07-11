@@ -1014,7 +1014,7 @@ body {
     bottom: 0px;
 }
 #user_tab .scrollable_container {
-    padding-right: 95px;
+    padding-right: 102px;
     height: 100%;
     overflow: hidden;
 }
@@ -1272,7 +1272,7 @@ body {
     position: fixed;
     top: 110px;
     left: 278px;
-    right: 14px;
+    right: 24px;
     height: 0px;
     max-width: 750px;
     white-space: nowrap;
