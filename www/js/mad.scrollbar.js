@@ -150,7 +150,9 @@
             
             this.refreshHtml();
             
-            this.pane.resize($.proxy(this, 'onPaneResize'));
+            this.pane.resize(function() { console.log("here"); }));
+            $(document).resize(function() { console.log("here2"); });
+            this.pane.bind('resize.madsb',$.proxy(this, 'onPaneResize'));
 
             return this;
         },
@@ -160,6 +162,7 @@
         },
         onPaneResize: function() {
             this.refreshHtml();
+            console.log("onPageResize");
         },
 
         //
