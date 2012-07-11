@@ -133,9 +133,6 @@
 
         setupHtml: function(){
 
-
-            var height = this.container.height();
-
             // set scrollbar-object properties
             this.pane = this.container;
             this.handle = this.container.find('.scrollbar-handle');
@@ -151,13 +148,11 @@
 
             this.handle.draggable(opts);
 
-
-            // set initial position of pane to 'top'
-            this.pane.top = 0;
-
             return this;
         },
-
+        refreshHtml: function() {
+            this.contentHeight = $.fn.scrollbar.contentHeight(this.pane);
+        },
 
         //
         // calculate dimensions of handle
@@ -278,10 +273,12 @@
         // Remove scrollbar dom elements
         //
         unscrollbar: function() {
+            /*
           var holder = this.container.find('.scrollbar-pane').find('*');
           this.container.empty();
           this.container.append(holder);
           this.container.attr('style','');
+          */
         },
 
 
@@ -382,7 +379,7 @@
         // set position of content
         //
         setContentPosition: function(percent){
-            var height = $.fn.scrollbar.contentHeight(this.pane);
+            var height = this.contentHeight;
             var newTop = height * percent;
             console.log("height: " + height + ", newTop: " + newTop);
             this.pane.scrollTop(newTop);
