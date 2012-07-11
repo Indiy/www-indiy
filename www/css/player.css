@@ -1840,9 +1840,9 @@ body {
 }
 .scrollbar-handle .inner .fingers {
     position: absolute;
-    left: 3px;
+    left: 2px;
     top: 50%;
-    margin-top: -4px;
+    margin-top: -8px;
     height: 8px;
     width: 6px;
 }
