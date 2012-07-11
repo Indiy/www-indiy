@@ -522,14 +522,13 @@
     //
     // determine content height
     //
-    $.fn.scrollbar.contentHeight = function(container){
+    $.fn.scrollbar.contentHeight = function(scroller){
 
-      // inner-wrap content temporarily and meassure content height.
-      // wrapper container need to have an overflow set to 'hidden' to respect margin collapsing
-      var wrapper = container.wrapInner('<div/>').find(':first');
-      var height = wrapper.css({overflow:'hidden'}).height();
-      wrapper.replaceWith(wrapper.contents());
-      return height;
+        var contents = scroller.wrapInner('<div>').children(); 
+        var height = contents.outerHeight(); 
+        contents.replaceWith(contents.html());
+        
+        return height;
     };
 
 
