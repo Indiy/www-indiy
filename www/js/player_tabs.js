@@ -1,6 +1,15 @@
 
 var g_currentUserPageIndex = false;
 
+var g_userTabScrollbar = false;
+
+$(document).ready(userTabReady);
+
+function userTabReady()
+{
+    g_userTabScrollbar = $('#user_tab .scrollable_container').scrollbar();
+}
+
 function showUserPage(i)
 {
     if( g_currentUserPageIndex === i && g_showingContentPage )
@@ -27,7 +36,7 @@ function showUserPage(i)
         }
         $('#page_content').html(page.content);
         $('#user_tab').show();
-        $('#user_tab .scrollable_container').scrollbar();
+        g_userTabScrollbar.repaint();
     }
 }
 function hideTab()
