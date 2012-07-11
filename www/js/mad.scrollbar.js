@@ -201,7 +201,7 @@
             
             var new_top = content_range * percent;
             //console.log("setContentPositionPercent: " + percent + ", content_range: " + content_range + ", new_top: " + new_top);
-            setContentPositionPx(new_top);
+            this.setContentPositionPx(new_top);
         },
         setContentPositionPx: function(new_top){
             //console.log("setContentPositionPx: new_top: " + new_top);
