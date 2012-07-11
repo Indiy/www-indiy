@@ -139,20 +139,18 @@
             this.handleContainer = this.container.find('.scrollbar-handle-container');
 
             this.handleContainer.bind('click.madsb',$.proxy(this, 'onHandleContainerClick'));
+
             var opts = {
                 'axis': "y",
                 'containment': "parent",
                 'drag': $.proxy(this, 'onHandleDrag'),
                 'dragstop': $.proxy(this, 'onHandleDragStop')
             };
-
             this.handle.draggable(opts);
             
             this.refreshHtml();
             
-            this.pane.resize(function() { console.log("here"); });
             $(window).resize($.proxy(this, 'onPaneResize'));
-            this.pane.bind('resize.madsb',);
 
             return this;
         },
