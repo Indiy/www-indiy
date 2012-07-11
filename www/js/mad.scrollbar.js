@@ -200,11 +200,11 @@
             var content_range = this.contentHeight - visible_height;
             
             var new_top = content_range * percent;
-            console.log("setContentPositionPercent: " + percent + ", content_range: " + content_range + ", new_top: " + new_top);
+            //console.log("setContentPositionPercent: " + percent + ", content_range: " + content_range + ", new_top: " + new_top);
             setContentPositionPx(new_top);
         },
         setContentPositionPx: function(new_top){
-            console.log("setContentPositionPx: new_top: " + new_top);
+            //console.log("setContentPositionPx: new_top: " + new_top);
             this.pane.scrollTop(new_top);
         },
         
@@ -316,10 +316,10 @@
         },
         
         onMouseWheel: function(ev, delta, deltaX, deltaY) {
-            console.log("onMouseWheel: " + delta + ", dX: " + deltaX + ", dY: " + deltaY);
+            //console.log("onMouseWheel: " + delta + ", dX: " + deltaX + ", dY: " + deltaY);
             // calculate new handle position
             var top = this.pane.scrollTop();
-            var new_top = top + deltaY * 30;
+            var new_top = top - deltaY * 30;
 
             this.setContentPositionPx(new_top);
             this.setHandle();
