@@ -318,9 +318,9 @@
             var progress_percent = y / height;
             
             console.log("progress_percent: " + progress_percent);
-        }
+        },
         
-        onHandleDragStop: function(ev) { onHandleDrag(ev); }
+        onHandleDragStop: function(ev) { onHandleDrag(ev); },
 
         onHandleContainerClick: function(ev) {
             var height = this.handleContainer.height();
