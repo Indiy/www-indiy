@@ -1812,11 +1812,18 @@ body {
 }
 
 .scrollbar-handle-container {
-    background: #EEE;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
     width: 20px;
+    background: #EEE;
 }
 
 .scrollbar-handle {
+    position: absolute;
+    top: 50%;
+    height: 20px;
     width: 20px;
     background: #999;
 }
