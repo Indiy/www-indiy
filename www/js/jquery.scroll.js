@@ -133,7 +133,7 @@ Changelog:
                 this.scrollbar = new $.fn.scrollbar.Scrollbar(container, props, options);
 
                 // build HTML, initialize Handle and append Events
-                this.scrollbar.setHandle().appendEvents();
+                this.scrollbar.buildHtml().setHandle().appendEvents();
 
                 // callback function after creation of scrollbar
                 if(typeof fn === "function"){
@@ -306,70 +306,25 @@ Changelog:
         //
         buildHtml: function(){
 
+            /*
             // build new DOM nodes
             this.container.wrapInner('<div class="scrollbar-pane"/>');
             this.container.append('<div class="scrollbar-handle-container"><div class="scrollbar-handle"/></div>');
             if(this.props.arrows){
                 this.container.append('<div class="scrollbar-handle-up"/>').append('<div class="scrollbar-handle-down"/>');
             }
+            */
 
             // save height of container to re-set it after some DOM manipulations
             var height = this.container.height();
 
             // set scrollbar-object properties
-            this.pane =            this.container.find('.scrollbar-pane');
+            this.pane =            this.container;
             this.handle =          this.container.find('.scrollbar-handle');
             this.handleContainer = this.container.find('.scrollbar-handle-container');
             this.handleArrows =    this.container.find('.scrollbar-handle-up, .scrollbar-handle-down');
             this.handleArrowUp =   this.container.find('.scrollbar-handle-up');
             this.handleArrowDown = this.container.find('.scrollbar-handle-down');
-
-            // set some default CSS attributes (may be overwritten by CSS definitions in an external CSS file)
-            this.pane.defaultCss({
-                'top':      0,
-                'left':     0
-            });
-            this.handleContainer.defaultCss({
-                'right':    0
-            });
-            this.handle.defaultCss({
-                'top':      0,
-                'right':    0
-            });
-            this.handleArrows.defaultCss({
-                'right':    0
-            });
-            this.handleArrowUp.defaultCss({
-                'top':      0
-            });
-            this.handleArrowDown.defaultCss({
-                'bottom':   0
-            });
-
-            // set some necessary CSS attributes (can NOT be overwritten by CSS definitions)
-            this.container.css({
-                'position': this.container.css('position') === 'absolute' ? 'absolute' : 'relative',
-                'overflow': 'hidden',
-                'height':   height
-            });
-            this.pane.css({
-                'position': 'absolute',
-                'overflow': 'visible',
-                'height':   'auto'
-            });
-            this.handleContainer.css({
-                'position': 'absolute',
-                'top':      this.handleArrowUp.outerHeight(true),
-                'height':   (this.props.containerHeight - this.handleArrowUp.outerHeight(true) - this.handleArrowDown.outerHeight(true)) + 'px'
-            });
-            this.handle.css({
-                'position': 'absolute',
-                'cursor':   'pointer'
-            });
-            this.handleArrows.css({
-                'position': 'absolute',
-                'cursor':   'pointer'
-            });
 
             // set initial position of pane to 'top'
             this.pane.top = 0;
