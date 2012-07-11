@@ -22,7 +22,7 @@
                 this.scrollbar = new $.fn.scrollbar.Scrollbar(container, props, options);
 
                 // build HTML, initialize Handle and append Events
-                this.scrollbar.setupHtml().setHandle().appendEvents();
+                this.scrollbar.setupHtml();
 
                 // callback function after creation of scrollbar
                 if(typeof fn === "function"){
@@ -156,6 +156,7 @@
         },
         refreshHtml: function() {
             this.contentHeight = $.fn.scrollbar.contentHeight(this.pane);
+            this.setHandle();
         },
         onPaneResize: function() {
             this.refreshHtml();
@@ -165,72 +166,33 @@
         // calculate dimensions of handle
         //
         setHandle: function(){
-            /*
-            this.props.handleContainerHeight = this.handleContainer.height();
-            this.props.contentHeight = this.pane.height();
 
-            // height of handle
-            this.props.handleHeight = this.opts.handleHeight == 'auto' ? Math.max(Math.ceil(this.props.containerHeight * this.props.handleContainerHeight / this.props.contentHeight), this.opts.handleMinHeight) : this.opts.handleHeight;
-            this.handle.height(this.props.handleHeight);
+            var handle_container_height = this.handleContainer.height();
+            var visible_height = this.pane.height();
 
-            // if handle has a border (always be aware of the css box-model), we need to correct the handle height.
-            this.handle.height(2 * this.handle.height() - this.handle.outerHeight(true));
+            var handle_height = Math.ceil(visible_height * handle_container_height / this.contentHeight);
+            
+            this.handle.height(handle_height);
 
-            // min- and max-position for handle
-            this.props.handlePosition = {
-                min: 0,
-                max: this.props.handleContainerHeight - this.props.handleHeight
-            };
+            // This is post CSS min-height application
+            handle_height = this.handle.height();
 
-            // ratio of handle-container-height to content-container-height (to calculate position of content related to position of handle)
-            this.props.handleContentRatio = (this.props.contentHeight - this.props.containerHeight) / (this.props.handleContainerHeight - this.props.handleHeight);
-
-            // set initial position of handle to 'top'
-            // if new content is added into the container, handle.top needs to be recalculated
-            if(this.handle.top == undefined){
-                this.handle.top = 0;
-            } else {
-                this.handle.top = -1 * this.pane.top / this.props.handleContentRatio;
-            }
-             */
+            var top = this.pane.scrollTop();
+            var content_range = this.contentHeight - visible_height;
+            
+            var content_percent = top / content_range;
+            var handle_range = content_range - handle_height;
+            var handle_top = handle_range * content_percent;
+            
+            this.handle.css({ top: handle_top });
             return this;
         },
-
-
-        //
-        // append events on handle and handle-container
-        //
-        appendEvents: function(){
-
-        /*
-            // append drag-drop event on scrollbar-handle
-            // the events 'mousemove.handle' and 'mouseup.handle' are dynamically appended in the startOfHandleMove-function
-            this.handle.bind('mousedown.handle', $.proxy(this, 'startOfHandleMove'));
-
-            // append mousedown event on handle-container
-            this.handleContainer.bind('mousedown.handle', $.proxy(this, 'onHandleContainerMousedown'));
-
-            // append hover event on handle-container
-            this.handleContainer.bind('mouseenter.container mouseleave.container', $.proxy(this, 'onHandleContainerHover'));
-
-            // append click event on scrollbar-up- and scrollbar-down-handles
-            this.handleArrows.bind('mousedown.arrows', $.proxy(this, 'onArrowsMousedown'));
-
-            // append mousewheel event on content container
-            this.container.bind('mousewheel.container', $.proxy(this, 'onMouseWheel'));
-
-            // append hover event on content container
-            this.container.bind('mouseenter.container mouseleave.container', $.proxy(this, 'onContentHover'));
-
-            // do not bubble down click events into content container
-            this.handle.bind('click.scrollbar', this.preventClickBubbling);
-            this.handleContainer.bind('click.scrollbar', this.preventClickBubbling);
-            this.handleArrows.bind('click.scrollbar', this.preventClickBubbling);
-            */
-
-            return this;
+        setContentPosition: function(percent){
+            var height = this.contentHeight;
+            var newTop = height * percent;
+            console.log("height: " + height + ", newTop: " + newTop);
+            this.pane.scrollTop(newTop);
         },
-
 
         //
         // get mouse position helper
@@ -244,8 +206,7 @@
         // repaint scrollbar height and position
         //
         repaint: function(){
-            this.setHandle();
-            this.setHandlePosition();
+            this.refreshHtml();
         },
 
 
@@ -287,8 +248,8 @@
           this.container.attr('style','');
           */
         },
-
-
+    
+        /*
         // ---------- event handler ---------------------------------------------------------------
 
         //
@@ -311,7 +272,7 @@
             this.handle.addClass('move');
             this.handleContainer.addClass('move');
         },
-
+         */
 
         onHandleDrag: function(ev) {
             var height = this.handleContainer.height();
@@ -336,6 +297,7 @@
 
             console.log("click progress_percent: " + progress_percent);
         },
+        /*
         //
         // on moving of handle
         //
@@ -380,19 +342,13 @@
 
             this.handle[0].style.top = this.handle.top + 'px';
         },
-
+         */
 
         //
         // set position of content
         //
-        setContentPosition: function(percent){
-            var height = this.contentHeight;
-            var newTop = height * percent;
-            console.log("height: " + height + ", newTop: " + newTop);
-            this.pane.scrollTop(newTop);
-        },
-
-
+        
+        
         //
         // mouse wheel movement
         //
