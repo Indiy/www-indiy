@@ -188,10 +188,12 @@
             return this;
         },
         setContentPosition: function(percent){
-            var height = this.contentHeight;
-            var newTop = height * percent;
-            console.log("height: " + height + ", newTop: " + newTop);
-            this.pane.scrollTop(newTop);
+            var visible_height = this.pane.height();
+            var content_range = this.contentHeight - visible_height;
+            
+            var new_top = content_range * percent;
+            console.log("content_range: " + content_range + ", new_top: " + new_top);
+            this.pane.scrollTop(new_top);
         },
 
         //
