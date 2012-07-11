@@ -311,7 +311,7 @@
 
         onHandleDrag: function(ev) {
             var height = this.handleContainer.height();
-            var bar_top = this.handleContainer.offset.top;
+            var bar_top = this.handleContainer.offset().top;
             var handle_top = this.handle.offset().top;
             
             var y = handle_top - bar_top;
@@ -324,7 +324,7 @@
 
         onHandleContainerClick: function(ev) {
             var height = this.handleContainer.height();
-            var bar_top = this.handleContainer.offset.top;
+            var bar_top = this.handleContainer.offset().top;
             var click_top = ev.pageY;
 
             var y = click_top - bar_top;
