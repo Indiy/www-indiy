@@ -167,10 +167,16 @@
         // calculate dimensions of handle
         //
         setHandle: function(){
+            var visible_height = this.pane.height();
+            if( visible_height >= this.contentHeight )
+            {
+                this.handleContainer.hide();
+                return;
+            }
+            
+            this.handleContainer.show();
 
             var handle_container_height = this.handleContainer.height();
-            var visible_height = this.pane.height();
-
             var handle_height = Math.ceil(visible_height * handle_container_height / this.contentHeight);
             
             this.handle.height(handle_height);
