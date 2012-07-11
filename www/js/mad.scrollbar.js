@@ -150,7 +150,7 @@
             
             this.refreshHtml();
             
-            this.pane.resize(function() { console.log("here"); }));
+            this.pane.resize(function() { console.log("here"); });
             $(document).resize(function() { console.log("here2"); });
             this.pane.bind('resize.madsb',$.proxy(this, 'onPaneResize'));
 
