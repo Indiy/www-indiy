@@ -318,11 +318,16 @@
         onMouseWheel: function(ev, delta, deltaX, deltaY) {
             //console.log("onMouseWheel: " + delta + ", dX: " + deltaX + ", dY: " + deltaY);
             // calculate new handle position
-            var top = this.pane.scrollTop();
-            var new_top = top - deltaY * 30;
+            var old_top = this.pane.scrollTop();
+            var new_top = old_top - deltaY * 30;
 
             this.setContentPositionPx(new_top);
             this.setHandle();
+
+            new_top = this.pane.scrollTop();
+
+            if( old_top != new_top )
+                ev.preventDefault();
 
             // prevent default scrolling of the entire document if handle is within [min, max]-range
             //if(this.handle.top > this.props.handlePosition.min && this.handle.top < this.props.handlePosition.max){
