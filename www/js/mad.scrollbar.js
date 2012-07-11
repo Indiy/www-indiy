@@ -147,11 +147,18 @@
             };
 
             this.handle.draggable(opts);
+            
+            this.refreshHtml();
+            
+            this.pane.resize($.proxy(this, 'onPaneResize'));
 
             return this;
         },
         refreshHtml: function() {
             this.contentHeight = $.fn.scrollbar.contentHeight(this.pane);
+        },
+        onPaneResize: function() {
+            this.refreshHtml();
         },
 
         //
