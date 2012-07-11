@@ -1831,9 +1831,12 @@ body {
     background: #c5c5c5;
 }
 .scrollbar-handle .inner {
+    position: absolute;
     background-color: #a5a5a5
-    padding: 1px;
-    height: 100%;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
 }
 
 
