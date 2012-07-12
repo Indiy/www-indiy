@@ -6,7 +6,7 @@ function userTabReady()
 {
     $('#user_tab').scrollbar();
     $('#contact_tab').scrollbar();
-    $('#comment_tab').scrollbar();
+    $('#comment_tab').scrollbar( { measureTag: "#comment_tab .fb_container" } );
 }
 
 function showUserPage(i)
@@ -99,7 +99,7 @@ function showComments()
 }
 function periodicCommentTabCheck()
 {
-    $('#comment_tab').scrollbar("repaint");
+    //$('#comment_tab').scrollbar("repaint");
     if( !g_showingCommentPage )
         window.clearInterval(g_commentUpdateTimer);
     console.log(".");
