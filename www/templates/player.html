@@ -453,11 +453,12 @@
             <div class='title'>COMMENTS</div>
         </div>
         <div class='sep'></div>
-        <div class='comment_container'>
+        <div class='comment_container scrollbar-pane'>
             <div class='fb_container'>
                 <div class="fb-comments" data-href="<?=$artist_url;?>" data-num-posts="15" data-width="650" data-colorscheme="dark"></div>
             </div>
         </div>
+        <?=$scrollbar_html;?>
     </div>
     <div id='store_tab' class='content_tab'>
         <div class='close' onclick='hideTab();'>
