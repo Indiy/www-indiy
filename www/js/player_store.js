@@ -1,4 +1,9 @@
 
+$(document).ready(storeReady);
+function storeReady()
+{
+    $('#store_tab').scrollbar();
+}
 
 var g_showingStore = false;
 function showStore()
@@ -14,6 +19,8 @@ function showStore()
         storeShowProductList();
         g_showingStore = true;
         $('#store_tab').show();
+        
+        $('#store_tab').scrollbar("repaint");
     }
 }
 
@@ -27,6 +34,8 @@ function storeShowProductList()
     $('#store_tab #store_back').hide();
     $('#store_tab .store_content').hide();
     $('#store_tab #product_list').show();
+    
+    $('#store_tab').scrollbar("repaint");
 }
 var g_storeCurrentProductIndex = false;
 function storeShowProduct(index)
@@ -43,6 +52,8 @@ function storeShowProduct(index)
     $('#store_tab .store_content').hide();
     $('#store_tab #store_back').show();
     $('#store_tab #product_info').show();
+    
+    $('#store_tab').scrollbar("repaint");
 }
 
 function storeBuyProduct()
@@ -56,7 +67,9 @@ function storeBuyProduct()
 
     $('#store_tab .store_content').hide();
     $('#store_tab #store_back').show();
-    $('#store_tab #buy_now_result').show();    
+    $('#store_tab #buy_now_result').show();
+        
+    $('#store_tab').scrollbar("repaint");
 }
 function storeBuyProductId(product_id)
 {

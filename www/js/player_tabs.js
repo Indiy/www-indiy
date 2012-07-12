@@ -4,7 +4,7 @@ var g_currentUserPageIndex = false;
 $(document).ready(userTabReady);
 function userTabReady()
 {
-    $('#user_tab .scrollable_container').scrollbar();
+    $('#user_tab').scrollbar();
 }
 
 function showUserPage(i)
@@ -33,7 +33,8 @@ function showUserPage(i)
         }
         $('#page_content').html(page.content);
         $('#user_tab').show();
-        $('#user_tab .scrollable_container').scrollbar("repaint");
+        $('#user_tab').scrollbar("repaint");
+        window.setTimeout(function() { $('#user_tab').scrollbar("repaint"); },100);
     }
 }
 function hideTab()
