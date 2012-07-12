@@ -134,6 +134,8 @@
             this.handle = this.container.find('.scrollbar-handle');
             this.handleContainer = this.container.find('.scrollbar-handle-container');
 
+            this.pane.css({overflow: 'hidden'});
+            
             this.handleContainer.bind('click.madsb',$.proxy(this, 'onHandleContainerClick'));
 
             var opts = {
@@ -144,6 +146,7 @@
             };
             this.handle.draggable(opts);
             this.pane.bind('mousewheel.madsb',$.proxy(this, 'onMouseWheel'));
+            
             
             this.refreshHtml();
             
@@ -242,12 +245,8 @@
         // Remove scrollbar dom elements
         //
         unscrollbar: function() {
-            /*
-          var holder = this.container.find('.scrollbar-pane').find('*');
-          this.container.empty();
-          this.container.append(holder);
-          this.container.attr('style','');
-          */
+            this.pane.css({overflow: 'auto'});
+            this.handleContainer.hide();
         },
     
 

@@ -2,7 +2,7 @@
 $(document).ready(storeReady);
 function storeReady()
 {
-    $('#store_tab #product_list').scrollbar();
+    $('#store_tab .right').scrollbar();
 }
 
 var g_showingStore = false;
@@ -32,6 +32,8 @@ function storeShowProductList()
     $('#store_tab #store_back').hide();
     $('#store_tab .store_content').hide();
     $('#store_tab #product_list').show();
+    
+    $('#store_tab .right').scrollbar("repaint");
 }
 var g_storeCurrentProductIndex = false;
 function storeShowProduct(index)
@@ -48,6 +50,8 @@ function storeShowProduct(index)
     $('#store_tab .store_content').hide();
     $('#store_tab #store_back').show();
     $('#store_tab #product_info').show();
+    
+    $('#store_tab .right').scrollbar("repaint");
 }
 
 function storeBuyProduct()
@@ -61,7 +65,9 @@ function storeBuyProduct()
 
     $('#store_tab .store_content').hide();
     $('#store_tab #store_back').show();
-    $('#store_tab #buy_now_result').show();    
+    $('#store_tab #buy_now_result').show();
+        
+    $('#store_tab .right').scrollbar("repaint");
 }
 function storeBuyProductId(product_id)
 {
