@@ -130,7 +130,7 @@
         setupHtml: function(){
 
             // set scrollbar-object properties
-            this.pane = this.container;
+            this.pane = this.container.find('.scrollbar-pane');
             this.handle = this.container.find('.scrollbar-handle');
             this.handleContainer = this.container.find('.scrollbar-handle-container');
 

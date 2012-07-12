@@ -355,15 +355,15 @@
         </div>
         <div class='title'></div>
         <div class='sep'></div>
-        <div class='content_container'>
+        <div class='content_container scrollbar-pane'>
             <div class='scrollable_container'>
                 <div id='page_image_holder' class='image_holder'>
                     <img id='page_image'/>
                 </div>
                 <div id='page_content' class='page_content'></div>
-                <?=$scrollbar_html;?>
             </div>
         </div>
+        <?=$scrollbar_html;?>
     </div>
 
     <div id='contact_tab' class='content_tab'>
@@ -469,7 +469,7 @@
             </div>
         </div>
         <div class='sep'></div>
-        <div class='right'>
+        <div class='right scrollbar-pane'>
             <div id='product_list' class='product_list store_content'>
                 <div class='store_title'><?=$artist_name;?> STORE</div>
                 <?=$product_list_html;?>
@@ -505,8 +505,8 @@
                 <div class='view_cart button' onclick='storeViewCart();'>VIEW CART</div>
                 <div class='checkout button' onclick='storeCheckout();'>CHECKOUT NOW</div>
             </div>
-            <?=$scrollbar_html;?>
         </div>
+        <?=$scrollbar_html;?>
     </div>
     <div id='search'>
         <div class='search_box'>
