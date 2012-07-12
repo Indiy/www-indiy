@@ -19,6 +19,8 @@ function showStore()
         storeShowProductList();
         g_showingStore = true;
         $('#store_tab').show();
+        
+        $('#store_tab').scrollbar("repaint");
     }
 }
 
