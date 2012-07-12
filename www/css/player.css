@@ -1071,13 +1071,21 @@ body {
     background-color: #aaa;
     background-color: rgba(255,255,255,0.4);
 }
-#contact_tab .contact_container {
+#contact_tab .right {
     position: absolute;
-    left: 278px;
+    left: 268px;
     right: 0px;
     top: 36px;
     bottom: 0px;
     overflow: auto;
+}
+
+#contact_tab .contact_container {
+    position: absolute;
+    left: 10px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
 }
 #contact_tab .contact_form {
     padding-right: 95px;
@@ -1175,11 +1183,10 @@ body {
 #contact_tab .booking_container {
     display: none;
     position: absolute;
-    left: 278px;
+    left: 10px;
     right: 0px;
-    top: 36px;
+    top: 0px;
     bottom: 0px;
-    overflow: auto;
 }
 #contact_tab .booking_container .booking_form {
     max-width: 672px;
@@ -1807,11 +1814,8 @@ body {
 
 /* ---------- basic theme: these are the most necessary styles --------------------------------- */
 
-.scrollbar-pane {
-    margin-right: 20px;
-}
-
 .scrollbar-handle-container {
+    display: none;
     position: absolute;
     top: 0px;
     bottom: 0px;
