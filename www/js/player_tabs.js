@@ -99,10 +99,10 @@ function showComments()
 }
 function periodicCommentTabCheck()
 {
-    //$('#comment_tab').scrollbar("repaint");
+    $('#comment_tab').scrollbar("repaint");
     if( !g_showingCommentPage )
         window.clearInterval(g_commentUpdateTimer);
-    console.log(".");
+    //console.log(".");
 }
 
 function clickContactContact()
