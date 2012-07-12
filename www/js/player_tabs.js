@@ -76,12 +76,16 @@ function showContact()
         $('#contact_tab').scrollbar("repaint");
     }
 }
+
+var g_commentUpdateTimer = false;
 var g_showingCommentPage = false;
 function showComments()
 {
     if( g_showingCommentPage )
     {
         hideTab();
+        if( g_commentUpdateTimer )
+            window.clearInterval(g_commentUpdateTimer);
     }
     else
     {
@@ -90,7 +94,15 @@ function showComments()
         g_showingCommentPage = true;
         $('#comment_tab').show();
         $('#comment_tab').scrollbar("repaint");
+        g_commentUpdateTimer = window.setInterval(periodicCommentTabCheck,500);
     }
+}
+function periodicCommentTabCheck()
+{
+    $('#comment_tab').scrollbar("repaint");
+    if( !g_showingCommentPage )
+        window.clearInterval(g_commentUpdateTimer);
+    console.log(".");
 }
 
 function clickContactContact()
