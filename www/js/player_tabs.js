@@ -6,6 +6,7 @@ function userTabReady()
 {
     $('#user_tab').scrollbar();
     $('#contact_tab').scrollbar();
+    $('#comment_tab').scrollbar();
 }
 
 function showUserPage(i)
@@ -88,6 +89,7 @@ function showComments()
         showContentPage();
         g_showingCommentPage = true;
         $('#comment_tab').show();
+        $('#comment_tab').scrollbar("repaint");
     }
 }
 
