@@ -2,7 +2,7 @@
 (function($, document){
 
     var methods = {
-        init: function(opts){
+        init: function(fn,opts){
 
             // Extend default options
             var options = $.extend({}, $.fn.scrollbar.defaults, opts);
