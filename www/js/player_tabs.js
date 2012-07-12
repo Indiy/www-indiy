@@ -34,7 +34,7 @@ function showUserPage(i)
         $('#page_content').html(page.content);
         $('#user_tab').show();
         $('#user_tab .scrollable_container').scrollbar("repaint");
-        window.setTimeout(function() { $('#user_tab .scrollable_container').scrollbar("repaint"); },500);
+        window.setTimeout(function() { $('#user_tab .scrollable_container').scrollbar("repaint"); },100);
     }
 }
 function hideTab()
