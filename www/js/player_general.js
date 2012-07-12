@@ -126,10 +126,13 @@ function timeoutControls()
 }
 function hideControls()
 {
-    g_controlsShown = false;
-    $('.idle_fade_out').fadeOut();
-    closeBottom(false);
-    hideTooltip();
+    if( !g_showingContentPage && !g_searchOpen )
+    {
+        g_controlsShown = false;
+        $('.idle_fade_out').fadeOut();
+        closeBottom(false);
+        hideTooltip();
+    }
 }
 
 
