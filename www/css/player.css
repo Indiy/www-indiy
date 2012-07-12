@@ -1820,6 +1820,7 @@ body {
     background: transparent;
     border-left: 1px solid #aaa;
     border-left-color: rgba(255,255,255,0.4);
+    overflow: hidden;
 }
 
 .scrollbar-handle {
