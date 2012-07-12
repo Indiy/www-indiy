@@ -376,70 +376,73 @@
             <div class='title booking' onclick='clickContactBooking();'>BOOKING</div>
         </div>
         <div class='sep'></div>
-        <div class='contact_container'>
-            <div class='headline'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-            <div class='description'>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure.</div>
-            <div class='contact_form'>
-                <div class='label'>Your Name</div>
-                <div class='input_container'>
-                    <input id='name'/>
-                </div>
-                <div class='label'>Your Email</div>
-                <div class='input_container'>
-                    <input id='email'/>
-                </div>
-                <div class='label'>Your Message</div>
-                <div class='input_container'>
-                    <textarea id='message'></textarea>
-                </div>
-                <div class='submit_container'>
-                    <button onclick='submitContact();'>CONTACT US</button>
-                </div>
-            </div>
-            <div class='success'>
-                Thank you for your submission.
-            </div>
-        </div>
-        <div class='booking_container'>
-            <div class='headline'>BOOK THIS ARTIST</div>
-            <div class='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-            <div class='booking_form'>
-                <div class='label'>Your Name</div>
-                <div class='input_container'>
-                    <input id='name'/>
-                </div>
-                <div class='left_input'>
+        <div class='right scrollbar-pane'>
+            <div class='contact_container'>
+                <div class='headline'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class='description'>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure.</div>
+                <div class='contact_form'>
+                    <div class='label'>Your Name</div>
+                    <div class='input_container'>
+                        <input id='name'/>
+                    </div>
                     <div class='label'>Your Email</div>
                     <div class='input_container'>
                         <input id='email'/>
                     </div>
-                    <div class='label'>Event Date</div>
+                    <div class='label'>Your Message</div>
                     <div class='input_container'>
-                        <input id='event_date'/>
+                        <textarea id='message'></textarea>
+                    </div>
+                    <div class='submit_container'>
+                        <button onclick='submitContact();'>CONTACT US</button>
                     </div>
                 </div>
-                <div class='right_input'>
-                    <div class='label'>Event Location</div>
-                    <div class='input_container'>
-                        <input id='event_location'/>
-                    </div>
-                    <div class='label'>Event Budget</div>
-                    <div class='input_container'>
-                        <input id='event_budget'/>
-                    </div>
-                </div>
-                <div class='label'>Your Message</div>
-                <div class='input_container'>
-                    <textarea id='message'></textarea>
-                </div>
-                <div class='submit_container'>
-                    <button onclick='submitBooking();'>CONTACT US</button>
+                <div class='success'>
+                    Thank you for your submission.
                 </div>
             </div>
-            <div class='success'>
-                Thank you for your submission.  Someone will contact you as soon as possible.
+            <div class='booking_container'>
+                <div class='headline'>BOOK THIS ARTIST</div>
+                <div class='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class='booking_form'>
+                    <div class='label'>Your Name</div>
+                    <div class='input_container'>
+                        <input id='name'/>
+                    </div>
+                    <div class='left_input'>
+                        <div class='label'>Your Email</div>
+                        <div class='input_container'>
+                            <input id='email'/>
+                        </div>
+                        <div class='label'>Event Date</div>
+                        <div class='input_container'>
+                            <input id='event_date'/>
+                        </div>
+                    </div>
+                    <div class='right_input'>
+                        <div class='label'>Event Location</div>
+                        <div class='input_container'>
+                            <input id='event_location'/>
+                        </div>
+                        <div class='label'>Event Budget</div>
+                        <div class='input_container'>
+                            <input id='event_budget'/>
+                        </div>
+                    </div>
+                    <div class='label'>Your Message</div>
+                    <div class='input_container'>
+                        <textarea id='message'></textarea>
+                    </div>
+                    <div class='submit_container'>
+                        <button onclick='submitBooking();'>CONTACT US</button>
+                    </div>
+                </div>
+                <div class='success'>
+                    Thank you for your submission.  Someone will contact you as soon as possible.
+                </div>
             </div>
         </div>
+        <?=$scrollbar_html;?>
     </div>
     <div id='comment_tab' class='content_tab'>
         <div class='close' onclick='hideTab();'>

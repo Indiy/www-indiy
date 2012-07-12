@@ -5,6 +5,7 @@ $(document).ready(userTabReady);
 function userTabReady()
 {
     $('#user_tab').scrollbar();
+    $('#contact_tab').scrollbar();
 }
 
 function showUserPage(i)
@@ -71,6 +72,7 @@ function showContact()
         g_showingContactPage = true;
         clickContactContact();
         $('#contact_tab').show();
+        $('#contact_tab').scrollbar("repaint");
     }
 }
 var g_showingCommentPage = false;
@@ -95,6 +97,8 @@ function clickContactContact()
     $('#contact_tab .contact_container').show();
     $('#contact_tab .title').removeClass('active');
     $('#contact_tab .title.contact').addClass('active');
+
+    $('#contact_tab').scrollbar("repaint");
 }
 function clickContactBooking()
 {
@@ -102,6 +106,8 @@ function clickContactBooking()
     $('#contact_tab .booking_container').show();
     $('#contact_tab .title').removeClass('active');
     $('#contact_tab .title.booking').addClass('active');
+
+    $('#contact_tab').scrollbar("repaint");    
 }
 
 function submitContact()
