@@ -106,7 +106,8 @@
         scrollTimeout       : 50,     // timeout of handle speed while mousedown on arrows [Number in milli sec].
         scrollStep          : 20,     // increment of handle position between two mousedowns on arrows [Number in px].
         scrollTimeoutArrows : 40,     // timeout of handle speed while mousedown in the handle container [Number in milli sec].
-        scrollStepArrows    : 3       // increment of handle position between two mousedowns in the handle container [px].
+        scrollStepArrows    : 3,       // increment of handle position between two mousedowns in the handle container [px].
+        measureTag          : false
     };
 
 
@@ -155,7 +156,14 @@
             return this;
         },
         refreshHtml: function() {
-            this.contentHeight = $.fn.scrollbar.contentHeight(this.pane);
+            if( this.opts.measureTag == false )
+            {
+                this.contentHeight = $.fn.scrollbar.contentHeight(this.pane);
+            }
+            else
+            {
+                this.contentHeight = $(this.opts.measureTag).height();
+            }
             this.setHandle();
         },
         onPaneResize: function() {
