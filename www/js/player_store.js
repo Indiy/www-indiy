@@ -1,4 +1,9 @@
 
+$(document).ready(storeReady);
+function storeReady()
+{
+    $('#store_tab #product_list').scrollbar();
+}
 
 var g_showingStore = false;
 function showStore()
