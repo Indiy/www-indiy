@@ -32,6 +32,7 @@
 		2D380B99146F0A5D00E36189 /* .htaccess */ = {isa = PBXFileReference; lastKnownFileType = text; path = .htaccess; sourceTree = "<group>"; };
 		2D380B9A146F0A5D00E36189 /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
 		2D380B9B1470800600E36189 /* cleanup_carts.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = cleanup_carts.php; sourceTree = "<group>"; };
+		2D3D8EF215AE4D0D00BA97B3 /* jquery.mousewheel.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.mousewheel.js; sourceTree = "<group>"; };
 		2D3ED6D41502D5A400A9D171 /* delete_account.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = delete_account.php; sourceTree = "<group>"; };
 		2D3EE24E15053A2800A9D171 /* madfm.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = madfm.js; sourceTree = "<group>"; };
 		2D3EE2501506E8C200A9D171 /* contact.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = contact.html; sourceTree = "<group>"; };
@@ -3129,6 +3130,7 @@
 		2DF472C71440B77F005538C7 /* js */ = {
 			isa = PBXGroup;
 			children = (
+				2D3D8EF215AE4D0D00BA97B3 /* jquery.mousewheel.js */,
 				2DD94A3114C3A6C5002B1259 /* artist_home_audio.js */,
 				2DE2142714C15540000C5142 /* artist_home_video.js */,
 				2DD94A3214C49CA8002B1259 /* artist_home_tabs.js */,
