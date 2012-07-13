@@ -134,7 +134,7 @@
             this.pane = this.container.find('.scrollbar-pane');
             this.handle = this.container.find('.scrollbar-handle');
             this.handleContainer = this.container.find('.scrollbar-handle-container');
-            this.handleSupport = this.container.find('.scrollbar-handle-suppport');
+            this.handleSupport = this.container.find('.scrollbar-handle-support');
 
             this.pane.css({overflow: 'hidden'});
             
