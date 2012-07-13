@@ -613,8 +613,7 @@ body {
 #media_social_boxes .media_boxes .media_content {
     width: auto;
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
     background: black url('../images/media_even_texture.png') repeat;
 }
 #media_social_boxes .media_list {
