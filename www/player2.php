@@ -352,10 +352,13 @@
         
     $signup_url = trueSiteUrl() . "/signup.php";
     
-    $scrollbar_html = <<<END
-    
+    function build_scrollbar($style='')
+    {
+        
+        $scrollbar_html = <<<END
+        
 <div class='scrollbar-handle-container'>
-    <div class='scrollbar-handle'>
+    <div class='scrollbar-handle $style'>
         <div class='inner'>
             <div class='fingers'>
                 <div class='finger'></div>
@@ -368,6 +371,10 @@
 </div>    
 
 END;
+        
+        return $scrollbar_html;
+
+    }
     
     include_once 'templates/player.html';
 

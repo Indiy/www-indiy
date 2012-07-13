@@ -1836,7 +1836,7 @@ body {
     top: 50%;
     min-height: 50px;
     width: 12px;
-    background: #c5c5c5;
+    background-color: #c5c5c5;
 }
 .scrollbar-handle .inner {
     position: absolute;
@@ -1861,6 +1861,11 @@ body {
     border-bottom: 1px solid #c7c7c7;
     margin-bottom: 2px;
 }
-
+.scrollbar-handle.scrollbar-dark {
+    background: #666
+}
+.scrollbar-handle.scrollbar-dark .inner {
+    background-color: #555;
+}
 
 

@@ -321,7 +321,7 @@
                     </div>
                     <div id='music_list' class='media_list'>
                         <div class='right scrollbar-handle-support'>
-                            <?=$scrollbar_html;?>
+                            <?=build_scrollbar('scrollbar-dark');?>
                         </div>
                         <div class='left'>
                             <div class='track_container scrollbar-pane'>
@@ -370,7 +370,7 @@
                 <div id='page_content' class='page_content'></div>
             </div>
         </div>
-        <?=$scrollbar_html;?>
+        <?=build_scrollbar();?>
     </div>
 
     <div id='contact_tab' class='content_tab'>
@@ -449,7 +449,7 @@
                 </div>
             </div>
         </div>
-        <?=$scrollbar_html;?>
+        <?=build_scrollbar();?>
     </div>
     <div id='comment_tab' class='content_tab'>
         <div class='close' onclick='hideTab();'>
@@ -465,7 +465,7 @@
                 <div class="fb-comments" data-href="<?=$artist_url;?>" data-num-posts="15" data-width="650" data-colorscheme="dark"></div>
             </div>
         </div>
-        <?=$scrollbar_html;?>
+        <?=build_scrollbar();?>
     </div>
     <div id='store_tab' class='content_tab'>
         <div class='close' onclick='hideTab();'>
@@ -517,7 +517,7 @@
                 <div class='checkout button' onclick='storeCheckout();'>CHECKOUT NOW</div>
             </div>
         </div>
-        <?=$scrollbar_html;?>
+        <?=build_scrollbar();?>
     </div>
     <div id='search'>
         <div class='search_box'>
