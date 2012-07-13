@@ -620,6 +620,20 @@ body {
 #media_social_boxes .media_list {
     display: none;
 }
+#media_socal_boxes #music_list .right {
+    position: relative;
+    float: right; 
+    height: 220px; 
+    width: 15px; 
+}
+#media_socal_boxes #music_list .left {
+    overflow: hidden;
+}
+#media_socal_boxes #music_list .left .track_container {
+    height: 220px;
+    overflow: auto; 
+}
+
 #media_social_boxes .sep_line {
     height: 2px;
     width: 100%;

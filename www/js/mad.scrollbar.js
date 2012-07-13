@@ -134,6 +134,7 @@
             this.pane = this.container.find('.scrollbar-pane');
             this.handle = this.container.find('.scrollbar-handle');
             this.handleContainer = this.container.find('.scrollbar-handle-container');
+            this.handleSupport = this.container.find('.scrollbar-handle-suppport');
 
             this.pane.css({overflow: 'hidden'});
             
@@ -168,7 +169,6 @@
         },
         onPaneResize: function() {
             this.refreshHtml();
-            console.log("onPageResize");
         },
 
         //
@@ -179,10 +179,12 @@
             if( visible_height >= this.contentHeight )
             {
                 this.handleContainer.hide();
+                this.handleSupport.hide();
                 return;
             }
             
             this.handleContainer.show();
+            this.handleSupport.show();
 
             var handle_container_height = this.handleContainer.height();
             var handle_height = Math.ceil(visible_height * handle_container_height / this.contentHeight);
@@ -282,7 +284,7 @@
             var y = click_top - bar_top;
             var progress_percent = y / height;
 
-            console.log("click progress_percent: " + progress_percent);
+            //console.log("click progress_percent: " + progress_percent);
         },
         
         onMouseWheel: function(ev, delta, deltaX, deltaY) {
@@ -290,7 +292,7 @@
             var old_top = this.pane.scrollTop();
             var new_top = old_top - deltaY * 30;
 
-            console.log("onMouseWheel: " + delta + ", dX: " + deltaX + ", dY: " + deltaY + ", new_top: " + new_top);
+            //console.log("onMouseWheel: " + delta + ", dX: " + deltaX + ", dY: " + deltaY + ", new_top: " + new_top);
             
             this.setContentPositionPx(new_top);
             this.setHandle();
