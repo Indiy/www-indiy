@@ -1,14 +1,15 @@
 
 var g_photoListIndex = 0;
+var g_currentPhotoIndex = 0;
 
 $(document).ready(photoOnReady);
 function photoOnReady()
 {
     if( g_photoList.length > 0 )
     {
-        scrollPhotoToIndex();
+        scrollPhotoListToIndex();
         
-        $(window).resize(scrollPhotoToIndex);
+        $(window).resize(scrollPhotoListToIndex);
         $(window).resize(photoResizeBackgrounds);
     }
 }
@@ -29,7 +30,7 @@ function photoListScrollLeft()
         g_photoListIndex -= 3;
         if( g_photoListIndex < 0 )
             g_photoListIndex = 0;
-        scrollPhotoToIndex(true);
+        scrollPhotoListToIndex(true);
     }
 }
 
@@ -42,11 +43,11 @@ function photoListScrollRight()
         g_photoListIndex += 3;
         if( g_photoListIndex > max_left )
             g_photoListIndex = max_left;
-        scrollPhotoToIndex(true);
+        scrollPhotoListToIndex(true);
     }
 }
 
-function scrollPhotoToIndex(animate)
+function scrollPhotoListToIndex(animate)
 {
     var img_w = $('#photo_list .content .item .picture img').width();
     var img_h = img_w/1.4;
@@ -96,8 +97,7 @@ function photoShowIndex( index )
     loveChangedPhoto(photo.id,photo.name);
     
     photoLoadImage(photo,index);
-    $('#photo_bg .image_holder').hide();
-    $('#photo_bg #image_holder_' + index).show();
+    photoScrollToCurrentIndex();
     
     g_currentPhotoId = photo.id;
     window.location.hash = '#photo_id=' + g_currentPhotoId; 
@@ -190,46 +190,19 @@ function photoLoadImage(photo,index)
             var html = "<div style='width: 100%; height: {0}px;'></div>".format(win_height);
             holder.html(html);
         }
-    }            
+    }         
+}
+function photoScrollToCurrentIndex()
+{
+    var win_width = $('#photo_bg').width();
+    var left = win_width * g_currentPhotoIndex;
+    $('#photo_bg').scrollLeft(left);
 }
 
 function photoResizeBackgrounds()
 {
     imageResizeBackgrounds(g_photoList,'#photo_bg');
-    return;
-
-    for( var i = 0 ; i < g_photoList.length ; ++i )
-    {
-        var photo = g_photoList[i];
-        
-        if( !photo.loaded )
-            continue;
-        
-        var bg_style = photo.bg_style;
-        if( bg_style == 'STRETCH' )
-        {
-            var win_height = $('#photo_bg').height();
-            var win_width = $('#photo_bg').width();
-            
-            var div_holder = $('#photo_bg  #image_holder_' + i + ' div');
-            var image = $('#photo_bg #image_holder_' + i + ' div img');
-            
-            div_holder.height(win_height);
-            div_holder.width(win_width);
-            
-            var image_params = photoGetBackgroundParams(photo);
-            
-            image.width(image_params.width);
-            image.height(image_params.height);
-            
-            //div_holder.scrollLeft(-image_params.margin_left);
-            //div_holder.scrollTop(-image_params.margin_top);
-            div_holder.css("margin-left",image_params.margin_left + "px");
-            div_holder.css("margin-top",image_params.margin_top + "px");
-            div_holder.css("padding-right",-image_params.margin_left + "px");
-            div_holder.css("padding-bottom",-image_params.margin_top + "px");
-        }
-    }
+    photoScrollToCurrentIndex();
 }
 
 function photoGetBackgroundParams(photo)

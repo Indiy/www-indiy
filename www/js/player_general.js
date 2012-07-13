@@ -229,7 +229,7 @@ function clickPhotoMediaButton()
     $('#media_content_lists .media_list').hide();
     $('#photo_list').show();
     g_mediaContent = "photo";
-    scrollPhotoToIndex();
+    scrollPhotoListToIndex();
 }
 function clickMusicMediaButton()
 {
