@@ -102,7 +102,6 @@ function periodicCommentTabCheck()
     $('#comment_tab').scrollbar("repaint");
     if( !g_showingCommentPage )
         window.clearInterval(g_commentUpdateTimer);
-    //console.log(".");
 }
 
 function clickContactContact()

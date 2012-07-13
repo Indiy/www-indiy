@@ -177,7 +177,7 @@ function onVideoReady()
     g_videoPlayer.addEvent("progress",videoDownloadProgress);
     
     g_videoReady = true;
-    if( g_playIndexOnReady )
+    if( g_playIndexOnReady !== false )
     {
         videoPlayIndex(g_playIndexOnReady);
     }
