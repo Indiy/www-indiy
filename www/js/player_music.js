@@ -15,6 +15,8 @@ function musicOnReady()
      
     window.setTimeout(musicPreloadImages,MUSIC_IMAGE_PRELOAD_TIMEOUT);
     $(window).resize(musicResizeBackgrounds);
+    
+    $("#music_list").scrollbar();
 }
 
 function setupJplayer()
