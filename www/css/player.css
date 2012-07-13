@@ -1867,5 +1867,9 @@ body {
 .scrollbar-handle.scrollbar-dark .inner {
     background-color: #555;
 }
+.scrollbar-handle.scrollbar-dark .inner .fingers .finger {
+    border-top: 1px solid #777;
+    border-bottom: 1px solid #888;
+}
 
 
