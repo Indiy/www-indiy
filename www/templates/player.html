@@ -320,20 +320,27 @@
                         </div>
                     </div>
                     <div id='music_list' class='media_list'>
-                        <div class='play_line'>
-                            <div class='love_song_name'>
-                                <div class='song_title'>SONG TITLE</div>
-                            </div>
-                            <div class='buy_length_listens'>
-                                <div class='buy none'></div>
-                                <div class='sep'></div>
-                                <div class='length'>LENGTH</div>
-                                <div class='sep'></div>
-                                <div class='played'>PLAYED</div>
+                        <div style='float: right'>
+                            <?=$scrollbar_html;?>
+                        </div>
+                        <div style='overflow: hidden'>
+                            <div class='scroll-pane' style='overflow: auto'>
+                                <div class='play_line'>
+                                    <div class='love_song_name'>
+                                        <div class='song_title'>SONG TITLE</div>
+                                    </div>
+                                    <div class='buy_length_listens'>
+                                        <div class='buy none'></div>
+                                        <div class='sep'></div>
+                                        <div class='length'>LENGTH</div>
+                                        <div class='sep'></div>
+                                        <div class='played'>PLAYED</div>
+                                    </div>
+                                </div>
+                                <div class='sep_line'></div>
+                                <?=$music_list_html;?>
                             </div>
                         </div>
-                        <div class='sep_line'></div>
-                        <?=$music_list_html;?>
                     </div>
                     <div id='video_list' class='media_list picture_list'>
                         <? if( $video_nav_show ): ?>
