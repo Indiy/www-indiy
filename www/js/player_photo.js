@@ -11,6 +11,8 @@ function photoOnReady()
         
         $(window).resize(scrollPhotoListToIndex);
         $(window).resize(photoResizeBackgrounds);
+        
+        $('#photo_bg').swipe();
     }
 }
 
