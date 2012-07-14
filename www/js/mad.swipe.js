@@ -188,8 +188,10 @@
             ev.preventDefault();
         },
         onMouseDown: function(ev, delta, deltaX, deltaY) {
-            console.log("mousedown: " + ev);
             this.mouseDown = true;
+            this.moveStart = ev.pageX;
+            this.scrollLeftStart = this.container.scrollLeft();
+            console.log("mousedown: pageX: " + ev.pageX + ", scrollLeftStart: " + this.scrollLeftStart);
             ev.preventDefault();
         },
         onMouseUp: function(ev, delta, deltaX, deltaY) {
@@ -203,7 +205,12 @@
         onMouseMove: function(ev, delta, deltaX, deltaY) {
             if( this.mouseDown )
             {
-                console.log("mousemove: " + ev);
+                var delta = this.moveStart - ev.pageX;
+                var new_left = this.scrollLeftStart + delta;
+
+                console.log("mousemove: pageX: " + ev.pageX + ", newLeft: " + new_left + ", delta: " + delta);
+
+                this.container.scrollLeft(new_left);
                 ev.preventDefault();
             }
         },
