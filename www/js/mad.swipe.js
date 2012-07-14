@@ -137,7 +137,6 @@
         },
         refreshHtml: function() {
             this.contentWidth = this.container.width();
-            this.setHandle();
         },
         onContainerResize: function() {
             this.refreshHtml();
@@ -186,12 +185,15 @@
         },
         onMouseDown: function(ev, delta, deltaX, deltaY) {
             console.log("mousedown: " + ev);
+            ev.preventDefault();
         },
         onMouseUp: function(ev, delta, deltaX, deltaY) {
             console.log("mouseup: " + ev);
+            ev.preventDefault();
         },
         onMouseMove: function(ev, delta, deltaX, deltaY) {
             console.log("mousemove: " + ev);
+            ev.preventDefault();
         },
         
     };
