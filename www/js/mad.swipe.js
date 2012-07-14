@@ -127,6 +127,7 @@
 
         setupHtml: function(){
 
+            this.pad = this.container.find('.pad');
             // set swipe-object properties
             this.container.bind('mousewheel.madsw',$.proxy(this, 'onMouseWheel'));
             this.container.bind('mousedown.madsw',$.proxy(this, 'onMouseDown'));
@@ -143,8 +144,9 @@
         refreshHtml: function() {
             this.contentWidth = this.container.width();
             var overflow = this.contentWidth * this.opts.overFlowRatio;
-            this.minScrollLeft = -overflow;
-            this.maxScrollLeft = this.opts.panelCount * this.contentWidth - overflow;
+            this.pad.width(overflow);
+            var left = this.panelIndex * this.contentWidth + overflow;
+            this.container.scrollLeft(left);
         },
         onContainerResize: function() {
             console.log("onContainerResize");
@@ -210,15 +212,12 @@
         onMouseMove: function(ev, delta, deltaX, deltaY) {
             if( this.mouseDown )
             {
+            
+            
                 var delta = this.moveStart - ev.pageX;
                 var new_left = this.scrollLeftStart + delta;
 
                 console.log("mousemove: pageX: " + ev.pageX + ", newLeft: " + new_left + ", delta: " + delta);
-                
-                if( new_left < this.minScrollLeft )
-                    new_left = this.minScrollLeft;
-                if( new_left > this.maxScrollLeft )
-                    new_left = this.maxScrollLeft;
                     
                 this.container.scrollLeft(new_left);
                 ev.preventDefault();
