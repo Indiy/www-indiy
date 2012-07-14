@@ -81,6 +81,11 @@ function scrollPhotoListToIndex(animate)
         $('#photo_list .content').scrollLeft(dest);
 }
 
+function photoPanelChange(index)
+{
+    console.log("photoPanelChange: " + index);
+}
+
 function photoChangeId( photo_id )
 {
     for( var i = 0 ; i < g_photoList.length ; ++i )
