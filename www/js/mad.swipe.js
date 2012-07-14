@@ -128,8 +128,8 @@
             // set swipe-object properties
             this.container.bind('mousewheel.madsw',$.proxy(this, 'onMouseWheel'));
             this.container.bind('mousedown.madsw',$.proxy(this, 'onMouseDown'));
-            $(window).('mouseup.madsw',$.proxy(this, 'onMouseUp'));
-            $(window).('mousemove.madsw',$.proxy(this, 'onMouseMove'));
+            $(window).bind('mouseup.madsw',$.proxy(this, 'onMouseUp'));
+            $(window).bind('mousemove.madsw',$.proxy(this, 'onMouseMove'));
             
             this.panelIndex = 0;
             this.refreshHtml();
