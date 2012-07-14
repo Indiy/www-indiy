@@ -100,7 +100,9 @@
     //
     $.fn.swipe.defaults = {
         containerHeight : 'auto',
-        panelCount: 1
+        panelCount: 1,
+        resizeCallback: function() {},
+        onPanelChange: function() {}
     };
 
 
@@ -126,9 +128,10 @@
             // set swipe-object properties
             this.container.bind('mousewheel.madsw',$.proxy(this, 'onMouseWheel'));
             this.container.bind('mousedown.madsw',$.proxy(this, 'onMouseDown'));
-            this.container.bind('mouseup.madsw',$.proxy(this, 'onMouseUp'));
-            this.container.bind('mousemove.madsw',$.proxy(this, 'onMouseMove'));
+            $(window).('mouseup.madsw',$.proxy(this, 'onMouseUp'));
+            $(window).('mousemove.madsw',$.proxy(this, 'onMouseMove'));
             
+            this.panelIndex = 0;
             this.refreshHtml();
             
             $(window).resize($.proxy(this, 'onContainerResize'));
@@ -139,8 +142,9 @@
             this.contentWidth = this.container.width();
         },
         onContainerResize: function() {
-            this.refreshHtml();
             console.log("onContainerResize");
+            this.opts.resizeCallback();
+            this.refreshHtml();
         },
 
         setContentPositionIndex: function(percent){
@@ -180,7 +184,7 @@
         },
     
         onMouseWheel: function(ev, delta, deltaX, deltaY) {
-            console.log("onMouseWheel: ev: " + ev + ",delta: " + delta + ", dX: " + deltaX + ", dY: " + deltaY);
+            //console.log("onMouseWheel: ev: " + ev + ",delta: " + delta + ", dX: " + deltaX + ", dY: " + deltaY);
             ev.preventDefault();
         },
         onMouseDown: function(ev, delta, deltaX, deltaY) {
