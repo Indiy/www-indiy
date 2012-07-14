@@ -224,8 +224,8 @@
                 left -= overflow;
 
                 var right = left + this.contentWidth;
-                var left_index = left / this.contentWidth;
-                var right_index = right / this.contentWidth;
+                var left_index = Math.floor(left / this.contentWidth);
+                var right_index = Math.floor(right / this.contentWidth);
                 
                 this.opts.onPanelVisible(left_index);
                 this.opts.onPanelVisible(right_index);
