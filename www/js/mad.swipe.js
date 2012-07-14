@@ -212,14 +212,26 @@
         onMouseMove: function(ev, delta, deltaX, deltaY) {
             if( this.mouseDown )
             {
-            
-            
+                var overflow = this.contentWidth * this.opts.overFlowRatio;
+                
                 var delta = this.moveStart - ev.pageX;
-                var new_left = this.scrollLeftStart + delta;
+                var left = this.scrollLeftStart + delta;
 
-                console.log("mousemove: pageX: " + ev.pageX + ", newLeft: " + new_left + ", delta: " + delta);
-                    
-                this.container.scrollLeft(new_left);
+                //console.log("mousemove: pageX: " + ev.pageX + ", left: " + left + ", delta: " + delta);
+                this.container.scrollLeft(left);
+                
+                left = this.container.scrollLeft();
+                left -= overflow;
+
+                var right = left + this.contentWidth;
+                var left_index = left / this.contentWidth;
+                var right_index = right / this.contentWidth;
+                
+                this.onPanelVisible(left_index);
+                this.onPanelVisible(right_index);
+                
+                console.log("mousemove: left_index: " + left_index + ", right_index: "  + right_index);
+                
                 ev.preventDefault();
             }
         },
