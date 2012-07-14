@@ -75,6 +75,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     overflow: hidden;
+    vertical-align: top;
 }
 .full_screen_bg .image_holder div { 
     width: 100%;
