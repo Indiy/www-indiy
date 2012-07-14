@@ -102,7 +102,9 @@
         containerHeight : 'auto',
         panelCount: 1,
         resizeCallback: function() {},
-        onPanelChange: function() {}
+        onPanelChange: function() {},
+        onPanelVisible: function() {},
+        overFlowRatio: 0.5;
     };
 
 
@@ -140,6 +142,9 @@
         },
         refreshHtml: function() {
             this.contentWidth = this.container.width();
+            var overflow = this.contentWidth * this.opts.overFlowRatio;
+            this.minScrollLeft = -overflow;
+            this.maxScrollLeft = this.opts.panelCount * this.contentWidth - overflow;
         },
         onContainerResize: function() {
             console.log("onContainerResize");
@@ -209,7 +214,12 @@
                 var new_left = this.scrollLeftStart + delta;
 
                 console.log("mousemove: pageX: " + ev.pageX + ", newLeft: " + new_left + ", delta: " + delta);
-
+                
+                if( new_left < this.minScrollLeft )
+                    new_left = this.minScrollLeft;
+                if( new_left > this.maxScrollLeft )
+                    new_left = this.maxScrollLeft;
+                    
                 this.container.scrollLeft(new_left);
                 ev.preventDefault();
             }
