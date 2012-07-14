@@ -189,15 +189,23 @@
         },
         onMouseDown: function(ev, delta, deltaX, deltaY) {
             console.log("mousedown: " + ev);
+            this.mouseDown = true;
             ev.preventDefault();
         },
         onMouseUp: function(ev, delta, deltaX, deltaY) {
-            console.log("mouseup: " + ev);
-            ev.preventDefault();
+            if( this.mouseDown )
+            {
+                console.log("mouseup: " + ev);
+                ev.preventDefault();
+            }
+            this.mouseDown = false;
         },
         onMouseMove: function(ev, delta, deltaX, deltaY) {
-            console.log("mousemove: " + ev);
-            ev.preventDefault();
+            if( this.mouseDown )
+            {
+                console.log("mousemove: " + ev);
+                ev.preventDefault();
+            }
         },
         
     };
