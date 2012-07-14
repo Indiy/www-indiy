@@ -10,9 +10,14 @@ function photoOnReady()
         scrollPhotoListToIndex();
         
         $(window).resize(scrollPhotoListToIndex);
-        $(window).resize(photoResizeBackgrounds);
+        //$(window).resize(photoResizeBackgrounds);
         
-        $('#photo_bg').swipe();
+        var opts = {
+            panelCount: g_photoList.length,
+            resizeCallback: photoResizeBackgrounds,
+            onPanelChange: photoPanelChange
+        };
+        $('#photo_bg').swipe(opts);
     }
 }
 
