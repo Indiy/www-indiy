@@ -255,7 +255,9 @@
             var touch = ev.touches[0];
             this.container.stop(true);
             
-            this.startTouchX = touch.pageX;
+            var realPageX = touch.pageX - this.container.scrollLeft();
+            
+            this.startTouchX = touch.realPageX;
             this.scrollLeftStart = this.container.scrollLeft();
             this.totalDeltaX = 0;
             this.moveInhibit = false;
@@ -274,7 +276,9 @@
             if(ev.touches.length > 1 || ev.scale && ev.scale !== 1) 
                 return;
 
-            var deltaX = touch.pageX - this.startTouchX;
+            var old_left = this.container.scrollLeft();
+            var realPageX = touch.pageX - old_left;
+            var deltaX = realPageX - this.startTouchX;
             
             this.totalDeltaX += deltaX;
             
@@ -295,16 +299,15 @@
             //this.container.animate({ scrollLeft: new_left },opts);
             //this.moveInhibit = true;
             this.container.scrollLeft(new_left);
-            this.startTouchX -= deltaX;
-            this.scrollLeftStart -= deltaX;
+            //this.startTouchX -= deltaX;
+            //this.scrollLeftStart -= deltaX;
             
             //this.scrollLeftStart = this.container.scrollLeft();
             //this.startTouchX = touch.pageX;
             
             je.preventDefault();
             
-            console.log("onTouchMove: touch.pageX: " + touch.pageX + ", deltaX: " + deltaX);
-            console.log("screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
+            console.log("onTouchMove: touch.pageX: " + touch.pageX + ", realPageX: " + realPageX + "old_left: " + old_left);
         },
         
         onTouchScrollComplete: function() {
