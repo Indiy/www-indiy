@@ -254,8 +254,8 @@
             var ev = je.originalEvent;
             this.container.stop(true);
             
-            this.startTouchX = ev.originalEvent.touches[0].pageX;
-            this.startTouchY = ev.originalEvent.touches[0].pageY;
+            this.startTouchX = ev.touches[0].pageX;
+            this.startTouchY = ev.touches[0].pageY;
             je.preventDefault();
         },
 
