@@ -255,8 +255,9 @@
             var touch = ev.touches[0];
             this.container.stop(true);
             
-            this.startTouchX = touch.screenX;
+            this.startTouchX = touch.pageX;
             this.scrollLeftStart = this.container.scrollLeft();
+            this.totalDeltaX = 0;
             je.preventDefault();
             
             console.log("onTouchStart: screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
@@ -269,7 +270,9 @@
             if(ev.touches.length > 1 || ev.scale && ev.scale !== 1) 
                 return;
 
-            var deltaX = touch.screenX - this.startTouchX;
+            var deltaX = touch.pageX - this.startTouchX;
+            
+            this.totalDeltaX += deltaX;
             
             var resistance = 1;
             /*
@@ -281,6 +284,9 @@
             
             var new_left = this.scrollLeftStart - deltaX;
             this.container.scrollLeft(new_left);
+            
+            this.scrollLeftStart = this.container.scrollLeft();
+            this.startTouchX = touch.pageX;
             
             je.preventDefault();
             
