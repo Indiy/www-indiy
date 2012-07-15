@@ -227,8 +227,10 @@
                 var left_index = Math.floor(left / this.contentWidth);
                 var right_index = Math.floor(right / this.contentWidth);
                 
-                this.opts.onPanelVisible(left_index);
-                this.opts.onPanelVisible(right_index);
+                if( left_index >= 0 )
+                    this.opts.onPanelVisible(left_index);
+                if( right_index < this.opts.panelCount )
+                    this.opts.onPanelVisible(right_index);
                 
                 console.log("mousemove: left_index: " + left_index + ", right_index: "  + right_index);
                 
