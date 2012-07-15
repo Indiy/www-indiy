@@ -319,7 +319,7 @@
                 isLeft = false;
             
             var isValidSlide = false;
-            if( deltaSL > this.contentWidth / 2 )
+            if( Math.abs(deltaSL) > this.contentWidth / 2 )
                 isValidSlide = true;
             if( deltaT < 250 && Math.abs(deltaSL) > 20 )
                 isValidSlide = true;
