@@ -202,13 +202,11 @@
             ev.preventDefault();
         },
         onMouseDown: function(ev, delta, deltaX, deltaY) {
+            ev.preventDefault();
             this.container.stop(true);
             this.mouseDown = true;
-            this.startMoveX = ev.pageX;
-            this.startScrollLeft = this.container.scrollLeft();
-            this.startTime = Number(new Date());
-            //console.log("mousedown: pageX: " + ev.pageX + ", startScrollLeft: " + this.startScrollLeft);
-            ev.preventDefault();
+            
+            this.handleStartMove(ev.pageX);
         },
         onMouseMove: function(ev, delta, deltaX, deltaY) {
             if( this.mouseDown )
@@ -224,15 +222,6 @@
                 ev.preventDefault();
                 
                 this.handleMoveDone();
-                return;
-                
-                var left = this.container.scrollLeft();
-                left -= this.overflow;
-                var right = left + this.contentWidth;
-                
-                var left_index = Math.round(left / this.contentWidth);
-
-                this.scrollto(left_index);
             }
             this.mouseDown = false;
         },
@@ -242,9 +231,7 @@
             
             var ev = je.originalEvent;
             var touch = ev.touches[0];
-            this.startMoveX = touch.screenX;
-            this.startScrollLeft = this.container.scrollLeft();
-            this.startTime = Number(new Date());
+            this.handleStartMove(touch.screenX);
             
             console.log("onTouchStart: screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
         },
@@ -289,8 +276,13 @@
                 this.slide( this.index + ( isValidSlide && !isPastBounds ? (this.deltaX < 0 ? 1 : -1) : 0 ), this.speed );
             }
         },
+        handleMoveStart: function(startX) {
+            this.startMoveX = startX;
+            this.startScrollLeft = this.container.scrollLeft();
+            this.startTime = Number(new Date());
+        },
 
-        handleMove: function(newX) {
+        handleMove: function(newX) {   
             var deltaX = newX - this.startMoveX;
             
             var resistance = 1;
