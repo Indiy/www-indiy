@@ -206,6 +206,7 @@
             this.mouseDown = true;
             this.startMoveX = ev.pageX;
             this.scrollLeftStart = this.container.scrollLeft();
+            this.startTime = Number(new Date());
             //console.log("mousedown: pageX: " + ev.pageX + ", scrollLeftStart: " + this.scrollLeftStart);
             ev.preventDefault();
         },
@@ -283,7 +284,7 @@
             if( !this.isScrolling ) {
                 this.slide( this.index + ( isValidSlide && !isPastBounds ? (this.deltaX < 0 ? 1 : -1) : 0 ), this.speed );
             }
-        }
+        },
 
         handleMove: function(newX) {
             var deltaX = newX - this.startMoveX;
