@@ -309,7 +309,7 @@
             var left = this.container.scrollLeft();
             var delta = this.scrollLeftStart - left;
             this.scrollLeftStart = left;
-            
+            this.startTouchX += delta;
         },
 
         onTouchEnd: function(je) {
