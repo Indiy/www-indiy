@@ -129,12 +129,14 @@
         setupHtml: function(){
 
             this.pad = this.container.find('.pad');
-            // set swipe-object properties
+
+            /*
             this.container.bind('mousewheel.madsw',$.proxy(this, 'onMouseWheel'));
             this.container.bind('mousedown.madsw',$.proxy(this, 'onMouseDown'));
             $(window).bind('mouseup.madsw',$.proxy(this, 'onMouseUp'));
             $(window).bind('mousemove.madsw',$.proxy(this, 'onMouseMove'));
-            
+            */
+
             this.container.bind('touchstart.madsw',$.proxy(this, 'onTouchStart'));
             this.container.bind('touchmove.madsw',$.proxy(this, 'onTouchMove'));
             this.container.bind('touchend.madsw',$.proxy(this, 'onTouchEnd'));
