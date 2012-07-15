@@ -135,6 +135,10 @@
             $(window).bind('mouseup.madsw',$.proxy(this, 'onMouseUp'));
             $(window).bind('mousemove.madsw',$.proxy(this, 'onMouseMove'));
             
+            this.container.bind('touchstart.madsw',$.proxy(this, 'onTouchStart'));
+            this.container.bind('touchmove.madsw',$.proxy(this, 'onTouchMove'));
+            this.container.bind('touchend.madsw',$.proxy(this, 'onTouchEnd'));
+            
             this.panelIndex = 0;
             this.refreshHtml();
             
@@ -244,6 +248,58 @@
                 ev.preventDefault();
             }
         },
+        onTouchStart: function(ev) {
+            this.container.stop(true);
+            
+            this.startTouchX = ev.touches[0].pageX;
+            this.startTouchY = ev.touches[0].pageY;
+        },
+
+        onTouchMove: function(ev) {
+            if(ev.touches.length > 1 || ev.scale && ev.scale !== 1) 
+                return;
+
+            var deltaX = ev.touches[0].pageX - this.startTouchX;
+            
+            var resistance = 1;
+            if( ( this.panelIndex == 0 && deltaX > 0 )
+               || this.panelIndex == this.panelCount - 1 && deltaX < 0 )
+                resistance = Math.abs(deltaX) / this.contentWidth + 1;
+            
+            deltaX = deltaX / resistance;
+            
+            var left = this.container.scrollLeft();
+            var new_left = left + deltaX;
+            this.scrollLeft(new_left);
+            
+            ev.preventDefault();
+        },
+
+        onTouchEnd: function(ev) {
+
+            var left = this.container.scrollLeft();
+            left -= this.overflow;
+            var right = left + this.contentWidth;
+            
+            var left_index = Math.round(left / this.contentWidth);
+
+            this.scrollto(left_index);
+            ev.preventDefault();
+            return;
+
+            var isValidSlide = 
+                  Number(new Date()) - this.start.time < 250      // if slide duration is less than 250ms
+                  && Math.abs(this.deltaX) > 20                   // and if slide amt is greater than 20px
+                  || Math.abs(this.deltaX) > this.width/2;        // or if slide amt is greater than half the width
+
+            var isPastBounds = 
+                  !this.index && this.deltaX > 0                          // if first slide and slide amt is greater than 0
+                  || this.index == this.length - 1 && this.deltaX < 0;    // or if last slide and slide amt is less than 0
+
+            if( !this.isScrolling ) {
+                this.slide( this.index + ( isValidSlide && !isPastBounds ? (this.deltaX < 0 ? 1 : -1) : 0 ), this.speed );
+            }
+        }
         
     };
     
