@@ -316,7 +316,7 @@
         handleMoveDone: function() {
             
             var left = this.container.scrollLeft();
-            var deltaSL = this.startScrollLeft - left;
+            var deltaSL = left - this.startScrollLeft;
             var deltaT = Number(new Date()) - this.startTime;
             
             var isLeft = true;
