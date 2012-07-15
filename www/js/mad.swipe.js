@@ -293,7 +293,7 @@
             var resistance = 1;
             /*
             if( ( this.panelIndex == 0 && deltaX < 0 )
-               || this.panelIndex == this.panelCount - 1 && deltaX < 0 )
+               || this.panelIndex == this.opts.panelCount - 1 && deltaX < 0 )
                 resistance = Math.abs(deltaX) / this.contentWidth + 1;
             */
             deltaX = deltaX / resistance;
@@ -332,7 +332,7 @@
             if( isLeft && this.panelIndex == 0 )
                 isValidSlide = false;
             
-            if( !isLeft && this.panelIndex == this.panelCount - 1 )
+            if( !isLeft && this.panelIndex == this.opts.panelCount - 1 )
                 isValidSlide = false;
             
             if( isValidSlide )
