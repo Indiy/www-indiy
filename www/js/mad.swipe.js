@@ -283,7 +283,7 @@
             if( !this.isScrolling ) {
                 this.slide( this.index + ( isValidSlide && !isPastBounds ? (this.deltaX < 0 ? 1 : -1) : 0 ), this.speed );
             }
-        }
+        },
 
         handleMove: function(newX) {
             var deltaX = newX - this.startMoveX;
