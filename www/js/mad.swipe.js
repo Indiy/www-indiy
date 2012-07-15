@@ -130,12 +130,12 @@
 
             this.pad = this.container.find('.pad');
             this.clickCatch = this.container;
-            /*
+            
             this.container.bind('mousewheel.madsw',$.proxy(this, 'onMouseWheel'));
             this.container.bind('mousedown.madsw',$.proxy(this, 'onMouseDown'));
             $(window).bind('mouseup.madsw',$.proxy(this, 'onMouseUp'));
             $(window).bind('mousemove.madsw',$.proxy(this, 'onMouseMove'));
-            */
+            
 
             this.clickCatch.bind('touchstart.madsw',$.proxy(this, 'onTouchStart'));
             this.clickCatch.bind('touchmove.madsw',$.proxy(this, 'onTouchMove'));
@@ -271,24 +271,6 @@
             
             var touch = ev.touches[0];
             this.handleMove(touch.screenX);
-            return;
-            
-            var deltaX = touch.screenX - this.startMoveX;
-            
-            var resistance = 1;
-            /*
-            if( ( this.panelIndex == 0 && deltaX < 0 )
-               || this.panelIndex == this.panelCount - 1 && deltaX < 0 )
-                resistance = Math.abs(deltaX) / this.contentWidth + 1;
-            */
-            deltaX = deltaX / resistance;
-            
-            var new_left = this.scrollLeftStart - deltaX;
-            this.container.scrollLeft(new_left);
-            
-            
-            //console.log("onTouchMove: deltaX: " + deltaX + ", old_left: " + old_left + ", new_left: " + new_left);
-            //console.log("onTouchMove: screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
         },
         
         handleMove: function(newX) {
