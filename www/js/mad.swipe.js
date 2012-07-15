@@ -104,7 +104,7 @@
         resizeCallback: function() {},
         onPanelChange: function() {},
         onPanelVisible: function() {},
-        overFlowRatio: 0.5
+        overFlowRatio: 0.4
     };
 
 
@@ -149,24 +149,17 @@
             this.container.scrollLeft(left);
         },
         onContainerResize: function() {
+            this.container.stop(true);
             console.log("onContainerResize");
             this.opts.resizeCallback();
             this.refreshHtml();
         },
 
-        setContentPositionIndex: function(percent){
-            var visible_height = this.pane.height();
-            var content_range = this.contentHeight - visible_height;
-            
-            var new_top = content_range * percent;
-            //console.log("setContentPositionPercent: " + percent + ", content_range: " + content_range + ", new_top: " + new_top);
-            this.setContentPositionPx(new_top);
+        onAnimateComplete: function()
+        {
+            this.opts.onPanelChange(this.panelIndex);
         },
-        setContentPositionPx: function(new_top){
-            //console.log("setContentPositionPx: new_top: " + new_top);
-            this.pane.scrollTop(new_top);
-        },
-        
+
         //
         // repaint swipe height and position
         //
@@ -195,6 +188,7 @@
             ev.preventDefault();
         },
         onMouseDown: function(ev, delta, deltaX, deltaY) {
+            this.container.stop(true);
             this.mouseDown = true;
             this.moveStart = ev.pageX;
             this.scrollLeftStart = this.container.scrollLeft();
@@ -204,6 +198,22 @@
         onMouseUp: function(ev, delta, deltaX, deltaY) {
             if( this.mouseDown )
             {
+                var overflow = this.contentWidth * this.opts.overFlowRatio;
+                var left = this.container.scrollLeft();
+                left -= overflow;
+                var right = left + this.contentWidth;
+                
+                var left_index = Math.round(left / this.contentWidth);
+
+                var new_left = left_index * this.contentWidth;
+                new_left += overflow;
+                this.panelIndex = left_index;
+                
+                var opts = {
+                    complete: $.proxy(this, 'onAnimateComplete')
+                };
+                this.container.animate({scrollLeft: new_left },opts);
+                
                 console.log("mouseup: " + ev);
                 ev.preventDefault();
             }
@@ -232,7 +242,7 @@
                 if( right_index < this.opts.panelCount )
                     this.opts.onPanelVisible(right_index);
                 
-                console.log("mousemove: left_index: " + left_index + ", right_index: "  + right_index);
+                //console.log("mousemove: left_index: " + left_index + ", right_index: "  + right_index);
                 
                 ev.preventDefault();
             }
