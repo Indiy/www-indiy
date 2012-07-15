@@ -263,6 +263,9 @@
             je.preventDefault();
             var ev = je.originalEvent;
 
+            this.handleMoveDone();
+            return;
+
             var left = this.container.scrollLeft();
             left -= this.overflow;
             var right = left + this.contentWidth;
