@@ -143,7 +143,7 @@
         },
         refreshHtml: function() {
             this.contentWidth = this.container.width();
-            var overflow = this.contentWidth * this.opts.overFlowRatio;
+            this.overflow = Math.floor(this.contentWidth * this.opts.overFlowRatio);
             this.pad.width(overflow);
             var left = this.panelIndex * this.contentWidth + overflow;
             this.container.scrollLeft(left);
@@ -198,9 +198,8 @@
         onMouseUp: function(ev, delta, deltaX, deltaY) {
             if( this.mouseDown )
             {
-                var overflow = this.contentWidth * this.opts.overFlowRatio;
                 var left = this.container.scrollLeft();
-                left -= overflow;
+                left -= this.overflow;
                 var right = left + this.contentWidth;
                 
                 var left_index = Math.round(left / this.contentWidth);
@@ -222,8 +221,6 @@
         onMouseMove: function(ev, delta, deltaX, deltaY) {
             if( this.mouseDown )
             {
-                var overflow = this.contentWidth * this.opts.overFlowRatio;
-                
                 var delta = this.moveStart - ev.pageX;
                 var left = this.scrollLeftStart + delta;
 
@@ -231,7 +228,7 @@
                 this.container.scrollLeft(left);
                 
                 left = this.container.scrollLeft();
-                left -= overflow;
+                left -= this.overflow;
 
                 var right = left + this.contentWidth;
                 var left_index = Math.floor(left / this.contentWidth);
