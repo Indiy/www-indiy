@@ -104,7 +104,7 @@
         resizeCallback: function() {},
         onPanelChange: function() {},
         onPanelVisible: function() {},
-        onReady: function() {}
+        onReady: function() {},
         overFlowRatio: 0.4
     };
 
