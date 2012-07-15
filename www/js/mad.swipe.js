@@ -206,7 +206,7 @@
             this.container.stop(true);
             this.mouseDown = true;
             
-            this.handleStartMove(ev.pageX);
+            this.handleMoveStart(ev.pageX);
         },
         onMouseMove: function(ev, delta, deltaX, deltaY) {
             if( this.mouseDown )
@@ -231,9 +231,9 @@
             
             var ev = je.originalEvent;
             var touch = ev.touches[0];
-            this.handleStartMove(touch.screenX);
+            this.handleMoveStart(touch.screenX);
             
-            console.log("onTouchStart: screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
+            //console.log("onTouchStart: screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
         },
 
         onTouchMove: function(je) {
