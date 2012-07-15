@@ -254,8 +254,7 @@
             var ev = je.originalEvent;
             this.container.stop(true);
             
-            this.startTouchX = ev.touches[0].pageX;
-            this.startTouchY = ev.touches[0].pageY;
+            this.startTouchX = ev.touches[0].screenX;
             this.scrollLeftStart = this.container.scrollLeft();
             je.preventDefault();
             
@@ -267,7 +266,7 @@
             if(ev.touches.length > 1 || ev.scale && ev.scale !== 1) 
                 return;
 
-            var deltaX = ev.touches[0].pageX - this.startTouchX;
+            var deltaX = ev.touches[0].screenX - this.startTouchX;
             
             var resistance = 1;
             /*
