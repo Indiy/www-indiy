@@ -275,6 +275,8 @@
             */
             deltaX = deltaX / resistance;
             
+            console.log("touches[0].pageX: " + ev.touches[0].pageX + ", deltaX: " + deltaX);
+            
             var new_left = this.scrollLeftStart - deltaX;
             this.container.scrollLeft(new_left);
             
