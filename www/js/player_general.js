@@ -74,7 +74,7 @@ function generalOnReady()
         else if( g_videoList.length > 0 )
             videoPlayIndex(0);
         else if( g_photoList.length > 0 )
-            photoShowIndex(0);
+            photoChangeIndex(0);
     }
 }
 
