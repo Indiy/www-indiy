@@ -129,7 +129,7 @@
         setupHtml: function(){
 
             this.pad = this.container.find('.pad');
-            this.clickCatch = this.container.find('.swipe_click_catch');
+            this.clickCatch = $('.swipe_click_catch');
             /*
             this.container.bind('mousewheel.madsw',$.proxy(this, 'onMouseWheel'));
             this.container.bind('mousedown.madsw',$.proxy(this, 'onMouseDown'));
