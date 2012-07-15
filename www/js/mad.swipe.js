@@ -206,6 +206,7 @@
             this.mouseDown = true;
             this.startMoveX = ev.pageX;
             this.scrollLeftStart = this.container.scrollLeft();
+            this.startTime = Number(new Date());
             //console.log("mousedown: pageX: " + ev.pageX + ", scrollLeftStart: " + this.scrollLeftStart);
             ev.preventDefault();
         },
