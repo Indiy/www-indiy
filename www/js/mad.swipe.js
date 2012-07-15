@@ -259,7 +259,7 @@
             this.scrollLeftStart = this.container.scrollLeft();
             je.preventDefault();
             
-            console.log("onTouchStart: touches[0].pageX: " + ev.touches[0].pageX + ", this.startTouchX: " + this.startTouchX);
+            console.log("onTouchStart: screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
         },
 
         onTouchMove: function(je) {
@@ -289,6 +289,7 @@
         },
 
         onTouchEnd: function(je) {
+            console.log("onTouchEnd");
             var ev = je.originalEvent;
 
             var left = this.container.scrollLeft();
