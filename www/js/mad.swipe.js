@@ -144,8 +144,8 @@
         refreshHtml: function() {
             this.contentWidth = this.container.width();
             this.overflow = Math.floor(this.contentWidth * this.opts.overFlowRatio);
-            this.pad.width(overflow);
-            var left = this.panelIndex * this.contentWidth + overflow;
+            this.pad.width(this.overflow);
+            var left = this.panelIndex * this.contentWidth + this.overflow;
             this.container.scrollLeft(left);
         },
         onContainerResize: function() {
@@ -179,8 +179,6 @@
         // Remove swipe dom elements
         //
         unswipe: function() {
-            this.pane.css({overflow: 'auto'});
-            this.handleContainer.hide();
         },
     
         onMouseWheel: function(ev, delta, deltaX, deltaY) {
@@ -205,7 +203,7 @@
                 var left_index = Math.round(left / this.contentWidth);
 
                 var new_left = left_index * this.contentWidth;
-                new_left += overflow;
+                new_left += this.overflow;
                 this.panelIndex = left_index;
                 
                 var opts = {
