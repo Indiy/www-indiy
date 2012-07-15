@@ -84,7 +84,7 @@ body {
     overflow: hidden;
 }
 
-.full_screen_bg .swipe_click_catch {
+.swipe_click_catch {
     position: fixed;
     top: 0px;
     bottom: 0px;
