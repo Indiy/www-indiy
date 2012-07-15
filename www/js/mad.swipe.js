@@ -252,9 +252,10 @@
         },
         onTouchStart: function(je) {
             var ev = je.originalEvent;
+            var touch = ev.touches[0];
             this.container.stop(true);
             
-            this.startTouchX = ev.touches[0].screenX;
+            this.startTouchX = touch.screenX;
             this.scrollLeftStart = this.container.scrollLeft();
             je.preventDefault();
             
@@ -263,10 +264,12 @@
 
         onTouchMove: function(je) {
             var ev = je.originalEvent;
+            var touch = ev.touches[0];
+
             if(ev.touches.length > 1 || ev.scale && ev.scale !== 1) 
                 return;
 
-            var deltaX = ev.touches[0].screenX - this.startTouchX;
+            var deltaX = touch.screenX - this.startTouchX;
             
             var resistance = 1;
             /*
@@ -281,7 +284,8 @@
             
             je.preventDefault();
             
-            console.log("onTouchMove: touches[0].pageX: " + ev.touches[0].pageX + ", deltaX: " + deltaX);
+            console.log("onTouchMove: touch.pageX: " + touch.pageX + ", deltaX: " + deltaX);
+            console.log("screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
         },
 
         onTouchEnd: function(je) {
