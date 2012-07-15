@@ -275,7 +275,7 @@
             
             var left = this.container.scrollLeft();
             var new_left = left + deltaX;
-            this.scrollLeft(new_left);
+            this.container.scrollLeft(new_left);
             
             je.preventDefault();
         },
