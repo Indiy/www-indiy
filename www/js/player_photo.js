@@ -15,7 +15,8 @@ function photoOnReady()
         var opts = {
             panelCount: g_photoList.length,
             resizeCallback: photoResizeBackgrounds,
-            onPanelChange: photoPanelChange
+            onPanelChange: photoPanelChange,
+            onPanelVisible: photoPanelVisible
         };
         $('#photo_bg').swipe(opts);
     }
@@ -86,6 +87,12 @@ function photoPanelChange(index)
     console.log("photoPanelChange: " + index);
 }
 
+function photoPanelVisible(index)
+{
+    var photo = g_photoList[index];
+    photoLoadImage(photo,index);
+}
+
 function photoChangeId( photo_id )
 {
     for( var i = 0 ; i < g_photoList.length ; ++i )
@@ -146,63 +153,6 @@ function photoPreloadImages()
 function photoLoadImage(photo,index)
 {
     imageLoadItem(photo,index,'#photo_bg');
-    return;
-
-    var image = photo.image;
-    var color = photo.bg_color;
-    var bg_style = photo.bg_style;
-    
-    if( !photo.loaded )
-    {
-        photo.loaded = true;
-        var holder = $('#photo_bg #image_holder_' + index);
-        
-        var win_height = $('#photo_bg').height();
-        var win_width = $('#photo_bg').width();
-        
-        holder.css("background-color", "#" + color);
-        if( bg_style == 'STRETCH' )
-        {
-            var image_params = photoGetBackgroundParams(photo);
-            
-            var img_style = "width: {0}px; height: {1}px;".format(image_params.width,image_params.height);
-            var img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(image,win_width);
-            
-            var div_holder_style = "";
-            div_holder_style += "height: {0}px; ".format(win_height);
-            div_holder_style += "width: {0}px; ".format(win_width);
-            div_holder_style += "margin-top: {0}px; ".format(image_params.margin_top);
-            div_holder_style += "margin-left: {0}px; ".format(image_params.margin_left);
-            div_holder_style += "padding-bottom: {0}px; ".format(-image_params.margin_top);
-            div_holder_style += "padding-right: {0}px; ".format(-image_params.margin_left);
-            
-            var html = "";
-            html += "<div style='{0}'>".format(div_holder_style);
-            html += "<img src='{0}' style='{1}' />".format(img_url,img_style);
-            html += "</div>"
-            holder.html(html);
-            
-            holder.css("background-image","none");
-            holder.css("background-repeat","no-repeat");
-            holder.css("background-position","center center");
-        }
-        else if( bg_style == 'CENTER' )
-        {
-            holder.css("background-image","url(" + image + ")");
-            holder.css("background-repeat","no-repeat");
-            holder.css("background-position","center center");
-            var html = "<div style='width: 100%; height: {0}px;'></div>".format(win_height);
-            holder.html(html);
-        }
-        else if( bg_style == 'TILE' )
-        {
-            holder.css("background-image","url(" + image + ")");
-            holder.css("background-repeat","repeat");
-            holder.css("background-position","center center");
-            var html = "<div style='width: 100%; height: {0}px;'></div>".format(win_height);
-            holder.html(html);
-        }
-    }         
 }
 function photoScrollToCurrentIndex()
 {
