@@ -150,7 +150,7 @@
         },
         onContainerResize: function() {
             this.container.stop(true);
-            console.log("onContainerResize");
+            //console.log("onContainerResize");
             this.opts.resizeCallback();
             this.refreshHtml();
         },
@@ -173,6 +173,14 @@
         //
         scrollto: function(index) {
             this.panelIndex = index;
+            var left = index * this.contentWidth;
+            left += this.overflow;
+            
+            var opts = {
+                    complete: $.proxy(this, 'onAnimateComplete')
+            };
+            
+            this.container.animate({ scrollLeft: left },opts);
         },
         
         //
@@ -190,7 +198,7 @@
             this.mouseDown = true;
             this.moveStart = ev.pageX;
             this.scrollLeftStart = this.container.scrollLeft();
-            console.log("mousedown: pageX: " + ev.pageX + ", scrollLeftStart: " + this.scrollLeftStart);
+            //console.log("mousedown: pageX: " + ev.pageX + ", scrollLeftStart: " + this.scrollLeftStart);
             ev.preventDefault();
         },
         onMouseUp: function(ev, delta, deltaX, deltaY) {
@@ -202,16 +210,7 @@
                 
                 var left_index = Math.round(left / this.contentWidth);
 
-                var new_left = left_index * this.contentWidth;
-                new_left += this.overflow;
-                this.panelIndex = left_index;
-                
-                var opts = {
-                    complete: $.proxy(this, 'onAnimateComplete')
-                };
-                this.container.animate({scrollLeft: new_left },opts);
-                
-                console.log("mouseup: " + ev);
+                this.scrollto(left_index);
                 ev.preventDefault();
             }
             this.mouseDown = false;

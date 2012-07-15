@@ -85,6 +85,7 @@ function scrollPhotoListToIndex(animate)
 function photoPanelChange(index)
 {
     console.log("photoPanelChange: " + index);
+    photoUpdateToIndex(index);
 }
 
 function photoPanelVisible(index)
@@ -100,28 +101,31 @@ function photoChangeId( photo_id )
         var photo = g_photoList[i];
         if( photo.id == photo_id )
         {
-            photoShowIndex(i);
+            photoChangeIndex(i);
             return;
         }
     }
 }
 
-function photoShowIndex( index ) 
+function photoChangeIndex( index ) 
 {
     setPlayerMode("photo");
     
+    $('#photo_bg').swipe("scrollto",index);    
+}
+function photoUpdateToIndex(index)
+{
     g_currentPhotoIndex = index;
     var photo = g_photoList[index];
     
     loveChangedPhoto(photo.id,photo.name);
     
     photoLoadImage(photo,index);
-    photoScrollToCurrentIndex();
     
     g_currentPhotoId = photo.id;
     window.location.hash = '#photo_id=' + g_currentPhotoId; 
     
-    playerPhotoInfo(photo.name,photo.location,photo.listens);
+    playerPhotoInfo(photo.name,photo.location,photo.listens);    
 }
 
 function photoNext()
@@ -130,7 +134,7 @@ function photoNext()
     if( index == g_photoList.length )
         index = 0;
     
-    photoShowIndex(index);
+    photoChangeIndex(index);
 }
 function photoPrevious()
 {
@@ -138,7 +142,7 @@ function photoPrevious()
     if( index < 0 )
         index = g_photoList.length - 1;
     
-    photoShowIndex(index);
+    photoChangeIndex(index);
 }
 
 function photoPreloadImages()

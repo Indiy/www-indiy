@@ -325,7 +325,7 @@
         $photo_list[] = $item;
         
         $html = "";
-        $html .= "<div class='item' onclick='photoShowIndex($i); closeBottom(true);'>";
+        $html .= "<div class='item' onclick='photoChangeIndex($i); closeBottom(true);'>";
         $html .= " <div class='picture'>";
         $html .= "  <img src='$photo_image'/>";
         $html .= " </div>";
