@@ -283,7 +283,7 @@
             deltaX = deltaX / resistance;
             
             var new_left = this.scrollLeftStart - deltaX;
-            this.container.scrollLeft(new_left);
+            //this.container.scrollLeft(new_left);
             
             //this.scrollLeftStart = this.container.scrollLeft();
             //this.startTouchX = touch.pageX;
