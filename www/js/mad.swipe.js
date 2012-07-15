@@ -219,6 +219,11 @@
         onMouseUp: function(ev, delta, deltaX, deltaY) {
             if( this.mouseDown )
             {
+                ev.preventDefault();
+                
+                handleMoveDone();
+                return;
+                
                 var left = this.container.scrollLeft();
                 left -= this.overflow;
                 var right = left + this.contentWidth;
@@ -226,7 +231,6 @@
                 var left_index = Math.round(left / this.contentWidth);
 
                 this.scrollto(left_index);
-                ev.preventDefault();
             }
             this.mouseDown = false;
         },
@@ -238,6 +242,7 @@
             var touch = ev.touches[0];
             this.startMoveX = touch.screenX;
             this.scrollLeftStart = this.container.scrollLeft();
+            this.startTime = Number(new Date());
             
             console.log("onTouchStart: screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
         },
@@ -279,10 +284,48 @@
             if( right_index < this.opts.panelCount )
                 this.opts.onPanelVisible(right_index);
         },
+        handleMoveDone: function() {
+            
+            var left = this.container.scrollLeft();
+            var deltaSL = this.startScrollLeft - left;
+            var deltaT = Number(new Date()) - this.startTime;
+            
+            var isLeft = true;
+            if( deltaSL > 0 )
+                isLeft = false;
+            
+            var isValidSlide = false;
+            if( deltaSL > this.contentWidth / 2 )
+                isValidSlide = true;
+            if( deltaT < 250 && Math.abs(deltaSL) > 20 )
+                isValidSlide = true;
+            
+            if( isLeft && this.panelIndex == 0 )
+                isValidSlide = false;
+            
+            if( !isLeft && this.panelIndex == this.panelCount - 1 )
+                isValidSlide = false;
+            
+            if( isValidSlide )
+            {
+                var new_index = this.panelIndex;
+                if( isLeft )
+                    new_index--;
+                else
+                    new_index++;
+                this.sctollto(new_index);
+            }
+            else
+            {
+                var left = index * this.contentWidth;
+                left += this.overflow;
+                this.container.animate({ scrollLeft: left });
+            }
+        }
  
 
         onTouchEnd: function(je) {
-            console.log("onTouchEnd");
+            je.preventDefault();
             var ev = je.originalEvent;
 
             var left = this.container.scrollLeft();
@@ -292,7 +335,7 @@
             var left_index = Math.round(left / this.contentWidth);
 
             this.scrollto(left_index);
-            je.preventDefault();
+            
             return;
 
             var isValidSlide = 
