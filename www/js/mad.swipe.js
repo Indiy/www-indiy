@@ -258,6 +258,8 @@
             this.startTouchY = ev.touches[0].pageY;
             this.scrollLeftStart = this.container.scrollLeft();
             je.preventDefault();
+            
+            console.log("onTouchStart: touches[0].pageX: " + ev.touches[0].pageX + ", this.startTouchX: " + this.startTouchX);
         },
 
         onTouchMove: function(je) {
@@ -275,12 +277,12 @@
             */
             deltaX = deltaX / resistance;
             
-            console.log("touches[0].pageX: " + ev.touches[0].pageX + ", deltaX: " + deltaX);
-            
             var new_left = this.scrollLeftStart - deltaX;
             this.container.scrollLeft(new_left);
             
             je.preventDefault();
+            
+            console.log("onTouchMove: touches[0].pageX: " + ev.touches[0].pageX + ", deltaX: " + deltaX);
         },
 
         onTouchEnd: function(je) {
