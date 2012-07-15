@@ -250,14 +250,17 @@
                 ev.preventDefault();
             }
         },
-        onTouchStart: function(ev) {
+        onTouchStart: function(je) {
+            var ev = je.originalEvent;
             this.container.stop(true);
             
-            this.startTouchX = ev.touches[0].pageX;
-            this.startTouchY = ev.touches[0].pageY;
+            this.startTouchX = ev.originalEvent.touches[0].pageX;
+            this.startTouchY = ev.originalEvent.touches[0].pageY;
+            je.preventDefault();
         },
 
-        onTouchMove: function(ev) {
+        onTouchMove: function(je) {
+            var ev = je.originalEvent;
             if(ev.touches.length > 1 || ev.scale && ev.scale !== 1) 
                 return;
 
@@ -274,10 +277,11 @@
             var new_left = left + deltaX;
             this.scrollLeft(new_left);
             
-            ev.preventDefault();
+            je.preventDefault();
         },
 
-        onTouchEnd: function(ev) {
+        onTouchEnd: function(je) {
+            var ev = je.originalEvent;
 
             var left = this.container.scrollLeft();
             left -= this.overflow;
@@ -286,7 +290,7 @@
             var left_index = Math.round(left / this.contentWidth);
 
             this.scrollto(left_index);
-            ev.preventDefault();
+            je.preventDefault();
             return;
 
             var isValidSlide = 
