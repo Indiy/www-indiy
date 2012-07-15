@@ -220,6 +220,7 @@
         onMouseUp: function(ev, delta, deltaX, deltaY) {
             if( this.mouseDown )
             {
+                this.mouseDown = false;
                 ev.preventDefault();
                 
                 this.handleMoveDone();
