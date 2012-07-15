@@ -341,11 +341,11 @@
                     new_index--;
                 else
                     new_index++;
-                this.sctollto(new_index);
+                this.scrollto(new_index);
             }
             else
             {
-                var left = index * this.contentWidth;
+                var left = this.panelIndex * this.contentWidth;
                 left += this.overflow;
                 this.container.animate({ scrollLeft: left });
             }
