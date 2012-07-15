@@ -2,6 +2,9 @@
 var g_photoListIndex = 0;
 var g_currentPhotoIndex = 0;
 
+var g_photoChangeToIndex = false;
+var g_photoReady = false;
+
 $(document).ready(photoOnReady);
 function photoOnReady()
 {
@@ -16,7 +19,8 @@ function photoOnReady()
             panelCount: g_photoList.length,
             resizeCallback: photoResizeBackgrounds,
             onPanelChange: photoPanelChange,
-            onPanelVisible: photoPanelVisible
+            onPanelVisible: photoPanelVisible,
+            onReady: photoSwipeReady
         };
         $('#photo_bg').swipe(opts);
     }
@@ -94,6 +98,14 @@ function photoPanelVisible(index)
     photoLoadImage(photo,index);
 }
 
+function photoSwipeReady()
+{
+    g_photoReady = true;
+    if( g_photoChangeToIndex !== false )
+        photoChangeIndex(g_photoChangeToIndex);
+    g_photoChangeToIndex = false;
+}
+
 function photoChangeId( photo_id )
 {
     for( var i = 0 ; i < g_photoList.length ; ++i )
@@ -109,6 +121,12 @@ function photoChangeId( photo_id )
 
 function photoChangeIndex( index ) 
 {
+    if( !g_photoReady )
+    {
+        g_photoChangeToIndex = index;
+        return;
+    }
+
     setPlayerMode("photo");
     
     $('#photo_bg').swipe("scrollto",index);    
