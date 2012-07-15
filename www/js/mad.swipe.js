@@ -308,6 +308,7 @@
             je.preventDefault();
             
             console.log("onTouchMove: touch.pageX: " + touch.pageX + ", realPageX: " + realPageX + ", old_left: " + old_left + ", new_left: " + new_left);
+            console.log("onTouchMove: screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
         },
         
         onTouchScrollComplete: function() {
