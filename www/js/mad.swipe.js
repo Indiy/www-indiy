@@ -222,7 +222,7 @@
             {
                 ev.preventDefault();
                 
-                handleMoveDone();
+                this.handleMoveDone();
                 return;
                 
                 var left = this.container.scrollLeft();
