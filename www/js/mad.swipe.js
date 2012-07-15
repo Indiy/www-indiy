@@ -268,11 +268,11 @@
             var ev = je.originalEvent;
             if(ev.touches.length > 1 || ev.scale && ev.scale !== 1) 
                 return;
-                
+            
+            var touch = ev.touches[0];
             this.handleMove(touch.screenX);
             return;
-        
-            var touch = ev.touches[0];
+            
             var deltaX = touch.screenX - this.startMoveX;
             
             var resistance = 1;
