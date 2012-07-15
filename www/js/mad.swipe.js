@@ -292,8 +292,11 @@
                 complete: $.proxy(this, 'onTouchScrollComplete'),
                 duration: 1
             };
-            this.container.animate({ scrollLeft: new_left },opts);
-            this.moveInhibit = true;
+            //this.container.animate({ scrollLeft: new_left },opts);
+            //this.moveInhibit = true;
+            this.container.scrollLeft(new_left);
+            this.startTouchX += deltaX;
+            this.scrollLeftStart += deltaX;
             
             //this.scrollLeftStart = this.container.scrollLeft();
             //this.startTouchX = touch.pageX;
