@@ -186,7 +186,7 @@
             left += this.overflow;
             
             var opts = {
-                    complete: $.proxy(this, 'onAnimateComplete')
+                complete: $.proxy(this, 'onAnimateComplete')
             };
             
             this.container.animate({ scrollLeft: left },opts);
@@ -258,12 +258,16 @@
             this.startTouchX = touch.pageX;
             this.scrollLeftStart = this.container.scrollLeft();
             this.totalDeltaX = 0;
+            this.moveInhibit = false;
             je.preventDefault();
             
             console.log("onTouchStart: screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
         },
 
         onTouchMove: function(je) {
+            if( this.moveInhibit )
+                return;
+        
             var ev = je.originalEvent;
             var touch = ev.touches[0];
 
@@ -283,7 +287,13 @@
             deltaX = deltaX / resistance;
             
             var new_left = this.scrollLeftStart - deltaX;
-            //this.container.scrollLeft(new_left);
+            
+            var opts = {
+                complete: $.proxy(this, 'onTouchScrollComplete'),
+                duration: 1
+            };
+            this.container.animate({ scrollLeft: new_left },opts);
+            this.moveInhibit = true;
             
             //this.scrollLeftStart = this.container.scrollLeft();
             //this.startTouchX = touch.pageX;
@@ -292,6 +302,14 @@
             
             console.log("onTouchMove: touch.pageX: " + touch.pageX + ", deltaX: " + deltaX);
             console.log("screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
+        },
+        
+        onTouchScrollComplete: function() {
+            this.moveInhibit = false;
+            var left = this.container.scrollLeft();
+            var delta = this.scrollLeftStart - left;
+            this.scrollLeftStart = left;
+            
         },
 
         onTouchEnd: function(je) {
