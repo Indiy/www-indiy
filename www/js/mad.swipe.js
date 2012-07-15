@@ -130,6 +130,7 @@
 
             this.pad = this.container.find('.pad');
             this.clickCatch = $('.swipe_click_catch');
+            this.clickCatch = this.container;
             /*
             this.container.bind('mousewheel.madsw',$.proxy(this, 'onMouseWheel'));
             this.container.bind('mousedown.madsw',$.proxy(this, 'onMouseDown'));
