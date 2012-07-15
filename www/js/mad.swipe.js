@@ -267,14 +267,15 @@
             var deltaX = ev.touches[0].pageX - this.startTouchX;
             
             var resistance = 1;
-            if( ( this.panelIndex == 0 && deltaX > 0 )
+            /*
+            if( ( this.panelIndex == 0 && deltaX < 0 )
                || this.panelIndex == this.panelCount - 1 && deltaX < 0 )
                 resistance = Math.abs(deltaX) / this.contentWidth + 1;
-            
+            */
             deltaX = deltaX / resistance;
             
             var left = this.container.scrollLeft();
-            var new_left = left + deltaX;
+            var new_left = left - deltaX;
             this.container.scrollLeft(new_left);
             
             je.preventDefault();
