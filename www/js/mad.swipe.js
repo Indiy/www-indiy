@@ -129,7 +129,6 @@
         setupHtml: function(){
 
             this.pad = this.container.find('.pad');
-            this.clickCatch = $('.swipe_click_catch');
             this.clickCatch = this.container;
             /*
             this.container.bind('mousewheel.madsw',$.proxy(this, 'onMouseWheel'));
@@ -206,7 +205,7 @@
         onMouseDown: function(ev, delta, deltaX, deltaY) {
             this.container.stop(true);
             this.mouseDown = true;
-            this.moveStart = ev.pageX;
+            this.startMoveX = ev.pageX;
             this.scrollLeftStart = this.container.scrollLeft();
             //console.log("mousedown: pageX: " + ev.pageX + ", scrollLeftStart: " + this.scrollLeftStart);
             ev.preventDefault();
@@ -228,7 +227,7 @@
         onMouseMove: function(ev, delta, deltaX, deltaY) {
             if( this.mouseDown )
             {
-                var delta = this.moveStart - ev.pageX;
+                var delta = this.startMoveX - ev.pageX;
                 var left = this.scrollLeftStart + delta;
 
                 //console.log("mousemove: pageX: " + ev.pageX + ", left: " + left + ", delta: " + delta);
@@ -252,36 +251,27 @@
             }
         },
         onTouchStart: function(je) {
-            var ev = je.originalEvent;
-            var touch = ev.touches[0];
+            je.preventDefault();
             this.container.stop(true);
             
-            var realPageX = touch.pageX - this.container.scrollLeft();
-            
-            this.startTouchX = touch.screenX;
+            var ev = je.originalEvent;
+            var touch = ev.touches[0];
+            this.startMoveX = touch.screenX;
             this.scrollLeftStart = this.container.scrollLeft();
-            this.totalDeltaX = 0;
-            this.moveInhibit = false;
-            je.preventDefault();
             
             console.log("onTouchStart: screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
         },
 
         onTouchMove: function(je) {
-            if( this.moveInhibit )
+            je.preventDefault();
+
+            if(ev.touches.length > 1 || ev.scale && ev.scale !== 1) 
                 return;
         
             var ev = je.originalEvent;
             var touch = ev.touches[0];
 
-            if(ev.touches.length > 1 || ev.scale && ev.scale !== 1) 
-                return;
-
-            var old_left = this.container.scrollLeft();
-            var realPageX = touch.pageX - old_left;
-            var deltaX = touch.screenX - this.startTouchX;
-            
-            this.totalDeltaX += deltaX;
+            var deltaX = touch.screenX - this.startMoveX;
             
             var resistance = 1;
             /*
@@ -297,28 +287,13 @@
                 complete: $.proxy(this, 'onTouchScrollComplete'),
                 duration: 1
             };
-            //this.container.animate({ scrollLeft: new_left },opts);
-            //this.moveInhibit = true;
             this.container.scrollLeft(new_left);
-            //this.startTouchX -= deltaX;
-            //this.scrollLeftStart -= deltaX;
             
-            //this.scrollLeftStart = this.container.scrollLeft();
-            //this.startTouchX = touch.pageX;
             
-            je.preventDefault();
-            
-            console.log("onTouchMove: deltaX: " + deltaX + ", old_left: " + old_left + ", new_left: " + new_left);
-            console.log("onTouchMove: screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
+            //console.log("onTouchMove: deltaX: " + deltaX + ", old_left: " + old_left + ", new_left: " + new_left);
+            //console.log("onTouchMove: screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
         },
         
-        onTouchScrollComplete: function() {
-            this.moveInhibit = false;
-            var left = this.container.scrollLeft();
-            var delta = this.scrollLeftStart - left;
-            this.scrollLeftStart = left;
-            this.startTouchX += delta;
-        },
 
         onTouchEnd: function(je) {
             console.log("onTouchEnd");
