@@ -129,7 +129,7 @@
         setupHtml: function(){
 
             this.pad = this.container.find('.pad');
-
+            this.clickCatch = this.container.find('.swipe_click_catch');
             /*
             this.container.bind('mousewheel.madsw',$.proxy(this, 'onMouseWheel'));
             this.container.bind('mousedown.madsw',$.proxy(this, 'onMouseDown'));
@@ -137,9 +137,9 @@
             $(window).bind('mousemove.madsw',$.proxy(this, 'onMouseMove'));
             */
 
-            this.container.bind('touchstart.madsw',$.proxy(this, 'onTouchStart'));
-            this.container.bind('touchmove.madsw',$.proxy(this, 'onTouchMove'));
-            this.container.bind('touchend.madsw',$.proxy(this, 'onTouchEnd'));
+            this.clickCatch.bind('touchstart.madsw',$.proxy(this, 'onTouchStart'));
+            this.clickCatch.bind('touchmove.madsw',$.proxy(this, 'onTouchMove'));
+            this.clickCatch.bind('touchend.madsw',$.proxy(this, 'onTouchEnd'));
             
             this.panelIndex = 0;
             this.refreshHtml();
