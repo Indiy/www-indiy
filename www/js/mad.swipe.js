@@ -257,7 +257,7 @@
             
             var realPageX = touch.pageX - this.container.scrollLeft();
             
-            this.startTouchX = touch.realPageX;
+            this.startTouchX = realPageX;
             this.scrollLeftStart = this.container.scrollLeft();
             this.totalDeltaX = 0;
             this.moveInhibit = false;
