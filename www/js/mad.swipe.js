@@ -104,6 +104,7 @@
         resizeCallback: function() {},
         onPanelChange: function() {},
         onPanelVisible: function() {},
+        onReady: function() {}
         overFlowRatio: 0.4
     };
 
@@ -138,7 +139,9 @@
             this.refreshHtml();
             
             $(window).resize($.proxy(this, 'onContainerResize'));
-
+            
+            this.opts.onReady();
+            
             return this;
         },
         refreshHtml: function() {
