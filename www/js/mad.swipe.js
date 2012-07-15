@@ -205,9 +205,9 @@
             this.container.stop(true);
             this.mouseDown = true;
             this.startMoveX = ev.pageX;
-            this.scrollLeftStart = this.container.scrollLeft();
+            this.startScrollLeft = this.container.scrollLeft();
             this.startTime = Number(new Date());
-            //console.log("mousedown: pageX: " + ev.pageX + ", scrollLeftStart: " + this.scrollLeftStart);
+            //console.log("mousedown: pageX: " + ev.pageX + ", startScrollLeft: " + this.startScrollLeft);
             ev.preventDefault();
         },
         onMouseMove: function(ev, delta, deltaX, deltaY) {
@@ -243,7 +243,7 @@
             var ev = je.originalEvent;
             var touch = ev.touches[0];
             this.startMoveX = touch.screenX;
-            this.scrollLeftStart = this.container.scrollLeft();
+            this.startScrollLeft = this.container.scrollLeft();
             this.startTime = Number(new Date());
             
             console.log("onTouchStart: screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
@@ -298,7 +298,7 @@
             */
             deltaX = deltaX / resistance;
             
-            var new_left = this.scrollLeftStart - deltaX;
+            var new_left = this.startScrollLeft - deltaX;
             this.container.scrollLeft(new_left);
             
             var left = this.container.scrollLeft();
