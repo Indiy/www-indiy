@@ -256,6 +256,7 @@
             
             this.startTouchX = ev.touches[0].pageX;
             this.startTouchY = ev.touches[0].pageY;
+            this.scrollLeftStart = this.container.scrollLeft();
             je.preventDefault();
         },
 
@@ -274,8 +275,7 @@
             */
             deltaX = deltaX / resistance;
             
-            var left = this.container.scrollLeft();
-            var new_left = left - deltaX;
+            var new_left = this.scrollLeftStart - deltaX;
             this.container.scrollLeft(new_left);
             
             je.preventDefault();
