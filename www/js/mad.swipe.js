@@ -268,6 +268,9 @@
             var ev = je.originalEvent;
             if(ev.touches.length > 1 || ev.scale && ev.scale !== 1) 
                 return;
+                
+            this.handleMove(touch.screenX);
+            return;
         
             var touch = ev.touches[0];
             var deltaX = touch.screenX - this.startMoveX;
@@ -281,11 +284,6 @@
             deltaX = deltaX / resistance;
             
             var new_left = this.scrollLeftStart - deltaX;
-            
-            var opts = {
-                complete: $.proxy(this, 'onTouchScrollComplete'),
-                duration: 1
-            };
             this.container.scrollLeft(new_left);
             
             
@@ -293,6 +291,33 @@
             //console.log("onTouchMove: screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
         },
         
+        handleMove: function(newX) {
+            var deltaX = newX - this.startMoveX;
+            
+            var resistance = 1;
+            /*
+            if( ( this.panelIndex == 0 && deltaX < 0 )
+               || this.panelIndex == this.panelCount - 1 && deltaX < 0 )
+                resistance = Math.abs(deltaX) / this.contentWidth + 1;
+            */
+            deltaX = deltaX / resistance;
+            
+            var new_left = this.scrollLeftStart - deltaX;
+            this.container.scrollLeft(new_left);
+            
+            var left = this.container.scrollLeft();
+            left -= this.overflow;
+
+            var right = left + this.contentWidth;
+            var left_index = Math.floor(left / this.contentWidth);
+            var right_index = Math.floor(right / this.contentWidth);
+            
+            if( left_index >= 0 )
+                this.opts.onPanelVisible(left_index);
+            if( right_index < this.opts.panelCount )
+                this.opts.onPanelVisible(right_index);
+        },
+ 
 
         onTouchEnd: function(je) {
             console.log("onTouchEnd");
