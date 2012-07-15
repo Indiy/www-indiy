@@ -131,11 +131,10 @@
             this.pad = this.container.find('.pad');
             this.clickCatch = this.container;
             
-            this.container.bind('mousewheel.madsw',$.proxy(this, 'onMouseWheel'));
-            this.container.bind('mousedown.madsw',$.proxy(this, 'onMouseDown'));
+            this.clickCatch.bind('mousewheel.madsw',$.proxy(this, 'onMouseWheel'));
+            this.clickCatch.bind('mousedown.madsw',$.proxy(this, 'onMouseDown'));
             $(window).bind('mouseup.madsw',$.proxy(this, 'onMouseUp'));
             $(window).bind('mousemove.madsw',$.proxy(this, 'onMouseMove'));
-            
 
             this.clickCatch.bind('touchstart.madsw',$.proxy(this, 'onTouchStart'));
             this.clickCatch.bind('touchmove.madsw',$.proxy(this, 'onTouchMove'));
@@ -210,6 +209,13 @@
             //console.log("mousedown: pageX: " + ev.pageX + ", scrollLeftStart: " + this.scrollLeftStart);
             ev.preventDefault();
         },
+        onMouseMove: function(ev, delta, deltaX, deltaY) {
+            if( this.mouseDown )
+            {
+                ev.preventDefault();
+                this.handleMove(ev.pageX);
+            }
+        },
         onMouseUp: function(ev, delta, deltaX, deltaY) {
             if( this.mouseDown )
             {
@@ -223,32 +229,6 @@
                 ev.preventDefault();
             }
             this.mouseDown = false;
-        },
-        onMouseMove: function(ev, delta, deltaX, deltaY) {
-            if( this.mouseDown )
-            {
-                var delta = this.startMoveX - ev.pageX;
-                var left = this.scrollLeftStart + delta;
-
-                //console.log("mousemove: pageX: " + ev.pageX + ", left: " + left + ", delta: " + delta);
-                this.container.scrollLeft(left);
-                
-                left = this.container.scrollLeft();
-                left -= this.overflow;
-
-                var right = left + this.contentWidth;
-                var left_index = Math.floor(left / this.contentWidth);
-                var right_index = Math.floor(right / this.contentWidth);
-                
-                if( left_index >= 0 )
-                    this.opts.onPanelVisible(left_index);
-                if( right_index < this.opts.panelCount )
-                    this.opts.onPanelVisible(right_index);
-                
-                //console.log("mousemove: left_index: " + left_index + ", right_index: "  + right_index);
-                
-                ev.preventDefault();
-            }
         },
         onTouchStart: function(je) {
             je.preventDefault();
