@@ -141,6 +141,7 @@
             this.clickCatch.bind('touchend.madsw',$.proxy(this, 'onTouchEnd'));
             
             this.panelIndex = 0;
+            this.wheelTime = 0;
             this.refreshHtml();
             
             $(window).resize($.proxy(this, 'onContainerResize'));
@@ -198,8 +199,71 @@
         },
     
         onMouseWheel: function(ev, delta, deltaX, deltaY) {
-            //console.log("onMouseWheel: ev: " + ev + ",delta: " + delta + ", dX: " + deltaX + ", dY: " + deltaY);
             ev.preventDefault();
+            this.container.stop(true);
+            //console.log("onMouseWheel: ev: " + ev + ",delta: " + delta + ", dX: " + deltaX + ", dY: " + deltaY);
+
+            var now = Number(new Date());
+            var left = this.container.scrollLeft();
+
+            this.lastWheelTime = now;
+            
+            if( !this.wheelMoving )
+            {
+                this.startWheelLeft = left;
+                this.startWheelTime = now;
+            }
+            this.wheelMoving = false;
+            var new_left = left + deltaX * 30;
+            this.container.scrollLeft(new_left);
+            window.setTimeout($.proxy(this, 'onMouseWheelTimeout'),300);
+        },
+        onMouseWheelTimeout: function() {
+            var now = Number(new Date());
+            var lastT = this.wheelTime - now;
+            
+            if( lastT > 250 )
+            {
+                this.wheelMoving = false;
+                var deltaSL = this.container.scrollLeft() - this.startWheelLeft;
+                var deltaT = now - this.startWheelTime;
+                
+                var isLeft = true;
+                if( deltaSL > 0 )
+                    isLeft = false;
+                
+                var isValidSlide = false;
+                if( Math.abs(deltaSL) > this.contentWidth / 2 )
+                    isValidSlide = true;
+                if( deltaT < 250 && Math.abs(deltaSL) > 20 )
+                    isValidSlide = true;
+                
+                if( isLeft && this.panelIndex == 0 )
+                    isValidSlide = false;
+                
+                if( !isLeft && this.panelIndex == this.opts.panelCount - 1 )
+                    isValidSlide = false;
+                
+                if( isValidSlide )
+                {
+                    var new_index = this.panelIndex;
+                    if( isLeft )
+                        new_index--;
+                    else
+                        new_index++;
+                    this.scrollto(new_index);
+                }
+                else
+                {
+                    var left = this.panelIndex * this.contentWidth;
+                    left += this.overflow;
+                    this.container.animate({ scrollLeft: left });
+                }            
+            }
+            else
+            {
+ 
+            }
         },
         onMouseDown: function(ev, delta, deltaX, deltaY) {
             ev.preventDefault();
@@ -232,8 +296,6 @@
             var ev = je.originalEvent;
             var touch = ev.touches[0];
             this.handleMoveStart(touch.screenX);
-            
-            //console.log("onTouchStart: screenX: " + touch.screenX + ", clientX: " + touch.screenX + ", pageX: " + touch.pageX);
         },
 
         onTouchMove: function(je) {
@@ -251,30 +313,6 @@
             var ev = je.originalEvent;
 
             this.handleMoveDone();
-            return;
-
-            var left = this.container.scrollLeft();
-            left -= this.overflow;
-            var right = left + this.contentWidth;
-            
-            var left_index = Math.round(left / this.contentWidth);
-
-            this.scrollto(left_index);
-            
-            return;
-
-            var isValidSlide = 
-                  Number(new Date()) - this.start.time < 250      // if slide duration is less than 250ms
-                  && Math.abs(this.deltaX) > 20                   // and if slide amt is greater than 20px
-                  || Math.abs(this.deltaX) > this.width/2;        // or if slide amt is greater than half the width
-
-            var isPastBounds = 
-                  !this.index && this.deltaX > 0                          // if first slide and slide amt is greater than 0
-                  || this.index == this.length - 1 && this.deltaX < 0;    // or if last slide and slide amt is less than 0
-
-            if( !this.isScrolling ) {
-                this.slide( this.index + ( isValidSlide && !isPastBounds ? (this.deltaX < 0 ? 1 : -1) : 0 ), this.speed );
-            }
         },
         handleMoveStart: function(startX) {
             this.startMoveX = startX;
@@ -309,7 +347,6 @@
                 this.opts.onPanelVisible(right_index);
         },
         handleMoveDone: function() {
-            
             var left = this.container.scrollLeft();
             var deltaSL = left - this.startScrollLeft;
             var deltaT = Number(new Date()) - this.startTime;
