@@ -64,8 +64,8 @@ function jplayerReady()
 
 function musicPanelVisible(index)
 {
-    var song = g_musicList[i];
-    musicLoadImage(song,i);
+    var song = g_musicList[index];
+    musicLoadImage(song,index);
 }
 function musicPanelChange(index)
 {
