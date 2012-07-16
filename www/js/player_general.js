@@ -4,6 +4,8 @@ var HIDE_CONTROLS_NORMAL_TIMEOUT = 5000;
 var HIDE_CONTROLS_OPEN_TIMEOUT = 15000;
 
 var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
+var IS_IPHONE = navigator.userAgent.match(/iPhone/i) != null;
+var IS_IOS = IS_IPAD || IS_IPHONE;
 
 var IS_IE = false;
 var IS_OLD_IE = false;
