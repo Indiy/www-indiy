@@ -3,8 +3,8 @@ var MUSIC_IMAGE_PRELOAD_TIMEOUT = 3000;
 
 var g_musicIsPlaying = false;
 var g_musicVolRatio = 0.8;
-var g_jplayerReady = false;
-var g_musicStartIndex = 0;
+var g_musicPlayerReady = false;
+var g_musicStartIndex = false;
 
 $(document).ready(musicOnReady);
 
@@ -17,6 +17,19 @@ function musicOnReady()
     $(window).resize(musicResizeBackgrounds);
     
     $("#music_list").scrollbar();
+    var opts = {
+            panelCount: g_musicList.length,
+            resizeCallback: musicResizeBackgrounds,
+            onPanelChange: musicPanelChange,
+            onPanelVisible: musicPanelVisible,
+            onReady: musicSwipeReady
+    };
+    $('#music_bg').swipe(opts);
+}
+
+function musicSwipeReady()
+{
+    setupJplayer();
 }
 
 function setupJplayer()
@@ -35,6 +48,56 @@ function setupJplayer()
     .bind($.jPlayer.event.play,jplayerPlay)
     .bind($.jPlayer.event.pause,jplayerPause)
     .bind($.jPlayer.event.volumechange,jplayerVolume);
+}
+
+function jplayerReady() 
+{
+    g_musicPlayerReady = true;
+    
+    if( g_musicStartIndex !== false )
+    {
+        musicChange(g_musicStartIndex);
+        var vol_ratio = 0.8;
+        volumeSetLevel(vol_ratio);
+    }
+}
+
+function musicPanelVisible(index)
+{
+    var song = g_musicList[i];
+    musicLoadImage(song,i);
+}
+function musicPanelChange(index)
+{
+    g_songsPlayed++;
+    if( g_songsPlayed == 3 )
+        maybeAskForEmail();
+    
+    g_currentSongIndex = index;
+    var song = g_musicList[index];
+    
+    loveChangedMusic(song.id,song.name);
+    
+    var media = {
+        mp3: song.mp3,
+        oga: song.mp3.replace(".mp3",".ogg")
+    };
+    $('#jquery_jplayer').jPlayer("setMedia", media);
+    if( g_musicIsPlaying )
+        $('#jquery_jplayer').jPlayer("play");
+
+    musicLoadImage(song,index);
+    
+    g_currentSongId = song.id;
+    window.location.hash = '#song_id=' + g_currentSongId; 
+    
+    playerTrackInfo(song.name,song.listens);
+    
+    if( musicUpdateListens(song.id,index) )
+    {
+        g_totalPageViews++;
+        playerUpdateTotalViewCount();
+    }
 }
 
 function musicHide()
@@ -87,14 +150,6 @@ function musicPlayPause()
         $('#jquery_jplayer').jPlayer("play");
 }
 
-function jplayerReady() 
-{
-    g_jplayerReady = true;
-    
-    musicChange(g_musicStartIndex);
-    var vol_ratio = 0.8;
-    volumeSetLevel(vol_ratio);
-}
 
 var g_songsPlayed = 0;
 var g_currentSongId = 0;
@@ -115,52 +170,16 @@ function musicChangeId( song_id )
 
 function musicChange( index ) 
 {
-    if( !g_jplayerReady )
+    if( !g_musicPlayerReady )
     {
         g_musicStartIndex = index;
-        setupJplayer();
         return;
     }
 
     setPlayerMode("music");
     volumeSetLevel(g_musicVolRatio);
 
-    g_songsPlayed++;
-    if( g_songsPlayed == 3 )
-        maybeAskForEmail();
-    
-    g_currentSongIndex = index;
-    var song = g_musicList[index];
-
-    loveChangedMusic(song.id,song.name);
-    
-    var media = {
-        mp3: song.mp3,
-        oga: song.mp3.replace(".mp3",".ogg")
-    };
-    if( song.mp3.endsWith("mp3") )
-    {
-        $('#jquery_jplayer').jPlayer("setMedia", media);
-        $('#jquery_jplayer').jPlayer("play");
-    }
-    else
-    {
-        $('#jquery_jplayer').jPlayer("stop");
-    }
-    musicLoadImage(song,index);
-    $('#music_bg .image_holder').hide();
-    $('#music_bg #image_holder_' + index).show();
-    
-    g_currentSongId = song.id;
-    window.location.hash = '#song_id=' + g_currentSongId; 
-    
-    playerTrackInfo(song.name,song.listens);
-    
-    if( musicUpdateListens(song.id,index) )
-    {
-        g_totalPageViews++;
-        playerUpdateTotalViewCount();
-    }
+    $('#music_bg').swipe('scrollto',index);
 }
 
 function musicNext()
