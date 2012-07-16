@@ -455,6 +455,8 @@ function formatMinSeconds(seconds)
 
 function playerProgress(curr_time,total_time)
 {
+    if( !total_time )
+        total_time = 2*60;
     var percent = curr_time / total_time * 100.0;
     var time = formatMinSeconds(curr_time) + " / " + formatMinSeconds(total_time);
     $('#track_progress').html(time);
