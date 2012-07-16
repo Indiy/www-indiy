@@ -226,7 +226,7 @@
             {
                 this.wheelMoving = false;
                 var deltaSL = this.container.scrollLeft() - this.startWheelLeft;
-                var deltaT = now - this.startWheelTime;
+                var deltaT = this.lastWheelTime - this.startWheelTime;
                 
                 var isLeft = true;
                 if( deltaSL > 0 )
