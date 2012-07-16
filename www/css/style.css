@@ -737,6 +737,16 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 #search .search_box input:focus {
     border: none;
 }
+#search .random {
+    display: inline-block;
+    width: 32px;
+    height: 23px;
+    margin-left: 20px;
+    margin-top: 10px;
+    background: #777 url("/images/") no-repeat 0px 0px;
+}
+#search .random:hover {
+}
 #search span.hilite { font-weight:bold; font-style:italic;}
 
 #search  .search_results { 
