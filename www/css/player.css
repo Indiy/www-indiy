@@ -149,7 +149,7 @@ body {
     cursor: pointer;
     background: transparent url('../images/player_icons.png') no-repeat -304px -665px;
 }
-#top_bar .search:hover {
+.no_touch #top_bar .search:hover {
     background: transparent url('../images/player_icons.png') no-repeat -301px -600px;
 }
 #top_bar .sep {
@@ -204,7 +204,7 @@ body {
     cursor: pointer;
     border-radius: 3px;
 }
-#top_bar .content_tabs .inner .tab:hover {
+.no_touch #top_bar .content_tabs .inner .tab:hover {
     background-color: rgba(255,255,255,0.1);
     color: white;
 }
@@ -241,8 +241,8 @@ body {
     text-decoration: none;
     outline: 0;
 }
-#bottom_bar .bottom_link:hover,
-#bottom_bar .bottom_link:hover a {
+.no_touch #bottom_bar .bottom_link:hover,
+.no_touch #bottom_bar .bottom_link:hover a {
     color: white;
 }
 
@@ -353,19 +353,19 @@ body {
 #tracker_bar .media_controls .play_pause .icon {
     background: transparent url('/images/player_icons.png') no-repeat 1px -660px;
 }
-#tracker_bar .media_controls .play_pause .icon:hover {
+.no_touch #tracker_bar .media_controls .play_pause .icon:hover {
     background: transparent url('/images/player_icons.png') no-repeat 0px -593px;
 }
 #tracker_bar .media_controls .play_pause.playing .icon {
     background: transparent url('/images/player_icons.png') no-repeat 1px -531px;
 }
-#tracker_bar .media_controls .play_pause.playing .icon:hover {
+.no_touch #tracker_bar .media_controls .play_pause.playing .icon:hover {
     background: transparent url('/images/player_icons.png') no-repeat 1px -479px;
 }
 #tracker_bar .media_controls .volume .icon {
     background: transparent url('/images/player_icons.png') no-repeat -378px -385px;
 }
-#tracker_bar .media_controls .volume .icon:hover {
+.no_touch #tracker_bar .media_controls .volume .icon:hover {
     background: transparent url('/images/player_icons.png') no-repeat -337px -385px;
 }
 #tracker_bar .media_controls .progress_container {
@@ -447,31 +447,31 @@ body {
 #tracker_bar .buttons .photos.button .icon {
     background: transparent url('/images/player_icons.png') no-repeat -56px -661px;
 }
-#tracker_bar .buttons .photos.button .icon:hover {
+.no_touch #tracker_bar .buttons .photos.button .icon:hover {
     background: transparent url('/images/player_icons.png') no-repeat -56px -591px;
 }
 #tracker_bar .buttons .music.button .icon {
     background: transparent url('/images/player_icons.png') no-repeat -118px -660px;
 }
-#tracker_bar .buttons .music.button .icon:hover {
+.no_touch #tracker_bar .buttons .music.button .icon:hover {
     background: transparent url('/images/player_icons.png') no-repeat -118px -592px;
 }
 #tracker_bar .buttons .video.button .icon {
     background: transparent url('/images/player_icons.png') no-repeat -179px -662px;
 }
-#tracker_bar .buttons .video.button .icon:hover {
+.no_touch #tracker_bar .buttons .video.button .icon:hover {
     background: transparent url('/images/player_icons.png') no-repeat -179px -594px;
 }
 #tracker_bar .buttons .love.button .icon {
     background: transparent url('/images/player_icons.png') no-repeat -243px -661px;
 }
-#tracker_bar .buttons .love.button .icon:hover {
+.no_touch #tracker_bar .buttons .love.button .icon:hover {
     background: transparent url('/images/player_icons.png') no-repeat -243px -534px;
 }
 #tracker_bar .buttons .love.button.love_active .icon {
     background: transparent url('/images/player_icons.png') no-repeat -243px -594px;
 }
-#tracker_bar .buttons .love.button.love_active .icon:hover {
+.no_touch #tracker_bar .buttons .love.button.love_active .icon:hover {
     background: transparent url('/images/player_icons.png') no-repeat -243px -534px;
 }
 
@@ -520,25 +520,25 @@ body {
 #media_social_boxes .social_boxes .social_buttons .button.twitter .icon {
     background: transparent url('../images/player_icons.png') no-repeat -622px -683px;
 }
-#media_social_boxes .social_boxes .social_buttons .button.twitter:hover .icon {
+.no_touch #media_social_boxes .social_boxes .social_buttons .button.twitter:hover .icon {
     background: transparent url('../images/player_icons.png') no-repeat -622px -614px;
 }
 #media_social_boxes .social_boxes .social_buttons .button.facebook .icon {
     background: transparent url('../images/player_icons.png') no-repeat -579px -684px;
 }
-#media_social_boxes .social_boxes .social_buttons .button.facebook:hover .icon {
+.no_touch #media_social_boxes .social_boxes .social_buttons .button.facebook:hover .icon {
     background: transparent url('../images/player_icons.png') no-repeat -579px -614px;
 }
 #media_social_boxes .social_boxes .social_buttons .button.share .icon {
     background: transparent url('../images/player_icons.png') no-repeat -541px -682px;
 }
-#media_social_boxes .social_boxes .social_buttons .button.share:hover .icon {
+.no_touch #media_social_boxes .social_boxes .social_buttons .button.share:hover .icon {
     background: transparent url('../images/player_icons.png') no-repeat -541px -614px;
 }
 #media_social_boxes .social_boxes .social_buttons .button.email .icon {
     background: transparent url('../images/player_icons.png') no-repeat -499px -683px;
 }
-#media_social_boxes .social_boxes .social_buttons .button.email:hover .icon  {
+.no_touch #media_social_boxes .social_boxes .social_buttons .button.email:hover .icon  {
     background: transparent url('../images/player_icons.png') no-repeat -499px -615px;
 }
 
@@ -553,7 +553,7 @@ body {
     text-shadow: 0px -1px #0e0e0e;
     vertical-align: top;
 }
-#media_social_boxes .social_boxes .social_buttons .button:hover .label {
+.no_touch #media_social_boxes .social_boxes .social_buttons .button:hover .label {
     color: white;
 }
 #media_social_boxes .social_boxes .social_buttons .sep {
@@ -593,19 +593,19 @@ body {
 #media_social_boxes .media_boxes .media_buttons .photos.button .icon {
     background: transparent url('../images/player_icons.png') no-repeat -56px -661px;
 }
-#media_social_boxes .media_boxes .media_buttons .photos.button:hover .icon {
+.no_touch #media_social_boxes .media_boxes .media_buttons .photos.button:hover .icon {
     background: transparent url('../images/player_icons.png') no-repeat -56px -591px;
 }
 #media_social_boxes .media_boxes .media_buttons .music.button .icon {
     background: transparent url('../images/player_icons.png') no-repeat -118px -660px;
 }
-#media_social_boxes .media_boxes .media_buttons .music.button:hover .icon {
+.no_touch #media_social_boxes .media_boxes .media_buttons .music.button:hover .icon {
     background: transparent url('../images/player_icons.png') no-repeat -118px -592px;
 }
 #media_social_boxes .media_boxes .media_buttons .video.button .icon {
     background: transparent url('../images/player_icons.png') no-repeat -179px -662px;
 }
-#media_social_boxes .media_boxes .media_buttons .video.button:hover .icon {
+.no_touch #media_social_boxes .media_boxes .media_buttons .video.button:hover .icon {
     background: transparent url('../images/player_icons.png') no-repeat -179px -594px;
 }
 
@@ -620,7 +620,7 @@ body {
     text-shadow: 0px -1px #0e0e0e;
     vertical-align: top;
 }
-#media_social_boxes .media_boxes .media_buttons .button:hover .label {
+.no_touch #media_social_boxes .media_boxes .media_buttons .button:hover .label {
     color: white;
 }
 #media_social_boxes .media_boxes .media_buttons .sep {
@@ -692,7 +692,7 @@ body {
 #media_social_boxes .play_line.loved .love_song_name .love {
     background: transparent url('../images/player_icons.png') no-repeat -261px -481px;
 }
-#media_social_boxes .play_line .love_song_name .love:hover {
+.no_touch #media_social_boxes .play_line .love_song_name .love:hover {
     background: transparent url('../images/player_icons.png') no-repeat -261px -454px;
 }
 #media_social_boxes .play_line .love_song_name .song_name {
@@ -705,7 +705,7 @@ body {
     cursor: pointer;
     vertical-align: top;
 }
-#media_social_boxes .play_line .love_song_name .song_name:hover {
+.no_touch #media_social_boxes .play_line .love_song_name .song_name:hover {
     color: white;
 }
 #media_social_boxes .play_line .buy_length_listens {
@@ -779,7 +779,7 @@ body {
     height: 28px;
     background: transparent url('../images/player_icons.png') no-repeat -440px -552px;
 }
-.picture_list .left_nav:hover {
+.no_touch .picture_list .left_nav:hover {
     background: transparent url('../images/player_icons.png') no-repeat -440px -487px;
 }
 .picture_list .right_nav {
@@ -790,7 +790,7 @@ body {
     height: 28px;
     background: transparent url('../images/player_icons.png') no-repeat -441px -677px;
 }
-.picture_list .right_nav:hover {
+.no_touch .picture_list .right_nav:hover {
     background: transparent url('../images/player_icons.png') no-repeat -441px -612px;
 }
 .picture_list .content {
@@ -1088,7 +1088,7 @@ body {
     text-align: right;
     cursor: pointer;
 }
-#contact_tab .left .title:hover,
+.no_touch #contact_tab .left .title:hover,
 #contact_tab .left .title.active {
     color: white;
 }
@@ -1231,7 +1231,7 @@ body {
     cursor: pointer;
     background: transparent url('../images/player_icons.png') no-repeat -440px -552px;
 }
-#player_prev:hover {
+.no_touch #player_prev:hover {
     background: transparent url('../images/player_icons.png') no-repeat -440px -487px;
 }
 #player_next {
@@ -1244,7 +1244,7 @@ body {
     cursor: pointer;
     background: transparent url('../images/player_icons.png') no-repeat -441px -677px;
 }
-#player_next:hover {
+.no_touch #player_next:hover {
     background: transparent url('../images/player_icons.png') no-repeat -441px -612px;
 }
 
@@ -1314,7 +1314,7 @@ body {
     margin-right: 2px;
     background: transparent url('../images/player_icons.png') no-repeat -206px -51px;
 }
-.content_tab .close:hover .icon {
+.no_touch .content_tab .close:hover .icon {
     background: transparent url('../images/player_icons.png') no-repeat -171px -51px;
 }
 .content_tab .close .name {
@@ -1327,7 +1327,7 @@ body {
     font-weight: normal;
     vertical-align: top;
 }
-.content_tab .close:hover .name {
+.no_touch .content_tab .close:hover .name {
     color: #888;
 }
 
@@ -1417,7 +1417,7 @@ body {
     white-space: normal;
     overflow: hidden;
 }
-#search .result_group .item:hover .value {
+.no_touch #search .result_group .item:hover .value {
     color: white;
 }
 
@@ -1457,7 +1457,7 @@ body {
     border-bottom: 6px solid transparent;
     border-right: 10px solid white;
 }
-#store_tab .left .back:hover .arrow {
+.no_touch #store_tab .left .back:hover .arrow {
 	border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
     border-right: 10px solid #888;
@@ -1472,7 +1472,7 @@ body {
     text-align: right;
     cursor: pointer;
 }
-#store_tab .left .back:hover .text {
+.no_touch #store_tab .left .back:hover .text {
     color: #888;
 }
 
@@ -1519,7 +1519,7 @@ body {
     cursor: pointer;
     vertical-align: top;
 }
-#store_tab .product_list .item:hover {
+.no_touch #store_tab .product_list .item:hover {
     background-color: rgba(80,80,80,0.6);
 }
 #store_tab .product_list .item .image {
