@@ -217,6 +217,19 @@
             var new_left = left + deltaX * 15;
             this.container.scrollLeft(new_left);
             window.setTimeout($.proxy(this, 'onMouseWheelTimeout'),300);
+            
+            var left = this.container.scrollLeft();
+            left -= this.overflow;
+
+            var right = left + this.contentWidth;
+            var left_index = Math.floor(left / this.contentWidth);
+            var right_index = Math.floor(right / this.contentWidth);
+            
+            if( left_index >= 0 )
+                this.opts.onPanelVisible(left_index);
+            if( right_index < this.opts.panelCount )
+                this.opts.onPanelVisible(right_index);
+            
         },
         onMouseWheelTimeout: function() {
             if( !this.wheelMoving )
