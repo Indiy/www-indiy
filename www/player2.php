@@ -271,6 +271,9 @@
                       "image" => $video_image,
                       "video_file" => $video_file,
                       "views" => $video['views'],
+                      "bg_color" => 'black',
+                      "bg_style" => 'letterbox',
+                      "image_data" => json_decode($video['image_data'])
                       );
         $video_list[] = $item;
         

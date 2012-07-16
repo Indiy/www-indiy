@@ -264,7 +264,7 @@ function clickVideoMediaButton()
     $('#media_content_lists .media_list').hide();
     $('#video_list').show();
     g_mediaContent = "video";
-    scrollVideoToIndex();
+    scrollVideoListToIndex();
 }
 
 function clickShareButton()
