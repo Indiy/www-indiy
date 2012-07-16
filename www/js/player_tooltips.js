@@ -3,7 +3,8 @@ $(document).ready(tooltipsOnReady);
 
 function tooltipsOnReady()
 {
-    $('.tooltiped').hover(showTooltip,hideTooltip);
+    if( !IS_IOS )
+        $('.tooltiped').hover(showTooltip,hideTooltip);
 }
 
 var TOOLTIP_OFFSET_MAP = {

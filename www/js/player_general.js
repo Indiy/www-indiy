@@ -37,6 +37,9 @@ var g_volumeShown = false;
 $(document).ready(generalOnReady);
 function generalOnReady()
 {
+    if( !('ontouchstart' in document) )
+        $('body').addClass('no_touch');
+
     clickMusicMediaButton();
     clickShareButton();
 
