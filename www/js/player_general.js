@@ -33,17 +33,24 @@ var g_socialContent = "share";
 var g_showingContentPage = false;
 var g_searchOpen = false;
 var g_volumeShown = false;
+var g_touchDevice = false;
 
 $(document).ready(generalOnReady);
 function generalOnReady()
 {
     if( !('ontouchstart' in document) )
+    {
+        g_touchDevice = false;
         $('body').addClass('no_touch');
+    }
+    else
+    {
+        g_touchDevice = true;
+    }
 
     clickMusicMediaButton();
     clickShareButton();
 
-    $(document).mousemove(showAndTimeoutControls);
 
     $('#volume_slider .bar').click(clickVolume);
     var opts = {
@@ -80,6 +87,16 @@ function generalOnReady()
             videoPlayIndex(0);
         else if( g_photoList.length > 0 )
             photoChangeIndex(0);
+    }
+    
+    if( g_touchDevice )
+    {
+        $(document).bind("touchstart",showControls);
+        $(document).bind("touchend",timeoutControls);
+    }
+    else
+    {
+        $(document).mousemove(showAndTimeoutControls);
     }
 }
 
