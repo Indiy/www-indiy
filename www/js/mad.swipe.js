@@ -219,6 +219,9 @@
             window.setTimeout($.proxy(this, 'onMouseWheelTimeout'),300);
         },
         onMouseWheelTimeout: function() {
+            if( !this.wheelMoving )
+                return;
+                
             var now = Number(new Date());
             var lastDeltaT = now - this.lastWheelTime;
             
