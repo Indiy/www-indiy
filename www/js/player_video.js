@@ -59,9 +59,8 @@ function videoPanelChange(index)
                  { type: "video/ogg", src: url_ogv }
                  ];
     
-    var img_holder_tag = "#video_bg #image_holder_{0}".format(index);
-    var pos = $(img_holder_tag).position();
-    $('#video_container').css({top: pos.top, left: pos.left });
+    var left_sl = $('#video_bg').scrollLeft();
+    $('#video_container').css({left: left_sl });
     $('#video_container').show();
     g_videoPlayer.src(media);
     g_videoPlayer.play();
@@ -72,9 +71,8 @@ function videoResizeBackgrounds()
 {
     imageResizeBackgrounds(g_videoList,'#video_bg');
     
-    var img_holder_tag = "#video_bg #image_holder_{0}".format(g_videoCurrentIndex);
-    var pos = $(img_holder_tag).position();
-    $('#video_container').css({top: pos.top, left: pos.left });
+    var left_sl = $('#video_bg').scrollLeft();
+    $('#video_container').css({left: left_sl });
 
     videoOnWindowResize();
 }
