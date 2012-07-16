@@ -56,6 +56,7 @@ function jplayerReady()
     
     if( g_musicStartIndex !== false )
     {
+        g_musicIsPlaying = true;
         musicChange(g_musicStartIndex);
         var vol_ratio = 0.8;
         volumeSetLevel(vol_ratio);
