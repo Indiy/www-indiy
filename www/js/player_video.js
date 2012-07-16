@@ -62,9 +62,10 @@ function videoPanelChange(index)
     var left_sl = $('#video_bg').scrollLeft();
     $('#video_container').css({left: left_sl });
     $('#video_container').show();
+    videoOnWindowResize();
+
     g_videoPlayer.src(media);
     g_videoPlayer.play();
-    
 }
 
 function videoResizeBackgrounds()
