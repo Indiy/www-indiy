@@ -10,7 +10,7 @@
     
     echo "<html><body><pre>\n";
     
-    print "audio image data\n"
+    print "audio image data\n";
     
     $sql = "SELECT * FROM mydna_musicplayer_audio WHERE image_data IS NULL OR image_data LIKE \"\"";
     $image_q = mq($sql);
@@ -55,7 +55,8 @@
     
     print "total: $total, good: $good\n";
 
-    print "video image data\n"
+    print "\n\n============================================\n\n";
+    print "video image data\n";
     
     $sql = "SELECT * FROM mydna_musicplayer_video WHERE image_data IS NULL OR image_data LIKE \"\"";
     $image_q = mq($sql);
