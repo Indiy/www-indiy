@@ -11,10 +11,7 @@ function videoOnReady()
 {
     if( g_videoList.length > 0 )
     {
-        videoCreateTag();
         scrollVideoListToIndex();
-        
-        $(window).resize(videoOnWindowResize);
         $(window).resize(scrollVideoListToIndex);
         
         var opts = {
@@ -30,7 +27,7 @@ function videoOnReady()
 
 function videoSwipeReady()
 {
-    
+    videoCreateTag();
 }
 
 function videoPanelVisible(index)
@@ -43,11 +40,43 @@ function videoPanelChange(index)
 {
     var video = g_videoList[index];
     imageLoadItem(video,index,'#video_bg');
+    
+    g_videoCurrentIndex = index;
+    volumeSetLevel(g_videoVolRatio);
+    var video = g_videoList[index];
+    window.location.hash = '#video_id=' + video.id;
+    
+    loveChangedVideo(video.id,video.name);
+    
+    playerTrackInfo(video.name,video.views);
+    videoUpdateViews(video.id,index);
+    
+    var url = video.video_file;
+    var url_ogv = url.replace(".mp4",".ogv");
+    
+    var media = [
+                 { type: "video/mp4", src: url },
+                 { type: "video/ogg", src: url_ogv }
+                 ];
+    
+    var img_holder_tag = "#video_bg #image_holder_{0}".format(index);
+    var pos = $(img_holder_tag).position();
+    $('#video_container').css({top: pos.top, left: pos.left });
+    $('#video_container').show();
+    g_videoPlayer.src(media);
+    g_videoPlayer.play();
+    
 }
 
 function videoResizeBackgrounds()
 {
     imageResizeBackgrounds(g_videoList,'#video_bg');
+    
+    var img_holder_tag = "#video_bg #image_holder_{0}".format(g_videoCurrentIndex);
+    var pos = $(img_holder_tag).position();
+    $('#video_container').css({top: pos.top, left: pos.left });
+
+    videoOnWindowResize();
 }
 
 function videoHide()
@@ -156,29 +185,10 @@ function videoPlayIndex(index)
         return;
     }
     g_playIndexOnReady = false;
+    
+    $('#video_bg').swipe('scrollto',index);
 
-    g_videoCurrentIndex = index;
-    setPlayerMode("video");
-    volumeSetLevel(g_videoVolRatio);
-    
-    var video = g_videoList[index];
-    window.location.hash = '#video_id=' + video.id;
-    
-    loveChangedVideo(video.id,video.name);
-    
-    playerTrackInfo(video.name,video.views);
-    videoUpdateViews(video.id,index);
-    
-    var url = video.video_file;
-    var url_ogv = url.replace(".mp4",".ogv");
-
-    var media = [
-                 { type: "video/mp4", src: url },
-                 { type: "video/ogg", src: url_ogv }
-                 ];
-
-    g_videoPlayer.src(media);
-    g_videoPlayer.play();
+    setPlayerMode("video");    
 }
 function videoNext()
 {
