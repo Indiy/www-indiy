@@ -213,7 +213,7 @@
                 this.startWheelLeft = left;
                 this.startWheelTime = now;
             }
-            this.wheelMoving = false;
+            this.wheelMoving = true;
             var new_left = left + deltaX * 30;
             this.container.scrollLeft(new_left);
             window.setTimeout($.proxy(this, 'onMouseWheelTimeout'),300);
