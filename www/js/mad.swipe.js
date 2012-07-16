@@ -220,9 +220,9 @@
         },
         onMouseWheelTimeout: function() {
             var now = Number(new Date());
-            var lastT = this.wheelTime - now;
+            var lastDeltaT = now - this.lastWheelTime;
             
-            if( lastT > 250 )
+            if( lastDeltaT > 250 )
             {
                 this.wheelMoving = false;
                 var deltaSL = this.container.scrollLeft() - this.startWheelLeft;
