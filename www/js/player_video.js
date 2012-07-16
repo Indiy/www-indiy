@@ -41,7 +41,8 @@ function videoPanelVisible(index)
 
 function videoPanelChange(index)
 {
-    
+    var video = g_videoList[index];
+    imageLoadItem(video,index,'#video_bg');
 }
 
 function videoResizeBackgrounds()
