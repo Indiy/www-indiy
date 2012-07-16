@@ -85,6 +85,7 @@
                 <input />
             </div>
             <div id="search_results" class="search_results"></div>
+            <div class="random"></div>
         </div>
     </nav>
 
