@@ -1889,4 +1889,6 @@ body {
     border-bottom: 1px solid #888;
 }
 
-
+#video_bg {
+    display: none;
+}
