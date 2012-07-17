@@ -88,7 +88,7 @@ header { width:940px; margin:0 auto}
 
 header h1 { float:left; line-height:.5em; padding:14px 16px 0 0}
 
-header nav {width:701px; height:50px; float:left; background:url(../images/bg_nav.gif) repeat-x; padding:0 20px 0 60px}
+header nav { width:701px; height:50px; float:left; background:url(../images/bg_nav.gif) repeat-x; padding:0 20px 0 25px; }
 header nav ul {float:left; padding:20px 0 0 0}
 header nav ul li { float:left; font-family:"Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; color:#D5D5D5; text-transform:uppercase; background:url(../images/divider_nav.png) no-repeat right 4px; padding:0 18px}
 header nav ul li.nodivider { background:none}
@@ -711,20 +711,21 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 {
     position: relative;
     float: right; 
+    width: 20px;
     margin: 10px 0px 5px 0px;
-    z-index: 10; 
+    z-index: 10;
 }
 #search .search_box {
     display: block; 
-    width: 220px; 
+    width: 160px; 
     height: 26px; 
     border: solid 1px #000; 
-    background-image: url(../images/search_back.gif);
+    background: url("../images/search_back.gif") -39px 0px;
 }
 #search .search_box input { 
     /*position:relative;*/ 
     top: -50px; 
-    width: 190px; 
+    width: 150px; 
     height: 23px; 
     border: none; 
     font-size: 12px; 
@@ -738,12 +739,13 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     border: none;
 }
 #search .random {
-    display: inline-block;
-    width: 32px;
-    height: 23px;
-    margin-left: 20px;
-    margin-top: 10px;
-    background: #777 url("/images/random_artist.png") no-repeat 0px 0px;
+    display: block;
+    float: right;
+    width: 34px;
+    height: 28px;
+    margin-top: -28px;
+    background: #777 url("/images/random_artist.png") no-repeat 1px -2px;
+    border-radius: 3px
 }
 #search .random:hover {
 }
