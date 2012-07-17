@@ -168,4 +168,12 @@ function searchRenderResults()
     }
 }
 
+function searchRandom()
+{
+    var max = g_searchData.artists.length;
+    var i = Math.floor( Math.random() * max );
+    var a = g_searchData.artists[i];
+    var url = g_trueSiteUrl.replace("http://www.","http://" + a.url + ".");
+    window.location.href = url;
+}
 
