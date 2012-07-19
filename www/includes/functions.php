@@ -133,6 +133,10 @@
     {
         return $GLOBALS["cart_base_url"];
     }
+    function fan_base_url()
+    {
+        return $GLOBALS["cart_base_url"];
+    }
 	
 	/* Site Url */
 	function siteUrl() {

@@ -204,6 +204,7 @@
 		2D9E2FFB1585A36000A76906 /* cart2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = cart2.php; sourceTree = "<group>"; };
 		2D9E2FFC1585C8B600A76906 /* cart.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = cart.js; sourceTree = "<group>"; };
 		2D9E2FFD1588355100A76906 /* cart.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = cart.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2DA723A315B8BEAC00658D4B /* love.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = love.php; path = data/love.php; sourceTree = "<group>"; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
 		2DD94A2B14C368DF002B1259 /* vim.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = vim.css; sourceTree = "<group>"; };
@@ -1787,6 +1788,7 @@
 			isa = PBXGroup;
 			children = (
 				2D8D970A15A5007200AA3D1B /* login_signup.php */,
+				2DA723A315B8BEAC00658D4B /* love.php */,
 			);
 			name = data;
 			sourceTree = "<group>";

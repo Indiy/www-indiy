@@ -1,7 +1,5 @@
 <?
 
-session_start();
-//error_reporting(0);
 if( !$_SESSION["cart"] )
 {
     $_SESSION["cart"] = rand(1111111,9999999);

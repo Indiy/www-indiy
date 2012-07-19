@@ -1,13 +1,12 @@
 <?php 
 
-    session_start();
+    require_once '../includes/config.php';
+    require_once '../includes/functions.php';
+    require_once '../includes/login_helper.php';
 
     require_once 'facebook/facebook.php';
     require_once 'config/fbconfig.php';
     require_once 'config/functions.php';
-    require_once '../includes/config.php';
-    require_once '../includes/functions.php';
-    require_once '../includes/login_helper.php';
 
     $facebook = new Facebook(array(
                 'appId' => APP_ID,

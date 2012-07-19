@@ -1,10 +1,7 @@
-<?
-
+<?php
 
     include('../includes/config.php');
 	include('../includes/functions.php');
-
-    session_start();
 
     if($_SESSION['cart'] == "")	
         $_SESSION['cart'] = rand(1111111,9999999);

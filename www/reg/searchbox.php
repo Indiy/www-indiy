@@ -1,6 +1,7 @@
 <?php
 
-session_start();
+require_once '../includes/config.php';
+require_once '../includes/functions.php';
 
 $remote_ip=$_SERVER['REMOTE_ADDR'];
 $query_string=urldecode($_SERVER['QUERY_STRING']);
