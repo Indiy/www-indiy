@@ -156,6 +156,7 @@
                 $fan_data['id'] = mysql_insert_id();
             }
             $fan_id = $fan_data['id'];
+            $_SESSION['fan_id'] = $fan_id;
             
             for( $i = 0 ; $i < count($order_items) ; $i++ )
             {

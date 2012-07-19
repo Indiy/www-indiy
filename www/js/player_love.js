@@ -10,6 +10,7 @@ $(document).ready(loveOnReady);
 function loveOnReady()
 {
     loadLoved();
+    syncLoved();
     musicUpdatePlaylistLove();
 }
 
@@ -162,5 +163,51 @@ function updateLoveLinks(type,track_name)
     $('#love_email_link').attr('href',url);
 }
 
+function syncLoved()
+{
+    var love_list = [];
+
+    for( var k in g_loveMap )
+    {
+        var l = g_loveMap[k];
+        var type = k.split("_")[0];
+        var id = k.split("_")[1];
+        
+        var item = {
+            'music_id': null,
+            'video_id': null,
+            'photo_id': null
+        };
+        
+        var item_key = type + '_id';
+        item[item_key] = id;
+        love_list.append(item);
+    }
+    var dict = {
+        'love_list': love_list
+    };
+    var data = JSON.stringify(dict);
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: g_fanBaseUrl + "/fan/data/love.php",
+        contentType: 'application/json',
+        data: data,
+        processData: false,
+        dataType: 'json',
+        success: function(data) 
+        {
+            g_totalPageViews = data['total_views'];
+            var element_views = data['element_views'];
+            g_videoList[index].views = element_views;
+            playerUpdateTotalViewCount();
+            playerTrackInfo(false,element_views);
+        },
+        error: function()
+        {
+            //alert('Failed to get listens!');
+        }
+    });
+}
 
 
