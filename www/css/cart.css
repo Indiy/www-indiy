@@ -106,7 +106,8 @@ body {
 #cart .header .description {
     display: inline-block;
     padding-top: 17px;
-    width: 650px;
+    padding-left: 20px;
+    width: 630px;
     font-size: 14px;
 }
 #cart .header .price {
