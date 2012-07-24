@@ -337,6 +337,10 @@ body {
     margin: 0;
     list-style: none;
 }
+#footer p {
+    margin: 0;
+    padding: 0;
+}
 
 #footer footer { width:940px; margin:0 auto; }
 
