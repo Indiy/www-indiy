@@ -97,7 +97,6 @@ body {
     width: 100%;
     height: 46px;
     font-size: 0;
-    padding-bottom: 10px;
     color: white;
     background: #2c9495 url('/images/cart_header_texture.png') repeat-x;
     text-transform: uppercase;
@@ -105,21 +104,21 @@ body {
 
 #cart .header .description {
     display: inline-block;
-    padding-top: 17px;
+    padding-top: 19px;
     padding-left: 20px;
     width: 630px;
     font-size: 14px;
 }
 #cart .header .price {
     display: inline-block;
-    padding-top: 17px;
+    padding-top: 19px;
     width: 130px;
     text-align: right;
     font-size: 14px;
 }
 #cart .header .quantity {
     display: inline-block;
-    padding-top: 17px;
+    padding-top: 19px;
     width: 130px;
     text-align: center;
     font-size: 14px;
