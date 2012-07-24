@@ -332,6 +332,12 @@ body {
 #footer .pad {
     height: 37px;
 }
+#footer ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
 #footer footer { width:940px; margin:0 auto; }
 
 #footer footer p { float:right; font-size:12px; color:#FFFFFF; text-align:right}
@@ -342,7 +348,7 @@ body {
 
 #footer footer .benefits { width:110px; float:left; }
 
-#footer footer aside ul { float:left; list-style:none; }
+#footer footer aside ul { float:left; }
 #footer footer aside ul li { font-size:12px; color:#4ecdc4; line-height:1.5em; }
 #footer footer aside ul li a { color:#4ecdc4; text-decoration:none; }
 #footer footer aside ul li a:hover { color:#4ecdc4; text-decoration:underline; }
