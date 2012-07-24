@@ -113,7 +113,7 @@ body {
     display: inline-block;
     padding-top: 19px;
     width: 130px;
-    text-align: right;
+    text-align: center;
     font-size: 14px;
 }
 #cart .header .quantity {
@@ -142,6 +142,8 @@ body {
 #cart #cart_list .cart_line .image_name_description {
     display: inline-block;
     width: 520px;
+    height: 79px;
+    vertical-align: top;
 }
 #cart #cart_list .cart_line .image_name_description .image_holder {
     display: inline-block;
@@ -169,7 +171,7 @@ body {
 #cart #cart_list .cart_line .delete {
     display: inline-block;
     width: 129px;
-    padding-top: 5px;
+    height: 79px;
     cursor: pointer;
     text-decoration: underline;
     color: blue;
@@ -178,9 +180,11 @@ body {
 #cart #cart_list .cart_line .price {
     display: inline-block;
     width: 129px;
-    color: black;
-    font-size: 14px;
-    text-align: right;
+    padding-top: 32px;
+    height: 47px;
+    color: #2c9495;
+    font-size: 24px;
+    text-align: center;
     border-left: 1px solid #dadada;
 }
 #cart #cart_list .cart_line .quantity_update {
