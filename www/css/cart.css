@@ -69,7 +69,7 @@ body {
     margin: 0 auto;
     padding-top: 10px;
     height: 40px;
-    background: url('images/MYARTISTDNA.png') no-repeat;
+    background: url('/images/MYARTISTDNA.png') no-repeat;
 }
 
 #cart {
