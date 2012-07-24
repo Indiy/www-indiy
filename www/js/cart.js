@@ -42,15 +42,19 @@ function cartRender()
         shipping_total += shipping;
         sub_total += price; 
         
+        var odd = "";
+        if( i % 2 == 0 )
+            odd = " odd";
+        
         var html = "";
-        html += "<div class='cart_line' id='cart_line_{0}'>".format(i);
-        html += " <div class='image_holder'><img src='{0}'></div>".format(image);
-        html += " <div class='description'>";
-        html += "  <div class='name_artist'>";
+        html += "<div class='cart_line{0}' id='cart_line_{1}'>".format(odd,i);
+        html += " <div class='image_name_description'>";
+        html += "  <div class='image_holder'><img src='{0}'></div>".format(image);
+        html += "  <div class='name_description'>";
         html += "   <div class='name'>{0}</div>".format(name);
         html += "  </div>";
-        html += "  <div class='delete' onclick='cartDeleteIndex({0});'>Delete</div>".format(i);
         html += " </div>";
+        html += " <div class='delete' onclick='cartDeleteIndex({0});'>Delete</div>".format(i);
         html += " <div class='price'>${0}</div>".format(price);
         html += " <div class='quantity_update'>";
         html += "  <div class='quantity'><input value='{0}'/></div>".format(quantity);

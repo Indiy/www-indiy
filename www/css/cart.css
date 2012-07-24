@@ -131,22 +131,34 @@ body {
 }
 #cart #cart_list .cart_line {
     font-size: 0;
-    width: 700px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #888;
-}
-#cart #cart_list .cart_line .image_holder {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    vertical-align: top;
-}
-#cart #cart_list .cart_line .image_holder img {
     width: 100%;
-    height: 100%;
+    height: 79px;
+    border-bottom: 1px solid #dadada;
+    background-color: white;
 }
-#cart #cart_list .cart_line .description {
+#cart #cart_list .cart_line.odd {
+    background-color: #f2f2f2;
+}
+#cart #cart_list .cart_line .image_name_description {
+    display: inline-block;
+    width: 520px;
+}
+#cart #cart_list .cart_line .image_name_description .image_holder {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 6px;
+    vertical-align: top;
+    border: 1px solid #d0d0d0;
+    border-radius: 2px;
+}
+#cart #cart_list .cart_line .image_name_description .image_holder img {
+    width: 36px;
+    height: 36px;
+}
+#cart #cart_list .cart_line .image_name_description .name_description {
     display: inline-block;
     padding-left: 10px;
     padding-right: 10px;
@@ -154,24 +166,29 @@ body {
     vertical-align: top;    
     font-size: 14px;
 }
-#cart #cart_list .cart_line .description .delete {
+#cart #cart_list .cart_line .delete {
+    display: inline-block;
+    width: 129px;
     padding-top: 5px;
     cursor: pointer;
     text-decoration: underline;
     color: blue;
+    border-left: 1px solid #dadada;
 }
 #cart #cart_list .cart_line .price {
     display: inline-block;
-    width: 100px;
+    width: 129px;
     color: black;
     font-size: 14px;
     text-align: right;
+    border-left: 1px solid #dadada;
 }
 #cart #cart_list .cart_line .quantity_update {
     display: inline-block;
-    width: 100px;
+    width: 129px;
     text-align: center;
     font-size: 14px;
+    border-left: 1px solid #dadada;
 }
 #cart #cart_list .cart_line .quantity_update .quantity input {
     width: 35px;
