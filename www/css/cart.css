@@ -72,16 +72,25 @@ body {
 }
 
 #cart {
-    padding-left: 20px;
-    padding-top: 20px;
+    width: 940px;
+    margin: 0 auto;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
 }
 
 #cart .title {
-    color: black;
-    font-size: 24px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-    font-weight: bold;
+    padding-top: 20px;
+    color: #687480;
+    font-size: 26px;
+    font-family: "Teletex Light",Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+#cart .title_underbar {
+    margin-top: 17px;
+    margin-bottom: 19px;
+    height: 11px;
+    width: 100%;
+    background: #e2e2e2 url("/images/cart_under_texture.png") repeat-x;
 }
 
 #cart .header {
