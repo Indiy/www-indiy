@@ -56,13 +56,20 @@ body {
     background: black;
 }
 #header .top_bar {
-    
+    height: 39px;
 }
 #header .mad_bar {
-    
+    height: 50px;
+    width: 100%;
+    background: url("/images/cart_top_texture.png") repeat-x;
+    border-bottom: 1px solid #5f5f5f;
 }
 #header .mad_bar .logo {
-    
+    width: 940px;
+    margin: 0 auto;
+    padding-top: 10px;
+    height: 40px;
+    background: url('images/MYARTISTDNA.png') no-repeat;
 }
 
 #cart {
