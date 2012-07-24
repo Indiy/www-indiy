@@ -52,6 +52,19 @@ body {
 	padding-bottom: 186px;
 }
 
+#header {
+    background: black;
+}
+#header .top_bar {
+    
+}
+#header .mad_bar {
+    
+}
+#header .mad_bar .logo {
+    
+}
+
 #cart {
     padding-left: 20px;
     padding-top: 20px;
