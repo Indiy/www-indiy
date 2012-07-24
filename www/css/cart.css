@@ -78,7 +78,7 @@ body {
 }
 
 #cart .title {
-    padding-top: 328px;
+    padding-top: 28px;
     color: #687480;
     font-size: 30px;
     font-family: "Teletex Light",Arial, Helvetica, sans-serif;
@@ -100,22 +100,26 @@ body {
     padding-bottom: 10px;
     color: white;
     background: #2c9495 url('/images/cart_header_texture.png') repeat-x;
+    text-transform: uppercase;
 }
 
 #cart .header .description {
     display: inline-block;
-    width: 500px;
+    padding-top: 17px;
+    width: 650px;
     font-size: 14px;
 }
 #cart .header .price {
     display: inline-block;
-    width: 100px;
+    padding-top: 17px;
+    width: 130px;
     text-align: right;
     font-size: 14px;
 }
 #cart .header .quantity {
     display: inline-block;
-    width: 100px;
+    padding-top: 17px;
+    width: 130px;
     text-align: center;
     font-size: 14px;
 }
