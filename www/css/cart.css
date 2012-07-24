@@ -78,15 +78,15 @@ body {
 }
 
 #cart .title {
-    padding-top: 20px;
+    padding-top: 328px;
     color: #687480;
-    font-size: 26px;
+    font-size: 30px;
     font-family: "Teletex Light",Arial, Helvetica, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
 }
 #cart .title_underbar {
-    margin-top: 17px;
+    margin-top: 12px;
     margin-bottom: 19px;
     height: 11px;
     width: 100%;
@@ -94,9 +94,12 @@ body {
 }
 
 #cart .header {
+    width: 100%;
+    height: 46px;
     font-size: 0;
     padding-bottom: 10px;
-    color: black;
+    color: white;
+    background: #2c9495 url('/images/cart_header_texture.png') repeat-x;
 }
 
 #cart .header .description {
