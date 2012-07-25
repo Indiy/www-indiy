@@ -56,7 +56,11 @@ function cartRender()
         html += "   <div class='description'>{0}</div>".format(description);
         html += "  </div>";
         html += " </div>";
-        html += " <div class='delete' onclick='cartDeleteIndex({0});'>Delete</div>".format(i);
+        html += " <div class='delete'>";
+        html += "  <div class='button' onclick='cartDeleteIndex({0});'>".format(i);
+        html += "   <div class='icon'></div><div class='label'>Delete</div>";
+        html += "  </div>";
+        html += " </div>";
         html += " <div class='price'>${0}</div>".format(price);
         html += " <div class='quantity_update'>";
         html += "  <div class='quantity'><input value='{0}'/></div>".format(quantity);
