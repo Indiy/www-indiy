@@ -95,12 +95,33 @@
             
             $num = $i + 1;
             $html = "";
-            $html .= "<div class='item'>";
-            $html .= " <div class='num'>$num</div>";
-            $html .= " <div class='description'>$description</div>";
-            $html .= " <div class='price'>$price</div>";
-            $html .= " <div class='quantity'>$quantity</div>";
+            
+            if( $i % 2 == 0 )
+                $odd = " odd";
+            else
+                $odd = "";
+            
+            $html .= "<div class='cart_line$odd' id='cart_line_$i'>";
+            $html .= " <div class='image_name_description'>";
+            $html .= "  <div class='image_holder'><img src='{0}'></div>".format(image);
+            $html .= "  <div class='name_description'>";
+            $html .= "   <div class='name'>{0}</div>".format(name);
+            $html .= "   <div class='description'>{0}</div>".format(description);
+            $html .= "  </div>";
+            $html .= " </div>";
+            $html .= " <div class='delete'>";
+            $html .= "  <div class='button' onclick='cartDeleteIndex({0});'>".format(i);
+            $html .= "   <div class='icon'></div><div class='label'>Delete</div>";
+            $html .= "  </div>";
+            $html .= " </div>";
+            $html .= " <div class='price'>${0}</div>".format(price);
+            $html .= " <div class='quantity_update'>";
+            $html .= "  <div class='quantity'><input value='{0}'/></div>".format(quantity);
+            $html .= "  <div class='update' onclick='cartUpdateQuantity({0});'>Update</div>".format(i);
+            $html .= "  <div class='saved'>Saved</div>";
+            $html .= " </div>";
             $html .= "</div>";
+
             
             $order_item_html .= $html;
             $i++;
