@@ -261,7 +261,7 @@ body {
     cursor: pointer;
 }
 #cart #cart_list .cart_line .quantity_update .update:hover {
-    color: #00a;
+    color: #09f;
 }
 #cart #cart_list .cart_line .quantity_update .saved {
     display: none;
