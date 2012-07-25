@@ -181,7 +181,7 @@ function syncLoved()
         
         var item_key = type + '_id';
         item[item_key] = id;
-        love_list.append(item);
+        love_list.push(item);
     }
     var dict = {
         'love_list': love_list
