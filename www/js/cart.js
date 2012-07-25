@@ -76,6 +76,9 @@ function cartRender()
     $('#cart #shipping_amount').html("$" + shipping_total.toFixed(2));
     $('#cart #total_amount').html("$" + total.toFixed(2));
     $('#cart .totals').show();
+    
+    $('#cart .quantity input').unbind();
+    $('#cart .quantity input').bind("propertychange keyup input paste",cartQuantityChange);
 
 }
 
@@ -127,6 +130,62 @@ function cartDeleteIndex(i)
         {
         }
     });
+}
+
+function cartQuantityChange(e)
+{
+    var parent = $(this).parent('cart_line');
+    var id = parent.attr('id');
+    var index = id.split("_")[2];
+
+    var c = g_cartList[index];
+
+    var qty = parseInt($(this).val());
+    
+    
+    if( qty > 0 && qty != c.quantity )
+    {
+        parent.find('.quantity_update .update').show();
+        parent.find('.quantity_update .saved').hide();
+    }
+    else
+    {
+        parent.find('.quantity_update .update').hide();
+        parent.find('.quantity_update .saved').hide();
+    }
+}
+
+function cartUpdateQuantity(index)
+{
+    var c = g_cartList[index];
+    var selector = "#cart_line_{0} .quantity_update".format(index);
+    var parent = $(selector);
+    var qty = parseInt(parent.find('input').val());
+    
+    if( qty > 0 && qty != c.quantity )
+    {
+        var data = {
+            'cart_item_id': c.id,
+            'quantity': qty
+        };
+        var url = "/data/cart2.php?artist_id={0}".format(g_artistId); 
+        jQuery.ajax(
+        {
+            type: 'POST',
+            url: url,
+            data: data,
+            dataType: 'json',
+            success: function(data) 
+            {
+                g_cartList = data;
+                $(parent).find('.saved').show();
+                $(parent).find('.update').hide();
+            },
+            error: function()
+            {
+            }
+        });
+    }
 }
 
 
