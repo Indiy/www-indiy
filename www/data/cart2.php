@@ -57,7 +57,9 @@
         parse_str(file_get_contents('php://input'), $params);
         $cart_item_id = $params['cart_item_id'];
         
-        mq("DELETE FROM cart_items WHERE id='$cart_item_id' AND cart_id='$artist_cart_id'");
+        $sql = "DELETE FROM cart_items WHERE id='$cart_item_id' AND cart_id='$artist_cart_id'";
+        print $sql;
+        mq($sql);
         
         send_store_cart($artist_id,$cart_id);
         exit();
