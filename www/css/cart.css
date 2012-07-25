@@ -281,8 +281,9 @@ body {
 }
 #cart .bottom .back_to_site .label {
     display: inline-block;
-    height: 25px;
+    height: 18px;
     width: 75px;
+    padding-top: 7px;
     background: #1e2126;
     color: white;
     font-size: 12px;
@@ -296,7 +297,7 @@ body {
 }
 #cart .bottom .totals .total {
     height: 29px;
-    padding-top: 15px;
+    padding-top: 6px;
     width: 100%;
 }
 #cart .bottom .totals .total .label {
@@ -305,6 +306,7 @@ body {
     font-size: 20px;
     font-weight: bold;
     color: black;
+    text-align: right;
 } 
 
 #cart .bottom .totals .total .amount {
