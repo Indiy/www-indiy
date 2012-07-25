@@ -108,18 +108,15 @@ function cartDeleteIndex(i)
 {
     var c = g_cartList[i];
     
-    var dict = {
+    var data = {
         'cart_item_id': c.id
     };
-    var data = JSON.stringify(dict);
     var url = "/data/cart2.php?artist_id={0}".format(g_artistId); 
     jQuery.ajax(
     {
         type: 'DELETE',
         url: url,
-        contentType: 'application/json',
         data: data,
-        processData: false,
         dataType: 'json',
         success: function(data) 
         {
