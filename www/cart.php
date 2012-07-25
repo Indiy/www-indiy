@@ -17,6 +17,9 @@
 
     $cart_list = store_get_cart($artist_id,$cart_id);
     $cart_list_json = json_encode($cart_list);
+    
+    $artist_url = $artist_data['url'];
+    $full_artist_url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
 
     include_once 'templates/cart.html';
 ?>
