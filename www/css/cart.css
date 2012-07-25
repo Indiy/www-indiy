@@ -288,13 +288,17 @@ body {
     text-align: center;
     vertical-align: top;
 }
-#cart .bottom .total {
+#cart .bottom .totals {
     float: right;
     width: 50%;
+    height: 80px;
+}
+#cart .bottom .totals .total {
     height: 29px;
     padding-top: 15px;
+    width: 100%;
 }
-#cart .bottom .total .label {
+#cart .bottom .totals .total .label {
     float: right;
     width: 130px;
     font-size: 20px;
@@ -302,7 +306,7 @@ body {
     color: black;
 } 
 
-#cart .bottom .total .amount {
+#cart .bottom .totals .total .amount {
     float: right;
     width: 115px;
     padding-right: 50px;
