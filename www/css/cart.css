@@ -260,6 +260,9 @@ body {
     text-decoration: underline;
     cursor: pointer;
 }
+#cart #cart_list .cart_line .quantity_update .update:hover {
+    color: #00a;
+}
 #cart #cart_list .cart_line .quantity_update .saved {
     display: none;
     padding-top: 5px;
