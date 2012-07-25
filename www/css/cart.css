@@ -323,9 +323,32 @@ body {
     display: none;
 }
 #cart .checkout {
-    cursor: pointer;
+    padding-right: 50px;
+    padding-top: 25px;
+    height: 65px;
 }
-
+#cart .checkout .paypal {
+    float: right;
+    width: 77px;
+    height: 25px;
+    font: 0;
+}
+#cart .checkout .paypal .icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #59658b;
+}
+#cart .checkout .paypal .label {
+    display: inline-block;
+    width: 52px;
+    padding-top: 7px;
+    height: 18px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    background: #1e3676;
+}
 
 #order {
     padding-left: 10px;
