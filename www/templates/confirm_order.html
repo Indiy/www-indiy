@@ -18,39 +18,104 @@
     </head>
     
     <body>
-        <div id='order'>
-            <div class='title'>Confirm Your Order</div>
-            <div class='header'>
-                <div class='description'>Items</div>
-                <div class='price'>Price</div>
-                <div class='quantity'>Quantity</div>
-            </div>
-            <div class='hsep'></div>
-            <div class='item_list'>
-                <?=$order_item_html;?>
-            </div>
-            <div class='total_lines'>
-                <div class='total'>
-                    Shipping:
-                    <div class='amount'><?=$shippping_amount;?></div>
-                </div>
-                <div class='total'>
-                    Total:
-                    <div class='amount'><?=$charge_amount;?></div>
+        <div id='body_wrap'><div id='main_content'>
+            
+            <div id='header'>
+                <div class='top_bar'></div>
+                <div class='mad_bar'>
+                    <div class='logo'></div>
                 </div>
             </div>
-            <div class='shipping'>
-                <div class='title'>Shipping Address:</div>
-                <div class='address'><?=$shipping_info['name'];?></div>
-                <div class='address'><?=$shipping_info['street1'];?></div>
-                <div class='address'><?=$shipping_info['street2'];?></div>
-                <div class='address'><?=$shipping_info['city'];?>, <?=$shipping_info['state'];?>, <?=$shipping_info['zip'];?></div>
-                <div class='address'><?=$shipping_info['phone_number'];?></div>
+            
+            <div id='cart'>
+                <div class='title'>Shopping Cart</div>
+                <div class='title_underbar'></div>
+                <div class='header'>
+                    <div class='description'>Items to buy now</div>
+                    <div class='price'>Price</div>
+                    <div class='quantity'>Quantity</div>
+                </div>
+                <div id='cart_list'>
+                    <?=$order_item_html;?>
+                </div>
+                <div class='bottom'>
+                    <a href="<?=$full_artist_url;?>">
+                        <div class='back_to_site'>
+                            <div class='icon'></div>
+                            <div class='label'>Back to site</div>
+                        </div>
+                    </a>
+                    <div class='totals'>
+                        <div class='total'>
+                            <div id='shipping_amount' class='amount'></div>
+                            <div class='label'>Shipping:</div>
+                        </div>
+                        <div class='total'>
+                            <div id='total_amount' class='amount'></div>
+                            <div class='label'>Total:</div>
+                        </div>
+                    </div>
+                </div>
+                <div class='buttons'>
+                    <div class='confirm'><a href='<?=$confirm_url;?>'>CONFIRM ORDER</a></div>
+                    <div class='cancel'><a href='<?=$cancel_url;?>'>BACK TO CART</a></div>
+                </div>
             </div>
-            <div class='buttons'>
-                <div class='confirm'><a href='<?=$confirm_url;?>'>CONFIRM ORDER</a></div>
-                <div class='cancel'><a href='<?=$cancel_url;?>'>BACK TO CART</a></div>
-            </div>
+            
+        </div></div>
+        
+        <div id="footer">
+            <div class='pad'></div>
+            <footer>
+                <aside>
+                    <div class='list_head'>ARTIST</div>
+                    <ul>
+                        <li><a href="#">All</a></li>
+                        
+                    </ul>
+                </aside>
+                
+                <aside class="benefits">
+                    <div class='list_head'>BENEFITS</div>
+                    <ul>
+                        <li><a href="be-heard.php">Be Heard</a></li>
+                        <li><a href="be-seen.php">Be Seen</a></li>
+                        <li><a href="be-independent.php">Be Independent</a></li>
+                    </ul>
+                </aside>
+                
+                <aside>
+                    <div class='list_head'>SUPPORT</div>
+                    <ul>
+                        <li><a href="pricing.php">Pricing</a></li>
+                        <li><a href="faq.php">FAQ</a></li>
+                        <li><a href="tour.php">Help</a></li>
+                    </ul>
+                </aside>
+                
+                <aside>
+                    <div class='list_head'>AFFILIATES</div>
+                    <ul>
+                        <li><a href="http://myartistdna.co">MAD.co</a></li>
+                        <li><a href="http://myartistdna.is">MAD.is</a></li>
+                        <li><a href="http://myartistdna.fm">MAD.fm</a></li>
+                        <li><a href="http://myartistdna.tv">MAD.tv</a></li>
+                        
+                    </ul>
+                </aside>
+                
+                <article>
+                    <div class='list_head'>STAY CONNECTED</div>
+                    <ul>
+                        <li><a href="http://facebook.com/pages/MyArtistDNA/106114012796731" target="_blank"><span><img src="images/facebook.gif" alt="Facebook"></span> Become a fan on Facebook</a></li>
+                        <li><a href="http://twitter.com/myartistdna" target="_blank"><span><img src="images/twitter.gif" alt="Twitter"></span> Follow us on Twitter</a></li>
+                        <li><a onclick='showNewsletter();'><span><img src="images/email.gif" alt="Email"></span> Join Newsletter</a></li>
+                        
+                    </ul>
+                </article>
+                <div class="logo"><a href="home.php"><img src="images/MYARTISTDNA_footer.gif" alt="MYARTISTDNA"></a></div>
+                <p>&copy; 2012 <a href="http://myartistdna.com">MYARTISTDNA</a></p>
+            </footer>
         </div>
     </body>
 </html>
