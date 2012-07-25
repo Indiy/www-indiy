@@ -1036,6 +1036,7 @@
         $sql = "";
         $sql .= "SELECT cart_items.*,";
         $sql .= "  mydna_musicplayer_ecommerce_products.name,";
+        $sql .= "  mydna_musicplayer_ecommerce_products.description,";
         $sql .= "  mydna_musicplayer_ecommerce_products.image, ";
         $sql .= "  mydna_musicplayer_ecommerce_products.price, ";
         $sql .= "  mydna_musicplayer_ecommerce_products.shipping ";
@@ -1064,6 +1065,7 @@
                           "product_id" => $product_id,
                           "price" => $price,
                           "name" => $name,
+                          "description" => $cart['description'],
                           "image" => $image,
                           "shipping" => $shipping,
                           "size" => $cart['size'],
