@@ -34,6 +34,7 @@ function cartRender()
         var c = g_cartList[i];
         var id = c['id'];
         var name = c['name'];
+        var description = c['description'];
         var image = c['image'];
         var price = myParseFloat(c['price'],0.0);
         var shipping = myParseFloat(c['shipping'],0.0);
@@ -52,6 +53,7 @@ function cartRender()
         html += "  <div class='image_holder'><img src='{0}'></div>".format(image);
         html += "  <div class='name_description'>";
         html += "   <div class='name'>{0}</div>".format(name);
+        html += "   <div class='description'>{0}</div>".format(description);
         html += "  </div>";
         html += " </div>";
         html += " <div class='delete' onclick='cartDeleteIndex({0});'>Delete</div>".format(i);
