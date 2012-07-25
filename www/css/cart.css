@@ -247,8 +247,7 @@ body {
 #cart #cart_list .cart_line .quantity_update .quantity input {
     font-size: 15px;
     width: 39px;
-    height: 19px;
-    padding-top: 5px;
+    height: 24px;
     text-align: center;
     border: 1px solid #d1d1d1;
     border-radius: 2px;
