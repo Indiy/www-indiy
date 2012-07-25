@@ -199,6 +199,7 @@ body {
     width: 25px;
     height: 25px;
     background: #d3d3d3;
+    vertical-align: top;
 }
 #cart #cart_list .cart_line .delete .button .label {
     display: inline-block;
@@ -210,6 +211,7 @@ body {
     color: white;
     font-size: 12px;
     background: #bcbcbc;
+    vertical-align: top;
 }
 
 #cart #cart_list .cart_line .price {
