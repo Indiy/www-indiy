@@ -27,8 +27,6 @@ function cartRender()
     }
     $('#cart_empty').hide();
 
-    var shipping_total = 0.0;
-    var sub_total = 0.0;
     for( var i = 0 ; i < g_cartList.length ; ++i )
     {
         var c = g_cartList[i];
@@ -40,9 +38,6 @@ function cartRender()
         var shipping = myParseFloat(c['shipping'],0.0);
         var quantity = c['quantity'];
 
-        shipping_total += shipping;
-        sub_total += price; 
-        
         var odd = "";
         if( i % 2 == 0 )
             odd = " odd";
@@ -72,14 +67,32 @@ function cartRender()
         $('#cart_list').append(html);
     }
     
-    var total = shipping_total + sub_total;
-    $('#cart #shipping_amount').html("$" + shipping_total.toFixed(2));
-    $('#cart #total_amount').html("$" + total.toFixed(2));
-    $('#cart .totals').show();
+    cartRenderTotals();
     
     $('#cart .quantity input').unbind();
     $('#cart .quantity input').bind("propertychange keyup input paste",cartQuantityChange);
 
+}
+
+function cartRenderTotals()
+{
+    var shipping_total = 0.0;
+    var sub_total = 0.0;
+    for( var i = 0 ; i < g_cartList.length ; ++i )
+    {
+        var c = g_cartList[i];
+        var price = myParseFloat(c['price'],0.0);
+        var shipping = myParseFloat(c['shipping'],0.0);
+        var quantity = c['quantity'];
+        
+        shipping_total += shipping * quantity;
+        sub_total += price * quantity;
+    }
+    
+    var total = shipping_total + sub_total;
+    $('#cart #shipping_amount').html("$" + shipping_total.toFixed(2));
+    $('#cart #total_amount').html("$" + total.toFixed(2));
+    $('#cart .totals').show();
 }
 
 function paypalCheckout()
@@ -145,8 +158,8 @@ function cartQuantityChange(e)
     
     if( qty > 0 && qty != c.quantity )
     {
-        parent.find('.quantity_update .update').show();
         parent.find('.quantity_update .saved').hide();
+        parent.find('.quantity_update .update').show();
     }
     else
     {
@@ -178,8 +191,9 @@ function cartUpdateQuantity(index)
             success: function(data) 
             {
                 g_cartList = data;
-                $(parent).find('.saved').show();
                 $(parent).find('.update').hide();
+                $(parent).find('.saved').show();
+                cartRenderTotals();
             },
             error: function()
             {

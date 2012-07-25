@@ -254,9 +254,17 @@ body {
 }
 #cart #cart_list .cart_line .quantity_update .update {
     display: none;
+    padding-top: 5px;
+    font-size: 12px;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
 }
 #cart #cart_list .cart_line .quantity_update .saved {
     display: none;
+    padding-top: 5px;
+    font-size: 12px;
+    color: green;
 }
 #cart .bottom {
     padding-top: 15px;
