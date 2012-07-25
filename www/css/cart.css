@@ -275,11 +275,21 @@ body {
     height: 29px;
     padding-top: 15px;
 }
+#cart .bottom .total .label {
+    float: right;
+    width: 130px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+} 
 
 #cart .bottom .total .amount {
     float: right;
     width: 115px;
     padding-right: 50px;
+    color: #2c9495;
+    font-size: 19px;
+    font-weight: bold;
     text-align: right;
 }
 
