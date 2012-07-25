@@ -186,6 +186,7 @@ body {
     width: 129px;
     height: 79px;
     border-left: 1px solid #dadada;
+    vertical-align: top;
 }
 #cart #cart_list .cart_line .delete .button {
     margin-top: 27px;
@@ -193,6 +194,7 @@ body {
     width: 77px;
     height: 25px;
     background-color: #bcbcbc;
+    cursor: pointer;
 }
 #cart #cart_list .cart_line .delete .button .icon {
     display: inline-block;
@@ -204,14 +206,20 @@ body {
 #cart #cart_list .cart_line .delete .button .label {
     display: inline-block;
     width: 52px;
-    height: 19px;
-    padding-top: 6px;
+    height: 18px;
+    padding-top: 7px;
     font-size: 
     text-align: center;
     color: white;
     font-size: 12px;
     background: #bcbcbc;
     vertical-align: top;
+}
+#cart #cart_list .cart_line .delete .button:hover .icon {
+    background: #bb1904;
+}
+#cart #cart_list .cart_line .delete .button:hover .label {
+    background: #74170a;
 }
 
 #cart #cart_list .cart_line .price {
