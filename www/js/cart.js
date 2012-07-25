@@ -134,7 +134,7 @@ function cartDeleteIndex(i)
 
 function cartQuantityChange(e)
 {
-    var parent = $(this).parent('cart_line');
+    var parent = $(this).parents('cart_line');
     var id = parent.attr('id');
     var index = id.split("_")[2];
 
