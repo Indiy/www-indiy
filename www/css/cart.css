@@ -162,15 +162,16 @@ body {
 }
 #cart #cart_list .cart_line .image_name_description .name_description {
     display: inline-block;
-    padding-left: 10px;
-    padding-top: 10px;
-    width: 460px;
+    padding-left: 17px;
+    padding-top: 22px;
+    width: 440px;
     vertical-align: top;    
 }
 #cart #cart_list .cart_line .image_name_description .name_description .name {
     width: 100%;
     color: #333;
     font-size: 16px;
+    font-weight: bold;
     text-overflow: ellipsis;
 }
 #cart #cart_list .cart_line .image_name_description .name_description .description {
