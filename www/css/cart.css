@@ -236,13 +236,22 @@ body {
 #cart #cart_list .cart_line .quantity_update {
     display: inline-block;
     width: 129px;
+    height: 79px;
     text-align: center;
-    font-size: 14px;
     border-left: 1px solid #dadada;
+    vertical-align: top;
+}
+#cart #cart_list .cart_line .quantity_update .quantity {
+    padding-top: 26px;
 }
 #cart #cart_list .cart_line .quantity_update .quantity input {
-    width: 35px;
+    font-size: 15px;
+    width: 39px;
+    height: 19px;
+    padding-top: 5px;
     text-align: center;
+    border: 1px solid #d1d1d1;
+    border-radius: 2px;
 }
 #cart #cart_list .cart_line .quantity_update .update {
     display: none;
