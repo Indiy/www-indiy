@@ -331,13 +331,14 @@ body {
     float: right;
     width: 77px;
     height: 25px;
-    font: 0;
+    font-size: 0;
 }
 #cart .checkout .paypal .icon {
     display: inline-block;
     width: 25px;
     height: 25px;
     background: #59658b;
+    vertical-align: top;
 }
 #cart .checkout .paypal .label {
     display: inline-block;
@@ -348,6 +349,7 @@ body {
     font-size: 12px;
     text-align: center;
     background: #1e3676;
+    vertical-align: top;
 }
 
 #order {
