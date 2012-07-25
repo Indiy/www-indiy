@@ -265,11 +265,12 @@ body {
     height: 78px;
 }
 #cart .bottom .back_to_site {
+    float: left;
     margin-left: 22px;
     margin-top: 18px;
     width: 100px;
     height: 25px;
-    float: left;
+    font-size: 0;
 }
 #cart .bottom .back_to_site .icon {
     display: inline-block;
