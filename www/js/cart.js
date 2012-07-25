@@ -73,9 +73,9 @@ function cartRender()
     }
     
     var total = shipping_total + sub_total;
-    $('#cart #shipping_amount').html("$" + shipping_total);
-    $('#cart #total_amount').html("$" + total);
-    $('#cart .total_lines').show();
+    $('#cart #shipping_amount').html("$" + shipping_total.toFixed(2));
+    $('#cart #total_amount').html("$" + total.toFixed(2));
+    $('#cart .totals').show();
 
 }
 

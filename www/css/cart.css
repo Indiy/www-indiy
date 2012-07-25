@@ -332,6 +332,7 @@ body {
     width: 77px;
     height: 25px;
     font-size: 0;
+    cursor: pointer;
 }
 #cart .checkout .paypal .icon {
     display: inline-block;
