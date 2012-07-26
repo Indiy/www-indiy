@@ -355,7 +355,7 @@ body {
 }
 #cart .confirm_order .confirm {
     float: right;
-    width: 77px;
+    width: 114px;
     height: 25px;
     font-size: 0;
     cursor: pointer;
@@ -369,7 +369,7 @@ body {
 }
 #cart .confirm_order .confirm .label {
     display: inline-block;
-    width: 52px;
+    width: 89px;
     padding-top: 7px;
     height: 18px;
     color: white;
