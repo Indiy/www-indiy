@@ -1555,6 +1555,7 @@ textarea {
 #order_list {
     width: 940px;
     margin: 0 auto;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
 }
 
 #order_list a {
@@ -1675,6 +1676,7 @@ textarea {
     background: #1e2126;
     color: white;
     font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     text-align: center;
     vertical-align: top;
 }
@@ -1692,6 +1694,7 @@ textarea {
     float: right;
     width: 130px;
     font-size: 19px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
     color: black;
     text-align: right;
@@ -1703,6 +1706,7 @@ textarea {
     padding-right: 50px;
     color: #2c9495;
     font-size: 19px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
     text-align: right;
 }
