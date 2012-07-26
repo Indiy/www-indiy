@@ -63,7 +63,7 @@
         else
             $order_status = "unknown";
     
-        $order_date = strftime("%F",strtotime($order['order_date']));
+        $order_date = strftime("%D",strtotime($order['order_date']));
 
         $odd = "";
         if( $i % 2 == 0 )
