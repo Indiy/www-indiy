@@ -26,6 +26,7 @@
     $order_list_html = "";
 
     $i = 0;
+    $total_sold = 0.0;
 
     while( $order = mf($order_q) )
     {
@@ -83,8 +84,13 @@
     
         $order_list_html .= $html;
         
+        $total_sold += $charge_amount;
+        
         $i++;
     }
+    
+    $total_orders = $i;
+    $total_sold = number_format($total_sold,2);
     
     $include_order = FALSE;
     $include_editor = FALSE;
