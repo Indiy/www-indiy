@@ -25,6 +25,8 @@
 
     $order_list_html = "";
 
+    $i = 0;
+
     while( $order = mf($order_q) )
     {
         $id = $order['id'];
@@ -53,9 +55,16 @@
         else
             $order_status = "Unknown";
     
+        $order_date = strftime("%F",strtotime($order_data['order_date']));
+
+        $odd = "";
+        if( $i % 2 == 0 )
+            $odd = " odd";
+    
         $html = "";
         $html .= "<a href='edit_order.php?order_id=$id'>";
-        $html .= " <div class='item'>";
+        $html .= " <div class='item$odd'>";
+        $html .= "  <div class='date'>$order_date</div>";
         $html .= "  <div class='order_num'>$id</div>";
         $html .= "  <div class='name'>$customer_name</div>";
         $html .= "  <div class='email'>$customer_email</div>";
@@ -65,6 +74,8 @@
         $html .= "</a>";
     
         $order_list_html .= $html;
+        
+        $i++;
     }
     
     $include_order = FALSE;
