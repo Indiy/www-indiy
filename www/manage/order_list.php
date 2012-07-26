@@ -108,6 +108,8 @@
     $include_order = FALSE;
     $include_editor = FALSE;
     
+    $artist_edit_url = "/manage/artist_management.php?userId=$artist_id";
+    
     include_once "templates/order_list.html";
 
 ?>
