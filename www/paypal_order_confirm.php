@@ -79,7 +79,7 @@
         
         $order_items = store_get_order($order_id);
         
-        for( $order_items as $i => $item )
+        foreach( $order_items as $i => $item )
         {
             $name = $item['name'];
             $description = $item['description'];
@@ -105,7 +105,7 @@
             $html .= "   <div class='description'>$description</div>";
             $html .= "  </div>";
             $html .= " </div>";
-            $html .= " <div class='price'>$$$price</div>";
+            $html .= " <div class='price'>$price</div>";
             $html .= " <div class='quantity'>$quantity</div>";
             $html .= "</div>";
             
