@@ -17,6 +17,24 @@
             <div class='list'>
                 <?=$order_list_html;?>
             </div>
+            <div class='bottom'>
+                <a href="<?=$cancel_url;?>">
+                    <div class='back_to_site'>
+                        <div class='icon'></div>
+                        <div class='label'>Back to site</div>
+                    </div>
+                </a>
+                <div class='totals'>
+                    <div class='total'>
+                        <div id='total_orders' class='amount'><?=$total_orders;?></div>
+                        <div class='label'>Total Orders:</div>
+                    </div>
+                    <div class='total'>
+                        <div id='total_sold' class='amount'><?=$total_sold;?></div>
+                        <div class='label'>Total Sold:</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     </section>
