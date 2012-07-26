@@ -98,7 +98,7 @@
             
             $html = "";
             $html .= "<div class='cart_line$odd' id='cart_line_$i'>";
-            $html .= " <div class='image_name_description'>";
+            $html .= " <div class='image_name_description order_description'>";
             $html .= "  <div class='image_holder'><img src='$image'></div>";
             $html .= "  <div class='name_description'>";
             $html .= "   <div class='name'>$name</div>";
