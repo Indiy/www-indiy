@@ -348,6 +348,37 @@ body {
 #cart_empty {
     display: none;
 }
+#cart .confirm_order {
+    padding-right: 50px;
+    padding-top: 25px;
+    height: 65px;
+}
+#cart .confirm_order .confirm {
+    float: right;
+    width: 77px;
+    height: 25px;
+    font-size: 0;
+    cursor: pointer;
+}
+#cart .confirm_order .confirm .icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #588c5c;
+    vertical-align: top;
+}
+#cart .confirm_order .confirm .label {
+    display: inline-block;
+    width: 52px;
+    padding-top: 7px;
+    height: 18px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    background: #1f773a;
+    vertical-align: top;
+}
+
 #cart .checkout {
     padding-right: 50px;
     padding-top: 25px;
@@ -378,6 +409,7 @@ body {
     background: #1e3676;
     vertical-align: top;
 }
+
 
 #order {
     padding-left: 10px;
