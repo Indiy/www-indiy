@@ -106,7 +106,7 @@
             $html .= "  </div>";
             $html .= " </div>";
             $html .= " <div class='price'>\$$price</div>";
-            $html .= " <div class='quantity'>$quantity</div>";
+            $html .= " <div class='order_quantity'>$quantity</div>";
             $html .= "</div>";
             
             $order_item_html .= $html;
