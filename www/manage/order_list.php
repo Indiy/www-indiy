@@ -54,15 +54,26 @@
             $order_status = "waiting for shipment";
         }
         else if( $order['state'] == 'SHIPPED' )
+        {
             $order_status = "shipped";
+        }
         else if( $order['state'] == 'CLOSED' )
-            $order_status = "closed";
+        {
+            $order_status = "complete";
+        }
         else if( $order['state'] == 'CANCELED' )
+        {
             $order_status = "canceled";
+        }
         else if( $order['state'] == 'ABANDONED' )
+        {
             $order_status = "order abandoned";
+            continue;
+        }
         else
+        {
             $order_status = "unknown";
+        }
     
         $order_date = strftime("%D",strtotime($order['order_date']));
 
@@ -84,8 +95,10 @@
     
         $order_list_html .= $html;
         
-        $total_sold += $charge_amount;
-        
+        if( $order['state'] != 'CANCELED' )
+        {
+            $total_sold += $charge_amount;
+        }
         $i++;
     }
     
