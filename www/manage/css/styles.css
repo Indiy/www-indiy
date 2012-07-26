@@ -1642,6 +1642,7 @@ textarea {
 }
 #order_list .amount {
     width: 140px;
+}
+#order_list .list .item .amount {
     border-right: none;
 }
-
