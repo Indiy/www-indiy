@@ -26,6 +26,8 @@
     $charge_amount = $order_data['charge_amount'];
     $shipping_info = json_decode($order_data['shipping_json'],TRUE);
     $payment_info = json_decode($order_data['payment_json'],TRUE);
+    
+    $order_email = $order_data['email'];
 
     if( $order_data['state'] == 'PENDING_CONFIRM' )
         $order_status = "Waiting For Customer Confirmation";
