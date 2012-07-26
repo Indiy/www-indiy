@@ -1077,6 +1077,52 @@
         return $cart_list;
     }
     
+    function store_get_order($order_id)
+    {
+        $sql = "";
+        $sql .= "SELECT order_items.*,";
+        $sql .= "  mydna_musicplayer_ecommerce_products.name,";
+        $sql .= "  mydna_musicplayer_ecommerce_products.description,";
+        $sql .= "  mydna_musicplayer_ecommerce_products.image, ";
+        $sql .= "  mydna_musicplayer_ecommerce_products.price, ";
+        $sql .= "  mydna_musicplayer_ecommerce_products.shipping ";
+        $sql .= " FROM order_items ";
+        $sql .= " JOIN mydna_musicplayer_ecommerce_products ON order_items.product_id = mydna_musicplayer_ecommerce_products.id";
+        $sql .= " WHERE order_id='$order_id'";
+        $sql .= " ORDER BY `id` ASC";
+        $q = mq($sql);
+        
+        $cart_list = array();
+        while($cart = mf($q)) 
+        {
+            $id = $cart['id'];
+            $product_id = $cart['product_id'];
+            $price = floatval($cart['price']);
+            $name = $cart['name'];
+            if(  $cart['image'] )
+                $image = '/artists/products/' . $cart['image'];
+            else
+                $image = '/images/default_product_image.jpg';
+            
+            $shipping = floatval($cart['shipping']);
+            $quantity = intval($cart['quantity']);
+            
+            $item = array("id" => $id,
+                          "product_id" => $product_id,
+                          "price" => $price,
+                          "name" => $name,
+                          "description" => $cart['description'],
+                          "image" => $image,
+                          "shipping" => $shipping,
+                          "size" => $cart['size'],
+                          "color" => $cart['color'],
+                          "quantity" => $quantity,
+                          );
+            $cart_list[] = $item;
+        }
+        return $cart_list;
+    }
+    
     function get_product_data($product_id)
     {
         $row = mf(mq("SELECT * FROM mydna_musicplayer_ecommerce_products WHERE id='$product_id'"));

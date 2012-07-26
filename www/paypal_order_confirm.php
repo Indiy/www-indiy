@@ -75,56 +75,41 @@
         $shippping_amount = $order_data['shipping_amount'];
         $charge_amount = $order_data['charge_amount'];
 
-        $order_items = array();
         $order_item_html = "";
         
-        $q_order_items = mq("SELECT * FROM order_items WHERE order_id='$order_id'");
-        $i = 0;
-        while( $item = mf($q_order_items) )
+        $order_items = store_get_order($order_id);
+        
+        for( $order_items as $i => $item )
         {
+            $name = $item['name'];
             $description = $item['description'];
             $color = $item['color'];
             $size = $item['size'];
             $price = $item['price'];
             $quantity = $item['quantity'];
-            $order_item = array("quantity" => $quantity,
-                                "description" => $description,
-                                "product_id" => $item['product_id'],
-                                "color" => $color,
-                                "size" => $size);
-            
+            $image = $item['image'];
+
             $num = $i + 1;
-            $html = "";
             
             if( $i % 2 == 0 )
                 $odd = " odd";
             else
                 $odd = "";
             
+            $html = "";
             $html .= "<div class='cart_line$odd' id='cart_line_$i'>";
             $html .= " <div class='image_name_description'>";
-            $html .= "  <div class='image_holder'><img src='{0}'></div>".format(image);
+            $html .= "  <div class='image_holder'><img src='$image'></div>";
             $html .= "  <div class='name_description'>";
-            $html .= "   <div class='name'>{0}</div>".format(name);
-            $html .= "   <div class='description'>{0}</div>".format(description);
+            $html .= "   <div class='name'>$name</div>";
+            $html .= "   <div class='description'>$description</div>";
             $html .= "  </div>";
             $html .= " </div>";
-            $html .= " <div class='delete'>";
-            $html .= "  <div class='button' onclick='cartDeleteIndex({0});'>".format(i);
-            $html .= "   <div class='icon'></div><div class='label'>Delete</div>";
-            $html .= "  </div>";
-            $html .= " </div>";
-            $html .= " <div class='price'>${0}</div>".format(price);
-            $html .= " <div class='quantity_update'>";
-            $html .= "  <div class='quantity'><input value='{0}'/></div>".format(quantity);
-            $html .= "  <div class='update' onclick='cartUpdateQuantity({0});'>Update</div>".format(i);
-            $html .= "  <div class='saved'>Saved</div>";
-            $html .= " </div>";
+            $html .= " <div class='price'>$$$price</div>";
+            $html .= " <div class='quantity'>$quantity</div>";
             $html .= "</div>";
-
             
             $order_item_html .= $html;
-            $i++;
         }
         
         $confirm_url = "paypal_finish.php?artist_id=$artist_id";
