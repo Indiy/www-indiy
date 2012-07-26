@@ -1553,6 +1553,9 @@ textarea {
 #adminblock .photolist .list ul li a:hover { color:#383838; text-decoration:underline}
 
 #order_list {
+    width: 940px;
+    margin: 0 auto;
+    background-color: white;
 }
 
 #order_list a {
@@ -1591,7 +1594,6 @@ textarea {
     font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
-    border-right: 1px solid #d3d3d3;
     text-overflow: ellipsis;
     text-align: top;
 }
@@ -1629,11 +1631,13 @@ textarea {
     display: inline-block;
     padding-top: 30px;
     height: 50px;
-    color: black;
+    color: #383838;
     font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     vertical-align: top;
+    border-right: 1px solid #d3d3d3;
+    text-align: center;
 }
 
 
