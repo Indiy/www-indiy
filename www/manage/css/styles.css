@@ -1598,26 +1598,6 @@ textarea {
     text-align: center;
     vertical-align: top;
 }
-#order_list .date {
-    width: 79px;
-}
-
-#order_list .order_num {
-    width: 99px;
-}
-#order_list .name {
-    width: 156px;
-}
-#order_list .email {
-    width: 330px;
-}
-#order_list .status {
-    width: 130px;
-}
-#order_list .amount {
-    width: 141px;
-    border-right: none;
-}
 #order_list .list .item {
     font-size: 0;
     cursor: pointer;
@@ -1641,9 +1621,27 @@ textarea {
     vertical-align: top;
     text-overflow: ellipsis;
 }
-
-
 #order_list .list .item:hover {
     background-color: #aaa;
+}
+#order_list .date {
+    width: 79px;
+}
+
+#order_list .order_num {
+    width: 99px;
+}
+#order_list .name {
+    width: 156px;
+}
+#order_list .email {
+    width: 330px;
+}
+#order_list .status {
+    width: 130px;
+}
+#order_list .amount {
+    width: 140px;
+    border-right: none;
 }
 
