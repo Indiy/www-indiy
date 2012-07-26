@@ -233,6 +233,16 @@ body {
     text-align: center;
     border-left: 1px solid #dadada;
 }
+#cart #cart_list .cart_line .order_quantity {
+    display: inline-block;
+    width: 129px;
+    padding-top: 32px;
+    height: 47px;
+    color: black;
+    font-size: 19px;
+    text-align: center;
+    border-left: 1px solid #dadada;
+}
 #cart #cart_list .cart_line .quantity_update {
     display: inline-block;
     width: 129px;
