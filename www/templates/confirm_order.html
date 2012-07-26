@@ -28,7 +28,7 @@
             </div>
             
             <div id='cart'>
-                <div class='title'>Shopping Cart</div>
+                <div class='title'>Confirm your order</div>
                 <div class='title_underbar'></div>
                 <div class='header'>
                     <div class='description'>Items to buy now</div>
@@ -39,26 +39,25 @@
                     <?=$order_item_html;?>
                 </div>
                 <div class='bottom'>
-                    <a href="<?=$full_artist_url;?>">
+                    <a href="<?=$cancel_url;?>">
                         <div class='back_to_site'>
                             <div class='icon'></div>
-                            <div class='label'>Back to site</div>
+                            <div class='label'>Back to cart</div>
                         </div>
                     </a>
                     <div class='totals'>
                         <div class='total'>
-                            <div id='shipping_amount' class='amount'></div>
+                            <div id='shipping_amount' class='amount'><?=$shipping_amount;?></div>
                             <div class='label'>Shipping:</div>
                         </div>
                         <div class='total'>
-                            <div id='total_amount' class='amount'></div>
+                            <div id='total_amount' class='amount'><?=$charge_amount;?></div>
                             <div class='label'>Total:</div>
                         </div>
                     </div>
                 </div>
-                <div class='buttons'>
+                <div class='confirm_order'>
                     <div class='confirm'><a href='<?=$confirm_url;?>'>CONFIRM ORDER</a></div>
-                    <div class='cancel'><a href='<?=$cancel_url;?>'>BACK TO CART</a></div>
                 </div>
             </div>
             

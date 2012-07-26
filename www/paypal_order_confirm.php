@@ -72,7 +72,7 @@
         $order_data = mf(mq("SELECT * FROM orders WHERE id='$order_id'"));
         $order_json = json_encode($order_data);
 
-        $shippping_amount = $order_data['shipping_amount'];
+        $shipping_amount = $order_data['shipping_amount'];
         $charge_amount = $order_data['charge_amount'];
 
         $order_item_html = "";
@@ -105,7 +105,7 @@
             $html .= "   <div class='description'>$description</div>";
             $html .= "  </div>";
             $html .= " </div>";
-            $html .= " <div class='price'>$price</div>";
+            $html .= " <div class='price'>\$$price</div>";
             $html .= " <div class='quantity'>$quantity</div>";
             $html .= "</div>";
             
