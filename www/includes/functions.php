@@ -1086,6 +1086,7 @@
         $sql .= "  mydna_musicplayer_ecommerce_products.image, ";
         $sql .= "  mydna_musicplayer_ecommerce_products.price, ";
         $sql .= "  mydna_musicplayer_ecommerce_products.shipping ";
+        $sql .= "  mydna_musicplayer_ecommerce_products.type ";
         $sql .= " FROM order_items ";
         $sql .= " JOIN mydna_musicplayer_ecommerce_products ON order_items.product_id = mydna_musicplayer_ecommerce_products.id";
         $sql .= " WHERE order_id='$order_id'";

@@ -60,6 +60,7 @@
         $price = $item['price'];
         $quantity = $item['quantity'];
         $image = $item['image'];
+        $type = $item['type'];
         
         $num = $i + 1;
         
@@ -79,7 +80,17 @@
         $html .= "  <div class='description'>$description</div>";
         $html .= " </div>";
         $html .= " <div class='price'>\$$price</div>";
-        $html .= " <div class='action'></div>";
+        $html .= " <div class='action'>";
+        if( $type == 'DIGITAL' )
+        {
+            $html .= "<a href='/fan'>";
+            $html .= " <div class='download_button'>";
+            $html .= "  <div class='icon'></div>";
+            $html .= "  <div class='label'>Download</div>";
+            $html .= " </div>";
+            $html .= "</a>";
+        }
+        $html .= " </div>";
         $html .= "</div>";
         
         $order_item_html .= $html;
