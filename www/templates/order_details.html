@@ -40,7 +40,9 @@
                         <div class='line'><?=$order_email;?></div>
                         <div class='line'><?=$shipping_info['name'];?></div>
                         <div class='line'><?=$shipping_info['street1'];?></div>
-                        <div class='line'><?=$shipping_info['street2'];?></div>
+                        <? if( $shipping_info['street2'] ): ?>
+                            <div class='line'><?=$shipping_info['street2'];?></div>
+                        <? endif; ?>
                         <div class='line'><?=$shipping_info['city'];?>, <?=$shipping_info['state'];?>, <?=$shipping_info['zip'];?></div>
                     </div>
                     <div class='order_number'>
