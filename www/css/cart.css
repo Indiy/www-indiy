@@ -617,10 +617,12 @@ body {
     display: inline-block;
     padding-top: 29px;
     width: 67px;
+    height: 50px;
     border-right: 1px solid #d3d3d3;
     vertical-align: top;
     color: #3a3a3a;
     font-size: 16px;
+    text-align: center;
 }
 #order_list .item .image {
     display: inline-block;
@@ -638,8 +640,46 @@ body {
     border-radius: 2px;
 }
 #order_list .item .image .image_holder img {
-    height: 43px;
-    width: 43px;
+    height: 45px;
+    width: 45px;
+}
+#order_list .item .name_description {
+    display: inline-block;
+    width: 519px;
+    height: 79px;
+    border-right: 1px solid #d3d3d3;
+}
+#order_list .item .name_description .name {
+    padding-top: 20px;
+    padding-left: 19px;
+    color: #383838;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#order_list .item .name_description .description {
+    padding-top: 2px;
+    padding-left: 19px;
+    color: #666;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#order_list .item .price {
+    display: inline-block;
+    padding-top: 30px;
+    height: 49px;
+    width: 131px;
+    color: #2c9495;
+    font-size: 20px;
+    text-align: center; 
+    border-right: 1px solid #d3d3d3;
+}
+#order_list .item .action {
+    display: inline-block;
+    height: 79px;
+    width: 143px;
+    background-color: blue;
 }
 
 
