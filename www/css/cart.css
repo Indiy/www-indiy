@@ -469,14 +469,14 @@ body {
     float: left;
     width: 135px;
     height: 92px;
-    padding-top: 13px;
+    padding-top: 15px;
     padding-left: 20px;
     padding-right: 20px;
     border-right: 1px solid #d9d9d9;
 }
 #order .receipt .address .line {
     width: 100%;
-    padding-top: 4px;
+    padding-top: 2px;
     color: #5a6774;
     font-size: 12px;
     overflow: hidden;
@@ -535,7 +535,7 @@ body {
 }
 #order .receipt .account_password .input_holder input {
     padding-left: 6px;
-    height: 228px;
+    height: 22px;
     width: 100%;
     font-size: 13px;
     text-align: left;
