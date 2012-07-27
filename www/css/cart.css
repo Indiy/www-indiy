@@ -421,7 +421,7 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
 }
 
-#order .title {
+#order .main_title {
     padding-top: 28px;
     color: #687480;
     font-size: 30px;
@@ -429,7 +429,7 @@ body {
     font-weight: normal;
     text-transform: uppercase;
 }
-#order .title_underbar {
+#order .main_title_underbar {
     margin-top: 12px;
     margin-bottom: 19px;
     height: 11px;
