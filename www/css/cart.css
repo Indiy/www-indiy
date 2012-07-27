@@ -606,6 +606,42 @@ body {
     font-size: 14px;
 }
 
+#order_list .item {
+    height: 79px;
+    background-color: white;
+    border-bottom: 1px solid #d3d3d3;
+    font-size: 0;
+}
+
+#order_list .item .quantity {
+    display: inline-block;
+    padding-top: 29px;
+    width: 67px;
+    border-right: 1px solid #d3d3d3;
+    vertical-align: top;
+    color: #3a3a3a;
+    font-size: 16px;
+}
+#order_list .item .image {
+    width: 87px;
+    height: 79px;
+}
+#order_list .item .image .image_holder {
+    margin-top: 15px;
+    margin-left: 20px;
+    height: 45px;
+    width: 45px;
+    padding: 2px;
+    border: 1px solid #cacaca;
+    border-radius: 2px;
+}
+#order_list .item .image .image_holder img {
+    height: 43px;
+    width: 43px;
+}
+
+
+
 /*
  ----------------------------------------
  05. footer
