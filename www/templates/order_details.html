@@ -11,10 +11,13 @@
         
         <script src="/js/jquery.jplayer.js" type="text/javascript"></script>
         <script src="/js/string.utils.js" type="text/javascript"></script>
+
+        <script src="/js/fan_login_signup.js" type="text/javascript"></script>
         
         <script type="text/javascript">
             var g_trueSiteUrl = "<?=trueSiteUrl();?>";
             var g_order = <?=$order_json;?>;
+            var g_registerToken = "<?=$register_token;?>";
         </script>
     </head>
     
@@ -64,7 +67,7 @@
                             <div class='input_holder'>
                                 <input id='fan_password' type="password" />
                             </div>
-                            <div class='button_holder'>
+                            <div class='button_holder' onclick='fanRegisterAccount(false);'>
                                 <div class='save'>
                                     <div class='icon'></div>
                                     <div class='label'>Save</div>

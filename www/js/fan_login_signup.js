@@ -1,5 +1,5 @@
 
-function createFanAccount()
+function fanRegisterAccount(need_confirm)
 {
     var register_token = g_registerToken;
     var password = $('#password').val();
@@ -11,7 +11,7 @@ function createFanAccount()
         return false;
     }
     
-    if( password != confirm_password )
+    if( need_confirm && password != confirm_password )
     {
         window.alert("Passwords do not match.");
         return false;
