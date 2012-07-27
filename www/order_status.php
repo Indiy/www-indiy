@@ -22,7 +22,7 @@
     
     $order_json = json_encode($order_data);
     
-    $shippping_amount = $order_data['shipping_amount'];
+    $shipping_amount = $order_data['shipping_amount'];
     $charge_amount = $order_data['charge_amount'];
     $shipping_info = json_decode($order_data['shipping_json'],TRUE);
     $payment_info = json_decode($order_data['payment_json'],TRUE);
