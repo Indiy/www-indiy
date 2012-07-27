@@ -517,25 +517,26 @@ body {
     float: left;
     height: 32px;
     width: 32px;
+    background: green;
 }
 #order .receipt .account_password .detail .label {
     float: left;
-    width: 330px;
+    width: 250px;
     height: 32px;
     color: #1e5354;
-    font-size: 15px;
+    font-size: 14px;
 }
 #order .receipt .account_password .input_holder {
     float: left;
     width: 240px;
     height: 30px;
     padding-left: 25px;
-    padding-top: 15px;
     padding-right: 15px;
 }
 #order .receipt .account_password .input_holder input {
-    padding-left: 7px;
-    height: 18px;
+    padding-left: 6px;
+    height: 228px;
+    width: 100%;
     font-size: 13px;
     text-align: left;
     border: 1px solid #e2e2e2;
@@ -544,8 +545,7 @@ body {
     float: left;
     width: 100px;
     height: 25px;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 12px;
 }
 #order .receipt .account_password .button_holder .icon {
     float: left;
@@ -554,8 +554,10 @@ body {
     background: #1b5f60;
 }
 #order .receipt .account_password .button_holder .label {
+    float: left;
     width: 75px;
-    height: 25px;
+    height: 18px;
+    padding-top: 7px;
     background: #144c4d;
     color: white;
     font-size: 14px;
