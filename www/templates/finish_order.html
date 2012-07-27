@@ -11,73 +11,185 @@
         
         <script src="/js/jquery.jplayer.js" type="text/javascript"></script>
         <script src="/js/string.utils.js" type="text/javascript"></script>
-        <script src="/js/fan_login_signup.js" type="text/javascript"></script>
         
         <script type="text/javascript">
             var g_trueSiteUrl = "<?=trueSiteUrl();?>";
-            var g_artistId = <?=$artist_id;?>;
+            var g_order = <?=$order_json;?>;
             var g_registerToken = "<?=$register_token;?>";
         </script>
     </head>
     
     <body>
-        <div id='order'>
-            <div class='title'>Order Complete</div>
-            <div class='order_number'>Order Number: <?=$order_id;?></div>
-            <div class='header'>
-                <div class='description'>Items</div>
-                <div class='price'>Price</div>
-                <div class='quantity'>Quantity</div>
-            </div>
-            <div class='hsep'></div>
-            <div class='item_list'>
-                <?=$order_item_html;?>
-            </div>
-            <div class='total_lines'>
-                <div class='total'>
-                    Shipping:
-                    <div class='amount'><?=$shippping_amount;?></div>
+        <div id='body_wrap'><div id='main_content'>
+            
+            <div id='header'>
+                <div class='top_bar'></div>
+                <div class='mad_bar'>
+                    <div class='logo'></div>
                 </div>
-                <div class='total'>
-                    Total:
-                    <div class='amount'><?=$charge_amount;?></div>
-                </div>
-            </div>
-            <div class='shipping'>
-                <div class='title'>Shipping Address:</div>
-                <div class='address'><?=$shipping_info['name'];?></div>
-                <div class='address'><?=$shipping_info['street1'];?></div>
-                <div class='address'><?=$shipping_info['street2'];?></div>
-                <div class='address'><?=$shipping_info['city'];?>, <?=$shipping_info['state'];?>, <?=$shipping_info['zip'];?></div>
-                <div class='address'><?=$shipping_info['phone_number'];?></div>
-            </div>
-            <div class='order_number'>Order Number: <?=$order_id;?></div>
-            <div class='description'>
-                Please write down your order number so you can check the status of your order in the future.
             </div>
             
-            <? if( $contains_digital_items ): ?>
-                <? if($fan_needs_register): ?>
-                    <div class='need_register'>
-                        Your order has digital items.  Please create a password for your account.<br/>
-                        <br/>
-                        Username: <?=$fan_email;?><br/>
-                        Password: <input id='password' type='password'/><br/>
-                        Confirm Password: <input id='confirm_password' type='password'><br/>
-                        <br/>
-                        <button onclick='createFanAccount();'>Create Account</button><br/>
-                        <br/>
-                        You can always log in to you account at <a href='<?=fan_site_url();?>'><?=fan_site_url();?></a>
+            <div id='order'>
+                <div class='main_title'>Thank you for your purchase!</div>
+                <div class='main_title_underbar'></div>
+                <div class='receipt'>
+                    <div class='header'>
+                        <div class='left'>Your Receipt</div>
+                        <div class='right'><?=$order_date;?></div>
                     </div>
-                <? else: ?>
-                    <div class='has_digital'>
-                        Your order has digital items. You can log into your fan account to access your purchases.<br/>
-                        <br/>
-                        You can always log in to you account at <a href='<?=fan_site_url();?>'><?=fan_site_url();?></a>
+                    <div class='address'>
+                        <div class='line'><?=$order_email;?></div>
+                        <div class='line'><?=$shipping_info['name'];?></div>
+                        <div class='line'><?=$shipping_info['street1'];?></div>
+                        <? if( $shipping_info['street2'] ): ?>
+                        <div class='line'><?=$shipping_info['street2'];?></div>
+                        <? endif; ?>
+                        <div class='line'><?=$shipping_info['city'];?>, <?=$shipping_info['state'];?>, <?=$shipping_info['zip'];?></div>
                     </div>
-                    
-                <? endif; ?>
-            <? endif; ?>
+                    <div class='order_number'>
+                        <div class='title'>Order Number: <?=$order_id;?></div>
+                        <div class='detail'>
+                            Please write down your order number so you can 
+                            check on the status of your order in the future. 
+                            We have also emailed you a copy of your receipt.
+                        </div>
+                    </div>
+                    <div class='account_password'>
+                        <? if( $fan_needs_register ): ?>
+                        <div class='detail'>
+                            <div class='icon'></div>
+                            <div class='label'>
+                                For later access to your account please create a password
+                            </div>
+                        </div>
+                        <div class='input_holder'>
+                            <input id='fan_password' type="password" />
+                        </div>
+                        <div class='button_holder'>
+                            <div class='save'>
+                                <div class='icon'></div>
+                                <div class='label'>Save</div>
+                            </div>
+                        </div>
+                        <? elseif( $contains_digital_items ): ?>
+                        <div class='login_text'>
+                            To download your digital purchases, please go to your fan home page
+                        </div>
+                        <div class='login_button'>
+                            <div class='icon'></div>
+                            <div class='label'>Login</div>
+                        </div>
+                        <? else: ?>
+                        <div class='login_text'>
+                            To check on the status of your order, please go to your fan home page
+                        </div>
+                        <div class='login_button'>
+                            <div class='icon'></div>
+                            <div class='label'>Login</div>
+                        </div>
+                        <? endif; ?>
+                    </div>
+                </div>
+                <div class='order_detail'>
+                    <div class='header'>
+                        <div class='quantity'>Qty</div>
+                        <div class='item'>Item</div>
+                        <div class='description'>Description</div>
+                        <div class='price'>Price</div>
+                    </div>
+                    <div id='order_list'>
+                        <?=$order_item_html;?>
+                    </div>
+                    <div class='bottom'>
+                        <div class='totals'>
+                            <div class='total'>
+                                <div id='shipping_amount' class='amount'>$<?=$shipping_amount;?></div>
+                                <div class='label'>Shipping:</div>
+                            </div>
+                            <div class='total'>
+                                <div id='total_amount' class='amount'>$<?=$charge_amount;?></div>
+                                <div class='label'>Total:</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='disclaimer'>
+                    <div class='header'>Please retain for your records</div>
+                    <div class='detail'>
+                        Please see below for terms and conditions to this offer.
+                    </div>
+                    <div class='header'>MyArtistDNA</div>
+                    <div class='detail'>
+                        You can find the MyArtistDNA Store Terms of 
+                        Sale and Sale Policies by clicking on 
+                        <a href="#">Terms of Sale and Sale Policies</a>
+                    </div>
+                    <div class='spacer'></div>
+                    <div class='detail'>
+                        Answers to frequently asked questions regarding the 
+                        MyArtistDNA Store can be found at
+                        <a href="http://www.myartistdna.com/support/store/">
+                            http://www.myartistdna.com/support/store/
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div></div>
+        
+        <div id="footer">
+            <div class='pad'></div>
+            <footer>
+                <aside>
+                    <div class='list_head'>ARTIST</div>
+                    <ul>
+                        <li><a href="#">All</a></li>
+                        
+                    </ul>
+                </aside>
+                
+                <aside class="benefits">
+                    <div class='list_head'>BENEFITS</div>
+                    <ul>
+                        <li><a href="be-heard.php">Be Heard</a></li>
+                        <li><a href="be-seen.php">Be Seen</a></li>
+                        <li><a href="be-independent.php">Be Independent</a></li>
+                    </ul>
+                </aside>
+                
+                <aside>
+                    <div class='list_head'>SUPPORT</div>
+                    <ul>
+                        <li><a href="pricing.php">Pricing</a></li>
+                        <li><a href="faq.php">FAQ</a></li>
+                        <li><a href="tour.php">Help</a></li>
+                    </ul>
+                </aside>
+                
+                <aside>
+                    <div class='list_head'>AFFILIATES</div>
+                    <ul>
+                        <li><a href="http://myartistdna.co">MAD.co</a></li>
+                        <li><a href="http://myartistdna.is">MAD.is</a></li>
+                        <li><a href="http://myartistdna.fm">MAD.fm</a></li>
+                        <li><a href="http://myartistdna.tv">MAD.tv</a></li>
+                        
+                    </ul>
+                </aside>
+                
+                <article>
+                    <div class='list_head'>STAY CONNECTED</div>
+                    <ul>
+                        <li><a href="http://facebook.com/pages/MyArtistDNA/106114012796731" target="_blank"><span><img src="images/facebook.gif" alt="Facebook"></span> Become a fan on Facebook</a></li>
+                        <li><a href="http://twitter.com/myartistdna" target="_blank"><span><img src="images/twitter.gif" alt="Twitter"></span> Follow us on Twitter</a></li>
+                        <li><a onclick='showNewsletter();'><span><img src="images/email.gif" alt="Email"></span> Join Newsletter</a></li>
+                        
+                    </ul>
+                </article>
+                <div class="logo"><a href="home.php"><img src="images/MYARTISTDNA_footer.gif" alt="MYARTISTDNA"></a></div>
+                <p>&copy; 2012 <a href="http://myartistdna.com">MYARTISTDNA</a></p>
+            </footer>
         </div>
     </body>
 </html>
+
