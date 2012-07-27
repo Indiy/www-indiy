@@ -623,8 +623,10 @@ body {
     font-size: 16px;
 }
 #order_list .item .image {
+    display: inline-block;
     width: 87px;
     height: 79px;
+    border-right: 1px solid #d3d3d3;
 }
 #order_list .item .image .image_holder {
     margin-top: 15px;
