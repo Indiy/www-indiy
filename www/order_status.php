@@ -97,7 +97,7 @@
     }
     
     $fan_needs_register = FALSE;
-    $contains_digital_items = TRUE;
+    $contains_digital_items = FALSE;
     
     include_once 'templates/order_details.html';
 
