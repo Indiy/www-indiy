@@ -416,7 +416,7 @@ body {
 
 
 #order {
-    width: 940px;
+    width: 951px;
     margin: 0 auto;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
 }
@@ -479,6 +479,7 @@ body {
     padding-top: 4px;
     color: #5a6774;
     font-size: 12px;
+    overflow: hidden;
     text-overflow: ellipsis;
 }
 #order .receipt .order_number {
@@ -492,7 +493,8 @@ body {
     padding-left: 24px;
     padding-right: 24px;
     color: #144c4d;
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: bold;
 }
 #order .receipt .order_number .detail {
     padding-top: 6px;
