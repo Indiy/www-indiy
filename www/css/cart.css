@@ -748,6 +748,22 @@ body {
     text-align: right;
 }
 
+#order .disclaimer {
+}
+#order .disclaimer .header {
+    padding-top: 20px;
+    color: #333;
+    font-size: 13px;
+    
+}
+#order .disclaimer .detail {
+    padding-top: 0px;
+    color: #666;
+    font-size: 13px;
+}
+#order .disclaimer .detail a {
+    color: #333;
+}
 
 /*
  ----------------------------------------
