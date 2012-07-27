@@ -563,6 +563,37 @@ body {
     font-size: 14px;
     text-align: center;
 }
+#order .receipt .account_password .login_text {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #1e5354;
+    font-size: 14px;
+}
+#order .receipt .account_password .login_button {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 100px;
+    height: 25px;
+    margin-left: 12px;
+}
+#order .receipt .account_password .login_button .icon {
+    float: left;
+    width: 25px;
+    height: 25px;
+    background: #1b5f60;
+}
+#order .receipt .account_password .login_button .label {
+    float: left;
+    width: 75px;
+    height: 18px;
+    padding-top: 7px;
+    background: #144c4d;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
 
 #order .order_detail {
     margin-top: 18px;
