@@ -508,10 +508,59 @@ body {
     width: 407px;
     height: 105px;
 }
-#order .receipt .account_password {
-    
+#order .receipt .account_password .detail {
+    padding-left: 27px;
+    padding-top: 18px;
+    height: 42px;
 }
-
+#order .receipt .account_password .detail .icon {
+    float: left;
+    height: 32px;
+    width: 32px;
+}
+#order .receipt .account_password .detail .label {
+    float: left;
+    width: 330px;
+    height: 32px;
+    color: #1e5354;
+    font-size: 15px;
+}
+#order .receipt .account_password .input_holder {
+    float: left;
+    width: 240px;
+    height: 30px;
+    padding-left: 25px;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+#order .receipt .account_password .input_holder input {
+    padding-left: 7px;
+    height: 18px;
+    font-size: 13px;
+    text-align: left;
+    border: 1px solid #e2e2e2;
+}
+#order .receipt .account_password .button_holder {
+    float: left;
+    width: 100px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#order .receipt .account_password .button_holder .icon {
+    float: left;
+    width: 25px;
+    height: 25px;
+    background: #1b5f60;
+}
+#order .receipt .account_password .button_holder .label {
+    width: 75px;
+    height: 25px;
+    background: #144c4d;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
 /*
  ----------------------------------------
  05. footer
