@@ -563,6 +563,48 @@ body {
     font-size: 14px;
     text-align: center;
 }
+
+#order .order_detail {
+    background-color: white;
+}
+
+#order .order_detail .header {
+    height: 46px;
+    font-size: 0;
+    color: white;
+    background: #2c9495 url('/images/cart_header_texture.png') repeat-x;
+    text-transform: uppercase;
+}
+
+#order .order_detail .header .quantity {
+    display: inline-block;
+    padding-top: 19px;
+    width: 68px;
+    text-align: center;
+    font-size: 14px;
+}
+#order .order_detail .header .item {
+    display: inline-block;
+    padding-top: 19px;
+    width: 88px;
+    text-align: center;
+    font-size: 14px;
+}
+#order .order_detail .header .description {
+    display: inline-block;
+    padding-top: 19px;
+    padding-left: 20px;
+    width: 520px;
+    font-size: 14px;
+}
+#order .order_detail .header .price {
+    display: inline-block;
+    padding-top: 19px;
+    width: 132px;
+    text-align: center;
+    font-size: 14px;
+}
+
 /*
  ----------------------------------------
  05. footer
