@@ -595,7 +595,7 @@ body {
     display: inline-block;
     padding-top: 19px;
     padding-left: 20px;
-    width: 520px;
+    width: 500px;
     font-size: 14px;
 }
 #order .order_detail .header .price {
@@ -655,7 +655,8 @@ body {
 #order_list .item .name_description .name {
     padding-top: 20px;
     padding-left: 19px;
-    color: #383838;
+    padding-right: 19px;
+    color: #222;
     font-size: 16px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -663,6 +664,7 @@ body {
 #order_list .item .name_description .description {
     padding-top: 2px;
     padding-left: 19px;
+    padding-right: 19px;
     color: #666;
     font-size: 13px;
     text-overflow: ellipsis;
