@@ -5,8 +5,10 @@
     <section id="content">
         <div id='order_list'>
             <div class='title'>Customer Orders</div>
+            <div class='title_underbar'></div>
             <div class='header'>
-                <div class='order_num header_item'>Num</div>
+                <div class='date header_item'>Date</div>
+                <div class='order_num header_item'>Order #</div>
                 <div class='name header_item'>Customer Name</div>
                 <div class='email header_item'>Customer Email</div>
                 <div class='status header_item'>Order Status</div>
@@ -14,6 +16,24 @@
             </div>
             <div class='list'>
                 <?=$order_list_html;?>
+            </div>
+            <div class='bottom'>
+                <a href="<?=$artist_edit_url;?>">
+                    <div class='back_to_site'>
+                        <div class='icon'></div>
+                        <div class='label'>Back to site</div>
+                    </div>
+                </a>
+                <div class='totals'>
+                    <div class='total'>
+                        <div id='total_orders' class='amount'><?=$total_orders;?></div>
+                        <div class='label'>Total Orders:</div>
+                    </div>
+                    <div class='total'>
+                        <div id='total_sold' class='amount'>$<?=$total_sold;?></div>
+                        <div class='label'>Total Sold:</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
