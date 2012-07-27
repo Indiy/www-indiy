@@ -1118,6 +1118,7 @@
                           "size" => $cart['size'],
                           "color" => $cart['color'],
                           "quantity" => $quantity,
+                          "type" => $cart['type'],
                           );
             $cart_list[] = $item;
         }
