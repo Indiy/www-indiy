@@ -15,7 +15,7 @@
         <script type="text/javascript">
             var g_trueSiteUrl = "<?=trueSiteUrl();?>";
             var g_order = <?=$order_json;?>;
-            </script>
+        </script>
     </head>
     
     <body>
@@ -74,18 +74,22 @@
                             <div class='login_text'>
                                 To download your digital purchases, please go to your fan home page
                             </div>
-                            <div class='login_button'>
-                                <div class='icon'></div>
-                                <div class='label'>Login</div>
-                            </div>
+                            <a href='/fan'>
+                                <div class='login_button'>
+                                    <div class='icon'></div>
+                                    <div class='label'>Login</div>
+                                </div>
+                            </a>
                         <? else: ?>
                             <div class='login_text'>
                                 To check on the status of your order, please go to your fan home page
                             </div>
-                            <div class='login_button'>
-                                <div class='icon'></div>
-                                <div class='label'>Login</div>
-                            </div>
+                            <a href='/fan'>
+                                <div class='login_button'>
+                                    <div class='icon'></div>
+                                    <div class='label'>Login</div>
+                                </div>
+                            </a>
                         <? endif; ?>
                     </div>
                 </div>
