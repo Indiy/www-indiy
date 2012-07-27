@@ -689,9 +689,9 @@ body {
     vertical-align: top;
 }
 #order .order_detail .bottom {
-    padding-top: 15px;
+    padding-top: 25px;
     width: 100%;
-    height: 78px;
+    height: 80px;
     background-color: white;
 }
 #order .order_detail .bottom .back_to_site {
