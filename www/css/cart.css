@@ -749,6 +749,7 @@ body {
 }
 
 #order .disclaimer {
+    padding-bottom: 18px;
 }
 #order .disclaimer .header {
     padding-top: 20px;
