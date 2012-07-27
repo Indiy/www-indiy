@@ -96,6 +96,9 @@
         $order_item_html .= $html;
     }
     
+    $fan_needs_register = FALSE;
+    $contains_digital_items = TRUE;
+    
     include_once 'templates/order_details.html';
 
 ?>
