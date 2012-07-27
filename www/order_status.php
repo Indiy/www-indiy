@@ -49,33 +49,40 @@
 
     $order_items = array();
     $order_item_html = "";
+    $order_items = store_get_order($order_id);
     
-    $q_order_items = mq("SELECT * FROM order_items WHERE order_id='$order_id'");
-    $i = 0;
-    while( $item = mf($q_order_items) )
+    foreach( $order_items as $i => $item )
     {
+        $name = $item['name'];
         $description = $item['description'];
         $color = $item['color'];
         $size = $item['size'];
         $price = $item['price'];
         $quantity = $item['quantity'];
-        $order_item = array("quantity" => $quantity,
-                            "description" => $description,
-                            "product_id" => $item['product_id'],
-                            "color" => $color,
-                            "size" => $size);
+        $image = $item['image'];
+        
         $num = $i + 1;
+        
+        if( $i % 2 == 0 )
+            $odd = " odd";
+        else
+            $odd = "";
+        
         $html = "";
-        $html .= "<div class='item'>";
-        $html .= " <div class='num'>$num</div>";
-        $html .= " <div class='description'>$description</div>";
-        $html .= " <div class='price'>$price</div>";
+        $html .= "<div class='item$odd'>";
         $html .= " <div class='quantity'>$quantity</div>";
+        $html .= " <div class='image'>";
+        $html .= "  <div class='image_holder'><img src='$image'></div>";
+        $html .= " </div>";
+        $html .= " <div class='name_description'>";
+        $html .= "  <div class='name'>$name</div>";
+        $html .= "  <div class='description'>$description</div>";
+        $html .= " </div>";
+        $html .= " <div class='price'>\$$price</div>";
+        $html .= " <div class='action'></div>";
         $html .= "</div>";
         
         $order_item_html .= $html;
-        
-        $i++;
     }
     
     include_once 'templates/order_details.html';
