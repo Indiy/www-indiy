@@ -195,8 +195,8 @@
             }
         }
         
-        $shipping_info = json_decode($shipping_info,TRUE);
-        $payment_info = json_decode($payment_info,TRUE);
+        $shipping_info = number_format($shipping_info,2);
+        $payment_info = number_format($payment_info,2);
 
         include_once 'templates/finish_order.html';
         
