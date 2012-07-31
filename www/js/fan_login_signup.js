@@ -32,20 +32,22 @@ function fanRegisterAccount(need_confirm,successCallback,failureCallback)
             success: function(text) 
             {
                 var data = JSON.parse(text);
-                
-                if( successCallback )
-                {
-                    successCallback(data);
-                    return;
-                }
-                
                 if( data['error'] )
                 {
                     window.alert("Failed to setup your account, please try again.");
                 }
                 else
                 {
-                    window.location = data['url'];
+                    if( successCallback )
+                    {
+                        successCallback(data);
+                        return;
+                    }
+                    else
+                    {
+                        window.location = data['url'];
+                        return;
+                    }
                 }
             },
             error: function()
