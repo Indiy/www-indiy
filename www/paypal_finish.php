@@ -15,7 +15,7 @@
     $order_data = mf(mq("SELECT * FROM orders WHERE id='$order_id'"));
     $order_json = json_encode($order_data);
     
-    $shippping_amount = $order_data['shipping_amount'];
+    $shipping_amount = $order_data['shipping_amount'];
     $charge_amount = $order_data['charge_amount'];
     
     $fan_email = $order_data['customer_email'];
@@ -194,6 +194,9 @@
                 mysql_update('orders',$updates,'id',$order_id);
             }
         }
+        
+        $shipping_info = json_decode($shipping_info,TRUE);
+        $payment_info = json_decode($payment_info,TRUE);
 
         include_once 'templates/finish_order.html';
         

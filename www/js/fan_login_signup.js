@@ -1,5 +1,5 @@
 
-function fanRegisterAccount(need_confirm)
+function fanRegisterAccount(need_confirm,successCallback,failureCallback)
 {
     var register_token = g_registerToken;
     var password = $('#password').val();
@@ -32,9 +32,16 @@ function fanRegisterAccount(need_confirm)
             success: function(text) 
             {
                 var data = JSON.parse(text);
+                
+                if( successCallback )
+                {
+                    successCallback(data);
+                    return;
+                }
+                
                 if( data['error'] )
                 {
-                window.alert("Failed to setup your account, please try again.");
+                    window.alert("Failed to setup your account, please try again.");
                 }
                 else
                 {
