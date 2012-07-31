@@ -1,5 +1,5 @@
 
-function orderSaveEmail()
+function orderSavePassword()
 {
     fanRegisterAccount(false,onOrderSaveEmailSuccess);
 }
