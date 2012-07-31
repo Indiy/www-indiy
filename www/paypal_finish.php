@@ -194,7 +194,7 @@
                 mysql_update('orders',$updates,'id',$order_id);
             }
         }
-        
+        $order_email = $fan_email;
         $shipping_amount = number_format($shipping_amount,2);
         $charge_amount = number_format($charge_amount,2);
 
