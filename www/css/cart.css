@@ -593,6 +593,9 @@ body {
     font-size: 13px;
     text-align: center;
 }
+#order .receipt .account_password #save_password_success {
+    display: none;
+}
 
 
 #order .order_detail {

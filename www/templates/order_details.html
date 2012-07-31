@@ -13,6 +13,7 @@
         <script src="/js/string.utils.js" type="text/javascript"></script>
 
         <script src="/js/fan_login_signup.js" type="text/javascript"></script>
+        <script src="/js/order.js" type="text/javascript"></script>
         
         <script type="text/javascript">
             var g_trueSiteUrl = "<?=trueSiteUrl();?>";
@@ -58,20 +59,33 @@
                     </div>
                     <div class='account_password'>
                         <? if( $fan_needs_register ): ?>
-                            <div class='detail'>
-                                <div class='icon'></div>
-                                <div class='label'>
-                                    For later access to your account please create a password
-                                </div>
-                            </div>
-                            <div class='input_holder'>
-                                <input id='fan_password' type="password" />
-                            </div>
-                            <div class='button_holder' onclick='fanRegisterAccount(false);'>
-                                <div class='save'>
+                            <div id='save_password_form'>
+                                <div class='detail'>
                                     <div class='icon'></div>
-                                    <div class='label'>Save</div>
+                                    <div class='label'>
+                                        For later access to your account please create a password
+                                    </div>
                                 </div>
+                                <div class='input_holder'>
+                                    <input id='fan_password' type="password" />
+                                </div>
+                                <div class='button_holder' onclick='fanRegisterAccount(false);'>
+                                    <div class='save'>
+                                        <div class='icon'></div>
+                                        <div class='label'>Save</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id='save_password_success'>
+                                <div class='login_text'>
+                                    To download your digital purchases, please go to your fan home page
+                                </div>
+                                <a href='/fan'>
+                                    <div class='login_button'>
+                                        <div class='icon'></div>
+                                        <div class='label'>Login</div>
+                                    </div>
+                                </a>
                             </div>
                         <? elseif( $contains_digital_items ): ?>
                             <div class='login_text'>
