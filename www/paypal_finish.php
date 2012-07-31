@@ -195,8 +195,8 @@
             }
         }
         
-        $shipping_info = number_format($shipping_info,2);
-        $payment_info = number_format($payment_info,2);
+        $shipping_amount = number_format($shipping_amount,2);
+        $charge_amount = number_format($charge_amount,2);
 
         include_once 'templates/finish_order.html';
         
