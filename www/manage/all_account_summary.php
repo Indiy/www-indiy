@@ -49,6 +49,8 @@
     
     $artist_list_json = json_encode($artist_list);
     
+    $artist_edit_url = "/manage/dashboard.php";
+    
     $include_order = TRUE;
     $include_editor = FALSE;
     include_once "templates/all_account_summary.html";
