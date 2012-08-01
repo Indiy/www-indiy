@@ -1648,7 +1648,9 @@ textarea {
 }
 
 #order_list .artist {
-    width: 544px;
+    width: 505px;
+    padding-left: 25px;
+    text-align: left !important;
 }
 #order_list .count {
     width: 130px;
