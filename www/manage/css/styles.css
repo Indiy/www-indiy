@@ -1647,6 +1647,23 @@ textarea {
     border-right: none;
 }
 
+#order_list .artist {
+    width: 544px;
+}
+#order_list .count {
+    width: 130px;
+}
+#order_list .charge_total {
+    width: 132px;
+}
+#order_list .payout_total {
+    width: 143px;
+}
+#order_list .list .item .payout_total {
+    border-right: none;
+}
+
+
 #order_list .bottom {
     padding-top: 15px;
     width: 100%;
