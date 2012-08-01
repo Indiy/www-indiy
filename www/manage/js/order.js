@@ -114,7 +114,7 @@ function renderArtistSettlementOrderArray(orders,tag)
 
 function renderAllArtistSummary()
 {
-    $('#order_summary tbody').empty();
+    $('#summary_list').empty();
     
     var total_charges = 0.0;
     var total_artist_payouts = 0.0;
@@ -123,26 +123,24 @@ function renderAllArtistSummary()
     {
         var artist = g_artistList[i];
         
+        var odd = "";
+        if( i % 2 == 0 )
+            odd = " odd";
+        
         var html = "";
-        html += "<tr>";
-        html += " <td class='artist'>{0}</td>".format(artist.artist_name);
-        html += " <td class='amount'>{0}</td>".format(artist.order_count);
-        html += " <td class='amount'>${0}</td>".format(artist.charge_total.toFixed(2));
-        html += " <td class='amount'>${0}</td>".format(artist.artist_total.toFixed(2));
-        html += "</tr>";
-        $('#order_summary tbody').append(html);
+        html += "<div class='item{0}'>".format(odd);
+        html += " <div class='artist'>{0}</div>".format(artist.artist_name);
+        html += " <div class='count'>{0}</div>".format(artist.order_count);
+        html += " <div class='charge_total'>${0}</div>".format(artist.charge_total.toFixed(2));
+        html += " <div class='payout_total'>${0}</div>".format(artist.artist_total.toFixed(2));
+        html += "</div>";
+        $('#summary_list').append(html);
         
         total_charges += artist.charge_total;
         total_artist_payouts += artist.artist_total;
         total_count += artist.order_count;
     }
     
-    var html = "";
-    html += "<tr class='total'>";
-    html += " <td class='title'>Total</td>";
-    html += " <td class='amount'>{0}</td>".format(total_count);
-    html += " <td class='amount'>${0}</td>".format(total_charges.toFixed(2));
-    html += " <td class='amount'>${0}</td>".format(total_artist_payouts.toFixed(2));
-    html += "</tr>";
-    $('#order_summary tbody').append(html);
+    $('#total_charges').html("${0}".format(total_charges.toFixed(2)));
+    $('#total_payouts').html("${0}".format(total_artist_payouts.toFixed(2)));
 }

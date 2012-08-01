@@ -11,21 +11,36 @@
 
 <section id="wrapper">
     <section id="content">
-        
         <div id='order_list'>
             <div class='title'>Account Summary</div>
-            <table id='order_summary'>
-                <thead>
-                    <tr>
-                        <th class='artist'>Artist</th>
-                        <th class='amount'>Order Count</th>
-                        <th class='amount'>Charge Total</th>
-                        <th class='amount'>Payout Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+            <div class='title_underbar'></div>
+            <div class='header'>
+                <div class='artist header_item'>Artist</div>
+                <div class='count header_item'>Order Count</div>
+                <div class='charge_total header_item'>Charge Total</div>
+                <div class='payout_total header_item'>Payout Total</div>
+            </div>
+            <div class='list' id='summary_list'>
+                <?=$order_list_html;?>
+            </div>
+            <div class='bottom'>
+                <a href="<?=$artist_edit_url;?>">
+                    <div class='back_to_site'>
+                        <div class='icon'></div>
+                        <div class='label'>Back to site</div>
+                    </div>
+                </a>
+                <div class='totals'>
+                    <div class='total'>
+                        <div id='total_charges' class='amount'></div>
+                        <div class='label'>Total Charges:</div>
+                    </div>
+                    <div class='total'>
+                        <div id='total_payouts' class='amount'></div>
+                        <div class='label'>Total Payouts:</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </section>
