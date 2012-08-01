@@ -119,6 +119,44 @@
     font-weight: normal;
     text-align: center;
 }
+#order .item_list .item .artist {
+    display: inline-block;
+    width: 544px;
+    color: black;
+    font-size: 15px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+#order .item_list .item .count {
+    display: inline-block;
+    width: 130px;
+    color: black;
+    font-size: 15px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+#order .item_list .item .charge_total {
+    display: inline-block;
+    width: 132px;
+    color: black;
+    font-size: 15px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+#order .item_list .item .payout_total {
+    display: inline-block;
+    width: 143px;
+    color: black;
+    font-size: 15px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: center;
+    border-right: none;
+}
+
 
 #order .total_lines {
     padding-top: 15px;
