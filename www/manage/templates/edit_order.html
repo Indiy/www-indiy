@@ -27,16 +27,28 @@
             </div>
             <div class='order_number'>
                 <div class='title'>Order Number: <?=$order_id;?></div>
-                <div class='detail'>
-                </div>
-            </div>
-            <div class='order_status'>
                 <div class='title'>Order Status: <?=$order_status;?></div>
                 <? if( $tracking_number ): ?>
-                <div class='tracking'>
-                    Tracking Number: <?=$tracking_number;?>
-                </div>
+                    <div class='tracking'>
+                        Tracking Number: <?=$tracking_number;?>
+                    </div>
                 <? endif; ?>
+            </div>
+            <div class='edit_order'>
+                <div class='title'>
+                    <span class='bold'>Admin Operations:</span>
+                    <span class='normal'>Refunds can not be reversed</span>
+                </div>
+                <div class='buttons'>
+                    <div class='button mark_shipped'>
+                        <div class='icon'></div>
+                        <div class='label'>Mark Order Shipped</div>
+                    </div>
+                    <div class='button refund'>
+                        <div class='icon'></div>
+                        <div class='label'>Refund</div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class='order_detail'>
