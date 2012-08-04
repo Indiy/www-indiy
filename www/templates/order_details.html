@@ -58,63 +58,14 @@
                         </div>
                     </div>
                     <div class='account_password'>
-                        <? if( $fan_needs_register ): ?>
-                            <div id='save_password_form'>
-                                <div class='detail'>
-                                    <div class='icon'></div>
-                                    <div class='label'>
-                                        For later access to your account please create a password
-                                    </div>
-                                </div>
-                                <div class='input_holder'>
-                                    <input id='password' type="password" />
-                                </div>
-                                <div class='button_holder' onclick='orderSavePassword();'>
-                                    <div class='save'>
-                                        <div class='icon'></div>
-                                        <div class='label'>Save</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id='save_password_success'>
-                                <div class='login_text'>
-                                    To download your digital purchases, please go to your fan home page
-                                </div>
-                                <a href='/fan'>
-                                    <div class='login_button'>
-                                        <div class='icon'></div>
-                                        <div class='label'>Login</div>
-                                    </div>
-                                </a>
-                            </div>
-                        <? elseif( $contains_digital_items ): ?>
-                            <div class='login_text'>
-                                To download your digital purchases, please go to your fan home page
-                            </div>
-                            <a href='/fan'>
-                                <div class='login_button'>
-                                    <div class='icon'></div>
-                                    <div class='label'>Login</div>
-                                </div>
-                            </a>
-                        <? else: ?>
-                            <div class='login_text'>
-                                To check on the status of your order, please go to your fan home page
-                            </div>
-                            <a href='/fan'>
-                                <div class='login_button'>
-                                    <div class='icon'></div>
-                                    <div class='label'>Login</div>
-                                </div>
-                            </a>
-                        <? endif; ?>
+                        
                     </div>
                 </div>
                 <div class='order_detail'>
                     <div class='header'>
                         <div class='quantity'>Qty</div>
                         <div class='item'>Item</div>
-                        <div class='description'>Description</div>
+                        <div class='description wide'>Description</div>
                         <div class='price'>Price</div>
                     </div>
                     <div id='order_list'>

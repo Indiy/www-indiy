@@ -632,6 +632,9 @@ body {
     width: 500px;
     font-size: 14px;
 }
+#order .order_detail .header .description.wide {
+    width: 643px;
+}
 #order .order_detail .header .price {
     display: inline-block;
     padding-top: 19px;
@@ -685,6 +688,9 @@ body {
     height: 79px;
     border-right: 1px solid #d3d3d3;
     vertical-align: top;
+}
+#order_list .item .name_description.wide {
+    width: 662px;
 }
 #order_list .item .name_description .name {
     padding-top: 20px;

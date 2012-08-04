@@ -75,29 +75,15 @@
         $html .= " <div class='image'>";
         $html .= "  <div class='image_holder'><img src='$image'></div>";
         $html .= " </div>";
-        $html .= " <div class='name_description'>";
+        $html .= " <div class='name_description wide'>";
         $html .= "  <div class='name'>$name</div>";
         $html .= "  <div class='description'>$description</div>";
         $html .= " </div>";
         $html .= " <div class='price'>\$$price</div>";
-        $html .= " <div class='action'>";
-        if( $type == 'DIGITAL' )
-        {
-            $html .= "<a href='/fan'>";
-            $html .= " <div class='download_button'>";
-            $html .= "  <div class='icon'></div>";
-            $html .= "  <div class='label'>Download</div>";
-            $html .= " </div>";
-            $html .= "</a>";
-        }
-        $html .= " </div>";
         $html .= "</div>";
         
         $order_item_html .= $html;
     }
-    
-    $fan_needs_register = TRUE;
-    $contains_digital_items = TRUE;
     
     include_once 'templates/order_details.html';
 
