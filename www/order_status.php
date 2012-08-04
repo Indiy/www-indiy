@@ -85,8 +85,8 @@
         $order_item_html .= $html;
     }
     
-    $tracking_number = FALSE:
-    if( isset($shipping_info['tracking_number']) )
+    $tracking_number = FALSE;
+    if( isset( $shipping_info['tracking_number'] ) )
         $tracking_number = $shipping_info['tracking_number'];
     
     include_once 'templates/order_details.html';
