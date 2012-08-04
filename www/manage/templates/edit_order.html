@@ -8,59 +8,77 @@
 <section id="wrapper">
 <section id="content">
 
-<div id='order'>
-    <div class='title'>Order Status</div>
-    <div class='order_number'>Order Number: <?=$order_id;?></div>
-    <div class='status'>Order Status: <span id='order_status'><?=$order_status;?></span></div>
-    <div class='ship_date'>Ship Date: <span id='ship_date'><?=$ship_date;?></span></div>
-    <div class='header'>
-        <div class='description'>Items</div>
-        <div class='price'>Price</div>
-        <div class='quantity'>Quantity</div>
-    </div>
-    <div class='hsep'></div>
-    <div class='item_list'>
-        <?=$order_item_html;?>
-    </div>
-    <div class='total_lines'>
-        <div class='total'>
-            Shipping:
-            <div class='amount'><?=$shippping_amount;?></div>
-        </div>
-        <div class='total'>
-            Total:
-            <div class='amount'><?=$charge_amount;?></div>
-        </div>
-    </div>
-    <div class='shipping'>
-        <div class='title'>Shipping Address:</div>
-        <div class='address'>Name: <?=$shipping_info['name'];?></div>
-        <div class='address'>Street Line 1: <?=$shipping_info['street1'];?></div>
-        <div class='address'>Street Line 2: <?=$shipping_info['street2'];?></div>
-        <div class='address'>City, State, Zip: <?=$shipping_info['city'];?>, <?=$shipping_info['state'];?>, <?=$shipping_info['zip'];?></div>
-        <div class='address'>Phone Number: <?=$shipping_info['phone_number'];?></div>
-        <? if( $shipping_info['tracking_number'] ): ?>
-            <div class='address'>Tracking Number: <?=$shipping_info['tracking_number'];?></div>
-        <? endif; ?>
-    </div>
-    <div class='hsep'></div>
-    <div class='title'>Admin Operations</div>
-    <? if( $order_state != "CANCELED" ): ?>
-        <div class='refund'>
-            <button onclick='confirmRefund();'>Refund Order</button>
-        </div>
-        <div class='hsep'></div>
-        <div class='edit_shipping'>
-            <div class='input_line'>
-                Order Ship Date: <input id='tracking_ship_date' />
+    <div id='order'>
+        <div class='main_title'>Order Details</div>
+        <div class='main_title_underbar'></div>
+        <div class='receipt'>
+            <div class='header'>
+                <div class='left'>Shipping Information</div>
+                <div class='right'><?=$order_date;?></div>
             </div>
-            <div class='input_line tracking'>
-                Tracking Number (optional): <input id='tracking_number' />
+            <div class='address'>
+                <div class='line'><?=$order_email;?></div>
+                <div class='line'><?=$shipping_info['name'];?></div>
+                <div class='line'><?=$shipping_info['street1'];?></div>
+                <? if( $shipping_info['street2'] ): ?>
+                <div class='line'><?=$shipping_info['street2'];?></div>
+                <? endif; ?>
+                <div class='line'><?=$shipping_info['city'];?>, <?=$shipping_info['state'];?>, <?=$shipping_info['zip'];?></div>
             </div>
-            <button onclick='markShipped();'>Mark Order Shipped</button>
+            <div class='order_number'>
+                <div class='title'>Order Number: <?=$order_id;?></div>
+                <div class='detail'>
+                </div>
+            </div>
+            <div class='order_status'>
+                <div class='title'>Order Status: <?=$order_status;?></div>
+                <? if( $tracking_number ): ?>
+                <div class='tracking'>
+                    Tracking Number: <?=$tracking_number;?>
+                </div>
+                <? endif; ?>
+            </div>
         </div>
-    <? endif; ?>
-</div>
+        <div class='order_detail'>
+            <div class='header'>
+                <div class='quantity'>Qty</div>
+                <div class='item'>Item</div>
+                <div class='description wide'>Description</div>
+                <div class='price'>Price</div>
+            </div>
+            <div id='order_list'>
+                <?=$order_item_html;?>
+            </div>
+            <div class='bottom'>
+                <div class='totals'>
+                    <div class='total'>
+                        <div id='shipping_amount' class='amount'>$<?=$shipping_amount;?></div>
+                        <div class='label'>Shipping:</div>
+                    </div>
+                    <div class='total'>
+                        <div id='total_amount' class='amount'>$<?=$charge_amount;?></div>
+                        <div class='label'>Total:</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='disclaimer'>
+            <div class='header'>MyArtistDNA</div>
+            <div class='detail'>
+                You can find the MyArtistDNA Store Terms of
+                Sale and Sale Policies by clicking on
+                <a href="#">Terms of Sale and Sale Policies</a>
+            </div>
+            <div class='spacer'></div>
+            <div class='detail'>
+                Answers to frequently asked questions regarding the
+                MyArtistDNA Store can be found at
+                <a href="http://www.myartistdna.com/support/store/">
+                    http://www.myartistdna.com/support/store/
+                </a>
+            </div>
+        </div>
+    </div>
 
 </section>
 </section>
