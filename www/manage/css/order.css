@@ -181,65 +181,445 @@
     padding-bottom: 20px;
 }
 
-#order_list table {
-    font-size: 14px;
+#edit_order {
+    width: 951px;
+    margin: 0 auto;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+}
+
+#order .main_title {
+    padding-top: 28px;
+    color: #687480;
+    font-size: 30px;
+    font-family: "Teletex Light",Arial, Helvetica, sans-serif;
     font-weight: normal;
-    border: 1px solid #999;
-    margin-top: 10px;
-    margin-bottom: 10px;
-} 
-
-#order_list table thead {
-    font-weight: bold;
+    text-transform: uppercase;
 }
-#order_list table thead tr th {
-    padding-top: 5px;
-    border-bottom: 1px solid #999;
-}
-#order_list table td {
-    padding: 2px;
-}
-#order_list table tr {
-    border: 1px solid #999;
+#edit_order .main_title_underbar {
+    margin-top: 12px;
+    margin-bottom: 19px;
+    height: 11px;
+    width: 100%;
+    background: #e2e2e2 url("/images/cart_under_texture.png") repeat-x;
 }
 
-#order_list table tbody tr td {
-    border-bottom: 1px dotted #999;
-} 
+#edit_order .receipt {
+    height: 155px;
+    background-color: white;
+}
 
-#order_list table .artist {
-    width: 250px;
+#edit_order .receipt .header {
+    width: 100%;
+    height: 50px;
+    font-size: 0;
+    color: white;
+    background: #144c4d url('/images/receipt_header_texture.png') repeat-x;
+    text-transform: uppercase;
+}
+
+#edit_order .receipt .header .left {
+    float: left;
+    padding-top: 18px;
+    padding-left: 20px;
     text-align: left;
-    padding-left: 10px;
+    font-size: 20px;
 }
-
-#order_list table .order_id {
-    padding-left: 10px;
-    width: 50px;
+#edit_order .receipt .header .right {
+    float: right;
+    padding-top: 18px;
+    padding-right: 25px;
+    font-size: 20px;
     text-align: center;
 }
-#order_list table .date {
-    width: 250px;
-    text-align: left;
+#edit_order .receipt .address {
+    float: left;
+    width: 135px;
+    height: 90px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #d9d9d9;
 }
-#order_list table .amount {
+#edit_order .receipt .address.wide {
+    width: 250px;
+}
+#edit_order .receipt .address .line {
+    padding-top: 2px;
+    color: #5a6774;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#edit_order .receipt .order_number {
+    float: left;
+    width: 367px;
+    height: 105px;
+    border-right: 1px solid #d9d9d9;
+}
+#edit_order .receipt .order_number .title {
+    padding-top: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: #144c4d;
+    font-size: 17px;
+    font-weight: bold;
+}
+#edit_order .receipt .order_number .detail {
+    padding-top: 6px;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: #5a6774;
+    font-size: 12px;
+}
+#edit_order .receipt .order_status {
+    float: left;
+    width: 407px;
+    height: 105px;
+}
+#edit_order .receipt .order_status .title {
+    padding-top: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: #144c4d;
+    font-size: 15px;
+    font-weight: bold;
+}
+#edit_order .receipt .order_status .tracking {
+    padding-top: 6px;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: #5a6774;
+    font-size: 12px;
+}
+#edit_order .receipt .account_password {
+    float: left;
+    width: 407px;
+    height: 105px;
+}
+#edit_order .receipt .account_password .detail {
+    padding-left: 27px;
+    padding-top: 18px;
+    height: 42px;
+}
+#edit_order .receipt .account_password .detail .icon {
+    float: left;
+    height: 32px;
+    width: 32px;
+    background: green;
+}
+#edit_order .receipt .account_password .detail .label {
+    float: left;
+    width: 250px;
+    height: 32px;
+    color: #1e5354;
+    font-size: 14px;
+}
+#edit_order .receipt .account_password .input_holder {
+    float: left;
+    width: 240px;
+    height: 30px;
+    padding-left: 25px;
+    padding-right: 15px;
+}
+#edit_order .receipt .account_password .input_holder input {
+    padding-left: 6px;
+    height: 22px;
+    width: 100%;
+    font-size: 13px;
+    text-align: left;
+    border: 1px solid #e2e2e2;
+}
+#edit_order .receipt .account_password .button_holder {
+    float: left;
+    width: 100px;
+    height: 25px;
+    margin-left: 12px;
+}
+#edit_order .receipt .account_password .button_holder .icon {
+    float: left;
+    width: 25px;
+    height: 25px;
+    background: #1b5f60;
+}
+#edit_order .receipt .account_password .button_holder .label {
+    float: left;
+    width: 75px;
+    height: 18px;
+    padding-top: 7px;
+    background: #144c4d;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+#edit_order .receipt .account_password .login_text {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 100px;
+    color: #1e5354;
+    font-size: 14px;
+}
+#edit_order .receipt .account_password .login_button {
+    margin-top: 14px;
+    margin-left: 280px;
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+}
+#edit_order .receipt .account_password .login_button .icon {
+    float: left;
+    width: 25px;
+    height: 25px;
+    background: #1b5f60;
+}
+#edit_order .receipt .account_password .login_button .label {
+    float: left;
+    width: 75px;
+    height: 18px;
+    padding-top: 7px;
+    background: #144c4d;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
+#edit_order .receipt .account_password #save_password_success {
+    display: none;
+}
+
+
+#edit_order .order_detail {
+    margin-top: 18px;
+    background-color: white;
+}
+
+#edit_order .order_detail .header {
+    height: 46px;
+    font-size: 0;
+    color: white;
+    background: #2c9495 url('/images/cart_header_texture.png') repeat-x;
+    text-transform: uppercase;
+}
+
+#edit_order .order_detail .header .quantity {
+    display: inline-block;
+    padding-top: 19px;
+    width: 68px;
+    text-align: center;
+    font-size: 14px;
+}
+#edit_order .order_detail .header .item {
+    display: inline-block;
+    padding-top: 19px;
+    width: 88px;
+    text-align: center;
+    font-size: 14px;
+}
+#edit_order .order_detail .header .description {
+    display: inline-block;
+    padding-top: 19px;
+    padding-left: 20px;
+    width: 500px;
+    font-size: 14px;
+}
+#edit_order .order_detail .header .description.wide {
+    width: 643px;
+}
+#edit_order .order_detail .header .price {
+    display: inline-block;
+    padding-top: 19px;
+    width: 132px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#edit_order #order_list .item {
+    height: 79px;
+    background-color: white;
+    border-bottom: 1px solid #d3d3d3;
+    font-size: 0;
+}
+
+#edit_order #order_list .item .quantity {
+    display: inline-block;
+    padding-top: 29px;
+    width: 67px;
+    height: 50px;
+    border-right: 1px solid #d3d3d3;
+    vertical-align: top;
+    color: #3a3a3a;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: top;
+}
+#edit_order #order_list .item .image {
+    display: inline-block;
+    width: 87px;
+    height: 79px;
+    border-right: 1px solid #d3d3d3;
+    vertical-align: top;
+}
+#edit_order #order_list .item .image .image_holder {
+    margin-top: 15px;
+    margin-left: 20px;
+    height: 45px;
+    width: 45px;
+    padding: 2px;
+    border: 1px solid #cacaca;
+    border-radius: 2px;
+}
+#edit_order #order_list .item .image .image_holder img {
+    height: 45px;
+    width: 45px;
+}
+#edit_order #order_list .item .name_description {
+    display: inline-block;
+    width: 519px;
+    height: 79px;
+    border-right: 1px solid #d3d3d3;
+    vertical-align: top;
+}
+#edit_order #order_list .item .name_description.wide {
+    width: 662px;
+}
+#edit_order #order_list .item .name_description .name {
+    padding-top: 20px;
+    padding-left: 19px;
+    padding-right: 19px;
+    color: #222;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#edit_order #order_list .item .name_description .description {
+    padding-top: 2px;
+    padding-left: 19px;
+    padding-right: 19px;
+    color: #666;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#edit_order #order_list .item .price {
+    display: inline-block;
+    padding-top: 30px;
+    height: 49px;
+    width: 131px;
+    color: #2c9495;
+    font-size: 20px;
+    text-align: center;
+    border-right: 1px solid #d3d3d3;
+    vertical-align: top;
+}
+#edit_order #order_list .item .action {
+    display: inline-block;
+    height: 79px;
+    width: 143px;
+    vertical-align: top;
+}
+#edit_order #order_list .item .action .download_button {
+    margin-left: 22px;
+    margin-top: 28px;
+    width: 100px;
+    height: 25px;
+    font-size: 0;
+}
+#edit_order #order_list .item .action .download_button .icon {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background: #383838;
+    vertical-align: top;
+}
+#edit_order #order_list .item .action .download_button .label {
+    display: inline-block;
+    height: 18px;
+    width: 75px;
+    padding-top: 7px;
+    background: #1e2126;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: top;
+}
+
+#edit_order .order_detail .bottom {
+    padding-top: 25px;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+}
+#edit_order .order_detail .bottom .back_to_site {
+    float: left;
+    margin-left: 22px;
+    margin-top: 18px;
+    width: 100px;
+    height: 25px;
+    font-size: 0;
+}
+#edit_order .order_detail .bottom .back_to_site .icon {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background: #383838;
+    vertical-align: top;
+}
+#edit_order .order_detail .bottom .back_to_site .label {
+    display: inline-block;
+    height: 18px;
+    width: 75px;
+    padding-top: 7px;
+    background: #1e2126;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: top;
+}
+#edit_order .order_detail .bottom .totals {
+    float: right;
+    width: 50%;
+    height: 80px;
+}
+#edit_order .order_detail .bottom .totals .total {
+    height: 29px;
+    padding-top: 6px;
+    width: 100%;
+}
+#edit_order .order_detail .bottom .totals .total .label {
+    float: right;
     width: 130px;
-    padding-right: 10px;
+    font-size: 19px;
+    font-weight: bold;
+    color: black;
+    text-align: right;
+}
+#edit_order .order_detail .bottom .totals .total .amount {
+    float: right;
+    width: 115px;
+    padding-right: 50px;
+    color: #2c9495;
+    font-size: 19px;
+    font-weight: bold;
     text-align: right;
 }
 
-#order_list table tr.total td {
-    padding-top: 10px;
-    padding-bottom: 5px;
-    border: none;
-    font-weight: bold;
+#edit_order .disclaimer {
+    padding-bottom: 18px;
+}
+#edit_order .disclaimer .header {
+    padding-top: 20px;
+    color: black;
+    font-size: 14px;
+    
+}
+#edit_order .disclaimer .detail {
+    padding-top: 0px;
+    color: #787878;
+    font-size: 13px;
+}
+#edit_order .disclaimer .detail a {
+    color: black;
+    text-decoration: none;
 }
 
-#order_list table .title {
-    padding: 2px;
-    padding-left: 10px;
-    text-align: left;
-    font-size: 14px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-}
+
+
+
