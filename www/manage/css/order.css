@@ -181,6 +181,14 @@
     padding-bottom: 20px;
 }
 
+
+
+/************************************************/
+/************************************************/
+/************************************************/
+/************************************************/
+
+
 #edit_order {
     width: 951px;
     margin: 0 auto;
@@ -233,15 +241,12 @@
 }
 #edit_order .receipt .address {
     float: left;
-    width: 135px;
+    width: 260px;
     height: 90px;
     padding-top: 15px;
     padding-left: 20px;
     padding-right: 20px;
     border-right: 1px solid #d9d9d9;
-}
-#edit_order .receipt .address.wide {
-    width: 250px;
 }
 #edit_order .receipt .address .line {
     padding-top: 2px;
@@ -291,57 +296,39 @@
     color: #5a6774;
     font-size: 12px;
 }
-#edit_order .receipt .account_password {
+#edit_order .receipt .edit_order {
     float: left;
     width: 407px;
     height: 105px;
 }
-#edit_order .receipt .account_password .detail {
+#edit_order .receipt .edit_order .title {
     padding-left: 27px;
     padding-top: 18px;
-    height: 42px;
-}
-#edit_order .receipt .account_password .detail .icon {
-    float: left;
-    height: 32px;
-    width: 32px;
-    background: green;
-}
-#edit_order .receipt .account_password .detail .label {
-    float: left;
-    width: 250px;
     height: 32px;
     color: #1e5354;
     font-size: 14px;
 }
-#edit_order .receipt .account_password .input_holder {
-    float: left;
-    width: 240px;
-    height: 30px;
-    padding-left: 25px;
-    padding-right: 15px;
+#edit_order .receipt .edit_order .title .bold {
+    font-size: 16px;
+    font-style: bold;
 }
-#edit_order .receipt .account_password .input_holder input {
-    padding-left: 6px;
-    height: 22px;
-    width: 100%;
-    font-size: 13px;
-    text-align: left;
-    border: 1px solid #e2e2e2;
+#edit_order .receipt .edit_order .buttons {
+    padding-left: 12px;
+    padding-top: 10px;
 }
-#edit_order .receipt .account_password .button_holder {
+#edit_order .receipt .edit_order .buttons .button {
     float: left;
+    margin-right: 15px;
     width: 100px;
     height: 25px;
-    margin-left: 12px;
 }
-#edit_order .receipt .account_password .button_holder .icon {
+#edit_order .receipt .edit_order .button .icon {
     float: left;
     width: 25px;
     height: 25px;
     background: #1b5f60;
 }
-#edit_order .receipt .account_password .button_holder .label {
+#edit_order .receipt .edit_order .button .label {
     float: left;
     width: 75px;
     height: 18px;
@@ -351,84 +338,14 @@
     font-size: 14px;
     text-align: center;
 }
-#edit_order .receipt .account_password .login_text {
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 100px;
-    color: #1e5354;
-    font-size: 14px;
+#edit_order .receipt .edit_order .button.mark_shipped {
+    width: 160px;
 }
-#edit_order .receipt .account_password .login_button {
-    margin-top: 14px;
-    margin-left: 280px;
-    width: 100px;
-    height: 25px;
-    cursor: pointer;
+#edit_order .receipt .edit_order .button.mark_shipped .label {
+    width: 135px;
 }
-#edit_order .receipt .account_password .login_button .icon {
-    float: left;
-    width: 25px;
-    height: 25px;
-    background: #1b5f60;
-}
-#edit_order .receipt .account_password .login_button .label {
-    float: left;
-    width: 75px;
-    height: 18px;
-    padding-top: 7px;
-    background: #144c4d;
-    color: white;
-    font-size: 13px;
-    text-align: center;
-}
-#edit_order .receipt .account_password #save_password_success {
-    display: none;
-}
-
-
-#edit_order .order_detail {
-    margin-top: 18px;
-    background-color: white;
-}
-
-#edit_order .order_detail .header {
-    height: 46px;
-    font-size: 0;
-    color: white;
-    background: #2c9495 url('/images/cart_header_texture.png') repeat-x;
-    text-transform: uppercase;
-}
-
-#edit_order .order_detail .header .quantity {
-    display: inline-block;
-    padding-top: 19px;
-    width: 68px;
-    text-align: center;
-    font-size: 14px;
-}
-#edit_order .order_detail .header .item {
-    display: inline-block;
-    padding-top: 19px;
-    width: 88px;
-    text-align: center;
-    font-size: 14px;
-}
-#edit_order .order_detail .header .description {
-    display: inline-block;
-    padding-top: 19px;
-    padding-left: 20px;
-    width: 500px;
-    font-size: 14px;
-}
-#edit_order .order_detail .header .description.wide {
-    width: 643px;
-}
-#edit_order .order_detail .header .price {
-    display: inline-block;
-    padding-top: 19px;
-    width: 132px;
-    text-align: center;
-    font-size: 14px;
+#edit_order .receipt .edit_order .button.refund {
+    
 }
 
 #edit_order .order_list .item {
@@ -502,7 +419,7 @@
     display: inline-block;
     padding-top: 30px;
     height: 49px;
-    width: 131px;
+    width: 132px;
     color: #2c9495;
     font-size: 20px;
     text-align: center;
