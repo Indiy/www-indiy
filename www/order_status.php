@@ -39,7 +39,7 @@
     else if( $order_data['state'] == 'SHIPPED' )
         $order_status = "Shipped";
     else if( $order_data['state'] == 'CLOSED' )
-        $order_status = "Closed";
+        $order_status = "Complete";
     else if( $order_data['state'] == 'CANCELED' )
         $order_status = "Canceled";
     else if( $order_data['state'] == 'ABANDONED' )
@@ -84,6 +84,10 @@
         
         $order_item_html .= $html;
     }
+    
+    $tracking_number = FALSE:
+    if( isset($shipping_info['tracking_number']) )
+        $tracking_number = $shipping_info['tracking_number'];
     
     include_once 'templates/order_details.html';
 

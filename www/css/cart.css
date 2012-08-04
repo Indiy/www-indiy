@@ -505,6 +505,26 @@ body {
     color: #5a6774;
     font-size: 12px;
 }
+#order .receipt .order_status {
+    float: left;
+    width: 407px;
+    height: 105px;
+}
+#order .receipt .order_status .title {
+    padding-top: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: #144c4d;
+    font-size: 15px;
+    font-weight: bold;
+}
+#order .receipt .order_status .tracking {
+    padding-top: 6px;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: #5a6774;
+    font-size: 12px;
+}
 #order .receipt .account_password {
     float: left;
     width: 407px;
