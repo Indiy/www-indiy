@@ -257,7 +257,7 @@
 }
 #edit_order .receipt .order_number {
     float: left;
-    width: 367px;
+    width: 240px;
     height: 105px;
     border-right: 1px solid #d9d9d9;
 }
@@ -347,6 +347,52 @@
 #edit_order .receipt .edit_order .button.refund {
     
 }
+
+#edit_order .order_detail {
+    margin-top: 18px;
+    background-color: white;
+}
+
+#edit_order  .order_detail .header {
+    height: 46px;
+    font-size: 0;
+    color: white;
+    background: #2c9495 url('/images/cart_header_texture.png') repeat-x;
+    text-transform: uppercase;
+}
+
+#edit_order  .order_detail .header .quantity {
+    display: inline-block;
+    padding-top: 19px;
+    width: 68px;
+    text-align: center;
+    font-size: 14px;
+}
+#edit_order  .order_detail .header .item {
+    display: inline-block;
+    padding-top: 19px;
+    width: 88px;
+    text-align: center;
+    font-size: 14px;
+}
+#edit_order  .order_detail .header .description {
+    display: inline-block;
+    padding-top: 19px;
+    padding-left: 20px;
+    width: 500px;
+    font-size: 14px;
+}
+#edit_order  .order_detail .header .description.wide {
+    width: 643px;
+}
+#edit_order  .order_detail .header .price {
+    display: inline-block;
+    padding-top: 19px;
+    width: 132px;
+    text-align: center;
+    font-size: 14px;
+}
+
 
 #edit_order .order_list .item {
     height: 79px;
