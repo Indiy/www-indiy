@@ -241,7 +241,7 @@
 }
 #edit_order .receipt .address {
     float: left;
-    width: 260px;
+    width: 220px;
     height: 90px;
     padding-top: 15px;
     padding-left: 20px;
@@ -257,7 +257,7 @@
 }
 #edit_order .receipt .order_number {
     float: left;
-    width: 249px;
+    width: 330px;
     height: 100px;
     padding-top: 5px;
     border-right: 1px solid #d9d9d9;
@@ -267,7 +267,7 @@
     padding-left: 24px;
     padding-right: 24px;
     color: #144c4d;
-    font-size: 12px;
+    font-size: 15px;
 }
 #edit_order .receipt .order_status {
     float: left;
@@ -291,7 +291,7 @@
 }
 #edit_order .receipt .edit_order {
     float: left;
-    width: 400px;
+    width: 359px;
     height: 105px;
 }
 #edit_order .receipt .edit_order .title {
