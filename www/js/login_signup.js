@@ -79,31 +79,39 @@ function onPasswordKeyPress(myfield,e)
 
 function onLoginClick()
 {           
-    var username = escape( $('#login_dialog #username').val() );
-    var password = escape( $('#login_dialog #password').val() );
+    var username = $('#login_dialog #username').val();
+    var password = $('#login_dialog #password').val();
+
+    
+    if( username.length == 0 || password.length == 0 )
+    {
+        $("#validate-login").html("<span class='ui-error'>Please enter the username and password.</span>");
+        return false;
+    }
+
+    var args = {
+        'method': 'login',
+        'username': email,
+        'password': password
+    };
 
     // Send the ajax request.
     jQuery.ajax(
         {
             type: "POST",
-            url: "/check_login.php?username="+username+"&password="+password,
+            url: "/data/login.php",
+            data: args,
             dataType: "json",
             success: function(data)
             {
-                var result = data['result'];
-                if( result == 0 )
+                if( data['success'] )
                 {   
-                    $("#validate-login").html("<span class='ui-error'>Wrong username or password. Please try again.</span>");                    
-                     return false;
-                }
-                else if( result == 1 )
-                {
-                    window.location.href=data['url'];   
+                    window.location.href = data['url'];
                     return true;
                 }
                 else
-                {           
-                    $("#validate-login").html("<span class='ui-error'>Please enter the username and password.</span>");                  
+                {
+                    $("#validate-login").html("<span class='ui-error'>Wrong username or password. Please try again.</span>");
                     return false;
                 }
             },
