@@ -25,19 +25,21 @@
     $order_email = $order_data['customer_email'];
     $order_date = strftime("%m-%d-%Y",strtotime($order_data['order_date']));
     
-    if( $order_data['state'] == 'PENDING_CONFIRM' )
+    $order_state = $order_data['state'];
+    
+    if( $order_state == 'PENDING_CONFIRM' )
         $order_status = "Waiting For Customer Confirmation";
-    else if( $order_data['state'] == 'PENDING_PAYMENT' )
+    else if( $order_state == 'PENDING_PAYMENT' )
         $order_status = "Payment Processing Pending";
-    else if( $order_data['state'] == 'PENDING_SHIPMENT' )
+    else if( $order_state == 'PENDING_SHIPMENT' )
         $order_status = "Waiting For Shipment";
-    else if( $order_data['state'] == 'SHIPPED' )
+    else if( $order_state == 'SHIPPED' )
         $order_status = "Shipped";
-    else if( $order_data['state'] == 'CLOSED' )
+    else if( $order_state == 'CLOSED' )
         $order_status = "Complete";
-    else if( $order_data['state'] == 'CANCELED' )
+    else if( $order_state == 'CANCELED' )
         $order_status = "Canceled";
-    else if( $order_data['state'] == 'ABANDONED' )
+    else if( $order_state == 'ABANDONED' )
         $order_status = "Order Abandoned";
     else
         $order_status = "Unknown";
