@@ -631,9 +631,11 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     font-size: 11px;
     text-align: center;
     text-transform: uppercase;
+    text-decoration: none;
 }
 #adminblock .block_button:hover .label {
     background: #00857a;
+    text-decoration: none;
 }
 
 
