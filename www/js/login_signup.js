@@ -55,7 +55,7 @@ function closeSignup()
     $('#mask').fadeOut(100);
 }
 
-function onPasswordKeyPress(myfield,e)
+function onPasswordKeyPress(myfield,e,callback)
 {
     var keycode = 0;
     if( window.event ) 
@@ -68,7 +68,7 @@ function onPasswordKeyPress(myfield,e)
         var username = $('#login_dialog #username').val();
         var password = $('#login_dialog #password').val();
         if( username.length > 0 && password.length > 0 )
-            onLoginClick();
+            callback();
         return false;
     }
     else

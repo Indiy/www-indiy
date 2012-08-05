@@ -457,7 +457,7 @@ $(document).ready(function()
                         <div class='password_header'>
                             Password
                         </div>
-                        <input id='password' name='password' type='password'/>
+                        <input id='password' name='password' type='password' onKeyPress="return onPasswordKeyPress(this,event,onLoginClick);" />
                         <div id='validate-login' class='validate_login'>
                         </div>
                         <div class='forgot_login_box'>
