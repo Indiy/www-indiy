@@ -147,7 +147,7 @@ function renderAllArtistSummary()
 
 function showEditShippingPopup()
 {
-    var ship_date = (new Date()).strftime("%F %T");
+    var ship_date = (new Date()).strftime("%Y-%m-%d %T");
 
     if( g_shipDate && g_shipDate != "None" )
         ship_date = g_shipDate;
