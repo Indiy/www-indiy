@@ -72,7 +72,7 @@
                 </div>
                 <div class='buttons'>
                     <? if( $order_state != 'CANCELED' ): ?>
-                        <div id='ship_button' class='button mark_shipped'>
+                        <div id='ship_button' class='button mark_shipped' onclick='showEditShippingPopup();'>
                             <div class='icon'></div>
                             <div class='label'>Mark Order Shipped</div>
                         </div>
