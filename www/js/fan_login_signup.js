@@ -61,14 +61,14 @@ function fanRegisterAccount(need_confirm,successCallback,failureCallback)
 
 function fanLogin()
 {
-    var email = $('#login_email').val();
+    var username = $('#login_email').val();
     var password = $('#login_password').val();
     
-    if( email.length > 0 && password.length > 0 )
+    if( username.length > 0 && password.length > 0 )
     {
         var args = {
             'method': 'login',
-            'username': email,
+            'username': username,
             'password': password
         };
         jQuery.ajax(

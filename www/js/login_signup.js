@@ -91,7 +91,7 @@ function onLoginClick()
 
     var args = {
         'method': 'login',
-        'username': email,
+        'username': username,
         'password': password
     };
 
