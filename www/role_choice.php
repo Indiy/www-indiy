@@ -65,7 +65,7 @@
         print "<br/>";
     }
     
-    print "<a href='/manage/'>Admin Home Page</a><br/>";
+    print "<a href='/logout.php'>Logout</a><br/>";
     print "<br/>";
     
     print "</body></html>";
