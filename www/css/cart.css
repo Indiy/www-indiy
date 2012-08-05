@@ -539,7 +539,7 @@ body {
     float: left;
     height: 32px;
     width: 32px;
-    background: green;
+    background: transparent url("/images/cart_icons.png") -7px -5px no-repeat;
 }
 #order .receipt .account_password .detail .label {
     float: left;
