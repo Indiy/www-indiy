@@ -36,7 +36,7 @@
 
     if( $num_logins == 0 )
     {
-        print "Not Logged in.\n";
+        print "Not Logged in.<br/>";
     }
 
 
