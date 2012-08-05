@@ -624,14 +624,17 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
 }
 #adminblock .block_button .label {
     height: 18px;
-    width: 75px;
+    width: 90px;
     padding-top: 7px;
-    background: #1e2126;
+    background: #1E2126;
     color: white;
-    font-size: 12px;
+    font-size: 11px;
     text-align: center;
+    text-transform: uppercase;
 }
-
+#adminblock .block_button:hover .label {
+    background: #00857a;
+}
 
 
 #adminblock .column2 { width:711px; float:left; padding-left:9px}
