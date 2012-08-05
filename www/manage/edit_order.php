@@ -89,6 +89,8 @@
     }
     
     $ship_date = $order_data['ship_date'];
+    if( $ship_date == "0000-00-00 00:00:00" )
+        $ship_date = "None";
     
     $include_order = TRUE;
     $include_editor = FALSE;
