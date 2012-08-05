@@ -4,7 +4,6 @@
     require_once 'includes/config.php';
     require_once 'includes/paypalfunctions.php';
     
-    
     $order_id = $_REQUEST['order_id'];
     
     if( !$order_id )
