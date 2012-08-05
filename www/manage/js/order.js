@@ -149,7 +149,7 @@ function showEditShippingPopup()
 {
     var ship_date = (new Date()).strftime("%F %T");
 
-    if( g_shipDate )
+    if( g_shipDate && g_shipDate != "None" )
         ship_date = g_shipDate;
 
     $('#edit_shipping #ship_date').val(ship_date);
