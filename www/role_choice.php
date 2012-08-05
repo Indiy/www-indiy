@@ -20,7 +20,7 @@
     if( $_SESSION['sess_userType'] == 'ARTIST' )
     {
         $show_artist = TRUE;
-        $artist_id = $_SESSION['sess_userId']
+        $artist_id = $_SESSION['sess_userId'];
         $num_logins++;
     }
     else if( $_SESSION['sess_userType'] == 'LABEL' )
