@@ -1,14 +1,14 @@
-<?
-
-    $browser = get_browser(null,TRUE);
-    if( $browser['browser'] == 'IE' && $browser['majorver'] < 8 )
-    {
-        include('unsupported_browser.php');
-        die();
-    }
+<?php
     
     require_once 'includes/config.php';
     require_once 'includes/functions.php';
+    
+    $browser = get_browser(null,TRUE);
+    if( $browser['browser'] == 'IE' && $browser['majorver'] < 8 )
+    {
+        include_once 'unsupported_browser.php';
+        die();
+    }
     
     $artist_url = '';
     $http_host = $_SERVER["HTTP_HOST"];
@@ -28,7 +28,7 @@
             die();
         }
     }
-    else 
+    else
     {
         $host_parts = explode('.',$http_host);
         $trailing_parts = array_slice($host_parts,-2);
@@ -46,12 +46,8 @@
                 $artist_url = $row['url'];
         }
     }
-
-    if( $artist_url != "" )
-    {
-        include 'jplayer/index.php';
-    }
-    else
+    
+    if( $artist_url == "" )
     {
         if( $_SESSION['sess_userId'] > 0 )
         {
@@ -80,5 +76,11 @@
         {
             include 'home.php';
         }
+        die();
     }
+    else
+    {
+        include_once 'player2.php';
+    }
+
 ?>
