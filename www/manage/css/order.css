@@ -258,22 +258,15 @@
 #edit_order .receipt .order_number {
     float: left;
     width: 249px;
-    height: 105px;
+    height: 100px;
+    padding-top: 5px;
     border-right: 1px solid #d9d9d9;
 }
-#edit_order .receipt .order_number .title {
-    padding-top: 18px;
+#edit_order .receipt .order_number .item {
+    padding-top: 5px;
     padding-left: 24px;
     padding-right: 24px;
     color: #144c4d;
-    font-size: 14px;
-    font-weight: bold;
-}
-#edit_order .receipt .order_number .detail {
-    padding-top: 6px;
-    padding-left: 24px;
-    padding-right: 24px;
-    color: #5a6774;
     font-size: 12px;
 }
 #edit_order .receipt .order_status {
