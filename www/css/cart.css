@@ -207,7 +207,7 @@ body {
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: #d3d3d3 url("/images/cart_icons.png") 0px -10px no-repeat;
+    background: #d3d3d3 url("/images/cart_icons.png") -62px -10px no-repeat;
     vertical-align: top;
 }
 #cart #cart_list .cart_line .delete .button .label {
@@ -224,7 +224,7 @@ body {
     vertical-align: top;
 }
 #cart #cart_list .cart_line .delete .button:hover .icon {
-    background: #bb1904;
+    background: #bb1904 url("/images/cart_icons.png") -62px -10px no-repeat;
 }
 #cart #cart_list .cart_line .delete .button:hover .label {
     background: #74170a;
@@ -304,7 +304,7 @@ body {
     display: inline-block;
     height: 25px;
     width: 25px;
-    background: #383838;
+    background: #383838 url("/images/cart_icons.png") -87px -10px no-repeat;
     vertical-align: top;
 }
 #cart .bottom .back_to_site .label {
@@ -399,7 +399,7 @@ body {
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: #59658b;
+    background: #59658b url("/images/cart_icons.png") -141px -10px no-repeat;
     vertical-align: top;
 }
 #cart .checkout .paypal .label {
