@@ -573,7 +573,7 @@ body {
     float: left;
     width: 25px;
     height: 25px;
-    background: #1b5f60;
+    background: #1b5f60 url("/images/cart_icons.png") -192px -10px no-repeat;
 }
 #order .receipt .account_password .button_holder .label {
     float: left;
@@ -603,7 +603,7 @@ body {
     float: left;
     width: 25px;
     height: 25px;
-    background: #1b5f60;
+    background: #1b5f60 url("/images/cart_icons.png") -192px -10px no-repeat;
 }
 #order .receipt .account_password .login_button .label {
     float: left;
@@ -760,7 +760,7 @@ body {
     display: inline-block;
     height: 25px;
     width: 25px;
-    background: #383838;
+    background: #383838 url("/images/cart_icons.png") -167px -10px no-repeat;
     vertical-align: top;
 }
 #order_list .item .action .download_button .label {
