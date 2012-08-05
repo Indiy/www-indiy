@@ -8,29 +8,40 @@
     $show_label = FALSE;
     $show_super_admin = FALSE;
     $artist_id = 0;
+    
+    $num_logins = 0;
 
     if( $_SESSION['fan_id'] )
     {
         $show_fan = TRUE;
+        $num_logins++;
     }
 
     if( $_SESSION['sess_userType'] == 'ARTIST' )
     {
         $show_artist = TRUE;
         $artist_id = $_SESSION['sess_userId']
+        $num_logins++;
     }
     else if( $_SESSION['sess_userType'] == 'LABEL' )
     {
         $show_label = TRUE;
+        $num_logins++;
     }
     else if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' )
     {
         $show_super_admin = TRUE;
+        $num_logins++;
     }
-    
+
+    if( $num_logins == 0 )
+    {
+        print "Not Logged in.\n";
+    }
+
 
     print "<html><body>";
-    
+
     if( $show_fan )
     {
         print "<a href='/fan'>Fan Home Page</a><br/>";
@@ -53,7 +64,7 @@
         print "<a href='/manage/dashboard.php'>Admin Home Page</a><br/>";
         print "<br/>";
     }
-
+    
     print "</body></html>";
 
 ?>
