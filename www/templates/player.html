@@ -192,11 +192,13 @@
                         </div>
                         <div class='sep'></div>
                     <? endif; ?>
-                    <div class='button facebook' onclick='clickFacebookButton();'>
-                        <div class='icon'></div>
-                        <div class='label'>FACEBOOK</div>
-                    </div>
-                    <div class='sep'></div>
+                    <? if( $artist_facebook_page ): ?>
+                        <div class='button facebook' onclick='clickFacebookButton();'>
+                            <div class='icon'></div>
+                            <div class='label'>FACEBOOK</div>
+                        </div>
+                        <div class='sep'></div>
+                    <? endif; ?>
                     <div class='button share' onclick='clickShareButton();'>
                         <div class='icon'></div>
                         <div class='label'>SHARE</div>
