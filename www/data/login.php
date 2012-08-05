@@ -14,7 +14,7 @@
     
     if( $username != '' && $password != '' )
     {
-        $fan_url = fan_login($username,password);
+        $fan_url = fan_login($username,$password);
         $artist_url = artist_login($username,$password);
         $admin_url = admin_login($username,$password);
         
