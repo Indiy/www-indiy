@@ -3,7 +3,37 @@
 
 <script type="text/javascript">
     var g_orderId = <?=$order_id;?>;
+    var g_trackingNumber = "<?=$tracking_number;?>";
+    var g_shipDate = "<?=$ship_date;?>";
 </script>
+
+<div id='edit_shipping' class='popup_wrapper'>
+    <div id="popup">
+        <div class='top_bar'>
+            <h2>Mark Order Shipped</h2>
+            <button onclick='closePopup();'>CLOSE</button>
+        </div>
+        
+        <div class='top_blue_bar'></div>
+        <div class='top_sep'></div>
+        
+        <div class='input_container'>
+            <div class='left_label'>Ship Date</div>
+            <input id='ship_date' type="text" name="email" value="" class='right_text' />
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Tracking Number</div>
+            <input id='tracking_number' type="text" name="name" value="" class='right_text' />
+        </div>
+        <div class='submit_container'>
+            <button class="submit" onclick='onEditShippingSubmit();'>Submit</button>
+        </div>
+        
+        <div class='bottom_sep'></div>
+        <div class='bottom_blue_bar'></div>
+    </div>
+</div>
+
 
 <section id="wrapper">
 <section id="content">
@@ -28,11 +58,12 @@
             <div class='order_number'>
                 <div class='title'>Order Number: <?=$order_id;?></div>
                 <div class='title'>Order Status: <span id='order_status'><?=$order_status;?></span></div>
-                <? if( $tracking_number ): ?>
-                    <div class='tracking'>
-                        Tracking Number: <?=$tracking_number;?>
-                    </div>
-                <? endif; ?>
+                <div class='tracking'>
+                    Tracking Number: <span id='tracking_number'><?=$tracking_number;?></span>
+                </div>
+                <div class='tracking'>
+                    Ship Date: <span id='ship_date'><?=$ship_date;?></span>
+                </div>
             </div>
             <div class='edit_order'>
                 <div class='title'>

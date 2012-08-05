@@ -109,6 +109,7 @@
         }
         
         mysql_update('orders',$updates,'id',$order_id);
+        $postedValues['ship_date'] = $ship_date;
         return FALSE;
     }
     
