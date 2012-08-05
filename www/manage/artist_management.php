@@ -245,7 +245,7 @@ $(document).ready(showFirstInstructions);
                 <li><a onclick='showSocialConfigPopup();' title='Add Facebook and Twitter account information'>Social Connections</a></li>
                 <li><a onclick='showInvitePopup();' title='Invite your friends to MyArtistDNA'>Invite Friends</a></li>
                 <li>
-                    <a id='view_site_anchor' href="<?=$artist_url;?>" target="_blank" title='View your site'>
+                    <a id='view_site_anchor' class='no_underline' href="<?=$artist_url;?>" target="_blank" title='View your site'>
                         <div class='block_button'>
                             <div class='icon'></div>
                             <div class='label'>View Site</div>
