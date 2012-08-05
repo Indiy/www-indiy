@@ -26,7 +26,7 @@ function fanRegisterAccount(need_confirm,successCallback,failureCallback)
     jQuery.ajax(
         {
             type: 'POST',
-            url: '/fan/data/login_signup.php',
+            url: '/data/fan_signup.php',
             data: args,
             dataType: 'text',
             success: function(text) 
@@ -68,25 +68,24 @@ function fanLogin()
     {
         var args = {
             'method': 'login',
-            'email': email,
+            'username': email,
             'password': password
         };
         jQuery.ajax(
         {
             type: 'POST',
-            url: '/fan/data/login_signup.php',
+            url: '/data/login.php',
             data: args,
-            dataType: 'text',
-            success: function(text) 
+            dataType: 'json',
+            success: function(data)
             {
-                var data = JSON.parse(text);
-                if( data['error'] )
+                if( data['success'] )
                 {
-                    window.alert("Failed to login, please check your email address and password.");
+                    window.location = data['url'];
                 }
                 else
                 {
-                    window.location = data['url'];
+                    window.alert("Failed to login, please check your email address and password.");
                 }
             },
             error: function()
@@ -116,7 +115,7 @@ function fanSendRegToken()
         jQuery.ajax(
         {
             type: 'POST',
-            url: '/fan/data/login_signup.php',
+            url: '/data/fan_signup.php',
             data: args,
             dataType: 'text',
             success: function(text) 

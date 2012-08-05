@@ -14,32 +14,9 @@
     {
         do_register();
     }
-    else if( $method == 'login' )
-    {
-        do_login();
-    }
     else if( $method == 'send_register_token' )
     {
         do_send_register_token();
-    }
-    
-    function do_login()
-    {
-        $email = $_REQUEST['email'];
-        $password = $_REQUEST['password'];
-        $hash_password = md5($email . $password);
-        
-        $sql = "SELECT * FROM fans WHERE email='$email' AND password='$hash_password'";
-        $fan = mf(mq($sql));
-        if( $fan )
-        {
-            fan_login($fan);
-        }
-        else
-        {
-            $output = array("error" => 1);
-            print json_encode($output);
-        }
     }
     
     function do_register()
@@ -57,25 +34,18 @@
             $updates = array("password" => $hash_password);
             mysql_update("fans",$updates,'id',$fan['id']);
             
-            fan_login($fan);
+            $url = login_fan_from_row($fan);
+            $output = array(
+                            "url" => $url,
+                            "success" => 1
+                            );
+            print json_encode($output);
         }
         else
         {
             $output = array("error" => 1);
             print json_encode($output);
         }
-    }
-    
-    function fan_login($fan)
-    {
-        $_SESSION['fan_id'] = $fan['id'];
-        $expire = time() + 60*24*60*60;
-        $cookie_domain = str_replace("http://www.","",trueSiteUrl());
-        setcookie("FAN_EMAIL",$fan['email'],$expire,"/",$cookie_domain);
-        $output = array("success" => 1,
-                        "url" => fan_site_url(),
-                        );
-        print json_encode($output);
     }
     
     function do_send_register_token()
