@@ -637,6 +637,12 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     background: #00857a;
     text-decoration: none;
 }
+#adminblock .block_button .label:hover {
+    text-decoration: none;
+}
+#adminblock .column1 ul li a:hover .block_button {
+    text-decoration: none;
+}
 
 
 #adminblock .column2 { width:711px; float:left; padding-left:9px}
