@@ -20,6 +20,11 @@
 	trackDownloads($getid);
 	$music = mf(mq("select * from `[p]musicplayer_audio` where `artistid`='{$artist}' and `id`='{$getid}'"));
 	$filename = 'artists/audio/'.$music["audio"];
+    
+    $download_filename = $music["upload_file_name"];
+    if( !$download_filename )
+        $download_filename = $music["audio"];
+    
 
 // required for IE, otherwise Content-disposition is ignored
 if(ini_get('zlib.output_compression'))
@@ -58,7 +63,7 @@ header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
 header("Cache-Control: private",false); // required for certain browsers 
 header("Content-Type: $ctype");
 // change, added quotes to allow spaces in filenames, by Rajkumar Singh
-header("Content-Disposition: attachment; filename=\"".basename($filename)."\";" );
+header("Content-Disposition: attachment; filename=\"".basename($download_filename)."\";" );
 header("Content-Transfer-Encoding: binary");
 header("Content-Length: ".filesize($filename));
 readfile("$filename");
