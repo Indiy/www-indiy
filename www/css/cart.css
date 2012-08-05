@@ -367,7 +367,7 @@ body {
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: #588c5c;
+    background: #588c5c url("/images/cart_icons.png") -113px -7px no-repeat;
     vertical-align: top;
 }
 #cart .confirm_order .confirm .label {
