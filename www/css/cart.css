@@ -207,7 +207,7 @@ body {
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: #d3d3d3;
+    background: #d3d3d3 url("/images/cart_icons.png") 0px -10px no-repeat;
     vertical-align: top;
 }
 #cart #cart_list .cart_line .delete .button .label {
