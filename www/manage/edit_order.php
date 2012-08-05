@@ -82,11 +82,13 @@
         $order_item_html .= $html;
     }
     
-    $tracking_number = FALSE;
+    $tracking_number = "None";
     if( isset( $shipping_info['tracking_number'] ) )
     {
         $tracking_number = $shipping_info['tracking_number'];
     }
+    
+    $ship_date = $order_data['ship_date'];
     
     $include_order = TRUE;
     $include_editor = FALSE;

@@ -144,3 +144,60 @@ function renderAllArtistSummary()
     $('#total_charges').html("${0}".format(total_charges.toFixed(2)));
     $('#total_payouts').html("${0}".format(total_artist_payouts.toFixed(2)));
 }
+
+function showEditShippingPopup()
+{
+    var ship_date = (new Date()).strftime("%F %T");
+
+    if( g_shipDate )
+        ship_date = g_shipDate;
+
+    $('#edit_shipping #ship_date').val(ship_date);
+    $('#edit_shipping #tracking_number').val(g_trackingNumber);
+
+    showPopup('#edit_shipping');
+}
+
+function onEditShippingSubmit()
+{
+    var ship_date = $('#edit_shipping #ship_date').val();
+    var tracking_number = $('#edit_shipping #tracking_number').val();
+    
+    if( ship_date.length == 0 )
+    {
+        window.alert("Please enter a ship date.");
+        return;
+    }
+    
+    var args = {
+        order_id: g_orderId,
+        method: "ship",
+        ship_date: ship_date
+    };
+    
+    if( tracking_number.length > 0 )
+        args.tracking_number = tracking_number;
+    
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: '/manage/data/order.php',
+        data: args,
+        dataType: 'json',
+        success: function(data) 
+        {
+            $('#edit_order #order_status').html("Shipped");
+            if( tracking_number.length > 0 )
+                $('#edit_order #tracking_number').html(tracking_number);
+            $('#edit_order #ship_date').html(data.ship_date)
+            closePopup();
+        },
+        error: function()
+        {
+            window.alert("Adding Shipping Data failed");
+        }
+    });
+}
+
+
+
