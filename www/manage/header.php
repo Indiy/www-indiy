@@ -32,12 +32,16 @@
 
         <script src="js/tooltip_text.js" type="text/javascript"></script>
         <script src="js/rich_text_editor.js" type="text/javascript"></script>
+    
+    <? endif; ?>
         
         <script src="js/popup.js" type="text/javascript"></script>
         <script src="js/manage.js" type="text/javascript"></script>
         <script src="js/manage_upload.js" type="text/javascript"></script>
         <script src="js/manage_tooltips.js" type="text/javascript"></script>
         
+    <? if( $include_editor !== FALSE ): ?>
+
         <script src="js/edit_page.js" type="text/javascript"></script>
         <script src="js/edit_photo.js" type="text/javascript"></script>
         <script src="js/edit_product.js" type="text/javascript"></script>
