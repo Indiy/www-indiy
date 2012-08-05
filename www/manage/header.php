@@ -77,7 +77,7 @@
 </div>
 <section id="bgtopbar">
 	<section id="topbar">
-		<p>Logged in as <?php echo $_SESSION['sess_userName']; ?> | <a href="logout.php">Logout</a></p>
+		<p>Logged in as <?php echo $_SESSION['sess_userName']; ?> | <a href="/logout.php">Logout</a></p>
 	</section>
 </section>
 <section id="headerinner">

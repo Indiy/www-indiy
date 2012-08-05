@@ -24,7 +24,7 @@
         $artist_id = mysql_real_escape_string($artist_id);
         $q = "DELETE FROM mydna_musicplayer WHERE id='$artist_id' LIMIT 1";
         mysql_query($q);
-        header("Location: logout.php");
+        header("Location: /logout.php");
         exit();
     }
     

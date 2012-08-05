@@ -65,6 +65,9 @@
         print "<br/>";
     }
     
+    print "<a href='/manage/'>Admin Home Page</a><br/>";
+    print "<br/>";
+    
     print "</body></html>";
 
 ?>
