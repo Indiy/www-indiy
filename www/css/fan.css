@@ -169,6 +169,7 @@ body {
 #fan_home .right {
     float: right;
     width: 250px;
+    overflow: hidden;
 }
 
 #fan_home .header {
