@@ -178,5 +178,18 @@ body {
     background: #2c9495 url('/images/cart_header_texture.png') repeat-x;
     text-transform: uppercase;
 }
+#fan_home .header .left {
+    float: left;
+    padding-left: 16px;
+    padding-top: 13px;
+    color: white;
+    font-size: 18px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+#fan_home .downloads {
+    margin-bottom: 20px;
+}
 
 
