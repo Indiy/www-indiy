@@ -76,6 +76,7 @@
     $sql .= " FROM orders ";
     $sql .= " JOIN mydna_musicplayer ON orders.artist_id = mydna_musicplayer.id ";
     $sql .= " WHERE customer_email='$fan_email' ";
+    $sql .= " ORDER BY orders.order_date DESC";
     $orders_q = mq($sql);
     while( $order = mf($orders_q) )
     {
