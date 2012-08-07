@@ -172,11 +172,8 @@ body {
 }
 
 #fan_home .header {
-    height: 46px;
+    height: 44px;
     font-size: 0;
-    color: white;
-    background: #2c9495 url('/images/cart_header_texture.png') repeat-x;
-    text-transform: uppercase;
 }
 #fan_home .header .left {
     float: left;
@@ -187,9 +184,21 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     text-transform: uppercase;
 }
+#fan_home .header .right {
+    float: right;
+    padding-right: 12px;
+}
 
 #fan_home .downloads {
     margin-bottom: 20px;
 }
-
+#fan_home .downloads .header {
+    background: #5da6d4;
+}
+#fan_home .loved_art .header {
+    background: #e3bf6b;
+}
+#fan_home .orders .header {
+    background: #2c9495 url('/images/cart_header_texture.png') repeat-x;
+}
 
