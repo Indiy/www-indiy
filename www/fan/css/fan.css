@@ -118,7 +118,7 @@ body {
 #footer footer aside ul li a:hover { color:#4ecdc4; text-decoration:underline; }
 
 #footer footer article { width:185px; float:left; }
-#footer footer article ul li { width:185px; float:left; background:url(../images/dottedborder.gif) repeat-x bottom left; margin-bottom:3px; }
+#footer footer article ul li { width:185px; float:left; background:url("/images/dottedborder.gif") repeat-x bottom left; margin-bottom:3px; }
 #footer footer article ul li.last {background:none; margin-bottom:0; }
 #footer footer article ul li img { float:left; padding:3px 7px 7px 0; }
 #footer footer article ul li a { font-size:12px; color:#4ecdc4; text-decoration:none; cursor: pointer; }

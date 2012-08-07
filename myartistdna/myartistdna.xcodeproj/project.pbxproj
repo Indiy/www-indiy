@@ -13,7 +13,6 @@
 		2D34E22814A173A9004473F9 /* landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = landing.php; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.php; };
 		2D34E22A14A30B50004473F9 /* logged_in.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = logged_in.php; sourceTree = "<group>"; };
 		2D34E22E14A59976004473F9 /* tooltip_text.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = tooltip_text.js; sourceTree = "<group>"; };
-		2D34E23114A645ED004473F9 /* jplayer.blue.monday.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = jplayer.blue.monday.css; sourceTree = "<group>"; };
 		2D34E23214A9680C004473F9 /* faq.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = faq.php; sourceTree = "<group>"; };
 		2D34E23314AAD64D004473F9 /* forgot_password.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = forgot_password.html; sourceTree = "<group>"; };
 		2D34E23414AADC6D004473F9 /* forgot_password.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = forgot_password.php; sourceTree = "<group>"; };
@@ -217,7 +216,6 @@
 		2DD94A3114C3A6C5002B1259 /* artist_home_audio.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_home_audio.js; sourceTree = "<group>"; };
 		2DD94A3214C49CA8002B1259 /* artist_home_tabs.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_home_tabs.js; sourceTree = "<group>"; };
 		2DD94A3314C49D68002B1259 /* artist_home_socialize.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_home_socialize.js; sourceTree = "<group>"; };
-		2DD94A3414C4E4E7002B1259 /* lionbars.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = lionbars.css; sourceTree = "<group>"; };
 		2DE197A214F6133000305EAD /* password.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = password.php; sourceTree = "<group>"; };
 		2DE2142714C15540000C5142 /* artist_home_video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_home_video.js; sourceTree = "<group>"; };
 		2DE3F8A715B1F4ED00B5D439 /* mad.swipe.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mad.swipe.js; sourceTree = "<group>"; };
@@ -1258,7 +1256,6 @@
 		2DF474111440B77F005538C7 /* expressInstall.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = expressInstall.swf; sourceTree = "<group>"; };
 		2DF474121440B77F005538C7 /* integrated_player.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = integrated_player.swf; sourceTree = "<group>"; };
 		2DF474141440B77F005538C7 /* tour.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = tour.php; sourceTree = "<group>"; };
-		2DF4741A1440CFC6005538C7 /* jquery.mCustomScrollbar.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = jquery.mCustomScrollbar.css; sourceTree = "<group>"; };
 		2DF4742B144A2D84005538C7 /* files.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = files.js; sourceTree = "<group>"; };
 		2DF4742C144A2D84005538C7 /* jquery.iframe-post-form.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery.iframe-post-form.js"; sourceTree = "<group>"; };
 		2DF4742D144A2D84005538C7 /* artist_management.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artist_management.php; sourceTree = "<group>"; };
@@ -2283,11 +2280,8 @@
 		2DF470471440B77F005538C7 /* css */ = {
 			isa = PBXGroup;
 			children = (
-				2DD94A3414C4E4E7002B1259 /* lionbars.css */,
 				2DD94A2B14C368DF002B1259 /* vim.css */,
 				2D34E23514ABFF09004473F9 /* video-js.css */,
-				2D34E23114A645ED004473F9 /* jplayer.blue.monday.css */,
-				2DF4741A1440CFC6005538C7 /* jquery.mCustomScrollbar.css */,
 				2DF4704F1440B77F005538C7 /* style.css */,
 				2DF470501440B77F005538C7 /* styles.css */,
 				2D4116BD1534E9BB00F18000 /* player.css */,
