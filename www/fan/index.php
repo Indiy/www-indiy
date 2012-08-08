@@ -44,7 +44,7 @@
     $sql .= " ,mydna_musicplayer_ecommerce_products.description AS product_decription ";
     $sql .= " FROM fan_files ";
     $sql .= " JOIN product_files ON fan_files.product_file_id = product_files.id ";
-    $sql .= " JOIN mydna_musicplayer_ecommerce_products ON product_files.product_id = mydna_musicplayer_ecommerce_products.id "
+    $sql .= " JOIN mydna_musicplayer_ecommerce_products ON product_files.product_id = mydna_musicplayer_ecommerce_products.id ";
     $sql .= " WHERE fan_files.fan_id='$fan_id' ";
     $files_q = mq($sql);
     while( $file = mf($files_q) )
