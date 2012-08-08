@@ -37,15 +37,25 @@
     $fan_files = array();
     $fan_files_html = "";
     
-    $sql = "SELECT fan_files.id AS id, product_files.upload_filename AS upload_filename ";
+    $sql = "SELECT fan_files.id AS id"
+    $sql .= " ,product_files.upload_filename AS upload_filename ";
+    $sql .= " ,mydna_musicplayer_ecommerce_products.image AS product_image ";
+    $sql .= " ,mydna_musicplayer_ecommerce_products.name AS product_name ";
+    $sql .= " ,mydna_musicplayer_ecommerce_products.description AS product_decription ";
     $sql .= " FROM fan_files ";
     $sql .= " JOIN product_files ON fan_files.product_file_id = product_files.id ";
+    $sql .= " JOIN mydna_musicplayer_ecommerce_products ON product_files.product_id = mydna_musicplayer_ecommerce_products.id "
     $sql .= " WHERE fan_files.fan_id='$fan_id' ";
     $files_q = mq($sql);
     while( $file = mf($files_q) )
     {
         $file_id = $file['id'];
         $file_name = $file['upload_filename'];
+        $product_name = $file['product_name'];
+        $product_image = $file['product_name'];
+        $product_description = $file['product_description'];
+
+        $product_image_url = "/artists/products/$product_image";
     
         $item = array("id" => $file_id,
                       "name" => $file_name,
@@ -58,8 +68,19 @@
         
         $html = "";
         $html .= "<div class='file'>";
-        $html .= " <div class='name'>$file_name</div>";
-        $html .= " <div class='download'><a href='$url'>download</a></div>";
+        $html .= " <div class='image'><img src='$product_image_url'/></div>";
+        $html .= " <div class='product_file'>";
+        $html .= "  <div class='product_name'>$product_name</div>";
+        $html .= "  <div class='file_name'>$file_name</div>";
+        $html .= " </div>";
+        $html .= " <div class='action'>";
+        $html .= "  <a href='$url'>";
+        $html .= "   <div class='download_button'>";
+        $html .= "    <div class='icon'></div>";
+        $html .= "    <div class='label'>Download</div>";
+        $html .= "   </div>";
+        $html .= "  </a>";
+        $html .= " </div>";
         $html .= "</div>";
         $fan_files_html .= $html;
     }
