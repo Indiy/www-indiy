@@ -52,7 +52,7 @@
         $file_id = $file['id'];
         $file_name = $file['upload_filename'];
         $product_name = $file['product_name'];
-        $product_image = $file['product_name'];
+        $product_image = $file['product_image'];
         $product_description = $file['product_description'];
 
         $product_image_url = "/artists/products/$product_image";
@@ -106,7 +106,7 @@
         $artist_logo = $order['artist_logo'];
         $order_date = $order['order_date'];
         
-        $artist_logo_url = "/artists/$artist_logo";
+        $artist_logo_url = "/artists/images/$artist_logo";
         
         $html = "";
         $html .= "<div class='order_item'>";
