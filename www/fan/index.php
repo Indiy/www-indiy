@@ -37,7 +37,7 @@
     $fan_files = array();
     $fan_files_html = "";
     
-    $sql = "SELECT fan_files.id AS id"
+    $sql = "SELECT fan_files.id AS id";
     $sql .= " ,product_files.upload_filename AS upload_filename ";
     $sql .= " ,mydna_musicplayer_ecommerce_products.image AS product_image ";
     $sql .= " ,mydna_musicplayer_ecommerce_products.name AS product_name ";
