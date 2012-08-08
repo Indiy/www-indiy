@@ -232,7 +232,7 @@ body {
     display: inline-block;
     vertical-align: top;
     height: 77px;
-    width: 430px;
+    width: 429px;
     border-right: 1px solid #d6d6d6;
 }
 #fan_home .downloads .file .product_name {
@@ -277,4 +277,6 @@ body {
     color: white;
     font-size: 12px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-align: center;
+    background-color: #34759f;
 }
