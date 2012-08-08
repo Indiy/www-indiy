@@ -1883,3 +1883,9 @@ body {
 #video_bg {
     display: none;
 }
+
+.popup_wrapper {
+    display: none;
+}
+
+

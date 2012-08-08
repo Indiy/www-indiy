@@ -165,7 +165,7 @@
         $html .= " </div>";
         $html .= " <div class='buy_length_listens'>";
         if( $music_free_download )
-            $html .= "  <div class='buy free'>FREE</div>";
+            $html .= "  <div class='buy free' onclick='clickFreeDownload($i);'>FREE</div>";
         else if( $buy )
             $html .= "  <div class='buy'>BUY</div>";
         $html .= "  <div class='sep'></div>";
