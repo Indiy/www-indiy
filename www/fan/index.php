@@ -124,10 +124,12 @@
         $html .= "  <div class='detail'>Order placed: $order_date</div>";
         $html .= " </div>";
         $html .= " <div class='status'>";
-        $html .= "  <div class='status_button'>";
-        $html .= "   <div class='icon'></div>";
-        $html .= "   <div class='label'>Status</div>";
-        $html .= "  </div>";
+        $html .= "  <a href='/order_status.php?order_id=$order_id'>";
+        $html .= "   <div class='status_button'>";
+        $html .= "    <div class='icon'></div>";
+        $html .= "    <div class='label'>Status</div>";
+        $html .= "   </div>";
+        $html .= "  </a>";
         $html .= " </div>";
         $html .= "</div>";
         $order_list_html .= $html;
