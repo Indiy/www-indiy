@@ -47,6 +47,8 @@
     $sql .= " JOIN mydna_musicplayer_ecommerce_products ON product_files.product_id = mydna_musicplayer_ecommerce_products.id ";
     $sql .= " WHERE fan_files.fan_id='$fan_id' ";
     $files_q = mq($sql);
+    
+    $i = 0;
     while( $file = mf($files_q) )
     {
         $file_id = $file['id'];
@@ -64,10 +66,14 @@
         
         $encoded_file_name = urlencode($file_name);
         
+        $odd = "";
+        if( $i % 2 == 1 )
+            $odd = " odd";
+        
         $url = "/fan/downloads/$encoded_file_name?id=$file_id&attachment=true";
         
         $html = "";
-        $html .= "<div class='file'>";
+        $html .= "<div class='file$odd'>";
         $html .= " <div class='image'><img src='$product_image_url'/></div>";
         $html .= " <div class='product_file'>";
         $html .= "  <div class='product_name'>$product_name</div>";
@@ -83,6 +89,8 @@
         $html .= " </div>";
         $html .= "</div>";
         $fan_files_html .= $html;
+        
+        $i++;
     }
     
     $fan_files_json = json_encode($file_files);
