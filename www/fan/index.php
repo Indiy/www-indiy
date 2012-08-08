@@ -123,7 +123,7 @@
         $html .= "  <div class='artist'>$artist_name</div>";
         $html .= "  <div class='detail'>Order placed: $order_date</div>";
         $html .= " </div>";
-        $html .= " <div class='status'>";
+        $html .= " <div class='action'>";
         $html .= "  <a href='/order_status.php?order_id=$order_id'>";
         $html .= "   <div class='status_button'>";
         $html .= "    <div class='icon'></div>";
