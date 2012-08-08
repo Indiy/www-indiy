@@ -203,3 +203,78 @@ body {
     background: #2c9495 url('/images/cart_header_texture.png') repeat-x;
 }
 
+#fan_home .downloads .file_list .file {
+    height: 77px;
+    font-size: 0;
+    border-bottom: 1px solid #d6d6d6;
+}
+#fan_home .downloads .file_list .file.odd {
+    background-color: #f2f2f2;
+}
+#fan_home .downloads .file .image {
+    display: inline-block;
+    vertical-align: top;
+    height: 47px;
+    width: 47px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border-right: 1px solid #d6d6d6;
+}
+#fan_home .downloads .file .image img {
+    padding: 3px;
+    height: 39px;
+    width: 39px;
+    border: 1px solid #d2d1cf;
+}
+#fan_home .downloads .file .product_file {
+    display: inline-block;
+    vertical-align: top;
+    height: 77px;
+    width: 430px;
+    border-right: 1px solid #d6d6d6;
+}
+#fan_home .downloads .file .product_name {
+    padding-top: 20px;
+    padding-left: 18px;
+    color: black;
+    font-size: 16px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+}
+#fan_home .downloads .file .file_name {
+    padding-top: 2px;
+    padding-left: 18px;
+    color: #666;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+}
+
+#fan_home .downloads .file .action {
+    display: inline-block;
+    vertical-align: top;
+    height: 77px;
+    width: 140px;
+}
+#fan_home .downloads .file .download_button {
+    margin-top: 24px;
+    margin-right: 20px;
+    height: 25px;
+    width: 100px;
+    cursor: pointer;
+}
+#fan_home .downloads .file .download_button .icon {
+    float: left;
+    height: 25px;
+    width: 25px;
+    background: #5395be;
+}
+#fan_home .downloads .file .download_button .label {
+    float: left;
+    padding-top: 7px;
+    height: 18px;
+    width: 75px;
+    color: white;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+}

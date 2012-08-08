@@ -1752,7 +1752,6 @@
 			children = (
 				2D8D970E15A5283400AA3D1B /* downloads */,
 				2D8D970715A4C73500AA3D1B /* data */,
-				2D8D970315A281B200AA3D1B /* css */,
 				2D8D96FF15A27D8600AA3D1B /* templates */,
 				2D8D96FD15A26FE900AA3D1B /* index.php */,
 				2D8D970115A27FA000AA3D1B /* login.php */,
@@ -1770,13 +1769,6 @@
 				2D8D970215A2818100AA3D1B /* fan_login.html */,
 			);
 			name = templates;
-			sourceTree = "<group>";
-		};
-		2D8D970315A281B200AA3D1B /* css */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = css;
 			sourceTree = "<group>";
 		};
 		2D8D970715A4C73500AA3D1B /* data */ = {
