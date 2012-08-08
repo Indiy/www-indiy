@@ -107,6 +107,8 @@
     $sql .= " WHERE customer_email='$fan_email' ";
     $sql .= " ORDER BY orders.order_date DESC";
     $orders_q = mq($sql);
+    
+    $i = 0;
     while( $order = mf($orders_q) )
     {
         $order_id = $order['id'];
@@ -116,8 +118,12 @@
         
         $artist_logo_url = "/artists/images/$artist_logo";
         
+        $odd = "";
+        if( $i % 2 == 1 )
+            $odd = " odd";
+        
         $html = "";
-        $html .= "<div class='order_item'>";
+        $html .= "<div class='order_item$odd'>";
         $html .= " <div class='logo'><img src='$artist_logo_url'/></div>";
         $html .= " <div class='description'>";
         $html .= "  <div class='artist'>$artist_name</div>";
@@ -133,6 +139,8 @@
         $html .= " </div>";
         $html .= "</div>";
         $order_list_html .= $html;
+        
+        $i++;
     }
         
     include_once 'templates/fan_index.html';
