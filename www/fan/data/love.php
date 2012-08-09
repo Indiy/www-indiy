@@ -102,11 +102,15 @@
             $photo_id = $item['photo_id'];
             $video_id = $item['video_id'];
         
-            $values = array("fan_id" => $fan_id,
-                            "music_id" => $music_id,
-                            "photo_id" => $photo_id,
-                            "video_id" => $video_id,
+            $values = array(
+                            "fan_id" => $fan_id,
                             );
+            if( $music_id )
+                $values['music_id'] = $music_id;
+            if( $photo_id )
+                $values['photo_id'] = $photo_id;
+            if( $video_id )
+                $values['video_id'] = $video_id;
                             
             mysql_insert('fan_loves',$values);
         }
