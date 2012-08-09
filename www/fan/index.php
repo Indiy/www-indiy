@@ -159,41 +159,24 @@
     $sql .= " JOIN mydna_musicplayer_video ON mydna_musicplayer_video.id = love_list.video_id ";
     $sql .= " WHERE fan_id='$fan_id' ";
     $sql .= " ORDER BY id ASC";
-    $orders_q = mq($sql);
+    $love_q = mq($sql);
     
     print "sql: $sql\n";
     
     $i = 0;
-    while( $order = mf($orders_q) )
+    while( $love = mf($love_q) )
     {
-        $order_id = $order['id'];
-        $artist_name = $order['artist_name'];
-        $artist_logo = $order['artist_logo'];
-        $order_date = $order['order_date'];
+        $order_id = $love['id'];
         
-        $artist_logo_url = "/artists/images/$artist_logo";
         
         $odd = "";
         if( $i % 2 == 1 )
             $odd = " odd";
         
         $html = "";
-        $html .= "<div class='order_item$odd'>";
-        $html .= " <div class='logo'><img src='$artist_logo_url'/></div>";
-        $html .= " <div class='description'>";
-        $html .= "  <div class='artist'>$artist_name</div>";
-        $html .= "  <div class='detail'>Order placed: $order_date</div>";
-        $html .= " </div>";
-        $html .= " <div class='action'>";
-        $html .= "  <a href='/order_status.php?order_id=$order_id'>";
-        $html .= "   <div class='status_button'>";
-        $html .= "    <div class='icon'></div>";
-        $html .= "    <div class='label'>Status</div>";
-        $html .= "   </div>";
-        $html .= "  </a>";
-        $html .= " </div>";
+        $html .= "<div class='love_item$odd'>";
         $html .= "</div>";
-        $order_list_html .= $html;
+        $love_list_html .= $html;
         
         $i++;
     }
