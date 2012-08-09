@@ -2,7 +2,6 @@
     
     define("ARTIST_PAYOUT_PERCENT",0.8); 
     
-    
     $new_include_path = get_include_path() . PATH_SEPARATOR . dirname(__FILE__) . "/../..";
     set_include_path($new_include_path);
 
@@ -20,10 +19,9 @@
     
     $cart_base_url = $jibya["cart_base_url"];
 
-
     $cookie_domain = str_replace("http://www.","",$trueSiteUrl);
     session_set_cookie_params(30*24*60*60,"/",$cookie_domain);
+    ini_set("session.gc_maxlifetime",2*24*60*60);
 	session_start();
-
 
 ?>
