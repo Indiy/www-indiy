@@ -154,7 +154,7 @@
     $sql .= " ,mydna_musicplayer_video.name AS video_name ";
     $sql .= " ,mydna_musicplayer_video.image AS video_image ";
     $sql .= " FROM fan_loves ";
-    $sql .= " LEFT JOIN mydna_musicplayer_audio ON mydna_musicplayer_audio.id = fan_loves.song_id ";
+    $sql .= " LEFT JOIN mydna_musicplayer_audio ON mydna_musicplayer_audio.id = fan_loves.music_id ";
     $sql .= " LEFT JOIN photos ON photos.id = fan_loves.photo_id ";
     $sql .= " LEFT JOIN mydna_musicplayer_video ON mydna_musicplayer_video.id = fan_loves.video_id ";
     $sql .= " WHERE fan_id='$fan_id' ";
