@@ -146,7 +146,7 @@
     $love_list = array();
     $love_list_html = "";
     
-    $sql = "SELECT fan_loves.id AS id ";
+    $sql = "SELECT fan_loves.* AS id ";
     $sql .= " ,mydna_musicplayer_audio.name AS song_name ";
     $sql .= " ,mydna_musicplayer_audio.image AS song_image ";
     $sql .= " ,photos.name AS photo_name ";
@@ -166,8 +166,29 @@
     $i = 0;
     while( $love = mf($love_q) )
     {
-        $order_id = $love['id'];
+        $love_id = $love['id'];
         
+        $artist_name = "";
+        if( $love['song_name'] )
+        {
+            $item_name = $love['song_name'];
+            $image_url = "/artists/images/" . $love['song_image'];
+            $item_hash = "song_id=" . $love['music_id'];
+        }
+        elseif( $love['photo_name'] )
+        {
+            $item_name = $love['photo_name'];
+            $image_url = "/artists/photo/" . $love['photo_image'];
+            $item_hash = "photo_id=" . $love['photo_id'];
+        }
+        elseif( $love['video_name'] )
+        {
+            $item_name = $love['video_name'];
+            $image_url = "/artists/images/" . $love['video_image'];
+            $item_hash = "video_id=" . $love['video_id'];
+        }
+        $artist_url = "";
+        $item_url = "$artist_url/#$item_hash";
         
         $odd = "";
         if( $i % 2 == 1 )
@@ -175,6 +196,19 @@
         
         $html = "";
         $html .= "<div class='love_item$odd'>";
+        $html .= " <div class='image'>";
+        $html .= "  <img src='$image_url'/>";
+        $html .= " </div>";
+        $html .= " <div class='artist_name'>$artist_name</div>";
+        $html .= " <div class='item_name'>$item_name</div>";
+        $html .= " <div class='actions'>";
+        $html .= "  <a href='$item_url'>";
+        $html .= "   <div class='view_button'>";
+        $html .= "    <div class='icon'></div>";
+        $html .= "    <div class='label'>View</div>";
+        $html .= "   </div>";
+        $html .= "  </a>";
+        $html .= " </div>";
         $html .= "</div>";
         $love_list_html .= $html;
         

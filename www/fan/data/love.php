@@ -101,17 +101,29 @@
             $music_id = $item['music_id'];
             $photo_id = $item['photo_id'];
             $video_id = $item['video_id'];
-        
+            
             $values = array(
                             "fan_id" => $fan_id,
                             );
+        
             if( $music_id )
+            {
                 $values['music_id'] = $music_id;
+                $music = mf(mq("SELECT artistid FROM mydna_musicplayer_audio WHERE id='$music_id'"));
+                $values['artist_id'] = $music['artistid'];
+            }
             if( $photo_id )
+            {
                 $values['photo_id'] = $photo_id;
+                $music = mf(mq("SELECT artist_id FROM photos WHERE id='$photo_id'"));
+                $values['artist_id'] = $music['artist_id'];
+            }
             if( $video_id )
+            {
                 $values['video_id'] = $video_id;
-                            
+                $music = mf(mq("SELECT artistid FROM mydna_musicplayer_video WHERE id='$video_id'"));
+                $values['artist_id'] = $music['artistid'];
+            }
             mysql_insert('fan_loves',$values);
         }
     }
