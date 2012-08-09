@@ -153,10 +153,14 @@
     $sql .= " ,photos.image AS photo_image ";
     $sql .= " ,mydna_musicplayer_video.name AS video_name ";
     $sql .= " ,mydna_musicplayer_video.image AS video_image ";
+    $sql .= " ,mydna_musicplayer_video.image AS video_image ";
+    $sql .= " ,mydna_musicplayer.artist AS artist_name ";
+    $sql .= " ,mydna_musicplayer.url AS artist_url ";
     $sql .= " FROM fan_loves ";
     $sql .= " LEFT JOIN mydna_musicplayer_audio ON mydna_musicplayer_audio.id = fan_loves.music_id ";
     $sql .= " LEFT JOIN photos ON photos.id = fan_loves.photo_id ";
     $sql .= " LEFT JOIN mydna_musicplayer_video ON mydna_musicplayer_video.id = fan_loves.video_id ";
+    $sql .= " JOIN mydna_musicplayer ON mydna_musicplayer.id = fan_loves.artist_id ";
     $sql .= " WHERE fan_id='$fan_id' ";
     $sql .= " ORDER BY fan_loves.id ASC";
     $love_q = mq($sql);
@@ -187,8 +191,9 @@
             $image_url = "/artists/images/" . $love['video_image'];
             $item_hash = "video_id=" . $love['video_id'];
         }
-        $artist_url = "";
-        $item_url = "$artist_url/#$item_hash";
+        $artist_url = $love['artist_url'];
+        $site_url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
+        $item_url = "$site_url/#$item_hash";
         
         $odd = "";
         if( $i % 2 == 1 )
