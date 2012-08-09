@@ -1910,6 +1910,7 @@ body {
     margin-right: auto;
     margin-top: 200px;
     width: 460px;
+    background: white;
 }
 
 .popup .top_bar {
@@ -1964,6 +1965,7 @@ body {
     font-size: 12px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     border: 1px solid #cfcfcf;
+    border-radius: 2px;
 }
 .popup .submit_container {
     padding-top: 20px;
