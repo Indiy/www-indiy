@@ -146,19 +146,19 @@
     $love_list = array();
     $love_list_html = "";
     
-    $sql = "SELECT love_list AS id ";
+    $sql = "SELECT ";
     $sql .= " ,mydna_musicplayer_audio.name AS song_name ";
     $sql .= " ,mydna_musicplayer_audio.image AS song_image ";
     $sql .= " ,photos.name AS photo_name ";
     $sql .= " ,photos.image AS photo_image ";
     $sql .= " ,mydna_musicplayer_video.name AS video_name ";
     $sql .= " ,mydna_musicplayer_video.image AS video_image ";
-    $sql .= " FROM love_list ";
-    $sql .= " JOIN mydna_musicplayer_audio ON mydna_musicplayer_audio.id = love_list.song_id ";
-    $sql .= " JOIN photos ON photos.id = love_list.photo_id ";
-    $sql .= " JOIN mydna_musicplayer_video ON mydna_musicplayer_video.id = love_list.video_id ";
+    $sql .= " FROM fan_loves ";
+    $sql .= " LEFT JOIN mydna_musicplayer_audio ON mydna_musicplayer_audio.id = fan_loves.song_id ";
+    $sql .= " LEFT JOIN photos ON photos.id = fan_loves.photo_id ";
+    $sql .= " LEFT JOIN mydna_musicplayer_video ON mydna_musicplayer_video.id = fan_loves.video_id ";
     $sql .= " WHERE fan_id='$fan_id' ";
-    $sql .= " ORDER BY id ASC";
+    $sql .= " ORDER BY fan_loves.id ASC";
     $love_q = mq($sql);
     
     print "sql: $sql\n";
