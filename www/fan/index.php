@@ -146,7 +146,7 @@
     $love_list = array();
     $love_list_html = "";
     
-    $sql = "SELECT ";
+    $sql = "SELECT fan_loves.id AS id ";
     $sql .= " ,mydna_musicplayer_audio.name AS song_name ";
     $sql .= " ,mydna_musicplayer_audio.image AS song_image ";
     $sql .= " ,photos.name AS photo_name ";
