@@ -267,7 +267,7 @@ body {
     float: left;
     height: 25px;
     width: 25px;
-    background: #5395be url("/images/cart_icons.png") -192px -10px no-repeat;
+    background: #5395be url("/images/cart_icons.png") -167px -10px no-repeat;
 }
 #fan_home .downloads .file .download_button .label {
     float: left;
@@ -344,7 +344,7 @@ body {
     float: left;
     height: 25px;
     width: 25px;
-    background: #35b0af url("/images/cart_icons.png") -192px -10px no-repeat;
+    background: #35b0af url("/images/cart_icons.png") -36px -10px no-repeat;
 }
 #fan_home .orders .order_item .status_button .label {
     float: left;
@@ -414,7 +414,7 @@ body {
     float: left;
     height: 25px;
     width: 25px;
-    background: #d4ad55 url("/images/cart_icons.png") -192px -10px no-repeat;
+    background: #d4ad55 url("/images/cart_icons.png") -88px -10px no-repeat;
 }
 #fan_home .loved_art .love_item .actions .view_button .label {
     float: left;
