@@ -1884,8 +1884,100 @@ body {
     display: none;
 }
 
-.popup_wrapper {
-    display: none;
+#mask {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: #080808;
+    opacity: 0.65;
+    z-index: 99;
 }
 
+.popup_wrapper {
+    display: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 100;
+}
+.popup_wrapper .popup {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    width: 460px;
+}
 
+.popup .top_bar {
+    height: 50px;
+    background: url("/images/bg_login01.gif") repeat-x;
+}
+
+.popup .top_bar .title {
+    float: left;
+    padding-left: 20px;
+    padding-top: 17px;
+    color: #ddd;
+    font-size: 22px;
+    font-weight: normal;
+}
+.popup .top_bar .close {
+    float: right;
+    height: 100%;
+    width: 57px;
+    padding-left: 10px;
+    padding-right: 4px;
+    color: #51C3C4;
+    font-size: 12px;
+    background: url("/images/bg_close.gif") no-repeat;
+    cursor: pointer;
+    border: 0;
+}
+.popup .description {
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: #666;
+    font-size: 13px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+}
+.popup .center_input_container {
+    padding-left: 75px;
+    padding-right: 60px;
+}
+.popup .label {
+    color: #666;
+    font-size: 13px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+}
+.popup .center_input_container input {
+    width: 304px;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 2px;
+    height: 27px;
+    color: #222;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    border: 1px solid #cfcfcf;
+}
+.popup .submit_container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 30px;
+    text-align: center;
+}
+.popup .submit_container .submit {
+    width: 150px;
+    height: 40px;
+    color: #51C3C4;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: black;
+    text-transform: uppercase;
+    border: 0 none;
+    cursor: pointer;
+}
