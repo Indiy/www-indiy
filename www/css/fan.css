@@ -428,7 +428,8 @@ body {
     background-color: #a68338;
 }
 #fan_home .loved_art .right_header {
-    width: 42px;
+    margin-top: 12px;
+    width: 44px;
     height: 19px;
 }
 #fan_home .loved_art .right_header .left_arrow {
