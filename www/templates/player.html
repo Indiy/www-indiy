@@ -554,17 +554,17 @@
         </div>
     </div>
     
-    <div id='submit_email_popup' class='popup_wrapper'>
+    <div id='submit_email_popup' class='popup_wrapper' style='display: none;'>
         <div class="popup">
             <div class='top_bar'>
                 <div class='title'>Submit Your Email</div>
-                <button onclick='closePopup();'>CLOSE</button>
+                <div class='close' onclick='closePopup();'>CLOSE</div>
             </div>
             <div class='description'>
                 To download this file you have to log in or signup.  Signing up is FREE
                 and only takes a couple of seconds.
             </div>
-            <div class='input_container'>
+            <div class='center_input_container'>
                 <div class='label'>Email Address</div>
                 <input id='' type="text" name="email" value="" class='center_text' />
             </div>
@@ -573,6 +573,6 @@
             </div>
         </div>
     </div>
-    <div id='popup_mask'></div>
+    <div id='popup_mask' style='display: none;'></div>
 </body>
 </html>

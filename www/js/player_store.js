@@ -111,12 +111,12 @@ function storeCheckout()
 
 function clickFreeDownload(index)
 {
-    $('#mask').show();
+    $('#popup_mask').show();
     $('#submit_email_popup').show();
 }
 function closePopup()
 {
-    $('#mask').hide();
+    $('#popup_mask').hide();
     $('#submit_email_popup').hide();
 }
 
