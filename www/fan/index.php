@@ -165,14 +165,11 @@
     $sql .= " ORDER BY fan_loves.id ASC";
     $love_q = mq($sql);
     
-    print "sql: $sql\n";
-    
     $i = 0;
     while( $love = mf($love_q) )
     {
         $love_id = $love['id'];
         
-        $artist_name = "";
         if( $love['song_name'] )
         {
             $item_name = $love['song_name'];
@@ -191,6 +188,8 @@
             $image_url = "/artists/images/" . $love['video_image'];
             $item_hash = "video_id=" . $love['video_id'];
         }
+
+        $artist_name = $love['artist_name'];
         $artist_url = $love['artist_url'];
         $site_url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
         $item_url = "$site_url/#$item_hash";
