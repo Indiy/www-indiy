@@ -179,9 +179,9 @@ body {
 #fan_home .header .left {
     float: left;
     padding-left: 16px;
-    padding-top: 13px;
+    padding-top: 14px;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     text-transform: uppercase;
 }
