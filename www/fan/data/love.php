@@ -5,13 +5,15 @@
     header("Content-Type: application/json");
     header("Cache-Control: no-cache");
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
+    header("Access-Control-Allow-Origin: *");
     
     if( !isset($_SESSION['fan_id']) )
     {
-        $ret = array("logged_in" => FALSE,
-                     "error" => "not logged in"
-                     );
-        print json_encode($ret);
+        $output = array(
+                        "logged_in" => FALSE,
+                        "error" => "not logged in",
+                        );
+        send_output($output);
         die();
     }
     $fan_id = $_SESSION['fan_id'];
@@ -31,10 +33,10 @@
     if( $method == 'GET' )
     {
         $love_list =  get_love_list();
-        $ret = array("love_list" => $love_list,
-                     "success" => TRUE,
-                     );
-        print json_encode($ret);
+        $output = array("love_list" => $love_list,
+                        "success" => 1,
+                        );
+        send_output($output);
         die();
     }
     elseif( $method == 'POST' )
@@ -43,27 +45,35 @@
         {
             update_love_list($data['love_list']);
             $love_list =  get_love_list();
-            $ret = array("love_list" => $love_list,
-                         "success" => TRUE,
-                         );
-            print json_encode($ret);
+            $output = array(
+                            "love_list" => $love_list,
+                            "success" => 1,
+                            );
+            send_output($output);
             die();
         }
         else
         {
-            $ret = array("logged_in" => TRUE,
-                         "error" => "no love list"
-                         );
-            print json_encode($ret);
+            $output = array(
+                            "logged_in" => 1,
+                            "error" => "no love list",
+                            );
+            send_output($output);
             die();
         }
     }
     elseif( $method == 'DELETE' )
     {
-        $ret = array("logged_in" => TRUE,
-                     "error" => "not implemented"
-                     );
-        print json_encode($ret);
+        $output = array(
+                        "logged_in" => 1,
+                        "error" => "not implemented",
+                        );
+        send_output($output);
+        die();
+    }
+    else {
+        $output = array("error" => "unknown method");
+        send_output($output);
         die();
     }
 
@@ -100,7 +110,19 @@
         }
     }
     
-    $output = array("error" => $error,"url" => $url);
-    print json_encode($output);
+    function send_output($output)
+    {
+        $json = json_encode($output);
+        if( isset($_REQUEST['callback']) )
+        {
+            $callback = $_REQUEST['callback'];
+            echo "$callback($json);";
+        }
+        else
+        {
+            echo $json;
+        }
+    }
+    
 
 ?>
