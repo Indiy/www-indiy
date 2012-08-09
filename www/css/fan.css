@@ -176,7 +176,7 @@ body {
     height: 44px;
     font-size: 0;
 }
-#fan_home .header .left {
+#fan_home .header .left_header {
     float: left;
     padding-left: 16px;
     padding-top: 14px;
@@ -185,7 +185,7 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     text-transform: uppercase;
 }
-#fan_home .header .right {
+#fan_home .header .right_header {
     float: right;
     padding-right: 12px;
 }
@@ -427,11 +427,11 @@ body {
     text-align: center;
     background-color: #a68338;
 }
-#fan_home .loved_art .right {
+#fan_home .loved_art .right_header {
     width: 42px;
     height: 19px;
 }
-#fan_home .loved_art .right .left_arrow {
+#fan_home .loved_art .right_header .left_arrow {
     float: left;
     width: 19px;
     height: 19px;
@@ -440,10 +440,10 @@ body {
     background-color: white;
     cursor: pointer;
 }
-#fan_home .loved_art .right .left_arrow:hover {
+#fan_home .loved_art .right_header .left_arrow:hover {
     background-color: black;
 }
-#fan_home .loved_art .right .right_arrow {
+#fan_home .loved_art .right_header .right_arrow {
     float: left;
     width: 19px;
     height: 19px;
@@ -451,7 +451,7 @@ body {
     background-color: white;
     cursor: pointer;
 }
-#fan_home .loved_art .right .right_arrow:hover {
+#fan_home .loved_art .right_header .right_arrow:hover {
     background-color: black;
 }
 
