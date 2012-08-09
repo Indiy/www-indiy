@@ -194,7 +194,7 @@ function syncLoved()
         contentType: 'application/json',
         data: data,
         processData: false,
-        dataType: 'json',
+        dataType: 'jsonp',
         success: function(data) 
         {
             g_totalPageViews = data['total_views'];
