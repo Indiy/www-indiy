@@ -13,7 +13,7 @@
         <script src="/js/string.utils.js" type="text/javascript"></script>
         
         <script src="/js/fan_login_signup.js" type="text/javascript"></script>
-        <script src="/js/order.js" type="text/javascript"></script>
+        <script src="/js/fan.js" type="text/javascript"></script>
         
         <script type="text/javascript">
             var g_trueSiteUrl = "<?=trueSiteUrl();?>";
@@ -56,11 +56,11 @@
                         <div class='header'>
                             <div class='left_header'>Loved Art</div>
                             <div class='right_header'>
-                                <div class='left_arrow'></div>
-                                <div class='right_arrow'></div>
+                                <div class='left_arrow' onclick='loveScrollUp();'></div>
+                                <div class='right_arrow' onclick='loveScrollDown();'></div>
                             </div>
                         </div>
-                        <div class='love_list'>
+                        <div id='love_list' class='love_list'>
                             <?=$love_list_html;?>
                         </div>
                     </div>

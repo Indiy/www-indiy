@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = unsupported_browser.php; sourceTree = "<group>"; };
+		2D25C38715D43BCE00132306 /* fan.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = fan.js; sourceTree = "<group>"; };
 		2D34E22414A05F05004473F9 /* utils.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = utils.php; sourceTree = "<group>"; };
 		2D34E22714A06AC9004473F9 /* twitter_landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twitter_landing.php; sourceTree = "<group>"; };
 		2D34E22814A173A9004473F9 /* landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = landing.php; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.php; };
@@ -3163,6 +3164,7 @@
 				2D64689215ACE95200B9AD11 /* jquery.scroll.js */,
 				2D64689715ADDA3300B9AD11 /* mad.scrollbar.js */,
 				2DE3F8A715B1F4ED00B5D439 /* mad.swipe.js */,
+				2D25C38715D43BCE00132306 /* fan.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
