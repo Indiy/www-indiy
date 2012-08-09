@@ -1884,7 +1884,8 @@ body {
     display: none;
 }
 
-#mask {
+#popup_mask {
+    display: none;
     position: fixed;
     left: 0px;
     right: 0px;
@@ -1896,7 +1897,8 @@ body {
 }
 
 .popup_wrapper {
-    display: fixed;
+    display: none;
+    position: fixed;
     top: 0px;
     bottom: 0px;
     right: 0px;
