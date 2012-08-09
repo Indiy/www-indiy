@@ -189,19 +189,15 @@ function syncLoved()
     var data = JSON.stringify(dict);
     jQuery.ajax(
     {
-        type: 'POST',
-        url: g_fanBaseUrl + "/fan/data/love.php",
+        type: 'GET',
+        url: g_fanBaseUrl + "/fan/data/love.php?method=POST",
         contentType: 'application/json',
         data: data,
         processData: false,
         dataType: 'jsonp',
         success: function(data) 
         {
-            g_totalPageViews = data['total_views'];
-            var element_views = data['element_views'];
-            g_videoList[index].views = element_views;
-            playerUpdateTotalViewCount();
-            playerTrackInfo(false,element_views);
+                
         },
         error: function()
         {
