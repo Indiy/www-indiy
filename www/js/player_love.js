@@ -197,11 +197,11 @@ function syncLoved()
         dataType: 'jsonp',
         success: function(data) 
         {
-                
+            console.log(data);
         },
         error: function()
         {
-            //alert('Failed to get listens!');
+            console.log("error love transmit");
         }
     });
 }
