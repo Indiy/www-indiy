@@ -83,7 +83,7 @@
         global $fan_id;
         
         $love_list = array();
-        $love_q = mf("SELECT * FROM fan_loves WHERE fan_id = '$fan_id'");
+        $love_q = mq("SELECT * FROM fan_loves WHERE fan_id = '$fan_id'");
         while( $item = mf($love_q) )
         {
             $love_list[] = $item;
