@@ -427,4 +427,31 @@ body {
     text-align: center;
     background-color: #a68338;
 }
+#fan_home .loved_art .right {
+    width: 42px;
+    height: 19px;
+}
+#fan_home .loved_art .right .left_arrow {
+    float: left;
+    width: 19px;
+    height: 19px;
+    margin-right: 5px;
+    border-radius: 19px;
+    background-color: white;
+    cursor: pointer;
+}
+#fan_home .loved_art .right .left_arrow:hover {
+    background-color: black;
+}
+#fan_home .loved_art .right .right_arrow {
+    float: left;
+    width: 19px;
+    height: 19px;
+    border-radius: 19px;
+    background-color: white;
+    cursor: pointer;
+}
+#fan_home .loved_art .right .right_arrow:hover {
+    background-color: black;
+}
 
