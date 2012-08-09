@@ -358,4 +358,44 @@ body {
     background-color: #148788;
 }
 
-
+#fan_home .loved_art .love_list {
+    height: 540px;
+    overflow: hidden;
+}
+#fan_home .loved_art .love_item {
+    height: 268px;
+    background: white;
+    border-bottom: 1px solid #d6d6d6;
+}
+#fan_home .loved_art .love_item.odd {
+    background: #f2f2f2;
+}
+#fan_home .loved_art .love_item .image {
+    width: 206px;
+    height: 142px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+#fan_home .loved_art .love_item .image img {
+    padding: 5px;
+    height: 196px;
+    width: 132px;
+    border: 1px solid #d2d1cf;
+}
+#fan_home .loved_art .love_item .artist_name {
+    padding-top: 20px;
+    padding-left: 22px;
+    height: 18px;
+    color: black;
+    font-size: 16px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+}
+#fan_home .loved_art .love_item .item_name {
+    padding-top: 2px;
+    padding-left: 22px;
+    height: 36px;
+    color: #666;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+}
