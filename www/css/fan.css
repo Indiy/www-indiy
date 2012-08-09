@@ -399,3 +399,31 @@ body {
     font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
 }
+#fan_home .loved_art .love_item .actions {
+    padding-left: 22px;
+    height: 25px;
+}
+#fan_home .loved_art .love_item .actions .view_button {
+    float: left;
+    height: 25px;
+    width: 100px;
+    cursor: pointer;
+}
+#fan_home .loved_art .love_item .actions .view_button .icon {
+    float: left;
+    height: 25px;
+    width: 25px;
+    background: #d4ad55;
+}
+#fan_home .loved_art .love_item .actions .view_button .label {
+    float: left;
+    padding-top: 7px;
+    height: 18px;
+    width: 75px;
+    color: white;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-align: center;
+    background-color: #a68338;
+}
+
