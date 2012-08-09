@@ -379,8 +379,8 @@ body {
 }
 #fan_home .loved_art .love_item .image img {
     padding: 5px;
-    height: 196px;
-    width: 132px;
+    width: 196px;
+    height: 132px;
     border: 1px solid #d2d1cf;
 }
 #fan_home .loved_art .love_item .artist_name {
