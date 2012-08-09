@@ -58,6 +58,7 @@
             $output = array(
                             "logged_in" => 1,
                             "error" => "no love list",
+                            "detail" => $data,
                             );
             send_output($output);
             die();
