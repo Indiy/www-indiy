@@ -1924,6 +1924,7 @@ body {
     padding-top: 17px;
     color: #ddd;
     font-size: 22px;
+    font-family: "Teletex Light",sans-serif;
     font-weight: normal;
 }
 .popup .top_bar .close {
@@ -1934,6 +1935,7 @@ body {
     padding-right: 4px;
     color: #51C3C4;
     font-size: 12px;
+    font-family: sans-serif;
     background: url("/images/bg_close.gif") no-repeat;
     cursor: pointer;
     border: 0;
@@ -1944,7 +1946,7 @@ body {
     padding-right: 24px;
     color: #666;
     font-size: 13px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-family: sans-serif;
 }
 .popup .center_input_container {
     padding-left: 75px;
@@ -1953,7 +1955,7 @@ body {
 .popup .label {
     color: #666;
     font-size: 13px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-family: sans-serif;
 }
 .popup .center_input_container input {
     width: 304px;
@@ -1963,7 +1965,7 @@ body {
     height: 27px;
     color: #222;
     font-size: 12px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-family: sans-serif;
     border: 1px solid #cfcfcf;
     border-radius: 2px;
 }
@@ -1978,7 +1980,7 @@ body {
     height: 40px;
     color: #51C3C4;
     font-size: 14px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-family: sans-serif;
     text-decoration: none;
     background-color: black;
     text-transform: uppercase;
