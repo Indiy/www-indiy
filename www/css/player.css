@@ -1926,15 +1926,16 @@ body {
     font-size: 22px;
     font-family: "Teletex Light",sans-serif;
     font-weight: normal;
+    text-transform: uppercase;
 }
 .popup .top_bar .close {
     float: right;
     height: 100%;
-    width: 57px;
-    padding-left: 10px;
-    padding-right: 4px;
+    width: 45px;
+    padding-left: 12px;
+    padding-top: 17px;
     color: #51C3C4;
-    font-size: 12px;
+    font-size: 11px;
     font-family: sans-serif;
     background: url("/images/bg_close.gif") no-repeat;
     cursor: pointer;
@@ -1944,6 +1945,7 @@ body {
     padding-top: 20px;
     padding-left: 24px;
     padding-right: 24px;
+    padding-bottom: 20px;
     color: #666;
     font-size: 13px;
     font-family: sans-serif;
@@ -1953,6 +1955,7 @@ body {
     padding-right: 60px;
 }
 .popup .label {
+    padding-bottom: 4px;
     color: #666;
     font-size: 13px;
     font-family: sans-serif;
@@ -1967,7 +1970,7 @@ body {
     font-size: 12px;
     font-family: sans-serif;
     border: 1px solid #cfcfcf;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 .popup .submit_container {
     padding-top: 20px;
@@ -1976,10 +1979,11 @@ body {
     text-align: center;
 }
 .popup .submit_container .submit {
-    width: 150px;
-    height: 40px;
+    height: 32px;
+    padding-left: 30px;
+    padding-right: 30px;
     color: #51C3C4;
-    font-size: 14px;
+    font-size: 12px;
     font-family: sans-serif;
     text-decoration: none;
     background-color: black;
