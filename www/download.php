@@ -21,7 +21,7 @@
 	$music = mf(mq("select * from `[p]musicplayer_audio` where `artistid`='{$artist}' and `id`='{$getid}'"));
 	$filename = 'artists/audio/'.$music["audio"];
     
-    $download_filename = $music["upload_file_name"];
+    $download_filename = $music["upload_audio_filename"];
     if( !$download_filename )
         $download_filename = $music["audio"];
     
