@@ -10,10 +10,9 @@ if [ -z "$COMMENT" ]
   exit -1
 fi
 
-
 pushd ~/sandbox/MAD >/dev/null
 
 echo "Tagging with tag: $TAG"
-echo git tag -a $TAG -m "$COMMENT"
-echo git push --tags
+git tag -a $TAG -m "$COMMENT"
+git push --tags
 echo "Tagged and pushed!"
