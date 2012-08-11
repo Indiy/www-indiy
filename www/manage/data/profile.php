@@ -86,13 +86,18 @@
                         "artist_type" => $artist_type,
                         );
 
-        $extra
-        $start_media_type = $_POST["start_media_type"];
-        if( $start_media_type )
+        $extra_modified = FALSE;
+        if( isset($_POST["start_media_type"]) )
         {
-            $extra
+            $extra['start_media_type'] = $_POST["start_media_type"];
+            $extra_modified = TRUE;
         }
-
+        
+        if( $extra_modified )
+        {
+            $extra_json = json_encode($extra);
+            $values['extra_json'] = $extra_json;
+        }
 		
         mysql_update("mydna_musicplayer",$values,"id",$artist_id);
 		
