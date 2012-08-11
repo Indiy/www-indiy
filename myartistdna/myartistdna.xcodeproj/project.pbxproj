@@ -970,7 +970,7 @@
 		2DF4728B1440B77F005538C7 /* work.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = work.jpg; sourceTree = "<group>"; };
 		2DF4728C1440B77F005538C7 /* www-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "www-icon.png"; sourceTree = "<group>"; };
 		2DF4728D1440B77F005538C7 /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
-		2DF472911440B77F005538C7 /* iphone.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = iphone.css; sourceTree = "<group>"; };
+		2DF472911440B77F005538C7 /* iphone.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = iphone.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DF472921440B77F005538C7 /* iphone.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = iphone.php; sourceTree = "<group>"; };
 		2DF472961440B77F005538C7 /* dynamic_content.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = dynamic_content.html; sourceTree = "<group>"; };
 		2DF472971440B77F005538C7 /* jquery.easing.1.3.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.easing.1.3.js; sourceTree = "<group>"; };
