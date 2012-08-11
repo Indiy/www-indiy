@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATE=$(date +"%Y%m%d_%H%M%S")
+DATE=$(date -u +"%Y%m%d_%H%M%S")
 TAG="MASTER_TAG_$DATE"
 COMMENT="$@"
 
