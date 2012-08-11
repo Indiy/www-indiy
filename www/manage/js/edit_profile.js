@@ -43,6 +43,10 @@ function showEditProfile()
         $('#edit_profile #custom_domain_container').hide();
     }
     $('#edit_profile #user_tags').val(g_artistData.tags);
+    if( g_artistData.start_media_type )
+    {
+        $('#edit_profile #start_media_type').val(g_artistData.start_media_type);
+    }
 
     showPopup('#edit_profile');
     return false;
@@ -99,6 +103,7 @@ function onEditProfileSubmit()
         var artist_location = $('#edit_profile #artist_location').val();
         var artist_type = $('#edit_profile #artist_type option:selected').val();
         var artist_gender = $('#edit_profile input[@name=artist_gender]:checked').val();
+        var start_media_type = $('#edit_profile #start_media_type').val();
         
         form_data.append('artistid',g_artistId);
         form_data.append('artist',artist);
@@ -109,6 +114,7 @@ function onEditProfileSubmit()
         form_data.append('artist_location',artist_location);
         form_data.append('artist_type',artist_type);
         form_data.append('artist_gender',artist_gender);
+        form_data.append('start_media_type',start_media_type);
         
         var logo = $('#edit_profile #logo')[0];
         if( logo.files && logo.files.length > 0 )

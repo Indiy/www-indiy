@@ -32,6 +32,12 @@ $artist_type_list = array(
 "Writer",
 );
 
+$start_type_list = array(
+"MUSIC",
+"PHOTO",
+"VIDEO",
+):
+
 ?>
 
 <div id="edit_profile" class="popup_wrapper">
@@ -84,6 +90,19 @@ $artist_type_list = array(
                 <input type="radio" name="artist_gender" value="female" class="radio" /> Female
             </div>
         </div>
+
+        <div class='input_container'>
+            <div class='left_label'>Default Media</div>
+            <select id='start_media_type' name="start_media_type" class='right_drop'>
+                <?php
+                    foreach( $start_type_list as $type )
+                    {
+                        echo "<option value='$type'>$type</option>\n";
+                    }
+                    ?>
+            </select>
+        </div>
+
 
         <div class='input_container'>
             <div class='left_label'>Artist Type</div>
