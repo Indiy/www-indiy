@@ -137,6 +137,8 @@
 		2D6E7A4515CE326A004C8D3E /* login.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = login.php; sourceTree = "<group>"; };
 		2D747C5215D635E700128EEC /* sync_db.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = sync_db.sh; path = ../utils/sync_db.sh; sourceTree = "<group>"; };
 		2D747C5415D6438500128EEC /* backup_schema_diff.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = backup_schema_diff.sh; path = ../utils/backup_schema_diff.sh; sourceTree = "<group>"; };
+		2D747C5515D6489D00128EEC /* update_madcom.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = update_madcom.sh; path = ../utils/update_madcom.sh; sourceTree = "<group>"; };
+		2D747C5615D64B9800128EEC /* tag_master.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = tag_master.sh; path = ../utils/tag_master.sh; sourceTree = "<group>"; };
 		2D7849EE15CE37EA00A89620 /* fan_signup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_signup.php; sourceTree = "<group>"; };
 		2D7849F015CED04B00A89620 /* role_choice.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = role_choice.php; sourceTree = "<group>"; };
 		2D7849F115CEEA0600A89620 /* logout.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = logout.php; sourceTree = "<group>"; };
@@ -1744,6 +1746,8 @@
 			children = (
 				2D747C5415D6438500128EEC /* backup_schema_diff.sh */,
 				2D747C5215D635E700128EEC /* sync_db.sh */,
+				2D747C5515D6489D00128EEC /* update_madcom.sh */,
+				2D747C5615D64B9800128EEC /* tag_master.sh */,
 			);
 			name = utils;
 			sourceTree = "<group>";
