@@ -14,7 +14,7 @@ COMMENT="Production Update from tag $INPUT_TAG"
 
 pushd ~/sandbox/MAD >/dev/null
 git pull
-git checkout tags/$TAG
+git checkout tags/$INPUT_TAG
 RET=$?
 echo "result: $?"
 if [ $RET -ne 0 ]
