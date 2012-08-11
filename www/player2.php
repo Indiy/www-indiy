@@ -286,6 +286,16 @@
         
     $signup_url = trueSiteUrl() . "/signup.php";
     
+    $fan_email = "";
+    if( strlen($_COOKIE['FAN_EMAIL']) > 0 )
+    {
+        $fan_email = $_COOKIE['FAN_EMAIL'];
+    }
+    elseif( strlen($_COOKIE['PAGE_VIEWER_EMAIL']) > 0 )
+    {
+        $fan_email = $_COOKIE['PAGE_VIEWER_EMAIL'];
+    }
+    
     function build_scrollbar($style='')
     {
         

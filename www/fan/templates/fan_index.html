@@ -13,7 +13,7 @@
         <script src="/js/string.utils.js" type="text/javascript"></script>
         
         <script src="/js/fan_login_signup.js" type="text/javascript"></script>
-        <script src="/js/order.js" type="text/javascript"></script>
+        <script src="/js/fan.js" type="text/javascript"></script>
         
         <script type="text/javascript">
             var g_trueSiteUrl = "<?=trueSiteUrl();?>";
@@ -36,7 +36,7 @@
                 <div class='left'>
                     <div class='downloads'>
                         <div class='header'>
-                            <div class='left'>Downloads</div>
+                            <div class='left_header'>Downloads</div>
                         </div>
                         <div class='file_list'>
                             <?=$fan_files_html;?>
@@ -44,7 +44,7 @@
                     </div>
                     <div class='orders'>
                         <div class='header'>
-                            <div class='left'>My Orders</div>
+                            <div class='left_header'>My Orders</div>
                         </div>
                         <div class='order_list'>
                             <?=$order_list_html;?>
@@ -54,13 +54,13 @@
                 <div class='right'>
                     <div class='loved_art'>
                         <div class='header'>
-                            <div class='left'>Loved Art</div>
-                            <div class='right'>
-                                <div class='left_arrow'></div>
-                                <div class='right_arrow'></div>
+                            <div class='left_header'>Loved Art</div>
+                            <div class='right_header'>
+                                <div class='left_arrow' onclick='loveScrollLeft();'></div>
+                                <div class='right_arrow' onclick='loveScrollRight();'></div>
                             </div>
                         </div>
-                        <div class='love_list'>
+                        <div id='love_list' class='love_list'>
                             <?=$love_list_html;?>
                         </div>
                     </div>

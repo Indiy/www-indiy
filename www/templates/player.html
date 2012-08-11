@@ -43,6 +43,8 @@
         var g_artistName = "<?=$artist_name;?>";
         var g_artistId = <?=$artist_id;?>;
         var g_artistUrl = "<?=$artist_url;?>";
+        
+        var g_fanEmail = "<?=$fan_email;?>";
     </script>
 </head>
 
@@ -558,15 +560,15 @@
         <div class="popup">
             <div class='top_bar'>
                 <div class='title'>Submit Your Email</div>
-                <button onclick='closePopup();'>CLOSE</button>
+                <div class='close' onclick='closePopup();'>CLOSE</div>
             </div>
             <div class='description'>
                 To download this file you have to log in or signup.  Signing up is FREE
                 and only takes a couple of seconds.
             </div>
-            <div class='input_container'>
+            <div class='center_input_container'>
                 <div class='label'>Email Address</div>
-                <input id='' type="text" name="email" value="" class='center_text' />
+                <input id='email' type="text" name="email" value="" class='center_text' />
             </div>
             <div class='submit_container'>
                 <button class="submit" onclick='onSubmitEmail();'>Submit</button>

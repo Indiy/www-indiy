@@ -281,4 +281,49 @@ function musicUpdateListens(song_id,index)
     return true;
 }
 
+var g_freeDownloadIndex = false;
+function clickFreeDownload(index)
+{
+    g_freeDownloadIndex = index;
+    if( g_fanEmail )
+    {
+        doFreeDownload();
+    }
+    else
+    {
+        $('#submit_email_popup #email').val("");
+        $('#popup_mask').show();
+        $('#submit_email_popup').show();
+    }
+}
+function closePopup()
+{
+    $('#popup_mask').hide();
+    $('#submit_email_popup').hide();
+}
+
+function onSubmitEmail()
+{
+    var email = $('#submit_email_popup #email').val();
+    if( email.length > 0 && email.match(EMAIL_REGEX) )
+    {
+        closePopup();
+        g_fanEmail = email;
+        doFreeDownload();
+    }
+    else
+    {
+        window.alert("Please enter a valid email address.");
+    }
+}
+
+function doFreeDownload()
+{
+    var song = g_musicList[g_freeDownloadIndex];
+    g_freeDownloadIndex = false;
+    
+    var email = escape(g_fanEmail);
+    var url = "/download.php?artist={0}&id={1}&email={2}".format(g_artistId,song.id,email);
+    window.location.href = url;
+}
 

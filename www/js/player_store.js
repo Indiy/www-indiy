@@ -109,14 +109,3 @@ function storeCheckout()
     storeViewCart();
 }
 
-function clickFreeDownload(index)
-{
-    $('#mask').show();
-    $('#submit_email_popup').show();
-}
-function closePopup()
-{
-    $('#mask').hide();
-    $('#submit_email_popup').hide();
-}
-
