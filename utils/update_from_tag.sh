@@ -16,13 +16,12 @@ pushd ~/sandbox/MAD >/dev/null
 git pull
 git checkout tags/$INPUT_TAG
 RET=$?
-echo "result: $RET"
 if [ $RET -ne 0 ]
  then
   echo "Failed to checkout tags/$INPUT_TAG"
+  echo "Please check your tag name."
 else
   echo "Checked out tag: tags/$INPUT_TAG"
-  exit
   git tag -a $TAG -m "$COMMENT"
   git push --tags
   echo "Tagged, updating..."
