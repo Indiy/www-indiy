@@ -9,6 +9,23 @@
         die();
     }
     
+
+    $IPHONE = FALSE;
+    $IOS = FALSE;
+    $IPAD = FALSE;
+    if( strpos($_SERVER['HTTP_USER_AGENT'],"iPhone") !== FALSE
+       || strpos($_SERVER['HTTP_USER_AGENT'],"Googlebot-Mobile") !== FALSE
+       )
+    {
+        $IPHONE = TRUE;
+        $IOS = TRUE;
+    }
+    else if( strpos($_SERVER['HTTP_USER_AGENT'],"iPad") )
+    {
+        $IOS = TRUE;
+        $IPAD = TRUE;
+    }
+    
     $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE url='$artist_url' LIMIT 1"));
     if( $artist_data == FALSE )
     {
