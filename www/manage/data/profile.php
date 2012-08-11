@@ -30,8 +30,10 @@
     {
         $artist_id = $_REQUEST['artistid'];
         
-        $row = mf(mq("SELECT id,logo,password FROM mydna_musicplayer WHERE id='$artist_id'"));
+        $row = mf(mq("SELECT id,logo,password,extra_json FROM mydna_musicplayer WHERE id='$artist_id'"));
         $old_logo = $row["logo"];
+        
+        $extra = json_decode($row['extra_json'],TRUE);
 		
 		$artist = my($_POST["artist"]);
 		$email = $_POST["email"];
@@ -66,6 +68,7 @@
         {
 			$logo = $old_logo;
 		}
+        
 		
         $values = array("artist" => $artist,
                         "email" => $email,
@@ -82,6 +85,14 @@
                         "tags" => $tags,
                         "artist_type" => $artist_type,
                         );
+
+        $extra
+        $start_media_type = $_POST["start_media_type"];
+        if( $start_media_type )
+        {
+            $extra
+        }
+
 		
         mysql_update("mydna_musicplayer",$values,"id",$artist_id);
 		

@@ -993,6 +993,8 @@
     {
         $row = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$id'"));
         
+        $extra_json = $row['extra_json'];
+        
         if( $row['oauth_token'] && $row['oauth_secret'] && $row['twitter'] )
             $twitter = 'true';
         else
@@ -1007,13 +1009,18 @@
         if( $row['logo'] )
             $row['logo_url'] = $logo_path;
         else
-            $row['logo_url'] = 'images/NoPhoto.jpg';
+            $row['logo_url'] = '/manage/images/NoPhoto.jpg';
         
         $url = $row['url'];
         $row['player_url'] = str_replace("http://www.","http://$url.",trueSiteUrl());
         
         array_walk($row,cleanup_row_element);
         
+        $extra = json_decode($extra_json,TRUE);
+        if( $extra )
+        {
+            $row = array_merge($row,$extra);
+        }
         return $row;
     }
     
