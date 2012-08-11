@@ -79,14 +79,26 @@ function generalOnReady()
         var photo_id = anchor_map['photo_id'];
         photoChangeId(photo_id);
     }
+    else if( g_startMediaType == 'MUSIC' )
+    {
+        musicChange(0);
+    }
+    else if( g_startMediaType == 'PHOTO' )
+    {
+        photoChangeIndex(0);
+    }
+    else if( g_startMediaType == 'VIDEO' )
+    {
+        videoPlayIndex(0);
+    }
     else
     {
         if( g_musicList.length > 0 )
             musicChange(0);
-        else if( g_videoList.length > 0 )
-            videoPlayIndex(0);
         else if( g_photoList.length > 0 )
             photoChangeIndex(0);
+        else if( g_videoList.length > 0 )
+            videoPlayIndex(0);
     }
     
     if( g_touchDevice )

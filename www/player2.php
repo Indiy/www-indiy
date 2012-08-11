@@ -28,6 +28,8 @@
         $artist_facebook_page = $artist_data['fb_page_url'];
     
     $artist_url = "http://" . $_SERVER["HTTP_HOST"];
+    
+    $extra = json_decode($artist_data['extra_json'],TRUE);
 
     $product_list = array();
     $product_list_html = "";
@@ -295,6 +297,8 @@
     {
         $fan_email = $_COOKIE['PAGE_VIEWER_EMAIL'];
     }
+    
+    $start_media_type = $extra['start_media_type'];
     
     function build_scrollbar($style='')
     {
