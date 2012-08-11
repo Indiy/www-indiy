@@ -16,7 +16,7 @@ pushd ~/sandbox/MAD >/dev/null
 git pull
 git checkout tags/$INPUT_TAG
 RET=$?
-echo "result: $?"
+echo "result: $RET"
 if [ $RET -ne 0 ]
  then
   echo "Failed to checkout tags/$INPUT_TAG"
