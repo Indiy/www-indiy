@@ -477,6 +477,66 @@ body {
     height: 531px;
     background-color: #77828a;
 }
+#fan_login .whats_new .left_arrow {
+    position: absolute;
+    top: 200px;
+    left: 11px;
+    height: 30px;
+    width: 30px;
+    background-color: #3e6e7c;
+    border-radius: 30px;
+}
+#fan_login .whats_new .right_arrow {
+    position: absolute;
+    top: 200px;
+    left: 287px;
+    height: 30px;
+    width: 30px;
+    background-color: #50bbba;
+    border-radius: 30px;
+}
+#fan_login .whats_new .title {
+    position: absolute;
+    top: 169px;
+    left: 40px;
+    right: 40px;
+    color: white;
+    font-size: 32px;
+    font-family: 'Teletex Light',sans-serif;
+    text-align: center;
+}
+#fan_login .whats_new .detail {
+    position: absolute;
+    top: 169px;
+    left: 50px;
+    right: 50px;
+    color: white;
+    font-size: 18px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-align: left;
+}
+#fan_login .whats_new .dots {
+    position: absolute;
+    top: 372px;
+    left: 0px;
+    right: 0px;
+    height: 11px;
+    text-align: center;
+    font-size: 0;
+}
+#fan_login .whats_new .dots .dot {
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    border-radius: 11px;
+    background-color: #2a6b78;
+}
+#fan_login .whats_new .dots .dot.active {
+    background-color: #34e5f9;
+}
+#fan_login .whats_new .dots .dot:hover {
+    background-color: #34e5f9;
+}
 #fan_login .editor_pick {
     position: absolute;
     top: 0px;
