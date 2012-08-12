@@ -567,7 +567,7 @@ body {
 #fan_login .most_loved .title {
     position: absolute;
     top: 83px;
-    left: 0px;
+    left: 14px;
     right: 0px;
     color: white;
     font-size: 32px;
@@ -577,7 +577,7 @@ body {
 #fan_login .most_loved .media_title {
     position: absolute;
     top: 125px;
-    left: 0px;
+    left: 14px;
     right: 0px;
     color: white;
     font-size: 26px;
@@ -587,7 +587,7 @@ body {
 #fan_login .most_loved .media_artist {
     position: absolute;
     top: 153px;
-    left: 0px;
+    left: 14px;
     right: 0px;
     color: white;
     font-size: 21px;
