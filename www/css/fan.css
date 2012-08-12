@@ -552,7 +552,7 @@ body {
 #fan_login .play_song {
     position: absolute;
     top: 662px;
-    right: 625px;
+    left: 182px;
     width: 443px;
     height: 300px;
     background-color: #73e3f3;
