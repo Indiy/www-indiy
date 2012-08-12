@@ -507,7 +507,7 @@ body {
 }
 #fan_login .whats_new .detail {
     position: absolute;
-    top: 169px;
+    top: 211px;
     left: 50px;
     right: 50px;
     color: white;
@@ -526,6 +526,8 @@ body {
 }
 #fan_login .whats_new .dots .dot {
     display: inline-block;
+    margin-left: 2px;
+    margin-right: 3px;
     height: 11px;
     width: 11px;
     border-radius: 11px;
