@@ -502,7 +502,7 @@ body {
     right: 40px;
     color: white;
     font-size: 32px;
-    font-family: 'Teletex Light',sans-serif;
+    font-family: "Teletex Light",sans-serif;
     text-align: center;
 }
 #fan_login .whats_new .detail {
@@ -555,7 +555,51 @@ body {
     height: 352px;
     background-color: #9a9791;
 }
-#fan_login .twitter_top_center {
+#fan_login .most_loved .red_circle {
+    position: absolute;
+    top: 30px;
+    left: 68px;
+    width: 190px;
+    height: 190px;
+    border-radius: 190px;
+    background-color: rbga(0.5,0,0,0.5);
+}
+#fan_login .most_loved .title {
+    position: absolute;
+    top: 83px;
+    left: 0px;
+    right: 0px;
+    font-size: 32px;
+    font-family: "Teletex Light",sans-serif;
+    text-align: center;
+}
+#fan_login .most_loved .media_title {
+    position: absolute;
+    top: 125px;
+    left: 0px;
+    right: 0px;
+    font-size: 26px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-align: center;
+}
+#fan_login .most_loved .media_artist {
+    position: absolute;
+    top: 153px;
+    left: 0px;
+    right: 0px;
+    font-size: 21px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-align: center;
+}
+#fan_login .most_loved .love_icon {
+    position: absolute;
+    top: 275px;
+    right: 14px;
+    height: 34px;
+    width: 41px;
+    background-color: #d31223;
+}
+#fan_login .twitter_center {
     position: absolute;
     top: 178px;
     left: 326px;
