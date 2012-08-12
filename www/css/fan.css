@@ -494,7 +494,7 @@ body {
     background-color: #9a9791;
 }
 #fan_login .twitter_top_center {
-    position absolute;
+    position: absolute;
     top: 178px;
     left: 326px;
     width: 299px;
@@ -519,10 +519,10 @@ body {
 }
 #fan_login .twitter_left {
     position: absolute;
-    top: 531px;
+    top: 527px;
     left: 0px;
     width: 307px;
-    height: 349px;
+    height: 353px;
     background-color: #2c2c2c;
 }
 #fan_login .center_pict {
@@ -543,10 +543,10 @@ body {
 }
 #fan_login .events {
     position: absolute;
-    top: 702px;
+    top: 703px;
     left: 625px;
     width: 312px;
-    height: 353px;
+    height: 354px;
     background-color: #b70009;
 }
 #fan_login .play_song {
@@ -570,7 +570,7 @@ body {
     top: 880px;
     left: 0px;
     width: 290px;
-    height: 178px;
+    height: 177px;
     background-color: #5d578b;
 }
 #fan_login .mad_fm {
@@ -578,6 +578,6 @@ body {
     top: 880px;
     left: 302px;
     width: 323px;
-    height: 178px;
+    height: 177px;
     background-color: #246667;
 }
