@@ -5,13 +5,15 @@
         <!--[if lt IE 9]>
          <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
          <![endif]-->
-        <link href="/css/fan_login_signup.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/fan.css" rel="stylesheet" type="text/css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
         
         <script src="/js/jquery.jplayer.js" type="text/javascript"></script>
         <script src="/js/string.utils.js" type="text/javascript"></script>
+        
         <script src="/js/fan_login_signup.js" type="text/javascript"></script>
+        <script src="/js/fan.js" type="text/javascript"></script>
         
         <script type="text/javascript">
             var g_trueSiteUrl = "<?=trueSiteUrl();?>";
@@ -19,31 +21,100 @@
     </head>
     
     <body>
-        <div id='login_signup'>
-            <div class='title'>MyArtistDNA Fan Login</div>
-            <div class='email'>
-                <div class='label'>Email:</div>
-                <input id='login_email'/>
+        <div id='body_wrap'><div id='main_content'>
+            
+            <div id='header'>
+                <div class='top_bar'></div>
+                <div class='mad_bar'>
+                    <div class='logo'></div>
+                </div>
             </div>
-            <div class='password'>
-                <div class='label'>Password: </div>
-                <input type='password' id='login_password'/>
+            
+            <div id='fan_login'>
+                <div class='whats_new'>
+                </div>
+                <div class='editor_pick'>
+                </div>
+                <div class='most_loved'>
+                </div>
+                <div class='twitter_top_center'>
+                </div>
+                <div class='tumblr'>
+                </div>
+                <div class='store_item'>
+                </div>
+                <div class='twitter_left'>
+                </div>
+                <div class='center_pict'>
+                </div>
+                <div class='twitter_right'>
+                </div>
+                <div class='events'>
+                </div>
+                <div class='play_song'>
+                </div>
+                <div class='play_song2'>
+                </div>
+                <div class='mad_tv'>
+                </div>
+                <div class='mad_fm'>
+                </div>
             </div>
-            <div class='submit'>
-                <button onclick='fanLogin();'>Login</button>
-            </div>
-            <div class='title'>Fan Register</div>
-            <div class='email'>
-                <div class='label'>Email:</div>
-                <input id='register_email'/>
-            </div>
-            <div class='submit'>
-                <button onclick='fanSendRegToken();'>Register</button>
-            </div>
-            <div class='register_token_sent'>
-                A registeration email has been sent.  Click the link to register
-                your account.
-            </div>
+        </div></div>
+        
+        <div id="footer">
+            <div class='pad'></div>
+            <footer>
+                <aside>
+                    <div class='list_head'>ARTIST</div>
+                    <ul>
+                        <li><a href="#">All</a></li>
+                        
+                    </ul>
+                </aside>
+                
+                <aside class="benefits">
+                    <div class='list_head'>BENEFITS</div>
+                    <ul>
+                        <li><a href="/be-heard.php">Be Heard</a></li>
+                        <li><a href="/be-seen.php">Be Seen</a></li>
+                        <li><a href="/be-independent.php">Be Independent</a></li>
+                    </ul>
+                </aside>
+                
+                <aside>
+                    <div class='list_head'>SUPPORT</div>
+                    <ul>
+                        <li><a href="/pricing.php">Pricing</a></li>
+                        <li><a href="/faq.php">FAQ</a></li>
+                        <li><a href="/tour.php">Help</a></li>
+                    </ul>
+                </aside>
+                
+                <aside>
+                    <div class='list_head'>AFFILIATES</div>
+                    <ul>
+                        <li><a href="http://myartistdna.co">MAD.co</a></li>
+                        <li><a href="http://myartistdna.is">MAD.is</a></li>
+                        <li><a href="http://myartistdna.fm">MAD.fm</a></li>
+                        <li><a href="http://myartistdna.tv">MAD.tv</a></li>
+                        
+                    </ul>
+                </aside>
+                
+                <article>
+                    <div class='list_head'>STAY CONNECTED</div>
+                    <ul>
+                        <li><a href="http://facebook.com/pages/MyArtistDNA/106114012796731" target="_blank"><span><img src="/images/facebook.gif" alt="Facebook"></span> Become a fan on Facebook</a></li>
+                        <li><a href="http://twitter.com/myartistdna" target="_blank"><span><img src="/images/twitter.gif" alt="Twitter"></span> Follow us on Twitter</a></li>
+                        <li><a onclick='showNewsletter();'><span><img src="/images/email.gif" alt="Email"></span> Join Newsletter</a></li>
+                        
+                    </ul>
+                </article>
+                <div class="logo"><a href="/home.php"><img src="/images/MYARTISTDNA_footer.gif" alt="MYARTISTDNA"></a></div>
+                <p>&copy; 2012 <a href="http://myartistdna.com">MYARTISTDNA</a></p>
+            </footer>
         </div>
     </body>
 </html>
+
