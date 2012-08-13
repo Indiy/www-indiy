@@ -783,7 +783,7 @@ body {
     height: 177px;
     background-color: #246667;
 }
-#fan_login .mad_fm .artist {
+#fan_login .mad_tv .artist {
     position: absolute;
     top: 132px;
     left: 53px;
@@ -794,7 +794,7 @@ body {
     text-transform: uppercase;
     overflow: hidden;
 }
-#fan_login .mad_fm .title {
+#fan_login .mad_tv .title {
     position: absolute;
     top: 151px;
     left: 53px;
@@ -804,7 +804,7 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     overflow: hidden;
 }
-#fan_login .mad_fm .play {
+#fan_login .mad_tv .play {
     position: absolute;
     top: 132px;
     left: 17px;
@@ -813,7 +813,7 @@ body {
     border-radius: 30px;
     background: white;
 }
-#fan_login .mad_tv .artist {
+#fan_login .mad_fm .artist {
     position: absolute;
     top: 132px;
     left: 148px;
@@ -824,7 +824,7 @@ body {
     text-transform: uppercase;
     overflow: hidden;
 }
-#fan_login .mad_tv .title {
+#fan_login .mad_fm .title {
     position: absolute;
     top: 151px;
     left: 148px;
@@ -834,7 +834,7 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     overflow: hidden;
 }
-#fan_login .mad_tv .play {
+#fan_login .mad_fm .play {
     position: absolute;
     top: 132px;
     left: 112px;
