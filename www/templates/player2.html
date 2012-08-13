@@ -206,19 +206,45 @@
         <div id='media_social_boxes'>
             <div class='social_boxes'>
                 <div class='social_buttons'>
-                    <? if( $artist_twitter ): ?>
-                        <div class='button twitter' onclick='clickTwitterButton();'>
+                    
+                </div>
+                <div id='social_content' class='social_content'>
+                    
+                </div>
+            </div>
+            <div class='media_boxes'>
+                <div class='media_buttons'>
+                    <? if( count($photo_list) > 0): ?>
+                        <div class='button photos' onclick='clickPhotoMediaButton();'>
                             <div class='icon'></div>
-                            <div class='label'>TWITTER</div>
+                            <div class='label'>PHOTOS</div>
                         </div>
                         <div class='sep'></div>
                     <? endif; ?>
-                    <? if( $artist_facebook_page ): ?>
-                        <div class='button facebook' onclick='clickFacebookButton();'>
+                    <div class='button music' onclick='clickMusicMediaButton();'>
+                        <div class='icon'></div>
+                        <div class='label'>MUSIC</div>
+                    </div>
+                    <div class='sep'></div>
+                    <? if( count($video_list) > 0 ): ?>
+                        <div class='button video' onclick='clickVideoMediaButton();'>
                             <div class='icon'></div>
-                            <div class='label'>FACEBOOK</div>
+                            <div class='label'>VIDEO</div>
                         </div>
-                        <div class='sep'></div>
+                    <? endif; ?>
+                    <? if( $artist_twitter ): ?>
+                    <div class='button twitter' onclick='clickTwitterButton();'>
+                        <div class='icon'></div>
+                        <div class='label'>TWITTER</div>
+                    </div>
+                    <div class='sep'></div>
+                    <? endif; ?>
+                    <? if( $artist_facebook_page ): ?>
+                    <div class='button facebook' onclick='clickFacebookButton();'>
+                        <div class='icon'></div>
+                        <div class='label'>FACEBOOK</div>
+                    </div>
+                    <div class='sep'></div>
                     <? endif; ?>
                     <div class='button share' onclick='clickShareButton();'>
                         <div class='icon'></div>
@@ -229,8 +255,54 @@
                         <div class='icon'></div>
                         <div class='label'>EMAIL LIST</div>
                     </div>
+                    
+                    
                 </div>
-                <div id='social_content' class='social_content'>
+                <div id='media_content_lists' class='media_content'>
+                    <div id='photo_list' class='media_list picture_list'>
+                        <? if( $photo_nav_show ): ?>
+                            <div class='left_nav' onclick='photoListScrollLeft();'></div>
+                            <div class='right_nav' onclick='photoListScrollRight();'></div>
+                        <? endif; ?>
+                        <div class='content'>
+                            <?=$photo_list_html;?>
+                        </div>
+                    </div>
+                    <div id='music_list' class='media_list'>
+                        <div class='right scrollbar-handle-support'>
+                            <?=build_scrollbar('scrollbar-dark');?>
+                        </div>
+                        <div class='left'>
+                            <div class='track_container scrollbar-pane'>
+                                <div class='play_line'>
+                                    <div class='love_song_name'>
+                                        <div class='song_title'>SONG TITLE</div>
+                                    </div>
+                                    <div class='buy_length_listens'>
+                                        <div class='buy none'></div>
+                                        <div class='sep'></div>
+                                        <div class='length'>LENGTH</div>
+                                        <div class='sep'></div>
+                                        <div class='played'>PLAYED</div>
+                                    </div>
+                                </div>
+                                <div class='sep_line'></div>
+                                <?=$music_list_html;?>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='video_list' class='media_list picture_list'>
+                        <? if( $video_nav_show ): ?>
+                            <div class='left_nav' onclick='videoListScrollLeft();'></div>
+                            <div class='right_nav' onclick='videoListScrollRight();'></div>
+                        <? endif; ?>
+                        <div class='content'>
+                            <?=$video_list_html;?>
+                        </div>
+                    </div>
+                    
+                    
+                    
                     <div id='social_share' class='social_item'>
                         <div class='title'>SHARE THIS ARTIST</div>
                         <div class='sep'></div>
@@ -326,71 +398,8 @@
                             <div class="fb-like-box" data-href="<?=$artist_facebook_page;?>" data-width="400" data-height="220" data-colorscheme="dark" data-show-faces="true" data-stream="true" data-header="false"></div>
                         </div>
                     <? endif; ?>
-                </div>
-            </div>
-            <div class='media_boxes'>
-                <div class='media_buttons'>
-                    <? if( count($photo_list) > 0): ?>
-                        <div class='button photos' onclick='clickPhotoMediaButton();'>
-                            <div class='icon'></div>
-                            <div class='label'>PHOTOS</div>
-                        </div>
-                        <div class='sep'></div>
-                    <? endif; ?>
-                    <div class='button music' onclick='clickMusicMediaButton();'>
-                        <div class='icon'></div>
-                        <div class='label'>MUSIC</div>
-                    </div>
-                    <div class='sep'></div>
-                    <? if( count($video_list) > 0 ): ?>
-                        <div class='button video' onclick='clickVideoMediaButton();'>
-                            <div class='icon'></div>
-                            <div class='label'>VIDEO</div>
-                        </div>
-                    <? endif; ?>
-                </div>
-                <div id='media_content_lists' class='media_content'>
-                    <div id='photo_list' class='media_list picture_list'>
-                        <? if( $photo_nav_show ): ?>
-                            <div class='left_nav' onclick='photoListScrollLeft();'></div>
-                            <div class='right_nav' onclick='photoListScrollRight();'></div>
-                        <? endif; ?>
-                        <div class='content'>
-                            <?=$photo_list_html;?>
-                        </div>
-                    </div>
-                    <div id='music_list' class='media_list'>
-                        <div class='right scrollbar-handle-support'>
-                            <?=build_scrollbar('scrollbar-dark');?>
-                        </div>
-                        <div class='left'>
-                            <div class='track_container scrollbar-pane'>
-                                <div class='play_line'>
-                                    <div class='love_song_name'>
-                                        <div class='song_title'>SONG TITLE</div>
-                                    </div>
-                                    <div class='buy_length_listens'>
-                                        <div class='buy none'></div>
-                                        <div class='sep'></div>
-                                        <div class='length'>LENGTH</div>
-                                        <div class='sep'></div>
-                                        <div class='played'>PLAYED</div>
-                                    </div>
-                                </div>
-                                <div class='sep_line'></div>
-                                <?=$music_list_html;?>
-                            </div>
-                        </div>
-                    </div>
-                    <div id='video_list' class='media_list picture_list'>
-                        <? if( $video_nav_show ): ?>
-                            <div class='left_nav' onclick='videoListScrollLeft();'></div>
-                            <div class='right_nav' onclick='videoListScrollRight();'></div>
-                        <? endif; ?>
-                        <div class='content'>
-                            <?=$video_list_html;?>
-                        </div>
-                    </div>
+                    
+                    
                 </div>
             </div>
         </div>
