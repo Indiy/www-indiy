@@ -485,6 +485,10 @@ body {
     width: 30px;
     background-color: #3e6e7c;
     border-radius: 30px;
+    cursor: pointer;
+}
+#fan_login .whats_new .left_arrow:hover {
+    background-color: #50bbba;
 }
 #fan_login .whats_new .right_arrow {
     position: absolute;
@@ -492,8 +496,12 @@ body {
     left: 287px;
     height: 30px;
     width: 30px;
-    background-color: #50bbba;
+    background-color: #3e6e7c;
     border-radius: 30px;
+    cursor: pointer;
+}
+#fan_login .whats_new .right_arrow:hover {
+    background-color: #50bbba;
 }
 #fan_login .whats_new .title {
     position: absolute;
@@ -532,6 +540,7 @@ body {
     width: 11px;
     border-radius: 11px;
     background-color: #2a6b78;
+    cursor: pointer;
 }
 #fan_login .whats_new .dots .dot.active {
     background-color: #34e5f9;
@@ -721,6 +730,7 @@ body {
     width: 32px;
     height: 42px;
     background-color: white;
+    cursor: pointer;
 }
 #fan_login .events .right_arrow {
     position: absolute;
@@ -729,6 +739,7 @@ body {
     width: 32px;
     height: 42px;
     background-color: white;
+    cursor: pointer;
 }
 #fan_login .events .event_details {
     position: absolute;
@@ -812,6 +823,7 @@ body {
     height: 30px;
     border-radius: 30px;
     background: white;
+    cursor: pointer;
 }
 #fan_login .mad_fm .artist {
     position: absolute;
@@ -842,4 +854,5 @@ body {
     height: 30px;
     border-radius: 30px;
     background: white;
+    cursor: pointer;
 }
