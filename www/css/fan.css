@@ -625,20 +625,37 @@ body {
     width: 170px;
     height: 95px;
 }
-#fan_login .twitter_center .content .title {
+#fan_login .twitter_box .content .title {
     color: white;
     font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    word-wrap: break-word;
 }
-#fan_login .twitter_center .content .other {
+#fan_login .twitter_box .content .other {
     color: #bcbcbc;
     font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    word-wrap: break-word;
 }
-#fan_login .twitter_center .content .other a {
+#fan_login .twitter_box .content .other a {
     color: #d7de4e;
     text-decoration: none;
     cursor: pointer;
+}
+#fan_login .twitter_right_arrow .twitter_icon {
+    position: absolute;
+    top: 48px;
+    left: 17px;
+    width: 30px;
+    height: 30px;
+    background-color: #c6a237;
+}
+#fan_login .twitter_right_arrow .content {
+    position: absolute;
+    top: 132px;
+    left: 34px;
+    width: 168px;
+    height: 100px;
 }
 #fan_login .tumblr {
     position: absolute;
