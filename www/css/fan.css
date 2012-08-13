@@ -64,11 +64,24 @@ body {
     background: url("/images/cart_top_texture.png") repeat-x;
     border-bottom: 1px solid #5f5f5f;
 }
-#header .mad_bar .logo {
+#header .mad_bar .content {
     width: 940px;
     margin: 0 auto;
     height: 100%;
+}
+#header .mad_bar .content .logo {
+    float: left;
+    height: 100%;
+    width: 160px;
     background: url('/images/MYARTISTDNA.png') 0px 10px no-repeat;
+}
+#header .mad_bar .content .login {
+    float: right;
+    padding-top: 10px;
+    color: #4ECDC4;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    cursor: pointer;
 }
 
 /*
@@ -456,6 +469,11 @@ body {
     background-color: black;
 }
 
+/*************************************************************************/
+/*************************************************************************/
+/*************************************************************************/
+/*************************************************************************/
+/*************************************************************************/
 
 
 #fan_login {
@@ -477,6 +495,114 @@ body {
     height: 531px;
     background-color: #77828a;
 }
+#fan_login .editor_pick {
+    position: absolute;
+    top: 0px;
+    left: 326px;
+    width: 299px;
+    height: 348px;
+    background-color: #046e8f;
+}
+#fan_login .most_loved {
+    position: absolute;
+    top: 0px;
+    left: 625px;
+    width: 312px;
+    height: 352px;
+    background-color: #9a9791;
+}
+#fan_login .twitter_center {
+    position: absolute;
+    top: 178px;
+    left: 326px;
+    width: 299px;
+    height: 349px;
+    background-color: #2c2c2c;
+}
+#fan_login .tumblr {
+    position: absolute;
+    top: 178px;
+    left: 625px;
+    width: 312px;
+    height: 524px;
+    background-color: #0090ab;
+}
+#fan_login .store_item {
+    position: absolute;
+    top: 348px;
+    left: 0px;
+    height: 361px;
+    width: 625px;
+    background-color: #4d436b;
+}
+#fan_login .twitter_left {
+    position: absolute;
+    top: 527px;
+    left: 0px;
+    width: 307px;
+    height: 353px;
+    background-color: #2c2c2c;
+}
+#fan_login .center_pict {
+    position: absolute;
+    top: 527px;
+    left: 389px;
+    width: 236px;
+    height: 277px;
+    background-color: #d9dce2;
+}
+#fan_login .twitter_right {
+    position: absolute;
+    top: 527px;
+    left: 625px;
+    width: 312px;
+    height: 355px;
+    background-color: #2c2c2c;
+}
+#fan_login .events {
+    position: absolute;
+    top: 703px;
+    left: 625px;
+    width: 312px;
+    height: 354px;
+    background-color: #b70009;
+}
+#fan_login .play_song {
+    position: absolute;
+    top: 662px;
+    left: 182px;
+    width: 443px;
+    height: 300px;
+    background-color: #73e3f3;
+}
+#fan_login .play_song2 {
+    position: absolute;
+    top: 779px;
+    left: 0px;
+    width: 478px;
+    height: 278px;
+    background-color: #5a6b68;
+}
+#fan_login .mad_tv {
+    position: absolute;
+    top: 880px;
+    left: 0px;
+    width: 290px;
+    height: 177px;
+    background-color: #5d578b;
+}
+#fan_login .mad_fm {
+    position: absolute;
+    top: 880px;
+    left: 302px;
+    width: 323px;
+    height: 177px;
+    background-color: #246667;
+}
+
+/**************/
+/**************/
+
 #fan_login .whats_new .left_arrow {
     position: absolute;
     top: 200px;
@@ -548,22 +674,6 @@ body {
 #fan_login .whats_new .dots .dot:hover {
     background-color: #34e5f9;
 }
-#fan_login .editor_pick {
-    position: absolute;
-    top: 0px;
-    left: 326px;
-    width: 299px;
-    height: 348px;
-    background-color: #046e8f;
-}
-#fan_login .most_loved {
-    position: absolute;
-    top: 0px;
-    left: 625px;
-    width: 312px;
-    height: 352px;
-    background-color: #9a9791;
-}
 #fan_login .most_loved .red_circle {
     position: absolute;
     top: 30px;
@@ -610,109 +720,6 @@ body {
     height: 34px;
     width: 41px;
     background-color: #d31223;
-}
-#fan_login .twitter_center {
-    position: absolute;
-    top: 178px;
-    left: 326px;
-    width: 299px;
-    height: 349px;
-    background-color: #2c2c2c;
-}
-#fan_login .twitter_center .twitter_icon {
-    position: absolute;
-    top: 48px;
-    right: 23px;
-    width: 30px;
-    height: 30px;
-    background-color: #c6a237;
-}
-#fan_login .twitter_center .content {
-    position: absolute;
-    top: 140px;
-    left: 117px;
-    width: 170px;
-    height: 95px;
-}
-#fan_login .twitter_box .content .title {
-    color: white;
-    font-size: 14px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-    word-wrap: break-word;
-}
-#fan_login .twitter_box .content .other {
-    color: #bcbcbc;
-    font-size: 14px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-    word-wrap: break-word;
-}
-#fan_login .twitter_box .content .other a {
-    color: #d7de4e;
-    text-decoration: none;
-    cursor: pointer;
-}
-#fan_login .twitter_right_arrow .twitter_icon {
-    position: absolute;
-    top: 48px;
-    left: 17px;
-    width: 30px;
-    height: 30px;
-    background-color: #c6a237;
-}
-#fan_login .twitter_right_arrow .content {
-    position: absolute;
-    top: 132px;
-    left: 34px;
-    width: 168px;
-    height: 100px;
-}
-#fan_login .tumblr {
-    position: absolute;
-    top: 178px;
-    left: 625px;
-    width: 312px;
-    height: 524px;
-    background-color: #0090ab;
-}
-#fan_login .store_item {
-    position: absolute;
-    top: 348px;
-    left: 0px;
-    height: 361px;
-    width: 625px;
-    background-color: #4d436b;
-}
-#fan_login .twitter_left {
-    position: absolute;
-    top: 527px;
-    left: 0px;
-    width: 307px;
-    height: 353px;
-    background-color: #2c2c2c;
-}
-#fan_login .center_pict {
-    position: absolute;
-    top: 527px;
-    left: 389px;
-    width: 236px;
-    height: 277px;
-    background-color: #d9dce2;
-}
-#fan_login .twitter_right {
-    position: absolute;
-    top: 527px;
-    left: 625px;
-    width: 312px;
-    height: 355px;
-    background-color: #2c2c2c;
-}
-#fan_login .events {
-    position: absolute;
-    top: 703px;
-    left: 625px;
-    width: 312px;
-    height: 354px;
-    background-color: #b70009;
 }
 #fan_login .events .title {
     position: absolute;
@@ -761,38 +768,6 @@ body {
     color: white;
     font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-}
-#fan_login .play_song {
-    position: absolute;
-    top: 662px;
-    left: 182px;
-    width: 443px;
-    height: 300px;
-    background-color: #73e3f3;
-}
-#fan_login .play_song2 {
-    position: absolute;
-    top: 779px;
-    left: 0px;
-    width: 478px;
-    height: 278px;
-    background-color: #5a6b68;
-}
-#fan_login .mad_tv {
-    position: absolute;
-    top: 880px;
-    left: 0px;
-    width: 290px;
-    height: 177px;
-    background-color: #5d578b;
-}
-#fan_login .mad_fm {
-    position: absolute;
-    top: 880px;
-    left: 302px;
-    width: 323px;
-    height: 177px;
-    background-color: #246667;
 }
 #fan_login .mad_tv .artist {
     position: absolute;
@@ -856,3 +831,51 @@ body {
     background: white;
     cursor: pointer;
 }
+#fan_login .twitter_center .twitter_icon {
+    position: absolute;
+    top: 48px;
+    right: 23px;
+    width: 30px;
+    height: 30px;
+    background-color: #c6a237;
+}
+#fan_login .twitter_center .content {
+    position: absolute;
+    top: 140px;
+    left: 117px;
+    width: 170px;
+    height: 95px;
+}
+#fan_login .twitter_box .content .title {
+    color: white;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    word-wrap: break-word;
+}
+#fan_login .twitter_box .content .other {
+    color: #bcbcbc;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    word-wrap: break-word;
+}
+#fan_login .twitter_box .content .other a {
+    color: #d7de4e;
+    text-decoration: none;
+    cursor: pointer;
+}
+#fan_login .twitter_right_arrow .twitter_icon {
+    position: absolute;
+    top: 48px;
+    left: 17px;
+    width: 30px;
+    height: 30px;
+    background-color: #c6a237;
+}
+#fan_login .twitter_right_arrow .content {
+    position: absolute;
+    top: 132px;
+    left: 34px;
+    width: 168px;
+    height: 100px;
+}
+
