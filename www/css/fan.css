@@ -783,3 +783,63 @@ body {
     height: 177px;
     background-color: #246667;
 }
+#fan_login .mad_fm .artist {
+    position: absolute;
+    top: 132px;
+    left: 53px;
+    width: 160px;
+    color: white;
+    font-size: 16px;
+    font-family: "Teletex Light",sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+#fan_login .mad_fm .title {
+    position: absolute;
+    top: 151px;
+    left: 53px;
+    width: 190px;
+    color: white;
+    font-size: 15px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    overflow: hidden;
+}
+#fan_login .mad_fm .play {
+    position: absolute;
+    top: 132px;
+    left: 17px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background: white;
+}
+#fan_login .mad_tv .artist {
+    position: absolute;
+    top: 132px;
+    left: 148px;
+    width: 170px;
+    color: white;
+    font-size: 16px;
+    font-family: "Teletex Light",sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+#fan_login .mad_tv .title {
+    position: absolute;
+    top: 151px;
+    left: 148px;
+    width: 170px;
+    color: white;
+    font-size: 15px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    overflow: hidden;
+}
+#fan_login .mad_tv .play {
+    position: absolute;
+    top: 132px;
+    left: 112px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background: white;
+}
