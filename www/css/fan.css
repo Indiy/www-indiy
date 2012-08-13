@@ -705,6 +705,52 @@ body {
     height: 354px;
     background-color: #b70009;
 }
+#fan_login .events .title {
+    position: absolute;
+    top: 175px;
+    left: 67px;
+    color: white;
+    font-size: 32px;
+    font-family: "Teletex Light",sans-serif;
+    text-align: center;
+}
+#fan_login .events .left_arrow {
+    position: absolute;
+    top: 232px;
+    right: 14px;
+    width: 32px;
+    height: 42px;
+    background-color: white;
+}
+#fan_login .events .right_arrow {
+    position: absolute;
+    top: 232px;
+    left: 14px;
+    width: 32px;
+    height: 42px;
+    background-color: white;
+}
+#fan_login .events .event_details {
+    position: absolute;
+    top: 229px;
+    left: 67px;
+    width: 188px;
+}
+#fan_login .events .event_details .name {
+    color: white;
+    font-size: 18px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+}
+#fan_login .events .event_details .date {
+    color: white;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+}
+#fan_login .events .event_details .location {
+    color: white;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+}
 #fan_login .play_song {
     position: absolute;
     top: 662px;
