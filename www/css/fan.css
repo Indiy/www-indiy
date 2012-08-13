@@ -77,9 +77,10 @@ body {
 }
 #header .mad_bar .content .login {
     float: right;
-    padding-top: 10px;
+    padding-top: 18px;
+    padding-right: 22px;
     color: #4ECDC4;
-    font-size: 14px;
+    font-size: 18px;
     font-family: "Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif;
     cursor: pointer;
 }
@@ -879,3 +880,114 @@ body {
     height: 100px;
 }
 
+/***************************************************************************/
+/***************************************************************************/
+/***************************************************************************/
+
+#popup_mask {
+    display: none;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: #080808;
+    opacity: 0.65;
+    z-index: 99;
+}
+
+.popup_wrapper {
+    display: none;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 100;
+}
+.popup_wrapper .popup {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    width: 460px;
+    background: white;
+}
+
+.popup .top_bar {
+    height: 50px;
+    background: url("/images/bg_login01.gif") repeat-x;
+}
+
+.popup .top_bar .title {
+    float: left;
+    padding-left: 20px;
+    padding-top: 17px;
+    color: #ddd;
+    font-size: 22px;
+    font-family: "Teletex Light",sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.popup .top_bar .close {
+    float: right;
+    height: 100%;
+    width: 45px;
+    padding-left: 12px;
+    padding-top: 18px;
+    color: #51C3C4;
+    font-size: 11px;
+    font-family: sans-serif;
+    background: url("/images/bg_close.gif") no-repeat;
+    cursor: pointer;
+    border: 0;
+}
+.popup .description {
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    color: #666;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+.popup .center_input_container {
+    padding-left: 75px;
+    padding-right: 60px;
+}
+.popup .label {
+    padding-bottom: 4px;
+    color: #666;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+.popup .center_input_container input {
+    width: 304px;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 2px;
+    height: 27px;
+    color: #222;
+    font-size: 12px;
+    font-family: sans-serif;
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+}
+.popup .submit_container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 30px;
+    text-align: center;
+}
+.popup .submit_container .submit {
+    height: 32px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #51C3C4;
+    font-size: 12px;
+    font-family: sans-serif;
+    text-decoration: none;
+    background-color: black;
+    text-transform: uppercase;
+    border: 0 none;
+    cursor: pointer;
+}

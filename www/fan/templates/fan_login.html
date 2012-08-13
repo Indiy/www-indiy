@@ -125,6 +125,29 @@
             </div>
         </div></div>
         
+        <div id='popup_mask'></div>
+        <div id='login_popup' class='popup_wrapper'>
+            <div class='popup'>
+                <div class='top_bar'>
+                    <div class='title'>LOGIN TO MYARTISTDNA</div>
+                    <div class='close' onclick='closePopup();'>CLOSE</div>
+                </div>
+                <div class='spacer'></div>
+                <div class='input_container'>
+                    <div class='label'>Email Address</div>
+                    <input id='email' type="text" name="email" value="" class='text' />
+                </div>
+                <div class='input_container'>
+                    <div class='label'>Password</div>
+                    <input id='password' type="password" name="password" value="" class='text' />
+                </div>
+                <div class='forgot' onclick='onForgotPassword();'>Forgot your password?</div>
+                <div class='submit_container'>
+                    <button class="submit" onclick='onLoginEmail();'>Login</button>
+                </div>
+            </div>
+        </div>
+        
         <div id="footer">
             <div class='pad'></div>
             <footer>
