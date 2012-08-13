@@ -9,6 +9,7 @@
 /* Begin PBXFileReference section */
 		2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = unsupported_browser.php; sourceTree = "<group>"; };
 		2D25C38715D43BCE00132306 /* fan.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = fan.js; sourceTree = "<group>"; };
+		2D25C38C15D96E2400132306 /* player.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player.php; sourceTree = "<group>"; };
 		2D34E22414A05F05004473F9 /* utils.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = utils.php; sourceTree = "<group>"; };
 		2D34E22714A06AC9004473F9 /* twitter_landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twitter_landing.php; sourceTree = "<group>"; };
 		2D34E22814A173A9004473F9 /* landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = landing.php; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.php; };
@@ -193,7 +194,6 @@
 		2D9E2FD615698A5900A76906 /* account_upgrade.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = account_upgrade.php; sourceTree = "<group>"; };
 		2D9E2FD715698C7000A76906 /* account_limit.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = account_limit.html; sourceTree = "<group>"; };
 		2D9E2FD91569F13700A76906 /* player.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player.html; sourceTree = "<group>"; };
-		2D9E2FDA1569F17D00A76906 /* player2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player2.php; sourceTree = "<group>"; };
 		2D9E2FDB156A0F2B00A76906 /* player_general.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_general.js; sourceTree = "<group>"; };
 		2D9E2FE51571E76D00A76906 /* element_views.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = element_views.php; sourceTree = "<group>"; };
 		2D9E2FE715734A0000A76906 /* player_love.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_love.js; sourceTree = "<group>"; };
@@ -1987,7 +1987,7 @@
 				2DF472C71440B77F005538C7 /* js */,
 				2D9E2FD81569F13600A76906 /* templates */,
 				2D8D96FC15A26FE900AA3D1B /* fan */,
-				2D9E2FDA1569F17D00A76906 /* player2.php */,
+				2D25C38C15D96E2400132306 /* player.php */,
 				2D7849F015CED04B00A89620 /* role_choice.php */,
 				2D7849F115CEEA0600A89620 /* logout.php */,
 				2D8D971415A8CF3900AA3D1B /* signup.php */,

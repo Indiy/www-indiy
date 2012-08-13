@@ -80,7 +80,7 @@
     }
     else
     {
-        include_once 'player2.php';
+        include_once 'player.php';
     }
 
 ?>
