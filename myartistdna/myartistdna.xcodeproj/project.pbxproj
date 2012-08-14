@@ -13,6 +13,8 @@
 		2D25C38D15D9BB9A00132306 /* player2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player2.php; sourceTree = "<group>"; };
 		2D25C38E15D9BBA200132306 /* player2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player2.html; sourceTree = "<group>"; };
 		2D25C38F15DAC0F900132306 /* player2.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = player2.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2D25C39015DAE8C400132306 /* player_social_items.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player_social_items.html; sourceTree = "<group>"; };
+		2D25C39115DAEAFC00132306 /* player_social_buttons.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player_social_buttons.html; sourceTree = "<group>"; };
 		2D34E22414A05F05004473F9 /* utils.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = utils.php; sourceTree = "<group>"; };
 		2D34E22714A06AC9004473F9 /* twitter_landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twitter_landing.php; sourceTree = "<group>"; };
 		2D34E22814A173A9004473F9 /* landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = landing.php; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.php; };
@@ -1862,6 +1864,8 @@
 			isa = PBXGroup;
 			children = (
 				2D25C38E15D9BBA200132306 /* player2.html */,
+				2D25C39015DAE8C400132306 /* player_social_items.html */,
+				2D25C39115DAEAFC00132306 /* player_social_buttons.html */,
 				2D9E2FD91569F13700A76906 /* player.html */,
 				2D9E2FFA1585918700A76906 /* cart.html */,
 				2D64687B1593DD5400B9AD11 /* confirm_order.html */,

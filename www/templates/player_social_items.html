@@ -1,0 +1,96 @@
+
+<div id='social_share' class='social_item'>
+    <div class='title'>SHARE THIS ARTIST</div>
+    <div class='sep'></div>
+    <div class='sub_title'>Now proclaim your newfound love to the world</div>
+    <div class='links'>
+        <a id='love_fb_link' href='#' target='_blank'>
+            <div class='item facebook'>
+                <div class='icon'></div>
+                <div class='name'>FACEBOOK</div>
+            </div>
+        </a>
+        <a id='love_tw_link' href='#' target='_blank'>
+            <div class='item twitter'>
+                <div class='icon'></div>
+                <div class='name'>TWITTER</div>
+            </div>
+        </a>
+        <a id='love_tumblr_link' href='#' target='_blank'>
+            <div class='item tumblr'>
+                <div class='icon'></div>
+                <div class='name'>TUMBLR</div>
+            </div>
+        </a>
+    </div>
+    <div class='links'>
+        <a id='love_pin_link' href='#' target='_blank'>
+            <div class='item pinterest'>
+                <div class='icon'></div>
+                <div class='name'>PINTEREST</div>
+            </div>
+        </a>
+        <a id='love_google_link' href='#' target='_blank'>
+            <div class='item google'>
+                <div class='icon'></div>
+                <div class='name'>GOOGLE +</div>
+            </div>
+        </a>
+        <a id='love_email_link' href='#' target='_blank'>
+            <div class='item email'>
+                <div class='icon'></div>
+                <div class='name'>EMAIL</div>
+            </div>
+        </a>
+    </div>
+</div>
+<div id='social_email' class='social_item'>
+    <div class='title'>JOIN THIS ARTIST'S MAILING LIST</div>
+    <div class='sep'></div>
+    <div class='sub_title'>Join the Mailing List</div>
+    <div class='detail'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <div class='input_button'>
+        <input placeholder="Your Email Address">
+        <button onclick='clickJoinNewsletter();'>JOIN</button>
+    </div>
+    <div class='success'>
+        Thank you for your submission!
+    </div>
+</div>
+<? if( $artist_twitter ): ?>
+    <div id='social_twitter' class='social_item'>
+        <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+        <script>
+        new TWTR.Widget({
+          version: 2,
+          type: 'profile',
+          rpp: 15,
+          interval: 30000,
+          width: 'auto',
+          height: 220,
+          theme: {
+            shell: {
+              background: '#000000',
+              color: '#ffffff'
+            },
+            tweets: {
+              background: '#000000',
+              color: '#aaaaaa',
+              links: '#ffffff'
+            }
+          },
+          features: {
+            scrollbar: true,
+            loop: false,
+            live: false,
+            behavior: 'all'
+          }
+        }).render().setUser('<?=$artist_twitter;?>').start();
+        </script>
+    </div>
+<? endif; ?>
+<? if( $artist_facebook_page ): ?>
+    <div id='social_facebook' class='social_item'>
+        <div class="fb-like-box" data-href="<?=$artist_facebook_page;?>" data-width="400" data-height="220" data-colorscheme="dark" data-show-faces="true" data-stream="true" data-header="false"></div>
+    </div>
+<? endif; ?>

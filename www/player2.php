@@ -61,6 +61,11 @@
         $IOS = TRUE;
         $IPAD = TRUE;
     }
+    $NARROW_SCREEN = FALSE;
+    if( $IOS )
+    {
+        $NARROW_SCREEN = TRUE;
+    }
     
     $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE url='$artist_url' LIMIT 1"));
     if( $artist_data == FALSE )
@@ -375,6 +380,12 @@ END;
         
         return $scrollbar_html;
 
+    }
+    
+    $body_style = "";
+    if( $NARROW_SCREEN )
+    {
+        $body_style .= "narrow_screen";
     }
     
     include_once 'templates/player2.html';
