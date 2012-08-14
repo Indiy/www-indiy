@@ -12,6 +12,7 @@
 		2D25C38C15D96E2400132306 /* player.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player.php; sourceTree = "<group>"; };
 		2D25C38D15D9BB9A00132306 /* player2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player2.php; sourceTree = "<group>"; };
 		2D25C38E15D9BBA200132306 /* player2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player2.html; sourceTree = "<group>"; };
+		2D25C38F15DAC0F900132306 /* player2.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = player2.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D34E22414A05F05004473F9 /* utils.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = utils.php; sourceTree = "<group>"; };
 		2D34E22714A06AC9004473F9 /* twitter_landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twitter_landing.php; sourceTree = "<group>"; };
 		2D34E22814A173A9004473F9 /* landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = landing.php; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.php; };
@@ -2297,6 +2298,7 @@
 				2D34E23514ABFF09004473F9 /* video-js.css */,
 				2DF4704F1440B77F005538C7 /* style.css */,
 				2DF470501440B77F005538C7 /* styles.css */,
+				2D25C38F15DAC0F900132306 /* player2.css */,
 				2D4116BD1534E9BB00F18000 /* player.css */,
 				2D9E2FFD1588355100A76906 /* cart.css */,
 				2D62486D15D1C4BA00914595 /* fan.css */,
