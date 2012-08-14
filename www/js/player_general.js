@@ -276,12 +276,12 @@ function preMediaShow()
     $('#media_content_lists .media_list').hide();
     if( IS_NARROW )
     {
-        $('#social_content .social_item').hide();
+        $('#media_social_boxes .social_item').hide();
     }
 }
 function preSocialItemShow()
 {
-    $('#social_content .social_item').hide();
+    $('#media_social_boxes .social_item').hide();
     if( IS_NARROW )
     {
         $('#media_content_lists .media_list').hide();
