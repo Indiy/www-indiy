@@ -22,6 +22,7 @@ var IS_OLD_IE = false;
 
 var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
 
+var IS_NARROW = false;
 
 var g_bottomOpen = false;
 var g_mediaContent = "music";
@@ -110,6 +111,11 @@ function generalOnReady()
     {
         $(document).mousemove(showAndTimeoutControls);
     }
+    
+    if( $('body').hasClass('narrow_screen') )
+    {
+        IS_NARROW = true;
+    }
 }
 
 function showControls()
@@ -186,7 +192,14 @@ function openBottom()
     hideAllTabs();
     g_bottomOpen = true;
     $('#bottom_container').stop();
-    $('#bottom_container').animate({ height: '275px' });
+    if( IS_NARROW )
+    {
+        $('#bottom_container').animate({ height: '350px' });
+    }
+    else
+    {
+        $('#bottom_container').animate({ height: '275px' });
+    }
 }
 
 function closeBottom(animate)
@@ -258,22 +271,38 @@ function clickMediaIcon(name,callback)
     }
 }
 
-function clickPhotoMediaButton()
+function preMediaShow()
 {
     $('#media_content_lists .media_list').hide();
+    if( IS_NARROW )
+    {
+        $('#social_content .social_item').hide();
+    }
+}
+function preSocialItemShow()
+{
+    $('#social_content .social_item').hide();
+    if( IS_NARROW )
+    {
+        $('#media_content_lists .media_list').hide();
+    }
+}
+function clickPhotoMediaButton()
+{
+    preMediaShow();
     $('#photo_list').show();
     g_mediaContent = "photo";
     scrollPhotoListToIndex();
 }
 function clickMusicMediaButton()
 {
-    $('#media_content_lists .media_list').hide();
+    preMediaShow();
     $('#music_list').show();
     g_mediaContent = "music";
 }
 function clickVideoMediaButton()
 {
-    $('#media_content_lists .media_list').hide();
+    preMediaShow();
     $('#video_list').show();
     g_mediaContent = "video";
     scrollVideoListToIndex();
@@ -281,25 +310,25 @@ function clickVideoMediaButton()
 
 function clickShareButton()
 {
-    $('#social_content .social_item').hide();
+    preSocialItemShow();
     $('#social_share').show();
     g_socialContent = "share";
 }
 function clickEmailButton()
 {
-    $('#social_content .social_item').hide();
+    preSocialItemShow();
     $('#social_email').show();
     g_socialContent = "email";
 }
 function clickTwitterButton()
 {
-    $('#social_content .social_item').hide();
+    preSocialItemShow();
     $('#social_twitter').show();
     g_socialContent = "twitter";
 }
 function clickFacebookButton()
 {
-    $('#social_content .social_item').hide();
+    preSocialItemShow();
     $('#social_facebook').show();
     g_socialContent = "twitter";
 }

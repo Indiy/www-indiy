@@ -1996,5 +1996,11 @@ body {
     height: 40px;
 }
 .narrow_screen #media_social_boxes {
-    height: 280px;
+    height: 294px;
+}
+.narrow_screen #media_social_boxes .media_boxes .media_buttons .button .label {
+    margin-top: 14px;
+}
+.narrow_screen #media_social_boxes .media_boxes .media_buttons .button .icon {
+    margin-top: -8px;
 }
