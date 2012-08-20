@@ -18,6 +18,10 @@
     {
         do_send_register_token();
     }
+    else if( $method == 'change_password' )
+    {
+        do_change_password();
+    }
     
     function do_register()
     {
@@ -93,6 +97,52 @@ END;
 
         mail($to,$subject,$message,$headers);
         echo "{ \"success\": 1 }\n";
+    }
+    
+    function do_change_password()
+    {
+        $fan_id = $_SESSION['fan_id'];
+        $old_pass = $_REQUEST['old_password'];
+        $new_pass = $_REQUEST['new_password'];
+        
+        if( !$fan_id )
+        {
+            $output = array("error" => 1,"detail" => "Fan not logged in.");
+            print json_encode($output);
+            die();
+        }
+        
+        $sql = "SELECT * FROM fans WHERE id='$fan_id'";
+        $fan = mf(mq($sql));
+        if( $fan )
+        {
+            $email = $fan['email'];
+            $hash_password = md5($email . $old_pass);
+            if( $fan['password'] == $hash_password )
+            {
+                $hash_password = md5($email . $new_pass);
+            
+                $updates = array("password" => $hash_password);
+                mysql_update("fans",$updates,'id',$fan_id);
+            
+                $output = array("success" => 1);
+                print json_encode($output);
+                die();
+            }
+            else
+            {
+                $output = array("error" => 2,"detail" => "Incorrect old password.");
+                print json_encode($output);
+                die();
+            }
+        }
+        else
+        {
+            $output = array("error" => 3,"detail" => "Fan account not found.");
+            print json_encode($output);
+            die();
+        }
+        
     }
 
 ?>

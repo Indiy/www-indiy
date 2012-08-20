@@ -1009,7 +1009,7 @@ body {
 
 .popup .input_container {
     padding-left: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 .popup .input_container .label {
     color: #222;
