@@ -373,7 +373,7 @@ body {
     background: transparent url('/images/player_icons.png') no-repeat -17px -306px;
 }
 
-#tracker_bar .media_controls .play_pause.player .big_icon {
+#tracker_bar .media_controls .play_pause.playing .big_icon {
     display: none;
 }
 
