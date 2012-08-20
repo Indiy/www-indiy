@@ -20,5 +20,16 @@ function showFanLogin()
 function closePopup()
 {
     $('#popup_mask').hide();
-    $('#login_popup').hide();
+    $('.popup_wrapper').hide();
+}
+
+function showChangePass()
+{
+    $('#popup_mask').show();
+    $('#change_pass_popup').show();    
+}
+
+function fanChangePass()
+{
+    
 }

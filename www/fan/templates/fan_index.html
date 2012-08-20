@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div id='fan_button_bar'>
-                <div class='change_pass_button'>
+                <div class='change_pass_button' onclick='showChangePass();'>
                     <div class='icon'></div>
                     <div class='label'>Change Password</div>
                 </div>
@@ -75,6 +75,32 @@
                 <div style='clear:both'></div>
             </div>
         </div></div>
+        
+        <div id='popup_mask'></div>
+        <div id='change_pass_popup' class='popup_wrapper'>
+            <div class='popup'>
+                <div class='top_bar'>
+                    <div class='title'>CHANGE PASSWORD</div>
+                    <div class='close' onclick='closePopup();'>CLOSE</div>
+                </div>
+                <div class='spacer'></div>
+                <div class='input_container'>
+                    <div class='label'>Old Password</div>
+                    <input id='old_password' type="password" class='text' />
+                </div>
+                <div class='input_container'>
+                    <div class='label'>New Password</div>
+                    <input id='new_password' type="password" class='text' />
+                </div>
+                <div class='input_container'>
+                    <div class='label'>Confirm Password</div>
+                    <input id='confirm_password' type="password" class='text' />
+                </div>
+                <div class='submit_container'>
+                    <button class="submit" onclick='fanChangePass();'>Submit</button>
+                </div>
+            </div>
+        </div>
         
         <div id="footer">
             <div class='pad'></div>
