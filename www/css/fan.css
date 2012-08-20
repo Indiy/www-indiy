@@ -971,6 +971,10 @@ body {
     cursor: pointer;
     border: 0;
 }
+.popup .spacer {
+    height: 20px;
+}
+
 .popup .description {
     padding-top: 20px;
     padding-left: 24px;
@@ -998,10 +1002,33 @@ body {
     height: 27px;
     color: #222;
     font-size: 12px;
-    font-family: sans-serif;
+    font-family: Helvetica, sans-serif;
     border: 1px solid #cfcfcf;
     border-radius: 4px;
 }
+
+.popup .input_container {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.popup .input_container .label {
+    color: #222;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+}
+.popup .input_container input {
+    width: 304px;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 2px;
+    height: 27px;
+    color: #222;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+}
+
 .popup .submit_container {
     padding-top: 20px;
     padding-bottom: 20px;
