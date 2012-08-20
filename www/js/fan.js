@@ -47,7 +47,7 @@ function fanChangePass()
         return false;
     }
     
-    var post = {
+    var args = {
         method: "change_password",
         old_password: old_pass,
         new_password: new_pass
