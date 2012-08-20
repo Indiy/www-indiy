@@ -147,8 +147,11 @@ body {
 /*************************************************************/
 
 #fan_button_bar {
-    padding-top: 0px;
-    height: 48px;
+    padding-top: 12px;
+    height: 36px;
+    width: 920px;
+    margin-left: auto;
+    margin-right: auto;
 }
 #fan_button_bar .change_pass_button {
     float: right;
