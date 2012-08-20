@@ -26,7 +26,11 @@ function closePopup()
 function showChangePass()
 {
     $('#popup_mask').show();
-    $('#change_pass_popup').show();    
+    $('#change_pass_popup').show();
+    
+    $('#old_password').val("");
+    $('#new_password').val("");
+    $('#confirm_password').val("");
 }
 
 function fanChangePass()
