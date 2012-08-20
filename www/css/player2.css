@@ -363,14 +363,14 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    margin-top: -50px;
-    margin-left: -50px;
-    width: 100px;
-    height: 100px;
-    background: transparent url('/images/player_icons.png') no-repeat -337px -385px;
+    margin-top: -58px;
+    margin-left: -58px;
+    width: 115px;
+    height: 115px;
+    background: transparent url('/images/player_icons.png') no-repeat -161px -306px;
 }
 .no_touch #tracker_bar .media_controls .play_pause .big_icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat -337px -385px;
+    background: transparent url('/images/player_icons.png') no-repeat -17px -306px;
 }
 
 #tracker_bar .media_controls .play_pause.player .big_icon {
