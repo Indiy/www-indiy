@@ -77,11 +77,11 @@ function markShipped()
 
 function renderArtistSettlementOrders()
 {
-    renderArtistSettlementOrderArray(g_pendingShipmentOrders,'#shipped_order_list');
-    renderArtistSettlementOrderArray(g_shippedOrders,'#pending_order_list');
+    renderArtistSettlementOrderArray(g_pendingShipmentOrders,'#shipped_order_list','#shipped_summary');
+    renderArtistSettlementOrderArray(g_shippedOrders,'#pending_order_list','#pending_summary');
 }
 
-function renderArtistSettlementOrderArray(orders,tag)
+function renderArtistSettlementOrderArray(orders,tag,summary_tag)
 {
     $(tag).empty();
     var total_charge = 0.0;
@@ -102,15 +102,17 @@ function renderArtistSettlementOrderArray(orders,tag)
         total_charge += order.charge_amount;
         total_artist += order.to_artist_amount;
     }
-    /*
+    
     var html = "";
-    html += "<tr class='total'>";
-    html += " <td class='title' colspan='2'>Total</td>";
-    html += " <td class='amount'>${0}</td>".format(total_charge.toFixed(2));
-    html += " <td class='amount'>${0}</td>".format(total_artist.toFixed(2));
-    html += "</tr>";
-    $(tag).append(html);
-     */
+    html += "<div class='count number'>";
+    html += " <div class='label'>Total Orders:</div>";
+    html += " <div class='amount'>{0}</div>".format(orders.length);
+    html += "</div>";
+    html += "<div class='earned number'>";
+    html += " <div class='label'>Total Earned:</div>";
+    html += " <div class='amount'>${0}</div>".format(total_artist.toFixed(2));
+    html += "</div>";
+    $(summary_tag).html(html);
 }
 
 function renderAllArtistSummary()
