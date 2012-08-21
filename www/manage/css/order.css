@@ -589,14 +589,41 @@
     text-decoration: none;
     color: inherit;
 }
-
-#artist_statement .title {
+#artist_statement .title_buttons {
     padding-top: 28px;
+    height: 35px;
+}
+#artist_statement .title_buttons .title {
+    float: left;
     color: #687480;
     font-size: 30px;
     font-family: "Teletex Light",Arial, Helvetica, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
+}
+#artist_statement .title_buttons .back_button {
+    float: right;
+    width: 100px;
+    height: 25px;
+}
+#artist_statement .title_buttons .back_button .icon {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background: #383838;
+    vertical-align: top;
+}
+#artist_statement .title_buttons .back_button .label {
+    display: inline-block;
+    height: 18px;
+    width: 75px;
+    padding-top: 7px;
+    background: #1e2126;
+    color: white;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-align: center;
+    vertical-align: top;
 }
 #artist_statement .title_underbar {
     margin-top: 12px;
@@ -606,6 +633,14 @@
     background: #e2e2e2 url("/images/cart_under_texture.png") repeat-x;
 }
 
+#artist_statement .sub_title {
+    padding-top: 28px;
+    color: #687480;
+    font-size: 22px;
+    font-family: "Teletex Light",Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
 #artist_statement .header {
     height: 46px;
     font-size: 0;
@@ -655,7 +690,7 @@
     width: 110px;
 }
 #artist_statement .order_date {
-    width: 320px;
+    width: 552px;
 }
 #artist_statement .charge_total {
     width: 210px;
