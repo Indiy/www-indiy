@@ -576,6 +576,178 @@
     text-decoration: none;
 }
 
+/***********************************************************************/
+/***********************************************************************/
 
+#artist_statement {
+    width: 940px;
+    margin: 0 auto;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+}
+
+#artist_statement a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#artist_statement .title {
+    padding-top: 28px;
+    color: #687480;
+    font-size: 30px;
+    font-family: "Teletex Light",Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+#artist_statement .title_underbar {
+    margin-top: 12px;
+    margin-bottom: 19px;
+    height: 11px;
+    width: 100%;
+    background: #e2e2e2 url("/images/cart_under_texture.png") repeat-x;
+}
+
+#artist_statement .header {
+    height: 46px;
+    font-size: 0;
+    color: white;
+    background: #2c9495 url('/images/cart_header_texture.png') repeat-x;
+    text-transform: uppercase;
+}
+
+#artist_statement .header .header_item {
+    display: inline-block;
+    padding-top: 16px;
+    color: white;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    text-align: center;
+    vertical-align: top;
+}
+#artist_statement .list .item {
+    font-size: 0;
+    cursor: pointer;
+    border-bottom: 1px solid #d3d3d3;
+    background-color: white;
+}
+#artist_statement .list .item.odd {
+    background-color: #f5f5f5;
+}
+
+#artist_statement .list .item div {
+    display: inline-block;
+    padding-top: 30px;
+    height: 50px;
+    color: #383838;
+    font-size: 16px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    border-right: 1px solid #d3d3d3;
+    vertical-align: top;
+    text-overflow: ellipsis;
+}
+#artist_statement .list .item:hover {
+    background-color: #aaa;
+}
+#artist_statement .order_num {
+    width: 110px;
+}
+#artist_statement .order_date {
+    width: 320px;
+}
+#artist_statement .charge_total {
+    width: 210px;
+}
+#artist_statement .payout_total {
+    width: 210px;
+}
+#artist_statement .list .item .payout_total {
+    border-right: none;
+}
+
+#artist_statement .artist {
+    width: 505px;
+    padding-left: 25px;
+    text-align: left !important;
+}
+#artist_statement .count {
+    width: 130px;
+}
+#artist_statement .charge_total {
+    width: 132px;
+}
+#artist_statement .payout_total {
+    width: 143px;
+}
+#artist_statement .list .item .payout_total {
+    border-right: none;
+}
+
+
+#artist_statement .bottom {
+    padding-top: 15px;
+    width: 100%;
+    height: 153px;
+    background-color: white;
+}
+#artist_statement .bottom .back_to_site {
+    float: left;
+    margin-left: 22px;
+    margin-top: 18px;
+    width: 100px;
+    height: 25px;
+    font-size: 0;
+}
+#artist_statement .bottom .back_to_site .icon {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background: #383838;
+    vertical-align: top;
+}
+#artist_statement .bottom .back_to_site .label {
+    display: inline-block;
+    height: 18px;
+    width: 75px;
+    padding-top: 7px;
+    background: #1e2126;
+    color: white;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-align: center;
+    vertical-align: top;
+}
+#artist_statement .bottom .totals {
+    float: right;
+    width: 50%;
+    height: 80px;
+}
+#artist_statement .bottom .totals .total {
+    height: 29px;
+    padding-top: 6px;
+    width: 100%;
+}
+#artist_statement .bottom .totals .total .label {
+    float: right;
+    width: 130px;
+    font-size: 19px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    text-align: right;
+}
+
+#artist_statement .bottom .totals .total .amount {
+    float: right;
+    width: 115px;
+    padding-right: 50px;
+    color: #2c9495;
+    font-size: 19px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: right;
+}
 
 
