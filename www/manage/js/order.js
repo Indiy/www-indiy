@@ -108,11 +108,11 @@ function renderArtistSettlementOrderArray(orders,tag,summary_tag)
     }
     
     var html = "";
-    html += "<div class='count number'>";
+    html += "<div class='number'>";
     html += " <div class='label'>Total Orders:</div>";
     html += " <div class='amount'>{0}</div>".format(orders.length);
     html += "</div>";
-    html += "<div class='earned number'>";
+    html += "<div class='number'>";
     html += " <div class='label'>Total Earned:</div>";
     html += " <div class='amount'>${0}</div>".format(total_artist.toFixed(2));
     html += "</div>";

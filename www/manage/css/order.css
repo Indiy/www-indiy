@@ -704,21 +704,6 @@
 #artist_statement .list .item .payout_total {
     border-right: none;
 }
-
-#artist_statement .artist {
-    width: 505px;
-    padding-left: 25px;
-    text-align: left !important;
-}
-#artist_statement .count {
-    width: 130px;
-}
-#artist_statement .charge_total {
-    width: 132px;
-}
-#artist_statement .payout_total {
-    width: 143px;
-}
 #artist_statement .list .item .payout_total {
     border-right: none;
 }
