@@ -589,7 +589,6 @@ body {
 }
 #media_social_boxes .media_boxes .media_buttons .button {
     height: 72px;
-    background: black url('../images/inactive_button_texture.png') repeat;
     cursor: pointer;
 }
 #media_social_boxes .media_boxes .media_buttons .button .icon {
