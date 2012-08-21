@@ -374,7 +374,7 @@ body {
 }
 
 #big_play_icon.playing {
-    display: none;
+    display: none !important;
 }
 
 #tracker_bar .media_controls .progress_container {
