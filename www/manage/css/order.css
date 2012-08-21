@@ -723,69 +723,27 @@
     border-right: none;
 }
 
-
-#artist_statement .bottom {
-    padding-top: 15px;
-    width: 100%;
-    height: 153px;
-    background-color: white;
-}
-#artist_statement .bottom .back_to_site {
-    float: left;
-    margin-left: 22px;
-    margin-top: 18px;
-    width: 100px;
-    height: 25px;
-    font-size: 0;
-}
-#artist_statement .bottom .back_to_site .icon {
-    display: inline-block;
-    height: 25px;
-    width: 25px;
-    background: #383838;
-    vertical-align: top;
-}
-#artist_statement .bottom .back_to_site .label {
-    display: inline-block;
-    height: 18px;
-    width: 75px;
-    padding-top: 7px;
-    background: #1e2126;
-    color: white;
-    font-size: 12px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+#artist_statement .summary {
+    padding-top: 25px;
+    height: 44px;
     text-align: center;
-    vertical-align: top;
 }
-#artist_statement .bottom .totals {
-    float: right;
-    width: 50%;
-    height: 80px;
+#artist_statement .summary .number {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-#artist_statement .bottom .totals .total {
-    height: 29px;
-    padding-top: 6px;
-    width: 100%;
-}
-#artist_statement .bottom .totals .total .label {
-    float: right;
-    width: 130px;
+#artist_statement .summary .number .label {
+    display: inline-block;
+    color: black;
     font-size: 19px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
-    color: black;
-    text-align: right;
 }
-
-#artist_statement .bottom .totals .total .amount {
-    float: right;
-    width: 115px;
-    padding-right: 50px;
+#artist_statement .summary .number .amount {
+    display: inline-block;
     color: #2c9495;
     font-size: 19px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
-    text-align: right;
 }
-
-

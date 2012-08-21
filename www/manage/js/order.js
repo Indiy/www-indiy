@@ -90,8 +90,12 @@ function renderArtistSettlementOrderArray(orders,tag,summary_tag)
     {
         var order = orders[i];
         
+        var odd = "";
+        if( i % 2 == 1 )
+            odd = " odd";
+        
         var html = "";
-        html += "<div class='item'>";
+        html += "<div class='item{0}'>".format(odd);
         html += " <div class='order_id'>{0}</div>".format(order.id);
         html += " <div class='order_date'>{0}</div>".format(order.order_date);
         html += " <div class='charge_total'>${0}</div>".format(order.charge_amount.toFixed(2));
