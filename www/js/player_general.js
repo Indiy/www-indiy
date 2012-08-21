@@ -506,6 +506,7 @@ function playerProgress(curr_time,total_time)
 function playerPhotoInfo(name,location,listens)
 {
     $('#media_controls').hide();
+    $('#big_play_icon').hide();
     $('#photo_info').show();
     $('#photo_info .name').html(name);
     $('#photo_info .location').html(location);
@@ -520,6 +521,7 @@ function playerTrackInfo(track_name,listens)
 {
     $('#photo_info').hide();
     $('#media_controls').show();
+    $('#big_play_icon').show();
 
     if( track_name )
         $('#track_name').html(track_name);
@@ -528,10 +530,12 @@ function playerTrackInfo(track_name,listens)
 function playerSetPaused()
 {
     $('#track_play_pause_button').removeClass('playing');
+    $('#big_play_icon').removeClass('playing');
 }
 function playerSetPlaying()
 {
     $('#track_play_pause_button').addClass('playing');
+    $('#big_play_icon').addClass('playing');
 }
 
 

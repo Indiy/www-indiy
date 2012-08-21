@@ -359,7 +359,7 @@ body {
 .no_touch #tracker_bar .media_controls .volume .icon:hover {
     background: transparent url('/images/player_icons.png') no-repeat -337px -385px;
 }
-#tracker_bar .media_controls .play_pause .big_icon {
+#big_play_icon {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -369,11 +369,11 @@ body {
     height: 115px;
     background: transparent url('/images/player_icons.png') no-repeat -161px -306px;
 }
-.no_touch #tracker_bar .media_controls .play_pause .big_icon:hover {
+.no_touch #big_play_icon:hover {
     background: transparent url('/images/player_icons.png') no-repeat -17px -306px;
 }
 
-#tracker_bar .media_controls .play_pause.playing .big_icon {
+#big_play_icon.playing {
     display: none;
 }
 
