@@ -73,6 +73,8 @@
     
     $pending_shipment_orders_json = json_encode($pending_shipment_orders);
     $shipped_orders_json = json_encode($shipped_orders);
+
+    $artist_edit_url = "/manage/artist_management.php?userId=$artist_id";
     
     $include_order = TRUE;
     $include_editor = FALSE;
