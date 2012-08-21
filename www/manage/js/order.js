@@ -77,8 +77,8 @@ function markShipped()
 
 function renderArtistSettlementOrders()
 {
-    renderArtistSettlementOrderArray(g_pendingShipmentOrders,'#pending_orders tbody');
-    renderArtistSettlementOrderArray(g_shippedOrders,'#shipped_orders tbody');
+    renderArtistSettlementOrderArray(g_pendingShipmentOrders,'#shipped_order_list');
+    renderArtistSettlementOrderArray(g_shippedOrders,'#pending_order_list');
 }
 
 function renderArtistSettlementOrderArray(orders,tag)
@@ -91,18 +91,18 @@ function renderArtistSettlementOrderArray(orders,tag)
         var order = orders[i];
         
         var html = "";
-        html += "<tr>";
-        html += " <td class='order_id'>{0}</td>".format(order.id);
-        html += " <td class='date'>{0}</td>".format(order.order_date);
-        html += " <td class='amount'>${0}</td>".format(order.charge_amount.toFixed(2));
-        html += " <td class='amount'>${0}</td>".format(order.to_artist_amount.toFixed(2));
-        html += "</tr>";
+        html += "<div class='item'>";
+        html += " <div class='order_id'>{0}</td>".format(order.id);
+        html += " <div class='date'>{0}</td>".format(order.order_date);
+        html += " <div class='amount'>${0}</td>".format(order.charge_amount.toFixed(2));
+        html += " <div class='amount'>${0}</td>".format(order.to_artist_amount.toFixed(2));
+        html += "</div>";
         $(tag).append(html);
         
         total_charge += order.charge_amount;
         total_artist += order.to_artist_amount;
     }
-    
+    /*
     var html = "";
     html += "<tr class='total'>";
     html += " <td class='title' colspan='2'>Total</td>";
@@ -110,6 +110,7 @@ function renderArtistSettlementOrderArray(orders,tag)
     html += " <td class='amount'>${0}</td>".format(total_artist.toFixed(2));
     html += "</tr>";
     $(tag).append(html);
+     */
 }
 
 function renderAllArtistSummary()
