@@ -578,7 +578,6 @@ body {
 #media_social_boxes .media_boxes {
     width: auto;
     height: 100%;
-    background: black url('../images/inactive_button_texture.png') repeat;
     overflow: hidden;
 }
 #media_social_boxes .media_boxes .media_buttons {
@@ -589,6 +588,7 @@ body {
 }
 #media_social_boxes .media_boxes .media_buttons .button {
     height: 72px;
+    background: black url('../images/inactive_button_texture.png') no-repeat;
     cursor: pointer;
 }
 #media_social_boxes .media_boxes .media_buttons .button .icon {
@@ -2013,7 +2013,7 @@ body {
 /*************************************************************************/
 
 .narrow_screen #media_social_boxes .media_boxes .media_buttons .button {
-    height: 40px;
+    height: 41px;
 }
 .narrow_screen #media_social_boxes {
     height: 294px;
