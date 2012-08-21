@@ -651,7 +651,7 @@
 #artist_statement .list .item:hover {
     background-color: #aaa;
 }
-#artist_statement .order_num {
+#artist_statement .order_id {
     width: 110px;
 }
 #artist_statement .order_date {
