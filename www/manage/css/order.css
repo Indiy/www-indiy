@@ -712,6 +712,7 @@
     padding-top: 25px;
     height: 44px;
     text-align: center;
+    background-color: white;
 }
 #artist_statement .summary .number {
     display: inline-block;
