@@ -2050,3 +2050,8 @@ body {
 .narrow_screen.no_touch #media_social_boxes .button.email:hover .icon  {
     background: transparent url('../images/player_icons.png') no-repeat -482px -597px;
 }
+
+.narrow_screen #media_social_boxes .media_boxes .media_buttons .sep {
+    height: 1px;
+    background: #282828;
+}
