@@ -49,7 +49,7 @@
 
 
         scrollto: function(to,animate){
-            if( animate == undefined )
+            if( animate !== false )
                 animate = true;
             return this.each(function(){
                 this.swipe.scrollto(to,animate);
