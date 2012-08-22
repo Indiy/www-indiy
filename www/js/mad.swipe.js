@@ -48,19 +48,11 @@
         },
 
 
-        // scroll to a specific item within the container or to a specific distance of the content from top
-        //
-        // usage:
-        //   $('selector').swipe("scrollto");                    // scroll to top of content
-        //   $('selector').swipe("scrollto", 20);                // scroll to content 20px from top
-        //   $('selector').swipe("scrollto", "top");             // scroll to top of content
-        //   $('selector').swipe("scrollto", "middle");          // scroll to vertically middle of content
-        //   $('selector').swipe("scrollto", "bottom");          // scroll to bottom of content
-        //   $('selector').swipe("scrollto", $('item'));         // scroll to first content item identified by selector $('item')
-        //
-        scrollto: function(to){
+        scrollto: function(to,animate){
+            if( animate == undefined )
+                animate = true;
             return this.each(function(){
-                this.swipe.scrollto(to);
+                this.swipe.scrollto(to,animate);
             });
         },
         
@@ -180,7 +172,7 @@
         //
         // scroll to a specific distance from the top
         //
-        scrollto: function(index) {
+        scrollto: function(index,animate) {
             this.panelIndex = index;
             var left = index * this.contentWidth;
             left += this.overflow;
@@ -189,7 +181,15 @@
                 complete: $.proxy(this, 'onAnimateComplete')
             };
             
-            this.container.animate({ scrollLeft: left },opts);
+            if( animate )
+            {
+                this.container.animate({ scrollLeft: left },opts);
+            }
+            else
+            {
+                this.container.scrollLeft(left);
+                this.onAnimateComplete();
+            }
         },
         
         //
