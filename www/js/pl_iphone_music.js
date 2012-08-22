@@ -136,11 +136,8 @@ function musicPlayPause()
 }
 function musicPlay()
 {
-    if( !g_musicIsPlaying )
-    {
-        g_musicIsPlaying = true;
-        $('#jquery_jplayer').jPlayer("play");
-    }
+    g_musicIsPlaying = true;
+    $('#jquery_jplayer').jPlayer("play");
 }
 
 
