@@ -2055,6 +2055,14 @@ body {
     background: #282828;
 }
 
+
+.hide_volume #tracker_bar .media_controls .progress_container {
+    left: 75px;
+}
+
+
+
+
 #test_warning {
     position: fixed;
     top: 50%;

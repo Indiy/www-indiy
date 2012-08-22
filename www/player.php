@@ -385,13 +385,14 @@ END;
     $body_style = "";
     if( $NARROW_SCREEN )
     {
-        $body_style .= "narrow_screen";
+        $body_style .= " narrow_screen";
     }
     
     $hide_volume = FALSE;
     if( $IOS )
     {
         $hide_volume = TRUE;
+        $body_style .= " hide_volume";
     }
     
     include_once 'templates/player.html';
