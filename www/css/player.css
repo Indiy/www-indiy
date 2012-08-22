@@ -1054,7 +1054,8 @@ body {
 #user_tab .scrollable_container {
     padding-right: 102px;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 #user_tab .scrollable_container .image_holder {
