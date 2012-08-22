@@ -1,6 +1,5 @@
 
-var HIDE_CONTROLS_NORMAL_TIMEOUT = 5000;
-var HIDE_CONTROLS_OPEN_TIMEOUT = 15000;
+var HIDE_CONTROLS_TIMEOUT = 5000;
 
 var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
 var IS_IPHONE = navigator.userAgent.match(/iPhone/i) != null;
@@ -23,14 +22,35 @@ var g_socialContent = "share";
 var g_showingContentPage = false;
 var g_searchOpen = false;
 var g_volumeShown = false;
-var g_touchDevice = true;
+var g_touchDevice = false;
 
 function iphoneGeneralReady()
 {
+    if( !('ontouchstart' in document) )
+    {
+        g_touchDevice = false;
+        $('body').addClass('no_touch');
+    }
+    else
+    {
+        g_touchDevice = true;
+    }
+
     scrollToTop();
     $(window).resize(scrollToTop);
     
     photoChangeIndex(0);
+    
+    if( g_touchDevice )
+    {
+        $(document).bind("touchstart",showControls);
+        $(document).bind("touchend",timeoutControls);
+    }
+    else
+    {
+        $(document).mousemove(showAndTimeoutControls);
+    }
+    timeoutControls();
 }
 $(document).ready(iphoneGeneralReady);
 
@@ -38,6 +58,49 @@ function scrollToTop()
 {
     window.scrollTo(0,1);
 }
+function showControls()
+{
+    if( !g_controlsShown )
+    {
+        g_controlsShown = true;
+        $('.idle_fade_out').fadeIn();
+    }
+    else if( !$('.idle_fade_out').is(':animated') )
+    {
+        $('.idle_fade_out').stop();
+        $('.idle_fade_out').show();
+        $('.idle_fade_out').css("opacity",1.0);
+    }
+    clearTimeoutControls();
+}
+function showAndTimeoutControls()
+{
+    showControls();
+    timeoutControls();
+}
+function clearTimeoutControls()
+{
+    if( g_hideControlsTimeout !== false )
+    {
+        window.clearTimeout(g_hideControlsTimeout);
+        g_hideControlsTimeout = false;
+    }
+}
+function timeoutControls()
+{
+    clearTimeoutControls();
+    
+    if( !g_showingContentPage && !g_searchOpen )
+    {
+        g_hideControlsTimeout = window.setTimeout(hideControls,HIDE_CONTROLS_TIMEOUT);
+    }
+}
+function hideControls()
+{
+    g_controlsShown = false;
+    $('.idle_fade_out').fadeOut();
+}
+
 
 function setPlayerMode(mode)
 {
