@@ -34,17 +34,21 @@
 body {
     margin: 0px;
     padding: 0px;
+    background-color: grey;
+}
+#player_body {
+    position: relative;
     background-color: black;
 }
 
 @media only screen and (orientation:portrait) {
-    body {
+    #player_body {
         height: 420px;
     }
 }
 @media only screen and (orientation:landscape) {
-    body {
-        height: 280px;
+    #player_body {
+        height: 270px;
     }
 }
 
@@ -213,14 +217,13 @@ body {
 
 #bottom_container {
     position: absolute;
-    bottom: -64px;
+    bottom: 0px;
     height: 55px;
     left: 0px;
     right: 0px;
     overflow: hidden;
 }
 #tracker_bar {
-    position: relative;
     height: 55px;
     overflow: hidden;
     background: black url('../images/tracker_bar_bg.png') repeat-x;
