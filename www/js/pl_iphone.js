@@ -1,5 +1,5 @@
 
-var HIDE_CONTROLS_TIMEOUT = 5000;
+var HIDE_CONTROLS_TIMEOUT = 3000;
 
 var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
 var IS_IPHONE = navigator.userAgent.match(/iPhone/i) != null;
