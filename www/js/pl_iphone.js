@@ -148,6 +148,15 @@ function playerSetPaused()
     $('#big_play_icon').removeClass('playing');
     $('#big_play_icon').addClass('paused');
 }
+function playerPlay()
+{
+    hideTooltip();
+    if( g_playerMode == "music" )
+        musicPlay();
+    else if( g_playerMode == "video" )
+        videoPlay();
+}
+
 
 function clickPhotoIcon()
 {
@@ -162,3 +171,5 @@ function clickVideoIcon()
 {
     
 }
+
+
