@@ -113,9 +113,9 @@ body {
     display: none;
     position: absolute;
     top: 0px;
+    left: 0px;
     right: 0px;
-    width: 200px;
-    height: 200px;
+    bottom: 0px;
     margin: 0px;
     padding: 0px;
     background-color: blue;
