@@ -23,6 +23,7 @@ function musicOnReady()
         onReady: musicSwipeReady
     };
     $('#music_bg').swipe(opts);
+    $('#music_bg').click(musicMaybePause);
 }
 
 function musicSwipeReady()
@@ -138,6 +139,11 @@ function musicPlay()
 {
     g_musicIsPlaying = true;
     $('#jquery_jplayer').jPlayer("play");
+}
+
+function musicMaybePause()
+{
+    $('#jquery_jplayer').jPlayer("pause");
 }
 
 
