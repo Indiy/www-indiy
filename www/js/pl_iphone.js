@@ -137,6 +137,16 @@ function playerTrackInfo(track_name,listens)
 {
     
 }
+function playerSetPlaying()
+{
+    $('#big_play_icon').removeClass('paused');
+    $('#big_play_icon').addClass('playing');
+}
+function playerSetPaused()
+{
+    $('#big_play_icon').removeClass('playing');
+    $('#big_play_icon').addClass('paused');
+}
 
 function clickPhotoIcon()
 {
@@ -145,6 +155,7 @@ function clickPhotoIcon()
 function clickMusicIcon()
 {
     musicChangeIndex(0);
+    musicPlay();
 }
 function clickVideoIcon()
 {

@@ -141,6 +141,11 @@ function musicPlayPause()
     else
         $('#jquery_jplayer').jPlayer("play");
 }
+function musicPlay()
+{
+    if( !g_musicIsPlaying )
+        $('#jquery_jplayer').jPlayer("play");
+}
 
 
 var g_songsPlayed = 0;
