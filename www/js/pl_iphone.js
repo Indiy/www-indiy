@@ -109,7 +109,7 @@ function setPlayerMode(mode)
     if( g_playerMode == "music" )
     {
         $('#big_play_icon').show();
-        //videoHide();
+        videoHide();
         photoHide();
         musicShow();
         $('#tracker_bar .buttons .music.button').addClass('active');
@@ -119,14 +119,14 @@ function setPlayerMode(mode)
         $('#big_play_icon').show();
         musicHide();
         photoHide();
-        //videoShow();
+        videoShow();
         $('#tracker_bar .buttons .video.button').addClass('active');
     }
     else if( g_playerMode == "photo" )
     {
         $('#big_play_icon').hide();
         musicHide();
-        //videoHide();
+        videoHide();
         photoShow();
         $('#tracker_bar .buttons .photos.button').addClass('active');
     }
@@ -168,7 +168,8 @@ function clickMusicIcon()
 }
 function clickVideoIcon()
 {
-    
+    videoChangeIndex(0,false);
+    videoPlay();
 }
 
 
