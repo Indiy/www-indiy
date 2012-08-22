@@ -4,16 +4,13 @@ var g_videoPlayer = false;
 var g_videoPlaying = false;
 var g_videoVolRatio = 1.0;
 var g_videoReady = false;
-var g_playIndexOnReady = false;
+var g_videoPlayIndexOnReady = false;
 
 $(document).ready(videoOnReady);
 function videoOnReady()
 {
     if( g_videoList.length > 0 )
     {
-        scrollVideoListToIndex();
-        $(window).resize(scrollVideoListToIndex);
-        
         var opts = {
             panelCount: g_videoList.length,
             resizeCallback: videoResizeBackgrounds,
@@ -131,10 +128,10 @@ function videoChangeIndex(index)
 {
     if( !g_videoReady )
     {
-        g_playIndexOnReady = index;
+        g_videoPlayIndexOnReady = index;
         return;
     }
-    g_playIndexOnReady = false;
+    g_videoPlayIndexOnReady = false;
     
     $('#video_bg').swipe('scrollto',index);
 
@@ -168,9 +165,9 @@ function onVideoReady()
     g_videoPlayer.addEvent("progress",videoDownloadProgress);
     
     g_videoReady = true;
-    if( g_playIndexOnReady !== false )
+    if( g_videoPlayIndexOnReady !== false )
     {
-        videoChangeIndex(g_playIndexOnReady);
+        videoChangeIndex(g_videoPlayIndexOnReady);
     }
 }
 function videoLoadStart()
