@@ -169,7 +169,6 @@ function clickMusicIcon()
 function clickVideoIcon()
 {
     videoChangeIndex(0,false);
-    videoPlay();
 }
 
 
