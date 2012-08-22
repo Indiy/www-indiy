@@ -2060,10 +2060,10 @@ body {
     top: 50%;
     left: 50%;
     width: 400px;
-    height: 100px;
+    height: 50px;
     margin-left: -200px;
-    margin-top: -50px;
-    font-size: 40px;
+    margin-top: -25px;
+    font-size: 50px;
     color: red;
     font-family: Helvetica, sans-serif;
     text-align: center;
