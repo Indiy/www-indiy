@@ -110,19 +110,19 @@ function setPlayerMode(mode)
     {
         //videoHide();
         photoHide();
-        //musicShow();
+        musicShow();
         $('#tracker_bar .buttons .music.button').addClass('active');
     }
     else if( g_playerMode == "video" )
     {
-        //musicHide();
+        musicHide();
         photoHide();
         //videoShow();
         $('#tracker_bar .buttons .video.button').addClass('active');
     }
     else if( g_playerMode == "photo" )
     {
-        //musicHide();
+        musicHide();
         //videoHide();
         photoShow();
         $('#tracker_bar .buttons .photos.button').addClass('active');
@@ -132,4 +132,17 @@ function setPlayerMode(mode)
 function playerPhotoInfo(name,location,listens)
 {
     $('#big_play_icon').hide();
+}
+
+function clickPhotoIcon()
+{
+    photoChangeIndex(0);
+}
+function clickMusicIcon()
+{
+    musicChangeIndex(0);
+}
+function clickVideoIcon()
+{
+    
 }

@@ -17,6 +17,7 @@
 		2D25C39115DAEAFC00132306 /* player_social_buttons.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player_social_buttons.html; sourceTree = "<group>"; };
 		2D25C3C515E5399400132306 /* pl_iphone.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = pl_iphone.js; sourceTree = "<group>"; };
 		2D25C3C715E544FB00132306 /* pl_iphone_photo.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = pl_iphone_photo.js; sourceTree = "<group>"; };
+		2D25C3C815E556EC00132306 /* pl_iphone_music.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = pl_iphone_music.js; sourceTree = "<group>"; };
 		2D34E22414A05F05004473F9 /* utils.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = utils.php; sourceTree = "<group>"; };
 		2D34E22714A06AC9004473F9 /* twitter_landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twitter_landing.php; sourceTree = "<group>"; };
 		2D34E22814A173A9004473F9 /* landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = landing.php; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.php; };
@@ -3171,6 +3172,7 @@
 				2D25C38715D43BCE00132306 /* fan.js */,
 				2D25C3C515E5399400132306 /* pl_iphone.js */,
 				2D25C3C715E544FB00132306 /* pl_iphone_photo.js */,
+				2D25C3C815E556EC00132306 /* pl_iphone_music.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
