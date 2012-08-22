@@ -146,6 +146,9 @@
 		2D747C5515D6489D00128EEC /* update_madcom.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = update_madcom.sh; path = ../utils/update_madcom.sh; sourceTree = "<group>"; };
 		2D747C5615D64B9800128EEC /* tag_master.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = tag_master.sh; path = ../utils/tag_master.sh; sourceTree = "<group>"; };
 		2D747C5715D64FD100128EEC /* update_from_tag.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = update_from_tag.sh; path = ../utils/update_from_tag.sh; sourceTree = "<group>"; };
+		2D747C5D15E4AFB300128EEC /* player_iphone.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = player_iphone.css; sourceTree = "<group>"; };
+		2D747C5F15E4AFBE00128EEC /* player_iphone.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player_iphone.html; sourceTree = "<group>"; };
+		2D747C6015E4AFE700128EEC /* player_iphone.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player_iphone.php; sourceTree = "<group>"; };
 		2D7849EE15CE37EA00A89620 /* fan_signup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_signup.php; sourceTree = "<group>"; };
 		2D7849F015CED04B00A89620 /* role_choice.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = role_choice.php; sourceTree = "<group>"; };
 		2D7849F115CEEA0600A89620 /* logout.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = logout.php; sourceTree = "<group>"; };
@@ -1863,6 +1866,7 @@
 		2D9E2FD81569F13600A76906 /* templates */ = {
 			isa = PBXGroup;
 			children = (
+				2D747C5F15E4AFBE00128EEC /* player_iphone.html */,
 				2D25C38E15D9BBA200132306 /* player2.html */,
 				2D25C39015DAE8C400132306 /* player_social_items.html */,
 				2D25C39115DAEAFC00132306 /* player_social_buttons.html */,
@@ -1997,6 +2001,7 @@
 				2D8D96FC15A26FE900AA3D1B /* fan */,
 				2D25C38D15D9BB9A00132306 /* player2.php */,
 				2D25C38C15D96E2400132306 /* player.php */,
+				2D747C6015E4AFE700128EEC /* player_iphone.php */,
 				2D7849F015CED04B00A89620 /* role_choice.php */,
 				2D7849F115CEEA0600A89620 /* logout.php */,
 				2D8D971415A8CF3900AA3D1B /* signup.php */,
@@ -2298,6 +2303,7 @@
 		2DF470471440B77F005538C7 /* css */ = {
 			isa = PBXGroup;
 			children = (
+				2D747C5D15E4AFB300128EEC /* player_iphone.css */,
 				2DD94A2B14C368DF002B1259 /* vim.css */,
 				2D34E23514ABFF09004473F9 /* video-js.css */,
 				2DF4704F1440B77F005538C7 /* style.css */,
