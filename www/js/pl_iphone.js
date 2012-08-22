@@ -133,6 +133,10 @@ function playerPhotoInfo(name,location,listens)
 {
     $('#big_play_icon').hide();
 }
+function playerTrackInfo(track_name,listens)
+{
+    
+}
 
 function clickPhotoIcon()
 {
