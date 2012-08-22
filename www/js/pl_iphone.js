@@ -4,6 +4,8 @@ function iphoneGeneralReady()
 {
     scrollToTop();
     $(window).resize(scrollToTop);
+    
+    photoChangeIndex(0);
 }
 $(document).ready(iphoneGeneralReady);
 
