@@ -110,8 +110,11 @@ function videoChangeId(video_id)
     }
 }
 
-function videoChangeIndex(index)
+function videoChangeIndex(index,animate)
 {
+    if( animate !== false )
+        animate = true;
+
     if( !g_videoReady )
     {
         g_videoPlayIndexOnReady = index;
@@ -119,7 +122,7 @@ function videoChangeIndex(index)
     }
     g_videoPlayIndexOnReady = false;
     
-    $('#video_bg').swipe('scrollto',index);
+    $('#video_bg').swipe('scrollto',index,animate);
 
     setPlayerMode("video");    
 }
