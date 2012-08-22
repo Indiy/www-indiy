@@ -61,3 +61,8 @@ function setPlayerMode(mode)
         photoShow();
     }
 }
+
+function playerPhotoInfo(name,location,listens)
+{
+    $('#big_play_icon').hide();
+}

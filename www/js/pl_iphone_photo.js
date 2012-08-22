@@ -104,8 +104,6 @@ function photoUpdateToIndex(index)
     g_currentPhotoIndex = index;
     var photo = g_photoList[index];
     
-    loveChangedPhoto(photo.id,photo.name);
-    
     photoLoadImage(photo,index);
     
     g_currentPhotoId = photo.id;
