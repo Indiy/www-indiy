@@ -37,6 +37,17 @@ body {
     background-color: black;
 }
 
+@media only screen and (orientation:portrait) {
+    body {
+        height: 420px;
+    }
+}
+@media only screen and (orientation:landscape) {
+    body {
+        height: 280px;
+    }
+}
+
 .full_screen_bg { 
     position: fixed; 
     top: 0px;
