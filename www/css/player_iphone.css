@@ -119,6 +119,7 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: black;
+    z-index: -100;
 }
 
 #top_bar {
