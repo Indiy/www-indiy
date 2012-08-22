@@ -388,7 +388,7 @@ END;
         $body_style .= "narrow_screen";
     }
     
-    $hide_volume = FALSE:
+    $hide_volume = FALSE;
     if( $IOS )
     {
         $hide_volume = TRUE;
