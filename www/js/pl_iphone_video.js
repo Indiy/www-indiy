@@ -39,7 +39,6 @@ function videoPanelChange(index)
     imageLoadItem(video,index,'#video_bg');
     
     g_videoCurrentIndex = index;
-    volumeSetLevel(g_videoVolRatio);
     var video = g_videoList[index];
     window.location.hash = '#video_id=' + video.id;
     
