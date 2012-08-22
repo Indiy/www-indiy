@@ -2066,4 +2066,6 @@ body {
     font-size: 40px;
     color: red;
     font-family: Helvetica, sans-serif;
+    text-align: center;
+    z-index: 1000000;
 }
