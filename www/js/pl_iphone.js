@@ -105,23 +105,27 @@ function hideControls()
 function setPlayerMode(mode)
 {
     g_playerMode = mode;
+    $('#tracker_bar .buttons .button').removeClass('active');
     if( g_playerMode == "music" )
     {
         //videoHide();
         photoHide();
         //musicShow();
+        $('#tracker_bar .buttons .music.button').addClass('active');
     }
     else if( g_playerMode == "video" )
     {
         //musicHide();
         photoHide();
         //videoShow();
+        $('#tracker_bar .buttons .video.button').addClass('active');
     }
     else if( g_playerMode == "photo" )
     {
         //musicHide();
         //videoHide();
         photoShow();
+        $('#tracker_bar .buttons .photos.button').addClass('active');
     }
 }
 

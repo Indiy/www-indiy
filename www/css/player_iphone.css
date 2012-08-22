@@ -261,32 +261,20 @@ body {
 #tracker_bar .buttons .photos.button .icon {
     background: transparent url('/images/player_icons.png') no-repeat -56px -661px;
 }
-.no_touch #tracker_bar .buttons .photos.button .icon:hover {
+#tracker_bar .buttons .photos.button.active .icon: {
     background: transparent url('/images/player_icons.png') no-repeat -56px -591px;
 }
 #tracker_bar .buttons .music.button .icon {
     background: transparent url('/images/player_icons.png') no-repeat -118px -660px;
 }
-.no_touch #tracker_bar .buttons .music.button .icon:hover {
+#tracker_bar .buttons .music.button.active .icon {
     background: transparent url('/images/player_icons.png') no-repeat -118px -592px;
 }
 #tracker_bar .buttons .video.button .icon {
     background: transparent url('/images/player_icons.png') no-repeat -179px -662px;
 }
-.no_touch #tracker_bar .buttons .video.button .icon:hover {
+#tracker_bar .buttons .video.button.active .icon {
     background: transparent url('/images/player_icons.png') no-repeat -179px -594px;
-}
-#tracker_bar .buttons .love.button .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -243px -661px;
-}
-.no_touch #tracker_bar .buttons .love.button .icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat -243px -534px;
-}
-#tracker_bar .buttons .love.button.love_active .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -243px -594px;
-}
-.no_touch #tracker_bar .buttons .love.button.love_active .icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat -243px -534px;
 }
 
 #tracker_bar .buttons .sep {
@@ -297,78 +285,9 @@ body {
     border-right: 1px solid #333;
 }
 
-.picture_list {
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-.picture_list .left_nav {
-    position: absolute;
-    top: 98px;
-    left: 9px;
-    width: 28px;
-    height: 28px;
-    background: transparent url('../images/player_icons.png') no-repeat -440px -552px;
-}
-.no_touch .picture_list .left_nav:hover {
-    background: transparent url('../images/player_icons.png') no-repeat -440px -487px;
-}
-.picture_list .right_nav {
-    position: absolute;
-    top: 98px;
-    right: 9px;
-    width: 28px;
-    height: 28px;
-    background: transparent url('../images/player_icons.png') no-repeat -441px -677px;
-}
-.no_touch .picture_list .right_nav:hover {
-    background: transparent url('../images/player_icons.png') no-repeat -441px -612px;
-}
-.picture_list .content {
-    position: absolute;
-    right: 44px;
-    left: 44px;
-    height: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-}
-.picture_list .content .item {
-    display: inline-block;
-    width: 33.333%;
-    padding-right: 2px;
-    text-align: center;
-    cursor: pointer;
-    vertical-align: top;
-}
-.picture_list .content .item .picture {
-    margin-right: 4px;
-    padding-right: 6px;
-}
-.picture_list .content .item .picture img {
-    max-width: 200px;
-    width: 100%;
-    padding: 3px;
-    background-color: white;
-}
-.picture_list .content .item .label {
-    max-width: 200px;
-    width: 100%;
-    padding-top: 10px;
-    margin-right: auto;
-    margin-left: auto;
-    color: #888;
-    font-size: 12px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-    font-weight: normal;
-    white-space: normal;
-}
-
-
 #video_bg {
     display: none;
 }
-
-
 
 #test_warning {
     position: fixed;
