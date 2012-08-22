@@ -2054,3 +2054,16 @@ body {
     height: 1px;
     background: #282828;
 }
+
+#test_warning {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 100px;
+    margin-left: -200px;
+    margin-top: -50px;
+    font-size: 40px;
+    color: red;
+    font-family: Helvetica, sans-serif;
+}
