@@ -43,6 +43,8 @@ function videoPanelChange(index)
     window.location.hash = '#video_id=' + video.id;
     
     playerTrackInfo(video.name,video.views);
+
+    /*
     
     var url = video.video_file;
     var url_ogv = url.replace(".mp4",".ogv");
@@ -58,6 +60,7 @@ function videoPanelChange(index)
     videoOnWindowResize();
 
     g_videoPlayer.src(media);
+    */
 }
 
 function videoResizeBackgrounds()
@@ -92,7 +95,7 @@ function videoPlayPause()
     }
     else
     {
-        g_videoPlayer.play();
+        videoPlay();
     }
 }
 function videoPause()
@@ -103,6 +106,17 @@ function videoPause()
 }
 function videoPlay()
 {
+    var video = g_videoList[g_videoCurrentIndex];
+
+    var url = video.video_file;
+    var url_ogv = url.replace(".mp4",".ogv");
+    
+    var media = [
+                 { type: "video/mp4", src: url },
+                 { type: "video/ogg", src: url_ogv }
+                 ];
+
+    g_videoPlayer.src(media);
     g_videoPlayer.play();
 }
 
