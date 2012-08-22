@@ -58,7 +58,6 @@ function videoPanelChange(index)
     videoOnWindowResize();
 
     g_videoPlayer.src(media);
-    g_videoPlayer.play();
 }
 
 function videoResizeBackgrounds()
