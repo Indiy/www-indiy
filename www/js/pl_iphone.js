@@ -150,7 +150,6 @@ function playerSetPaused()
 }
 function playerPlay()
 {
-    hideTooltip();
     if( g_playerMode == "music" )
         musicPlay();
     else if( g_playerMode == "video" )
