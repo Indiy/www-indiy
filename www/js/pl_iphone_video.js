@@ -64,19 +64,10 @@ function videoPanelChange(index)
 function videoResizeBackgrounds()
 {
     imageResizeBackgrounds(g_videoList,'#video_bg');
-    
-    var left_sl = $('#video_bg').scrollLeft();
-    $('#video_container').css({left: left_sl });
-
-    videoOnWindowResize();
 }
 
 function videoHide()
 {
-    if( g_videoPlayer )
-    {
-        videoPause();
-    }
     $('#big_play_button').hide();
     $('#video_container').hide();
     $('#video_bg').hide();
@@ -196,16 +187,6 @@ function videoEnded()
 {
     //playerSetPaused();
     videoNext();
-}
-
-function videoOnWindowResize()
-{
-    if( g_videoPlayer )
-    {
-        var h = $('#video_container').height();
-        var w = $('#video_container').width();
-        g_videoPlayer.size(w,h);
-    }
 }
 
 function videoCreateTag()
