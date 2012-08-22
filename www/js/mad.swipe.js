@@ -306,26 +306,38 @@
             this.mouseDown = false;
         },
         onTouchStart: function(je) {
-            je.preventDefault();
+            //je.preventDefault();
             this.container.stop(true);
             
             var ev = je.originalEvent;
             var touch = ev.touches[0];
+            this.startScreenX = touch.screenX;
+            this.startScreenY = touch.screenY;
             this.handleMoveStart(touch.screenX);
         },
 
         onTouchMove: function(je) {
-            je.preventDefault();
 
             var ev = je.originalEvent;
             if(ev.touches.length > 1 || ev.scale && ev.scale !== 1) 
                 return;
             
             var touch = ev.touches[0];
-            this.handleMove(touch.screenX);
+            
+            var deltaX = touch.screenX - this.startScreenX;
+            var deltaY = touch.screenY - this.startScreenY;
+            var is_scroll = false;
+            if( Math.abs(deltaX) < Math.abs(deltaY) )
+                is_scroll = true;
+
+            if( !is_scroll )
+            {
+                je.preventDefault();
+                this.handleMove(touch.screenX);
+            }
         },
         onTouchEnd: function(je) {
-            je.preventDefault();
+            //je.preventDefault();
             var ev = je.originalEvent;
 
             this.handleMoveDone();
