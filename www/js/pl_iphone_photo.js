@@ -56,7 +56,6 @@ function photoListScrollRight()
 
 function photoPanelChange(index)
 {
-    console.log("photoPanelChange: " + index);
     photoUpdateToIndex(index);
 }
 
