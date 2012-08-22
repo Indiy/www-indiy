@@ -37,9 +37,7 @@ function setupJplayer()
         solution: "html, flash",
         supplied: "mp3, oga",
         swfPath: "/js/Jplayer.swf",
-        verticalVolume: true,
-        wmode: "window",
-        volume: 0.8
+        wmode: "window"
     };
 
     var player = $('#jquery_jplayer').jPlayer(opts);
@@ -56,10 +54,7 @@ function jplayerReady()
     
     if( g_musicStartIndex !== false )
     {
-        if( IS_IOS )
-            g_musicIsPlaying = false;
-        else
-            g_musicIsPlaying = true;
+        g_musicIsPlaying = false;
         musicChangeIndex(g_musicStartIndex);
     }
 }
@@ -130,8 +125,6 @@ function jplayerEnded()
 }
 function jplayerVolume(event)
 {
-    var vol_ratio = event.jPlayer.options.volume;
-    volumeSetLevel(vol_ratio);
 }
 
 function musicPlayPause()
