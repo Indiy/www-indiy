@@ -394,6 +394,6 @@ END;
         $hide_volume = TRUE;
     }
     
-    include_once 'templates/player2.html';
+    include_once 'templates/player.html';
 
 ?>
