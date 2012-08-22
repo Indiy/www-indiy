@@ -398,6 +398,14 @@ END;
         $body_style .= " hide_volume";
     }
     
+    $DESKTOP = FALSE;
+    if( strpos($_SERVER['HTTP_USER_AGENT'],"Mobile") === FALSE )
+    {
+        $DESKTOP = TRUE;
+        $body_style .= " desktop";
+    }
+    
+    
     include_once 'templates/player_iphone.html';
 
 ?>

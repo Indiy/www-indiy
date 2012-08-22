@@ -45,10 +45,20 @@ body {
     #player_body {
         height: 420px;
     }
+    .desktop #player_body {
+        width: 320px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 @media only screen and (orientation:landscape) {
     #player_body {
         height: 270px;
+    }
+    .desktop #player_body {
+        width: 480px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
