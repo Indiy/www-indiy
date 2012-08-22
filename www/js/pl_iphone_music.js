@@ -163,8 +163,11 @@ function musicChangeId( song_id )
     }
 }
 
-function musicChangeIndex( index ) 
+function musicChangeIndex(index,animate)
 {
+    if( animate !== false )
+        animate = true;
+
     if( !g_musicPlayerReady )
     {
         g_musicStartIndex = index;
@@ -173,7 +176,7 @@ function musicChangeIndex( index )
 
     setPlayerMode("music");
 
-    $('#music_bg').swipe('scrollto',index);
+    $('#music_bg').swipe('scrollto',index,animate);
 }
 
 function musicNext()

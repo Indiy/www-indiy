@@ -163,7 +163,7 @@ function clickPhotoIcon()
 }
 function clickMusicIcon()
 {
-    musicChangeIndex(0);
+    musicChangeIndex(0,false);
     musicPlay();
 }
 function clickVideoIcon()
