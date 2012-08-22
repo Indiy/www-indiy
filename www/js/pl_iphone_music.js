@@ -89,11 +89,7 @@ function musicPanelChange(index)
     
     playerTrackInfo(song.name,song.listens);
     
-    if( musicUpdateListens(song.id,index) )
-    {
-        g_totalPageViews++;
-        playerUpdateTotalViewCount();
-    }
+    musicUpdateListens(song.id,index);
 }
 
 function musicHide()
