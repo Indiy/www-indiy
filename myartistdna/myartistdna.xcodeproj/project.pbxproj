@@ -146,7 +146,7 @@
 		2D747C5515D6489D00128EEC /* update_madcom.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = update_madcom.sh; path = ../utils/update_madcom.sh; sourceTree = "<group>"; };
 		2D747C5615D64B9800128EEC /* tag_master.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = tag_master.sh; path = ../utils/tag_master.sh; sourceTree = "<group>"; };
 		2D747C5715D64FD100128EEC /* update_from_tag.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = update_from_tag.sh; path = ../utils/update_from_tag.sh; sourceTree = "<group>"; };
-		2D747C5D15E4AFB300128EEC /* player_iphone.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = player_iphone.css; sourceTree = "<group>"; };
+		2D747C5D15E4AFB300128EEC /* player_iphone.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = player_iphone.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D747C5F15E4AFBE00128EEC /* player_iphone.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player_iphone.html; sourceTree = "<group>"; };
 		2D747C6015E4AFE700128EEC /* player_iphone.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player_iphone.php; sourceTree = "<group>"; };
 		2D7849EE15CE37EA00A89620 /* fan_signup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_signup.php; sourceTree = "<group>"; };
