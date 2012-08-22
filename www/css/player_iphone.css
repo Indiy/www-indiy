@@ -261,7 +261,7 @@ body {
 #tracker_bar .buttons .photos.button .icon {
     background: transparent url('/images/player_icons.png') no-repeat -56px -661px;
 }
-#tracker_bar .buttons .photos.button.active .icon: {
+#tracker_bar .buttons .photos.button.active .icon {
     background: transparent url('/images/player_icons.png') no-repeat -56px -591px;
 }
 #tracker_bar .buttons .music.button .icon {
