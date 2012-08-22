@@ -289,6 +289,25 @@ body {
     display: none;
 }
 
+#big_play_icon {
+    position: absolute;
+    top: 60px;
+    bottom: 70px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(100,100,100,0.3);
+    z-index: 100;
+}
+#big_play_icon .play {
+    padding-top: 40px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+#big_play_icon .pause {
+    display: none;
+}
+
 #test_warning {
     position: fixed;
     top: 50%;
