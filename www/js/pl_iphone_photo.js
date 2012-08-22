@@ -10,7 +10,6 @@ function photoOnReady()
 {
     if( g_photoList.length > 0 )
     {
-        
         var opts = {
             panelCount: g_photoList.length,
             resizeCallback: photoResizeBackgrounds,
