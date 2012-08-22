@@ -194,7 +194,7 @@ function openBottom()
     $('#bottom_container').stop();
     if( IS_NARROW )
     {
-        $('#bottom_container').animate({ height: '349px' });
+        $('#bottom_container').animate({ height: '348px' });
     }
     else
     {
