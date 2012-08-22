@@ -137,7 +137,10 @@ function musicPlayPause()
 function musicPlay()
 {
     if( !g_musicIsPlaying )
+    {
+        g_musicIsPlaying = true;
         $('#jquery_jplayer').jPlayer("play");
+    }
 }
 
 
@@ -186,11 +189,6 @@ function musicPrevious()
         index = g_musicList.length - 1;
     
     musicChangeIndex(index);
-}
-function musicVolume(vol_ratio)
-{
-    $('#jquery_jplayer').jPlayer("volume",vol_ratio);
-    g_musicVolRatio = vol_ratio;
 }
 
 function musicPreloadImages()
