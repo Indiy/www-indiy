@@ -1,7 +1,6 @@
 
 var g_videoLeftIndex = 0;
 var g_videoPlayer = false;
-var g_videoPlaying = false;
 var g_videoVolRatio = 1.0;
 var g_videoReady = false;
 var g_videoPlayIndexOnReady = false;
@@ -78,30 +77,15 @@ function videoHide()
     {
         videoPause();
     }
+    $('#big_play_button').hide();
     $('#video_container').hide();
     $('#video_bg').hide();
 }
 function videoShow()
 {
+    $('#big_play_button').show();
     $('#video_container').show();
     $('#video_bg').show();
-}
-function videoPlayPause()
-{
-    if( g_videoPlaying )
-    {
-        videoPause();
-    }
-    else
-    {
-        videoPlay();
-    }
-}
-function videoPause()
-{
-    g_videoPlaying = false;
-    g_videoPlayer.pause();
-    playerSetPaused();
 }
 function videoPlay()
 {
@@ -144,7 +128,7 @@ function videoChangeIndex(index)
     }
     g_videoPlayIndexOnReady = false;
     
-    $('#video_bg').swipe('scrollto',index);
+    $('#video_bg').swipe('scrollto',index,false);
 
     setPlayerMode("video");    
 }
@@ -199,8 +183,7 @@ function videoDurationChange()
 }
 function videoPlayStarted()
 {
-    g_videoPlaying = true;
-    playerSetPlaying();
+    //playerSetPlaying();
 }
 function videoProgress()
 {
@@ -211,8 +194,7 @@ function videoProgress()
 }
 function videoEnded()
 {
-    g_videoPlaying = false;
-    playerSetPaused();
+    //playerSetPaused();
     videoNext();
 }
 
