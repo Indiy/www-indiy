@@ -47,7 +47,6 @@
             });
         },
 
-
         scrollto: function(to,animate){
             if( animate !== false )
                 animate = true;
