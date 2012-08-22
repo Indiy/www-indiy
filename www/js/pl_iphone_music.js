@@ -120,7 +120,6 @@ function jplayerPause()
 }
 function jplayerEnded()
 {
-    g_musicIsPlaying = false;
     playerSetPaused();
     musicNext();
 }
