@@ -56,7 +56,6 @@ function videoPanelChange(index)
     
     var left_sl = $('#video_bg').scrollLeft();
     $('#video_container').css({ left: left_sl });
-    $('#video_container').show();
     videoOnWindowResize();
 
     g_videoPlayer.src(media);
@@ -84,7 +83,7 @@ function videoHide()
 }
 function videoShow()
 {
-    //$('#video_container').show();
+    $('#video_container').show();
     $('#video_bg').show();
 }
 function videoPlayPause()
