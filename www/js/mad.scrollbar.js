@@ -4,6 +4,10 @@
     var methods = {
         init: function(fn,opts){
 
+            //if( 'ontouchstart' in document )
+            if( navigator.userAgent.match(/iPad/i) != null )
+                return this;
+
             // Extend default options
             var options = $.extend({}, $.fn.scrollbar.defaults, opts);
 
