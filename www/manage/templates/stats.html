@@ -63,36 +63,40 @@
 				
 				<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="#">Analytics</a></h2>
-					
-						<h2>Total Player Views: <?=$total_player_views;?></h2>
-						
-						<h4>Page Views</h4>
-						
-							<div class="graph">
-								<div style="height: 10px;">&nbsp;</div>
-								<?=$pageList;?>
-								<div class="clear"></div>
-							</div>
-							<div class="names">
-								<?=$pageNames;?>
-								<div class="clear"></div>
-							</div>
-							
-						<h4>Song Plays</h4>
-						
-                        <?=$songListHtml;?>
+                        <div class='messy'>
+                            <h2 class="title"><a href="#">Analytics</a></h2>
+                        
+                            <h2>Total Player Views: <?=$total_player_views;?></h2>
+                            
+                            <h4>Page Views</h4>
+                            
+                                <div class="graph">
+                                    <div style="height: 10px;">&nbsp;</div>
+                                    <?=$pageList;?>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="names">
+                                    <?=$pageNames;?>
+                                    <div class="clear"></div>
+                                </div>
+                                
+                            <h4>Song Plays</h4>
+                            
+                            <?=$songListHtml;?>
+                        </div>
                         
                         <h4>Video Plays</h4>
                         
                         <?=$video_plays_html;?>
-							
-						<h4>Love</h4>
-						
-							<div class="lovehate">
-								<?=$lovehate;?>
-								<div class="clear"></div>
-							</div>
+
+                        <div class='messy'>
+                            <h4>Love</h4>
+                            
+                            <div class="lovehate">
+                                <?=$lovehate;?>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
 
 					</div>
 					<div style="clear: both;">&nbsp;</div>
