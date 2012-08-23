@@ -304,10 +304,10 @@ body {
 #big_play_icon .outer {
     width: 72px;
     height: 72px;
-    background-color: rgba(100,100,100,0.7)
+    background-color: rgba(100,100,100,0.7);
     border-radius: 72px;
 }
-#bin_play_icon .inner {
+#big_play_icon .inner {
     margin-top: 2px;
     margin-left: 2px;
     width: 68px;
