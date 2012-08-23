@@ -2,4 +2,10 @@
 /* For Web Analytics */
 
 
-
+#stats .graph_title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #474248;
+    font-size: 28px;
+    font-family: "Neuzeit Grotesk", Helvetica, Arial, sans-serif;
+}
