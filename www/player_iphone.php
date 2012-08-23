@@ -361,30 +361,6 @@
     
     $start_media_type = $extra['start_media_type'];
     
-    function build_scrollbar($style='')
-    {
-        
-        $scrollbar_html = <<<END
-        
-<div class='scrollbar-handle-container'>
-    <div class='scrollbar-handle $style'>
-        <div class='inner'>
-            <div class='fingers'>
-                <div class='finger'></div>
-                <div class='finger'></div>
-                <div class='finger'></div>
-                <div class='finger'></div>
-            </div>
-        </div>
-    </div>
-</div>    
-
-END;
-        
-        return $scrollbar_html;
-
-    }
-    
     $body_style = "";
     if( $NARROW_SCREEN )
     {
