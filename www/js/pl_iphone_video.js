@@ -122,9 +122,9 @@ function videoChangeIndex(index,animate)
     }
     g_videoPlayIndexOnReady = false;
     
-    $('#video_bg').swipe('scrollto',index,animate);
+    setPlayerMode("video");
 
-    setPlayerMode("video");    
+    $('#video_bg').swipe('scrollto',index,animate);
 }
 function videoNext()
 {
