@@ -308,16 +308,18 @@ body {
     border-radius: 72px;
 }
 #big_play_icon .inner {
-    margin-top: 2px;
-    margin-left: 2px;
-    width: 68px;
-    height: 68px;
-    border-radius: 68px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
     border: 4px solid white;
 }
 #big_play_icon .triangle {
-    margin-top: 0px;
-    margin-left: 0px;
+    position: absolute;
+    top: 12px;
+    left: 18px;
     width: 0;
 	height: 0;
 	border-top: 18px solid transparent;
