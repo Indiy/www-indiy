@@ -39,7 +39,43 @@ function iphoneGeneralReady()
     scrollToTop();
     $(window).resize(scrollToTop);
     
-    photoChangeIndex(0);
+    var anchor_map = getAnchorMap();
+    if( 'song_id' in anchor_map )
+    {
+        var song_id = anchor_map['song_id'];
+        musicChangeId(song_id);
+    }
+    else if( 'video_id' in anchor_map )
+    {
+        var video_id = anchor_map['video_id'];
+        videoChangeId(video_id);
+    }
+    else if( 'photo_id' in anchor_map )
+    {
+        var photo_id = anchor_map['photo_id'];
+        photoChangeId(photo_id);
+    }
+    else if( g_startMediaType == 'MUSIC' )
+    {
+        musicChange(0);
+    }
+    else if( g_startMediaType == 'PHOTO' )
+    {
+        photoChangeIndex(0);
+    }
+    else if( g_startMediaType == 'VIDEO' )
+    {
+        videoPlayIndex(0);
+    }
+    else
+    {
+        if( g_musicList.length > 0 )
+            musicChange(0);
+        else if( g_photoList.length > 0 )
+            photoChangeIndex(0);
+        else if( g_videoList.length > 0 )
+            videoPlayIndex(0);
+    }
     
     if( g_touchDevice )
     {
@@ -172,3 +208,22 @@ function clickVideoIcon()
 }
 
 
+function getAnchorMap()
+{
+    var anchor_map = {};
+    var anchor = self.document.location.hash.substring(1);
+    var anchor_elements = anchor.split('&');
+    var g_anchor_map = {};
+    for( var k in anchor_elements )
+    {
+        var e = anchor_elements[k];
+        var k_v = e.split('=');
+        
+        k = unescape(k_v[0]);
+        if( k_v.length > 1 )
+            anchor_map[k] = unescape(k_v[1]);
+        else
+            anchor_map[k] = true;
+    }
+    return anchor_map;
+}
