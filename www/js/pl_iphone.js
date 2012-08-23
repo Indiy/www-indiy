@@ -30,6 +30,7 @@ function iphoneGeneralReady()
     {
         g_touchDevice = false;
         $('body').addClass('no_touch');
+        $('body').addClass('desktop');
     }
     else
     {
