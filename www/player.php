@@ -2,6 +2,12 @@
 
     require_once 'includes/config.php';
     require_once 'includes/functions.php';
+    
+    if( strpos($_SERVER['HTTP_USER_AGENT'],"iPhone") !== FALSE )
+    {
+        require_once 'player_iphone.php';
+        die();
+    }
 
     if( !$artist_url )
     {
