@@ -121,12 +121,12 @@ div.entry .entryfloat ul li a:hover {
 }
 
 
-.sep { height: 12px; }
-.graph { width: 970px; height: 110px; overflow: hidden; border-bottom: 2px solid #333; background: #fff; }
-.names { width: 970px; background: #fff; }
-.bar { float: left; height: 100px; background: url('images/graph.jpg') repeat-x; text-align: center; color: #000; }
-.download { background: url('images/graph-download.jpg') repeat-x !important; }
-.page { background: url('images/graph-page.jpg') repeat-x !important; }
+.messy .sep { height: 12px; }
+.messy .graph { width: 970px; height: 110px; overflow: hidden; border-bottom: 2px solid #333; background: #fff; }
+.messy .names { width: 970px; background: #fff; }
+.messy .bar { float: left; height: 100px; background: url('images/graph.jpg') repeat-x; text-align: center; color: #000; }
+.messy .download { background: url('images/graph-download.jpg') repeat-x !important; }
+.messy .page { background: url('images/graph-page.jpg') repeat-x !important; }
 
 
 ul#q-graph {
