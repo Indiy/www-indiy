@@ -155,7 +155,8 @@
   <link rel="stylesheet" href="/includes/css/custom.css" type="text/css" />
 <!-- Stylesheet from old site END -->
 
-<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href="css/stats.css" rel="stylesheet" type="text/css" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
@@ -164,35 +165,6 @@
 <script src="js/html5.js"></script>
 <![endif]-->
 
-
-<script type="text/javascript"> 
-$(document).ready(function(){	
-                  //Set default open/close settings
-                  $('.list').hide(); //Hide/close all containers
-                  <?
-                  if(!isset($_SESSION['tabOpen']) ||  $_SESSION['tabOpen']=='playlist'){?>
-                  $('.heading:first').addClass('active').next().show(); //Add "active" class to first trigger, then show/open the immediate next container
-                  <?}else{?>
-                  $('.<?=$_SESSION["tabOpen"]?> .heading').addClass('active').next().show(); //Add "active" class to first trigger, then show/open the immediate next container
-                  <?}?>
-                  //On Click
-                  $('.heading').click(function(){
-                                      if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
-                                      $('.heading').removeClass('active').next().slideUp(); //Remove all .heading classes and slide up the immediate next container
-                                      $(this).toggleClass('active').next().slideDown(); //Add .heading class to clicked trigger and slide down the immediate next container
-                                      }
-                                      return false; //Prevent the browser jump to the link anchor
-                                      }); 
-                  });
-</script>
-<link href="facefiles/facebox.css" media="screen" rel="stylesheet" type="text/css" />
-<script src="facefiles/facebox.js" type="text/javascript"></script>
-<script src="color/jscolor.js" type="text/javascript"></script>
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-                       $('a[rel*=facebox]').facebox() ;	  
-                       })
-</script>
 </head>
 <body>
 <section id="bgtopbar">
