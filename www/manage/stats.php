@@ -118,6 +118,9 @@
         $songListHtml .= '</div>';
     }
 	
+    
+    
+    
 
 	
 	// Build Love Hate Stats
@@ -140,6 +143,6 @@
 
 	}
 	
-	include_once 'templates/stats.html';
+	include_once "templates/stats.html";
 
 ?>

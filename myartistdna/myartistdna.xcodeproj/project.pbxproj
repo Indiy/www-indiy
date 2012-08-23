@@ -19,8 +19,8 @@
 		2D25C3C715E544FB00132306 /* pl_iphone_photo.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = pl_iphone_photo.js; sourceTree = "<group>"; };
 		2D25C3C815E556EC00132306 /* pl_iphone_music.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = pl_iphone_music.js; sourceTree = "<group>"; };
 		2D25C3C915E58DB900132306 /* pl_iphone_video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = pl_iphone_video.js; sourceTree = "<group>"; };
-		2D25C3CA15E6F43F00132306 /* stats.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = stats.html; sourceTree = "<group>"; };
 		2D25C3CB15E6F4AE00132306 /* stats.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = stats.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2D25C3CC15E6F78A00132306 /* stats.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = stats.html; path = templates/stats.html; sourceTree = "<group>"; };
 		2D34E22414A05F05004473F9 /* utils.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = utils.php; sourceTree = "<group>"; };
 		2D34E22714A06AC9004473F9 /* twitter_landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twitter_landing.php; sourceTree = "<group>"; };
 		2D34E22814A173A9004473F9 /* landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = landing.php; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.php; };
@@ -1747,11 +1747,11 @@
 		2D8D96E6159568FA00AA3D1B /* templates */ = {
 			isa = PBXGroup;
 			children = (
+				2D25C3CC15E6F78A00132306 /* stats.html */,
 				2D8D96E71595692100AA3D1B /* order_list.html */,
 				2D8D96F015998C5000AA3D1B /* edit_order.html */,
 				2D8D971915AA604300AA3D1B /* artist_statement.html */,
 				2D8D971B15AAA2A900AA3D1B /* all_account_summary.html */,
-				2D25C3CA15E6F43F00132306 /* stats.html */,
 			);
 			name = templates;
 			sourceTree = "<group>";
