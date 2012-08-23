@@ -57,7 +57,7 @@ function iphoneGeneralReady()
     }
     else if( g_startMediaType == 'MUSIC' )
     {
-        musicChange(0);
+        musicChangeIndex(0);
     }
     else if( g_startMediaType == 'PHOTO' )
     {
@@ -65,16 +65,16 @@ function iphoneGeneralReady()
     }
     else if( g_startMediaType == 'VIDEO' )
     {
-        videoPlayIndex(0);
+        videoChangeIndex(0);
     }
     else
     {
         if( g_musicList.length > 0 )
-            musicChange(0);
+            musicChangeIndex(0);
         else if( g_photoList.length > 0 )
             photoChangeIndex(0);
         else if( g_videoList.length > 0 )
-            videoPlayIndex(0);
+            videoChangeIndex(0);
     }
     
     if( g_touchDevice )
