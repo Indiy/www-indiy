@@ -20,6 +20,7 @@
 		2D25C3C815E556EC00132306 /* pl_iphone_music.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = pl_iphone_music.js; sourceTree = "<group>"; };
 		2D25C3C915E58DB900132306 /* pl_iphone_video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = pl_iphone_video.js; sourceTree = "<group>"; };
 		2D25C3CA15E6F43F00132306 /* stats.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = stats.html; sourceTree = "<group>"; };
+		2D25C3CB15E6F4AE00132306 /* stats.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = stats.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D34E22414A05F05004473F9 /* utils.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = utils.php; sourceTree = "<group>"; };
 		2D34E22714A06AC9004473F9 /* twitter_landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twitter_landing.php; sourceTree = "<group>"; };
 		2D34E22814A173A9004473F9 /* landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = landing.php; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.php; };
@@ -1274,15 +1275,7 @@
 		2DF4743A144A2D84005538C7 /* hv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hv.png; sourceTree = "<group>"; };
 		2DF4743B144A2D84005538C7 /* jscolor.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jscolor.js; sourceTree = "<group>"; };
 		2DF4743D144A2D84005538C7 /* contact.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = contact.css; sourceTree = "<group>"; };
-		2DF4743E144A2D84005538C7 /* Lucida Grande.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lucida Grande.eot"; sourceTree = "<group>"; };
-		2DF4743F144A2D84005538C7 /* Lucida Grande.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lucida Grande.ttf"; sourceTree = "<group>"; };
-		2DF47440144A2D84005538C7 /* Neuzeit-Grotesk-Light.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk-Light.eot"; sourceTree = "<group>"; };
-		2DF47441144A2D84005538C7 /* Neuzeit-Grotesk-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk-Light.otf"; sourceTree = "<group>"; };
-		2DF47442144A2D84005538C7 /* Neuzeit-Grotesk.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk.eot"; sourceTree = "<group>"; };
-		2DF47443144A2D84005538C7 /* Neuzeit-Grotesk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk.otf"; sourceTree = "<group>"; };
 		2DF47444144A2D84005538C7 /* styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
-		2DF47445144A2D84005538C7 /* Teletex_Light.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = Teletex_Light.eot; sourceTree = "<group>"; };
-		2DF47446144A2D84005538C7 /* Teletex_Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Teletex_Light.otf; sourceTree = "<group>"; };
 		2DF47447144A2D84005538C7 /* dashboard.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = dashboard.php; sourceTree = "<group>"; };
 		2DF47453144A2D84005538C7 /* facebox.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = facebox.css; sourceTree = "<group>"; };
 		2DF47454144A2D84005538C7 /* facebox.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = facebox.js; sourceTree = "<group>"; };
@@ -3714,16 +3707,9 @@
 			isa = PBXGroup;
 			children = (
 				2DF4743D144A2D84005538C7 /* contact.css */,
-				2DF4743E144A2D84005538C7 /* Lucida Grande.eot */,
-				2DF4743F144A2D84005538C7 /* Lucida Grande.ttf */,
-				2DF47440144A2D84005538C7 /* Neuzeit-Grotesk-Light.eot */,
-				2DF47441144A2D84005538C7 /* Neuzeit-Grotesk-Light.otf */,
-				2DF47442144A2D84005538C7 /* Neuzeit-Grotesk.eot */,
-				2DF47443144A2D84005538C7 /* Neuzeit-Grotesk.otf */,
 				2DF47444144A2D84005538C7 /* styles.css */,
-				2DF47445144A2D84005538C7 /* Teletex_Light.eot */,
-				2DF47446144A2D84005538C7 /* Teletex_Light.otf */,
 				2D8D96F115998EBF00AA3D1B /* order.css */,
+				2D25C3CB15E6F4AE00132306 /* stats.css */,
 			);
 			path = css;
 			sourceTree = "<group>";
