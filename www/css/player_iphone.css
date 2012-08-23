@@ -318,8 +318,8 @@ body {
 }
 #big_play_icon .triangle {
     position: absolute;
-    top: 12px;
-    left: 18px;
+    top: 18px;
+    left: 24px;
     width: 0;
 	height: 0;
 	border-top: 18px solid transparent;
