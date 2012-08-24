@@ -102,7 +102,6 @@
         return $video_plays_html;
     }
 
-    musicplayer_content
     $sql = "SELECT id,name,views FROM mydna_musicplayer_content WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
     $tab_views_html = make_q_html($sql);
     
