@@ -9,3 +9,54 @@
     font-size: 28px;
     font-family: "Neuzeit Grotesk", Helvetica, Arial, sans-serif;
 }
+
+#stats .graph_row {
+    display: inline-block;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    height: 120px;
+    background-color: white;
+    font-size: 0;
+    white-space: nowrap;
+}
+
+#stats .graph_row .item {
+    display: inline-block;
+    position: relative;
+    width: 160px;
+    height: 120px;
+}
+#stats .graph_row .item .number {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    color: black;
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+#stats .graph_row .item .bar_holder {
+    position: relative;
+    height: 100px;
+}
+#stats .graph_row .item .bar_holder .bar {
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
+    right: 5px;
+    background-color: #c9d9e1;
+}
+#stats .graph_row .item .line {
+    height: 2px;
+    background-color: black;
+}
+#stats .graph_row .item .name {
+    height: 18px;
+    color: black;
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    text-overflow: ellipse;
+    overflow: hidden;
+}
