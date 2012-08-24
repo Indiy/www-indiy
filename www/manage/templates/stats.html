@@ -83,18 +83,20 @@
                         </div>
                         
                         <div id='stats'>
+                            <? if( $song_plays_html ): ?>
+                                <div class='graph_title'>Song Plays</div>
+                                <?=$song_plays_html;?>
+                            <? endif; ?>
                         
-                            <div class='graph_title'>Song Plays</div>
-                            
-                            <?=$song_plays_html;?>
-                        
-                            <div class='graph_title'>Video Plays</div>
-                            
-                            <?=$video_plays_html;?>
-                            
-                            <div class='graph_title'>Photo Views</div>
-                            <?=$photo_views_html;?>
-                            
+                            <? if( $video_plays_html ): ?>
+                                <div class='graph_title'>Video Plays</div>
+                                <?=$video_plays_html;?>
+                            <? endif; ?>
+
+                            <? if( $photo_views_html ): ?>
+                                <div class='graph_title'>Photo Views</div>
+                                <?=$photo_views_html;?>
+                            <? endif; ?>
                         </div>
 
                         <div class='messy'>
