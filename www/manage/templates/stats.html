@@ -68,21 +68,14 @@
                         
                             <h2>Total Player Views: <?=$total_player_views;?></h2>
                             
-                            <h4>Page Views</h4>
-                            
-                                <div class="graph">
-                                    <div style="height: 10px;">&nbsp;</div>
-                                    <?=$pageList;?>
-                                    <div class="clear"></div>
-                                </div>
-                                <div class="names">
-                                    <?=$pageNames;?>
-                                    <div class="clear"></div>
-                                </div>
-                                
                         </div>
                         
                         <div id='stats'>
+                            <? if( $song_plays_html ): ?>
+                                <div class='graph_title'>Tab Views</div>
+                                <?=$tab_views_html;?>
+                            <? endif; ?>
+                        
                             <? if( $song_plays_html ): ?>
                                 <div class='graph_title'>Song Plays</div>
                                 <?=$song_plays_html;?>

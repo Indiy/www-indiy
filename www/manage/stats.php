@@ -12,9 +12,7 @@
 
 	$id = $_REQUEST["userId"];
 	
-	// Player views
-	$stats_player = mf(mq("select `views` from `[p]musicplayer` where `id`='{$id}'"));
-	$total_player_views = $stats_player["views"];
+	$total_player_views = artist_get_total_views($id);
 	
 	// Build Page Graph
 	$loadpages = mq("select `views` from `[p]musicplayer_content` where `artistid`='{$id}' order by `order` asc, `id` desc");
@@ -103,6 +101,10 @@
         }
         return $video_plays_html;
     }
+
+    musicplayer_content
+    $sql = "SELECT id,name,views FROM mydna_musicplayer_content WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
+    $tab_views_html = make_q_html($sql);
     
     $sql = "SELECT id,name,views FROM mydna_musicplayer_video WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
     $video_plays_html = make_q_html($sql);
