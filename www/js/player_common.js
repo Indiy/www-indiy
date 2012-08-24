@@ -42,11 +42,12 @@ function genericUpdateViews(type,list,id,index)
         dataType: 'json',
         success: function(data) 
         {
-            g_totalPageViews = data['total_views'];
+            var total_views = data['total_views'];
             var element_views = data['element_views'];
             list[index].views = element_views;
-            playerUpdateTotalViewCount();
-            playerTrackInfo(false,element_views);
+            
+            playerUpdateTotalViewCount(total_views);
+            playerUpdateElementViews(element_views);
         },
         error: function()
         {

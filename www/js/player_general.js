@@ -512,8 +512,9 @@ function playerPhotoInfo(name,location,listens)
     $('#photo_info .location').html(location);
 }
 
-function playerUpdateTotalViewCount()
+function playerUpdateTotalViewCount(count)
 {
+    g_totalPageViews = count;
     $('#total_view_count').html(g_totalPageViews);
 }
 
@@ -523,10 +524,14 @@ function playerTrackInfo(track_name,listens)
     $('#media_controls').show();
     $('#big_play_icon').show();
 
-    if( track_name )
-        $('#track_name').html(track_name);
-    $('#track_play_count').html(listens);
+    $('#track_name').html(track_name);
+    playerUpdateElementViews(listens);
 }
+function playerUpdateElementViews(listens)
+{
+     $('#track_play_count').html(listens);
+}
+
 function playerSetPaused()
 {
     $('#track_play_pause_button').removeClass('playing');

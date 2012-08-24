@@ -99,8 +99,7 @@ function musicPanelChange(index)
     
     if( musicUpdateListens(song.id,index) )
     {
-        g_totalPageViews++;
-        playerUpdateTotalViewCount();
+        playerUpdateTotalViewCount(g_totalPageViews + 1);
     }
 }
 
