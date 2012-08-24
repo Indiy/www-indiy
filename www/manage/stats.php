@@ -43,82 +43,6 @@
 		';
 	}
 
-	
-	// Build Song Graph
-	$loadmuse = mq("select `views` from `[p]musicplayer_audio` where `artistid`='{$id}' and `type`='0' order by `order` asc, `id` desc");
-	while ($mu = mf($loadmuse)) {
-		$buildmaxe .= $mu["views"].",";
-	}
-	$msize = 100 / max(num($loadmuse),1);
-    $msize = max($msize,100.0/6);
-	$sizee = round(($msize) / 2, 2);
-	$buildmaxe = explode(",", $buildmaxe);
-	$maxe = max($buildmaxe);
-    
-    $c=0;
-    $songListHtml = '';
-    $songList = '';
-    $songNames = '';
-
-	$loadmusic = mq("select * from `[p]musicplayer_audio` where `artistid`='{$id}' and `type`='0' order by `order` asc, `id` desc");
-	while ($p = mf($loadmusic)) {
-		$p_id = $p["id"];
-		$p_views = $p["views"];
-		$p_percent = floor(100 -($p_views / $maxe) * 100);
-		
-		$p_downloads = $p["download"];
-		$p_dpercent = floor(100 - ($p_downloads / $maxe) * 100);
-		
-		$p_name = stripslashes($p["name"]);
-		$songList .= '
-			<div style="width: '.$msize.'%; height: 100px; float: left; text-align: center;">
-				<div class="clear"></div>
-				<div class="bar" style="width: 50%; background-position: 0px '.$p_percent.'px !important;">'.$p_views.'</div>
-				<div class="bar download" style="width: 50%; background-position: 0px '.$p_dpercent.'px !important;">'.$p_downloads.'</div>
-				<div class="clear"></div>
-			</div>
-		';
-		$songNames .= '
-			<div style="width: '.$msize.'%; float: left; text-align: center;">
-				<small>'.$p_name.'</small>
-			</div>
-		';		
-        
-		++$c;
-        if( $c == 6 )
-        {
-            $songListHtml .= '<div class="sep"></div>';
-            $songListHtml .= '<div class="graph">';
-            $songListHtml .= '<div style="height: 10px;">&nbsp;</div>';
-            $songListHtml .= $songList;
-            $songListHtml .= '<div class="clear"></div>';
-            $songListHtml .= '</div>';
-            $songListHtml .= '<div class="names">';
-            $songListHtml .= $songNames;
-            $songListHtml .= '<div class="clear"></div>';
-            $songListHtml .= '</div>';
-            
-            $songList = '';
-            $songNames = '';
-            $c = 0;
-        }
-	}
-
-    if( strlen($songList) > 0 )
-    {
-        $songListHtml .= '<div class="sep"></div>';
-        $songListHtml .= '<div class="graph">';
-        $songListHtml .= '<div style="height: 10px;">&nbsp;</div>';
-        $songListHtml .= $songList;
-        $songListHtml .= '<div class="clear"></div>';
-        $songListHtml .= '</div>';
-        $songListHtml .= '<div class="names">';
-        $songListHtml .= $songNames;
-        $songListHtml .= '<div class="clear"></div>';
-        $songListHtml .= '</div>';
-    }
-    
-
     function make_q_html($sql)
     {
 
@@ -185,6 +109,9 @@
     $video_plays_html = make_q_html($sql);
 
     $sql = "SELECT id,name,views FROM mydna_musicplayer_audio WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
+    $song_plays_html = make_q_html($sql);
+
+    $sql = "SELECT id,name,views FROM photos WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
     $song_plays_html = make_q_html($sql);
 
 	
