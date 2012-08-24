@@ -13,11 +13,17 @@ function photoUpdateViews(id,index)
 {
     return genericUpdateViews('photo',g_photoList,id,index);
 }
+function tabUpdateViews(id)
+{
+    return genericUpdateViews('tab',false,id,false);
+}
+
 
 var g_genericViewsUpdated = {
+    song: {},
     video: {},
     photo: {},
-    song: {}
+    tab: {}
 };
 function genericUpdateViews(type,list,id,index)
 {
@@ -44,14 +50,16 @@ function genericUpdateViews(type,list,id,index)
         {
             var total_views = data['total_views'];
             var element_views = data['element_views'];
-            list[index].views = element_views;
-            
-            playerUpdateTotalViewCount(total_views);
-            playerUpdateElementViews(element_views);
+            if( list !== false )
+            {
+                list[index].views = element_views;
+                
+                playerUpdateTotalViewCount(total_views);
+                playerUpdateElementViews(element_views);
+            }
         },
         error: function()
         {
-            //alert('Failed to get listens!');
         }
     });
     return true;

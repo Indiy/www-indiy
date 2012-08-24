@@ -32,6 +32,10 @@
     {
         $views = update_table('photos',$_REQUEST['photo_id']);
     }
+    else if( isset($_REQUEST['tab_id']) )
+    {
+        $views = update_table('mydna_musicplayer_content',$_REQUEST['tab_id']);
+    }
     
     $total = artist_get_total_views($artist_id);
     

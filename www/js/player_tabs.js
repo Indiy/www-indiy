@@ -37,6 +37,8 @@ function showUserPage(i)
         $('#user_tab').show();
         $('#user_tab').scrollbar("repaint");
         window.setTimeout(function() { $('#user_tab').scrollbar("repaint"); },100);
+        
+        tabUpdateViews(page.id);
     }
 }
 function hideTab()
