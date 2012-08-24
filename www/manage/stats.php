@@ -119,9 +119,54 @@
     }
 	
     
+    $video_q = mq("SELECT id,name,views FROM mydna_musicplayer_video WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC")
     
-    
+    $video_plays_html = "";
 
+    $frag_html = "";
+    $i = 0;
+    while( $video = mf($video_q) )
+    {
+        $id = $video['id'];
+        $name = $video['name'];
+        $views = intval($video['views']);
+        
+        $html = "";
+        $html .= "<div class='item'>";
+        $html .= " <div class='number'>$views</div>";
+        $html .= " <div class='bar_holder'>";
+        $html .= "  <div class='bar' style='height: $percent%;'></div>";
+        $html .= " </div>";
+        $html .= " <div class='line'></div>";
+        $html .= " <div class='name'>$name</div>";
+        $html .= "</div>";
+        
+        $frag_html .= $html;
+    
+        if( $i % 6 == 5 )
+        {
+            $html = "";
+            $html .= "<div class='graph_row'>";
+            $html .= $frag_html;
+            $html .= "</div>";
+            
+            $video_plays_html .= $html;
+            $frag_html = "";
+        }
+    
+        $i++;
+    }
+    
+    if( strlen($frag_html) > 0 )
+    {
+        $html = "";
+        $html .= "<div class='graph_row'>";
+        $html .= $frag_html;
+        $html .= "</div>";
+        
+        $video_plays_html .= $html;
+        $frag_html = "";
+    }
 	
 	// Build Love Hate Stats
 	$loadvotes = mq("select `id`,`name` from `[p]musicplayer_audio` where `artistid`='{$id}' order by `order` asc, `id` desc");
