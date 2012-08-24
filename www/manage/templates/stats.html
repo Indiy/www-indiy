@@ -63,14 +63,10 @@
 				
 				<div id="content">
 					<div class="post">
-                        <div class='messy'>
-                            <h2 class="title"><a href="#">Analytics</a></h2>
-                        
-                            <h2>Total Player Views: <?=$total_player_views;?></h2>
-                            
-                        </div>
-                        
                         <div id='stats'>
+                            <div class='page_title'>Analytics</div>
+                            <div class='total_views'><?=$total_player_views;?></div>
+                        
                             <? if( $song_plays_html ): ?>
                                 <div class='graph_title'>Tab Views</div>
                                 <?=$tab_views_html;?>

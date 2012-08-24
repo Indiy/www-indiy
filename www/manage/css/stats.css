@@ -1,6 +1,22 @@
 
 /* For Web Analytics */
 
+#stats .page_title {
+    color: #329ECC;
+    font-size: 20px;
+    font-family: "Teletex Light", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+#stats .total_views {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    color: #353A3F;
+    font-size: 30px;
+    font-family: "Teletex Light", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+}
 
 #stats .graph_title {
     padding-top: 10px;
