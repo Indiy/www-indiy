@@ -1,43 +1,17 @@
 
-var g_musicListenUpdated = {};
-function musicUpdateListens(song_id,index)
+function musicUpdateListens(id,index)
 {
-    if( song_id in g_musicListenUpdated )
-        return false;
-
-    g_musicListenUpdated[song_id] = true;
-
-    var args = {
-        artist_id: g_artistId,
-        song_id: song_id
-    };
-
-    var url = "/data/element_views.php";
-    jQuery.ajax(
-    {
-        type: 'POST',
-        url: url,
-        data: args,
-        dataType: 'json',
-        success: function(data) 
-        {
-            g_totalPageViews = data['total_views'];
-            var track_listens = data['element_views'];
-            g_musicList[index].listens = track_listens;
-            playerUpdateTotalViewCount();
-            playerTrackInfo(false,track_listens);
-        },
-        error: function()
-        {
-            //alert('Failed to get listens!');
-        }
-    });
-    return true;
+    return genericUpdateViews('song',g_musicList,id,index);
 }
 
 function videoUpdateViews(id,index)
 {
     return genericUpdateViews('video',g_videoList,id,index);
+}
+
+function photoUpdateViews(id,index)
+{
+    return genericUpdateViews('photo',g_photoList,id,index);
 }
 
 var g_genericViewsUpdated = {

@@ -20,16 +20,9 @@
         return $views;
     }
     
-    
     if( isset($_REQUEST['song_id']) )
     {
-        $song_id = $_REQUEST['song_id'];
-
-        $music = mf(mq("SELECT * FROM mydna_musicplayer_audio WHERE id='$song_id'"));
-        $artist_id = $music["artistid"];
-        $views = intval($music["views"]) + 1;
-        mysql_update("mydna_musicplayer_audio",array("views" => $views),"id",$music['id']);
-
+        $views = update_table('mydna_musicplayer_audio',$_REQUEST['song_id']);
     }
     else if( isset($_REQUEST['video_id']) )
     {
