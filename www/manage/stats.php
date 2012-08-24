@@ -45,8 +45,7 @@
 
     function make_q_html($sql)
     {
-
-        $max_views = 0;
+        $max_views = 1;
         $video_list = array();
         $video_q = mq($sql);
         while( $video = mf($video_q) )
