@@ -118,18 +118,25 @@
         $songListHtml .= '</div>';
     }
 	
-    
+    $max_views = 0;
+    $video_list = array();
     $video_q = mq("SELECT id,name,views FROM mydna_musicplayer_video WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC");
-    
+    while( $video = mf($video_q) )
+    {
+        $views = intval($video['views']);
+        $max_views = max($max_views,$views);
+        $video_list[] = $video;
+    }
     $video_plays_html = "";
 
     $frag_html = "";
     $i = 0;
-    while( $video = mf($video_q) )
+    foreach( $videolist as $video )
     {
         $id = $video['id'];
         $name = $video['name'];
         $views = intval($video['views']);
+        $percent = number_format($views / $max_views * 100.0,4);
         
         $html = "";
         $html .= "<div class='item'>";
