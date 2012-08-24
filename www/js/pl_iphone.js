@@ -175,6 +175,10 @@ function playerPhotoInfo(name,location,listens)
 function playerTrackInfo(track_name,listens)
 {
 }
+function playerUpdateElementViews(listens)
+{
+}
+
 function playerSetPlaying()
 {
     $('#big_play_icon').removeClass('paused');

@@ -42,23 +42,6 @@ function videoPanelChange(index)
     window.location.hash = '#video_id=' + video.id;
     
     playerTrackInfo(video.name,video.views);
-
-    /*
-    
-    var url = video.video_file;
-    var url_ogv = url.replace(".mp4",".ogv");
-    
-    var media = [
-                 { type: "video/mp4", src: url },
-                 { type: "video/ogg", src: url_ogv }
-                 ];
-    
-    var left_sl = $('#video_bg').scrollLeft();
-    $('#video_container').css({ left: left_sl });
-    videoOnWindowResize();
-
-    g_videoPlayer.src(media);
-    */
 }
 
 function videoResizeBackgrounds()
@@ -92,6 +75,7 @@ function videoPlay()
 
     g_videoPlayer.src(media);
     g_videoPlayer.play();
+    videoUpdateViews(video.id,g_videoCurrentIndex);
 }
 
 
@@ -215,31 +199,3 @@ function videoCreateTag()
     g_videoPlayer = _V_('video_player');
     g_videoPlayer.ready(onVideoReady);
 }
-
-var g_videoViewsUpdated = {};
-function videoUpdateViews(id,index)
-{
-    if( id in g_videoViewsUpdated )
-        return false;
-
-    g_videoViewsUpdated[id] = true;
-
-    var url = "/data/element_views.php?video_id=" + id;
-    jQuery.ajax(
-    {
-        type: 'POST',
-        url: url,
-        dataType: 'json',
-        success: function(data) 
-        {
-        },
-        error: function()
-        {
-            //alert('Failed to get listens!');
-        }
-    });
-    return true;
-}
-
-
-

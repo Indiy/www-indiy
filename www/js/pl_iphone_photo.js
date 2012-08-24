@@ -108,7 +108,8 @@ function photoUpdateToIndex(index)
     g_currentPhotoId = photo.id;
     window.location.hash = '#photo_id=' + g_currentPhotoId; 
     
-    playerPhotoInfo(photo.name,photo.location,photo.listens);    
+    playerPhotoInfo(photo.name,photo.location,photo.listens);
+    photoUpdateViews(photo.id,index);
 }
 
 function photoNext()

@@ -215,29 +215,3 @@ function musicResizeBackgrounds()
     imageResizeBackgrounds(g_musicList,'#music_bg');
 }
 
-
-var g_musicListenUpdated = {};
-function musicUpdateListens(song_id,index)
-{
-    if( song_id in g_musicListenUpdated )
-        return false;
-
-    g_musicListenUpdated[song_id] = true;
-
-    var url = "/data/element_views.php?song_id=" + song_id;
-    jQuery.ajax(
-    {
-        type: 'POST',
-        url: url,
-        dataType: 'json',
-        success: function(data) 
-        {
-        },
-        error: function()
-        {
-            //alert('Failed to get listens!');
-        }
-    });
-    return true;
-}
-
