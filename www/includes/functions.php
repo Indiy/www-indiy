@@ -1028,9 +1028,11 @@
     {
         $music_sum = mf(mq("SELECT SUM(views) FROM mydna_musicplayer_audio WHERE `artistid`='$artist_id'"));
         $video_sum = mf(mq("SELECT SUM(views) FROM mydna_musicplayer_video WHERE `artistid`='$artist_id'"));
+        $photo_sum = mf(mq("SELECT SUM(views) FROM photos WHERE `artist_id`='$artist_id'"));
         
         $total = intval($music_sum[0]);
         $total += intval($video_sum[0]);
+        $total += intval($photo_sum[0]);
         
         return $total;
     }
