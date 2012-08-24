@@ -33,12 +33,7 @@
     }
     else if( isset($_REQUEST['video_id']) )
     {
-        $video_id = $_REQUEST['video_id'];
-
-        $video = mf(mq("SELECT * FROM mydna_musicplayer_video WHERE id='$video_id'"));
-        $artist_id = $video["artistid"];
-        $views = intval($video["views"]) + 1;
-        mysql_update("mydna_musicplayer_video",array("views" => $views),"id",$video['id']);
+        $views = update_table('mydna_musicplayer_video',$_REQUEST['video_id']);
     }
     else if( isset($_REQUEST['photo_id']) )
     {
