@@ -119,7 +119,7 @@
     }
 	
     
-    $video_q = mq("SELECT id,name,views FROM mydna_musicplayer_video WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC")
+    $video_q = mq("SELECT id,name,views FROM mydna_musicplayer_video WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC");
     
     $video_plays_html = "";
 
