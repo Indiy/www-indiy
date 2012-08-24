@@ -178,6 +178,9 @@ function playerTrackInfo(track_name,listens)
 function playerUpdateElementViews(listens)
 {
 }
+function playerUpdateTotalViewCount(count)
+{
+}
 
 function playerSetPlaying()
 {
