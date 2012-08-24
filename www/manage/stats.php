@@ -110,8 +110,8 @@
     $sql = "SELECT id,name,views FROM mydna_musicplayer_audio WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
     $song_plays_html = make_q_html($sql);
 
-    $sql = "SELECT id,name,views FROM photos WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
-    $song_plays_html = make_q_html($sql);
+    $sql = "SELECT id,name,views FROM photos WHERE artist_id='$id' ORDER BY `order` ASC, `id` DESC";
+    $photo_views_html = make_q_html($sql);
 
 	
 	// Build Love Hate Stats
