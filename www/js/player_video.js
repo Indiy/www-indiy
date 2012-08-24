@@ -294,35 +294,5 @@ function videoCreateTag()
     $('#video_container video').bind('contextmenu', function(e) { return false; });
 }
 
-var g_videoViewsUpdated = {};
-function videoUpdateViews(id,index)
-{
-    if( id in g_videoViewsUpdated )
-        return false;
-
-    g_videoViewsUpdated[id] = true;
-
-    var url = "/data/element_views.php?video_id=" + id;
-    jQuery.ajax(
-    {
-        type: 'POST',
-        url: url,
-        dataType: 'json',
-        success: function(data) 
-        {
-            g_totalPageViews = data['total_views'];
-            var element_views = data['element_views'];
-            g_videoList[index].views = element_views;
-            playerUpdateTotalViewCount();
-            playerTrackInfo(false,element_views);
-        },
-        error: function()
-        {
-            //alert('Failed to get listens!');
-        }
-    });
-    return true;
-}
-
 
 

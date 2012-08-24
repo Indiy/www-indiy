@@ -17,11 +17,11 @@ function musicOnReady()
     
     $("#music_list").scrollbar();
     var opts = {
-            panelCount: g_musicList.length,
-            resizeCallback: musicResizeBackgrounds,
-            onPanelChange: musicPanelChange,
-            onPanelVisible: musicPanelVisible,
-            onReady: musicSwipeReady
+        panelCount: g_musicList.length,
+        resizeCallback: musicResizeBackgrounds,
+        onPanelChange: musicPanelChange,
+        onPanelVisible: musicPanelVisible,
+        onReady: musicSwipeReady
     };
     $('#music_bg').swipe(opts);
 }
@@ -249,36 +249,6 @@ function musicUpdatePlaylistLove()
             $('#song_playlist_' + i).removeClass('loved');            
         }
     }
-}
-
-var g_musicListenUpdated = {};
-function musicUpdateListens(song_id,index)
-{
-    if( song_id in g_musicListenUpdated )
-        return false;
-
-    g_musicListenUpdated[song_id] = true;
-
-    var url = "/data/element_views.php?song_id=" + song_id;
-    jQuery.ajax(
-    {
-        type: 'POST',
-        url: url,
-        dataType: 'json',
-        success: function(data) 
-        {
-            g_totalPageViews = data['total_views'];
-            var track_listens = data['element_views'];
-            g_musicList[index].listens = track_listens;
-            playerUpdateTotalViewCount();
-            playerTrackInfo(false,track_listens);
-        },
-        error: function()
-        {
-            //alert('Failed to get listens!');
-        }
-    });
-    return true;
 }
 
 var g_freeDownloadIndex = false;

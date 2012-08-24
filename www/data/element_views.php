@@ -6,12 +6,24 @@
     include('../includes/functions.php');   
     include('../includes/config.php');
     
-    $artist_id = 0;
+    $artist_id = $_REQUEST['artist_id'];
     $views = 0;
     
-    if( isset($_GET['song_id']) )
+    function update_table($table,$id)
     {
-        $song_id = $_GET['song_id'];
+        $views = 0;
+        $video = mq("UPDATE $table SET views = views + 1 WHERE id='$id'");
+        $photo = mf(mq("SELECT views FROM $table WHERE id='$id'"));
+        if( $photo )
+            $views = $photo['views'];
+        
+        return $views;
+    }
+    
+    
+    if( isset($_REQUEST['song_id']) )
+    {
+        $song_id = $_REQUEST['song_id'];
 
         $music = mf(mq("SELECT * FROM mydna_musicplayer_audio WHERE id='$song_id'"));
         $artist_id = $music["artistid"];
@@ -19,20 +31,24 @@
         mysql_update("mydna_musicplayer_audio",array("views" => $views),"id",$music['id']);
 
     }
-    else if( isset($_GET['video_id']) )
+    else if( isset($_REQUEST['video_id']) )
     {
-        $video_id = $_GET['video_id'];
+        $video_id = $_REQUEST['video_id'];
 
         $video = mf(mq("SELECT * FROM mydna_musicplayer_video WHERE id='$video_id'"));
         $artist_id = $video["artistid"];
         $views = intval($video["views"]) + 1;
         mysql_update("mydna_musicplayer_video",array("views" => $views),"id",$video['id']);
     }
+    else if( isset($_REQUEST['photo_id']) )
+    {
+        $views = update_table('photos',$_REQUEST['photo_id']);
+    }
     
     $total = artist_get_total_views($artist_id);
     
     $output = array("total_views" => $total,
-                   "element_views" => $views);
+                    "element_views" => $views);
 
     print json_encode($output);
 

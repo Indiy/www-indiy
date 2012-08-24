@@ -21,6 +21,7 @@
 		2D25C3C915E58DB900132306 /* pl_iphone_video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = pl_iphone_video.js; sourceTree = "<group>"; };
 		2D25C3CB15E6F4AE00132306 /* stats.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = stats.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D25C3CC15E6F78A00132306 /* stats.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = stats.html; path = templates/stats.html; sourceTree = "<group>"; };
+		2D25C3CD15E816F700132306 /* player_common.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_common.js; sourceTree = "<group>"; };
 		2D34E22414A05F05004473F9 /* utils.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = utils.php; sourceTree = "<group>"; };
 		2D34E22714A06AC9004473F9 /* twitter_landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twitter_landing.php; sourceTree = "<group>"; };
 		2D34E22814A173A9004473F9 /* landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = landing.php; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.php; };
@@ -3148,6 +3149,7 @@
 				2DF472DD1440B77F005538C7 /* main.js */,
 				2DF61FE2151ED3DE00DBFBC8 /* string.utils.js */,
 				2D9E2FDB156A0F2B00A76906 /* player_general.js */,
+				2D25C3CD15E816F700132306 /* player_common.js */,
 				2DFF87EB156EB98C008EA18C /* player_music.js */,
 				2DFF87ED156EFF2F008EA18C /* player_video.js */,
 				2D9E2FE715734A0000A76906 /* player_love.js */,
