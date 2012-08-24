@@ -183,6 +183,10 @@
     
     $sql = "SELECT id,name,views FROM mydna_musicplayer_video WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
     $video_plays_html = make_q_html($sql);
+
+    $sql = "SELECT id,name,views FROM mydna_musicplayer_audio WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
+    $song_plays_html = make_q_html($sql);
+
 	
 	// Build Love Hate Stats
 	$loadvotes = mq("select `id`,`name` from `[p]musicplayer_audio` where `artistid`='{$id}' order by `order` asc, `id` desc");
