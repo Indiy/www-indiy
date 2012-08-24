@@ -50,7 +50,7 @@ function genericUpdateViews(type,list,id,index)
     if( id in g_genericViewsUpdated[type] )
         return false;
 
-    g_videoViewsUpdated[type][id] = true;
+    g_genericViewsUpdated[type][id] = true;
 
     var args = {
         artist_id: g_artistId
