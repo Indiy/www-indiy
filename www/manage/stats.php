@@ -131,7 +131,7 @@
 
     $frag_html = "";
     $i = 0;
-    foreach( $videolist as $video )
+    foreach( $video_list as $video )
     {
         $id = $video['id'];
         $name = $video['name'];
