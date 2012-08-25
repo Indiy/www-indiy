@@ -12,6 +12,10 @@
     <? if( $include_order ): ?>
         <link href="css/order.css" rel="stylesheet" type="text/css">
     <? endif; ?>
+    
+    <? if( $include_stats === TRUE ): ?>
+        <link href="css/stats.css" rel="stylesheet" type="text/css">
+    <? endif; ?>
 
     <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>

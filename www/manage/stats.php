@@ -123,6 +123,13 @@
     $sql = "SELECT id,name,loves AS views FROM photos WHERE artist_id='$id' ORDER BY `order` ASC, `id` DESC";
     $photo_loves_html = make_q_html($sql);
 
+
+    $include_order = FALSE;
+    $include_editor = FALSE;
+    $include_stats = TRUE;
+
+    $artist_edit_url = "/manage/artist_management.php?userId=$artist_id";
+
 	include_once "templates/stats.html";
 
 ?>
