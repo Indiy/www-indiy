@@ -96,7 +96,7 @@
     $sql = "SELECT id,name,loves AS views FROM photos WHERE artist_id='$id' ORDER BY `order` ASC, `id` DESC";
     $photo_loves_html = make_q_html($sql);
 
-    $sql = "SELECT id,name,downloads AS views FROM mydna_musicplayer_audio WHERE artistid='$id' AND downloads > 0 ORDER BY `order` ASC, `id` DESC";
+    $sql = "SELECT id,name,download AS views FROM mydna_musicplayer_audio WHERE artistid='$id' AND download > 0 ORDER BY `order` ASC, `id` DESC";
     $song_downloads_html = make_q_html($sql);
 
 
