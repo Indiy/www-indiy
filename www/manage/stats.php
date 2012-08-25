@@ -105,36 +105,24 @@
     $sql = "SELECT id,name,views FROM mydna_musicplayer_content WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
     $tab_views_html = make_q_html($sql);
     
-    $sql = "SELECT id,name,views FROM mydna_musicplayer_video WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
-    $video_plays_html = make_q_html($sql);
-
     $sql = "SELECT id,name,views FROM mydna_musicplayer_audio WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
     $song_plays_html = make_q_html($sql);
+
+    $sql = "SELECT id,name,views FROM mydna_musicplayer_video WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
+    $video_plays_html = make_q_html($sql);
 
     $sql = "SELECT id,name,views FROM photos WHERE artist_id='$id' ORDER BY `order` ASC, `id` DESC";
     $photo_views_html = make_q_html($sql);
 
-	
-	// Build Love Hate Stats
-	$loadvotes = mq("select `id`,`name` from `[p]musicplayer_audio` where `artistid`='{$id}' order by `order` asc, `id` desc");
-	
-	while ($vote = mf($loadvotes)) {
-	
-		$v_id = $vote["id"];
-		$v_name = stripslashes($vote["name"]);
+    $sql = "SELECT id,name,loves AS views FROM mydna_musicplayer_audio WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
+    $song_loves_html = make_q_html($sql);
 
-		$loadvotestats = mq("select `vote` from `[p]musicplayer_votes` where `artistid`='{$id}' and `audioid`='{$v_id}'");
-		$l=0;
-		$h=0;
-		while ($cv = mf($loadvotestats)) {
-			if ($cv["vote"] == "1") { ++$l; }
-			if ($cv["vote"] == "0") { ++$h; }
-		}
-		
-		$lovehate .= '<div class="voteStats"><div class="voteName">'.$v_name.'</div><div class="voteResult">Love: '.$l.' / Hate: '.$h.'</div><div class="clear"></div></div>';
+    $sql = "SELECT id,name,loves AS views FROM mydna_musicplayer_video WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
+    $video_loves_html = make_q_html($sql);
 
-	}
-	
+    $sql = "SELECT id,name,loves AS views FROM photos WHERE artist_id='$id' ORDER BY `order` ASC, `id` DESC";
+    $photo_loves_html = make_q_html($sql);
+
 	include_once "templates/stats.html";
 
 ?>

@@ -153,6 +153,7 @@
 		2D747C5D15E4AFB300128EEC /* player_iphone.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = player_iphone.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D747C5F15E4AFBE00128EEC /* player_iphone.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player_iphone.html; sourceTree = "<group>"; };
 		2D747C6015E4AFE700128EEC /* player_iphone.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player_iphone.php; sourceTree = "<group>"; };
+		2D747C6415E8419B00128EEC /* element_loves.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = element_loves.php; sourceTree = "<group>"; };
 		2D7849EE15CE37EA00A89620 /* fan_signup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_signup.php; sourceTree = "<group>"; };
 		2D7849F015CED04B00A89620 /* role_choice.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = role_choice.php; sourceTree = "<group>"; };
 		2D7849F115CEEA0600A89620 /* logout.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = logout.php; sourceTree = "<group>"; };
@@ -2316,6 +2317,7 @@
 				2D6DF95214BA5DA400D0750E /* add_mad_newsletter.php */,
 				2D9E2FD31568685B00A76906 /* viewer_data.php */,
 				2D9E2FE51571E76D00A76906 /* element_views.php */,
+				2D747C6415E8419B00128EEC /* element_loves.php */,
 				2DFF880F157E8E1D008EA18C /* search.php */,
 				2D8D96D915918C5A00AA3D1B /* paypal.php */,
 				2D6E7A4515CE326A004C8D3E /* login.php */,

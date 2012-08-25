@@ -1,122 +1,49 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<title>MYARTISTDNA</title>
+<? include_once 'header.php'; ?>
 
-<!-- Stylesheet from old site -->
-  <link rel="stylesheet" href="/includes/css/style.css" type="text/css" />
-  <link rel="stylesheet" href="/includes/style.css" type="text/css" />
-  <!-- Your Custom Stylesheet -->
-  <link rel="stylesheet" href="/includes/css/custom.css" type="text/css" />
-<!-- Stylesheet from old site END -->
+<section id="wrapper">
+    <section id="content">
 
-<link href="css/styles.css" rel="stylesheet" type="text/css" />
-<link href="css/stats.css" rel="stylesheet" type="text/css" />
+        <div id='stats'>
+            <div class='page_title'>Analytics</div>
+            <div class='total_views'>Total Media Views: <?=$total_player_views;?></div>
+        
+            <? if( $song_plays_html ): ?>
+                <div class='graph_title'>Tab Views</div>
+                <?=$tab_views_html;?>
+            <? endif; ?>
+        
+            <? if( $song_plays_html ): ?>
+                <div class='graph_title'>Song Plays</div>
+                <?=$song_plays_html;?>
+            <? endif; ?>
+        
+            <? if( $video_plays_html ): ?>
+                <div class='graph_title'>Video Plays</div>
+                <?=$video_plays_html;?>
+            <? endif; ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+            <? if( $photo_views_html ): ?>
+                <div class='graph_title'>Photo Views</div>
+                <?=$photo_views_html;?>
+            <? endif; ?>
+            
+            <? if( $song_loves_html ): ?>
+                <div class='graph_title'>Song Loves</div>
+                <?=$song_loves_html;?>
+            <? endif; ?>
+        
+            <? if( $video_loves_html ): ?>
+                <div class='graph_title'>Video Loves</div>
+                <?=$video_loves_html;?>
+            <? endif; ?>
 
-<!--[if IE]>
-<script src="js/html5.js"></script>
-<![endif]-->
+            <? if( $photo_loves_html ): ?>
+                <div class='graph_title'>Photo Loves</div>
+                <?=$photo_loves_html;?>
+            <? endif; ?>
+        </div>
 
-</head>
-<body>
-<section id="bgtopbar">
-<section id="topbar">
-<p>Logged in as <a href="#"><?php echo $_SESSION['sess_userName']; ?></a> | <a href="/logout.php">Logout</a></p>
+    </section>
 </section>
-</section>
-<section id="headerinner">
-<header>
-<h1><a href="#"><img src="images/MYARTISTDNA.png" alt="MYARTISTDNA"></a></h1>
-<nav>
-<ul>
-<?php 
-    if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' ) 
-    {
-        echo '<li class="nodivider"><a href="dashboard.php">DASHBOARD</a></li>';
-    }
-    else
-    {
-        $host = parse_url(trueSiteUrl(),PHP_URL_HOST);
-        $host_explode = explode(".", $host);
-        $artist_home_host = $_SESSION['sess_userURL'] . '.' . implode('.',array_slice($host_explode,1));
-        //echo "<li class='active'><a href='/manage/artist_management.php?userId=".$_SESSION['sess_userId']."'>DASHBOARD</a></li>";
-        echo "<li class='nodivider'>";
-        echo "<a href='http://$artist_home_host'>VIEW MY SITE</a>";
-        echo "</li>";
-    }
-    ?>
-</ul>
-</nav>
-</header>
-</section><!-- header -->
-<!-- Page content -->
-<div id="page">
-<!-- Wrapper -->
-<div class="wrapper">
-<!-- Left column/section -->
-<section class="column width6 first">					
 
-				
-				<div id="content">
-					<div class="post">
-                        <div id='stats'>
-                            <div class='page_title'>Analytics</div>
-                            <div class='total_views'>Total Media Views: <?=$total_player_views;?></div>
-                        
-                            <? if( $song_plays_html ): ?>
-                                <div class='graph_title'>Tab Views</div>
-                                <?=$tab_views_html;?>
-                            <? endif; ?>
-                        
-                            <? if( $song_plays_html ): ?>
-                                <div class='graph_title'>Song Plays</div>
-                                <?=$song_plays_html;?>
-                            <? endif; ?>
-                        
-                            <? if( $video_plays_html ): ?>
-                                <div class='graph_title'>Video Plays</div>
-                                <?=$video_plays_html;?>
-                            <? endif; ?>
-
-                            <? if( $photo_views_html ): ?>
-                                <div class='graph_title'>Photo Views</div>
-                                <?=$photo_views_html;?>
-                            <? endif; ?>
-                        </div>
-
-                        <div class='messy'>
-                            <h4>Love</h4>
-                            
-                            <div class="lovehate">
-                                <?=$lovehate;?>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-
-					</div>
-					<div style="clear: both;">&nbsp;</div>
-				</div>
-				<!-- end #content -->
-				
-				
-				
-				<div id="sidebar">
-
-				</div>
-				<!-- end #sidebar -->
-				<div style="clear: both;">&nbsp;</div>
-                
-</section>
-</div>
-<!-- End of Wrapper -->
-</div>
-<!-- End of Page content -->
-
-<?php
-	include('footer.php');
-?>
-
+<? include_once 'footer.php'; ?>

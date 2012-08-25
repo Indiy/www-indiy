@@ -12,7 +12,7 @@
     function update_table($table,$id)
     {
         $views = 0;
-        $video = mq("UPDATE $table SET views = views + 1 WHERE id='$id'");
+        mq("UPDATE $table SET views = views + 1 WHERE id='$id'");
         $photo = mf(mq("SELECT views FROM $table WHERE id='$id'"));
         if( $photo )
             $views = $photo['views'];
