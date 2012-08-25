@@ -41,7 +41,7 @@
 		';
 	}
 
-    function make_q_html($sql)
+    function make_q_html($sql,$class='')
     {
         $max_views = 1;
         $video_list = array();
@@ -78,7 +78,7 @@
             if( $i % 6 == 5 )
             {
                 $html = "";
-                $html .= "<div class='graph_row'>";
+                $html .= "<div class='graph_row $class'>";
                 $html .= $frag_html;
                 $html .= "</div>";
                 
@@ -92,7 +92,7 @@
         if( strlen($frag_html) > 0 )
         {
             $html = "";
-            $html .= "<div class='graph_row'>";
+            $html .= "<div class='graph_row $class'>";
             $html .= $frag_html;
             $html .= "</div>";
             
@@ -103,7 +103,7 @@
     }
 
     $sql = "SELECT id,name,views FROM mydna_musicplayer_content WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
-    $tab_views_html = make_q_html($sql);
+    $tab_views_html = make_q_html($sql,'yellow');
     
     $sql = "SELECT id,name,views FROM mydna_musicplayer_audio WHERE artistid='$id' ORDER BY `order` ASC, `id` DESC";
     $song_plays_html = make_q_html($sql);

@@ -6,8 +6,12 @@ body {
 }
 
 #stats {
+    width: 970px;
     padding: 10px;
+    margin-top: 40px;
     margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
     background: #EEE;
 }
 
@@ -74,6 +78,11 @@ body {
     right: 20px;
     background-color: #c9d9e1;
 }
+#stats .graph_row.yellow .item .bar_holder .bar
+{
+    background-color: #ebf2af;
+}
+
 #stats .graph_row .item .line {
     height: 2px;
     background-color: black;
