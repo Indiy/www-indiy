@@ -1,6 +1,12 @@
 
 /* For Web Analytics */
 
+#stats {
+    padding: 10px;
+    margin-bottom: 40px;
+    background: #EEE;
+}
+
 #stats .page_title {
     color: #329ECC;
     font-size: 20px;
@@ -69,6 +75,7 @@
     background-color: black;
 }
 #stats .graph_row .item .name {
+    padding-top: 2px;
     padding-left: 7px;
     padding-right: 7px;
     height: 18px;
