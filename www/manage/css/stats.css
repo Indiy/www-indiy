@@ -7,8 +7,11 @@ body {
 
 #stats {
     width: 970px;
-    padding: 10px;
-    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 60px;
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
@@ -33,8 +36,6 @@ body {
 }
 
 #stats .graph_title {
-    padding-top: 10px;
-    padding-bottom: 10px;
     color: #474248;
     font-size: 28px;
     font-family: "Neuzeit Grotesk", Helvetica, Arial, sans-serif;
