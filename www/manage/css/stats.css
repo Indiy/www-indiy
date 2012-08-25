@@ -1,6 +1,10 @@
 
 /* For Web Analytics */
 
+body {
+    background-color: white;
+}
+
 #stats {
     padding: 10px;
     margin-bottom: 40px;
