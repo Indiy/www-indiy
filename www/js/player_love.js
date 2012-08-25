@@ -106,6 +106,7 @@ function addLoved(tag)
         window.localStorage["love_map"] = json;
     }
     catch(e) {}
+    sendLoveTag(tag);
 }
 function removeLoved(tag)
 {
@@ -206,4 +207,38 @@ function syncLoved()
     });
 }
 
+var g_loveTagsSent = {};
+function sendLoveTag(tag)
+{
+    if( tag in g_loveTagsSent )
+        return false;
+
+    g_loveTagsSent[tag] = true;
+
+    var args = {
+        artist_id: g_artistId
+    };
+    
+    var type = tag.split('_')[0];
+    var id = parseInt(tag.split('_')[1]);
+    
+    var arg_name = "{0}_id".format(type);
+    args[arg_name] = id;
+
+    var url = "/data/element_loves.php";
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: url,
+        data: args,
+        dataType: 'json',
+        success: function(data) 
+        {
+        },
+        error: function()
+        {
+        }
+    });
+    return true;
+}
 
