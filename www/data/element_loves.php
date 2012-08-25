@@ -12,9 +12,9 @@
         mq("UPDATE $table SET loves = loves + 1 WHERE id='$id'");
     }
     
-    if( isset($_REQUEST['song_id']) )
+    if( isset($_REQUEST['music_id']) )
     {
-        update_table('mydna_musicplayer_audio',$_REQUEST['song_id']);
+        update_table('mydna_musicplayer_audio',$_REQUEST['music_id']);
     }
     else if( isset($_REQUEST['video_id']) )
     {
