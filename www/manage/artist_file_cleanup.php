@@ -46,7 +46,7 @@
         $existing = mf(mq($existing_sql));
         if( $existing )
         {
-            print "Existing file: $file, $upload_filename\n";
+            print "Existing file: $file, $save_filename, $upload_filename\n";
             if( $upload_filename )
             {
                 if( $existing['upload_filename'] )
