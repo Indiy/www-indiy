@@ -108,7 +108,7 @@
         }
         return 'MISC';
     }
-    
+    /*
     $dir = "../artists/images";
     $sql = "SELECT id AS artist_id, logo AS file, NULL AS upload_filename FROM mydna_musicplayer";
     do_table($sql,$dir);
@@ -132,13 +132,18 @@
     $dir = "../vid";
     $sql = "SELECT artistid AS artist_id, video AS file, upload_video_filename AS upload_filename FROM mydna_musicplayer_video";
     do_table($sql,$dir);
-
+     */
     $dir = "../artists/photo";
-    $sql = "SELECT artist_id AS artist_id, video AS file, NULL AS upload_filename FROM photos";
+    $sql = "SELECT artist_id AS artist_id, image AS file, NULL AS upload_filename FROM photos";
     do_table($sql,$dir);
 
     $dir = "../artists/digital_downloads";
-    $sql = "SELECT artist_id AS artist_id, filename AS file, upload_filename AS upload_filename FROM product_files";
+    $sql = "";
+    $sql .= "SELECT mydna_musicplayer_ecommerce_products.artistid AS artist_id ";
+    $sql .= ", product_files.filename AS file ";
+    $sql .= ", product_files.upload_filename AS upload_filename ";
+    $sql .= "FROM product_files ";
+    $sql .= "JOIN mydna_musicplayer_ecommerce_products ON product_files.product_id = mydna_musicplayer_ecommerce_products.id";
     do_table($sql,$dir);
 
     print "done done\n\n";
