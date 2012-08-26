@@ -13,7 +13,7 @@
     
     echo "<html><body><pre>\n";
 
-    function do_table($sql,$dir)
+    function do_table($sql,$dir,$prefix = "")
     {
         print "\n\n";
         print "============================================\n";
@@ -48,7 +48,7 @@
             $hash = hash_file("md5",$src_file);
             $type = get_file_type($src_file);
             
-            $save_filename = "{$artist_id}_$hash.$extension";
+            $save_filename = "{$prefix}{$artist_id}_$hash.$extension";
             
             $existing_sql = "SELECT * FROM artist_files WHERE filename = '$save_filename' AND artist_id = '$artist_id'";
             //print "existing_sql: $existing_sql\n";
@@ -144,7 +144,7 @@
     $sql .= ", product_files.upload_filename AS upload_filename ";
     $sql .= "FROM product_files ";
     $sql .= "JOIN mydna_musicplayer_ecommerce_products ON product_files.product_id = mydna_musicplayer_ecommerce_products.id";
-    do_table($sql,$dir);
+    do_table($sql,$dir,"dd_");
 
     print "done done\n\n";
 
