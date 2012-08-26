@@ -43,6 +43,7 @@
             continue;
         }
         $hash = hash_file("md5",$src_file);
+        $type = get_file_type($src_file);
         
         $save_filename = "{$artist_id}_$hash.$extension";
         
@@ -75,13 +76,34 @@
             
             $values = array("artist_id" => $artist_id,
                             "filename" => $save_filename,
-                            "upload_filename" => $filename);
+                            "upload_filename" => $filename,
+                            "type" => $type);
                             
             $ret = mysql_insert("artist_files",$values);
             
-            print "New File: $file, $save_filename, ret: "; var_dump($ret); print "\n";
+            print "New File: $file, $save_filename, type: $type, ret: ";
+            var_dump($ret);
+            print "\n";
         }
     }
     
+    function get_file_type($file)
+    {
+        $path_parts = pathinfo($file);
+        $extension = $path_parts['extension'];
+        switch( $extension )
+        {
+            case 'jpg':
+            case 'jpeg':
+            case 'png':
+            case 'gif':
+                return 'IMAGE';
+            case 'mp4':
+                return 'VIDEO';
+            case 'mp3':
+                return 'AUDIO';
+        }
+        return 'MISC';
+    }
 
 ?>
