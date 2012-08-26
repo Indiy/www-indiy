@@ -107,9 +107,9 @@ else
         
         $item = array("id" => $music_id,
                       "name" => $music_name,
-                      "mp3" => '/artists/audio/' . $music_audio,
+                      "mp3" => '/artists/files/' . $music_audio,
                       "download" => $music_download,
-                      "image" => '/artists/images/' . $music_image,
+                      "image" => '/artists/files/' . $music_image,
                       "bgcolor" => $music_bgcolor,
                       "bg_style" => $bg_style,
                       "plus" => "",

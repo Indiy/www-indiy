@@ -19,7 +19,7 @@
     
 	trackDownloads($getid);
 	$music = mf(mq("select * from `[p]musicplayer_audio` where `artistid`='{$artist}' and `id`='{$getid}'"));
-	$filename = 'artists/audio/'.$music["audio"];
+	$filename = 'artists/files/'.$music["audio"];
     
     $download_filename = $music["upload_audio_filename"];
     if( !$download_filename )

@@ -186,8 +186,8 @@
     $i = 0;
     while( $music = mf($q_music) )
     {
-        $music_image = '/artists/images/' . $music["image"];
-        $music_audio = '/artists/audio/' . $music["audio"];
+        $music_image = '/artists/files/' . $music["image"];
+        $music_audio = '/artists/files/' . $music["audio"];
         
         $music_name = stripslashes($music["name"]);
         $music_listens = $music["views"];

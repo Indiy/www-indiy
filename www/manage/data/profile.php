@@ -80,7 +80,7 @@
 		
         mysql_update("mydna_musicplayer",$values,"id",$artist_id);
 		
-		$postedValues['imageSource'] = "../artists/images/".$artist_logo;
+		$postedValues['imageSource'] = "../artists/files/".$artist_logo;
 		$postedValues['success'] = "1";
 		$postedValues['postedValues'] = $_REQUEST;
         if( $_REQUEST['ajax'] )

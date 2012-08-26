@@ -173,7 +173,7 @@
         if( $love['song_name'] )
         {
             $item_name = $love['song_name'];
-            $image_url = "/artists/images/" . $love['song_image'];
+            $image_url = "/artists/files/" . $love['song_image'];
             $item_hash = "song_id=" . $love['music_id'];
         }
         elseif( $love['photo_name'] )
