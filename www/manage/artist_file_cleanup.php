@@ -68,9 +68,9 @@
                             "filename" => $save_filename,
                             "upload_filename" => $filename);
                             
-            mysql_insert("artist_files",$values);
+            $ret = mysql_insert("artist_files",$values);
             
-            print "New File: $file, $save_filename, \n";
+            print "New File: $file, $save_filename, ret: $ret\n";
         }
     }
     
