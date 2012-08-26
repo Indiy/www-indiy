@@ -42,7 +42,7 @@
         $save_filename = "{$artist_id}_$hash.$extension";
         
         $existing_sql = "SELECT * FROM artist_files WHERE filename = '$save_filename' AND artist_id = '$artist_id'";
-        print "existing_sql: $existing_sql\n";
+        //print "existing_sql: $existing_sql\n";
         $existing = mf(mq($existing_sql));
         if( $existing )
         {
@@ -72,7 +72,7 @@
                             "filename" => $save_filename,
                             "upload_filename" => $filename);
                             
-            $ret = mysql_insert("artist_files",$values,TRUE);
+            $ret = mysql_insert("artist_files",$values);
             
             print "New File: $file, $save_filename, ret: "; var_dump($ret); print "\n";
         }
