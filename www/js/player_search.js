@@ -85,7 +85,7 @@ function searchRun(s)
     var artists = searchTestList(g_searchData.artists,re,true,"artist","/artists/files/");
     var songs = searchTestList(g_searchData.songs,re,false,"song","/artists/files/");
     var videos = searchTestList(g_searchData.videos,re,false,"video","/artists/files/");
-    var photos = searchTestList(g_searchData.photos,re,false,"photo","/artists/photo/");
+    var photos = searchTestList(g_searchData.photos,re,false,"photo","/artists/files/");
     
     var results = {
         'artists': artists,

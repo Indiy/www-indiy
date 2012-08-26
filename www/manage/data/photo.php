@@ -29,9 +29,9 @@
         
         array_walk($row,cleanup_row_element);
         
-        $image_path = PATH_TO_ROOT . "artists/photo/" . $row['image'];
+        $image_path = PATH_TO_ROOT . "artists/files/" . $row['image'];
         if( !empty($row['image']) && file_exists($image_path) )
-            $row['image_url'] = "/artists/photo/" . $row['image'];
+            $row['image_url'] = "/artists/files/" . $row['image'];
         else
             $row['image_url'] = "images/photo_video_01.jpg";
 

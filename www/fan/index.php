@@ -179,7 +179,7 @@
         elseif( $love['photo_name'] )
         {
             $item_name = $love['photo_name'];
-            $image_url = "/artists/photo/" . $love['photo_image'];
+            $image_url = "/artists/files/" . $love['photo_image'];
             $item_hash = "photo_id=" . $love['photo_id'];
         }
         elseif( $love['video_name'] )
