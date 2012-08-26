@@ -13,76 +13,80 @@
     
     echo "<html><body><pre>\n";
 
-
-
-    $sql = "SELECT id AS artist_id, logo AS file, NULL AS upload_filename FROM mydna_musicplayer";
-    $q = mq($sql);
-    
-    $dir = "../artists/images";
-    $dest_dir = "../artists/files";
-    
-    while( $item = mf($q) )
+    function do_table($sql,$dir)
     {
-        $artist_id = $item['artist_id'];
-        $file = $item['file'];
-        $upload_filename = $item['upload_filename'];
+        print "\n\n";
+        print "============================================\n"
+        print "sql: $sql\n"
+        print "\n";
+    
+        $q = mq($sql);
         
-        if( !$file )
+        $dest_dir = "../artists/files";
+        
+        while( $item = mf($q) )
         {
-            print "No file: file: $file, artist_id: $artist_id, upload_filename: $upload_filename\n";
-            continue;
-        }
-
-        $path_parts = pathinfo($file);
-        $extension = $path_parts['extension'];
-        
-        $src_file = "$dir/$file";
-        if( !file_exists($src_file) )
-        {
-            print "File not found: $src_file, file: $file, artist_id: $artist_id, update_filename: $upload_filename\n";
-            continue;
-        }
-        $hash = hash_file("md5",$src_file);
-        $type = get_file_type($src_file);
-        
-        $save_filename = "{$artist_id}_$hash.$extension";
-        
-        $existing_sql = "SELECT * FROM artist_files WHERE filename = '$save_filename' AND artist_id = '$artist_id'";
-        //print "existing_sql: $existing_sql\n";
-        $existing = mf(mq($existing_sql));
-        if( $existing )
-        {
-            print "Existing file: $file, $save_filename, $upload_filename\n";
-            if( $upload_filename )
+            $artist_id = $item['artist_id'];
+            $file = $item['file'];
+            $upload_filename = $item['upload_filename'];
+            
+            if( !$file )
             {
-                if( $existing['upload_filename'] )
+                print "No file: file: $file, artist_id: $artist_id, upload_filename: $upload_filename\n";
+                continue;
+            }
+
+            $path_parts = pathinfo($file);
+            $extension = $path_parts['extension'];
+            
+            $src_file = "$dir/$file";
+            if( !file_exists($src_file) )
+            {
+                print "File not found: $src_file, file: $file, artist_id: $artist_id, update_filename: $upload_filename\n";
+                continue;
+            }
+            $hash = hash_file("md5",$src_file);
+            $type = get_file_type($src_file);
+            
+            $save_filename = "{$artist_id}_$hash.$extension";
+            
+            $existing_sql = "SELECT * FROM artist_files WHERE filename = '$save_filename' AND artist_id = '$artist_id'";
+            //print "existing_sql: $existing_sql\n";
+            $existing = mf(mq($existing_sql));
+            if( $existing )
+            {
+                print "Existing file: $file, $save_filename, $upload_filename\n";
+                if( $upload_filename )
                 {
-                    print "Already has upload filename: " . $existing['upload_filename'] . "\n";
-                }
-                else
-                {
-                    print "Adding upload filename: $upload_filename\n";
-                    
-                    $updates = array("upload_filename" => $upload_filename);
-                    mysql_update("artist_files",$updates,"id",$existing['id']);
+                    if( $existing['upload_filename'] )
+                    {
+                        print "Already has upload filename: " . $existing['upload_filename'] . "\n";
+                    }
+                    else
+                    {
+                        print "Adding upload filename: $upload_filename\n";
+                        
+                        $updates = array("upload_filename" => $upload_filename);
+                        mysql_update("artist_files",$updates,"id",$existing['id']);
+                    }
                 }
             }
-        }
-        else
-        {
-            $dest_file = "$dest_dir/$save_filename";
-            
-            copy($src_file,$dest_file);
-            
-            $values = array("artist_id" => $artist_id,
-                            "filename" => $save_filename,
-                            "upload_filename" => $upload_filename,
-                            "type" => $type);
-                            
-            $ret = mysql_insert("artist_files",$values);
-            
-            print "New File: $file, $save_filename, type: $type, ret: ";
-            var_dump($ret);
+            else
+            {
+                $dest_file = "$dest_dir/$save_filename";
+                
+                copy($src_file,$dest_file);
+                
+                $values = array("artist_id" => $artist_id,
+                                "filename" => $save_filename,
+                                "upload_filename" => $upload_filename,
+                                "type" => $type);
+                                
+                $ret = mysql_insert("artist_files",$values);
+                
+                print "New File: $file, $save_filename, type: $type, ret: ";
+                var_dump($ret);
+            }
         }
     }
     
@@ -104,5 +108,38 @@
         }
         return 'MISC';
     }
+    
+    $dir = "../artists/images";
+    $sql = "SELECT id AS artist_id, logo AS file, NULL AS upload_filename FROM mydna_musicplayer";
+    do_table($sql,$dir);
+
+    $dir = "../artists/images";
+    $sql = "SELECT artistid AS artist_id, image AS file, NULL AS upload_filename FROM mydna_musicplayer_audio";
+    do_table($sql,$dir);
+
+    $dir = "../artists/audio";
+    $sql = "SELECT artistid AS artist_id, audio AS file, upload_audio_filename AS upload_filename FROM mydna_musicplayer_audio";
+    do_table($sql,$dir);
+
+    $dir = "../artists/products";
+    $sql = "SELECT artistid AS artist_id, image AS file, NULL AS upload_filename FROM mydna_musicplayer_ecommerce_products";
+    do_table($sql,$dir);
+
+    $dir = "../artists/images";
+    $sql = "SELECT artistid AS artist_id, image AS file, NULL AS upload_filename FROM mydna_musicplayer_video";
+    do_table($sql,$dir);
+
+    $dir = "../vid";
+    $sql = "SELECT artistid AS artist_id, video AS file, upload_video_filename AS upload_filename FROM mydna_musicplayer_video";
+    do_table($sql,$dir);
+
+    $dir = "../artists/photo";
+    $sql = "SELECT artist_id AS artist_id, video AS file, NULL AS upload_filename FROM photos";
+    do_table($sql,$dir);
+
+    $dir = "../artists/digital_downloads";
+    $sql = "SELECT artist_id AS artist_id, filename AS file, upload_filename AS upload_filename FROM product_files";
+    do_table($sql,$dir);
+
 
 ?>
