@@ -102,12 +102,14 @@
     
     function copy_alternative($src_file,$dst_file_prefix,$extension)
     {
+        $dest_dir = "../artists/files";
+    
         $path_parts = pathinfo($src_file);
         $src_ext = $path_parts['extension'];
         $alt_file = str_replace(".$src_ext",".$extension",$src_file);
-        if( file_exists($alt_file) )
+        $dst_file = "$dest_dir/$dst_file_prefix.$extension";
+        if( file_exists($alt_file) && !file_exists($dst_file) )
         {
-            $dst_file = "$dst_file_prefix.$extension";
             copy($alt_file,$dst_file);
             print "Copied alt file: $alt_file\n";
         }
