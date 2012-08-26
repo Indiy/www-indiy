@@ -47,7 +47,8 @@
         $custom_domain = $_POST["custom_domain"];
         $tags = $_POST["tags"];
         $artist_type = $_POST["artist_type"];
-        $logo = artist_upload_file($artist_id,$_FILES["logo"],$old_logo);
+        $ret = artist_file_upload($artist_id,$_FILES["logo"],$old_logo);
+        $logo = $ret['file'];
 		
         $values = array("artist" => $artist,
                         "email" => $email,

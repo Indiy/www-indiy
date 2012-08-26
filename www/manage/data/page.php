@@ -75,75 +75,18 @@ function do_POST()
     if( $remove_image )
         $old_logo = '';
     
-    $audio_logo = $old_logo;
-    
-    if(!empty($_FILES["logo"]["name"]))
-    {
-        if (is_uploaded_file($_FILES["logo"]["tmp_name"])) 
-        {
-            $image_data = get_image_data($_FILES["logo"]["tmp_name"]);
-            if( $image_data != NULL )
-            {
-                $audio_logo = $artist_id."_".strtolower(rand(11111,99999)."_".basename(cleanup($_FILES["logo"]["name"])));
-                @move_uploaded_file($_FILES['logo']['tmp_name'], PATH_TO_ROOT . "artists/images/$audio_logo");
-            }
-            else
-            {
-                $image_data = $old_image_data;
-                $postedValues['image_error'] = "Image format not recognized.";
-            }
-        }
-    }
-    
-    $upload_sound_error = false;
-    if(!empty($_FILES["audio"]["name"]))
-    {
-        if (is_uploaded_file($_FILES["audio"]["tmp_name"])) 
-        {
-            $uploaded_name = strtolower($_FILES["audio"]["name"]);
-            $ext_parts = explode(".",$uploaded_name);
-            $ext = $ext_parts[count($ext_parts) - 1];
-            
-            $filename = $artist_id."_".strtolower(rand(11111,99999)."_song.");
-            $audio_sound = $filename . "mp3";
-            $audio_sound_ogg = $filename . "ogg";
-            
-            $upload_file = $_FILES['audio']['tmp_name'];
-            $mp3_file = PATH_TO_ROOT . "artists/audio/$audio_sound";
-            $ogg_file = PATH_TO_ROOT . "artists/audio/$audio_sound_ogg";
-            if( $ext == "mp3" )
-            {
-                @move_uploaded_file($upload_file, $mp3_file);
-                @system("/usr/local/bin/ffmpeg -i $mp3_file -acodec libvorbis $ogg_file");
-                $upload_audio_filename = $_FILES["audio"]["name"];
-            }
-            else
-            {
-                @system("/usr/local/bin/ffmpeg -i $upload_file -acodec libmp3lame $mp3_file",$retval);
-                if( $retval == 0 )
-                {
-                    @system("/usr/local/bin/ffmpeg -i $upload_file -acodec libvorbis $ogg_file");
-                    $upload_audio_filename = $_FILES["audio"]["name"];
-                }
-                else
-                {
-                    $postedValues['upload_error'] = 'Please upload audio files in mp3 format.';
-                    $audio_sound = '';
-                }
-            }
-        } 
-        else 
-        {
-            if ($old_sound != $audio_sound) 
-            {
-                $audio_sound = $old_sound;
-            }
-        }
-    }
+    $ret = artist_file_upload($artist_id,$_FILES["logo"],$old_logo);
+    $audio_logo = $ret['file'];
+    if( isset($ret['image_data']) )
+        $image_data = $ret['image_data'];
     else
-    {
-        $audio_sound = $old_sound;
-    }
+        $image_data = $old_image_data;
+        
+    $ret = artist_file_upload($artist_id,$_FILES["audio"],$old_sound);
+    $audio_sound = $ret['file'];
+    if( isset($ret['upload_error']) )
+        $postedValues['upload_error'] = $ret['upload_error'];
+    
     if( $mad_store )
     {
         if( isset($old_product_id) && $old_product_id > 0 )
@@ -152,7 +95,7 @@ function do_POST()
         }
         else
         {
-            $src = PATH_TO_ROOT . "artists/images/$audio_logo";
+            $src = PATH_TO_ROOT . "artists/files/$audio_logo";
             $dst = PATH_TO_ROOT . "artists/products/$audio_logo";
             @copy($src,$dst);
             $values = array("artistid" => $artist_id,

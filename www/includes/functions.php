@@ -1205,8 +1205,10 @@ END;
         return $scrollbar_html;
     }
     
-    function artist_upload_file($artist_id,$file,$old_filename,$prefix="")
+    function artist_file_upload($artist_id,$file,$old_filename)
     {
+        $ret['file'] = $old_filename;
+    
         if(!empty($file["name"]))
         {
             $src_file = $file["tmp_name"];
@@ -1215,12 +1217,37 @@ END;
                 $upload_filename = basename($file["name"]);
                 
                 $path_parts = pathinfo($upload_filename);
-                $extension = $path_parts['extension'];
-                $hash = hash_file("md5",$src_file);
-                
+                $extension = strtolower($path_parts['extension']);
+
                 $type = get_file_type($upload_filename);
                 
-                $save_filename = "{$prefix}{$artist_id}_$hash.$extension";
+                if( $type == 'IMAGE' )
+                {
+                    $image_data = get_image_data($src_file);
+                    if( $image_data )
+                        $ret['image_data'] = $image_data;
+                }
+                else if( $type == 'AUDIO' )
+                {
+                    if( $extension != 'mp3' )
+                    {
+                        $mp3_file = tempnam(sys_get_temp_dir(),"mad_") . ".mp3";
+                        @system("/usr/local/bin/ffmpeg -i $src_file -acodec libmp3lame $mp3_file",$retval);
+                        if( $retval == 0 )
+                        {
+                            $src_file = $mp3_file;
+                            $extension = 'mp3';
+                        }
+                        else
+                        {
+                            $ret['upload_error'] = "Please upload audio files in mp3 format.";
+                            return $ret;
+                        }
+                    }
+                }
+
+                $hash = hash_file("md5",$src_file);
+                $save_filename = "{$artist_id}_$hash.$extension";
                 
                 if( PATH_TO_ROOT )
                     $dst_file = PATH_TO_ROOT . "artists/files/$save_filename";
@@ -1228,30 +1255,25 @@ END;
                     $dst_file = "../../artists/files/$save_filename";
                 
 				@move_uploaded_file($src_file, $dst_file);
+                
+                post_convert($dst_file);
 
                 $values = array("artist_id" => $artist_id,
                                 "filename" => $save_filename,
                                 "upload_filename" => $upload_filename,
                                 "type" => $type);
                 
-                $ret = mysql_insert("artist_files",$values);
+                mysql_insert("artist_files",$values);
 
-                return $save_filename;
-			}
-            else
-            {
-				return $old_filename;
+                $ret['file'] = $save_filename;
 			}
 		}
-        else
-        {
-			return $old_filename;
-		}
+        return $ret;
     }
     function get_file_type($file)
     {
         $path_parts = pathinfo($file);
-        $extension = $path_parts['extension'];
+        $extension = strtolower($path_parts['extension']);
         switch( $extension )
         {
             case 'jpg':
@@ -1267,5 +1289,21 @@ END;
         return 'MISC';
     }
 
+    function post_convert($file)
+    {
+        $path_parts = pathinfo($file);
+        $extension = strtolower($path_parts['extension']);
+        
+        if( $extension == 'mp3')
+        {
+            $ogg_file = str_replace(".$extension",".ogg",$file);
+            @system("/usr/local/bin/ffmpeg -i $file -acodec libvorbis $ogg_file");
+        }
+        else if( $extension == 'mp4')
+        {
+            $ogv_file = str_replace(".$extension",".ogv",$file);
+            @system("/usr/local/bin/ffmpeg2theora --videoquality 8 --audioquality 6 -o $ogv_file $file");
+        }
+    }
 
 ?>

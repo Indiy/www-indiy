@@ -13,7 +13,7 @@
     
     echo "<html><body><pre>\n";
 
-    function do_table($sql,$dir,$table = FALSE,$column = FALSE,$prefix = "")
+    function do_table($sql,$dir,$table = FALSE,$column = FALSE)
     {
         print "\n\n";
         print "============================================\n";
@@ -38,7 +38,7 @@
             }
 
             $path_parts = pathinfo($file);
-            $extension = $path_parts['extension'];
+            $extension = strtolower($path_parts['extension']);
             
             $src_file = "$dir/$file";
             if( !file_exists($src_file) )
@@ -153,7 +153,7 @@
     $sql .= ", product_files.upload_filename AS upload_filename ";
     $sql .= "FROM product_files ";
     $sql .= "JOIN mydna_musicplayer_ecommerce_products ON product_files.product_id = mydna_musicplayer_ecommerce_products.id";
-    do_table($sql,$dir,"dd_");
+    do_table($sql,$dir);
      
 
     $dir = "../artists/images";
