@@ -254,8 +254,8 @@
         if( strlen($vid_error) > 0 )
             continue;
         
-        $video_file = trueSiteUrl() . '/vid/' . $video['video'];
-        $video_image = '/artists/images/' . $video['image'];
+        $video_file = trueSiteUrl() . '/artists/files/' . $video['video'];
+        $video_image = '/artists/files/' . $video['image'];
         $video_name = $video['name'];
         
         

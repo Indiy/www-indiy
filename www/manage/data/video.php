@@ -33,7 +33,7 @@
        
         array_walk($row,cleanup_row_element);
 
-        $image_path = "../artists/images/" . $row['image'];
+        $image_path = "../artists/files/" . $row['image'];
         if( !empty($row['image']) )
             $row['image_url'] = $image_path;
         else
@@ -51,9 +51,10 @@
         if( $video_id != "" ) 
         {
             $row = mf(mq("SELECT `id`,`image`,`video` FROM mydna_musicplayer_video WHERE `id`='$video_id'"));
-            $old_logo = $row["image"];
-            $old_sound = $row["video"];
+            $old_image_file = $row["image"];
+            $old_video_file = $row["video"];
             $upload_video_filename = $row["upload_video_filename"];
+            $old_image_data = $row['image_data'];
         }
         
         $video_name = my($_POST["name"]);
@@ -64,100 +65,43 @@
             $old_logo = '';
         if( $_POST["remove_video"] == 'true' )
             $old_sound = '';
+            
         
-        // Upload Image
-        if(!empty($_FILES["logo"]["name"]))
-        {
-            if (is_uploaded_file($_FILES["logo"]["tmp_name"]))
-            {
-                $video_logo = $artist_id."_".strtolower(rand(11111,99999)."_".basename(cleanup($_FILES["logo"]["name"])));
-                @move_uploaded_file($_FILES['logo']['tmp_name'], PATH_TO_ROOT . 'artists/images/' . $video_logo);
-            } 
-            else 
-            {
-                if ($old_logo != "") 
-                {
-                    $video_logo = $old_logo;
-                }
-            }
-        }
+        $ret = artist_file_upload($artist_id,$_FILES["logo"],$old_image_file);
+        $image_file = $ret['file'];
+        if( isset($ret['image_data']) )
+            $image_data = $ret['image_data'];
         else
-        {
-            $video_logo = $old_logo;
-        }
+            $image_data = $old_image_data;
         
-        // Upload video
-        if(!empty($_FILES["video"]["name"]))
-        {
-            if (is_uploaded_file($_FILES["video"]["tmp_name"]))
-            {
-                ignore_user_abort(true);
-                set_time_limit(0);
-                $tmp_file = $_FILES['video']['tmp_name'];
-                $ext = explode(".",$_FILES['video']['name']);
-                $upload_ext = strtolower($ext[count($ext)-1]);
-                
-                $video_sound_mp4 = $artist_id . '_' . strtolower( rand(11111,99999) . '_video.mp4' );
-                $dest_file = PATH_TO_ROOT . 'vid/' . $video_sound_mp4;
-                $dest_file_ogv = str_replace('.mp4','.ogv',$dest_file);
-                
-                $args = "-i_qfactor 0.71 -qcomp 0.6 -qmin 10 -qmax 63 -qdiff 4 -trellis 0 -vcodec libx264 -s 640x360 -vb 300k -ab 64k -ar 44100 -threads 4";
-                if( $upload_ext == "mp4" )
-                {
-                    @move_uploaded_file($tmp_file, $dest_file);
-                    @chmod($dest_file, 0644);
-                    //@system("/usr/bin/qafaststart $dest_file");
-                    @system("/usr/local/bin/ffmpeg2theora --videoquality 8 --audioquality 6 -o $dest_file_ogv $dest_file");
-                    
-                    $video_sound = $video_sound_mp4;
-                    $upload_video_filename = $_FILES["video"]["name"];
-                }
-                else if( $upload_ext == "mov" )
-                {
-                    @system("/usr/local/bin/ffmpeg -i $tmp_file $args $dest_file");
-                    @unlink($_FILES['video']['tmp_name']);
-                    //@system("/usr/bin/qafaststart $dest_file");
-                    @system("/usr/local/bin/ffmpeg2theora --videoquality 8 --audioquality 6 -o $dest_file_ogv $dest_file");
-                    
-                    $video_sound = $video_sound_mp4;
-                    $upload_video_filename = $_FILES["video"]["name"];
-                }
-                else
-                {
-                    $error = 'Please upload video files in MP4 or MOV format.';
-                    $postedValues['upload_error'] = $error;
-                    $video_sound = '';
-                }
-            } 
-            else 
-            {
-                if ($old_sound != "") 
-                {
-                    $video_sound = $old_sound;
-                }
-            }
-        }
-        else
-        {
-            $video_sound = $old_sound;
-        }
+        $ret = artist_file_upload($artist_id,$_FILES["video"],$old_video_file);
+        $video_file = $ret['file'];
+        if( isset($ret['upload_error']) )
+            $postedValues['upload_error'] = $ret['upload_error'];
         
-        
-        $tables = "artistid|name|image|video|upload_video_filename|tags|error";
-        $values = "$artist_id|$video_name|$video_logo|$video_sound|$upload_video_filename|$video_tags|$error";
+
+        $values = array("artistid" => $artist_id,
+                        "name" => $video_name,
+                        "image" => $image_file,
+                        "video" => $video_file,
+                        "upload_video_filename" => $upload_video_filename,
+                        "tags" => $tags,
+                        "error" => $error,
+                        "image_data" => $image_data,
+                        );
         
         if( $video_id != "") 
         {
-            update('mydna_musicplayer_video',$tables,$values,"id",$video_id);
+            mysql_update('mydna_musicplayer_video',$values,"id",$video_id);
         } 
         else 
         {
-            insert('mydna_musicplayer_video',$tables,$values);
+            mysql_insert('mydna_musicplayer_video',$values);
             $video_id = mysql_insert_id();
         }
         
         $postedValues['imageSource'] = $video_logo;
-        $postedValues['video_sound'] = $video_sound;
+        $postedValues['video_sound'] = $video_file;
         $postedValues['success'] = "1";
         $postedValues['postedValues'] = $_REQUEST;
         

@@ -185,7 +185,7 @@
         elseif( $love['video_name'] )
         {
             $item_name = $love['video_name'];
-            $image_url = "/artists/images/" . $love['video_image'];
+            $image_url = "/artists/files/" . $love['video_image'];
             $item_hash = "video_id=" . $love['video_id'];
         }
 

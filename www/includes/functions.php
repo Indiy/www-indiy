@@ -1245,6 +1245,26 @@ END;
                         }
                     }
                 }
+                else if( $type == 'VIDEO' )
+                {
+                    if( $extension != 'mp4' )
+                    {
+                        $args = "-i_qfactor 0.71 -qcomp 0.6 -qmin 10 -qmax 63 -qdiff 4 -trellis 0 -vcodec libx264 -s 640x360 -vb 300k -ab 64k -ar 44100 -threads 4";
+                    
+                        $mp4_file = tempnam(sys_get_temp_dir(),"mad_") . ".mp4";
+                        @system("/usr/local/bin/ffmpeg -i $src_file $args $mp4_file");
+                        if( $retval == 0 )
+                        {
+                            $src_file = $mp4_file;
+                            $extension = 'mp4';
+                        }
+                        else
+                        {
+                            $ret['upload_error'] = "Please upload video files in MP4 or MOV format.";
+                            return $ret;
+                        }
+                    }
+                }
 
                 $hash = hash_file("md5",$src_file);
                 $save_filename = "{$artist_id}_$hash.$extension";
@@ -1282,7 +1302,12 @@ END;
             case 'gif':
                 return 'IMAGE';
             case 'mp4':
+            case 'mov':
+            case 'ogv':
                 return 'VIDEO';
+            case 'wav':
+            case 'ogg':
+            case 'm4a':
             case 'mp3':
                 return 'AUDIO';
         }
