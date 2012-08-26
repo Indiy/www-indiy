@@ -65,7 +65,7 @@
 	if($record_artistDetail['logo'] == '')
 		$artist_img_logo = 'images/NoPhoto.jpg';
 	else
-		$artist_img_logo = '../artists/images/'.$record_artistDetail['logo'];
+		$artist_img_logo = '../artists/files/'.$record_artistDetail['logo'];
 
 	$img_url = "timthumb.php?src=".$artist_img_logo.'&amp;w=220&amp;h=248&amp;zc=1&amp;q=100';
 
@@ -151,7 +151,7 @@
 						if($find_record['logo'] == '')
 							$artist_img_logo = 'images/NoPhoto.jpg';
 						else
-							$artist_img_logo = '../artists/images/'.$find_record['logo'];
+							$artist_img_logo = '../artists/files/'.$find_record['logo'];
 
 					$img_url = "timthumb.php?src=".$artist_img_logo.'&amp;w=89&amp;h=40&amp;zc=1&amp;q=100';
 

@@ -137,7 +137,7 @@
 	if($record_artistDetail['logo'] == '')
 		$artist_img_logo = 'images/NoPhoto.jpg';
 	else
-		$artist_img_logo = '../artists/images/'.$record_artistDetail['logo'];
+		$artist_img_logo = '../artists/files/'.$record_artistDetail['logo'];
 
 	$img_url = $artist_img_logo;
 

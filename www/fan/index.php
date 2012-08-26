@@ -116,7 +116,7 @@
         $artist_logo = $order['artist_logo'];
         $order_date = $order['order_date'];
         
-        $artist_logo_url = "/artists/images/$artist_logo";
+        $artist_logo_url = "/artists/files/$artist_logo";
         
         $odd = "";
         if( $i % 2 == 1 )

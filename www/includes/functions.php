@@ -1017,7 +1017,7 @@
             $row['facebook'] = FALSE;
         
         $logo = $row['logo'];
-        $logo_path = "/artists/images/$logo";
+        $logo_path = "/artists/files/$logo";
         if( $row['logo'] )
             $row['logo_url'] = $logo_path;
         else
