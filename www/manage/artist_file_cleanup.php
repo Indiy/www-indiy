@@ -13,7 +13,7 @@
     
     echo "<html><body><pre>\n";
 
-    function do_table($sql,$dir,$table,$column,$prefix = "")
+    function do_table($sql,$dir,$table = FALSE,$column = FALSE,$prefix = "")
     {
         print "\n\n";
         print "============================================\n";
@@ -89,8 +89,11 @@
                 var_dump($ret);
             }
             
-            $updates = array($column => $save_filename);
-            mysql_update($table,$updates,'id',$id);
+            if( $table && $column )
+            {
+                $updates = array($column => $save_filename);
+                mysql_update($table,$updates,'id',$id);
+            }
         }
     }
     
@@ -135,7 +138,7 @@
 
     $dir = "../artists/images";
     $sql = "SELECT id, artistid AS artist_id, image AS file, NULL AS upload_filename FROM mydna_musicplayer_content";
-    do_table($sql,$dir);
+    do_table($sql,$dir,"");
 
     print "done done\n\n";
 
