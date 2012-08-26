@@ -295,12 +295,24 @@
 		}
 	}
     
-    function mysql_insert($table,$inserts)
+    function mysql_insert($table,$inserts,$debug=FALSE)
     {
         $values = array_map('mysql_real_escape_string', array_values($inserts));
         $keys = array_keys($inserts);
         $q = 'INSERT INTO `'.$table.'` (`'.implode('`,`', $keys).'`) VALUES (\''.implode('\',\'', $values).'\')';
-        return mysql_query($q);
+        $ret = mysql_query($q);
+        
+        if( $debug )
+        {
+            print "sql: $q\n";
+            if( !$ret )
+            {
+                print "mysql_error: ";
+                print mysql_error();
+                print "\n";
+            }
+        }
+        return $ret;
     }
     function mysql_update($table,$inserts,$insert_key,$insert_val)
     {
