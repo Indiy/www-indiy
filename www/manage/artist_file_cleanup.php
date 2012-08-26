@@ -122,11 +122,11 @@
     */
     $dir = "../artists/images";
     $sql = "SELECT id, artistid AS artist_id, image AS file, NULL AS upload_filename FROM mydna_musicplayer_audio";
-    do_table($sql,$dir,FALSE,'image');
+    do_table($sql,$dir,'mydna_musicplayer_audio','image');
 
     $dir = "../artists/audio";
     $sql = "SELECT id, artistid AS artist_id, audio AS file, upload_audio_filename AS upload_filename FROM mydna_musicplayer_audio";
-    do_table($sql,$dir,FALSE,'audio');
+    do_table($sql,$dir,'mydna_musicplayer_audio','audio');
     
     /*
     
