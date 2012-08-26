@@ -22,6 +22,7 @@
     
         $q = mq($sql);
         
+        $prefix = "";
         $dest_dir = "../artists/files";
         
         while( $item = mf($q) )
