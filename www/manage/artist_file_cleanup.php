@@ -39,7 +39,9 @@
         
         $save_filename = "{$artist_id}_$hash.$extension";
         
-        $existing = mf(mq("SELECT * FROM artist_files WHERE filename = '$save_filename' AND artist_id = '$artist_id'"));
+        $existing_sql = "SELECT * FROM artist_files WHERE filename = '$save_filename' AND artist_id = '$artist_id'";
+        print "existing_sql: $existing_sql\n"
+        $existing = mf(mq($existing_sql));
         if( $extisting )
         {
             print "Existing file: $file, $upload_filename\n";
