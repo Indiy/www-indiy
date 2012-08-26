@@ -95,9 +95,6 @@ function do_POST()
         }
         else
         {
-            $src = PATH_TO_ROOT . "artists/files/$audio_logo";
-            $dst = PATH_TO_ROOT . "artists/products/$audio_logo";
-            @copy($src,$dst);
             $values = array("artistid" => $artist_id,
                             "name" => $audio_name,
                             "description" => "Single",

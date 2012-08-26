@@ -113,7 +113,7 @@
             $colors = explode(",", $pro["color"]);
         
         if( $product["image"] )
-            $image = "/artists/products/" . $product["image"];
+            $image = "/artists/files/" . $product["image"];
         else
             $image = "/images/default_product_image.jpg";
 

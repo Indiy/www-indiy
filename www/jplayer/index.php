@@ -193,7 +193,7 @@ else
             $image = '/images/default_product_image.jpg';
             if( $product_image != "" ) 
             {
-                $path = "artists/products/$product_image";
+                $path = "artists/files/$product_image";
                 if( file_exists("$path") )
                     $image = "/$path";
             }

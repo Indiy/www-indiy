@@ -1075,7 +1075,7 @@
             $price = floatval($cart['price']);
             $name = $cart['name'];
             if(  $cart['image'] )
-                $image = '/artists/products/' . $cart['image'];
+                $image = '/artists/files/' . $cart['image'];
             else
                 $image = '/images/default_product_image.jpg';
             
@@ -1122,7 +1122,7 @@
             $price = floatval($cart['price']);
             $name = $cart['name'];
             if(  $cart['image'] )
-                $image = '/artists/products/' . $cart['image'];
+                $image = '/artists/files/' . $cart['image'];
             else
                 $image = '/images/default_product_image.jpg';
             
@@ -1151,7 +1151,7 @@
         $row = mf(mq("SELECT * FROM mydna_musicplayer_ecommerce_products WHERE id='$product_id'"));
         
         array_walk($row,cleanup_row_element);
-        $image_path = "/artists/products/" . $row['image'];
+        $image_path = "/artists/files/" . $row['image'];
         if( !empty($row['image']) )
             $row['image'] = $image_path;
         else

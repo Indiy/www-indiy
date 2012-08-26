@@ -29,24 +29,11 @@ function do_POST()
     $product_id = $_POST["id"];
     $artist_id = $_POST["artistid"];
     
-    if( is_uploaded_file($_FILES["file"]["tmp_name"]) ) 
-    {
-        $productimage = strtolower(rand(111,999)."_".basename($_FILES["file"]["name"]));
-        @move_uploaded_file($_FILES['file']['tmp_name'], PATH_TO_ROOT . "artists/products/$productimage");
-        $image = $productimage;
-    } 
-    else 
-    {
-        if( $product_id != "" ) 
-        {
-            $product = mf(mq("SELECT image FROM mydna_musicplayer_ecommerce_products WHERE id='$product_id'"));
-            $image = $product["image"];	
-        } 
-        else 
-        {
-            $image = "";
-        }
-    }
+    $product = mf(mq("SELECT image FROM mydna_musicplayer_ecommerce_products WHERE id='$product_id'"));
+    $old_image = $product["image"];
+
+    $ret = artist_file_upload($artist_id,$_FILES["file"],$old_image);
+    $image = $ret['file'];
     
     $name = my($_POST["name"]);
     $description = my($_POST["description"]);

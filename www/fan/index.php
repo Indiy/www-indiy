@@ -57,7 +57,7 @@
         $product_image = $file['product_image'];
         $product_description = $file['product_description'];
 
-        $product_image_url = "/artists/products/$product_image";
+        $product_image_url = "/artists/files/$product_image";
     
         $item = array("id" => $file_id,
                       "name" => $file_name,
