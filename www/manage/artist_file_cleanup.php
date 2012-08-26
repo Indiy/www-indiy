@@ -165,7 +165,7 @@
      */
     $dir = "../artists/images";
     $sql = "SELECT id, artistid AS artist_id, image AS file, NULL AS upload_filename FROM mydna_musicplayer_content";
-    do_table($sql,$dir);
+    do_table($sql,$dir,'mydna_musicplayer_content','image');
     
     print "done done\n\n";
 
