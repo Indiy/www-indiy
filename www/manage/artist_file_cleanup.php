@@ -83,7 +83,6 @@
             
             print "New File: $file, $save_filename, type: $type, ret: ";
             var_dump($ret);
-            print "\n";
         }
     }
     
