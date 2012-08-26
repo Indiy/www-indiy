@@ -3,6 +3,8 @@
     require_once '../includes/config.php';
 	require_once '../includes/functions.php';
 
+    error_reporting(E_ALL);
+
 	if( $_SESSION['sess_userId'] == '' && php_sapi_name() != 'cli' )
 	{
 		header("Location: /index.php");
@@ -42,7 +44,7 @@
         $existing_sql = "SELECT * FROM artist_files WHERE filename = '$save_filename' AND artist_id = '$artist_id'";
         print "existing_sql: $existing_sql\n";
         $existing = mf(mq($existing_sql));
-        if( $extisting )
+        if( $existing )
         {
             print "Existing file: $file, $upload_filename\n";
             if( $upload_filename )
