@@ -101,15 +101,17 @@
     $dir = "../artists/images";
     $sql = "SELECT id AS id, id AS artist_id, logo AS file, NULL AS upload_filename FROM mydna_musicplayer";
     do_table($sql,$dir,"mydna_musicplayer","logo");
-    
+    */
     $dir = "../artists/images";
     $sql = "SELECT id, artistid AS artist_id, image AS file, NULL AS upload_filename FROM mydna_musicplayer_audio";
-    do_table($sql,$dir);
+    do_table($sql,$dir,'mydna_musicplayer_audio','image');
 
     $dir = "../artists/audio";
     $sql = "SELECT id, artistid AS artist_id, audio AS file, upload_audio_filename AS upload_filename FROM mydna_musicplayer_audio";
-    do_table($sql,$dir);
-
+    do_table($sql,$dir,'mydna_musicplayer_audio','audio');
+    
+    /*
+    
     $dir = "../artists/products";
     $sql = "SELECT id, artistid AS artist_id, image AS file, NULL AS upload_filename FROM mydna_musicplayer_ecommerce_products";
     do_table($sql,$dir);
@@ -134,12 +136,13 @@
     $sql .= "FROM product_files ";
     $sql .= "JOIN mydna_musicplayer_ecommerce_products ON product_files.product_id = mydna_musicplayer_ecommerce_products.id";
     do_table($sql,$dir,"dd_");
-     */
+     
 
     $dir = "../artists/images";
     $sql = "SELECT id, artistid AS artist_id, image AS file, NULL AS upload_filename FROM mydna_musicplayer_content";
     do_table($sql,$dir);
-
+    
+    */
     print "done done\n\n";
 
 ?>
