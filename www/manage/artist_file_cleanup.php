@@ -76,7 +76,7 @@
             
             $values = array("artist_id" => $artist_id,
                             "filename" => $save_filename,
-                            "upload_filename" => $filename,
+                            "upload_filename" => $upload_filename,
                             "type" => $type);
                             
             $ret = mysql_insert("artist_files",$values);
