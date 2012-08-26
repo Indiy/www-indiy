@@ -47,7 +47,7 @@
         {
             $row = mf(mq("SELECT * FROM photos WHERE id='$photo_id'"));
             
-            $old_image = $row["image"];
+            $old_image_file = $row["image"];
             $old_image_data = $row["image_data"];
         }
         
@@ -60,28 +60,17 @@
         
         $image = $old_image;
         
-        if(!empty($_FILES['image']['name']))
-        {
-            if (is_uploaded_file($_FILES['image']['tmp_name'])) 
-            {
-                $image_data = get_image_data($_FILES['image']['tmp_name']);
-                if( $image_data != NULL )
-                {
-                    $image = $artist_id."_".strtolower(rand(11111,99999)."_".basename(cleanup($_FILES['image']['name'])));
-                    @move_uploaded_file($_FILES['image']['tmp_name'], PATH_TO_ROOT . "artists/photo/$image");
-                }
-                else
-                {
-                    $image_data = $old_image_data;
-                    $postedValues['image_error'] = "Image format not recognized.";
-                }
-            }
-        }
+        $ret = artist_file_upload($artist_id,$_FILES["logo"],$old_image_file);
+        $image_file = $ret['file'];
+        if( isset($ret['image_data']) )
+            $image_data = $ret['image_data'];
+        else
+            $image_data = $old_image_data;
         
         $values = array("artist_id" => $artist_id,
                         "name" => $name,
                         "location" => $location,
-                        "image" => $image,
+                        "image" => $image_file,
                         "bg_color" => $bg_color,
                         "bg_style" => $bg_style,
                         "tags" => $audio_tags,
