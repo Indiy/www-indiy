@@ -1204,5 +1204,68 @@ END;
         
         return $scrollbar_html;
     }
+    
+    function artist_upload_file($artist_id,$file,$old_filename,$prefix="")
+    {
+        if(!empty($file["name"]))
+        {
+            $src_file = $file["tmp_name"];
+			if( is_uploaded_file($src_file) )
+            {
+                $upload_filename = basename($file["name"]);
+                
+                $path_parts = pathinfo($upload_filename);
+                $extension = $path_parts['extension'];
+                $hash = file_hash("md5",$src_file);
+                
+                $type = get_file_type($upload_filename);
+                
+                $save_filename = "{$prefix}{$artist_id}_$hash.$extension";
+                
+                if( PATH_TO_ROOT )
+                    $dst_file = PATH_TO_ROOT . "artists/files/$save_filename";
+                else
+                    $dst_file = "../../artists/files/$save_filename";
+                
+				@move_uploaded_file($src_file, $dst_file);
+
+                $values = array("artist_id" => $artist_id,
+                                "filename" => $save_filename,
+                                "upload_filename" => $upload_filename,
+                                "type" => $type);
+                
+                $ret = mysql_insert("artist_files",$values);
+
+                return $save_filename;
+			}
+            else
+            {
+				return $old_filename;
+			}
+		}
+        else
+        {
+			return $old_filename;
+		}
+    }
+    function get_file_type($file)
+    {
+        $path_parts = pathinfo($file);
+        $extension = $path_parts['extension'];
+        switch( $extension )
+        {
+            case 'jpg':
+            case 'jpeg':
+            case 'png':
+            case 'gif':
+                return 'IMAGE';
+            case 'mp4':
+                return 'VIDEO';
+            case 'mp3':
+                return 'AUDIO';
+        }
+        return 'MISC';
+    }
+
 
 ?>

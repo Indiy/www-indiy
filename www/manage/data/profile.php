@@ -47,28 +47,7 @@
         $custom_domain = $_POST["custom_domain"];
         $tags = $_POST["tags"];
         $artist_type = $_POST["artist_type"];
-		
-		if(!empty($_FILES["logo"]["name"]))
-        {
-			if (is_uploaded_file($_FILES["logo"]["tmp_name"])) 
-            {
-				$artist_logo = $artistid."_".strtolower(rand(11111,99999)."_".basename(cleanup($_FILES["logo"]["name"])));
-				@move_uploaded_file($_FILES['logo']['tmp_name'], PATH_TO_ROOT . "artists/images/$artist_logo");
-                $logo = $artist_logo;
-			} 
-            else 
-            {
-				if ($old_logo != $artist_logo) 
-                {
-					$logo = $old_logo;
-				}
-			}
-		}
-        else
-        {
-			$logo = $old_logo;
-		}
-        
+        $logo = artist_upload_file($artist_id,$_FILES["logo"],$old_logo);
 		
         $values = array("artist" => $artist,
                         "email" => $email,

@@ -94,24 +94,6 @@
         }
     }
     
-    function get_file_type($file)
-    {
-        $path_parts = pathinfo($file);
-        $extension = $path_parts['extension'];
-        switch( $extension )
-        {
-            case 'jpg':
-            case 'jpeg':
-            case 'png':
-            case 'gif':
-                return 'IMAGE';
-            case 'mp4':
-                return 'VIDEO';
-            case 'mp3':
-                return 'AUDIO';
-        }
-        return 'MISC';
-    }
     
     $dir = "../artists/images";
     $sql = "SELECT id AS id, id AS artist_id, logo AS file, NULL AS upload_filename FROM mydna_musicplayer";
