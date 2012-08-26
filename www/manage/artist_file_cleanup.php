@@ -56,6 +56,7 @@
             $existing = mf(mq($existing_sql));
             if( $existing )
             {
+
                 print "Existing file: $file, $save_filename, $upload_filename\n";
                 if( $upload_filename )
                 {
@@ -78,9 +79,6 @@
                 
                 copy($src_file,$dest_file);
                 
-                copy_alternative($src_file,"{$prefix}{$artist_id}_$hash","ogg");
-                copy_alternative($src_file,"{$prefix}{$artist_id}_$hash","ogv");
-                
                 $values = array("artist_id" => $artist_id,
                                 "filename" => $save_filename,
                                 "upload_filename" => $upload_filename,
@@ -91,6 +89,8 @@
                 print "New File: $file, $save_filename, type: $type, ret: ";
                 var_dump($ret);
             }
+            copy_alternative($src_file,"{$prefix}{$artist_id}_$hash","ogg");
+            copy_alternative($src_file,"{$prefix}{$artist_id}_$hash","ogv");
             
             if( $table && $column )
             {
