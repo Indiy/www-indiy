@@ -158,7 +158,7 @@
         $image = FALSE;
         if( $tab['image'] != '' )
         {
-            $image = '/artists/images/' . $tab['image'];
+            $image = '/artists/files/' . $tab['image'];
         }
         $item = array("id" => $tab['id'],
                       "title" => $title,

@@ -33,7 +33,7 @@
         
         array_walk($row,cleanup_row_element);
         
-        $image_path = "../artists/images/" . $row['image'];
+        $image_path = "../artists/files/" . $row['image'];
         if( !empty($row['image']) )
             $row['image_url'] = $image_path;
         else
@@ -51,40 +51,23 @@
         if( $tab_id != "" ) 
         {
             $row = mf(mq("SELECT * FROM mydna_musicplayer_content WHERE id='$tab_id'"));
-            $old_logo = $row["image"];
+            $old_image_file = $row["image"];
         }
         
         $remove_image = $_POST["remove_image"] == 'true';
         
         if( $remove_image )
-            $old_logo = '';
+            $old_image_file = '';
         
         $content_name = my($_POST["name"]);
         $content_video = $_POST["video"];
         $content_body = my($_POST["body"]);
         
-        if( !empty($_FILES["logo"]["name"]) )
-        {
-            if( is_uploaded_file($_FILES["logo"]["tmp_name"]) ) 
-            {
-                $content_logo = $artistid."_".strtolower(rand(11111,99999)."_".basename(cleanup($_FILES["logo"]["name"])));
-                @move_uploaded_file($_FILES['logo']['tmp_name'], PATH_TO_ROOT . 'artists/images/' . $content_logo);
-            } 
-            else 
-            {
-                if( $old_logo != "" ) 
-                {
-                    $content_logo = $old_logo;
-                }
-            }
-        }
-        else
-        {
-            $content_logo = $old_logo;
-        }
+        $ret = artist_file_upload($artist_id,$_FILES["logo"],$old_image_file);
+        $image_file = $ret['file'];
         
         $tables = "artistid|name|image|video|body";
-        $values = "$artist_id|$content_name|$content_logo|$content_video|$content_body";
+        $values = "$artist_id|$content_name|$image_file|$content_video|$content_body";
         
         if( $tab_id != "" )
         {
@@ -95,7 +78,7 @@
             insert("mydna_musicplayer_content",$tables,$values);
             $tab_id = mysql_insert_id();
         }
-        $postedValues['imageSource'] = $content_logo;
+        $postedValues['imageSource'] = $image_file;
         $postedValues['success'] = "1";
         $postedValues['postedValues'] = $_REQUEST;
         
