@@ -16,8 +16,8 @@
     function do_table($sql,$dir)
     {
         print "\n\n";
-        print "============================================\n"
-        print "sql: $sql\n"
+        print "============================================\n";
+        print "sql: $sql\n";
         print "\n";
     
         $q = mq($sql);
@@ -141,5 +141,6 @@
     $sql = "SELECT artist_id AS artist_id, filename AS file, upload_filename AS upload_filename FROM product_files";
     do_table($sql,$dir);
 
+    print "done done\n\n";
 
 ?>
