@@ -4,7 +4,7 @@
 	require_once '../includes/functions.php';	
 	if( $_SESSION['sess_userId'] == '' && php_sapi_name() != 'cli')
 	{
-		header("Location: index.php");
+		header("Location: /index.php");
 		exit();
 	}
 
