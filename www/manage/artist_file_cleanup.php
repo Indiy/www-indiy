@@ -27,10 +27,9 @@
         
         if( !$file )
         {
-            print "No file: file: $file, artist_id: $artist_id, upload_filename: $upload_filename\n"
+            print "No file: file: $file, artist_id: $artist_id, upload_filename: $upload_filename\n";
             continue;
         }
-        
 
         $path_parts = pathinfo($file);
         $extension = $path_parts['extension'];
