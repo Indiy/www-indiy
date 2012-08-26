@@ -1216,7 +1216,7 @@ END;
                 
                 $path_parts = pathinfo($upload_filename);
                 $extension = $path_parts['extension'];
-                $hash = file_hash("md5",$src_file);
+                $hash = hash_file("md5",$src_file);
                 
                 $type = get_file_type($upload_filename);
                 
