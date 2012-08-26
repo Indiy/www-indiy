@@ -3,7 +3,7 @@
     require_once '../includes/config.php';
 	require_once '../includes/functions.php';
 
-	if( $_SESSION['sess_userId'] == '' && php_sapi_name() != 'cli')
+	if( $_SESSION['sess_userId'] == '' && php_sapi_name() != 'cli' )
 	{
 		header("Location: /index.php");
 		exit();
@@ -64,7 +64,7 @@
                             
             mysql_insert("artist_files",$values);
             
-            print "New File: $file, $save_filename, \n"
+            print "New File: $file, $save_filename, \n";
         }
     }
     
