@@ -24,6 +24,13 @@
         $artist_id = $item['artist_id'];
         $file = $item['file'];
         $upload_filename = $item['upload_filename'];
+        
+        if( !$file )
+        {
+            print "No file: file: $file, artist_id: $artist_id, upload_filename: $upload_filename\n"
+            continue;
+        }
+        
 
         $path_parts = pathinfo($file);
         $extension = $path_parts['extension'];
