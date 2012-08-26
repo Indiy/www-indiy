@@ -37,6 +37,11 @@
         $extension = $path_parts['extension'];
         
         $src_file = "$dir/$file";
+        if( !file_exists($src_file) )
+        {
+            print "File not found: $src_file, file: $file, artist_id: $artist_id, update_filename: $upload_filename\n";
+            continue;
+        }
         $hash = hash_file("md5",$src_file);
         
         $save_filename = "{$artist_id}_$hash.$extension";
