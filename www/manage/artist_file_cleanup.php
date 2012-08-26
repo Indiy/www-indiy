@@ -70,7 +70,7 @@
                             
             $ret = mysql_insert("artist_files",$values);
             
-            print "New File: $file, $save_filename, ret: $ret\n";
+            print "New File: $file, $save_filename, ret: "; var_dump($ret); print "\n";
         }
     }
     
