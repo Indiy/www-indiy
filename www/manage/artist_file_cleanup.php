@@ -78,6 +78,9 @@
                 
                 copy($src_file,$dest_file);
                 
+                copy_alternative($src_file,"{$prefix}{$artist_id}_$hash","ogg");
+                copy_alternative($src_file,"{$prefix}{$artist_id}_$hash","ogv");
+                
                 $values = array("artist_id" => $artist_id,
                                 "filename" => $save_filename,
                                 "upload_filename" => $upload_filename,
@@ -97,6 +100,19 @@
         }
     }
     
+    function copy_alternative($src_file,$dst_file_prefix,$extension)
+    {
+        $path_parts = pathinfo($src_file);
+        $src_ext = $path_parts['extension'];
+        $alt_file = str_replace(".$src_ext",".$extension",$src_file);
+        if( file_exists($alt_file) )
+        {
+            $dst_file = "$dst_file_prefix.$extension";
+            copy($alt_file,$dst_file);
+            print "Copied alt file: $alt_file\n";
+        }
+    }
+    
     /*
     $dir = "../artists/images";
     $sql = "SELECT id AS id, id AS artist_id, logo AS file, NULL AS upload_filename FROM mydna_musicplayer";
@@ -104,11 +120,11 @@
     */
     $dir = "../artists/images";
     $sql = "SELECT id, artistid AS artist_id, image AS file, NULL AS upload_filename FROM mydna_musicplayer_audio";
-    do_table($sql,$dir,'mydna_musicplayer_audio','image');
+    do_table($sql,$dir,FALSE,'image');
 
     $dir = "../artists/audio";
     $sql = "SELECT id, artistid AS artist_id, audio AS file, upload_audio_filename AS upload_filename FROM mydna_musicplayer_audio";
-    do_table($sql,$dir,'mydna_musicplayer_audio','audio');
+    do_table($sql,$dir,FALSE,'audio');
     
     /*
     
