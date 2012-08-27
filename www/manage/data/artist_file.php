@@ -74,14 +74,15 @@
         $artist_id = $_REQUEST['artist_id'];
         $file_id = $_REQUEST['file_id'];
         
-        $ret = mq("DELETE FROM artist_files WHERE id = '$file_id' AND artist_id = '$artist_id'");
+        $sql = "DELETE FROM artist_files WHERE id = '$file_id' AND artist_id = '$artist_id'";
+        $ret = mq($sql);
         if( $ret )
         {
-            $result = array("success" => 1);
+            $result = array("success" => 1,"sql" => $sql);
         }
         else
         {
-            $result = array("failure" => 1);
+            $result = array("failure" => 1,"sql" => $sql);
         }
         echo json_encode($result);
         exit();
