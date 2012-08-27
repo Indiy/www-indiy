@@ -1765,19 +1765,19 @@ textarea {
 #adminblock .filelist .list .file_heading {
     display: none;
 }
-#adminblock .filelist .list .filelist {
+#adminblock .filelist .list .file_list {
     border-bottom: 1px solid #dddee0;
 }
-#adminblock .filelist .list .filelist .item {
+#adminblock .filelist .list .file_list .item {
     padding-top: 10px;
     height: 40px;
     font-size: 0;
     white-space: nowrap;
 }
-#adminblock .filelist .list .filelist .item.odd {
+#adminblock .filelist .list .file_list .item.odd {
     background:#eeeff0;
 }
-#adminblock .filelist .list .filelist .item .filename {
+#adminblock .filelist .list .file_list .item .filename {
     display: inline-block;
     padding-left: 15px;
     width: 600px;
@@ -1790,17 +1790,17 @@ textarea {
     text-overflow: ellipsis;
     cursor: pointer;
 }
-#adminblock .filelist .list .filelist .item .filename:hover {
+#adminblock .filelist .list .file_list .item .filename:hover {
     text-decoration: underline;
 }
-#adminblock .filelist .list .filelist .item .delete {
+#adminblock .filelist .list .file_list .item .delete {
     display: inline-block;
     text-align: center;
     width: 30px;
     height: 25px;
     background: url("/manage/images/icon_delete_admin.gif") no-repeat;
 }
-#adminblock .filelist .list .filelist .item .delete:hover {
+#adminblock .filelist .list .file_list .item .delete:hover {
     background: url("/manage/images/icon_delete_hover_admin.gif") no-repeat;
 }
 
