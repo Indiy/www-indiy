@@ -221,7 +221,6 @@
 		2D9E2FF7158413D900A76906 /* player_store.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_store.js; sourceTree = "<group>"; };
 		2D9E2FF91585917B00A76906 /* cart.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = cart.php; sourceTree = "<group>"; };
 		2D9E2FFA1585918700A76906 /* cart.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = cart.html; sourceTree = "<group>"; };
-		2D9E2FFB1585A36000A76906 /* cart2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = cart2.php; sourceTree = "<group>"; };
 		2D9E2FFC1585C8B600A76906 /* cart.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = cart.js; sourceTree = "<group>"; };
 		2D9E2FFD1588355100A76906 /* cart.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = cart.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DA723A315B8BEAC00658D4B /* love.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = love.php; path = data/love.php; sourceTree = "<group>"; };
@@ -1748,7 +1747,6 @@
 			isa = PBXGroup;
 			children = (
 				2D5DD4B114CCE4AF00566E9A /* cart.php */,
-				2D9E2FFB1585A36000A76906 /* cart2.php */,
 				2D34E23914AD87E2004473F9 /* booking.php */,
 				2D6DF95514BA955000D0750E /* feedback.php */,
 				2DF47527144BD7CB005538C7 /* send_friend.php */,

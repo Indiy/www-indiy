@@ -80,7 +80,7 @@ function storeBuyProductId(product_id)
     cart += "&product_id=" + product_id;
     cart += "&quantity=1";
     
-    var url = "{0}/data/cart2.php".format(g_cartBaseUrl);
+    var url = "{0}/data/cart.php".format(g_cartBaseUrl);
     
     jQuery.ajax(
     {

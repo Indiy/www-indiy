@@ -127,7 +127,7 @@ function cartDeleteIndex(i)
     var data = {
         'cart_item_id': c.id
     };
-    var url = "/data/cart2.php?artist_id={0}".format(g_artistId); 
+    var url = "/data/cart.php?artist_id={0}".format(g_artistId);
     jQuery.ajax(
     {
         type: 'DELETE',
@@ -181,7 +181,7 @@ function cartUpdateQuantity(index)
             'cart_item_id': c.id,
             'quantity': qty
         };
-        var url = "/data/cart2.php?artist_id={0}".format(g_artistId); 
+        var url = "/data/cart.php?artist_id={0}".format(g_artistId); 
         jQuery.ajax(
         {
             type: 'POST',
