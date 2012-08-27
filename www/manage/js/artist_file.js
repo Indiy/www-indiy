@@ -47,7 +47,7 @@ function deleteFile(i)
     
     jQuery.ajax(
     {
-        type: 'DELETE',
+        type: 'POST',
         url: '/manage/data/artist_file.php',
         data: args,
         dataType: 'json',
