@@ -1769,7 +1769,6 @@ textarea {
     border-bottom: 1px solid #dddee0;
 }
 #adminblock .filelist .list .file_list .item {
-    padding-top: 10px;
     height: 40px;
     font-size: 0;
     white-space: nowrap;
@@ -1779,28 +1778,39 @@ textarea {
 }
 #adminblock .filelist .list .file_list .item .filename {
     display: inline-block;
+    padding-top: 13px;
     padding-left: 15px;
-    width: 600px;
-    border-left: 1px solid #dddee0;
-    border-right: 1px solid #dddee0;
+    height: 27px;
+    width: 611px;
     color: #383838;
     font-size: 12px;
     font-family: Helvetica, Arial, sans-serif;
     overflow: hidden;
     text-overflow: ellipsis;
     cursor: pointer;
+    border-left: 1px solid #dddee0;
+    border-right: 1px solid #dddee0;
+    vertical-align: top;
 }
 #adminblock .filelist .list .file_list .item .filename:hover {
     text-decoration: underline;
 }
 #adminblock .filelist .list .file_list .item .delete {
     display: inline-block;
+    padding-top: 8px;
+    width: 100px;
+    height: 32px;
     text-align: center;
+    border-right: 1px solid #dddee0;
+    vertical-align: top;
+}
+#adminblock .filelist .list .file_list .item .delete .button {
+    display: inline-block;
     width: 30px;
     height: 25px;
     background: url("/manage/images/icon_delete_admin.gif") no-repeat;
 }
-#adminblock .filelist .list .file_list .item .delete:hover {
+#adminblock .filelist .list .file_list .item .delete .button:hover {
     background: url("/manage/images/icon_delete_hover_admin.gif") no-repeat;
 }
 
