@@ -1,0 +1,27 @@
+
+<div id="add_artist_file" class="popup_wrapper">
+<div id="popup">
+    <div class='top_bar'>
+        <h2>Add File</h2>
+        <button onclick='closePopup();'>CLOSE</button>
+    </div>
+    
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+    <form id='ajax_form'  method="post" enctype="multipart/form-data" action="data/artist_file.php" onsubmit="return onAddArtistFile();">
+        <input id='artist_id' type="hidden" name="artist_id" value="">
+            
+        <div class='input_container' style='height: 50px;'>
+            <div class='left_label'>Upload File</div>
+            <input id='file' type="file" name="file" class='right_file' />
+        </div>
+        <div class='submit_container'>
+            <button class="submit">Submit</button>
+        </div>
+    </form>
+    
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
+</div>
+</div>
+

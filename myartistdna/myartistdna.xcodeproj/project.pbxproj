@@ -9,6 +9,8 @@
 /* Begin PBXFileReference section */
 		2D0A2DE815E961F800F0EE6D /* artist_file_cleanup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artist_file_cleanup.php; sourceTree = "<group>"; };
 		2D0A2DEB15EB05F800F0EE6D /* ZeroClipboard.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ZeroClipboard.swf; sourceTree = "<group>"; };
+		2D0A2DF015EB3A8D00F0EE6D /* artist_file.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_file.js; sourceTree = "<group>"; };
+		2D0A2DF115EB3ACC00F0EE6D /* artist_file.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = artist_file.html; sourceTree = "<group>"; };
 		2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = unsupported_browser.php; sourceTree = "<group>"; };
 		2D25C38715D43BCE00132306 /* fan.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = fan.js; sourceTree = "<group>"; };
 		2D25C38C15D96E2400132306 /* player.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player.php; sourceTree = "<group>"; };
@@ -1653,6 +1655,7 @@
 				2DFF87E3156572F0008EA18C /* add_user.html */,
 				2DFF87E5156572FB008EA18C /* add_label.html */,
 				2D9E2FD715698C7000A76906 /* account_limit.html */,
+				2D0A2DF115EB3ACC00F0EE6D /* artist_file.html */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -1680,6 +1683,7 @@
 				2DFF87E715658E15008EA18C /* user_admin.js */,
 				2D9E2FD5156985B400A76906 /* account_limit.js */,
 				2D8D96F2159AB7E600AA3D1B /* order.js */,
+				2D0A2DF015EB3A8D00F0EE6D /* artist_file.js */,
 			);
 			path = js;
 			sourceTree = "<group>";

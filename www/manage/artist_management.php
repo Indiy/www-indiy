@@ -211,6 +211,7 @@
     include_once 'include/first_instructions.html';
     include_once 'include/social_post.html';
     include_once 'include/account_limit.html';
+    include_once 'include/artist_file.html';
     
     if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' )
         include_once 'include/edit_account_settings.html';
@@ -306,7 +307,7 @@ $(document).ready(showFirstInstructions);
         	<div class="heading">
                 <div class='title'>ARTIST FILES</div>
                 <div class="buttonadd">
-                    <a onclick='showFilesPopup(false);' title='Add files for your site'>Add Files</a>
+                    <a onclick='showAddArtistFilePopup(false);' title='Add files for your site'>Add Files</a>
                 </div>
             </div>
             <div class="list" style='display: none;'>
