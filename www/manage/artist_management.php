@@ -133,7 +133,7 @@
     }
     $product_list_json = json_encode($product_list);
     
-    $sql = "SELECT * FROM artist_files WHERE artist_id='$artistID' ORDER BY id ASC";
+    $sql = "SELECT * FROM artist_files WHERE artist_id='$artistID' WHERE upload_filename != '' ORDER BY id DESC";
     $files_q = mq($sql);
     $file_list = array();
     while( $file = mf($files_q) )

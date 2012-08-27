@@ -1781,7 +1781,7 @@ textarea {
     padding-top: 13px;
     padding-left: 15px;
     height: 27px;
-    width: 611px;
+    width: 623px;
     color: #383838;
     font-size: 12px;
     font-family: Helvetica, Arial, sans-serif;
@@ -1798,7 +1798,7 @@ textarea {
 #adminblock .filelist .list .file_list .item .delete {
     display: inline-block;
     padding-top: 8px;
-    width: 100px;
+    width: 70px;
     height: 32px;
     text-align: center;
     border-right: 1px solid #dddee0;
