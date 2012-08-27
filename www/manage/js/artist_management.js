@@ -349,7 +349,7 @@ function updateFileList()
         var filename = file.upload_filename;
         if( !filename )
             filename = file.filename;
-    
+
         var html = "";
         html += "<div class='item'>";
         html += " <div class='filename'>{0}</div>".format(filename);

@@ -144,7 +144,7 @@
         $type = $file['type'];
         $item = array("id" => $id,
                       "filename" => $file,
-                      "upload_filename" => $upload_filename
+                      "upload_filename" => $upload_filename,
                       "type" => $type,
                       );
         $file_list[] = $item;
