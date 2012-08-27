@@ -35,6 +35,35 @@ function updateFileListItem(file)
 {
     updateFileList();
 }
+function deleteFile(i)
+{
+    var file = g_fileList[i];
+    
+    var args = {
+        artist_id: g_artistId,
+        method: "DELETE",
+        file_id: file.id
+    };
+    
+    jQuery.ajax(
+    {
+        type: 'DELETE',
+        url: '/manage/data/artist_file.php',
+        data: args,
+        dataType: 'json',
+        success: function(data) 
+        {
+            if( data['success'] )
+            {
+                g_fileList.splice(i,1);
+                updateFileList();
+            }
+        },
+        error: function()
+        {
+        }
+    });
+}
 
 
 function showAddArtistFilePopup()
@@ -46,7 +75,7 @@ function showAddArtistFilePopup()
     return false;
 }
 
-function onAddArtistFileSubmit()
+function onAddArtistFile()
 {
     var file_input = $('#add_artist_file #file')[0];
     if( !file_input || !file_input.value || file_input.value.length == 0 )

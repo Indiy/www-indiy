@@ -16,8 +16,14 @@
 	}
     session_write_close();
     
-    if( $_SERVER['REQUEST_METHOD'] == 'POST' )
+    $method = $_SERVER['REQUEST_METHOD'];
+    if( $_REQUEST['method'] )
+        $method = strtoupper($_REQUEST['method']);
+    
+    if( $method == 'POST' )
         do_POST();
+    else if( $method == 'DELETE' )
+        do_DELETE();
     else
         print "Bad method\n";
     
@@ -34,7 +40,7 @@
     
     function do_POST()
     {
-        $artist_id = $_POST['artist_id'];
+        $artist_id = $_REQUEST['artist_id'];
         
         $ret = artist_file_upload($artist_id,$_FILES["file"],FALSE);
         if( $ret['id'] )
@@ -62,6 +68,23 @@
             header("Location: /manage/artist_management.php?userId=$artist_id");
             exit();
         }
+    }
+    function do_DELETE()
+    {
+        $artist_id = $_REQUEST['artist_id'];
+        $file_id = $_REQUEST['file_id'];
+        
+        $ret = mq("DELETE FROM artist_files WHERE id = '$file_id' AND artist_id = '$artist_id'");
+        if( $ret )
+        {
+            $result = array("success" => 1);
+        }
+        else
+        {
+            $result = array("failure" => 1);
+        }
+        echo json_encode($result);
+        exit();
     }
     
 ?>
