@@ -143,7 +143,7 @@
         $upload_filename = $file['upload_filename'];
         $type = $file['type'];
         $item = array("id" => $id,
-                      "filename" => $file,
+                      "filename" => filename,
                       "upload_filename" => $upload_filename,
                       "type" => $type,
                       );

@@ -1784,7 +1784,7 @@ textarea {
     border-left: 1px solid #dddee0;
     border-right: 1px solid #dddee0;
     color: #383838;
-    font-size: 12;
+    font-size: 12px;
     font-family: Helvetica, Arial, sans-serif;
     overflow: hidden;
     text-overflow: ellipsis;
