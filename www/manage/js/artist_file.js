@@ -64,9 +64,9 @@ function updateFileListItem(file)
     var width = percent.toFixed(4);
 
     var sel = "#upload_file_{0}".format(file.upload_index);
-    var style = "width: {0}%".format(width);
+    var style = "{0}%".format(width);
     
-    $(sel).find('#upload_progress_bar').css(style);
+    $(sel).find('#upload_progress_bar').css("width",style);
     $(sel).find('#upload_percent').html(percent.toFixed());
 }
 function deleteFile(i)
