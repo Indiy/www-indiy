@@ -49,7 +49,7 @@ function showAddArtistFilePopup()
 function onAddArtistFileSubmit()
 {
     var file_input = $('#add_artist_file #file')[0];
-    if( !file_input || !file_input.value || file_input.value.length == 0 ) )
+    if( !file_input || !file_input.value || file_input.value.length == 0 )
     {
         window.alert("Please select a file for upload.");
         return false;
