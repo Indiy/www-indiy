@@ -350,8 +350,12 @@ function updateFileList()
         if( !filename )
             filename = file.filename;
 
+        var odd = "";
+        if( i % 2 == 0 )
+            odd = " odd";
+
         var html = "";
-        html += "<div class='item'>";
+        html += "<div class='item{0}'>".format(odd);
         html += " <div class='filename'>{0}</div>".format(filename);
         html += " <div class='delete'>";
         html += "  <div class='button' onclick='deleteFile({0});'></div>".format(i);
