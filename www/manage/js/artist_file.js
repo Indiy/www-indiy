@@ -67,7 +67,7 @@ function updateFileListItem(file)
     var style = "width: {0}%".format(width);
     
     $(sel).find('#upload_progress_bar').css(style);
-    $(sel).find('#upload_percent').val(percent.toFixed())
+    $(sel).find('#upload_percent').html(percent.toFixed());
 }
 function deleteFile(i)
 {
