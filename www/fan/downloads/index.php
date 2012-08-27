@@ -34,7 +34,7 @@
     header("Content-Type: $mime_type");
     
     $filename = $file['filename'];
-    $path = "../../artists/digital_downloads/$filename";
+    $path = "../../artists/files/$filename";
     
     $real_path = realpath($path);
 

@@ -71,25 +71,16 @@ function do_POST()
     
     if( $type == "DIGITAL" )
     {
-        $tmp_file = $_FILES["digital_download1"]["tmp_name"];
-        if( is_uploaded_file($tmp_file) ) 
+        $ret = artist_file_upload($artist_id,$_FILES["digital_download1"],FALSE);
+        if( $ret['file'] )
         {
+            $filename = $ret['file'];
             $upload_filename = basename($_FILES["digital_download1"]["name"]);
-            $extension = pathinfo($upload_filename,PATHINFO_EXTENSION);
-            $rand = rand(100000,999999);
-            $filename =  "$rand.$extension";
-            $dest = PATH_TO_ROOT . "artists/digital_downloads/$filename";
-            
-            @move_uploaded_file($tmp_file,$dest);
-            $image = $productimage;
-            
             $values = array("product_id" => $product_id,
                             "upload_filename" => $upload_filename,
                             "filename" => $filename,
                             );
-                            
             mysql_insert("product_files",$values);
-            $postedValues['insert_sql'] = mysql_error();
         }
         
         if( isset($_POST["remove_digital_downloads"]) )
@@ -100,7 +91,7 @@ function do_POST()
                 $remove_list = explode(',',$remove_digital_downloads);
                 foreach( $remove_list as $file_id )
                 {
-                    $updates = array("is_deleted" => 0);
+                    $updates = array("is_deleted" => 1);
                     mysql_update('product_files',$updates,'id',$file_id);
                 }
             }
