@@ -22,36 +22,49 @@ function updateFileList()
         {
             var sel = "upload_file_{0}".format(file.upload_index);
         
-            html += " <div id='{0}' class='file_status'>".format(sel);
-            html += "  <div class='file'>{0}</div>".format(filename);
-            html += "  <div class='status'>";
             
-            html += "    <div class='upload_bar'>";
-            html += "     <div id='upload_progress_bar' class='upload_progress_bar'></div>";
-            html += "     <div class='upload_label'>Uploading&hellip;</div>";
-            html += "     <div class='percent'><span id='upload_percent'>0</span>%</div>";
-            html += "    </div>";
-            
-            html += "  </div>";
-            html += " </div>";
-            html += " <div class='delete'>";
-            
-            if( file.upload_status == 'uploading' )
+            if( file.upload_status == 'uploading'
+               || file.upload_status == 'processing' )
             {
-                html += "  <div class='button' onclick='cancelUploadFile({0});'></div>".format(i);
+                var width = file.upload_progress.toFixed(4);
+                
+                var msg = "Uploading&hellip;";
+                if( file.upload_status == 'processing' )
+                    msg = "Processing&hellip;"
+            
+                html += "<div id='{0}' class='file_status'>".format(sel);
+                html += " <div class='file'>{0}</div>".format(filename);
+                html += " <div class='status'>";
+                html += "  <div class='upload_bar'>";
+                html += "   <div id='upload_progress_bar' class='upload_progress_bar' style='width: {0}%'></div>".format(width);
+                html += "   <div class='upload_label'>{0}</div>".format(msg);
+                html += "   <div class='percent'><span id='upload_percent'>0</span>%</div>";
+                html += "  </div>";
+                html += " </div>";
+                html += "</div>";
+                html += "<div class='delete'>";
+                html += " <div class='button' onclick='cancelUploadFile({0});'></div>".format(i);
+                html += "</div>"
             }
-            else
+            else if( file.upload_status == 'failed' )
             {
-                html += "  <div class='button' onclick='removeUploadFile({0});'></div>".format(i);
+                html += "<div id='{0}' class='file_status'>".format(sel);
+                html += " <div class='file'>{0}</div>".format(filename);
+                html += " <div class='status'>";
+                html += "  <div class='error'>Failed</div>";
+                html += " </div>";
+                html += "</div>";
+                html += "<div class='delete'>";
+                html += " <div class='button' onclick='removeUploadFile({0});'></div>".format(i);
+                html += "</div>";
             }
-            html += " </div>";
         }
         else
         {
-            html += " <div class='filename'>{0}</div>".format(filename);
-            html += " <div class='delete'>";
-            html += "  <div class='button' onclick='deleteFile({0});'></div>".format(i);
-            html += " </div>";
+            html += "<div class='filename'>{0}</div>".format(filename);
+            html += "<div class='delete'>";
+            html += " <div class='button' onclick='deleteFile({0});'></div>".format(i);
+            html += "</div>";
         }
         html += "</div>";
         
@@ -102,7 +115,18 @@ function deleteFile(i)
         }
     });
 }
+function cancelUploadFile(i)
+{
+    var file = g_fileList[i];
+    var xhr = file.xhr;
 
+    if( xhr )
+    {
+        xhr.abort();
+    }
+    g_fileList.splice(i,1);
+    updateFileList();
+}
 
 function showAddArtistFilePopup()
 {
