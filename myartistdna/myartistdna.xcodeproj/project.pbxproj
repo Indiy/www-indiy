@@ -11,6 +11,7 @@
 		2D0A2DEB15EB05F800F0EE6D /* ZeroClipboard.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ZeroClipboard.swf; sourceTree = "<group>"; };
 		2D0A2DF015EB3A8D00F0EE6D /* artist_file.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_file.js; sourceTree = "<group>"; };
 		2D0A2DF115EB3ACC00F0EE6D /* artist_file.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = artist_file.html; sourceTree = "<group>"; };
+		2D0A2DF215EB509200F0EE6D /* artist_file.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artist_file.php; sourceTree = "<group>"; };
 		2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = unsupported_browser.php; sourceTree = "<group>"; };
 		2D25C38715D43BCE00132306 /* fan.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = fan.js; sourceTree = "<group>"; };
 		2D25C38C15D96E2400132306 /* player.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player.php; sourceTree = "<group>"; };
@@ -368,7 +369,6 @@
 		2DF471301440B77F005538C7 /* twitter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = twitter.jpg; sourceTree = "<group>"; };
 		2DF471341440B77F005538C7 /* config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = config.php; sourceTree = "<group>"; };
 		2DF4713D1440B77F005538C7 /* functions.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = functions.php; sourceTree = "<group>"; };
-		2DF4713F1440B77F005538C7 /* home.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = home.css; sourceTree = "<group>"; };
 		2DF471C71440B77F005538C7 /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
 		2DF472D11440B77F005538C7 /* homepage_slideshow.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = homepage_slideshow.js; sourceTree = "<group>"; };
 		2DF472DD1440B77F005538C7 /* main.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
@@ -999,6 +999,7 @@
 				2DFF87E615658D8F008EA18C /* user_admin.php */,
 				2D9E2FD615698A5900A76906 /* account_upgrade.php */,
 				2D646885159B7BFF00B9AD11 /* order.php */,
+				2D0A2DF215EB509200F0EE6D /* artist_file.php */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -1307,7 +1308,6 @@
 				2D8D96DB159197BC00AA3D1B /* paypalfunctions.php */,
 				2DF471341440B77F005538C7 /* config.php */,
 				2DF4713D1440B77F005538C7 /* functions.php */,
-				2DF4713F1440B77F005538C7 /* home.css */,
 				2D380B92146A08AA00E36189 /* login_helper.php */,
 				2D380B94146B55F700E36189 /* login_signup.html */,
 			);

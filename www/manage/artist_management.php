@@ -146,6 +146,7 @@
                       "filename" => $filename,
                       "upload_filename" => $upload_filename,
                       "type" => $type,
+                      "is_uploading" => FALSE,
                       );
         $file_list[] = $item;
     }

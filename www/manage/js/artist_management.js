@@ -337,31 +337,3 @@ function clearFileElement(selector)
     var html = $(selector).parent().html();
     $(selector).parent().html(html);
 }
-
-function updateFileList()
-{
-    $('#file_list').empty();
-    
-    for( var i = 0 ; i < g_fileList.length ; ++i )
-    {
-        var file = g_fileList[i];
-        
-        var filename = file.upload_filename;
-        if( !filename )
-            filename = file.filename;
-
-        var odd = "";
-        if( i % 2 == 0 )
-            odd = " odd";
-
-        var html = "";
-        html += "<div class='item{0}'>".format(odd);
-        html += " <div class='filename'>{0}</div>".format(filename);
-        html += " <div class='delete'>";
-        html += "  <div class='button' onclick='deleteFile({0});'></div>".format(i);
-        html += " </div>";
-        html += "</div>";
-
-        $('#file_list').append(html);
-    }
-}

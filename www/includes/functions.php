@@ -1284,7 +1284,7 @@ END;
                                 "type" => $type);
                 
                 mysql_insert("artist_files",$values);
-
+                $ret['id'] = mysql_insert_id();
                 $ret['file'] = $save_filename;
 			}
 		}
