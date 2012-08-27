@@ -31,6 +31,7 @@ function updateFileList()
             html += "    </div>";
             
             html += "  </div>";
+            html += " </div>";
             html += " <div class='delete'>";
             html += "  <div class='button' onclick='cancelUploadFile({0});'></div>".format(i);
             html += " </div>";

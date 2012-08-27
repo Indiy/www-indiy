@@ -1808,7 +1808,7 @@ textarea {
     display: inline-block;
     padding-top: 13px;
     height: 27px;
-    width: 250px;
+    width: 314px;
     color: #383838;
     font-size: 12px;
     font-family: Helvetica, Arial, sans-serif;
@@ -1818,14 +1818,15 @@ textarea {
 }
 #adminblock .filelist .list .file_list .item .file_status .status {
     display: inline-block;
-    width: 373px;
+    padding-left: 10px;
+    width: 300px;
     height: 40px;
     vertical-align: top;
 }
 #adminblock .filelist .list .file_list .item .file_status .status .upload_bar
 {
     position: relative;
-    padding-top: 8px;
+    margin-top: 8px;
     height: 24px;
     width: 100%;
     margin-left: auto;
