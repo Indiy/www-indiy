@@ -42,7 +42,7 @@
     {
         $artist_id = $_REQUEST['artist_id'];
         
-        $ret = artist_file_upload($artist_id,$_FILES["file"],FALSE);
+        $ret = handle_file_upload($artist_id,$_FILES["file"]);
         if( $ret['id'] )
         {
             $postedValues['success'] = "1";
@@ -86,6 +86,65 @@
         }
         echo json_encode($result);
         exit();
+    }
+    
+    function handle_file_upload($artist_id,$file)
+    {
+        $ret = array("id" => FALSE);
+        
+        if(!empty($file["name"]))
+        {
+            $src_file = $file["tmp_name"];
+			if( is_uploaded_file($src_file) )
+            {
+                $upload_filename = basename($file["name"]);
+                
+                $path_parts = pathinfo($upload_filename);
+                $extension = strtolower($path_parts['extension']);
+                
+                $type = get_file_type($upload_filename);
+                
+                $hash = hash_file("md5",$src_file);
+                $save_filename = "{$artist_id}_$hash.$extension";
+                
+                if( PATH_TO_ROOT )
+                    $dst_file = PATH_TO_ROOT . "artists/files/$save_filename";
+                else
+                    $dst_file = "../../artists/files/$save_filename";
+                
+                $sql = "SELECT * FROM artist_files WHERE artist_id='$artist_id' AND filename = '$save_filename'";
+                $existing_file = mf(mq($sql));
+                if( $existing_file )
+                {
+                    if( $existing_file['upload_filename'] )
+                    {
+                        $ret['upload_error'] = "File already uploaded.";
+                    }
+                    else
+                    {
+                        $id = $existing_file['id'];
+                        $ret['id'] = $id;
+                        $ret['file'] = $save_filename;
+                        $values = array("upload_filename" => $upload_filename);
+                        mysql_update('artist_files',$values,'id',$id);
+                    }
+                }
+                else
+                {
+                    @move_uploaded_file($src_file, $dst_file);
+                    
+                    $values = array("artist_id" => $artist_id,
+                                    "filename" => $save_filename,
+                                    "upload_filename" => $upload_filename,
+                                    "type" => $type);
+                    
+                    mysql_insert("artist_files",$values);
+                    $ret['id'] = mysql_insert_id();
+                    $ret['file'] = $save_filename;
+                }
+			}
+		}
+        return $ret;
     }
     
 ?>
