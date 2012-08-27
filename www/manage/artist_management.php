@@ -132,7 +132,24 @@
         $product_list[] = $row;
     }
     $product_list_json = json_encode($product_list);
-     
+    
+    $sql = "SELECT * FROM artist_files WHERE artist_id='$artistID' ORDER BY id ASC";
+    $files_q = mq($sql);
+    $file_list = array();
+    while( $file = mf($files_q) )
+    {
+        $id = $file['id'];
+        $filename = $file['filename'];
+        $upload_filename = $file['upload_filename'];
+        $type = $file['type'];
+        $item = array("id" => $id,
+                      "filename" => $file,
+                      "upload_filename" => $upload_filename
+                      "type" => $type,
+                      );
+        $file_list[] = $item;
+    }
+    $file_list_json = json_encode($file_list);
 	
 	if($record_artistDetail['logo'] == '')
 		$artist_img_logo = 'images/NoPhoto.jpg';
@@ -214,6 +231,7 @@ var g_photoList = <?=$photo_list_json;?>;
 var g_videoList = <?=$video_list_json;?>;
 var g_tabList = <?=$tab_list_json;?>;
 var g_productList = <?=$product_list_json;?>;
+var g_fileList = <?=$file_list_json;?>;
 
 var g_playerUrl = "<?=playerUrl();?>";
 
@@ -284,6 +302,25 @@ $(document).ready(showFirstInstructions);
         
         <div class="column2">
         
+        <div class="filelist">
+        	<div class="heading">
+                <h5>ARTIST FILES</h5>
+                <div class="buttonadd">
+                    <a onclick='showFilesPopup(false);' title='Add files for your site'>Add Files</a>
+                </div>
+            </div>
+            <div class="list" style='display: none;'>
+                <div class='file_heading'>
+                    <div class='button active'>Misc</div>
+                    <div class='button'>Images</div>
+                    <div class='button'>Music</div>
+                    <div class='button'>Video</div>
+                    <div class='button'>Misc</div>
+                </div>
+                <div id='file_list' class='file_list'>
+                </div>
+            </div>
+        </div>
         <div class="playlist">
         	<div class="heading">
                 <h5>SONGS</h5>
