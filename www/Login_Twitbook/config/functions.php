@@ -60,12 +60,12 @@ class User {
                     $logo = NULL;
                     if( $user_info->profile_image_url )
                     {
-                        $new_logo = $artist_id . "_" . rand(11111,99999) . "_twitter.jpg";
-                        $file_path = '../artists/images/' . $new_logo;
-                        
                         $contents = file_get_contents($user_info->profile_image_url);
                         if( $contents )
                         {
+                            $hash = hash("md5",$contents);
+                            $new_logo = $artist_id . "_" . $hash . ".jpg";
+                            $file_path = '../artists/files/' . $new_logo;
                             file_put_contents($file_path,$contents);
                             $logo = $new_logo;
                         }
@@ -102,12 +102,12 @@ class User {
                     if( $user_info['username'] )
                     {
                         $url = "http://graph.facebook.com/$username/picture";
-                        $new_logo = $artist_id . "_" . rand(11111,99999) . "_fb.jpg";
-                        $file_path = '../artists/images/' . $new_logo;
-                        
                         $contents = file_get_contents($url);
                         if( $contents )
                         {
+                            $hash = hash("md5",$contents);
+                            $new_logo = $artist_id . "_" . $hash . ".jpg";
+                            $file_path = '../artists/files/' . $new_logo;
                             file_put_contents($file_path,$contents);
                             $logo = $new_logo;
                         }
