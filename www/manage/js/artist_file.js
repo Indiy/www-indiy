@@ -37,6 +37,10 @@ function updateFileListItem(file)
 }
 function deleteFile(i)
 {
+    var ret = window.confirm("Are you sure you want to delete this file?");
+    if( !ret )
+        return false;
+
     var file = g_fileList[i];
     
     var args = {
