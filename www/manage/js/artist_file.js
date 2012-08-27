@@ -191,7 +191,7 @@ function onArtistFileReadyStateChange(evt,file)
                     
                     file.filename = new_file.filename;
                     file.is_uploading = false;
-                    file.upload_filename = new_file.filename;
+                    file.upload_filename = new_file.upload_filename;
                     file.id = new_file.id;
                     file.type = new_file.type;
                     updateFileList();
