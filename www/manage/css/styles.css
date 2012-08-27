@@ -1819,7 +1819,7 @@ textarea {
 #adminblock .filelist .list .file_list .item .file_status .status {
     display: inline-block;
     padding-left: 10px;
-    width: 300px;
+    width: 290px;
     height: 40px;
     vertical-align: top;
 }

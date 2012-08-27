@@ -20,20 +20,30 @@ function updateFileList()
         
         if( file.is_uploading || true )
         {
-            html += " <div class='file_status'>";
+            var sel = "upload_file_{0}".format(file.upload_index);
+        
+            html += " <div id='{0}' class='file_status'>".format(sel);
             html += "  <div class='file'>{0}</div>".format(filename);
             html += "  <div class='status'>";
             
             html += "    <div class='upload_bar'>";
             html += "     <div id='upload_progress_bar' class='upload_progress_bar'></div>";
             html += "     <div class='upload_label'>Uploading&hellip;</div>";
-            html += "     <div class='percent'><span id='upload_percent'>50</span>%</div>";
+            html += "     <div class='percent'><span id='upload_percent'>0</span>%</div>";
             html += "    </div>";
             
             html += "  </div>";
             html += " </div>";
             html += " <div class='delete'>";
-            html += "  <div class='button' onclick='cancelUploadFile({0});'></div>".format(i);
+            
+            if( file.upload_status == 'uploading' )
+            {
+                html += "  <div class='button' onclick='cancelUploadFile({0});'></div>".format(i);
+            }
+            else if( file.upload_status == 'failed' )
+            {
+                html += "  <div class='button' onclick='removeFailedFile({0});'></div>".format(i);
+            }
             html += " </div>";
         }
         else
@@ -50,7 +60,14 @@ function updateFileList()
 }
 function updateFileListItem(file)
 {
-    updateFileList();
+    var percent = file.upload_progress;
+    var width = percent.toFixed(4);
+
+    var sel = "#upload_file_{0}".format(file.upload_index);
+    var style = "width: {0}%".format(width);
+    
+    $(sel).find('#upload_progress_bar').css(style);
+    $(sel).find('#upload_percent').val(percent.toFixed())
 }
 function deleteFile(i)
 {
@@ -108,6 +125,7 @@ function onAddArtistFile()
     return startFileUpload(file_input);
 }
 
+var g_uploadIndex = 0;
 function startFileUpload(file_input)
 {
     try
@@ -119,7 +137,8 @@ function startFileUpload(file_input)
             upload_progress: 0.0,
             upload_status: 'uploading',
             is_uploading: true,
-            type: 'MISC'
+            type: 'MISC',
+            upload_index: g_uploadIndex++
         };
     
         function makeCallback(callback)
