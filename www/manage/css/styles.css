@@ -1741,3 +1741,68 @@ textarea {
     text-align: right;
 }
 
+/***********************************************************************/
+/***********************************************************************/
+
+#adminblock .filelist { width:711px; float:left; padding-bottom:10px}
+#adminblock .heading {cursor:pointer}
+#adminblock .filelist .heading {
+    width:691px;
+    float:left;
+    background: #688dc5;
+    padding:10px;
+}
+#adminblock .filelist .heading .title { float:left; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; color:#ffffff; padding:5px 0 0 9px}
+#adminblock .filelist .heading .buttonadd { float:right; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#ffffff}
+#adminblock .filelist .heading .buttonadd a {
+    float:left;
+    color:#FFFFFF;
+    text-decoration:none;
+    background: #284D85 url(../images/icon_add_product.gif) no-repeat;
+    padding:5px 10px 6px 33px;
+}
+#adminblock .filelist .list { width:711px; float:left; }
+#adminblock .filelist .list .file_heading {
+    display: none;
+}
+#adminblock .filelist .list .filelist {
+    border-bottom: 1px solid #dddee0;
+}
+#adminblock .filelist .list .filelist .item {
+    padding-top: 10px;
+    height: 40px;
+    font-size: 0;
+    white-space: nowrap;
+}
+#adminblock .filelist .list .filelist .item.odd {
+    background:#eeeff0;
+}
+#adminblock .filelist .list .filelist .item .filename {
+    display: inline-block;
+    padding-left: 15px;
+    width: 600px;
+    border-left: 1px solid #dddee0;
+    border-right: 1px solid #dddee0;
+    color: #383838;
+    font-size: 12;
+    font-family: Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+#adminblock .filelist .list .filelist .item .filename:hover {
+    text-decoration: underline;
+}
+#adminblock .filelist .list .filelist .item .delete {
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 25px;
+    background: url("/manage/images/icon_delete_admin.gif") no-repeat;
+}
+#adminblock .filelist .list .filelist .item .delete:hover {
+    background: url("/manage/images/icon_delete_hover_admin.gif") no-repeat;
+}
+
+/***********************************************************************/
+/***********************************************************************/

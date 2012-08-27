@@ -394,7 +394,6 @@
 		2DF47439144A2D84005538C7 /* hs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hs.png; sourceTree = "<group>"; };
 		2DF4743A144A2D84005538C7 /* hv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hv.png; sourceTree = "<group>"; };
 		2DF4743B144A2D84005538C7 /* jscolor.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jscolor.js; sourceTree = "<group>"; };
-		2DF4743D144A2D84005538C7 /* contact.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = contact.css; sourceTree = "<group>"; };
 		2DF47444144A2D84005538C7 /* styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DF47447144A2D84005538C7 /* dashboard.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = dashboard.php; sourceTree = "<group>"; };
 		2DF4745A144A2D84005538C7 /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
@@ -1454,7 +1453,6 @@
 		2DF4743C144A2D84005538C7 /* css */ = {
 			isa = PBXGroup;
 			children = (
-				2DF4743D144A2D84005538C7 /* contact.css */,
 				2DF47444144A2D84005538C7 /* styles.css */,
 				2D8D96F115998EBF00AA3D1B /* order.css */,
 				2D25C3CB15E6F4AE00132306 /* stats.css */,

@@ -304,14 +304,14 @@ $(document).ready(showFirstInstructions);
         
         <div class="filelist">
         	<div class="heading">
-                <h5>ARTIST FILES</h5>
+                <div class='title'>ARTIST FILES</div>
                 <div class="buttonadd">
                     <a onclick='showFilesPopup(false);' title='Add files for your site'>Add Files</a>
                 </div>
             </div>
             <div class="list" style='display: none;'>
                 <div class='file_heading'>
-                    <div class='button active'>Misc</div>
+                    <div class='button active'>All</div>
                     <div class='button'>Images</div>
                     <div class='button'>Music</div>
                     <div class='button'>Video</div>
