@@ -105,7 +105,6 @@ function startFileUpload(file_input)
         {
             return function(evt) { callback(evt,file); }
         }
-        xhr.successCallback = successCallback;
         xhr.onreadystatechange = makeCallback(onArtistFileReadyStateChange)
         var upload = xhr.upload;
         if( upload )
