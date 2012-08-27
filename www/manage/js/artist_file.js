@@ -21,7 +21,7 @@ function updateFileList()
         if( file.is_uploading || true )
         {
             html += " <div class='file_status'>";
-            html += "  <div class='file'>".format(filename);
+            html += "  <div class='file'>{0}</div>".format(filename);
             html += "  <div class='status'>";
             
             html += "    <div class='upload_bar'>";
