@@ -18,7 +18,7 @@ function updateFileList()
         var html = "";
         html += "<div class='item{0}'>".format(odd);
         
-        if( file.is_uploading || true )
+        if( file.is_uploading )
         {
             var sel = "upload_file_{0}".format(file.upload_index);
         
