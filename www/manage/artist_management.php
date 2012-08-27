@@ -319,6 +319,7 @@ $(document).ready(showFirstInstructions);
                     <div class='button'>Video</div>
                     <div class='button'>Misc</div>
                 </div>
+                <div class='tip'>You can drag and drop files for easy upload.</div>
                 <div id='file_list' class='file_list'>
                 </div>
             </div>

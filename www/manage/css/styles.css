@@ -1765,6 +1765,15 @@ textarea {
 #adminblock .filelist .list .file_heading {
     display: none;
 }
+#adminblock .filelist .list .tag {
+    background-color: #d9dadc;
+    padding-top: 8px;
+    padding-left: 15px;
+    color: #383838;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    border-bottom: 1px solid #dddee0;
+}
 #adminblock .filelist .list .file_list {
     border-bottom: 1px solid #dddee0;
 }
