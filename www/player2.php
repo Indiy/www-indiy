@@ -149,7 +149,7 @@
         $image = FALSE;
         if( $tab['image'] != '' )
         {
-            $image = '/artists/images/' . $tab['image'];
+            $image = '/artists/files/' . $tab['image'];
         }
         $item = array("id" => $tab['id'],
                       "title" => $title,
@@ -183,8 +183,8 @@
     $i = 0;
     while( $music = mf($q_music) )
     {
-        $music_image = '/artists/images/' . $music["image"];
-        $music_audio = '/artists/audio/' . $music["audio"];
+        $music_image = '/artists/files/' . $music["image"];
+        $music_audio = '/artists/files/' . $music["audio"];
         
         $music_name = stripslashes($music["name"]);
         $music_listens = $music["views"];
@@ -251,8 +251,8 @@
         if( strlen($vid_error) > 0 )
             continue;
         
-        $video_file = trueSiteUrl() . '/vid/' . $video['video'];
-        $video_image = '/artists/images/' . $video['image'];
+        $video_file = trueSiteUrl() . '/artists/files/' . $video['video'];
+        $video_image = '/artists/files/' . $video['image'];
         $video_name = $video['name'];
         
         
