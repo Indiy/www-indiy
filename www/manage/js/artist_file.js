@@ -40,9 +40,9 @@ function updateFileList()
             {
                 html += "  <div class='button' onclick='cancelUploadFile({0});'></div>".format(i);
             }
-            else if( file.upload_status == 'failed' )
+            else
             {
-                html += "  <div class='button' onclick='removeFailedFile({0});'></div>".format(i);
+                html += "  <div class='button' onclick='removeUploadFile({0});'></div>".format(i);
             }
             html += " </div>";
         }
