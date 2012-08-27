@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		2D0A2DE815E961F800F0EE6D /* artist_file_cleanup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artist_file_cleanup.php; sourceTree = "<group>"; };
+		2D0A2DEB15EB05F800F0EE6D /* ZeroClipboard.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ZeroClipboard.swf; sourceTree = "<group>"; };
 		2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = unsupported_browser.php; sourceTree = "<group>"; };
 		2D25C38715D43BCE00132306 /* fan.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = fan.js; sourceTree = "<group>"; };
 		2D25C38C15D96E2400132306 /* player.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player.php; sourceTree = "<group>"; };
@@ -715,6 +716,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		2D0A2DEA15EB05F700F0EE6D /* flash */ = {
+			isa = PBXGroup;
+			children = (
+				2D0A2DEB15EB05F800F0EE6D /* ZeroClipboard.swf */,
+			);
+			path = flash;
+			sourceTree = "<group>";
+		};
 		2D380B98146F0A5700E36189 /* madna.co */ = {
 			isa = PBXGroup;
 			children = (
@@ -1075,6 +1084,7 @@
 			isa = PBXGroup;
 			children = (
 				2DF470541440B77F005538C7 /* data */,
+				2D0A2DEA15EB05F700F0EE6D /* flash */,
 				2DF470C01440B77F005538C7 /* images */,
 				2DF471311440B77F005538C7 /* includes */,
 				2DF472E41440B77F005538C7 /* Login_Twitbook */,
