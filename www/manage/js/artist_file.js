@@ -11,21 +11,37 @@ function updateFileList()
         if( !filename )
             filename = file.filename;
         
-        if( file.is_uploading )
-        {
-            filename += file.upload_status + " " + file.upload_progress + "%";
-        }
-        
         var odd = "";
         if( i % 2 == 0 )
             odd = " odd";
         
         var html = "";
         html += "<div class='item{0}'>".format(odd);
-        html += " <div class='filename'>{0}</div>".format(filename);
-        html += " <div class='delete'>";
-        html += "  <div class='button' onclick='deleteFile({0});'></div>".format(i);
-        html += " </div>";
+        
+        if( file.is_uploading || true )
+        {
+            html += " <div class='file_status'>";
+            html += "  <div class='file'>".format(filename);
+            html += "  <div class='status'>";
+            
+            html += "    <div class='upload_bar'>";
+            html += "     <div id='upload_progress_bar' class='upload_progress_bar'></div>";
+            html += "     <div class='upload_label'>Uploading&hellip;</div>";
+            html += "     <div class='percent'><span id='upload_percent'>50</span>%</div>";
+            html += "    </div>";
+            
+            html += "  </div>";
+            html += " <div class='delete'>";
+            html += "  <div class='button' onclick='cancelUploadFile({0});'></div>".format(i);
+            html += " </div>";
+        }
+        else
+        {
+            html += " <div class='filename'>{0}</div>".format(filename);
+            html += " <div class='delete'>";
+            html += "  <div class='button' onclick='deleteFile({0});'></div>".format(i);
+            html += " </div>";
+        }
         html += "</div>";
         
         $('#file_list').append(html);

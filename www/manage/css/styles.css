@@ -1795,6 +1795,69 @@ textarea {
 #adminblock .filelist .list .file_list .item .filename:hover {
     text-decoration: underline;
 }
+#adminblock .filelist .list .file_list .item .file_status {
+    display: inline-block;
+    padding-left: 15px;
+    height: 40px;
+    width: 623px;
+    border-left: 1px solid #dddee0;
+    border-right: 1px solid #dddee0;
+    vertical-align: top;
+}
+#adminblock .filelist .list .file_list .item .file_status .file {
+    display: inline-block;
+    padding-top: 13px;
+    height: 27px;
+    width: 250px;
+    color: #383838;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+}
+#adminblock .filelist .list .file_list .item .file_status .status {
+    display: inline-block;
+    width: 373px;
+    height: 40px;
+    vertical-align: top;
+}
+#adminblock .filelist .list .file_list .item .file_status .status .upload_bar
+{
+    position: relative;
+    padding-top: 8px;
+    height: 24px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: url('/images/upload_progress_bg.png');
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px #c7c7c7;
+}
+#adminblock .filelist .list .file_list .item .file_status .status .upload_bar .upload_progress_bar {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 50%;
+    background-color: #5693fd;
+    border-radius: 3px;
+}
+#adminblock .filelist .list .file_list .item .file_status .status .upload_bar .upload_label {
+    color: white;
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    font-size: 12px;
+}
+#adminblock .filelist .list .file_list .item .file_status .status .upload_bar .percent {
+    color: white;
+    position: absolute;
+    top: 4px;
+    right: 7px;
+    font-size: 12px;
+}
+
 #adminblock .filelist .list .file_list .item .delete {
     display: inline-block;
     padding-top: 8px;
