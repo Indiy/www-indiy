@@ -292,8 +292,10 @@ function iterableContains(array,val)
     return false;
 }
 
-function onDragEnter(evt)
+function onDragEnter(je)
 {
+    var evt = je.origonalEvent;
+
     evt.stopPropagation();
     evt.preventDefault();
     var dt = evt.dataTransfer;
@@ -302,8 +304,9 @@ function onDragEnter(evt)
         $('#drop_file_overlay').fadeIn('fast');
     }
 }
-function onDragLeave(evt)
+function onDragLeave(je)
 {
+    var evt = je.origonalEvent;
     evt.stopPropagation();
     evt.preventDefault();
     if( evt.pageX < 10 || evt.pageY < 10 || $(window).width() - evt.pageX < 10  || $(window).height - evt.pageY < 10 )
@@ -311,13 +314,15 @@ function onDragLeave(evt)
         $('#drop_file_overlay').fadeOut('fast');
     }
 }
-function onDragOver(evt)
+function onDragOver(je)
 {
+    var evt = je.origonalEvent;
     evt.stopPropagation();
     evt.preventDefault();
 }
-function onDrop(evt)
+function onDrop(je)
 {
+    var evt = je.origonalEvent;
     evt.stopPropagation();
     evt.preventDefault();
     $('#drop_file_overlay').fadeOut('fast');
