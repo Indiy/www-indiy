@@ -64,7 +64,7 @@ function showPagePopup(page_index)
         fillArtistFileSelect('#edit_page #image_drop','IMAGE',false);
 
         $('#edit_page #image_filename_container').empty();
-        $('#edit_page #bg_style').val('STRETCH');
+        $('#edit_page #bg_style').val('LETTERBOX');
         $('#edit_page input[name=download]:eq(1)').attr('checked','checked');
         clickFree(0);
         $('#edit_page #amazon_url').val('');
