@@ -294,7 +294,7 @@ function iterableContains(array,val)
 
 function onDragEnter(je)
 {
-    var evt = je.origonalEvent;
+    var evt = je.originalEvent;
 
     evt.stopPropagation();
     evt.preventDefault();
@@ -306,7 +306,7 @@ function onDragEnter(je)
 }
 function onDragLeave(je)
 {
-    var evt = je.origonalEvent;
+    var evt = je.originalEvent;
     evt.stopPropagation();
     evt.preventDefault();
     if( evt.pageX < 10 || evt.pageY < 10 || $(window).width() - evt.pageX < 10  || $(window).height - evt.pageY < 10 )
@@ -316,13 +316,13 @@ function onDragLeave(je)
 }
 function onDragOver(je)
 {
-    var evt = je.origonalEvent;
+    var evt = je.originalEvent;
     evt.stopPropagation();
     evt.preventDefault();
 }
 function onDrop(je)
 {
-    var evt = je.origonalEvent;
+    var evt = je.originalEvent;
     evt.stopPropagation();
     evt.preventDefault();
     $('#drop_file_overlay').fadeOut('fast');
