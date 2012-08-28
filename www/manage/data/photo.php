@@ -60,13 +60,8 @@
         
         $image = $old_image;
         
-        $ret = artist_file_upload($artist_id,$_FILES["logo"],$old_image_file);
-        $image_file = $ret['file'];
-        if( isset($ret['image_data']) )
-            $image_data = $ret['image_data'];
-        else
-            $image_data = $old_image_data;
-        
+        $image_file = $_POST['image_drop'];
+
         $values = array("artist_id" => $artist_id,
                         "name" => $name,
                         "location" => $location,

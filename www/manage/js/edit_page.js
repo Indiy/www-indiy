@@ -15,10 +15,6 @@ function showPagePopup(page_index)
 
     $('#edit_page #artist_id').val(g_artistId);
     
-    
-    //clearFileElement('#edit_page #song_audio');
-    clearFileElement('#edit_page #song_image');
-    
     if( page_index !== false )
     {
         var song = g_pageList[page_index];
