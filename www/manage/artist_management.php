@@ -64,12 +64,6 @@
         array_walk($row,cleanup_row_element);
         $row['download'] = $row['download'] == "0" ? FALSE : TRUE;
         $row['product_id'] = $row['product_id'] > 0 ? intval($row['product_id']) : FALSE;
-        $image_path = "../artists/files/" . $row['image'];
-        if( !empty($row['image']) && file_exists($image_path) )
-            $row['image'] = $image_path;
-        else
-            $row['image'] = "images/photo_video_01.jpg";
-        
         $page_list[] = $row;
     }
     $page_list_json = json_encode($page_list);
