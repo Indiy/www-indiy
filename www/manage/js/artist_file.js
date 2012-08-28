@@ -396,4 +396,9 @@ function fillArtistFileSelect(sel,type,current_val)
 function artistFileDropChange(el)
 {
     var val = $(el).val();
+    
+    if( val == 'upload_new_file' )
+    {
+        showAddArtistFilePopup();
+    }
 }
