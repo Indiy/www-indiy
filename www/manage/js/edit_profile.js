@@ -68,7 +68,7 @@ function validateEditProfile()
     }
     
     var image_drop = $('#edit_profile #image_drop').val();
-    if( image_drop.length > 0 )
+    if( image_drop.length == 0 )
     {
         window.alert("Please select a logo image.");
         return false;
