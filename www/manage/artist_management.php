@@ -276,7 +276,7 @@ $(document).ready(showFirstInstructions);
             
             <h6>Store</h6>
             <ul>
-                <li><a onclick='showProductPopup();' title='Add a product to your store'>Add Product</a></li>
+                <li><a onclick='showProductPopup(false);' title='Add a product to your store'>Add Product</a></li>
                 <li><a href="order_list.php?artist_id=<?=$artistID;?>" title='List of Customer Orders'>Order List</a></li>
                 <li><a href="artist_statement.php?artist_id=<?=$artistID;?>" title="Account Statement">Account Statement</a></li>
             </ul>
