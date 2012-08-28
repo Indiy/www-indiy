@@ -171,9 +171,11 @@ function setPlayerMode(mode)
 
 function playerPhotoInfo(name,location,listens)
 {
+    $('#track_name').html(name);
 }
 function playerTrackInfo(track_name,listens)
 {
+    $('#track_name').html(track_name);
 }
 function playerUpdateElementViews(listens)
 {

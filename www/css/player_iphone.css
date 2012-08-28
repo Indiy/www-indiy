@@ -128,127 +128,53 @@ body {
     left: 73px;
     right: 0px;
     height: 48px;
-    background: black url('../images/topbar_texture.png') repeat-x;
+    background: black;
     overflow: hidden;
 }
-#top_bar_mad_logo {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 73px;
-    height: 48px;
-    background: black url('../images/madcom_logo.png');
-    cursor: pointer;
-}
 #top_bar .artist_name {
-    float: left;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 18px;
+    padding-left: 7px;
+    padding-right: 10px;
+    padding-top: 6px;
     color: white;
     font-size: 16px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-#top_bar .search_viewed_tabs {
-    height: 48px;
+    text-overflow: ellipsis;
     overflow: hidden;
 }
-#top_bar .search {
-    float: right;
-    width: 28px;
-    height: 24px;
-    padding-left: 14px;
-    padding-right: 14px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    cursor: pointer;
-    background: transparent url('../images/player_icons.png') no-repeat -304px -665px;
-}
-.no_touch #top_bar .search:hover {
-    background: transparent url('../images/player_icons.png') no-repeat -301px -600px;
-}
-#top_bar .sep {
-    float: right;
-    width: 0px;
-    height: 48px;
-    border-left: 1px solid black;
-    border-right: 1px solid #333;
-}
-#top_bar .view_count {
-    float: right;
-    padding-top: 18px;
-    padding-bottom: 0px;
-    padding-left: 8px;
-    padding-right: 8px;
-    margin-right: 12px;
-    margin-left: 12px;
+#top_bar .track_name {
+    padding-left: 7px;
+    padding-right: 10px;
+    padding-top: 4px;
     color: white;
-    font-size: 13px;
+    font-size: 12px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-    font-weight: bold;
-    text-shadow: 0px -1px #0e0e0e;
-    text-transform: uppercase;
-}
-#top_bar .content_tabs {
-    padding-right: 14px;
-    padding-top: 13px;
-    height: 35px;
+    text-overflow: ellipsis;
     overflow: hidden;
-}
-#top_bar .content_tabs .inner {
-    height: 35px;
-    white-space: nowrap;
-    text-align: right;
-    overflow: hidden;
-}
-#top_bar .content_tabs .inner .tab {
-    display: inline-block;
-    padding-top: 5px;
-    padding-bottom: 0px;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin-right: 12px;
-    margin-left: 12px;
-    color: #888;
-    font-size: 13px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-    font-weight: bold;
-    text-shadow: 0px -1px #0e0e0e;
-    text-transform: uppercase;
-    white-space: nowrap;
-    cursor: pointer;
-    border-radius: 3px;
-}
-.no_touch #top_bar .content_tabs .inner .tab:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
 }
 
 #bottom_container {
     position: absolute;
     bottom: 0px;
-    height: 55px;
+    height: 76px;
     left: 0px;
     right: 0px;
     overflow: hidden;
 }
 #tracker_bar {
-    height: 55px;
+    height: 51px;
     overflow: hidden;
-    background: black url('../images/tracker_bar_bg.png') repeat-x;
+    background: rgba(0,0,0,0.5);
 }
 
 #tracker_bar .buttons {
-    height: 55px;
+    height: 51px;
     white-space: nowrap;
     text-align: center;
     font-size: 0;
 }
 #tracker_bar .buttons .button {
     display: inline-block;
-    height: 55px;
+    height: 51px;
     width: 59px;
 }
 #tracker_bar .buttons .button .icon {
@@ -256,7 +182,7 @@ body {
     height: 24px;
     padding-left: 14px;
     padding-right: 14px;
-    padding-top: 12px;
+    padding-top: 11px;
     padding-bottom: 12px;
 }
 #tracker_bar .buttons .photos.button .icon {
@@ -284,6 +210,28 @@ body {
     width: 0px;
     border-left: 1px solid black;
     border-right: 1px solid #333;
+}
+#bottom_container .bottom_bar {
+    height: 25px;
+    background: black;
+}
+#bottom_container .bottom_bar .left {
+    float: left;
+    padding-left: 11px;
+    padding-top: 7px;
+    color: white;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-decoration: none;
+}
+#bottom_container .bottom_bar .right {
+    float: right;
+    padding-right: 11px;
+    padding-top: 7px;
+    color: white;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-decoration: none;
 }
 
 #video_bg {

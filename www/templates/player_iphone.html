@@ -98,33 +98,40 @@
             <div class='inner'></div>
             <div class='triangle'></div>
         </div>
-        <a href="<?=trueSiteUrl();?>" title='MyArtistDNA'><div id='top_bar_mad_logo'></div></a>
         <div id='top_bar' class='idle_fade_out'>
             <div class='artist_name'><?=$artist_name;?></div>
+            <div id='track_name' class='track_name'></div>
         </div>
         <div id='bottom_container' class='idle_fade_out'>
             <div id='tracker_bar'>
                 <div class='buttons'>
-                    <? if( count($photo_list) > 0): ?>
-                        <div class='sep'></div>
-                        <div class='photos tooltiped button' onclick='clickPhotoIcon();' tooltip="PHOTOS">
+                    <? if( count($photo_list) > 0 ): ?>
+                        <div class='photos tooltiped button <?=$button_style;?>' onclick='clickPhotoIcon();' tooltip="PHOTOS">
                             <div class='icon'></div>
                         </div>
+                        <? if( count($video_list) > 0 || count($music_list) > 0 ): ?>
+                            <div class='sep'></div>
+                        <? endif; ?>
                     <? endif; ?>
-                    <? if( count($music_list) > 0): ?>
-                        <div class='sep'></div>
-                        <div class='music tooltiped button' onclick='clickMusicIcon();' tooltip="MUSIC">
+                    <? if( count($music_list) > 0 ): ?>
+                        <div class='music tooltiped button <?=$button_style;?>' onclick='clickMusicIcon();' tooltip="MUSIC">
                             <div class='icon'></div>
                         </div>
+                        <? if( count($video_list) > 0 ): ?>
+                            <div class='sep'></div>
+                        <? endif; ?>
                     <? endif; ?>
                     <? if( count($video_list) > 0 ): ?>
-                        <div class='sep'></div>
-                        <div class='video tooltiped button' onclick='clickVideoIcon();' tooltip="VIDEO">
+                        <div class='video tooltiped button <?=$button_style;?>' onclick='clickVideoIcon();' tooltip="VIDEO">
                             <div class='icon'></div>
                         </div>
                     <? endif; ?>
                     <div class='sep'></div>
                 </div>
+            </div>
+            <div class='bottom_bar'>
+                <a href='?desktop=true'><div class='left'>Desktop Version</div></a>
+                <div class='right'>&copy;MyArtistDNA</div>
             </div>
         </div>
     </div>
