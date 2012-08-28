@@ -389,6 +389,11 @@ function fillArtistFileSelect(sel,type,current_val)
         var html = "<option value='{0}' {1}>{2}</option>".format(val,selected,vis);
         $(sel).append(html);
     }
-    var html = "<option value=''>Upload New File</option>";
+    var html = "<option value='upload_new_file'>Upload New File</option>";
     $(sel).append(html);
+}
+
+function artistFileDropChange(el)
+{
+    var val = $(el).val();
 }
