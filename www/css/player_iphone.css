@@ -182,7 +182,7 @@ body {
 #tracker_bar {
     height: 51px;
     overflow: hidden;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.85);
 }
 
 #tracker_bar .buttons {
@@ -195,6 +195,7 @@ body {
     display: inline-block;
     height: 51px;
     text-align: center;
+    vertical-align: top;
 }
 #tracker_bar .buttons .button .name_icon {
     display: inline-block;
@@ -208,34 +209,29 @@ body {
     font-size: 12px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-#tracker_bar .buttons .button .name_icon .icon {
-    width: 28px;
-    height: 24px;
-    padding-left: 14px;
-    padding-right: 14px;
-    padding-top: 11px;
-    padding-bottom: 12px;
-}
-#tracker_bar .buttons .button.active .name_icon .icon {
+#tracker_bar .buttons .button.active .name_icon .name {
     color: white;
 }
+#tracker_bar .buttons .button .name_icon .icon {
+    height: 30px;
+}
 #tracker_bar .buttons .photos.button .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -56px -661px;
+    background: transparent url('/images/player_icons.png') no-repeat -63px -676px;
 }
 #tracker_bar .buttons .photos.button.active .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -56px -591px;
+    background: transparent url('/images/player_icons.png') no-repeat -63px -606px;
 }
 #tracker_bar .buttons .music.button .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -118px -660px;
+    background: transparent url('/images/player_icons.png') no-repeat -125px -675px;
 }
 #tracker_bar .buttons .music.button.active .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -118px -592px;
+    background: transparent url('/images/player_icons.png') no-repeat -125px -607px;
 }
 #tracker_bar .buttons .video.button .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -179px -662px;
+    background: transparent url('/images/player_icons.png') no-repeat -186px -677px;
 }
 #tracker_bar .buttons .video.button.active .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -179px -594px;
+    background: transparent url('/images/player_icons.png') no-repeat -186px -609px;
 }
 
 #tracker_bar .buttons .sep {
