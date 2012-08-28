@@ -153,9 +153,9 @@ body {
 #top_bar .artist_name {
     padding-left: 7px;
     padding-right: 10px;
-    padding-top: 6px;
+    padding-top: 4px;
     color: white;
-    font-size: 16px;
+    font-size: 15px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -163,7 +163,7 @@ body {
 #top_bar .track_name {
     padding-left: 7px;
     padding-right: 10px;
-    padding-top: 4px;
+    padding-top: 2px;
     color: white;
     font-size: 12px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -239,7 +239,7 @@ body {
     height: 55px;
     width: 0px;
     border-left: 1px solid black;
-    border-right: 1px solid #333;
+    border-right: 1px solid #444;
 }
 #bottom_container .bottom_bar {
     height: 25px;
