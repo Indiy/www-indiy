@@ -28,18 +28,7 @@ function showPagePopup(page_index)
         $('#edit_page #song_name').val(song.name);
         
         fillArtistFileSelect('#edit_page #song_drop','AUDIO',song.audio);
-        fillArtistFileSelect('#edit_page #song_drop','IMAGE',song.image);
-        
-        if( song.image )
-        {
-            var html = "<img src='{0}' />".format(song.image);
-            html += "<button onclick='return onPageImageRemove();'></button>";
-            $('#edit_page #image_filename_container').html(html);
-        }
-        else
-        {
-            $('#edit_page #image_filename_container').empty();
-        }
+        fillArtistFileSelect('#edit_page #image_drop','IMAGE',song.image);
         
         $('#edit_page #bg_style').val(song.bg_style);
         $('#edit_page #song_bgcolor').val(song.bgcolor);
@@ -72,7 +61,7 @@ function showPagePopup(page_index)
         $('#edit_page #song_name').val('');
 
         fillArtistFileSelect('#edit_page #song_drop','AUDIO',false);
-        fillArtistFileSelect('#edit_page #song_drop','IMAGE',false);
+        fillArtistFileSelect('#edit_page #image_drop','IMAGE',false);
 
         $('#edit_page #image_filename_container').empty();
         $('#edit_page #bg_style').val('STRETCH');
@@ -132,22 +121,10 @@ function clickMadStore()
 
 function onAddMusicSubmit()
 {
-    var needs_image = false;
-    if( g_pageIndex === false )
+    var image_drop = $('#edit_page #image_drop').val();
+    if( image_drop.length == 0 )
     {
-        needs_image = true;
-    }
-    else
-    {
-        var song  = g_pageList[g_pageIndex];
-        if( !song.image )
-            needs_image = true;
-    }   
-    
-    var song_image = $('#edit_page #song_image')[0];
-    if( needs_image && ( !song_image || !song_image.value || song_image.value.length == 0 ) )
-    {
-        window.alert("Please upload an image for the page.");
+        window.alert("Please specify an image for the page.");
         return false;
     }
     var song_name = $('#edit_page #song_name').val();
@@ -169,6 +146,7 @@ function onAddMusicSubmit()
         var mad_store = $('#edit_page #mad_store').is(':checked');
         var tags = $('#edit_page #audio_tags').val();
         var song_drop = $('#edit_page #song_drop').val();
+        var image_drop = $('#edit_page #image_drop').val();
         
         form_data.append('artistid',g_artistId);
         form_data.append('id',song_id);
@@ -184,13 +162,9 @@ function onAddMusicSubmit()
         form_data.append('tags',tags);
         form_data.append('ajax',true);
         
-        var song_image = $('#edit_page #song_image')[0];
-        if( song_image.files && song_image.files.length > 0 )
-        {
-            form_data.append('logo',song_image.files[0]);
-        }
-        
         form_data.append('song_drop',song_drop);
+        form_data.append('image_drop',image_drop);
+        
         form_data.append('WriteTags','submit');
     }
     
