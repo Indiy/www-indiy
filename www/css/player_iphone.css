@@ -51,13 +51,13 @@ body {
         margin-right: auto;
         margin-left: auto;
     }
-    #tracker_bar .buttons .button.1_button {
+    #tracker_bar .buttons .button.buttons_1 {
         width: 320px;
     }
-    #tracker_bar .buttons .button.2_button {
+    #tracker_bar .buttons .button.buttons_2 {
         width: 159px;
     }
-    #tracker_bar .buttons .button.3_button {
+    #tracker_bar .buttons .button.buttons_3 {
         width: 105px;
     }
 }
@@ -70,13 +70,13 @@ body {
         margin-right: auto;
         margin-left: auto;
     }
-    #tracker_bar .buttons .button.1_button {
+    #tracker_bar .buttons .button.buttons_1 {
         width: 480px;
     }
-    #tracker_bar .buttons .button.2_button {
+    #tracker_bar .buttons .button.buttons_2 {
         width: 239px;
     }
-    #tracker_bar .buttons .button.3_button {
+    #tracker_bar .buttons .button.buttons_3 {
         width: 159px;
     }
 }
