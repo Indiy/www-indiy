@@ -2,7 +2,6 @@
 
 function showEditProfile()
 {
-    clearFileElement('#edit_video #logo');
 
     $('#edit_profile #artist_id').val(g_artistId);
     $('#edit_profile #artist').val(g_artistData.artist);
@@ -22,16 +21,8 @@ function showEditProfile()
     {
         $('#edit_profile input[name=artist_gender]').removeAttr('checked');
     }
-    
-    if( g_artistData.logo )
-    {
-        var html = "<img src='{0}' />".format(g_artistData.logo_url);
-        $('#edit_profile .image_image').html(html);        
-    }
-    else
-    {
-        $('#edit_profile .image_image').empty();
-    }
+
+    fillArtistFileSelect('#edit_profile #image_drop','IMAGE',g_artistData.logo);
     
     if( g_artistData.account_type == 'PREMIUM' )
     {
@@ -76,12 +67,10 @@ function validateEditProfile()
         return false;
     }
     
-    var needs_image = !g_artistData.logo;
-    
-    var logo = $('#edit_profile #logo')[0];
-    if( needs_image && ( !logo || !logo.value || logo.value.length == 0 ) )
+    var image_drop = $('#edit_profile #image_drop').val();
+    if( image_drop.length > 0 )
     {
-        window.alert("Please upload a logo image.");
+        window.alert("Please select a logo image.");
         return false;
     } 
     return true;
@@ -104,6 +93,7 @@ function onEditProfileSubmit()
         var artist_type = $('#edit_profile #artist_type option:selected').val();
         var artist_gender = $('#edit_profile input[@name=artist_gender]:checked').val();
         var start_media_type = $('#edit_profile #start_media_type').val();
+        var image_drop = $('#edit_profile #image_drop').val();
         
         form_data.append('artistid',g_artistId);
         form_data.append('artist',artist);
@@ -115,12 +105,9 @@ function onEditProfileSubmit()
         form_data.append('artist_type',artist_type);
         form_data.append('artist_gender',artist_gender);
         form_data.append('start_media_type',start_media_type);
+
+        form_data.append('image_drop',image_drop);
         
-        var logo = $('#edit_profile #logo')[0];
-        if( logo.files && logo.files.length > 0 )
-        {
-            form_data.append('logo',logo.files[0]);
-        }
         form_data.append('WriteTags','submit');
         form_data.append('ajax',true);
     }

@@ -71,11 +71,8 @@ $start_type_list = array(
             <input id='custom_domain' name="custom_domain" class='line_text' value="">
         </div>
         <div class='input_container' style='height: 50px;'>
-            <div class='left_image_label'>
-                <div class='image_label'>Logo <span id='tip_artist_logo' class='tooltip'>(?)</span><span class='required'>*</span></div>
-                <div class='image_image'></div>
-            </div>
-            <input id='logo' type="file" name="logo" class='right_file' onchange='onImageChange(this);' />
+            <div class='left_label'>Logo <span id='tip_artist_logo' class='tooltip'>(?)</span><span class='required'>*</span></div>
+            <select id='image_drop' name="image_drop" class='right_drop' onchange='artistFileDropChange(this);'></select>
         </div>
 
         <div class='input_container'>
