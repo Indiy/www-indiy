@@ -1,10 +1,10 @@
 
 function artistFileReady()
 {
-    document.body.addEventListener('dragenter',onDragEnter,false);
-    document.getElementById('drop-file-overlay').addEventListener('dragleave',onDragLeave,false);
-    document.getElementById('drop-file-overlay').addEventListener('dragover',onDragOver,false);
-    document.getElementById('drop-file-overlay').addEventListener('drop',onDrop,false);
+    $('body').bind('dragenter',onDragEnter);
+    $('#drop_file_overlay').bind('dragleave',onDragLeave);
+    $('#drop_file_overlay').bind('dragover',onDragOver);
+    $('#drop_file_overlay').bind('drop',onDrop);
 }
 $(document).ready(artistFileReady);
 
