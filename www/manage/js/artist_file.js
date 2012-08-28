@@ -333,5 +333,13 @@ function onDrop(je)
         var file = files[i];
         startFileUpload(file);
     }
+    if( files.length > 0 )
+    {
+        if( $('#adminblock .filelist .heading').next().is(':hidden') )
+        {
+			$('.heading').removeClass('active').next().slideUp();
+			$('#adminblock .filelist .heading').toggleClass('active').next().slideDown();
+		}
+    }
 }
 
