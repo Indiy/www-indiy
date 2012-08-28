@@ -297,7 +297,7 @@ $(document).ready(showFirstInstructions);
         
         <div class="filelist">
         	<div class="heading">
-                <div class='title'>ARTIST FILES</div>
+                <div class='title'>MEDIA LIBRARY</div>
                 <div class="buttonadd">
                     <a onclick='showAddArtistFilePopup(false);' title='Add files for your site'>Add Files</a>
                 </div>
