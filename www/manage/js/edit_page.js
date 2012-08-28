@@ -28,6 +28,7 @@ function showPagePopup(page_index)
         $('#edit_page #song_name').val(song.name);
         
         fillArtistFileSelect('#edit_page #song_drop','AUDIO',song.audio);
+        fillArtistFileSelect('#edit_page #song_drop','IMAGE',song.image);
         
         if( song.image )
         {
@@ -71,6 +72,7 @@ function showPagePopup(page_index)
         $('#edit_page #song_name').val('');
 
         fillArtistFileSelect('#edit_page #song_drop','AUDIO',false);
+        fillArtistFileSelect('#edit_page #song_drop','IMAGE',false);
 
         $('#edit_page #image_filename_container').empty();
         $('#edit_page #bg_style').val('STRETCH');

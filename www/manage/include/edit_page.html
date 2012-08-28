@@ -15,23 +15,18 @@
         <input id='song_id' type='hidden' value="" name="id">
         
         <div class='input_container'>
-            <div class='line_label'>Name of Audio / Image<span class='required'>*</span></div>
+            <div class='line_label'>Name of Song<span class='required'>*</span></div>
             <input id='song_name' type="text" name="name" value="" class="line_text" />
         </div>
         <div class='input_container' style='height: 50px;'>
-            <div class='left_label'>MP3 File <span id='tip_mp3' class='tooltip'>(?)</span></div>
-            <select id='song_drop' name="song_drop" class='right_drop' onchange='artistFileDropChange(this);'>
-            </select>
+            <div class='left_label'>Audio File <span id='tip_mp3' class='tooltip'>(?)</span><span class='required'>*</span></div>
+            <select id='song_drop' name="song_drop" class='right_drop' onchange='artistFileDropChange(this);'></select>
         </div>
         <div class='input_container' style='height: 50px;'>
             <div class='left_image_label'>
                 <div class='image_label'>Image <span id='tip_image' class='tooltip'>(?)</span><span class='required'>*</span></div>
-                <div id='image_filename_container' class='image_image'></div>
             </div>
-            <div class='right_file_filename'>
-                <input id='song_image' type="file" name="logo" onchange='onImageChange(this);' />
-                <div class='filename'>(For best results use 1200 x 800 size photos)</div>
-            </div>
+            <select id='image_drop' name="image_drop" class='right_drop' onchange='artistFileDropChange(this);'></select>
         </div>
         <div class='input_container'>
             <div class='left_label'>Background Style <span id='tip_bg_style' class='tooltip'>(?)</span></div>

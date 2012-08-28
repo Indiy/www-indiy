@@ -375,6 +375,8 @@ function fillArtistFileSelect(sel,type,current_val)
     var html = "<option value=''>None</option>";
     $(sel).append(html);
     
+    var found_current = false;
+    
     for( var i = 0 ; i < possible_files.length ; ++i )
     {
         var file = possible_files[i];
@@ -384,11 +386,21 @@ function fillArtistFileSelect(sel,type,current_val)
         
         var selected = "";
         if( val == current_val )
+        {
             selected = "selected='selected'";
+            found_current = true;
+        }
         
         var html = "<option value='{0}' {1}>{2}</option>".format(val,selected,vis);
         $(sel).append(html);
     }
+    
+    if( !found_current && current_val != false )
+    {
+        var html = "<option value='{0}' selected='selected'>{0}</option>".format(current_val);
+        $(sel).append(html);
+    }
+    
     var html = "<option value='upload_new_file'>Upload New File</option>";
     $(sel).append(html);
 }
