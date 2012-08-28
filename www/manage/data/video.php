@@ -67,18 +67,8 @@
             $old_sound = '';
             
         
-        $ret = artist_file_upload($artist_id,$_FILES["logo"],$old_image_file);
-        $image_file = $ret['file'];
-        if( isset($ret['image_data']) )
-            $image_data = $ret['image_data'];
-        else
-            $image_data = $old_image_data;
-        
-        $ret = artist_file_upload($artist_id,$_FILES["video"],$old_video_file);
-        $video_file = $ret['file'];
-        if( isset($ret['upload_error']) )
-            $postedValues['upload_error'] = $ret['upload_error'];
-        
+        $image_file = $_POST['image_drop'];
+        $video_file = $_POST['video_drop'];
 
         $values = array("artistid" => $artist_id,
                         "name" => $video_name,

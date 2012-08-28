@@ -74,7 +74,7 @@
     while( $row = mysql_fetch_array($result_artistVideo) )
     {
         array_walk($row,cleanup_row_element);
-        $image_path = "../artists/files/" . $row['image'];
+        $image_url = "/artists/files/" . $row['image'];
         if( !empty($row['image']) && file_exists($image_path) )
             $row['image_url'] = $image_path;
         else
@@ -90,7 +90,7 @@
     while( $row = mysql_fetch_array($q_photo) )
     {
         array_walk($row,cleanup_row_element);
-        $image_path = "../artists/files/" . $row['image'];
+        $image_path = "/artists/files/" . $row['image'];
         if( !empty($row['image']) && file_exists($image_path) )
             $row['image_url'] = $image_path;
         else
@@ -106,7 +106,7 @@
     while( $row = mysql_fetch_array($result_artistContent) )
     {
         array_walk($row,cleanup_row_element);
-        $image_path = "../artists/files/" . $row['image'];
+        $image_path = "/artists/files/" . $row['image'];
         if( !empty($row['image']) )
             $row['image_url'] = $image_path;
         else
@@ -149,7 +149,7 @@
 	if($record_artistDetail['logo'] == '')
 		$artist_img_logo = 'images/NoPhoto.jpg';
 	else
-		$artist_img_logo = '../artists/files/'.$record_artistDetail['logo'];
+		$artist_img_logo = '/artists/files/'.$record_artistDetail['logo'];
 
 	$img_url = $artist_img_logo;
 

@@ -10,8 +10,6 @@ function showVideoPopup(video_index)
     g_removeVideoImage = false;
     
     $('#edit_video #artist_id').val(g_artistId);
-    clearFileElement('#edit_video #video_image_file');
-    clearFileElement('#edit_video #video_file');
     
     if( video_index !== false )
     {
@@ -20,26 +18,8 @@ function showVideoPopup(video_index)
         $('#edit_video #video_name').val(video.name);
         $('#edit_video #video_tags').val(video.tags);
         
-        if( video.image )
-        {
-            var html = "<img src='{0}' />".format(video.image_url);
-            html += "<button onclick='return onVideoImageRemove();'></button>";
-            $('#edit_video .image_image').html(html);
-        }
-        else
-        {
-            $('#edit_video .image_image').empty();
-        }
-        var html = "<div>(We only accept .mov and .mp4 files)</div>";
-        if( video.video != '' )
-        {
-            if( video.upload_video_filename )
-                html = "<div>{0}</div>".format(video.upload_video_filename);
-            else
-                html = "<div>{0}</div>".format(video.video);
-            html += "<button onclick='return onVideoRemove();'></button>";
-        }
-        $('#edit_video .filename').html(html);
+        fillArtistFileSelect('#edit_video #image_drop','IMAGE',video.image);
+        fillArtistFileSelect('#edit_video #video_drop','VIDEO',video.video);
     }
     else
     {
@@ -49,6 +29,9 @@ function showVideoPopup(video_index)
             showAccountLimitPopup();
             return;
         }
+
+        fillArtistFileSelect('#edit_video #image_drop','IMAGE',false);
+        fillArtistFileSelect('#edit_video #video_drop','VIDEO',false);
     
         $('#edit_video #song_id').val('');
         $('#edit_video #video_name').val('');
@@ -83,23 +66,7 @@ function onVideoImageRemove()
 
 function onAddVideoSubmit()
 {
-    var needs_image = false;
-
-    var video_image_file = $('#edit_video #video_image_file')[0];
-    if( needs_image && ( !video_image_file || !video_image_file.value || video_image_file.value.length == 0 ) )
-    {
-        window.alert("Please upload a poster image for the video.");
-        return false;
-    }
     
-    var needs_video = false;
-    
-    var video_file = $('#edit_video #video_file')[0];
-    if( needs_video && ( !video_file || !video_file.value || video_file.value.length == 0 ) )
-    {
-        window.alert("Please upload a video.");
-        return false;
-    }
     var video_name = $('#edit_video #video_name').val();
     if( video_name.length == 0 )
     {

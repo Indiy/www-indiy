@@ -17,18 +17,12 @@
             <input id='video_name' type="text" name="name" value="" class='right_text' />
         </div>
         <div class='input_container' style='height: 50px;'>
-            <div class='left_image_label'>
-                <div class='image_label'>Image <span id='tip_video_image' class='tooltip'>(?)</span><span class='required'>*</span></div>
-                <div class='image_image'></div>
-            </div>
-            <input id='video_image_file' type="file" name="logo" class='right_file' onchange='onImageChange(this);'  />
+            <div class='left_label'>Image <span id='tip_video_image' class='tooltip'>(?)</span><span class='required'>*</span></div>
+            <select id='image_drop' name="image_drop" class='right_drop' onchange='artistFileDropChange(this);'></select>
         </div>
         <div class='input_container' style='height: 50px;'>
             <div class='left_label'>Video <span id='tip_video' class='tooltip'>(?)</span><span class='required'>*</span></div>
-            <div class='right_file_filename'>
-                <input id='video_file' type="file" name="audio" onchange='onVideoChange();' />
-                <div class='filename'></div>
-            </div>
+            <select id='video_drop' name="video_drop" class='right_drop' onchange='artistFileDropChange(this);'></select>
         </div>
         <div class='input_container' style="height: 60px;">
             <div class='left_label'>Tags <span id='tip_tags' class='tooltip'>(?)</span></div>
