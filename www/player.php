@@ -3,7 +3,15 @@
     require_once 'includes/config.php';
     require_once 'includes/functions.php';
     
+    $ios_version = FALSE:
+    
     if( strpos($_SERVER['HTTP_USER_AGENT'],"iPhone") !== FALSE )
+        $ios_version = TRUE;
+
+    if( isset($_REQUEST['desktop']) && $_REQUEST['desktop'] == 'true' )
+        $ios_version = FALSE;
+    
+    if( $ios_version )
     {
         require_once 'player_iphone.php';
         die();
