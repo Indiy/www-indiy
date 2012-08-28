@@ -216,22 +216,22 @@ body {
     height: 30px;
 }
 #tracker_bar .buttons .photos.button .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -63px -676px;
+    background: transparent url('/images/player_icons.png') no-repeat -68px -676px;
 }
 #tracker_bar .buttons .photos.button.active .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -63px -606px;
+    background: transparent url('/images/player_icons.png') no-repeat -68px -606px;
 }
 #tracker_bar .buttons .music.button .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -125px -675px;
+    background: transparent url('/images/player_icons.png') no-repeat -130px -675px;
 }
 #tracker_bar .buttons .music.button.active .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -125px -607px;
+    background: transparent url('/images/player_icons.png') no-repeat -130px -607px;
 }
 #tracker_bar .buttons .video.button .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -186px -677px;
+    background: transparent url('/images/player_icons.png') no-repeat -191px -677px;
 }
 #tracker_bar .buttons .video.button.active .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -186px -609px;
+    background: transparent url('/images/player_icons.png') no-repeat -191px -609px;
 }
 
 #tracker_bar .buttons .sep {
