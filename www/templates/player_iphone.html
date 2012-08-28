@@ -105,28 +105,36 @@
         <div id='bottom_container' class='idle_fade_out'>
             <div id='tracker_bar'>
                 <div class='buttons'>
-                    <? if( count($photo_list) > 0 ): ?>
-                        <div class='photos tooltiped button <?=$button_style;?>' onclick='clickPhotoIcon();' tooltip="PHOTOS">
-                            <div class='icon'></div>
+                    <? if( count($music_list) > 0 ): ?>
+                        <div class='music tooltiped button <?=$button_style;?>' onclick='clickMusicIcon();' >
+                            <div class='name_icon'>
+                                <div class='name'>Audio</div>
+                                <div class='icon'></div>
+                            </div>
                         </div>
                         <? if( count($video_list) > 0 || count($music_list) > 0 ): ?>
                             <div class='sep'></div>
                         <? endif; ?>
                     <? endif; ?>
-                    <? if( count($music_list) > 0 ): ?>
-                        <div class='music tooltiped button <?=$button_style;?>' onclick='clickMusicIcon();' tooltip="MUSIC">
-                            <div class='icon'></div>
+                    <? if( count($video_list) > 0 ): ?>
+                        <div class='video tooltiped button <?=$button_style;?>' onclick='clickVideoIcon();'>
+                            <div class='name_icon'>
+                                <div class='name'>Videos</div>
+                                <div class='icon'></div>
+                            </div>
                         </div>
                         <? if( count($video_list) > 0 ): ?>
                             <div class='sep'></div>
                         <? endif; ?>
                     <? endif; ?>
-                    <? if( count($video_list) > 0 ): ?>
-                        <div class='video tooltiped button <?=$button_style;?>' onclick='clickVideoIcon();' tooltip="VIDEO">
-                            <div class='icon'></div>
+                    <? if( count($photo_list) > 0 ): ?>
+                        <div class='photos tooltiped button <?=$button_style;?>' onclick='clickPhotoIcon();' >
+                            <div class='name_icon'>
+                                <div class='name'>Photos</div>
+                                <div class='icon'></div>
+                            </div>
                         </div>
                     <? endif; ?>
-                    <div class='sep'></div>
                 </div>
             </div>
             <div class='bottom_bar'>

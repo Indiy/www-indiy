@@ -1,5 +1,5 @@
 
-
+/*
 @font-face {
     font-family: 'Neuzeit Grotesk';
     src: url('Neuzeit-Grotesk.eot');
@@ -30,6 +30,7 @@
     font-weight: normal;
     font-style: normal;
 }
+*/
 
 body {
     margin: 0px;
@@ -137,7 +138,7 @@ body {
     padding-top: 6px;
     color: white;
     font-size: 16px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-overflow: ellipsis;
     overflow: hidden;
 }
@@ -147,7 +148,7 @@ body {
     padding-top: 4px;
     color: white;
     font-size: 12px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-overflow: ellipsis;
     overflow: hidden;
 }
@@ -221,7 +222,7 @@ body {
     padding-top: 7px;
     color: white;
     font-size: 12px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-decoration: none;
 }
 #bottom_container .bottom_bar .right {
@@ -230,7 +231,7 @@ body {
     padding-top: 7px;
     color: white;
     font-size: 12px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-decoration: none;
 }
 
@@ -289,7 +290,7 @@ body {
     margin-top: -25px;
     font-size: 50px;
     color: red;
-    font-family: Helvetica, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
     z-index: 1000000;
 }

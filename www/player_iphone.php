@@ -381,6 +381,15 @@
         $body_style .= " desktop";
     }
     
+    $button_count = 0;
+    if( count($music_list) > 0 )
+        $button_count++;
+    if( count($video_list) > 0 )
+        $button_count++;
+    if( count($photo_list) > 0 )
+        $button_count++;
+    
+    $button_style = "{$button_count}_button";
     
     include_once 'templates/player_iphone.html';
 
