@@ -389,7 +389,7 @@
     if( count($photo_list) > 0 )
         $button_count++;
     
-    $button_style = "{$button_count}_button";
+    $button_style = "buttons_$button_count";
     
     include_once 'templates/player_iphone.html';
 
