@@ -139,7 +139,7 @@ function updateStoreList()
         html += "<figure>";
         html += "<span class='close'><a href='#' onclick='deleteProduct({0});'></a></span>".format(product.id);
         html += "<a onclick='showProductPopup({0});'>".format(i);
-        html += "<img src='{0}' width='207' height='130' alt=''>".format(product.image);
+        html += "<img src='{0}' width='207' height='130' alt=''>".format(product.image_url);
         html += "</a>";
         html += "</figure>";
         html += "<span>";

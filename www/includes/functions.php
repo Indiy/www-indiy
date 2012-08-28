@@ -1151,11 +1151,10 @@
         $row = mf(mq("SELECT * FROM mydna_musicplayer_ecommerce_products WHERE id='$product_id'"));
         
         array_walk($row,cleanup_row_element);
-        $image_path = "/artists/files/" . $row['image'];
         if( !empty($row['image']) )
-            $row['image'] = $image_path;
+            $row['image_url'] = "/artists/files/" . $row['image'];
         else
-            $row['image'] = "/images/photo_video_01.jpg";
+            $row['image_url'] = "/images/photo_video_01.jpg";
         
         $digital_downloads = array();
         $q = mq("SELECT * FROM product_files WHERE product_id='$product_id' AND is_deleted=0");
