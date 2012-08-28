@@ -16,7 +16,7 @@ function showPagePopup(page_index)
     $('#edit_page #artist_id').val(g_artistId);
     
     
-    clearFileElement('#edit_page #song_audio');
+    //clearFileElement('#edit_page #song_audio');
     clearFileElement('#edit_page #song_image');
     
     if( page_index !== false )
@@ -26,20 +26,9 @@ function showPagePopup(page_index)
         g_songId = song.id;
         $('#edit_page #song_id').val(song.id);
         $('#edit_page #song_name').val(song.name);
-        if( song.audio )
-        {
-            var html = "";
-            if( song.upload_audio_filename )
-                html += "<div>{0}</div>".format(song.upload_audio_filename);
-            else
-                html += "<div>{0}</div>".format(song.audio);
-            html += "<button onclick='return onPageSongRemove();'></button>";
-            $('#edit_page #song_filename_container').html(html);
-        }
-        else
-        {
-            $('#edit_page #song_filename_container').empty();
-        }
+        
+        fillArtistFileSelect('#edit_page #song_drop','AUDIO',song.audio);
+        
         if( song.image )
         {
             var html = "<img src='{0}' />".format(song.image);
@@ -80,7 +69,9 @@ function showPagePopup(page_index)
         g_songId = '';
         $('#edit_page #song_id').val('');
         $('#edit_page #song_name').val('');
-        $('#edit_page #song_filename_container').empty();
+
+        fillArtistFileSelect('#edit_page #song_drop','AUDIO',false);
+
         $('#edit_page #image_filename_container').empty();
         $('#edit_page #bg_style').val('STRETCH');
         $('#edit_page input[name=download]:eq(1)').attr('checked','checked');
@@ -175,6 +166,7 @@ function onAddMusicSubmit()
         var itunes_url = $('#edit_page #itunes_url').val();
         var mad_store = $('#edit_page #mad_store').is(':checked');
         var tags = $('#edit_page #audio_tags').val();
+        var song_drop = $('#edit_page #song_drop').val();
         
         form_data.append('artistid',g_artistId);
         form_data.append('id',song_id);
@@ -195,11 +187,8 @@ function onAddMusicSubmit()
         {
             form_data.append('logo',song_image.files[0]);
         }
-        var song_audio = $('#edit_page #song_audio')[0];
-        if( song_audio.files && song_audio.files.length > 0 )
-        {
-            form_data.append('audio',song_audio.files[0]);
-        }
+        
+        form_data.append('song_drop',song_drop);
         form_data.append('WriteTags','submit');
     }
     

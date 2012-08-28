@@ -349,3 +349,46 @@ function onDrop(je)
     }
 }
 
+function getArtistFiles(type)
+{
+    var ret = [];
+
+    for( var i = 0 ; i < g_fileList.length ; ++i )
+    {
+        var file = g_fileList[i];
+        
+        if( file.is_uploading )
+            continue;
+        
+        if( file.type == type )
+            ret.push(file);
+    }
+    return ret;
+}
+
+function fillArtistFileSelect(sel,type,current_val)
+{
+    var possible_files = getArtistFiles(type);
+    
+    $(sel).empty();
+    
+    var html = "<option value=''>None</option>";
+    $(sel).append(html);
+    
+    for( var i = 0 ; i < possible_files.length ; ++i )
+    {
+        var file = possible_files[i];
+        
+        var val = file.filename;
+        var vis = file.upload_filename;
+        
+        var selected = "";
+        if( val == current_val )
+            selected = "selected='selected'";
+        
+        var html = "<option value='{0}' {1}>{2}</option>".format(val,selected,vis);
+        $(sel).append(html);
+    }
+    var html = "<option value=''>Upload New File</option>";
+    $(sel).append(html);
+}

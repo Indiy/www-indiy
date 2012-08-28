@@ -20,10 +20,8 @@
         </div>
         <div class='input_container' style='height: 50px;'>
             <div class='left_label'>MP3 File <span id='tip_mp3' class='tooltip'>(?)</span></div>
-            <div class='right_file_filename'>
-                <span><input id='song_audio' type="file" name="audio" onchange='onSongChange();'/></span>
-                <div id='song_filename_container' class='filename'></div>
-            </div>
+            <select id='song_drop' name="song_drop" class='right_drop'>
+            </select>
         </div>
         <div class='input_container' style='height: 50px;'>
             <div class='left_image_label'>

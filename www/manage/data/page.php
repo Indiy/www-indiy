@@ -81,11 +81,8 @@ function do_POST()
         $image_data = $ret['image_data'];
     else
         $image_data = $old_image_data;
-        
-    $ret = artist_file_upload($artist_id,$_FILES["audio"],$old_sound);
-    $audio_sound = $ret['file'];
-    if( isset($ret['upload_error']) )
-        $postedValues['upload_error'] = $ret['upload_error'];
+
+    $audio_sound = $_POST['song_drop'];
     
     if( $mad_store )
     {
