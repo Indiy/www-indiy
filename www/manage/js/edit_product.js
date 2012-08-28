@@ -54,6 +54,7 @@ function showProductPopup(product_index)
         {
             $('#edit_product #downloads').html("None");
         }
+        fillArtistFileSelect('#edit_product #dd_drop','ALL',false);
         
         clickProductType(product.type);
     }
@@ -72,6 +73,7 @@ function showProductPopup(product_index)
         clickProductType("DIGITAL");
 
         fillArtistFileSelect('#edit_product #image_drop','IMAGE',false);
+        fillArtistFileSelect('#edit_product #dd_drop','ALL',false);
     }
     showPopup('#edit_product');
     return false;

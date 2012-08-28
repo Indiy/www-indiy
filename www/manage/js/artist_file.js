@@ -360,7 +360,7 @@ function getArtistFiles(type)
         if( file.is_uploading )
             continue;
         
-        if( file.type == type )
+        if( type == 'ALL' || file.type == type )
             ret.push(file);
     }
     return ret;
