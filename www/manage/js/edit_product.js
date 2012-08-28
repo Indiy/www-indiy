@@ -11,8 +11,6 @@ function showProductPopup(product_index)
     g_digitalDownloadRemoveList = "";
     
     $('#edit_product #artist_id').val(g_artistId);
-    clearFileElement('#edit_product #product_image');
-    clearFileElement('#edit_product #digital_download1');
 
     if( product_index !== false )
     {
@@ -20,16 +18,8 @@ function showProductPopup(product_index)
         
         $('#edit_product #product_id').val(product.id);
         $('#edit_product #name').val(product.name);
-        if( product.image )
-        {
-            var html = "<img src='{0}' />".format(product.image);
-            html += "<button onclick='return onImageRemove();'></button>";
-            $('#edit_product #product_image_container').html(html);
-        }
-        else
-        {
-            $('#edit_product #product_image_container').empty();
-        }
+        
+        fillArtistFileSelect('#edit_product #image_drop','IMAGE',product.image);
         
         $('#edit_product #description').val(product.description);
         $('#edit_product #price').val(product.price);
@@ -71,7 +61,6 @@ function showProductPopup(product_index)
     {
         $('#edit_product #product_id').val("");
         $('#edit_product #name').val("");
-        $('#edit_product #product_image_container').empty();
         $('#edit_product #description').val("");
         $('#edit_product #price').val("");
         $('#edit_product #shipping').val("0.00");
@@ -81,7 +70,8 @@ function showProductPopup(product_index)
         
         $('#edit_product input[name=product_type]:eq(0)').attr('checked','checked');
         clickProductType("DIGITAL");
-        
+
+        fillArtistFileSelect('#edit_product #image_drop','IMAGE',false);
     }
     showPopup('#edit_product');
     return false;
@@ -89,16 +79,11 @@ function showProductPopup(product_index)
 
 function onAddProductSubmit()
 {
-    var needs_image = false;
-    if( g_productIndex === false )
+    var image_drop = $('#edit_product #image_drop').val();
+    if( image_drop.length == 0 )
     {
-        needs_image = true;
-    }
-    else
-    {
-        var product  = g_productList[g_productIndex];
-        if( !product.image )
-            needs_image = true;
+        window.alert("Please select an image for your product.");
+        return false;
     }
 
     var name = $('#edit_product #name').val();
@@ -132,6 +117,7 @@ function onAddProductSubmit()
         var color = $('#edit_product #color').val();
         var type = $('#edit_product input[@name=product_type]:checked').val();
         var shipping = $('#edit_product #shipping').val();
+        var image_drop = $('#edit_product #image_drop').val();
         
         form_data.append('artistid',artist_id);
         form_data.append('id',product_id);
@@ -147,20 +133,11 @@ function onAddProductSubmit()
         form_data.append('shipping',shipping);
         form_data.append('remove_digital_downloads',g_digitalDownloadRemoveList);
         form_data.append('ajax',true);
-        
-        var product_image = $('#edit_product #product_image')[0];
-        if( product_image.files && product_image.files.length > 0 )
-        {
-            form_data.append('file',product_image.files[0]);
-        }
+
+        form_data.append('image_drop',image_drop);
         
         if( type == 'DIGITAL' )
         {
-            var digital_download1 = $('#edit_product #digital_download1')[0];
-            if( digital_download1.files && digital_download1.files.length > 0 )
-            {
-                form_data.append('digital_download1',digital_download1.files[0]);
-            }
         }
     }
     

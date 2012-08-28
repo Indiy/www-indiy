@@ -23,11 +23,8 @@
             <textarea id='description' name="description" class="textarea" style="height: 40px; width: 450px;"></textarea>
         </div>
         <div class='input_container' style='height: 50px;'>
-            <div class='left_image_label'>
-                <div class='image_label'>Image<span class='required'>*</span></div>
-                <div id='product_image_container' class='image_image'></div>
-            </div>
-            <input id='product_image' type="file" name="file" value="" class='right_file' onchange='onImageChange(this);'/> 
+            <div class='left_label'>Image<span class='required'>*</span></div>
+            <select id='image_drop' name="image_drop" class='right_drop' onchange='artistFileDropChange(this);'></select>
         </div>
         <div class='input_container'>
             <div class='left_label'>Price<span class='required'>*</span></div>
@@ -49,10 +46,7 @@
             <div class='hsep'></div>
             <div class='input_container' style='height: 50px;'>
                 <div class='left_label'>Add File</div>
-                <div class='right_file_filename'>
-                    <span><input id='digital_download1' type="file" name="digital_download1" /></span>
-                    <div id='digital_download1_filename_container' class='filename'></div>
-                </div>
+                <select id='dd_drop' name="dd_drop" class='right_drop' onchange='artistFileDropChange(this);'></select>
             </div>
             <div class='hsep'></div>
         </div>
