@@ -125,9 +125,9 @@ body {
 #top_bar {
     position: absolute;
     top: 0px;
-    left: 73px;
+    left: 0px;
     right: 0px;
-    height: 48px;
+    height: 41px;
     background: black;
     overflow: hidden;
 }
