@@ -75,12 +75,7 @@ function do_POST()
     if( $remove_image )
         $old_logo = '';
     
-    $ret = artist_file_upload($artist_id,$_FILES["logo"],$old_logo);
-    $audio_logo = $ret['file'];
-    if( isset($ret['image_data']) )
-        $image_data = $ret['image_data'];
-    else
-        $image_data = $old_image_data;
+    $audio_logo = $_POST['image_drop'];
 
     $audio_sound = $_POST['song_drop'];
     

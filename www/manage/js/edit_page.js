@@ -121,10 +121,16 @@ function clickMadStore()
 
 function onAddMusicSubmit()
 {
+    var song_drop = $('#edit_page #song_drop').val();
+    if( song_drop.length == 0 )
+    {
+        window.alert("Please specify a song for your page.");
+        return false;
+    }
     var image_drop = $('#edit_page #image_drop').val();
     if( image_drop.length == 0 )
     {
-        window.alert("Please specify an image for the page.");
+        window.alert("Please specify an image for your page.");
         return false;
     }
     var song_name = $('#edit_page #song_name').val();
