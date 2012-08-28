@@ -32,8 +32,7 @@ function do_POST()
     $product = mf(mq("SELECT image FROM mydna_musicplayer_ecommerce_products WHERE id='$product_id'"));
     $old_image = $product["image"];
 
-    $ret = artist_file_upload($artist_id,$_FILES["file"],$old_image);
-    $image = $ret['file'];
+    $image = $_POST['image_drop'];
     
     $name = my($_POST["name"]);
     $description = my($_POST["description"]);
