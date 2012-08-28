@@ -99,13 +99,6 @@ function onAddProductSubmit()
         return false;
     }
     
-    var product_image = $('#edit_product #product_image')[0];
-    if( needs_image && ( !product_image || !product_image.value || product_image.value.length == 0 ) )
-    {
-        window.alert("Please upload an image for your product.");
-        return false;
-    }
-    
     function fillProductForm(form_data)
     {
         var artist_id = $('#edit_product #artist_id').val();
