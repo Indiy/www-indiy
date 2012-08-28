@@ -3,7 +3,7 @@
     require_once 'includes/config.php';
     require_once 'includes/functions.php';
     
-    $ios_version = FALSE:
+    $ios_version = FALSE;
     
     if( strpos($_SERVER['HTTP_USER_AGENT'],"iPhone") !== FALSE )
         $ios_version = TRUE;
