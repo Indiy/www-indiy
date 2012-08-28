@@ -445,6 +445,10 @@ $(document).ready(showFirstInstructions);
 </section><!-- content -->
 </section><!-- wrapper -->
 
+<div id='drop_file_overlay'>
+    <div class='text'>Drop files anywhere to upload&hellip;</div>
+</div>
+
 <?php
 	include('footer.php');
 ?>

@@ -1,4 +1,13 @@
 
+function artistFileReady()
+{
+    document.body.addEventListener('dragenter',onDragEnter,false);
+    document.getElementById('drop-file-overlay').addEventListener('dragleave',onDragLeave,false);
+    document.getElementById('drop-file-overlay').addEventListener('dragover',onDragOver,false);
+    document.getElementById('drop-file-overlay').addEventListener('drop',onDrop,false);
+}
+$(document).ready(artistFileReady);
+
 function updateFileList()
 {
     $('#file_list').empty();
@@ -146,18 +155,18 @@ function onAddArtistFile()
         return false;
     }
     
-    return startFileUpload(file_input);
+    return startFileUpload(file_input.files[0]);
 }
 
 var g_uploadIndex = 0;
-function startFileUpload(file_input)
+function startFileUpload(file_obj)
 {
     try
     {
         var xhr = new XMLHttpRequest();
         var file = {
             xhr: xhr,
-            upload_filename: file_input.files[0].name,
+            upload_filename: file_obj.name,
             upload_progress: 0.0,
             upload_status: 'uploading',
             is_uploading: true,
@@ -180,7 +189,7 @@ function startFileUpload(file_input)
         
         var form_data = new FormData();
         form_data.append('artist_id',g_artistId);
-        form_data.append('file',file_input.files[0]);
+        form_data.append('file',file_obj);
         form_data.append('ajax','1');
         
         var url = "/manage/data/artist_file.php";
@@ -274,3 +283,50 @@ function onArtistFileReadyStateChange(evt,file)
         }
     }
 }
+
+function iterableContains(array,val)
+{
+    for( var i = 0 ; i < array.length ; ++i )
+        if( array[i] == val )
+            return true;
+    return false;
+}
+
+function onDragEnter(evt)
+{
+    evt.stopPropagation();
+    evt.preventDefault();
+    var dt = evt.dataTransfer;
+    if( dt && dt.types && iterableContains(dt.types,'Files') )
+    {
+        $('#drop_file_overlay').fadeIn('fast');
+    }
+}
+function onDragLeave(evt)
+{
+    evt.stopPropagation();
+    evt.preventDefault();
+    if( evt.pageX < 10 || evt.pageY < 10 || $(window).width() - evt.pageX < 10  || $(window).height - evt.pageY < 10 )
+    {
+        $('#drop_file_overlay').fadeOut('fast');
+    }
+}
+function onDragOver(evt)
+{
+    evt.stopPropagation();
+    evt.preventDefault();
+}
+function onDrop(evt)
+{
+    evt.stopPropagation();
+    evt.preventDefault();
+    $('#drop_file_overlay').fadeOut('fast');
+    
+    var files = evt.dataTransfer.files;
+    for( var i = 0 ; i < files.length ; ++i )
+    {
+        var file = files[i];
+        startFileUpload(file);
+    }
+}
+

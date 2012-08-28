@@ -1890,3 +1890,31 @@ textarea {
 
 /***********************************************************************/
 /***********************************************************************/
+
+#drop_file_overlay {
+    display: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+}
+#drop_file_overlay .text {
+    display: absolute;
+    top: 50%;
+    left: 50%;
+    padding-top: 30px;
+    height: 70px;
+    margin-top: -50px;
+    width: 300px;
+    margin-left: -150px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: rgba(0,0,200,0.7);
+    border-radius: 8px;
+    border: 2px solid white;
+}
+
