@@ -1905,16 +1905,16 @@ textarea {
     position: absolute;
     top: 50%;
     left: 50%;
-    padding-top: 30px;
+    padding-top: 46px;
     height: 70px;
-    margin-top: -50px;
-    width: 300px;
-    margin-left: -150px;
+    margin-top: -58px;
+    width: 450px;
+    margin-left: -225px;
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 22px;
     font-family: Helvetica, Arial, sans-serif;
-    background-color: rgba(0,0,200,0.7);
+    background-color: rgba(0, 0, 200, 0.5);
     border-radius: 8px;
     border: 2px solid white;
 }
