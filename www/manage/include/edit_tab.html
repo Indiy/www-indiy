@@ -17,11 +17,8 @@
             <input id='name' type="text" name="name" value="" class='right_text' />
         </div>
         <div class='input_container'>
-            <div class='left_image_label' style='width: 200px;'>
-                <div class='image_label'>Image</div>
-                <div class='image_image'></div>
-            </div>
-            <input id='content_image' type="file" name="logo" class='right_file' onchange='onImageChange(this);' />
+            <div class='left_label'>Image</div>
+            <select id='image_drop' name="image_drop" class='right_drop' onchange='artistFileDropChange(this);'></select>
         </div>
         <div class='editor_container yui-skin-sam'>
             <textarea id="body" name="body"></textarea>
