@@ -126,12 +126,18 @@ function deleteFile(i)
 }
 function cancelUploadFile(i)
 {
+    var ret = window.confirm("Are you sure you cancel this upload?");
+    if( !ret )
+        return false;
+
     var file = g_fileList[i];
     var xhr = file.xhr;
 
     if( xhr )
     {
         xhr.abort();
+        g_uploadCount--;
+        g_backgroundCount--;
     }
     g_fileList.splice(i,1);
     updateFileList();
