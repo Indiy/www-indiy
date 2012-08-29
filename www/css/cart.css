@@ -869,12 +869,21 @@ body {
 }
 #header .top_bar .inner .right .fan_email {
     display: inline-block;
-    padding-top: 10px;
+    padding-top: 13px;
+    padding-right: 4px;
     vertical-align: top;
+}
+#header .top_bar .inner .right .bar {
+    display: inline-block;
+    margin-top: 11px;
+    width: 1px;
+    height: 16px;
+    background-color: white;
 }
 #header .top_bar .inner .right .logout {
     display: inline-block;
-    padding-top: 10px;
+    padding-top: 13px;
+    padding-left: 4px;
     color: #51c3c4;
     vertical-align: top;
 }
