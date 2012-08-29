@@ -414,3 +414,15 @@ function artistFileDropChange(el)
         showAddArtistFilePopup();
     }
 }
+
+function artistFilenameToId(filename)
+{
+    for( var i = 0 ; i < g_fileList.length ; ++i )
+    {
+        var file = g_fileList[i];
+        
+        if( file.filename == filename )
+            return file.id;
+    }
+    return false;
+}

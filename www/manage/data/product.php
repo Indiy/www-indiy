@@ -70,18 +70,6 @@ function do_POST()
     
     if( $type == "DIGITAL" )
     {
-        $ret = artist_file_upload($artist_id,$_FILES["digital_download1"],FALSE);
-        if( $ret['file'] )
-        {
-            $filename = $ret['file'];
-            $upload_filename = basename($_FILES["digital_download1"]["name"]);
-            $values = array("product_id" => $product_id,
-                            "upload_filename" => $upload_filename,
-                            "filename" => $filename,
-                            );
-            mysql_insert("product_files",$values);
-        }
-        
         if( isset($_POST["remove_digital_downloads"]) )
         {
             $remove_digital_downloads = $_POST["remove_digital_downloads"];
@@ -92,6 +80,29 @@ function do_POST()
                 {
                     $updates = array("is_deleted" => 1);
                     mysql_update('product_files',$updates,'id',$file_id);
+                }
+            }
+        }
+        if( isset($_POST["add_digital_downloads"]) )
+        {
+            $add_digital_downloads = $_POST["add_digital_downloads"];
+            if( strlen($add_digital_downloads) > 0 )
+            {
+                $add_list = explode(',',$add_digital_downloads);
+                foreach( $add_list as $file_id )
+                {
+                    $file = mf(mq("SELECT * FROM artist_files WHERE id='$file_id' AND artist_id='$artist_id'"));
+                    if( $file )
+                    {
+                        $filename = $file['filename'];
+                        $upload_filename = $file['upload_filename'];
+                        
+                        $values = array("product_id" => $product_id,
+                                        "upload_filename" => $upload_filename,
+                                        "filename" => $filename,
+                                        );
+                        mysql_insert("product_files",$values);
+                    }
                 }
             }
         }
