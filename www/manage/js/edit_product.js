@@ -209,7 +209,7 @@ function ddDropChange(el)
         return;
     }
 
-    var sel = $("#edit_product #dd_drop option[value='{0}']").format(filename);
+    var sel = "#edit_product #dd_drop option[value='{0}']".format(filename);
     var upload_filename = $(sel).text();
     
     var file = {
