@@ -153,7 +153,7 @@ function removeDigitalFile(index)
 {
     var product = g_productList[g_productIndex];
     var file = product.digital_downloads[index];
-    file.is_deleted = true;
+    file.edit_deleted = true;
     renderDigitalDownloads();
     return false;
 }
@@ -170,7 +170,7 @@ function renderDigitalDownloads()
     {
         var file = product.digital_downloads[i];
         
-        if( file.is_deleted )
+        if( file.edit_deleted )
             continue;
             
         num_shown++;
@@ -203,7 +203,7 @@ function ddDropChange(el)
     var product = g_productList[g_productIndex];
     
     var file = {
-        is_new: true,
+        edit_new: true,
         upload_filename: upload_filename,
         filename: filename
     };
