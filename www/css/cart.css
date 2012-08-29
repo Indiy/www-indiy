@@ -895,7 +895,7 @@ body {
     float: left;
     height: 50px;
     width: 160px;
-    background: url('/images/MYARTISTDNA.png') 0px 10px no-repeat;
+    background: url('/images/MYARTISTDNA.png') 0px 11px no-repeat;
 }
 #header .mad_bar .inner .right {
     float: right;
@@ -935,11 +935,12 @@ body {
 #header .mad_bar .inner .right .sep {
     position: relative;
     display: inline-block;
-    height: 50px;
+    padding-top: 19px;
     width: 20px;
     vertical-align: top;
     color: #999;
     font-size: 14px;
+    letter-spacing: -2px;
     font-family: "Neuzeit Grotesk", Helvetica, Arial, sans-serif;
     text-align: center;
 }
