@@ -50,9 +50,8 @@
         
         array_walk($row,cleanup_row_element);
         
-        $image_path = "../artists/files/" . $row['image'];
         if( !empty($row['image']) )
-            $row['image_url'] = $image_path;
+            $row['image_url'] = "/artists/files/" . $row['image'];;
         else
             $row['image_url'] = "images/photo_video_01.jpg";
         
@@ -65,23 +64,11 @@
         $artist_id = $_POST["artistid"];
         $tab_id = $_POST["id"];
     
-        if( $tab_id != "" ) 
-        {
-            $row = mf(mq("SELECT * FROM mydna_musicplayer_content WHERE id='$tab_id'"));
-            $old_image_file = $row["image"];
-        }
-        
-        $remove_image = $_POST["remove_image"] == 'true';
-        
-        if( $remove_image )
-            $old_image_file = '';
-        
         $content_name = my($_POST["name"]);
         $content_video = $_POST["video"];
         $content_body = my($_POST["body"]);
-        
-        $ret = artist_file_upload($artist_id,$_FILES["logo"],$old_image_file);
-        $image_file = $ret['file'];
+
+        $image_file = $_POST['image_drop'];
         
         $tables = "artistid|name|image|video|body";
         $values = "$artist_id|$content_name|$image_file|$content_video|$content_body";

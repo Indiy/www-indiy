@@ -18,7 +18,6 @@ function onTabImageRemove()
 function showTabPopup(tab_index)
 {
     g_tabIndex = tab_index;
-    g_removeTabImage = false;
     
     $('#edit_tab #artist_id').val(g_artistId);
     
@@ -80,7 +79,6 @@ function onAddContentSubmit()
         form_data.append('id',content_id);
         form_data.append('name',name);
         form_data.append('body',body);
-        form_data.append('remove_image',g_removeTabImage);
 
         form_data.append('image_drop',image_drop);
         
