@@ -230,7 +230,7 @@ function ddFormData(form_data)
 
     for( var i = 0 ; i < g_digitalDownloads.length ; i++ )
     {
-        var file = g_digitalDownload[i];
+        var file = g_digitalDownloads[i];
         
         if( file.edit_deleted && !file.edit_new)
         {
