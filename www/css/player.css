@@ -1061,6 +1061,7 @@ body {
 
 #user_tab .scrollable_container .image_holder {
     padding-bottom: 34px;
+    max-width: 650px;
 }
 #user_tab .scrollable_container .image_holder img {
     max-width: 100%;
