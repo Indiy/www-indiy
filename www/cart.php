@@ -21,5 +21,7 @@
     $artist_url = $artist_data['url'];
     $full_artist_url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
 
+    $fan_email = get_fan_email();
+    
     include_once 'templates/cart.html';
 ?>
