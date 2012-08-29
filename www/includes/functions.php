@@ -1333,10 +1333,10 @@ END;
     function get_fan_email()
     {
         $fan_email = FALSE;
-        if( $_SESSION['fan_id'] )
+        if( isset($_SESSION['fan_id']) )
         {
             $fan_id = $_SESSION['fan_id'];
-            $fan = mf(mq("SELECT * fans WHERE id='$fan_id'"));
+            $fan = mf(mq("SELECT * FROM fans WHERE id='$fan_id'"));
             $fan_email = $fan['email'];
         }
         return $fan_email;
