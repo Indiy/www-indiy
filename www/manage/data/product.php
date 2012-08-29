@@ -16,12 +16,34 @@
 	}
     session_write_close();
     
-    if( $_SERVER['REQUEST_METHOD'] == 'POST' )
+    $method = $_SERVER['REQUEST_METHOD'];
+    if( isset($_REQUEST['method']) )
+        $method = strtoupper($_REQUEST['method']);
+    
+    if( $method == 'POST' )
         do_POST();
+    else if( $method == 'ORDER' )
+        do_ORDER();
     else
         print "Bad method\n";
     
     exit();
+    
+    function do_ORDER()
+    {
+        $array = $_REQUEST['arrayorder'];
+        $count = 1;
+        foreach( $array as $id )
+        {
+            $values = array("order" => $count);
+            mysql_update('mydna_musicplayer_ecommerce_products',$values,"id",$id);
+            ++$count;
+        }
+        
+        $ret = array("success" => 1);
+        echo json_encode($ret);
+        exit();
+    }
 
 
 function do_POST()

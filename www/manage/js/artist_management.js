@@ -28,7 +28,11 @@ function artistManagementReady()
 	});
     $('.heading a').click(function(e) { e.stopPropagation(); });
     
-    setupSortableLists();
+    setupSortableList('ul.playlist_sortable',"/manage/data/page.php");
+    setupSortableList('ul.videos_sortable',"/manage/data/video.php");
+    setupSortableList('ul.products_sortable',"/manage/data/product.php");
+    setupSortableList('ul.photos_sortable',"/manage/data/photo.php");
+    setupSortableList('ul.pages_sortable',"/manage/data/tab.php");
 }
 $(document).ready(artistManagementReady);
 
@@ -275,7 +279,7 @@ function deletePhoto(photo_id)
 }
 
 
-function setupSortableLists()
+function setupSortableList(el,url)
 {
     var args = {
         opacity: 0.8,
@@ -283,53 +287,10 @@ function setupSortableLists()
         update: function()
         {
             var order = $(this).sortable("serialize") + "&method=order";
-            $.post("/manage/data/page.php", order, function(data){});
+            $.post(url, order, function(data){});
         }
     };
-    $("ul.playlist_sortable").sortable(args);
-
-    $(function() {
-        $("ul.pages_sortable").sortable({opacity: 0.8, cursor: 'move', update: function() {
-            //$("#response").html("Loading...");
-                var order = $(this).sortable("serialize") + '&order=order&type=mydna_musicplayer_content';
-                $.post("/includes/ajax.php", order, function(theResponse){
-                    //$("#response").html(theResponse);
-                });
-            }
-        });
-    });
-
-    $(function() {
-        $("ul.videos_sortable").sortable({opacity: 0.8, cursor: 'move', update: function() {
-            //$("#response").html("Loading...");
-                var order = $(this).sortable("serialize") + '&order=order&type=mydna_musicplayer_video';
-                $.post("/includes/ajax.php", order, function(theResponse){
-                    //$("#response").html(theResponse);
-                });
-            }
-        });
-    });			
-
-    $(function() {
-        $("ul.products_sortable").sortable({opacity: 0.8, cursor: 'move', update: function() {
-            //$("#response").html("Loading...");
-                var order = $(this).sortable("serialize") + '&order=order&type=mydna_musicplayer_ecommerce_products';
-                $.post("/includes/ajax.php", order, function(theResponse){
-                    //$("#response").html(theResponse);
-                });
-            }
-        });
-    });
-    
-    $("ul.photos_sortable").sortable(
-        { 
-            opacity: 0.8, 
-            cursor: 'move', 
-            update: function() {
-                var order = $(this).sortable("serialize") + '&order=order&type=photos';
-                $.post("/includes/ajax.php", order, function(theResponse){});
-            }
-        });
+    $(el).sortable(args);
 }
 
 function clearFileElement(selector)
