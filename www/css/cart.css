@@ -921,10 +921,11 @@ body {
 }
 #header .mad_bar .inner .right .item .arrow {
     position: absolute;
-    top: 46px;
-    height: 4px;
+    left: 50%;
     width: 8px;
     margin-left: -4px;
+    top: 46px;
+    height: 4px;
     background: transparent;
 }
 #header .mad_bar .inner .right .item:hover .arrow {
