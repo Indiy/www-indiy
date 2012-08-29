@@ -199,7 +199,8 @@ function ddDropChange(el)
         return;
     }
 
-    var upload_filename = $(el).text();
+    var sel = $("#edit_product #dd_drop option[value='{0}']").format(filename);
+    var upload_filename = $(sel).text();
     var product = g_productList[g_productIndex];
     
     var file = {
