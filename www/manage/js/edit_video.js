@@ -66,11 +66,23 @@ function onVideoImageRemove()
 
 function onAddVideoSubmit()
 {
-    
     var video_name = $('#edit_video #video_name').val();
     if( video_name.length == 0 )
     {
         window.alert("Please enter a name for your video.");
+        return false;
+    }
+    
+    var video_drop = $('#edit_video #video_drop').val();
+    if( video_drop.length == 0 )
+    {
+        window.alert("Please select a video.");
+        return false;
+    }
+    var image_drop = $('#edit_video #image_drop').val();
+    if( image_drop.length == 0 )
+    {
+        window.alert("Please select an image for your video.");
         return false;
     }
     
@@ -79,18 +91,19 @@ function onAddVideoSubmit()
         var artist_id = $('#edit_video #artist_id').val();
         var song_id = $('#edit_video #song_id').val();
         var video_name = $('#edit_video #video_name').val();
-        var video_image_file = $('#edit_video #video_image_file')[0].files[0];
-        var video_file = $('#edit_video #video_file')[0].files[0];
         var tags = $('#edit_video #video_tags').val();
+        
+        var video_drop = $('#edit_video #video_drop').val();
+        var image_drop = $('#edit_video #image_drop').val();
         
         form_data.append('artistid',artist_id);
         form_data.append('id',song_id);
         form_data.append('name',video_name);
-        form_data.append('logo',video_image_file);
-        form_data.append('video',video_file);
-        form_data.append('remove_video',g_removeVideo);
-        form_data.append('remove_video_image',g_removeVideoImage);
         form_data.append('tags',tags);
+
+        form_data.append('video_drop',video_drop);
+        form_data.append('image_drop',image_drop);
+
         form_data.append('ajax',true);
     }
     var url = '/manage/data/video.php';
