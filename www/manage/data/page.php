@@ -16,12 +16,34 @@
 	}
     session_write_close();
 
-    if( $_SERVER['REQUEST_METHOD'] == 'POST' )
+    $method = $_SERVER['REQUEST_METHOD'];
+    if( isset($_REQUEST['method']) )
+        $method = strtoupper($_REQUEST['method']);
+
+    if( $method == 'POST' )
         do_POST();
+    else if( $method == 'ORDER' )
+        do_ORDER();
     else
         print "Bad method\n";
 
     exit();
+    
+function do_ORDER()
+{
+    $array = $_REQUEST['arrayorder'];
+    $count = 1;
+    foreach( $array as $id )
+    {
+        $values = array("order" => $count);
+        mysql_update('mydna_musicplayer_audio',$values,"id",$id);
+        ++$count;
+    }
+    
+    $ret = array("success" => 1);
+    echo json_encode($ret);
+    exit();
+}
 
 function get_page_data($page_id)
 {
@@ -31,11 +53,10 @@ function get_page_data($page_id)
     array_walk($row,cleanup_row_element);
     $row['download'] = $row['download'] == "0" ? FALSE : TRUE;
     $row['product_id'] = $row['product_id'] > 0 ? intval($row['product_id']) : FALSE;
-    $image_path = "../artists/files/" . $row['image'];
     if( !empty($row['image']) )
-        $row['image'] = $image_path;
+        $row['image_url'] = "/artists/files/" . $row['image'];
     else
-        $row['image'] = "images/photo_video_01.jpg";
+        $row['image_url'] = "images/photo_video_01.jpg";
     return $row;
 }
 

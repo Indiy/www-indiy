@@ -277,16 +277,16 @@ function deletePhoto(photo_id)
 
 function setupSortableLists()
 {
-    $(function() {
-        $("ul.playlist_sortable").sortable({opacity: 0.8, cursor: 'move', update: function() {
-            //$("#response").html("Loading...");
-                var order = $(this).sortable("serialize") + '&order=order&type=mydna_musicplayer_audio';
-                $.post("/includes/ajax.php", order, function(theResponse){
-                    //$("#response").html(theResponse);
-                });
-            }
-        });
-    });
+    var args = {
+        opacity: 0.8,
+        cursor: 'move',
+        update: function()
+        {
+            var order = $(this).sortable("serialize") + "&method=order";
+            $.post("/manage/data/page.php", order, function(data){});
+        }
+    };
+    $("ul.playlist_sortable").sortable(args);
 
     $(function() {
         $("ul.pages_sortable").sortable({opacity: 0.8, cursor: 'move', update: function() {
