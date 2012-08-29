@@ -910,7 +910,7 @@ body {
 }
 #header .mad_bar .inner .right .item .name {
     display: inline-block;
-    padding-top: 10px;
+    padding-top: 19px;
     padding-left: 10px;
     padding-right: 10px;
     color: #d5d5d5;
@@ -921,15 +921,14 @@ body {
 }
 #header .mad_bar .inner .right .item .arrow {
     position: absolute;
-    left: 50%;
-    top: 40px;
-    height: 10px;
-    width: 20px;
-    margin-left: -10px;
-    background-color: blue;
+    top: 46px;
+    height: 4px;
+    width: 8px;
+    margin-left: -4px;
+    background: transparent;
 }
-#header .mad_bar .inner .right .arrow:hover {
-    background: url("/images/arrow_nav.gif");
+#header .mad_bar .inner .right .item:hover .arrow {
+    background: url("/images/arrow_nav.gif") no-repeat;
 }
 
 #header .mad_bar .inner .right .sep {
