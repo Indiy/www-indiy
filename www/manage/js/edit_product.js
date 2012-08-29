@@ -3,6 +3,13 @@
 var g_productIndex = false;
 var g_digitalDownloadRemoveList = "";
 
+var g_digitalDownloads = [];
+
+function jsonClone(obj)
+{
+    return JSON.parse(JSON.stringify(obj));
+}
+
 function showProductPopup(product_index)
 {
     g_productIndex = product_index;
@@ -36,6 +43,8 @@ function showProductPopup(product_index)
             $('#edit_product input[name=product_type]:eq(1)').attr('checked','checked');
         }
         
+        g_digitalDownloads = jsonClone(product.digital_downloads);
+        
         renderDigitalDownloads();
         fillArtistFileSelect('#edit_product #dd_drop','ALL',false);
         
@@ -57,6 +66,10 @@ function showProductPopup(product_index)
 
         fillArtistFileSelect('#edit_product #image_drop','IMAGE',false);
         fillArtistFileSelect('#edit_product #dd_drop','ALL',false);
+        
+        g_digitalDownloads = [];
+        
+        renderDigitalDownloads();
     }
     showPopup('#edit_product');
     return false;
@@ -151,8 +164,7 @@ function clickProductType(type)
 
 function removeDigitalFile(index)
 {
-    var product = g_productList[g_productIndex];
-    var file = product.digital_downloads[index];
+    var file = g_digitalDownloads[index];
     file.edit_deleted = true;
     renderDigitalDownloads();
     return false;
@@ -160,15 +172,13 @@ function removeDigitalFile(index)
 
 function renderDigitalDownloads()
 {
-    var product = g_productList[g_productIndex];
-
     $('#edit_product #downloads').empty();
     
     var num_shown = 0;
 
-    for( var i = 0 ; i < product.digital_downloads.length ; ++i )
+    for( var i = 0 ; i < g_digitalDownloads.length ; ++i )
     {
-        var file = product.digital_downloads[i];
+        var file = g_digitalDownloads[i];
         
         if( file.edit_deleted )
             continue;
@@ -201,14 +211,13 @@ function ddDropChange(el)
 
     var sel = $("#edit_product #dd_drop option[value='{0}']").format(filename);
     var upload_filename = $(sel).text();
-    var product = g_productList[g_productIndex];
     
     var file = {
         edit_new: true,
         upload_filename: upload_filename,
         filename: filename
     };
-    product.digital_downloads.push(file);
+    g_digitalDownloads.push(file);
     $(el).val("None");
     renderDigitalDownloads();
 }
