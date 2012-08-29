@@ -144,13 +144,23 @@ function submitContact()
         $('#contact_tab .contact_container .contact_form').hide();
         $('#contact_tab .contact_container .success').show();
         
-        var submit = "&form=send";
-        submit += "&artist_id=" + artist_id;
-        submit += "&name=" + escape(name);
-        submit += "&email=" + escape(email);
-        submit += "&comments=" + escape(comments);
+        var args = {
+            artist_id: g_artistId,
+            name: name,
+            email: email,
+            comments: comments
+        };
         
-        $.post("jplayer/ajax.php", submit, function(response) { });
+        var url = "/data/artist_contact.php";
+        jQuery.ajax(
+        {
+            type: 'POST',
+            url: url,
+            data: args,
+            dataType: 'json',
+            success: function(data) {},
+            error: function() {}
+        }); 
     }
 }
 function submitBooking()

@@ -6,11 +6,19 @@ function clickJoinNewsletter()
     
     var email = $('#social_email input').val();
     
-    var submited = "";
-    submited += "&newsletter=true"
-    submited += "&artist=" + g_artistId;
-    submited += "&email=" + escape(email);
+    var args {
+        email: email,
+        artist_id: g_artistId
+    }
     
-    $.post("/jplayer/ajax.php", submited, function(repo) {});
+    var url = "/data/viewer_data.php";
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: url,
+        data: args,
+        dataType: 'json',
+        success: function(data) {},
+        error: function() {}
+    });    
 }
-
