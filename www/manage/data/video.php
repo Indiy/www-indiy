@@ -88,6 +88,8 @@
         
         $image_file = $_POST['image_drop'];
         $video_file = $_POST['video_drop'];
+        
+        $image_data = get_image_data(PATH_TO_ROOT . "artists/files/$image_file");
 
         $values = array("artistid" => $artist_id,
                         "name" => $video_name,

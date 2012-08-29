@@ -83,6 +83,7 @@
         $image = $old_image;
         
         $image_file = $_POST['image_drop'];
+        $image_data = get_image_data(PATH_TO_ROOT . "artists/files/$image_file");
 
         $values = array("artist_id" => $artist_id,
                         "name" => $name,

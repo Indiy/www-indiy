@@ -97,6 +97,7 @@ function do_POST()
         $old_logo = '';
     
     $audio_logo = $_POST['image_drop'];
+    $image_data = get_image_data(PATH_TO_ROOT . "artists/files/$audio_logo");
 
     $audio_sound = $_POST['song_drop'];
     
