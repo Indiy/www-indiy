@@ -209,6 +209,7 @@ function ddDropChange(el)
         filename: filename
     };
     product.digital_downloads.push(file);
+    $(el).val("None");
     renderDigitalDownloads();
 }
 
