@@ -36,24 +36,7 @@ function showProductPopup(product_index)
             $('#edit_product input[name=product_type]:eq(1)').attr('checked','checked');
         }
         
-        if( product.digital_downloads && product.digital_downloads.length > 0 )
-        {
-            $('#edit_product #downloads').empty();
-            for( var i = 0 ; i < product.digital_downloads.length ; ++i )
-            {
-                var file = product.digital_downloads[i];
-                var html = "";
-                html += "<div class='file' id='file_{0}'>".format(i);
-                html += " <div class='name'>{0}</div>".format(file.upload_filename);
-                html += " <button onclick='return removeDigitalFile({0});'></button>".format(i);
-                html += "</div>";
-                $('#edit_product #downloads').append(html);
-            }
-        }
-        else
-        {
-            $('#edit_product #downloads').html("None");
-        }
+        renderDigitalDownloads();
         fillArtistFileSelect('#edit_product #dd_drop','ALL',false);
         
         clickProductType(product.type);
@@ -170,13 +153,61 @@ function removeDigitalFile(index)
 {
     var product = g_productList[g_productIndex];
     var file = product.digital_downloads[index];
-    var id = file.id;
-    $('#edit_product #downloads #file_' + index).hide();
-    if( g_digitalDownloadRemoveList.length > 0 )
-        g_digitalDownloadRemoveList += ",";
-    g_digitalDownloadRemoveList += id;
+    file.is_deleted = true;
+    renderDigitalDownloads();
     return false;
 }
 
+function renderDigitalDownloads()
+{
+    var product = g_productList[g_productIndex];
 
+    $('#edit_product #downloads').empty();
+    
+    var num_shown = 0;
+
+    for( var i = 0 ; i < product.digital_downloads.length ; ++i )
+    {
+        var file = product.digital_downloads[i];
+        
+        if( file.is_deleted )
+            continue;
+            
+        num_shown++;
+        
+        var html = "";
+        html += "<div class='file' id='file_{0}'>".format(i);
+        html += " <div class='name'>{0}</div>".format(file.upload_filename);
+        html += " <button onclick='return removeDigitalFile({0});'></button>".format(i);
+        html += "</div>";
+        $('#edit_product #downloads').append(html);
+    }
+    
+    if( num_shown == 0 )
+    {
+        $('#edit_product #downloads').html("None");
+    }
+}
+
+function ddDropChange(el)
+{
+    var filename = $(el).val();
+    
+    if( filename == 'upload_new_file' )
+    {
+        showAddArtistFilePopup();
+        return;
+    }
+
+    var upload_filename = $(el).text();
+    var product = g_productList[g_productIndex];
+    
+    var file = {
+        is_new: true,
+        upload_filename: upload_filename,
+        filename: filename
+    };
+    product.digital_downloads.push(file);
+    renderDigitalDownloads();
+}
 
