@@ -53,25 +53,6 @@ body {
     background-color: #f5f5f5;
 }
 
-#header {
-    background: black;
-}
-#header .top_bar {
-    height: 39px;
-}
-#header .mad_bar {
-    height: 50px;
-    width: 100%;
-    background: url("/images/cart_top_texture.png") repeat-x;
-    border-bottom: 1px solid #5f5f5f;
-}
-#header .mad_bar .logo {
-    width: 940px;
-    margin: 0 auto;
-    height: 100%;
-    background: url('/images/MYARTISTDNA.png') 0px 10px no-repeat;
-}
-
 #cart {
     width: 940px;
     margin: 0 auto;
@@ -856,11 +837,116 @@ body {
 
 
 
-/*
- ----------------------------------------
- 05. footer
- ----------------------------------------
- */
+/****************************************************************************/
+/**************** HEADER ****************************************************/
+/****************************************************************************/
+
+#header {
+    background: black;
+}
+#header a {
+    text-decoration: none;
+    outline: none;
+}
+
+#header .top_bar {
+    height: 39px;
+}
+
+#header .top_bar .inner {
+    height: 39px;
+    width: 940px;
+    margin: 0 auto;
+}
+
+#header .top_bar .inner .right {
+    float: right;
+    padding-right: 10px;
+    height: 39px;
+    color: white;
+    font-size: 11px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+#header .top_bar ..inner right .fan_email {
+    display: inline-block;
+    padding-top: 10px;
+    vertical-align: top;
+}
+#header .top_bar .inner .right .logout {
+    display: inline-block;
+    color: #51c3c4;
+    vertical-align: top;
+}
+#header .top_bar .inner .right .logout:hover {
+    text-decoration: underline;
+}
+
+#header .mad_bar {
+    height: 50px;
+    background: url("/images/cart_top_texture.png") repeat-x;
+    border-bottom: 1px solid #5f5f5f;
+}
+#header .mad_bar .inner {
+    height: 50px;
+    width: 940px;
+    margin: 0 auto;
+}
+#header .mad_bar .inner .logo {
+    float: left;
+    height: 50px;
+    width: 160px;
+    background: url('/images/MYARTISTDNA.png') 0px 10px no-repeat;
+}
+#header .mad_bar .inner .right {
+    float: right;
+    padding-right: 10px;
+    height: 50px;
+}
+#header .mad_bar .inner .right .item {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    vertical-align: top;
+}
+#header .mad_bar .inner .right .item .name {
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #d5d5d5;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    vertical-align: top;
+}
+#header .mad_bar .inner .right .item .arrow {
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    height: 10px;
+    width: 20px;
+    margin-left: -10px;
+    background-color: blue;
+}
+#header .mad_bar .inner .right .arrow:hover {
+    background: url("/images/arrow_nav.gif");
+}
+
+#header .mad_bar .inner .right .sep {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    width: 20px;
+    vertical-align: top;
+    color: #999;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+/****************************************************************************/
+/**************** FOOTER ****************************************************/
+/****************************************************************************/
 
 #footer { 
     position: relative;
