@@ -875,9 +875,9 @@ body {
 }
 #header .top_bar .inner .right .bar {
     display: inline-block;
-    margin-top: 11px;
+    margin-top: 14px;
     width: 1px;
-    height: 16px;
+    height: 11px;
     background-color: white;
 }
 #header .top_bar .inner .right .logout {
