@@ -234,13 +234,13 @@ function ddFormData(form_data)
         
         if( file.edit_deleted && !file.edit_new)
         {
-            remove_list.append(file.id);
+            remove_list.push(file.id);
         }
         if( file.edit_new && !file.edit_deleted )
         {
             var id = artistFilenameToId(file.filename);
             if( id !== false )
-                add_list.append(id);
+                add_list.push(id);
         }
     }
 
