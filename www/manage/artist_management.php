@@ -364,11 +364,7 @@ $(document).ready(showFirstInstructions);
         
             <div class="heading">
             <h5>Store</h5>
-            <? if( strlen($paypalEmail) == 0 ): ?>
-                <div class="buttonadd"><a onclick='showStoreSettings();' title='Edit your store settings'>Store Settings</a></div>
-            <? else: ?>
-                <div class="buttonadd"><a onclick='showProductPopup(false);' title='Add a product to your store'>Add Product</a></div>
-            <? endif ?>
+            <div class="buttonadd"><a onclick='showProductPopup(false);' title='Add a product to your store'>Add Product</a></div>
 
             </div>
         
