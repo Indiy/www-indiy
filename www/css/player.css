@@ -593,6 +593,7 @@ body {
     width: 175px;
     height: 100%;
     box-shadow: 2px 0px 14px black;
+    background: black url('../images/inactive_button_texture.png') repeat-y;
 }
 #media_social_boxes .media_boxes .media_buttons .button {
     height: 72px;
@@ -655,14 +656,14 @@ body {
 #music_list .right {
     position: relative;
     float: right; 
-    height: 220px; 
+    height: 100%px;
     width: 15px; 
 }
 #music_list .left {
     overflow: hidden;
 }
 #music_list .left .track_container {
-    height: 220px;
+    height: 100%px;
     overflow: auto; 
 }
 
