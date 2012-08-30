@@ -8,6 +8,8 @@
     
     if( !$order_id )
     {
+        $fan_email = get_fan_email();
+
         include_once 'templates/order_status.html';
         die();
     }
@@ -87,6 +89,8 @@
     $tracking_number = FALSE;
     if( isset( $shipping_info['tracking_number'] ) )
         $tracking_number = $shipping_info['tracking_number'];
+    
+    $fan_email = get_fan_email();
     
     include_once 'templates/order_details.html';
 

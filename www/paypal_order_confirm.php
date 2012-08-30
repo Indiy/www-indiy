@@ -115,6 +115,8 @@
         $confirm_url = "paypal_finish.php?artist_id=$artist_id";
         $cancel_url = "cart.php?abandon_order=1&artist_id=$artist_id";
         
+        $fan_email = get_fan_email();
+        
         include_once 'templates/confirm_order.html';
     }
     else  

@@ -232,6 +232,7 @@
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
 		2DC262C215EEC67400CA560F /* footer.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = footer.html; sourceTree = "<group>"; };
 		2DC262C415EEC76900CA560F /* fan_header.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = fan_header.html; sourceTree = "<group>"; };
+		2DC262C515EFD0B600CA560F /* fan_header_footer.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = fan_header_footer.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DD94A2B14C368DF002B1259 /* vim.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = vim.css; sourceTree = "<group>"; };
 		2DE197A214F6133000305EAD /* password.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = password.php; sourceTree = "<group>"; };
 		2DE3F8A715B1F4ED00B5D439 /* mad.swipe.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mad.swipe.js; sourceTree = "<group>"; };
@@ -1156,6 +1157,7 @@
 				2D62486D15D1C4BA00914595 /* fan.css */,
 				2D62486C15D1C4BA00914595 /* fan_login_signup.css */,
 				2D747C5D15E4AFB300128EEC /* player_iphone.css */,
+				2DC262C515EFD0B600CA560F /* fan_header_footer.css */,
 			);
 			path = css;
 			sourceTree = "<group>";
