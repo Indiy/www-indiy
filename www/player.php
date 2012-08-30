@@ -78,8 +78,13 @@
         $IOS = TRUE;
         $IPAD = TRUE;
     }
+    
     $NARROW_SCREEN = FALSE;
     if( $IOS )
+    {
+        $NARROW_SCREEN = TRUE;
+    }
+    if( isset($_REQUEST['embed']) )
     {
         $NARROW_SCREEN = TRUE;
     }
