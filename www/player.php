@@ -62,6 +62,7 @@
         header("HTTP/1.0 404 Not Found");
         die();
     }
+    $hide_volume = FALSE;
 
     $IPHONE = FALSE;
     $IOS = FALSE;
@@ -83,10 +84,12 @@
     if( $IOS )
     {
         $NARROW_SCREEN = TRUE;
+        $hide_volume = TRUE;
     }
     if( isset($_REQUEST['embed']) )
     {
         $NARROW_SCREEN = TRUE;
+        $hide_volume = TRUE;
     }
     
     $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE url='$artist_url' LIMIT 1"));
@@ -386,10 +389,8 @@
         $body_style .= " narrow_screen";
     }
     
-    $hide_volume = FALSE;
-    if( $IOS )
+    if( $hide_volume  )
     {
-        $hide_volume = TRUE;
         $body_style .= " hide_volume";
     }
     
