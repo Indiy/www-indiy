@@ -617,6 +617,13 @@ body {
 .no_touch #media_social_boxes .media_boxes .media_buttons .video.button:hover .icon {
     background: transparent url('../images/player_icons.png') no-repeat -179px -594px;
 }
+#media_social_boxes .media_boxes .media_buttons .plus.button .icon {
+    background: transparent url('../images/player_icons.png') no-repeat -118px -660px;
+}
+.no_touch #media_social_boxes .media_boxes .media_buttons .plus.button:hover .icon {
+    background: transparent url('../images/player_icons.png') no-repeat -118px -592px;
+}
+
 
 #media_social_boxes .media_boxes .media_buttons .button .label {
     display: inline-block;
