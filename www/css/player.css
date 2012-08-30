@@ -663,7 +663,7 @@ body {
     overflow: hidden;
 }
 #music_list .left .track_container {
-    height: 100%px;
+    height: 100%;
     overflow: auto; 
 }
 
