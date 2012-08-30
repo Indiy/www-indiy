@@ -330,6 +330,14 @@ body {
 
 #cart_empty {
     display: none;
+    padding-top: 30px;
+    width: 940px;
+    margin: 0 auto;
+    color: #687480;
+    font-size: 30px;
+    font-family: "Teletex Light",Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 #cart .confirm_order {
     padding-right: 50px;
