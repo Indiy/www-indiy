@@ -485,10 +485,10 @@ body {
     background: transparent url('/images/player_icons.png') no-repeat -243px -534px;
 }
 #tracker_bar .buttons .plus.button .icon {
-    background: transparent url('/images/embed_plus.png') no-repeat 0px 0px;
+    background: transparent url('/images/embed_plus.png') no-repeat -37px 11px;
 }
 .no_touch #tracker_bar .buttons .plus.button .icon:hover {
-    background: transparent url('/images/embed_plus.png') no-repeat 0px 0px;
+    background: transparent url('/images/embed_plus.png') no-repeat 13px 11px;
 }
 
 
