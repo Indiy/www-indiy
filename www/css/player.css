@@ -656,7 +656,7 @@ body {
 #music_list .right {
     position: relative;
     float: right; 
-    height: 100%px;
+    height: 100%;
     width: 15px; 
 }
 #music_list .left {
