@@ -116,7 +116,7 @@
     <div id='player_prev' class='idle_fade_out' onclick='playerPrevious();'></div>
     <div id='player_next' class='idle_fade_out' onclick='playerNext();'></div>
     
-    <a href="<?=trueSiteUrl();?>" title='MyArtistDNA'><div id='top_bar_mad_logo'></div></a>
+    <a <?=$all_links_blank;?> href="<?=trueSiteUrl();?>" title='MyArtistDNA'><div id='top_bar_mad_logo'></div></a>
     <div id='top_bar' class='idle_fade_out'>
         <div class='artist_name'><?=$artist_name;?></div>
         <div class='search_viewed_tabs'>
@@ -135,9 +135,9 @@
         <div class='be_heard'>BE HEARD. BE SEEN. BE INDEPENDENT.</div>
         <div class='slash'>//</div>
         <? if( $login_url ): ?>
-            <div class='sign_up bottom_link'><a href='<?=$login_url;?>'>LOGIN NOW</a></div>
+            <div class='sign_up bottom_link'><a <?=$all_links_blank;?> href='<?=$login_url;?>' >LOGIN NOW</a></div>
         <? else: ?>
-            <div class='sign_up bottom_link'><a href='<?=$signup_url;?>'>SIGN UP NOW</a></div>
+            <div class='sign_up bottom_link'><a <?=$all_links_blank;?> href='<?=$signup_url;?>' >SIGN UP NOW</a></div>
         <? endif; ?>
         <? if( $show_order_status ): ?>
             <div class='slash'>//</div>

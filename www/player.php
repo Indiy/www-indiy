@@ -64,6 +64,7 @@
     }
     $hide_volume = FALSE;
     $single_media_button = FALSE;
+    $all_links_blank = "";
 
     $IPHONE = FALSE;
     $IOS = FALSE;
@@ -92,6 +93,7 @@
         $NARROW_SCREEN = TRUE;
         $hide_volume = TRUE;
         $single_media_button = TRUE;
+        $all_links_blank = " target='_blank' ";
     }
     
     $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE url='$artist_url' LIMIT 1"));
