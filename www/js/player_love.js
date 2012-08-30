@@ -198,11 +198,11 @@ function syncLoved()
         dataType: 'json',
         success: function(data) 
         {
-            console.log(data);
+            //console.log(data);
         },
         error: function()
         {
-            console.log("error love transmit");
+            //console.log("error love transmit");
         }
     });
 }
