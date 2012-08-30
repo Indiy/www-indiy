@@ -78,6 +78,7 @@
     display: inline-block;
     height: 50px;
     vertical-align: top;
+    cursor: pointer;
 }
 #header .mad_bar .inner .right .item .name {
     display: inline-block;
