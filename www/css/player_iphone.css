@@ -222,22 +222,22 @@ body {
     height: 30px;
 }
 #tracker_bar .buttons .photos.button .name_icon .icon {
-    background: transparent url('/images/mobile_icons_2x.png') no-repeat 0px 0px / 50% auto;
+    background: transparent url('/images/mobile_icons_2x.png') no-repeat 0px 0px / 314px auto;
 }
 #tracker_bar .buttons .photos.button.active .name_icon .icon {
-    background: transparent url('/images/mobile_icons_2x.png') no-repeat 0px 0px / 50% auto;
+    background: transparent url('/images/mobile_icons_2x.png') no-repeat 0px 0px / 314px auto;
 }
 #tracker_bar .buttons .music.button .name_icon .icon {
-    background: transparent url('/images/mobile_icons_2x.png') no-repeat 0px 0px / 50% auto;
+    background: transparent url('/images/mobile_icons_2x.png') no-repeat 0px 0px / 314px auto;
 }
 #tracker_bar .buttons .music.button.active .name_icon .icon {
-    background: transparent url('/images/mobile_icons_2x.png') no-repeat 0px 0px / 50% auto;
+    background: transparent url('/images/mobile_icons_2x.png') no-repeat 0px 0px / 314px auto;
 }
 #tracker_bar .buttons .video.button .name_icon .icon {
-    background: transparent url('/images/mobile_icons_2x.png') no-repeat 0px 0px / 50% auto;
+    background: transparent url('/images/mobile_icons_2x.png') no-repeat 0px 0px / 314px auto;
 }
 #tracker_bar .buttons .video.button.active .name_icon .icon {
-    background: transparent url('/images/mobile_icons_2x.png') no-repeat 0px 0px / 50% auto;
+    background: transparent url('/images/mobile_icons_2x.png') no-repeat 0px 0px / 314px auto;
 }
 
 #tracker_bar .buttons .sep {
