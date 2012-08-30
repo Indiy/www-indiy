@@ -656,14 +656,14 @@ body {
 #music_list .right {
     position: relative;
     float: right; 
-    height: 100%;
+    height: 220px;
     width: 15px; 
 }
 #music_list .left {
     overflow: hidden;
 }
 #music_list .left .track_container {
-    height: 100%;
+    height: 220px;
     overflow: auto; 
 }
 
@@ -2060,12 +2060,16 @@ body {
 .narrow_screen.no_touch #media_social_boxes .button.email:hover .icon  {
     background: transparent url('../images/player_icons.png') no-repeat -482px -597px;
 }
-
 .narrow_screen #media_social_boxes .media_boxes .media_buttons .sep {
     height: 1px;
     background: #282828;
 }
-
+.narrow_screen #music_list .left .track_container {
+    height: 294px;
+}
+.narrow_screen #music_list .right {
+    height: 294px;
+}
 
 .hide_volume #tracker_bar .media_controls .progress_container {
     left: 75px;
