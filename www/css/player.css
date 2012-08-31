@@ -2076,7 +2076,7 @@ body {
     text-align: center;
     font-size: 0;
 }
-#top_bar .content_tabs .inner .tab {
+#popup_tab_list .list .tab {
     display: inline-block;
     padding-top: 5px;
     padding-bottom: 0px;
@@ -2095,7 +2095,7 @@ body {
     cursor: pointer;
     border-radius: 3px;
 }
-.no_touch #top_bar .content_tabs .inner .tab:hover {
+.no_touch #popup_tab_list .list .tab:hover {
     background-color: rgba(255,255,255,0.1);
     color: white;
 }
