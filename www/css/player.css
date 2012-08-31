@@ -165,6 +165,29 @@ body {
     text-shadow: 0px -1px #0e0e0e;
     text-transform: uppercase;
 }
+#top_bar .more_tabs {
+    float: right;
+    height: 48px;
+    width: 40px;
+    text-align: center;
+}
+#top_bar .more_tabs .more_block {
+    display: inline-block;
+    margin-top: 16px;
+    width: 16px;
+    height: 16px;
+    background-color: rgba(0,0,0,0.6);
+}
+#top_bar .more_tabs .more_block .more_arrow {
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 0px;
+    width: 0px;
+    border-right: 16px solid transparent;
+    border-left: 16px solid transparent;
+    border-bottom: 32px solid white;
+}
+
 #top_bar .content_tabs {
     padding-right: 14px;
     padding-top: 13px;
