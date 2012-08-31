@@ -173,19 +173,20 @@ body {
 }
 #top_bar .more_tabs .more_block {
     display: inline-block;
-    margin-top: 16px;
-    width: 16px;
-    height: 16px;
-    background-color: rgba(0,0,0,0.6);
+    margin-top: 12px;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 8px;
 }
 #top_bar .more_tabs .more_block .more_arrow {
     margin-top: 0px;
     margin-left: 0px;
     height: 0px;
     width: 0px;
-    border-right: 16px solid transparent;
-    border-left: 16px solid transparent;
-    border-bottom: 32px solid white;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-top: 11px solid white;
 }
 
 #top_bar .content_tabs {
