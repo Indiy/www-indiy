@@ -196,7 +196,7 @@ body {
 }
 #top_bar .content_tabs .inner {
     height: 35px;
-    white-space: wrap;
+    white-space: normal;
     text-align: right;
     overflow: hidden;
     font-size: 0;
