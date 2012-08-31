@@ -423,7 +423,10 @@ Reach out to us.</div>
         <div class='sep'></div>
         <div class='comment_container scrollbar-pane'>
             <div class='fb_container'>
-                <div class="fb-comments" data-href="<?=$artist_url;?>" data-num-posts="15" data-width="650" data-colorscheme="dark"></div>
+                <fb:comments href="<?=$artist_url;?>" num_posts="2" width="470" colorscheme="dark"></fb:comments>
+            </div>
+            <div class='comment_count'>
+                <fb:comments-count href="<?=$artist_url;?>"></fb:comments-count>
             </div>
         </div>
         <?=build_scrollbar();?>
