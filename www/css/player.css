@@ -166,6 +166,7 @@ body {
     text-transform: uppercase;
 }
 #top_bar .more_tabs {
+    display: none;
     float: right;
     height: 48px;
     padding-right: 12px;
