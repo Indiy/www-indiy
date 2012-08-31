@@ -178,7 +178,7 @@ body {
     background-color: rgba(0,0,0,0.25);
     border-radius: 4px;
 }
-#top_bar .more_tabs .more_block:hover {
+#top_bar .more_tabs:hover .more_block {
     background-color: rgba(255,255,255,0.1);
 }
 #top_bar .more_tabs .more_block .more_arrow {
@@ -190,7 +190,7 @@ body {
     border-left: 7px solid transparent;
     border-top: 10px solid #888;
 }
-#top_bar .more_tabs .more_block:hover .more_arrow {
+#top_bar .more_tabs:hover .more_block .more_arrow {
     border-top: 11px solid #eee;
 }
 
