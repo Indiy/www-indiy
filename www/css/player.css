@@ -2066,7 +2066,7 @@ body {
     text-align: center;
 }
 #popup_tab_list .inner {
-    position absolute;
+    position: absolute;
     top: 50%;
     margin-top: -50px;
     left: 0px;
