@@ -222,13 +222,15 @@ body {
     height: 30px;
 }
 #tracker_bar .buttons .photos.button .name_icon .icon {
-    background: transparent url('/images/mobile_icons_2x.png') no-repeat 0px 0px / 171px auto;
+    background: transparent url('/images/mobile_icons_2x.png') no-repeat 0px 0px;
+    background-size: 171px auto;
 }
 #tracker_bar .buttons .photos.button.active .name_icon .icon {
     background: transparent url('/images/player_icons.png') no-repeat -66px -606px;
 }
 #tracker_bar .buttons .music.button .name_icon .icon {
-    background: transparent url('/images/mobile_icons_2x.png') no-repeat -65px -53px / 171px auto;
+    background: transparent url('/images/mobile_icons_2x.png') no-repeat -65px -53px;
+    background-size: 171px auto;
 }
 #tracker_bar .buttons .music.button.active .name_icon .icon {
     background: transparent url('/images/player_icons.png') no-repeat -130px -607px;
