@@ -25,9 +25,14 @@ function maybeShowMoreTabsButton()
         $('#more_tabs_button').show();
     }
 }
+function showMoreTabs()
+{
+    $('#popup_tab_list').show();
+}
 
 function showUserPage(i)
 {
+    $('#popup_tab_list').hide();
     if( g_currentUserPageIndex === i && g_showingContentPage )
     {
         hideTab();
@@ -81,6 +86,7 @@ function hideAllTabs()
 var g_showingContactPage = false;
 function showContact()
 {
+    $('#popup_tab_list').hide();
     if( g_showingContactPage )
     {
         hideTab();
@@ -100,6 +106,7 @@ var g_commentUpdateTimer = false;
 var g_showingCommentPage = false;
 function showComments()
 {
+    $('#popup_tab_list').hide();
     if( g_showingCommentPage )
     {
         hideTab();
