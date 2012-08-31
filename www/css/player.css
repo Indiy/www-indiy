@@ -168,29 +168,34 @@ body {
 #top_bar .more_tabs {
     float: right;
     height: 48px;
-    width: 40px;
-    text-align: center;
+    padding-right: 12px;
 }
 #top_bar .more_tabs .more_block {
     display: inline-block;
     margin-top: 12px;
     width: 24px;
     height: 24px;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.25);
     border-radius: 8px;
 }
+#top_bar .more_tabs .more_block:hover {
+    background-color: rgba(100,100,100,0.25);
+}
 #top_bar .more_tabs .more_block .more_arrow {
-    margin-top: 0px;
-    margin-left: 0px;
+    margin-top: 8px;
+    margin-left: 5px;
     height: 0px;
     width: 0px;
     border-right: 7px solid transparent;
     border-left: 7px solid transparent;
-    border-top: 11px solid white;
+    border-top: 10px solid #888;
+}
+#top_bar .more_tabs .more_block:hover .more_arrow {
+    border-top: 11px solid #eee;
 }
 
 #top_bar .content_tabs {
-    padding-right: 14px;
+    padding-right: 10px;
     padding-top: 13px;
     height: 35px;
     overflow: hidden;
