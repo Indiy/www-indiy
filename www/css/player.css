@@ -176,10 +176,10 @@ body {
     width: 24px;
     height: 24px;
     background-color: rgba(0,0,0,0.25);
-    border-radius: 8px;
+    border-radius: 4px;
 }
 #top_bar .more_tabs .more_block:hover {
-    background-color: rgba(100,100,100,0.25);
+    background-color: rgba(255,255,255,0.1);
 }
 #top_bar .more_tabs .more_block .more_arrow {
     margin-top: 8px;
