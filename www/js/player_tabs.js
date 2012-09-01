@@ -123,7 +123,7 @@ function showComments()
         showContentPage();
         g_showingCommentPage = true;
         $('#comment_tab .fb_container').hide();
-        var id_tag = g_curentMediaHash.replace('=','_');
+        var id_tag = g_currentMediaHash.replace('=','_');
         var sel = "#comment_tab {0}".format(id_tag);
         $(sel).show();
         $('#comment_tab').show();
