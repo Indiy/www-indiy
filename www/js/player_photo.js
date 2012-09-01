@@ -141,7 +141,9 @@ function photoUpdateToIndex(index)
     photoLoadImage(photo,index);
     
     g_currentPhotoId = photo.id;
-    window.location.hash = '#photo_id=' + g_currentPhotoId; 
+    var hash = '#photo_id=' + g_currentPhotoId;
+    window.location.hash = hash;
+    g_currentMediaHash = hash;
     
     playerPhotoInfo(photo.name,photo.location,photo.listens);
     photoUpdateViews(photo.id,index);

@@ -398,6 +398,40 @@
         $body_style .= " hide_volume";
     }
     
+    function make_comments_for_list($artist_url,$type,$list)
+    {
+        $base_url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
+
+
+        $ret_html = "";
+        
+        for( $list as $index => $item )
+        {
+            $id = $item['id'];
+        
+            $url = "$artist_url/#{$type}_id=$id";
+        
+            $id_tag = "comments_{$type}_$id";
+        
+            $html = "";
+            $html .= "<div id='$id_tag' class='fb_container'>";
+            $html .= " <fb:comments href='$url' num_posts='10' width='470' colorscheme='dark'></fb:comments>";
+            $html .= " <div class='comment_count'>";
+            $html .= "  <fb:comments-count href='$url'></fb:comments-count>";
+            $html .= " </div>";
+            $html .= "</div>";
+            
+            $ret_html .= $html;
+        }
+        
+        return $ret_html;
+    }
+    
+    $comments_html = "";
+    $comments_html .= make_comments_for_list($artist_url,"song",$music_list);
+    $comments_html .= make_comments_for_list($artist_url,"video",$video_list);
+    $comments_html .= make_comments_for_list($artist_url,"photo",$photo_list);
+    
     include_once 'templates/player.html';
 
 ?>

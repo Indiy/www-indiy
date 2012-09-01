@@ -93,7 +93,9 @@ function musicPanelChange(index)
     musicLoadImage(song,index);
     
     g_currentSongId = song.id;
-    window.location.hash = '#song_id=' + g_currentSongId; 
+    var hash = '#song_id=' + g_currentSongId;
+    window.location.hash = hash;
+    g_currentMediaHash = hash;
     
     playerTrackInfo(song.name,song.listens);
     
