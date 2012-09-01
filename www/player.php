@@ -406,7 +406,7 @@
         {
             $id = $item['id'];
             $url = "$artist_url/#{$type}_id=$id";
-            $id_tag = "comments_{$type}_$id";
+            $id_tag = "{$type}_$id";
         
             $html = "";
             $html .= "<div id='$id_tag' class='fb_container'>";

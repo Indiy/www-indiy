@@ -123,8 +123,9 @@ function showComments()
         showContentPage();
         g_showingCommentPage = true;
         $('#comment_tab .fb_container').hide();
-        var sel = "#comment_tab #comments_{0}".format(g_currentMediaHash);
+        var sel = "#comment_tab {0}".format(g_currentMediaHash);
         $(sel).show();
+        $('#comment_tab').show();
         $('#comment_tab').scrollbar("repaint");
         g_commentUpdateTimer = window.setInterval(periodicCommentTabCheck,500);
     }
