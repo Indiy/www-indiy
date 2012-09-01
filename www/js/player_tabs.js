@@ -29,6 +29,10 @@ function showMoreTabs()
 {
     $('#popup_tab_list').show();
 }
+function closeMoreTabs()
+{
+    $('#popup_tab_list').hide();
+}
 
 function showUserPage(i)
 {
