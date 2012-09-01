@@ -45,31 +45,12 @@ body {
 
 #body_wrap {
     min-height: 100%;
+    background-color: #f5f5f5;
 }
 
 #main_content {
     overflow:auto;
 	padding-bottom: 186px;
-    background-color: #f5f5f5;
-}
-
-#header {
-    background: black;
-}
-#header .top_bar {
-    height: 39px;
-}
-#header .mad_bar {
-    height: 50px;
-    width: 100%;
-    background: url("/images/cart_top_texture.png") repeat-x;
-    border-bottom: 1px solid #5f5f5f;
-}
-#header .mad_bar .logo {
-    width: 940px;
-    margin: 0 auto;
-    height: 100%;
-    background: url('/images/MYARTISTDNA.png') 0px 10px no-repeat;
 }
 
 #cart {
@@ -349,6 +330,14 @@ body {
 
 #cart_empty {
     display: none;
+    padding-top: 90px;
+    width: 940px;
+    margin: 0 auto;
+    color: #687480;
+    font-size: 30px;
+    font-family: "Teletex Light",Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 #cart .confirm_order {
     padding-right: 50px;
@@ -853,63 +842,6 @@ body {
     color: black;
     text-decoration: none;
 }
-
-
-
-/*
- ----------------------------------------
- 05. footer
- ----------------------------------------
- */
-
-#footer { 
-    position: relative;
-    
-    width:100%; 
-    height:186px; 
-    background:#0a0b0d; 
-    
-    margin-top: -186px;
-    clear:both;
-    
-    font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif;
-}
-#footer .pad {
-    height: 37px;
-}
-#footer ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-#footer p {
-    margin: 0;
-    padding: 0;
-}
-
-#footer footer { width:940px; margin:0 auto; }
-
-#footer footer p { float:right; font-size:12px; color:#FFFFFF; text-align:right}
-#footer footer p a { color:#FFFFFF; text-decoration: none; }
-
-#footer footer .list_head { font-size:14px; color:#f5f5f5; padding-bottom:10px; }
-#footer footer aside { width:100px; float:left; }
-
-#footer footer .benefits { width:110px; float:left; }
-
-#footer footer aside ul { float:left; }
-#footer footer aside ul li { font-size:12px; color:#4ecdc4; line-height:1.5em; }
-#footer footer aside ul li a { color:#4ecdc4; text-decoration:none; }
-#footer footer aside ul li a:hover { color:#4ecdc4; text-decoration:underline; }
-
-#footer footer article { width:185px; float:left; }
-#footer footer article ul li { width:185px; float:left; background:url(../images/dottedborder.gif) repeat-x bottom left; margin-bottom:3px; }
-#footer footer article ul li.last {background:none; margin-bottom:0; }
-#footer footer article ul li img { float:left; padding:3px 7px 7px 0; }
-#footer footer article ul li a { font-size:12px; color:#4ecdc4; text-decoration:none; cursor: pointer; }
-#footer footer article ul li a:hover { color:#4ecdc4; text-decoration:underline; }
-
-#footer footer .logo { float:right; line-height:.5em; padding:0 0 43px 0; }
 
 
 

@@ -62,6 +62,9 @@
         header("HTTP/1.0 404 Not Found");
         die();
     }
+    $hide_volume = FALSE;
+    $single_media_button = FALSE;
+    $all_links_blank = "";
 
     $IPHONE = FALSE;
     $IOS = FALSE;
@@ -78,10 +81,19 @@
         $IOS = TRUE;
         $IPAD = TRUE;
     }
+    
     $NARROW_SCREEN = FALSE;
     if( $IOS )
     {
         $NARROW_SCREEN = TRUE;
+        $hide_volume = TRUE;
+    }
+    if( isset($_REQUEST['embed']) )
+    {
+        $NARROW_SCREEN = TRUE;
+        $hide_volume = TRUE;
+        $single_media_button = TRUE;
+        $all_links_blank = " target='_blank' ";
     }
     
     $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE url='$artist_url' LIMIT 1"));
@@ -381,10 +393,8 @@
         $body_style .= " narrow_screen";
     }
     
-    $hide_volume = FALSE;
-    if( $IOS )
+    if( $hide_volume  )
     {
-        $hide_volume = TRUE;
         $body_style .= " hide_volume";
     }
     

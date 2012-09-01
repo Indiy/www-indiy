@@ -7,10 +7,32 @@ function userTabReady()
     $('#user_tab').scrollbar();
     $('#contact_tab').scrollbar();
     $('#comment_tab').scrollbar( { measureTag: "#comment_tab .fb_container" } );
+    maybeShowMoreTabsButton();
+    $(window).resize(maybeShowMoreTabsButton);
+}
+
+function maybeShowMoreTabsButton()
+{
+    var top_first = $('#top_bar .content_tabs .tab:first').position().top;
+    var top_last = $('#top_bar .content_tabs .tab:last').position().top;
+    
+    if( top_first == top_last )
+    {
+        $('#more_tabs_button').hide();
+    }
+    else
+    {
+        $('#more_tabs_button').show();
+    }
+}
+function showMoreTabs()
+{
+    $('#popup_tab_list').show();
 }
 
 function showUserPage(i)
 {
+    $('#popup_tab_list').hide();
     if( g_currentUserPageIndex === i && g_showingContentPage )
     {
         hideTab();
@@ -64,6 +86,7 @@ function hideAllTabs()
 var g_showingContactPage = false;
 function showContact()
 {
+    $('#popup_tab_list').hide();
     if( g_showingContactPage )
     {
         hideTab();
@@ -83,6 +106,7 @@ var g_commentUpdateTimer = false;
 var g_showingCommentPage = false;
 function showComments()
 {
+    $('#popup_tab_list').hide();
     if( g_showingCommentPage )
     {
         hideTab();

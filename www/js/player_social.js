@@ -6,10 +6,10 @@ function clickJoinNewsletter()
     
     var email = $('#social_email input').val();
     
-    var args {
+    var args = {
         email: email,
         artist_id: g_artistId
-    }
+    };
     
     var url = "/data/viewer_data.php";
     jQuery.ajax(

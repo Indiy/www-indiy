@@ -222,22 +222,28 @@ body {
     height: 30px;
 }
 #tracker_bar .buttons .photos.button .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -66px -676px;
+    background: transparent url('/images/mobile_icons_2x.png') no-repeat -1px -53px;
+    background-size: 171px auto;
 }
 #tracker_bar .buttons .photos.button.active .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -66px -606px;
+    background: transparent url('/images/mobile_icons_2x.png') no-repeat -1px -4px;
+    background-size: 171px auto;
 }
 #tracker_bar .buttons .music.button .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -130px -675px;
+    background: transparent url('/images/mobile_icons_2x.png') no-repeat -65px -53px;
+    background-size: 171px auto;
 }
 #tracker_bar .buttons .music.button.active .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -130px -607px;
+    background: transparent url('/images/mobile_icons_2x.png') no-repeat -65px -4px;
+    background-size: 171px auto;
 }
 #tracker_bar .buttons .video.button .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -189px -677px;
+    background: transparent url('/images/mobile_icons_2x.png') no-repeat -126px -53px;
+    background-size: 171px auto;
 }
 #tracker_bar .buttons .video.button.active .name_icon .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -189px -609px;
+    background: transparent url('/images/mobile_icons_2x.png') no-repeat -126px -4px;
+    background-size: 171px auto;
 }
 
 #tracker_bar .buttons .sep {

@@ -165,17 +165,49 @@ body {
     text-shadow: 0px -1px #0e0e0e;
     text-transform: uppercase;
 }
+#top_bar .more_tabs {
+    display: none;
+    float: right;
+    height: 48px;
+    padding-right: 12px;
+    cursor: pointer;
+}
+#top_bar .more_tabs .more_block {
+    display: inline-block;
+    margin-top: 12px;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(0,0,0,0.25);
+    border-radius: 4px;
+}
+#top_bar .more_tabs:hover .more_block {
+    background-color: rgba(255,255,255,0.1);
+}
+#top_bar .more_tabs .more_block .more_arrow {
+    margin-top: 8px;
+    margin-left: 5px;
+    height: 0px;
+    width: 0px;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-top: 10px solid #888;
+}
+#top_bar .more_tabs:hover .more_block .more_arrow {
+    border-top: 11px solid #eee;
+}
+
 #top_bar .content_tabs {
-    padding-right: 14px;
+    padding-right: 10px;
     padding-top: 13px;
     height: 35px;
     overflow: hidden;
 }
 #top_bar .content_tabs .inner {
     height: 35px;
-    white-space: nowrap;
+    white-space: normal;
     text-align: right;
     overflow: hidden;
+    font-size: 0;
 }
 #top_bar .content_tabs .inner .tab {
     display: inline-block;
@@ -185,6 +217,7 @@ body {
     padding-right: 12px;
     margin-right: 12px;
     margin-left: 12px;
+    margin-bottom: 20px;
     color: #888;
     font-size: 13px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
@@ -484,6 +517,13 @@ body {
 .no_touch #tracker_bar .buttons .love.button.love_active .icon:hover {
     background: transparent url('/images/player_icons.png') no-repeat -243px -534px;
 }
+#tracker_bar .buttons .plus.button .icon {
+    background: transparent url('/images/embed_plus.png') no-repeat -37px 11px;
+}
+.no_touch #tracker_bar .buttons .plus.button .icon:hover {
+    background: transparent url('/images/embed_plus.png') no-repeat 13px 11px;
+}
+
 
 #tracker_bar .buttons .sep {
     display: inline-block;
@@ -586,6 +626,7 @@ body {
     width: 175px;
     height: 100%;
     box-shadow: 2px 0px 14px black;
+    background: black url('../images/inactive_button_texture.png') repeat-y;
 }
 #media_social_boxes .media_boxes .media_buttons .button {
     height: 72px;
@@ -648,7 +689,7 @@ body {
 #music_list .right {
     position: relative;
     float: right; 
-    height: 220px; 
+    height: 220px;
     width: 15px; 
 }
 #music_list .left {
@@ -2013,6 +2054,62 @@ body {
     cursor: pointer;
 }
 
+#popup_tab_list {
+    display: none;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: rgba(8,8,8,0.65);
+    z-index: 1000;
+    text-align: center;
+}
+#popup_tab_list .inner {
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+}
+#popup_tab_list .list {
+    display: inline-block;
+    max-width: 60%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    white-space: normal;
+    text-align: center;
+    font-size: 0;
+    border-radius: 7px;
+}
+#popup_tab_list .list .tab {
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-top: 6px;
+    margin-bottom: 5px;
+    color: #888;
+    font-size: 13px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 0px -1px #0e0e0e;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.no_touch #popup_tab_list .list .tab:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
 /*************************************************************************/
 
 .narrow_screen #media_social_boxes .media_boxes .media_buttons .button {
@@ -2052,12 +2149,16 @@ body {
 .narrow_screen.no_touch #media_social_boxes .button.email:hover .icon  {
     background: transparent url('../images/player_icons.png') no-repeat -482px -597px;
 }
-
 .narrow_screen #media_social_boxes .media_boxes .media_buttons .sep {
     height: 1px;
     background: #282828;
 }
-
+.narrow_screen #music_list .left .track_container {
+    height: 294px;
+}
+.narrow_screen #music_list .right {
+    height: 294px;
+}
 
 .hide_volume #tracker_bar .media_controls .progress_container {
     left: 75px;

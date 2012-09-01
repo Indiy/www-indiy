@@ -8,6 +8,7 @@ function storeReady()
 var g_showingStore = false;
 function showStore()
 {
+    $('#popup_tab_list').hide();
     if( g_showingStore )
     {
         hideTab();

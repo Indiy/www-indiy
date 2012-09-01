@@ -1329,5 +1329,17 @@ END;
             @system("/usr/local/bin/ffmpeg2theora --videoquality 8 --audioquality 6 -o $ogv_file $file");
         }
     }
+    
+    function get_fan_email()
+    {
+        $fan_email = FALSE;
+        if( isset($_SESSION['fan_id']) )
+        {
+            $fan_id = $_SESSION['fan_id'];
+            $fan = mf(mq("SELECT * FROM fans WHERE id='$fan_id'"));
+            $fan_email = $fan['email'];
+        }
+        return $fan_email;
+    }
 
 ?>
