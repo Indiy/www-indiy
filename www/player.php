@@ -401,16 +401,11 @@
     function make_comments_for_list($artist_url,$type,$list)
     {
         $base_url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
-
-
         $ret_html = "";
-        
-        for( $list as $index => $item )
+        foreach( $list as $index => $item )
         {
             $id = $item['id'];
-        
             $url = "$artist_url/#{$type}_id=$id";
-        
             $id_tag = "comments_{$type}_$id";
         
             $html = "";
