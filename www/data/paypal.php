@@ -109,7 +109,7 @@
     $mad_amt = $payment_amount - $artist_amt;
     
     $extra_args = array(
-                        //"BRANDNAME" => "$artist_name - MyArtistDNA Store",
+                        "BRANDNAME" => "$artist_name - MyArtistDNA Store",
                         //"CUSTOMERSERVICENUMBER" => "347-775-5638",
                         //"PAYMENTREQUEST_0_ITEMAMT" => $sub_total,
                         //"PAYMENTREQUEST_0_SHIPPINGAMT" => $shipping_total,
