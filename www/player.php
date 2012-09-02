@@ -65,6 +65,7 @@
     $hide_volume = FALSE;
     $single_media_button = FALSE;
     $all_links_blank = "";
+    $thin_footer = FALSE:
 
     $IPHONE = FALSE;
     $IOS = FALSE;
@@ -94,6 +95,7 @@
         $hide_volume = TRUE;
         $single_media_button = TRUE;
         $all_links_blank = " target='_blank' ";
+        $thin_footer = TRUE;
     }
     
     $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE url='$artist_url' LIMIT 1"));
@@ -396,6 +398,10 @@
     if( $hide_volume  )
     {
         $body_style .= " hide_volume";
+    }
+    if( $thin_footer )
+    {
+        $body_style .= " thin_footer";
     }
     
     function make_comments_for_list($base_url,$type,$list)
