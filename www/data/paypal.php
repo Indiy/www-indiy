@@ -93,6 +93,7 @@
     $extra_args = array("BRANDNAME" => "MyArtistDNA",
                         "CUSTOMERSERVICENUMBER" => "347-775-5638",
                         "PAYMENTREQUEST_0_SHIPPINGAMT" => $shipping_total,
+                        "PAYMENTREQUEST_0_ITEMAMT" => $sub_total,
                         );
                         
     $extra_args = array_merge($extra_args,$order_item_args);
