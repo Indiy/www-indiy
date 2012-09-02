@@ -525,10 +525,10 @@ body {
     background: transparent url('/images/embed_plus.png') no-repeat 13px 11px;
 }
 #tracker_bar .buttons .comment.button .icon {
-    background: transparent url('/images/embed_plus.png') no-repeat -37px 11px;
+    background: transparent url('/images/comment_icon.png') no-repeat -37px 11px;
 }
 .no_touch #tracker_bar .buttons .comment.button .icon:hover {
-    background: transparent url('/images/embed_plus.png') no-repeat 13px 11px;
+    background: transparent url('/images/comment_icon.png') no-repeat 13px 11px;
 }
 #tracker_bar .buttons .button .comment_badge_count {
     position: absolute;
