@@ -15,9 +15,14 @@
 	//' Replace <API_PASSWORD> with your API Password
 	//' Replace <API_SIGNATURE> with your Signature
 	//'------------------------------------
-	$API_UserName="seller_1340382332_biz_api1.blueskylabs.com";
-	$API_Password="1340382355";
-	$API_Signature="A.y5rqTqB5ifaOYVWKnkml0FKPQbArK-Gh7moXyUYcw8P7WX.l8pOlqc";
+	//$API_UserName="seller_1340382332_biz_api1.blueskylabs.com";
+	//$API_Password="1340382355";
+	//$API_Signature="A.y5rqTqB5ifaOYVWKnkml0FKPQbArK-Gh7moXyUYcw8P7WX.l8pOlqc";
+
+	$API_UserName="wtl_api1.lomaxco.com";
+	$API_Password="B9K3CSH3AMLQSRRU";
+	$API_Signature="AYPWYcsCU66yye7Ljup18V27fG8LAJE0BPSJQ5II8-ogx1T9aLnD7sS3";
+
 
 	// BN Code 	is only applicable for partners
 	$sBNCode = "PP-ECWizard";
