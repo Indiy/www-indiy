@@ -104,6 +104,9 @@
 
     $returnURL = "http://$http_host/paypal_order_confirm.php?artist_id=$artist_id";
     $cancelURL = "http://$http_host/cart.php?artist_id=$artist_id&abandon_order=1";
+
+    $artist_amount = round($payment_amount * ARTIST_PAYOUT_PERCENT,2);
+    $mad_amt = $payment_amount - $artist_amount;
     
     $extra_args = array("BRANDNAME" => "$artist_name - MyArtistDNA Store",
                         "CUSTOMERSERVICENUMBER" => "347-775-5638",
