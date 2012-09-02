@@ -116,11 +116,10 @@
                         "PAYMENTREQUEST_1_AMT" => $mad_amt,
                         "PAYMENTREQUEST_1_SELLERPAYPALACCOUNTID" => "mad_1346558535_biz@myartistdna.com",
                         "PAYMENTREQUEST_1_PAYMENTACTION" => "Sale",
-                        "PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID" => $artist_email,
+                        "PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID" => "artist_1346622743_per@myartistdna.com",
                         );
 
     //$extra_args = array_merge($extra_args,$order_item_args);
-    $extra_args = array();
     
     //$resArray = CallShortcutExpressCheckout($payment_amount, $currencyCodeType, $paymentType, $returnURL, $cancelURL, $extra_args);
     $resArray = CallShortcutExpressCheckout($artist_amount, $currencyCodeType, $paymentType, $returnURL, $cancelURL, $extra_args);
