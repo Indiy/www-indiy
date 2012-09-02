@@ -7,7 +7,7 @@
 	$PROXY_HOST = '127.0.0.1';
 	$PROXY_PORT = '808';
 
-	$SandboxFlag = true;
+	$SandboxFlag = false;
 
 	//'------------------------------------
 	//' PayPal API Credentials
