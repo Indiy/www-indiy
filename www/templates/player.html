@@ -238,18 +238,20 @@
             <? endif; ?>
             <div class='media_boxes'>
                 <div class='media_buttons'>
-                    <? if( count($photo_list) > 0): ?>
+                    <? if( count($photo_list) > 0 ): ?>
                         <div class='button photos' onclick='clickPhotoMediaButton();'>
                             <div class='icon'></div>
                             <div class='label'>PHOTOS</div>
                         </div>
                         <div class='sep'></div>
                     <? endif; ?>
-                    <div class='button music' onclick='clickMusicMediaButton();'>
-                        <div class='icon'></div>
-                        <div class='label'>MUSIC</div>
-                    </div>
-                    <div class='sep'></div>
+                    <? if( count($music_list) > 0 ): ?>
+                        <div class='button music' onclick='clickMusicMediaButton();'>
+                            <div class='icon'></div>
+                            <div class='label'>MUSIC</div>
+                        </div>
+                        <div class='sep'></div>
+                    <? endif; ?>
                     <? if( count($video_list) > 0 ): ?>
                         <div class='button video' onclick='clickVideoMediaButton();'>
                             <div class='icon'></div>
