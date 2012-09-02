@@ -106,7 +106,7 @@
     $cancelURL = "http://$http_host/cart.php?artist_id=$artist_id&abandon_order=1";
 
     $artist_amt = round($payment_amount * ARTIST_PAYOUT_PERCENT,2);
-    $mad_amt = $payment_amount - $artist_amount;
+    $mad_amt = $payment_amount - $artist_amt;
     
     $extra_args = array("BRANDNAME" => "$artist_name - MyArtistDNA Store",
                         "CUSTOMERSERVICENUMBER" => "347-775-5638",
@@ -142,6 +142,20 @@
                         "PAYMENTREQUEST_1_INSURANCEOPTIONOFFERED" => "false",
                         "PAYMENTREQUEST_1_PAYMENTACTION" => "Order",
                         "PAYMENTREQUEST_1_PAYMENTREQUESTID" => "CART26488-PAYMENT1",
+
+                        "L_PAYMENTREQUEST_0_NAME0" => "Depart San Jose Feb 12 at 12:10PM Arrive in Baltimore at 10:22PM",
+                        "L_PAYMENTREQUEST_0_NUMBER0" => "0",
+                        "L_PAYMENTREQUEST_0_QTY0" => "1",
+                        "L_PAYMENTREQUEST_0_TAXAMT0" => "0",
+                        "L_PAYMENTREQUEST_0_AMT0" => $mad_amt,
+                        "L_PAYMENTREQUEST_0_DESC0" => "SJC Terminal 1. Flight time: 7 hours 12 minutes",
+
+                        "L_PAYMENTREQUEST_1_NAME0" => "Night(s) stay at 9990 Deereco Road, Timonium, MD 21093",
+                        "L_PAYMENTREQUEST_1_NUMBER0" => "1",
+                        "L_PAYMENTREQUEST_1_QTY0" => "1",
+                        "L_PAYMENTREQUEST_1_TAXAMT0" => "0",
+                        "L_PAYMENTREQUEST_1_AMT0" => $artist_amt,
+                        "L_PAYMENTREQUEST_1_DESC0" => "King No-Smoking; Check in after 4:00 PM; Check out by 1:00 PM",
 
                         );
 
