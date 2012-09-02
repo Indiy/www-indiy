@@ -77,14 +77,14 @@ function updateCommentIconCount(count,id_tag)
         read_count = g_commentReadMap[id_tag];
     
     var unread_count = count - read_count;
-    if( count > 99 )
+    if( unread_count > 99 )
     {
         $('#comment_badge_count').html("99+");
         $('#comment_badge_count').show();
     }
-    else if( count > 0 )
+    else if( unread_count > 0 )
     {
-        $('#comment_badge_count').html(count);
+        $('#comment_badge_count').html(unread_count);
         $('#comment_badge_count').show();
     }
     else
