@@ -17,6 +17,7 @@
     
     $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id'"));
     $artist_name = $artist_data['artist'];
+    $artist_email = $artist_data['email'];
     
     $cart = store_get_cart($artist_id,$cart_id);
     
@@ -106,13 +107,20 @@
     
     $extra_args = array("BRANDNAME" => "$artist_name - MyArtistDNA Store",
                         "CUSTOMERSERVICENUMBER" => "347-775-5638",
-                        "PAYMENTREQUEST_0_ITEMAMT" => $sub_total,
-                        "PAYMENTREQUEST_0_SHIPPINGAMT" => $shipping_total,
+                        //"PAYMENTREQUEST_0_ITEMAMT" => $sub_total,
+                        //"PAYMENTREQUEST_0_SHIPPINGAMT" => $shipping_total,
+                        "PAYMENTREQUEST_1_CURRENCYCODE" => "USD",
+                        "PAYMENTREQUEST_1_AMT" => $mad_amt,
+                        "PAYMENTREQUEST_1_SELLERPAYPALACCOUNTID" => "mad_1346558535_biz@myartistdna.com",
+                        "PAYMENTREQUEST_1_PAYMENTACTION" => "Sale",
+                        "PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID" => $artist_email,
                         );
-                        
-    $extra_args = array_merge($extra_args,$order_item_args);
+
+    //$extra_args = array_merge($extra_args,$order_item_args);
+    $extra_args = array();
     
-    $resArray = CallShortcutExpressCheckout($payment_amount, $currencyCodeType, $paymentType, $returnURL, $cancelURL, $extra_args);
+    //$resArray = CallShortcutExpressCheckout($payment_amount, $currencyCodeType, $paymentType, $returnURL, $cancelURL, $extra_args);
+    $resArray = CallShortcutExpressCheckout($artist_amount, $currencyCodeType, $paymentType, $returnURL, $cancelURL, $extra_args);
     $ack = strtoupper($resArray["ACK"]);
     if( $ack == "SUCCESS" || $ack == "SUCCESSWITHWARNING" )
     {
