@@ -476,6 +476,7 @@ body {
 }
 #tracker_bar .buttons .button {
     display: inline-block;
+    position: relative;
     height: 55px;
     width: 59px;
 }
@@ -528,6 +529,22 @@ body {
 }
 .no_touch #tracker_bar .buttons .comment.button .icon:hover {
     background: transparent url('/images/embed_plus.png') no-repeat 13px 11px;
+}
+#tracker_bar .buttons .button .comments_badge_number {
+    position: absolute;
+    display: inline-block;
+    top: 0px;
+    right: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    padding-bottom: 0px;
+    color: white;
+    font-size: 12px;
+    font-family: Helvetica, Ariel, sans-serif;
+    background: red;
+    border: 2px solid white;
+    border-radius: 10px;
 }
 
 
