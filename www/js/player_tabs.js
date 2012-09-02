@@ -114,7 +114,7 @@ function commentChangedMedia(type,id)
 {
     g_currentMediaCommentId = "{0}_id_{1}".format(type,id);
     
-    var comment_url = "{0}/#{1}_id_{2}".format(g_artistBaseUrl,type,id);
+    var comment_url = "{0}/#{1}_id={2}".format(g_artistBaseUrl,type,id);
     var url = "http://graph.facebook.com/?ids={0}".format(comment_url);
     jQuery.ajax(
         {
