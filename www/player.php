@@ -200,7 +200,7 @@
     {
         $content_tabs_html .= "<div class='tab' onclick='showStore();'>Store</div>";
     }
-    $content_tabs_html .= "<div class='tab' onclick='showComments();'>Comment</div>";
+    //$content_tabs_html .= "<div class='tab' onclick='showComments();'>Comment</div>";
     if( $artist_email )
     {
         $content_tabs_html .= "<div class='tab' onclick='showContact();'>Contact</div>";
