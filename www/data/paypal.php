@@ -141,7 +141,7 @@
                         //"PAYMENTREQUEST_1_DESC" => "Summer Vacation trip",
                         //"PAYMENTREQUEST_1_INSURANCEAMT" => "0",
                         //"PAYMENTREQUEST_1_SHIPDISCAMT" => "0",
-                        "PAYMENTREQUEST_1_SELLERPAYPALACCOUNTID" => "artsel_1346624638_biz@myartistdna.com",
+                        "PAYMENTREQUEST_1_SELLERPAYPALACCOUNTID" => "jim@blueskylabs.com",
                         //"PAYMENTREQUEST_1_INSURANCEOPTIONOFFERED" => "false",
                         "PAYMENTREQUEST_1_PAYMENTACTION" => "Order",
                         "PAYMENTREQUEST_1_PAYMENTREQUESTID" => "MAD$order_id-PAYMENT1",
