@@ -95,7 +95,7 @@
                         "PAYMENTREQUEST_0_SHIPPINGAMT" => $shipping_total,
                         );
                         
-    $extra_args = array_merge($extra_args,$cart_item_args);
+    $extra_args = array_merge($extra_args,$order_item_args);
     
     $resArray = CallShortcutExpressCheckout($payment_amount, $currencyCodeType, $paymentType, $returnURL, $cancelURL, $extra_args);
     $ack = strtoupper($resArray["ACK"]);
