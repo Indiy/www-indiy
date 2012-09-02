@@ -7,7 +7,7 @@
 	$PROXY_HOST = '127.0.0.1';
 	$PROXY_PORT = '808';
 
-	$SandboxFlag = false;
+	$SandboxFlag = true;
 
 	//'------------------------------------
 	//' PayPal API Credentials
@@ -19,9 +19,14 @@
 	//$API_Password="1340382355";
 	//$API_Signature="A.y5rqTqB5ifaOYVWKnkml0FKPQbArK-Gh7moXyUYcw8P7WX.l8pOlqc";
 
-	$API_UserName="wtl_api1.lomaxco.com";
-	$API_Password="B9K3CSH3AMLQSRRU";
-	$API_Signature="AYPWYcsCU66yye7Ljup18V27fG8LAJE0BPSJQ5II8-ogx1T9aLnD7sS3";
+	//$API_UserName="wtl_api1.lomaxco.com";
+	//$API_Password="B9K3CSH3AMLQSRRU";
+	//$API_Signature="AYPWYcsCU66yye7Ljup18V27fG8LAJE0BPSJQ5II8-ogx1T9aLnD7sS3";
+
+
+	$API_UserName="mad_1346558535_biz_api1.myartistdna.com";
+	$API_Password="1346558558";
+	$API_Signature="Ab.Ua9MmJioLkDJWgEubbcrQ8dONA9x1bbDIhJetM9P6ktHGYZ6AK3D-";
 
 
 	// BN Code 	is only applicable for partners
