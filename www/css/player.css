@@ -2181,13 +2181,28 @@ body {
 .narrow_screen #music_list .right {
     height: 294px;
 }
+/*************************************************************************/
 
 .hide_volume #tracker_bar .media_controls .progress_container {
     left: 75px;
 }
 
+/*************************************************************************/
 
+.thin_footer #bottom_bar {
+    height: 25px;
+}
+.thin_footer #bottom_bar .be_heard,
+.thin_footer #bottom_bar .slash,
+.thin_footer #bottom_bar .bottom_link {
+    padding-top: 10px;
+}
 
+.thin_footer #bottom_bar .copyright {
+    padding-top: 10px;
+}
+
+/*************************************************************************/
 
 #test_warning {
     position: fixed;
