@@ -138,7 +138,7 @@
                         "PAYMENTREQUEST_1_DESC" => "Summer Vacation trip",
                         "PAYMENTREQUEST_1_INSURANCEAMT" => "0",
                         "PAYMENTREQUEST_1_SHIPDISCAMT" => "0",
-                        "PAYMENTREQUEST_1_SELLERPAYPALACCOUNTID" => "artist_1346622743_per@myartistdna.com",
+                        "PAYMENTREQUEST_1_SELLERPAYPALACCOUNTID" => "artsel_1346624638_biz@myartistdna.com",
                         "PAYMENTREQUEST_1_INSURANCEOPTIONOFFERED" => "false",
                         "PAYMENTREQUEST_1_PAYMENTACTION" => "Order",
                         "PAYMENTREQUEST_1_PAYMENTREQUESTID" => "CART26488-PAYMENT1",
