@@ -532,19 +532,20 @@ body {
 }
 #tracker_bar .buttons .button .comment_badge_count {
     position: absolute;
-    display: inline-block;
-    top: 0px;
+    display: none;
+    top: 3px;
     right: 0px;
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
     padding-top: 2px;
-    padding-bottom: 0px;
+    padding-bottom: 1px;
     color: white;
     font-size: 12px;
     font-family: Helvetica, Ariel, sans-serif;
-    background: red;
+    background: #ed0019;
     border: 2px solid white;
-    border-radius: 10px;
+    border-radius: 12px;
+    opacity: 0;
 }
 
 
