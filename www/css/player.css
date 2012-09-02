@@ -2201,6 +2201,9 @@ body {
 .thin_footer #bottom_bar .copyright {
     padding-top: 10px;
 }
+.thin_footer #bottom_container {
+    bottom: 25px;
+}
 
 /*************************************************************************/
 
