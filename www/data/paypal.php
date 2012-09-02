@@ -124,6 +124,9 @@
                      "ErrorLongMsg" => $ErrorLongMsg,
                      "ErrorSeverityCode" => $ErrorSeverityCode,
                      "returnURL" => $returnURL,
+                     "extra_args" => $extra_args,
+                     "shipping_total" => $shipping_total,
+                     "payment_amount" => $payment_amount,
                      );
         echo json_encode($ret);
         die();
