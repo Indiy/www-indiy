@@ -115,7 +115,7 @@ function commentChangedMedia(type,id)
     g_currentMediaCommentId = "{0}_id_{1}".format(type,id);
     
     var comment_url = "{0}/#{1}_id={2}".format(g_artistBaseUrl,type,id);
-    var url = "http://graph.facebook.com/?ids={0}".format(comment_url);
+    var url = "http://graph.facebook.com/{0}".format(escape(comment_url));
     jQuery.ajax(
         {
             type: 'POST',
@@ -164,10 +164,12 @@ function updateCommentIconCount(count)
     if( count > 99 )
     {
         $('#comment_badge_count').html("99+");
+        $('#comment_badge_count').show();
     }
     else if( count > 0 )
     {
         $('#comment_badge_count').html(count);
+        $('#comment_badge_count').show();
     }
     else
     {
