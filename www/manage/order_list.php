@@ -21,7 +21,7 @@
         }
     }
 
-    $order_q = mq("SELECT * FROM orders WHERE artist_id='$artist_id' ORDER BY order_data DESC");
+    $order_q = mq("SELECT * FROM orders WHERE artist_id='$artist_id' ORDER BY order_date DESC");
 
     $order_list_html = "";
 
