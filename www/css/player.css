@@ -545,9 +545,7 @@ body {
     background: #ed0019;
     border: 2px solid white;
     border-radius: 12px;
-    opacity: 0;
 }
-
 
 #tracker_bar .buttons .sep {
     display: inline-block;
