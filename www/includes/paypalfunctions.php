@@ -88,6 +88,25 @@
 		   
 	    return $resArray;
 	}
+	function SimpleCallShortcutExpressCheckout( $extra_args )
+	{
+		$nvpstr = "";
+        
+        foreach( $extra_args as $key => $val )
+        {
+            $nvpstr .= "&$key=" . urlencode($val);
+        }
+		
+	    $resArray=hash_call("SetExpressCheckout", $nvpstr);
+		$ack = strtoupper($resArray["ACK"]);
+		if($ack=="SUCCESS" || $ack=="SUCCESSWITHWARNING")
+		{
+			$token = urldecode($resArray["TOKEN"]);
+			$_SESSION['TOKEN']=$token;
+		}
+        
+	    return $resArray;
+	}
     
     function CallRefundTransaction( $transactionId ) 
 	{

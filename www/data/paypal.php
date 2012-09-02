@@ -105,24 +105,50 @@
     $returnURL = "http://$http_host/paypal_order_confirm.php?artist_id=$artist_id";
     $cancelURL = "http://$http_host/cart.php?artist_id=$artist_id&abandon_order=1";
 
-    $artist_amount = round($payment_amount * ARTIST_PAYOUT_PERCENT,2);
+    $artist_amt = round($payment_amount * ARTIST_PAYOUT_PERCENT,2);
     $mad_amt = $payment_amount - $artist_amount;
     
     $extra_args = array("BRANDNAME" => "$artist_name - MyArtistDNA Store",
                         "CUSTOMERSERVICENUMBER" => "347-775-5638",
                         //"PAYMENTREQUEST_0_ITEMAMT" => $sub_total,
                         //"PAYMENTREQUEST_0_SHIPPINGAMT" => $shipping_total,
+
+
+                        "RETURNURL" => $returnURL,
+                        "CANCELURL" => $cancelURL,
+                        
+                        "PAYMENTREQUEST_0_CURRENCYCODE" => "USD",
+                        "PAYMENTREQUEST_0_AMT" => $mad_amt,
+                        "PAYMENTREQUEST_0_ITEMAMT" => $mad_amt,
+                        "PAYMENTREQUEST_0_TAXAMT" => "0",
+                        "PAYMENTREQUEST_0_DESC" => "Summer Vacation trip",
+                        "PAYMENTREQUEST_0_INSURANCEAMT" => "0",
+                        "PAYMENTREQUEST_0_SHIPDISCAMT" => "0",
+                        "PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID" => "mad_1346558535_biz@myartistdna.com",
+                        "PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED" => "false",
+                        "PAYMENTREQUEST_0_PAYMENTACTION" => "Order",
+                        "PAYMENTREQUEST_0_PAYMENTREQUESTID" => "CART26488-PAYMENT0",
+                        
                         "PAYMENTREQUEST_1_CURRENCYCODE" => "USD",
-                        "PAYMENTREQUEST_1_AMT" => $mad_amt,
-                        "PAYMENTREQUEST_1_SELLERPAYPALACCOUNTID" => "mad_1346558535_biz@myartistdna.com",
-                        "PAYMENTREQUEST_1_PAYMENTACTION" => "Sale",
-                        "PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID" => "artist_1346622743_per@myartistdna.com",
+                        "PAYMENTREQUEST_1_AMT" => $artist_amt,
+                        "PAYMENTREQUEST_1_ITEMAMT" =>  $artist_amt,
+                        "PAYMENTREQUEST_1_SHIPPINGAMT" => "0",
+                        "PAYMENTREQUEST_1_HANDLINGAMT" => "0",
+                        "PAYMENTREQUEST_1_TAXAMT" => "0",
+                        "PAYMENTREQUEST_1_DESC" => "Summer Vacation trip",
+                        "PAYMENTREQUEST_1_INSURANCEAMT" => "0",
+                        "PAYMENTREQUEST_1_SHIPDISCAMT" => "0",
+                        "PAYMENTREQUEST_1_SELLERPAYPALACCOUNTID" => "artist_1346622743_per@myartistdna.com",
+                        "PAYMENTREQUEST_1_INSURANCEOPTIONOFFERED" => "false",
+                        "PAYMENTREQUEST_1_PAYMENTACTION" => "Order",
+                        "PAYMENTREQUEST_1_PAYMENTREQUESTID" => "CART26488-PAYMENT1",
+
                         );
 
     //$extra_args = array_merge($extra_args,$order_item_args);
     
     //$resArray = CallShortcutExpressCheckout($payment_amount, $currencyCodeType, $paymentType, $returnURL, $cancelURL, $extra_args);
-    $resArray = CallShortcutExpressCheckout($artist_amount, $currencyCodeType, $paymentType, $returnURL, $cancelURL, $extra_args);
+    $resArray = SimpleCallShortcutExpressCheckout($extra_args);
     $ack = strtoupper($resArray["ACK"]);
     if( $ack == "SUCCESS" || $ack == "SUCCESSWITHWARNING" )
     {
