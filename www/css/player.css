@@ -530,7 +530,7 @@ body {
 .no_touch #tracker_bar .buttons .comment.button .icon:hover {
     background: transparent url('/images/embed_plus.png') no-repeat 13px 11px;
 }
-#tracker_bar .buttons .button .comments_badge_number {
+#tracker_bar .buttons .button .comments_badge_count {
     position: absolute;
     display: inline-block;
     top: 0px;
