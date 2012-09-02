@@ -2195,11 +2195,11 @@ body {
 .thin_footer #bottom_bar .be_heard,
 .thin_footer #bottom_bar .slash,
 .thin_footer #bottom_bar .bottom_link {
-    padding-top: 9px;
+    padding-top: 7px;
 }
 
 .thin_footer #bottom_bar .copyright {
-    padding-top: 9px;
+    padding-top: 7px;
 }
 .thin_footer #bottom_container {
     bottom: 25px;
