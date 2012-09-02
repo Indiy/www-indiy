@@ -65,7 +65,7 @@
     $hide_volume = FALSE;
     $single_media_button = FALSE;
     $all_links_blank = "";
-    $thin_footer = FALSE:
+    $thin_footer = FALSE;
 
     $IPHONE = FALSE;
     $IOS = FALSE;
