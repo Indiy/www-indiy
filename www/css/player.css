@@ -2205,6 +2205,10 @@ body {
     bottom: 25px;
 }
 
+.thin_footer .full_screen_bg {
+    bottom: 25px;
+}
+
 /*************************************************************************/
 
 #test_warning {
