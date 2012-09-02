@@ -15,6 +15,9 @@
     $cart_id = $_SESSION['cart_id'];
     $artist_id = $_GET['artist_id'];
     
+    $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id'"));
+    $artist_name = $artist_data['artist'];
+    
     $cart = store_get_cart($artist_id,$cart_id);
     
     $payment_amount = 0.0;
@@ -54,11 +57,20 @@
         $name = $c['name'];
         $qty = $c['quantity'];
 
-        $description = $name;
+        $desc_extra = "";
         if( strlen($color) > 0 )
-            $description .= " - $color";
+        {
+            $desc_extra .= $color;
+        }
         if( strlen($size) > 0 )
-            $description .= " - $size";
+        {
+            if( strlen($desc_extra) > 0 )
+                $desc_extra .= " - ";
+            $desc_extra .= $size;
+        }
+        $description = $name;
+        if( strlen($desc_extra) > 0 )
+            $description .= " - $desc_extra";
         
         $order_item = array("order_id" => $order_id,
                             "quantity" => $qty,
@@ -74,9 +86,11 @@
             print "Failure: " . mysql_error();
         }
         
-        $order_item_args["L_PAYMENTREQUEST_0_NAME$i"] = $description;
+        $order_item_args["L_PAYMENTREQUEST_0_NAME$i"] = $name;
         $order_item_args["L_PAYMENTREQUEST_0_AMT$i"] = $price;
         $order_item_args["L_PAYMENTREQUEST_0_QTY$i"] = $qty;
+        if( strlen($desc_extra) > 0 )
+            $order_item_args["L_PAYMENTREQUEST_0_DESC$i"] = $desc_extra;
     }
     
     $_SESSION['in_process_order_id'] = $order_id;
@@ -90,10 +104,10 @@
     $returnURL = "http://$http_host/paypal_order_confirm.php?artist_id=$artist_id";
     $cancelURL = "http://$http_host/cart.php?artist_id=$artist_id&abandon_order=1";
     
-    $extra_args = array("BRANDNAME" => "MyArtistDNA",
+    $extra_args = array("BRANDNAME" => "$artist_name - MyArtistDNA Store",
                         "CUSTOMERSERVICENUMBER" => "347-775-5638",
-                        "PAYMENTREQUEST_0_SHIPPINGAMT" => $shipping_total,
                         "PAYMENTREQUEST_0_ITEMAMT" => $sub_total,
+                        "PAYMENTREQUEST_0_SHIPPINGAMT" => $shipping_total,
                         );
                         
     $extra_args = array_merge($extra_args,$order_item_args);
