@@ -110,6 +110,7 @@
     
     $extra_args = array(
                         "BRANDNAME" => "$artist_name - MyArtistDNA Store",
+                        
                         //"CUSTOMERSERVICENUMBER" => "347-775-5638",
                         //"PAYMENTREQUEST_0_ITEMAMT" => $sub_total,
                         //"PAYMENTREQUEST_0_SHIPPINGAMT" => $shipping_total,
@@ -121,30 +122,30 @@
                         
                         "PAYMENTREQUEST_0_CURRENCYCODE" => "USD",
                         "PAYMENTREQUEST_0_AMT" => $mad_amt,
-                        "PAYMENTREQUEST_0_ITEMAMT" => $mad_amt,
-                        "PAYMENTREQUEST_0_TAXAMT" => "0",
-                        "PAYMENTREQUEST_0_DESC" => "Summer Vacation trip",
-                        "PAYMENTREQUEST_0_INSURANCEAMT" => "0",
-                        "PAYMENTREQUEST_0_SHIPDISCAMT" => "0",
+                        //"PAYMENTREQUEST_0_ITEMAMT" => $mad_amt,
+                        //"PAYMENTREQUEST_0_TAXAMT" => "0",
+                        //"PAYMENTREQUEST_0_DESC" => "Summer Vacation trip",
+                        //"PAYMENTREQUEST_0_INSURANCEAMT" => "0",
+                        //"PAYMENTREQUEST_0_SHIPDISCAMT" => "0",
                         "PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID" => "mad_1346558535_biz@myartistdna.com",
-                        "PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED" => "false",
+                        //"PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED" => "false",
                         "PAYMENTREQUEST_0_PAYMENTACTION" => "Order",
-                        "PAYMENTREQUEST_0_PAYMENTREQUESTID" => "CART26488-PAYMENT0",
+                        "PAYMENTREQUEST_0_PAYMENTREQUESTID" => "MAD$order_id-PAYMENT0",
                         
                         "PAYMENTREQUEST_1_CURRENCYCODE" => "USD",
                         "PAYMENTREQUEST_1_AMT" => $artist_amt,
-                        "PAYMENTREQUEST_1_ITEMAMT" =>  $artist_amt,
-                        "PAYMENTREQUEST_1_SHIPPINGAMT" => "0",
-                        "PAYMENTREQUEST_1_HANDLINGAMT" => "0",
-                        "PAYMENTREQUEST_1_TAXAMT" => "0",
-                        "PAYMENTREQUEST_1_DESC" => "Summer Vacation trip",
-                        "PAYMENTREQUEST_1_INSURANCEAMT" => "0",
-                        "PAYMENTREQUEST_1_SHIPDISCAMT" => "0",
+                        //"PAYMENTREQUEST_1_ITEMAMT" =>  $artist_amt,
+                        //"PAYMENTREQUEST_1_SHIPPINGAMT" => "0",
+                        //"PAYMENTREQUEST_1_HANDLINGAMT" => "0",
+                        //"PAYMENTREQUEST_1_TAXAMT" => "0",
+                        //"PAYMENTREQUEST_1_DESC" => "Summer Vacation trip",
+                        //"PAYMENTREQUEST_1_INSURANCEAMT" => "0",
+                        //"PAYMENTREQUEST_1_SHIPDISCAMT" => "0",
                         "PAYMENTREQUEST_1_SELLERPAYPALACCOUNTID" => "artsel_1346624638_biz@myartistdna.com",
-                        "PAYMENTREQUEST_1_INSURANCEOPTIONOFFERED" => "false",
+                        //"PAYMENTREQUEST_1_INSURANCEOPTIONOFFERED" => "false",
                         "PAYMENTREQUEST_1_PAYMENTACTION" => "Order",
-                        "PAYMENTREQUEST_1_PAYMENTREQUESTID" => "CART26488-PAYMENT1",
-
+                        "PAYMENTREQUEST_1_PAYMENTREQUESTID" => "MAD$order_id-PAYMENT1",
+/*
                         "L_PAYMENTREQUEST_0_NAME0" => "Depart San Jose Feb 12 at 12:10PM Arrive in Baltimore at 10:22PM",
                         "L_PAYMENTREQUEST_0_NUMBER0" => "0",
                         "L_PAYMENTREQUEST_0_QTY0" => "1",
@@ -158,7 +159,7 @@
                         "L_PAYMENTREQUEST_1_TAXAMT0" => "0",
                         "L_PAYMENTREQUEST_1_AMT0" => $artist_amt,
                         "L_PAYMENTREQUEST_1_DESC0" => "King No-Smoking; Check in after 4:00 PM; Check out by 1:00 PM",
-
+*/
                         );
 
     //$extra_args = array_merge($extra_args,$order_item_args);
