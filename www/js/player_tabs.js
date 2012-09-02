@@ -152,7 +152,7 @@ function showComments()
         g_showingCommentPage = true;
         $('#comment_tab .fb_container').hide();
         var id_tag = g_currentMediaCommentId;
-        var sel = "#comment_tab {0}".format(id_tag);
+        var sel = "#comment_tab #{0}".format(id_tag);
         $(sel).show();
         $('#comment_tab').show();
         $('#comment_tab').scrollbar("repaint");
