@@ -42,6 +42,8 @@
         die("Error in order processing");
     
     $order_id = mysql_insert_id();
+    
+    $order_item_args = array();
 
     for( $i = 0 ; $i < count($cart) ; ++$i )
     {
@@ -49,15 +51,17 @@
         $color = $c['color'];
         $size = $c['size'];
         $price = $c['price'];
+        $name = $c['name'];
+        $qty = $c['quantity'];
 
-        $description = $c['name'];
+        $description = $name;
         if( strlen($color) > 0 )
             $description .= " - $color";
         if( strlen($size) > 0 )
             $description .= " - $size";
         
         $order_item = array("order_id" => $order_id,
-                            "quantity" => $c['quantity'],
+                            "quantity" => $qty,
                             "product_id" => $c['product_id'],
                             "color" => $color,
                             "size" => $size,
@@ -69,6 +73,10 @@
         {
             print "Failure: " . mysql_error();
         }
+        
+        $order_item_args["L_PAYMENTREQUEST_0_NAME$i"] = $description;
+        $order_item_args["L_PAYMENTREQUEST_0_AMT$i"] = $price;
+        $order_item_args["L_PAYMENTREQUEST_0_QTY$i"] = $qty;
     }
     
     $_SESSION['in_process_order_id'] = $order_id;
@@ -82,7 +90,14 @@
     $returnURL = "http://$http_host/paypal_order_confirm.php?artist_id=$artist_id";
     $cancelURL = "http://$http_host/cart.php?artist_id=$artist_id&abandon_order=1";
     
-    $resArray = CallShortcutExpressCheckout($payment_amount, $currencyCodeType, $paymentType, $returnURL, $cancelURL);
+    $extra_args = array("BRANDNAME" => "MyArtistDNA",
+                        "CUSTOMERSERVICENUMBER" => "347-775-5638",
+                        "PAYMENTREQUEST_0_SHIPPINGAMT" => $shipping_total,
+                        );
+                        
+    $extra_args = array_merge($extra_args,$cart_item_args);
+    
+    $resArray = CallShortcutExpressCheckout($payment_amount, $currencyCodeType, $paymentType, $returnURL, $cancelURL, $extra_args);
     $ack = strtoupper($resArray["ACK"]);
     if( $ack == "SUCCESS" || $ack == "SUCCESSWITHWARNING" )
     {

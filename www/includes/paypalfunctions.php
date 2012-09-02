@@ -30,7 +30,7 @@
 	}
 
 	$USE_PROXY = false;
-	$version="64";
+	$PAYPAL_VERSION = "64";
 
 	if (session_id() == "") 
 		session_start();
@@ -54,16 +54,21 @@
 	'		cancelURL:			the page where buyers return to when they cancel the payment review on PayPal
 	'--------------------------------------------------------------------------------------------------------------------------------------------	
 	*/
-	function CallShortcutExpressCheckout( $paymentAmount, $currencyCodeType, $paymentType, $returnURL, $cancelURL) 
+	function CallShortcutExpressCheckout( $paymentAmount, $currencyCodeType, $paymentType, $returnURL, $cancelURL, $extra_args)
 	{
 		//------------------------------------------------------------------------------------------------------------------------------------
 		// Construct the parameter string that describes the SetExpressCheckout API call in the shortcut implementation
 		
-		$nvpstr="&PAYMENTREQUEST_0_AMT=". $paymentAmount;
-		$nvpstr = $nvpstr . "&PAYMENTREQUEST_0_PAYMENTACTION=" . $paymentType;
-		$nvpstr = $nvpstr . "&RETURNURL=" . $returnURL;
-		$nvpstr = $nvpstr . "&CANCELURL=" . $cancelURL;
-		$nvpstr = $nvpstr . "&PAYMENTREQUEST_0_CURRENCYCODE=" . $currencyCodeType;
+		$nvpstr = "&PAYMENTREQUEST_0_AMT=" . $paymentAmount;
+		$nvpstr .= "&PAYMENTREQUEST_0_PAYMENTACTION=" . $paymentType;
+		$nvpstr .= "&RETURNURL=" . $returnURL;
+		$nvpstr .= "&CANCELURL=" . $cancelURL;
+		$nvpstr .= "&PAYMENTREQUEST_0_CURRENCYCODE=" . $currencyCodeType;
+        
+        foreach( $extra_args as $key => $val )
+        {
+            $nvpstr .= "&$key=" . urlencode($val);
+        }
 		
 		$_SESSION["currencyCodeType"] = $currencyCodeType;	  
 		$_SESSION["PaymentType"] = $paymentType;
@@ -321,7 +326,7 @@
 	function hash_call($methodName,$nvpStr)
 	{
 		//declaring of global variables
-		global $API_Endpoint, $version, $API_UserName, $API_Password, $API_Signature;
+		global $API_Endpoint, $PAYPAL_VERSION, $API_UserName, $API_Password, $API_Signature;
 		global $USE_PROXY, $PROXY_HOST, $PROXY_PORT;
 		global $gv_ApiErrorURL;
 		global $sBNCode;
@@ -344,7 +349,7 @@
 			curl_setopt ($ch, CURLOPT_PROXY, $PROXY_HOST. ":" . $PROXY_PORT); 
 
 		//NVPRequest for submitting to server
-		$nvpreq="METHOD=" . urlencode($methodName) . "&VERSION=" . urlencode($version) . "&PWD=" . urlencode($API_Password) . "&USER=" . urlencode($API_UserName) . "&SIGNATURE=" . urlencode($API_Signature) . $nvpStr . "&BUTTONSOURCE=" . urlencode($sBNCode);
+		$nvpreq="METHOD=" . urlencode($methodName) . "&VERSION=" . urlencode($PAYPAL_VERSION) . "&PWD=" . urlencode($API_Password) . "&USER=" . urlencode($API_UserName) . "&SIGNATURE=" . urlencode($API_Signature) . $nvpStr . "&BUTTONSOURCE=" . urlencode($sBNCode);
 
 		//setting the nvpreq as POST FIELD to curl
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $nvpreq);
