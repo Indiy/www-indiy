@@ -114,7 +114,7 @@
     if( $artist_data['fb_setting'] != 'DISABLED' && $artist_data['fb_page_url'] )
         $artist_facebook_page = $artist_data['fb_page_url'];
     
-    $artist_url = "http://" . $_SERVER["HTTP_HOST"];
+    $artist_base_url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
     
     $extra = json_decode($artist_data['extra_json'],TRUE);
 
@@ -398,9 +398,9 @@
         $body_style .= " hide_volume";
     }
     
-    function make_comments_for_list($artist_url,$type,$list)
+    function make_comments_for_list($base_url,$type,$list)
     {
-        $base_url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
+        
         $ret_html = "";
         foreach( $list as $index => $item )
         {
@@ -411,9 +411,6 @@
             $html = "";
             $html .= "<div id='$id_tag' class='fb_container'>";
             $html .= " <fb:comments href='$url' num_posts='10' width='470' colorscheme='dark'></fb:comments>";
-            $html .= " <div class='comment_count'>";
-            $html .= "  <fb:comments-count href='$url'></fb:comments-count>";
-            $html .= " </div>";
             $html .= "</div>";
             
             $ret_html .= $html;
@@ -423,9 +420,9 @@
     }
     
     $comments_html = "";
-    $comments_html .= make_comments_for_list($artist_url,"song",$music_list);
-    $comments_html .= make_comments_for_list($artist_url,"video",$video_list);
-    $comments_html .= make_comments_for_list($artist_url,"photo",$photo_list);
+    $comments_html .= make_comments_for_list($artist_base_url,"song",$music_list);
+    $comments_html .= make_comments_for_list($artist_base_url,"video",$video_list);
+    $comments_html .= make_comments_for_list($artist_base_url,"photo",$photo_list);
     
     include_once 'templates/player.html';
 

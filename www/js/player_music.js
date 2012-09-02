@@ -95,7 +95,7 @@ function musicPanelChange(index)
     g_currentSongId = song.id;
     var hash = '#song_id=' + g_currentSongId;
     window.location.hash = hash;
-    g_currentMediaHash = hash;
+    commentChangedMedia('song',song.id);
     
     playerTrackInfo(song.name,song.listens);
     

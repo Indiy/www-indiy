@@ -523,6 +523,12 @@ body {
 .no_touch #tracker_bar .buttons .plus.button .icon:hover {
     background: transparent url('/images/embed_plus.png') no-repeat 13px 11px;
 }
+#tracker_bar .buttons .comment.button .icon {
+    background: transparent url('/images/embed_plus.png') no-repeat -37px 11px;
+}
+.no_touch #tracker_bar .buttons .comment.button .icon:hover {
+    background: transparent url('/images/embed_plus.png') no-repeat 13px 11px;
+}
 
 
 #tracker_bar .buttons .sep {
@@ -1345,9 +1351,6 @@ body {
     display: inline-block;
     padding: 10px;
     background-color: #333;
-}
-#comment_tab .comment_container .comment_count {
-    display: none;
 }
 
 .content_tab .close {

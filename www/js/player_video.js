@@ -46,7 +46,7 @@ function videoPanelChange(index)
     var video = g_videoList[index];
     var hash = '#video_id=' + video.id;
     window.location.hash = hash;
-    g_currentMediaHash = hash;
+    commentChangedMedia('video',video.id);
     
     loveChangedVideo(video.id,video.name);
     

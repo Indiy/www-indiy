@@ -36,8 +36,6 @@ var g_searchOpen = false;
 var g_volumeShown = false;
 var g_touchDevice = false;
 
-var g_currentMediaHash = "";
-
 $(document).ready(generalOnReady);
 function generalOnReady()
 {

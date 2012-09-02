@@ -51,7 +51,7 @@
 
         var g_artistName = "<?=$artist_name;?>";
         var g_artistId = <?=$artist_id;?>;
-        var g_artistUrl = "<?=$artist_url;?>";
+        var g_artistBaseUrl = "<?=$artist_base_url;?>";
         
         var g_fanEmail = "<?=$fan_email;?>";
         
@@ -183,6 +183,11 @@
                         </div>
                     <? endif; ?>
                 <? endif; ?>
+                <div class='sep'></div>
+                <div class='comment tooltiped button' onclick='showComments();' tooltip="COMMENTS">
+                    <div class='icon'></div>
+                    <div id='comment_badge_count' class='comment_badge_count'></div>
+                </div>
                 <div class='sep'></div>
                 <div id='love_button' class='love tooltiped button' onclick='clickLoveIcon();' tooltip="LOVE">
                     <div class='icon'></div>

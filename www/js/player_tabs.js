@@ -106,8 +106,36 @@ function showContact()
     }
 }
 
+var g_currentMediaCommentId = "";
 var g_commentUpdateTimer = false;
 var g_showingCommentPage = false;
+
+function commentChangedMedia(type,id)
+{
+    g_currentMediaCommentId = "{0}_id_{1}".format(type,id);
+    
+    var comment_url = "{0}/#{1}_id_{2}".format(g_artistBaseUrl,type,id);
+    var url = "http://graph.facebook.com/?ids={0}".format(comment_url);
+    jQuery.ajax(
+        {
+            type: 'POST',
+            url: url,
+            dataType: 'jsonp',
+            success: function(data)
+            {
+                var count = 0;
+                if( 'comments' in data )
+                {
+                    count = data.comments;
+                }
+                updateCommentIconCount(count);
+            },
+            error: function()
+            {
+                updateCommentIconCount(0);
+            }
+        });
+}
 function showComments()
 {
     $('#popup_tab_list').hide();
@@ -123,7 +151,7 @@ function showComments()
         showContentPage();
         g_showingCommentPage = true;
         $('#comment_tab .fb_container').hide();
-        var id_tag = g_currentMediaHash.replace('=','_');
+        var id_tag = g_currentMediaCommentId;
         var sel = "#comment_tab {0}".format(id_tag);
         $(sel).show();
         $('#comment_tab').show();
@@ -131,6 +159,22 @@ function showComments()
         g_commentUpdateTimer = window.setInterval(periodicCommentTabCheck,500);
     }
 }
+function updateCommentIconCount(count)
+{
+    if( count > 99 )
+    {
+        $('#comment_badge_count').html("99+");
+    }
+    else if( count > 0 )
+    {
+        $('#comment_badge_count').html(count);
+    }
+    else
+    {
+        $('#comment_badge_count').hide();
+    }
+}
+
 function periodicCommentTabCheck()
 {
     $('#comment_tab').scrollbar("repaint");
