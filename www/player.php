@@ -400,12 +400,11 @@
     
     function make_comments_for_list($base_url,$type,$list)
     {
-        
         $ret_html = "";
         foreach( $list as $index => $item )
         {
             $id = $item['id'];
-            $url = "$artist_url/#{$type}_id=$id";
+            $url = "$base_url/#{$type}_id=$id";
             $id_tag = "{$type}_id_$id";
         
             $html = "";
