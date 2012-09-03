@@ -119,6 +119,21 @@ function do_POST()
             mysql_insert('mydna_musicplayer_ecommerce_products',$values);
             $product_id = mysql_insert_id();
         }
+        
+        mq("DELETE FROM product_files WHERE artist_id='$artist_id' AND product_id='$product_id'");
+        
+        $file = mf(mq("SELECT * FROM artist_files WHERE artist_id='$artist_id' AND filename='$audio_sound'"));
+        if( $file )
+        {
+            $filename = $file['filename'];
+            $upload_filename = $file['upload_filename'];
+            
+            $values = array("product_id" => $product_id,
+                            "filename" => $filename,
+                            "upload_filename" => $upload_filename,
+                            );
+            mysql_insert("product_files",$values);
+        }
     }
     else
     {
