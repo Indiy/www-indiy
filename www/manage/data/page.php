@@ -114,7 +114,7 @@ function do_POST()
                             "description" => "Single",
                             "image" => $audio_logo,
                             "price" => 0.99,
-                            "sku" => MADSONG,
+                            "sku" => "MADSONG",
                             );
             mysql_insert('mydna_musicplayer_ecommerce_products',$values);
             $product_id = mysql_insert_id();
