@@ -298,3 +298,15 @@ function doFreeDownload()
     window.location.href = url;
 }
 
+function clickBuySong(index)
+{
+    var song = g_musicList[index];
+    
+    var product_id = song.product_id;
+    if( product_id )
+    {
+        showStore();
+        storeShowProductId(product_id);
+    }
+}
+

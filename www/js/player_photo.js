@@ -88,7 +88,6 @@ function scrollPhotoListToIndex(animate)
 
 function photoPanelChange(index)
 {
-    console.log("photoPanelChange: " + index);
     photoUpdateToIndex(index);
 }
 

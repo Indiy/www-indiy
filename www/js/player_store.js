@@ -1,11 +1,13 @@
 
+var g_showingStore = false;
+var g_storeCurrentProductIndex = false;
+
 $(document).ready(storeReady);
 function storeReady()
 {
     $('#store_tab').scrollbar();
 }
 
-var g_showingStore = false;
 function showStore()
 {
     $('#popup_tab_list').hide();
@@ -38,7 +40,18 @@ function storeShowProductList()
     
     $('#store_tab').scrollbar("repaint");
 }
-var g_storeCurrentProductIndex = false;
+function storeShowProductId(id)
+{
+    for( var i = 0 ; i < g_productList.length ; ++i )
+    {
+        var product = g_productList[i];
+        if( product.id == id )
+        {
+            storeShowProduct(i);
+            return;
+        }
+    }
+}
 function storeShowProduct(index)
 {
     g_storeCurrentProductIndex = index;
