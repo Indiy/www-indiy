@@ -2076,6 +2076,33 @@ body {
     cursor: pointer;
 }
 
+#song_buy_popup .buy_buttons {
+    width: 464px;
+    height: 175px;
+    font-size: 0;
+    text-align: center;
+    white-space: nowrap;
+}
+#song_buy_popup .buy_buttons a {
+    outline: none;
+    text-decoration: none;
+}
+#song_buy_popup .buy_buttons .button {
+    display: inline-block;
+    width: 150px;
+    height: 175px;
+    vertical-align: top;
+}
+#song_buy_popup .buy_buttons .button.mad {
+    background: url('/images/buy_on_mad.png') 0px 0px;
+}
+#song_buy_popup .buy_buttons .button.itunes {
+    background: url('/images/download_on_itunes.png') 0px 0px;
+}
+#song_buy_popup .buy_buttons .button.amazon {
+    background: url('/images/buy_on_amazon.jpg') 0px 0px;
+}
+
 #popup_tab_list {
     display: none;
     position: fixed;
