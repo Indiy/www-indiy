@@ -271,7 +271,7 @@ function clickFreeDownload(index)
 function closePopup()
 {
     $('#popup_mask').hide();
-    $('#submit_email_popup').hide();
+    $('.popup_wrapper').hide();
 }
 
 function onSubmitEmail()
