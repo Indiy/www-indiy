@@ -2092,6 +2092,7 @@ body {
     width: 150px;
     height: 175px;
     vertical-align: top;
+    cursor: pointer;
 }
 #song_buy_popup .buy_buttons .button.mad {
     background: url('/images/buy_on_mad.png') 0px 0px no-repeat;
