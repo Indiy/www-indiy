@@ -222,7 +222,7 @@
         $music_free_download = $music["download"] != "0";
         $product_id = intval($music['product_id']);
         if( !$product_id )
-            $product_id = FALSE:
+            $product_id = FALSE;
         
         $item = array("id" => $music['id'],
                       "name" => $music_name,
