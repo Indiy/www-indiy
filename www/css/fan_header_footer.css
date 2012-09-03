@@ -107,12 +107,12 @@
 #header .mad_bar .inner .right .sep {
     position: relative;
     display: inline-block;
-    padding-top: 19px;
+    padding-top: 18px;
     width: 20px;
     vertical-align: top;
     color: #999;
-    font-size: 14px;
-    letter-spacing: -3px;
+    font-size: 12px;
+    letter-spacing: -2px;
     font-family: "Neuzeit Grotesk", Helvetica, Arial, sans-serif;
     text-align: center;
 }
