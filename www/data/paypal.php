@@ -107,7 +107,7 @@
 
     $artist_amt = round($payment_amount * ARTIST_PAYOUT_PERCENT,2);
     $mad_amt = $payment_amount - $artist_amt;
-    
+/*
     $extra_args = array(
                         "BRANDNAME" => "$artist_name - MyArtistDNA Store",
                         
@@ -122,50 +122,27 @@
                         
                         "PAYMENTREQUEST_0_CURRENCYCODE" => "USD",
                         "PAYMENTREQUEST_0_AMT" => $mad_amt,
-                        //"PAYMENTREQUEST_0_ITEMAMT" => $mad_amt,
-                        //"PAYMENTREQUEST_0_TAXAMT" => "0",
-                        //"PAYMENTREQUEST_0_DESC" => "Summer Vacation trip",
-                        //"PAYMENTREQUEST_0_INSURANCEAMT" => "0",
-                        //"PAYMENTREQUEST_0_SHIPDISCAMT" => "0",
                         "PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID" => "mad_1346558535_biz@myartistdna.com",
-                        //"PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED" => "false",
                         "PAYMENTREQUEST_0_PAYMENTACTION" => "Order",
                         "PAYMENTREQUEST_0_PAYMENTREQUESTID" => "MAD$order_id-PAYMENT0",
                         
                         "PAYMENTREQUEST_1_CURRENCYCODE" => "USD",
                         "PAYMENTREQUEST_1_AMT" => $artist_amt,
-                        //"PAYMENTREQUEST_1_ITEMAMT" =>  $artist_amt,
-                        //"PAYMENTREQUEST_1_SHIPPINGAMT" => "0",
-                        //"PAYMENTREQUEST_1_HANDLINGAMT" => "0",
-                        //"PAYMENTREQUEST_1_TAXAMT" => "0",
-                        //"PAYMENTREQUEST_1_DESC" => "Summer Vacation trip",
-                        //"PAYMENTREQUEST_1_INSURANCEAMT" => "0",
-                        //"PAYMENTREQUEST_1_SHIPDISCAMT" => "0",
                         "PAYMENTREQUEST_1_SELLERPAYPALACCOUNTID" => "artist_1346622743_per@myartistdna.com",
-                        //"PAYMENTREQUEST_1_INSURANCEOPTIONOFFERED" => "false",
                         "PAYMENTREQUEST_1_PAYMENTACTION" => "Order",
                         "PAYMENTREQUEST_1_PAYMENTREQUESTID" => "MAD$order_id-PAYMENT1",
-/*
-                        "L_PAYMENTREQUEST_0_NAME0" => "Depart San Jose Feb 12 at 12:10PM Arrive in Baltimore at 10:22PM",
-                        "L_PAYMENTREQUEST_0_NUMBER0" => "0",
-                        "L_PAYMENTREQUEST_0_QTY0" => "1",
-                        "L_PAYMENTREQUEST_0_TAXAMT0" => "0",
-                        "L_PAYMENTREQUEST_0_AMT0" => $mad_amt,
-                        "L_PAYMENTREQUEST_0_DESC0" => "SJC Terminal 1. Flight time: 7 hours 12 minutes",
-
-                        "L_PAYMENTREQUEST_1_NAME0" => "Night(s) stay at 9990 Deereco Road, Timonium, MD 21093",
-                        "L_PAYMENTREQUEST_1_NUMBER0" => "1",
-                        "L_PAYMENTREQUEST_1_QTY0" => "1",
-                        "L_PAYMENTREQUEST_1_TAXAMT0" => "0",
-                        "L_PAYMENTREQUEST_1_AMT0" => $artist_amt,
-                        "L_PAYMENTREQUEST_1_DESC0" => "King No-Smoking; Check in after 4:00 PM; Check out by 1:00 PM",
+                        );
 */
+    $extra_args = array(
+                        "BRANDNAME" => "$artist_name - MyArtistDNA Store",
+                        "PAYMENTREQUEST_0_ITEMAMT" => $sub_total,
+                        "PAYMENTREQUEST_0_SHIPPINGAMT" => $shipping_total,
                         );
 
-    //$extra_args = array_merge($extra_args,$order_item_args);
+    $extra_args = array_merge($extra_args,$order_item_args);
     
-    //$resArray = CallShortcutExpressCheckout($payment_amount, $currencyCodeType, $paymentType, $returnURL, $cancelURL, $extra_args);
-    $resArray = SimpleCallShortcutExpressCheckout($extra_args);
+    $resArray = CallShortcutExpressCheckout($payment_amount, $currencyCodeType, $paymentType, $returnURL, $cancelURL, $extra_args);
+    //$resArray = SimpleCallShortcutExpressCheckout($extra_args);
     $ack = strtoupper($resArray["ACK"]);
     if( $ack == "SUCCESS" || $ack == "SUCCESSWITHWARNING" )
     {
