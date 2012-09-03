@@ -50,14 +50,7 @@
         else
         {
             $output['success'] = 1;
-            if( $num_logins > 1 )
-            {
-                $output['url'] = trueSiteUrl() . "/role_choice.php";
-            }
-            else
-            {
-                $output['url'] = $url;
-            }
+            $output['url'] = $url;
         }
         send_output($output);
     }
