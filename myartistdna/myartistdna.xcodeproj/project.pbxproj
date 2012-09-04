@@ -233,6 +233,8 @@
 		2DC262C215EEC67400CA560F /* footer.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = footer.html; sourceTree = "<group>"; };
 		2DC262C415EEC76900CA560F /* fan_header.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = fan_header.html; sourceTree = "<group>"; };
 		2DC262C515EFD0B600CA560F /* fan_header_footer.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = fan_header_footer.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2DC262CA15F6706200CA560F /* paypal_adaptive.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = paypal_adaptive.php; sourceTree = "<group>"; };
+		2DC262CC15F678E800CA560F /* debug.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = debug.php; sourceTree = "<group>"; };
 		2DD94A2B14C368DF002B1259 /* vim.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = vim.css; sourceTree = "<group>"; };
 		2DE197A214F6133000305EAD /* password.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = password.php; sourceTree = "<group>"; };
 		2DE3F8A715B1F4ED00B5D439 /* mad.swipe.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mad.swipe.js; sourceTree = "<group>"; };
@@ -1102,6 +1104,7 @@
 				2D9E2FD81569F13600A76906 /* templates */,
 				2D8D96FC15A26FE900AA3D1B /* fan */,
 				2D25C38D15D9BB9A00132306 /* player2.php */,
+				2DC262CC15F678E800CA560F /* debug.php */,
 				2D25C38C15D96E2400132306 /* player.php */,
 				2D747C6015E4AFE700128EEC /* player_iphone.php */,
 				2D7849F115CEEA0600A89620 /* logout.php */,
@@ -1313,6 +1316,7 @@
 			isa = PBXGroup;
 			children = (
 				2D8D96DB159197BC00AA3D1B /* paypalfunctions.php */,
+				2DC262CA15F6706200CA560F /* paypal_adaptive.php */,
 				2DF471341440B77F005538C7 /* config.php */,
 				2DF4713D1440B77F005538C7 /* functions.php */,
 				2D380B92146A08AA00E36189 /* login_helper.php */,
