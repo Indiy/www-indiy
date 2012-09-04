@@ -1104,7 +1104,6 @@
 				2D9E2FD81569F13600A76906 /* templates */,
 				2D8D96FC15A26FE900AA3D1B /* fan */,
 				2D25C38D15D9BB9A00132306 /* player2.php */,
-				2DC262CC15F678E800CA560F /* debug.php */,
 				2D25C38C15D96E2400132306 /* player.php */,
 				2D747C6015E4AFE700128EEC /* player_iphone.php */,
 				2D7849F115CEEA0600A89620 /* logout.php */,
@@ -1141,6 +1140,7 @@
 				2DF474141440B77F005538C7 /* tour.php */,
 				2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */,
 				2D380B95146E35CD00E36189 /* robots.txt */,
+				2DC262CC15F678E800CA560F /* debug.php */,
 			);
 			name = www;
 			path = ../www;

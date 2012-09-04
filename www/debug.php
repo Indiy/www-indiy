@@ -37,7 +37,7 @@
 
     print "paypal_checkout done ========================\n";
     
-    $ret = paypal_checkout();
+    $ret = paypal_checkout($extra_args);
 
     print "\n\n";
     print "paypal_checkout done ========================\n";
