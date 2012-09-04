@@ -40,13 +40,13 @@
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
 		curl_setopt($ch, CURLOPT_POST, 1);
 
-        $header = array("X-PAYPAL-SECURITY-USERID: $PAYPAL_USERNAME",
-                        "X-PAYPAL-SECURITY-PASSWORD: $PAYPAL_PASSWORD",
-                        "X-PAYPAL-SECURITY-SIGNATURE: $PAYPAL_SIGNATURE",
-                        "X-PAYPAL-REQUEST-DATA-FORMAT: NV",
-                        "X-PAYPAL-RESPONSE-DATA-FORMAT: JSON",
-                        "X-PAYPAL-APPLICATION-ID: $PAYPAL_APPID",
-                        );
+        $headers = array("X-PAYPAL-SECURITY-USERID: $PAYPAL_USERNAME",
+                         "X-PAYPAL-SECURITY-PASSWORD: $PAYPAL_PASSWORD",
+                         "X-PAYPAL-SECURITY-SIGNATURE: $PAYPAL_SIGNATURE",
+                         "X-PAYPAL-REQUEST-DATA-FORMAT: NV",
+                         "X-PAYPAL-RESPONSE-DATA-FORMAT: JSON",
+                         "X-PAYPAL-APPLICATION-ID: $PAYPAL_APPID",
+                         );
 
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         
