@@ -45,6 +45,25 @@
     print "ret:\n";
     var_dump($ret);
     
+    $pay_status = $ret['paymentExecStatus'];
+    
+    if( $pay_status == 'CREATED' )
+    {
+        $pay_key = $ret['payKey'];
+        $url = "$PAYPAL_URL$pay_key";
+        
+        print "</pre>";
+        print "<br/>";
+        print "<a href='$url'>Pay URL: $url</a><br/>";
+        print "<br/>";
+        print "<pre>\n";
+    }
+    else
+    {
+        print "Error, status: $pay_status\n";
+    }
+    
+    
     print "done done";
 
 ?>
