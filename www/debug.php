@@ -29,7 +29,7 @@
                         "currencyCode" => "USD",
                         "feesPayer" => "EACHRECEIVER",
                         "cancelUrl" => trueSiteUrl() . "/debug.php?cancel=1",
-                        "cancelUrl" => trueSiteUrl() . "/debug.php?return=1",
+                        "returnUrl" => trueSiteUrl() . "/debug.php?return=1",
                         );
 
     print "extra_args:\n";
