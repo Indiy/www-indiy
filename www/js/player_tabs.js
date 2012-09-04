@@ -29,6 +29,10 @@ function showMoreTabs()
 {
     $('#popup_tab_list').show();
 }
+function closeMoreTabs()
+{
+    $('#popup_tab_list').hide();
+}
 
 function showUserPage(i)
 {
@@ -100,34 +104,6 @@ function showContact()
         $('#contact_tab').show();
         $('#contact_tab').scrollbar("repaint");
     }
-}
-
-var g_commentUpdateTimer = false;
-var g_showingCommentPage = false;
-function showComments()
-{
-    $('#popup_tab_list').hide();
-    if( g_showingCommentPage )
-    {
-        hideTab();
-        if( g_commentUpdateTimer )
-            window.clearInterval(g_commentUpdateTimer);
-    }
-    else
-    {
-        hideAllTabs();
-        showContentPage();
-        g_showingCommentPage = true;
-        $('#comment_tab').show();
-        $('#comment_tab').scrollbar("repaint");
-        g_commentUpdateTimer = window.setInterval(periodicCommentTabCheck,500);
-    }
-}
-function periodicCommentTabCheck()
-{
-    $('#comment_tab').scrollbar("repaint");
-    if( !g_showingCommentPage )
-        window.clearInterval(g_commentUpdateTimer);
 }
 
 function clickContactContact()

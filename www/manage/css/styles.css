@@ -87,7 +87,15 @@ header h1 { float:left; line-height:.5em; padding:14px 16px 0 0}
 
 header nav {width:701px; height:50px; float:left; background:url(../images/bg_nav.gif) repeat-x; padding:0 20px 0 60px}
 header nav ul {float:left; padding:20px 0 0 0}
-header nav ul li { float:left; font-family:"Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; color:#D5D5D5; text-transform:uppercase; background:url(../images/divider_nav.png) no-repeat right 4px; padding:0 18px}
+header nav ul li {
+    float:left;
+    font-family:"Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:14px;
+    color:#D5D5D5;
+    text-transform:uppercase;
+    background:url(../images/divider_nav.png) no-repeat right 1px;
+    padding:0 18px;
+}
 header nav ul li.nodivider { background:none}
 header nav ul li a { float:left; color:#D5D5D5; text-decoration:none; padding-bottom:14px; z-index:10; cursor: pointer; }
 header nav ul li a:hover { background:url(../images/arrow_nav.gif) no-repeat bottom center}

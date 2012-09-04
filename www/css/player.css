@@ -476,6 +476,7 @@ body {
 }
 #tracker_bar .buttons .button {
     display: inline-block;
+    position: relative;
     height: 55px;
     width: 59px;
 }
@@ -523,7 +524,28 @@ body {
 .no_touch #tracker_bar .buttons .plus.button .icon:hover {
     background: transparent url('/images/embed_plus.png') no-repeat 13px 11px;
 }
-
+#tracker_bar .buttons .comment.button .icon {
+    background: transparent url('/images/comment_icon.png') no-repeat -60px 11px;
+}
+.no_touch #tracker_bar .buttons .comment.button .icon:hover {
+    background: transparent url('/images/comment_icon.png') no-repeat 0px 11px;
+}
+#tracker_bar .buttons .button .comment_badge_count {
+    position: absolute;
+    display: none;
+    top: 3px;
+    right: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 1px;
+    color: white;
+    font-size: 12px;
+    font-family: Helvetica, Ariel, sans-serif;
+    background: #ed0019;
+    border: 2px solid white;
+    border-radius: 12px;
+}
 
 #tracker_bar .buttons .sep {
     display: inline-block;
@@ -2054,6 +2076,34 @@ body {
     cursor: pointer;
 }
 
+#song_buy_popup .buy_buttons {
+    width: 464px;
+    height: 175px;
+    font-size: 0;
+    text-align: center;
+    white-space: nowrap;
+}
+#song_buy_popup .buy_buttons a {
+    outline: none;
+    text-decoration: none;
+}
+#song_buy_popup .buy_buttons .button {
+    display: inline-block;
+    width: 150px;
+    height: 175px;
+    vertical-align: top;
+    cursor: pointer;
+}
+#song_buy_popup .buy_buttons .button.mad {
+    background: url('/images/buy_on_mad.png') 11px 24px no-repeat;
+}
+#song_buy_popup .buy_buttons .button.itunes {
+    background: url('/images/download_on_itunes.png') 20px 58px no-repeat;
+}
+#song_buy_popup .buy_buttons .button.amazon {
+    background: url('/images/buy_on_amazon.jpg') 0px 58px no-repeat;
+}
+
 #popup_tab_list {
     display: none;
     position: fixed;
@@ -2159,13 +2209,35 @@ body {
 .narrow_screen #music_list .right {
     height: 294px;
 }
+/*************************************************************************/
 
 .hide_volume #tracker_bar .media_controls .progress_container {
     left: 75px;
 }
 
+/*************************************************************************/
 
+.thin_footer #bottom_bar {
+    height: 25px;
+}
+.thin_footer #bottom_bar .be_heard,
+.thin_footer #bottom_bar .slash,
+.thin_footer #bottom_bar .bottom_link {
+    padding-top: 7px;
+}
 
+.thin_footer #bottom_bar .copyright {
+    padding-top: 7px;
+}
+.thin_footer #bottom_container {
+    bottom: 25px;
+}
+
+.thin_footer .full_screen_bg {
+    bottom: 25px;
+}
+
+/*************************************************************************/
 
 #test_warning {
     position: fixed;

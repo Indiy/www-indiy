@@ -98,7 +98,7 @@
     }
     $photo_list_json = json_encode($photo_list);
 
-	$find_artistContent = "SELECT * FROM mydna_musicplayer_content  WHERE artistid='".$artistID."' ORDER BY `order` ASC, `id` DESC";
+	$find_artistContent = "SELECT * FROM mydna_musicplayer_content  WHERE artistid='$artistID' ORDER BY `order` ASC, `id` DESC";
 	$result_artistContent = mysql_query($find_artistContent) or die(mysql_error());
     $tab_list = array();
     while( $row = mysql_fetch_array($result_artistContent) )
@@ -113,7 +113,7 @@
     }
     $tab_list_json = json_encode($tab_list);
 	
-	$find_artistProduct = "SELECT * FROM mydna_musicplayer_ecommerce_products  WHERE artistid='$artistID' AND sku != 'MADSONG' ORDER BY `order` ASC, `id` DESC";
+	$find_artistProduct = "SELECT * FROM mydna_musicplayer_ecommerce_products WHERE artistid='$artistID' ORDER BY `order` ASC, `id` DESC";
 	$result_artistProduct = mysql_query($find_artistProduct) or die(mysql_error());
 	$product_list = array();
     while( $row = mysql_fetch_array($result_artistProduct) )

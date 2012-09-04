@@ -88,7 +88,6 @@ function scrollPhotoListToIndex(animate)
 
 function photoPanelChange(index)
 {
-    console.log("photoPanelChange: " + index);
     photoUpdateToIndex(index);
 }
 
@@ -141,7 +140,9 @@ function photoUpdateToIndex(index)
     photoLoadImage(photo,index);
     
     g_currentPhotoId = photo.id;
-    window.location.hash = '#photo_id=' + g_currentPhotoId; 
+    var hash = '#photo_id=' + g_currentPhotoId;
+    window.location.hash = hash;
+    commentChangedMedia('photo',photo.id);
     
     playerPhotoInfo(photo.name,photo.location,photo.listens);
     photoUpdateViews(photo.id,index);
@@ -189,43 +190,3 @@ function photoResizeBackgrounds()
     imageResizeBackgrounds(g_photoList,'#photo_bg');
     photoScrollToCurrentIndex();
 }
-
-function photoGetBackgroundParams(photo)
-{
-    var win_height = $('#photo_bg').height();
-    var win_width = $('#photo_bg').width();
-    var win_ratio = win_width / win_height;
-    
-    var img_width = photo.image_data.width;
-    var img_height = photo.image_data.height;
-    var img_ratio = img_width/img_height;
-    
-    
-    var height = 0;
-    var width = 0;
-    var margin_left = 0;
-    var margin_top = 0;
-    
-    if( win_ratio < img_ratio )
-    {
-        height = win_height;
-        width = height * img_ratio;
-        margin_left = -(width - win_width)/2;
-    }
-    else
-    {
-        width = win_width;
-        height = width / img_ratio;
-        margin_top = -(height - win_height)/2;
-    }
-    
-    var ret = {
-        'width': width,
-        'height': height,
-        'margin_top': margin_top,
-        'margin_left': margin_left
-    };
-    return ret;
-}
-
-

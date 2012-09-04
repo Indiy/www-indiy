@@ -5,6 +5,7 @@ var g_musicIsPlaying = false;
 var g_musicVolRatio = 0.8;
 var g_musicPlayerReady = false;
 var g_musicStartIndex = false;
+var g_songBuyProductId = 0;
 
 $(document).ready(musicOnReady);
 
@@ -93,7 +94,9 @@ function musicPanelChange(index)
     musicLoadImage(song,index);
     
     g_currentSongId = song.id;
-    window.location.hash = '#song_id=' + g_currentSongId; 
+    var hash = '#song_id=' + g_currentSongId;
+    window.location.hash = hash;
+    commentChangedMedia('song',song.id);
     
     playerTrackInfo(song.name,song.listens);
     
@@ -268,7 +271,7 @@ function clickFreeDownload(index)
 function closePopup()
 {
     $('#popup_mask').hide();
-    $('#submit_email_popup').hide();
+    $('.popup_wrapper').hide();
 }
 
 function onSubmitEmail()
@@ -294,5 +297,79 @@ function doFreeDownload()
     var email = escape(g_fanEmail);
     var url = "/download.php?artist={0}&id={1}&email={2}".format(g_artistId,song.id,email);
     window.location.href = url;
+}
+
+function clickBuySong(index)
+{
+    var song = g_musicList[index];
+    
+    var product_id = song.product_id;
+    var amazon = song.amazon;
+    var itunes = song.itunes;
+    
+    var num_buy_methods = 0;
+    if( product_id )
+        num_buy_methods++;
+    if( amazon.length > 0 )
+        num_buy_methods++;
+    if( itunes.length > 0 )
+        num_buy_methods++;
+    
+    if( num_buy_methods > 1 )
+    {
+        showBuyPopup(amazon,itunes,product_id);
+    }
+    else if( product_id )
+    {
+        showStore();
+        storeShowProductId(product_id);
+    }
+    else if( amazon.length > 0 )
+    {
+        window.open(amazon,"_blank");
+    }
+    else if( itunes.length > 0 )
+    {
+        window.open(itunes,"_blank");
+    }
+}
+
+function showBuyPopup(amazon,itunes,product_id)
+{
+    g_songBuyProductId = product_id;
+    if( amazon.length > 0 )
+    {
+        $('#song_buy_popup #amazon_link').attr('href',amazon);
+        $('#song_buy_popup #amazon_link').show();
+    }
+    else
+    {
+        $('#song_buy_popup #amazon_link').hide();
+    }
+    if( itunes.length > 0 )
+    {
+        $('#song_buy_popup #itunes_link').attr('href',itunes);
+        $('#song_buy_popup #itunes_link').show();
+    }
+    else
+    {
+        $('#song_buy_popup #itunes_link').hide();
+    }
+    if( product_id > 0 )
+    {
+        $('#song_buy_popup #mad_link').show();
+    }
+    else
+    {
+        $('#song_buy_popup #mad_link').hide();
+    }
+    $('#popup_mask').show();
+    $('#song_buy_popup').show();
+}
+function clickSongBuyPopupMAD()
+{
+    closePopup();
+    showStore();
+    storeShowProductId(g_songBuyProductId);
 }
 

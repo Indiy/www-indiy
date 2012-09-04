@@ -16,7 +16,8 @@ var TOOLTIP_OFFSET_MAP = {
     VOLUME: -15,
     PAUSE: 2,
     UNLOVE: -30,
-    MORE: -7
+    MORE: -7,
+    COMMENTS: -25
 };
 
 var TOOLTIP_CARROT_MARGIN_MAP = {
@@ -28,7 +29,8 @@ var TOOLTIP_CARROT_MARGIN_MAP = {
     UNLOVE: 3,
     VIDEO: -9,
     VOLUME: -9,
-    MORE: -10
+    MORE: -10,
+    COMMENTS: -10
 };
 
 function showTooltip(event)

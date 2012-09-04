@@ -80,15 +80,15 @@ function generalOnReady()
         var photo_id = anchor_map['photo_id'];
         photoChangeId(photo_id);
     }
-    else if( g_startMediaType == 'MUSIC' )
+    else if( g_startMediaType == 'MUSIC' && g_musicList.length > 0 )
     {
         musicChange(0);
     }
-    else if( g_startMediaType == 'PHOTO' )
+    else if( g_startMediaType == 'PHOTO' && g_photoList.length > 0 )
     {
         photoChangeIndex(0);
     }
-    else if( g_startMediaType == 'VIDEO' )
+    else if( g_startMediaType == 'VIDEO' && g_videoList.length > 0 )
     {
         videoPlayIndex(0);
     }

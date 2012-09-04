@@ -37,6 +37,7 @@
     <script src="/js/player_search.js" type="text/javascript"></script>
     <script src="/js/player_store.js" type="text/javascript"></script>
     <script src="/js/player_tooltips.js" type="text/javascript"></script>
+    <script src="/js/player_comments.js" type="text/javascript"></script>
 
     <script type="text/javascript">
         var g_tabList = <?=$tab_list_json;?>;
@@ -51,7 +52,7 @@
 
         var g_artistName = "<?=$artist_name;?>";
         var g_artistId = <?=$artist_id;?>;
-        var g_artistUrl = "<?=$artist_url;?>";
+        var g_artistBaseUrl = "<?=$artist_base_url;?>";
         
         var g_fanEmail = "<?=$fan_email;?>";
         
@@ -184,6 +185,11 @@
                     <? endif; ?>
                 <? endif; ?>
                 <div class='sep'></div>
+                <div class='comment tooltiped button' onclick='showComments();' tooltip="COMMENTS">
+                    <div class='icon'></div>
+                    <div id='comment_badge_count' class='comment_badge_count'></div>
+                </div>
+                <div class='sep'></div>
                 <div id='love_button' class='love tooltiped button' onclick='clickLoveIcon();' tooltip="LOVE">
                     <div class='icon'></div>
                 </div>
@@ -232,18 +238,20 @@
             <? endif; ?>
             <div class='media_boxes'>
                 <div class='media_buttons'>
-                    <? if( count($photo_list) > 0): ?>
+                    <? if( count($photo_list) > 0 ): ?>
                         <div class='button photos' onclick='clickPhotoMediaButton();'>
                             <div class='icon'></div>
                             <div class='label'>PHOTOS</div>
                         </div>
                         <div class='sep'></div>
                     <? endif; ?>
-                    <div class='button music' onclick='clickMusicMediaButton();'>
-                        <div class='icon'></div>
-                        <div class='label'>MUSIC</div>
-                    </div>
-                    <div class='sep'></div>
+                    <? if( count($music_list) > 0 ): ?>
+                        <div class='button music' onclick='clickMusicMediaButton();'>
+                            <div class='icon'></div>
+                            <div class='label'>MUSIC</div>
+                        </div>
+                        <div class='sep'></div>
+                    <? endif; ?>
                     <? if( count($video_list) > 0 ): ?>
                         <div class='button video' onclick='clickVideoMediaButton();'>
                             <div class='icon'></div>
@@ -422,12 +430,7 @@ Reach out to us.</div>
         </div>
         <div class='sep'></div>
         <div class='comment_container scrollbar-pane'>
-            <div class='fb_container'>
-                <fb:comments href="<?=$artist_url;?>" num_posts="10" width="470" colorscheme="dark"></fb:comments>
-            </div>
-            <div class='comment_count'>
-                <fb:comments-count href="<?=$artist_url;?>"></fb:comments-count>
-            </div>
+            <?=$comments_html;?>
         </div>
         <?=build_scrollbar();?>
     </div>
@@ -522,9 +525,28 @@ Reach out to us.</div>
             </div>
         </div>
     </div>
+    <div id='song_buy_popup' class='popup_wrapper'>
+        <div class="popup">
+            <div class='top_bar'>
+                <div class='title'>BUY THIS SONG</div>
+                <div class='close' onclick='closePopup();'>CLOSE</div>
+            </div>
+            <div class='buy_buttons'>
+                <a id='mad_link' onclick='clickSongBuyPopupMAD();'>
+                    <div id='mad_button' class='mad button'></div>
+                </a>
+                <a id='itunes_link' href='#' target='_blank'>
+                    <div class='itunes button'></div>
+                </a>
+                <a id='amazon_link' href='#' target='_blank'>
+                    <div class='amazon button'></div>
+                </a>
+            </div>
+        </div>
+    </div>
     <div id='popup_mask'></div>
 
-    <div id='popup_tab_list'>
+    <div id='popup_tab_list' onclick='closeMoreTabs();'>
         <div class='inner'>
             <div class='list'>
                 <?=$content_tabs_html;?>

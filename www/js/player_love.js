@@ -136,7 +136,7 @@ function loadLoved()
 function updateLoveLinks(type,track_name)
 {
     var artist = g_artistName;
-    var link_url = g_artistUrl;
+    var link_url = g_artistBaseUrl;
     var host = window.location.host;
 
     var msg = "Check out {0}'s {1} \"{2}\" on MyArtistDNA".format(artist,type,track_name);

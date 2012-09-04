@@ -90,7 +90,15 @@
     <h1><a href="/home.php"><img src="images/MYARTISTDNA.png" alt="MYARTISTDNA"></a></h1>
 	<nav>
     <ul>
-        <?php 
+        <?php
+        
+        if( $_SESSION['fan_id'] > 0 )
+        {
+            echo "<li>";
+            echo "<a href='/fan/'>FAN HOME</a>";
+            echo "</li>";
+        }
+        
         if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' ) 
         {
             ?>

@@ -15,6 +15,10 @@
     $cart_id = $_SESSION['cart_id'];
     $artist_id = $_GET['artist_id'];
     
+    $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id'"));
+    $artist_name = $artist_data['artist'];
+    $artist_email = $artist_data['email'];
+    
     $cart = store_get_cart($artist_id,$cart_id);
     
     $payment_amount = 0.0;
@@ -42,6 +46,8 @@
         die("Error in order processing");
     
     $order_id = mysql_insert_id();
+    
+    $order_item_args = array();
 
     for( $i = 0 ; $i < count($cart) ; ++$i )
     {
@@ -49,15 +55,26 @@
         $color = $c['color'];
         $size = $c['size'];
         $price = $c['price'];
+        $name = $c['name'];
+        $qty = $c['quantity'];
 
-        $description = $c['name'];
+        $desc_extra = "";
         if( strlen($color) > 0 )
-            $description .= " - $color";
+        {
+            $desc_extra .= $color;
+        }
         if( strlen($size) > 0 )
-            $description .= " - $size";
+        {
+            if( strlen($desc_extra) > 0 )
+                $desc_extra .= " - ";
+            $desc_extra .= $size;
+        }
+        $description = $name;
+        if( strlen($desc_extra) > 0 )
+            $description .= " - $desc_extra";
         
         $order_item = array("order_id" => $order_id,
-                            "quantity" => $c['quantity'],
+                            "quantity" => $qty,
                             "product_id" => $c['product_id'],
                             "color" => $color,
                             "size" => $size,
@@ -69,6 +86,12 @@
         {
             print "Failure: " . mysql_error();
         }
+        
+        $order_item_args["L_PAYMENTREQUEST_0_NAME$i"] = $name;
+        $order_item_args["L_PAYMENTREQUEST_0_AMT$i"] = $price;
+        $order_item_args["L_PAYMENTREQUEST_0_QTY$i"] = $qty;
+        if( strlen($desc_extra) > 0 )
+            $order_item_args["L_PAYMENTREQUEST_0_DESC$i"] = $desc_extra;
     }
     
     $_SESSION['in_process_order_id'] = $order_id;
@@ -81,8 +104,45 @@
 
     $returnURL = "http://$http_host/paypal_order_confirm.php?artist_id=$artist_id";
     $cancelURL = "http://$http_host/cart.php?artist_id=$artist_id&abandon_order=1";
+
+    $artist_amt = round($payment_amount * ARTIST_PAYOUT_PERCENT,2);
+    $mad_amt = $payment_amount - $artist_amt;
+/*
+    $extra_args = array(
+                        "BRANDNAME" => "$artist_name - MyArtistDNA Store",
+                        
+                        //"CUSTOMERSERVICENUMBER" => "347-775-5638",
+                        //"PAYMENTREQUEST_0_ITEMAMT" => $sub_total,
+                        //"PAYMENTREQUEST_0_SHIPPINGAMT" => $shipping_total,
+
+                        "RETURNURL" => $returnURL,
+                        "CANCELURL" => $cancelURL,
+                        
+                        "PAYMENTACTION" => "Order",
+                        
+                        "PAYMENTREQUEST_0_CURRENCYCODE" => "USD",
+                        "PAYMENTREQUEST_0_AMT" => $mad_amt,
+                        "PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID" => "mad_1346558535_biz@myartistdna.com",
+                        "PAYMENTREQUEST_0_PAYMENTACTION" => "Order",
+                        "PAYMENTREQUEST_0_PAYMENTREQUESTID" => "MAD$order_id-PAYMENT0",
+                        
+                        "PAYMENTREQUEST_1_CURRENCYCODE" => "USD",
+                        "PAYMENTREQUEST_1_AMT" => $artist_amt,
+                        "PAYMENTREQUEST_1_SELLERPAYPALACCOUNTID" => "artist_1346622743_per@myartistdna.com",
+                        "PAYMENTREQUEST_1_PAYMENTACTION" => "Order",
+                        "PAYMENTREQUEST_1_PAYMENTREQUESTID" => "MAD$order_id-PAYMENT1",
+                        );
+*/
+    $extra_args = array(
+                        "BRANDNAME" => "$artist_name - MyArtistDNA Store",
+                        "PAYMENTREQUEST_0_ITEMAMT" => $sub_total,
+                        "PAYMENTREQUEST_0_SHIPPINGAMT" => $shipping_total,
+                        );
+
+    $extra_args = array_merge($extra_args,$order_item_args);
     
-    $resArray = CallShortcutExpressCheckout($payment_amount, $currencyCodeType, $paymentType, $returnURL, $cancelURL);
+    $resArray = CallShortcutExpressCheckout($payment_amount, $currencyCodeType, $paymentType, $returnURL, $cancelURL, $extra_args);
+    //$resArray = SimpleCallShortcutExpressCheckout($extra_args);
     $ack = strtoupper($resArray["ACK"]);
     if( $ack == "SUCCESS" || $ack == "SUCCESSWITHWARNING" )
     {
@@ -108,7 +168,11 @@
                      "ErrorShortMsg" => $ErrorShortMsg,
                      "ErrorLongMsg" => $ErrorLongMsg,
                      "ErrorSeverityCode" => $ErrorSeverityCode,
+                     "resArray" => $resArray,
                      "returnURL" => $returnURL,
+                     "extra_args" => $extra_args,
+                     "shipping_total" => $shipping_total,
+                     "payment_amount" => $payment_amount,
                      );
         echo json_encode($ret);
         die();

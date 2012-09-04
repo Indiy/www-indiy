@@ -65,6 +65,7 @@
     $hide_volume = FALSE;
     $single_media_button = FALSE;
     $all_links_blank = "";
+    $thin_footer = FALSE;
 
     $IPHONE = FALSE;
     $IOS = FALSE;
@@ -94,6 +95,7 @@
         $hide_volume = TRUE;
         $single_media_button = TRUE;
         $all_links_blank = " target='_blank' ";
+        $thin_footer = TRUE;
     }
     
     $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE url='$artist_url' LIMIT 1"));
@@ -114,7 +116,7 @@
     if( $artist_data['fb_setting'] != 'DISABLED' && $artist_data['fb_page_url'] )
         $artist_facebook_page = $artist_data['fb_page_url'];
     
-    $artist_url = "http://" . $_SERVER["HTTP_HOST"];
+    $artist_base_url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
     
     $extra = json_decode($artist_data['extra_json'],TRUE);
 
@@ -200,7 +202,7 @@
     {
         $content_tabs_html .= "<div class='tab' onclick='showStore();'>Store</div>";
     }
-    $content_tabs_html .= "<div class='tab' onclick='showComments();'>Comment</div>";
+    //$content_tabs_html .= "<div class='tab' onclick='showComments();'>Comment</div>";
     if( $artist_email )
     {
         $content_tabs_html .= "<div class='tab' onclick='showContact();'>Contact</div>";
@@ -218,6 +220,9 @@
         $music_name = stripslashes($music["name"]);
         $music_listens = $music["views"];
         $music_free_download = $music["download"] != "0";
+        $product_id = intval($music['product_id']);
+        if( !$product_id )
+            $product_id = FALSE;
         
         $item = array("id" => $music['id'],
                       "name" => $music_name,
@@ -228,7 +233,7 @@
                       "bg_style" => $music['bg_style'],
                       "amazon" => $music['amazon'],
                       "itunes" => $music['itunes'],
-                      "product_id" => $music['product_id'],
+                      "product_id" => $product_id,
                       "loaded" => FALSE,
                       "listens" => $music_listens,
                       "image_data" => json_decode($music['image_data']),
@@ -256,7 +261,7 @@
         if( $music_free_download )
             $html .= "  <div class='buy free' onclick='clickFreeDownload($i);'>FREE</div>";
         else if( $buy )
-            $html .= "  <div class='buy'>BUY</div>";
+            $html .= "  <div class='buy' onclick='clickBuySong($i);'>BUY</div>";
         $html .= "  <div class='sep'></div>";
         $html .= "  <div class='length'>4:05</div>";
         $html .= "  <div class='sep'></div>";
@@ -397,6 +402,35 @@
     {
         $body_style .= " hide_volume";
     }
+    if( $thin_footer )
+    {
+        $body_style .= " thin_footer";
+    }
+    
+    function make_comments_for_list($base_url,$type,$list)
+    {
+        $ret_html = "";
+        foreach( $list as $index => $item )
+        {
+            $id = $item['id'];
+            $url = "$base_url/#{$type}_id=$id";
+            $id_tag = "{$type}_id_$id";
+        
+            $html = "";
+            $html .= "<div id='$id_tag' class='fb_container'>";
+            $html .= " <fb:comments href='$url' num_posts='10' width='470' colorscheme='dark'></fb:comments>";
+            $html .= "</div>";
+            
+            $ret_html .= $html;
+        }
+        
+        return $ret_html;
+    }
+    
+    $comments_html = "";
+    $comments_html .= make_comments_for_list($artist_base_url,"song",$music_list);
+    $comments_html .= make_comments_for_list($artist_base_url,"video",$video_list);
+    $comments_html .= make_comments_for_list($artist_base_url,"photo",$photo_list);
     
     include_once 'templates/player.html';
 

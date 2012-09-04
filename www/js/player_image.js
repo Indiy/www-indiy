@@ -22,7 +22,11 @@ function imageLoadItem(item,index,root_tag)
             var image_params = imageGetStretchParams(item,root_tag);
             
             var img_style = "width: {0}px; height: {1}px;".format(image_params.width,image_params.height);
-            var img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(image,win_width);
+            var tim_width = win_width;
+            if( IS_IOS )
+                tim_width = 2*win_width;
+            
+            var img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(image,tim_width);
             
             var div_holder_style = "";
             div_holder_style += "height: {0}px; ".format(win_height);

@@ -125,9 +125,9 @@ function updatePhotoList()
         html += "</li>";
         $('#photo_list_ul').append(html);
     }
-    if( g_pageList.length == 0 )
+    if( g_photoList.length == 0 )
     {
-        var html = "<div class='empty_list'>You have not uploaded any pages yet.</div>";
+        var html = "<div class='empty_list'>You have not uploaded any photos yet.</div>";
         $('#photo_list_ul').append(html);
     }
 }
@@ -155,7 +155,7 @@ function updateStoreList()
         html += "</li>";
         $('#product_list_ul').append(html);
     }
-    if( g_tabList.length == 0 )
+    if( g_productList.length == 0 )
     {
         var html = "<div class='empty_list'>You have not added any products yet.</div>";
         $('#product_list_ul').append(html);
