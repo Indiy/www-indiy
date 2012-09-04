@@ -8,7 +8,7 @@
     $PAYPAL_API_ENDPOINT = "https://svcs.sandbox.paypal.com/AdaptivePayments/Pay";
     
     //$PAYPAL_URL = "https://www.sandbox.paypal.com/webapps/adaptivepayment/flow/pay?paykey=";
-    $PAYPAL_URL = "https://www.paypal.com/webscr?cmd=_ap-payment&paykey=";
+    $PAYPAL_URL = "https://www.sandbox.paypal.com/webscr?cmd=_ap-payment&paykey=";
     
     function paypal_checkout($extra_args)
     {
