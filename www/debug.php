@@ -63,6 +63,7 @@
         $pay_key = $ret['payKey'];
         
         $args = array("payKey" => $pay_key,
+                      "requestEnvelope.errorLanguage" => "en_US",
                       "displayOptions.businessName" => "Jim Lake - MyArtistDNA Store",
                       "senderOptions.requireShippingAddressSelection" => "Jim Lake - MyArtistDNA Store",
                       "receiverOptions[0].invoiceData.totalTax" => 0,
