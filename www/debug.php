@@ -120,9 +120,9 @@ $(document).ready(function() {
                       "receiverOptions[0].invoiceData.item[0].itemCount" => 1,
                       "receiverOptions[0].invoiceData.item[0].itemPrice" => 25.0,
                       "receiverOptions[0].invoiceData.item[1].name" => "MAD T-Shirts, cheap ones",
-                      "receiverOptions[0].invoiceData.item[1].price" => 10.0,
+                      "receiverOptions[0].invoiceData.item[1].price" => 50.0,
                       "receiverOptions[0].invoiceData.item[1].itemCount" => 5,
-                      "receiverOptions[0].invoiceData.item[1].itemPrice" => 50.0,
+                      "receiverOptions[0].invoiceData.item[1].itemPrice" => 10.0,
                       
                       );
         
