@@ -23,7 +23,7 @@
         return paypal_hash_call($args);
     }
     
-    function paypal_checkout($extra_args)
+    function paypal_get_paykey($extra_args)
     {
         global $PAYPAL_PAY_API_ENDPOINT;
     
