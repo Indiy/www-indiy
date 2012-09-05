@@ -105,12 +105,6 @@ $(document).ready(function() {
         $args = array("trackingId" => $tracking_id,
                       "requestEnvelope.errorLanguage" => "en_US",
                       "currencyCode" => "USD",
-                      "receiverList.receiver(0).email" => "mad_1346558535_biz@myartistdna.com",
-                      "receiverList.receiver(0).amount" => "100.00",
-                      "receiverList.receiver(0).primary" => "true",
-                      "receiverList.receiver(1).email" => "artist_1346622743_per@myartistdna.com",
-                      "receiverList.receiver(1).amount" => "80.00",
-                      "receiverList.receiver(1).primary" => "false",
                       );
         
         var_dump($args);
