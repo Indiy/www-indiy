@@ -19,7 +19,17 @@
         print "Return endpoint\n";
         die("Done done");
     }
-
+    if( isset($_REQUEST['transaction_id']) )
+    {
+        $transaction_id = $_REQUEST['transaction_id'];
+        
+        $info = paypal_get_transaction_info($transaction_id);
+        
+        print "transaction_info: \n";
+        var_dump($info);
+        
+        die("Done done");
+    }
 
     
     $extra_args = array("requestEnvelope.errorLanguage" => "en_US",
