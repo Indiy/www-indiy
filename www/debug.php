@@ -72,7 +72,7 @@ $(document).ready(function() {
         
         die("Done done");
     }
-    /*
+    
 
     print "<body><pre>\n";
 
@@ -156,6 +156,6 @@ $(document).ready(function() {
     
     print "done done";
     
-    */
+    
 
 ?>
