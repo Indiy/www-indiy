@@ -4,6 +4,8 @@
     require_once 'includes/functions.php';
     require_once 'includes/paypal_adaptive.php';
 
+    error_reporting(E_ALL);
+
     header("Cache-Control: no-cache");
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
 
