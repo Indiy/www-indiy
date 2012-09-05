@@ -33,7 +33,7 @@
 
     
     $extra_args = array("requestEnvelope.errorLanguage" => "en_US",
-                        "actionType" => "PAY",
+                        "actionType" => "CREATE",
                         "receiverList.receiver(0).email" => "mad_1346558535_biz@myartistdna.com",
                         "receiverList.receiver(0).amount" => "100.00",
                         "currencyCode" => "USD",
