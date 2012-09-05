@@ -37,7 +37,7 @@ $(document).ready(function() {
         <?php
 
         print "<body><pre>\n";
-        print "Cancel Endpoint\n"
+        print "Cancel Endpoint\n";
         die("Done done");
     }
     if( isset($_REQUEST['return']) )
@@ -57,7 +57,7 @@ $(document).ready(function() {
         <?php
     
         print "<body><pre>\n";
-        print "Return Endpoint\n"
+        print "Return Endpoint\n";
         die("Done done");
     }
     if( isset($_REQUEST['transaction_id']) )
