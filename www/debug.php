@@ -72,6 +72,18 @@ $(document).ready(function() {
         
         die("Done done");
     }
+    if( isset($_REQUEST['refund_pay_key']) )
+    {
+        print "<body><pre>\n";
+        $pay_key = $_REQUEST['refund_pay_key'];
+        
+        $info = paypal_refund_paykey($pay_key);
+        
+        print "paypal_refund_paykey: \n";
+        var_dump($info);
+        
+        die("Done done");
+    }
     
 
     print "<body><pre>\n";

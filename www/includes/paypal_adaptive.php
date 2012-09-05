@@ -9,6 +9,7 @@
 
     $PAYPAL_HASH_API_ENDPOINT = "https://api-3t.sandbox.paypal.com/nvp";
     $PAYPAL_PAY_API_ENDPOINT = "https://svcs.sandbox.paypal.com/AdaptivePayments/Pay";
+    $PAYPAL_REFUND_API_ENDPOINT = "https://svcs.sandbox.paypal.com/AdaptivePayments/Refund";
     $PAYPAL_SET_PAYMENT_OPTIONS_API_ENDPOINT = "https://svcs.sandbox.paypal.com/AdaptivePayments/SetPaymentOptions";
     $PAYPAL_GET_PAYMENT_OPTIONS_API_ENDPOINT = "https://svcs.sandbox.paypal.com/AdaptivePayments/GetPaymentOptions";
     
@@ -36,7 +37,6 @@
         
         return paypal_app_header_call($PAYPAL_SET_PAYMENT_OPTIONS_API_ENDPOINT,$args);
     }
-    
     function paypal_get_payment_options($pay_key)
     {
         global $PAYPAL_GET_PAYMENT_OPTIONS_API_ENDPOINT;
@@ -45,6 +45,15 @@
                       "requestEnvelope.errorLanguage" => "en_US",
                       );
         return paypal_app_header_call($PAYPAL_GET_PAYMENT_OPTIONS_API_ENDPOINT,$args);
+    }
+    function paypal_refund_paykey($pay_key)
+    {
+        global $PAYPAL_REFUND_API_ENDPOINT;
+        
+        $args = array("payKey" => $pay_key,
+                      "requestEnvelope.errorLanguage" => "en_US",
+                      );
+        return paypal_app_header_call($PAYPAL_REFUND_API_ENDPOINT,$args);
     }
     
     function paypal_get_url($pay_key)
