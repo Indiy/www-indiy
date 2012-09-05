@@ -24,11 +24,14 @@
     
     function paypal_checkout($extra_args)
     {
+        global $PAYPAL_PAY_API_ENDPOINT;
+    
         return paypal_app_header_call($PAYPAL_PAY_API_ENDPOINT,$extra_args);
     }
 
     function paypal_hash_call($nvp_array)
     {
+        global $PAYPAL_HASH_API_ENDPOINT;
         global $PAYPAL_API_VERSION;
         global $PAYPAL_API_ENDPOINT;
         global $PAYPAL_USERNAME;
