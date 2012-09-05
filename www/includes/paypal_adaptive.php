@@ -65,7 +65,12 @@
         
 		$response = curl_exec($ch);
         
+        print "response: $response\n";
+        
         $ret = paypal_deformat_nvp($response);
+        
+        print "ret: \n";
+        var_dump($ret);
         
 		if (curl_errno($ch))
 		{
