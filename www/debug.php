@@ -145,6 +145,11 @@ var dgFlow = new PAYPAL.apps.DGFlow({ trigger: 'submitBtn' });;
 
 </script>
 
+<br/>
+<br/>
+<a href="<?=$url;?>">Pay on PayPal Site</a><br/>
+<br/>
+
 <pre>
 
 <?php
