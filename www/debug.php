@@ -23,13 +23,14 @@
 
     
     $extra_args = array("requestEnvelope.errorLanguage" => "en_US",
-                        "actionType" => "CREATE",
+                        "actionType" => "PAY",
                         "receiverList.receiver(0).email" => "mad_1346558535_biz@myartistdna.com",
                         "receiverList.receiver(0).amount" => "100.00",
                         "currencyCode" => "USD",
                         "feesPayer" => "EACHRECEIVER",
                         "cancelUrl" => trueSiteUrl() . "/debug.php?cancel=1",
                         "returnUrl" => trueSiteUrl() . "/debug.php?return=1",
+                        "ipnNotificationUrl" => trueSiteUrl() . "/data/paypal_ipn.php?order_id=42",
                         );
 
     print "extra_args:\n";
