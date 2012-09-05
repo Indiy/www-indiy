@@ -133,8 +133,11 @@ $(document).ready(function() {
 </pre>
 
 <script type="text/javascript">
+
+var dgFlow;
+
 $(document).ready(function() {
-                  var dgFlow = new PAYPAL.apps.DGFlow({ trigger: 'submitBtn' });
+                  dgFlow = new PAYPAL.apps.DGFlow({ trigger: 'submitBtn' });
                   });
 </script>
 
