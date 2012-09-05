@@ -97,6 +97,31 @@ $(document).ready(function() {
         
         die("Done done");
     }
+    if( isset($_REQUEST['refund_tracking_id']) )
+    {
+        print "<body><pre>\n";
+        $tracking_id = $_REQUEST['refund_tracking_id'];
+        
+        $args = array("trackingId" => $tracking_id,
+                      "requestEnvelope.errorLanguage" => "en_US",
+                      "currencyCode" => "USD",
+                      "receiverList.receiver(0).email" => "mad_1346558535_biz@myartistdna.com",
+                      "receiverList.receiver(0).amount" => "100.00",
+                      "receiverList.receiver(0).primary" => "true",
+                      "receiverList.receiver(1).email" => "artist_1346622743_per@myartistdna.com",
+                      "receiverList.receiver(1).amount" => "80.00",
+                      "receiverList.receiver(1).primary" => "false",
+                      );
+        
+        var_dump($args);
+        
+        $info = paypal_refund_paykey($args);
+        
+        print "paypal_refund_paykey: \n";
+        var_dump($info);
+        
+        die("Done done");
+    }
     
 
     print "<body><pre>\n";
