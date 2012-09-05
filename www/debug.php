@@ -7,20 +7,60 @@
     header("Cache-Control: no-cache");
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
 
-    print "<html><pre>\n\n";
+?>
+
+<html>
+    <head>
+        <script type="text/javascript" src="https://www.paypalobjects.com/js/external/dg.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+        
+
+<?php
 
     if( isset($_REQUEST['cancel']) )
     {
-        print "Cancel endpoint\n";
+        
+        ?>
+<script type="text/javascript">
+$(document).ready(function() {
+                  if (top && top.opener && top.opener.top) {
+                    top.opener.top.dgFlow.closeFlow();
+                  } else {
+                    top.dgFlow.closeFlow();
+                  }
+                  });
+</script>
+        
+        <?php
+
+        print "<body><pre>\n";
+        print "Cancel Endpoint\n"
         die("Done done");
     }
     if( isset($_REQUEST['return']) )
     {
-        print "Return endpoint\n";
+        ?>
+        
+<script type="text/javascript">
+$(document).ready(function() {
+                  if (top && top.opener && top.opener.top) {
+                    top.opener.top.dgFlow.closeFlow();
+                  } else {
+                    top.dgFlow.closeFlow();
+                  }
+                  });
+</script>
+
+        <?php
+    
+        print "<body><pre>\n";
+        print "Return Endpoint\n"
         die("Done done");
     }
     if( isset($_REQUEST['transaction_id']) )
     {
+        print "<body><pre>\n";
         $transaction_id = $_REQUEST['transaction_id'];
         
         $info = paypal_get_transaction_info($transaction_id);
@@ -30,6 +70,8 @@
         
         die("Done done");
     }
+
+    print "<body><pre>\n";
 
     
     $extra_args = array("requestEnvelope.errorLanguage" => "en_US",
@@ -66,7 +108,7 @@
                       "requestEnvelope.errorLanguage" => "en_US",
                       "displayOptions.businessName" => "Jim Lake - MyArtistDNA Store",
                       "senderOptions.requireShippingAddressSelection" => "Jim Lake - MyArtistDNA Store",
-                      "receiverOptions[0].receiver.email" => "mad_1346558535_biz@myartistdna.com",
+                      "receiverOptions[0].receiver.email" => "mad_1346558535_biz@myartistdna.com"
                       "receiverOptions[0].invoiceData.totalTax" => 0,
                       "receiverOptions[0].invoiceData.totalShipping" => 25.0,
                       "receiverOptions[0].invoiceData.item[0].name" => "MAD Single",
@@ -82,12 +124,25 @@
         paypal_set_payment_options($args);
         
         $url = paypal_get_url($pay_key);
-        
-        print "</pre>";
-        print "<br/>";
-        print "<a href='$url'>Pay URL: $url</a><br/>";
-        print "<br/>";
-        print "<pre>\n";
+
+?>
+
+</pre>
+
+<script type="text/javascript">
+$(document).ready(function() {
+                  var dgFlow = new PAYPAL.apps.DGFlow({ trigger: 'submitBtn' });
+                  });
+</script>
+
+<form action= "https://www.sandbox.paypal.com/webapps/adaptivepayment/flow/pay" target="PPDGFrame">
+<input id="type" type="hidden" name="expType" value="light"></input>
+<input id="paykey" type="hidden" name="paykey" value="<?=$pay_key;?>"> </input>
+<button id="submitBtn" value="Pay with PayPal"><p style="font-size:20px">Pay</button>
+</form>
+<pre>
+
+<?php
     }
     else
     {
