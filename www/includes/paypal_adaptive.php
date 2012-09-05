@@ -36,17 +36,16 @@
         global $PAYPAL_SIGNATURE;
         global $PAYPAL_APPID;
 
-        $nvpstr = "";
-
-        $nvp_array("VERSION" => $PAYPAL_API_VERSION,
-                   "PWD" => $PAYPAL_PASSWORD,
-                   "USER" => $PAYPAL_USERNAME,
-                   "SIGNATURE" => $PAYPAL_SIGNATURE,
-                   "USER" => $PAYPAL_USERNAME,
-                   );
-
+        $sign_params = array("VERSION" => $PAYPAL_API_VERSION,
+                             "PWD" => $PAYPAL_PASSWORD,
+                             "USER" => $PAYPAL_USERNAME,
+                             "SIGNATURE" => $PAYPAL_SIGNATURE,
+                             "USER" => $PAYPAL_USERNAME,
+                             );
+        $call_array = array_merge($sign_params,$nvp_array);
         
-        foreach( $nvp_array as $key => $val )
+        $nvpstr = "";
+        foreach( $call_array as $key => $val )
         {
             $nvpstr .= "&$key=" . urlencode($val);
         }
