@@ -62,13 +62,6 @@
     {
         $pay_key = $ret['payKey'];
         
-        invoiceData.item[0].name=ITEM1
-        receiverOptions[0].invoiceData.item[0].price=50.0
-        receiverOptions[0].invoiceData.item[0].itemCount=2
-        receiverOptions[0].invoiceData.item[0].itemPrice=25.0
-        receiverOptions[0].invoiceData.totalTax=25.0
-        receiverOptions[0].invoiceData.totalShipping=25.0
-        
         $args = array("payKey" => $pay_key,
                       "displayOptions.businessName" => "Jim Lake - MyArtistDNA Store",
                       "senderOptions.requireShippingAddressSelection" => "Jim Lake - MyArtistDNA Store",
@@ -85,7 +78,6 @@
                       );
         
         paypal_set_payment_options($args);
-        
         
         $url = paypal_get_url($pay_key);
         
