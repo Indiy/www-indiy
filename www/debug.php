@@ -77,7 +77,18 @@ $(document).ready(function() {
         print "<body><pre>\n";
         $pay_key = $_REQUEST['refund_pay_key'];
         
-        $info = paypal_refund_paykey($pay_key);
+        $args = array("payKey" => $pay_key,
+                      "requestEnvelope.errorLanguage" => "en_US",
+                      "currencyCode" => "USD",
+                      "receiverList.receiver(0).email" => "mad_1346558535_biz@myartistdna.com",
+                      "receiverList.receiver(0).amount" => "100.00",
+                      "receiverList.receiver(0).primary" => "true",
+                      "receiverList.receiver(1).email" => "artist_1346622743_per@myartistdna.com",
+                      "receiverList.receiver(1).amount" => "80.00",
+                      "receiverList.receiver(1).primary" => "false",
+                      );
+        
+        $info = paypal_refund_paykey($args);
         
         print "paypal_refund_paykey: \n";
         var_dump($info);
@@ -102,6 +113,7 @@ $(document).ready(function() {
                         "cancelUrl" => trueSiteUrl() . "/debug.php?cancel=1",
                         "returnUrl" => trueSiteUrl() . "/debug.php?return=1",
                         "ipnNotificationUrl" => trueSiteUrl() . "/data/paypal_ipn.php?order_id=42",
+                        "trackingId" => "TEST-" .rand(10000,99999),
                         );
 
     print "extra_args:\n";

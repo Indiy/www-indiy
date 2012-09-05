@@ -46,13 +46,10 @@
                       );
         return paypal_app_header_call($PAYPAL_GET_PAYMENT_OPTIONS_API_ENDPOINT,$args);
     }
-    function paypal_refund_paykey($pay_key)
+    function paypal_refund_paykey($args)
     {
         global $PAYPAL_REFUND_API_ENDPOINT;
         
-        $args = array("payKey" => $pay_key,
-                      "requestEnvelope.errorLanguage" => "en_US",
-                      );
         return paypal_app_header_call($PAYPAL_REFUND_API_ENDPOINT,$args);
     }
     
