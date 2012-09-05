@@ -49,6 +49,8 @@
         {
             $nvpstr .= "&$key=" . urlencode($val);
         }
+
+        print "nvpstr: $nvpstr\n";
         
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL,$PAYPAL_HASH_API_ENDPOINT);
