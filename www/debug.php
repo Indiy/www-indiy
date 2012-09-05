@@ -112,6 +112,7 @@ $(document).ready(function() {
                       "displayOptions.businessName" => "Jim Lake - MyArtistDNA Store",
                       "senderOptions.requireShippingAddressSelection" => "true",
                       //"receiverOptions[0].receiver.email" => "mad_1346558535_biz@myartistdna.com",
+                      /*
                       "receiverOptions[0].invoiceData.totalTax" => 0,
                       "receiverOptions[0].invoiceData.totalShipping" => 25.0,
                       "receiverOptions[0].invoiceData.item[0].name" => "MAD Single",
@@ -122,6 +123,7 @@ $(document).ready(function() {
                       "receiverOptions[0].invoiceData.item[1].price" => 10.0,
                       "receiverOptions[0].invoiceData.item[1].itemCount" => 5,
                       "receiverOptions[0].invoiceData.item[1].itemPrice" => 50.0,
+                      */
                       );
         
         paypal_set_payment_options($args);
