@@ -126,7 +126,14 @@ $(document).ready(function() {
                       */
                       );
         
+        print "paypal_set_payment_options ====================\n";
         paypal_set_payment_options($args);
+        print "===============================================\n"
+
+        $ret = paypal_get_payment_options($pay_key);
+        print "paypal_get_payment_options ====================\n";
+        var_dump($ret);
+        print "===============================================\n"
         
         $url = paypal_get_url($pay_key);
 
