@@ -88,6 +88,8 @@ $(document).ready(function() {
                       "receiverList.receiver(1).primary" => "false",
                       );
         
+        var_dump($args);
+        
         $info = paypal_refund_paykey($args);
         
         print "paypal_refund_paykey: \n";
