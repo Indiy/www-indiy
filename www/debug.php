@@ -78,7 +78,7 @@ $(document).ready(function() {
 
     
     $extra_args = array("requestEnvelope.errorLanguage" => "en_US",
-                        "actionType" => "CREATE",
+                        "actionType" => "PAY",
                         "receiverList.receiver(0).email" => "mad_1346558535_biz@myartistdna.com",
                         "receiverList.receiver(0).amount" => "100.00",
                         "currencyCode" => "USD",
@@ -124,7 +124,7 @@ $(document).ready(function() {
                       "receiverOptions[0].invoiceData.item[1].itemPrice" => 50.0,
                       );
         
-        paypal_set_payment_options($args);
+        //paypal_set_payment_options($args);
         
         $url = paypal_get_url($pay_key);
 
