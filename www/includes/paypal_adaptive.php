@@ -9,9 +9,10 @@
 
     $PAYPAL_HASH_API_ENDPOINT = "https://api-3t.sandbox.paypal.com/nvp";
     $PAYPAL_PAY_API_ENDPOINT = "https://svcs.sandbox.paypal.com/AdaptivePayments/Pay";
+    $PAYPAL_SET_PAYMENT_OPTIONS_API_ENDPOINT = "https://svcs.sandbox.paypal.com/AdaptivePayments/SetPaymentOptions";
     
     //$PAYPAL_URL = "https://www.sandbox.paypal.com/webapps/adaptivepayment/flow/pay?paykey=";
-    $PAYPAL_URL = "https://www.sandbox.paypal.com/webscr?cmd=_ap-payment&paykey=";
+    $PAYPAL_REDIRECT_URL = "https://www.sandbox.paypal.com/webscr?cmd=_ap-payment&paykey=";
     
     
     function paypal_get_transaction_info($transaction_id)
@@ -27,6 +28,19 @@
         global $PAYPAL_PAY_API_ENDPOINT;
     
         return paypal_app_header_call($PAYPAL_PAY_API_ENDPOINT,$extra_args);
+    }
+    function paypal_set_payment_options($args)
+    {
+        global $PAYPAL_SET_PAYMENT_OPTIONS_API_ENDPOINT;
+        
+        return paypal_app_header_call($PAYPAL_SET_PAYMENT_OPTIONS_API_ENDPOINT,$args);
+    }
+    
+    function paypal_get_url($pay_key)
+    {
+        global $PAYPAL_REDIRECT_URL;
+        
+        return "$PAYPAL_REDIRECT_URL$pay_key";
     }
 
     function paypal_hash_call($nvp_array)

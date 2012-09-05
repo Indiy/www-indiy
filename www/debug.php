@@ -48,7 +48,7 @@
 
     print "paypal_checkout done ========================\n";
     
-    $ret = paypal_checkout($extra_args);
+    $ret = paypal_get_paykey($extra_args);
 
     print "\n\n";
     print "paypal_checkout done ========================\n";
@@ -61,7 +61,33 @@
     if( $pay_status == 'CREATED' )
     {
         $pay_key = $ret['payKey'];
-        $url = "$PAYPAL_URL$pay_key";
+        
+        invoiceData.item[0].name=ITEM1
+        receiverOptions[0].invoiceData.item[0].price=50.0
+        receiverOptions[0].invoiceData.item[0].itemCount=2
+        receiverOptions[0].invoiceData.item[0].itemPrice=25.0
+        receiverOptions[0].invoiceData.totalTax=25.0
+        receiverOptions[0].invoiceData.totalShipping=25.0
+        
+        $args = array("payKey" => $pay_key,
+                      "displayOptions.businessName" => "Jim Lake - MyArtistDNA Store",
+                      "senderOptions.requireShippingAddressSelection" => "Jim Lake - MyArtistDNA Store",
+                      "receiverOptions[0].invoiceData.totalTax" => 0,
+                      "receiverOptions[0].invoiceData.totalShipping" => 25.0,
+                      "receiverOptions[0].invoiceData.item[0].name" => "MAD Single",
+                      "receiverOptions[0].invoiceData.item[0].price" => 25.0,
+                      "receiverOptions[0].invoiceData.item[0].itemCount" => 1,
+                      "receiverOptions[0].invoiceData.item[0].itemPrice" => 25.0,
+                      "receiverOptions[0].invoiceData.item[1].name" => "MAD T-Shirts, cheap ones",
+                      "receiverOptions[0].invoiceData.item[1].price" => 50.0,
+                      "receiverOptions[0].invoiceData.item[1].itemCount" => 5,
+                      "receiverOptions[0].invoiceData.item[1].itemPrice" => 50.0,
+                      );
+        
+        paypal_set_payment_options($args);
+        
+        
+        $url = paypal_get_url($pay_key);
         
         print "</pre>";
         print "<br/>";
