@@ -132,20 +132,19 @@ $(document).ready(function() {
 
 </pre>
 
-<script type="text/javascript">
-
-var dgFlow;
-
-$(document).ready(function() {
-                  dgFlow = new PAYPAL.apps.DGFlow({ trigger: 'submitBtn' });
-                  });
-</script>
 
 <form action= "https://www.sandbox.paypal.com/webapps/adaptivepayment/flow/pay" target="PPDGFrame">
 <input id="type" type="hidden" name="expType" value="light"></input>
 <input id="paykey" type="hidden" name="paykey" value="<?=$pay_key;?>"> </input>
 <button id="submitBtn" value="Pay with PayPal"><p style="font-size:20px">Pay</button>
 </form>
+
+<script type="text/javascript">
+
+var dgFlow = new PAYPAL.apps.DGFlow({ trigger: 'submitBtn' });;
+
+</script>
+
 <pre>
 
 <?php
