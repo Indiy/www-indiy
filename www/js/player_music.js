@@ -87,7 +87,7 @@ function musicPanelChange(index)
         oga: song.mp3.replace(".mp3",".ogg")
     };
     $('#jquery_jplayer').jPlayer("setMedia", media);
-    playerProgress(0,2*60);
+    playerProgress(0,0);
     if( g_musicIsPlaying )
         $('#jquery_jplayer').jPlayer("play");
 
