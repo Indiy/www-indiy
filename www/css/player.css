@@ -1693,6 +1693,7 @@ body {
     font-size: 25px;
 }
 #store_tab .product_info .pi_right .price_share .share {
+    display: none;
     position: relative;
     float: right;
     width: 109px;

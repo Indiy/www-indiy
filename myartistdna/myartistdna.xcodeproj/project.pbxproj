@@ -234,7 +234,6 @@
 		2DC262C415EEC76900CA560F /* fan_header.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = fan_header.html; sourceTree = "<group>"; };
 		2DC262C515EFD0B600CA560F /* fan_header_footer.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = fan_header_footer.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DC262CA15F6706200CA560F /* paypal_adaptive.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = paypal_adaptive.php; sourceTree = "<group>"; };
-		2DC262CC15F678E800CA560F /* debug.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = debug.php; sourceTree = "<group>"; };
 		2DC262CD15F7B21900CA560F /* paypal_ipn.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = paypal_ipn.php; sourceTree = "<group>"; };
 		2DD94A2B14C368DF002B1259 /* vim.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = vim.css; sourceTree = "<group>"; };
 		2DE197A214F6133000305EAD /* password.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = password.php; sourceTree = "<group>"; };
@@ -1141,7 +1140,6 @@
 				2DF474141440B77F005538C7 /* tour.php */,
 				2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */,
 				2D380B95146E35CD00E36189 /* robots.txt */,
-				2DC262CC15F678E800CA560F /* debug.php */,
 			);
 			name = www;
 			path = ../www;
