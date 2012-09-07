@@ -496,10 +496,14 @@ function formatMinSeconds(seconds)
 
 function playerProgress(curr_time,total_time)
 {
-    if( !total_time )
-        total_time = 2*60;
+    var time = formatMinSeconds(curr_time);
+    if( total_time > 0 )
+        time += " / " + formatMinSeconds(total_time);
+
+    if( total_time <= 0 )
+        total_time = 5*60;
     var percent = curr_time / total_time * 100.0;
-    var time = formatMinSeconds(curr_time) + " / " + formatMinSeconds(total_time);
+
     $('#track_progress').html(time);
     $('#track_current_bar').css('width',percent + "%");
 }
