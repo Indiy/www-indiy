@@ -28,6 +28,7 @@ function showTabPopup(tab_index)
         $('#edit_tab #content_id').val(tab.id);
         $('#edit_tab #name').val(tab.name);
         var body = getEncodedBody(tab.body)
+        $('#edit_tab #body').val(tab.body);
         g_editor.setEditorHTML(body);
         
         fillArtistFileSelect('#edit_tab #image_drop','IMAGE',tab.image);
@@ -43,6 +44,7 @@ function showTabPopup(tab_index)
         $('#edit_tab #content_id').val("");
         $('#edit_tab #name').val("");
         g_editor.setEditorHTML("");
+        $('#edit_tab #body').val("");
         
         fillArtistFileSelect('#edit_tab #image_drop','IMAGE',false);
     }
