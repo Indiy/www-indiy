@@ -2237,6 +2237,19 @@ body {
 .thin_footer .full_screen_bg {
     bottom: 25px;
 }
+.thin_footer #user_tab {
+    bottom: 80px;
+}
+.thin_footer #contact_tab {
+    bottom: 80px;
+}
+.thin_footer #comment_tab {
+    bottom: 80px;
+}
+.thin_footer #store_tab {
+    bottom: 80px;
+}
+
 
 /*************************************************************************/
 
