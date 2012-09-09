@@ -1943,11 +1943,11 @@ textarea {
 }
 
 #admin .name_publish {
-    height: 68px;
+    height: 85px;
 }
 #admin .name_publish .name {
     float: left;
-    padding-top: 25px;
+    padding-top: 32px;
     padding-left: 0px;
     color: black;
     font-size: 38px;
@@ -1961,7 +1961,7 @@ textarea {
 }
 #admin .name_publish .publish {
     float: right;
-    height: 68px;
+    height: 85px;
 }
 #admin .name_publish .publish .published {
     padding-top: 5px;
