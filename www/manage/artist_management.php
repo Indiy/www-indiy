@@ -259,7 +259,7 @@ $(document).ready(showFirstInstructions);
                         <div class='label'>Publish</div>
                         <div class='icon'></div>
                     </div>
-                    <div id='unpublish_button' class='button' onclick='unpublishPage();'>
+                    <div id='unpublish_button' class='button' style='display: block;' onclick='unpublishPage();'>
                         <div class='label'>Unpublish</div>
                         <div class='icon'></div>
                     </div>
