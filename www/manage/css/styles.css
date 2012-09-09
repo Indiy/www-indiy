@@ -1945,12 +1945,15 @@ textarea {
     text-transform: uppercase;
     text-decoration: none;
 }
+#admin .name_publish .name a {
+    text-decoration: none;
+}
 #admin .name_publish .publish {
     float: right;
-    height: 116px;
+    height: 76px;
 }
 #admin .name_publish .publish .published {
-    padding-top: 20px;
+    padding-top: 5px;
     padding-right: 0px;
     color: black;
     font-size: 12px;
