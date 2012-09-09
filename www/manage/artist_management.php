@@ -237,7 +237,7 @@ $(document).ready(showFirstInstructions);
 </script>
 
 <section id="wrapper">
-<section id="content">
+<section id="content" class='thin'>
 	
     <div id="admin">
         <div class='name_publish'>
