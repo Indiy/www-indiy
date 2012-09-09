@@ -240,7 +240,32 @@ $(document).ready(showFirstInstructions);
 <section id="content">
 	
     <div id="admin">
-    <h2><a id='profile_name_anchor' href="<?=$artist_url;?>" target="_blank"><?php echo $record_artistDetail['artist']; ?></a></h2>
+        <div class='name_publish'>
+            <div class='name'>
+                <a class='artist_page_url' id='profile_name_anchor' href="<?=$artist_url;?>" target="_blank">
+                    <?=$record_artistDetail['artist'];?>
+                </a>
+            </div>
+            <div class='publish'>
+                <div class='published'>You page is published and live at the URL below.</div>
+                <div class='not_published'>You page is not published, you can use the link below to preview your site.</div>
+                <div class='link_edit'>
+                    <div class='link'>Site URL: <a class='artist_page_url' href="<?=$artist_url;?>"><?=$artist_url;?></a></div>
+                    <div class='sep'></div>
+                    <div class='edit' onclick='showEditProfile();'>Edit</div>
+                </div>
+                <div class='buttons'>
+                    <div id='publish_button' class='button' onclick='publishPage();'>
+                        <div class='label'>Publish</div>
+                        <div class='icon'></div>
+                    </div>
+                    <div id='unpublish_button' class='button' onclick='unpublishPage();'>
+                        <div class='label'>Unpublish</div>
+                        <div class='icon'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
     <div id="adminblock">
     	<div class="column1">
@@ -256,7 +281,7 @@ $(document).ready(showFirstInstructions);
                 <li><a onclick='showSocialConfigPopup();' title='Add Facebook and Twitter account information'>Social Connections</a></li>
                 <li><a onclick='showInvitePopup();' title='Invite your friends to MyArtistDNA'>Invite Friends</a></li>
                 <li>
-                    <a id='view_site_anchor' class='no_underline' href="<?=$artist_url;?>" target="_blank" title='View your site'>
+                    <a id='view_site_anchor' class='artist_page_url no_underline' href="<?=$artist_url;?>" target="_blank" title='View your site'>
                         <div class='block_button'>
                             <div class='icon'></div>
                             <div class='label'>View Site</div>

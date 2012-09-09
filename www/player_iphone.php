@@ -46,6 +46,8 @@
     if( !$artist_url )
     {
         header("HTTP/1.0 404 Not Found");
+        header("Cache-Control: no-cache");
+        header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
         die();
     }
 
@@ -74,7 +76,20 @@
     if( $artist_data == FALSE )
     {
         header("HTTP/1.0 404 Not Found");
+        header("Cache-Control: no-cache");
+        header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
         die();
+    }
+    if( strlen($artist_data['preview_key']) > 0 )
+    {
+        $preview_key = $_REQUEST['preview_key'];
+        if( $preview_key != $artist_data['preview_key'] )
+        {
+            header("HTTP/1.0 404 Not Found");
+            header("Cache-Control: no-cache");
+            header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
+            die();
+        }
     }
     $artist_id = $artist_data['id'];
     $artist_name = $artist_data['artist'];

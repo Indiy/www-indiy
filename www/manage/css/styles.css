@@ -1930,3 +1930,100 @@ textarea {
     border: 2px solid white;
 }
 
+#admin .name_publish {
+    height: 116px;
+}
+#admin .name_publish .name {
+    float: left;
+    padding-top: 45px;
+    padding-left: 0px;
+    color: black;
+    font-size: 38px;
+    font-family: "Teletex Light", Helvetica, sans-serif;
+    text-decoration: none;
+}
+#admin .name_publish .publish {
+    float: right;
+    height: 116px;
+}
+#admin .name_publish .publish .published {
+    padding-top: 20px;
+    padding-right: 0px;
+    color: black;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: right;
+}
+#admin .name_publish .publish .not_published {
+    display: none;
+    padding-top: 20px;
+    padding-right: 0px;
+    color: red;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: right;
+}
+#admin .name_publish .publish .link_edit {
+    font-size: 0;
+    text-align: right;
+}
+#admin .name_publish .publish .link_edit .link {
+    color: black;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+#admin .name_publish .publish .link_edit .link a {
+    text-decoration: underline;
+}
+#admin .name_publish .publish .link_edit .sep {
+    display: inline-block;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 12px;
+    width: 1px;
+    background-color: black;
+}
+#admin .name_publish .publish .link_edit .edit {
+    color: #51C3C4;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    cursor: pointer;
+}
+#admin .name_publish .publish .link_edit .edit:hover {
+    text-decoration: underline;
+}
+#admin .name_publish .publish .buttons {
+    height: 25px;
+    text-align: right;
+    font-size: 0;
+}
+#admin .name_publish .publish .buttons .button {
+    display: none;
+    float: right;
+    margin-left: 10px;
+    width: 100px;
+    height: 25px;
+    font-size: 0;
+}
+#admin .name_publish .publish .buttons .button .icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #383838 url("/images/cart_icons.png") -87px -10px no-repeat;
+}
+#admin .name_publish .publish .buttons .button .label {
+    display: inline-block;
+    height: 18px;
+    width: 75px;
+    padding-top: 7px;
+    background: #1E2126;
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+
+

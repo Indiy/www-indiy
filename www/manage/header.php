@@ -114,25 +114,30 @@
                 <li class="nodivider"><a onclick="showAddArtist();">ADD ARTIST</a></li>
             <?php
         }
-         else
-         {
-             $host = parse_url(trueSiteUrl(),PHP_URL_HOST);
-             $host_explode = explode(".", $host);
-             $artist_home_host = $_SESSION['sess_userURL'] . '.' . implode('.',array_slice($host_explode,1));
+        else
+        {
+            if( !$artist_url )
+            {
+                $host = parse_url(trueSiteUrl(),PHP_URL_HOST);
+                $host_explode = explode(".", $host);
+                $artist_home_host = $_SESSION['sess_userURL'] . '.' . implode('.',array_slice($host_explode,1));
+                
+                $artist_url = "http://$artist_home_host";
+
+                $artist_id = $_SESSION['sess_userId'];
+            }
              
-             $artist_id = $_SESSION['sess_userId'];
-             
-             echo "<li>";
-             echo "<a href='http://$artist_home_host'>VIEW SITE</a>";
-             echo "</li>";
-             echo "<li>";
-             echo "<a onclick='showEditProfile();'>EDIT PROFILE</a>";
-             echo "</li>";
-             echo "<li class='nodivider'>";
-             echo "<a onclick='showInvitePopup();'>INVITE FRIENDS</a>";
-             echo "</li>";
-         }
-         ?>
+            echo "<li>";
+            echo "<a class='artist_page_url' href='$artist_url'>VIEW SITE</a>";
+            echo "</li>";
+            echo "<li>";
+            echo "<a onclick='showEditProfile();'>EDIT PROFILE</a>";
+            echo "</li>";
+            echo "<li class='nodivider'>";
+            echo "<a onclick='showInvitePopup();'>INVITE FRIENDS</a>";
+            echo "</li>";
+        }
+        ?>
     </ul>
     </nav>
 </header>

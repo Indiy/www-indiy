@@ -16,9 +16,19 @@
     }
     session_write_close();
     
-    if( $_SERVER['REQUEST_METHOD'] == 'POST' )
+    if( isset($_REQUEST['method']) )
+        $method = strtoupper($_REQUEST['method']);
+    else
+        $method = $_SERVER['REQUEST_METHOD'];
+    
+    
+    if( $method == 'POST' )
     {
         do_POST();
+    }
+    else if( $method == 'UPDATE_PUBLISH' )
+    {
+        do_UPDATE_PUBLISH();
     }
     else
     {
@@ -95,5 +105,31 @@
             header("Location: /manage/artist_management.php?userId=$artist_id");
             exit();
         }
+    }
+    function do_UPDATE_PUBLISH()
+    {
+        $artist_id = $_REQUEST['artist_id'];
+        $do_publish = $_REQUEST['do_publish'] == 'true';
+        
+        $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id'"));
+        $artist_url = $artist['url'];
+        $url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
+        if( $do_publish )
+        {
+            $values = array("preview_key" => $preview_key);
+            $url .= "/?preview_key=$preview_key";
+        }
+        else
+        {
+            $values = array("preview_key" => "");
+        }
+        mysql_update("mydna_musicplayer",$values,"id",$artist_id);
+        
+        $ret = array("success" => 1,
+                     "url" => $url
+                     );
+        
+        echo json_encode($ret);
+        exit();
     }
 ?>
