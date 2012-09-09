@@ -1991,12 +1991,13 @@ textarea {
 }
 #admin .name_publish .publish .link_edit .sep {
     display: inline-block;
-    margin-top: 0px;
+    margin-top: -2px;
     margin-left: 10px;
     margin-right: 10px;
-    height: 15px;
+    height: 14px;
     width: 1px;
     background-color: black;
+    vertical-align: middle;
 }
 #admin .name_publish .publish .link_edit .edit {
     display: inline-block;
@@ -2009,7 +2010,7 @@ textarea {
     text-decoration: underline;
 }
 #admin .name_publish .publish .buttons {
-    margin-top: 7px;
+    margin-top: 11px;
     height: 25px;
     text-align: right;
     font-size: 0;
@@ -2018,7 +2019,7 @@ textarea {
     display: none;
     float: right;
     margin-left: 10px;
-    width: 100px;
+    width: 125px;
     height: 25px;
     font-size: 0;
 }
@@ -2032,8 +2033,8 @@ textarea {
 #admin .name_publish .publish .buttons .button .label {
     display: inline-block;
     height: 19px;
-    width: 75px;
-    padding-top: 8px;
+    width: 100px;
+    padding-top: 6px;
     background: #1E2126;
     color: white;
     font-size: 11px;
