@@ -2019,6 +2019,7 @@ textarea {
     width: 25px;
     height: 25px;
     background: #383838 url("/images/cart_icons.png") -87px -10px no-repeat;
+    vertical-align: top;
 }
 #admin .name_publish .publish .buttons .button .label {
     display: inline-block;
@@ -2031,7 +2032,7 @@ textarea {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-
+    vertical-align: top;
 }
 
 
