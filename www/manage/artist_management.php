@@ -266,6 +266,7 @@ $(document).ready(showFirstInstructions);
                 </div>
             </div>
         </div>
+        <div style="clear: both;"></div>
         
     <div id="adminblock">
     	<div class="column1">
