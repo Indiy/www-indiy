@@ -1937,11 +1937,11 @@ textarea {
 }
 
 #admin .name_publish {
-    height: 76px;
+    height: 68px;
 }
 #admin .name_publish .name {
     float: left;
-    padding-top: 5px;
+    padding-top: 25px;
     padding-left: 0px;
     color: black;
     font-size: 38px;
@@ -1955,14 +1955,14 @@ textarea {
 }
 #admin .name_publish .publish {
     float: right;
-    height: 76px;
+    height: 68px;
 }
 #admin .name_publish .publish .published {
     padding-top: 5px;
     padding-right: 0px;
-    padding-bottom: 5px;
-    color: #999;
-    font-size: 10px;
+    padding-bottom: 7px;
+    color: #777;
+    font-size: 11px;
     font-family: Helvetica, Arial, sans-serif;
     text-align: right;
 }
@@ -1981,8 +1981,8 @@ textarea {
 }
 #admin .name_publish .publish .link_edit .link {
     display: inline-block;
-    color: black;
-    font-size: 12px;
+    color: #555;
+    font-size: 14px;
     font-family: Helvetica, Arial, sans-serif;
 }
 #admin .name_publish .publish .link_edit .link a {
@@ -1994,14 +1994,14 @@ textarea {
     margin-top: 0px;
     margin-left: 10px;
     margin-right: 10px;
-    height: 12px;
+    height: 15px;
     width: 1px;
     background-color: black;
 }
 #admin .name_publish .publish .link_edit .edit {
     display: inline-block;
     color: #51C3C4;
-    font-size: 12px;
+    font-size: 14px;
     font-family: Helvetica, Arial, sans-serif;
     cursor: pointer;
 }
@@ -2009,7 +2009,7 @@ textarea {
     text-decoration: underline;
 }
 #admin .name_publish .publish .buttons {
-    margin-top: 5px;
+    margin-top: 7px;
     height: 25px;
     text-align: right;
     font-size: 0;
@@ -2031,9 +2031,9 @@ textarea {
 }
 #admin .name_publish .publish .buttons .button .label {
     display: inline-block;
-    height: 18px;
+    height: 19px;
     width: 75px;
-    padding-top: 7px;
+    padding-top: 8px;
     background: #1E2126;
     color: white;
     font-size: 11px;
