@@ -208,7 +208,6 @@ function confirmUnpublishSite()
         artist_id: g_artistId,
         do_publish: false,
     };
-    var postData = JSON.stringify(data);
     jQuery.ajax(
     {
         type: 'POST',
@@ -242,7 +241,6 @@ function publishSite()
         artist_id: g_artistId,
         do_publish: true,
     };
-    var postData = JSON.stringify(data);
     jQuery.ajax(
     {
         type: 'POST',
