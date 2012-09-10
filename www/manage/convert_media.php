@@ -42,6 +42,8 @@ END;
             $headers = "From:" . $from;
             
             mail($to,$subject,$message,$headers);
+            
+            print "Emailed $to regarding file convertion failure.\n";
         }
     }
 
