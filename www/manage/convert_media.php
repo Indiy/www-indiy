@@ -14,7 +14,7 @@
 		exit();
 	}
     $user = get_current_user();
-    $fd = fopen("/tmp/convert_media_$user.lock",'rw');
+    $fd = fopen("/tmp/convert_media_$user.lock",'w+');
     if( !$fd )
     {
         print "failed to open file\n";
