@@ -41,6 +41,7 @@ function updateFileList()
                 if( file.upload_status == 'processing' )
                     msg = "Processing&hellip;"
             
+                html += "<div class='icon {0}'></div>".format(file.type);
                 html += "<div id='{0}' class='file_status'>".format(sel);
                 html += " <div class='file'>{0}</div>".format(filename);
                 html += " <div class='status'>";
@@ -57,6 +58,7 @@ function updateFileList()
             }
             else if( file.upload_status == 'failed' )
             {
+                html += "<div class='icon {0}'></div>".format(file.type);
                 html += "<div id='{0}' class='file_status'>".format(sel);
                 html += " <div class='file'>{0}</div>".format(filename);
                 html += " <div class='status'>";
@@ -70,6 +72,7 @@ function updateFileList()
         }
         else
         {
+            html += "<div class='icon {0}'></div>".format(file.type);
             html += "<div class='filename'>{0}</div>".format(filename);
             html += "<div class='delete'>";
             html += " <div class='button' onclick='deleteFile({0});'></div>".format(i);
