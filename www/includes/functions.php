@@ -1382,10 +1382,12 @@ END;
                 }
                 if( !$artist_url )
                 {
-                    $row = mf(mq("SELECT url FROM mydna_musicplayer WHERE custom_domain LIKE '%$trailing'"))
+                    $row = mf(mq("SELECT custom_domain FROM mydna_musicplayer WHERE custom_domain LIKE '%$trailing'"))
                     if( $row )
                     {
-                        $artist_url = $row['url'];
+                        $custom_domain = $row['custom_domain'];
+                        header("Location: http://$custom_domain");
+                        die();
                     }
                 }
             }
