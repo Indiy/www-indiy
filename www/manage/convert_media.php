@@ -51,6 +51,10 @@
                 file_error($id,"Please upload audio files in mp3 format.");
             }
         }
+        else
+        {
+            print "ignore filename: $filename\n";
+        }
     }
     
     print "\ndone done\n\n";
