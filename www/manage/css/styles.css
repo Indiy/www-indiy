@@ -1807,13 +1807,14 @@ textarea {
     display: inline-block;
     height: 40px;
     width: 40px;
+    border-left: 1px solid #dddee0;
 }
 #adminblock .filelist .list .file_list .item .filename {
     display: inline-block;
     padding-top: 13px;
     padding-left: 15px;
     height: 27px;
-    width: 583px;
+    width: 582px;
     color: #383838;
     font-size: 12px;
     font-family: Helvetica, Arial, sans-serif;
@@ -1831,7 +1832,7 @@ textarea {
     display: inline-block;
     padding-left: 15px;
     height: 40px;
-    width: 583px;
+    width: 582px;
     border-left: 1px solid #dddee0;
     border-right: 1px solid #dddee0;
     vertical-align: top;
@@ -1840,7 +1841,7 @@ textarea {
     display: inline-block;
     padding-top: 13px;
     height: 27px;
-    width: 274px;
+    width: 272px;
     color: #383838;
     font-size: 12px;
     font-family: Helvetica, Arial, sans-serif;
