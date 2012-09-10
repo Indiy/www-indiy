@@ -124,18 +124,19 @@
         $url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
         if( $do_publish )
         {
+            $values = array("preview_key" => "");
+        }
+        else
+        {
             $preview_key = random_string(8);
             $values = array("preview_key" => $preview_key);
             $url .= "/?preview_key=$preview_key";
         }
-        else
-        {
-            $values = array("preview_key" => "");
-        }
         mysql_update("mydna_musicplayer",$values,"id",$artist_id);
         
         $ret = array("success" => 1,
-                     "url" => $url
+                     "url" => $url,
+                     "request" => $_REQUEST,
                      );
         
         echo json_encode($ret);
