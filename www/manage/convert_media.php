@@ -19,7 +19,7 @@
     function file_error($id,$msg)
     {
         $values = array("error" => $msg);
-        //mysql_update("artist_files",$values,"id",$id);
+        mysql_update("artist_files",$values,"id",$id);
     }
 
 
@@ -38,23 +38,56 @@
             $src_file = "../artists/files/$filename";
             $mp3_file = str_replace(".$extension",".mp3",$filename);
             $dst_file = "../artists/files/$mp3_file";
-            @system("/usr/local/bin/ffmpeg -i $src_file -acodec libmp3lame $dst_file",$retval);
-            if( $retval == 0 )
+            if( !file_exists($dst_file) )
             {
-                print "updated file to mp3: $id, file: $filename, new_filename: $mp3_file\n";
-                $filename = $mp3_file;
-                $values = array("filename" => $mp3_file);
-                mysql_update("artist_files",$values,"id",$id);
+                @system("/usr/local/bin/ffmpeg -i $src_file -acodec libmp3lame $dst_file",$retval);
+                if( $retval == 0 )
+                {
+                    print "converted file: $filename to $mp3_file\n";
+                }
+                else
+                {
+                    print "error with file id: $id, filename: $filename, src_file: $src_file, dst_file: $dst_file\n";
+                    file_error($id,"Please upload audio files in mp3 format.");
+                    continue;
+                }
             }
             else
             {
-                print "error with file id: $id, filename: $filename, src_file: $src_file, dst_file: $dst_file\n";
-                file_error($id,"Please upload audio files in mp3 format.");
+                print "file ($mp3_file) already exists, using it.\n";
             }
+            print "updated file to mp3: $id, file: $filename, new_filename: $mp3_file\n";
+            $filename = $mp3_file;
+            $values = array("filename" => $mp3_file);
+            mysql_update("artist_files",$values,"id",$id);
         }
         else
         {
             //print "ignore id: $id, filename: $filename\n";
+        }
+        $path_parts = pathinfo($filename);
+        $extension = strtolower($path_parts['extension']);
+        
+        $src_file = "../artists/files/$filename";
+        $ogg_file = str_replace(".$extension",".ogg",$filename);
+        $dst_file = "../artists/files/$ogg_file";
+        if( file_exists($dst_file) )
+        {
+            print "id: $id, has ogg, done!\n";
+        }
+        else
+        {
+            @system("/usr/local/bin/ffmpeg -i $src_file -acodec libvorbis $ogg_file",$retval);
+            if( $retval == 0 )
+            {
+                print "successfully made ogg: $ogg_file, id: $id\n";
+            }
+            else
+            {
+                print "failed to make ogg: $ogg_file, id: $id\n";
+                file_error($id,"Please upload audio files in mp3 format.");
+                continue;
+            }
         }
     }
     
