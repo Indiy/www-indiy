@@ -19,12 +19,14 @@
         $ret = array();
         while( $row = mysql_fetch_assoc($q) )
         {
+            $artist_id = $row['id'];
+        
             $ret[] = array("id" => $row['id'],
                            "artist" => $row['artist'],
                            "url" => $row['url'],
                            "logo" => $row['logo'],
                            );
-            $allowed_artists[$row['id']] = TRUE;
+            $allowed_artists[$artist_id] = TRUE;
         }
         return $ret;
     }
@@ -37,7 +39,8 @@
         $ret = array();
         while( $row = mysql_fetch_assoc($q) )
         {
-            if( isset($allowed_artists[$row['artist_id']]) )
+            $artist_id = $row['artist_id'];
+            if( isset($allowed_artists[$artist_id]) )
             {
                 $ret[] = array("id" => $row['id'],
                                "artist_id" => $row['artist_id'],
@@ -47,7 +50,6 @@
             }
         }
         return $ret;
-        
     }
     
     function get_songs()
