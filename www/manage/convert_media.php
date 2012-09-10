@@ -53,7 +53,7 @@
         }
         else
         {
-            print "ignore filename: $filename\n";
+            print "ignore id: $id, filename: $filename\n";
         }
     }
     
