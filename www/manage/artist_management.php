@@ -261,7 +261,7 @@ $(document).ready(showFirstInstructions);
                 <div class='published'>You page is published and live at the URL below.</div>
                 <div class='not_published'>You page is not published, you can use the link below to preview your site.</div>
                 <div class='link_edit'>
-                    <div class='link'>Site URL: <a class='artist_page_url' href="<?=$artist_url;?>"><?=$artist_url;?></a></div>
+                    <div class='link'>Site URL: <a class='artist_page_url' href="<?=$artist_url;?>" target="_blank"><?=$artist_url;?></a></div>
                     <div class='sep'></div>
                     <div class='edit' onclick='showEditProfile();'>Edit</div>
                 </div>
