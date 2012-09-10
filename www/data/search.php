@@ -8,9 +8,13 @@
     
     session_write_close();
     
+    $allowed_artists = array();
+    
     function get_artists()
     {
-        $sql = "SELECT id,artist,url,logo FROM mydna_musicplayer";
+        global $allowed_artists;
+    
+        $sql = "SELECT id,artist,url,logo FROM mydna_musicplayer WHERE preview_key = ''";
         $q = mysql_query($sql);
         $ret = array();
         while( $row = mysql_fetch_assoc($q) )
@@ -20,56 +24,48 @@
                            "url" => $row['url'],
                            "logo" => $row['logo'],
                            );
+            $allowed_artists[$row['id']] = TRUE;
         }
         return $ret;
+    }
+
+    function get_media($sql)
+    {
+        global $allowed_artists;
+    
+        $q = mysql_query($sql);
+        $ret = array();
+        while( $row = mysql_fetch_assoc($q) )
+        {
+            if( isset($allowed_artists[$row['artist_id']]) )
+            {
+                $ret[] = array("id" => $row['id'],
+                               "artist_id" => $row['artist_id'],
+                               "name" => $row['name'],
+                               "image" => $row['image'],
+                               );
+            }
+        }
+        return $ret;
+        
     }
     
     function get_songs()
     {	
-        $sql = "SELECT id,artistid,name,image FROM mydna_musicplayer_audio";
-        $q = mysql_query($sql);
-        $ret = array();
-        while( $row = mysql_fetch_assoc($q) )
-        {
-            $ret[] = array("id" => $row['id'],
-                           "artist_id" => $row['artistid'],
-                           "name" => $row['name'],
-                           "image" => $row['image'],
-                           );
-        }
-        return $ret;
+        $sql = "SELECT id,artistid AS artist_id,name,image FROM mydna_musicplayer_audio";
+        return get_media($sql)
     }
     
     function get_videos()
     {	
-        $sql = "SELECT id,artistid,name,image FROM mydna_musicplayer_video";
-        $q = mysql_query($sql);
-        $ret = array();
-        while( $row = mysql_fetch_assoc($q) )
-        {
-            $ret[] = array("id" => $row['id'],
-                           "artist_id" => $row['artistid'],
-                           "name" => $row['name'],
-                           "image" => $row['image'],
-                           );
-        }
-        return $ret;
+        $sql = "SELECT id,artistid AS artist_id,name,image FROM mydna_musicplayer_video";
+        return get_media($sql)
     }
 
     function get_photos()
     {	
         $sql = "SELECT id,artist_id,name,image FROM photos";
-        $q = mysql_query($sql);
-        $ret = array();
-        while( $row = mysql_fetch_assoc($q) )
-        {
-            $ret[] = array("id" => $row['id'],
-                           "artist_id" => $row['artist_id'],
-                           "name" => $row['name'],
-                           "image" => $row['image'],
-                           );
-        }
-        return $ret;
+        return get_media($sql)
     }
     
     
