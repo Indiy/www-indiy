@@ -33,7 +33,7 @@
         if( $extension != 'mp3' )
         {
             $src_file = "../artists/files/$filename";
-            $mp3_file = basename($filename) . ".mp3";
+            $mp3_file = str_replace(".$extension",".mp3",$src_file);
             @system("/usr/local/bin/ffmpeg -i $src_file -acodec libmp3lame $mp3_file",$retval);
             if( $retval == 0 )
             {
@@ -48,5 +48,7 @@
             }
         }
     }
+    
+    print "\ndone done\n\n";
 
 ?>
