@@ -55,19 +55,19 @@
     function get_songs()
     {	
         $sql = "SELECT id,artistid AS artist_id,name,image FROM mydna_musicplayer_audio";
-        return get_media($sql)
+        return get_media($sql);
     }
     
     function get_videos()
     {	
         $sql = "SELECT id,artistid AS artist_id,name,image FROM mydna_musicplayer_video";
-        return get_media($sql)
+        return get_media($sql);
     }
 
     function get_photos()
     {	
         $sql = "SELECT id,artist_id,name,image FROM photos";
-        return get_media($sql)
+        return get_media($sql);
     }
     
     
