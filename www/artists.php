@@ -9,7 +9,7 @@
     while( $artist = mf($artists_q) )
     {
         $logo = $artist['logo'];
-        $logo_url = "/artists/files/$logo";
+        $logo_url = "/timthumb.php?src=/artists/files/$logo&w=600";
         $name = $artist['artist'];
         
         $html = "";
