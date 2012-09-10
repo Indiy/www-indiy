@@ -5,16 +5,22 @@
     
     $list_html = "";
     
-    $artists_q = mq("SELECT * FROM mydna_musicplayer WHERE preview_key = ''");
+    $artists_q = mq("SELECT * FROM mydna_musicplayer WHERE preview_key = '' LIMIT 300");
     while( $artist = mf($artists_q) )
     {
         $logo = $artist['logo'];
-        $logo_url = "/artists/files/$logo";
+        $logo_path = "artists/files/$logo";
+        
+        if( file_exists($logo_path) )
+        {
+            $logo_path = "/manage/images/NoPhoto.jpg";
+        }
+        
         $name = $artist['artist'];
         
         $html = "";
         $html .= "<li>";
-        $html .= " <img src='$logo_url' />";
+        $html .= " <img src='/$logo_path' />";
         $html .= " <span>$name</span>";
         $html .= "</li>";
         
