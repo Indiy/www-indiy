@@ -91,7 +91,7 @@
 		
         mysql_update("mydna_musicplayer",$values,"id",$artist_id);
 		
-        $artist_page_url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
+        $artist_page_url = str_replace("http://www.","http://$url.",trueSiteUrl());
         if( strlen($artist_data['preview_key']) > 0 )
         {
             $preview_key = $artist_data['preview_key'];
