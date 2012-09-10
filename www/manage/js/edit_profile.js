@@ -197,7 +197,7 @@ function updatePublishState()
     $('.artist_page_url').attr('href',url);
 }
 
-function confirmUnpublish()
+function confirmUnpublishSite()
 {
     var ret = window.confirm("Are you sure you want to unpublish your site?  It will only be available to people with the preview URL.");
     if( !ret )
