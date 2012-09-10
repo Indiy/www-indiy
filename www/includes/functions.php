@@ -1382,7 +1382,7 @@ END;
                 }
                 if( !$artist_url )
                 {
-                    $row = mf(mq("SELECT custom_domain FROM mydna_musicplayer WHERE custom_domain LIKE '%$trailing'"))
+                    $row = mf(mq("SELECT custom_domain FROM mydna_musicplayer WHERE custom_domain LIKE '%$trailing'"));
                     if( $row )
                     {
                         $custom_domain = $row['custom_domain'];
