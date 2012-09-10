@@ -14,7 +14,7 @@ function loginArtistFromRow($row)
     $_SESSION['sess_userType'] = 'ARTIST';
     $_SESSION['sess_userURL'] = $row['url'];
     
-    $url = trueSiteUrl() . "/manage/artist_management.php?userId=$myid&session_id=" . session_id();
+    $url = trueSiteUrl() . "/manage/artist_management.php?userId=$myid";
     return $url;
 }
 

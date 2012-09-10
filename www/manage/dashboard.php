@@ -1,10 +1,9 @@
-<?php 
-    if( $_REQUEST['session_id'] )
-        session_id($_REQUEST['session_id']);
+<?php
 
 	require_once('../includes/config.php');
 	include_once('../includes/functions.php');	
     include_once("include/page.inc.php");
+
 	if($_SESSION['sess_userId']=="")
 	{
 		header("Location: /index.php");
