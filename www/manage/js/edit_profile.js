@@ -91,7 +91,6 @@ function onEditProfileSubmit()
         var artist = $('#edit_profile #artist').val();
         var email = $('#edit_profile #email').val();
         var url = $('#edit_profile #url').val();
-        var custom_domain = $('#edit_profile #custom_domain').val();
         var tags = $('#edit_profile #user_tags').val();
         var location = $('#edit_profile #artist_location').val();
         var gender = $('#edit_profile #artist_location').val();
@@ -100,6 +99,10 @@ function onEditProfileSubmit()
         var artist_gender = $('#edit_profile input[@name=artist_gender]:checked').val();
         var start_media_type = $('#edit_profile #start_media_type').val();
         var image_drop = $('#edit_profile #image_drop').val();
+
+        var custom_domain = $('#edit_profile #custom_domain').val();
+        if( typeof(custom_domain) == 'undefined' )
+            custom_domain = '';
         
         form_data.append('artistid',g_artistId);
         form_data.append('artist',artist);

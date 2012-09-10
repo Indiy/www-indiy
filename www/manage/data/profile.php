@@ -54,7 +54,6 @@
 		$url  = $_POST["url"];
 		$website = $_POST["website"];
 		$appid = $_POST["appid"];
-        $custom_domain = $_POST["custom_domain"];
         $tags = $_POST["tags"];
         $artist_type = $_POST["artist_type"];
         
@@ -71,10 +70,21 @@
                         "appid" => $appid,
                         "IsArtist" => $IsArtist,
                         "logo" => $logo,
-                        "custom_domain" => $custom_domain,
                         "tags" => $tags,
                         "artist_type" => $artist_type,
                         );
+        if( isset($_POST["custom_domain"]) )
+        {
+            $custom_domain = $_POST["custom_domain"];
+            if( strlen($custom_domain) > 0 )
+            {
+                $values['custom_domain'] = $custom_domain;
+            }
+            else
+            {
+                mq("UPDATE mydna_musicplayer SET custom_domain = NULL WHERE id='$artist_id'");
+            }
+        }
 
         $extra_modified = FALSE;
         if( isset($_POST["start_media_type"]) )
