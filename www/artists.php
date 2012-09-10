@@ -6,7 +6,7 @@
     $list_html = "";
     
     $artists_q = mq("SELECT * FROM mydna_musicplayer WHERE preview_key = ''");
-    while( $artist = mf($artist_q) )
+    while( $artist = mf($artists_q) )
     {
         $logo = $artist['logo'];
         $logo_url = "/artists/files/$logo";
