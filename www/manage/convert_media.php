@@ -73,7 +73,7 @@
         $dst_file = "../artists/files/$ogg_file";
         if( file_exists($dst_file) )
         {
-            print "id: $id, has ogg, done!\n";
+            print "id: $id, has ogg, dst_file: $dst_file, done!\n";
         }
         else
         {
