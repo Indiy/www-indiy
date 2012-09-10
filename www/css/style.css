@@ -207,13 +207,13 @@ ul#accordion-slider li{ width:314px; height:257px; float:left; display: block; o
     float:left; 
     padding:20px 20px 0 0; 
     position: relative;
-    text-align: center;
+    text-align: left;
 }
 #artistshome ul li img {
     display: inline-block;
     max-width: 300px;
     max-height: 140px;
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 #artistshome ul li span {
     display: inline-block;
