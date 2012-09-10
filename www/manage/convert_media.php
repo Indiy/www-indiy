@@ -13,6 +13,19 @@
 		header("Location: /index.php");
 		exit();
 	}
+    $user = get_current_user();
+    $fd = fopen("/tmp/convert_media_$user.lock",'rw');
+    if( !$fd )
+    {
+        print "failed to open file\n";
+        die();
+    }
+    if( !flock($fd,LOCK_EX | LOCK_NB) )
+    {
+        fclose($fd);
+        print "Failed to get lock, done!\n";
+        die();
+    }
 
     ignore_user_abort(TRUE);
     set_time_limit(60*60);
@@ -83,6 +96,7 @@ END;
                 print "file ($mp3_file) already exists, using it.\n";
             }
             print "updated file to mp3: $id, file: $filename, new_filename: $mp3_file\n";
+            mq("UPDATE mydna_musicplayer_audio SET audio='$mp3_file' WHERE artistid='$artist_id' AND audio='$filename'");
             $filename = $mp3_file;
             $values = array("filename" => $mp3_file);
             mysql_update("artist_files",$values,"id",$id);
@@ -154,6 +168,7 @@ END;
                 print "file ($mp4_file) already exists, using it.\n";
             }
             print "updated file to mp4: $id, file: $filename, new_filename: $mp4_file\n";
+            mq("UPDATE mydna_musicplayer_video SET video='$mp4_file' WHERE artistid='$artist_id' AND video='$filename'");
             $filename = $mp4_file;
             $values = array("filename" => $mp3_file);
             mysql_update("artist_files",$values,"id",$id);
@@ -188,6 +203,7 @@ END;
         }
     }
     
+    fclose($fd);
     print "\ndone done\n\n";
 
 ?>
