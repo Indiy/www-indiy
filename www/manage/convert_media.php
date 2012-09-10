@@ -48,6 +48,7 @@
             }
             else
             {
+                print "error with file id: $id, filename: $filename\n";
                 file_error($id,"Please upload audio files in mp3 format.");
             }
         }
