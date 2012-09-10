@@ -270,7 +270,7 @@ $(document).ready(showFirstInstructions);
                         <div class='label'>Publish</div>
                         <div class='icon'></div>
                     </div>
-                    <div id='unpublish_button' class='button' style='display: block;' onclick='confirmUnpublishSite();'>
+                    <div id='unpublish_button' class='button' onclick='confirmUnpublishSite();'>
                         <div class='label'>Unpublish</div>
                         <div class='icon'></div>
                     </div>

@@ -1,5 +1,11 @@
 
 
+function profileReady()
+{
+    updatePublishState();
+}
+$(document).ready(profileReady);
+
 function showEditProfile()
 {
 
