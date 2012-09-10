@@ -1375,9 +1375,19 @@ END;
             }
             else
             {
-                $row = mf(mq("SELECT * FROM mydna_musicplayer WHERE custom_domain = '$http_host'"));
+                $row = mf(mq("SELECT url FROM mydna_musicplayer WHERE custom_domain = '$http_host'"));
                 if( $row )
+                {
                     $artist_url = $row['url'];
+                }
+                if( !$artist_url )
+                {
+                    $row = mf(mq("SELECT url FROM mydna_musicplayer WHERE custom_domain LIKE '%$trailing'"))
+                    if( $row )
+                    {
+                        $artist_url = $row['url'];
+                    }
+                }
             }
         }
         
