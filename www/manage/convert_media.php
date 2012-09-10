@@ -10,6 +10,9 @@
 		header("Location: /index.php");
 		exit();
 	}
+
+    ignore_user_abort(TRUE);
+    set_time_limit(60*60);
     
     echo "<html><body><pre>\n";
 
@@ -33,11 +36,12 @@
         if( $extension != 'mp3' )
         {
             $src_file = "../artists/files/$filename";
-            $mp3_file = str_replace(".$extension",".mp3",$src_file);
-            @system("/usr/local/bin/ffmpeg -i $src_file -acodec libmp3lame $mp3_file",$retval);
+            $mp3_file = str_replace(".$extension",".mp3",$filename);
+            $dst_file = "../artists/files/$mp3_file";
+            @system("/usr/local/bin/ffmpeg -i $src_file -acodec libmp3lame $dst_file",$retval);
             if( $retval == 0 )
             {
-                print "updated file to mp3: $id, file: $filename\n";
+                print "updated file to mp3: $id, file: $filename, new_filename: $mp3_file\n";
                 $filename = $mp3_file;
                 $values = array("filename" => $mp3_file);
                 mysql_update("artist_files",$values,"id",$id);
