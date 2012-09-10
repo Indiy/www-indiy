@@ -19,7 +19,7 @@
     function file_error($id,$msg)
     {
         $values = array("error" => $msg);
-        mysql_update("artist_files",$values,"id",$id);
+        //mysql_update("artist_files",$values,"id",$id);
     }
 
 
@@ -48,7 +48,7 @@
             }
             else
             {
-                print "error with file id: $id, filename: $filename\n";
+                print "error with file id: $id, filename: $filename, src_file: $src_file, dst_file: $dst_file\n";
                 file_error($id,"Please upload audio files in mp3 format.");
             }
         }
