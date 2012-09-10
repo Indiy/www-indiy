@@ -11,7 +11,7 @@
         $logo = $artist['logo'];
         $logo_path = "artists/files/$logo";
         
-        if( !file_exists($logo_path) )
+        if( !$logo || !file_exists($logo_path) )
         {
             $logo_path = "manage/images/NoPhoto.jpg";
         }
