@@ -150,7 +150,14 @@
 
 	$img_url = $artist_img_logo;
 
+    $is_published = TRUE;
     $artist_url = str_replace("http://www.","http://".$record_artistDetail['url'].".",trueSiteUrl());
+    if( strlen($record_artistDetail['preview_key']) > 0 )
+    {
+        $preview_key = $record_artistDetail['preview_key'];
+        $is_published = FALSE;
+        $artist_url .= "?preview_key=$preview_key";
+    }
 
     $show_first_instruction = FALSE;
     if( $_SESSION['sess_userType'] == 'ARTIST' && $artistID == $_SESSION['sess_userId'] )
@@ -219,6 +226,8 @@ var g_twitter = <?=$twitter;?>;
 var g_paypalEmail = "<?=$paypalEmail;?>";
 var g_artistData = <?=$artist_data_json;?>;
 
+var g_artistPageUrl = "<?=$artist_url;?>";
+
 var g_pageList = <?=$page_list_json;?>;
 var g_photoList = <?=$photo_list_json;?>;
 var g_videoList = <?=$video_list_json;?>;
@@ -227,6 +236,8 @@ var g_productList = <?=$product_list_json;?>;
 var g_fileList = <?=$file_list_json;?>;
 
 var g_playerUrl = "<?=playerUrl();?>";
+
+var g_isPublished = <?=json_encode($is_published);?>;
 
 <? if( $show_first_instruction ): ?>
 
@@ -255,11 +266,11 @@ $(document).ready(showFirstInstructions);
                     <div class='edit' onclick='showEditProfile();'>Edit</div>
                 </div>
                 <div class='buttons'>
-                    <div id='publish_button' class='button' onclick='publishPage();'>
+                    <div id='publish_button' class='button' onclick='publishSite();'>
                         <div class='label'>Publish</div>
                         <div class='icon'></div>
                     </div>
-                    <div id='unpublish_button' class='button' style='display: block;' onclick='unpublishPage();'>
+                    <div id='unpublish_button' class='button' style='display: block;' onclick='confirmUnpublishSite();'>
                         <div class='label'>Unpublish</div>
                         <div class='icon'></div>
                     </div>

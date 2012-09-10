@@ -40,10 +40,10 @@
     {
         $artist_id = $_REQUEST['artistid'];
         
-        $row = mf(mq("SELECT id,logo,password,extra_json FROM mydna_musicplayer WHERE id='$artist_id'"));
-        $old_logo = $row["logo"];
+        $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id'"));
+        $old_logo = $artist_data["logo"];
         
-        $extra = json_decode($row['extra_json'],TRUE);
+        $extra = json_decode($artist_data['extra_json'],TRUE);
 		
 		$artist = my($_POST["artist"]);
 		$email = $_POST["email"];
@@ -91,12 +91,20 @@
 		
         mysql_update("mydna_musicplayer",$values,"id",$artist_id);
 		
+        $artist_page_url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
+        if( strlen($artist_data['preview_key']) > 0 )
+        {
+            $preview_key = $artist_data['preview_key'];
+            $artist_page_url .= "/?preview_key=$preview_key";
+        }
+        
 		$postedValues['imageSource'] = "../artists/files/".$artist_logo;
 		$postedValues['success'] = "1";
 		$postedValues['postedValues'] = $_REQUEST;
         if( $_REQUEST['ajax'] )
         {
             $postedValues['artist_data'] = get_artist_data($artist_id);
+            $postedValues['artist_page_url'] = $artist_page_url;
             echo json_encode($postedValues);
             exit();
         }
@@ -116,6 +124,7 @@
         $url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
         if( $do_publish )
         {
+            $preview_key = random_string(8);
             $values = array("preview_key" => $preview_key);
             $url .= "/?preview_key=$preview_key";
         }

@@ -118,6 +118,7 @@ function onEditProfileSubmit()
 function onProfileSuccess(data)
 {
     g_artistData = data.artist_data;
+    g_artistPageUrl = data.artist_page_url;
     updateProfile();
 }
 
@@ -172,4 +173,98 @@ function submitChangePassword()
     }
 }
 
+function updatePublishState()
+{
+    if( g_isPublished )
+    {
+        $('#admin .publish .not_published').hide();
+        $('#admin .publish .published').show();
+        
+        $('#publish_button').hide();
+        $('#unpublish_button').show();
+    }
+    else
+    {
+        $('#admin .publish .published').hide();
+        $('#admin .publish .not_published').show();
+        
+        $('#unpublish_button').hide();
+        $('#publish_button').show();
+    }
 
+    var url = g_artistPageUrl;
+    $('#admin .publish .link a').html(url);
+    $('.artist_page_url').attr('href',url);
+}
+
+function confirmUnpublish()
+{
+    var ret = window.confirm("Are you sure you want to unpublish your site?  It will only be available to people with the preview URL.");
+    if( !ret )
+        return;
+    
+    var args = {
+        method: 'UPDATE_PUBLISH',
+        artist_id: g_artistId,
+        do_publish: false,
+    };
+    var postData = JSON.stringify(data);
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: '/manage/data/profile.php',
+        data: args,
+        dataType: 'json',
+        success: function(data) 
+        {
+            if( data.success )
+            {
+                g_isPublished = false;
+                g_artistPageUrl = data.url;
+                updatePublishState();
+            }
+            else
+            {
+                window.alert("Unpublish failed.  Please try again.");
+            }
+        },
+        error: function()
+        {
+            window.alert("Unpublish failed.  Please try again.");
+        }
+    });
+    
+}
+function publishSite()
+{
+    var args = {
+        method: 'UPDATE_PUBLISH',
+        artist_id: g_artistId,
+        do_publish: true,
+    };
+    var postData = JSON.stringify(data);
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: '/manage/data/profile.php',
+        data: args,
+        dataType: 'json',
+        success: function(data) 
+        {
+            if( data.success )
+            {
+                g_isPublished = true;
+                g_artistPageUrl = data.url;
+                updatePublishState();
+            }
+            else
+            {
+                window.alert("Publish failed.  Please try again.");
+            }
+        },
+        error: function()
+        {
+            window.alert("Publish failed.  Please try again.");
+        }
+    });
+}
