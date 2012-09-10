@@ -19,10 +19,30 @@
     
     echo "<html><body><pre>\n";
 
-    function file_error($id,$msg)
+    function file_error($id,$artist_id,$msg)
     {
         $values = array("error" => $msg);
         mysql_update("artist_files",$values,"id",$id);
+        
+        $artist = mf(mq("SELECT email FROM mydna_musicplayer WHERE id='$artist_id'"));
+        
+        if( $artist['email'] )
+        {
+            $to = $artist['email'];
+            $subject = "MAD uploaded media conversion failed";
+            
+            $message = <<<END
+One of your media files failed upload conversion.  Please login to your account
+to try your upload again.
+
+Be Heard. Be Seen. Be Independent.
+
+END;
+            $from = "no-reply@myartistdna.com";
+            $headers = "From:" . $from;
+            
+            mail($to,$subject,$message,$headers);
+        }
     }
 
 
@@ -32,6 +52,7 @@
     {
         $id = $file['id'];
         $filename = $file['filename'];
+        $artist_id = $file['artist_id'];
     
         $path_parts = pathinfo($filename);
         $extension = strtolower($path_parts['extension']);
@@ -51,7 +72,7 @@
                 else
                 {
                     print "error with file id: $id, filename: $filename, src_file: $src_file, dst_file: $dst_file\n";
-                    file_error($id,"Please upload audio files in mp3 format.");
+                    file_error($id,$artist_id,"Please upload audio files in mp3 format.");
                     continue;
                 }
             }
@@ -88,7 +109,7 @@
             else
             {
                 print "failed to make ogg: $ogg_file, id: $id\n";
-                file_error($id,"Your audio file failed conversion, please try your upload again.");
+                file_error($id,$artist_id,"Your audio file failed conversion, please try your upload again.");
                 continue;
             }
         }
@@ -100,6 +121,7 @@
     {
         $id = $file['id'];
         $filename = $file['filename'];
+        $artist_id = $file['artist_id'];
         
         $path_parts = pathinfo($filename);
         $extension = strtolower($path_parts['extension']);
@@ -121,7 +143,7 @@
                 else
                 {
                     print "error with file id: $id, filename: $filename, src_file: $src_file, dst_file: $dst_file\n";
-                    file_error($id,"Please upload video files in mp4 format.");
+                    file_error($id,$artist_id,"Please upload video files in mp4 format.");
                     continue;
                 }
             }
@@ -158,7 +180,7 @@
             else
             {
                 print "failed to make ogv: $ogv_file, id: $id\n";
-                file_error($id,"Your video file failed conversion, please try your upload again.");
+                file_error($id,$artist_id,"Your video file failed conversion, please try your upload again.");
                 continue;
             }
         }
