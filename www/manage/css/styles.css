@@ -2028,6 +2028,7 @@ textarea {
     width: 125px;
     height: 25px;
     font-size: 0;
+    cursor: pointer;
 }
 #admin .name_publish .publish .buttons .button .icon {
     display: inline-block;
