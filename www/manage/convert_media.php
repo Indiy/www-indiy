@@ -96,7 +96,7 @@
     
     $video_q = mq("SELECT * FROM artist_files WHERE type='VIDEO' AND error IS NULL");
     
-    while( $file = mf($audio_q) )
+    while( $file = mf($video_q) )
     {
         $id = $file['id'];
         $filename = $file['filename'];
