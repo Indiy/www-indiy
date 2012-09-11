@@ -1849,6 +1849,12 @@ textarea {
     text-overflow: ellipsis;
     vertical-align: top;
 }
+#adminblock .filelist .list .file_list .item .file_status .file:hover {
+    text-decoration: underline;
+}
+#adminblock .filelist .list .file_list .item .file_status .link {
+    cursor: pointer;
+}
 #adminblock .filelist .list .file_list .item .file_status .status {
     display: inline-block;
     padding-left: 10px;

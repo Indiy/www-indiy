@@ -76,9 +76,9 @@ function updateFileList()
             {
                 html += "<div class='icon {0} error'></div>".format(file.type);
                 html += "<div id='{0}' class='file_status'>".format(sel);
-                html += " <div class='file'>{0}</div>".format(filename);
+                html += " <div class='file link' onclick='showFileDetail({0});>{1}</div>".format(i,filename);
                 html += " <div class='status'>";
-                html += "  <div class='error'>{0}</div>".format(file.error);
+                html += "  <div class='error link' onclick='showFileDetail({0});'>{1}</div>".format(i,file.error);
                 html += " </div>";
                 html += "</div>";
                 html += "<div class='delete'>";
@@ -99,6 +99,24 @@ function updateFileList()
         $('#file_list').append(html);
     }
 }
+function showFileDetail(index)
+{
+    var file = g_fileList[index];
+    
+    $('#file_detail #filename').html(file.name);
+    if( file.error.length > 0 )
+    {
+        $('#file_detail #error #text').html(file.error);
+        $('#file_detail #error').show();
+    }
+    else
+    {
+        $('#file_detail #error').hide();
+    }
+    showPopup('#file_detail');
+    return false;
+}
+
 function updateFileListItem(file)
 {
     var percent = file.upload_progress;
