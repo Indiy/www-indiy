@@ -106,12 +106,12 @@ function showFileDetail(index)
     $('#file_detail #filename').html(file.upload_filename);
     if( file.error.length > 0 )
     {
-        $('#file_detail #error').html(file.error);
-        $('#file_detail #error').show();
+        $('#file_detail #error_text').html(file.error);
+        $('#file_detail #error_text').show();
     }
     else
     {
-        $('#file_detail #error').hide();
+        $('#file_detail #error_text').hide();
     }
     showPopup('#file_detail');
     return false;
