@@ -76,7 +76,7 @@ function updateFileList()
             {
                 html += "<div class='icon {0} error'></div>".format(file.type);
                 html += "<div id='{0}' class='file_status'>".format(sel);
-                html += " <div class='file link' onclick='showFileDetail({0});>{1}</div>".format(i,filename);
+                html += " <div class='file link' onclick='showFileDetail({0});'>{1}</div>".format(i,filename);
                 html += " <div class='status'>";
                 html += "  <div class='error link' onclick='showFileDetail({0});'>{1}</div>".format(i,file.error);
                 html += " </div>";
