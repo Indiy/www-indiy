@@ -13,6 +13,8 @@
 		header("Location: /index.php");
 		exit();
 	}
+    session_write_close();
+    
     $user = get_current_user();
     $fd = fopen("/tmp/convert_media_$user.lock",'w+');
     if( !$fd )
