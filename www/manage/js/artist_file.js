@@ -72,7 +72,7 @@ function updateFileList()
         }
         else
         {
-            if( file.error.length > 0 )
+            if( file.error && file.error.length > 0 )
             {
                 html += "<div class='icon {0} error'></div>".format(file.type);
                 html += "<div id='{0}' class='file_status'>".format(sel);
