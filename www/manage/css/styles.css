@@ -1849,7 +1849,7 @@ textarea {
     text-overflow: ellipsis;
     vertical-align: top;
 }
-#adminblock .filelist .list .file_list .item .file_status .file:hover {
+#adminblock .filelist .list .file_list .item .file_status .link:hover {
     text-decoration: underline;
 }
 #adminblock .filelist .list .file_list .item .file_status .link {
