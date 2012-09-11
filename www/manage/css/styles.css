@@ -1856,6 +1856,14 @@ textarea {
     height: 40px;
     vertical-align: top;
 }
+#adminblock .filelist .list .file_list .item .file_status .status .error {
+    padding-top: 13px;
+    color: red;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-align: right;
+}
 #adminblock .filelist .list .file_list .item .file_status .status .upload_bar
 {
     position: relative;
