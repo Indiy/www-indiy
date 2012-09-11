@@ -103,10 +103,10 @@ function showFileDetail(index)
 {
     var file = g_fileList[index];
     
-    $('#file_detail #filename').html(file.name);
+    $('#file_detail #filename').html(file.upload_filename);
     if( file.error.length > 0 )
     {
-        $('#file_detail #error #text').html(file.error);
+        $('#file_detail #error').html(file.error);
         $('#file_detail #error').show();
     }
     else
