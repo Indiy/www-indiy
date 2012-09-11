@@ -1863,6 +1863,8 @@ textarea {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
     text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #adminblock .filelist .list .file_list .item .file_status .status .upload_bar
 {

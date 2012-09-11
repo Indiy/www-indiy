@@ -58,11 +58,11 @@ function updateFileList()
             }
             else if( file.upload_status == 'failed' )
             {
-                html += "<div class='icon {0}'></div>".format(file.type);
+                html += "<div class='icon {0} error'></div>".format(file.type);
                 html += "<div id='{0}' class='file_status'>".format(sel);
                 html += " <div class='file'>{0}</div>".format(filename);
                 html += " <div class='status'>";
-                html += "  <div class='error'>Failed</div>";
+                html += "  <div class='error'>Upload Failed!</div>";
                 html += " </div>";
                 html += "</div>";
                 html += "<div class='delete'>";
@@ -72,11 +72,27 @@ function updateFileList()
         }
         else
         {
-            html += "<div class='icon {0}'></div>".format(file.type);
-            html += "<div class='filename'>{0}</div>".format(filename);
-            html += "<div class='delete'>";
-            html += " <div class='button' onclick='deleteFile({0});'></div>".format(i);
-            html += "</div>";
+            if( file.error.length > 0 )
+            {
+                html += "<div class='icon {0} error'></div>".format(file.type);
+                html += "<div id='{0}' class='file_status'>".format(sel);
+                html += " <div class='file'>{0}</div>".format(filename);
+                html += " <div class='status'>";
+                html += "  <div class='error'>{0}</div>".format(file.error);
+                html += " </div>";
+                html += "</div>";
+                html += "<div class='delete'>";
+                html += " <div class='button' onclick='removeUploadFile({0});'></div>".format(i);
+                html += "</div>";
+            }
+            else
+            {
+                html += "<div class='icon {0}'></div>".format(file.type);
+                html += "<div class='filename'>{0}</div>".format(filename);
+                html += "<div class='delete'>";
+                html += " <div class='button' onclick='deleteFile({0});'></div>".format(i);
+                html += "</div>";
+            }
         }
         html += "</div>";
         
@@ -361,6 +377,9 @@ function getArtistFiles(type)
         var file = g_fileList[i];
         
         if( file.is_uploading )
+            continue;
+        
+        if( file.error.length > 0 )
             continue;
         
         if( type == 'ALL' || file.type == type )
