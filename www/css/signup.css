@@ -41,6 +41,8 @@ html, body {
 
 .signup_bg {
     background-image: url("/images/landing_bg3.jpg");
+    min-height: 1255px;
+    background-size: auto 100%;
 }
 .signup_bg_cover {
     position: absolute;
@@ -319,7 +321,7 @@ html, body {
     border-left: 1px solid #ccc;
     border-right: 1px solid #f6f6f6;
     border-bottom: 1px solid #f6f6f6;
-    border-radius: 16px;
+    border-radius: 30px;
 }
 
 
