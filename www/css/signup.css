@@ -112,18 +112,19 @@ html, body {
     border-right: 1px solid #f6f6f6;
     border-bottom: 1px solid #f6f6f6;
     border-radius: 8px;
+    text-align: left;
 }
 #signup .select .check_item input {
     padding-left: 12px;
     padding-top: 18px;
-    text-align: left;
 }
 #signup .select .check_item .text {
+    display: inline-block;
     padding-top: 18px;
+    padding-left: 16px;
     color: #454545;
     font-size: 24px;
     font-family: Helvetica, Arial, sans-serif;
-    text-align: left;
 }
 
 
