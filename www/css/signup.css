@@ -216,16 +216,16 @@ html, body {
 }
 #signup .credentials .fb_tw .icon {
     display: inline-block;
-    width: 180px;
+    width: 230px;
     height: 30px;
     vertical-align: top;
     background: blue;
 }
 #signup .credentials .fb_tw .fb.icon {
-    background: url('/images/signup_fb.gif') 0px 0px;
+    background: url('/images/signup_fb.gif') 17px 0px no-repeat;
 }
 #signup .credentials .fb_tw .tw.icon {
-    background: url('/images/twitter.jpg') 0px 0px;
+    background: url('/images/twitter.jpg') 18px 0px no-repeat;
 }
 
 
