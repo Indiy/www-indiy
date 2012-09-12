@@ -129,10 +129,11 @@ html, body {
     vertical-align: top;
 }
 #signup .line_container {
-    height: 163px;
+    height: 133px;
+    padding-top: 30px;
 }
 #signup .line_container .container {
-    margin-top: 30px;
+    margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     width: 889px;
