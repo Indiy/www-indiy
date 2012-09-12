@@ -247,7 +247,16 @@ html, body {
     width: 340px;
     background: #bebebe;
 }
-
+#signup .credentials .or .left.line {
+    background-image: linear-gradient(left , #FAFAFA 0%, #BCBCBC 75%);
+    background-image: -moz-linear-gradient(left , #FAFAFA 0%, #BCBCBC 75%);
+    background-image: -webkit-linear-gradient(left , #FAFAFA 0%, #BCBCBC 75%);
+}
+#signup .credentials .or .right.line {
+    background-image: linear-gradient(right , #FAFAFA 0%, #BCBCBC 75%);
+    background-image: -moz-linear-gradient(right , #FAFAFA 0%, #BCBCBC 75%);
+    background-image: -webkit-linear-gradient(right , #FAFAFA 0%, #BCBCBC 75%);
+}
 
 
 
