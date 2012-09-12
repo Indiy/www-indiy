@@ -169,7 +169,7 @@ html, body {
     display: inline-block;
     padding-left: 0px;
     padding-top: 25px;
-    color: #333
+    color: #333;
     font-size: 28px;
     text-align: left;
 }
@@ -181,7 +181,7 @@ html, body {
 #signup .container_detail {
     padding-top: 20px;
     padding-left: 30px;
-    color: #eaeaea;
+    color: #343434;
     font-size: 16px;
 }
 
