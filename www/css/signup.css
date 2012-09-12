@@ -310,6 +310,10 @@ html, body {
     color: black;
     font-size: 24px;
     text-align: center;
+    background-color: #e2e2e2;
+    background-image: linear-gradient(top, #F5F5F5 0%, #E3E3E3 50%);
+    background-image: -webkit-linear-gradient(top, #F5F5F5 0%, #E3E3E3 50%);
+    background-image: -moz-linear-gradient(top, #F5F5F5 0%, #E3E3E3 50%);
     border-top: 1px solid #ccc;
     border-left: 1px solid #ccc;
     border-right: 1px solid #f6f6f6;
