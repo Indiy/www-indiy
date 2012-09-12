@@ -187,4 +187,33 @@ html, body {
     color: #343434;
     font-size: 16px;
 }
+#signup .credentials {
+    margin-top: 25px;
+    width: 890px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fafafa;
+}
+#signup .credentials .title {
+    padding-top: 32px;
+    color: #51c3c4;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+#signup .credentials .detail {
+    padding-top: 12px;
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
 
