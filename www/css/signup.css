@@ -159,6 +159,7 @@ html, body {
     color: #333;
     font-size: 28px;
     border: 1px solid #bababa;
+    vertical-align: top;
 }
 #signup .line_container .container input.placeholder {
     color: #ccc;
@@ -168,11 +169,12 @@ html, body {
 }
 #signup .line_container .container .postfix {
     display: inline-block;
-    padding-left: 0px;
-    padding-top: 25px;
+    padding-left: 10px;
+    padding-top: 21px;
     color: #333;
-    font-size: 28px;
+    font-size: 33px;
     text-align: left;
+    vertical-align: top;
 }
 #signup .container_sep {
     height: 0px;
