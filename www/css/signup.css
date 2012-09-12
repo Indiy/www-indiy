@@ -106,9 +106,25 @@ html, body {
     margin-left: 8px;
     width: 237px;
     height: 48px;
+    background-color: #ececec;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #f6f6f6;
+    border-bottom: 1px solid #f6f6f6;
+    border-radius: 8px;
 }
-
-
+#signup .select .check_item input {
+    padding-left: 12px;
+    padding-top: 18px;
+    text-align: left;
+}
+#signup .select .check_item .text {
+    padding-top: 18px;
+    color: #454545;
+    font-size: 24px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: left;
+}
 
 
 
