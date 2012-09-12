@@ -194,6 +194,7 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     background-color: #fafafa;
+    border-radius: 8px;
 }
 #signup .credentials .title {
     padding-top: 32px;
@@ -259,6 +260,7 @@ html, body {
     background-image: -webkit-linear-gradient(right , #FAFAFA 0%, #BCBCBC 75%);
 }
 #signup .credentials .input_container {
+    margin-top: 18px;
     margin-right: auto;
     margin-left: auto;
     width: 826px;
@@ -289,9 +291,40 @@ html, body {
     padding-right: 15px;
     padding-top: 4px;
     height: 42px;
-    width: 535px;
+    width: 503px;
     color: #333;
-    font-size: 30px;
+    font-size: 20px;
     border: 1px solid #c4c4c4;
     vertical-align: top;
 }
+#signup .credentials .submit_container {
+    height: 118px;
+}
+#signup .credentials .submit_container .signup {
+    margin-top: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 12px;
+    height: 30px;
+    width: 176px;
+    color: black;
+    font-size: 22px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #f6f6f6;
+    border-bottom: 1px solid #f6f6f6;
+    border-radius: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
