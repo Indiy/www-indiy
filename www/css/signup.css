@@ -80,6 +80,37 @@ html, body {
 #signup .header .text {
     padding-top: 41px;
     padding-left: 44px;
+    color: white;
     font-size: 40px;
     font-family: 'Teletex Light', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
 }
+#signup .select {
+    padding-top: 25px;
+    height: 85px;
+    font-size: 0;
+    text-align: center;
+}
+#signup .select .label {
+    display: inline-block;
+    padding-top: 15px;
+    padding-right: 32px;
+    padding-left: 32px;
+    color: #333;
+    font-size: 24px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+#signup .select .check_item {
+    display: inline-block;
+    margin-right: 8px;
+    margin-left: 8px;
+    width: 237px;
+    height: 48px;
+}
+
+
+
+
+
+
+
