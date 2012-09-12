@@ -122,13 +122,29 @@ html, body {
 }
 #signup .select .check_item .text {
     display: inline-block;
-    padding-top: 11px;
-    padding-left: 11px;
+    padding-top: 15px;
+    padding-left: 12px;
     color: #454545;
     font-size: 24px;
     vertical-align: top;
 }
-
+#signup .site_name {
+    height: 163px;
+}
+#signup .container {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 890;
+    height: 69px;
+    background-color: #e2e2e2;
+    background-image: linear-gradient(bottom, #F1F1F1 20%, #E1E1E1 60%);
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #f6f6f6;
+    border-bottom: 1px solid #f6f6f6;
+    border-radius: 8px;
+}
 
 
 
