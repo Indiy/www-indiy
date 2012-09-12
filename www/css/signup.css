@@ -128,10 +128,10 @@ html, body {
     font-size: 24px;
     vertical-align: top;
 }
-#signup .site_name {
+#signup .line_container {
     height: 163px;
 }
-#signup .container {
+#signup .line_container .container {
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -147,7 +147,7 @@ html, body {
     border-bottom: 1px solid #f6f6f6;
     border-radius: 8px;
 }
-#signup .container input {
+#signup .line_container .container input {
     margin-left: 10px;
     margin-top: 10px;
     padding-left: 15px;
@@ -159,13 +159,13 @@ html, body {
     font-size: 28px;
     border: 1px solid #bababa;
 }
-#signup .container input.placeholder {
+#signup .line_container .container input.placeholder {
     color: #ccc;
 }
-#signup .site_link .container input {
+#signup .site_link.line_container .container input {
     width: 470px
 }
-#signup .container .postfix {
+#signup .line_container .container .postfix {
     display: inline-block;
     padding-left: 0px;
     padding-top: 25px;
@@ -178,7 +178,7 @@ html, body {
     border-top: 1px solid #c1c1c1;
     border-bottom: 1px solid white;
 }
-#signup .container_detail {
+#signup .line_container .detail {
     padding-top: 20px;
     padding-left: 30px;
     color: #343434;
