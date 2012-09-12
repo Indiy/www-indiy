@@ -227,9 +227,21 @@ html, body {
 #signup .credentials .fb_tw .tw.icon {
     background: url('/images/twitter.jpg') 18px 0px no-repeat;
 }
-
-
-
+#signup .credentials .or {
+    height: 30px;
+    font-size: 0;
+    text-align: center;
+}
+#signup .credentials .or .text {
+    color: #666;
+    font-size: 24px;
+    vertical-align: top;
+}
+#signup .credentials .or .line {
+    margin-top: 8px;
+    height: 1px;
+    background: #bebebe;
+}
 
 
 
