@@ -64,6 +64,7 @@ html, body {
 }
 #signup {
     margin-top: 100px;
+    margin-bottom: 60px;
     margin-right: auto;
     margin-left: auto;
     width: 960px;
@@ -190,6 +191,7 @@ html, body {
 }
 #signup .credentials {
     margin-top: 25px;
+    margin-bottom: 45px;
     width: 890px;
     margin-left: auto;
     margin-right: auto;
