@@ -193,6 +193,7 @@
 		2D8D971915AA604300AA3D1B /* artist_statement.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = artist_statement.html; path = templates/artist_statement.html; sourceTree = "<group>"; };
 		2D8D971A15AA928500AA3D1B /* all_account_summary.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = all_account_summary.php; sourceTree = "<group>"; };
 		2D8D971B15AAA2A900AA3D1B /* all_account_summary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = all_account_summary.html; path = templates/all_account_summary.html; sourceTree = "<group>"; };
+		2D9214C11601403E000B8DC1 /* signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = signup.js; sourceTree = "<group>"; };
 		2D98BF3D1480778500CE851D /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		2D98BF3E1480778500CE851D /* holder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holder.png; sourceTree = "<group>"; };
 		2D98BF3F1480778500CE851D /* play.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = play.jpg; sourceTree = "<group>"; };
@@ -1364,6 +1365,7 @@
 				2D25C3C715E544FB00132306 /* pl_iphone_photo.js */,
 				2D25C3C815E556EC00132306 /* pl_iphone_music.js */,
 				2D25C3C915E58DB900132306 /* pl_iphone_video.js */,
+				2D9214C11601403E000B8DC1 /* signup.js */,
 			);
 			path = js;
 			sourceTree = "<group>";

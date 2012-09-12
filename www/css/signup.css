@@ -131,6 +131,10 @@ html, body {
     font-size: 24px;
     vertical-align: top;
 }
+#signup #artist_items {
+    display: none;
+}
+
 #signup .line_container {
     height: 133px;
     padding-top: 30px;
