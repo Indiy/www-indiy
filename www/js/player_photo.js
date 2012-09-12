@@ -23,6 +23,7 @@ function photoOnReady()
             onReady: photoSwipeReady
         };
         $('#photo_bg').swipe(opts);
+        $('#photo_bg').bind('contextmenu', function(e) { return false; });
     }
 }
 

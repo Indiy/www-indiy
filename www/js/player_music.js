@@ -25,6 +25,7 @@ function musicOnReady()
         onReady: musicSwipeReady
     };
     $('#music_bg').swipe(opts);
+    $('#music_bg').bind('contextmenu', function(e) { return false; });
 }
 
 function musicSwipeReady()

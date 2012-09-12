@@ -135,15 +135,25 @@ html, body {
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-    width: 890;
+    width: 889px;
     height: 69px;
     background-color: #e2e2e2;
-    background-image: linear-gradient(bottom, #F1F1F1 20%, #E1E1E1 60%);
+    background-image: linear-gradient(bottom, #F1F1F1 0%, #E1E1E1 50%);
+    background-image: -webkit-linear-gradient(bottom, #F1F1F1 0%, #E1E1E1 50%);
+    background-image: -moz-linear-gradient(bottom, #F1F1F1 0%, #E1E1E1 50%);
     border-top: 1px solid #ccc;
     border-left: 1px solid #ccc;
     border-right: 1px solid #f6f6f6;
     border-bottom: 1px solid #f6f6f6;
     border-radius: 8px;
+}
+#signup .container {
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-top: 12px;
+    height: 34px;
+    border: 1px solid #bababa;
 }
 
 
