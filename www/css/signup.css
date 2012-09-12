@@ -153,9 +153,14 @@ html, body {
     padding-left: 15px;
     padding-top: 12px;
     height: 34px;
+    width: 867px;
+    color: #333;
+    font-size: 28px;
     border: 1px solid #bababa;
 }
-
+#signup .container input.placeholder {
+    color: #ccc;
+}
 
 
 
