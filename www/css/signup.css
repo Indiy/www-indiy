@@ -196,20 +196,37 @@ html, body {
 }
 #signup .credentials .title {
     padding-top: 32px;
-    color: #51c3c4;
+    color: #24948e;
     font-size: 26px;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
 }
 #signup .credentials .detail {
-    padding-top: 12px;
+    padding-top: 0px;
     color: #333;
     font-size: 16px;
     text-align: center;
 }
-
-
+#signup .credentials .fb_tw {
+    padding-top: 18px;
+    height: 40px;
+    font-size: 0px;
+    text-align: center;
+}
+#signup .credentials .fb_tw .icon {
+    display: inline-block;
+    width: 180px;
+    height: 30px;
+    vertical-align: top;
+    background: blue;
+}
+#signup .credentials .fb_tw .fb.icon {
+    background: url('/images/signup_fb.gif') 0px 0px;
+}
+#signup .credentials .fb_tw .tw.icon {
+    background: url('/images/twitter.jpg') 0px 0px;
+}
 
 
 
