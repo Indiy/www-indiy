@@ -85,6 +85,7 @@ html, body {
     padding-left: 44px;
     color: white;
     font-size: 40px;
+    font-family: 'Teletex Light', Helvetica, sans-serif;
     text-transform: uppercase;
 }
 #signup .select {
