@@ -151,9 +151,10 @@ html, body {
     margin-left: 10px;
     margin-top: 10px;
     padding-left: 15px;
-    padding-top: 12px;
-    height: 34px;
-    width: 867px;
+    padding-right: 15px;
+    padding-top: 4px;
+    height: 42px;
+    width: 835px;
     color: #333;
     font-size: 28px;
     border: 1px solid #bababa;
