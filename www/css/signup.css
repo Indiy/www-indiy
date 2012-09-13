@@ -117,6 +117,7 @@ html, body {
     border-radius: 8px;
     text-align: left;
     vertical-align: top;
+    cursor: pointer;
 }
 #signup .select .check_item input {
     margin-left: 13px;
