@@ -328,6 +328,7 @@ html, body {
     border-right: 1px solid #f6f6f6;
     border-bottom: 1px solid #f6f6f6;
     border-radius: 30px;
+    cursor: pointer;
 }
 
 
