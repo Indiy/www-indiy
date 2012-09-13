@@ -18,10 +18,18 @@ function signupCheckBox(signup_type)
 
 function signupClickInput(input,default_text)
 {
-    
+    if( $(input).val() == default_text )
+    {
+        $(input).val("");
+        $(input).removeClass("placeholder");
+    }
 }
 function signupBlurInput(input,default_text)
 {
-    
+    if( $(input).val() == '' )
+    {
+        $(input).val(default_text);
+        $(input).addClass("placeholder");
+    }
 }
 
