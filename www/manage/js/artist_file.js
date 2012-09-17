@@ -104,7 +104,7 @@ function showFileDetail(index)
     var file = g_fileList[index];
     
     $('#file_detail #filename').html(file.upload_filename);
-    if( file.error.length > 0 )
+    if( file.error && file.error.length > 0 )
     {
         $('#file_detail #error_text').html(file.error);
         $('#file_detail #error_text').show();
@@ -397,7 +397,7 @@ function getArtistFiles(type)
         if( file.is_uploading )
             continue;
         
-        if( file.error.length > 0 )
+        if( file.error && file.error.length > 0 )
             continue;
         
         if( type == 'ALL' || file.type == type )
