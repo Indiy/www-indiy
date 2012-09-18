@@ -136,7 +136,7 @@
             echo "</li>";
             
             echo "<li class='nodivider'>";
-            echo "<a href="artist_statement.php?artist_id=<?=$artistID;?>">ACCOUNT SUMMARY</a>"
+            echo "<a onclick='showInvitePopup();'>ACCOUNT STATEMENT</a>";
             echo "</li>";
         }
         ?>
