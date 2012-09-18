@@ -132,11 +132,11 @@
             echo "</li>";
             
             echo "<li>";
-            echo "<a href='stats.php?userId=<?=$artistID;?>'>VIEW ANALYTICS</a>";
+            echo "<a href=stats.php?userId=<?=$artistID;?>VIEW ANALYTICS</a>";
             echo "</li>";
             
             echo "<li class='nodivider'>";
-            echo "<a href='artist_statement.php?artist_id=<?=$artistID;?>'>ACCOUNT STATEMENT</a>";
+            echo "<a href=artist_statement.php?artist_id=<?=$artistID;?>ACCOUNT STATEMENT</a>";
             echo "</li>";
         }
         ?>
