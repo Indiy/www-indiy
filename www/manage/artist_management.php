@@ -434,7 +434,7 @@ $(document).ready(showFirstInstructions);
                 <h5>BRANDING TIPS</h5>
         	</div> 
             
-            <div class="list">
+          <!--  <div class="list">
                 <ul class="branding_tips">
                     <li class="branding_tips odd">
                         <span class='branding_left'>Tip #1 - </span>
@@ -454,8 +454,8 @@ $(document).ready(showFirstInstructions);
                         </span>
                     </li>
                 </ul>
-            </div>
-        </div>
+            </div> -->
+        </div> 
         
 
         </div>
