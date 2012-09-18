@@ -132,7 +132,7 @@
             echo "</li>";
             
             echo "<li>";
-            echo "<a class='artist_page_url' href='$artist_url'>MY STATS</a>";
+            echo "<a href="stats.php?userId=<?=$artistID;?>">View Analytics</a>";
             echo "</li>";
             
             echo "<li class='nodivider'>";
