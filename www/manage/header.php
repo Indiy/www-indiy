@@ -127,15 +127,19 @@
                 $artist_id = $_SESSION['sess_userId'];
             }
              
-            echo "<li>";
-            echo "<a class='artist_page_url' href='$artist_url'>VIEW SITE</a>";
-            echo "</li>";
-            echo "<li>";
+          
             echo "<a onclick='showEditProfile();'>EDIT PROFILE</a>";
             echo "</li>";
             echo "<li class='nodivider'>";
-            echo "<a onclick='showInvitePopup();'>INVITE FRIENDS</a>";
+            echo "<a onclick='showInvitePopup();'>MY STATS</a>";
             echo "</li>";
+            echo "<li>";
+            echo "<a href='artist_statement.php?artist_id=<?=$artistID;?>'>ACCOUNT SUMMARY</a>";
+            echo "</li>";
+            echo "<li>";
+            echo "<a href='/faq.php'>HELP</a>";
+            echo "</li>";
+            echo "<li>";
         }
         ?>
     </ul>
