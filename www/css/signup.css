@@ -145,7 +145,7 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     width: 658px;
-    height: 69px;
+    height: 50px;
     font-size: 0;
     background-color: #e2e2e2;
     background-image: linear-gradient(bottom, #F1F1F1 0%, #E1E1E1 50%);
@@ -158,13 +158,13 @@ html, body {
     border-radius: 8px;
 }
 #signup .line_container .container input {
-    margin-left: 10px;
-    margin-top: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 4px;
-    height: 42px;
-    width: 611px;
+    margin-left: 7px;
+    margin-top: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    height: 30px;
+    width: 621px;
     color: #333;
     font-size: 20px;
     border: 1px solid #bababa;
@@ -174,7 +174,7 @@ html, body {
     color: #ccc;
 }
 #signup .site_link.line_container .container input {
-    width: 340px
+    width: 350px
 }
 #signup .line_container .container .postfix {
     display: inline-block;
