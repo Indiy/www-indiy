@@ -205,9 +205,9 @@ html, body {
     border-radius: 8px;
 }
 #signup .credentials .title {
-    padding-top: 32px;
+    padding-top: 24px;
     color: #24948e;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -215,7 +215,7 @@ html, body {
 #signup .credentials .detail {
     padding-top: 0px;
     color: #333;
-    font-size: 16px;
+    font-size: 12px;
     text-align: center;
 }
 #signup .credentials .fb_tw {
@@ -244,9 +244,9 @@ html, body {
 }
 #signup .credentials .or .text {
     display: inline-block;
-    width: 62px;
+    width: 46px;
     color: #666;
-    font-size: 24px;
+    font-size: 16px;
     text-align: center;
     vertical-align: top;
 }
@@ -254,7 +254,7 @@ html, body {
     display: inline-block;
     margin-top: 10px;
     height: 1px;
-    width: 340px;
+    width: 250px;
     background: #bebebe;
 }
 #signup .credentials .or .left.line {
