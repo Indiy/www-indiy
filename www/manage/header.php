@@ -125,11 +125,14 @@
                 $artist_url = "http://$artist_home_host";
             }
             $artist_id = $_SESSION['sess_userId'];
-             
-            echo "<li>";
-            echo "<a onclick='showEditProfile();'>EDIT PROFILE</a>";
-            echo "</li>";
             
+            if( strstr($_SERVER['PHP_SELF'],'artist_management.php') !== FALSE )
+            {
+                echo "<li>";
+                echo "<a onclick='showEditProfile();'>EDIT PROFILE</a>";
+                echo "</li>";
+            }
+                
             echo "<li>";
             echo "<a href='/manage/stats.php?userId=$artist_id'>VIEW ANALYTICS</a>";
             echo "</li>";
