@@ -2087,22 +2087,29 @@ textarea {
 /***********************************************************************/
 
 #adminblock .heading .buttonadd {
-    
+    font-size: 0px;
 }
 #adminblock .heading .buttonadd .plus {
     display: inline-block;
     height: 25px;
     width: 25px;
-    background: url('/images/white-plus.png') 0px 0px;
+    background: url('/images/white-plus.png') 2px 2px;
 }
 #adminblock .heading .buttonadd .label {
     display: inline-block;
-    padding-top: 3px;
-    padding-right: 10px;
-    padding-left: 10px;
-    height: 22px;
+    padding-top: 6px;
+    padding-right: 15px;
+    padding-left: 15px;
+    height: 19px;
     color: white;
     font-size: 12px;
     font-family: Helvetica, Arial, sans-serif;
     text-decoration: none;
+}
+
+#adminblock .filelist .heading .buttonadd .plus {
+    background-color: #486DB5;
+}
+#adminblock .filelist .heading .buttonadd .label {
+    background-color: #284D95;
 }
