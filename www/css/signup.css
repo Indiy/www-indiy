@@ -90,7 +90,7 @@ html, body {
 }
 #signup .select {
     padding-top: 25px;
-    height: 85px;
+    height: 55px;
     font-size: 0;
     text-align: center;
 }
@@ -137,8 +137,8 @@ html, body {
 }
 
 #signup .line_container {
-    height: 133px;
     padding-top: 30px;
+    height: 91px;
 }
 #signup .line_container .container {
     margin-top: 0px;
