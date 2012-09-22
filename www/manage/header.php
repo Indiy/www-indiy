@@ -135,7 +135,7 @@
             else
             {
                 echo "<li>";
-                echo "<a onclick='/manage/artist_management.php?userId=$artist_id'>EDIT PROFILE</a>";
+                echo "<a href='/manage/artist_management.php?userId=$artist_id'>EDIT PROFILE</a>";
                 echo "</li>";
             }
                 
