@@ -231,8 +231,9 @@
 		2DA723A315B8BEAC00658D4B /* love.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = love.php; path = data/love.php; sourceTree = "<group>"; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
-		2DC18089160E4AD3007B44C0 /* error404.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = error404.html; sourceTree = "<group>"; };
 		2DC1808B160E4D82007B44C0 /* error.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = error.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2DC1808C160E5E82007B44C0 /* error404.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = error404.html; sourceTree = "<group>"; };
+		2DC18090160E5EC3007B44C0 /* error404.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = error404.php; sourceTree = "<group>"; };
 		2DC262C215EEC67400CA560F /* footer.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = footer.html; sourceTree = "<group>"; };
 		2DC262C415EEC76900CA560F /* fan_header.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = fan_header.html; sourceTree = "<group>"; };
 		2DC262C515EFD0B600CA560F /* fan_header_footer.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = fan_header_footer.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
@@ -992,6 +993,7 @@
 				2DC262C415EEC76900CA560F /* fan_header.html */,
 				2DC262C215EEC67400CA560F /* footer.html */,
 				2DC262E815FFD6A400CA560F /* signup.html */,
+				2DC1808C160E5E82007B44C0 /* error404.html */,
 			);
 			path = templates;
 			sourceTree = "<group>";
@@ -1147,7 +1149,7 @@
 				2DF474141440B77F005538C7 /* tour.php */,
 				2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */,
 				2D380B95146E35CD00E36189 /* robots.txt */,
-				2DC18089160E4AD3007B44C0 /* error404.html */,
+				2DC18090160E5EC3007B44C0 /* error404.php */,
 			);
 			name = www;
 			path = ../www;

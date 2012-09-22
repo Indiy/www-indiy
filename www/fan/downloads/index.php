@@ -24,7 +24,7 @@
     if( !$file )
     {
         header("HTTP/1.0 404 Not Found");
-        include_once "error404.html";
+        include_once "error404.php";
         die();
     }
     
