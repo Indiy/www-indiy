@@ -89,26 +89,26 @@ html, body {
     text-transform: uppercase;
 }
 #signup .select {
-    padding-top: 25px;
-    height: 55px;
+    padding-top: 18px;
+    height: 62px;
     font-size: 0;
     text-align: center;
 }
 #signup .select .label {
     display: inline-block;
     padding-top: 15px;
-    padding-right: 32px;
-    padding-left: 32px;
+    padding-right: 17px;
+    padding-left: 17px;
     color: #333;
-    font-size: 24px;
+    font-size: 18px;
     vertical-align: top;
 }
 #signup .select .check_item {
     display: inline-block;
-    margin-right: 8px;
-    margin-left: 8px;
-    width: 237px;
-    height: 48px;
+    margin-right: 7px;
+    margin-left: 7px;
+    width: 175px;
+    height: 35px;
     background-color: #ececec;
     border-top: 1px solid #ccc;
     border-left: 1px solid #ccc;
@@ -129,7 +129,7 @@ html, body {
     padding-top: 15px;
     padding-left: 12px;
     color: #454545;
-    font-size: 24px;
+    font-size: 18px;
     vertical-align: top;
 }
 #signup #artist_items {
