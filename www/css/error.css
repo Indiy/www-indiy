@@ -33,6 +33,7 @@ body {
     background: black;
 }
 a {
+    color: inherit;
     text-decoration: none;
     outline: none;
 }
@@ -43,7 +44,7 @@ a {
     margin-right: auto;
     width: 270px;
     height: 220px;
-    background: url('/images/error_mad_logo.jpg') 0px 0px;
+    background: url('/images/error_mad_logo.jpg') 8px 6px no-repeat;
 }
 .error_text {
     padding-top: 75px;
@@ -62,6 +63,7 @@ a {
     font-weight: lighter;
 }
 .error_text .line a {
+    color: white;
     text-decoration: underline;
     cursor: pointer;
 }
