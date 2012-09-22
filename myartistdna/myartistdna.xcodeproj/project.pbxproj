@@ -234,6 +234,8 @@
 		2DC1808B160E4D82007B44C0 /* error.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = error.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DC1808C160E5E82007B44C0 /* error404.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = error404.html; sourceTree = "<group>"; };
 		2DC18090160E5EC3007B44C0 /* error404.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = error404.php; sourceTree = "<group>"; };
+		2DC18093160E627F007B44C0 /* .htaccess */ = {isa = PBXFileReference; lastKnownFileType = text; path = .htaccess; sourceTree = "<group>"; };
+		2DC18095160E627F007B44C0 /* holder.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = holder.txt; sourceTree = "<group>"; };
 		2DC262C215EEC67400CA560F /* footer.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = footer.html; sourceTree = "<group>"; };
 		2DC262C415EEC76900CA560F /* fan_header.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = fan_header.html; sourceTree = "<group>"; };
 		2DC262C515EFD0B600CA560F /* fan_header_footer.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = fan_header_footer.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
@@ -998,6 +1000,23 @@
 			path = templates;
 			sourceTree = "<group>";
 		};
+		2DC18092160E627F007B44C0 /* artists */ = {
+			isa = PBXGroup;
+			children = (
+				2DC18093160E627F007B44C0 /* .htaccess */,
+				2DC18094160E627F007B44C0 /* files */,
+			);
+			path = artists;
+			sourceTree = "<group>";
+		};
+		2DC18094160E627F007B44C0 /* files */ = {
+			isa = PBXGroup;
+			children = (
+				2DC18095160E627F007B44C0 /* holder.txt */,
+			);
+			path = files;
+			sourceTree = "<group>";
+		};
 		2DE197A114F6130700305EAD /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -1102,6 +1121,7 @@
 		2DF46F491440B77F005538C7 /* www */ = {
 			isa = PBXGroup;
 			children = (
+				2DC18092160E627F007B44C0 /* artists */,
 				2DF470541440B77F005538C7 /* data */,
 				2D0A2DEA15EB05F700F0EE6D /* flash */,
 				2DF470C01440B77F005538C7 /* images */,
