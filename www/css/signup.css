@@ -81,10 +81,10 @@ html, body {
     border-bottom: 1px solid #7a7a7a;
 }
 #signup .header .text {
-    padding-top: 41px;
+    padding-top: 30px;
     padding-left: 44px;
     color: white;
-    font-size: 40px;
+    font-size: 34px;
     font-family: 'Teletex Light', Helvetica, sans-serif;
     text-transform: uppercase;
 }
