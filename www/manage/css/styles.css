@@ -2087,13 +2087,14 @@ textarea {
 /***********************************************************************/
 
 #adminblock .heading .buttonadd {
-    font-size: 0px;
+    font-size: 0px !important;
 }
 #adminblock .heading .buttonadd .plus {
     display: inline-block;
     height: 25px;
     width: 25px;
     background: url('/images/white-plus.png') 2px 2px;
+    vertical-align: top;
 }
 #adminblock .heading .buttonadd .label {
     display: inline-block;
@@ -2105,6 +2106,7 @@ textarea {
     font-size: 12px;
     font-family: Helvetica, Arial, sans-serif;
     text-decoration: none;
+    vertical-align: top;
 }
 
 #adminblock .filelist .heading .buttonadd .plus {
