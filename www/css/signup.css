@@ -164,7 +164,7 @@ html, body {
     padding-right: 15px;
     padding-top: 4px;
     height: 42px;
-    width: 835px;
+    width: 641px;
     color: #333;
     font-size: 20px;
     border: 1px solid #bababa;
@@ -174,7 +174,7 @@ html, body {
     color: #ccc;
 }
 #signup .site_link.line_container .container input {
-    width: 470px
+    width: 370px
 }
 #signup .line_container .container .postfix {
     display: inline-block;
