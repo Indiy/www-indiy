@@ -32,6 +32,10 @@
 body {
     background: black;
 }
+a {
+    text-decoration: none;
+    outline: none;
+}
 
 .big_mad_logo {
     margin-top: 170px;
@@ -39,22 +43,23 @@ body {
     margin-right: auto;
     width: 270px;
     height: 220px;
-    background: green;
+    background: url('/images/error_mad_logo.jpg') 0px 0px;
 }
 .error_text {
     padding-top: 75px;
+    padding-bottom: 50px;
     max-width: 820px;
     padding-left: 50px;
     padding-right: 50px;
     margin-left: auto;
     margin-right: auto;
-    background: grey;
 }
 .error_text .line {
     padding-top: 24px;
     color: white;
     font-size: 16px;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: lighter;
 }
 .error_text .line a {
     text-decoration: underline;
