@@ -1774,7 +1774,7 @@ textarea {
 #adminblock .filelist .heading {
     width:691px;
     float:left;
-    background: #688dc5;
+    background: #355;
     padding:10px;
 }
 #adminblock .filelist .heading .title { float:left; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; color:#ffffff; padding:5px 0 0 9px}
@@ -2110,10 +2110,10 @@ textarea {
 }
 
 #adminblock .filelist .heading .buttonadd .plus {
-    background-color: #486DB5;
+    background-color: #477;
 }
 #adminblock .filelist .heading .buttonadd .label {
-    background-color: #284D95;
+    background-color: #133;
 }
 
 #adminblock .playlist .heading .buttonadd .plus {
