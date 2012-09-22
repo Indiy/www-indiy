@@ -132,6 +132,12 @@
                 echo "<a onclick='showEditProfile();'>EDIT PROFILE</a>";
                 echo "</li>";
             }
+            else
+            {
+                echo "<li>";
+                echo "<a onclick='/manage/artist_management.php?userId=$artist_id'>EDIT PROFILE</a>";
+                echo "</li>";
+            }
                 
             echo "<li>";
             echo "<a href='/manage/stats.php?userId=$artist_id'>VIEW ANALYTICS</a>";
