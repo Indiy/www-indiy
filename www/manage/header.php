@@ -132,11 +132,11 @@
             echo "</li>";
             
             echo "<li>";
-            echo "<a class='artist_page_url' href='$artist_url'>VIEW ANALYTICS</a>";
+            echo "<a href='/manage/stats.php?userId=$artist_id'>VIEW ANALYTICS</a>";
             echo "</li>";
             
             echo "<li class='nodivider'>";
-            echo "<a onclick='showInvitePopup();'>ACCOUNT STATEMENT</a>";
+            echo "<a href='/manage/artist_statement.php?artist_id=$artist_id'>ACCOUNT STATEMENT</a>";
             echo "</li>";
         }
         ?>
