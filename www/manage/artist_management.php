@@ -333,9 +333,12 @@ $(document).ready(showFirstInstructions);
         <div class="filelist">
         	<div class="heading">
                 <div class='title'>MEDIA LIBRARY</div>
-                <div class="buttonadd">
-                    <a onclick='showAddArtistFilePopup(false);' title='Add files for your site'>Add Files</a>
-                </div>
+                <a onclick='showAddArtistFilePopup(false);' title='Add files for your site'>
+                    <div class="buttonadd">
+                        <div class='plus'></div>
+                        <div class='label'>Add Files</div>
+                    </div>
+                </a>
             </div>
             <div class="list" style='display: none;'>
                 <div class='file_heading'>
