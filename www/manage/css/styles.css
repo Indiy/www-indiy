@@ -2115,3 +2115,38 @@ textarea {
 #adminblock .filelist .heading .buttonadd .label {
     background-color: #284D95;
 }
+
+#adminblock .playlist .heading .buttonadd .plus {
+    background-color: #486DB5;
+}
+#adminblock .playlist .heading .buttonadd .label {
+    background-color: #284D95;
+}
+
+#adminblock .photolist .heading .buttonadd .plus {
+    background-color: #567F7B;
+}
+#adminblock .photolist .heading .buttonadd .label {
+    background-color: #3C5351;
+}
+
+#adminblock .videolist .heading .buttonadd .plus {
+    background-color: #5C5C71;
+}
+#adminblock .videolist .heading .buttonadd .label {
+    background-color: #3E3E53;
+}
+
+#adminblock .products .heading .buttonadd .plus {
+    background-color: #565656;
+}
+#adminblock .products .heading .buttonadd .label {
+    background-color: #333;
+}
+
+#adminblock .pages .heading .buttonadd .plus {
+    background-color: #97121E;
+}
+#adminblock .pages .heading .buttonadd .label {
+    background-color: #682128;
+}

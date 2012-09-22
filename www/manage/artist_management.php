@@ -356,9 +356,12 @@ $(document).ready(showFirstInstructions);
         <div class="playlist">
         	<div class="heading">
                 <h5>SONGS</h5>
-                <div class="buttonadd">
-                    <a onclick='showPagePopup(false);' title='Add a song to your site'>Add Song</a>
-                </div>
+                <a onclick='showPagePopup(false);' title='Add a song to your site'>
+                    <div class="buttonadd">
+                        <div class='plus'></div>
+                        <div class='label'>Add Song</div>
+                    </div>
+                </a>
             </div>
             <div class="list" style='display: none;'>
                 <ul>
@@ -376,8 +379,13 @@ $(document).ready(showFirstInstructions);
         
         <div class="photolist">
             <div class="heading">
-            <h5>Photos</h5>
-            <div class="buttonadd"><a onclick='showPhotoPopup(false);' title='Add a photo to your site'>Add Photo</a></div>
+                <h5>Photos</h5>
+                <a onclick='showPhotoPopup(false);' title='Add a photo to your site'>
+                    <div class="buttonadd">
+                        <div class='plus'></div>
+                        <div class='label'>Add Photo</div>
+                    </div>
+                </a>
             </div>
         
             <div class="list" style='display: none;'>
@@ -388,8 +396,13 @@ $(document).ready(showFirstInstructions);
         
         <div class="videolist">
             <div class="heading">
-            <h5>Videos</h5>
-            <div class="buttonadd"><a onclick='showVideoPopup(false);' title='Add a video to your site'>Add Video</a></div>
+                <h5>Videos</h5>
+                <a onclick='showVideoPopup(false);' title='Add a video to your site'>
+                    <div class="buttonadd">
+                        <div class='plus'></div>
+                        <div class='label'>Add Video</div>
+                    </div>
+                </a>
             </div>
         
             <div class="list" style='display: none;'>
@@ -401,9 +414,13 @@ $(document).ready(showFirstInstructions);
         <div class="products">
         
             <div class="heading">
-            <h5>Store</h5>
-            <div class="buttonadd"><a onclick='showProductPopup(false);' title='Add a product to your store'>Add Product</a></div>
-
+                <h5>Store</h5>
+                <a onclick='showProductPopup(false);' title='Add a product to your store'>
+                    <div class="buttonadd">
+                        <div class='plus'></div>
+                        <div class='label'>Add Product</div>
+                    </div>
+                </a>
             </div>
         
             <div class="list" style='display: none;'>
@@ -415,10 +432,13 @@ $(document).ready(showFirstInstructions);
         <div class="pages">
             <div class="heading">
                 <h5>TABS</h5>
-                <div class="buttonadd">
-                    <a id='add_tab_link' onclick='showTabPopup(false);' title='Add a tab to your site'>Add Tab</a>
-                </div>
-        	</div> 
+                <a id='add_tab_link' onclick='showTabPopup(false);' title='Add a tab to your site'>
+                    <div class="buttonadd">
+                        <div class='plus'></div>
+                        <div class='label'>Add Tab</div>
+                    </div>
+                </a>
+        	</div>
             
             <div class="list" style='display: none;'>
             <ul>
@@ -432,7 +452,8 @@ $(document).ready(showFirstInstructions);
             </div>
         </div>
 
-        <!-- <div class="branding_tips">
+        <!--
+        <div class="branding_tips">
             <div class="heading">
                 <h5>BRANDING TIPS</h5>
         	</div> 
@@ -458,7 +479,8 @@ $(document).ready(showFirstInstructions);
                     </li>
                 </ul>
             </div> 
-        </div> -->
+        </div>
+        -->
         
 
         </div>
