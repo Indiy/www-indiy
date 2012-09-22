@@ -96,7 +96,7 @@ html, body {
 }
 #signup .select .label {
     display: inline-block;
-    padding-top: 15px;
+    padding-top: 13px;
     padding-right: 17px;
     padding-left: 17px;
     color: #333;
@@ -121,12 +121,12 @@ html, body {
 }
 #signup .select .check_item input {
     margin-left: 13px;
-    margin-top: 20px;
+    margin-top: 13px;
     vertical-align: top;
 }
 #signup .select .check_item .text {
     display: inline-block;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-left: 12px;
     color: #454545;
     font-size: 18px;
