@@ -24,7 +24,8 @@
     if( !$file )
     {
         header("HTTP/1.0 404 Not Found");
-        die("File not found");
+        include_once "error404.html";
+        die();
     }
     
     $mime_type = mime_content_type($file['upload_filename']);

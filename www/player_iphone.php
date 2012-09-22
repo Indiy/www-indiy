@@ -13,6 +13,7 @@
         header("HTTP/1.0 404 Not Found");
         header("Cache-Control: no-cache");
         header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
+        include_once "error404.html";
         die();
     }
 
@@ -43,6 +44,7 @@
         header("HTTP/1.0 404 Not Found");
         header("Cache-Control: no-cache");
         header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
+        include_once "error404.html";
         die();
     }
     if( strlen($artist_data['preview_key']) > 0 )
@@ -53,6 +55,7 @@
             header("HTTP/1.0 404 Not Found");
             header("Cache-Control: no-cache");
             header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
+            include_once "error404.html";
             die();
         }
     }
