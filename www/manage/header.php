@@ -123,9 +123,8 @@
                 $artist_home_host = $_SESSION['sess_userURL'] . '.' . implode('.',array_slice($host_explode,1));
                 
                 $artist_url = "http://$artist_home_host";
-
-                $artist_id = $_SESSION['sess_userId'];
             }
+            $artist_id = $_SESSION['sess_userId'];
              
             echo "<li>";
             echo "<a onclick='showEditProfile();'>EDIT PROFILE</a>";
