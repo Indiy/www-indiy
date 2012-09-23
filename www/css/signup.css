@@ -230,6 +230,7 @@ html, body {
     height: 30px;
     vertical-align: top;
     background: blue;
+    cursor: pointer;
 }
 #signup .credentials .fb_tw .fb.icon {
     background: url('/images/signup_fb.gif') 17px 0px no-repeat;
