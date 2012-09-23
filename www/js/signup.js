@@ -2,7 +2,8 @@
 
 var HOSTNAME_REGEX = new RegExp('^(?=.{1,255}$)[0-9A-Za-z](?:(?:[0-9A-Za-z]|\\b-){0,61}[0-9A-Za-z])?(?:[0-9A-Za-z](?:(?:[0-9A-Za-z]|\\b-){0,61}[0-9A-Za-z])?)*$');
 var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
-
+var NAME_PLACEHOLDER = "Your Site Name";
+var URL_PLACEHOLDER = "Your Site Link";
 
 function signupCheckBox(signup_type)
 {
@@ -57,12 +58,12 @@ function signupArtist()
     var email = $('#signup .credentials .email input').val();
     var password = $('#signup .credentials .password input').val();
     
-    if( name.length == 0 )
+    if( name.length == 0 || name == NAME_PLACEHOLDER )
     {
         window.alert("Please enter a name for your site.");
         return;
     }
-    if( url.length == 0 )
+    if( url.length == 0 || url == URL_PLACEHOLDER )
     {
         window.alert("Please enter a URL for your site.");
         return;
