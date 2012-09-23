@@ -236,6 +236,7 @@
 		2DC18090160E5EC3007B44C0 /* error404.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = error404.php; sourceTree = "<group>"; };
 		2DC18093160E627F007B44C0 /* .htaccess */ = {isa = PBXFileReference; lastKnownFileType = text; path = .htaccess; sourceTree = "<group>"; };
 		2DC18095160E627F007B44C0 /* holder.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = holder.txt; sourceTree = "<group>"; };
+		2DC18097160ED1DA007B44C0 /* add_network.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_network.php; sourceTree = "<group>"; };
 		2DC262C215EEC67400CA560F /* footer.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = footer.html; sourceTree = "<group>"; };
 		2DC262C415EEC76900CA560F /* fan_header.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = fan_header.html; sourceTree = "<group>"; };
 		2DC262C515EFD0B600CA560F /* fan_header_footer.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = fan_header_footer.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
@@ -1472,6 +1473,7 @@
 				2DF47518144A9765005538C7 /* stats.php */,
 				2DF47517144A2D84005538C7 /* timthumb.php */,
 				2D380B96146E3EAC00E36189 /* setup_abbrev.php */,
+				2DC18097160ED1DA007B44C0 /* add_network.php */,
 				2DF4AA60147A058500CA819B /* download_newsletter.php */,
 				2D6DF95314BA62A900D0750E /* mad_newsletter.php */,
 				2D3ED6D41502D5A400A9D171 /* delete_account.php */,

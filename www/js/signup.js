@@ -130,3 +130,66 @@ function signupArtist()
             }
         });
 }
+
+function signupFacebook()
+{
+    signupSocial('facebook');
+}
+function signupTwitter()
+{
+    signupSocial('twitter');
+}
+function signupSocial(network)
+{
+    var name = $('#signup #artist_items .site_name input').val();
+    var url = $('#signup #artist_items .site_link input').val();
+    
+    if( name.length == 0 || name == NAME_PLACEHOLDER )
+    {
+        window.alert("Please enter a name for your site.");
+        return;
+    }
+    if( url.length == 0 || url == URL_PLACEHOLDER )
+    {
+        window.alert("Please enter a URL for your site.");
+        return;
+    }
+    if( !url.match(HOSTNAME_REGEX) )
+    {
+        window.alert("Please enter a valid URL.  A-Z, a-z, -, 0-9 are allowed.");
+        return;
+    }
+    var dict = {
+            'name': name,
+            'url': url,
+            'network': network
+        };
+    var data = JSON.stringify(dict);
+    jQuery.ajax(
+        {
+            type: 'POST',
+            url: '/data/signup.php',
+            contentType: 'application/json',
+            data: data,
+            processData: false,
+            dataType: 'text',
+            success: function(text) 
+            {
+                var data = JSON.parse(text);
+                if( data['error'] )
+                {
+                    window.alert(data['error']);
+                }
+                else
+                {
+                    window.location = data['url'];
+                }
+            },
+            error: function()
+            {
+                window.alert("Registration failed!");
+            }
+        });
+}
+
+
