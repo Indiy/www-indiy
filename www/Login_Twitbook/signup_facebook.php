@@ -18,7 +18,7 @@
         $uid = $facebook->getUser();
         $user = $facebook->api('/me');
     }
-    catch (Exception $e)
+    catch( Exception $e )
     {}
     
     print "<html><body><pre>\n\n";
@@ -26,7 +26,6 @@
     print "user: "; var_dump($user);
     print "session: "; var_dump($_SESSION);
     
-    die("done done\n\n");
     
     if (!empty($user))
     {
@@ -49,17 +48,21 @@
                         "email" => $email,
                         );
         
+        print "values: "; var_dump($values);
+        
         mysql_insert('mydna_musicplayer',$values);
         
         $artist_id = mysql_insert_id();
         
         $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id'"));
         $url = loginArtistFromRow($artist_data);
-        header("Location: $url");
+        //header("Location: $url");
     }
     else
     {
-        header("Location: /");
+        print "No user!\n"
+        //header("Location: /");
     }
+    die("done done\n\n");
 
 ?>
