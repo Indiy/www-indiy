@@ -27,16 +27,24 @@
     
     if( !empty($user) )
     {
-        $fan = mf(mq("SELECT * FROM fan WHERE fb_uid='$uid'"));
+        $fan = mf(mq("SELECT * FROM fans WHERE fb_uid='$uid'"));
         if( $fan )
         {
             $url = login_fan_from_row($fan);
             header("Location: $url");
             die();
         }
+
+        $fan_id = FALSE;
+        $email = $user['email'];
+
+        $fan = mf(mq("SELECT * FROM fans WHERE email = '$email'"));
+        if( $fan )
+        {
+            $fan_id = $fan['id'];
+        }
     
         $fb_access_token = $facebook->getAccessToken();
-        $email = $user['email'];
         $extra = array("facebook_access_token" => $fb_access_token);
         $extra_json = json_encode($extra);
         
@@ -45,10 +53,16 @@
                         "extra_json" => $extra_json,
                         );
         
-        mysql_insert('mydna_musicplayer',$values);
-        
-        $fan_id = mysql_insert_id();
-        
+        if( $fan_id )
+        {
+            mysql_update('fans',$values,'id',$fan_id);
+        }
+        else
+        {
+            mysql_insert('fans',$values);
+            $fan_id = mysql_insert_id();
+        }
+
         $fan = mf(mq("SELECT * FROM fans WHERE id='$fan_id'"));
         $url = login_fan_from_row($fan);
         header("Location: $url");
