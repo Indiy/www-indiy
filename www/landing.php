@@ -408,6 +408,7 @@ input {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
         <script src="https://vjs.zencdn.net/c/video.js"></script>
+        <script src="/js/string.utils.js" type="text/javascript"></script>
         <script src="/js/login_signup.js" type="text/javascript"></script>
         
         <script type="text/javascript">
