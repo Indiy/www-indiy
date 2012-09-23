@@ -225,3 +225,38 @@ function onForgotPasswordClick()
         });
 } 
 
+function loginFacebook()
+{
+    loginSocialNetwork('facebook');
+}
+function loginTwitter()
+{
+    loginSocialNetwork('twitter');
+}
+function loginSocialNetwork(network)
+{
+    var url = "/data/signup.php?network={0}".format(network);
+
+    jQuery.ajax(
+        {
+            type: "GET",
+            url: url,
+            dataType: "jsonp",
+            success: function(data)
+            {
+                var error = data['error'];
+                if( error )
+                {
+                    window.alert(error);
+                }
+                else
+                {
+                    window.location.href = data['url'];
+                }
+            },
+            error: function()
+            {
+                window.alert("Failed to contact login server.");
+            }
+        });
+}

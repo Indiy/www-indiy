@@ -469,7 +469,7 @@ $(document).ready(function()
                             </div>
                         </div>
                         <div class='login_fb'>
-                            <a href='/Login_Twitbook/login-facebook.php'>
+                            <a onclick='loginFacebook();'>
                                 <div></div>
                             </a>
                         </div>
@@ -477,7 +477,7 @@ $(document).ready(function()
                         <div class='dash_or'>OR</div>
                         <div class='dash2'></div>
                         <div class='login_tw'>
-                            <a href='/Login_Twitbook/login-twitter.php'>
+                            <a onclick='loginTwitter();'>
                                 <div></div>
                             </a>
                         </div>
