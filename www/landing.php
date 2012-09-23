@@ -181,6 +181,7 @@ input#password {
     position: absolute;
     top: 85px;
     left: 20px;
+    cursor: pointer;
 }
 .login_fb div {
     height: 25px;
@@ -191,6 +192,7 @@ input#password {
     position: absolute;
     top: 85px;
     left: 233px;
+    cursor: pointer;
 }
 .login_tw div {
     height: 25px;
