@@ -235,7 +235,7 @@ function loginTwitter()
 }
 function loginSocialNetwork(network)
 {
-    var url = "/data/signup.php?network={0}".format(network);
+    var url = "/data/login.php?network={0}".format(network);
 
     jQuery.ajax(
         {
