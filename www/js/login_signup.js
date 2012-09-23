@@ -45,6 +45,9 @@ function closeLogin()
 
 function showSignup()
 {
+    window.location.href = "/signup.php";
+    return;
+
     $('#login_dialog').hide();
     showPopup('#signup_dialog');
 }

@@ -1,56 +1,4 @@
 
-<!-- SIGNUP FORM -->
-<div id="signup_dialog" class="window">
-    <div id="popup">
-        <div class="topbox">
-            <h3>SIGN UP FOR MYARTISTDNA</h3>
-            <div class="close"><a href="#" onclick='closeSignup();'>CLOSE</a></div>
-        </div>
-        
-        <!-- <div class="offer">
-         <h2><span>You selected:</span> <br> Basic Package</h2>
-         <h3>FREE</h3>
-         </div> -->
-        
-        <div class="sign_up">
-            <article>
-                <h5>GET STARTED NOW</h5>
-                <p>Log in  and get started easily using your existing Facebook <br /> or Twitter account </p>
-                <div class="socialmedia">
-                    <ul>
-                        <li><a onclick='loginFacebook();'><img src="images/facebook.jpg" alt=""></a></li>
-                        <li><a onclick='loginTwitter();'><img src="images/twitter.jpg" alt=""></a></li>
-                    </ul>
-                </div>
-            </article>
-            <div class="or">OR</div>
-            <span id='signup_error' class="error" style="display:none">Please fill up all required fields.</span>
-            <span id='signup_success' style="display:none">Registration Successfull.</span>
-            
-            <article>
-                <h5>Create Login</h5>	 
-                <form>
-                    <fieldset>
-                        <ul>
-                            <li><label>Name</label> <input name="name" id='signup_name' type="text" class="input" value="" /></li>
-                            <li><label>URL</label> <input name="url" id='signup_url' type="text" class="input" value="" /></li>
-                            <li><label>Email Address</label> <input name="email" id='signup_email' type="text" class="input" value="" /></li>
-                            <li><label>Password</label> <input name="password" id='signup_password' type="password" class="input" value="" /></li>
-                            <li>
-                                <input name="agree" id='signup_agree' type="checkbox" value="agree" />
-                                <span for='signup_agree'>
-                                    I agree to the <a target='_blank' class='t_c_link' href='/terms_service.php'>Terms &amp; Conditions</a> of MyArtistDNA
-                                </span>
-                            </li>
-                        </ul>
-                        <div class="button"><a href="#" onclick='onSignupClick();'>Complete Signup</a></div>
-                    </fieldset>
-                </form>
-            </article>
-        </div>
-    </div><!-- pop up -->
-</div>
-<!-- END SIGNUP FORM -->
 
 <!-- LOGIN FORM -->
 <div id="login_dialog" class="window">
@@ -89,14 +37,14 @@
                 <div class="socialmedia">
                     <ul>
                         <li><a onclick='loginFacebook();' href='#'><img src="images/facebook.jpg" alt="Facebook"></a></li>
-                        <li><a onlcick='loginTwitter();' href="#""><img src="images/twitter.jpg" alt="Twitter"></a></li>
+                        <li><a onlcick='loginTwitter();' href="#"><img src="images/twitter.jpg" alt="Twitter"></a></li>
                     </ul>
                 </div>
             </article>
             
             <div class="bottombox">
                 <h3>NOT A MEMBER Yet?</h3>
-                <div class="buttonsignup"><a href="#" onclick='showSignup();'>SIGN UP</a></div>
+                <div class="buttonsignup"><a href="/signup.php">SIGN UP</a></div>
             </div>
         </div>
     </div><!-- pop up -->
