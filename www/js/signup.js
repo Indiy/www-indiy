@@ -22,7 +22,7 @@ function signupCheckBox(signup_type)
 }
 
 
-function signupClickInput(input,default_text)
+function signupFocusInput(input,default_text)
 {
     if( $(input).val() == default_text )
     {
