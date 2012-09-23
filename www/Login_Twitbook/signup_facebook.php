@@ -60,7 +60,7 @@
     }
     else
     {
-        print "No user!\n"
+        print "No user!\n";
         //header("Location: /");
     }
     die("done done\n\n");
