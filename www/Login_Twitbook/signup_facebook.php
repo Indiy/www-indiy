@@ -55,7 +55,7 @@
                         "email" => $email,
                         );
         
-        print "values: "; var_dump($values);
+        //print "values: "; var_dump($values);
         
         mysql_insert('mydna_musicplayer',$values);
         
