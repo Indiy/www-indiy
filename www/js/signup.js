@@ -84,5 +84,36 @@ function signupArtist()
         return;
     }
     
-    window.alert("Good form");
+    var dict = {
+            'name': name,
+            'url': url,
+            'email': email,
+            'password': password
+        };
+    var data = JSON.stringify(dict);
+    jQuery.ajax(
+        {
+            type: 'POST',
+            url: '/data/signup.php',
+            contentType: 'application/json',
+            data: data,
+            processData: false,
+            dataType: 'text',
+            success: function(text) 
+            {
+                var data = JSON.parse(text);
+                if( data['error'] )
+                {
+                    window.alert(data['error']);
+                }
+                else
+                {
+                    window.location = data['url'];
+                }
+            },
+            error: function()
+            {
+                window.alert("Registration failed!");
+            }
+        });
 }

@@ -19,8 +19,7 @@
     $error = FALSE;
 
     $sql = "SELECT * FROM mydna_musicplayer";
-    $sql .= " WHERE artist = '$name' ";
-    $sql .= " OR url = '$url' ";
+    $sql .= " WHERE url = '$url' ";
     $sql .= " OR email = '$email' ";
     $q = mysql_query($sql) or die("bad sql: '$sql'");
     $row = mf($q);
@@ -36,7 +35,6 @@
         $values = array("artist" => $name,
                         "url" => $url,
                         "email" => $email,
-                        "username" => $username,
                         "password" => $password,
                         );
         if( mysql_insert('mydna_musicplayer',$values) )
