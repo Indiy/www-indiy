@@ -241,6 +241,8 @@
 		2DC18099160F8C47007B44C0 /* signup_twitter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = signup_twitter.php; sourceTree = "<group>"; };
 		2DC1809A160FA8EF007B44C0 /* login_facebook.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = login_facebook.php; sourceTree = "<group>"; };
 		2DC1809B160FA8FC007B44C0 /* login_twitter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = login_twitter.php; sourceTree = "<group>"; };
+		2DC1809C160FD476007B44C0 /* fan_signup_facebook.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_signup_facebook.php; sourceTree = "<group>"; };
+		2DC1809D160FD481007B44C0 /* fan_signup_twitter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_signup_twitter.php; sourceTree = "<group>"; };
 		2DC262C215EEC67400CA560F /* footer.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = footer.html; sourceTree = "<group>"; };
 		2DC262C415EEC76900CA560F /* fan_header.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = fan_header.html; sourceTree = "<group>"; };
 		2DC262C515EFD0B600CA560F /* fan_header_footer.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = fan_header_footer.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
@@ -1402,6 +1404,8 @@
 				2DF472FA1440B77F005538C7 /* twitter */,
 				2DC18098160EE014007B44C0 /* signup_facebook.php */,
 				2DC18099160F8C47007B44C0 /* signup_twitter.php */,
+				2DC1809C160FD476007B44C0 /* fan_signup_facebook.php */,
+				2DC1809D160FD481007B44C0 /* fan_signup_twitter.php */,
 				2DC1809A160FA8EF007B44C0 /* login_facebook.php */,
 				2DC1809B160FA8FC007B44C0 /* login_twitter.php */,
 			);

@@ -252,6 +252,31 @@ function signupArtistSocial(network)
 }
 function signupFanSocial(network)
 {
-    
+    var args = {
+        'network': network
+    };
+    jQuery.ajax(
+        {
+            type: 'POST',
+            url: '/data/fan_signup.php',
+            data: args,
+            dataType: 'text',
+            success: function(text) 
+            {
+                var data = JSON.parse(text);
+                if( data['error'] )
+                {
+                    window.alert(data['error']);
+                }
+                else
+                {
+                    window.location = data['url'];
+                }
+            },
+            error: function()
+            {
+                window.alert("Registration failed!");
+            }
+        });
 }
 
