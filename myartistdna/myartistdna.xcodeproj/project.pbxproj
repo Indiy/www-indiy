@@ -237,6 +237,7 @@
 		2DC18093160E627F007B44C0 /* .htaccess */ = {isa = PBXFileReference; lastKnownFileType = text; path = .htaccess; sourceTree = "<group>"; };
 		2DC18095160E627F007B44C0 /* holder.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = holder.txt; sourceTree = "<group>"; };
 		2DC18097160ED1DA007B44C0 /* add_network.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_network.php; sourceTree = "<group>"; };
+		2DC18098160EE014007B44C0 /* signup_facebook.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = signup_facebook.php; sourceTree = "<group>"; };
 		2DC262C215EEC67400CA560F /* footer.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = footer.html; sourceTree = "<group>"; };
 		2DC262C415EEC76900CA560F /* fan_header.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = fan_header.html; sourceTree = "<group>"; };
 		2DC262C515EFD0B600CA560F /* fan_header_footer.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = fan_header_footer.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
@@ -1402,12 +1403,13 @@
 			children = (
 				2DF472E61440B77F005538C7 /* config */,
 				2DF472ED1440B77F005538C7 /* facebook */,
-				2DF472F11440B77F005538C7 /* getTwitterData.php */,
 				2DF472F21440B77F005538C7 /* images */,
+				2DF472FA1440B77F005538C7 /* twitter */,
+				2DF472F11440B77F005538C7 /* getTwitterData.php */,
 				2DF472F71440B77F005538C7 /* index.php */,
 				2DF472F81440B77F005538C7 /* login-facebook.php */,
 				2DF472F91440B77F005538C7 /* login-twitter.php */,
-				2DF472FA1440B77F005538C7 /* twitter */,
+				2DC18098160EE014007B44C0 /* signup_facebook.php */,
 			);
 			path = Login_Twitbook;
 			sourceTree = "<group>";

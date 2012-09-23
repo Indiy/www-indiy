@@ -124,7 +124,7 @@
         
         $args = array(
                       'scope' => 'email,user_birthday,status_update,publish_stream,user_photos,user_videos,manage_pages,offline_access',
-                      'redirect_uri' => trueSiteUrl() . "/Login_Twitbook/signup-facebook.php",
+                      'redirect_uri' => trueSiteUrl() . "/Login_Twitbook/signup_facebook.php",
                       );
         
         $login_url = $facebook->getLoginUrl($args);
