@@ -125,7 +125,7 @@
         if( $twitteroauth->http_code == 200 )
         {
             $url = $twitteroauth->getAuthorizeURL($request_token['oauth_token']);
-            $output = array("error" => FALSE,"url" => $login_url);
+            $output = array("error" => FALSE,"url" => $url);
             print json_encode($output);
             die();
         }
