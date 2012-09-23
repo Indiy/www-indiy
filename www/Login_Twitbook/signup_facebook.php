@@ -21,6 +21,13 @@
     catch (Exception $e)
     {}
     
+    print "<html><body><pre>\n\n";
+    
+    print "user: "; var_dump($user);
+    print "session: "; var_dump($_SESSION);
+    
+    die("done done\n\n");
+    
     if (!empty($user))
     {
         $fb_name = $user['name'];
