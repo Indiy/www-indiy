@@ -40,7 +40,8 @@ function signupFocusInput(input,default_text)
 }
 function signupBlurInput(input,default_text)
 {
-    if( $(input).val() == '' )
+    var val = $(input).val();
+    if( val == '' || val == default_text )
     {
         $(input).val(default_text);
         $(input).addClass("placeholder");
