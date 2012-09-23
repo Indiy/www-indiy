@@ -40,6 +40,7 @@
         $url = $_SESSION['signup_url'];
         
         $values = array("artist" => $name,
+                        "url" => $usl,
                         "facebook" => $fb_name,
                         "fb_uid" => $uid,
                         "fb_access_token" => $fb_access_token,
