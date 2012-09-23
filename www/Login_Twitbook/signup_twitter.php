@@ -2,6 +2,7 @@
     
     require_once '../includes/config.php';
     require_once '../includes/functions.php';
+    require_once '../includes/login_helper.php';
     
     require_once '../Login_Twitbook/twitter/twitteroauth.php';
     require_once '../Login_Twitbook/config/twconfig.php';
