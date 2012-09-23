@@ -32,7 +32,7 @@
         {
             $uid = $user_info->id;
             
-            $fan = mf(mq("SELECT * FROM fans WHERE tw_uid='$uid' )"));
+            $fan = mf(mq("SELECT * FROM fans WHERE tw_uid='$uid'"));
             if( $fan )
             {
                 //print "already exists\n";
