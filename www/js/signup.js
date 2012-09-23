@@ -5,6 +5,12 @@ var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+
 var NAME_PLACEHOLDER = "Your Site Name";
 var URL_PLACEHOLDER = "Your Site Link";
 
+function signupReady()
+{
+    signupCheckBox('fan');
+}
+$(document).ready(signupReady);
+
 function signupCheckBox(signup_type)
 {
     if( signup_type == 'fan' )
