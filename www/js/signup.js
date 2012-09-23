@@ -155,7 +155,6 @@ function signupFan()
         {
             type: 'POST',
             url: '/data/fan_signup.php',
-            contentType: 'application/json',
             data: args,
             dataType: 'text',
             success: function(text) 

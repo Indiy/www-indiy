@@ -161,10 +161,7 @@ END;
             if( $fan )
             {
                 $url = login_fan_from_row($fan);
-                $output = array(
-                                "url" => $url,
-                                "success" => 1
-                                );
+                $output = array("success" => 1,"url" => $url);
                 print json_encode($output);
                 die();
             }
@@ -178,7 +175,8 @@ END;
             }
             
             $values = array("email" => $email,
-                            "password" => $hash_password);
+                            "password" => $hash_password,
+                            );
             
             mysql_insert('fans',$values);
             $fan_id = mysql_insert_id();
@@ -186,10 +184,7 @@ END;
             if( $fan )
             {
                 $url = login_fan_from_row($fan);
-                $output = array(
-                                "url" => $url,
-                                "success" => 1
-                                );
+                $output = array("success" => 1,"url" => $url);
                 print json_encode($output);
                 die();
             }
