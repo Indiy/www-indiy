@@ -110,6 +110,31 @@
     function do_twitter_signup($data)
     {
         do_signup_check($data);
+        
+        require_once '../Login_Twitbook/twitter/twitteroauth.php';
+        require_once '../Login_Twitbook/config/twconfig.php';
+        
+        $twitteroauth = new TwitterOAuth(YOUR_CONSUMER_KEY, YOUR_CONSUMER_SECRET);
+        
+        $landing_url = trueSiteUrl() . "/Login_Twitbook/signup_twitter.php";
+        $request_token = $twitteroauth->getRequestToken($landing_url);
+        
+        $_SESSION['oauth_token'] = $request_token['oauth_token'];
+        $_SESSION['oauth_token_secret'] = $request_token['oauth_token_secret'];
+        
+        if( $twitteroauth->http_code == 200 )
+        {
+            $url = $twitteroauth->getAuthorizeURL($request_token['oauth_token']);
+            $output = array("error" => FALSE,"url" => $login_url);
+            print json_encode($output);
+            die();
+        }
+        else
+        {
+            $output = array("error" => "Failed to talk to Twitter!","url" => NULL);
+            print json_encode($output);
+            die();
+        }
     }
     function do_facebook_signup($data)
     {
@@ -128,7 +153,7 @@
                       );
         
         $login_url = $facebook->getLoginUrl($args);
-        $output = array("error" => $error,"url" => $login_url);
+        $output = array("error" => FALSE,"url" => $login_url);
         print json_encode($output);
         die();
         
