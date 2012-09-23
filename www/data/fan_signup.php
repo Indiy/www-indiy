@@ -155,7 +155,7 @@ END;
         
         if( $email && $password )
         {
-            $hash_password = md5($email . $new_pass);
+            $hash_password = md5($email . $password);
             
             $fan = mf(mq("SELECT * FROM fans WHERE email = '$email' AND password='$hash_password'"));
             if( $fan )
