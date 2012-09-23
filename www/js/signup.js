@@ -8,8 +8,8 @@ var URL_PLACEHOLDER = "Your Site Link";
 function signupReady()
 {
     signupCheckBox('fan');
-    signupBlurInput('#signup #artist_items .site_name input',NAME_PLACEHOLDER);
-    signupBlurInput('#signup #artist_items .site_link input',URL_PLACEHOLDER);
+    $('#signup #artist_items .site_name input').val(NAME_PLACEHOLDER);
+    $('#signup #artist_items .site_link input').val(URL_PLACEHOLDER);
 }
 $(document).ready(signupReady);
 
