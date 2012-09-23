@@ -8,6 +8,8 @@ var URL_PLACEHOLDER = "Your Site Link";
 function signupReady()
 {
     signupCheckBox('fan');
+    signupBlurInput('#signup #artist_items .site_name input',NAME_PLACEHOLDER);
+    signupBlurInput('#signup #artist_items .site_link input',URL_PLACEHOLDER);
 }
 $(document).ready(signupReady);
 
@@ -33,8 +35,8 @@ function signupFocusInput(input,default_text)
     if( $(input).val() == default_text )
     {
         $(input).val("");
-        $(input).removeClass("placeholder");
     }
+    $(input).removeClass("placeholder");
 }
 function signupBlurInput(input,default_text)
 {
@@ -42,6 +44,10 @@ function signupBlurInput(input,default_text)
     {
         $(input).val(default_text);
         $(input).addClass("placeholder");
+    }
+    else
+    {
+        $(input).removeClass("placeholder");
     }
 }
 
