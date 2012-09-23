@@ -253,6 +253,7 @@ function signupArtistSocial(network)
 function signupFanSocial(network)
 {
     var args = {
+        'method': 'signup',
         'network': network
     };
     jQuery.ajax(
