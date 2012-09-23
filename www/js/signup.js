@@ -148,8 +148,6 @@ function signupFan()
     
     var args = {
         'method': 'signup',
-        'name': name,
-        'url': url,
         'email': email,
         'password': password
     };
