@@ -35,6 +35,8 @@
             $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE oauth_uid_twitter='$uid' OR ( oauth_uid='$uid' AND oauth_provider='twitter' )"));
             if( $artist_data )
             {
+                print "already exists\n";
+            
                 $url = loginArtistFromRow($artist_data);
                 header("Location: $url");
                 die();
