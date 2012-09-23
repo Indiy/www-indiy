@@ -22,6 +22,10 @@
     {
         do_change_password();
     }
+    else if( $method == 'signup' )
+    {
+        do_signup();
+    }
     
     function do_register()
     {
@@ -142,7 +146,62 @@ END;
             print json_encode($output);
             die();
         }
+    }
+    
+    function do_signup()
+    {
+        $email = $_REQUEST['email'];
+        $password = $_REQUEST['password'];
         
+        if( $email && $password )
+        {
+            $hash_password = md5($email . $new_pass);
+            
+            $fan = mf(mq("SELECT * FROM fans WHERE email = '$email' AND password='$hash_password'"));
+            if( $fan )
+            {
+                $url = login_fan_from_row($fan);
+                $output = array(
+                                "url" => $url,
+                                "success" => 1
+                                );
+                print json_encode($output);
+                die();
+            }
+            
+            $fan = mf(mq("SELECT * FROM fans WHERE email = '$email'"));
+            if( $fan )
+            {
+                $output = array("error" => "Fan account already exists with that email address.");
+                print json_encode($output);
+                die();
+            }
+            
+            $values = array("email" => $email,
+                            "password" => $hash_password);
+            
+            mysql_insert('fans',$values);
+            $fan_id = mysql_insert_id();
+            $fan = mf(mq("SELECT * FROM fans WHERE id='$fan_id'"));
+            if( $fan )
+            {
+                $url = login_fan_from_row($fan);
+                $output = array(
+                                "url" => $url,
+                                "success" => 1
+                                );
+                print json_encode($output);
+                die();
+            }
+            
+            $output = array("error" => "Failed to create fan account.");
+            print json_encode($output);
+            die();
+        }
+        
+        $output = array("error" => "Need a valid email address and password to create an account.");
+        print json_encode($output);
+        die();
     }
 
 ?>

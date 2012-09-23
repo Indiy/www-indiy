@@ -130,16 +130,78 @@ function signupArtist()
             }
         });
 }
+function signupFan()
+{
+    var email = $('#signup .credentials .email input').val();
+    var password = $('#signup .credentials .password input').val();
+    
+    if( email.length == 0 || !email.match(EMAIL_REGEX) )
+    {
+        window.alert("Please enter a valid email address.");
+        return;
+    }
+    if( password.length == 0 )
+    {
+        window.alert("Please enter a password for your account.");
+        return;
+    }
+    
+    var args = {
+        'method': 'signup',
+        'name': name,
+        'url': url,
+        'email': email,
+        'password': password
+    };
+    jQuery.ajax(
+        {
+            type: 'POST',
+            url: '/data/fan_signup.php',
+            contentType: 'application/json',
+            data: args,
+            dataType: 'text',
+            success: function(text) 
+            {
+                var data = JSON.parse(text);
+                if( data['error'] )
+                {
+                    window.alert(data['error']);
+                }
+                else
+                {
+                    window.location = data['url'];
+                }
+            },
+            error: function()
+            {
+                window.alert("Registration failed!");
+            }
+        });
+}
 
 function signupFacebook()
 {
-    signupSocial('facebook');
+    if( $('#signup .check_item.fan input').is(':checked') )
+    {
+        signupFanSocial('facebook');
+    }
+    else
+    {
+        signupArtistSocial('facebook');
+    }
 }
 function signupTwitter()
 {
-    signupSocial('twitter');
+    if( $('#signup .check_item.fan input').is(':checked') )
+    {
+        signupFanSocial('twitter');
+    }
+    else
+    {
+        signupArtistSocial('twitter');
+    }
 }
-function signupSocial(network)
+function signupArtistSocial(network)
 {
     var name = $('#signup #artist_items .site_name input').val();
     var url = $('#signup #artist_items .site_link input').val();
@@ -191,5 +253,8 @@ function signupSocial(network)
             }
         });
 }
-
+function signupFanSocial(network)
+{
+    
+}
 
