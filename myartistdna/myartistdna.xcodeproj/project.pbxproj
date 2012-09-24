@@ -243,6 +243,7 @@
 		2DC1809B160FA8FC007B44C0 /* login_twitter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = login_twitter.php; sourceTree = "<group>"; };
 		2DC1809C160FD476007B44C0 /* fan_signup_facebook.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_signup_facebook.php; sourceTree = "<group>"; };
 		2DC1809D160FD481007B44C0 /* fan_signup_twitter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_signup_twitter.php; sourceTree = "<group>"; };
+		2DC1809E160FDD53007B44C0 /* login_failed.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = login_failed.php; sourceTree = "<group>"; };
 		2DC262C215EEC67400CA560F /* footer.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = footer.html; sourceTree = "<group>"; };
 		2DC262C415EEC76900CA560F /* fan_header.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = fan_header.html; sourceTree = "<group>"; };
 		2DC262C515EFD0B600CA560F /* fan_header_footer.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = fan_header_footer.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
@@ -1167,6 +1168,7 @@
 				2D4116BC1534E44A00F18000 /* terms_service.php */,
 				2DF47528144BFF7A005538C7 /* timthumb.php */,
 				2DF474141440B77F005538C7 /* tour.php */,
+				2DC1809E160FDD53007B44C0 /* login_failed.php */,
 				2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */,
 				2D380B95146E35CD00E36189 /* robots.txt */,
 				2DC18090160E5EC3007B44C0 /* error404.php */,

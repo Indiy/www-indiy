@@ -56,7 +56,7 @@
     }
 
     //print "No user!\n";
-    header("Location: /");
+    header("Location: /login_failed.php");
     die();
     //die("done done\n\n");
 
