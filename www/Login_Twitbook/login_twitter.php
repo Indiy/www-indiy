@@ -32,12 +32,27 @@
         {
             $uid = $user_info->id;
         
-            $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE oauth_uid_twitter='$uid' OR ( oauth_uid='$uid' AND oauth_provider='twitter' )"));
-            if( $artist_data )
+            $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE oauth_uid_twitter='$uid' OR ( oauth_uid='$uid' AND oauth_provider='twitter' )"));
+            if( $artist )
             {
-                //print "already exists\n";
-                $url = loginArtistFromRow($artist_data);
-                header("Location: $url");
+                $artist_url = loginArtistFromRow($artist);
+            }
+            
+            $fan = mf(mq("SELECT * FROM fans WHERE tw_uid='$uid'"));
+            if( $fan )
+            {
+                $fan_url = login_fan_from_row($fan);
+            }
+            
+            if( $artist_url )
+            {
+                header("Location: $artist_url");
+                die();
+            }
+            
+            if( $fan_url )
+            {
+                header("Location: $fan_url");
                 die();
             }
         }
