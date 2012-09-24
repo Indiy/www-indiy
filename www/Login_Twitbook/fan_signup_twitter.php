@@ -52,7 +52,8 @@
             
             $extra_json = json_encode($extra);
             
-            $values = array("tw_uid" => $uid,
+            $values = array("email" => "@$screen_name",
+                            "tw_uid" => $uid,
                             "extra_json" => $extra_json,
                             );
             
