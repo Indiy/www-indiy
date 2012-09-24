@@ -98,49 +98,52 @@
     $order_list = array();
     $order_list_html = "";
     
-    $sql = "SELECT orders.id AS id ";
-    $sql .= " ,mydna_musicplayer.artist AS artist_name ";
-    $sql .= " ,mydna_musicplayer.logo AS artist_logo ";
-    $sql .= " ,orders.order_date AS order_date ";
-    $sql .= " FROM orders ";
-    $sql .= " JOIN mydna_musicplayer ON orders.artist_id = mydna_musicplayer.id ";
-    $sql .= " WHERE customer_email='$fan_email' ";
-    $sql .= " ORDER BY orders.order_date DESC";
-    $orders_q = mq($sql);
-    
-    $i = 0;
-    while( $order = mf($orders_q) )
+    if( strlen($fan_email) > 0 )
     {
-        $order_id = $order['id'];
-        $artist_name = $order['artist_name'];
-        $artist_logo = $order['artist_logo'];
-        $order_date = $order['order_date'];
+        $sql = "SELECT orders.id AS id ";
+        $sql .= " ,mydna_musicplayer.artist AS artist_name ";
+        $sql .= " ,mydna_musicplayer.logo AS artist_logo ";
+        $sql .= " ,orders.order_date AS order_date ";
+        $sql .= " FROM orders ";
+        $sql .= " JOIN mydna_musicplayer ON orders.artist_id = mydna_musicplayer.id ";
+        $sql .= " WHERE customer_email='$fan_email' ";
+        $sql .= " ORDER BY orders.order_date DESC";
+        $orders_q = mq($sql);
         
-        $artist_logo_url = "/artists/files/$artist_logo";
-        
-        $odd = "";
-        if( $i % 2 == 1 )
-            $odd = " odd";
-        
-        $html = "";
-        $html .= "<div class='order_item$odd'>";
-        $html .= " <div class='logo'><img src='$artist_logo_url'/></div>";
-        $html .= " <div class='description'>";
-        $html .= "  <div class='artist'>$artist_name</div>";
-        $html .= "  <div class='detail'>Order placed: $order_date</div>";
-        $html .= " </div>";
-        $html .= " <div class='action'>";
-        $html .= "  <a href='/order_status.php?order_id=$order_id'>";
-        $html .= "   <div class='status_button'>";
-        $html .= "    <div class='icon'></div>";
-        $html .= "    <div class='label'>Status</div>";
-        $html .= "   </div>";
-        $html .= "  </a>";
-        $html .= " </div>";
-        $html .= "</div>";
-        $order_list_html .= $html;
-        
-        $i++;
+        $i = 0;
+        while( $order = mf($orders_q) )
+        {
+            $order_id = $order['id'];
+            $artist_name = $order['artist_name'];
+            $artist_logo = $order['artist_logo'];
+            $order_date = $order['order_date'];
+            
+            $artist_logo_url = "/artists/files/$artist_logo";
+            
+            $odd = "";
+            if( $i % 2 == 1 )
+                $odd = " odd";
+            
+            $html = "";
+            $html .= "<div class='order_item$odd'>";
+            $html .= " <div class='logo'><img src='$artist_logo_url'/></div>";
+            $html .= " <div class='description'>";
+            $html .= "  <div class='artist'>$artist_name</div>";
+            $html .= "  <div class='detail'>Order placed: $order_date</div>";
+            $html .= " </div>";
+            $html .= " <div class='action'>";
+            $html .= "  <a href='/order_status.php?order_id=$order_id'>";
+            $html .= "   <div class='status_button'>";
+            $html .= "    <div class='icon'></div>";
+            $html .= "    <div class='label'>Status</div>";
+            $html .= "   </div>";
+            $html .= "  </a>";
+            $html .= " </div>";
+            $html .= "</div>";
+            $order_list_html .= $html;
+            
+            $i++;
+        }
     }
 
     $love_list = array();
