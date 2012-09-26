@@ -268,6 +268,10 @@
 		2DE8284414D0C75F00A91FCE /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
 		2DE8284514D0DC8300A91FCE /* upload.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = upload.php; sourceTree = "<group>"; };
 		2DE8284614D0E32B00A91FCE /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
+		2DEADA9B1613A23B0076F95D /* home2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = home2.php; sourceTree = "<group>"; };
+		2DEADA9D1613A27C0076F95D /* home.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = home.html; sourceTree = "<group>"; };
+		2DEADA9E1613B4EC0076F95D /* home.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = home.js; sourceTree = "<group>"; };
+		2DEADA9F1613B6C00076F95D /* home.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = home.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DF470301440B77F005538C7 /* art.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = art.php; sourceTree = "<group>"; };
 		2DF470401440B77F005538C7 /* artists.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artists.php; sourceTree = "<group>"; };
 		2DF470411440B77F005538C7 /* be-heard.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "be-heard.php"; sourceTree = "<group>"; };
@@ -997,6 +1001,7 @@
 				2DC262C215EEC67400CA560F /* footer.html */,
 				2DC262E815FFD6A400CA560F /* signup.html */,
 				2DC1808C160E5E82007B44C0 /* error404.html */,
+				2DEADA9D1613A27C0076F95D /* home.html */,
 			);
 			path = templates;
 			sourceTree = "<group>";
@@ -1157,6 +1162,7 @@
 				2DF4705A1440B77F005538C7 /* favicon.ico */,
 				2DF4705C1440B77F005538C7 /* header.php */,
 				2DF4705D1440B77F005538C7 /* home.php */,
+				2DEADA9B1613A23B0076F95D /* home2.php */,
 				2DBDD1271469D46D001E20CC /* footer.php */,
 				2DF471C71440B77F005538C7 /* index.php */,
 				2D34E22814A173A9004473F9 /* landing.php */,
@@ -1193,6 +1199,7 @@
 				2DC262C515EFD0B600CA560F /* fan_header_footer.css */,
 				2DC262E915FFDF0600CA560F /* signup.css */,
 				2DC1808B160E4D82007B44C0 /* error.css */,
+				2DEADA9F1613B6C00076F95D /* home.css */,
 			);
 			path = css;
 			sourceTree = "<group>";
@@ -1394,6 +1401,7 @@
 				2D25C3C815E556EC00132306 /* pl_iphone_music.js */,
 				2D25C3C915E58DB900132306 /* pl_iphone_video.js */,
 				2D9214C11601403E000B8DC1 /* signup.js */,
+				2DEADA9E1613B4EC0076F95D /* home.js */,
 			);
 			path = js;
 			sourceTree = "<group>";

@@ -1,0 +1,73 @@
+
+@font-face {
+    font-family: 'Neuzeit Grotesk';
+    src: url('Neuzeit-Grotesk.eot');
+    src: local('Neuzeit-Grotesk'), url('Neuzeit-Grotesk.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Neuzeit Grotesk Light';
+    src: url('Neuzeit-Grotesk-Light.eot');
+    src: local('Neuzeit-Grotesk-Light'), url('Neuzeit-Grotesk-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Teletex Light';
+    src: url('Teletex_Light.eot');
+    src: local('Teletex_Light'), url('Teletex_Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lucida Grande';
+    src: url('Lucida Grande.eot');
+    src: local('Lucida Grande'), url('Lucida Grande.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+.full_screen_bg { 
+    position: fixed; 
+    top: 0px;
+    bottom: 49px;
+    left: 0px;
+    right: 0px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0px;
+}
+.full_screen_bg .pad {
+    display: inline-block;
+    width: 0px;
+    height: 100%;
+    background: black;
+}
+.full_screen_bg .image_holder {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    vertical-align: top;
+}
+.full_screen_bg .image_holder div {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
