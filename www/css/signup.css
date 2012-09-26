@@ -40,8 +40,9 @@ html, body {
 }
 
 .signup_bg {
-    background-image: url("/images/signup_bg.jpg") 0px center;
+    background: url("/images/signup_bg.jpg") center center no-repeat;
     min-height: 1024px;
+    background-size: 100% auto;
 }
 .signup_bg_cover {
     position: absolute;
