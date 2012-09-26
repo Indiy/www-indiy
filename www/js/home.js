@@ -61,8 +61,8 @@ function backgroundOnReady()
         onReady: backgroundSwipeReady
     };
     $('#home_bg').swipe(opts);
+    backgroundPreloadImages();
 }
-
 
 function backgroundPanelChange(index)
 {
