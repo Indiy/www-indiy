@@ -47,7 +47,6 @@ function backgroundOnReady()
         onReady: backgroundSwipeReady
     };
     $('#home_bg').swipe(opts);
-    $('#home_bg').bind('contextmenu', function(e) { return false; });
 }
 
 
