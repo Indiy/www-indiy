@@ -40,16 +40,15 @@ html, body {
 }
 
 .signup_bg {
-    background-image: url("/images/landing_bg3.jpg");
-    min-height: 1255px;
-    background-size: auto 100%;
+    background-image: url("/images/signup_bg.jpg") 0px center;
+    min-height: 1024px;
 }
 .signup_bg_cover {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
-    min-height: 1255px;
+    min-height: 1024px;
     z-index: 0;
     background: #080808;
     opacity: 0.65;
