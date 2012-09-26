@@ -1,9 +1,23 @@
 
-var g_backgroundListIndex = 0;
-var g_currentBackgroundIndex = 0;
 
-var g_backgroundChangeToIndex = false;
-var g_backgroundReady = false;
+var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
+var IS_IPHONE = navigator.userAgent.match(/iPhone/i) != null;
+var IS_IOS = IS_IPAD || IS_IPHONE;
+
+var IS_IE = false;
+var IS_OLD_IE = false;
+(function() {
+    var ie_match = navigator.userAgent.match(/IE ([^;]*);/);
+    if( ie_match != null && ie_match.length > 1 )
+    {
+        IS_IE = true;
+        var ie_version = parseFloat(ie_match[1]);
+        if( ie_version < 9.0 )
+            IS_OLD_IE = true;
+    }
+})();
+
+var g_currentBackgroundIndex = 0;
 
 var g_backgroundList = [
     {
@@ -63,35 +77,10 @@ function backgroundPanelVisible(index)
 
 function backgroundSwipeReady()
 {
-    g_backgroundReady = true;
-    if( g_backgroundChangeToIndex !== false )
-        backgroundChangeIndex(g_backgroundChangeToIndex);
-    g_backgroundChangeToIndex = false;
-}
-
-function backgroundChangeId( background_id )
-{
-    for( var i = 0 ; i < g_backgroundList.length ; ++i )
-    {
-        var background = g_backgroundList[i];
-        if( background.id == background_id )
-        {
-            backgroundChangeIndex(i);
-            return;
-        }
-    }
 }
 
 function backgroundChangeIndex( index )
-{
-    if( !g_backgroundReady )
-    {
-        g_backgroundChangeToIndex = index;
-        return;
-    }
-    
-    setPlayerMode("background");
-    
+{    
     $('#home_bg').swipe("scrollto",index);
 }
 function backgroundUpdateToIndex(index)
@@ -100,8 +89,6 @@ function backgroundUpdateToIndex(index)
     var background = g_backgroundList[index];
     
     backgroundLoadImage(background,index);
-    
-    backgroundUpdateViews(background.id,index);
 }
 
 function backgroundNext()
