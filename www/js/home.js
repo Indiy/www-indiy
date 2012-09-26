@@ -50,7 +50,7 @@ var g_backgroundList = [
     },
 ];
 
-var ROTATE_MS = 4000;
+var ROTATE_MS = 8000;
 
 var rotateTimeout = false;
 
