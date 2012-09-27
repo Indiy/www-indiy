@@ -82,6 +82,7 @@ body {
     font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .full_top_bar .left {
+    float: left;
     margin-left: 120px;
     height: 67px;
     font-size: 0px;
@@ -110,6 +111,7 @@ body {
 }
 
 .full_top_bar .right {
+    float: right;
     margin-right: 26px;
     height: 67px;
     font-size: 0px;
