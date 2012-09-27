@@ -83,7 +83,7 @@ body {
 }
 .full_top_bar .left {
     float: left;
-    margin-left: 120px;
+    margin-left: 87px;
     height: 48px;
     font-size: 0px;
     text-align: left;
@@ -180,4 +180,85 @@ body {
     text-align: center;
     cursor: pointer;
 }
+
+.bottom_bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: url("/images/home_bottom_bg.png") repeat-x;
+}
+.bottom_bar .left {
+    float: left;
+    margin-left: 87px;
+    height: 48px;
+    font-size: 0px;
+    text-align: left;
+}
+.bottom_bar .left .copyright {
+    color: white;
+    font-size: 11px;
+    vertical-align: top;
+}
+.bottom_bar .left .slashes {
+    color: white;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 11px;
+    vertical-align: top;
+}
+.bottom_bar .left a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ff9734;
+    font-size: 11px;
+    vertical-align: top;
+    text-decoration: none;
+    cursor: pointer;
+}
+.bottom_bar .left a:hover {
+    text-decoration: underline;
+}
+.bottom_bar .right {
+    float: right;
+    margin-right: 80px;
+    height: 48px;
+    text-align: right;
+}
+.bottom_bar .right a.facebook {
+    display: inline-block;
+    margin-top: 18px;
+    margin-right: 12px;
+    height: 25px;
+    width: 30px;
+    background: gray;
+}
+.bottom_bar .right .slashes {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ff9734;
+    font-size: 11px;
+    vertical-align: top;
+    text-decoration: none;
+    cursor: pointer;
+}
+.bottom_bar .right a.twitter {
+    display: inline-block;
+    margin-top: 18px;
+    margin-left: 12px;
+    height: 25px;
+    width: 30px;
+    background: gray;
+}
+
+
+
+
+
+
+
+
+
 
