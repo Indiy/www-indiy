@@ -71,3 +71,38 @@ body {
     height: 100%;
     overflow: hidden;
 }
+
+.full_top_bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 67px;
+    background: url("/images/home_top_bg.png") repeat;
+}
+.full_top_bar .left {
+    margin-left: 120px;
+    height: 67px;
+    font-size: 0px;
+    text-align: left;
+}
+.full_top_bar .left a {
+    display: inline-block;
+    padding-top: 30px;
+    color: white;
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    vertical-align: top;
+}
+.full_top_bar .left .slash {
+    display: inline-block;
+    width: 18px;
+    padding-top: 30px;
+    color: white;
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: top;
+}
