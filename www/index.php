@@ -37,14 +37,7 @@
                 die();
             }
         }
-        if( strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
-        {
-            include 'landing.php';
-        }
-        else
-        {
-            include 'home.php';
-        }
+        include_once 'home.php';
         die();
     }
 

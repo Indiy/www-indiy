@@ -360,7 +360,7 @@
     $login_url = FALSE;
     if( strlen($_COOKIE['FAN_EMAIL']) > 0 
        || strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
-        $login_url = trueSiteUrl() . "/landing.php";
+        $login_url = trueSiteUrl() . "/login.php";
         
     $signup_url = trueSiteUrl() . "/signup.php";
     
