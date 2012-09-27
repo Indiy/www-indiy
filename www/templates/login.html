@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyAritstDNA | Be Heard. Be Seen. Be Independent.</title>
+        <!--[if lt IE 9]>
+         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+         <![endif]-->
+        <link href="/css/signup.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+        
+        <script src="/js/jquery.jplayer.js" type="text/javascript"></script>
+        <script src="/js/string.utils.js" type="text/javascript"></script>
+        <script src="/js/login.js" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+            var g_trueSiteUrl = "<?=trueSiteUrl();?>";
+        </script>
+    </head>
+    
+    <body>
+        <div id='body_wrap'><div id='main_content'>
+            <div id='signup_container'><div id='signup'>
+                <div class='header'>
+                    <div class='text'>LOGIN</div>
+                </div>
+                <div class='credential_container'>
+                    <div class='credentials'>
+                        <div class='title'>GET STARTED NOW</div>
+                        <div class='detail'>Log in and get started easily using your existing Facebook or Twitter account.</div>
+                        <div class='fb_tw'>
+                            <div class='fb icon' onclick='loginFacebook();'></div>
+                            <div class='tw icon' onclick='loginTwitter();'></div>
+                        </div>
+                        <div class='or'>
+                            <div class='left line'></div>
+                            <div class='text'>OR</div>
+                            <div class='right line'></div>
+                        </div>
+                        <div class='input_container email'>
+                            <div class='label'>Your Email Address</div>
+                            <input type='text'/>
+                        </div>
+                        <div class='input_container password'>
+                            <div class='label'>Pick Your Password</div>
+                            <input type='password'/>
+                        </div>
+                        <div class='submit_container'>
+                            <div class='submit' onclick='loginSubmit();'>Login</div>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+        </div></div>
+        <div id='footer'>
+            <div class='bottom_bar'>
+                <div class='left'>
+                    <div class='copyright'>COPYRIGHT &copy; 2012 MYARTISTDNA</div>
+                    <div class='slashes'>//</div>
+                    <a href="/terms_service.php">TERMS OF USAGE</a>
+                    <div class='slashes'>//</div>
+                    <a href="/faq.php">SUPPORT / HELP</a>
+                    <div class='slashes'>//</div>
+                    <a href="/tour.php">CONTACT</a>
+                </div>
+                <div class='right'>
+                    <a class='facebook' href="http://www.facebook.com/pages/MyArtistDNA/106114012796731"></a>
+                    <div class='slashes'>//</div>
+                    <a class='twitter' href="http://twitter.com/myartistdna"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
