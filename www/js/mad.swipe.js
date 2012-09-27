@@ -198,6 +198,10 @@
         },
     
         onMouseWheel: function(ev, delta, deltaX, deltaY) {
+ 
+            if( deltaY > deltaX )
+                return;
+ 
             ev.preventDefault();
             this.container.stop(true);
             //console.log("onMouseWheel: ev: " + ev + ",delta: " + delta + ", dX: " + deltaX + ", dY: " + deltaY);
