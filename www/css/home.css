@@ -195,7 +195,6 @@ body {
     background: url("/images/home_sub_menu_trap.png") no-repeat;
 }
 .full_top_bar .right .trap_button .child:hover {
-    background: url("/images/home_sub_menu_trap_highlight.png") no-repeat;
 }
 .full_top_bar .right .trap_button:hover .child {
     display: block;
@@ -217,6 +216,7 @@ body {
 }
 .full_top_bar .right .trap_button .child a:hover {
     color: #ff9734;
+    background: url("/images/home_sub_menu_trap_highlight.png") no-repeat;
 }
 
 .bottom_bar {
