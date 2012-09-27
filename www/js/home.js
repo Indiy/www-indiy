@@ -52,7 +52,7 @@ var g_backgroundList = [
 
 var ROTATE_MS = 8000;
 
-var rotateTimeout = false;
+var g_rotateTimeout = false;
 
 $(document).ready(backgroundOnReady);
 function backgroundOnReady()
@@ -66,13 +66,13 @@ function backgroundOnReady()
     };
     $('#home_bg').swipe(opts);
     backgroundPreloadImages();
-    rotateTimeout = window.setTimeout(rotateBackground,ROTATE_MS);
+    g_rotateTimeout = window.setTimeout(rotateBackground,ROTATE_MS);
 }
 
 function rotateBackground()
 {
     backgroundNext();
-    window.setTimeout(rotateBackground,ROTATE_MS);
+    g_rotateTimeout = window.setTimeout(rotateBackground,ROTATE_MS);
 }
 
 function backgroundPanelChange(index)
