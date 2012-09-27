@@ -129,8 +129,8 @@ body {
 }
 .full_top_bar .right .network .icon {
     display: inline-block;
-    margin-top: 20px;
-    margin-right: 5px;
+    margin-top: 18px;
+    padding-right: 8px;
     height: 13px;
     width: 29px;
     background: url("/images/mad_logo_29_13.png") no-repeat;
@@ -138,14 +138,13 @@ body {
 }
 .full_top_bar .right .search .icon {
     display: inline-block;
-    margin-top: 20px;
-    margin-right: 5px;
+    margin-top: 18px;
+    padding-right: 10px;
     height: 13px;
     width: 12px;
     background: url("/images/icon_search_12_13.png") no-repeat;
     vertical-align: top;
 }
-
 .full_top_bar .right .trap_button .label {
     display: inline-block;
     margin-top: 20px;
