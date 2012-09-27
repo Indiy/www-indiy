@@ -122,9 +122,8 @@ body {
     display: inline-block;
     margin-left: -43px;
     width: 188px;
-    height: 48px;
-    background: url("/images/grey_trap.png");
-    background-size: 100%;
+    height: 50px;
+    background: url("/images/grey_trap.png") no-repeat;
     text-align: center;
     vertical-align: top;
 }
@@ -141,9 +140,9 @@ body {
     position: absolute;
     top: 41px;
     right: 41px;
-    height: 39px;
+    height: 41px;
     width: 178px;
-    background: url("/images/home_sub_menu_trap.png");
+    background: url("/images/home_sub_menu_trap.png") no-repeat;
 }
 .full_top_bar .right .trap_button:hover .child {
     display: block;
