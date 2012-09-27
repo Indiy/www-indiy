@@ -128,9 +128,6 @@ body {
     text-align: center;
     vertical-align: top;
 }
-.full_top_bar .right .trap_button:hover {
-    opacity: 1.0;
-}
 .full_top_bar .right .trap_button .label {
     display: inline-block;
     margin-top: 20px;
