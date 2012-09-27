@@ -269,15 +269,32 @@ body {
     position: absolute;
     top: 186px;
     left: 87px;
-    width: 375px;
+    width: 415px;
     color: white;
     font-size: 32px;
     font-family: "Teletex Light", Helvetica, sans-serif;
+    letter-spacing: -2px;
 }
-
-
-
-
+.body_under_title_line {
+    position: absolute;
+    top: 307px;
+    left: 87px;
+}
+.body_under_title_line .text {
+    display: inline-block;
+    margin-top: 5px;
+    border-bottom: 2px solid #00f1fd;
+}
+.body_under_title_line a {
+    display: inline-block;
+    padding-top: 16px;
+    height: 25px;
+    width: 135px;
+    font-size: 11px;
+    font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    background: url("/images/home_aqua_button.png");
+}
 
 
 
