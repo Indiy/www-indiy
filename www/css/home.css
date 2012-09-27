@@ -187,6 +187,7 @@ body {
     left: 0;
     right: 0;
     height: 48px;
+    font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: url("/images/home_bottom_bg.png") repeat-x;
 }
 .bottom_bar .left {
@@ -197,11 +198,13 @@ body {
     text-align: left;
 }
 .bottom_bar .left .copyright {
+    display: inline-block;
     color: white;
     font-size: 11px;
     vertical-align: top;
 }
 .bottom_bar .left .slashes {
+    display: inline-block;
     color: white;
     margin-top: 20px;
     margin-left: 0px;
