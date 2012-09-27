@@ -142,8 +142,8 @@ body {
 }
 .full_top_bar .right .trap_button .child {
     position: absolute;
-    top: 48px;
-    right: 39px;
+    top: 50px;
+    right: 50px;
     height: 39px;
     width: 178px;
     background: url("/images/home_sub_menu_trap.png");
