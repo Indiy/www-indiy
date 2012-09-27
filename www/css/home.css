@@ -84,13 +84,13 @@ body {
 .full_top_bar .left {
     float: left;
     margin-left: 120px;
-    height: 67px;
+    height: 48px;
     font-size: 0px;
     text-align: left;
 }
 .full_top_bar .left a {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 20px;
     color: white;
     font-size: 12px;
     text-decoration: none;
@@ -102,7 +102,7 @@ body {
 .full_top_bar .left .slash {
     display: inline-block;
     width: 18px;
-    padding-top: 30px;
+    padding-top: 20px;
     color: white;
     font-size: 12px;
     text-decoration: none;
@@ -112,25 +112,28 @@ body {
 
 .full_top_bar .right {
     float: right;
-    margin-right: 26px;
-    height: 67px;
+    margin-right: 19px;
+    height: 48px;
     font-size: 0px;
 }
 
 .full_top_bar .right .trap_button {
     display: inline-block;
     margin-left: -57px;
-    width: 261px;
-    height: 67px;
+    width: 188px;
+    height: 48px;
     background: url("/images/grey_trap.png");
     background-size: 100%;
     opacity: 0.8;
     text-align: center;
     vertical-align: top;
 }
+.full_top_bar .right .trap_button:hover {
+    opacity: 1.0;
+}
 .full_top_bar .right .trap_button .label {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 20px;
     color: white;
     font-size: 12px;
     text-decoration: none;
