@@ -179,11 +179,15 @@ body {
 }
 .full_top_bar .right .trap_button .label {
     display: inline-block;
-    margin-top: 20px;
+    padding-top: 20px;
+    height: 30px;
     color: white;
     font-size: 11px;
     text-decoration: none;
     vertical-align: top;
+}
+.full_top_bar .right .trap_button .label:hover {
+    color: #ff9734;
 }
 .full_top_bar .right .trap_button .child {
     display: none;
