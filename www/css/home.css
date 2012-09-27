@@ -199,6 +199,7 @@ body {
 }
 .bottom_bar .left .copyright {
     display: inline-block;
+    margin-top: 20px;
     color: white;
     font-size: 11px;
     vertical-align: top;
@@ -207,8 +208,8 @@ body {
     display: inline-block;
     color: white;
     margin-top: 20px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
     font-size: 11px;
     vertical-align: top;
 }
@@ -217,8 +218,8 @@ body {
     margin-top: 20px;
     color: #ff9734;
     font-size: 11px;
-    vertical-align: top;
     text-decoration: none;
+    vertical-align: top;
     cursor: pointer;
 }
 .bottom_bar .left a:hover {
