@@ -92,7 +92,7 @@ body {
     display: inline-block;
     margin-top: 20px;
     color: white;
-    font-size: 12px;
+    font-size: 11px;
     text-decoration: none;
     vertical-align: top;
 }
@@ -104,7 +104,7 @@ body {
     width: 18px;
     padding-top: 20px;
     color: white;
-    font-size: 12px;
+    font-size: 11px;
     text-decoration: none;
     text-align: center;
     vertical-align: top;
@@ -118,6 +118,7 @@ body {
 }
 
 .full_top_bar .right .trap_button {
+    position: relative;
     display: inline-block;
     margin-left: -43px;
     width: 188px;
@@ -135,10 +136,13 @@ body {
     display: inline-block;
     margin-top: 20px;
     color: white;
-    font-size: 12px;
+    font-size: 11px;
     text-decoration: none;
     vertical-align: top;
 }
-
+.full_top_bar .right .trap_button .child {
+    position: absolute;
+    top: 48px;
+}
 
 
