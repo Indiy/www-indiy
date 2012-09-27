@@ -109,10 +109,19 @@ body {
     vertical-align: top;
 }
 
+.full_top_bar .right {
+    margin-right: 26px;
+    height: 67px;
+    font-size: 0px;
+}
 
-
-
-
+.full_top_bar .right .trap_button {
+    display: inline-block;
+    width: 261px;
+    height: 67px;
+    background: 
+    vertical-align: top;
+}
 
 
 

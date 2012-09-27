@@ -74,7 +74,7 @@ html, body {
 }
 #signup .header {
     height: 85px;
-    background: #1d182a;
+    background: #1d182a url("/images/signup_header_bg.jpg") repeat-x;
     border-top: 1px solid #2c1b55;
     border-left: 1px solid #2c1b55;
     border-right: 1px solid #2c1b55;
