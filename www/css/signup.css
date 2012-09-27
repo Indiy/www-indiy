@@ -47,9 +47,12 @@ body {
 #body_wrap {
     position: relative;
     min-height: 100%;
+    background: url("/images/signup_bg.jpg") center center no-repeat;
+    background-size: 100% auto;
 }
 
 #main_content {
+    padding-bottom: 47px;
     min-height: 560px;
     overflow:auto;
 }
@@ -71,6 +74,7 @@ html, body {
 }
 
 .signup_bg {
+    display: none;
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -81,6 +85,7 @@ html, body {
     z-index: -2;
 }
 .signup_bg_cover {
+    display: none;
     position: absolute;
     left: 0;
     right: 0;
@@ -92,8 +97,9 @@ html, body {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
 }
 #signup_container {
-    padding-top: 100px;
-    padding-bottom: 60px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background: rgba(8,8,8,0.65);
 }
 #signup {
     padding-bottom: 45px;
