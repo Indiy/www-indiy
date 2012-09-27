@@ -237,7 +237,8 @@ body {
     margin-right: 12px;
     height: 25px;
     width: 30px;
-    background: gray;
+    background: url("/images/home_fb.png");
+    vertical-align: top;
 }
 .bottom_bar .right .slashes {
     display: inline-block;
@@ -254,7 +255,8 @@ body {
     margin-left: 12px;
     height: 25px;
     width: 30px;
-    background: gray;
+    background: url("/images/home_tw.png");
+    vertical-align: top;
 }
 
 
