@@ -49,7 +49,7 @@ body {
 }
 
 #main_content {
-    min-height: 680px;
+    min-height: 560px;
     overflow:auto;
 }
 
