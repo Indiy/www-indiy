@@ -340,6 +340,7 @@ body {
     font-family: "Teletex Light", Helvetica, sans-serif;
     text-align: center;
     background: url("/images/home_artist_info_bg.png") no-repeat;
+    vertical-align: top;
 }
 .body_content_info .logo {
     display: inline-block;
@@ -348,10 +349,12 @@ body {
     width: 25px;
     height: 14px;
     background: url("/images/mad_logo_25_14.png") no-repeat;
+    vertical-align: top;
 }
 .body_content_info a {
     color: white;
     text-decoration: none;
+    vertical-align: top;
 }
 .body_content_info a:hover {
     text-decoration: underline;
