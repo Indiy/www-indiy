@@ -350,6 +350,7 @@ body {
     background: url("/images/mad_logo_25_14.png") no-repeat;
 }
 .body_content_info a {
+    color: white;
     text-decoration: none;
 }
 .body_content_info a:hover {
