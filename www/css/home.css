@@ -194,6 +194,9 @@ body {
     width: 178px;
     background: url("/images/home_sub_menu_trap.png") no-repeat;
 }
+.full_top_bar .right .trap_button .child:hover {
+    background: url("/images/home_sub_menu_trap_highlight.png") no-repeat;
+}
 .full_top_bar .right .trap_button:hover .child {
     display: block;
 }
