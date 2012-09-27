@@ -32,87 +32,91 @@
 </head>
 
 <body>
-    <div id='home_bg' class='full_screen_bg'>
-        <div class='pad'></div>
-        <?php
-            foreach( array(0,1,2,3) as $k  )
-            {
-                echo "<div id='image_holder_$k' class='image_holder'>";
-                echo "</div>\n";
-            }
-        ?>
-        <div class='pad'></div>
-    </div>
-    <div class='full_top_bar'>
-        <div class='left'>
-            <a href="/signup.php">JOIN US</a>
-            <div class='slash'>//</div>
-            <a href="/landing.php">SIGN IN</a>
+    <div id='body_wrap'><div id='main_content'>
+        <div id='home_bg' class='full_screen_bg'>
+            <div class='pad'></div>
+            <?php
+                foreach( array(0,1,2,3) as $k  )
+                {
+                    echo "<div id='image_holder_$k' class='image_holder'>";
+                    echo "</div>\n";
+                }
+            ?>
+            <div class='pad'></div>
         </div>
-        <div class='right'>
-            <div class='network trap_button'>
-                <div class='icon'></div>
-                <div class='label'>NETWORK</div>
-                <div class='first child'>
-                    <a href="http://myartistdna.tumblr.com">BLOG</a>
-                    <div class='child'>
-                        <a href="#">MAD LOVE</a>
+        <div class='full_top_bar'>
+            <div class='left'>
+                <a href="/signup.php">JOIN US</a>
+                <div class='slash'>//</div>
+                <a href="/landing.php">SIGN IN</a>
+            </div>
+            <div class='right'>
+                <div class='network trap_button'>
+                    <div class='icon'></div>
+                    <div class='label'>NETWORK</div>
+                    <div class='first child'>
+                        <a href="http://myartistdna.tumblr.com">BLOG</a>
                         <div class='child'>
-                            <a href="http://www.myartistdna.fm">LISTEN TO MAD.FM</a>
+                            <a href="#">MAD LOVE</a>
                             <div class='child'>
-                                <a href="http://www.myartistdna.tv">WATCH MAD.TV</a>
+                                <a href="http://www.myartistdna.fm">LISTEN TO MAD.FM</a>
                                 <div class='child'>
-                                    <a href="http://www.myartistdna.co">BRANDING AGENCY</a>
+                                    <a href="http://www.myartistdna.tv">WATCH MAD.TV</a>
+                                    <div class='child'>
+                                        <a href="http://www.myartistdna.co">BRANDING AGENCY</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class='community trap_button'>
-                <div class='icon'></div>
-                <div class='label'>COMMUNITY</div>
-                <div class='first child'>
-                    <a href="/artists.php">ALL</a>
+                <div class='community trap_button'>
+                    <div class='icon'></div>
+                    <div class='label'>COMMUNITY</div>
+                    <div class='first child'>
+                        <a href="/artists.php">ALL</a>
+                    </div>
+                </div>
+                <div class='search trap_button'>
+                    <div class='icon'></div>
+                    <div class='label'>SEARCH</div>
                 </div>
             </div>
-            <div class='search trap_button'>
-                <div class='icon'></div>
-                <div class='label'>SEARCH</div>
+        </div>
+        <div class='body_mad_logo'></div>
+        <div class='body_title'>THE OPPORTUNITY PLATFORM FOR ARTISTS, BRANDS AND FANS</div>
+        <div class='body_under_title_line'>
+            <div class='text'>Showcase. Sell. Experience the Arts.</div>
+            <a href="/signup.php">JOIN US</a>
+        </div>
+        <div class='body_buttons'>
+            <a href="#">COMMERCIAL</a>
+            <a href="#">MORE INFO</a>
+        </div>
+        <div class='body_content_info'>
+            <div class='logo'></div>
+            <a href="#">Snoop Dogg</a>
+            <div class='slashes'>//</div>
+            Rapper. Producer. Long Beach, CA.
+        </div>
+    </div></div>
+    <div id='footer'>
+        <div class='bottom_bar'>
+            <div class='left'>
+                <div class='copyright'>COPYRIGHT &copy; 2012 MYARTISTDNA</div>
+                <div class='slashes'>//</div>
+                <a href="/terms_service.php">TERMS OF USAGE</a>
+                <div class='slashes'>//</div>
+                <a href="/faq.php">SUPPORT / HELP</a>
+                <div class='slashes'>//</div>
+                <a href="/tour.php">CONTACT</a>
+            </div>
+            <div class='right'>
+                <a class='facebook' href="http://www.facebook.com/pages/MyArtistDNA/106114012796731"></a>
+                <div class='slashes'>//</div>
+                <a class='twitter' href="http://twitter.com/myartistdna"></a>
             </div>
         </div>
-    </div>
-    <div class='bottom_bar'>
-        <div class='left'>
-            <div class='copyright'>COPYRIGHT &copy; 2012 MYARTISTDNA</div>
-            <div class='slashes'>//</div>
-            <a href="/terms_service.php">TERMS OF USAGE</a>
-            <div class='slashes'>//</div>
-            <a href="/faq.php">SUPPORT / HELP</a>
-            <div class='slashes'>//</div>
-            <a href="/tour.php">CONTACT</a>
-        </div>
-        <div class='right'>
-            <a class='facebook' href="http://www.facebook.com/pages/MyArtistDNA/106114012796731"></a>
-            <div class='slashes'>//</div>
-            <a class='twitter' href="http://twitter.com/myartistdna"></a>
-        </div>
-    </div>
-    <div class='body_mad_logo'></div>
-    <div class='body_title'>THE OPPORTUNITY PLATFORM FOR ARTISTS, BRANDS AND FANS</div>
-    <div class='body_under_title_line'>
-        <div class='text'>Showcase. Sell. Experience the Arts.</div>
-        <a href="/signup.php">JOIN US</a>
-    </div>
-    <div class='body_buttons'>
-        <a href="#">COMMERCIAL</a>
-        <a href="#">MORE INFO</a>
-    </div>
-    <div class='body_content_info'>
-        <div class='logo'></div>
-        <a href="#">Snoop Dogg</a>
-        <div class='slashes'>//</div>
-        Rapper. Producer. Long Beach, CA.
     </div>
 </body>
 </html>
