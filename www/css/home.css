@@ -289,6 +289,7 @@ body {
     font-family: "Teletex Light", Helvetica, sans-serif;
     font-style: italic;
     border-bottom: 2px solid #00f1fd;
+    vertical-align: top;
 }
 .body_under_title_line a {
     display: inline-block;
@@ -302,6 +303,7 @@ body {
     text-decoration: none;
     background: url("/images/home_aqua_button.png");
     cursor: pointer;
+    vertical-align: top;
 }
 
 
