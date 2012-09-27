@@ -125,7 +125,6 @@ body {
     height: 48px;
     background: url("/images/grey_trap.png");
     background-size: 100%;
-    opacity: 0.8;
     text-align: center;
     vertical-align: top;
 }
@@ -147,10 +146,10 @@ body {
     height: 39px;
     width: 178px;
     background: url("/images/home_sub_menu_trap.png");
-    opacity: 0.8;
 }
-.full_top_bar .right .trap_button .child:hover {
-    opacity: 1.0;
+.full_top_bar .right .trap_button .first.child {
+    top: 50px;
+    right: 50px;
 }
 .full_top_bar .right .trap_button .child a {
     display: inline-block;
@@ -161,5 +160,6 @@ body {
     font-size: 11px;
     text-decoration: none;
     text-align: center;
+    cursor: pointer;
 }
 
