@@ -242,7 +242,7 @@ body {
 .bottom_bar .right .slashes {
     display: inline-block;
     margin-top: 20px;
-    color: #ff9734;
+    color: white;
     font-size: 11px;
     vertical-align: top;
     text-decoration: none;
