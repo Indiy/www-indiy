@@ -119,9 +119,11 @@ body {
 
 .full_top_bar .right .trap_button {
     display: inline-block;
+    margin-left: -57px;
     width: 261px;
     height: 67px;
     background: url("/images/grey_trap.png");
+    background-size: 100%;
     opacity: 0.8;
     text-align: center;
     vertical-align: top;
