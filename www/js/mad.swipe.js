@@ -199,7 +199,7 @@
     
         onMouseWheel: function(ev, delta, deltaX, deltaY) {
  
-            if( deltaY > deltaX )
+            if( Math.abs(deltaY) > Math.abs(deltaX) )
                 return;
  
             ev.preventDefault();
