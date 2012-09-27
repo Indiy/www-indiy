@@ -341,7 +341,7 @@ body {
     text-align: center;
     background: url("/images/home_artist_info_bg.png") no-repeat;
 }
-.body_content_info .icon {
+.body_content_info .logo {
     display: inline-block;
     margin-top: -2px;
     margin-right: 13px;
@@ -355,4 +355,6 @@ body {
 .body_content_info a:hover {
     text-decoration: underline;
 }
-
+.body_content_info .slashes {
+    display: inline-block;
+}
