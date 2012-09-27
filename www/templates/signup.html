@@ -19,72 +19,93 @@
         </script>
     </head>
     
-    <body class='signup_bg'>
-        <div class='signup_bg_cover'></div>
-        <div id='signup_container'><div id='signup'>
-            <div class='header'>
-                <div class='text'>SIGN UP</div>
-            </div>
-            <div class='select'>
-                <div class='label'>Please Select</div>
-                <div class='check_item fan' onclick="return signupCheckBox('fan');">
-                    <input type='checkbox' checked='checked'  />
-                    <div class='text'>Fan</div>
+    <body>
+        <div id='body_wrap'><div id='main_content'>
+            <div class='signup_bg'></div>
+            <div class='signup_bg_cover'></div>
+            <div id='signup_container'><div id='signup'>
+                <div class='header'>
+                    <div class='text'>SIGN UP</div>
                 </div>
-                <div class='check_item artist' onclick="return signupCheckBox('artist');">
-                    <input type='checkbox' />
-                    <div class='text'>Artist / Brand</div>
-                </div>
-            </div>
-            <div class='container_sep'></div>
-            <div id='artist_items'>
-                <div class='site_name line_container'>
-                    <div class='container'>
-                        <input class='placeholder' type='text' value='Your Site Name' onfocus="return signupFocusInput(this,'Your Site Name');"
-                            onblur="return signupBlurInput(this,'Your Site Name');"  />
+                <div class='select'>
+                    <div class='label'>Please Select</div>
+                    <div class='check_item fan' onclick="return signupCheckBox('fan');">
+                        <input type='checkbox' checked='checked'  />
+                        <div class='text'>Fan</div>
                     </div>
-                    <div class='detail'>
-                        What will your site be called? (ex: your name, band name, company name, etc.)
-                        Don't stress. You can change this anytime.
+                    <div class='check_item artist' onclick="return signupCheckBox('artist');">
+                        <input type='checkbox' />
+                        <div class='text'>Artist / Brand</div>
                     </div>
                 </div>
                 <div class='container_sep'></div>
-                <div class='site_link line_container'>
-                    <div class='container'>
-                        <input class='placeholder' type='text' value='Your Site Link' onfocus="return signupFocusInput(this,'Your Site Link');"
-                            onblur="return signupBlurInput(this,'Your Site Link');" />
-                        <div class='postfix'>.myartistdna.com</div>
+                <div id='artist_items'>
+                    <div class='site_name line_container'>
+                        <div class='container'>
+                            <input class='placeholder' type='text' value='Your Site Name' onfocus="return signupFocusInput(this,'Your Site Name');"
+                                onblur="return signupBlurInput(this,'Your Site Name');"  />
+                        </div>
+                        <div class='detail'>
+                            What will your site be called? (ex: your name, band name, company name, etc.)
+                            Don't stress. You can change this anytime.
+                        </div>
                     </div>
-                    <div class='detail'>
-                        This will be your website address, it must be 3-55 characters long (only letters and numbers).
+                    <div class='container_sep'></div>
+                    <div class='site_link line_container'>
+                        <div class='container'>
+                            <input class='placeholder' type='text' value='Your Site Link' onfocus="return signupFocusInput(this,'Your Site Link');"
+                                onblur="return signupBlurInput(this,'Your Site Link');" />
+                            <div class='postfix'>.myartistdna.com</div>
+                        </div>
+                        <div class='detail'>
+                            This will be your website address, it must be 3-55 characters long (only letters and numbers).
+                        </div>
+                    </div>
+                    <div class='container_sep'></div>
+                </div>
+                <div class='credentials'>
+                    <div class='title'>GET STARTED NOW</div>
+                    <div class='detail'>Log in and get started easily using your existing Facebook or Twitter account.</div>
+                    <div class='fb_tw'>
+                        <div class='fb icon' onclick='signupFacebook();'></div>
+                        <div class='tw icon' onclick='signupTwitter();'></div>
+                    </div>
+                    <div class='or'>
+                        <div class='left line'></div>
+                        <div class='text'>OR</div>
+                        <div class='right line'></div>
+                    </div>
+                    <div class='input_container email'>
+                        <div class='label'>Your Email Address</div>
+                        <input type='text'/>
+                    </div>
+                    <div class='input_container password'>
+                        <div class='label'>Pick Your Password</div>
+                        <input type='password'/>
+                    </div>
+                    <div class='submit_container'>
+                        <div class='submit' onclick='signupSubmit();'>Submit</div>
                     </div>
                 </div>
-                <div class='container_sep'></div>
-            </div>
-            <div class='credentials'>
-                <div class='title'>GET STARTED NOW</div>
-                <div class='detail'>Log in and get started easily using your existing Facebook or Twitter account.</div>
-                <div class='fb_tw'>
-                    <div class='fb icon' onclick='signupFacebook();'></div>
-                    <div class='tw icon' onclick='signupTwitter();'></div>
-                </div>
-                <div class='or'>
-                    <div class='left line'></div>
-                    <div class='text'>OR</div>
-                    <div class='right line'></div>
-                </div>
-                <div class='input_container email'>
-                    <div class='label'>Your Email Address</div>
-                    <input type='text'/>
-                </div>
-                <div class='input_container password'>
-                    <div class='label'>Pick Your Password</div>
-                    <input type='password'/>
-                </div>
-                <div class='submit_container'>
-                    <div class='submit' onclick='signupSubmit();'>Submit</div>
-                </div>
-            </div>
+            </div></div>
         </div></div>
+        <div id='footer'>
+            <div class='bottom_bar'>
+                <div class='left'>
+                    <div class='copyright'>COPYRIGHT &copy; 2012 MYARTISTDNA</div>
+                    <div class='slashes'>//</div>
+                    <a href="/terms_service.php">TERMS OF USAGE</a>
+                    <div class='slashes'>//</div>
+                    <a href="/faq.php">SUPPORT / HELP</a>
+                    <div class='slashes'>//</div>
+                    <a href="/tour.php">CONTACT</a>
+                </div>
+                <div class='right'>
+                    <a class='facebook' href="http://www.facebook.com/pages/MyArtistDNA/106114012796731"></a>
+                    <div class='slashes'>//</div>
+                    <a class='twitter' href="http://twitter.com/myartistdna"></a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

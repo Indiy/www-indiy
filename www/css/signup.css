@@ -32,6 +32,36 @@
 }
 
 
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#body_wrap {
+    position: relative;
+    min-height: 100%;
+}
+
+#main_content {
+    min-height: 560px;
+    overflow:auto;
+}
+
+#footer {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    margin-top: -48px;
+    clear:both;
+}
+
 html, body {
     margin: 0;
     border: 0 none;
@@ -40,8 +70,12 @@ html, body {
 }
 
 .signup_bg {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
     background: url("/images/signup_bg.jpg") center center no-repeat;
-    min-height: 1024px;
     background-size: 100% auto;
 }
 .signup_bg_cover {

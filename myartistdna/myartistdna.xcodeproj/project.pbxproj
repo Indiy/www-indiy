@@ -161,6 +161,7 @@
 		2D747C6415E8419B00128EEC /* element_loves.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = element_loves.php; sourceTree = "<group>"; };
 		2D7849EE15CE37EA00A89620 /* fan_signup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_signup.php; sourceTree = "<group>"; };
 		2D7849F115CEEA0600A89620 /* logout.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = logout.php; sourceTree = "<group>"; };
+		2D8949211614C4A500538B7F /* login.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = login.php; sourceTree = "<group>"; };
 		2D8D96D915918C5A00AA3D1B /* paypal.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = paypal.php; sourceTree = "<group>"; };
 		2D8D96DB159197BC00AA3D1B /* paypalfunctions.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = paypalfunctions.php; sourceTree = "<group>"; };
 		2D8D96DC159199F000AA3D1B /* paypal_order_confirm.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = paypal_order_confirm.php; sourceTree = "<group>"; };
@@ -1143,6 +1144,7 @@
 				2D747C6015E4AFE700128EEC /* player_iphone.php */,
 				2D7849F115CEEA0600A89620 /* logout.php */,
 				2D8D971415A8CF3900AA3D1B /* signup.php */,
+				2D8949211614C4A500538B7F /* login.php */,
 				2D8D96E31595391C00AA3D1B /* order_status.php */,
 				2D8D96DC159199F000AA3D1B /* paypal_order_confirm.php */,
 				2D8D96DD1591A41D00AA3D1B /* paypal_finish.php */,
