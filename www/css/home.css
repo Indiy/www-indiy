@@ -79,6 +79,7 @@ body {
     right: 0;
     height: 67px;
     background: url("/images/home_top_bg.png") repeat;
+    font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .full_top_bar .left {
     margin-left: 120px;
@@ -88,12 +89,14 @@ body {
 }
 .full_top_bar .left a {
     display: inline-block;
-    padding-top: 30px;
+    margin-top: 30px;
     color: white;
     font-size: 12px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-decoration: none;
     vertical-align: top;
+}
+.full_top_bar .left a:hover {
+    text-decoration: underline;
 }
 .full_top_bar .left .slash {
     display: inline-block;
@@ -101,7 +104,6 @@ body {
     padding-top: 30px;
     color: white;
     font-size: 12px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-decoration: none;
     text-align: center;
     vertical-align: top;
