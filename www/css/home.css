@@ -215,6 +215,9 @@ body {
     text-align: center;
     cursor: pointer;
 }
+.full_top_bar .right .trap_button .child a:hover {
+    color: #ff9734;
+}
 
 .bottom_bar {
     position: absolute;
