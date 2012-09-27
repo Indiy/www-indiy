@@ -143,6 +143,23 @@ body {
 .full_top_bar .right .trap_button .child {
     position: absolute;
     top: 48px;
+    right: 39px;
+    height: 39px;
+    width: 178px;
+    background: url("/images/home_sub_menu_trap.png");
+    opacity: 0.8;
 }
-
+.full_top_bar .right .trap_button .child:hover {
+    opacity: 1.0;
+}
+.full_top_bar .right .trap_button .child a {
+    display: inline-block;
+    padding-top: 16px;
+    height: 23px;
+    width: 178px;
+    color: white;
+    font-size: 11px;
+    text-decoration: none;
+    text-align: center;
+}
 
