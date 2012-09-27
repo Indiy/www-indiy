@@ -50,6 +50,9 @@ body {
     background: url("/images/signup_bg.jpg") top center no-repeat;
     background-size: 100% auto;
 }
+.login_page #body_wrap {
+    background: url("/images/login_bg.jpg") top center no-repeat;
+}
 
 #main_content {
     padding-bottom: 47px;

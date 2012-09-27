@@ -263,3 +263,48 @@ function loginSocialNetwork(network)
             }
         });
 }
+function loginSubmit()
+{           
+    var username = $('#login_username').val();
+    var password = $('#login_password').val();
+
+    
+    if( username.length == 0 || password.length == 0 )
+    {
+        window.alert("Please enter an email address and password.");
+        return false;
+    }
+
+    var args = {
+        'method': 'login',
+        'username': username,
+        'password': password
+    };
+
+    jQuery.ajax(
+        {
+            type: "POST",
+            url: "/data/login.php",
+            data: args,
+            dataType: "json",
+            success: function(data)
+            {
+                if( data['success'] )
+                {   
+                    window.location.href = data['url'];
+                    return true;
+                }
+                else
+                {
+                    window.alert("Wrong email address or password. Please try again.");
+                    return false;
+                }
+            },
+            error: function()
+            {
+                window.alert("Login Error. Please try again.");
+                return false;
+            }
+        });
+}
+
