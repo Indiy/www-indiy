@@ -283,6 +283,10 @@ body {
 .body_under_title_line .text {
     display: inline-block;
     margin-top: 5px;
+    color: white;
+    font-size: 16px;
+    font-family: "Teletex Light", Helvetica, sans-serif;
+    font-style: italic;
     border-bottom: 2px solid #00f1fd;
 }
 .body_under_title_line a {
