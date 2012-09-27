@@ -137,12 +137,16 @@ body {
     vertical-align: top;
 }
 .full_top_bar .right .trap_button .child {
+    display: none;
     position: absolute;
-    top: 50px;
-    right: 50px;
+    top: 41px;
+    right: 41px;
     height: 39px;
     width: 178px;
     background: url("/images/home_sub_menu_trap.png");
+}
+.full_top_bar .right .trap_button:hover .child {
+    display: block;
 }
 .full_top_bar .right .trap_button .first.child {
     top: 50px;
