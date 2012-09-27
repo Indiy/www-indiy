@@ -131,6 +131,10 @@ function imageResizeBackgrounds(list,root_tag)
 
 function imageGetStretchParams(item,root_tag)
 {
+    var bg_justify = "CENTER";
+    if( 'bg_justify' in item )
+        bg_justify = item.bg_justify;
+
     var win_height = $(root_tag).height();
     var win_width = $(root_tag).width();
     var win_ratio = win_width / win_height;
@@ -157,6 +161,9 @@ function imageGetStretchParams(item,root_tag)
         height = width / img_ratio;
         margin_top = -(height - win_height)/2;
     }
+    
+    if( bg_justify == "TOP" )
+        margin_top = 0;
     
     var ret = {
         'width': width,
