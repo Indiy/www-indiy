@@ -119,14 +119,19 @@ body {
     display: inline-block;
     width: 261px;
     height: 67px;
-    background: 
+    background: url("/images/grey_trap.png");
+    opacity: 0.8;
+    text-align: center;
     vertical-align: top;
 }
-
-
-
-
-
+.full_top_bar .right .trap_button .label {
+    display: inline-block;
+    margin-top: 30px;
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    vertical-align: top;
+}
 
 
 
