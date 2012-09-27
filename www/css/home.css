@@ -257,7 +257,23 @@ body {
     vertical-align: top;
 }
 
-
+.body_mad_logo {
+    position: absolute;
+    top: 125px;
+    left: 87px;
+    height: 22px;
+    width: 126px;
+    background: url("/images/mad_logo_white_126_22.png") no-repeat;
+}
+.body_title {
+    position: absolute;
+    top: 186px;
+    left: 87px;
+    width: 375px;
+    color: white;
+    font-size: 32px;
+    font-family: "Teletex Light", Helvetica, sans-serif;
+}
 
 
 
