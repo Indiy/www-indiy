@@ -30,7 +30,9 @@
         $artist_invoice_id = $invoice['artist_invoice_id'];
 
         $orders = array();
-        $order_q = mq("SELECT * FROM orders WHERE artist_invoice_id='$artist_invoice_id'");
+        $sql = "SELECT * FROM orders WHERE artist_invoice_id='$artist_invoice_id'";
+        print "$sql\n";
+        $order_q = mq($sql);
         while( $order = mf($order_q) )
         {
             $orders[] = $order;
