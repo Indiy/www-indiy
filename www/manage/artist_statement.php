@@ -31,6 +31,8 @@
         $order_q = mq("SELECT * FROM orders WHERE artist_invoice_id='$artist_invoice_id'");
         while( $order = mf($order_q) )
         {
+            $order['amount'] = floatval($order['amount']);
+            $order['paid_amount'] = floatval($order['paid_amount']);
             $orders[] = $order;
         }
         $invoice['orders'] = $orders;
