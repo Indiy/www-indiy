@@ -42,6 +42,9 @@
     $sql = "SELECT * FROM orders ";
     $sql .= " WHERE artist_invoice_id IS NULL AND order_date < $until_date";
     $sql .= " AND state IN ( 'PENDING_SHIPMENT','SHIPPED','CLOSED' )";
+    
+    print "sql: $sql\n";
+    
     $order_q = mq($sql);
     
     $artists = array();
