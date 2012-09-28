@@ -17,6 +17,17 @@ String.prototype.endsWith = function(suffix) {
     return this.indexOf(suffix, this.length - suffix.length) !== -1;
 };
 
+Number.prototype.padZeros(length)
+{
+    var str = '' + this;
+    while (str.length < length)
+    {
+        str = '0' + str;
+    }
+    
+    return str;
+}
+
 
 /**
 sprintf() for JavaScript 0.7-beta1

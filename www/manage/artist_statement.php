@@ -34,10 +34,13 @@
             $orders[] = $order;
         }
         $invoice['orders'] = $orders;
+        
+        $invoice['id'] = intval($invoice['id']);
         $invoice['amount'] = floatval($invoice['amount']);
+        $invoice['paid_amount'] = floatval($invoice['paid_amount']);
+
         $invoice_ts = strtotime($invoice['invoice_date']);
         $invoice['invoice_date'] = date("F Y",$invoice_ts);
-        $invoice['paid_amount'] = floatval($invoice['paid_amount']);
         
         $artist_invoices[] = $invoice;
     }

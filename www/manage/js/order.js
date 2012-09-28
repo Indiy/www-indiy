@@ -83,7 +83,7 @@ function renderArtistStatement()
     {
         var invoice = g_artistInvoiceList[i];
         
-        var invoice_id = "{0}-{1}".format(invoice.artist_id,invoice.id);
+        var invoice_id = "{0}-{1}".format(invoice.artist_id,invoice.id.padZeros(8));
         
         var odd = "";
         if( i % 2 == 1 )
