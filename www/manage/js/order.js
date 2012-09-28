@@ -93,7 +93,7 @@ function renderArtistStatement()
         html += "<div class='item{0}' onclick='showInvoice({1});'>".format(odd,i);
         html += " <div class='invoice_id'>{0}</div>".format(invoice_id);
         html += " <div class='invoice_date'>{0}</div>".format(invoice.invoice_date);
-        html += " <div class='payout_total'>${0}</div>".format(invoice.amount.toFixed(2));
+        html += " <div class='invoice_total'>${0}</div>".format(invoice.amount.toFixed(2));
         if( invoice.paid_amount > 0.0 )
         {
             html += " <div class='invoice_status'>Paid</div>";
