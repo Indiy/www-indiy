@@ -83,9 +83,24 @@
                 $total += $to_artist_amount;
             }
             print "artist_id: $artist_id, month: $month, total: $total\n";
+            
+            $values = array("artist_id" => $artist_id,
+                            "invoice_date" => $month,
+                            "amount" => $total,
+                            );
+            
+            mysql_insert('artist_invoices',$values);
+            $invoice_id = mysql_insert_id();
+            
+            foreach( $orders as $order )
+            {
+                $order_id = $order['id'];
+                $values = array("artist_invoice_id" => $invoice_id);
+                mysql_update('artist_invoices',$values,'id',$order_id);
+            }
         }
     }
     
-    var_dump($artists);
+    //var_dump($artists);
 
 ?>
