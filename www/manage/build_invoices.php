@@ -40,8 +40,8 @@
     print "Until_time: $until_time, until_date: $until_date\n";
     
     $sql = "SELECT * FROM orders ";
-    $sql .= " WHERE artist_invoice_id IS NULL AND order_date < $until_date";
-    $sql .= " AND state IN ( 'PENDING_SHIPMENT','SHIPPED','CLOSED' )";
+    $sql .= " WHERE artist_invoice_id IS NULL AND order_date < '$until_date' ";
+    $sql .= " AND state IN ( 'PENDING_SHIPMENT','SHIPPED','CLOSED' ) ";
     
     print "sql: $sql\n";
     
