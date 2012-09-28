@@ -96,7 +96,7 @@
             {
                 $order_id = $order['id'];
                 $values = array("artist_invoice_id" => $invoice_id);
-                mysql_update('artist_invoices',$values,'id',$order_id);
+                mysql_update('orders',$values,'id',$order_id);
             }
         }
     }
