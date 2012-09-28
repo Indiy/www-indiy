@@ -27,11 +27,11 @@
     $invoice_q = mq("SELECT * FROM artist_invoices WHERE artist_id='$artist_id'");
     while( $invoice = mf($invoice_q) )
     {
-        $artist_invoice_id = $invoice['artist_invoice_id'];
+        $artist_invoice_id = $invoice['id'];
 
         $orders = array();
         $sql = "SELECT * FROM orders WHERE artist_invoice_id='$artist_invoice_id'";
-        print "$sql\n";
+        //print "$sql\n";
         $order_q = mq($sql);
         while( $order = mf($order_q) )
         {
