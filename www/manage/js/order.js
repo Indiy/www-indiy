@@ -75,10 +75,50 @@ function markShipped()
 }
 
 
-function renderArtistSettlementOrders()
+function renderArtistStatement()
 {
-    renderArtistSettlementOrderArray(g_pendingShipmentOrders,'#shipped_order_list','#shipped_summary');
-    renderArtistSettlementOrderArray(g_shippedOrders,'#pending_order_list','#pending_summary');
+    $('#invoice_list').empty();
+    var total_artist = 0.0;
+    for( var i = 0 ; i < g_artistInvoiceList.length ; ++i )
+    {
+        var invoice = g_artistInvoiceList[i];
+        
+        var invoice_id = "{0}-{1}".format(invoice.artist_id,invoice.id);
+        
+        var odd = "";
+        if( i % 2 == 1 )
+            odd = " odd";
+        
+        var html = "";
+        html += "<div class='item{0}' onclick='showInvoice({1});'>".format(odd,i);
+        html += " <div class='invoice_id'>{0}</div>".format(invoice_id);
+        html += " <div class='invoice_date'>{0}</div>".format(invoice.order_date);
+        html += " <div class='payout_total'>${0}</div>".format(invoice.amount.toFixed(2));
+        if( invoice.paid_amount > 0.0 )
+        {
+            html += " <div class='invoice_status'>Paid</div>";
+        }
+        else
+        {
+            html += " <div class='invoice_status'>Pending Payment</div>";
+        }
+        html += "</div>";
+        $('#invoice_list').append(html);
+        
+        total_artist += order.amount;
+    }
+    
+    var html = "";
+    html += "<div class='number'>";
+    html += " <div class='label'>Total Invoices:</div>";
+    html += " <div class='amount'>{0}</div>".format(g_artistInvoiceList.length);
+    html += "</div>";
+    html += "<div class='number'>";
+    html += " <div class='label'>Total Earned:</div>";
+    html += " <div class='amount'>${0}</div>".format(total_artist.toFixed(2));
+    html += "</div>";
+    $('#invoice_summary').html(html);
+
 }
 
 function renderArtistSettlementOrderArray(orders,tag,summary_tag)

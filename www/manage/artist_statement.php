@@ -19,60 +19,26 @@
             exit();
         }
     }
-
-    $pending_shipment_orders = array();
-    $shipped_orders = array();
     
-    $order_q = mq("SELECT * FROM orders WHERE artist_id='$artist_id'");
-    while( $order = mf($order_q) )
+    $artist_invoices = array();
+
+    $invoice_q = mq("SELECT * FROM artist_invoices WHERE artist_id='$artist_id'");
+    while( $invoice = mf($invoice_q) )
     {
-        $id = $order['id'];
-        
-        $state = $order['state'];
-        
-        $customer_name = $order['customer_name'];
-        $customer_email = $order['customer_email'];
-        
-        $order_date = $order['order_date'];
-        
-        $charge_amount = floatval($order['charge_amount']);
-        $to_artist_amount = floatval($order['to_artist_amount']);
+        $artist_invoice_id = $invoice['artist_invoice_id'];
 
-        $order = array("id" => $id,
-                       "state" => $state,
-                       "order_date" => $order_date,
-                       "customer_name" => $customer_name,
-                       "customer_email" => $customer_email,
-                       "charge_amount" => $charge_amount,
-                       "to_artist_amount" => $to_artist_amount,
-                       );
+        $orders = array();
+        $order_q = mq("SELECT * FROM orders WHERE artist_invoice_id='$artist_invoice_id'");
+        while( $order = mf($order_q) )
+        {
+            $orders[] = $order;
+        }
+        $invoice['orders'] = $orders;
         
-        if( $state == 'PENDING_CONFIRM' )
-        {
-            
-        }
-        else if( $state == 'CANCELED' )
-        {
-            
-        }
-        else if( $state == 'ABANDONED' )
-        {
-            
-        }
-        else if( $state == 'PENDING_SHIPMENT' )
-        {
-            $pending_shipment_orders[] = $order;
-        }
-        else if( $state == 'SHIPPED' 
-                || $state == 'CLOSED'
-                )
-        {
-            $shipped_orders[] = $order;
-        }
+        $artist_invoices[] = $invoice;
     }
-    
-    $pending_shipment_orders_json = json_encode($pending_shipment_orders);
-    $shipped_orders_json = json_encode($shipped_orders);
+
+    $artist_invoices_json = json_encode($artist_invoices);
 
     $artist_edit_url = "/manage/artist_management.php?userId=$artist_id";
     

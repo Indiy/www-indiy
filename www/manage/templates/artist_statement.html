@@ -3,10 +3,9 @@
 <script type="text/javascript">
     
     var g_artistId = <?=$artist_id;?>;
-    var g_pendingShipmentOrders = <?=$pending_shipment_orders_json;?>;
-    var g_shippedOrders = <?=$shipped_orders_json;?>;
+    var g_artistInvoiceList = <?=$artist_invoice_json;?>;
     
-    $(document).ready(renderArtistSettlementOrders);
+    $(document).ready(renderArtistStatement);
     
 </script>
 
@@ -23,28 +22,16 @@
                 </a>
             </div>
             <div class='title_underbar'></div>
-            <div class='sub_title'>Shipped Orders</div>
+            <div class='sub_title'>Invoices</div>
             <div class='header'>
-                <div class='order_id header_item'>ID</div>
-                <div class='order_date header_item'>Order Date</div>
-                <div class='charge_total header_item'>Charge Amount</div>
-                <div class='payout_total header_item'>Artist Payment</div>
+                <div class='invoice_id header_item'>ID</div>
+                <div class='invoice_date header_item'>Order Date</div>
+                <div class='payout_total header_item'>Invoice Amount</div>
+                <div class='invoice_status header_item'>Status</div>
             </div>
-            <div class='list' id='shipped_order_list'>
+            <div class='list' id='invoice_list'>
             </div>
-            <div class='summary' id='shipped_summary'>
-            </div>
-            <div class='title_underbar'></div>
-            <div class='sub_title'>Pending Orders</div>
-            <div class='header'>
-                <div class='order_id header_item'>ID</div>
-                <div class='order_date header_item'>Order Date</div>
-                <div class='charge_total header_item'>Charge Amount</div>
-                <div class='payout_total header_item'>Artist Payment</div>
-            </div>
-            <div class='list' id='pending_order_list'>
-            </div>
-            <div class='summary' id='pending_summary'>
+            <div class='summary' id='invoice_summary'>
             </div>
         </div>
     </section>
