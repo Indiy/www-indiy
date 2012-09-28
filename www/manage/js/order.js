@@ -105,7 +105,7 @@ function renderArtistStatement()
         html += "</div>";
         $('#invoice_list').append(html);
         
-        total_artist += order.amount;
+        total_artist += invoice.amount;
     }
     
     var html = "";
