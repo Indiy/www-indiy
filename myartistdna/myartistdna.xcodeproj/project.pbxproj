@@ -163,6 +163,7 @@
 		2D7849F115CEEA0600A89620 /* logout.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = logout.php; sourceTree = "<group>"; };
 		2D8949211614C4A500538B7F /* login.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = login.php; sourceTree = "<group>"; };
 		2D8949231614D58700538B7F /* login.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = login.html; sourceTree = "<group>"; };
+		2D89492416151AB300538B7F /* build_invoices.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = build_invoices.php; sourceTree = "<group>"; };
 		2D8D96D915918C5A00AA3D1B /* paypal.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = paypal.php; sourceTree = "<group>"; };
 		2D8D96DB159197BC00AA3D1B /* paypalfunctions.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = paypalfunctions.php; sourceTree = "<group>"; };
 		2D8D96DC159199F000AA3D1B /* paypal_order_confirm.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = paypal_order_confirm.php; sourceTree = "<group>"; };
@@ -1488,6 +1489,7 @@
 				2DF61FE3151F946F00DBFBC8 /* image_data_fixup.php */,
 				2D0A2DE815E961F800F0EE6D /* artist_file_cleanup.php */,
 				2DE61EDD15FD841500D032A9 /* convert_media.php */,
+				2D89492416151AB300538B7F /* build_invoices.php */,
 			);
 			path = manage;
 			sourceTree = "<group>";
