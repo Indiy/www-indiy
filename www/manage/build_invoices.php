@@ -69,6 +69,23 @@
         $artists[$artist_id][$month][] = $order;
     }
     
+    foreach( $artists as $artist_id => $months )
+    {
+        print "artist_id: $artist_id\n";
+        
+        foreach( $months as $month => $orders )
+        {
+            $total = 0.0;
+            print "artist_id: $artist_id, month: $month\n";
+            foreach( $orders as $order )
+            {
+                $to_artist_amount = $order['to_artist_amount'];
+                $total += $to_artist_amount;
+            }
+            print "artist_id: $artist_id, month: $month, total: $total\n";
+        }
+    }
+    
     var_dump($artists);
 
 ?>
