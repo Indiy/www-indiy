@@ -1,6 +1,7 @@
 
 
 #artist_invoice {
+    display: none;
     width: 951px;
     margin: 0 auto;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;

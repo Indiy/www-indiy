@@ -39,31 +39,33 @@
             <div class='main_title_underbar'></div>
             <div class='receipt'>
                 <div class='header'>
+                    <div class='left paid_to'>Paid To:</div>
                     <div class='left'>Artist Invoice</div>
-                    <div class='right'>July 2012</div>
+                    <div class='right' id='invoice_date'>July 2012</div>
                 </div>
                 <div class='address'>
-                    <div class='line'>Artist Name</div>
-                    <div class='line'>foo@bar.com</div>
+                    <div class='line' id='invoice_artist_name'><?=$artist_name;?></div>
+                    <div class='line' id='invoice_artist_email'><?=$artist_email;?></div>
                 </div>
                 <div class='order_number'>
                     <div class='item'>Invoice ID: <span id='invoice_id'>123-0000008</span></div>
-                    <div class='item'>Invoice Status: <span id='order_status'>Payment Pending</span></div>
+                    <div class='item'>Invoice Date: <span id='invoice_date'>July 2012</span></div>
+                    <div class='item'>Invoice Status: <span id='invoice_status'>Payment Pending</span></div>
                 </div>
             </div>
             <div class='order_detail'>
                 <div class='header'>
-                    <div class='quantity'>Order ID</div>
-                    <div class='item'>Order Date</div>
-                    <div class='description wide'>Order Total</div>
-                    <div class='price'>Artist Payment</div>
+                    <div class='order_id'>Order ID</div>
+                    <div class='order_date'>Order Date</div>
+                    <div class='order_total'>Order Total</div>
+                    <div class='order_artist_payment'>Artist Payment</div>
                 </div>
-                <div class='order_list'>
+                <div class='order_list' id='invoice_order_list'>
                 </div>
                 <div class='bottom'>
                     <div class='totals'>
                         <div class='total'>
-                            <div id='total_amount' class='amount'>$123.23</div>
+                            <div id='invoice_total' class='amount'>$123.23</div>
                             <div class='label'>Invoice Total:</div>
                         </div>
                     </div>

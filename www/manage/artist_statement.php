@@ -20,6 +20,8 @@
         }
     }
     
+    $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id'"));
+    
     $artist_invoices = array();
 
     $invoice_q = mq("SELECT * FROM artist_invoices WHERE artist_id='$artist_id'");
@@ -46,6 +48,9 @@
     }
 
     $artist_invoices_json = json_encode($artist_invoices);
+
+    $artist_name = $artist['artist'];
+    $artist_email = $artist['email'];
 
     $artist_edit_url = "/manage/artist_management.php?userId=$artist_id";
     

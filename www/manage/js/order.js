@@ -118,7 +118,39 @@ function renderArtistStatement()
     html += " <div class='amount'>${0}</div>".format(total_artist.toFixed(2));
     html += "</div>";
     $('#invoice_summary').html(html);
+}
 
+function showInvoice(index)
+{
+    var invoice = g_artistInvoiceList[index];
+    
+    var invoice_id = "{0}-{1}".format(invoice.artist_id,invoice.id.padZeros(8));
+    $('#invoice_id').html(invoice_id);
+    $('#invoice_date').html(invoice.date);
+    $('#invoice_amount').html(invoice.amount);
+    
+    $('#invoice_order_list').empty();
+    
+    for( var i = 0 ; i < invoice.order_list ; ++i )
+    {
+        var order = invoice.order_list[i];
+        
+        var odd = "";
+        if( i % 2 == 1 )
+            odd = " odd";
+    
+        var html = "";
+        html += "<div class='item{0}'>".format(odd,i);
+        html += " <div class='order_id'>{0}</div>".format(order.id);
+        html += " <div class='order_date'>{0}</div>".format(order.order_date);
+        html += " <div class='order_total'>${0}</div>".format(order.charge_amount.toFixed(2));
+        html += " <div class='order_artist_payment'>${0}</div>".format(order.to_artist_amount.toFixed(2));
+        html += "</div>";
+        $('#invoice_order_list').append(html);
+    }
+    
+    $('#artist_statement').hide();
+    $('#artist_invoice').show();
 }
 
 function renderArtistSettlementOrderArray(orders,tag,summary_tag)
