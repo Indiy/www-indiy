@@ -53,7 +53,7 @@
     {
         $order_date = $order['order_date'];
         $order_time = strtotime($order_date);
-        $month = date("Y-m-d",$order_time);
+        $month = date("Y-m-01",$order_time);
         
         $artist_id = $order['artist_id'];
         
