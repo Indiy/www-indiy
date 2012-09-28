@@ -17,7 +17,7 @@ String.prototype.endsWith = function(suffix) {
     return this.indexOf(suffix, this.length - suffix.length) !== -1;
 };
 
-Number.prototype.padZeros(length)
+Number.prototype.padZeros = function(length)
 {
     var str = '' + this;
     while (str.length < length)
@@ -26,7 +26,7 @@ Number.prototype.padZeros(length)
     }
     
     return str;
-}
+};
 
 
 /**
