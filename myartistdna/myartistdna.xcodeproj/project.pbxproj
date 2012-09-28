@@ -275,6 +275,7 @@
 		2DEADA9D1613A27C0076F95D /* home.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = home.html; sourceTree = "<group>"; };
 		2DEADA9E1613B4EC0076F95D /* home.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = home.js; sourceTree = "<group>"; };
 		2DEADA9F1613B6C00076F95D /* home.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = home.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2DEADAAB16164A040076F95D /* artist_invoice.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = artist_invoice.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DF470301440B77F005538C7 /* art.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = art.php; sourceTree = "<group>"; };
 		2DF470401440B77F005538C7 /* artists.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artists.php; sourceTree = "<group>"; };
 		2DF470411440B77F005538C7 /* be-heard.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "be-heard.php"; sourceTree = "<group>"; };
@@ -1512,6 +1513,7 @@
 				2DF47444144A2D84005538C7 /* styles.css */,
 				2D8D96F115998EBF00AA3D1B /* order.css */,
 				2D25C3CB15E6F4AE00132306 /* stats.css */,
+				2DEADAAB16164A040076F95D /* artist_invoice.css */,
 			);
 			path = css;
 			sourceTree = "<group>";

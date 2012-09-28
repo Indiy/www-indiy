@@ -695,18 +695,6 @@
 #artist_statement .order_date {
     width: 407px;
 }
-#artist_statement .invoice_id {
-    width: 110px;
-}
-#artist_statement .invoice_date {
-    width: 407px;
-}
-#artist_statement .invoice_total {
-    width: 210px;
-}
-#artist_statement .invoice_status {
-    width: 210px;
-}
 #artist_statement .charge_total {
     width: 210px;
 }
@@ -718,6 +706,18 @@
 }
 #artist_statement .list .item .payout_total {
     border-right: none;
+}
+#artist_statement .invoice_id {
+    width: 200px;
+}
+#artist_statement .invoice_date {
+    width: 175px;
+}
+#artist_statement .invoice_total {
+    width: 275px;
+}
+#artist_statement .invoice_status {
+    width: 287px;
 }
 #artist_statement .list .item .invoice_status {
     border-right: none;

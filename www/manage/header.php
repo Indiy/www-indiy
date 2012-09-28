@@ -10,6 +10,7 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 
     <? if( $include_order ): ?>
+        <link href="css/artist_statement.css" rel="stylesheet" type="text/css">
         <link href="css/order.css" rel="stylesheet" type="text/css">
     <? endif; ?>
     
