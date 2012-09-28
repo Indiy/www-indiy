@@ -131,9 +131,10 @@ function showInvoice(index)
     
     $('#invoice_order_list').empty();
     
-    for( var i = 0 ; i < invoice.orders ; ++i )
+    var orders = invoice.orders;
+    for( var i = 0 ; i < orders.length ; ++i )
     {
-        var order = invoice.orders[i];
+        var order = orders[i];
         
         var odd = "";
         if( i % 2 == 1 )
