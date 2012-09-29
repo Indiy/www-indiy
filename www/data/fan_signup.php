@@ -185,21 +185,35 @@ END;
                 die();
             }
             
-            $fan = mf(mq("SELECT * FROM fans WHERE email = '$email' AND LENGTH(password) > 0"));
+            $fan_id = FALSE;
+            $fan = mf(mq("SELECT * FROM fans WHERE email = '$email'"));
             if( $fan )
             {
-                $output = array("error" => "Fan account already exists with that email address.");
-                print json_encode($output);
-                die();
+                if( $fan['password']) )
+                {
+                    $output = array("error" => "Fan account already exists with that email address.");
+                    print json_encode($output);
+                    die();
+                }
+                $fan_id = $fan['id'];
             }
             
-            $values = array("email" => $email,
-                            "password" => $hash_password,
-                            );
             
-            mysql_insert('fans',$values);
-            $fan_id = mysql_insert_id();
-            $fan = mf(mq("SELECT * FROM fans WHERE id='$fan_id'"));
+            if( $fan_id )
+            {
+                $values = array("password" => $hash_password);
+                mysql_update('fans',$values,'id',$fan_id);
+            }
+            else
+            {
+                $values = array("email" => $email,
+                                "password" => $hash_password,
+                                );
+                mysql_insert('fans',$values);
+                $fan_id = mysql_insert_id();
+                $fan = mf(mq("SELECT * FROM fans WHERE id='$fan_id'"));
+            }
+
             if( $fan )
             {
                 $url = login_fan_from_row($fan);
