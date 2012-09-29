@@ -189,7 +189,7 @@ END;
             $fan = mf(mq("SELECT * FROM fans WHERE email = '$email'"));
             if( $fan )
             {
-                if( $fan['password']) )
+                if( $fan['password'] )
                 {
                     $output = array("error" => "Fan account already exists with that email address.");
                     print json_encode($output);
