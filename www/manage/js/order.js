@@ -126,7 +126,7 @@ function showInvoice(index)
     
     var invoice_id = "{0}-{1}".format(invoice.artist_id,invoice.id.padZeros(8));
     $('.set_invoice_id').html(invoice_id);
-    $('.set_invoice_date').html(invoice.date);
+    $('.set_invoice_date').html(invoice.invoice_date);
     $('.set_invoice_amount').html("$" + invoice.amount);
     
     $('#invoice_order_list').empty();
