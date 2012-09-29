@@ -68,8 +68,10 @@
     text-overflow: ellipsis;
 }
 #artist_invoice .receipt .address .line.paid_to {
-    font-weight: bold;
+    padding-bottom: 7px;
+    color: black;
     font-size: 14px;
+    font-weight: bold;
 }
 #artist_invoice .receipt .order_number {
     float: left;
