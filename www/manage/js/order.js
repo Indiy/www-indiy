@@ -155,6 +155,11 @@ function showInvoice(index)
     $('#artist_statement').hide();
     $('#artist_invoice').show();
 }
+function showInvoiceList()
+{
+    $('#artist_invoice').hide();
+    $('#artist_statement').show();
+}
 
 function renderArtistSettlementOrderArray(orders,tag,summary_tag)
 {
