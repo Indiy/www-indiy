@@ -25,7 +25,7 @@
         if( isset($user_info->error) )
         {
             //print "Failed to get user info\n";
-            header("Location: /login_failed.php");
+            header("Location: /login.php?failed=twitter");
             die();
         }
         else
@@ -59,7 +59,7 @@
     }
 
     //print "Failed to do twitter login\n";
-    header("Location: /login_failed.php");
+    header("Location: /login.php?failed=twitter");
     die();
     
 ?>
