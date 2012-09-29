@@ -45,6 +45,8 @@
 
         $url = $_SESSION['signup_url'];
         
+        $preview_key = random_string(8);
+
         $values = array("artist" => $name,
                         "url" => $url,
                         "facebook" => $fb_name,
@@ -53,6 +55,7 @@
                         "oauth_provider" => 'facebook',
                         "oauth_uid" => $uid,
                         "email" => $email,
+                        "preview_key" => $preview_key,
                         );
         
         //print "values: "; var_dump($values);

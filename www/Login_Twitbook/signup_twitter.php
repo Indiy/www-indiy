@@ -48,6 +48,8 @@
             $name = $_SESSION['signup_name'];
             $url = $_SESSION['signup_url'];
             
+            $preview_key = random_string(8);
+
             $values = array("artist" => $name,
                             "url" => $url,
                             "twitter" => $screen_name,
@@ -56,6 +58,7 @@
                             "oauth_secret" => $oauth_token_secret,
                             "oauth_provider" => 'twitter',
                             "oauth_uid" => $uid,
+                            "preview_key" => $preview_key,
                             );
             
             //print "values: "; var_dump($values);

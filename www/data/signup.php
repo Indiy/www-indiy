@@ -56,10 +56,13 @@
         }
         else
         {
+            $preview_key = random_string(8);
+
             $values = array("artist" => $name,
                             "url" => $url,
                             "email" => $email,
                             "password" => $password,
+                            "preview_key" => $preview_key,
                             );
             if( mysql_insert('mydna_musicplayer',$values) )
             {
