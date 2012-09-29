@@ -13,6 +13,8 @@ function showVideoPopup(video_index,video_filename)
     
     if( video_index !== false )
     {
+        $('#edit_video .top_bar h2').html("Edit Video");
+
         var video = g_videoList[video_index];
         $('#edit_video #song_id').val(video.id);
         $('#edit_video #video_name').val(video.name);
@@ -29,6 +31,8 @@ function showVideoPopup(video_index,video_filename)
             showAccountLimitPopup();
             return;
         }
+
+        $('#edit_video .top_bar h2').html("Add Video");
 
         fillArtistFileSelect('#edit_video #image_drop','IMAGE',false);
         fillArtistFileSelect('#edit_video #video_drop','VIDEO',video_filename);
