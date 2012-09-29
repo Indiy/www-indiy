@@ -68,8 +68,8 @@ function onPasswordKeyPress(myfield,e,callback)
     
     if( keycode == 13 )
     {
-        var username = $('#login_dialog #username').val();
-        var password = $('#login_dialog #password').val();
+        var username = $('#login_username').val();
+        var password = $('#login_password').val();
         if( username.length > 0 && password.length > 0 )
             callback();
         return false;
