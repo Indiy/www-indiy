@@ -20,47 +20,50 @@
     
     <body class='login_page'>
         <div id='body_wrap'><div id='main_content'>
+
+            <div id='signup_container'>
+
+                <? if( $login_failed ): ?>
+                    <div id='login_error'>
+                        <div class='error_msg'><?=$login_failed;?></div>
+                    </div>
+                <? endif; ?>
             
-            <? if( $login_failed ): ?>
-                <div id='login_error'>
-                    <div class='error_msg'><?=$login_failed;?></div>
-                </div>
-            <? endif; ?>
-        
-            <div id='signup_container'><div id='signup'>
-                <div class='header'>
-                    <div class='text'>LOGIN</div>
-                </div>
-                <div class='credential_container'>
-                    <div class='credentials'>
-                        <div class='title'>LOGIN TO MYARTISTDNA</div>
-                        <div class='detail'>
-                            Log in using your Facebook or Twitter account. Don't have an account?
-                            <a href="/signup.php">Signup here.</a>
-                        </div>
-                        <div class='fb_tw'>
-                            <div class='fb icon' onclick='loginFacebook();'></div>
-                            <div class='tw icon' onclick='loginTwitter();'></div>
-                        </div>
-                        <div class='or'>
-                            <div class='left line'></div>
-                            <div class='text'>OR</div>
-                            <div class='right line'></div>
-                        </div>
-                        <div class='input_container email'>
-                            <div class='label'>Email Address</div>
-                            <input id='login_username' type='text'/>
-                        </div>
-                        <div class='input_container password'>
-                            <div class='label'>Password</div>
-                            <input id='login_password' type='password'/>
-                        </div>
-                        <div class='submit_container'>
-                            <div class='submit' onclick='loginSubmit();'>Login</div>
+                <div id='signup'>
+                    <div class='header'>
+                        <div class='text'>LOGIN</div>
+                    </div>
+                    <div class='credential_container'>
+                        <div class='credentials'>
+                            <div class='title'>LOGIN TO MYARTISTDNA</div>
+                            <div class='detail'>
+                                Log in using your Facebook or Twitter account. Don't have an account?
+                                <a href="/signup.php">Signup here.</a>
+                            </div>
+                            <div class='fb_tw'>
+                                <div class='fb icon' onclick='loginFacebook();'></div>
+                                <div class='tw icon' onclick='loginTwitter();'></div>
+                            </div>
+                            <div class='or'>
+                                <div class='left line'></div>
+                                <div class='text'>OR</div>
+                                <div class='right line'></div>
+                            </div>
+                            <div class='input_container email'>
+                                <div class='label'>Email Address</div>
+                                <input id='login_username' type='text'/>
+                            </div>
+                            <div class='input_container password'>
+                                <div class='label'>Password</div>
+                                <input id='login_password' type='password'/>
+                            </div>
+                            <div class='submit_container'>
+                                <div class='submit' onclick='loginSubmit();'>Login</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div></div>
+            </div>
         </div></div>
         <div id='footer'>
             <div class='bottom_bar'>

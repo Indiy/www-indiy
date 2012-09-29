@@ -382,11 +382,12 @@ html, body {
 }
 
 #login_error {
-    padding-top: 40px;
     height: 50px;
 }
 #login_error .error_msg {
-    padding-top: 3px;
+    padding-top: 6px;
+    margin-left: auto;
+    margin-right: auto;
     height: 18px;
     width: 600px;
     color: white;
@@ -396,7 +397,7 @@ html, body {
     background-color: #e00;
     border-radius: 8px;
     border: 1px solid #f00;
-    box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 1px 1px 0px #222;
 }
 
 
