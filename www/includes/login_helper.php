@@ -21,6 +21,7 @@ function loginArtistFromRow($row)
 function login_fan_from_row($row)
 {
     $_SESSION['fan_id'] = $row['id'];
+    $_SESSION['fan_email'] = $row['email'];
     $expire = time() + 60*24*60*60;
     $cookie_domain = str_replace("http://www.","",trueSiteUrl());
     setcookie("FAN_EMAIL",$row['email'],$expire,"/",$cookie_domain);

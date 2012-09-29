@@ -357,6 +357,26 @@
     else
         $show_order_status = FALSE;
 
+
+    $is_logged_in_text = FALSE;
+    $is_logged_in_url = FALSE;
+    if( isset($_SESSION['fan_email']) )
+    {
+        $is_logged_in_text = $_SESSION['fan_email'];
+        $is_logged_in_url = trueSiteUrl() . "/fan/";
+    }
+    if( isset($_SESSION['sess_userEmail']) )
+    {
+        $is_logged_in_text = $_SESSION['sess_userEmail'];
+        $is_logged_in_url = trueSiteUrl() . "/manage/";
+    }
+    else if( isset($_SESSION['sess_userName']) )
+    {
+        $is_logged_in_text = $_SESSION['sess_userName'];
+        $is_logged_in_url = trueSiteUrl() . "/manage/";
+    }
+
+
     $login_url = FALSE;
     if( strlen($_COOKIE['FAN_EMAIL']) > 0 
        || strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
