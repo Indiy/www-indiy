@@ -174,18 +174,20 @@
     font-size: 14px;
 }
 #artist_invoice  .order_detail .order_id {
-    width: 100px;
+    width: 175px;
 }
 #artist_invoice  .order_detail .order_date {
-    width: 250px;
+    width: 375px;
 }
 #artist_invoice  .order_detail .order_total {
-    width: 100px;
+    width: 198px;
 }
 #artist_invoice  .order_detail .order_artist_payment {
-    width: 100px;
+    width: 198px;
 }
-
+#artist_invoice  .order_detail .order_list .item .order_artist_payment {
+    border-right: none;    
+}
 
 #artist_invoice .order_list .item {
     height: 79px;
