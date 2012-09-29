@@ -196,11 +196,6 @@ END;
                     die();
                 }
                 $fan_id = $fan['id'];
-            }
-            
-            
-            if( $fan_id )
-            {
                 $values = array("password" => $hash_password);
                 mysql_update('fans',$values,'id',$fan_id);
             }
