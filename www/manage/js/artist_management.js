@@ -36,6 +36,15 @@ function artistManagementReady()
 }
 $(document).ready(artistManagementReady);
 
+function showList(list_selector)
+{
+    if( $(list_selector).next().is(':hidden') )
+    {
+        $('.heading').removeClass('active').next().slideUp();
+        $(list_selector).toggleClass('active').next().slideDown();
+    }
+}
+
 function updatePageList()
 {
     $('#page_list_ul').empty();

@@ -118,5 +118,6 @@ function onPhotoSuccess(data)
         g_photoList.unshift(data.photo_data);
     }
     updatePhotoList();
+    showList('.photolist .heading');
 }
 

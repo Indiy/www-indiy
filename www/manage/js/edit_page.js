@@ -192,6 +192,7 @@ function onPageSuccess(data)
         g_pageList.unshift(data.page_data);
     }
     updatePageList();
+    showList('.playlist .heading');
 }
 
 function onSongChange()

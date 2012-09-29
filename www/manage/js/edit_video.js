@@ -128,6 +128,7 @@ function onVideoSuccess(data)
         g_videoList.unshift(data.video_data);
     }
     updateVideoList();
+    showList('.videolist .heading');
 }
 
 
