@@ -67,7 +67,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-#artist_invoice .receipt .address .line .paid_to {
+#artist_invoice .receipt .address .line.paid_to {
     font-weight: bold;
     font-size: 14px;
 }
