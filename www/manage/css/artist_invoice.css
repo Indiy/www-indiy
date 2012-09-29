@@ -7,6 +7,46 @@
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
 }
 
+#artist_invoice .title_buttons {
+    padding-top: 28px;
+    height: 35px;
+}
+#artist_invoice .title_buttons .title {
+    float: left;
+    color: #687480;
+    font-size: 30px;
+    font-family: "Teletex Light",Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+#artist_invoice .title_buttons .back_button {
+    float: right;
+    width: 100px;
+    height: 25px;
+    font-size: 0;
+    cursor: pointer;
+}
+#artist_invoice .title_buttons .back_button .icon {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background: #383838;
+    vertical-align: top;
+}
+#artist_invoice .title_buttons .back_button .label {
+    display: inline-block;
+    height: 18px;
+    width: 75px;
+    padding-top: 7px;
+    background: #1e2126;
+    color: white;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-align: center;
+    vertical-align: top;
+}
+
+
 #artist_invoice .main_title {
     padding-top: 28px;
     color: #687480;
