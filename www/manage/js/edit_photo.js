@@ -4,8 +4,11 @@ var g_photoRemove = false;
 var g_photoId = '';
 var g_photoIndex = false;
 
-function showPhotoPopup(photo_index)
+function showPhotoPopup(photo_index,photo_filename)
 {
+    if( !photo_filename )
+        photo_filename = false;
+
     g_photoIndex = photo_index;
     g_photoRemove = false;
     
@@ -14,6 +17,8 @@ function showPhotoPopup(photo_index)
     if( photo_index !== false )
     {
         var photo = g_photoList[photo_index];
+
+        $('#edit_photo .top_bar h2').html("Edit Photo");
         
         g_photoId = photo.id;
         $('#edit_photo #song_id').val(photo.id);
@@ -34,6 +39,8 @@ function showPhotoPopup(photo_index)
             return;
         }
         
+        $('#edit_photo .top_bar h2').html("Add Photo");
+        
         g_photoId = '';
         $('#edit_photo #photo_id').val('');
         $('#edit_photo #photo_name').val('');
@@ -41,7 +48,7 @@ function showPhotoPopup(photo_index)
         $('#edit_photo #photo_bg_color').val('000000');
         $('#edit_photo #photo_tags').val('');
         
-        fillArtistFileSelect('#edit_photo #image_drop','IMAGE',false);
+        fillArtistFileSelect('#edit_photo #image_drop','IMAGE',photo_filename);
     }
     showPopup('#edit_photo');
 }

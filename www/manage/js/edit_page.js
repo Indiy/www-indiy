@@ -9,6 +9,9 @@ $(document).ready(function() { jscolor.init(); });
 
 function showPagePopup(page_index,song_filename)
 {
+    if( !song_filename )
+        song_filename = false;
+
     g_pageIndex = page_index;
     g_removeSong = false;
     g_removeImage = false;

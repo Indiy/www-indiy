@@ -128,6 +128,10 @@ function artistFilenameClick(index)
     {
         showVideoPopup(false,file.filename);
     }
+    else if( file.type == 'IMAGE' )
+    {
+        showPhotoPopup(false,file.filename);
+    }
 }
 
 function updateFileListItem(file)

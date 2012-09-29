@@ -5,6 +5,9 @@ var g_videoIndex = false;
 
 function showVideoPopup(video_index,video_filename)
 {
+    if( !video_filename )
+        video_filename = false;
+
     g_videoIndex = video_index;
     g_removeVideo = false;
     g_removeVideoImage = false;
