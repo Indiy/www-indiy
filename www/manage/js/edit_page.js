@@ -17,6 +17,8 @@ function showPagePopup(page_index,song_filename)
     
     if( page_index !== false )
     {
+        $('#edit_page .top_bar h2').html("Edit Song");
+    
         var song = g_pageList[page_index];
         
         g_songId = song.id;
@@ -45,12 +47,14 @@ function showPagePopup(page_index,song_filename)
     }
     else
     {
-        if( g_artistData.account_type == 'REGULAR' 
+        if( g_artistData.account_type == 'REGULAR'
            && g_pageList.length >= SONG_REGULAR_LIMIT )
         {
             showAccountLimitPopup();
             return;
         }
+
+        $('#edit_page .top_bar h2').html("Add Song");
     
         g_songId = '';
         $('#edit_page #song_id').val('');
