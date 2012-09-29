@@ -31,7 +31,6 @@ function login_fan_from_row($row)
 function post_signup($row)
 {
     $email = $row['email'];
-    $username = $row['username'];
     if( $email )
     {
         $to = $email;
@@ -41,7 +40,7 @@ Thanks for signing up!
 
 Welcome! We're excited to have you join us and wanted to give you your login info for your records.
 
-Username: $username
+Login Email Address: $email
         
 Enjoy your membership, and if you have any quesitons, email us at support@myartistdna.com
 
