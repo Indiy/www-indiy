@@ -19,6 +19,9 @@
             exit();
         }
     }
+    $SUPER_ADMIN = FALSE;
+    if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' )
+        $SUPER_ADMIN = TRUE;
     
     $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id'"));
     
