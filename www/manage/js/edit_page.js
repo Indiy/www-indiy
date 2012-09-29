@@ -68,6 +68,7 @@ function showPagePopup(page_index,song_filename)
 
         $('#edit_page #image_filename_container').empty();
         $('#edit_page #bg_style').val('LETTERBOX');
+        $('#edit_page #song_bgcolor').val('000000');
         $('#edit_page input[name=download]:eq(1)').attr('checked','checked');
         clickFree(0);
         $('#edit_page #amazon_url').val('');
