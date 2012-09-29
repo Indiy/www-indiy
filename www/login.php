@@ -5,6 +5,17 @@
 
     session_write_close();
     
+    if( isset($_SESSION['sess_userId']) )
+    {
+        header("Location: /manage/");
+        die();
+    }
+    else if( isset($_SESSION['fan_id']) )
+    {
+        header("Location: /fan/");
+        die();
+    }
+    
     $login_failed = FALSE;
     if( $_REQUEST['failed'] )
     {
