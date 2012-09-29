@@ -8,7 +8,7 @@ var g_tooltipText =
     "tip_paypal_email": "The paypal email that will recieve payments for merch on your site.",
     "tip_tw_account": "Link your Twitter account. Allows you to post tweets to your twitter account when you add content to your MyArtistDNA account. Also shows your tweets in your socialize tab on the account page.",
     "tip_fb_account": "Link your Facebook account. Allows you to post status updates to your Facebook account when you add content to your MyArtistDNA account.",
-    "tip_fb_page_url": "URL of the Facebook Fan Page you would like to show up in your socialize tab on your account page. e.g: facebook.com/username Does not work with a Facebook Profile Page.",
+    "tip_fb_page_url": "URL of the Facebook Fan Page (not Profile Page) you would like to show up in your socialize tab on your account page. e.g: http://www.facebook.com/fanpage",
     "tip_fb_setting": "Facebook update setting. Set to automatically send a status update to your Facebook account when you add content to your MyArtistDNA page. Manual to manually send updates.  Disabled to remove Facebook from the socialize tab on your page.",
     "tip_tw_setting": "Twitter tweet setting. Set to automatically tweet to your twitter account when you add content to your MyArtistDNA page. Manual to manually tweet updates. Disabled to remove Twitter from the socialize tab on your page.",
     "tip_embed": "Copy and paste this code to embed your MyArtistDNA page.",
