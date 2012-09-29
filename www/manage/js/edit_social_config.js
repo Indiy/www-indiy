@@ -1,5 +1,6 @@
 
 var FB_PLACEHOLDER = "You can only embed a Facebook Fan Page not a Profile Page!";
+var FB_REGEX = new RegExp('http://www.facebook.com/(.*)','i');
 
 function blurFBPageURL(field)
 {
@@ -111,6 +112,15 @@ function onSocialConfigSave()
     
     if( fb_page_url && fb_page_url.length > 0 && fb_page_url != FB_PLACEHOLDER )
     {
+        if( fb_page_url.startsWith("www.") )
+        {
+            fb_page_url = "http://" + fb_page_url;
+        }
+        else if( fb_page_url.startsWith("facebook.com") )
+        {
+            fb_page_url = "http://www." + fb_page_url;
+        }
+    
         var match = FB_REGEX.exec(fb_page_url);
         if( match && match.length > 1 )
         {

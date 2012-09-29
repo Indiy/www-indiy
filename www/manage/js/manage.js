@@ -5,8 +5,6 @@ var HOSTNAME_REGEX = new RegExp('^(?=.{1,255}$)[0-9A-Za-z](?:(?:[0-9A-Za-z]|\\b-
 
 var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
 
-var FB_REGEX = new RegExp('http://www.facebook.com/(.*)','i');
-
 function checkElementFileExtensions(file,extensions,error_string)
 {
     if( file.files && file.files.length > 0 )
