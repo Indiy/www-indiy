@@ -140,8 +140,8 @@
     <div id='bottom_bar'>
         <div class='be_heard'>BE HEARD. BE SEEN. BE INDEPENDENT.</div>
         <div class='slash'>//</div>
-        <? if( $is_logged_in_url ): ?>
-            <div class='sign_up bottom_link'><a <?=$all_links_blank;?> href='<?=$is_logged_in_url;?>' ><?=$is_logged_in_text;?></a></div>
+        <? if( $is_logged_in_text ): ?>
+            <div class='sign_up bottom_link'><?=$is_logged_in_text;?></div>
         <? elseif( $login_url ): ?>
             <div class='sign_up bottom_link'><a <?=$all_links_blank;?> href='<?=$login_url;?>' >LOGIN NOW</a></div>
         <? else: ?>

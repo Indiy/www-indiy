@@ -375,6 +375,10 @@
         $is_logged_in_text = $_SESSION['sess_userName'];
         $is_logged_in_url = trueSiteUrl() . "/manage/";
     }
+    if( $is_logged_in_text )
+    {
+        $is_logged_in_text = "Logged in as: <a $all_links_blank href='$is_logged_in_url'>$is_logged_in_text</a>";
+    }
 
 
     $login_url = FALSE;
