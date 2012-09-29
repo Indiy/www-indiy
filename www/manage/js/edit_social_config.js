@@ -115,10 +115,12 @@ function onSocialConfigSave()
         if( fb_page_url.startsWith("www.") )
         {
             fb_page_url = "http://" + fb_page_url;
+            $('#social_config #fb_page_url').val(fb_page_url);
         }
         else if( fb_page_url.startsWith("facebook.com") )
         {
             fb_page_url = "http://www." + fb_page_url;
+            $('#social_config #fb_page_url').val(fb_page_url);
         }
     
         var match = FB_REGEX.exec(fb_page_url);
