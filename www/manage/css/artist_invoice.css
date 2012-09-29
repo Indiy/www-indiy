@@ -167,36 +167,24 @@
     text-transform: uppercase;
 }
 
-#artist_invoice  .order_detail .header .quantity {
+#artist_invoice  .order_detail .header .header_item {
     display: inline-block;
     padding-top: 19px;
     width: 68px;
     text-align: center;
     font-size: 14px;
 }
-#artist_invoice  .order_detail .header .item {
-    display: inline-block;
-    padding-top: 19px;
-    width: 88px;
-    text-align: center;
-    font-size: 14px;
+#artist_invoice  .order_detail .order_id {
+    width: 100px;
 }
-#artist_invoice  .order_detail .header .description {
-    display: inline-block;
-    padding-top: 19px;
-    padding-left: 20px;
-    width: 500px;
-    font-size: 14px;
+#artist_invoice  .order_detail .order_date {
+    width: 250px;
 }
-#artist_invoice  .order_detail .header .description.wide {
-    width: 643px;
+#artist_invoice  .order_detail .order_total {
+    width: 100px;
 }
-#artist_invoice  .order_detail .header .price {
-    display: inline-block;
-    padding-top: 19px;
-    width: 132px;
-    text-align: center;
-    font-size: 14px;
+#artist_invoice  .order_detail .order_artist_payment {
+    width: 100px;
 }
 
 
@@ -205,6 +193,9 @@
     background-color: white;
     border-bottom: 1px solid #d3d3d3;
     font-size: 0;
+}
+#artist_invoice .order_list .item.odd {
+    background: whitesmoke;
 }
 
 #artist_invoice .order_list .item .quantity {
@@ -219,93 +210,14 @@
     text-align: center;
     vertical-align: top;
 }
-#artist_invoice .order_list .item .image {
-    display: inline-block;
-    width: 87px;
-    height: 79px;
-    border-right: 1px solid #d3d3d3;
-    vertical-align: top;
-}
-#artist_invoice .order_list .item .image .image_holder {
-    margin-top: 15px;
-    margin-left: 20px;
-    height: 45px;
-    width: 45px;
-    padding: 2px;
-    border: 1px solid #cacaca;
-    border-radius: 2px;
-}
-#artist_invoice .order_list .item .image .image_holder img {
-    height: 45px;
-    width: 45px;
-}
-#artist_invoice .order_list .item .name_description {
-    display: inline-block;
-    width: 519px;
-    height: 79px;
-    border-right: 1px solid #d3d3d3;
-    vertical-align: top;
-}
-#artist_invoice .order_list .item .name_description.wide {
-    width: 662px;
-}
-#artist_invoice .order_list .item .name_description .name {
-    padding-top: 20px;
-    padding-left: 19px;
-    padding-right: 19px;
-    color: #222;
-    font-size: 16px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-#artist_invoice .order_list .item .name_description .description {
-    padding-top: 2px;
-    padding-left: 19px;
-    padding-right: 19px;
-    color: #666;
-    font-size: 13px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-#artist_invoice .order_list .item .price {
+#artist_invoice .order_list .item .item_col {
     display: inline-block;
     padding-top: 30px;
     height: 49px;
-    width: 132px;
-    color: #2c9495;
+    color: #222;
     font-size: 20px;
     text-align: center;
-    vertical-align: top;
-}
-#artist_invoice .order_list .item .action {
-    display: inline-block;
-    height: 79px;
-    width: 143px;
-    vertical-align: top;
-}
-#artist_invoice .order_list .item .action .download_button {
-    margin-left: 22px;
-    margin-top: 28px;
-    width: 100px;
-    height: 25px;
-    font-size: 0;
-}
-#artist_invoice .order_list .item .action .download_button .icon {
-    display: inline-block;
-    height: 25px;
-    width: 25px;
-    background: #383838;
-    vertical-align: top;
-}
-#artist_invoice .order_list .item .action .download_button .label {
-    display: inline-block;
-    height: 18px;
-    width: 75px;
-    padding-top: 7px;
-    background: #1e2126;
-    color: white;
-    font-size: 12px;
-    text-align: center;
+    border-right: 1px solid #d3d3d3;
     vertical-align: top;
 }
 

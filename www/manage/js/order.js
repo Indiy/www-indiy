@@ -144,10 +144,10 @@ function showInvoice(index)
     
         var html = "";
         html += "<div class='item{0}'>".format(odd,i);
-        html += " <div class='order_id'>{0}</div>".format(order.id);
-        html += " <div class='order_date'>{0}</div>".format(order.order_date);
-        html += " <div class='order_total'>${0}</div>".format(charge_amount.toFixed(2));
-        html += " <div class='order_artist_payment'>${0}</div>".format(to_artist_amount.toFixed(2));
+        html += " <div class='order_id item_col'>{0}</div>".format(order.id);
+        html += " <div class='order_date item_col'>{0}</div>".format(order.order_date);
+        html += " <div class='order_total item_col'>${0}</div>".format(charge_amount.toFixed(2));
+        html += " <div class='order_artist_payment item_col'>${0}</div>".format(to_artist_amount.toFixed(2));
         html += "</div>";
         $('#invoice_order_list').append(html);
     }
