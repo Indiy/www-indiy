@@ -185,7 +185,7 @@ END;
                 die();
             }
             
-            $fan = mf(mq("SELECT * FROM fans WHERE email = '$email'"));
+            $fan = mf(mq("SELECT * FROM fans WHERE email = '$email' AND LENGTH(password) > 0"));
             if( $fan )
             {
                 $output = array("error" => "Fan account already exists with that email address.");
