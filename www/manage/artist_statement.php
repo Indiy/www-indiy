@@ -27,7 +27,7 @@
     
     $artist_invoices = array();
 
-    $invoice_q = mq("SELECT * FROM artist_invoices WHERE artist_id='$artist_id'");
+    $invoice_q = mq("SELECT * FROM artist_invoices WHERE artist_id='$artist_id' ORDER BY order_date DESC");
     while( $invoice = mf($invoice_q) )
     {
         $artist_invoice_id = $invoice['id'];
