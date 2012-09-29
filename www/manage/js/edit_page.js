@@ -7,7 +7,7 @@ var g_pageIndex = false;
 
 $(document).ready(function() { jscolor.init(); });
 
-function showPagePopup(page_index)
+function showPagePopup(page_index,song_filename)
 {
     g_pageIndex = page_index;
     g_removeSong = false;
@@ -56,7 +56,7 @@ function showPagePopup(page_index)
         $('#edit_page #song_id').val('');
         $('#edit_page #song_name').val('');
 
-        fillArtistFileSelect('#edit_page #song_drop','AUDIO',false);
+        fillArtistFileSelect('#edit_page #song_drop','AUDIO',song_filename);
         fillArtistFileSelect('#edit_page #image_drop','IMAGE',false);
 
         $('#edit_page #image_filename_container').empty();

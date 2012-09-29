@@ -3,7 +3,7 @@ var g_removeVideo = false;
 var g_removeVideoImage = false;
 var g_videoIndex = false;
 
-function showVideoPopup(video_index)
+function showVideoPopup(video_index,video_filename)
 {
     g_videoIndex = video_index;
     g_removeVideo = false;
@@ -31,7 +31,7 @@ function showVideoPopup(video_index)
         }
 
         fillArtistFileSelect('#edit_video #image_drop','IMAGE',false);
-        fillArtistFileSelect('#edit_video #video_drop','VIDEO',false);
+        fillArtistFileSelect('#edit_video #video_drop','VIDEO',video_filename);
     
         $('#edit_video #song_id').val('');
         $('#edit_video #video_name').val('');

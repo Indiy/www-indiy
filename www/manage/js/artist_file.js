@@ -88,7 +88,7 @@ function updateFileList()
             else
             {
                 html += "<div class='icon {0}'></div>".format(file.type);
-                html += "<div class='filename'>{0}</div>".format(filename);
+                html += "<div class='filename' onclick='artistFilenameClick({0});'>{1}</div>".format(i,filename);
                 html += "<div class='delete'>";
                 html += " <div class='button' onclick='deleteFile({0});'></div>".format(i);
                 html += "</div>";
@@ -115,6 +115,19 @@ function showFileDetail(index)
     }
     showPopup('#file_detail');
     return false;
+}
+function artistFilenameClick(index)
+{
+    var file = g_fileList[index];
+    
+    if( file.type == 'AUDIO' )
+    {
+        showPagePopup(false,file.filename);
+    }
+    else if( file.type == 'VIDEO' )
+    {
+        showVideoPopup(false,file.filename);
+    }
 }
 
 function updateFileListItem(file)
