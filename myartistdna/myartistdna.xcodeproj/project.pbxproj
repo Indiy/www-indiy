@@ -31,7 +31,6 @@
 		2D25C3CD15E816F700132306 /* player_common.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_common.js; sourceTree = "<group>"; };
 		2D34E22414A05F05004473F9 /* utils.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = utils.php; sourceTree = "<group>"; };
 		2D34E22714A06AC9004473F9 /* twitter_landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twitter_landing.php; sourceTree = "<group>"; };
-		2D34E22814A173A9004473F9 /* landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = landing.php; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.php; };
 		2D34E22E14A59976004473F9 /* tooltip_text.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = tooltip_text.js; sourceTree = "<group>"; };
 		2D34E23214A9680C004473F9 /* faq.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = faq.php; sourceTree = "<group>"; };
 		2D34E23314AAD64D004473F9 /* forgot_password.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = forgot_password.html; sourceTree = "<group>"; };
@@ -1171,7 +1170,6 @@
 				2DEADA9B1613A23B0076F95D /* home2.php */,
 				2DBDD1271469D46D001E20CC /* footer.php */,
 				2DF471C71440B77F005538C7 /* index.php */,
-				2D34E22814A173A9004473F9 /* landing.php */,
 				2D34E23314AAD64D004473F9 /* forgot_password.html */,
 				2DF472FE1440B77F005538C7 /* music.php */,
 				2DF473291440B77F005538C7 /* php.ini */,
