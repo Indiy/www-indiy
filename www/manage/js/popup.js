@@ -15,6 +15,7 @@ function showPopup(selector,immediate)
         $(selector).fadeIn();
         $('#mask').fadeIn();
     }
+    window.scrollTo(0,1);
 }
 function closePopup()
 {
