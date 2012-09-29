@@ -9,7 +9,7 @@
     if( $_REQUEST['failed'] )
     {
         $network = $_REQUEST['failed'];
-        $login_failed = "No account found associated with your $network account";
+        $login_failed = "No account found associated with your $network account.";
     }
 
     include_once 'templates/login.html';
