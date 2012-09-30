@@ -25,80 +25,41 @@
         do_set_password();
     }
     
-    function do_register()
+    function do_set_password()
     {
+        $fan_id = $_SESSION['fan_id'];
+        
         $password = $_REQUEST['password'];
-        $register_token = $_REQUEST['register_token'];
         
-        $sql = "SELECT * FROM fans WHERE register_token='$register_token'";
-        $fan = mf(mq($sql));
+        $fan = mf(mq("SELECT * FROM fans WHERE id='$fan_id'"));
         if( $fan )
         {
-            $email = $fan['email'];
-            $hash_password = md5($email . $password);
-        
-            $updates = array("password" => $hash_password);
-            mysql_update("fans",$updates,'id',$fan['id']);
+            if( !$fan['password'] )
+            {
+                $email = $fan['email'];
             
-            $url = login_fan_from_row($fan);
-            $output = array(
-                            "url" => $url,
-                            "success" => 1
-                            );
-            print json_encode($output);
+                $hash_password = md5($email . $password);
+                
+                $updates = array("password" => $hash_password);
+                mysql_update("fans",$updates,'id',$fan_id);
+                
+                $output = array("success" => 1);
+                print json_encode($output);
+                die();
+            }
+            else
+            {
+                $output = array("error" => "Account already has a password.");
+                print json_encode($output);
+                die();
+            }
         }
         else
         {
-            $output = array("error" => 1);
+            $output = array("error" => "Fan account not found.");
             print json_encode($output);
+            die();
         }
-    }
-    
-    function do_send_register_token()
-    {
-        $email = $_REQUEST['email'];
-        $register_token = random_string(32);
-        
-        $fan = mf(mq("SELECT * FROM fans WHERE email='$email'"));
-        if( $fan )
-        {
-            $values = array("register_token" => $register_token,
-                            );
-            mysql_update('fans',$values,'id',$fan['id']);
-        }
-        else
-        {
-            $values = array("email" => $email,
-                            "register_token" => $register_token,
-                            );
-            mysql_insert('fans',$values);
-        }
-        
-        $register_link = fan_site_url() . "/register.php?token=$register_token";
-        $register_generic_link = fan_site_url() . "/register.php";
-        
-        $to = $email;
-        $subject = "MyArtistDNA Fan Account Registration";
-        $message = <<<END
-        
-Thank you for registering for a fan account at MyArtistDNA.
-
-Click the link below to verify your email address.
-
-$register_link
-
-Or go to $register_generic_link and enter the code:
-
-$register_token
-
-Be Heard. Be Seen. Be Independent.
-
-END;
-        $from = "no-reply@myartistdna.com";
-        $headers = "From:" . $from;
-
-        mail($to,$subject,$message,$headers);
-        echo "{ \"success\": 1 }\n";
     }
     
     function do_change_password()

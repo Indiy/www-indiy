@@ -1,11 +1,4 @@
 
-var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
-
-var USERNAME_REGEX = new RegExp('^[A-Za-z0-9]*$'); 
-
-
-var HOSTNAME_REGEX = new RegExp('^(?=.{1,255}$)[0-9A-Za-z](?:(?:[0-9A-Za-z]|\\b-){0,61}[0-9A-Za-z])?(?:\\.[0-9A-Za-z](?:(?:[0-9A-Za-z]|\\b-){0,61}[0-9A-Za-z])?)*\\.?$');
-
 function onPasswordKeyPress(myfield,e,callback)
 {
     var keycode = 0;
@@ -27,40 +20,6 @@ function onPasswordKeyPress(myfield,e,callback)
         return true;
     }
 }
-
-function forgotPasswordSubmit()
-{           
-    var username = $('#login_username').val();
-
-    var args = {
-        method: "send_code",
-        email: username
-    };
-
-    jQuery.ajax(
-        {
-            type: "POST",
-            url: "/data/forgot_password.php",
-            data: args,
-            dataType: "json",
-            success: function(data)
-            {
-                if( data['error'] )
-                {
-                    window.alert(data['error']);
-                }
-                else
-                {
-                    window.alert("Email sent.  Please check your email for your password reset link.");
-                }
-            },
-            error: function()
-            {
-                window.alert("Failed to send email, please check your email address and try again.");
-                return false;
-            }
-        });
-} 
 
 function loginFacebook()
 {
@@ -141,4 +100,97 @@ function loginSubmit()
             }
         });
 }
+
+function forgotPasswordSubmit()
+{           
+    var username = $('#login_username').val();
+
+    var args = {
+        method: "send_code",
+        email: username
+    };
+
+    jQuery.ajax(
+        {
+            type: "POST",
+            url: "/data/forgot_password.php",
+            data: args,
+            dataType: "json",
+            success: function(data)
+            {
+                if( data['error'] )
+                {
+                    window.alert(data['error']);
+                }
+                else
+                {
+                    window.alert("Email sent.  Please check your email for your password reset link.");
+                }
+            },
+            error: function()
+            {
+                window.alert("Failed to send email, please check your email address and try again.");
+                return false;
+            }
+        });
+} 
+function recoverAccountSubmit()
+{
+    var token = g_registerToken;
+    if( !token )
+    {
+        token = $('#login_token').val();
+    }
+
+    var password = $('#login_password').val();
+    var confirm_password = $('#confirm_password').val();
+
+    if( !token )
+    {
+        window.alert("Please enter the token your recieved in your email.");
+        return false;
+    }
+    
+    if( password.length == 0 )
+    {
+        window.alert("Please enter a new password.");
+        return false;
+    }
+    if( password != confirm_password )
+    {
+        window.alert("Passwords do not match.");
+        return false;
+    }
+
+    var args = {
+        method: "set_password",
+        token: token,
+        password: password,
+    };
+
+    jQuery.ajax(
+        {
+            type: "POST",
+            url: "/data/forgot_password.php",
+            data: args,
+            dataType: "json",
+            success: function(data)
+            {
+                if( data['error'] )
+                {
+                    window.alert(data['error']);
+                }
+                else
+                {
+                    
+                }
+            },
+            error: function()
+            {
+                window.alert("Failed to send email, please check your email address and try again.");
+                return false;
+            }
+        });
+} 
+
 

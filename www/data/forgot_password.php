@@ -17,6 +17,10 @@
         do_send_code();
         die();
     }
+    else if( $method == "update_password" )
+    {
+        do_update_password();
+    }
     else
     {
         header("HTTP/1.0 400 Bad Request");
@@ -109,5 +113,62 @@
             die();
         }
     }
+    
+    function do_update_password()
+    {
+        $error = "Invalid token.";
+        $url = FALSE;
+    
+        $token = $_REQUEST['token'];
+        $password = $_REQUEST['password'];
+        
+        $sql = "SELECT * FROM mydna_musicplayer WHERE register_token='$token' LIMIT 1";
+        $artist = mf(mq($sql));
+        if( $artist )
+        {
+            $artist_id = $artist['id'];
+            
+            $values = array("password" => $password,
+                            "register_token" => "",
+                            );
+            mysql_update('mydna_musicplayer',$values,'id',$artist_id);
+            $url = loginArtistFromRow($artist);
+            $error = FALSE;
+        }
+        $sql = "SELECT * FROM fans WHERE register_token='$token' LIMIT 1";
+        $fan = mf(mq($sql));
+        if( $fan )
+        {
+            $fan_id = $fan['id'];
+            $email = $fan['email'];
+            
+            $hash_password = md5($email . $password);
+            
+            $values = array("password" => $hash_password,
+                            "register_token" => "",
+                            );
+            mysql_update('fans',$values,'id',$fan_id);
+            $fan_url = login_fan_from_row($fan);
+            if( !$url )
+            {
+                $url = $fan_url;
+            }
+            $error = FALSE;
+        }
+        
+        if( $error )
+        {
+            $output = array("error" => $error);
+            print json_encode($output);
+            die();
+        }
+        else
+        {
+            $output = array("success" => 1,"url" => $url);
+            print json_encode($output);
+            die();
+        }
+    }
+
 
 ?>
