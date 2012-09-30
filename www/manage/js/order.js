@@ -128,9 +128,16 @@ function showInvoice(index)
     $('.set_invoice_id').html(invoice_id);
     $('.set_invoice_date').html(invoice.invoice_date);
     $('.set_invoice_amount').html("$" + invoice.amount);
-    
+    if( invoice.paid_amount > 0 )
+    {
+        var html = "PAID ({0} on {1})".format(invoice.paid_amount,invoice.paid_date);
+        $('.set_invoice_status').html(html);
+    }
+    else
+    {
+        $('.set_invoice_status').html("Payment Pending");
+    }
     $('#invoice_order_list').empty();
-    
     var orders = invoice.orders;
     for( var i = 0 ; i < orders.length ; ++i )
     {
