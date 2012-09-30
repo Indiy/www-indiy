@@ -37,9 +37,7 @@ function post_signup($row)
         $to = $email;
         
         ob_start();
-        
         include PATH_TO_ROOT . "templates/email_artist_signup.html";
-        
         $message = ob_get_contents();
         ob_end_clean();
 

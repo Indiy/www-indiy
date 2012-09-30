@@ -275,6 +275,9 @@
 		2DEADA9F1613B6C00076F95D /* home.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = home.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DEADAAB16164A040076F95D /* artist_invoice.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = artist_invoice.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DEADAAD16180E670076F95D /* email_artist_signup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = email_artist_signup.html; sourceTree = "<group>"; };
+		2DEADAAE1618116D0076F95D /* email_artist_order.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = email_artist_order.html; sourceTree = "<group>"; };
+		2DEADAAF161812740076F95D /* email_fan_order.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = email_fan_order.html; sourceTree = "<group>"; };
+		2DEADAB0161812820076F95D /* email_fan_order_digital.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = email_fan_order_digital.html; sourceTree = "<group>"; };
 		2DF470301440B77F005538C7 /* art.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = art.php; sourceTree = "<group>"; };
 		2DF470401440B77F005538C7 /* artists.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artists.php; sourceTree = "<group>"; };
 		2DF470411440B77F005538C7 /* be-heard.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "be-heard.php"; sourceTree = "<group>"; };
@@ -1007,6 +1010,9 @@
 				2DC1808C160E5E82007B44C0 /* error404.html */,
 				2DEADA9D1613A27C0076F95D /* home.html */,
 				2DEADAAD16180E670076F95D /* email_artist_signup.html */,
+				2DEADAAE1618116D0076F95D /* email_artist_order.html */,
+				2DEADAAF161812740076F95D /* email_fan_order.html */,
+				2DEADAB0161812820076F95D /* email_fan_order_digital.html */,
 			);
 			path = templates;
 			sourceTree = "<group>";

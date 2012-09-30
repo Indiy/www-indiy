@@ -202,17 +202,37 @@
         
         $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id'"));
 
+        /******** Artist Email *******/
+
         $to = $artist['email'];
         $subject = "Order Made on MyArtistDNA";
-        $message = <<<END
-Your store on MyArtistDNA just got an order.  Login to your admin portal to see details on the order.
-
-http://www.myartistdna.com/manage
-
-Be Heard. Be Seen. Be Independent.
         
-END;
+        ob_start();
+        include "templates/email_artist_order.html";
+        $message = ob_get_contents();
+        ob_end_clean();
 
+        $from = "no-reply@myartistdna.com";
+        $headers = "From:" . $from;
+        mail($to,$subject,$message,$headers);
+        
+        /******** Fan Email *******/
+        
+        $to = $order_email;
+        $subject = "Order Made on MyArtistDNA";
+        
+        ob_start();
+        if( $contains_digital_items )
+        {
+            include "templates/email_fan_order_digital.html";
+        }
+        else
+        {
+            include "templates/email_fan_order.html";
+        }
+        $message = ob_get_contents();
+        ob_end_clean();
+        
         $from = "no-reply@myartistdna.com";
         $headers = "From:" . $from;
         mail($to,$subject,$message,$headers);
