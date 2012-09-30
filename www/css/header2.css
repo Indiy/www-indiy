@@ -1,0 +1,77 @@
+
+#footer2 .bottom_bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: url("/images/home_bottom_bg.png") repeat-x;
+}
+#footer2 .bottom_bar .left {
+    float: left;
+    margin-left: 87px;
+    height: 48px;
+    font-size: 0px;
+    text-align: left;
+}
+#footer2 .bottom_bar .left .copyright {
+    display: inline-block;
+    margin-top: 20px;
+    color: white;
+    font-size: 11px;
+    vertical-align: top;
+}
+#footer2 .bottom_bar .left .slashes {
+    display: inline-block;
+    color: white;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 11px;
+    vertical-align: top;
+}
+#footer2 .bottom_bar .left a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ff9734;
+    font-size: 11px;
+    text-decoration: none;
+    vertical-align: top;
+    cursor: pointer;
+}
+#footer2 .bottom_bar .left a:hover {
+    text-decoration: underline;
+}
+#footer2 .bottom_bar .right {
+    float: right;
+    margin-right: 80px;
+    height: 48px;
+    text-align: right;
+}
+#footer2 .bottom_bar .right a.facebook {
+    display: inline-block;
+    margin-top: 14px;
+    margin-right: 3px;
+    height: 25px;
+    width: 22px;
+    background: url("/images/home_fb.png") no-repeat;
+    vertical-align: top;
+}
+#footer2 .bottom_bar .right .slashes {
+    display: inline-block;
+    margin-top: 20px;
+    color: white;
+    font-size: 11px;
+    vertical-align: top;
+}
+#footer2 .bottom_bar .right a.twitter {
+    display: inline-block;
+    margin-top: 14px;
+    margin-left: 8px;
+    height: 25px;
+    width: 30px;
+    background: url("/images/home_tw.png") no-repeat;
+    vertical-align: top;
+}
+

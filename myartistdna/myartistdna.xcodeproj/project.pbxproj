@@ -279,6 +279,9 @@
 		2DEADAAF161812740076F95D /* email_fan_order.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = email_fan_order.html; sourceTree = "<group>"; };
 		2DEADAB0161812820076F95D /* email_fan_order_digital.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = email_fan_order_digital.html; sourceTree = "<group>"; };
 		2DEADAB1161818A10076F95D /* invoice.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = invoice.php; sourceTree = "<group>"; };
+		2DEADAB21618C0320076F95D /* header2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = header2.html; sourceTree = "<group>"; };
+		2DEADAB31618C0410076F95D /* footer2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = footer2.html; sourceTree = "<group>"; };
+		2DEADAB41618C1170076F95D /* header2.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = header2.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DF470301440B77F005538C7 /* art.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = art.php; sourceTree = "<group>"; };
 		2DF470401440B77F005538C7 /* artists.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artists.php; sourceTree = "<group>"; };
 		2DF470411440B77F005538C7 /* be-heard.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "be-heard.php"; sourceTree = "<group>"; };
@@ -1010,6 +1013,8 @@
 				2D8949231614D58700538B7F /* login.html */,
 				2DC1808C160E5E82007B44C0 /* error404.html */,
 				2DEADA9D1613A27C0076F95D /* home.html */,
+				2DEADAB21618C0320076F95D /* header2.html */,
+				2DEADAB31618C0410076F95D /* footer2.html */,
 				2DEADAAD16180E670076F95D /* email_artist_signup.html */,
 				2DEADAAE1618116D0076F95D /* email_artist_order.html */,
 				2DEADAAF161812740076F95D /* email_fan_order.html */,
@@ -1213,6 +1218,7 @@
 				2DC262E915FFDF0600CA560F /* signup.css */,
 				2DC1808B160E4D82007B44C0 /* error.css */,
 				2DEADA9F1613B6C00076F95D /* home.css */,
+				2DEADAB41618C1170076F95D /* header2.css */,
 			);
 			path = css;
 			sourceTree = "<group>";
