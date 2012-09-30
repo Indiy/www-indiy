@@ -278,6 +278,7 @@
 		2DEADAAE1618116D0076F95D /* email_artist_order.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = email_artist_order.html; sourceTree = "<group>"; };
 		2DEADAAF161812740076F95D /* email_fan_order.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = email_fan_order.html; sourceTree = "<group>"; };
 		2DEADAB0161812820076F95D /* email_fan_order_digital.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = email_fan_order_digital.html; sourceTree = "<group>"; };
+		2DEADAB1161818A10076F95D /* invoice.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = invoice.php; sourceTree = "<group>"; };
 		2DF470301440B77F005538C7 /* art.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = art.php; sourceTree = "<group>"; };
 		2DF470401440B77F005538C7 /* artists.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artists.php; sourceTree = "<group>"; };
 		2DF470411440B77F005538C7 /* be-heard.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "be-heard.php"; sourceTree = "<group>"; };
@@ -1053,6 +1054,7 @@
 				2D9E2FD615698A5900A76906 /* account_upgrade.php */,
 				2D646885159B7BFF00B9AD11 /* order.php */,
 				2D0A2DF215EB509200F0EE6D /* artist_file.php */,
+				2DEADAB1161818A10076F95D /* invoice.php */,
 			);
 			path = data;
 			sourceTree = "<group>";
