@@ -638,7 +638,7 @@
 
 #artist_statement .detail_text {
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 14px;
     color: #222;
     font-size: 16px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
