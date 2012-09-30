@@ -120,8 +120,10 @@ function renderArtistStatement()
     $('#invoice_summary').html(html);
 }
 
+var g_currentInvoiceIndex = false;
 function showInvoice(index)
 {
+    g_currentInvoiceIndex = index;
     var invoice = g_artistInvoiceList[index];
     
     var invoice_id = "{0}-{1}".format(invoice.artist_id,invoice.id.padZeros(8));
@@ -166,6 +168,39 @@ function showInvoiceList()
 {
     $('#artist_invoice').hide();
     $('#artist_statement').show();
+}
+
+function invoicePay()
+{
+    var invoice = g_artistInvoiceList[g_currentInvoiceIndex];
+    
+    var args = {
+        method: "pay_invoice",
+        invoice_id: invoice.id,
+    };
+    
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: '/manage/data/invoice.php',
+        data: args,
+        dataType: 'json',
+        success: function(data) 
+        {
+            if( data['error'] )
+            {
+                window.alert(data['error']);
+            }
+            else
+            {
+                window.alert("Invoice Paid!");
+            }
+        },
+        error: function()
+        {
+            window.alert("Failed to pay invoice.");
+        }
+    });
 }
 
 function renderArtistSettlementOrderArray(orders,tag,summary_tag)
