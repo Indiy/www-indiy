@@ -580,6 +580,7 @@
 /***********************************************************************/
 
 #artist_statement {
+    padding-bottom: 50px;
     width: 940px;
     margin: 0 auto;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
