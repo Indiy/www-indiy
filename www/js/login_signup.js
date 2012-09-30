@@ -180,9 +180,13 @@ function recoverAccountSubmit()
                 {
                     window.alert(data['error']);
                 }
+                else if( data['url'] )
+                {
+                    window.location.href = data['url'];
+                }
                 else
                 {
-                    
+                    window.alert("Failed to reset password, please try again.");
                 }
             },
             error: function()
