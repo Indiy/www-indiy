@@ -77,3 +77,29 @@ function showFirstInstructions()
     showPopup('#first_instructions');
 }
 
+function closeFirstInstructions()
+{
+    if( $('#first_instructions #dont_show_again').is(':checked') )
+    {
+        var args = {
+            method: "clear_first_instructions",
+            artist_id: g_artistId
+        };
+    
+        jQuery.ajax(
+        {
+            type: 'POST',
+            url: "/manage/data/profile.php",
+            data: args,
+            dataType: 'json',
+            success: function(data) 
+            {
+            },
+            error: function()
+            {
+            }
+        });
+    }
+
+    closePopup();
+}

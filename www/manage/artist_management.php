@@ -158,12 +158,11 @@
     }
 
     $show_first_instruction = FALSE;
-    if( $_SESSION['sess_userType'] == 'ARTIST' && $artistID == $_SESSION['sess_userId'] )
+    if( $_SESSION['sess_userType'] == 'ARTIST' )
     {
-        if(! $record_artistDetail['shown_first_instructions'] )
+        if( !$record_artistDetail['shown_first_instructions'] )
         {
             $show_first_instruction = TRUE;
-            mysql_update('mydna_musicplayer',array("shown_first_instructions" => 1),'id',$artistID);
         }
     }
     
