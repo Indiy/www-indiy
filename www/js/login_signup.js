@@ -163,7 +163,7 @@ function recoverAccountSubmit()
     }
 
     var args = {
-        method: "set_password",
+        method: "update_password",
         token: token,
         password: password,
     };
@@ -191,7 +191,7 @@ function recoverAccountSubmit()
             },
             error: function()
             {
-                window.alert("Failed to send email, please check your email address and try again.");
+                window.alert("Failed to reset password, please try again.");
                 return false;
             }
         });
