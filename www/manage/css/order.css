@@ -636,6 +636,19 @@
     background: #e2e2e2 url("/images/cart_under_texture.png") repeat-x;
 }
 
+#artist_statement .detail_text {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: #222;
+    font-size: 16px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+}
+#artist_statement .detail_text a {
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 #artist_statement .sub_title {
     padding-top: 0px;
     padding-bottom: 12px;
