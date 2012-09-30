@@ -33,7 +33,6 @@
 		2D34E22714A06AC9004473F9 /* twitter_landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twitter_landing.php; sourceTree = "<group>"; };
 		2D34E22E14A59976004473F9 /* tooltip_text.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = tooltip_text.js; sourceTree = "<group>"; };
 		2D34E23214A9680C004473F9 /* faq.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = faq.php; sourceTree = "<group>"; };
-		2D34E23314AAD64D004473F9 /* forgot_password.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = forgot_password.html; sourceTree = "<group>"; };
 		2D34E23414AADC6D004473F9 /* forgot_password.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = forgot_password.php; sourceTree = "<group>"; };
 		2D34E23514ABFF09004473F9 /* video-js.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "video-js.css"; sourceTree = "<group>"; };
 		2D34E23714AD5897004473F9 /* fan_connections.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_connections.php; sourceTree = "<group>"; };
@@ -244,7 +243,6 @@
 		2DC1809B160FA8FC007B44C0 /* login_twitter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = login_twitter.php; sourceTree = "<group>"; };
 		2DC1809C160FD476007B44C0 /* fan_signup_facebook.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_signup_facebook.php; sourceTree = "<group>"; };
 		2DC1809D160FD481007B44C0 /* fan_signup_twitter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_signup_twitter.php; sourceTree = "<group>"; };
-		2DC1809E160FDD53007B44C0 /* login_failed.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = login_failed.php; sourceTree = "<group>"; };
 		2DC262C215EEC67400CA560F /* footer.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = footer.html; sourceTree = "<group>"; };
 		2DC262C415EEC76900CA560F /* fan_header.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = fan_header.html; sourceTree = "<group>"; };
 		2DC262C515EFD0B600CA560F /* fan_header_footer.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = fan_header_footer.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
@@ -282,6 +280,8 @@
 		2DEADAB21618C0320076F95D /* header2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = header2.html; sourceTree = "<group>"; };
 		2DEADAB31618C0410076F95D /* footer2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = footer2.html; sourceTree = "<group>"; };
 		2DEADAB41618C1170076F95D /* header2.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = header2.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2DEADAB91618E2AA0076F95D /* forgot_password.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = forgot_password.php; sourceTree = "<group>"; };
+		2DEADABA1618E3AD0076F95D /* forgot_password.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = forgot_password.html; sourceTree = "<group>"; };
 		2DF470301440B77F005538C7 /* art.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = art.php; sourceTree = "<group>"; };
 		2DF470401440B77F005538C7 /* artists.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artists.php; sourceTree = "<group>"; };
 		2DF470411440B77F005538C7 /* be-heard.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "be-heard.php"; sourceTree = "<group>"; };
@@ -1011,6 +1011,7 @@
 				2DC262C215EEC67400CA560F /* footer.html */,
 				2DC262E815FFD6A400CA560F /* signup.html */,
 				2D8949231614D58700538B7F /* login.html */,
+				2DEADABA1618E3AD0076F95D /* forgot_password.html */,
 				2DC1808C160E5E82007B44C0 /* error404.html */,
 				2DEADA9D1613A27C0076F95D /* home.html */,
 				2DEADAB21618C0320076F95D /* header2.html */,
@@ -1184,7 +1185,6 @@
 				2DEADA9B1613A23B0076F95D /* home2.php */,
 				2DBDD1271469D46D001E20CC /* footer.php */,
 				2DF471C71440B77F005538C7 /* index.php */,
-				2D34E23314AAD64D004473F9 /* forgot_password.html */,
 				2DF472FE1440B77F005538C7 /* music.php */,
 				2DF473291440B77F005538C7 /* php.ini */,
 				2D4116BB1534E44900F18000 /* privacy.php */,
@@ -1192,7 +1192,7 @@
 				2D4116BC1534E44A00F18000 /* terms_service.php */,
 				2DF47528144BFF7A005538C7 /* timthumb.php */,
 				2DF474141440B77F005538C7 /* tour.php */,
-				2DC1809E160FDD53007B44C0 /* login_failed.php */,
+				2DEADAB91618E2AA0076F95D /* forgot_password.php */,
 				2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */,
 				2D380B95146E35CD00E36189 /* robots.txt */,
 				2DC18090160E5EC3007B44C0 /* error404.php */,

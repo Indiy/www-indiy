@@ -54,6 +54,10 @@ body {
     background: url("/images/login_bg.jpg") top center no-repeat;
     background-size: 100% auto;
 }
+.forgot_password_page #body_wrap {
+    background: url("/images/forgot_password_bg.jpg") top center no-repeat;
+    background-size: 100% auto;
+}
 
 #main_content {
     padding-bottom: 47px;

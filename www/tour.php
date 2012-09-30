@@ -55,7 +55,7 @@ data-setup="{}">
 		<div class="reset">
 		<h3>Can’t Login?</h3>
 		<p>Click the button below and we will email instructions to you on how to reset your password. </p>
-		<div class="button_reset"><a href="/forgot_password.html">RESET PASSWORD</a></div>
+		<div class="button_reset"><a href="/forgot_password.php">RESET PASSWORD</a></div>
 		</div>
 		</div>
 		</div>
