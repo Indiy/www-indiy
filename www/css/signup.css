@@ -252,9 +252,15 @@ html, body {
 }
 #signup .credentials .detail {
     padding-top: 7px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 565px;
     color: #333;
     font-size: 14px;
     text-align: center;
+}
+#signup .credentials .detail.left {
+    text-align: left;
 }
 #signup .credentials .detail a {
     color: #333;
