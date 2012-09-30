@@ -35,22 +35,14 @@ function post_signup($row)
     if( $email )
     {
         $to = $email;
-        $message = <<<END
-
-Thanks for signing up!
-
-Welcome! We're excited to have you join us and wanted to give you your login info for your records.
-
-Login Email Address: $email
         
-Enjoy your membership, and if you have any quesitons, email us at support@myartistdna.com
+        ob_start();
+        
+        include PATH_TO_ROOT . "templates/email_artist_signup.html";
+        
+        $message = ob_get_contents();
+        ob_end_clean();
 
-Thank You,
-The MyArtistDNA Team
-
-Be Heard. Be Seen. Be Independent.
-
-END;
         $subject = "Welcome to MyArtistDNA";
         $from = "no-reply@myartistdna.com";
         $headers = "From:" . $from;

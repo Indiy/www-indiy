@@ -43,7 +43,6 @@
 		2D380B8B1468AC0500E36189 /* manage.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = manage.js; sourceTree = "<group>"; };
 		2D380B90146A004B00E36189 /* signup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = signup.php; sourceTree = "<group>"; };
 		2D380B92146A08AA00E36189 /* login_helper.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = login_helper.php; sourceTree = "<group>"; };
-		2D380B94146B55F700E36189 /* login_signup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = login_signup.html; sourceTree = "<group>"; };
 		2D380B95146E35CD00E36189 /* robots.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = robots.txt; sourceTree = "<group>"; };
 		2D380B96146E3EAC00E36189 /* setup_abbrev.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = setup_abbrev.php; sourceTree = "<group>"; };
 		2D380B99146F0A5D00E36189 /* .htaccess */ = {isa = PBXFileReference; lastKnownFileType = text; path = .htaccess; sourceTree = "<group>"; };
@@ -275,6 +274,7 @@
 		2DEADA9E1613B4EC0076F95D /* home.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = home.js; sourceTree = "<group>"; };
 		2DEADA9F1613B6C00076F95D /* home.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = home.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DEADAAB16164A040076F95D /* artist_invoice.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = artist_invoice.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2DEADAAD16180E670076F95D /* email_artist_signup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = email_artist_signup.html; sourceTree = "<group>"; };
 		2DF470301440B77F005538C7 /* art.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = art.php; sourceTree = "<group>"; };
 		2DF470401440B77F005538C7 /* artists.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artists.php; sourceTree = "<group>"; };
 		2DF470411440B77F005538C7 /* be-heard.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "be-heard.php"; sourceTree = "<group>"; };
@@ -1006,6 +1006,7 @@
 				2D8949231614D58700538B7F /* login.html */,
 				2DC1808C160E5E82007B44C0 /* error404.html */,
 				2DEADA9D1613A27C0076F95D /* home.html */,
+				2DEADAAD16180E670076F95D /* email_artist_signup.html */,
 			);
 			path = templates;
 			sourceTree = "<group>";
@@ -1365,7 +1366,6 @@
 				2DF471341440B77F005538C7 /* config.php */,
 				2DF4713D1440B77F005538C7 /* functions.php */,
 				2D380B92146A08AA00E36189 /* login_helper.php */,
-				2D380B94146B55F700E36189 /* login_signup.html */,
 			);
 			path = includes;
 			sourceTree = "<group>";

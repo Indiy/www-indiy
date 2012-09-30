@@ -73,10 +73,6 @@ background:#f6f6f6;
 </section>
 <!-- FOOTER -->
 
-<?php
-include_once 'includes/login_signup.html';
-?>
-
 <div id='newsletter_mask' style='display: none;'></div>
 <div id='newsletter_wrapper' style='display: none;'>
     <div id='newsletter_container'>

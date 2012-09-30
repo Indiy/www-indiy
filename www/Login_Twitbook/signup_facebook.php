@@ -1,13 +1,13 @@
 <?php
 
+    define("PATH_TO_ROOT","../");
+
     require_once '../includes/config.php';
     require_once '../includes/functions.php';
     require_once '../includes/login_helper.php';
     
     require_once 'facebook/facebook.php';
     require_once 'config/fbconfig.php';
-    require_once 'config/functions.php';
-    
     
     $args = array('appId' => APP_ID,'secret' => APP_SECRET);
     $facebook = new Facebook($args);
