@@ -1482,16 +1482,15 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     margin-left: 4px;
 }
 #popup .dont_show_again {
-    padding-top: 2px;
-    padding-bottom: 10px;
-    text-align: center;
+    padding-top: 13px;
+    padding-bottom: 6px;
+    padding-left: 20px;
 }
 #popup .dont_show_again input {
-    padding-left: 10px;
-    padding-right: 10px;
 }
 #popup .dont_show_again .detail {
     display: inline-block;
+    font-size: 13px;
 }
 
 #spinner
