@@ -51,7 +51,7 @@ function post_artist_signup($row)
         mail($to,$subject,$message,$headers);
     }
 }
-function post_fan_signup()
+function post_fan_signup($row)
 {
     $email = $row['email'];
     if( $email )
