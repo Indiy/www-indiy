@@ -194,35 +194,35 @@ function onSignupClick()
     return false;
 }
 
-function onForgotPasswordClick()
+function forgotPasswordSubmit()
 {           
-    var username = escape( $('#login_username').val() );
+    var username = $('#login_username').val();
 
-    // Send the ajax request.
+    var args = {
+        method: "send_code",
+        email: username
+    };
+
     jQuery.ajax(
         {
             type: "POST",
-            url: "/data/forgot_password.php?email="+username,
+            url: "/data/forgot_password.php",
+            data: args,
             dataType: "json",
             success: function(data)
             {
-                var error = data['error'];
-                if( error == 0 )
+                if( data['error'] )
                 {
-                    $('.instructions').text(data['msg']);
-                    $('.login').hide();
-                    $('.email_header').hide();
-                    $('#login_username').hide();
+                    window.alert(data['error']);
                 }
                 else
-                {           
-                    $('#validate-login').html("<span class='ui-error'>Couldn't find your user. Please try again.</span>");                  
-                    return false;
+                {
+                    window.alert("Email sent.  Please check your email for your password reset link.");
                 }
             },
             error: function()
             {
-                $('#validate-login').html("<span class='ui-error'>Couldn't find your user. Please try again.</span>");                   
+                window.alert("Failed to send email, please check your email address and try again.");
                 return false;
             }
         });

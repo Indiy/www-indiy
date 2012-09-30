@@ -2,6 +2,7 @@
 
     require_once 'includes/functions.php';   
     require_once 'includes/config.php';
+    require_once 'includes/login_helper.php';
     require_once 'includes/paypalfunctions.php';
     
     $expire = time() + 60*24*60*60;
@@ -141,11 +142,13 @@
         }
         
         $fan_needs_register = TRUE;
+        
         $register_token = FALSE;
         
         $fan_data = mf(mq("SELECT * FROM fans WHERE email='$fan_email'"));
         if( $fan_data )
         {
+            $fan_id = $fan_data['id'];
             if( strlen($fan_data['password']) > 0 )
             {
                 $fan_needs_register = FALSE;
@@ -153,22 +156,22 @@
             else
             {
                 $register_token = random_string(32);
-                $fan_data['register_token'] = $register_token;
-                $updates = array("register_token" => $register_token);
-                mysql_update('fans',$updates,'id',$fan_data['id']);
+                $values = array("register_token" => $register_token);
+                mysql_update('fans',$values,'id',$fan_id);
             }
         }
         else
         {
             $register_token = random_string(32);
-            $fan_data = array("email" => $fan_email,
-                              "register_token" => $register_token,
-                              );
-            mysql_insert('fans',$fan_data);
-            $fan_data['id'] = mysql_insert_id();
+            $values = array(
+                            "email" => $fan_email,
+                            "register_token" => $register_token,
+                            );
+            mysql_insert('fans',$values);
+            $fan_id = mysql_insert_id();
+            $fan_data = mf(mq("SELECT * FROM fans WHERE id='$fan_id'"));
         }
-        $fan_id = $fan_data['id'];
-        $_SESSION['fan_id'] = $fan_id;
+        login_fan_from_row($fan_data);
         
         if( $contains_digital_items )
         {

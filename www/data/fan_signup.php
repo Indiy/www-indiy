@@ -1,5 +1,7 @@
 <?php
     
+    define("PATH_TO_ROOT","../");
+    
     require_once '../includes/config.php';
     require_once '../includes/functions.php';
     require_once '../includes/login_helper.php';
@@ -10,21 +12,17 @@
     
     $method = $_REQUEST['method'];
     
-    if( $method == 'register' )
-    {
-        do_register();
-    }
-    else if( $method == 'send_register_token' )
-    {
-        do_send_register_token();
-    }
-    else if( $method == 'change_password' )
+    if( $method == 'change_password' )
     {
         do_change_password();
     }
     else if( $method == 'signup' )
     {
         do_signup();
+    }
+    else if( $method == 'set_password' )
+    {
+        do_set_password();
     }
     
     function do_register()

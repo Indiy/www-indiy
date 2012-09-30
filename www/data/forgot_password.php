@@ -1,4 +1,6 @@
-<?
+<?php
+
+    define("PATH_TO_ROOT","../");
 
     require_once '../includes/config.php';
     require_once '../includes/functions.php';
@@ -8,58 +10,104 @@
     header("Cache-Control: no-cache");
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
 
+    $method = $_REQUEST['method'];
 
-    function generatePassword($length = 8)
+    if( $method == "send_code" )
     {
-        $possible = "123467890abcdefghijkmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        $possible_len = strlen($possible);
-        
-        $password = "";
-        for($i = 0 ; $i < $length ; $i++ ) 
-        {
-            $char = substr($possible, mt_rand(0, $possible_len-1), 1);
-            $password .= $char;
-        }
-        return $password;
-    }
-
-    $email = $_REQUEST['email'];
-
-    $error = FALSE;
-    $msg = '';
-
-    $sql = "SELECT * FROM mydna_musicplayer WHERE email = '$email' LIMIT 1";
-    $q = mysql_query($sql) or die("bad sql: '$sql'");
-    if( mysql_num_rows($q) == 0 )
-    {
-        $error = 1;
+        do_send_code();
+        die();
     }
     else
     {
-        $user = mf($q);
-        $new_password = generatePassword();
-        mysql_update("mydna_musicplayer",
-                     array("password" => md5($new_password)),
-                     "id",
-                     $user['id']);
-
-        $to = $email;
-        $subject = 'Retrieve password for MyArtistDNA!';
-        $message = <<<END
-        
-Forgot your password? No worries, we created a new one for you: $new_password
-
-END;
-        $from = "no-reply@myartistdna.com";
-        $headers = "From:" . $from;
-        
-        mail($to,$subject,$message,$headers);
-        $error = 0;
-        $msg = "Your new password has been emailed to $email.";
+        header("HTTP/1.0 400 Bad Request");
+        print "Unknown request\n";
+        var_dump($_REQUEST);
+        die();
     }
 
-    $output = array("error" => $error,"msg" => $msg);
-    print json_encode($output);
+    function send_reset_email($email,$register_token)
+    {
+        $link = trueSiteUrl() . "/recover_account.php?token=$register_token";
+        $generic_link = trueSiteUrl() . "/recover_account.php";
+    
+        $to = $email;
+        $subject = "Retrieve your MyArtistDNA Account!";
+
+        ob_start();
+        include PATH_TO_ROOT . "templates/email_forgot_password.html";
+        $message = ob_get_contents();
+        ob_end_clean();
+
+        $from = "no-reply@myartistdna.com";
+
+        $headers = "From: $from\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+        
+        mail($to,$subject,$message,$headers);
+    }
+
+    function do_send_code()
+    {
+        $error = "Email address not found.";
+        $sent_email = FALSE;
+        
+        $email = $_REQUEST['email'];
+        if( strlen($email) > 0 )
+        {
+            $register_token = random_string(32);
+
+            $sql = "SELECT * FROM mydna_musicplayer WHERE email = '$email' LIMIT 1";
+            $artist = mf(mq($sql));
+            if( $artist )
+            {
+                $artist_id = $artist['id'];
+            
+                $values = array("register_token" => $register_token);
+                mysql_update('mydna_musicplayer',$values,'id',$artist_id);
+
+                $email = $artist['email'];
+                
+                if( !$sent_email )
+                {
+                    $sent_email = TRUE;
+                    send_reset_email($email,$register_token);
+                    $error = FALSE;
+                }
+            }
+            
+            $sql = "SELECT * FROM fans WHERE email='$email' LIMIT 1";
+            $fan = mf(mq($sql));
+            if( $fan )
+            {
+                $fan_id = $fan['id'];
+                
+                $values = array("register_token" => $register_token);
+                mysql_update('fans',$values,'id',$fan_id);
+                
+                $email = $fan['email'];
+                
+                if( !$sent_email )
+                {
+                    $sent_email = TRUE;
+                    send_reset_email($email,$register_token);
+                    $error = FALSE;
+                }
+            }
+        }
+
+        if( $error )
+        {
+            $output = array("error" => $error);
+            print json_encode($output);
+            die();
+        }
+        else
+        {
+            $output = array("success" => 1);
+            print json_encode($output);
+            die();
+        }
+    }
 
 ?>
-
