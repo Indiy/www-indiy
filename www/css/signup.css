@@ -351,6 +351,26 @@ html, body {
     padding-top: 27px;
     height: 53px;
 }
+#signup .credentials .forgot_password {
+    margin-left: auto;
+    margin-right: auto;
+    width: 611px;
+    height: 30px;
+    text-align: right;
+}
+#signup .credentials .forgot_password {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0px;
+    width: 611px;
+    height: 30px;
+    text-align: right;
+}
+#signup .credentials .forgot_password a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: underline;
+}
 #signup .credentials .submit_container .submit {
     margin-top: 0px;
     margin-right: auto;
