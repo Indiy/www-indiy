@@ -71,7 +71,7 @@
                 $insert_id = mysql_insert_id();
                 $q = mysql_query("SELECT * FROM mydna_musicplayer WHERE id = $insert_id");
                 $row = mf($q);
-                post_signup($row);
+                post_artist_signup($row);
                 $url = loginArtistFromRow($row);
             }
             else

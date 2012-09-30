@@ -283,6 +283,7 @@
 		2DEADABB1618F44A0076F95D /* email_forgot_password.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = email_forgot_password.html; sourceTree = "<group>"; };
 		2DEADABC1618F7150076F95D /* recover_account.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = recover_account.php; sourceTree = "<group>"; };
 		2DEADABD1618F7960076F95D /* recover_account.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = recover_account.html; sourceTree = "<group>"; };
+		2DEADABE1619039A0076F95D /* email_fan_signup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = email_fan_signup.html; sourceTree = "<group>"; };
 		2DF470301440B77F005538C7 /* art.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = art.php; sourceTree = "<group>"; };
 		2DF470401440B77F005538C7 /* artists.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artists.php; sourceTree = "<group>"; };
 		2DF470411440B77F005538C7 /* be-heard.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "be-heard.php"; sourceTree = "<group>"; };
@@ -1018,6 +1019,7 @@
 				2DEADAB21618C0320076F95D /* header2.html */,
 				2DEADAB31618C0410076F95D /* footer2.html */,
 				2DEADAAD16180E670076F95D /* email_artist_signup.html */,
+				2DEADABE1619039A0076F95D /* email_fan_signup.html */,
 				2DEADAAE1618116D0076F95D /* email_artist_order.html */,
 				2DEADAAF161812740076F95D /* email_fan_order.html */,
 				2DEADAB0161812820076F95D /* email_fan_order_digital.html */,

@@ -29,7 +29,7 @@ function login_fan_from_row($row)
     return fan_site_url();
 }
 
-function post_signup($row)
+function post_artist_signup($row)
 {
     $email = $row['email'];
     if( $email )
@@ -41,6 +41,28 @@ function post_signup($row)
         $message = ob_get_contents();
         ob_end_clean();
 
+        $subject = "Welcome to MyArtistDNA";
+        $from = "no-reply@myartistdna.com";
+        
+        $headers = "From: $from\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+        
+        mail($to,$subject,$message,$headers);
+    }
+}
+function post_fan_signup()
+{
+    $email = $row['email'];
+    if( $email )
+    {
+        $to = $email;
+        
+        ob_start();
+        include PATH_TO_ROOT . "templates/email_fan_signup.html";
+        $message = ob_get_contents();
+        ob_end_clean();
+        
         $subject = "Welcome to MyArtistDNA";
         $from = "no-reply@myartistdna.com";
         

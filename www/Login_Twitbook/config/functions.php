@@ -129,7 +129,7 @@ class User {
 
 			 $query_data = mysql_query("SELECT * FROM mydna_musicplayer WHERE oauth_uid = '$uid' and oauth_provider = '$oauth_provider'");
 			 $result_data = mysql_fetch_array($query_data);
-             post_signup($result_data);
+             post_artist_signup($result_data);
 			 return $result_data;
         }
         return $result;

@@ -157,6 +157,7 @@
                 $fan_id = $fan['id'];
                 $values = array("password" => $hash_password);
                 mysql_update('fans',$values,'id',$fan_id);
+                post_fan_signup($fan);
             }
             else
             {
@@ -166,6 +167,7 @@
                 mysql_insert('fans',$values);
                 $fan_id = mysql_insert_id();
                 $fan = mf(mq("SELECT * FROM fans WHERE id='$fan_id'"));
+                post_fan_signup($fan);
             }
 
             if( $fan )

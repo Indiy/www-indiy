@@ -64,6 +64,9 @@
             $fan_id = mysql_insert_id();
             
             $fan = mf(mq("SELECT * FROM fans WHERE id='$fan_id'"));
+
+            post_fan_signup($fan);
+
             $url = login_fan_from_row($fan);
             header("Location: $url");
             die();
