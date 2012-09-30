@@ -213,7 +213,9 @@
         ob_end_clean();
 
         $from = "no-reply@myartistdna.com";
-        $headers = "From:" . $from;
+        $headers = "From: $from\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
         mail($to,$subject,$message,$headers);
         
         /******** Fan Email *******/
@@ -234,7 +236,9 @@
         ob_end_clean();
         
         $from = "no-reply@myartistdna.com";
-        $headers = "From:" . $from;
+        $headers = "From: $from\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
         mail($to,$subject,$message,$headers);
     }
     else  
