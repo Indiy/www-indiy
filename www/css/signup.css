@@ -232,7 +232,6 @@ html, body {
     padding-top: 25px;
 }
 #signup .credentials {
-    height: 370px;
     width: 660px;
     margin-left: auto;
     margin-right: auto;
@@ -361,9 +360,9 @@ html, body {
 #signup .credentials .forgot_password {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 0px;
-    width: 611px;
-    height: 30px;
+    padding-top: 5px;
+    width: 585px;
+    height: 0px;
     text-align: right;
 }
 #signup .credentials .forgot_password a {
