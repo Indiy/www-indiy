@@ -136,7 +136,7 @@ function forgotPasswordSubmit()
 } 
 function recoverAccountSubmit()
 {
-    var token = g_registerToken;
+    var token = g_recoverToken;
     if( !token )
     {
         token = $('#login_token').val();
