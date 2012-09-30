@@ -128,7 +128,7 @@
         {
             $artist_id = $artist['id'];
             
-            $values = array("password" => $password,
+            $values = array("password" => md5($password),
                             "register_token" => "",
                             );
             mysql_update('mydna_musicplayer',$values,'id',$artist_id);
