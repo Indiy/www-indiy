@@ -1,4 +1,77 @@
 
+#header2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: url("/images/home_top_bg.png") repeat;
+    font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#header2 .left {
+    float: left;
+    margin-left: 87px;
+    height: 48px;
+    font-size: 0px;
+    text-align: left;
+}
+#header2 .left .mad_logo {
+    display: inline-block;
+    margin-top: 13px;
+    height: 22px;
+    width: 126px;
+    background: url("/images/mad_logo_white_126_22.png") no-repeat;
+    vertical-align: top;
+}
+
+#header2 .right {
+    float: right;
+    margin-right: 19px;
+    height: 48px;
+    font-size: 0px;
+}
+
+#header2 .right .trap_button {
+    position: relative;
+    display: inline-block;
+    margin-left: -43px;
+    width: 188px;
+    height: 50px;
+    background: url("/images/grey_trap.png") no-repeat;
+    text-align: center;
+    vertical-align: top;
+}
+#header2 .right .trap_button .inner {
+    height: 100%;
+    width: 100%;
+}
+#header2 .right .trap_button .icon {
+    display: inline-block;
+    margin-top: 18px;
+    padding-right: 8px;
+    height: 13px;
+    width: 29px;
+    background: url("/images/mad_logo_29_13.png") no-repeat;
+    vertical-align: top;
+}
+
+#header2 .right .trap_button .inner .label {
+    display: inline-block;
+    padding-top: 20px;
+    height: 30px;
+    color: white;
+    font-size: 11px;
+    text-decoration: none;
+    vertical-align: top;
+}
+#header2 .right .trap_button .inner:hover .label {
+    color: #ff9734;
+}
+
+
+
+
+
 #footer2 .bottom_bar {
     position: absolute;
     bottom: 0;
