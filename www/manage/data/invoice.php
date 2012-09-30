@@ -68,8 +68,7 @@
         
         if( $ack == 'Success' )
         {
-            $ret = array("success" => 1);
-            $timestamp = $resArray['TIMESTAMP']
+            $timestamp = $resArray['TIMESTAMP'];
             $ts = strtotime($timestamp);
             $paid_date = date('Y-m-d H:i:s',$ts);
             
