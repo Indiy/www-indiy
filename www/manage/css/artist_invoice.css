@@ -351,23 +351,25 @@
 /***********************************************************************/
 
 #artist_invoice .super_admin {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin-bottom: 40px;
+    padding-left: 20px;
     background: white;
 }
 #artist_invoice .super_admin .title {
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     color: black;
-    font-size: 16px;
+    font-size: 24px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
 }
 #artist_invoice .super_admin button {
     padding-top: 7px;
-    height: 18px;
+    height: 27px;
     width: 200px;
     background: #1E2126;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     text-align: center;
     cursor: pointer;
