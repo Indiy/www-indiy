@@ -343,12 +343,12 @@
                            "L_AMT0" => $amount,
                            "CURRENCYCODE" => "USD",
                            );
-        $ret = paypal_hash_call($nvp_array);
+        $resArray = paypal_hash_call($nvp_array);
         
         
-        print "mass pay result: "; var_dump($ret);
+        print "mass pay result: "; var_dump($resArray);
         
-        return TRUE;
+        return $resArray;
     }
 
 

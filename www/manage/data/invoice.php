@@ -62,19 +62,54 @@
 
         $amount = $invoice['amount'];
         
-        $ret = paypal_masspay($email,$amount);
+        $resArray = paypal_masspay($email,$amount);
         
-        if( $ret )
+        $ack = $resArray['ACK'];
+        
+        if( $ack == 'Success' )
         {
-            $ret = array("error" => "Masspay failed!");
+            $ret = array("success" => 1);
+            $timestamp = $resArray['TIMESTAMP']
+            $ts = strtotime($timestamp);
+            $paid_date = date('Y-m-d H:i:s',$ts);
+            
+            $correlation_id = $resArray['CORRELATIONID'];
+            
+            $extra = json_decode($invoice['extra_json'],TRUE);
+            if( !$extra )
+            {
+                $extra = array();
+            }
+            if( !isset($extra['payments']) )
+            {
+                $extra['payments'] = array();
+            }
+            $extra['payments'][] = array("correlation_id" => $correlation_id,
+                                         "amount" => $amount,
+                                         "timestamp" => $timestamp,
+                                         "method" => "paypal masspay",
+                                         );
+            $extra_json = json_encode($extra);
+            
+            $values = array("extra_json" => $extra_json,
+                            "paid_amount" => $amount,
+                            "paid_date" => $paid_date,
+                            );
+            
+            print "values: "; var_dump($values);
+            
+            mysql_update("artist_invoices",$values,'id',$invoice_id);
+            
+            $ret = array("success" => 1);
+            echo json_encode($ret);
+            die();
         }
         else
         {
-            $ret = array("success" => 1);
+            $ret = array("error" => "Masspay failed!");
+            echo json_encode($ret);
+            die();
         }
-        
-		echo json_encode($ret);
-		die();
     }
     
 
