@@ -108,7 +108,12 @@
             
             mysql_update("artist_invoices",$values,'id',$invoice_id);
             
-            $ret = array("success" => 1);
+            $invoice = mf(mq("SELECT * FROM artist_invoices WHERE id='$invoice_id'"));
+            $invoice_json = json_encode($invoice);
+            
+            $ret = array("success" => 1,
+                         "invoice" => $invoice_json,
+                         );
             echo json_encode($ret);
             die();
         }

@@ -193,6 +193,11 @@ function invoicePay()
             }
             else
             {
+                var invoice = data['invoice'];
+                
+                var html = "PAID (${0} on {1})".format(invoice.paid_amount,invoice.paid_date);
+                $('.set_invoice_status').html(html);
+                
                 window.alert("Invoice Paid!");
             }
         },
