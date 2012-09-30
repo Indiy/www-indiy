@@ -61,8 +61,17 @@
         }
 
         $amount = $invoice['amount'];
+        $paid_amount = $invoice['paid_amount'];
         
-        $resArray = paypal_masspay($email,$amount);
+        if( $paid_amount >= $amount )
+        {
+            $ret = array("error" => "Invoice already paid in full");
+            echo json_encode($ret);
+            die();
+        }
+        $to_pay_amount = $amount - $paid_amount;
+        
+        $resArray = paypal_masspay($email,$to_pay_amount);
         
         $ack = $resArray['ACK'];
         
@@ -84,14 +93,14 @@
                 $extra['payments'] = array();
             }
             $extra['payments'][] = array("correlation_id" => $correlation_id,
-                                         "amount" => $amount,
+                                         "amount" => $to_pay_amount,
                                          "timestamp" => $timestamp,
                                          "method" => "paypal masspay",
                                          );
             $extra_json = json_encode($extra);
             
             $values = array("extra_json" => $extra_json,
-                            "paid_amount" => $amount,
+                            "paid_amount" => $to_pay_amount + $paid_amount,
                             "paid_date" => $paid_date,
                             );
             
