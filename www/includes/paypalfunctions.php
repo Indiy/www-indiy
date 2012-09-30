@@ -346,7 +346,7 @@
         $resArray = paypal_hash_call($nvp_array);
         
         
-        print "mass pay result: "; var_dump($resArray);
+        //print "mass pay result: "; var_dump($resArray);
         
         return $resArray;
     }

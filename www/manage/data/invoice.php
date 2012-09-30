@@ -45,7 +45,7 @@
         
         if( !$invoice )
         {
-            $ret = array("error" => "Unknown invoice");
+            $ret = array("error" => "Unknown invoice.");
             echo json_encode($ret);
             die();
         }
@@ -65,7 +65,7 @@
         
         if( $paid_amount >= $amount )
         {
-            $ret = array("error" => "Invoice already paid in full");
+            $ret = array("error" => "Invoice already paid in full.");
             echo json_encode($ret);
             die();
         }
@@ -104,7 +104,7 @@
                             "paid_date" => $paid_date,
                             );
             
-            print "values: "; var_dump($values);
+            //print "values: "; var_dump($values);
             
             mysql_update("artist_invoices",$values,'id',$invoice_id);
             
