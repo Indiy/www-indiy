@@ -8,6 +8,7 @@
     
     require_once '../../includes/config.php';
     require_once '../../includes/functions.php';
+    require_once '../../includes/login_helper.php';
     
     if( $_SESSION['sess_userId'] == "" )
     {
@@ -189,6 +190,9 @@
         $values = array("email" => $email);
         
         mysql_update('mydna_musicplayer',$values,'id',$artist_id);
+        
+        $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id'"));
+        post_artist_signup($artist);
         
         $ret = array("success" => 1);
         echo json_encode($ret);
