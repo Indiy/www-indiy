@@ -143,6 +143,7 @@ function closeEmailPopup()
             }
             else
             {
+                g_artistData['email'] = email;
                 closePopup();
             }
         },
