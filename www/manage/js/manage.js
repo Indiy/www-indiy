@@ -145,11 +145,16 @@ function closeEmailPopup()
             {
                 g_artistData['email'] = email;
                 closePopup();
+                
+                if( g_shouldShowFirstInstruction )
+                {
+                    showFirstInstructions();
+                }
             }
         },
         error: function()
         {
-            closePopup();
+            window.alert("Failed to set email address, please try again.");
         }
     });
     
