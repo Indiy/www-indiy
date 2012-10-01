@@ -114,14 +114,6 @@ function clickFree(yes)
         $('#edit_page #mad_store').removeAttr('disabled');
     }
 }
-function clickMadStore()
-{
-    if( g_paypalEmail.length == 0 )
-    {
-        window.alert("You will need to add a Paypal Email address in Monetize settings to sell music in the MyArtistDNA Store.");
-    }
-}
-
 
 function onAddMusicSubmit()
 {

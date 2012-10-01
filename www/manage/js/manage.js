@@ -103,3 +103,53 @@ function closeFirstInstructions()
 
     closePopup();
 }
+
+function showEmailPopup()
+{
+    showPopup('#email_popup');
+}
+function closeEmailPopup()
+{
+    var email = $('#email_popup #email').val();
+    if( email.length == 0 )
+    {
+        window.alert("Please enter an email for your account.");
+        return false;
+    }
+
+    if( !EMAIL_REGEX.match(email) )
+    {
+        window.alert("Please enter a valid email address.");
+        return false;
+    }
+    
+    var args = {
+        method: "set_email_address",
+        artist_id: g_artistId,
+        email: email
+    };
+    
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: "/manage/data/profile.php",
+        data: args,
+        dataType: 'json',
+        success: function(data) 
+        {
+            if( data['error'] )
+            {
+                window.alert(data['error']);
+            }
+            else
+            {
+                closePopup();
+            }
+        },
+        error: function()
+        {
+            closePopup();
+        }
+    });
+    
+}

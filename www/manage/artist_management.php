@@ -217,30 +217,25 @@
 <script src="js/artist_management.js" type="text/javascript"></script>
 <script type="text/javascript">
 
-var g_artistId = <?=$artistID?>;
-var g_facebook = <?=$facebook;?>;
-var g_twitter = <?=$twitter;?>;
-var g_paypalEmail = "<?=$paypalEmail;?>";
-var g_artistData = <?=$artist_data_json;?>;
+    var g_artistId = <?=$artistID?>;
+    var g_facebook = <?=$facebook;?>;
+    var g_twitter = <?=$twitter;?>;
+    var g_artistData = <?=$artist_data_json;?>;
 
-var g_artistPageUrl = "<?=$artist_url;?>";
+    var g_artistPageUrl = "<?=$artist_url;?>";
 
-var g_pageList = <?=$page_list_json;?>;
-var g_photoList = <?=$photo_list_json;?>;
-var g_videoList = <?=$video_list_json;?>;
-var g_tabList = <?=$tab_list_json;?>;
-var g_productList = <?=$product_list_json;?>;
-var g_fileList = <?=$file_list_json;?>;
+    var g_pageList = <?=$page_list_json;?>;
+    var g_photoList = <?=$photo_list_json;?>;
+    var g_videoList = <?=$video_list_json;?>;
+    var g_tabList = <?=$tab_list_json;?>;
+    var g_productList = <?=$product_list_json;?>;
+    var g_fileList = <?=$file_list_json;?>;
 
-var g_playerUrl = "<?=playerUrl();?>";
+    var g_playerUrl = "<?=playerUrl();?>";
 
-var g_isPublished = <?=json_encode($is_published);?>;
+    var g_isPublished = <?=json_encode($is_published);?>;
 
-<? if( $show_first_instruction ): ?>
-
-$(document).ready(showFirstInstructions);
-
-<? endif; ?>
+    var g_shouldShowFirstInstruction = <?=json_encode($show_first_instruction);?>
 
 </script>
 

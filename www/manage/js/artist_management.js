@@ -33,6 +33,16 @@ function artistManagementReady()
     setupSortableList('ul.products_sortable',"/manage/data/product.php");
     setupSortableList('ul.photos_sortable',"/manage/data/photo.php");
     setupSortableList('ul.pages_sortable',"/manage/data/tab.php");
+    
+    if( !g_artistData['email'] )
+    {
+        showEmailPopup();
+    }
+    else if( g_shouldShowFirstInstruction )
+    {
+        showFirstInstructions();
+    }
+    
 }
 $(document).ready(artistManagementReady);
 
