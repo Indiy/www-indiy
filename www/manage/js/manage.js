@@ -117,7 +117,7 @@ function closeEmailPopup()
         return false;
     }
 
-    if( !EMAIL_REGEX.match(email) )
+    if( !email.match(EMAIL_REGEX) )
     {
         window.alert("Please enter a valid email address.");
         return false;
