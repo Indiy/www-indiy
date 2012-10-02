@@ -58,6 +58,10 @@ body {
     background: url("/images/forgot_password_bg.jpg") top center no-repeat;
     background-size: 100% auto;
 }
+.recover_account_page #body_wrap {
+    background: url("/images/recover_account_bg.jpg") top center no-repeat;
+    background-size: 100% auto;
+}
 
 #main_content {
     padding-bottom: 47px;
