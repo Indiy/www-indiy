@@ -8,7 +8,7 @@ include ('header.php');
 <section id="content">
 
     <div id="help">
-		<h2>LEARN ABOUT MYARTISTDNA</h2>
+		<h2>NEED MORE INFO?</h2>
 		<div class="videos">
 <!--
 <video width="638" height="358" controls>
