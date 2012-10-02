@@ -36,6 +36,13 @@ function post_artist_signup($row)
     {
         $to = $email;
         
+        $artist_name = $row['artist'];
+        $artist_email = $email;
+        $url = $row['url'];
+        $artist_url = str_replace("http://www.","http://$url.",trueSiteUrl());
+        
+        $manage_url = trueSiteUrl() ."/manage";
+        
         ob_start();
         include PATH_TO_ROOT . "templates/email_artist_signup.html";
         $message = ob_get_contents();
