@@ -105,7 +105,7 @@
             ?>
                 <li><a class="active" href="dashboard.php">DASHBOARD</a></li>
                 <li><a onclick="showAddArtist();">ADD ARTIST</a></li>
-                <li class="nodivider"><a onclick="showAddLabel();">ADD LABEL</a></li>
+                <li class="nodivider"><a onclick="showAddLabel();">ADD BRAND</a></li>
             <?php
         }
         else if( $_SESSION['sess_userType'] == 'LABEL' )

@@ -9,15 +9,6 @@
     </ul>
     </aside>
 
-    <aside class="benefits">
-    <h5>BENEFITS</h5>
-    <ul>
-     <li><a href="be-heard.html">Be Heard</a></li>
-     <li><a href="be-seen.html">Be Seen</a></li>
-     <li><a href="be-independent.html">Be Independent</a></li>
-    </ul>
-    </aside>
-
     <aside>
     <h5>SUPPORT</h5>
     <ul>
@@ -45,7 +36,7 @@
     </article>
 
     <div class="logo"><a href="http://myartistdna.is"><img src="images/MYARTISTDNA_footer.gif" alt="MYARTISTDNA"></a></div>
-    <p>&copy; 2011 <a href="http://myartistdna.com">MyArtistDNA</a></p>
+    <p>&copy; 2012 Powered by MyArtistDNA</p>
 
 </footer>
 </section><!-- footer -->
