@@ -9,15 +9,6 @@
     </ul>
     </aside>
 
-    <aside class="benefits">
-    <h5>BENEFITS</h5>
-    <ul>
-     <li><a href="be-heard.html">Be Heard</a></li>
-     <li><a href="be-seen.html">Be Seen</a></li>
-     <li><a href="be-independent.html">Be Independent</a></li>
-    </ul>
-    </aside>
-
     <aside>
     <h5>SUPPORT</h5>
     <ul>

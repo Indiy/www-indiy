@@ -25,15 +25,6 @@ background:#f6f6f6;
     </ul>
     </aside>
 
-    <aside class="benefits">
-    <h5>BENEFITS</h5>
-    <ul>
-     <li><a href="be-heard.php">Be Heard</a></li>
-     <li><a href="be-seen.php">Be Seen</a></li>
-     <li><a href="be-independent.php">Be Independent</a></li>
-    </ul>
-    </aside>
-
     <aside>
     <h5>SUPPORT</h5>
     <ul>
