@@ -142,7 +142,7 @@
     $file_list_json = json_encode($file_list);
 	
 	if($record_artistDetail['logo'] == '')
-		$artist_img_logo = "images/NoPhoto.jpg";
+		$artist_img_logo = "/manage/images/artist_need_image.jpg";
 	else
 		$artist_img_logo = "/artists/files/" . $record_artistDetail['logo'];
 
