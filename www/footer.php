@@ -20,7 +20,7 @@ background:#f6f6f6;
     <aside>
     <h5>ARTIST</h5>
     <ul>
-    <li><a href="#">All</a></li>
+    <li><a href="community.php">All</a></li>
   
     </ul>
     </aside>
@@ -28,16 +28,16 @@ background:#f6f6f6;
     <aside>
     <h5>SUPPORT</h5>
     <ul>
-    <li><a href="pricing.php">Pricing</a></li>
     <li><a href="faq.php">FAQ</a></li>
-    <li><a href="tour.php">Help</a></li>
+    <li><a href="tour.php">Contact Us</a></li>
     </ul>
     </aside>
 
     <aside>
-    <h5>AFFILIATES</h5>
+    <h5>MAD NETWORK</h5>
     <ul>
-    <li><a href="http://myartistdna.co">MAD.co</a></li>
+    <li><a href="http://myartistdna.com/fan">MAD Fan</a></li>
+    <li><a href="http://myartistdna.tumblr.com">MAD Blog</a></li>
     <li><a href="http://myartistdna.is">MAD.is</a></li>
     <li><a href="http://myartistdna.fm">MAD.fm</a></li>
     <li><a href="http://myartistdna.tv">MAD.tv</a></li>

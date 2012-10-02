@@ -63,21 +63,10 @@
 
     <nav>
         <ul>
-            <li>
-                <a href="be-heard.php">BENEFITS</a>
-                <span>
-                    <ul>
-                        <li></li>
-                        <li><a href="be-heard.php">BE HEARD</a></li>
-                        <li><a href="be-seen.php">BE SEEN</a></li>
-                        <li><a href="be-independent.php">BE INDEPENDENT</a></li>
-           
-                    </ul>
-                </span>  
-            </li>
-            <li><a href="artist-kit.php" target="_self">ARTIST KIT</a></li>
-            <li><a href="pricing.php" target="_self">PRICING</a></li>                       
-            <li><a href="tour.php">ABOUT US</a></li>                     
+            <li><a href="http://myartistdna.tumblr.com">READ</a></li>
+            <li><a href="http://myartistdna.fm" target="_self">LSITEN</a></li>
+            <li><a href="http://myartistdna.tv" target="_self">WATCH</a></li>                       
+            <li><a href="http://myartistdna.is">AGENCY</a></li>                     
             <li class="nodivider"><a class="login" href="/login.php">LOGIN</a></li>
         </ul>
         <div id="search">
