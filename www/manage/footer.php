@@ -34,6 +34,7 @@
     <ul>
     <li><a href="http://facebook.com/pages/MyArtistDNA/106114012796731" target="_blank"><span><img src="images/facebook.gif" alt="Facebook"></span> Become a fan on Facebook</a></li>
     <li><a href="http://twitter.com/myartistdna" target="_blank"><span><img src="images/twitter.gif" alt="Twitter"></span> Follow us on Twitter</a></li>
+    <li><a onclick='showNewsletter();'><span><img src="images/email.gif" alt="Email"></span> Join Newsletter</a></li>
 
     </ul>
     </article>
