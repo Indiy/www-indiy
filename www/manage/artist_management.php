@@ -295,7 +295,7 @@
             </ul>
             <h6>Platform</h6>
             <ul>
-                <li><a onclick='showPagePopup(false);' title='Add a song to your site'>Add Song</a></li>
+                <li><a onclick='showPagePopup(false);' title='Add audio to your site'>Add Audio</a></li>
                 <li><a onclick='showVideoPopup(false);' title='Add a video to your site'>Add Video</a></li>
                 <li><a onclick='showPhotoPopup(false);' title='Add a photo to your site'>Add Photo</a></li>
                 <li id='add_tab_list_item'><a onclick='showTabPopup(false);' title='Add a tab to your site'>Add Tab</a></li>
@@ -349,11 +349,11 @@
         </div>
         <div class="playlist">
         	<div class="heading">
-                <h5>SONGS</h5>
+                <h5>AUDIO</h5>
                 <a onclick='showPagePopup(false);' title='Add a song to your site'>
                     <div class="buttonadd">
                         <div class='plus'></div>
-                        <div class='label'>Add Song</div>
+                        <div class='label'>Add Audio</div>
                     </div>
                 </a>
             </div>
