@@ -4,24 +4,28 @@
     <aside>
     <h5>ARTIST</h5>
     <ul>
-    <li><a href="artists.php">All</a></li>
-   
+    <li><a href="#">All</a></li>
+  
     </ul>
     </aside>
 
     <aside>
     <h5>SUPPORT</h5>
     <ul>
-    <li><a href="tour.php">Help</a></li>
+    <li><a href="faq.php">FAQ</a></li>
+    <li><a href="tour.php">Contact Us</a></li>
     </ul>
     </aside>
 
     <aside>
-    <h5>AFFILIATES</h5>
+    <h5>MAD NETWORK</h5>
     <ul>
+    <li><a href="http://myartistdna.com/fan">MAD Fan</a></li>
+    <li><a href="http://myartistdna.tumblr.com">MAD Blog</a></li>
     <li><a href="http://myartistdna.is">MAD.is</a></li>
     <li><a href="http://myartistdna.fm">MAD.fm</a></li>
-       <li><a href="http://myartistdna.tv">MAD.tv</a></li>
+    <li><a href="http://myartistdna.tv">MAD.tv</a></li>
+
     </ul>
     </aside>
 
@@ -30,16 +34,14 @@
     <ul>
     <li><a href="http://facebook.com/pages/MyArtistDNA/106114012796731" target="_blank"><span><img src="images/facebook.gif" alt="Facebook"></span> Become a fan on Facebook</a></li>
     <li><a href="http://twitter.com/myartistdna" target="_blank"><span><img src="images/twitter.gif" alt="Twitter"></span> Follow us on Twitter</a></li>
-    <li><a href="#" target="_blank"><span><img src="images/email.gif" alt="Email"></span> Join Newsletter</a></li>
 
     </ul>
     </article>
 
-    <div class="logo"><a href="http://myartistdna.is"><img src="images/MYARTISTDNA_footer.gif" alt="MYARTISTDNA"></a></div>
+    <div class="logo"><a href="home.php"><img src="images/MYARTISTDNA_footer.gif" alt="MYARTISTDNA"></a></div>
     <p>&copy; 2012 Powered by MyArtistDNA</p>
 
-</footer>
-</section><!-- footer -->
+</footer></section><!-- footer -->
 
 <script type="text/javascript" charset="utf-8">
     var is_ssl = ("https:" == document.location.protocol);
