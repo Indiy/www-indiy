@@ -65,7 +65,7 @@ background:#f6f6f6;
     </article>
 
     <div class="logo"><a href="home.php"><img src="images/MYARTISTDNA_footer.gif" alt="MYARTISTDNA"></a></div>
-    <p>&copy; 2012 <a href="http://myartistdna.com">MYARTISTDNA</a></p>
+    <p>&copy; 2012 <a href="http://myartistdna.com">Powered by MyArtistDNA</a></p>
 
 </footer>
 </section>
