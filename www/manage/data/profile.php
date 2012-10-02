@@ -8,6 +8,7 @@
     
     require_once '../../includes/config.php';
     require_once '../../includes/functions.php';
+    require_once '../../includes/login_helper.php';
     
     if( $_SESSION['sess_userId'] == "" )
     {
@@ -33,6 +34,10 @@
     else if( $method == 'CLEAR_FIRST_INSTRUCTIONS' )
     {
         do_CLEAR_FIRST_INSTRUCTIONS();
+    }
+    else if( $method == 'SET_EMAIL_ADDRESS' )
+    {
+        do_SET_EMAIL_ADDRESS();
     }
     else
     {
@@ -163,6 +168,31 @@
         $values = array("shown_first_instructions" => 1);
         
         mysql_update('mydna_musicplayer',$values,'id',$artist_id);
+        
+        $ret = array("success" => 1);
+        echo json_encode($ret);
+        die();
+    }
+    function do_SET_EMAIL_ADDRESS()
+    {
+        $artist_id = $_REQUEST['artist_id'];
+        
+        $email = $_REQUEST['email'];
+        
+        $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE email='$email'"));
+        if( $artist )
+        {
+            $ret = array("error" => "Email already used for another account.  Please use a unique email for each account.");
+            echo json_encode($ret);
+            die();
+        }
+        
+        $values = array("email" => $email);
+        
+        mysql_update('mydna_musicplayer',$values,'id',$artist_id);
+        
+        $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id'"));
+        post_artist_signup($artist);
         
         $ret = array("success" => 1);
         echo json_encode($ret);

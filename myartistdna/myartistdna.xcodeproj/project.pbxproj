@@ -181,8 +181,6 @@
 		2D8D970015A27DA000AA3D1B /* fan_index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fan_index.html; path = templates/fan_index.html; sourceTree = "<group>"; };
 		2D8D970115A27FA000AA3D1B /* login.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = login.php; sourceTree = "<group>"; };
 		2D8D970215A2818100AA3D1B /* fan_login.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fan_login.html; path = templates/fan_login.html; sourceTree = "<group>"; };
-		2D8D970515A4C55B00AA3D1B /* register.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = register.php; sourceTree = "<group>"; };
-		2D8D970B15A5172F00AA3D1B /* register.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = register.html; path = templates/register.html; sourceTree = "<group>"; };
 		2D8D970F15A5284D00AA3D1B /* .htaccess */ = {isa = PBXFileReference; lastKnownFileType = text; name = .htaccess; path = downloads/.htaccess; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		2D8D971015A5289800AA3D1B /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = index.php; path = downloads/index.php; sourceTree = "<group>"; };
 		2D8D971415A8CF3900AA3D1B /* signup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = signup.php; sourceTree = "<group>"; };
@@ -914,7 +912,6 @@
 				2D8D96FF15A27D8600AA3D1B /* templates */,
 				2D8D96FD15A26FE900AA3D1B /* index.php */,
 				2D8D970115A27FA000AA3D1B /* login.php */,
-				2D8D970515A4C55B00AA3D1B /* register.php */,
 			);
 			path = fan;
 			sourceTree = "<group>";
@@ -922,7 +919,6 @@
 		2D8D96FF15A27D8600AA3D1B /* templates */ = {
 			isa = PBXGroup;
 			children = (
-				2D8D970B15A5172F00AA3D1B /* register.html */,
 				2D8D970015A27DA000AA3D1B /* fan_index.html */,
 				2D8D970215A2818100AA3D1B /* fan_login.html */,
 			);

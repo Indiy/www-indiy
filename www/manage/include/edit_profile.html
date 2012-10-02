@@ -165,3 +165,31 @@ $start_type_list = array(
 </div>
 </div>
 
+<div id='email_popup' class='popup_wrapper'>
+    <div id="popup">
+        <div class='top_bar'>
+            <h2>Account Setup</h2>
+            <button onclick='closeEmailPopup();'>CLOSE</button>
+        </div>
+        <div class='top_blue_bar'></div>
+        <div class='top_sep'></div>
+        
+        <div class='description'>
+            Please enter an email address for your account.  This will be used to
+            inform you when things happen to you account like getting an order,
+            being paid out for finished orders, etc.
+        </div>
+        
+        <div class='input_container'>
+            <div class='left_label'>Email Address</div>
+            <input id='email' type="text" class="right_text" />
+        </div>
+        
+        <div class='submit_container'>
+            <button class="submit" onclick='closeEmailPopup();'>Submit</button>
+        </div>
+
+        <div class='bottom_sep'></div>
+        <div class='bottom_blue_bar'></div>
+    </div>
+</div>

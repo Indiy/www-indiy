@@ -26,10 +26,12 @@
                 <? endif; ?>
 
                 <? if( $show_fan_login === TRUE ): ?>
-                    <div class='item' onclick='showFanLogin();'>
-                        <div class='name'>Login</div>
-                        <div class='arrow'></div>
-                    </div>
+                    <a href="/login.php">
+                        <div class='item'>
+                            <div class='name'>Login</div>
+                            <div class='arrow'></div>
+                        </div>
+                    </a>
                 <? else: ?>
                     <a href="/fan/">
                         <div class='item'>
