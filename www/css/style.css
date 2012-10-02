@@ -256,7 +256,7 @@ footer aside ul li {font-size:12px; color:#4ecdc4; line-height:1.5em}
 footer aside ul li a {color:#4ecdc4; text-decoration:none}
 footer aside ul li a:hover {color:#4ecdc4; text-decoration:underline}
 
-footer article { width:185px; float:left}
+footer article { width:185px; float:left; padding-left: 20px;}
 footer article ul li { width:185px; float:left; background:url(../images/dottedborder.gif) repeat-x bottom left; margin-bottom:3px}
 footer article ul li.last {background:none; margin-bottom:0}
 footer article ul li img { float:left; padding:3px 7px 7px 0}
