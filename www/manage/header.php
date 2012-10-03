@@ -81,6 +81,9 @@
 <div id='question_tooltip' style='display: none;'>
     Tooltip Text
 </div>
+
+<div id='body_wrap'><div id='main_content'>
+
 <section id="bgtopbar">
 	<section id="topbar">
 		<p>Logged in as: <?=$_SESSION['sess_userName'];?> | <a href="/logout.php">Logout</a> | <a href="/faq.php">Help</a> </p>

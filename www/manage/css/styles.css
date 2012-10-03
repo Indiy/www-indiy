@@ -55,6 +55,28 @@ h1, h2, h3, h4, h5, h6 {
  font-style: normal;
 }
 
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#body_wrap {
+    min-height: 100%;
+    background-color: #f5f5f5;
+}
+
+#main_content {
+    overflow:auto;
+	padding-bottom: 186px;
+}
+
 
 body {
 	font-family:"Lucida Grande", Verdana, Arial, Helvetica, sans-serif; background:#f6f6f6
@@ -209,8 +231,20 @@ ul#accordion-slider li{ width:314px; height:257px; float:left; display: block; o
 ----------------------------------------
 */
 
-#footer {width:100%; height:149px; float:left; background:#0a0b0d; padding-top:37px}
-footer { width:940px; margin:0 auto}
+#footer {
+    position: relative;
+    
+    width:100%;
+    height:186px;
+    background:#0a0b0d;
+    
+    margin-top: -186px;
+    clear:both;
+    
+    font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif;
+}
+
+footer { /* padding-top: 37px; */ width:940px; margin:0 auto; }
 
 footer p { float:right; font-size:12px; color:#FFFFFF; text-align:right}
 footer p a { color:#FFFFFF}
