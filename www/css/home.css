@@ -408,5 +408,6 @@ body {
 .body_content_info .slashes {
     display: inline-block;
     letter-spacing: -2px;
-    margin-right: 2px;
+    margin-right: 4px;
+    margin-left: 4px;
 }
