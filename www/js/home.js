@@ -19,41 +19,6 @@ var IS_OLD_IE = false;
 
 var g_currentBackgroundIndex = 0;
 
-var g_backgroundList = [
-    {
-        image: "/images/home_bg01.jpg",
-        bg_color: "000000",
-        bg_style: "STRETCH",
-        bg_justify: "TOP",
-        loaded: false,
-        image_data: { width:1267, height:800 }
-    },
-    {
-        image: "/images/home_bg02.jpg",
-        bg_color: "000000",
-        bg_style: "STRETCH",
-        bg_justify: "CENTER",
-        loaded: false,
-        image_data: { width:1267, height:800 }
-    },
-    {
-        image: "/images/home_bg03.jpg",
-        bg_color: "000000",
-        bg_style: "STRETCH",
-        bg_justify: "TOP",
-        loaded: false,
-        image_data: { width:1267, height:800 }
-    },
-    {
-        image: "/images/home_bg04.jpg",
-        bg_color: "000000",
-        bg_style: "STRETCH",
-        bg_justify: "CENTER",
-        loaded: false,
-        image_data: { width:1267, height:800 }
-    },
-];
-
 var ROTATE_MS = 8000;
 
 var g_rotateTimeout = false;
@@ -104,6 +69,7 @@ function backgroundUpdateToIndex(index)
     var background = g_backgroundList[index];
     
     backgroundLoadImage(background,index);
+    $('#body_content_info').html(background.content_info_html);
 }
 
 function backgroundNext()
