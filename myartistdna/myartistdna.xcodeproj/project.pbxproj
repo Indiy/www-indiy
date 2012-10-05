@@ -284,6 +284,7 @@
 		2DEADABE1619039A0076F95D /* email_fan_signup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = email_fan_signup.html; sourceTree = "<group>"; };
 		2DEADAC2161A95630076F95D /* test_emails.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = test_emails.php; sourceTree = "<group>"; };
 		2DEADAC4161BF8160076F95D /* home_data.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = home_data.js; sourceTree = "<group>"; };
+		2DEADAC5161F8F1F0076F95D /* user_info.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = user_info.php; path = data/user_info.php; sourceTree = "<group>"; };
 		2DF470301440B77F005538C7 /* art.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = art.php; sourceTree = "<group>"; };
 		2DF470401440B77F005538C7 /* artists.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artists.php; sourceTree = "<group>"; };
 		2DF470411440B77F005538C7 /* be-heard.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "be-heard.php"; sourceTree = "<group>"; };
@@ -931,6 +932,7 @@
 			isa = PBXGroup;
 			children = (
 				2DA723A315B8BEAC00658D4B /* love.php */,
+				2DEADAC5161F8F1F0076F95D /* user_info.php */,
 			);
 			name = data;
 			sourceTree = "<group>";

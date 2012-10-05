@@ -1,4 +1,14 @@
 
+function fanReady()
+{
+    if( !('dont_show_welcome' in g_userInfo) )
+    {
+        $('#popup_mask').show();
+        $('#fan_welcome_popup').show();
+    }
+}
+$(document).ready(fanReady);
+
 function loveScrollLeft()
 {
     var st = $('#love_list').scrollTop();
@@ -9,12 +19,6 @@ function loveScrollRight()
 {
     var st = $('#love_list').scrollTop();
     $('#love_list').scrollTop(st + 540);
-}
-
-function showFanLogin()
-{
-    $('#popup_mask').show();
-    $('#login_popup').show();
 }
 
 function closePopup()
@@ -31,6 +35,33 @@ function showChangePass()
     $('#old_password').val("");
     $('#new_password').val("");
     $('#confirm_password').val("");
+}
+
+function closeWelcomePopup()
+{
+    if( $('#fan_welcome_popup #dont_show_again').is(':checked') )
+    {
+        var args = {
+            method: 'POST',
+            dont_show_welcome: true
+        };
+    
+        jQuery.ajax(
+        {
+            type: 'POST',
+            url: '/fan/data/user_info.php',
+            data: args,
+            dataType: 'json',
+            success: function(data)
+            {
+            },
+            error: function()
+            {
+            }
+        });
+    }
+
+    closePopup();
 }
 
 function fanChangePass()

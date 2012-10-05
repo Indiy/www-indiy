@@ -17,6 +17,7 @@
         
         <script type="text/javascript">
             var g_trueSiteUrl = "<?=trueSiteUrl();?>";
+            var g_userInfo = <?=$fan_user_info_json;?>;
         </script>
     </head>
     
@@ -93,6 +94,28 @@
                 <div class='submit_container'>
                     <button class="submit" onclick='fanChangePass();'>Submit</button>
                 </div>
+            </div>
+        </div>
+        <div id='fan_welcome_popup' class='popup_wrapper'>
+            <div class='popup'>
+                <div class='top_bar'>
+                    <div class='title'>Welcome!</div>
+                    <div class='close' onclick='closeWelcomePopup();'>CLOSE</div>
+                </div>
+                <div class='spacer'></div>
+                <div class='free_text'>
+                    Welcome to MyArtistDNA!  You will see your purchases, your orders and
+                    the things you love on this page.
+                </div>
+                
+                <div class='dont_show_again'>
+                    <input id='dont_show_again' type="checkbox" />
+                    <div class='detail'>Don't show this again</div>
+                </div>
+                
+                <div class='bottom_sep'></div>
+                <div class='bottom_blue_bar'></div>
+
             </div>
         </div>
 
