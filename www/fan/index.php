@@ -33,6 +33,8 @@
     
     $fan_email = $fan['email'];
     $fan_user_info_json = $fan['user_info_json'];
+    if( !$fan_user_info_json )
+        $fan_user_info_json = "{}";
     
     $fan_files = array();
     $fan_files_html = "";
