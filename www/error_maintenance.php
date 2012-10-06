@@ -9,30 +9,23 @@
         die();
     }
     
-    if( isset($_REQUEST['maintainer']) )
+    if( $_COOKIE['maintenance_cookie'] == 'adivyy129741jblad9y71' ||
+        (  isset($_REQUEST['maintainer'])
+            && $_REQUEST['maintainer'] == 'adivyy129741jblad9y71'
+         )
+     )
     {
-        $maintainer = $_REQUEST['maintainer'];
-        if( $maintainer == 'adivyy129741jblad9y71' )
+        if( strpos($_SERVER['SERVER_NAME'],"madd3v.com") !== FALSE )
         {
-            if( strpos($_SERVER['SERVER_NAME'],"madd3v.com") !== FALSE )
-            {
-                setcookie('maintenance_cookie','adivyy129741jblad9y71',0,"/","madd3v.com");
-                
-            }
-            else if( strpos($_SERVER['SERVER_NAME'],"myartistdna.com") !== FALSE )
-            {
-                setcookie('maintenance_cookie','adivyy129741jblad9y71',0,"/","myartistdna.com");
-            }
-        
-            do_origonal();
-            die();
+            setcookie('maintenance_cookie','adivyy129741jblad9y71',0,"/","madd3v.com");
+            
         }
-    }
-    
-    include_once "templates/error_maintenance.html";
-    
-    function do_origonal()
-    {
+        else if( strpos($_SERVER['SERVER_NAME'],"myartistdna.com") !== FALSE )
+        {
+            setcookie('maintenance_cookie','adivyy129741jblad9y71',0,"/","myartistdna.com");
+        }
+        
+        
         $redirect_url = $_SERVER['REDIRECT_URL'];
         
         if( endsWith($redirect_url,"php") )
@@ -42,7 +35,7 @@
         else
         {
             $path = ".$redirect_url";
-
+            
             $mime_type = mime_content_type($path);
             
             if( endsWith($redirect_url,"css") )
@@ -67,7 +60,13 @@
             
             readfile($real_path);
         }
+        
+        die();
     }
+    
+    include_once "templates/error_maintenance.html";
+    die();
+    
     function endsWith($haystack, $needle)
     {
         $length = strlen($needle);
