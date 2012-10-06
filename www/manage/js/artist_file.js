@@ -263,6 +263,7 @@ function startFileUpload(file_obj)
         closePopup();
         g_fileList.unshift(file);
         updateFileList();
+        showList('.filelist .heading');
         return false;
     }
     catch(e)
