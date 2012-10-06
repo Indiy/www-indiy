@@ -853,8 +853,8 @@ body {
     font-size: 16px;
 }
 #order .order_status_form_container .button {
-    margin-top: 14px;
-    margin-left: 280px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     width: 100px;
     height: 25px;
     cursor: pointer;
