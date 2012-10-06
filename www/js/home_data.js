@@ -7,7 +7,7 @@ var g_backgroundList = [
         loaded: false,
         image_data: { width:1267, height:800 },
         content_info_html:
-            "<div class='logo'></div><a href='http://erictwillams.myartistdna.com' target='_blank'>Eric T. Willams</a><div class='slashes'>//</div>Photographer. Philadelphia, PA."
+            "<div class='logo'></div><a href='http://erictwillams.myartistdna.com' target='_blank'>Eric T. Willams</a><div class='slashes'>//</div>Photographer, Philadelphia"
     },
     {
         image: "/images/home_bg02.jpg",
@@ -17,7 +17,7 @@ var g_backgroundList = [
         loaded: false,
         image_data: { width:1267, height:800 },
         content_info_html:
-            "<div class='logo'></div><a href='http://navegante.myartistdna.com' target='_blank'>Jean Shepherd</a><div class='slashes'>//</div>Producer. Singer. Brooklyn, NY."
+            "<div class='logo'></div><a href='http://navegante.myartistdna.com' target='_blank'>Jean Shepherd</a><div class='slashes'>//</div>Producer, Singer, Brooklyn, NY"
     },
     {
         image: "/images/home_bg03.jpg",
@@ -27,7 +27,7 @@ var g_backgroundList = [
         loaded: false,
         image_data: { width:1267, height:800 },
         content_info_html:
-            "<div class='logo'></div><a href='http://masongarments.madd3v.com' target='_blank'>Mason Garmernts</a><div class='slashes'>//</div>Fashion Line. Amsterdam, The Netherlands."
+            "<div class='logo'></div><a href='http://masongarments.madd3v.com' target='_blank'>Mason Garmernts<div class='slashes'>//</div>Fashion Line, Amsterdam</a>"
     },
     {
         image: "/images/home_bg04.jpg",
@@ -37,6 +37,6 @@ var g_backgroundList = [
         loaded: false,
         image_data: { width:1267, height:800 },
         content_info_html:
-            "<div class='logo'></div><a href='http://demo.madd3v.com' target='_blank'>Spike Jordan</a><div class='slashes'>//</div>Filmmaker. Philadelphia, PA."        
+            "<div class='logo'></div><a href='http://demo.madd3v.com' target='_blank'>Spike Jordan</a><div class='slashes'>//</div>Filmmaker, Philadelphia</a>"        
     },
 ];
