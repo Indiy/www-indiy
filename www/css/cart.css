@@ -848,6 +848,8 @@ body {
 }
 
 #order .order_status_form_container input {
+    padding-top: 3px;
+    padding-bottom: 3px;
     padding-left: 5px;
     width: 200px;
     font-size: 16px;
