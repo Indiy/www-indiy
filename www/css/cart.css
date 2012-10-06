@@ -843,6 +843,15 @@ body {
     text-decoration: none;
 }
 
+#order .order_status_form_container {
+    padding-top: 20px;
+}
+
+#order .order_status_form_container input {
+    padding-left: 5px;
+    width: 200px;
+    font-size: 16px;
+}
 
 
 
