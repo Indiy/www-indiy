@@ -107,7 +107,7 @@
             if( $table && $column )
             {
                 $updates = array($column => $save_filename);
-                //mysql_update($table,$updates,'id',$id);
+                mysql_update($table,$updates,'id',$id);
             }
         }
     }
