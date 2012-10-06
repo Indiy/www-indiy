@@ -39,4 +39,16 @@ var g_backgroundList = [
         content_info_html:
             "<div class='logo'></div><a href='http://spikejordan.myartistdna.com' target='_blank'>Spike Jordan<div class='slashes'>//</div>Filmmaker, Philadelphia</a>"        
     },
-];
+    {
+        image: "/images/home_bg05.jpg",
+        bg_color: "000000",
+        bg_style: "STRETCH",
+        bg_justify: "CENTER",
+        loaded: false,
+        image_data: { width:1267, height:800 },
+        content_info_html:
+            "<div class='logo'></div><a href='http://spikejordan.myartistdna.com' target='_blank'>Den.m Bar<div class='slashes'>//</div>Clothing Line, Los Angeles</a>"        
+    },
+
+]
+;
