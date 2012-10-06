@@ -22,7 +22,7 @@
     
     if( !isset($_SESSION['fan_id']) )
     {
-        header("Location: $fan_site_url/login.php");
+        header("Location: /login.php");
         die();
     }
     
