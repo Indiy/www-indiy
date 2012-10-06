@@ -35,6 +35,7 @@
             $artist_id = $item['artist_id'];
             $file = $item['file'];
             $upload_filename = $item['upload_filename'];
+            $alt_prefix = $item['alt_prefix'];
             
             if( !$file )
             {
@@ -44,6 +45,12 @@
 
             $path_parts = pathinfo($file);
             $extension = strtolower($path_parts['extension']);
+
+            if( !$upload_filename && $alt_prefix )
+            {
+                $upload_filename = "$alt_prefix.$extension";
+            }
+
             
             $src_file = "$dir/$file";
             if( !file_exists($src_file) )
@@ -100,7 +107,7 @@
             if( $table && $column )
             {
                 $updates = array($column => $save_filename);
-                mysql_update($table,$updates,'id',$id);
+                //mysql_update($table,$updates,'id',$id);
             }
         }
     }
@@ -121,27 +128,27 @@
     }
     
     $dir = "../artists/images";
-    $sql = "SELECT id AS id, id AS artist_id, logo AS file, NULL AS upload_filename FROM mydna_musicplayer";
+    $sql = "SELECT id AS id, id AS artist_id, logo AS file, NULL AS upload_filename, artist AS alt_prefix FROM mydna_musicplayer";
     do_table($sql,$dir,"mydna_musicplayer","logo");
     
     $dir = "../artists/images";
-    $sql = "SELECT id, artistid AS artist_id, image AS file, NULL AS upload_filename FROM mydna_musicplayer_audio";
+    $sql = "SELECT id, artistid AS artist_id, image AS file, NULL AS upload_filename, name AS alt_prefix FROM mydna_musicplayer_audio";
     do_table($sql,$dir,'mydna_musicplayer_audio','image');
 
     $dir = "../artists/audio";
-    $sql = "SELECT id, artistid AS artist_id, audio AS file, upload_audio_filename AS upload_filename FROM mydna_musicplayer_audio";
+    $sql = "SELECT id, artistid AS artist_id, audio AS file, upload_audio_filename AS upload_filename, name AS alt_prefix FROM mydna_musicplayer_audio";
     do_table($sql,$dir,'mydna_musicplayer_audio','audio');
     
     $dir = "../artists/products";
-    $sql = "SELECT id, artistid AS artist_id, image AS file, NULL AS upload_filename FROM mydna_musicplayer_ecommerce_products";
+    $sql = "SELECT id, artistid AS artist_id, image AS file, NULL AS upload_filename, name AS alt_prefix FROM mydna_musicplayer_ecommerce_products";
     do_table($sql,$dir,'mydna_musicplayer_ecommerce_products','image');
 
     $dir = "../artists/images";
-    $sql = "SELECT id, artistid AS artist_id, image AS file, NULL AS upload_filename FROM mydna_musicplayer_video";
+    $sql = "SELECT id, artistid AS artist_id, image AS file, NULL AS upload_filename, name AS alt_prefix FROM mydna_musicplayer_video";
     do_table($sql,$dir,'mydna_musicplayer_video','image');
 
     $dir = "../vid";
-    $sql = "SELECT id, artistid AS artist_id, video AS file, upload_video_filename AS upload_filename FROM mydna_musicplayer_video";
+    $sql = "SELECT id, artistid AS artist_id, video AS file, upload_video_filename AS upload_filename, name AS alt_prefix FROM mydna_musicplayer_video";
     do_table($sql,$dir,'mydna_musicplayer_video','video');
     
      
@@ -160,7 +167,7 @@
      
      
     $dir = "../artists/images";
-    $sql = "SELECT id, artistid AS artist_id, image AS file, NULL AS upload_filename FROM mydna_musicplayer_content";
+    $sql = "SELECT id, artistid AS artist_id, image AS file, NULL AS upload_filename, name AS alt_prefix FROM mydna_musicplayer_content";
     do_table($sql,$dir,'mydna_musicplayer_content','image');
     
     print "done done\n\n";
