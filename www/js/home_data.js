@@ -48,7 +48,7 @@ var g_backgroundList = [
         image_data: { width:1267, height:800 },
         content_info_html:
             "<div class='logo'></div><a href='http://spikejordan.myartistdna.com' target='_blank'>Den.m Bar<div class='slashes'>//</div>Clothing Line, Los Angeles</a>"        
-    },
+    }
 
 ]
 ;
