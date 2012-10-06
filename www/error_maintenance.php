@@ -24,15 +24,15 @@
     
     function do_origonal()
     {
-        $request_uri = $_SERVER['REQUEST_URI'];
+        $redirect_url = $_SERVER['REDIRECT_URL'];
         
-        if( endsWith($request_uri,"php") )
+        if( endsWith($redirect_url,"php") )
         {
-            include_once ".$request_uri";
+            include_once ".$redirect_url";
         }
         else
         {
-            $path = ".$request_uri";
+            $path = ".$redirect_url";
 
             $mime_type = mime_content_type($path);
             header("Content-Type: $mime_type");
