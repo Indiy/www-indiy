@@ -286,6 +286,8 @@
 		2DEADAC4161BF8160076F95D /* home_data.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = home_data.js; sourceTree = "<group>"; };
 		2DEADAC5161F8F1F0076F95D /* user_info.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = user_info.php; path = data/user_info.php; sourceTree = "<group>"; };
 		2DEADAC6161FAD550076F95D /* fan_welcome_popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = fan_welcome_popup.html; sourceTree = "<group>"; };
+		2DEADAC7161FCF360076F95D /* error_maintenance.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = error_maintenance.php; sourceTree = "<group>"; };
+		2DEADAC8161FD0F60076F95D /* error_maintenance.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = error_maintenance.html; sourceTree = "<group>"; };
 		2DF470301440B77F005538C7 /* art.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = art.php; sourceTree = "<group>"; };
 		2DF470401440B77F005538C7 /* artists.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artists.php; sourceTree = "<group>"; };
 		2DF470411440B77F005538C7 /* be-heard.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "be-heard.php"; sourceTree = "<group>"; };
@@ -1016,7 +1018,6 @@
 				2D8949231614D58700538B7F /* login.html */,
 				2DEADABA1618E3AD0076F95D /* forgot_password.html */,
 				2DEADABD1618F7960076F95D /* recover_account.html */,
-				2DC1808C160E5E82007B44C0 /* error404.html */,
 				2DEADA9D1613A27C0076F95D /* home.html */,
 				2DEADAB21618C0320076F95D /* header2.html */,
 				2DEADAB31618C0410076F95D /* footer2.html */,
@@ -1026,6 +1027,8 @@
 				2DEADAAF161812740076F95D /* email_fan_order.html */,
 				2DEADAB0161812820076F95D /* email_fan_order_digital.html */,
 				2DEADABB1618F44A0076F95D /* email_forgot_password.html */,
+				2DC1808C160E5E82007B44C0 /* error404.html */,
+				2DEADAC8161FD0F60076F95D /* error_maintenance.html */,
 			);
 			path = templates;
 			sourceTree = "<group>";
@@ -1203,6 +1206,7 @@
 				2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */,
 				2D380B95146E35CD00E36189 /* robots.txt */,
 				2DC18090160E5EC3007B44C0 /* error404.php */,
+				2DEADAC7161FCF360076F95D /* error_maintenance.php */,
 			);
 			name = www;
 			path = ../www;
