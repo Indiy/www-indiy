@@ -50,9 +50,8 @@
     
     function maintenance_allow_request()
     {
-        if( )$_COOKIE['maintenance_cookie'] == 'adivyy129741jblad9y71' )
+        if( $_COOKIE['maintenance_cookie'] == 'adivyy129741jblad9y71' )
             return TRUE;
-        
         
         if( isset($_REQUEST['maintainer']) )
         {
@@ -60,12 +59,11 @@
             {
                if( strpos($_SERVER['SERVER_NAME'],"madd3v.com") !== FALSE )
                {
-               setcookie('maintenance_cookie','adivyy129741jblad9y71',0,"/","madd3v.com");
-               
+                   setcookie('maintenance_cookie','adivyy129741jblad9y71',0,"/","madd3v.com");
                }
                else if( strpos($_SERVER['SERVER_NAME'],"myartistdna.com") !== FALSE )
                {
-               setcookie('maintenance_cookie','adivyy129741jblad9y71',0,"/","myartistdna.com");
+                   setcookie('maintenance_cookie','adivyy129741jblad9y71',0,"/","myartistdna.com");
                }
                return TRUE;
             }
