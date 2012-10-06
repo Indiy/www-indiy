@@ -3,12 +3,6 @@
     header("Cache-Control: no-cache");
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
     
-    if( $_COOKIE['maintenance_cookie'] == 'adivyy129741jblad9y71' )
-    {
-        do_origonal();
-        die();
-    }
-    
     if( $_COOKIE['maintenance_cookie'] == 'adivyy129741jblad9y71' ||
         (  isset($_REQUEST['maintainer'])
             && $_REQUEST['maintainer'] == 'adivyy129741jblad9y71'
