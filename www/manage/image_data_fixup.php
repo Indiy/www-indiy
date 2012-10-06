@@ -8,6 +8,7 @@
 		exit();
 	}
     session_write_close();
+    set_time_limit(60*60);
     
     echo "<html><body><pre>\n";
     
