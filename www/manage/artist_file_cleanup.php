@@ -14,6 +14,8 @@
 		exit();
 	}
     session_write_close();
+    ignore_user_abort(TRUE);
+    set_time_limit(60*60);
     
     echo "<html><body><pre>\n";
 
