@@ -3,26 +3,11 @@
     header("Cache-Control: no-cache");
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
     
-    if( $_COOKIE['maintenance_cookie'] == 'adivyy129741jblad9y71' ||
-        (  isset($_REQUEST['maintainer'])
-            && $_REQUEST['maintainer'] == 'adivyy129741jblad9y71'
-         )
-     )
+    if( maintenance_allow_request() )
     {
-        if( strpos($_SERVER['SERVER_NAME'],"madd3v.com") !== FALSE )
-        {
-            setcookie('maintenance_cookie','adivyy129741jblad9y71',0,"/","madd3v.com");
-            
-        }
-        else if( strpos($_SERVER['SERVER_NAME'],"myartistdna.com") !== FALSE )
-        {
-            setcookie('maintenance_cookie','adivyy129741jblad9y71',0,"/","myartistdna.com");
-        }
-        
-        
         $redirect_url = $_SERVER['REDIRECT_URL'];
         
-        if( endsWith($redirect_url,"php") )
+        if( maintenance_endsWith($redirect_url,"php") )
         {
             include_once ".$redirect_url";
         }
@@ -32,15 +17,15 @@
             
             $mime_type = mime_content_type($path);
             
-            if( endsWith($redirect_url,"css") )
+            if( maintenance_endsWith($redirect_url,"css") )
             {
                 $mime_type = "text/css";
             }
-            else if( endsWith($redirect_url,"js") )
+            else if( maintenance_endsWith($redirect_url,"js") )
             {
                 $mime_type = "application/javascript";
             }
-            else if( endsWith($redirect_url,"otf") )
+            else if( maintenance_endsWith($redirect_url,"otf") )
             {
                 $mime_type = "font/opentype";
             }
@@ -61,7 +46,38 @@
     include_once "templates/error_maintenance.html";
     die();
     
-    function endsWith($haystack, $needle)
+    function maintenance_allow_request()
+    {
+        if( )$_COOKIE['maintenance_cookie'] == 'adivyy129741jblad9y71' )
+            return TRUE;
+        
+        
+        if( isset($_REQUEST['maintainer']) )
+        {
+            if( $_REQUEST['maintainer'] == 'adivyy129741jblad9y71' )
+            {
+               if( strpos($_SERVER['SERVER_NAME'],"madd3v.com") !== FALSE )
+               {
+               setcookie('maintenance_cookie','adivyy129741jblad9y71',0,"/","madd3v.com");
+               
+               }
+               else if( strpos($_SERVER['SERVER_NAME'],"myartistdna.com") !== FALSE )
+               {
+               setcookie('maintenance_cookie','adivyy129741jblad9y71',0,"/","myartistdna.com");
+               }
+               return TRUE;
+            }
+        }
+        
+        $redirect_url = $_SERVER['REDIRECT_URL'];
+        
+        if( maintenance_endsWith($redirect_url,'error.css') )
+            return TRUE;
+        if( maintenance_endsWith($redirect_url,'error_mad_logo.jpg') )
+            return TRUE;
+    }
+    
+    function maintenance_endsWith($haystack, $needle)
     {
         $length = strlen($needle);
         if ($length == 0) {
