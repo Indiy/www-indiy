@@ -14,7 +14,16 @@
         $maintainer = $_REQUEST['maintainer'];
         if( $maintainer == 'adivyy129741jblad9y71' )
         {
-            setcookie('maintenance_cookie','adivyy129741jblad9y71');
+            if( strpos($_SERVER['SERVER_NAME'],"madd3v.com") !== FALSE )
+            {
+                setcookie('maintenance_cookie','adivyy129741jblad9y71',0,"/","madd3v.com");
+                
+            }
+            else if( strpos($_SERVER['SERVER_NAME'],"myartistdna.com") !== FALSE )
+            {
+                setcookie('maintenance_cookie','adivyy129741jblad9y71',0,"/","myartistdna.com");
+            }
+        
             do_origonal();
             die();
         }
