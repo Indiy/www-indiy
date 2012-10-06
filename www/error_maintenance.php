@@ -40,6 +40,15 @@
             {
                 $mime_type = "text/css";
             }
+            else if( endsWith($redirect_url,"js") )
+            {
+                $mime_type = "application/javascript";
+            }
+            else if( endsWith($redirect_url,"otf") )
+            {
+                $mime_type = "font/opentype";
+            }
+            
             header("Content-Type: $mime_type");
             
             $real_path = realpath($path);
