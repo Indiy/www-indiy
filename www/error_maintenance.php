@@ -1,6 +1,6 @@
 <?php
 
-    error_reporting(E_ALL);
+    //error_reporting(E_ALL);
     
     header("Cache-Control: no-cache");
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
@@ -50,7 +50,7 @@
     
     function maintenance_allow_request()
     {
-        if( $_COOKIE['maintenance_cookie'] == 'adivyy129741jblad9y71' )
+        if( isset( $_COOKIE['maintenance_cookie'] ) && $_COOKIE['maintenance_cookie'] == 'adivyy129741jblad9y71' )
             return TRUE;
         
         if( isset($_REQUEST['maintainer']) )
