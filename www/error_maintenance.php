@@ -35,6 +35,11 @@
             $path = ".$redirect_url";
 
             $mime_type = mime_content_type($path);
+            
+            if( endsWith($redirect_url,"css") )
+            {
+                $mime_type = "text/css";
+            }
             header("Content-Type: $mime_type");
             
             $real_path = realpath($path);
