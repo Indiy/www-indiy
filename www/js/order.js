@@ -41,3 +41,8 @@ function orderSavePassword()
     
     return false;
 }
+
+function submitOrderStatus()
+{
+    $('form').submit();
+}

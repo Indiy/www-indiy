@@ -15,10 +15,8 @@
         
         <script src="/js/order.js" type="text/javascript"></script>
         
-         
         <script type="text/javascript">
             var g_trueSiteUrl = "<?=trueSiteUrl();?>";
-            var g_order = <?=$order_json;?>;
         </script>
     </head>
     
@@ -39,6 +37,10 @@
                     <form>
                         <input name='order_id'/>
                     </form>
+                    <div class='button' onclick='submitOrderStatus();'>
+                        <div class='icon'></div>
+                        <div class='label'>Get Status</div>
+                    </div>
                 </div>
             </div>
             

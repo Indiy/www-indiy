@@ -852,6 +852,29 @@ body {
     width: 200px;
     font-size: 16px;
 }
+#order .order_status_form_container .button {
+    margin-top: 14px;
+    margin-left: 280px;
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+}
+#order .order_status_form_container .button .icon {
+    float: left;
+    width: 25px;
+    height: 25px;
+    background: #1b5f60 url("/images/cart_icons.png") -192px -10px no-repeat;
+}
+#order .order_status_form_container .button .label {
+    float: left;
+    width: 75px;
+    height: 18px;
+    padding-top: 7px;
+    background: #144c4d;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
 
 
 
