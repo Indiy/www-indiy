@@ -36,13 +36,13 @@ function backgroundOnReady()
     $('#home_bg').swipe(opts);
     backgroundPreloadImages();
     $('#body_content_info').html(g_backgroundList[0].content_info_html);
-    g_rotateTimeout = window.setTimeout(rotateBackground,ROTATE_MS);
+    //g_rotateTimeout = window.setTimeout(rotateBackground,ROTATE_MS);
 }
 
 function rotateBackground()
 {
+    g_rotateTimeout = false;
     backgroundNext();
-    g_rotateTimeout = window.setTimeout(rotateBackground,ROTATE_MS);
 }
 
 function backgroundPanelChange(index)
@@ -71,6 +71,11 @@ function backgroundUpdateToIndex(index)
     
     backgroundLoadImage(background,index);
     $('#body_content_info').html(background.content_info_html);
+
+    if( g_rotateTimeout !== false )
+        window.clearTimeout(g_rotateTimeout);
+
+    g_rotateTimeout = window.setTimeout(rotateBackground,ROTATE_MS);
 }
 
 function backgroundNext()
