@@ -2254,6 +2254,18 @@ filter:alpha(opacity=40);
 
 /*************************************************************************/
 
+#under_construction {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 231px;
+    margin-left: -250px;
+    margin-top: -120px;
+    background: url('/images/under_construction.jpg') no-repeat;
+    z-index: 1000000;
+}
+
 #test_warning {
     position: fixed;
     top: 50%;
