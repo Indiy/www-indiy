@@ -263,7 +263,6 @@
 		2DE8284414D0C75F00A91FCE /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
 		2DE8284514D0DC8300A91FCE /* upload.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = upload.php; sourceTree = "<group>"; };
 		2DE8284614D0E32B00A91FCE /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
-		2DEADA9B1613A23B0076F95D /* home2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = home2.php; sourceTree = "<group>"; };
 		2DEADA9D1613A27C0076F95D /* home.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = home.html; sourceTree = "<group>"; };
 		2DEADA9E1613B4EC0076F95D /* home.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = home.js; sourceTree = "<group>"; };
 		2DEADA9F1613B6C00076F95D /* home.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = home.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
@@ -1191,7 +1190,6 @@
 				2DF4705A1440B77F005538C7 /* favicon.ico */,
 				2DF4705C1440B77F005538C7 /* header.php */,
 				2DF4705D1440B77F005538C7 /* home.php */,
-				2DEADA9B1613A23B0076F95D /* home2.php */,
 				2DBDD1271469D46D001E20CC /* footer.php */,
 				2DF471C71440B77F005538C7 /* index.php */,
 				2DF472FE1440B77F005538C7 /* music.php */,
