@@ -16,13 +16,19 @@
             $logo_path = "manage/images/NoPhoto.jpg";
         }
         
+        $artist_url = $artist['url'];
+        
+        $url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
+        
         $name = $artist['artist'];
         
         $html = "";
-        $html .= "<li>";
-        $html .= " <img src='/$logo_path' />";
-        $html .= " <span>$name</span>";
-        $html .= "</li>";
+        $html .= "<a href='$url'>";
+        $html .= " <li>";
+        $html .= "  <img src='/$logo_path' />";
+        $html .= "  <span>$name</span>";
+        $html .= " </li>";
+        $html .= "</a>";
         
         $list_html .= $html;
     }
