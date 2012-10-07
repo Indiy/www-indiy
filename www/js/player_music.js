@@ -116,6 +116,14 @@ function musicHide()
 function musicShow()
 {
     $('#music_bg').show();
+    if( g_musicList.length < 2 )
+    {
+        $('.player_nav_button').addClass("hidden");
+    }
+    else
+    {
+        $('.player_nav_button').removeClass("hidden");
+    }
 }
 
 function jplayerTimeUpdate(event)

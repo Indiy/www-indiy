@@ -37,6 +37,10 @@ body {
     background-color: black;
 }
 
+.hidden {
+    display: none;
+}
+
 .full_screen_bg { 
     position: fixed; 
     top: 0px;

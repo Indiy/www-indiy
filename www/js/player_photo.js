@@ -34,6 +34,14 @@ function photoHide()
 function photoShow()
 {
     $('#photo_bg').show();
+    if( g_photoList.length < 2 )
+    {
+        $('.player_nav_button').addClass("hidden");
+    }
+    else
+    {
+        $('.player_nav_button').removeClass("hidden");
+    }
 }
 
 function photoListScrollLeft()

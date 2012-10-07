@@ -93,6 +93,15 @@ function videoShow()
 {
     //$('#video_container').show();
     $('#video_bg').show();
+    if( g_videoList.length < 2 )
+    {
+        $('.player_nav_button').addClass("hidden");
+    }
+    else
+    {
+        $('.player_nav_button').removeClass("hidden");
+    }
+
 }
 function videoPlayPause()
 {
