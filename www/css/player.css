@@ -38,7 +38,7 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .full_screen_bg { 
