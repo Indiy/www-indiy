@@ -230,24 +230,26 @@ body {
     display: none;
     position: absolute;
     top: 50px;
-    right: 50px;
-    height: 41px;
-    width: 250px;
-    background: url("/images/home_sub_menu_trap_highlight.png") no-repeat;
-    background-size: 100%;
+    right: 15px;
+    height: 43px;
+    width: 260px;
+    background: black;
+    background: rgba(0,0,0,0.7);
 }
 .full_top_bar .right .trap_button:hover .search_box {
     display: block;
 }
 .full_top_bar .right .trap_button .search_box input {
-    margin-top: 0px;
-    margin-left: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    margin-top: 8px;
+    padding-top: 5px;
+    padding-left: 6px;
+    height: 20px;
     width: 220px;
     color: #777;
-    font-size: 16px;
+    font-size: 12px;
     background: #333;
+    border: 0 none;
+    outline: 0 none;
 }
 
 .bottom_bar {
