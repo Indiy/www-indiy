@@ -1303,6 +1303,7 @@ END;
             case 'mp4':
             case 'mov':
             case 'ogv':
+            case 'm4v':
                 return 'VIDEO';
             case 'wav':
             case 'ogg':
