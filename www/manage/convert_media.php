@@ -33,6 +33,13 @@
     set_time_limit(60*60);
     
     echo "<html><body><pre>\n";
+    
+    $send_emails = TRUE;
+    if( isset($_REQUEST['no_emails']) )
+    {
+       $send_emails = FALSE;
+       print "No emails being sent\n\n";
+    }
 
     function file_error($id,$artist_id,$msg)
     {
@@ -55,10 +62,16 @@ Be Heard. Be Seen. Be Independent.
 END;
             $from = "no-reply@myartistdna.com";
             $headers = "From:" . $from;
-            
-            mail($to,$subject,$message,$headers);
-            
-            print "Emailed $to regarding file convertion failure.\n";
+       
+            if( $send_emails )
+            {
+                mail($to,$subject,$message,$headers);
+                print "Emailed $to regarding file convertion failure.\n";
+            }
+            else
+            {
+                print "Would have emailed $to, but didn't.\n";
+            }
         }
     }
 
