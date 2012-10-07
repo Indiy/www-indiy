@@ -36,7 +36,7 @@ function backgroundOnReady()
     $('#home_bg').swipe(opts);
     backgroundPreloadImages();
     $('#body_content_info').html(g_backgroundList[0].content_info_html);
-    //g_rotateTimeout = window.setTimeout(rotateBackground,ROTATE_MS);
+    g_rotateTimeout = window.setTimeout(rotateBackground,ROTATE_MS);
 }
 
 function rotateBackground()
