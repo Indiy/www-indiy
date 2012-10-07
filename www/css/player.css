@@ -2257,14 +2257,14 @@ filter:alpha(opacity=40);
 #under_construction {
     display: none;
     position: fixed;
-    top: 50%;
+    top: 0;
     left: 50%;
     width: 500px;
     height: 231px;
     margin-left: -250px;
-    margin-top: -220px;
+    margin-top: 70px;
     background: url('/images/under_construction.jpg') no-repeat;
-    z-index: 1000000;
+    z-index: 0;
 }
 
 #test_warning {
