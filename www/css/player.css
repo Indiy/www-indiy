@@ -2257,12 +2257,12 @@ filter:alpha(opacity=40);
 #under_construction {
     display: none;
     position: fixed;
-    top: 0;
+    top: 50%;
     left: 50%;
     width: 500px;
     height: 231px;
     margin-left: -250px;
-    margin-top: 70px;
+    margin-top: -130px;
     background: url('/images/under_construction.jpg') no-repeat;
     z-index: 0;
 }
