@@ -43,6 +43,8 @@
 
     function file_error($id,$artist_id,$msg)
     {
+        global $send_emails;
+    
         $values = array("error" => $msg);
         mysql_update("artist_files",$values,"id",$id);
         
@@ -166,7 +168,7 @@ END;
             {
                 $args = "-i_qfactor 0.71 -qcomp 0.6 -qmin 10 -qmax 63 -qdiff 4 -trellis 0 -vcodec libx264 -s 640x360 -vb 300k -ab 64k -ar 44100 -threads 4";
                 
-                @system("/usr/local/bin/ffmpeg -i $src_file $args $dst_file");
+                @system("/usr/local/bin/ffmpeg -i $src_file $args $dst_file",$retval);
                 if( $retval == 0 )
                 {
                     print "converted file: $filename to $mp4_file\n";
@@ -185,7 +187,7 @@ END;
             print "updated file to mp4: $id, file: $filename, new_filename: $mp4_file\n";
             mq("UPDATE mydna_musicplayer_video SET video='$mp4_file' WHERE artistid='$artist_id' AND video='$filename'");
             $filename = $mp4_file;
-            $values = array("filename" => $mp3_file);
+            $values = array("filename" => $filename);
             mysql_update("artist_files",$values,"id",$id);
         }
         else
