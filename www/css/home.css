@@ -226,31 +226,6 @@ body {
     color: #ff9734;
     background: url("/images/home_sub_menu_trap_highlight.png") no-repeat;
 }
-.full_top_bar .right .trap_button .search_box {
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 15px;
-    height: 43px;
-    width: 260px;
-    background: black;
-    background: rgba(0,0,0,0.7);
-}
-.full_top_bar .right .trap_button:hover .search_box {
-    display: block;
-}
-.full_top_bar .right .trap_button .search_box input {
-    margin-top: 8px;
-    padding-top: 5px;
-    padding-left: 6px;
-    height: 20px;
-    width: 238px;
-    color: #777;
-    font-size: 12px;
-    background: #333;
-    border: 0 none;
-    outline: 0 none;
-}
 
 .bottom_bar {
     position: absolute;
@@ -440,28 +415,53 @@ body {
 /************************************************************************/
 /************************************************************************/
 
+.full_top_bar .right .trap_button .search_box {
+    display: none;
+    position: absolute;
+    top: 51px;
+    right: 15px;
+    height: 43px;
+    width: 325px;
+    background: black;
+    background: rgba(0,0,0,0.7);
+}
+.full_top_bar .right .trap_button:hover .search_box {
+    display: block;
+}
+.full_top_bar .right .trap_button .search_box input {
+    margin-top: 8px;
+    padding-top: 5px;
+    padding-left: 6px;
+    height: 20px;
+    width: 300px;
+    color: #777;
+    font-size: 12px;
+    background: #333;
+    border: 0 none;
+    outline: 0 none;
+}
+
 #search .search_results {
+    margin-top: 12px;
+    max-height: 396px;
     overflow-y: auto;
     overflow-x: hidden;
+    font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#search .below_bar {
+    height: 12px;
+    background: rgba(0,0,0,0.7);
 }
 
 #search .result_group .title {
+    padding-left: 12px;
     padding-top: 6px;
     height: 22px;
     color: white;
-    font-size: 15px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-size: 14px;
     font-weight: normal;
     background-color: #181818;
-}
-#search .result_group .title {
-    padding-left: 10px;
-    padding-top: 6px;
-    height: 22px;
-    color: white;
-    font-size: 15px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-    font-weight: normal;
     background-color: rgba(0,0,0,0.85);
 }
 #search .result_group a {
@@ -490,8 +490,7 @@ body {
     width: 200px;
     height: 34px;
     color: #999;
-    font-size: 14px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-size: 12px;
     font-weight: normal;
     text-decoration: none;
     text-align: left;
@@ -500,4 +499,7 @@ body {
     white-space: normal;
     overflow: hidden;
 }
+
+/**************************************************************************/
+
 
