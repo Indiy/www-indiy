@@ -436,3 +436,68 @@ body {
     margin-right: 4px;
     margin-left: 4px;
 }
+
+/************************************************************************/
+/************************************************************************/
+
+#search .search_results {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#search .result_group .title {
+    padding-top: 6px;
+    height: 22px;
+    color: white;
+    font-size: 15px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    background-color: #181818;
+}
+#search .result_group .title {
+    padding-left: 10px;
+    padding-top: 6px;
+    height: 22px;
+    color: white;
+    font-size: 15px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    background-color: rgba(0,0,0,0.85);
+}
+#search .result_group a {
+    text-decoration: none;
+}
+#search .result_group .item {
+    padding-top: 10px;
+    padding-left: 10px;
+    height: 57px;
+    background-color: rgba(0,0,0,0.75);
+    border-bottom: 1px solid #111;
+    white-space: nowrap;
+    cursor: pointer;
+}
+#search .result_group .item img {
+    display: inline-block;
+    height: 44px;
+    width: 65px;
+    padding: 3px;
+    background-color: white;
+}
+#search .result_group .item .value {
+    display: inline-block;
+    padding-left: 12px;
+    padding-top: 15px;
+    width: 200px;
+    height: 34px;
+    color: #999;
+    font-size: 14px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: normal;
+    white-space: normal;
+    overflow: hidden;
+}
+
