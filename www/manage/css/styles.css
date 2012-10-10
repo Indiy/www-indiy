@@ -1593,6 +1593,25 @@ textarea {
     font-family: Helvetica,sans-serif;
 }
 
+#first_instructions #popup {
+    min-width: 667px;
+}
+
+#first_instructions #popup .right_title_detail {
+    width: 585px;
+}
+
+#first_instructions #popup .line_title {
+    font-size: 19px;
+    color: black;
+    font-family: sans-serif;
+    width: auto;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
 
 
 /* ======================== */
