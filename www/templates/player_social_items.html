@@ -91,6 +91,6 @@
 <? endif; ?>
 <? if( $artist_facebook_page ): ?>
     <div id='social_facebook' class='social_item'>
-        <div class="fb-like-box" data-href="<?=$artist_facebook_page;?>" data-width="400" data-height="220" data-colorscheme="dark" data-show-faces="true" data-stream="true" data-header="false"></div>
+        <iframe src="//www.facebook.com/plugins/likebox.php?href=<?=urlencode($artist_facebook_page);?>&amp;width=400&amp;height=558&amp;colorscheme=dark&amp;show_faces=true&amp;border_color=%23333&amp;stream=true&amp;header=false&amp;appId=120524971363318" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400px; height:558px;" allowTransparency="true"></iframe>
     </div>
 <? endif; ?>
