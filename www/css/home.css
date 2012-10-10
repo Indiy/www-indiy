@@ -415,7 +415,7 @@ body {
 /************************************************************************/
 /************************************************************************/
 
-.full_top_bar .right .trap_button .search_container {
+.full_top_bar .right .trap_button .search_holder {
     display: none;
     position: absolute;
     padding-top: 51px;
@@ -424,15 +424,15 @@ body {
     width: 325px;
 }
 
-.full_top_bar .right .trap_button .search_container .search_box {
+.full_top_bar .right .trap_button .search_holder .search_box {
     height: 43px;
     background: black;
     background: rgba(0,0,0,0.7);
 }
-.full_top_bar .right .trap_button:hover .search_container  {
+.full_top_bar .right .trap_button:hover .search_holder  {
     display: block;
 }
-.full_top_bar .right .trap_button .search_container .search_box input {
+.full_top_bar .right .trap_button .search_holder .search_box input {
     margin-top: 8px;
     padding-top: 5px;
     padding-left: 6px;
