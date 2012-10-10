@@ -1869,16 +1869,16 @@ textarea {
 }
 
 #adminblock .filelist .list .file_list .item .icon.AUDIO div {
-    background: url("/images/admin_icons.png") 0px 0px no-repeat;
+    background: url("/images/admin_icons.png") -27px 5px no-repeat;
 }
 #adminblock .filelist .list .file_list .item .icon.IMAGE div {
-    background: url("/images/admin_icons.png") 0px 0px no-repeat;
+    background: url("/images/admin_icons.png") 3px 5px no-repeat;
 }
 #adminblock .filelist .list .file_list .item .icon.VIDEO div {
-    background: url("/images/admin_icons.png") 0px 0px no-repeat;
+    background: url("/images/admin_icons.png") -57px 5px no-repeat;
 }
 #adminblock .filelist .list .file_list .item .icon.MISC div {
-    background: url("/images/admin_icons.png") 0px 0px no-repeat;
+    background: url("/images/admin_icons.png") -87px 5px no-repeat;
 }
 #adminblock .filelist .list .file_list .item .filename {
     display: inline-block;
