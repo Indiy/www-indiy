@@ -1515,17 +1515,6 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     cursor: pointer;
     margin-left: 4px;
 }
-#popup .dont_show_again {
-    padding-top: 13px;
-    padding-bottom: 6px;
-    padding-left: 20px;
-}
-#popup .dont_show_again input {
-}
-#popup .dont_show_again .detail {
-    display: inline-block;
-    font-size: 13px;
-}
 
 #spinner
 {
@@ -1612,6 +1601,35 @@ textarea {
     margin-right: 20px;
     text-align: center;
 }
+
+#first_instructions .grey_sep {
+    padding-top: 0px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-bottom: 1px solid #ccc;
+}
+#first_instructions .footer {
+    padding-top: 27px;
+    height: 32px;
+}
+#first_instructions .footer .left {
+    float: left;
+    padding-left: 20px;
+    color: black;
+    font-size: 15px;
+}
+#first_instructions .footer .right {
+    float: right;
+    padding-right: 17px;
+    color: black;
+    font-size: 13px;
+}
+#first_instructions .footer .right .detail {
+    display: inline-block;
+    color: black;
+    font-size: 13px;
+}
+
 
 
 /* ======================== */
