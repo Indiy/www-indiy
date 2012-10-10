@@ -1861,6 +1861,18 @@ textarea {
     width: 40px;
     border-left: 1px solid #dddee0;
 }
+#adminblock .filelist .list .file_list .item .icon.AUDIO {
+    background: url("/images/admin_icons.png") 0px 0px no-repeat;
+}
+#adminblock .filelist .list .file_list .item .icon.IMAGE {
+    background: url("/images/admin_icons.png") 0px 0px no-repeat;
+}
+#adminblock .filelist .list .file_list .item .icon.VIDEO {
+    background: url("/images/admin_icons.png") 0px 0px no-repeat;
+}
+#adminblock .filelist .list .file_list .item .icon.MISC {
+    background: url("/images/admin_icons.png") 0px 0px no-repeat;
+}
 #adminblock .filelist .list .file_list .item .filename {
     display: inline-block;
     padding-top: 13px;
