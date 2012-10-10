@@ -1609,31 +1609,33 @@ textarea {
     border-bottom: 1px solid #ccc;
 }
 #first_instructions .footer {
-    padding-top: 27px;
-    height: 32px;
+    padding-top: 15px;
+    height: 18px;
 }
 #first_instructions .footer .left {
     float: left;
     padding-left: 20px;
-    color: black;
-    font-size: 15px;
+    color: #333;
+    font-size: 14px;
 }
 #first_instructions .footer .left a {
-    color: black;
+    color: #333;
 }
 #first_instructions .footer .left a:visited {
-    color: black;
+    color: #333;
 }
 #first_instructions .footer .right {
     float: right;
-    padding-right: 17px;
+    padding-right: 20px;
     color: black;
-    font-size: 13px;
+    font-size: 14px;
 }
 #first_instructions .footer .right .detail {
     display: inline-block;
-    color: black;
-    font-size: 13px;
+    padding-top: 1px;
+    color: #333;
+    font-size: 14px;
+    vertical-align: top;
 }
 
 
