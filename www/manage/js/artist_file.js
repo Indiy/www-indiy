@@ -41,7 +41,7 @@ function updateFileList()
                 if( file.upload_status == 'processing' )
                     msg = "Processing&hellip;"
             
-                html += "<div class='icon {0}'></div>".format(file.type);
+                html += "<div class='icon {0}'><div></div></div>".format(file.type);
                 html += "<div id='{0}' class='file_status'>".format(sel);
                 html += " <div class='file'>{0}</div>".format(filename);
                 html += " <div class='status'>";
@@ -58,7 +58,7 @@ function updateFileList()
             }
             else if( file.upload_status == 'failed' )
             {
-                html += "<div class='icon {0} error'></div>".format(file.type);
+                html += "<div class='icon {0} error'><div></div></div>".format(file.type);
                 html += "<div id='{0}' class='file_status'>".format(sel);
                 html += " <div class='file'>{0}</div>".format(filename);
                 html += " <div class='status'>";
@@ -74,7 +74,7 @@ function updateFileList()
         {
             if( file.error && file.error.length > 0 )
             {
-                html += "<div class='icon {0} error'></div>".format(file.type);
+                html += "<div class='icon {0} error'><div></div></div>".format(file.type);
                 html += "<div id='{0}' class='file_status'>".format(sel);
                 html += " <div class='file link' onclick='showFileDetail({0});'>{1}</div>".format(i,filename);
                 html += " <div class='status'>";
@@ -87,7 +87,7 @@ function updateFileList()
             }
             else
             {
-                html += "<div class='icon {0}'></div>".format(file.type);
+                html += "<div class='icon {0}'><div></div></div>".format(file.type);
                 html += "<div class='filename' onclick='artistFilenameClick({0});'>{1}</div>".format(i,filename);
                 html += "<div class='delete'>";
                 html += " <div class='button' onclick='deleteFile({0});'></div>".format(i);
