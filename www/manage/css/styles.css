@@ -1618,6 +1618,12 @@ textarea {
     color: black;
     font-size: 15px;
 }
+#first_instructions .footer .left a {
+    color: black;
+}
+#first_instructions .footer .left a:visited {
+    color: black;
+}
 #first_instructions .footer .right {
     float: right;
     padding-right: 17px;
