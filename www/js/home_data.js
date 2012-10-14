@@ -17,18 +17,9 @@ var g_backgroundList = [
         loaded: false,
         image_data: { width:1267, height:800 },
         content_info_html:
-            "<div class='logo'></div><a href='http://navegante.myartistdna.com' target='_blank'>Jean Shepherd<div class='slashes'>//</div>Producer, Singer, Brooklyn, NY"
+            "<div class='logo'></div><a href='http://pozzie9.myartistdna.com' target='_blank'>Pozzie Mazerati<div class='slashes'>//</div>Music Artist, Philadelphia"
     },
-    {
-        image: "/images/home_bg03.jpg",
-        bg_color: "000000",
-        bg_style: "STRETCH",
-        bg_justify: "TOP",
-        loaded: false,
-        image_data: { width:1267, height:800 },
-        content_info_html:
-            "<div class='logo'></div><a href='http://masongarments.myartistdna.com' target='_blank'>Mason Garmernts<div class='slashes'>//</div>Fashion Line, Amsterdam</a>"
-    },
+    
     {
         image: "/images/home_bg04.jpg",
         bg_color: "000000",
@@ -47,6 +38,6 @@ var g_backgroundList = [
         loaded: false,
         image_data: { width:1267, height:800 },
         content_info_html:
-            "<div class='logo'></div><a href='http://spikejordan.myartistdna.com' target='_blank'>Den.m Bar<div class='slashes'>//</div>Clothing Line, Los Angeles</a>"        
+            "<div class='logo'></div><a href='http://denmbar.myartistdna.com' target='_blank'>Den.m Bar<div class='slashes'>//</div>Clothing Line, Los Angeles</a>"        
     }
 ];
