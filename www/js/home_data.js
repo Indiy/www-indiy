@@ -7,7 +7,7 @@ var g_backgroundList = [
         loaded: false,
         image_data: { width:1267, height:800 },
         content_info_html:
-            "<div class='logo'></div><a href='http://erictwilliams.myartistdna.com' target='_blank'>Eric T. Willams<div class='slashes'>//</div>Photographer, Philadelphia</a>"
+            "<div class='logo'></div><a href='http://erictwilliams.myartistdna.com' target='_blank'>ERIC WILLIAMS<div class='slashes'>//</div>PHOTOGRAPHER</a>"
     },
     { image: "/images/home_bg05.jpg",
         bg_color: "000000",
@@ -16,7 +16,7 @@ var g_backgroundList = [
         loaded: false,
         image_data: { width:1267, height:800 },
         content_info_html:
-            "<div class='logo'></div><a href='http://denmbar.myartistdna.com' target='_blank'>Den.m Bar<div class='slashes'>//</div>Clothing Line, Los Angeles</a>"      
+            "<div class='logo'></div><a href='http://denmbar.myartistdna.com' target='_blank'>DEN.M BAR<div class='slashes'>//</div>CLOTHING LINE</a>"      
        
     },
     
@@ -28,7 +28,7 @@ var g_backgroundList = [
         loaded: false,
         image_data: { width:1267, height:800 },
         content_info_html:
-            "<div class='logo'></div><a href='http://spikejordan.myartistdna.com' target='_blank'>Spike Jordan<div class='slashes'>//</div>Filmmaker, Philadelphia</a>"        
+            "<div class='logo'></div><a href='http://spikejordan.myartistdna.com' target='_blank'>SPIKE JORDAN<div class='slashes'>//</div>FILMMAKER</a>"        
     },
     {
        image: "/images/home_bg02.jpg",
@@ -38,6 +38,6 @@ var g_backgroundList = [
         loaded: false,
         image_data: { width:1267, height:800 },
         content_info_html:
-            "<div class='logo'></div><a href='http://pozzie9.myartistdna.com' target='_blank'>Pozzie Mazerati<div class='slashes'>//</div>Music Artist, Philadelphia</a>"
+            "<div class='logo'></div><a href='http://pozzie9.myartistdna.com' target='_blank'>POZZIE MAZERATI<div class='slashes'>//</div>MUSIC ARTIST</a>"
     }
 ];
