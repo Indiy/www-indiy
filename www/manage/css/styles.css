@@ -1635,9 +1635,11 @@ textarea {
     color: black;
     font-size: 11px;
 }
+#first_instructions .footer .right input {
+    font-size: 11px;
+}
 #first_instructions .footer .right .detail {
     display: inline-block;
-    padding-top: 1px;
     color: #333;
     font-size: 11px;
     vertical-align: top;
