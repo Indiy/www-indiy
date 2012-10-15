@@ -1655,13 +1655,19 @@ textarea {
     background: white;
 }
 #first_instructions #popup .left_column .rotate {
-    font-size: 48px;
+    margin-top: 371px;
+    margin-right: -26px;
+    color: #666;
+    font-size: 69px;
     font-family: "Teletex Light",Arial, Helvetica, sans-serif;
     white-space: nowrap;
     -webkit-transform: rotate(270deg);
 	-moz-transform:rotate(270deg);
 	-o-transform: rotate(270deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);    
+}
+#first_instructions #popup .left_column .rotate .blue {
+    color: #16cdc9
 }
 #first_instructions #popup .vert_column_sep {
     float: left;
