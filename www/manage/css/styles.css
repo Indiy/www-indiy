@@ -1667,17 +1667,16 @@ textarea {
 }
 
 #first_instructions #popup .number_container {
-    height: 70px;
+    height: 91px;
 }
 #first_instructions #popup .left_number {
     float: left;
     margin-left: 20px;
     padding-top: 5px;
     padding-bottom: 4px;
-    width: 30px;
-    height: 21px;
-    color: black;
-    font-size: 17px;
+    width: 78px;
+    color: #505050;
+    font-size: 35px;
     font-family: "Teletex Light",Arial, Helvetica, sans-serif;
     text-align: left;
     text-transform: uppercase;
@@ -1687,16 +1686,19 @@ textarea {
 #first_instructions #popup .right_title_detail {
     float: right;
     height: 70px;
-    width: 290px;
+    width: 498px;
     margin-right: 20px;
 }
 #first_instructions #popup .right_title {
-    font-size: 14px;
-    font-weight: bold;
+    color: #333;
+    font-size: 20px;
+    font-weight: normal;
     font-family: "Teletex Light",Arial, Helvetica, sans-serif;;
+    text-transform: uppercase;
     margin-bottom: 5px;
 }
 #first_instructions #popup .right_detail {
+    color: #333;
     font-size: 12px;
     font-family: Helvetica, Arial, sans-serif;
 }
