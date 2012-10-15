@@ -42,7 +42,9 @@ h1, h2, h3, h4, h5, h6 {
 @font-face {
  font-family: 'Teletex Light';
  src: url('Teletex_Light.eot');
- src: local('Teletex_Light'), url('Teletex_Light.otf') format('opentype');
+ src: local('Teletex_Light'),
+    url('myfont-webfont.ttf') format('truetype'),
+    url('Teletex_Light.otf') format('opentype');
  font-weight: normal;
  font-style: normal;
 }
