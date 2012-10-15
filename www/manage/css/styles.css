@@ -1676,7 +1676,7 @@ textarea {
     padding-bottom: 0px;
     width: 78px;
     color: #505050;
-    font-size: 35px;
+    font-size: 42px;
     font-family: "Teletex Light",Arial, Helvetica, sans-serif;
     text-align: center;
     text-transform: uppercase;
@@ -1685,21 +1685,23 @@ textarea {
 }
 #first_instructions #popup .right_title_detail {
     float: right;
+    margin-right: 0px;
     height: 91px;
     width: 498px;
-    margin-right: 0px;
 }
 #first_instructions #popup .right_title {
     padding-top: 3px;
     color: #333;
-    font-size: 20px;
-    font-weight: normal;
+    font-size: 21px;
+    font-weight: bold;
     font-family: "Teletex Light",Arial, Helvetica, sans-serif;;
     text-transform: uppercase;
     margin-bottom: 5px;
 }
 #first_instructions #popup .right_detail {
-    color: #333;
+    padding-top: 3px;
+    padding-right: 60px;
+    color: #666;
     font-size: 12px;
     font-family: Helvetica, Arial, sans-serif;
 }
