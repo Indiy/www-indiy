@@ -1538,6 +1538,8 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px;
 }
 
+
+
 #popup input.placeholder {
     color: red;
 }
@@ -1548,6 +1550,9 @@ input::-webkit-input-placeholder {
 input:-moz-placeholder {
     color: red;
 }
+
+/*************************************************************************/
+
 
 .editor-hidden {
     visibility: hidden;
@@ -1572,6 +1577,8 @@ textarea {
     left: 5px;
 }
 
+/*************************************************************************/
+
 #popup .description {
     width: 375px;
     padding-top: 20px;
@@ -1583,7 +1590,7 @@ textarea {
 }
 
 #first_instructions #popup {
-    min-width: 667px;
+    min-width: 733px;
 }
 
 #first_instructions #popup .right_title_detail {
@@ -1638,9 +1645,70 @@ textarea {
     vertical-align: top;
 }
 
+#first_instructions #popup .left_column {
+    float: left;
+    width: 155px;
+    height: 529px;
+    background: whitesmoke;
+}
+#first_instructions #popup .vert_column_sep {
+    float: left;
+    width: 1px;
+    height: 505px;
+    background: #c1c1c1;
+}
+#first_instructions #popup .right_column {
+    float: right;
+    width: 577px;
+    height: 529px;
+}
+
+#first_instructions #popup .number_container {
+    height: 70px;
+}
+#first_instructions #popup .left_number {
+    float: left;
+    margin-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    width: 30px;
+    height: 21px;
+    color: black;
+    font-size: 17px;
+    font-family: "Teletex Light",Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-radius: 6px;
+}
+#first_instructions #popup .right_title_detail {
+    float: right;
+    height: 70px;
+    width: 290px;
+    margin-right: 20px;
+}
+#first_instructions #popup .right_title {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Teletex Light",Arial, Helvetica, sans-serif;;
+    margin-bottom: 5px;
+}
+#first_instructions #popup .right_detail {
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+#first_instructions #popup .right_detail a {
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 
-/* ======================== */
+
+/*************************************************************************/
+/*************************************************************************/
+/*************************************************************************/
+/*************************************************************************/
+/*************************************************************************/
+
+
 #adminblock .photolist { width:711px; float:left; padding-bottom:10px}
 #adminblock .photolist .heading { width:691px; float:left; background:#7f9996; padding:10px}
 #adminblock .photolist .heading h5 { float:left; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; color:#ffffff; text-transform:uppercase; padding:5px 0 0 9px}
