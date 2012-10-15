@@ -1672,8 +1672,8 @@ textarea {
 #first_instructions #popup .left_number {
     float: left;
     margin-left: 0px;
-    padding-top: 5px;
-    padding-bottom: 4px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     width: 78px;
     color: #505050;
     font-size: 35px;
@@ -1685,11 +1685,12 @@ textarea {
 }
 #first_instructions #popup .right_title_detail {
     float: right;
-    height: 70px;
+    height: 91px;
     width: 498px;
     margin-right: 0px;
 }
 #first_instructions #popup .right_title {
+    padding-top: 3px;
     color: #333;
     font-size: 20px;
     font-weight: normal;
