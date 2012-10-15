@@ -1623,7 +1623,7 @@ textarea {
     float: left;
     padding-left: 20px;
     color: #333;
-    font-size: 14px;
+    font-size: 11px;
 }
 #first_instructions .footer .left a {
     color: #333;
@@ -1635,7 +1635,7 @@ textarea {
     float: right;
     padding-right: 20px;
     color: black;
-    font-size: 14px;
+    font-size: 11px;
 }
 #first_instructions .footer .right .detail {
     display: inline-block;
