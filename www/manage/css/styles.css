@@ -1676,7 +1676,9 @@ textarea {
     color: black;
     font-size: 17px;
     font-family: "Teletex Light",Arial, Helvetica, sans-serif;
-    text-align: center;
+    text-align: left;
+    text-transform: uppercase;
+    background-color: transparent;
     border-radius: 6px;
 }
 #first_instructions #popup .right_title_detail {
