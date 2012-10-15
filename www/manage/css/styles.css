@@ -1611,13 +1611,11 @@ textarea {
 
 #first_instructions .grey_sep {
     padding-top: 0px;
-    margin-left: 4px;
-    margin-right: 4px;
     border-bottom: 1px solid #ccc;
 }
 #first_instructions .footer {
-    padding-top: 15px;
-    height: 18px;
+    padding-top: 11px;
+    height: 23px;
 }
 #first_instructions .footer .left {
     float: left;
@@ -1641,7 +1639,7 @@ textarea {
     display: inline-block;
     padding-top: 1px;
     color: #333;
-    font-size: 14px;
+    font-size: 11px;
     vertical-align: top;
 }
 #first_instructions #popup .column_container {
