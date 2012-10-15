@@ -1652,9 +1652,11 @@ textarea {
     float: left;
     width: 155px;
     height: 529px;
-    background: white;
+    background: url("/images/first_instructions_left_bar.png") 0px 0px no-repeat;
 }
 #first_instructions #popup .left_column .rotate {
+    display: none;
+    /*
     margin-top: 371px;
     margin-right: -26px;
     color: #666;
@@ -1664,7 +1666,9 @@ textarea {
     -webkit-transform: rotate(270deg);
 	-moz-transform:rotate(270deg);
 	-o-transform: rotate(270deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);    
+    -ms-transform: rotate(270deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    */
 }
 #first_instructions #popup .left_column .rotate .blue {
     color: #16cdc9
