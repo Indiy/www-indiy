@@ -1644,7 +1644,10 @@ textarea {
     font-size: 14px;
     vertical-align: top;
 }
-
+#first_instructions #popup .column_container {
+    padding-top: 21px;
+    height: 529px;
+}
 #first_instructions #popup .left_column {
     float: left;
     width: 155px;
