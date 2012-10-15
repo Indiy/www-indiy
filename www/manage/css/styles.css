@@ -1671,14 +1671,14 @@ textarea {
 }
 #first_instructions #popup .left_number {
     float: left;
-    margin-left: 20px;
+    margin-left: 0px;
     padding-top: 5px;
     padding-bottom: 4px;
     width: 78px;
     color: #505050;
     font-size: 35px;
     font-family: "Teletex Light",Arial, Helvetica, sans-serif;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     background-color: transparent;
     border-radius: 6px;
@@ -1687,7 +1687,7 @@ textarea {
     float: right;
     height: 70px;
     width: 498px;
-    margin-right: 20px;
+    margin-right: 0px;
 }
 #first_instructions #popup .right_title {
     color: #333;
