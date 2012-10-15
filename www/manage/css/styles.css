@@ -1591,6 +1591,7 @@ textarea {
 
 #first_instructions #popup {
     min-width: 733px;
+    background: #f1f1f1;
 }
 
 #first_instructions #popup .right_title_detail {
@@ -1652,7 +1653,7 @@ textarea {
     float: left;
     width: 155px;
     height: 529px;
-    background: url("/images/first_instructions_left_bar.png") 0px 0px no-repeat;
+    background: url("/images/first_instructions_left_bar.png") 48px 2px no-repeat;
 }
 #first_instructions #popup .left_column .rotate {
     display: none;
