@@ -1075,10 +1075,11 @@ body {
     text-align: left;
 }
 
-.popup .fancy_header {
+.popup .fancy_title {
     color: #333;
     font-size: 24px;
     font-family: "Teletex Light", Helvetica, Arial, sans-serif;
+    text-align: center;
 }
 
 .popup .dont_show_again {
@@ -1093,12 +1094,14 @@ body {
 }
 .popup .dont_show_again input {
     display: inline-block;
-    vertical-align: top;
+    margin: 0px;
+    padding: 0px;
     font-size: 11px;
+    vertical-align: top;
 }
 .popup .dont_show_again .detail {
     display: inline-block;
-    padding-top: 0px;
+    padding-top: 1px;
     padding-left: 6px;
     color: #555;
     font-size: 14px;
