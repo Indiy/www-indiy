@@ -97,7 +97,7 @@ background:#f6f6f6;
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-15194524-1']);
-  _gaq.push(['_setDomainName', '.myartistdna.com']);
+  _gaq.push(['_setDomainName', 'myartistdna.com']);
   _gaq.push(['_trackPageview']);
 
   (function() {
