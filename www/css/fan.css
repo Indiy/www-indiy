@@ -1070,9 +1070,15 @@ body {
     padding-bottom: 20px;
     padding-left: 40px;
     padding-right: 40px;
-    color: #333;
+    color: #555;
     font-size: 15px;
     text-align: left;
+}
+
+.popup .fancy_header {
+    color: #333;
+    font-size: 24px;
+    font-family: "Teletex Light", Helvetica, Arial, sans-serif;
 }
 
 .popup .dont_show_again {
@@ -1088,12 +1094,13 @@ body {
 .popup .dont_show_again input {
     display: inline-block;
     vertical-align: top;
+    font-size: 11px;
 }
 .popup .dont_show_again .detail {
     display: inline-block;
     padding-top: 0px;
     padding-left: 6px;
-    color: black;
+    color: #555;
     font-size: 14px;
     vertical-align: top;
 }
