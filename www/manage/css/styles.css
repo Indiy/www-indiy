@@ -43,8 +43,8 @@ h1, h2, h3, h4, h5, h6 {
  font-family: 'Teletex Light';
  src: url('Teletex_Light.eot');
  src: local('Teletex_Light'),
-    url('Teletex_Light.ttf') format('truetype'),
-    url('Teletex_Light.otf') format('opentype');
+    url('Teletex_Light.otf') format('opentype'),
+    url('Teletex_Light.ttf') format('truetype');
  font-weight: normal;
  font-style: normal;
 }
