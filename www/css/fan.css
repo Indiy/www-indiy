@@ -1077,9 +1077,29 @@ body {
 
 .popup .fancy_title {
     color: #333;
-    font-size: 24px;
+    font-size: 22px;
     font-family: "Teletex Light", Helvetica, Arial, sans-serif;
     text-align: center;
+}
+
+.popup .artist_list {
+    padding-top: 14px;
+    height: 80px;
+    text-align: center;
+}
+.popup .artist_list a {
+    outline: none;
+    border: none;
+    color: inherit;
+    text-decoration: none;
+}
+.popup .artist_list a .artist {
+    display: inline-block;
+    padding-left: 7px;
+    padding-right: 7px;
+    width: 102px;
+    height: 68px;
+    background: black;
 }
 
 .popup .dont_show_again {
