@@ -1087,12 +1087,15 @@ body {
 }
 .popup .dont_show_again input {
     display: inline-block;
+    vertical-align: top;
 }
 .popup .dont_show_again .detail {
     display: inline-block;
+    padding-top: 0px;
     padding-left: 6px;
     color: black;
     font-size: 14px;
+    vertical-align: top;
 }
 
 /***************************************************************************/
