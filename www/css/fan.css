@@ -1103,6 +1103,18 @@ body {
     height: 68px;
     background: black;
 }
+.popup .artist_list a .artist.artist1 {
+    background: url("/images/fan_welcome_artist1.jpg") no-repeat;
+}
+.popup .artist_list a .artist.artist2 {
+    background: url("/images/fan_welcome_artist2.jpg") no-repeat;
+}
+.popup .artist_list a .artist.artist3 {
+    background: url("/images/fan_welcome_artist3.jpg") no-repeat;
+}
+.popup .artist_list a .artist.artist4 {
+    background: url("/images/fan_welcome_artist4.jpg") no-repeat;
+}
 
 .popup .dont_show_again {
     padding-top: 10px;
