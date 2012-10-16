@@ -940,7 +940,7 @@ body {
     margin-right: auto;
     margin-top: 200px;
     width: 505px;
-    background: white;
+    background: #f1f1f1;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
 }
 
@@ -1068,18 +1068,22 @@ body {
 .popup .free_text {
     padding-top: 10px;
     padding-bottom: 20px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
     color: #333;
-    font-size: 16px;
+    font-size: 15px;
     text-align: left;
 }
 
 .popup .dont_show_again {
-    height: 20px;
+    padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    height: 22px;
     font-size: 0;
+    text-align: right;
+    border-top: 1px solid #d1d1d1;
+    border-bottom: 1px solid white;
 }
 .popup .dont_show_again input {
     display: inline-block;
