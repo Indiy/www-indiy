@@ -91,9 +91,9 @@ function onAddProductSubmit()
         return false;
     }
     var price = parseFloat($('#edit_product #price').val());
-    if( ! ( price > 0.0 ) )
+    if( ! ( price >= 0.0 ) )
     {
-        window.alert("Please enter a price for your product, must be greater than $0.00.");
+        window.alert("Please enter a price for your product.");
         return false;
     }
     
