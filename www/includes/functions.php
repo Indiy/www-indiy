@@ -1399,8 +1399,7 @@ END;
 
     function add_free_product_to_fan($product_id)
     {
-        $product = mf(mq("SELECT * FROM mydna_musicplayer_ecommerce_products WHERE id='$product_id'"));
-        
+        $product = get_product_data($product_id);
         if( !$product )
         {
             return FALSE;
@@ -1428,6 +1427,7 @@ END;
                              );
             mysql_insert('fan_files',$inserts);
         }
+        return TRUE;
     }
 
 ?>
