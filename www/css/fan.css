@@ -1,3 +1,4 @@
+<?php header("Content-type: text/css"); ?>
 
 @font-face {
     font-family: 'Neuzeit Grotesk';
