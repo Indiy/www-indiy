@@ -39,9 +39,8 @@
 @font-face {
     font-family: 'Teletex Bold';
     src: url('teletex_med.eot');
-    src: url('teletex_med.svg#teletex_mediumregular') format('svg'),
-    url('teletex_med.eot?#iefix') format('embedded-opentype'),
-    url('teletex_reg.woff') format('woff'),
+    src: url('teletex_med.eot?#iefix') format('embedded-opentype'),
+    url('teletex_meg.woff') format('woff'),
     url('teletex_med.ttf') format('truetype');
     
     font-weight: normal;
