@@ -1741,6 +1741,21 @@ body {
     border-radius: 3px;
     cursor: pointer;
 }
+#store_tab .product_info .pi_right .buy_free {
+    display: none;
+    margin-top: 22px;
+    width: 175px;
+    padding-top: 13px;
+    height: 30px;
+    background-color: #ba0218;
+    text-align: center;
+    color: white;
+    font-size: 19px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+    border-radius: 3px;
+    cursor: pointer;
+}
 #store_tab .product_info .pi_right .description {
     padding-top: 22px;
     color: white;

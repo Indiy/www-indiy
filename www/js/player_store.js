@@ -71,11 +71,15 @@ function storeShowProduct(index)
     {
         $('#product_info .dollar_price').removeClass("free");
         $('#product_info .price').html(product.price);
+        $('#product_info .buy_free').hide();
+        $('#product_info .buy').show();
     }
     else
     {
         $('#product_info .dollar_price').addClass("free");
         $('#product_info .price').html("FREE");
+        $('#product_info .buy').hide();
+        $('#product_info .buy_free').show();
     }
     $('#product_info .description').html(product.description);
     
