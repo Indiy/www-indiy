@@ -1397,4 +1397,37 @@ END;
         return $artist_url;
     }
 
+    function add_free_product_to_fan($product_id)
+    {
+        $product = mf(mq("SELECT * FROM mydna_musicplayer_ecommerce_products WHERE id='$product_id'"));
+        
+        if( !$product )
+        {
+            return FALSE;
+        }
+        
+        $price = floatval($product['price']);
+        if( $price != 0.0 )
+        {
+            return FALSE;
+        }
+        
+        $fan_id = $_SESSION['fan_id'];
+        if( !$fan_id )
+        {
+            return FALSE;
+        }
+        
+        $digital_downloads = $product['digital_downloads'];
+        for( $j = 0 ; $j < count($digital_downloads) ; ++$j )
+        {
+            $download = $digital_downloads[$j];
+            $product_file_id = $download['id'];
+            $inserts = array("fan_id" => $fan_id,
+                             "product_file_id" => $product_file_id,
+                             );
+            mysql_insert('fan_files',$inserts);
+        }
+    }
+
 ?>

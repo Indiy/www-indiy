@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		2D00E36E16331FF600E2B768 /* free_product.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = free_product.php; sourceTree = "<group>"; };
 		2D0A2DE815E961F800F0EE6D /* artist_file_cleanup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artist_file_cleanup.php; sourceTree = "<group>"; };
 		2D0A2DEB15EB05F800F0EE6D /* ZeroClipboard.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ZeroClipboard.swf; sourceTree = "<group>"; };
 		2D0A2DF015EB3A8D00F0EE6D /* artist_file.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_file.js; sourceTree = "<group>"; };
@@ -1253,6 +1254,7 @@
 				2D7849EE15CE37EA00A89620 /* fan_signup.php */,
 				2D0A2DF315EDD72C00F0EE6D /* artist_contact.php */,
 				2DC262CD15F7B21900CA560F /* paypal_ipn.php */,
+				2D00E36E16331FF600E2B768 /* free_product.php */,
 			);
 			path = data;
 			sourceTree = "<group>";

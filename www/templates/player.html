@@ -505,6 +505,22 @@ Reach out to us.</div>
                 <div class='view_cart button' onclick='storeViewCart();'>VIEW CART</div>
                 <div class='checkout button' onclick='storeCheckout();'>CHECKOUT NOW</div>
             </div>
+            <div id='free_product_success' class='free_product_success store_content'>
+                <div class='store_title'></div>
+                <div class='name'></div>
+                <div class='hsep'></div>
+                <div class='text'>Product added to your fan account!</div>
+                <div class='return_to_store button' onclick='storeShowProductList();'>RETURN TO STORE</div>
+                <div class='go_to_fan button' onclick='storeShowProductList();'>GO TO FAN ACCOUNT</div>
+            </div>
+            <div id='free_product_need_fan' class='free_product_need_fan store_content'>
+                <div class='store_title'></div>
+                <div class='name'></div>
+                <div class='hsep'></div>
+                <div class='text'>You need to signup for a MyArtistDNA fan account to download this item.</div>
+                <div class='fan_signup button' onclick='storeFanSignup();'>SIGNUP</div>
+                <div class='fan_login button' onclick='storeFanLogin();'>LOGIN</div>
+            </div>
         </div>
         <?=build_scrollbar();?>
     </div>
