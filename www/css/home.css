@@ -42,7 +42,7 @@
     if( preg_match("/Windows.*Chrome/",$_SERVER['HTTP_USER_AGENT']) === 1 )
     {
         /*  Windows Chrome */
-        echo <<END
+        print <<<END
 
 @font-face {
     font-family: 'Teletex Bold';
@@ -60,7 +60,7 @@ END;
     else
     {
         /* Everything else */
-        echo <<END
+        print <<<END
         
 @font-face {
     font-family: 'Teletex Bold';
