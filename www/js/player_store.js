@@ -14,6 +14,7 @@ function showStore()
     if( g_showingStore )
     {
         hideTab();
+        updateAnchor({product_id: ""});
     }
     else
     {
@@ -31,6 +32,7 @@ function hideStore()
 {
     g_showingStore = false;
     $('#store_tab').hide();
+    updateAnchor({product_id: ""});
 }
 function storeShowProductList()
 {
@@ -39,6 +41,7 @@ function storeShowProductList()
     $('#store_tab #product_list').show();
     
     $('#store_tab').scrollbar("repaint");
+    updateAnchor({product_id: ""});
 }
 function storeShowProductId(id)
 {
@@ -68,6 +71,7 @@ function storeShowProduct(index)
     $('#store_tab #product_info').show();
     
     $('#store_tab').scrollbar("repaint");
+    updateAnchor({product_id: product.id});
 }
 
 function storeBuyProduct()
@@ -84,6 +88,7 @@ function storeBuyProduct()
     $('#store_tab #buy_now_result').show();
         
     $('#store_tab').scrollbar("repaint");
+    updateAnchor({product_id: ""});    
 }
 function storeBuyProductId(product_id)
 {
