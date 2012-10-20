@@ -24,12 +24,11 @@
     font-style: normal;
 }
 @font-face {
-    font-family: 'Teletex Medium';
+    font-family: 'Teletex Bold Italic';
     src: url('teletex_med.eot');
-    src: url('teletex_med.svg#teletex_mediumregular') format('svg'),
-    url('teletex_med.eot?#iefix') format('embedded-opentype'),
-    url('teletex_med.woff') format('woff'),
-    url('teletex_med.ttf') format('truetype');
+    src: url('teletex_med.eot?#iefix') format('embedded-opentype'),
+    url('teletex_med.ttf') format('truetype')
+    url('teletex_reg.woff') format('woff');
     
     font-weight: normal;
     font-style: normal;
@@ -346,7 +345,7 @@ body {
     padding-bottom: 2px;
     color: white;
     font-size: 16px;
-    font-family: "Teletex Medium", Helvetica, sans-serif;
+    font-family: "Teletex Bold Italic", Helvetica, sans-serif;
     font-style: italic;
     border-bottom: 2px solid #00f1fd;
     vertical-align: top;
