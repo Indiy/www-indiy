@@ -27,7 +27,7 @@ function showStore(product_id)
         $('#store_tab').scrollbar("repaint");
         
         if( product_id )
-            `storeShowProductId(product_id);
+            storeShowProductId(product_id);
     }
 }
 
