@@ -124,7 +124,7 @@
             $image = "/images/default_product_image.jpg";
 
         $name = stripslashes($product['name']);
-        $price = $product['price'];
+        $price = floatval($product['price']);
         $item = array("id" => $product['id'],
                       "image" => $image,
                       "name" => $name,
@@ -141,7 +141,14 @@
         $html .= "  <img src='$image'/>";
         $html .= " </div>";
         $html .= " <div class='name_price'>";
-        $html .= "  <div class='price'>\$$price</div>";
+        if( $price > 0.0 )
+        {
+            $html .= "  <div class='price'>\$$price</div>";
+        }
+        else
+        {
+            $html .= "  <div class='price'>FREE</div>";
+        }
         $html .= "  <div class='name'>$name</div>";
         $html .= " </div>";
         $html .= "</div>";

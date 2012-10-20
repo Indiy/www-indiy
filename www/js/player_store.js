@@ -66,7 +66,17 @@ function storeShowProduct(index)
     $('#product_info .store_title').html("{0} > {1}".format(g_artistName,product.name));
     $('#product_info .img_holder img').attr('src',product.image);
     $('#product_info .name').html(product.name);
-    $('#product_info .price').html(product.price);
+
+    if( product.price > 0.0 )
+    {
+        $('#product_info .dollar_price').removeClass("free");
+        $('#product_info .price').html(product.price);
+    }
+    else
+    {
+        $('#product_info .dollar_price').addClass("free");
+        $('#product_info .price').html("FREE");
+    }
     $('#product_info .description').html(product.description);
     
     $('#store_tab .store_content').hide();
