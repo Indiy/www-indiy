@@ -37,6 +37,18 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Teletex Bold';
+    src: url('teletex_med.eot');
+    src: url('teletex_med.svg#teletexregular') format('svg'),
+    url('teletex_med.eot?#iefix') format('embedded-opentype'),
+    url('teletex_reg.woff') format('woff'),
+    url('teletex_med.ttf') format('truetype');
+    
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Lucida Grande';
     src: url('Lucida Grande.eot');
     src: local('Lucida Grande'), url('Lucida Grande.ttf') format('truetype');
@@ -360,7 +372,7 @@ body {
     width: 135px;
     color: black;
     font-size: 11px;
-    font-family: "Teletex Light", Helvetica, sans-serif;
+    font-family: "Teletex Bold", Helvetica, sans-serif;
     text-align: center;
     text-decoration: none;
     background: url("/images/home_aqua_button.png") no-repeat;
@@ -381,7 +393,7 @@ body {
     width: 149px;
     color: white;
     font-size: 11px;
-    font-family: "Teletex Light", Helvetica, sans-serif;
+    font-family: "Teletex Bold", Helvetica, sans-serif;
     text-align: center;
     text-decoration: none;
     background: url("/images/home_purple_button.png") no-repeat;
