@@ -613,5 +613,5 @@ function updateAnchorMedia(map)
     
     jQuery.extend(default_map,map);
     
-    updateMap(default_map);
+    updateAnchor(default_map);
 }
