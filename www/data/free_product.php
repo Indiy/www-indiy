@@ -15,15 +15,29 @@
     {
         add_free_product_to_fan($product_id);
         $ret = array("success" => 1);
-        echo json_encode($ret);
+        send_response($ret);
         die();
     }
     else
     {
         $_SEESION['free_product_to_buy'] = $product_id;
         $ret = array("error" => "need_login_signup");
-        echo json_encode($ret);
+        send_response($ret);
         die();
+    }
+    
+    function send_response($ret)
+    {
+        $json = json_encode($ret);
+        if( isset($_REQUEST['callback']) )
+        {
+            $callback = $_REQUEST['callback'];
+            echo "$callback($json);";
+        }
+        else
+        {
+            echo $json;
+        }
     }
 
 ?>
