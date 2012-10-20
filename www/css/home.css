@@ -27,7 +27,7 @@
     font-family: 'Teletex Bold Italic';
     src: url('teletex_med.eot');
     src: url('teletex_med.eot?#iefix') format('embedded-opentype'),
-    url('teletex_med.ttf') format('truetype')
+    url('teletex_med.ttf') format('truetype'),
     url('teletex_reg.woff') format('woff');
     
     font-weight: normal;
