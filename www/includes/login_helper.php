@@ -26,6 +26,13 @@ function login_fan_from_row($row)
     $cookie_domain = str_replace("http://www.","",trueSiteUrl());
     setcookie("FAN_EMAIL",$row['email'],$expire,"/",$cookie_domain);
 
+    if( isset($_SESSION['free_product_to_buy']) )
+    {
+        $product_id = $_SESSION['free_product_to_buy'];
+        add_free_product_to_fan($product_id);
+        unset($_SESSION['free_product_to_buy']);
+    }
+
     return fan_site_url();
 }
 
