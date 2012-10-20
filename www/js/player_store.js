@@ -189,3 +189,19 @@ function storeCheckout()
     storeViewCart();
 }
 
+function storeGoToFan()
+{
+    var url = "{0}/fan/".format(g_fanBaseUrl);
+    window.open(url,'_blank');
+}
+function storeFanSignup()
+{
+    var url = "{0}/signup.php".format(g_fanBaseUrl);
+    window.open(url,'_blank');
+}
+function storeFanLogin()
+{
+    var url = "{0}/login.php".format(g_fanBaseUrl);
+    window.open(url,'_blank');
+}
+
