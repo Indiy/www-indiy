@@ -140,7 +140,7 @@ function storeBuyFreeProduct()
     
     var args = {
         artist_id: g_artistId,
-        product_id, product.id
+        product_id: product.id
     };
     
     var url = "{0}/data/free_product.php".format(g_cartBaseUrl);
