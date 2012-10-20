@@ -44,8 +44,8 @@ function videoPanelChange(index)
     g_videoCurrentIndex = index;
     volumeSetLevel(g_videoVolRatio);
     var video = g_videoList[index];
-    var hash = '#video_id=' + video.id;
-    window.location.hash = hash;
+
+    updateAnchorMedia({ video_id: video.id });
     commentChangedMedia('video',video.id);
     
     loveChangedVideo(video.id,video.name);

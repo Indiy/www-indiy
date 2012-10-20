@@ -603,3 +603,15 @@ function updateAnchor(map)
     }
     window.location.hash = anchor;
 }
+function updateAnchorMedia(map)
+{
+    var default_map = {
+        song_id: "",
+        photo_id: "",
+        video_id: ""
+    };
+    
+    jQuery.extend(default_map,map);
+    
+    updateMap(default_map);
+}

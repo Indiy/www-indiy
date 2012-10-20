@@ -149,8 +149,8 @@ function photoUpdateToIndex(index)
     photoLoadImage(photo,index);
     
     g_currentPhotoId = photo.id;
-    var hash = '#photo_id=' + g_currentPhotoId;
-    window.location.hash = hash;
+
+    updateAnchorMedia({ photo_id: photo.id });
     commentChangedMedia('photo',photo.id);
     
     playerPhotoInfo(photo.name,photo.location,photo.listens);
