@@ -35,6 +35,7 @@ var g_showingContentPage = false;
 var g_searchOpen = false;
 var g_volumeShown = false;
 var g_touchDevice = false;
+var g_stored_hash = "";
 
 $(document).ready(generalOnReady);
 function generalOnReady()
@@ -130,6 +131,16 @@ function generalOnReady()
     if( $('body').hasClass('narrow_screen') )
     {
         IS_NARROW = true;
+    }
+    
+    g_storedHash = window.location.hash;
+    if( "onhashchange" in window )
+    {
+        window.onhashchange = maybeHashChanged;
+    }
+    else
+    {
+        window.setInterval(maybeHashChanged, 100);
     }
 }
 
@@ -601,6 +612,9 @@ function updateAnchor(map)
             anchor += "{0}={1}".format(key,val);
         }
     }
+
+    // inhibit hashChanged if we do it
+    g_storedHash = anchor;
     window.location.hash = anchor;
 }
 function updateAnchorMedia(map)
@@ -614,4 +628,22 @@ function updateAnchorMedia(map)
     jQuery.extend(default_map,map);
     
     updateAnchor(default_map);
+}
+function maybeHashChanged()
+{
+    if( g_storedHash != window.location.hash )
+    {
+        g_storedHash = window.location.hash;
+        hashChanged(g_storedHash);
+    }
+}
+function hashChanged()
+{
+    var anchor_map = getAnchorMap();
+    
+    if( 'product_id' in anchor_map )
+    {
+        var product_id = anchor_map['product_id'];
+        showStore(product_id);
+    }
 }

@@ -11,7 +11,7 @@ function storeReady()
 function showStore(product_id)
 {
     $('#popup_tab_list').hide();
-    if( g_showingStore )
+    if( g_showingStore && !product_id )
     {
         hideTab();
         updateAnchor({product_id: ""});
