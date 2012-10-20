@@ -1697,6 +1697,9 @@ body {
     vertical-align: super;
     font-size: 25px;
 }
+#store_tab .product_info .pi_right .price_share .dollar_price.free .dollar {
+    display: none;
+}
 #store_tab .product_info .pi_right .price_share .share {
     display: none;
     position: relative;
