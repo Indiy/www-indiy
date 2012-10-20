@@ -591,7 +591,7 @@ function updateAnchor(map)
         
         if( val.length > 0 )
         {
-            if( anchor.length == 0 )
+            if( anchor.length > 0 )
                 anchor += "&";
             anchor += "{0}={1}".format(key,val);
         }
