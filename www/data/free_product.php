@@ -20,7 +20,7 @@
     }
     else
     {
-        $_SEESION['free_product_to_buy'] = $product_id;
+        $_SESSION['free_product_to_buy'] = $product_id;
         $ret = array("error" => "need_login_signup");
         send_response($ret);
         die();
