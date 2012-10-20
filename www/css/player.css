@@ -319,6 +319,7 @@ body {
 #tracker_bar .media_info_box .photo_info .location {
     position: absolute;
     top: 22px;
+    left: 0px;
     right: 20px;
     height: 25px;
     color: white;
@@ -326,6 +327,7 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold; 
     text-transform: uppercase;
+    text-align: right;
 }
 
 #tracker_bar .media_controls {
