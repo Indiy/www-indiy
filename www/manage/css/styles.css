@@ -25,11 +25,24 @@ h1, h2, h3, h4, h5, h6 {
 
  
 @font-face {
- font-family: 'Neuzeit Grotesk';
- src: url('Neuzeit-Grotesk.eot');
- src: local('Neuzeit-Grotesk'), url('Neuzeit-Grotesk.otf') format('opentype');
- font-weight: normal;
- font-style: normal;
+    font-family: 'Neuzeit Grotesk';
+    src: url('neuzeit-grotesk.eot');
+    src: url('neuzeit-grotesk-bold.svg#neuzeitgrobold') format('svg'),
+    url('neuzeit-grotesk.eot?#iefix') format('embedded-opentype'),
+    url('neuzeit-grotesk.woff') format('woff'),
+    url('neuzeit-grotesk.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Teletex Light';
+    src: url('teletex_reg.eot');
+    src: url('teletex_reg.svg#teletexregular') format('svg'),
+    url('teletex_reg.eot?#iefix') format('embedded-opentype'),
+    url('teletex_light.woff') format('woff'),
+    url('teletex_reg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
  font-family: 'Neuzeit Grotesk Light';
@@ -38,17 +51,6 @@ h1, h2, h3, h4, h5, h6 {
  font-weight: normal;
  font-style: normal;
 }
-
-@font-face {
- font-family: 'Teletex Light';
- src: url('Teletex_Light.eot');
- src: local('Teletex_Light'),
-    url('Teletex_Light.otf') format('opentype'),
-    url('Teletex_Light.ttf') format('truetype');
- font-weight: normal;
- font-style: normal;
-}
-
 @font-face {
  font-family: 'Lucida Grande';
  src: url('Lucida Grande.eot');
