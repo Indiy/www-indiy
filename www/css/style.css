@@ -41,15 +41,16 @@ input:focus { outline: 0; -webkit-box-shadow: none !important; -moz-box-shadow: 
  font-weight: normal;
  font-style: normal;
 }
-
 @font-face {
- font-family: 'Teletex Light';
- src: url('Teletex_Light.eot');
- src: local('Teletex_Light'), url('Teletex_Light.otf') format('opentype');
- font-weight: normal;
- font-style: normal;
+    font-family: 'Teletex Light';
+    src: url('teletex_light.eot');
+    src: url('teletex_light.eot?#iefix') format('embedded-opentype'),
+    url('teletex_light.woff') format('woff'),
+    url('teletex_light.ttf') format('truetype'),
+    url('teletex_light.svg#teletex_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
-
 @font-face {
  font-family: 'Lucida Grande';
  src: url('Lucida Grande.eot');
