@@ -614,7 +614,7 @@ function updateAnchor(map)
     }
 
     // inhibit hashChanged if we do it
-    g_storedHash = anchor;
+    g_storedHash = "#" + anchor;
     window.location.hash = anchor;
 }
 function updateAnchorMedia(map)
