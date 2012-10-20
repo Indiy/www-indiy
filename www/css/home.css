@@ -341,7 +341,7 @@ body {
     color: white;
     font-size: 35px;
     font-family: "Teletex Light", Helvetica, sans-serif;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
 }
 .body_under_title_line {
     position: absolute;
