@@ -2,7 +2,7 @@
 @font-face {
     font-family: 'Neuzeit Grotesk';
     src: url('neuzeit-grotesk.eot');
-    src: url('neuzeit-grotesk.svg#neuzeitgroregular') format('svg'),
+    src: url('neuzeit-grotesk-bold.svg#neuzeitgrobold') format('svg'),
     url('neuzeit-grotesk.eot?#iefix') format('embedded-opentype'),
     url('neuzeit-grotesk.woff') format('woff'),
     url('neuzeit-grotesk.ttf') format('truetype');
