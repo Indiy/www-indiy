@@ -8,7 +8,7 @@ function storeReady()
     $('#store_tab').scrollbar();
 }
 
-function showStore()
+function showStore(product_id)
 {
     $('#popup_tab_list').hide();
     if( g_showingStore )
@@ -25,6 +25,9 @@ function showStore()
         $('#store_tab').show();
         
         $('#store_tab').scrollbar("repaint");
+        
+        if( product_id )
+            `storeShowProductId(product_id);
     }
 }
 

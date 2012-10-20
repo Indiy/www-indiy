@@ -111,6 +111,11 @@ function generalOnReady()
             $('#under_construction').show();
         }
     }
+    if( 'product_id' in anchor_map )
+    {
+        var product_id = anchor_map['product_id'];
+        showStore(product_id);
+    }
     
     if( g_touchDevice )
     {
