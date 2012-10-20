@@ -33,20 +33,49 @@
     src: url('teletex_med.eot?#iefix') format('embedded-opentype'),
     url('teletex_reg.woff') format('woff'),
     url('teletex_med.ttf') format('truetype');
-    
     font-weight: normal;
     font-style: normal;
 }
+
+<?php
+
+    if( preg_match("/Windows.*Chrome/",$_SERVER['HTTP_USER_AGENT']) === 1 )
+    {
+        /*  Windows Chrome */
+        echo <<END
+
+@font-face {
+    font-family: 'Teletex Bold';
+    src: url('teletex_med.eot');
+    src: url('teletex_med.eot?#iefix') format('embedded-opentype'),
+    url('teletex_med.svg#teletex_mediumregular') format('svg'),
+    url('teletex_med.woff') format('woff'),
+    url('teletex_med.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+END;
+    }
+    else
+    {
+        /* Everything else */
+        echo <<END
+        
 @font-face {
     font-family: 'Teletex Bold';
     src: url('teletex_med.eot');
     src: url('teletex_med.eot?#iefix') format('embedded-opentype'),
     url('teletex_med.woff') format('woff'),
     url('teletex_med.ttf') format('truetype');
-    
     font-weight: normal;
     font-style: normal;
 }
+
+END;
+    }
+
+?>
 
 @font-face {
     font-family: 'Lucida Grande';
