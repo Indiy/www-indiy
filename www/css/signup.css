@@ -12,6 +12,16 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Neuzeit Grotesk Large Regular';
+    src: url('neuzeit-grotesk.eot');
+    src: url('neuzeit-grotesk.svg#neuzeitgroregular') format('svg'),
+    url('neuzeit-grotesk.eot?#iefix') format('embedded-opentype'),
+    url('neuzeit-grotesk.woff') format('woff'),
+    url('neuzeit-grotesk.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'Teletex Light';
     src: url('teletex_reg.eot');
     src: url('teletex_reg.svg#teletexregular') format('svg'),
@@ -100,7 +110,7 @@ html, body {
     margin-left: auto;
     width: 710px;
     background: #e9e9e9;
-    font-family: 'Neuzeit Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Neuzeit Grotesk Large Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 #signup .header {
     height: 85px;
