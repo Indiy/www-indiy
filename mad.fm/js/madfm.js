@@ -70,7 +70,7 @@ $(document).ready(onReady);
 
 function update_genre_bg()
 {
-    var img = "/images/" + g_genre + ".jpg";
+    var img = "/images/madfm_bg_" + g_genre + ".jpg";
     var bg_css = "black url(\"" + img + "\") center center no-repeat";
     $('.overlay_container').css('background',bg_css);
 }
