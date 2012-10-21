@@ -63,7 +63,7 @@
 
     <nav>
         <ul>
-            <li><a href="http://myartistdna.tumblr.com">READ</a></li>
+            <li><a href="http://blog.myartistdna.com">READ</a></li>
             <li><a href="http://myartistdna.fm" target="_self">LISTEN</a></li>
             <li><a href="http://myartistdna.tv" target="_self">WATCH</a></li>                       
             <li><a href="http://myartistdna.is">AGENCY</a></li>                     
