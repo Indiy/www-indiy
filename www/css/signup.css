@@ -30,7 +30,7 @@ if( preg_match("/Windows.*Chrome/",$_SERVER['HTTP_USER_AGENT']) === 1 )
         font-style: normal;
     }
     
-    END;
+END;
 }
 else
 {
@@ -48,7 +48,7 @@ else
         font-style: normal;
     }
     
-    END;
+END;
 }
 
 ?>
