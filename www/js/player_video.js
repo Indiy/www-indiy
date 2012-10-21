@@ -111,6 +111,7 @@ function videoPlayPause()
     }
     else
     {
+        $('#big_play_icon').hide();
         g_videoPlayer.play();
     }
 }

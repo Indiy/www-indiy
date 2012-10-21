@@ -89,8 +89,7 @@ function musicPanelChange(index)
     };
     $('#jquery_jplayer').jPlayer("setMedia", media);
     playerProgress(0,0);
-    //if( g_musicIsPlaying )
-        $('#jquery_jplayer').jPlayer("play");
+    $('#jquery_jplayer').jPlayer("play");
 
     musicLoadImage(song,index);
     
