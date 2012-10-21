@@ -276,6 +276,9 @@ body {
     outline: 0;
 }
 
+#bottom_bar .copyright a:visited {
+   	color: #fff:
+}
 
 #bottom_container {
     position: absolute;
