@@ -1144,6 +1144,10 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
 }
+#user_tab .scrollable_container .page_content a,
+#user_tab .scrollable_container .page_content a:visited {
+    color: white;
+}
 
 #contact_tab {
     display: none;
