@@ -71,6 +71,11 @@ function videoPanelChange(index)
     if( g_mediaAutoStart )
     {
         g_videoPlayer.play();
+        $('#video_container').show();
+    }
+    else
+    {
+        $('#video_container').hide();
     }
     // Just inhibit the first play
     g_mediaAutoStart = true;    
@@ -117,6 +122,7 @@ function videoPlayPause()
     }
     else
     {
+        $('#video_container').show();
         $('#big_play_icon').hide();
         g_videoPlayer.play();
     }
