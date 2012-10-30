@@ -102,5 +102,6 @@ function onTabSuccess(data)
         g_tabList.unshift(data.tab_data);
     }
     updateTabList();
+    showList('.pages .heading');
 }
 
