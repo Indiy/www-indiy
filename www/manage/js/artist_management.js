@@ -123,6 +123,8 @@ function updatePhotoList()
         var class_name = i % 2 == 0 ? 'odd' : '';
         var error = false;
         
+        var img_url = "/timthumb.php?src={0}&w=210&h=132&zc=1&q=100".format(photo.image_url);
+        
         var html = "";
         html += "<li id='arrayorder_{0}' class='photos_sortable'>".format(photo.id);
         html += "<figure>";
@@ -130,7 +132,7 @@ function updatePhotoList()
         html += "<a href='#' onclick='deletePhoto({0});'></a>".format(photo.id);
         html += "</span>";
         html += "<a title='{0}' onclick='showPhotoPopup({1});'>".format("Edit Photo",i);
-        html += "<img src='{0}' width='210' height='132'>".format(photo.image_url);
+        html += "<img src='{0}' width='210' height='132'>".format(img_url);
         if( error )
             html += "<div class='error'>!</div>";
         html += "</a>";
@@ -157,12 +159,15 @@ function updateStoreList()
     for( var i = 0 ; i < g_productList.length ; ++i )
     {
         var product = g_productList[i];
+        
+        var img_url = "/timthumb.php?src={0}&w=207&h=130&zc=1&q=100".format(product.image_url);
+        
         var html = "";
         html += "<li id='arrayorder_{0}' class='products_sortable'>".format(product.id);
         html += "<figure>";
         html += "<span class='close'><a href='#' onclick='deleteProduct({0});'></a></span>".format(product.id);
         html += "<a onclick='showProductPopup({0});'>".format(i);
-        html += "<img src='{0}' width='207' height='130' alt=''>".format(product.image_url);
+        html += "<img src='{0}' width='207' height='130' alt=''>".format(img_url);
         html += "</a>";
         html += "</figure>";
         html += "<span>";
@@ -201,6 +206,8 @@ function updateVideoList()
             tip = "Item needs video!"
         }
         
+        var img_url = "/timthumb.php?src={0}&w=210&h=132&zc=1&q=100".format(video.image_url);
+        
         var html = "";
         html += "<li id='arrayorder_{0}' class='videos_sortable'>".format(video.id);
         html += "<figure>";
@@ -208,7 +215,7 @@ function updateVideoList()
         html += "<a href='#' onclick='deleteVideo({0});'></a>".format(video.id);
         html += "</span>";
         html += "<a title='{0}' onclick='showVideoPopup({1});'>".format(tip,i);
-        html += "<img src='{0}' width='210' height='132'>".format(video.image_url);
+        html += "<img src='{0}' width='210' height='132'>".format(img_url);
         if( error )
             html += "<div class='error'>!</div>";
         html += "</a>";
