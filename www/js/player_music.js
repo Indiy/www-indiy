@@ -89,7 +89,13 @@ function musicPanelChange(index)
     };
     $('#jquery_jplayer').jPlayer("setMedia", media);
     playerProgress(0,0);
-    $('#jquery_jplayer').jPlayer("play");
+    
+    if( g_mediaAutoStart )
+    {
+        $('#jquery_jplayer').jPlayer("play");
+    }
+    // Just inhibit the first play
+    g_mediaAutoStart = true;
 
     musicLoadImage(song,index);
     

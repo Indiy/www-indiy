@@ -58,6 +58,8 @@
         
         var g_startMediaType = "<?=$start_media_type;?>";
         
+        var g_mediaAutoStart = <?=json_encode($media_auto_start);?>;
+        
         <? if( $IPHONE ): ?>
             function iphoneReady()
             {

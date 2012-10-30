@@ -34,6 +34,7 @@
     $single_media_button = FALSE;
     $all_links_blank = "";
     $thin_footer = FALSE;
+    $media_auto_start = TRUE;
 
     $IPHONE = FALSE;
     $IOS = FALSE;
@@ -64,6 +65,7 @@
         $single_media_button = TRUE;
         $all_links_blank = " target='_blank' ";
         $thin_footer = TRUE;
+        $media_auto_start = FALSE;
     }
     
     $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE url='$artist_url' LIMIT 1"));

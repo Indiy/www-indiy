@@ -67,7 +67,13 @@ function videoPanelChange(index)
     videoOnWindowResize();
 
     g_videoPlayer.src(media);
-    g_videoPlayer.play();
+    
+    if( g_mediaAutoStart )
+    {
+        g_videoPlayer.play();
+    }
+    // Just inhibit the first play
+    g_mediaAutoStart = true;    
 }
 
 function videoResizeBackgrounds()
