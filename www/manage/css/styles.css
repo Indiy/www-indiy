@@ -1775,7 +1775,16 @@ textarea {
     background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
-#adminblock .photolist .list ul li span { font-weight:bold}
+#adminblock .photolist .list ul li span { font-weight:bold }
+#adminblock .photolist .list ul li span a {
+    display: inline-block;
+    height: 16px;
+    overflow: hidden;
+    vertical-align: top;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
 #adminblock .photolist .list ul li a { color:#383838; text-decoration:none; cursor: pointer; }
 #adminblock .photolist .list ul li a:hover { color:#383838; text-decoration:underline}
 
