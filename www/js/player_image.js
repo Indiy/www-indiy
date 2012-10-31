@@ -52,17 +52,7 @@ function imageLoadItem(item,index,root_tag)
             
             var img_style = "width: {0}px; height: {1}px;".format(image_params.width,image_params.height);
             
-            var tim_width = win_width;
-            if( image_params.margin_left > 0 )
-            {
-                tim_width += Math.abs(image_params.margin_left) * 2;
-            }
-            if( IS_IOS )
-            {
-                tim_width = 2*tim_width;
-            }
-            
-            var img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(image,tim_width);
+            var img_url = image_params.img_url;
             
             var div_holder_style = "";
             div_holder_style += "height: {0}px; ".format(win_height);
@@ -217,11 +207,25 @@ function imageGetLetterboxParams(item,root_tag)
         margin_top = (win_height - height)/2;
     }
     
+    var tim_width = win_width;
+    if( IS_IOS )
+    {
+        tim_width = 2*tim_width;
+    }
+    
+    var img_url = image;
+    if( tim_width < (img_width*0.8) )
+    {
+        // If we're doing more than a 20% downscale, do it on the server
+        img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(image,tim_width);
+    }
+    
     var ret = {
         'width': width,
         'height': height,
         'margin_top': margin_top,
-        'margin_left': margin_left
+        'margin_left': margin_left,
+        'img_url': img_url
     };
     return ret;
 }
