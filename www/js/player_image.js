@@ -221,6 +221,7 @@ function imageGetLetterboxParams(item,root_tag)
 function getImgUrl(item,root_tag)
 {
     var win_width = $(root_tag).width();
+    var img_width = item.image_data.width;
 
     var tim_width = win_width;
     if( IS_IOS )
@@ -235,8 +236,12 @@ function getImgUrl(item,root_tag)
         
         switch( tim_width )
         {
+            case 320:
+            case 480:
+            case 640:
             case 768:
             case 800:
+            case 960:
             case 1024:
             case 1080:
             case 1280:
@@ -244,8 +249,10 @@ function getImgUrl(item,root_tag)
             case 1536:
             case 1600:
             case 2048:
+                // Don't round up natural values
                 break;
             default:
+                // Round up wierd values to closest 100 to make server chache work better
                 tim_width = Math.ceil(tim_width/100)*100;
                 break;
         }
