@@ -213,11 +213,11 @@ function imageGetLetterboxParams(item,root_tag)
         tim_width = 2*tim_width;
     }
     
-    var img_url = image;
+    var img_url = item.image;
     if( tim_width < (img_width*0.8) )
     {
         // If we're doing more than a 20% downscale, do it on the server
-        img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(image,tim_width);
+        img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(item.image,tim_width);
     }
     
     var ret = {
