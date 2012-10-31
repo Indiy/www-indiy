@@ -67,7 +67,18 @@ function videoPanelChange(index)
     videoOnWindowResize();
 
     g_videoPlayer.src(media);
-    g_videoPlayer.play();
+    
+    if( g_mediaAutoStart )
+    {
+        g_videoPlayer.play();
+        $('#video_container').show();
+    }
+    else
+    {
+        $('#video_container').hide();
+    }
+    // Just inhibit the first play
+    g_mediaAutoStart = true;    
 }
 
 function videoResizeBackgrounds()
@@ -111,6 +122,7 @@ function videoPlayPause()
     }
     else
     {
+        $('#video_container').show();
         $('#big_play_icon').hide();
         g_videoPlayer.play();
     }

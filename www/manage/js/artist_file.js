@@ -66,7 +66,7 @@ function updateFileList()
                 html += " </div>";
                 html += "</div>";
                 html += "<div class='delete'>";
-                html += " <div class='button' onclick='removeUploadFile({0});'></div>".format(i);
+                html += " <div class='button' onclick='removeFailedUploadFile({0});'></div>".format(i);
                 html += "</div>";
             }
         }
@@ -82,7 +82,7 @@ function updateFileList()
                 html += " </div>";
                 html += "</div>";
                 html += "<div class='delete'>";
-                html += " <div class='button' onclick='removeUploadFile({0});'></div>".format(i);
+                html += " <div class='button' onclick='deleteFile({0});'></div>".format(i);
                 html += "</div>";
             }
             else
@@ -193,6 +193,11 @@ function cancelUploadFile(i)
         g_uploadCount--;
         g_backgroundCount--;
     }
+    g_fileList.splice(i,1);
+    updateFileList();
+}
+function removeFailedUploadFile(i)
+{
     g_fileList.splice(i,1);
     updateFileList();
 }

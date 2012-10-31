@@ -58,6 +58,8 @@
         
         var g_startMediaType = "<?=$start_media_type;?>";
         
+        var g_mediaAutoStart = <?=json_encode($media_auto_start);?>;
+        
         <? if( $IPHONE ): ?>
             function iphoneReady()
             {
@@ -370,9 +372,7 @@
         <div class='right scrollbar-pane'>
             <div class='contact_container'>
                 <div class='headline'>We want to hear what you have to say!</div>
-                <div class='description'>Have any questions or suggestions?
-Want to learn more about partnerships or custom products?
-Reach out to us.</div>
+                <div class='description'></div>
                 <div class='contact_form'>
                     <div class='label'>Your Name</div>
                     <div class='input_container'>
