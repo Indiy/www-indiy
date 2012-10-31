@@ -22,11 +22,8 @@ function imageLoadItem(item,index,root_tag)
             var image_params = imageGetStretchParams(item,root_tag);
             
             var img_style = "width: {0}px; height: {1}px;".format(image_params.width,image_params.height);
-            var tim_width = win_width;
-            if( IS_IOS )
-                tim_width = 2*win_width;
             
-            var img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(image,tim_width);
+            var img_url = image_params.img_url;
             
             var div_holder_style = "";
             div_holder_style += "height: {0}px; ".format(win_height);
@@ -169,11 +166,14 @@ function imageGetStretchParams(item,root_tag)
     if( bg_justify == "TOP" )
         margin_top = 0;
     
+    var img_url = getImgUrl(item,root_tag);
+    
     var ret = {
         'width': width,
         'height': height,
         'margin_top': margin_top,
-        'margin_left': margin_left
+        'margin_left': margin_left,
+        'img_url': img_url
     };
     return ret;
 }
@@ -207,6 +207,21 @@ function imageGetLetterboxParams(item,root_tag)
         margin_top = (win_height - height)/2;
     }
     
+    var img_url = getImgUrl(item,root_tag);
+    
+    var ret = {
+        'width': width,
+        'height': height,
+        'margin_top': margin_top,
+        'margin_left': margin_left,
+        'img_url': img_url
+    };
+    return ret;
+}
+function getImgUrl(item,root_tag)
+{
+    var win_width = $(root_tag).width();
+
     var tim_width = win_width;
     if( IS_IOS )
     {
@@ -220,31 +235,23 @@ function imageGetLetterboxParams(item,root_tag)
         
         switch( tim_width )
         {
-        case 768:
-        case 800:
-        case 1024:
-        case 1080:
-        case 1280:
-        case 1440:
-        case 1536:
-        case 1600:
-        case 2048:
-            break;
-        default:
-            tim_width = Math.ceil(tim_width/100)*100;
-            break;
+            case 768:
+            case 800:
+            case 1024:
+            case 1080:
+            case 1280:
+            case 1440:
+            case 1536:
+            case 1600:
+            case 2048:
+                break;
+            default:
+                tim_width = Math.ceil(tim_width/100)*100;
+                break;
         }
         
         img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(item.image,tim_width);
     }
-    
-    var ret = {
-        'width': width,
-        'height': height,
-        'margin_top': margin_top,
-        'margin_left': margin_left,
-        'img_url': img_url
-    };
-    return ret;
+    return img_url;
 }
 
