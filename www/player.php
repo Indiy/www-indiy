@@ -331,6 +331,9 @@
     while( $photo = mf($q_photo) )
     {
         $photo_image = '/artists/files/' . $photo['image'];
+        
+        $img_url = "/timthumb.php?src=$photo_image&w=200&zc=0&q=100";
+        
         $photo_name = $photo['name'];
         
         $item = array("id" => $photo['id'],
@@ -348,7 +351,7 @@
         $html = "";
         $html .= "<div class='item' onclick='photoChangeIndex($i); closeBottom(true);'>";
         $html .= " <div class='picture'>";
-        $html .= "  <img src='$photo_image'/>";
+        $html .= "  <img src='$img_url'/>";
         $html .= " </div>";
         $html .= " <div class='label'>$photo_name</div>";
         $html .= "</div>";
