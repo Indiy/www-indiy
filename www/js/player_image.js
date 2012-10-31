@@ -84,11 +84,7 @@ function imageLoadItem(item,index,root_tag)
         }
         else if( bg_style == 'CENTER' )
         {
-            var tim_width = win_width;
-            if( IS_IOS )
-                tim_width = 2*win_width;
-            
-            var img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(image,tim_width);
+            var img_url = image;
         
             holder.css("background-image","url({0})".format(img_url));
             holder.css("background-repeat","no-repeat");
