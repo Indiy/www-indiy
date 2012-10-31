@@ -52,6 +52,18 @@ function imageLoadItem(item,index,root_tag)
             
             var img_style = "width: {0}px; height: {1}px;".format(image_params.width,image_params.height);
             
+            var tim_width = win_width;
+            if( image_params.margin_left > 0 )
+            {
+                tim_width += Math.abs(image_params.margin_left) * 2;
+            }
+            if( IS_IOS )
+            {
+                tim_width = 2*tim_width;
+            }
+            
+            var img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(image,tim_width);
+            
             var div_holder_style = "";
             div_holder_style += "height: {0}px; ".format(win_height);
             div_holder_style += "width: {0}px; ".format(win_width);
@@ -62,7 +74,7 @@ function imageLoadItem(item,index,root_tag)
             
             var html = "";
             html += "<div style='{0}'>".format(div_holder_style);
-            html += "<img src='{0}' style='{1}' />".format(image,img_style);
+            html += "<img src='{0}' style='{1}' />".format(img_url,img_style);
             html += "</div>"
             holder.html(html);
             
@@ -72,7 +84,13 @@ function imageLoadItem(item,index,root_tag)
         }
         else if( bg_style == 'CENTER' )
         {
-            holder.css("background-image","url(" + image + ")");
+            var tim_width = win_width;
+            if( IS_IOS )
+                tim_width = 2*win_width;
+            
+            var img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(image,tim_width);
+        
+            holder.css("background-image","url({0})".format(img_url));
             holder.css("background-repeat","no-repeat");
             holder.css("background-position","center center");
             var html = "<div style='width: 100%; height: {0}px;'></div>".format(win_height);
