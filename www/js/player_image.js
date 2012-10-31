@@ -217,6 +217,24 @@ function imageGetLetterboxParams(item,root_tag)
     if( tim_width < (img_width*0.8) )
     {
         // If we're doing more than a 20% downscale, do it on the server
+        
+        switch( tim_width )
+        {
+        case 768:
+        case 800:
+        case 1024:
+        case 1080:
+        case 1280:
+        case 1440:
+        case 1536:
+        case 1600:
+        case 2048:
+            break;
+        default:
+            tim_width = Math.ceil(tim_width/100)*100;
+            break;
+        }
+        
         img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(item.image,tim_width);
     }
     
