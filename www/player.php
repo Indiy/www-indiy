@@ -282,6 +282,7 @@
         $video_image = '/artists/files/' . $video['image'];
         $video_name = $video['name'];
         
+        $img_url = "/timthumb.php?src=$video_image&w=200&zc=0&q=100";
         
         $item = array("id" => $video['id'],
                       "name" => $video_name,
@@ -298,7 +299,7 @@
         $html = "";
         $html .= "<div class='item' onclick='videoPlayIndex($i); closeBottom(true);'>";
         $html .= " <div class='picture'>";
-        $html .= "  <img src='$video_image'/>";
+        $html .= "  <img src='$img_url'/>";
         $html .= " </div>";
         $html .= " <div class='label'>$video_name</div>";
         $html .= "</div>";
