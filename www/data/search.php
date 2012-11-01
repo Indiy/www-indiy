@@ -25,7 +25,7 @@
             
             if( !$image )
             {
-                $image = "/images/NoPhoto.jpg";
+                $image = "/images/search_default.jpg";
             }
             else
             {
@@ -56,7 +56,7 @@
                 $image = $row['image'];
                 if( !$image )
                 {
-                    $image = "/images/NoPhoto.jpg";
+                    $image = "/images/search_default.jpg";
                 }
                 else
                 {
