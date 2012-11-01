@@ -20,11 +20,22 @@
         while( $row = mysql_fetch_assoc($q) )
         {
             $artist_id = $row['id'];
+            
+            $image = $row['logo'];
+            
+            if( !$image )
+            {
+                $image = "/images/NoPhoto.jpg";
+            }
+            else
+            {
+                $image = "/timthumb.php?src=/artists/files/$image&w=65&h=44&zc=0&q=100";
+            }
         
             $ret[] = array("id" => $row['id'],
                            "artist" => $row['artist'],
                            "url" => $row['url'],
-                           "logo" => $row['logo'],
+                           "logo" => $image,
                            );
             $allowed_artists[$artist_id] = TRUE;
         }
@@ -42,10 +53,20 @@
             $artist_id = $row['artist_id'];
             if( isset($allowed_artists[$artist_id]) )
             {
+                $image = $row['image'];
+                if( !$image )
+                {
+                    $image = "/images/NoPhoto.jpg";
+                }
+                else
+                {
+                    $image = "/timthumb.php?src=/artists/files/$image&w=65&h=44&zc=0&q=100";
+                }
+            
                 $ret[] = array("id" => $row['id'],
                                "artist_id" => $row['artist_id'],
                                "name" => $row['name'],
-                               "image" => $row['image'],
+                               "image" => $image,
                                );
             }
         }

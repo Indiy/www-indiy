@@ -108,8 +108,7 @@ function searchTestList(list,re,is_artist,type,image_path)
             if( item.artist.match(re) )
             {
                 var r = createFromArtist(item);
-                r['type'] = "artist";
-                r['image'] = image_path + item.logo;
+                r['image'] = item.logo;
                 r['value'] = item.artist;
                 ret.push(r);
             }
@@ -122,7 +121,7 @@ function searchTestList(list,re,is_artist,type,image_path)
                 var r = createFromArtist(artist);
                 r['type'] = type;
                 r['value'] = item.name;
-                r['image'] = image_path + item.image;
+                r['image'] = item.image;
                 r['url'] += "#{0}_id={1}".format(type,item.id);
                 ret.push(r);
             }
