@@ -51,10 +51,9 @@
         $row = mf(mq("SELECT * FROM mydna_musicplayer_video WHERE id='$id'"));
        
         array_walk($row,cleanup_row_element);
-
-        $image_path = "../artists/files/" . $row['image'];
+        
         if( !empty($row['image']) )
-            $row['image_url'] = $image_path;
+            $row['image_url'] = "/artists/files/" . $row['image'];
         else
             $row['image_url'] = "images/photo_video_01.jpg";
        
