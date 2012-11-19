@@ -21,6 +21,7 @@ html {
     left: 0px; 
     top: 0px;
     background: black url("../images/madfm_bg.png") center center no-repeat;
+    cursor: pointer;
 }
 
 #player {
@@ -33,6 +34,7 @@ html {
     margin-left: -430px;
     background: url("../images/grey_checked_bg.png");
     border-radius: 8px;
+    cursor: default;
 }
 #player .progress {
     float: left;
@@ -337,6 +339,7 @@ html {
     font-size: 12px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
+    cursor: default;
 }
 #bottom .copyright {
     position: absolute;

@@ -82,6 +82,8 @@ function get_genre_data()
     return false;
 }
 
+var g_backgroundFlipTimeout = false;
+
 function update_genre_bg()
 {
     var genre_data = get_genre_data();
@@ -102,6 +104,13 @@ function update_genre_bg()
         var bg_css = "black url(\"" + img + "\") center center no-repeat";
         $('.overlay_container').css('background',bg_css);
     }
+    
+    if( g_backgroundFlipTimeout !== false )
+    {
+        window.clearTimeout(g_backgroundFlipTimeout);
+        g_backgroundFlipTimeout = false;
+    }
+    g_backgroundFlipTimeout = window.setTimeout(update_genre_bg,30*1000);
 }
 
 $(document).ready(onReady);
@@ -195,7 +204,6 @@ function updateTrackInfo()
         else
             $('#player .heart').removeClass('love');
         updateHistory();
-        update_genre_bg();
     }
     
     var duration = track.duration;
