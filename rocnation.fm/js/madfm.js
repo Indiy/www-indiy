@@ -66,11 +66,42 @@ function onReady()
     
     update_genre_bg();
 }
+
+function get_genre_data()
+{
+    for( var i = 0 ; i < g_genreList.length ; i++ )
+    {
+        var genre_data = g_genreList[i];
+        
+        if( genre_data.stream_name == g_genre )
+        {
+            return genre_data;
+        }
+    }
+    
+    return false;
+}
+
 function update_genre_bg()
 {
-    var img = "/images/" + g_genre + ".jpg";
-    var bg_css = "black url(\"" + img + "\") center center no-repeat";
-    $('.overlay_container').css('background',bg_css);
+    var genre_data = get_genre_data();
+    
+    if( genre_data && genre_data.num_images > 1 )
+    {
+        var max = genre_data.num_images;
+    
+        var image_num = Math.floor(Math.random() * max) + 1;
+    
+        var img = "/images/" + g_genre + "_" + image_num + ".jpg";
+        var bg_css = "black url(\"" + img + "\") center center no-repeat";
+        $('.overlay_container').css('background',bg_css);
+    }
+    else
+    {
+        var img = "/images/" + g_genre + ".jpg";
+        var bg_css = "black url(\"" + img + "\") center center no-repeat";
+        $('.overlay_container').css('background',bg_css);
+    }
 }
 
 $(document).ready(onReady);
@@ -164,6 +195,7 @@ function updateTrackInfo()
         else
             $('#player .heart').removeClass('love');
         updateHistory();
+        update_genre_bg();
     }
     
     var duration = track.duration;
