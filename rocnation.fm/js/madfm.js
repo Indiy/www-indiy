@@ -66,7 +66,7 @@ function onReady()
     
     update_genre_bg();
     
-    $('.overlay_container').onclick(backgroundClick);
+    $('.overlay_container').click(backgroundClick);
 }
 
 function backgroundClick()
