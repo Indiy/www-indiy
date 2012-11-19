@@ -65,6 +65,13 @@ function onReady()
     window.setInterval(scrollTrackTitle,50);
     
     update_genre_bg();
+    
+    $('.overlay_container').onclick(backgroundClick);
+}
+
+function backgroundClick()
+{
+    window.open("http://www.duracellpower.com/","_blank");
 }
 
 function get_genre_data()
