@@ -21,8 +21,17 @@ html {
     left: 0px; 
     top: 0px;
     background: black url("../images/madfm_bg.png") center center no-repeat;
+}
+
+#background_click {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
     cursor: pointer;
 }
+
 
 #player {
     position: absolute;
@@ -327,7 +336,6 @@ html {
     width: 194px;
     background: url("../images/mad_fm_logo.png");
 }
-
 #bottom {
     position: absolute;
     bottom: 0px;
