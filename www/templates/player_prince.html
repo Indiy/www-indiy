@@ -154,18 +154,6 @@
     </div>
     <div id='bottom_bar'>
         <div class='be_heard'>NEW ALBUM COMING SOON! BUY NEW SINGLE ROCK N ROLL AFFAIR!</div>
-        <div class='slash'>//</div>
-        <? if( $is_logged_in_text ): ?>
-            <div class='sign_up bottom_link'><?=$is_logged_in_text;?></div>
-        <? elseif( $login_url ): ?>
-            <div class='sign_up bottom_link'><a <?=$all_links_blank;?> href='<?=$login_url;?>' >LOGIN NOW</a></div>
-        <? else: ?>
-            <div class='sign_up bottom_link'><a <?=$all_links_blank;?> href='<?=$signup_url;?>' >SIGN UP NOW</a></div>
-        <? endif; ?>
-        <? if( $show_order_status ): ?>
-            <div class='slash'>//</div>
-            <div class='order_status bottom_link'><a target="_blank" href='/order_status.php'>ORDER STATUS</a></div>
-        <? endif; ?>
         <div class='copyright'>&copy;2012 PRINCE</div>
     </div>
     <div id='tooltip'>
