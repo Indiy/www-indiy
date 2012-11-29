@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyArtistDNA | Be Heard. Be Seen. Be Independent.</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    
+    <link rel="apple-touch-icon" href="/artists/files/<?=$artist_logo;?>" />
+    <link rel="apple-touch-startup-image" href="/images/apple-loading-screen.jpg" />
+
+    <!--[if lt IE 9]>
+     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+     
+    <link href="/css/video-js.css" rel="stylesheet">
+    <link href="/css/player.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/js/video.js"></script>
+
+    <script src="/js/jquery.mousewheel.js" type="text/javascript"></script>
+    <script src="/js/jquery.jplayer.js" type="text/javascript"></script>
+    <script src="/js/string.utils.js" type="text/javascript"></script>
+    <script src="/js/mad.scrollbar.js" type="text/javascript"></script>
+    <script src="/js/mad.swipe.js" type="text/javascript"></script>
+
+    <script src="/js/player_general.js" type="text/javascript"></script>
+    <script src="/js/player_common.js" type="text/javascript"></script>
+    <script src="/js/player_image.js" type="text/javascript"></script>
+    <script src="/js/player_photo.js" type="text/javascript"></script>
+    <script src="/js/player_music.js" type="text/javascript"></script>
+    <script src="/js/player_video.js" type="text/javascript"></script>
+    <script src="/js/player_love.js" type="text/javascript"></script>
+    <script src="/js/player_social.js" type="text/javascript"></script>
+    <script src="/js/player_tabs.js" type="text/javascript"></script>
+    <script src="/js/player_search.js" type="text/javascript"></script>
+    <script src="/js/player_store.js" type="text/javascript"></script>
+    <script src="/js/player_tooltips.js" type="text/javascript"></script>
+    <script src="/js/player_comments.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var g_tabList = <?=$tab_list_json;?>;
+        var g_photoList = <?=$photo_list_json;?>;
+        var g_musicList = <?=$music_list_json;?>;
+        var g_videoList = <?=$video_list_json;?>;
+        var g_productList = <?=$product_list_json;?>;
+        var g_totalPageViews = <?=$artist_views;?>;
+        var g_trueSiteUrl = "<?=trueSiteUrl();?>";
+        var g_cartBaseUrl = "<?=cart_base_url();?>";
+        var g_fanBaseUrl = "<?=fan_base_url();?>";
+
+        var g_artistName = "<?=$artist_name;?>";
+        var g_artistId = <?=$artist_id;?>;
+        var g_artistBaseUrl = "<?=$artist_base_url;?>";
+        
+        var g_fanEmail = "<?=$fan_email;?>";
+        
+        var g_startMediaType = "<?=$start_media_type;?>";
+        
+        var g_mediaAutoStart = <?=json_encode($media_auto_start);?>;
+        
+        <? if( $IPHONE ): ?>
+            function iphoneReady()
+            {
+                window.scrollTo(0,1);
+            }
+            $(document).ready(iphoneReady);
+        <? endif; ?>
+        
+    </script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15194524-1']);
+  _gaq.push(['_setDomainName', 'myartistdna.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body class='template_prince <?=$body_style;?>'>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) return;
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=256680924395123";
+             fjs.parentNode.insertBefore(js, fjs);
+             }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div id='music_bg' class='full_screen_bg'>
+        <div class='pad'></div>
+        <?php
+            foreach( $music_list as $k => $song )
+            {
+                echo "<div id='image_holder_$k' class='image_holder'>";
+                echo "</div>\n";
+            }
+        ?>
+        <div class='pad'></div>
+    </div>
+    <div id='photo_bg' class='full_screen_bg'>
+        <div class='pad'></div>
+        <?php
+            foreach( $photo_list as $k => $photo )
+            {
+                echo "<div id='image_holder_$k' class='image_holder'>";
+                echo "</div>\n";
+            }
+        ?>
+        <div class='pad'></div>
+    </div>
+    <div id="jquery_jplayer" class="jp-jplayer"></div>
+    <div id='video_bg' class='full_screen_bg'>
+        <div class='pad'></div>
+        <?php
+            foreach( $video_list as $k => $video )
+            {
+                echo "<div id='image_holder_$k' class='image_holder'>";
+                echo "</div>\n";
+            }
+        ?>
+        <div class='pad'></div>
+        <div id='video_container'></div>
+    </div>
+    <div id='under_construction'></div>
+    <div id='player_prev' class='idle_fade_out player_nav_button' onclick='playerPrevious();'></div>
+    <div id='player_next' class='idle_fade_out player_nav_button' onclick='playerNext();'></div>
+    
+    <a <?=$all_links_blank;?> href="<?=trueSiteUrl();?>" title='MyArtistDNA'><div id='top_bar_mad_logo'></div></a>
+    <div id='top_bar' class='idle_fade_out'>
+        <div class='artist_name'><?=$artist_name;?></div>
+        <div class='search_viewed_tabs'>
+            <div id='player_view_count' class='view_count'>VIEWED <span id='total_view_count'><?=number_format($artist_views);?></span></div>
+            <div class='sep'></div>
+            <div id='more_tabs_button' class='more_tabs' onclick='showMoreTabs();'>
+                <div class='more_block'>
+                    <div class='more_arrow'></div>
+                </div>
+            </div>
+            <div class='content_tabs'>
+                <div class='inner'>
+                    <?=$content_tabs_html;?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='bottom_bar'>
+        <div class='be_heard'>NEW ALBUM COMING SOON! BUY NEW SINGLE ROCK N ROLL AFFAIR!</div>
+        <div class='slash'>//</div>
+        <? if( $is_logged_in_text ): ?>
+            <div class='sign_up bottom_link'><?=$is_logged_in_text;?></div>
+        <? elseif( $login_url ): ?>
+            <div class='sign_up bottom_link'><a <?=$all_links_blank;?> href='<?=$login_url;?>' >LOGIN NOW</a></div>
+        <? else: ?>
+            <div class='sign_up bottom_link'><a <?=$all_links_blank;?> href='<?=$signup_url;?>' >SIGN UP NOW</a></div>
+        <? endif; ?>
+        <? if( $show_order_status ): ?>
+            <div class='slash'>//</div>
+            <div class='order_status bottom_link'><a target="_blank" href='/order_status.php'>ORDER STATUS</a></div>
+        <? endif; ?>
+        <div class='copyright'>&copy;2012 PRINCE</div>
+    </div>
+    <div id='tooltip'>
+        <div class='carrot'></div>
+        <span>TEST</span>
+    </div>
+    <div id='big_play_icon' onclick='playerPlayPause();'></div>
+    <div id='bottom_container' class='idle_fade_out'>
+        <div id='tracker_bar'>
+            <div class='buttons'>
+                <? if( $single_media_button ): ?>
+                    <div class='sep'></div>
+                    <div class='plus tooltiped button' onclick='toggleBottom();' tooltip="MORE">
+                        <div class='icon'></div>
+                    </div>
+                <? else: ?>
+                    <? if( count($photo_list) > 0): ?>
+                        <div class='sep'></div>
+                        <div class='photos tooltiped button' onclick='clickPhotoIcon();' tooltip="PHOTOS">
+                            <div class='icon'></div>
+                        </div>
+                    <? endif; ?>
+                    <? if( count($music_list) > 0): ?>
+                        <div class='sep'></div>
+                        <div class='music tooltiped button' onclick='clickMusicIcon();' tooltip="MUSIC">
+                            <div class='icon'></div>
+                        </div>
+                    <? endif; ?>
+                    <? if( count($video_list) > 0 ): ?>
+                        <div class='sep'></div>
+                        <div class='video tooltiped button' onclick='clickVideoIcon();' tooltip="VIDEO">
+                            <div class='icon'></div>
+                        </div>
+                    <? endif; ?>
+                <? endif; ?>
+                <div class='sep'></div>
+                <div class='comment tooltiped button' onclick='showComments();' tooltip="COMMENTS">
+                    <div class='icon'></div>
+                    <div id='comment_badge_count' class='comment_badge_count'></div>
+                </div>
+                <div class='sep'></div>
+                <div id='love_button' class='love tooltiped button' onclick='clickLoveIcon();' tooltip="LOVE">
+                    <div class='icon'></div>
+                </div>
+            </div>
+            <div class='media_info_box'>
+                <div id='media_controls' class='media_controls info_box'>
+                    <div id='track_play_pause_button' class='play_pause tooltiped' onclick='playerPlayPause();' tooltip="PLAY">
+                        <div class='icon'></div>
+                    </div>
+                    <div class='sep'></div>
+                    <? if( !$hide_volume ): ?>
+                        <div class='volume tooltiped' onclick='playerVolume();' tooltip="VOLUME">
+                            <div class='icon'></div>
+                        </div>
+                        <div class='sep2'></div>
+                    <? endif; ?>
+                    <div class='progress_container'>
+                        <div class='progress_bar'>
+                            <div class='current_bar_holder'>
+                                <div id='track_current_bar' class='current_bar'></div>
+                            </div>
+                            <div id='track_name' class='track_name'></div>
+                            <div class='progress_play_times'>
+                                <div id='track_progress' class='progress'></div>
+                                <div class='play_times'> - PLAYED <div id='track_play_count'></div> TIMES</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id='photo_info' class='photo_info info_box'>
+                    <div class='name'></div>
+                    <div class='location'></div>
+                </div>
+            </div>
+        </div>
+        <div id='media_social_boxes'>
+            <? if( !$NARROW_SCREEN ): ?>
+                <div class='social_boxes'>
+                    <div class='social_buttons'>
+                        <? include 'player_social_buttons.html'; ?>
+                    </div>
+                    <div id='social_content' class='social_content'>
+                        <? include 'player_social_items.html'; ?>
+                    </div>
+                </div>
+            <? endif; ?>
+            <div class='media_boxes'>
+                <div class='media_buttons'>
+                    <? if( count($photo_list) > 0 ): ?>
+                        <div class='button photos' onclick='clickPhotoMediaButton();'>
+                            <div class='icon'></div>
+                            <div class='label'>PHOTOS</div>
+                        </div>
+                        <div class='sep'></div>
+                    <? endif; ?>
+                    <? if( count($music_list) > 0 ): ?>
+                        <div class='button music' onclick='clickMusicMediaButton();'>
+                            <div class='icon'></div>
+                            <div class='label'>AUDIO</div>
+                        </div>
+                        <div class='sep'></div>
+                    <? endif; ?>
+                    <? if( count($video_list) > 0 ): ?>
+                        <div class='button video' onclick='clickVideoMediaButton();'>
+                            <div class='icon'></div>
+                            <div class='label'>VIDEO</div>
+                        </div>
+                        <div class='sep'></div>
+                    <? endif; ?>
+                    
+                    <?
+                        if( $NARROW_SCREEN )
+                        {
+                            include 'player_social_buttons.html';
+                        }
+                    ?>
+
+                </div>
+                <div id='media_content_lists' class='media_content'>
+                    <div id='photo_list' class='media_list picture_list'>
+                        <? if( $photo_nav_show ): ?>
+                            <div class='left_nav' onclick='photoListScrollLeft();'></div>
+                            <div class='right_nav' onclick='photoListScrollRight();'></div>
+                        <? endif; ?>
+                        <div class='content'>
+                            <?=$photo_list_html;?>
+                        </div>
+                    </div>
+                    <div id='music_list' class='media_list'>
+                        <div class='right scrollbar-handle-support'>
+                            <?=build_scrollbar('scrollbar-dark');?>
+                        </div>
+                        <div class='left'>
+                            <div class='track_container scrollbar-pane'>
+                                <div class='play_line'>
+                                    <div class='love_song_name'>
+                                        <div class='song_title'>SONG TITLE</div>
+                                    </div>
+                                    <div class='buy_length_listens'>
+                                        <div class='buy none'></div>
+                                        <div class='sep'></div>
+                                        <div class='length'>LENGTH</div>
+                                        <div class='sep'></div>
+                                        <div class='played'>PLAYED</div>
+                                    </div>
+                                </div>
+                                <div class='sep_line'></div>
+                                <?=$music_list_html;?>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='video_list' class='media_list picture_list'>
+                        <? if( $video_nav_show ): ?>
+                            <div class='left_nav' onclick='videoListScrollLeft();'></div>
+                            <div class='right_nav' onclick='videoListScrollRight();'></div>
+                        <? endif; ?>
+                        <div class='content'>
+                            <?=$video_list_html;?>
+                        </div>
+                    </div>
+                    
+                    <?
+                        if( $NARROW_SCREEN )
+                        {
+                            include 'player_social_items.html';
+                        }
+                    ?>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='user_tab' class='content_tab'>
+        <div class='close' onclick='hideTab();'>
+            <div class='icon'></div>
+            <div class='name'>CLOSE</div>
+        </div>
+        <div class='title'></div>
+        <div class='sep'></div>
+        <div class='content_container'>
+            <div class='scrollable_container scrollbar-pane'>
+                <div id='page_image_holder' class='image_holder'>
+                    <img id='page_image'/>
+                </div>
+                <div id='page_content' class='page_content'></div>
+            </div>
+        </div>
+        <?=build_scrollbar();?>
+    </div>
+
+    <div id='contact_tab' class='content_tab'>
+        <div class='close' onclick='hideTab();'>
+            <div class='icon'></div>
+            <div class='name'>CLOSE</div>
+        </div>
+        <div class='left'>
+            <div class='title active contact' onclick='clickContactContact();'>CONTACT</div>
+            <div class='title booking' onclick='clickContactBooking();'>BOOKING</div>
+        </div>
+        <div class='sep'></div>
+        <div class='right scrollbar-pane'>
+            <div class='contact_container'>
+                <div class='headline'>We want to hear what you have to say!</div>
+                <div class='description'></div>
+                <div class='contact_form'>
+                    <div class='label'>Your Name</div>
+                    <div class='input_container'>
+                        <input id='name'/>
+                    </div>
+                    <div class='label'>Your Email</div>
+                    <div class='input_container'>
+                        <input id='email'/>
+                    </div>
+                    <div class='label'>Your Message</div>
+                    <div class='input_container'>
+                        <textarea id='message'></textarea>
+                    </div>
+                    <div class='submit_container'>
+                        <button onclick='submitContact();'>CONTACT US</button>
+                    </div>
+                </div>
+                <div class='success'>
+                    Thank you for your submission.
+                </div>
+            </div>
+            <div class='booking_container'>
+                <div class='headline'>BOOK THIS ARTIST</div>
+                <div class='description'>Please fill out the form below and someone will contact you as soon as possible!</div>
+                <div class='booking_form'>
+                    <div class='label'>Your Name</div>
+                    <div class='input_container'>
+                        <input id='name'/>
+                    </div>
+                    <div class='left_input'>
+                        <div class='label'>Your Email</div>
+                        <div class='input_container'>
+                            <input id='email'/>
+                        </div>
+                        <div class='label'>Event Date</div>
+                        <div class='input_container'>
+                            <input id='event_date'/>
+                        </div>
+                    </div>
+                    <div class='right_input'>
+                        <div class='label'>Event Location</div>
+                        <div class='input_container'>
+                            <input id='event_location'/>
+                        </div>
+                        <div class='label'>Event Budget</div>
+                        <div class='input_container'>
+                            <input id='event_budget'/>
+                        </div>
+                    </div>
+                    <div class='label'>Your Message</div>
+                    <div class='input_container'>
+                        <textarea id='message'></textarea>
+                    </div>
+                    <div class='submit_container'>
+                        <button onclick='submitBooking();'>CONTACT US</button>
+                    </div>
+                </div>
+                <div class='success'>
+                    Thank you for your submission.  Someone will contact you as soon as possible.
+                </div>
+            </div>
+        </div>
+        <?=build_scrollbar();?>
+    </div>
+    <div id='comment_tab' class='content_tab'>
+        <div class='close' onclick='hideTab();'>
+            <div class='icon'></div>
+            <div class='name'>CLOSE</div>
+        </div>
+        <div class='left'>
+            <div class='title'>COMMENTS</div>
+        </div>
+        <div class='sep'></div>
+        <div class='comment_container scrollbar-pane'>
+            <?=$comments_html;?>
+        </div>
+        <?=build_scrollbar();?>
+    </div>
+    <div id='store_tab' class='content_tab'>
+        <div class='close' onclick='hideTab();'>
+            <div class='icon'></div>
+            <div class='name'>CLOSE</div>
+        </div>
+        <div class='left'>
+            <div class='title'>STORE</div>
+            <div id='store_back' class='back' onclick='storeShowProductList();'>
+                <div class='arrow'></div>
+                <div class='text'>BACK TO LIST</div>
+            </div>
+            <div class='back' onclick='storeViewCart();'>
+                <div class='arrow'></div>
+                <div class='text'>VIEW CART</div>
+            </div>
+        </div>
+        <div class='sep'></div>
+        <div class='right scrollbar-pane'>
+            <div id='product_list' class='product_list store_content'>
+                <div class='store_title'><?=$artist_name;?> STORE</div>
+                <?=$product_list_html;?>
+            </div>
+            <div id='product_info' class='product_info store_content'>
+                <div class='store_title'></div>
+                <div class='pi_right'>
+                    <div class='name'></div>
+                    <div class='hsep'></div>
+                    <div class='price_share'>
+                        <div class='dollar_price'><span class='dollar'>$</span><span class='price'></span></div>
+                        <div class='share'>
+                            <div class='icon'></div>
+                            <div class='text'>SHARE</div>
+                        </div>
+                    </div>
+                    <div class='hsep'></div>
+                    <div class='buy' onclick='storeBuyProduct();'>BUY NOW</div>
+                    <div class='buy_free' onclick='storeBuyFreeProduct();'>DOWNLOAD</div>
+                    <div class='description'></div>
+                </div>
+                <div class='pi_left'>
+                    <div class='img_holder'>
+                        <img src=''/>
+                    </div>
+                </div>
+            </div>
+            <div id='buy_now_result' class='buy_now_result buy_result store_content'>
+                <div class='store_title'></div>
+                <div class='name'></div>
+                <div class='hsep'></div>
+                <div class='text'>PRODUCT ADDED TO CART.</div>
+                <div class='return_to_store button' onclick='storeShowProductList();'>RETURN TO STORE</div>
+                <div class='view_cart button' onclick='storeViewCart();'>VIEW CART</div>
+                <div class='checkout button' onclick='storeCheckout();'>CHECKOUT NOW</div>
+            </div>
+            <div id='free_product_success' class='free_product_success buy_result store_content'>
+                <div class='store_title'></div>
+                <div class='name'></div>
+                <div class='hsep'></div>
+                <div class='text'>Product added to your fan account!</div>
+                <div class='return_to_store button' onclick='storeShowProductList();'>RETURN TO STORE</div>
+                <div class='go_to_fan button' onclick='storeGoToFan();'>GO TO FAN PAGE</div>
+            </div>
+            <div id='free_product_need_fan' class='free_product_need_fan buy_result store_content'>
+                <div class='store_title'></div>
+                <div class='name'></div>
+                <div class='hsep'></div>
+                <div class='text'>You need to signup for a MyArtistDNA fan account to download this item.</div>
+                <div class='fan_signup button' onclick='storeFanSignup();'>SIGNUP</div>
+                <div class='fan_login button' onclick='storeFanLogin();'>LOGIN</div>
+            </div>
+        </div>
+        <?=build_scrollbar();?>
+    </div>
+    <div id='search'>
+        <div class='search_box'>
+            <input placeholder='Search'>
+        </div>
+        <div id='search_results' class='search_results'></div>
+    </div>
+    <div class='idle_fade_out'>
+        <div id='volume_slider'>
+            <div class='carrot'></div>
+            <div class='bar'>
+                <div class='current'></div>
+                <div class='handle'></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id='submit_email_popup' class='popup_wrapper'>
+        <div class="popup">
+            <div class='top_bar'>
+                <div class='title'>Submit Your Email</div>
+                <div class='close' onclick='closePopup();'>CLOSE</div>
+            </div>
+            <div class='description'>
+                To download this file you have to log in or signup.  Signing up is FREE
+                and only takes a couple of seconds.
+            </div>
+            <div class='center_input_container'>
+                <div class='label'>Email Address</div>
+                <input id='email' type="text" name="email" value="" class='center_text' />
+            </div>
+            <div class='submit_container'>
+                <button class="submit" onclick='onSubmitEmail();'>Submit</button>
+            </div>
+        </div>
+    </div>
+    <div id='song_buy_popup' class='popup_wrapper'>
+        <div class="popup">
+            <div class='top_bar'>
+                <div class='title'>BUY THIS SONG</div>
+                <div class='close' onclick='closePopup();'>CLOSE</div>
+            </div>
+            <div class='buy_buttons'>
+                <a id='mad_link' onclick='clickSongBuyPopupMAD();'>
+                    <div id='mad_button' class='mad button'></div>
+                </a>
+                <a id='itunes_link' href='#' target='_blank'>
+                    <div class='itunes button'></div>
+                </a>
+                <a id='amazon_link' href='#' target='_blank'>
+                    <div class='amazon button'></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id='popup_mask'></div>
+
+    <div id='popup_tab_list' onclick='closeMoreTabs();'>
+        <div class='inner'>
+            <div class='list'>
+                <?=$content_tabs_html;?>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

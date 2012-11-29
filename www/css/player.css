@@ -2287,6 +2287,12 @@ body {
     bottom: 80px;
 }
 
+.template_prince #top_bar {
+    background: black url('../images/topbar_texture_prince.png') repeat-x;
+}
+.template_prince #tracker_bar {
+    background: black url('../images/tracker_bar_bg_prince.png') repeat-x;
+}
 
 /*************************************************************************/
 

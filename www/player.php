@@ -95,6 +95,7 @@
     $artist_email = $artist_data['email'];
     $artist_views = artist_get_total_views($artist_id);
     $artist_twitter = FALSE;
+    $artist_player_template = $artist_data['player_template'];
     if( $artist_data['tw_setting'] != 'DISABLED' && $artist_data['twitter'] )
         $artist_twitter = $artist_data['twitter'];
     
@@ -453,6 +454,13 @@
     $comments_html .= make_comments_for_list($artist_base_url,"video",$video_list);
     $comments_html .= make_comments_for_list($artist_base_url,"photo",$photo_list);
     
-    include_once 'templates/player.html';
+    if( $artist_player_template == 'PRINCE' )
+    {
+        include_once 'templates/player_prince.html';
+    }
+    else
+    {
+        include_once 'templates/player.html';
+    }
 
 ?>
