@@ -2296,6 +2296,9 @@ body {
 .template_prince #top_bar_mad_logo {
     background: black url('../images/topbar_logo_prince.png') no-repeat;
 }
+.template_prince #bottom_bar .be_heard {
+    color: white;
+}
 
 /*************************************************************************/
 
