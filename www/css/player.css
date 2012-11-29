@@ -2293,6 +2293,9 @@ body {
 .template_prince #tracker_bar {
     background: black url('../images/tracker_bar_bg_prince.png') repeat-x;
 }
+.template_prince #top_bar_mad_logo {
+    background: black url('../images/topbar_logo_prince.png') no-repeat;
+}
 
 /*************************************************************************/
 
