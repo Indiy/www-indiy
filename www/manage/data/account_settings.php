@@ -37,9 +37,14 @@
     {
         $artist_id = $_REQUEST['artist_id'];
         $account_type = $_REQUEST['account_type'];
-        mysql_update('mydna_musicplayer',
-                     array("account_type" => $account_type),
-                     'id',$artist_id);
+        $player_template = $_REQUEST['player_template'];
+        
+        $updates = array(
+                         "account_type" => $account_type,
+                         "player_template" => $player_template,
+                         );
+        
+        mysql_update('mydna_musicplayer',$updates,'id',$artist_id);
         
         $postedValues['artist_data'] = get_artist_data($artist_id);
         echo json_encode($postedValues);

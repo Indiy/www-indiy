@@ -80,6 +80,7 @@ function showAccountSettings()
 {
     $('#account_settings #artist_id').val(g_artistId);
     $('#account_settings #account_type').val(g_artistData.account_type);
+    $('#account_settings #player_template').val(g_artistData.player_template);
     
     showPopup('#account_settings');
 }
@@ -88,9 +89,11 @@ function onAccountSettingsSubmit()
     showProgress("Updating record...");
 
     var account_type = $('#account_settings #account_type').val();
+    var player_template = $('#account_settings #player_template').val();
     var args = {
         'artist_id': g_artistId,
-        'account_type': account_type
+        'account_type': account_type,
+        'player_template': player_template
     };
     
     jQuery.ajax(
@@ -102,6 +105,7 @@ function onAccountSettingsSubmit()
         success: function(data) 
         {
             g_artistData.account_type = account_type;
+            g_artistData.player_template = player_template;
             showSuccess("Update Success");
         },
         error: function()

@@ -13,13 +13,26 @@
         <div class='input_container'>
             <div class='left_label'>Account Type</div>
             <select id='account_type' name='account_type' class='right_drop'>
-                <?
-                $options = array("REGULAR","PREMIUM");
-                foreach ($options as $option) 
-                {
-                    $option_value = ucfirst(strtolower($option));
-                    echo "<option value='$option'>$option_value</option>\n";
-                }
+                <?php
+                    $options = array("REGULAR","PREMIUM");
+                    foreach( $options as $option ) 
+                    {
+                        $option_value = ucfirst(strtolower($option));
+                        echo "<option value='$option'>$option_value</option>\n";
+                    }
+                ?>
+            </select>
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Player Template</div>
+            <select id='player_template' name='player_template' class='right_drop'>
+                <?php
+                    $options = array("DEFAULT","PRINCE");
+                    foreach( $options as $option ) 
+                    {
+                        $option_value = $option;
+                        echo "<option value='$option'>$option_value</option>\n";
+                    }
                 ?>
             </select>
         </div>
