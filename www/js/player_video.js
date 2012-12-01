@@ -200,8 +200,13 @@ function videoChangeId(video_id)
     }
 }
 
-function videoPlayIndex(index)
+function videoPlayIndex(index,animate)
 {
+    if( animate === false )
+        animate = false;
+    else
+        animate = true;
+
     if( !g_videoReady )
     {
         g_playIndexOnReady = index;
@@ -209,7 +214,7 @@ function videoPlayIndex(index)
     }
     g_playIndexOnReady = false;
     
-    $('#video_bg').swipe('scrollto',index);
+    $('#video_bg').swipe('scrollto',index,animate);
 
     setPlayerMode("video");    
 }
@@ -245,7 +250,7 @@ function onVideoReady()
     g_videoReady = true;
     if( g_playIndexOnReady !== false )
     {
-        videoPlayIndex(g_playIndexOnReady);
+        videoPlayIndex(g_playIndexOnReady,false);
     }
 }
 function videoLoadStart()
