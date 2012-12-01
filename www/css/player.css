@@ -247,6 +247,10 @@ body {
     padding-top: 20px;
     padding-left: 20px;
 }
+#bottom_bar .be_heard a
+{
+    color: #FFF;
+}
 #bottom_bar .slash {
     padding-left: 2px;
     letter-spacing: -1px;  
