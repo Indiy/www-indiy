@@ -581,9 +581,9 @@ function getAnchorMap()
     var anchor = self.document.location.hash.substring(1);
     var anchor_elements = anchor.split('&');
     var g_anchor_map = {};
-    for( var k in anchor_elements )
+    for( var i = 0 ; i < anchor_elements.length ; i++ )
     {
-        var e = anchor_elements[k];
+        var e = anchor_elements[i];
         var k_v = e.split('=');
         
         k = unescape(k_v[0]);
