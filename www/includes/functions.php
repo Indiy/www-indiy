@@ -1430,4 +1430,27 @@ END;
         return TRUE;
     }
 
+    function check_unsupported_browser()
+    {
+        $uas = $_SERVER['HTTP_USER_AGENT'];
+        
+        $matches = FALSE;
+        
+        if( strpos($_SERVER['HTTP_USER_AGENT'],"chromeframe") !== FALSE )
+        {
+            return;
+        }
+        
+        if( preg_match('/MSIE ([0-9]*)/',$uas,$matches) === 1 )
+        {
+            $ie_major = intval($matches[1]);
+            
+            if( $ie_major < 9 )
+            {
+                include_once "unsupported_browser.php";
+                die();
+            }
+        }
+    }
+
 ?>

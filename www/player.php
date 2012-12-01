@@ -3,6 +3,8 @@
     require_once 'includes/config.php';
     require_once 'includes/functions.php';
     
+    check_unsupported_browser();
+    
     $ios_version = FALSE;
     
     if( strpos($_SERVER['HTTP_USER_AGENT'],"iPhone") !== FALSE )
@@ -89,6 +91,8 @@
             die();
         }
     }
+    
+    header("X-UA-Compatible: chrome=1");
     
     $artist_id = $artist_data['id'];
     $artist_name = $artist_data['artist'];
