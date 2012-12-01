@@ -274,6 +274,8 @@ function videoPlayStarted()
 {
     g_videoPlaying = true;
     playerSetPlaying();
+    
+    videoOnWindowResize();
 }
 function videoProgress()
 {
