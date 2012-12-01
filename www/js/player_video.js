@@ -64,7 +64,7 @@ function videoPanelChange(index)
     var left_sl = $('#video_bg').scrollLeft();
     $('#video_container').css({left: left_sl });
     $('#video_container').show();
-    videoOnWindowResize();
+    //videoOnWindowResize();
 
     g_videoPlayer.src(media);
     
@@ -78,7 +78,8 @@ function videoPanelChange(index)
         $('#video_container').hide();
     }
     // Just inhibit the first play
-    g_mediaAutoStart = true;    
+    g_mediaAutoStart = true;
+    videoResizeBackgrounds();
 }
 
 function videoResizeBackgrounds()
