@@ -208,6 +208,8 @@ function videoPlayIndex(index,animate)
     else
         animate = true;
 
+    setPlayerMode("video");
+
     if( !g_videoReady )
     {
         g_playIndexOnReady = index;
@@ -217,7 +219,6 @@ function videoPlayIndex(index,animate)
     
     $('#video_bg').swipe('scrollto',index,animate);
 
-    setPlayerMode("video");    
 }
 function videoNext()
 {
