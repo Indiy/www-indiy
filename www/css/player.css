@@ -474,7 +474,7 @@ body {
     margin-left: 5px;
     margin-right: 0px;
     padding-top: 5px;
-    width: 40px;
+    width: 46px;
     height: 15px;
     color: black;
     font-size: 13px;
@@ -482,6 +482,7 @@ body {
     text-align: center;
     background-color: white;
     border-radius: 4px;
+    cursor: pointer;
 }
 #tracker_bar .media_controls .progress_bar .current_bar_holder {
     position: absolute;
@@ -1930,6 +1931,43 @@ body {
     margin-left: -4px;
     margin-bottom: -4px;
     background-color: #5c5c5c;
+}
+
+#quality_popup {
+    display: none;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: 70px;
+    border: 3px solid #434343;
+    border-radius: 3px;
+    background: black url('../images/media_even_texture.png') repeat;
+}
+#quality_popup .carrot {
+    position: absolute;
+    top: 103px;
+    left: 8px;
+    width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid #434343;
+}
+#quality_popup .title {
+    padding-top: 5px;
+    padding-bottom: 2px;
+    color: white;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-align: center;
+}
+#quality_popup .size {
+    padding-top: 2px;
+    padding-bottom: 0px;
+    color: white;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-align: center;
 }
 
 #tooltip {

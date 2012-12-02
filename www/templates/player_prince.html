@@ -222,7 +222,7 @@
                             <div class='progress_play_times'>
                                 <div id='track_progress' class='progress'></div>
                                 <div class='play_times'> - PLAYED <div id='track_play_count'></div> TIMES</div>
-                                <div id='video_bitrate' class='bitrate'>1080p</div>
+                                <div id='video_bitrate' class='bitrate' onclick='videoBitrate();'>1080p</div>
                             </div>
                         </div>
                     </div>
@@ -526,6 +526,17 @@
                 <div class='current'></div>
                 <div class='handle'></div>
             </div>
+        </div>
+    </div>
+    <div class='idle_fade_out'>
+        <div id='quality_popup'>
+            <div class='carrot'></div>
+            <div class='title'>Quality</div>
+            <div class='size current'>1080p</div>
+            <div class='size'>720p</div>
+            <div class='size'>480p</div>
+            <div class='size'>360p</div>
+            <div class='size'>240p</div>
         </div>
     </div>
     

@@ -215,6 +215,7 @@ function openBottom()
 {
     hideTooltip();
     hideVolume();
+    hideVideoBitrate();
     hideContentPage();
     hideAllTabs();
     g_bottomOpen = true;
@@ -233,6 +234,7 @@ function closeBottom(animate)
 {
     hideTooltip();
     hideVolume();
+    hideVideoBitrate();
     g_bottomOpen = false;
     if( animate === false )
     {
@@ -455,6 +457,29 @@ function playerVolume()
         $('#volume_slider').show();
         g_volumeShown = true;
     }
+}
+
+var g_videoBitrateShown = false;
+function videoBitrate()
+{
+    if( g_videoBitrateShown )
+    {
+        hideVideoBitrate();
+    }
+    else
+    {
+        var offset = $('#tracker_bar .media_controls .progress_bar .progress_play_times .bitrate').offset();
+        var top = offset.top - 103;
+        var left = offset.left + 10;
+        $('#quality_popup').css({ top: top, left: left });
+        $('#quality_popup').show();
+        g_videoBitrateShown = true;
+    }
+}
+function hideVideoBitrate()
+{
+    $('#quality_popup').hide();
+    g_videoBitrateShown = false;
 }
 
 function clickVolume(event)
