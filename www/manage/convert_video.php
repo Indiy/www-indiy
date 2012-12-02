@@ -161,7 +161,7 @@
         if( !file_exists($dst_file) )
         {
             $args = "-w $target_width -h $target_height --videoquality 8 --audioquality 6 --videobitrate $vb --audiobitrate $ab";
-            $cmd_line = "/usr/local/bin/ffmpeg2theora $args -o $dst_file $src_file"
+            $cmd_line = "/usr/local/bin/ffmpeg2theora $args -o $dst_file $src_file";
             @system($cmd_line,$retval);
             if( $retval == 0 )
             {
