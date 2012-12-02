@@ -117,7 +117,7 @@
     {
         if( $height <= $inhibit_height)
         {
-            print "  SKIP RES: height: $height lower than inhibit height: $inhibit_height\n";
+            print "  SKIP RES: target_height: $target_height, height: $height lower than inhibit height: $inhibit_height\n";
             return;
         }
         
