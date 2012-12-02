@@ -163,13 +163,13 @@ html, body {
     height: 110px;
 }
 #unsupported_browser .browser_icons .browser .icon.chrome {
-    background: url("/images/chrome.png") no-repeat 0px 0px;
+    background: url("/images/chrome.png") no-repeat 44px 6px;
 }
 #unsupported_browser .browser_icons .browser .icon.firefox {
-    background: url("/images/firefox.png") no-repeat 0px 0px;
+    background: url("/images/firefox.png") no-repeat 44px 6px;
 }
 #unsupported_browser .browser_icons .browser .icon.msie {
-    background: url("/images/msie.png") no-repeat 0px 0px;
+    background: url("/images/msie.png") no-repeat 35px 2px;
 }
 #unsupported_browser .browser_icons .browser .text {
     display: inline-block;
