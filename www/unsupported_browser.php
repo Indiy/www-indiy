@@ -17,6 +17,15 @@
 
 <html>
 <head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+
+<script type="text/javascript">
+function popChromeFrame()
+{
+    CFInstall.check({ mode: "overlay" });
+}
+</script>
+
 </head>
 <body>
 <h3>Sorry!</h3>
@@ -28,7 +37,7 @@ This site does not support your browser.<br/>
     <a href="http://windows.microsoft.com/en-US/internet-explorer/download-ie">Internet Explorer 9.0 or above</a><br/>
 <?php endif; ?>
 <?php  if( $is_msie ):  ?>
-    Or keep your current browser and enhance it with <a href="http://google.com/chromeframe">Google Chrome Frame</a>
+    Or keep your current browser and enhance it with <a href="javascript:popChromeFrame();">Google Chrome Frame</a>
 <?php endif; ?>
 
 
