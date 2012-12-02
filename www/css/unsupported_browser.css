@@ -143,6 +143,7 @@ html, body {
     color: #333;
     font-size: 15px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 #unsupported_browser .browser_icons {
@@ -163,14 +164,17 @@ html, body {
     height: 110px;
 }
 #unsupported_browser .browser_icons .browser .text {
+    display: inline-block;
     width: 82px;
     color: #333;
     font-size: 14px;
+    text-transform: uppercase;
 }
 #unsupported_browser .bottom_text {
     padding-top: 10px;
     color: #333;
     font-size: 15px;
+    text-transform: uppercase;
 }
 #unsupported_browser .bottom_text a {
     text-decoration: underline;
