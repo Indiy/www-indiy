@@ -65,8 +65,9 @@ function videoPlay()
 {
     var video = g_videoList[g_videoCurrentIndex];
 
-    var url = video.video_file;
-    var url_ogv = url.replace(".mp4",".ogv");
+    var urls = videoGetUrls(video);
+    var url = urls.url;
+    var url_ogv = urls.url_ogv;
     
     var media = [
                  { type: "video/mp4", src: url },
@@ -182,8 +183,9 @@ function videoCreateTag()
     var w = $('#video_container').width();
     
     var video = g_videoList[0];
-    var url = video.video_file;
-    var url_ogv = url.replace(".mp4",".ogv");
+    var urls = videoGetUrls(video);
+    var url = urls.url;
+    var url_ogv = urls.url_ogv;
     var image = video.image;
     
     var w_h = " width='" + w + "' height='" + h + "' ";
@@ -198,4 +200,41 @@ function videoCreateTag()
     $('#video_container').html(html);
     g_videoPlayer = _V_('video_player');
     g_videoPlayer.ready(onVideoReady);
+}
+function videoGetUrls(video)
+{
+    var ret = {
+        url: video.video_file,
+        url_ogv: video.video_file.replace(".mp4",".ogv");
+    };
+    
+    if( 'video_data' in video && video.video_data )
+    {
+        var video_data = video.video_data;
+        var res_list = video_data.mp4;
+        
+        var all_res_list = [ 480, 360, 240 ];
+        var auto_res = false;
+        for( var i = 0 ; i < all_res_list.length ; ++i )
+        {
+            var res = all_res_list[i];
+            if( res in res_list )
+            {
+                if( auto_res == false )
+                {
+                    auto_res = res;
+                }
+            }
+        }
+        
+        if( auto_res > 0 )
+        {
+            var mp4 = video.video_data.mp4[auto_res];
+            var ogv = video.video_data.ogv[auto_res];
+            
+            url = "{0}/artists/files/{1}".format(g_trueSiteUrl,mp4);
+            url_ogv = "{0}/artists/files/{1}".format(g_trueSiteUrl,ogv);
+        }
+    }
+    return ret;
 }

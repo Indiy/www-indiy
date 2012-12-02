@@ -63,6 +63,7 @@
     $artist_name = $artist_data['artist'];
     $artist_email = $artist_data['email'];
     $artist_views = artist_get_total_views($artist_id);
+    $artist_player_template = $artist_data['player_template'];
     $artist_twitter = FALSE;
     if( $artist_data['tw_setting'] != 'DISABLED' && $artist_data['twitter'] )
         $artist_twitter = $artist_data['twitter'];
@@ -251,6 +252,7 @@
                       "bg_style" => "LETTERBOX",
                       "image_data" => json_decode($video['image_data']),
                       "loaded" => FALSE,
+                      "video_data" => json_decode($video['video_data']),
                       );
         $video_list[] = $item;
         
@@ -373,6 +375,17 @@
         $button_count++;
     
     $button_style = "buttons_$button_count";
+    
+    if( $artist_player_template == 'PRINCE' )
+    {
+        $copyright_text = "&copy;Prince";
+        $head_title_text = "Prince | RNR Affair";
+    }
+    else
+    {
+        $copyright_text = "&copy;MyArtistDNA";
+        $head_title_text = "MyAritstDNA | Be Heard. Be Seen. Be Independent.";
+    }
     
     include_once 'templates/player_iphone.html';
 
