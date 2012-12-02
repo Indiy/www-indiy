@@ -123,7 +123,7 @@
         
         $target_width = floor($target_height * $aspect_ratio);
         
-        $h_w = "{$target_height}x{$target_width}";
+        $h_w = "{$target_width}x{$target_height}";
         
         $dst_file = str_replace(".mp4","_{$target_height}p.mp4",$src_file);
         
