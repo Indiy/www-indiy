@@ -169,6 +169,7 @@ html, body {
     color: #333;
     font-size: 14px;
     text-transform: uppercase;
+    vertical-align: top;
 }
 #unsupported_browser .bottom_text {
     padding-top: 10px;
