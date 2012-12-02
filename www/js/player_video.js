@@ -74,16 +74,17 @@ function videoPanelChange(index)
             res_list = video.video_data.mp4;
         }
 
-        $("#quality_popup").show();
         $("#quality_popup .size").removeClass("current");
 
         var all_res_list = [ 1080, 720, 480, 360, 240 ];
         var auto_res = false;
+        var res_count = 0;
         for( var i = 0 ; i < all_res_list.length ; ++i )
         {
             var res = all_res_list[i];
             if( res in res_list )
             {
+                res_count++;
                 if( auto_res == false )
                 {
                     auto_res = res;
@@ -100,7 +101,7 @@ function videoPanelChange(index)
         }
         
         $("#quality_popup .size" + auto_res).addClass("current");
-        if( res_list.length > 1 )
+        if( res_count > 1 )
         {
             $('#video_bitrate').show();
         }
