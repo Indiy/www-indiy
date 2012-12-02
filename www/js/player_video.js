@@ -104,6 +104,7 @@ function videoPanelChange(index)
         if( res_count > 1 )
         {
             $('#video_bitrate').show();
+            $('#video_bitrate').html(auto_res + "p");
         }
         else
         {
