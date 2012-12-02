@@ -32,8 +32,9 @@
     ignore_user_abort(TRUE);
     set_time_limit(60*60);
     
-    echo "<html><body><pre>\n";
-    
+    echo "<html><body>\n";
+    echo str_repeat(" ",1024);
+    echo "<pre>\n";
     
     $artist_id = $_GET['artist_id'];
     
@@ -100,11 +101,11 @@
         
         print "FILE: $filename, starting res: $video_height, aspect: $aspect_ratio\n";
         
-        maybe_resize_media($src_file,$video_height,$aspect_ratio,1080,720,"2000k","192k");
-        maybe_resize_media($src_file,$video_height,$aspect_ratio,720,480,"1500k","192k");
-        maybe_resize_media($src_file,$video_height,$aspect_ratio,480,360,"800k","128k");
-        maybe_resize_media($src_file,$video_height,$aspect_ratio,360,240,"400k","96k");
-        maybe_resize_media($src_file,$video_height,$aspect_ratio,240,0,"300k","96k");
+        maybe_resize_media($src_file,$video_height,$aspect_ratio,1080,720,"2000","192");
+        maybe_resize_media($src_file,$video_height,$aspect_ratio,720,480,"1500","192");
+        maybe_resize_media($src_file,$video_height,$aspect_ratio,480,360,"800","128");
+        maybe_resize_media($src_file,$video_height,$aspect_ratio,360,240,"400","96");
+        maybe_resize_media($src_file,$video_height,$aspect_ratio,240,0,"300","96");
         
         print "FILE DONE!\n";
     }
@@ -137,25 +138,45 @@
             }
             else
             {
-                $args = "-i_qfactor 0.71 -qcomp 0.6 -qmin 10 -qmax 63 -qdiff 4 -trellis 0 -vcodec libx264 -s $h_w -vb $vb -ab $ab -ar 44100 -threads 4";
+                $args = "-i_qfactor 0.71 -qcomp 0.6 -qmin 10 -qmax 63 -qdiff 4 -trellis 0 -vcodec libx264 -s $h_w -vb {$vb}k -ab {$ab}k -ar 44100 -threads 4";
                 $cmd_line = "/usr/local/bin/ffmpeg -i $src_file $args $dst_file";
                 @system($cmd_line,$retval);
                 if( $retval == 0 )
                 {
-                    print "  SUCCESS: $h_w converted file to {$target_height}p: $src_file => $dst_file\n";
+                    print "  SUCCESS: $h_w converted file to {$target_height}p: $dst_file\n";
                 }
                 else
                 {
-                    print "  ERROR! $h_w converted file to {$target_height}p: $src_file => $dst_file (cmd_line: $cmd_line)\n\n";
+                    print "  ERROR! $h_w converted file to {$target_height}p: (cmd_line: $cmd_line)\n";
                     unlink($dst_file);
                 }
             }
         }
         else
         {
-            print "  SKIP: $h_w already have file for {$target_height}p: $src_file => $dst_file\n";
+            print "  SKIP: $h_w already have file for {$target_height}p: $dst_file\n";
         }
         
+        $dst_file = str_replace(".mp4","_{$target_height}p.ogv",$src_file);
+        if( !file_exists($dst_file) )
+        {
+            $args = "-w $target_width -h $target_height --videoquality 8 --audioquality 6 --videobitrate $vb --audiobitrate $ab";
+            $cmd_line = "/usr/local/bin/ffmpeg2theora $args -o $dst_file $src_file"
+            @system($cmd_line,$retval);
+            if( $retval == 0 )
+            {
+                print "  SUCCESS OGV: $h_w converted file to {$target_height}p: $dst_file\n";
+            }
+            else
+            {
+                print "  ERROR OGV! $h_w converted file to {$target_height}p: (cmd_line: $cmd_line)\n";
+                unlink($dst_file);
+            }
+        }
+        else
+        {
+            print "  SKIP OGV: $h_w already have file for {$target_height}p: $dst_file\n";
+        }
     }
 
 ?>

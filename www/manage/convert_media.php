@@ -32,7 +32,9 @@
     ignore_user_abort(TRUE);
     set_time_limit(60*60);
     
-    echo "<html><body><pre>\n";
+    echo "<html><body>\n";
+    echo str_repeat(" ",1024);
+    echo "<pre>\n";
     
     $send_emails = TRUE;
     if( isset($_REQUEST['no_emails']) )
