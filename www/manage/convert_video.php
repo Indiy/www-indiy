@@ -122,6 +122,7 @@
         }
         
         $target_width = floor($target_height * $aspect_ratio);
+        $target_width = floor($target_width/16)*16;
         
         $h_w = "{$target_width}x{$target_height}";
         
@@ -129,10 +130,10 @@
         
         if( !file_exists($dst_file) )
         {
-            if( $height == $target_height )
+            if( FALSE && $height == $target_height )
             {
                 copy($src_file,$dst_file);
-                print "  SUCCESS: copied $src_file => $dst_file\n";
+                print "  SUCCESS: $h_w copied $src_file => $dst_file\n";
             }
             else
             {
@@ -141,18 +142,18 @@
                 @system($cmd_line,$retval);
                 if( $retval == 0 )
                 {
-                    print "  SUCCESS: converted file to {$target_height}p: $src_file => $dst_file\n";
+                    print "  SUCCESS: $h_w converted file to {$target_height}p: $src_file => $dst_file\n";
                 }
                 else
                 {
-                    print "  ERROR! converted file to {$target_height}p: $src_file => $dst_file (cmd_line: $cmd_line)\n\n";
+                    print "  ERROR! $h_w converted file to {$target_height}p: $src_file => $dst_file (cmd_line: $cmd_line)\n\n";
                     unlink($dst_file);
                 }
             }
         }
         else
         {
-            print "  SKIP: already have file for {$target_height}p: $src_file => $dst_file\n";
+            print "  SKIP: $h_w already have file for {$target_height}p: $src_file => $dst_file\n";
         }
         
     }
