@@ -1963,12 +1963,16 @@ body {
     text-align: center;
 }
 #quality_popup .size {
-    padding-top: 2px;
-    padding-bottom: 0px;
-    color: #ddd;
+    padding-top: 3px;
+    padding-bottom: 1px;
+    color: #999;
     font-size: 12px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     text-align: center;
+    cursor: pointer;
+}
+#quality_popup .size:hover {
+    color: white;
 }
 #quality_popup .size.current {
     color: white;
