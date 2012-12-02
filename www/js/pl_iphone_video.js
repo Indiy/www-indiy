@@ -232,8 +232,8 @@ function videoGetUrls(video)
             var mp4 = video.video_data.mp4[auto_res];
             var ogv = video.video_data.ogv[auto_res];
             
-            url = "{0}/artists/files/{1}".format(g_trueSiteUrl,mp4);
-            url_ogv = "{0}/artists/files/{1}".format(g_trueSiteUrl,ogv);
+            ret.url = "{0}/artists/files/{1}".format(g_trueSiteUrl,mp4);
+            ret.url_ogv = "{0}/artists/files/{1}".format(g_trueSiteUrl,ogv);
         }
     }
     return ret;
