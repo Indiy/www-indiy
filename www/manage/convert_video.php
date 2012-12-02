@@ -106,6 +106,32 @@
         maybe_resize_media($src_file,$video_height,$aspect_ratio,480,360,"800","128");
         maybe_resize_media($src_file,$video_height,$aspect_ratio,360,240,"400","96");
         maybe_resize_media($src_file,$video_height,$aspect_ratio,240,0,"300","96");
+
+        $video_data = array("ogv" => array(),"mp4" => array());
+
+        foreach( array(1080,720,480,360,240) as $res )
+        {
+            $mp4_file = str_replace(".mp4","_{$res}p.mp4",$filename);
+            $ogv_file = str_replace(".mp4",".ogv",$mp4_file);
+            if( file_exists("../artists/files/$mp4_file") )
+            {
+                $video_data["mp4"][$res] = $mp4_file;
+            }
+            if( file_exists("../artists/files/$ogv_file") )
+            {
+                $video_data["ogv"][$res] = $ogv_file;
+            }
+        }
+
+        $updates = array("video_data" => json_encode($video_data),);
+        
+        $artist_video_q = mq("SELECT * FROM mydna_musicplayer_video WHERE video='$filename'");
+        while( $artist_video = mf($artist_video_q) )
+        {
+            $video_id = $artist_video['id'];
+            mysql_update("mydna_musicplayer_video",$updates,"id",$video_id);
+            print "  UPDATED VIDEO: $video_id\n";
+        }
         
         print "FILE DONE!\n";
     }
