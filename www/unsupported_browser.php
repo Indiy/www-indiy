@@ -13,6 +13,27 @@
         $is_msie = TRUE;
     }
 
+    $return_url = FALSE;
+    if( isset($_GET['return_url']) )
+    {
+        $return_url = $_GET['return_url'];
+    }
+    else
+    {
+        if( __FILE__ != "unsupported_browser.php" )
+        {
+            if( $_SERVER["HTTPS"] == "on" )
+            {
+                $return_url .= "https://";
+            }
+            else
+            {
+                $return_url .= "http://";
+            }
+            $return_url .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
+        }
+    }
+
 ?>
 
 <html>
@@ -20,9 +41,21 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
 
 <script type="text/javascript">
+
+var g_returnUrl = <?=json_encode($return_url);?>;
+
 function popChromeFrame()
 {
-    CFInstall.check({ mode: "overlay" });
+    var opts = {
+        mode: "overlay"
+    };
+    
+    if( g_returnUrl )
+    {
+        opts['destination'] = g_returnUrl;
+    }
+
+    CFInstall.check(opts);
 }
 </script>
 
