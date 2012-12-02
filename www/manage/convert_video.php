@@ -129,16 +129,25 @@
         
         if( !file_exists($dst_file) )
         {
-            $args = "-i_qfactor 0.71 -qcomp 0.6 -qmin 10 -qmax 63 -qdiff 4 -trellis 0 -vcodec libx264 -s $h_w -vb $vb -ab $ab -ar 44100 -threads 4";
-            
-            @system("/usr/local/bin/ffmpeg -i $src_file $args $dst_file",$retval);
-            if( $retval == 0 )
+            if( $height == $target_height )
             {
-                print "  SUCCESS: converted file to {$target_height}p: $src_file => $dst_file\n";
+                copy($src_file,$dst_file);
+                print "  SUCCESS: copied $src_file => $dst_file\n";
             }
             else
             {
-                print "  ERROR! converted file to {$target_height}p: $src_file => $dst_file\n\n";
+                $args = "-i_qfactor 0.71 -qcomp 0.6 -qmin 10 -qmax 63 -qdiff 4 -trellis 0 -vcodec libx264 -s $h_w -vb $vb -ab $ab -ar 44100 -threads 4";
+                $cmd_line = "/usr/local/bin/ffmpeg -i $src_file $args $dst_file";
+                @system($cmd_line,$retval);
+                if( $retval == 0 )
+                {
+                    print "  SUCCESS: converted file to {$target_height}p: $src_file => $dst_file\n";
+                }
+                else
+                {
+                    print "  ERROR! converted file to {$target_height}p: $src_file => $dst_file (cmd_line: $cmd_line)\n\n";
+                    unlink($dst_file);
+                }
             }
         }
         else
