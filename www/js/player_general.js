@@ -7,6 +7,9 @@ var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
 var IS_IPHONE = navigator.userAgent.match(/iPhone/i) != null;
 var IS_IOS = IS_IPAD || IS_IPHONE;
 
+
+var IS_ANDROID = navigator.userAgent.match(/Android/i) != null;
+
 var IS_IE = false;
 var IS_OLD_IE = false;
 (function() {

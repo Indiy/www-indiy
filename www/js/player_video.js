@@ -100,6 +100,11 @@ function videoPanelChange(index)
             }
         }
         
+        if( IS_ANDROID && auto_res > 480 )
+        {
+            auto_res = 480;
+        }
+        
         $("#quality_popup .size" + auto_res).addClass("current");
         if( res_count > 1 )
         {
