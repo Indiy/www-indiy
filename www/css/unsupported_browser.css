@@ -106,7 +106,6 @@ html, body {
     margin-right: auto;
     margin-left: auto;
     width: 710px;
-    background: #e9e9e9;
     font-family: 'Neuzeit Grotesk Large Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 #unsupported_browser .header {
@@ -172,12 +171,14 @@ html, body {
     vertical-align: top;
 }
 #unsupported_browser .bottom_text {
-    padding-top: 10px;
+    padding-top: 32px;
     color: #333;
     font-size: 15px;
     text-transform: uppercase;
+    text-align: center;
 }
 #unsupported_browser .bottom_text a {
+    color: #333;
     text-decoration: underline;
     cursor: pointer;
 }
