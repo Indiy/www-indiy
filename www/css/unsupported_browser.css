@@ -162,6 +162,15 @@ html, body {
 #unsupported_browser .browser_icons .browser .icon {
     height: 110px;
 }
+#unsupported_browser .browser_icons .browser .icon.chrome {
+    background: url("/images/chrome.png") no-repeat 0px 0px;
+}
+#unsupported_browser .browser_icons .browser .icon.firefox {
+    background: url("/images/firefox.png") no-repeat 0px 0px;
+}
+#unsupported_browser .browser_icons .browser .icon.msie {
+    background: url("/images/msie.png") no-repeat 0px 0px;
+}
 #unsupported_browser .browser_icons .browser .text {
     display: inline-block;
     width: 82px;
