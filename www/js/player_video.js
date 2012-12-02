@@ -60,7 +60,7 @@ function videoPanelChange(index)
     var url = video.video_file;
     var url_ogv = url.replace(".mp4",".ogv");
 
-    if( 'video_data' in video )
+    if( 'video_data' in video && video.video_data )
     {
         var window_height = $(window).height();
     
