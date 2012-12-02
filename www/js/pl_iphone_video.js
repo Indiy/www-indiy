@@ -205,7 +205,7 @@ function videoGetUrls(video)
 {
     var ret = {
         url: video.video_file,
-        url_ogv: video.video_file.replace(".mp4",".ogv");
+        url_ogv: video.video_file.replace(".mp4",".ogv")
     };
     
     if( 'video_data' in video && video.video_data )
