@@ -1936,6 +1936,7 @@ body {
 #quality_popup {
     display: none;
     position: absolute;
+    padding-bottom: 6px;
     bottom: 98px;
     left: 20px;
     width: 60px;
@@ -1954,8 +1955,8 @@ body {
 	border-top: 8px solid #434343;
 }
 #quality_popup .title {
-    padding-top: 5px;
-    padding-bottom: 2px;
+    padding-top: 6px;
+    padding-bottom: 3px;
     color: white;
     font-size: 12px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
@@ -1964,10 +1965,13 @@ body {
 #quality_popup .size {
     padding-top: 2px;
     padding-bottom: 0px;
-    color: white;
+    color: #ddd;
     font-size: 12px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     text-align: center;
+}
+#quality_popup .size.current {
+    color: white;
 }
 
 #tooltip {
