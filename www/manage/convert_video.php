@@ -121,7 +121,7 @@
             return;
         }
         
-        $target_width = floor($target_height * $aspect_ratio)
+        $target_width = floor($target_height * $aspect_ratio);
         
         $h_w = "{$target_height}x{$target_width}";
         
