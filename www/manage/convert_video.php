@@ -100,11 +100,11 @@
         
         print "FILE: $filename, starting res: $video_height, aspect: $aspect_ratio\n";
         
-        maybe_resize_media($src_file,$height,$aspect_ratio,1080,720,"2000k","192k");
-        maybe_resize_media($src_file,$height,$aspect_ratio,720,480,"1500k","192k");
-        maybe_resize_media($src_file,$height,$aspect_ratio,480,360,"800k","128k");
-        maybe_resize_media($src_file,$height,$aspect_ratio,360,240,"400k","96k");
-        maybe_resize_media($src_file,$height,$aspect_ratio,240,0,"300k","96k");
+        maybe_resize_media($src_file,$video_height,$aspect_ratio,1080,720,"2000k","192k");
+        maybe_resize_media($src_file,$video_height,$aspect_ratio,720,480,"1500k","192k");
+        maybe_resize_media($src_file,$video_height,$aspect_ratio,480,360,"800k","128k");
+        maybe_resize_media($src_file,$video_height,$aspect_ratio,360,240,"400k","96k");
+        maybe_resize_media($src_file,$video_height,$aspect_ratio,240,0,"300k","96k");
         
         print "FILE DONE!\n";
     }
