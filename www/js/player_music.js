@@ -120,6 +120,7 @@ function musicHide()
 
 function musicShow()
 {
+    $('#video_bitrate').hide();
     $('#music_bg').show();
     if( g_musicList.length < 2 )
     {
