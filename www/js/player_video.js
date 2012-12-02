@@ -145,6 +145,28 @@ function videoPanelChange(index)
     g_mediaAutoStart = true;
     videoResizeBackgrounds();
 }
+function changeVideoBitrate(bitrate)
+{
+    hideVideoBitrate();
+    
+    var video = g_videoList[g_videoCurrentIndex];
+    var mp4 = video.video_data.mp4[bitrate];
+    var ogv = video.video_data.ogv[bitrate];
+    
+    var url = "{0}/artists/files/{1}".format(g_trueSiteUrl,mp4);
+    var url_ogv = "{0}/artists/files/{1}".format(g_trueSiteUrl,ogv);
+    var media = [
+                 { type: "video/mp4", src: url },
+                 { type: "video/ogg", src: url_ogv }
+                 ];
+    
+    $('#video_bitrate').html(bitrate + "p");
+    $("#quality_popup .size").removeClass("current");
+    $("#quality_popup .size" + bitrate).addClass("current");
+    
+    g_videoPlayer.src(media);
+    g_videoPlayer.play();
+}
 
 function videoResizeBackgrounds()
 {
