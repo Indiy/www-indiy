@@ -297,6 +297,7 @@
                       "bg_color" => "000",
                       "bg_style" => "LETTERBOX",
                       "image_data" => json_decode($video['image_data']),
+                      "video_data" => json_decode($video['video_data']),
                       "loaded" => FALSE,
                       );
         $video_list[] = $item;

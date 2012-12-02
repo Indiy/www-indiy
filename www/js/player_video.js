@@ -53,19 +53,81 @@ function videoPanelChange(index)
     playerTrackInfo(video.name,video.views);
     videoUpdateViews(video.id,index);
     
+    var left_sl = $('#video_bg').scrollLeft();
+    $('#video_container').css({left: left_sl });
+    $('#video_container').show();
+
     var url = video.video_file;
     var url_ogv = url.replace(".mp4",".ogv");
+
+    if( 'video_data' in video )
+    {
+        var window_height = $(window).height();
+    
+        var res_list = false;
+        if( _V_.isFF() )
+        {
+            res_list = video.video_data.ogv;
+        }
+        else
+        {
+            res_list = video.video_data.mp4;
+        }
+
+        $("#quality_popup").show();
+        $("#quality_popup .size").removeClass("current");
+
+        var all_res_list = [ 1080, 720, 480, 360, 240 ];
+        var auto_res = false;
+        for( var i = 0 ; i < all_res_list.length ; ++i )
+        {
+            var res = all_res_list[i];
+            if( res in res_list )
+            {
+                if( auto_res == false )
+                {
+                    auto_res = res;
+                }
+                else if( res > window_height )
+                {
+                    auto_res = res;
+                }
+            }
+            else
+            {
+                $("#quality_popup .size" + res).hide();
+            }
+        }
+        
+        $("#quality_popup .size" + auto_res).addClass("current");
+        if( res_list.length > 1 )
+        {
+            $('#video_bitrate').show();
+        }
+        else
+        {
+            $('#video_bitrate').hide();
+        }
+        
+        if( auto_res )
+        {
+            var mp4 = video.video_data.mp4[auto_res];
+            var ogv = video.video_data.ogv[auto_res];
+        
+            url = "{0}/artists/files/{1}".format(g_trueSiteUrl,mp4);
+            url_ogv = "{0}/artists/files/{1}".format(g_trueSiteUrl,ogv);
+        }
+    }
+    else
+    {
+        $('#video_bitrate').hide();
+    }
     
     var media = [
                  { type: "video/mp4", src: url },
                  { type: "video/ogg", src: url_ogv }
                  ];
     
-    var left_sl = $('#video_bg').scrollLeft();
-    $('#video_container').css({left: left_sl });
-    $('#video_container').show();
-    //videoOnWindowResize();
-
     g_videoPlayer.src(media);
     
     if( g_mediaAutoStart )
