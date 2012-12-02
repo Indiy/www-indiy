@@ -469,9 +469,9 @@ function videoBitrate()
     else
     {
         var offset = $('#tracker_bar .media_controls .progress_bar .progress_play_times .bitrate').offset();
-        var top = offset.top - 103;
-        var left = offset.left + 10;
-        $('#quality_popup').css({ top: top, left: left });
+        var bottom = $(window).height() - offset.top + 12;
+        var left = offset.left - 10;
+        $('#quality_popup').css({ bottom: bottom, left: left });
         $('#quality_popup').show();
         g_videoBitrateShown = true;
     }

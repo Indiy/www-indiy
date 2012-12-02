@@ -1936,17 +1936,17 @@ body {
 #quality_popup {
     display: none;
     position: absolute;
-    bottom: -10px;
+    bottom: 98px;
     left: 20px;
-    width: 70px;
+    width: 60px;
     border: 3px solid #434343;
     border-radius: 3px;
     background: black url('../images/media_even_texture.png') repeat;
 }
 #quality_popup .carrot {
     position: absolute;
-    top: 103px;
-    left: 8px;
+    bottom: -11px;
+    left: 21px;
     width: 0;
 	height: 0;
 	border-left: 8px solid transparent;
