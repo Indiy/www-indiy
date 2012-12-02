@@ -6,16 +6,16 @@
     header("Cache-Control: no-cache");
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
 
-    $is_windows = FALSE;
+    $is_windows = TRUE;
     if( strpos($_SERVER['HTTP_USER_AGENT'],"Windows") !== FALSE )
     {
-        //$is_windows = TRUE;
+        $is_windows = TRUE;
     }
     
-    $is_msie = FALSE;
+    $is_msie = TRUE;
     if( strpos($_SERVER['HTTP_USER_AGENT'],"MSIE") !== FALSE )
     {
-        //$is_msie = TRUE;
+        $is_msie = TRUE;
     }
 
     $return_url = FALSE;
