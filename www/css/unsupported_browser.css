@@ -79,7 +79,7 @@ body {
 #body_wrap {
     position: relative;
     min-height: 100%;
-    background: url("/images/signup_bg.jpg") top center no-repeat;
+    background: url("/images/unsupported_browser_bg.jpg") top center no-repeat;
     background-size: 100% auto;
 }
 
