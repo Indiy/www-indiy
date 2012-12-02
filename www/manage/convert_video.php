@@ -125,7 +125,7 @@
         
         $h_w = "{$target_height}x{$target_width}";
         
-        $dst_file = str_replace("_{$target_height}p.mp4",".mp4",$src_file);
+        $dst_file = str_replace(".mp4","_{$target_height}p.mp4",$src_file);
         
         if( !file_exists($dst_file) )
         {
