@@ -1,0 +1,180 @@
+<?php header("Content-type: text/css"); ?>
+
+
+@font-face {
+    font-family: 'Neuzeit Grotesk';
+    src: url('neuzeit-grotesk.eot');
+    src: url('neuzeit-grotesk-bold.svg#neuzeitgrobold') format('svg'),
+    url('neuzeit-grotesk.eot?#iefix') format('embedded-opentype'),
+    url('neuzeit-grotesk.woff') format('woff'),
+    url('neuzeit-grotesk.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+<?php
+
+if( preg_match("/Windows.*Chrome/",$_SERVER['HTTP_USER_AGENT']) === 1 )
+{
+    /*  Windows Chrome */
+    print <<<END
+    
+    @font-face {
+        font-family: 'Neuzeit Grotesk Large Regular';
+        src: url('neuzeit-grotesk.eot');
+        src: url('neuzeit-grotesk.eot?#iefix') format('embedded-opentype'),
+        url('neuzeit-grotesk.svg#neuzeitgroregular') format('svg'),
+        url('neuzeit-grotesk.woff') format('woff'),
+        url('neuzeit-grotesk.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+END;
+}
+else
+{
+    /* Everything else */
+    print <<<END
+    
+    @font-face {
+        font-family: 'Neuzeit Grotesk Large Regular';
+        src: url('neuzeit-grotesk.eot');
+        src: url('neuzeit-grotesk.eot?#iefix') format('embedded-opentype'),
+        url('neuzeit-grotesk.woff') format('woff'),
+        url('neuzeit-grotesk.ttf') format('truetype'),
+        url('neuzeit-grotesk.svg#neuzeitgroregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+END;
+}
+
+?>
+
+@font-face {
+    font-family: 'Teletex Light';
+    src: url('teletex_reg.eot');
+    src: url('teletex_reg.svg#teletexregular') format('svg'),
+    url('teletex_reg.eot?#iefix') format('embedded-opentype'),
+    url('teletex_light.woff') format('woff'),
+    url('teletex_reg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#body_wrap {
+    position: relative;
+    min-height: 100%;
+    background: url("/images/signup_bg.jpg") top center no-repeat;
+    background-size: 100% auto;
+}
+
+#main_content {
+    padding-bottom: 47px;
+    min-height: 560px;
+    overflow:auto;
+}
+
+
+html, body {
+    margin: 0;
+    border: 0 none;
+    padding: 0;
+    background-color: black;
+}
+
+#ub_container {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+#unsupported_browser {
+    padding-bottom: 45px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 710px;
+    background: #e9e9e9;
+    font-family: 'Neuzeit Grotesk Large Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#unsupported_browser .header {
+    height: 85px;
+    background: #1d182a url("/images/signup_header_bg.jpg") repeat-x;
+    border-top: 1px solid #2c1b55;
+    border-left: 1px solid #2c1b55;
+    border-right: 1px solid #2c1b55;
+    border-bottom: 1px solid #7a7a7a;
+}
+#unsupported_browser .header .text {
+    padding-top: 30px;
+    padding-left: 44px;
+    color: white;
+    font-size: 34px;
+    font-family: 'Teletex Light', Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+#unsupported_browser .ub_outer {
+    height: 418px;
+    background: #e9e9e9;
+}
+#unsupported_browser .ub_inner {
+    margin-left: 25px;
+    padding-top: 49px;
+    height: 310px;
+    width: 660px;
+    background: #fafafa;
+    border-radius: 4px;
+}
+#unsupported_browser .title {
+    height: 36px;
+    color: #333;
+    font-size: 15px;
+    text-align: center;
+}
+
+#unsupported_browser .browser_icons {
+    padding-top: 10px;
+    font-size: 0px;
+    text-align: center;
+}
+#unsupported_browser .browser_icons a {
+    text-decoration: none;
+    cursor: pointer;
+}
+#unsupported_browser .browser_icons .browser {
+    display: inline-block;
+    width: 170px;
+    cursor: pointer;
+}
+#unsupported_browser .browser_icons .browser .icon {
+    height: 110px;
+}
+#unsupported_browser .browser_icons .browser .text {
+    width: 82px;
+    color: #333;
+    font-size: 14px;
+}
+#unsupported_browser .bottom_text {
+    padding-top: 10px;
+    color: #333;
+    font-size: 15px;
+}
+#unsupported_browser .bottom_text a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+

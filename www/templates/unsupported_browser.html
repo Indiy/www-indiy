@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyAritstDNA | Be Heard. Be Seen. Be Independent.</title>
+        <!--[if lt IE 9]>
+         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link href="/css/unsupported_browser.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/header2.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+        
+        <script src="/js/jquery.jplayer.js" type="text/javascript"></script>
+        <script src="/js/string.utils.js" type="text/javascript"></script>
+        <script src="/js/login_signup.js" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+            var g_trueSiteUrl = "<?=trueSiteUrl();?>";
+            var g_returnUrl = <?=json_encode($return_url);?>;
+            
+            function popChromeFrame()
+            {
+                var opts = {
+                    mode: "overlay"
+                };
+                
+                if( g_returnUrl )
+                {
+                    opts['destination'] = g_returnUrl;
+                }
+                
+                CFInstall.check(opts);
+            }
+        </script>
+    </head>
+    
+    <body class='unsupported_browser'>
+        <div id='body_wrap'><div id='main_content'>
+            
+            <?php include "header2.html"; ?>
+            
+            <div id='ub_container'>
+                
+                <div id='unsupported_browser'>
+                    <div class='header'>
+                        <div class='text'>SORRY!</div>
+                    </div>
+                    <div class='ub_outer'>
+                        <div class='ub_inner'>
+                            <div class='title'>It looks like you're using a browser that isn't supported.</div>
+                            <div class='title'>If you'd like to try out MyAritstDNA we suggest you use one of these browsers:</div>
+                            <div class='browser_icons'>
+                                <a href="http://www.google.com/chrome">
+                                    <div class='browser'>
+                                        <div class='icon chrome'></div>
+                                        <div class='text'>Google Chrome</div>
+                                    </div>
+                                </a>
+                                <a href="http://firefox.com">
+                                    <div class='browser'>
+                                        <div class='icon firefox'></div>
+                                        <div class='text'>Firefox</div>
+                                    </div>
+                                </a>
+                                <?php if( $is_windows ): ?>
+                                    <a href="http://windows.microsoft.com/en-US/internet-explorer/download-ie">
+                                        <div class='browser'>
+                                            <div class='icon ie9'></div>
+                                            <div class='text'>Internet Explorer 9+</div>
+                                        </div>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                            <?php if( $is_ie ): ?>
+                                <div class='bottom_text'>
+                                    Or keep your current browser and enhance it with <a href="javascript:popChromeFrame();">Google Chrome Frame</a>.
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+        
+        <?php include "footer2.html"; ?>
+        
+    </body>
+</html>

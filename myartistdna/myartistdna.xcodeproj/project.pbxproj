@@ -18,6 +18,8 @@
 		2D0A2DFB15F2E91000F0EE6D /* player_comments.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_comments.js; sourceTree = "<group>"; };
 		2D0B9F4216680A7F00D09771 /* player_prince.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player_prince.html; sourceTree = "<group>"; };
 		2D16391D166AEBB700297030 /* convert_video.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = convert_video.php; sourceTree = "<group>"; };
+		2D163920166BB67500297030 /* unsupported_browser.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = unsupported_browser.html; sourceTree = "<group>"; };
+		2D163921166BBB5300297030 /* unsupported_browser.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = unsupported_browser.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = unsupported_browser.php; sourceTree = "<group>"; };
 		2D25C38715D43BCE00132306 /* fan.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = fan.js; sourceTree = "<group>"; };
 		2D25C38C15D96E2400132306 /* player.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player.php; sourceTree = "<group>"; };
@@ -1025,6 +1027,7 @@
 				2DEADA9D1613A27C0076F95D /* home.html */,
 				2DEADAB21618C0320076F95D /* header2.html */,
 				2DEADAB31618C0410076F95D /* footer2.html */,
+				2D163920166BB67500297030 /* unsupported_browser.html */,
 				2DEADAAD16180E670076F95D /* email_artist_signup.html */,
 				2DEADABE1619039A0076F95D /* email_fan_signup.html */,
 				2DEADAAE1618116D0076F95D /* email_artist_order.html */,
@@ -1231,6 +1234,7 @@
 				2D747C5D15E4AFB300128EEC /* player_iphone.css */,
 				2DC262C515EFD0B600CA560F /* fan_header_footer.css */,
 				2DC262E915FFDF0600CA560F /* signup.css */,
+				2D163921166BBB5300297030 /* unsupported_browser.css */,
 				2DC1808B160E4D82007B44C0 /* error.css */,
 				2DEADA9F1613B6C00076F95D /* home.css */,
 				2DEADAB41618C1170076F95D /* header2.css */,
