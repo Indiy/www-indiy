@@ -6,15 +6,17 @@
     header("Cache-Control: no-cache");
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
 
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
+
     $is_windows = FALSE;
-    if( strpos($_SERVER['HTTP_USER_AGENT'],"Windows") !== FALSE )
+    if( strpos($user_agent,"Windows") !== FALSE )
     {
         $is_windows = TRUE;
     }
     
     $is_msie = FALSE;
     $is_very_old_msie = FALSE;
-    if( preg_match('/MSIE ([0-9]*)/',$uas,$matches) === 1 )
+    if( preg_match('/MSIE ([0-9]*)/',$user_agent,$matches) === 1 )
     {
         $is_msie = TRUE;
         $ie_major = intval($matches[1]);
