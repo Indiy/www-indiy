@@ -104,6 +104,10 @@ function videoPanelChange(index)
         {
             auto_res = 480;
         }
+        if( auto_res > 720 )
+        {
+            auto_res = 720;
+        }
         
         $("#quality_popup .size" + auto_res).addClass("current");
         if( res_count > 1 )

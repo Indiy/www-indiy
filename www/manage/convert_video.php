@@ -186,8 +186,10 @@
         $dst_file = str_replace(".mp4","_{$target_height}p.ogv",$src_file);
         if( !file_exists($dst_file) )
         {
-            $args = "--width $target_width --height $target_height --videoquality 8 --audioquality 6 --videobitrate $vb --audiobitrate $ab";
-            $cmd_line = "/usr/local/bin/ffmpeg2theora $args -o $dst_file $src_file";
+            $res_src_file = str_replace(".mp4","_{$target_height}p.mp4",$src_file);
+        
+            $args = "--videobitrate $vb --audiobitrate $ab";
+            $cmd_line = "/usr/local/bin/ffmpeg2theora $args -o $dst_file $res_src_file";
             
             print "  OGV CMD: $cmd_line\n";
             
