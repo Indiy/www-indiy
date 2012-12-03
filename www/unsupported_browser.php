@@ -13,11 +13,18 @@
     }
     
     $is_msie = FALSE;
-    if( strpos($_SERVER['HTTP_USER_AGENT'],"MSIE") !== FALSE )
+    $is_very_old_msie = FALSE;
+    if( preg_match('/MSIE ([0-9]*)/',$uas,$matches) === 1 )
     {
         $is_msie = TRUE;
-    }
+        $ie_major = intval($matches[1]);
 
+        if( $ie_major < 8 )
+        {
+            $is_very_old_msie = TRUE;
+        }
+    }
+    
     $return_url = FALSE;
     if( isset($_GET['return_url']) )
     {

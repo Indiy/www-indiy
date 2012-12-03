@@ -38,8 +38,12 @@
     <body class='unsupported_browser'>
         <div id='body_wrap'><div id='main_content'>
             
-            <?php include "header2.html"; ?>
-            
+            <?php
+                if( !$is_very_old_msie )
+                {
+                    include "header2.html";
+                }
+            ?>
             <div id='ub_container'>
                 
                 <div id='unsupported_browser'>
@@ -82,8 +86,12 @@
                 </div>
             </div>
         </div></div>
-        
-        <?php include "footer2.html"; ?>
-        
+
+        <?php
+            if( !$is_very_old_msie )
+            {
+                include "footer2.html";
+            }
+        ?>
     </body>
 </html>
