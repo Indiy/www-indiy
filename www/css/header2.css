@@ -44,6 +44,7 @@
 }
 #header2 .right .trap_button a {
     display: inline-block;
+    width: 100%;
 }
 #header2 .right .trap_button .inner {
     height: 100%;
