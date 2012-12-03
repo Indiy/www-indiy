@@ -151,6 +151,7 @@ html, body {
     text-align: center;
 }
 #unsupported_browser .browser_icons a {
+    display: inline-block;
     text-decoration: none;
     cursor: pointer;
 }
