@@ -1,0 +1,122 @@
+
+/* Styles */
+
+@font-face {
+    font-family: 'Neuzeit Grotesk';
+    src: url('Neuzeit-Grotesk.eot');
+    src: local('Neuzeit-Grotesk'), url('Neuzeit-Grotesk.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+#mad_bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background: white url("../images/splash_bg.jpg") center center no-repeat;
+}
+
+#play_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 640px;
+    margin-left: -320px;
+    margin-top: -134px;
+    background-color: transparent;
+}
+#play_container .logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 64px;
+    width: 194px;
+    background: url("../images/mad_fm_logo.png");
+}
+#play_container .item_container {
+    position: absolute;
+    top: 0px;
+    left: 194px;
+    width: 446px;
+    height: 64px;
+    overflow: hidden;
+}
+#play_container .item_container .item {
+    position: relative;
+    height: 64px;
+    width: 446px;
+    background-color: #333;
+}
+#play_container .item_container .item .label {
+    position: absolute;
+    top: 22px;
+    left: 24px;
+    color: white;
+    font-size: 22px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0px 1px rgba(0,0,0,0.5);
+}
+#play_container .item_container .item.top {
+    background: url("../images/top_gradiant.png");
+}
+#play_container .item_container .item.second {
+    background: url("../images/second_gradiant.png");
+}
+#play_container .item_container .item.reg {
+    border-top: 1px solid #222;
+}
+#play_container .item_container .item .icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 0px;
+    width: 0px;
+    border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 20px solid white;
+}
+
+#bottom {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 49px;
+    background-color: #333;
+    color: white;
+    font-size: 12px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#bottom .copyright {
+    position: absolute;
+    top: 20px;
+    right: 270px;
+}
+#bottom .be_heard {
+    position: absolute;
+    top: 20px;
+    left: 270px;
+}
+
+
+
+
+
+
