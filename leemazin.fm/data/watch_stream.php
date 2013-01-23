@@ -31,6 +31,7 @@ function setup_genre_data()
 {
     global $g_data;
     global $FILE;
+    global $fm_app_site;
     
     $g_data = array();
 
@@ -43,6 +44,7 @@ function setup_genre_data()
     mysql_select_db($dbname,$connect) or die ("Could not select database");
     
     $sql = "SELECT * FROM genres WHERE site=\"$fm_app_site\" ORDER BY `order` ASC";
+    print "sql: $sql\n";
     $q = mysql_query($sql);
     $genre_list = array();
     while( $row = mysql_fetch_array($q) )
