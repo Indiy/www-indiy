@@ -1,14 +1,16 @@
 <?php
 
     $dbhost		=	"localhost";
-    $dbusername	=	"rnfm_user";
-    $dbpassword	=	"rnfm_password";
-    $dbname		=	"rocnationfm";
+    $dbusername	=	"fm_app_user";
+    $dbpassword	=	"fm_app_password";
+    $dbname		=	"fm_app";
     
+    $fm_app_site = "leemazin";
+        
     $connect 	= 	mysql_connect($dbhost, $dbusername, $dbpassword);
     mysql_select_db($dbname,$connect) or die ("Could not select database");
     
-    $sql = "SELECT * FROM genres ORDER BY `order` ASC";
+    $sql = "SELECT * FROM genres WHERE site=\"$fm_app_site\" ORDER BY `order` ASC";
     $q = mysql_query($sql);
     $genre_list = array();
     while( $row = mysql_fetch_array($q) )
