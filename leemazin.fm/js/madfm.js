@@ -71,7 +71,7 @@ function onReady()
 
 function backgroundClick()
 {
-    window.open("http://www.duracellpower.com/","_blank");
+    window.open("http://www.myartistdna.com/","_blank");
 }
 
 function get_genre_data()

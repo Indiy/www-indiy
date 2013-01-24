@@ -47,7 +47,7 @@ function renderGenreList()
         var g = g_genreList[i];
         var html = "<a href='player.html?genre=" + g.stream_name + "'>";
         html += "<div class='item " + cls + "'>";
-        html += "<div class='label'>I WANT " + g.genre + "</div>";
+        html += "<div class='label'>LISTEN TO " + g.genre + "</div>";
         html += "<div class='icon'></div>";
         html += "</div>";
         html += "</a>";
@@ -90,4 +90,9 @@ function closePlaylist()
         g_playlistOpen = false;
         $('#play_container .item_container').animate({ height: "64px" }, 300);
     }
+}
+
+function splashBackgroundClick()
+{
+    window.open("http://www.myartistdna.com/","_blank");
 }
