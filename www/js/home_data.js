@@ -52,6 +52,6 @@ var g_backgroundList = [
         loaded: false,
         image_data: { width:1267, height:800 },
         content_info_html:
-            "<div class='logo'></div><a href='http://nanai.myartistdna.com' target='_blank'>NANNI<div class='slashes'>//</div>MUSIC ARTIST</a>"        
+            "<div class='logo'></div><a href='http://nanai.myartistdna.com' target='_blank'>NANAI<div class='slashes'>//</div>MUSIC ARTIST</a>"        
     }
 ];
