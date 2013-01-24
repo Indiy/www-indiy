@@ -109,6 +109,12 @@ a {
     top: 20px;
     right: 270px;
 }
+
+#bottom .copyright a {
+    color: white;
+	text-decoration: none;
+}
+
 #bottom .be_heard {
     position: absolute;
     top: 20px;
