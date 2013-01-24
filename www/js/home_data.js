@@ -55,3 +55,4 @@ var g_backgroundList = [
             "<div class='logo'></div><a href='http://nanai.myartistdna.com' target='_blank'>NANAI<div class='slashes'>//</div>MUSIC ARTIST</a>"        
     }
 ];
+
