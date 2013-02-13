@@ -50,7 +50,7 @@ body {
 
 @media only screen and (orientation:portrait) {
     #player_body {
-        height: 420px;
+        height: 470px;
     }
     .desktop #player_body {
         width: 320px;
