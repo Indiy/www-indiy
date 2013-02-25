@@ -56,8 +56,13 @@
         
         $output = implode("\n",$lines);
         
+        print "output: "; var_dump($output); print "\n";
+        
         $matches = array();
         $ret = preg_match("/Duration: ([^::]*):([^:]*):([^,]*),/",$output,&$matches);
+
+        print "ret: "; var_dump($ret); print "\n";
+        print "matches: "; var_dump($matches); print "\n";
         
         if( $ret === 1 )
         {
