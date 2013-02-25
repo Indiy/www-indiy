@@ -222,6 +222,25 @@
         if( !$product_id )
             $product_id = FALSE;
         
+        if( $music['extra_json'] )
+        {
+            $extra = json_decode($music['extra_json']);
+        }
+        else
+        {
+            $extra = array();
+        }
+        
+        if( isset($extra['audio_length']) )
+        {
+            $song_len = $extra['audio_length'];
+        }
+        else
+        {
+            $song_len = 4*60 + 5;
+        }
+        $length_string = sprintf("%02d:%02d",$song_len / 60,$song_len % 60);
+        
         $item = array("id" => $music['id'],
                       "name" => $music_name,
                       "mp3" => $music_audio,
@@ -261,7 +280,7 @@
         else if( $buy )
             $html .= "  <div class='buy' onclick='clickBuySong($i);'>BUY</div>";
         $html .= "  <div class='sep'></div>";
-        $html .= "  <div class='length'>4:05</div>";
+        $html .= "  <div class='length'>$length_string</div>";
         $html .= "  <div class='sep'></div>";
         $html .= "  <div class='played'>$music_listens</div>";
         $html .= " </div>";
