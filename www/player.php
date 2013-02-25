@@ -224,7 +224,7 @@
         
         if( $music['extra_json'] )
         {
-            $extra = json_decode($music['extra_json']);
+            $extra = json_decode($music['extra_json'],TRUE);
         }
         else
         {
