@@ -56,6 +56,7 @@
         
         $output = implode("\n",$lines);
         
+        print "cmd: "; var_dump($cmd); print "\n";
         print "output: "; var_dump($output); print "\n";
         
         $matches = array();
