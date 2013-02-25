@@ -70,7 +70,7 @@ body {
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     /* iPhone 5 or iPod Touch 5th generation */
     #player_body {
-        height: 518px;
+        height: 508px;
     }
 }
 
