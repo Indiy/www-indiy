@@ -1458,6 +1458,8 @@ END;
         $cmd = "/usr/bin/ffprobe $file 2>&1";
         $lines = array();
         
+        exec($cmd,&$lines);
+        
         $output = implode("\n",$lines);
         
         $matches = array();
