@@ -334,6 +334,11 @@ function videoVolume(vol_ratio)
     g_videoPlayer.volume(vol_ratio);
     g_videoVolRatio = vol_ratio;
 }
+function videoSeek(seek_ratio)
+{
+    var seek_secs = seek_ratio * g_videoPlayer.duration();
+    g_videoPlayer.currentTime(seek_secs);
+}
 
 function onVideoReady()
 {
