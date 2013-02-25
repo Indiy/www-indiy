@@ -50,7 +50,7 @@
     
     function get_audio_length($file)
     {
-        $cmd = "/usr/bin/ffprobe $file";
+        $cmd = "/usr/bin/ffprobe $file 2>&1";
         $lines = array();
         
         print "exec: ";
