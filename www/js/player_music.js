@@ -224,6 +224,10 @@ function musicVolume(vol_ratio)
     $('#jquery_jplayer').jPlayer("volume",vol_ratio);
     g_musicVolRatio = vol_ratio;
 }
+function musicSeek(seek_ratio)
+{
+    $('#jquery_jplayer').jPlayer( "playHead", seek_ratio * 100 );
+}
 
 function musicPreloadImages()
 {

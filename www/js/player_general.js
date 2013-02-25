@@ -67,6 +67,8 @@ function generalOnReady()
     
     $('#volume_slider .bar .handle').draggable(opts);
     
+    $('#media_seek_bar').click(clickSeekBar)l
+    
     var anchor_map = getAnchorMap();
     
     if( 'song_id' in anchor_map )
@@ -529,12 +531,22 @@ function volumeDrag(event,ui)
     
     $('#volume_slider .bar .current').css({ height: curr_height });
     volumeChange(vol_ratio);
-
-    console.log(vol_ratio);
 }
 function volumeDragStop(event,ui)
 {
     volumeDrag(event,ui);
+}
+
+function clickSeekBar()
+{
+    var x = event.pageX - $('#media_seek_bar').offset().left;
+    var width = $('#media_seek_bar').width();
+    var seek_ratio = x / width;
+    
+    if( g_playerMode == "music" )
+        musicSeek(seek_ratio);
+    else if( g_playerMode == "video" )
+        videoSeek(seek_ratio);
 }
 
 function formatMinSeconds(seconds)
