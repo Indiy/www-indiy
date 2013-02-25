@@ -66,7 +66,8 @@ function do_POST()
 
     $upload_audio_filename = NULL;
     $song_id = $_POST['id'];
-    if( $song_id ) 
+    $extra = array();
+    if( $song_id )
     {
         $row = mf(mq("SELECT * FROM mydna_musicplayer_audio WHERE id='$song_id'"));
         
@@ -75,6 +76,12 @@ function do_POST()
         $old_product_id = $row["product_id"];
         $upload_audio_filename = $row["upload_audio_filename"];
         $old_image_data = $row["image_data"];
+        $extra = array();
+        if( $row['extra_json'] )
+        {
+            $extra_json = $row['extra_json'];
+            $extra = json_decode($extra_json,TRUE);
+        }
     }
     
     $audio_name = my($_POST["name"]);
@@ -146,7 +153,13 @@ function do_POST()
         $product_id = NULL;
     }
     
-    //INSERTING THE DATA
+    if( $audio_sound )
+    {
+        $audio_path = "../../artists/files/$audio_sound";
+        $extra['audio_length'] = get_audio_length($audio_path);
+    }
+    
+    $extra_json = json_encode($extra);
     
     $values = array("artistid" => $artist_id,
                     "name" => $audio_name,
@@ -163,6 +176,7 @@ function do_POST()
                     "bg_style" => $bg_style,
                     "tags" => $audio_tags,
                     "image_data" => $image_data,
+                    "extra_json" => $extra_json,
                     );
     
     if( $song_id ) 
