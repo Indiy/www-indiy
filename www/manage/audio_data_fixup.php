@@ -38,7 +38,6 @@
 
             mysql_update("mydna_musicplayer_audio",$values,"id",$id);
         }
-        break;
     }
     
     print "total: $total, good: $good\n";
