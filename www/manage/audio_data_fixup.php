@@ -38,6 +38,10 @@
 
             mysql_update("mydna_musicplayer_audio",$values,"id",$id);
         }
+        else
+        {
+            print "failed to get len for: $audio_path\n";
+        }
     }
     
     print "total: $total, good: $good\n";
