@@ -50,7 +50,7 @@ body {
 
 @media only screen and (orientation:portrait) {
     #player_body {
-        height: 470px;
+        height: 420px;
     }
     .desktop #player_body {
         width: 320px;
@@ -67,6 +67,13 @@ body {
         width: 105px;
     }
 }
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    /* iPhone 5 or iPod Touch 5th generation */
+    #player_body {
+        height: 518px;
+    }
+}
+
 @media only screen and (orientation:landscape) {
     #player_body {
         height: 270px;
