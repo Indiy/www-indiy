@@ -356,6 +356,7 @@
 		2DEADAC6161FAD550076F95D /* fan_welcome_popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = fan_welcome_popup.html; sourceTree = "<group>"; };
 		2DEADAC7161FCF360076F95D /* error_maintenance.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = error_maintenance.php; sourceTree = "<group>"; };
 		2DEADAC8161FD0F60076F95D /* error_maintenance.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = error_maintenance.html; sourceTree = "<group>"; };
+		2DF1907016DB069C007EC661 /* audio_data_fixup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = audio_data_fixup.php; sourceTree = "<group>"; };
 		2DF470301440B77F005538C7 /* art.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = art.php; sourceTree = "<group>"; };
 		2DF470401440B77F005538C7 /* artists.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artists.php; sourceTree = "<group>"; };
 		2DF470411440B77F005538C7 /* be-heard.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "be-heard.php"; sourceTree = "<group>"; };
@@ -1703,6 +1704,7 @@
 				2D8D971615AA16DF00AA3D1B /* paypal_update_orders.php */,
 				2D380B9B1470800600E36189 /* cleanup_carts.php */,
 				2DF61FE3151F946F00DBFBC8 /* image_data_fixup.php */,
+				2DF1907016DB069C007EC661 /* audio_data_fixup.php */,
 				2D0A2DE815E961F800F0EE6D /* artist_file_cleanup.php */,
 				2DE61EDD15FD841500D032A9 /* convert_media.php */,
 				2D16391D166AEBB700297030 /* convert_video.php */,
