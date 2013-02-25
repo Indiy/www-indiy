@@ -52,7 +52,10 @@
     {
         $cmd = "/usr/bin/ffprobe $file";
         $lines = array();
-        exec($cmd,&$lines);
+        
+        print "exec: ";
+        print exec($cmd,&$lines);
+        print "\n";
         
         $output = implode("\n",$lines);
         
