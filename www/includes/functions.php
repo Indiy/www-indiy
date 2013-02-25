@@ -1458,20 +1458,10 @@ END;
         $cmd = "/usr/bin/ffprobe $file 2>&1";
         $lines = array();
         
-        print "exec: ";
-        print exec($cmd,&$lines);
-        print "\n";
-        
         $output = implode("\n",$lines);
-        
-        print "cmd: "; var_dump($cmd); print "\n";
-        print "output: "; var_dump($output); print "\n";
         
         $matches = array();
         $ret = preg_match("/Duration: ([^::]*):([^:]*):([^,]*),/",$output,&$matches);
-        
-        print "ret: "; var_dump($ret); print "\n";
-        print "matches: "; var_dump($matches); print "\n";
         
         if( $ret === 1 )
         {
