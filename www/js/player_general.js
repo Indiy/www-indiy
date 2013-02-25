@@ -67,7 +67,7 @@ function generalOnReady()
     
     $('#volume_slider .bar .handle').draggable(opts);
     
-    $('#media_seek_bar').click(clickSeekBar)l
+    $('#media_seek_bar').click(clickSeekBar);
     
     var anchor_map = getAnchorMap();
     
