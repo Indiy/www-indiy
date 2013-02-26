@@ -91,6 +91,10 @@ body {
     background-color: black;
 }
 
+#splash_form {
+    display: none;
+}
+
 #top_bar {
     position: absolute;
     top: 0px;
