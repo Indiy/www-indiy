@@ -12,6 +12,14 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Neuzeit Grotesk Light';
+    src: url('Neuzeit-Grotesk-Light.eot');
+    src: local('Neuzeit-Grotesk-Light'), url('Neuzeit-Grotesk-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Teletex Light';
     src: url('teletex_reg.eot');
     src: url('teletex_reg.svg#teletexregular') format('svg'),
@@ -122,7 +130,7 @@ body {
     height: 23px;
     color: white;
     font-size: 36px;
-    font-family: Helvetica, sans-serif;
+    font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
     text-align: right;
     background-color: #333;
     border: none;
@@ -141,7 +149,7 @@ body {
     width: 120px;
     color: white;
     font-size: 21px;
-    font-family: Helvetica, sans-serif;
+    font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
     cursor: pointer;
     background-color: #007b87;
 }
