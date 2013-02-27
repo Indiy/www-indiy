@@ -93,7 +93,51 @@ body {
 
 #splash_form {
     display: none;
+    position: fixed;
+    top: 48px;
+    bottom: 103px;
+    left: 0px;
+    right: 0px;
 }
+#splash_form .content {
+    padding-top: 100px;
+    text-align: center;
+}
+#splash_form .content .input_container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 11px;
+    padding-right: 11px;
+    width: 600px;
+    height: 60px;
+    background-color: black;
+}
+#splash_form .content .input_container input {
+    padding-top: 17px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 520px;
+    height: 23px;
+    color: white;
+    font-size: 36px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-align: right;
+    background-color: #333;
+}
+#splash_form .content .button_container {
+    padding-top: 22px;
+}
+#splash_form .content .button_container .button {
+    padding-top: 9px;
+    height: 23px;
+    width: 120px;
+    color: white;
+    font-size: 21px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    cursor: pointer;
+    background-color: #007b87;
+}
+
 
 #top_bar {
     position: absolute;
