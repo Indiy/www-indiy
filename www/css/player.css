@@ -122,14 +122,14 @@ body {
     background-color: black;
 }
 #splash_form .content .input_container input {
-    padding-top: 6px;
+    padding-top: 10px;
     padding-bottom: 0px;
     padding-left: 10px;
     padding-right: 10px;
     width: 580px;
-    height: 34px;
+    height: 30px;
     color: white;
-    font-size: 36px;
+    font-size: 32px;
     font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
     text-align: center;
     background-color: #333;
