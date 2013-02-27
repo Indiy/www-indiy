@@ -122,7 +122,7 @@ body {
     height: 23px;
     color: white;
     font-size: 36px;
-    font-family: "Teletex Light", Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     text-align: right;
     background-color: #333;
     border: none;
@@ -141,7 +141,7 @@ body {
     width: 120px;
     color: white;
     font-size: 21px;
-    font-family: "Teletex Light", Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     cursor: pointer;
     background-color: #007b87;
 }
