@@ -122,16 +122,16 @@ body {
     background-color: black;
 }
 #splash_form .content .input_container input {
-    padding-top: 17px;
+    padding-top: 6px;
     padding-bottom: 0px;
-    padding-left: 40px;
-    padding-right: 40px;
-    width: 520px;
-    height: 23px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 580px;
+    height: 34px;
     color: white;
     font-size: 36px;
     font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
-    text-align: right;
+    text-align: center;
     background-color: #333;
     border: none;
     outline: none;
@@ -145,8 +145,9 @@ body {
     display: inline-block;
     padding-top: 9px;
     padding-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
     height: 23px;
-    width: 120px;
     color: white;
     font-size: 21px;
     font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
