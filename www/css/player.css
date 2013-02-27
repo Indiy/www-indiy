@@ -106,22 +106,23 @@ body {
 #splash_form .content .input_container {
     display: inline-block;
     padding-top: 12px;
-    padding-bottom: 12px;
+    padding-bottom: 0px;
     padding-left: 11px;
     padding-right: 11px;
     width: 600px;
-    height: 60px;
+    height: 50px;
     background-color: black;
 }
 #splash_form .content .input_container input {
     padding-top: 17px;
+    padding-bottom: 0px;
     padding-left: 40px;
     padding-right: 40px;
     width: 520px;
     height: 23px;
     color: white;
     font-size: 36px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-family: "Teletex Light", Helvetica, sans-serif;
     text-align: right;
     background-color: #333;
     border: none;
@@ -129,16 +130,18 @@ body {
 }
 #splash_form .content .button_container {
     padding-top: 22px;
+    padding-bottom: 0px;
     text-align: center;
 }
 #splash_form .content .button_container .button {
     display: inline-block;
     padding-top: 9px;
+    padding-bottom: 0px;
     height: 23px;
     width: 120px;
     color: white;
     font-size: 21px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-family: "Teletex Light", Helvetica, sans-serif;
     cursor: pointer;
     background-color: #007b87;
 }
