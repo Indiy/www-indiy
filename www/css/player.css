@@ -100,7 +100,7 @@ body {
 }
 
 #splash_form {
-    display: none;
+    display: block;
     position: fixed;
     top: 48px;
     bottom: 103px;
