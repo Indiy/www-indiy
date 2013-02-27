@@ -104,6 +104,7 @@ body {
     text-align: center;
 }
 #splash_form .content .input_container {
+    display: inline-block;
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 11px;
@@ -128,8 +129,10 @@ body {
 }
 #splash_form .content .button_container {
     padding-top: 22px;
+    text-align: center;
 }
 #splash_form .content .button_container .button {
+    display: inline-block;
     padding-top: 9px;
     height: 23px;
     width: 120px;
