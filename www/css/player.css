@@ -123,6 +123,8 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     text-align: right;
     background-color: #333;
+    border: none;
+    outline: none;
 }
 #splash_form .content .button_container {
     padding-top: 22px;
