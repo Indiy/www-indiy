@@ -144,10 +144,9 @@ body {
 #splash_form .content .button_container .button {
     display: inline-block;
     padding-top: 9px;
-    padding-bottom: 0px;
+    padding-bottom: 1px;
     padding-left: 10px;
     padding-right: 10px;
-    height: 23px;
     color: white;
     font-size: 21px;
     font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
