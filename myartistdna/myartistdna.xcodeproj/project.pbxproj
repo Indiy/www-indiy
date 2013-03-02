@@ -317,7 +317,7 @@
 		2DC262E915FFDF0600CA560F /* signup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = signup.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DD94A2B14C368DF002B1259 /* vim.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = vim.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DE18E6F16E28E3A0066A13B /* fm_admin.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fm_admin.php; sourceTree = "<group>"; };
-		2DE18E7016E292A60066A13B /* fm_admin.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = fm_admin.html; sourceTree = "<group>"; };
+		2DE18E7116E2959C0066A13B /* fm_admin.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fm_admin.html; path = templates/fm_admin.html; sourceTree = "<group>"; };
 		2DE197A214F6133000305EAD /* password.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = password.php; sourceTree = "<group>"; };
 		2DE3F8A715B1F4ED00B5D439 /* mad.swipe.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mad.swipe.js; sourceTree = "<group>"; };
 		2DE61EDD15FD841500D032A9 /* convert_media.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = convert_media.php; sourceTree = "<group>"; };
@@ -1091,12 +1091,12 @@
 		2D8D96E6159568FA00AA3D1B /* templates */ = {
 			isa = PBXGroup;
 			children = (
+				2DE18E7116E2959C0066A13B /* fm_admin.html */,
 				2D25C3CC15E6F78A00132306 /* stats.html */,
 				2D8D96E71595692100AA3D1B /* order_list.html */,
 				2D8D96F015998C5000AA3D1B /* edit_order.html */,
 				2D8D971915AA604300AA3D1B /* artist_statement.html */,
 				2D8D971B15AAA2A900AA3D1B /* all_account_summary.html */,
-				2DE18E7016E292A60066A13B /* fm_admin.html */,
 			);
 			name = templates;
 			sourceTree = "<group>";
