@@ -23,7 +23,8 @@
     
     $streams = array();
     
-    $q = mq("SELECT * FROM fm_streams WHERE artist_id='$artist_id' ORDER BY order ASC, id ASC");
+    $sql = "SELECT * FROM fm_streams WHERE artist_id='$artist_id' ORDER BY order ASC, id ASC";
+    $q = mq($sql);
     while( $s = mf($q) )
     {
         $streams[] = $s;
