@@ -23,14 +23,12 @@
     
     $streams = array();
     
-    $sql = "SELECT * FROM fm_streams WHERE artist_id='$artist_id' ORDER BY order ASC, id ASC";
+    $sql = "SELECT * FROM fm_streams WHERE artist_id='$artist_id' ORDER BY `order` ASC, id ASC";
     $q = mq($sql);
     while( $s = mf($q) )
     {
         $streams[] = $s;
     }
-    print $sql;
-    die();
     
     $sql = "SELECT * FROM artist_files WHERE artist_id='$artistID' AND upload_filename != '' ORDER BY id DESC";
     $files_q = mq($sql);
