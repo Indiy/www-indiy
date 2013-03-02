@@ -1,0 +1,28 @@
+<? include_once 'header.php'; ?>
+
+<div style='clear: both'></div>
+
+<script type="text/javascript">
+    var g_streams = <?=$stream_json;?>;
+</script>
+
+<div id='streams'>
+    <div class='title'>FM Streams</div>
+
+
+    <div class='stream_list'>
+    </div>
+    
+    <div class='add_stream'>
+        <div class='title'>Add Stream</div>
+        <div class='name_container'>
+            <input type='text'>
+        </div>
+        <div class='button_container'>
+            <div class='button' onclick='addStream();'>Add Stream</div>
+        </div>
+    </div>
+    
+</div>
+
+<? include_once 'footer.php'; ?>
