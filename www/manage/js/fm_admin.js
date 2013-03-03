@@ -73,7 +73,7 @@ function fmUpdateDisplay()
         html += " <div class='title'>{0}</div>".format(stream.name);
         html += " <div class='song_list'>";
         
-        for( var j = 0 ; j < songs.length ++j )
+        for( var j = 0 ; j < songs.length ; ++j )
         {
             var song = songs[j];
             
