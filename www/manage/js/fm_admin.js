@@ -124,12 +124,11 @@ function fmUpdateDisplay()
 {
     $('#fm_streams .stream_list').empty();
 
+    var html = "";
     for( var i = 0 ; i < g_streams.length ; ++i )
     {
         var stream = g_streams[i];
         var songs = stream.songs;
-        
-        var html = "";
         
         html += "<div class='stream' id='stream_{0}'>".format(i);
         html += " <div class='title'>{0}</div>".format(stream.name);
