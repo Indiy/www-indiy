@@ -37,4 +37,10 @@
     width: 50px;
 }
 
+#fm_streams .stream_list .stream input {
+    width: 190px;
+}
+#fm_streams .stream_list .stream select {
+    width: 190px;
+}
 
