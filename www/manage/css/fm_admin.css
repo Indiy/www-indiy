@@ -15,30 +15,46 @@
     padding-bottom: 30px;
 }
 #fm_streams .stream_list .stream .column_titles {
+    font-size: 0px;
+    white-space: nowrap;
 }
+#fm_streams .stream_list .stream .song {
+    font-size: 0px;
+    white-space: nowrap;
+}
+#fm_streams .stream_list .stream .add_line {
+    font-size: 0px;
+    white-space: nowrap;
+}
+
 #fm_streams .stream_list .stream .scrubber {
     display: inline-block;
     width: 265px;
+    font-size: 12px;
 }
 #fm_streams .stream_list .stream .bottom {
     display: inline-block;
     width: 265px;
+    font-size: 12px;
 }
 #fm_streams .stream_list .stream .audio {
     display: inline-block;
     width: 200px;
+    font-size: 12px;
 }
 #fm_streams .stream_list .stream .image {
     display: inline-block;
     width: 200px;
+    font-size: 12px;
 }
 #fm_streams .stream_list .stream .remove {
     display: inline-block;
     width: 50px;
+    font-size: 12px;
 }
 
 #fm_streams .stream_list .stream input {
-    width: 190px;
+    width: 250px;
 }
 #fm_streams .stream_list .stream select {
     width: 190px;
