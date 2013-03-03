@@ -78,6 +78,13 @@ function fmUpdateDisplay()
         
         html += "<div class='stream' id='stream_{0}'>".format(i);
         html += " <div class='title'>{0}</div>".format(stream.name);
+        html += " <div class='column_titles'>";
+        html += "  <div class='scrubber'>Scrubber Text</div>";
+        html += "  <div class='bottom'>Bottom Text</div>";
+        html += "  <div class='audio'>Audio File</div>";
+        html += "  <div class='image'>Image File</div>";
+        html += "  <div class='remove'></div>";
+        html += " </div>";
         html += " <div class='song_list'>";
         
         for( var j = 0 ; j < songs.length ; ++j )
@@ -95,7 +102,6 @@ function fmUpdateDisplay()
         
         html += " </div>";
         html += " <div class='add_song'>";
-        html += "  <div class='title'>Add Stream</div>";
         html += "  <div class='add_line'>";
         html += "   <div class='scrubber_container'>";
         html += "    <input class='scrubber' type='text'>";
