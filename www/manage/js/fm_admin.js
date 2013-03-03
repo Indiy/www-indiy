@@ -76,11 +76,11 @@ function fmAddSong(i)
     var audio_file_id = $(sel + " .add_line .audio input").val();
     var image_file_id = $(sel + " .add_line .image input").val();
     
-    if( scrubber.length > 0
-       && bottom.length > 0
+    if( scrubber_text.length > 0
+       && bottom_text.length > 0
        )
     {
-        window.alert("Please enter a scrubber and bottom value for your new song.");
+        window.alert("Please enter a scrubber and bottom text for your new song.");
         return;
     }
     
