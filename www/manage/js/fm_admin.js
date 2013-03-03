@@ -73,8 +73,8 @@ function fmAddSong(i)
 
     var scrubber_text = $(sel + " .add_line .scrubber input").val();
     var bottom_text = $(sel + " .add_line .bottom input").val();
-    var audio_file_id = $(sel + " .add_line .audio input").val();
-    var image_file_id = $(sel + " .add_line .image input").val();
+    var audio_file_id = $(sel + " .add_line .audio select").val();
+    var image_file_id = $(sel + " .add_line .image select").val();
     
     if( scrubber_text.length == 0
        || bottom_text.length == 0
