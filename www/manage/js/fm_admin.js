@@ -11,7 +11,7 @@ function fmAddStream()
     
     var args = {
         name: name,
-        invoice_id: invoice.id,
+        artist_id: g_artistId,
     };
     
     jQuery.ajax(
