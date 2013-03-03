@@ -1692,10 +1692,11 @@
 				2DF4743C144A2D84005538C7 /* css */,
 				2DF4745C144A2D84005538C7 /* images */,
 				2DF474FD144A2D84005538C7 /* include */,
-				2DF47503144A2D84005538C7 /* js */,
 				2DE197A114F6130700305EAD /* data */,
+				2DF47503144A2D84005538C7 /* js */,
 				2D8D96E6159568FA00AA3D1B /* templates */,
 				2D34E22714A06AC9004473F9 /* twitter_landing.php */,
+				2DE18E6F16E28E3A0066A13B /* fm_admin.php */,
 				2D8D96EE159980A500AA3D1B /* edit_order.php */,
 				2D8D96E5159568E900AA3D1B /* order_list.php */,
 				2DF4742D144A2D84005538C7 /* artist_management.php */,
@@ -1722,7 +1723,6 @@
 				2D16391D166AEBB700297030 /* convert_video.php */,
 				2D89492416151AB300538B7F /* build_invoices.php */,
 				2DEADAC2161A95630076F95D /* test_emails.php */,
-				2DE18E6F16E28E3A0066A13B /* fm_admin.php */,
 			);
 			path = manage;
 			sourceTree = "<group>";

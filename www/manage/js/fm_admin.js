@@ -120,6 +120,7 @@ function fmUpdateDisplay()
         html += " </div>";
         html += "</div>";
     }
+    $('#fm_streams .stream_list').html(html);
 }
 
 
