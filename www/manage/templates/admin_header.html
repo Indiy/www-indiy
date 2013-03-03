@@ -1,0 +1,75 @@
+<div id='body_wrap'><div id='main_content'>
+    
+    <section id="bgtopbar">
+        <section id="topbar">
+            <p>Logged in as: <?=$_SESSION['sess_userName'];?> | <a href="/logout.php">Logout</a> | <a href="/faq.php">Help</a> </p>
+        </section>
+    </section>
+    <section id="headerinner">
+        <header>
+            <h1><a href="/home.php"><img src="images/MYARTISTDNA.png" alt="MYARTISTDNA"></a></h1>
+            <nav>
+                <ul>
+                    <?php
+                        
+                        if( $_SESSION['fan_id'] > 0 )
+                        {
+                            echo "<li>";
+                            echo "<a href='/fan/'>FAN HOME</a>";
+                            echo "</li>";
+                        }
+                        
+                        if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' )
+                        {
+                        ?>
+                    <li><a class="active" href="dashboard.php">DASHBOARD</a></li>
+                    <li><a onclick="showAddArtist();">ADD ARTIST</a></li>
+                    <li class="nodivider"><a onclick="showAddLabel();">ADD BRAND</a></li>
+                    <?php
+                        }
+                        else if( $_SESSION['sess_userType'] == 'LABEL' )
+                        {
+                        ?>
+                    <li><a class="active" href="dashboard.php">DASHBOARD</a></li>
+                    <li class="nodivider"><a onclick="showAddArtist();">ADD ARTIST</a></li>
+                    <?php
+                        }
+                        else
+                        {
+                            if( !$artist_url )
+                            {
+                                $host = parse_url(trueSiteUrl(),PHP_URL_HOST);
+                                $host_explode = explode(".", $host);
+                                $artist_home_host = $_SESSION['sess_userURL'] . '.' . implode('.',array_slice($host_explode,1));
+                                
+                                $artist_url = "http://$artist_home_host";
+                            }
+                            $artist_id = $_SESSION['sess_userId'];
+                            
+                            if( strstr($_SERVER['PHP_SELF'],'artist_management.php') !== FALSE )
+                            {
+                                echo "<li>";
+                                echo "<a onclick='showEditProfile();'>EDIT PROFILE</a>";
+                                echo "</li>";
+                            }
+                            else
+                            {
+                                echo "<li>";
+                                echo "<a href='/manage/artist_management.php?userId=$artist_id'>EDIT PROFILE</a>";
+                                echo "</li>";
+                            }
+                            
+                            echo "<li>";
+                            echo "<a href='/manage/stats.php?userId=$artist_id'>VIEW ANALYTICS</a>";
+                            echo "</li>";
+                            
+                            echo "<li class='nodivider'>";
+                            echo "<a href='/manage/artist_statement.php?artist_id=$artist_id'>ACCOUNT STATEMENT</a>";
+                            echo "</li>";
+                        }
+                        ?>
+                </ul>
+            </nav>
+        </header>
+    </section><!-- header -->
+

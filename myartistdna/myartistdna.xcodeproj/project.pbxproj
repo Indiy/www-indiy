@@ -318,6 +318,11 @@
 		2DD94A2B14C368DF002B1259 /* vim.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = vim.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DE18E6F16E28E3A0066A13B /* fm_admin.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fm_admin.php; sourceTree = "<group>"; };
 		2DE18E7116E2959C0066A13B /* fm_admin.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fm_admin.html; path = templates/fm_admin.html; sourceTree = "<group>"; };
+		2DE18E7216E30F3D0066A13B /* fm_stream.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fm_stream.php; sourceTree = "<group>"; };
+		2DE18E7316E316040066A13B /* fm_song.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fm_song.php; sourceTree = "<group>"; };
+		2DE18E7416E31D8E0066A13B /* fm_admin.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = fm_admin.js; sourceTree = "<group>"; };
+		2DE18E7516E3222C0066A13B /* admin_header.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = admin_header.html; path = templates/admin_header.html; sourceTree = "<group>"; };
+		2DE18E7616E322400066A13B /* admin_footer.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = admin_footer.html; path = templates/admin_footer.html; sourceTree = "<group>"; };
 		2DE197A214F6133000305EAD /* password.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = password.php; sourceTree = "<group>"; };
 		2DE3F8A715B1F4ED00B5D439 /* mad.swipe.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mad.swipe.js; sourceTree = "<group>"; };
 		2DE61EDD15FD841500D032A9 /* convert_media.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = convert_media.php; sourceTree = "<group>"; };
@@ -1091,12 +1096,14 @@
 		2D8D96E6159568FA00AA3D1B /* templates */ = {
 			isa = PBXGroup;
 			children = (
-				2DE18E7116E2959C0066A13B /* fm_admin.html */,
+				2DE18E7516E3222C0066A13B /* admin_header.html */,
+				2DE18E7616E322400066A13B /* admin_footer.html */,
 				2D25C3CC15E6F78A00132306 /* stats.html */,
 				2D8D96E71595692100AA3D1B /* order_list.html */,
 				2D8D96F015998C5000AA3D1B /* edit_order.html */,
 				2D8D971915AA604300AA3D1B /* artist_statement.html */,
 				2D8D971B15AAA2A900AA3D1B /* all_account_summary.html */,
+				2DE18E7116E2959C0066A13B /* fm_admin.html */,
 			);
 			name = templates;
 			sourceTree = "<group>";
@@ -1263,6 +1270,8 @@
 				2D646885159B7BFF00B9AD11 /* order.php */,
 				2D0A2DF215EB509200F0EE6D /* artist_file.php */,
 				2DEADAB1161818A10076F95D /* invoice.php */,
+				2DE18E7216E30F3D0066A13B /* fm_stream.php */,
+				2DE18E7316E316040066A13B /* fm_song.php */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -1963,6 +1972,7 @@
 				2D9E2FD5156985B400A76906 /* account_limit.js */,
 				2D8D96F2159AB7E600AA3D1B /* order.js */,
 				2D0A2DF015EB3A8D00F0EE6D /* artist_file.js */,
+				2DE18E7416E31D8E0066A13B /* fm_admin.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
