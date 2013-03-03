@@ -8,3 +8,33 @@
     padding-bottom: 50px;
 }
 
+#fm_streams .stream_list {
+    padding-bottom: 30px;
+}
+#fm_streams .stream_list .stream {
+    padding-bottom: 30px;
+}
+#fm_streams .stream_list .stream .column_titles {
+}
+#fm_streams .stream_list .stream .scrubber {
+    display: inline-block;
+    width: 265px;
+}
+#fm_streams .stream_list .stream .bottom {
+    display: inline-block;
+    width: 265px;
+}
+#fm_streams .stream_list .stream .audio {
+    display: inline-block;
+    width: 200px;
+}
+#fm_streams .stream_list .stream .image {
+    display: inline-block;
+    width: 200px;
+}
+#fm_streams .stream_list .stream .remove {
+    display: inline-block;
+    width: 50px;
+}
+
+
