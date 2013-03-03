@@ -59,10 +59,10 @@
             $id = mysql_insert_id();
         }
         
-        $stream = mf(mq("SELECT * FROM fm_songs WHERE id='$id'"));
+        $song = mf(mq("SELECT * FROM fm_songs WHERE id='$id'"));
         
         $ret = array("success" => 1,
-                     "stream" => $stream,
+                     "song" => $song,
                      );
         
         echo json_encode($ret);
