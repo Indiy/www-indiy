@@ -54,7 +54,7 @@
     {
         $id = $stream['id'];
         $streams[$i]['songs'] = array();
-        $q = mq("SELECT * FROM fm_songs WHERE stream_id='$id'");
+        $q = mq("SELECT * FROM fm_songs WHERE fm_stream_id='$id'");
         while( $song = mf($q) )
         {
             $streams[$i]['songs'][] = $song;
