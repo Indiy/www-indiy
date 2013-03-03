@@ -74,6 +74,8 @@
 
         $stream = mf(mq("SELECT * FROM fm_streams WHERE id='$id'"));
         
+        $stream['songs'] = array();
+        
         $ret = array("success" => 1,
                      "stream" => $stream,
                      );

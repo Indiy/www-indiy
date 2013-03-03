@@ -1,4 +1,11 @@
 
+function fmReady()
+{
+    fmUpdateDisplay();
+}
+$(document).ready(fmReady);
+
+
 function fmAddStream()
 {
     var name = $('#fm_streams .add_stream input').val();
