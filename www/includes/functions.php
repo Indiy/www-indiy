@@ -161,7 +161,7 @@
 
 	/* mysql_fetch_aray function */
 	function mf($mycontent) {
-		return mysql_fetch_array($mycontent); 
+		return mysql_fetch_array($mycontent,MYSQL_ASSOC);
 	}
 
 	/* mysql_num_rows function */
