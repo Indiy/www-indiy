@@ -50,14 +50,14 @@
     }
     $file_list_json = json_encode($file_list);
     
-    foreach( $streams as $stream )
+    foreach( $streams as $i => $stream )
     {
         $id = $stream['id'];
-        $stream['songs'] = array();
+        $streams[i]['songs'] = array();
         $q = mq("SELECT * FROM fm_songs WHERE stream_id='$id'");
         while( $song = mf($q) )
         {
-            $stream['songs'][] = $song;
+            $streams[i]['songs'][] = $song;
         }
     }
     
