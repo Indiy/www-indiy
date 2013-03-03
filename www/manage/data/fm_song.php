@@ -35,10 +35,13 @@
     
     function do_POST()
     {
-        $artist_id = $_POST['artist_id'];
-        $name = $_POST['name'];
+        $fm_stream_id = $_POST['fm_stream_id'];
+        $scrubber_text = $_POST['scrubber_text'];
+        $bottom_text = $_POST['bottom_text'];
+        $audio_file_id = $_POST['audio_file_id'];
+        $image_file_id = $_POST['image_file_id'];
         
-        $values = array("fm_stream_id" => $stream_id,
+        $values = array("fm_stream_id" => $fm_stream_id,
                         "scrubber_text" => $scrubber_text,
                         "bottom_text" => $bottom_text,
                         "audio_file_id" => $audio_file_id,

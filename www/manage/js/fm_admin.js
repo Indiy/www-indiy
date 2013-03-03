@@ -18,7 +18,7 @@ function fmAddStream()
     
     var args = {
         name: name,
-        artist_id: g_artistId,
+        artist_id: g_artistId
     };
     
     jQuery.ajax(
@@ -64,6 +64,61 @@ function fmOptionList(type)
     }
     return html;
 }
+
+function fmAddSong(i)
+{
+    var stream = g_streams[i];
+
+    var sel = "#fm_streams #stream_{0}".format(i);
+
+    var scrubber_text = $(sel + " .add_line .scrubber input").val();
+    var bottom_text = $(sel + " .add_line .bottom input").val();
+    var audio_file_id = $(sel + " .add_line .audio input").val();
+    var image_file_id = $(sel + " .add_line .image input").val();
+    
+    if( scrubber.length > 0
+       && bottom.length > 0
+       )
+    {
+        window.alert("Please enter a scrubber and bottom value for your new song.");
+        return;
+    }
+    
+    var args = {
+        fm_stream_id: stream.id,
+        scrubber_text: scrubber_text,
+        bottom_text: bottom_text,
+        audio_file_id: audio_file_id,
+        image_file_id: image_file_id
+    };
+    
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url: '/manage/data/fm_song.php',
+        data: args,
+        dataType: 'json',
+        success: function(data) 
+        {
+            if( data['success'] )
+            {
+                var s = data['song'];
+                g_streams[i]['songs'].push(s);
+                fmUpdateDisplay();
+            }
+            else
+            {
+                window.alert("Failed to add song.");
+            }
+        },
+        error: function()
+        {
+            window.alert("Failed to add song.");
+        }
+    });
+}
+
+
 
 function fmUpdateDisplay()
 {
