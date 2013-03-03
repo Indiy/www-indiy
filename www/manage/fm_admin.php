@@ -53,11 +53,11 @@
     foreach( $streams as $i => $stream )
     {
         $id = $stream['id'];
-        $streams[i]['songs'] = array();
+        $streams[$i]['songs'] = array();
         $q = mq("SELECT * FROM fm_songs WHERE stream_id='$id'");
         while( $song = mf($q) )
         {
-            $streams[i]['songs'][] = $song;
+            $streams[$i]['songs'][] = $song;
         }
     }
     
