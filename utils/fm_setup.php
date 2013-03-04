@@ -57,7 +57,7 @@
             $parts = explode(' - ',$scrubber_text,1);
             $artist = "";
             $track = "";
-            if( len($parts) > 1 )
+            if( count($parts) > 1 )
             {
                 $artist = $parts[0];
                 $track = $parts[1];
