@@ -81,6 +81,7 @@
         }
 
         $playlist_text = implode("\n",$file_list);
+        $playlist_text .= "\n";
         
         file_put_contents($playlist,$playlist_text,LOCK_EX);
     }
