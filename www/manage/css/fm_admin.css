@@ -24,6 +24,10 @@
     font-size: 0px;
     white-space: nowrap;
 }
+#fm_streams .stream_list .stream .song div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 #fm_streams .stream_list .stream .add_line {
     font-size: 0px;
     white-space: nowrap;
