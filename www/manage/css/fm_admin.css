@@ -15,7 +15,9 @@
     padding-bottom: 30px;
 }
 #fm_streams .stream_list .stream .column_titles {
+    padding-bottom: 5px;
     font-size: 0px;
+    font-weight: bold;
     white-space: nowrap;
 }
 #fm_streams .stream_list .stream .song {
