@@ -65,6 +65,7 @@
         $sql .= " FROM fm_songs";
         $sql .= " JOIN artist_files AS audio_file ON fm_songs.audio_file_id = audio_file.id";
         $sql .= " JOIN artist_files AS image_file ON fm_songs.image_file_id = image_file.id";
+        $sql .= " WHERE id='$id'";
         
         $q = mq($sql);
         while( $song = mf($q) )
