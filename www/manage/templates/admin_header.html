@@ -12,7 +12,7 @@
                 <ul>
                     <?php
                         
-                        if( $_SESSION['fan_id'] > 0 )
+                        if( isset($_SESSION['fan_id']) )
                         {
                             echo "<li>";
                             echo "<a href='/fan/'>FAN HOME</a>";
