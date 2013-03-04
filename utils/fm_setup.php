@@ -54,7 +54,7 @@
             $audio_filename = $song['audio_filename'];
             $scrubber_text = $song['scrubber_text'];
             
-            $parts = explode(' - ',$scrubber_text,1);
+            $parts = explode(' - ',$scrubber_text,2);
             $artist = "";
             $track = "";
             if( count($parts) > 1 )
