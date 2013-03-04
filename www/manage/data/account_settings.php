@@ -9,6 +9,8 @@
     require_once '../../includes/config.php';
     require_once '../../includes/functions.php';
     
+    session_start();
+    session_write_close();
     if( $_SESSION['sess_userId'] == "" )
     {
         header("HTTP/1.1 403 Not Authorized");

@@ -6,6 +6,7 @@
     require_once '../Login_Twitbook/twitter/twitteroauth.php';
     require_once '../Login_Twitbook/config/twconfig.php';
     
+    session_start();
     
     if(!empty($_GET['oauth_verifier']) && !empty($_SESSION['oauth_token']) && !empty($_SESSION['oauth_token_secret'])) 
     {

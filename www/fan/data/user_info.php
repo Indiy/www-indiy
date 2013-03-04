@@ -8,6 +8,8 @@
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
     header("Access-Control-Allow-Origin: *");
     
+    session_start();
+
     if( !isset($_SESSION['fan_id']) )
     {
         $output = array(

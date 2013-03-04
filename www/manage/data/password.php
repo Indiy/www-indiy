@@ -5,6 +5,8 @@
 
     require_once '../../includes/functions.php';   
     require_once '../../includes/config.php';
+
+    session_start();
     if( $_SESSION['sess_userId'] == "" )
     {
         header("HTTP/1.0 403 Forbidden");

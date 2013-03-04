@@ -8,9 +8,9 @@
     require_once '../includes/config.php';
     require_once '../includes/paypalfunctions.php';
     
-    if( $_SESSION['cart_id'] == '' )	
+    session_start();
+    if( $_SESSION['cart_id'] == '' )
         $_SESSION['cart_id'] = rand(1111111,9999999);
-    //session_write_close();
     
     $cart_id = $_SESSION['cart_id'];
     $artist_id = $_GET['artist_id'];

@@ -4,8 +4,10 @@
     require_once 'includes/config.php';
     require_once 'includes/paypalfunctions.php';
     
+    session_start();
+    session_write_close();
+
     $order_id = $_REQUEST['order_id'];
-    
     if( !$order_id )
     {
         $fan_email = get_fan_email();

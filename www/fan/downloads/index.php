@@ -3,9 +3,10 @@
     require_once '../../includes/config.php';
     require_once '../../includes/functions.php';
 
-    $fan_id = $_SESSION['fan_id'];
+    session_start();
     session_write_close();
 
+    $fan_id = $_SESSION['fan_id'];
     if( !$fan_id )
     {
         header("Location: /fan/");

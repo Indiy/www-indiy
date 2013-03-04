@@ -9,6 +9,8 @@
     require_once 'facebook/facebook.php';
     require_once 'config/fbconfig.php';
     
+    session_start();
+    
     $args = array('appId' => APP_ID,'secret' => APP_SECRET);
     $facebook = new Facebook($args);
 

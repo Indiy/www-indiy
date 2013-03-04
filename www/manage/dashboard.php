@@ -4,7 +4,9 @@
 	include_once('../includes/functions.php');	
     include_once("include/page.inc.php");
 
-	if($_SESSION['sess_userId']=="")
+    session_start();
+    session_write_close();
+	if( $_SESSION['sess_userId'] == "" )
 	{
 		header("Location: /index.php");
 		exit();

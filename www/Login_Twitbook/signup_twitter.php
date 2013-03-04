@@ -11,6 +11,8 @@
     
     //print "<html><body><pre>\n";
     
+    session_start();
+    
     if( !empty($_GET['oauth_verifier']) && !empty($_SESSION['oauth_token']) && !empty($_SESSION['oauth_token_secret']) )
     {
         $oauth_token = $_SESSION['oauth_token'];

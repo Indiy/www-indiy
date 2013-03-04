@@ -5,6 +5,8 @@
     require_once 'includes/login_helper.php';
     require_once 'includes/paypalfunctions.php';
     
+    session_start();
+    
     $expire = time() + 60*24*60*60;
     $cookie_domain = str_replace("http://www.","",trueSiteUrl());
     setcookie("FAN_HAS_ORDERED","1",$expire,"/",$cookie_domain);

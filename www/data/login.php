@@ -9,6 +9,7 @@
     require_once '../includes/functions.php';
     require_once '../includes/login_helper.php';
     
+    session_start();
     if( isset($_REQUEST['network']) )
     {
         $network = $_REQUEST['network'];

@@ -3,6 +3,8 @@
     require_once '../includes/config.php';
 	require_once '../includes/functions.php';
     
+    session_start();
+    session_write_close();
     header("Cache-Control: no-cache");
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
     
@@ -13,7 +15,6 @@
 		header("Location: /index.php");
 		exit();
 	}
-    session_write_close();
 
     print "<html><body><pre>\n";
 

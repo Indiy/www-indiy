@@ -2,7 +2,10 @@
 
     require_once '../includes/config.php';
 	require_once '../includes/functions.php';
-	if($_SESSION['sess_userId']=="")
+    
+    session_start();
+    session_write_close();
+	if( $_SESSION['sess_userId'] == "" )
 	{
 		header("Location: /index.php");
 		exit();

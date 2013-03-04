@@ -4,6 +4,8 @@
     require_once 'includes/config.php';
     require_once 'includes/paypalfunctions.php';
 
+    session_start();
+
     $token = "";
     if( isset($_REQUEST['token']) )
     {

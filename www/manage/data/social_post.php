@@ -15,12 +15,13 @@
     require_once PATH_TO_ROOT . 'Login_Twitbook/facebook/facebook.php';
     require_once PATH_TO_ROOT . 'Login_Twitbook/config/fbconfig.php';
     
+    session_start();
+    session_write_close();
     if( $_SESSION['sess_userId'] == "" )
     {
         header("Location: /index.php");
         exit();
     }
-    session_write_close();
     
     if( $_SERVER['REQUEST_METHOD'] == 'POST' )
     {

@@ -8,6 +8,8 @@
     require_once 'includes/functions.php';
     require_once 'includes/login_helper.php';
     
+    session_start();
+    
     $url = "";
     $result = 0;
     

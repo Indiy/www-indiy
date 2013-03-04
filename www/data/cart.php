@@ -5,10 +5,11 @@
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
     header("Access-Control-Allow-Origin: *");
 
-    include('../includes/functions.php');   
     include('../includes/config.php');
+    include('../includes/functions.php');
 
-    if( $_SESSION['cart_id'] == '' )	
+    session_start();
+    if( $_SESSION['cart_id'] == '' )
         $_SESSION['cart_id'] = rand(1111111,9999999);
     session_write_close();
 

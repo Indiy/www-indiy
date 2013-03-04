@@ -8,12 +8,13 @@
 
     error_reporting(E_ALL);
 
+    session_start();
+    session_write_close();
 	if( $_SESSION['sess_userId'] == '' && php_sapi_name() != 'cli' )
 	{
 		header("Location: /index.php");
 		exit();
 	}
-    session_write_close();
     ignore_user_abort(TRUE);
     set_time_limit(60*60);
     

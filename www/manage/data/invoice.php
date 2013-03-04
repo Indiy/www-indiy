@@ -10,6 +10,7 @@
     require_once '../../includes/functions.php';
     require_once '../../includes/paypalfunctions.php';
     
+    session_start();
     session_write_close();
 
     if( $_SESSION['sess_userId'] == "" )

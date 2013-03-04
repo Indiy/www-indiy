@@ -8,6 +8,8 @@
     include('../includes/functions.php');   
     include('../includes/config.php');
 
+    session_start();
+
     $artist_id = $_REQUEST['artist_id'];
     $product_id = $_REQUEST['product_id'];
 

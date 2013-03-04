@@ -8,12 +8,13 @@
     
     error_reporting(E_ALL);
     
+    session_start();
+    session_write_close();
 	if( $_SESSION['sess_userId'] == '' && php_sapi_name() != 'cli' )
 	{
 		header("Location: /index.php");
 		exit();
 	}
-    session_write_close();
     
     $user = get_current_user();
     $fd = fopen("/tmp/convert_media_$user.lock",'w+');
