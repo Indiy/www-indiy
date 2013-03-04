@@ -324,6 +324,7 @@
 		2DE18E7516E3222C0066A13B /* admin_header.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = admin_header.html; path = templates/admin_header.html; sourceTree = "<group>"; };
 		2DE18E7616E322400066A13B /* admin_footer.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = admin_footer.html; path = templates/admin_footer.html; sourceTree = "<group>"; };
 		2DE18E7716E3DA7B0066A13B /* fm_admin.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = fm_admin.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2DE18E7816E447870066A13B /* fm_setup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = fm_setup.php; path = ../utils/fm_setup.php; sourceTree = "<group>"; };
 		2DE197A214F6133000305EAD /* password.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = password.php; sourceTree = "<group>"; };
 		2DE3F8A715B1F4ED00B5D439 /* mad.swipe.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mad.swipe.js; sourceTree = "<group>"; };
 		2DE61EDD15FD841500D032A9 /* convert_media.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = convert_media.php; sourceTree = "<group>"; };
@@ -1090,6 +1091,7 @@
 				2D747C5515D6489D00128EEC /* update_madcom.sh */,
 				2D747C5615D64B9800128EEC /* tag_master.sh */,
 				2D747C5715D64FD100128EEC /* update_from_tag.sh */,
+				2DE18E7816E447870066A13B /* fm_setup.php */,
 			);
 			name = utils;
 			sourceTree = "<group>";

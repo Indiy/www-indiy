@@ -4,10 +4,10 @@
     
     //Production 
     error_reporting(0);
-    $dbhost		=	"localhost";
-    $dbusername	=	"madcom_user";
-    $dbpassword	=	"MyartistDNA!";
-    $dbname		=	"madcom_mysql";
+    $dbhost = "localhost";
+    $dbusername = "madcom_user";
+    $dbpassword = "MyartistDNA!";
+    $dbname = "madcom_mysql";
     
     $domainName = "http://www.myartistdna.com";
     $trueSiteUrl = "http://www.myartistdna.com";
@@ -16,16 +16,18 @@
     $siteTitle = "MyArtistDNA";
     $cart_base_url = "http://www.myartistdna.com";
     
+    $stream_prefix = "stream_mad_";
+
     */
 
     /*
     
     // MADDEV.COM
     error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE); 
-    $dbhost		=	"localhost";
-    $dbusername	=	"maddvcom_user";
-    $dbpassword	=	"MyartistDNA!";
-    $dbname		=	"maddvcom_mysql";
+    $dbhost = "localhost";
+    $dbusername = "maddvcom_user";
+    $dbpassword = "MyartistDNA!";
+    $dbname = "maddvcom_mysql";
     
     $domainName = "http://www.madd3v.com";
     $trueSiteUrl = "http://www.madd3v.com";
@@ -34,12 +36,14 @@
     $siteTitle = "MyArtistDNA";
     $cart_base_url = "http://www.madd3v.com";
     
+    $stream_prefix = "stream_maddev_";
+    
     */
 
-    $connect 	= 	mysql_connect($dbhost, $dbusername, $dbpassword);
+    $connect = mysql_connect($dbhost, $dbusername, $dbpassword);
     mysql_select_db($dbname,$connect) or die ("Could not select database");
 
-	$SandboxFlag = TRUE;
+    $SandboxFlag = TRUE;
     if( $SandboxFlag == TRUE )
     {
         $API_UserName="mad_1346558535_biz_api1.myartistdna.com";

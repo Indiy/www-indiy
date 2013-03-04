@@ -57,7 +57,16 @@
     {
         $id = $stream['id'];
         $streams[$i]['songs'] = array();
-        $q = mq("SELECT * FROM fm_songs WHERE fm_stream_id='$id'");
+        
+        $sql = "";
+        $sql .= "SELECT fm_songs.*,";
+        $sql .= " audio_file.filename AS audio_filename, audio_file.upload_filename AS audio_upload_filename,";
+        $sql .= " image_file.filename AS image_filename, image_file.upload_filename AS image_upload_filename";
+        $sql .= " FROM fm_songs";
+        $sql .= " JOIN artist_files AS audio_file ON fm_songs.audio_file_id = audio_file.id";
+        $sql .= " JOIN artist_files AS image_file ON fm_songs.image_file_id = image_file.id";
+        
+        $q = mq($sql);
         while( $song = mf($q) )
         {
             $streams[$i]['songs'][] = $song;
