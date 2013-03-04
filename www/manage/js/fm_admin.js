@@ -148,8 +148,8 @@ function fmUpdateDisplay()
             html += "<div class='song'>";
             html += " <div class='scrubber'>{0}</div>".format(song.scrubber_text);
             html += " <div class='bottom'>{0}</div>".format(song.bottom_text);
-            html += " <div class='audio'>{0}</div>".format(song.audio_file_id);
-            html += " <div class='image'>{0}</div>".format(song.image_file_id);
+            html += " <div class='audio'>{0}</div>".format(song.audio_upload_filename);
+            html += " <div class='image'>{0}</div>".format(song.image_upload_filename);
             html += " <div class='remove'></div>";
             html += "</div>";
         }
