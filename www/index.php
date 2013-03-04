@@ -21,7 +21,7 @@
     }
     else
     {
-        if( $_SESSION['sess_userId'] > 0 )
+        if( isset($_SESSION['sess_userId']) && $_SESSION['sess_userId'] > 0 )
         {
             $user_id =  $_SESSION['sess_userId'];
             if( $_SESSION['sess_userType'] == 'ARTIST' )

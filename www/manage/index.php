@@ -5,7 +5,7 @@
 
     session_start();
     session_write_close();
-	if( $_SESSION['sess_userId'] == '' )
+	if( !isset($_SESSION['sess_userId']) || $_SESSION['sess_userId'] == '' )
 	{
 		header("Location: /login.php");
 		die();

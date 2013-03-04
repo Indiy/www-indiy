@@ -1349,11 +1349,14 @@ END;
         $http_host = $_SERVER["HTTP_HOST"];
         if( "http://$http_host" == trueSiteUrl() )
         {
-            $artist_url = $_GET["url"];
+            if( isset($_GET["url"]) )
+            {
+                $artist_url = $_GET["url"];
+            }
         }
         else if( "http://www.$http_host" == trueSiteUrl() )
         {
-            if( $_GET["url"] )
+            if( isset($_GET["url"]) )
             {
                 $artist_url = $_GET["url"];
             }
