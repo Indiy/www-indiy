@@ -1,6 +1,7 @@
 <?php
 
     require_once "public_html/includes/config.php";
+    require_once "public_html/includes/functions.php";
     
     $ID3v2 = "/usr/local/bin/id3v2";
     
