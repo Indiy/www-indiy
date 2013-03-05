@@ -17,6 +17,7 @@
     $cart_base_url = "http://www.myartistdna.com";
     
     $stream_prefix = "stream_mad_";
+    $fm_port = 8000;
 
     */
 
@@ -37,6 +38,7 @@
     $cart_base_url = "http://www.madd3v.com";
     
     $stream_prefix = "stream_maddev_";
+    $fm_port = 8000;
     
     */
 

@@ -41,11 +41,14 @@
     {
         $stream_id = $stream['id'];
         $songs = $stream['songs'];
+        $name = $stream['name'];
 
         $file_list = array();
         
-        $stream_name = "{$stream_prefix}{$stream_id}";
-        $playlist = "ices/$stream_name.playlist.txt";
+        $stream_name = "MyArtistDNA.FM $name";
+        $stream_mount = "{$stream_prefix}{$stream_id}";
+        $playlist = "ices/$stream_mount.playlist.txt";
+        $conf_file = "$stream_mount.ices.conf";
         
         foreach( $songs as $song )
         {
@@ -84,6 +87,51 @@
         $playlist_text .= "\n";
         
         file_put_contents($playlist,$playlist_text,LOCK_EX);
+        write_conf($conf_file,$stream_mount,$stream_name,$playlist);
     }
+
+    
+    function write_conf($file,$stream_mount,$stream_name,$playlist)
+    {
+        $contents = <<<END
+<?xml version="1.0"?>
+<ices:Configuration xmlns:ices="http://www.icecast.org/projects/ices">
+  <Playlist>
+    <File>$playlist</File>
+    <Randomize>1</Randomize>
+    <Type>builtin</Type>
+    <Module>ices</Module>
+  </Playlist>
+
+  <Execution>
+    <Background>0</Background>
+    <Verbose>0</Verbose>
+    <BaseDirectory>/tmp</BaseDirectory>
+  </Execution>
+
+  <Stream>
+    <Server>
+      <Hostname>localhost</Hostname>
+      <Port>$fm_port</Port>
+      <Password>source12345</Password>
+      <Protocol>http</Protocol>
+    </Server>
+
+    <Mountpoint>/$stream_mount</Mountpoint>
+    <Name>$stream_name</Name>
+    <Genre>rock</Genre>
+    <Description>$stream_name</Description>
+    <URL>http://www.myartistdna.fm/</URL>
+    <Public>0</Public>
+    <Bitrate>128</Bitrate>
+    <Reencode>0</Reencode>
+    <Channels>2</Channels>
+  </Stream>
+</ices:Configuration>
+END;
+
+        file_put_contents($file,$contents,LOCK_EX);
+    }
+
 
 ?>
