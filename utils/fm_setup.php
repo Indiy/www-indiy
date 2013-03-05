@@ -47,8 +47,10 @@
         
         $stream_name = "MyArtistDNA.FM $name";
         $stream_mount = "{$stream_prefix}{$stream_id}";
-        $playlist = "ices/$stream_mount.playlist.txt";
-        $conf_file = "ices/$stream_mount.ices.conf";
+        $playlist = "$stream_mount.playlist.txt";
+        $playlist_path = "ices/$playlist";
+        $conf_file = "$stream_mount.ices.conf";
+        $conf_path = "ices/$conf_file";
         
         foreach( $songs as $song )
         {
@@ -86,8 +88,8 @@
         $playlist_text = implode("\n",$file_list);
         $playlist_text .= "\n";
         
-        file_put_contents($playlist,$playlist_text,LOCK_EX);
-        write_conf($conf_file,$stream_mount,$stream_name,$playlist);
+        file_put_contents($playlist_path,$playlist_text,LOCK_EX);
+        write_conf($conf_path,$stream_mount,$stream_name,$playlist);
     }
 
     
