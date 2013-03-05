@@ -95,6 +95,8 @@
     
     function write_conf($file,$stream_mount,$stream_name,$playlist)
     {
+        global $fm_port;
+    
         $contents = <<<END
 <?xml version="1.0"?>
 <ices:Configuration xmlns:ices="http://www.icecast.org/projects/ices">
