@@ -48,7 +48,7 @@
         $stream_name = "MyArtistDNA.FM $name";
         $stream_mount = "{$stream_prefix}{$stream_id}";
         $playlist = "ices/$stream_mount.playlist.txt";
-        $conf_file = "$stream_mount.ices.conf";
+        $conf_file = "ices/$stream_mount.ices.conf";
         
         foreach( $songs as $song )
         {
