@@ -128,6 +128,7 @@
     <Channels>2</Channels>
   </Stream>
 </ices:Configuration>
+
 END;
 
         file_put_contents($file,$contents,LOCK_EX);
