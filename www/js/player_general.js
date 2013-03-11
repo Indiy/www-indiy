@@ -537,7 +537,7 @@ function volumeDragStop(event,ui)
     volumeDrag(event,ui);
 }
 
-function clickSeekBar()
+function clickSeekBar(event)
 {
     var x = event.pageX - $('#media_seek_bar').offset().left;
     var width = $('#media_seek_bar').width();
