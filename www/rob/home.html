@@ -26,8 +26,24 @@
 
 
 <div class="videoblock">
-	<img src="images/video01.jpg" alt="VIDEO">
-</div><!-- videoblock -->
+  <!-- BigVideo Dependencies -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+    <script src="js/jquery-ui-1.8.22.custom.min.js"></script>
+    <script src="js/jquery.imagesloaded.min.js"></script>
+    <script src="http://vjs.zencdn.net/c/video.js"></script>
+
+    <!-- BigVideo -->
+    <script src="js/bigvideo.js"></script>
+
+    <!-- Demo -->
+    <script>
+	    $(function() {
+            var BV = new $.BigVideo();
+			BV.init();
+			BV.show('http://myartistdna.com/rob/RD_DNA_vr2.mp4',{doLoop:true});
+	    });
+    </script></div><!-- videoblock -->
 
     
 <div id="container">
@@ -39,15 +55,6 @@
         
     <div class="wrapper">
     <div id="content">
-        
-        <div class="brand">
-        <select name="" class="select">
-        <option value="1">SORT BRANDS BY:</option>
-        <option value="2">BRAND01</option>
-        <option value="2">BRAND02</option>
-        <option value="2">BRAND03</option>
-        </select>
-        </div>
         
         
        	<div class="slider">
