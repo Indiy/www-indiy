@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="">
+  <Ad id="1">
+  <InLine>
+    <AdSystem>VNGRD79</AdSystem>
+    <AdTitle>Linear Campaign</AdTitle>
+    <Description>Linear Campaign</Description>
+    <Survey></Survey>
+    <Error></Error>
+  	<Impression>http://www.vngrd79.com</Impression>
+  	<Creatives>
+  		
+  		<Creative AdID="0-pre">
+  			<Linear>
+  				<Duration>00:00:00</Duration>
+  				<VideoClicks>
+  					<ClickThrough>http://www.getfirefox.com</ClickThrough>
+  					<ClickTracking>http://www.getfirefox.com</ClickTracking>
+  				</VideoClicks>
+  				<MediaFiles>
+  					<MediaFile delivery="progressive" type="video/mp4" width="0" height="0">
+  						<![CDATA[http://khadlock-2.local/~krishadlock/vngrd79/adserver/assets/mp4/ffox.mp4?bg=JaguarAquaGraphite.jpg]]>
+  					</MediaFile>
+  				</MediaFiles>
+  			</Linear>
+  		</Creative>
+  		
+  		<Creative AdID="1-pre">
+  			<Linear>
+  				<Duration>00:00:00</Duration>
+  				<VideoClicks>
+  					<ClickThrough>http://www.studiosedition.com</ClickThrough>
+  					<ClickTracking>http://www.studiosedition.com</ClickTracking>
+  				</VideoClicks>
+  				<MediaFiles>
+  					<MediaFile delivery="progressive" type="video/x-flv" width="0" height="0">
+  						<![CDATA[http://khadlock-2.local/~krishadlock/vngrd79/adserver/assets/flv/bmw-2004.flv]]>
+  					</MediaFile>
+  				</MediaFiles>
+  			</Linear>
+  		</Creative>
+  		
+  		<Creative AdID="2-pre">
+  			<Linear>
+  				<Duration>00:00:00</Duration>
+  				<VideoClicks>
+  					<ClickThrough>http://www.studiosedition.com</ClickThrough>
+  					<ClickTracking>http://www.studiosedition.com</ClickTracking>
+  				</VideoClicks>
+  				<MediaFiles>
+  					<MediaFile delivery="progressive" type="video/mp4" width="0" height="0">
+  						<![CDATA[http://khadlock-2.local/~krishadlock/vngrd79/adserver/assets/mp4/pepsi.mp4]]>
+  					</MediaFile>
+  				</MediaFiles>
+  			</Linear>
+  		</Creative>
+  		
+  		<Creative AdID="3-pre">
+  			<CompanionAds>
+  				<Companion width="400" height="300">
+  					<StaticResource creativeType="image/jpg">
+  						<![CDATA[http://khadlock-2.local/~krishadlock/vngrd79/adserver/assets/jpg/sample.jpg]]>
+  					</StaticResource>
+  					<CompanionClickThrough>http://www.distantmeasures.com</CompanionClickThrough>
+  				</Companion>
+  			</CompanionAds>
+  		</Creative>
+  		
+	</Creatives>
+  </InLine>
+  </Ad>
+</VAST>

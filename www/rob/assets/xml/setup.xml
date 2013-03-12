@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	
+	<thumbnail>assets/images/sm-logo.jpg</thumbnail>
+	
+	<!--player width in pixels-->
+	<videoWidth>640</videoWidth>
+	<!--player height in pixels-->
+	<videoHeight>360</videoHeight>
+	<!--thumbnail width in pixels, 
+	specify thumb image width and desired text box width-->
+	<thumbWidth image="81" text="80"></thumbWidth>
+	<!--thumbnail height in pixels, 
+	specify thumb image height. Height for text box is auto-->
+	<thumbHeight image="50"></thumbHeight>
+	<!--gap between thumbnails-->
+	<thumbGap>5</thumbGap>
+	<!--frame border size in pixel-->
+	<frameBorder>20</frameBorder>
+	<!--thumb caption text character limit, set 0 to disable this feature
+	to avoide long text for thumnail images-->
+	<char_limit>22</char_limit>
+	<!--path to logo, leave blank if not needed, 
+	for pos use: TL(top left), TR(top right), BL(bottom left) or BR(bottom right)-->
+	<logo position="TR"></logo>
+	<!--start playing first vid automatically, 
+	if set false a big play button will appear in center of screen-->
+	<startPlay>true</startPlay>
+	<!--crop video on fullscreen to fit screen, if set to false, 
+	video will fit horizontally, aligned to center with gap at top and bottom-->
+	<cropVideo>false</cropVideo>
+	<!--play videos continuously: true or false, 
+	only if there is more than one video-->
+	<playAll>true</playAll>
+	<!--fullscreen feature, set as true to keep 
+	or false to remove button-->
+	<fullscreen_btn>true</fullscreen_btn>
+	
+	<!--'play/pause' and 'more video' btn bg color-->
+	<btn_color>0x000000</btn_color>
+	<!--now playing title text color-->
+	<title_color>0x999999</title_color>
+	<!--video downloading progress bar color-->
+	<dwn_color>0x534261</dwn_color>
+	<!--video playing progress bar color-->
+	<playing_color>0x000000</playing_color>
+	<!--audio volume highlight color-->
+	<vol_color>0xFFCC00</vol_color>
+	<!--drag/seek button color-->
+	<drag_color>0x534261</drag_color>
+	<!--tooltip bg color-->
+	<tip_bg_color>0xffffff</tip_bg_color>
+	<!--circle play btn bg color-->
+	<cplay_bg_color>0xffffff</cplay_bg_color>
+	<!--circle play btn arrow & border color-->
+	<cplay_front_color>0xFFffff</cplay_front_color>
+	<!--buffering preloader highlight color-->
+	<buffer_color>0xcccccc</buffer_color>
+	
+	<!--thumb animated lines highlight color-->
+	<playing_thumb>0ffffff</playing_thumb>
+	<!--thumb text color on mous eover-->
+	<thumb_text>0xffffff</thumb_text>
+	<!--thumb text color on mous eover-->
+	<thumb_roll_text>0xffffff</thumb_roll_text>
+	
+	<!--page button color-->
+	<bullet_color>0x999999</bullet_color>
+	<!--page button rollover color-->
+	<bullet_rollover_color>0x999999</bullet_rollover_color>
+	<!--arrow button color-->
+	<arrow_color>0x999999</arrow_color>
+	<!--arrow button rollover color-->
+	<arrow_rollover_color>0xcccccc</arrow_rollover_color>
+		
+</settings>

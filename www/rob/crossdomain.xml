@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cross-domain-policySYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">
+<cross-domain-policy>
+<allow-access-from domain="http://www.myartistdna.com/"/>
+<allow-access-from domain="http://myartistdna.com"/>
+<allow-access-from domain="*"/>
+</cross-domain-policy>
