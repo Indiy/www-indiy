@@ -1,0 +1,126 @@
+/*
+----------------------------------------
+01. default elements
+----------------------------------------
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style:none
+}
+fieldset, iframe, img {
+	border:none
+}
+/* render html5 elements as block */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+	display: block;
+}
+
+ul, li { list-style:none}
+h1,h2,h3,h4,h5,h6 { font-weight:normal; line-height:1em}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: none;
+  outline: 0;
+  outline:0;
+}
+
+body { font-family:"helveticaworld_regular",Arial, Helvetica, sans-serif} 
+
+a {  text-decoration:none; outline:0}
+a:hover{ text-decoration:underline; outline:0}
+
+p { font-size:9px; color:#f5fbfa; line-height:1.3em}
+p a { color:#f5fbfa}
+
+/*
+----------------------------------------
+02. wrapper
+----------------------------------------
+*/
+
+.wrapper { width:930px; margin:0 auto}
+
+/*
+----------------------------------------
+03. videoblock
+----------------------------------------
+*/
+
+.videoblock{ width:100%; float:left; position:absolute; top:0; left:0}
+.videoblock img{ width:100%; float:left}
+
+/*
+----------------------------------------
+04. headers
+----------------------------------------
+*/
+
+#container{ width:100%; min-height:863px; float:left; background:url(../images/overlay01.png) repeat top left; position:relative; z-index:100; padding:32px 0 0 0}
+
+header{ width:100%; height:59px; float:left; background:url(../images/bg_header.png) no-repeat top center}
+header .logo{ width:100%; float:left; line-height:.5em; text-align:center; margin-top:-12px; position:relative}
+
+/*
+----------------------------------------
+05. content
+----------------------------------------
+*/
+
+#content{ width:930px; float:left; padding-top:24px}
+
+.brand{ width:930px; float:left}
+.brand .sbHolder{ float:left; background:url(../images/select01.png) no-repeat top right; font-family:"HelveticaWorld-Bold",Arial, Helvetica, sans-serif; font-size:10px; color:#787878; height:29px; position:relative; width:174px; margin:0 0 24px 10px}
+.brand .sbSelector{ color:#000000; display: block; height:24px; left:0; top:0; line-height:28px; position:absolute; outline:none; text-indent:10px; width:174px}
+.brand .sbSelector:link{ color:#787878; text-decoration:none}
+.brand .sbOptions{ background:url(../images/option01.png) no-repeat bottom left; list-style:none; left:0; margin:0; padding:4px 0; position:absolute; top:29px; width:174px; z-index:100}
+.brand .sbOptions li{ width:156px; height:auto; padding:0 9px; background:none; text-transform:none; margin:0; position:relative}
+.brand .sbOptions a{ display: block; color:#000000; text-decoration: none; padding:3px 0 6px 2px}
+.brand .sbOptions a:hover{ color: #666666}
+ 
+.slider{ width:960px; float:left; margin:0 -15px}
+#slide-scroll.scrollable { width:950px; height:535px; overflow:hidden; position:relative}
+#slide-scroll.scrollable .items { width:20000em; height:535px; position:absolute; clear:both}
+
+#slide-scroll.scrollable .item { width:960px; height:525px; float:left; position:relative; padding:10px 0 0 10px; margin:0 0px 0 0}
+#slide-scroll.scrollable .item .set { width:302px; height:525px; float:left; padding-right:15px}
+
+#slide-scroll.scrollable .item figure { width:270px; height:220px; float:left; background:#e1e1e1; border:10px solid #ffffff; text-align:center; line-height:270px; margin:0 30px 30px 0; position:relative}
+#slide-scroll.scrollable .item figure .video{ width:302px; height:254px; float:left; border:3px solid #ffffff; display:none; position:absolute; top:-18px; left:-18px; line-height:normal}
+#slide-scroll.scrollable .item figure:hover .video{ display:block}
+
+#slide-scroller { float:left}
+#slide-scroller .prevPage, .nextPage { width:45px; height:86px; float:left; background:url(../images/arrow_previous.png) no-repeat; text-indent:-9999px; top:378px; left:0; position:absolute}
+#slide-scroller .nextPage { background:url(../images/arrow_next.png) no-repeat; left:auto; right:0}
+#slide-scroller .prevPage:hover{ background:url(../images/arrow_previous02.png) no-repeat}
+#slide-scroller .nextPage:hover{ background:url(../images/arrow_next02.png) no-repeat}
+
+/*
+----------------------------------------
+06. footer
+----------------------------------------
+*/
+
+footer{ width:100%; float:left; background:url(../images/trans01.png) repeat top left; padding:11px 0; position:absolute; bottom:0; left:0}
+
+footer p{ text-align:center}
+footer p a{ margin:0 2px}
+
