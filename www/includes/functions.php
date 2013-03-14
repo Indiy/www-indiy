@@ -1038,13 +1038,13 @@
     
     function artist_get_total_views($artist_id)
     {
-        $music_sum = mf(mq("SELECT SUM(views) FROM mydna_musicplayer_audio WHERE `artistid`='$artist_id'"));
-        $video_sum = mf(mq("SELECT SUM(views) FROM mydna_musicplayer_video WHERE `artistid`='$artist_id'"));
-        $photo_sum = mf(mq("SELECT SUM(views) FROM photos WHERE `artist_id`='$artist_id'"));
+        $music_sum = mf(mq("SELECT SUM(views) AS sum_views FROM mydna_musicplayer_audio WHERE `artistid`='$artist_id'"));
+        $video_sum = mf(mq("SELECT SUM(views) AS sum_views FROM mydna_musicplayer_video WHERE `artistid`='$artist_id'"));
+        $photo_sum = mf(mq("SELECT SUM(views) AS sum_views FROM photos WHERE `artist_id`='$artist_id'"));
         
-        $total = intval($music_sum[0]);
-        $total += intval($video_sum[0]);
-        $total += intval($photo_sum[0]);
+        $total = intval($music_sum['sum_views']);
+        $total += intval($video_sum['sum_views']);
+        $total += intval($photo_sum['sum_views']);
         
         return $total;
     }
