@@ -4,6 +4,7 @@
     require_once 'includes/functions.php';
     
     check_unsupported_browser();
+    session_start();
     
     $ios_version = FALSE;
     

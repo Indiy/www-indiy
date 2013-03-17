@@ -3,6 +3,8 @@
     require_once 'includes/config.php';
     require_once 'includes/functions.php';
 
+    session_start();
+
     if( !$artist_url )
     {
         $artist_url = get_artist_url_for_page();
