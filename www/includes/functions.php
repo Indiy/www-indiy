@@ -1490,7 +1490,7 @@ END;
     }
     function artist_file_url($file)
     {
-        return 'http://' . $GLOBALS['g_artist_file_url'] . '/artists/files/' . $file;
+        return $GLOBALS['g_artist_file_url'] . '/artists/files/' . $file;
     }
 
 ?>
