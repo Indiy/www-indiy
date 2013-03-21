@@ -1488,5 +1488,9 @@ END;
     {
         return $GLOBALS["g_artist_file_host"];
     }
+    function artist_file_url($file)
+    {
+        return 'http://' . $GLOBALS['g_artist_file_host'] . '/artists/files/' . $file;
+    }
 
 ?>

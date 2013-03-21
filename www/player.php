@@ -179,7 +179,7 @@
         $image = FALSE;
         if( $tab['image'] != '' )
         {
-            $image = '/artists/files/' . $tab['image'];
+            $image = artist_file_url($tab['image']);
         }
         $item = array("id" => $tab['id'],
                       "title" => $title,
@@ -213,8 +213,8 @@
     $i = 0;
     while( $music = mf($q_music) )
     {
-        $music_image = artist_file_host() . '/artists/files/' . $music["image"];
-        $music_audio = artist_file_host() . '/artists/files/' . $music["audio"];
+        $music_image = artist_file_url($music['image']);
+        $music_audio = artist_file_url($music['audio']);
         
         $music_name = stripslashes($music["name"]);
         $music_listens = $music["views"];
@@ -303,8 +303,8 @@
         if( strlen($vid_error) > 0 )
             continue;
         
-        $video_file = artist_file_host() . '/artists/files/' . $video['video'];
-        $video_image = artist_file_host() . '/artists/files/' . $video['image'];
+        $video_file = artist_file_url($video['video']);
+        $video_image = artist_file_url($video['image']);
         $video_name = $video['name'];
         
         $img_url = "/timthumb.php?src=$video_image&w=200&zc=0&q=100";
@@ -344,7 +344,7 @@
     $i = 0;
     while( $photo = mf($q_photo) )
     {
-        $photo_image = artist_file_host() . '/artists/files/' . $photo['image'];
+        $photo_image = artist_file_url($photo['image']);
         
         $img_url = "/timthumb.php?src=$photo_image&w=200&zc=0&q=100";
         
