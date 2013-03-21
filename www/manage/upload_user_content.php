@@ -52,6 +52,45 @@
     {
         return substr($haystack, -strlen($needle)) == $needle;
     }
+    
+    function maybe_upload_file($client,$filename,$alt_ext)
+    {
+        if( $alt_ext )
+        {
+            $path_parts = pathinfo($filename);
+            $extension = strtolower($path_parts['extension']);
+            
+            $filename = str_replace(".$extension",$alt_ext,$filename);
+        }
+
+
+        $path = "../artists/files/$filename";
+        $key = "artists/files/$filename";
+        
+        $realpath = realpath($path);
+        
+        if( file_exists($realpath ) )
+        {
+            
+            $args = array(
+                          'Bucket' => 'static2.madd3v.com',
+                          'Key' => $key,
+                          'SourceFile' => $realpath,
+                          'ACL' => 'public-read',
+                          'CacheControl' => 'public, max-age=22896000'
+                          );
+            $client->putObject($args);
+            print " uploaded: $filename\n";
+        }
+        else
+        {
+            if( !$alt_ext )
+            {
+                print "******file missing: $realpath\n";
+            }
+        }
+    }
+
 
 
     try
@@ -74,22 +113,13 @@
         {
             $filename = $file['filename'];
 
-            if( !endsWith($filename,'.mp4') )
+            if( !endsWith($filename,'.mp3') )
                 continue;
 
-            $path = "../artists/files/$filename";
-        
-            $key = "artists/files/$filename";
-        
-            print "filename: $filename\n";
+            maybe_upload_file($client,$filename,'.ogv');
+            maybe_upload_file($client,$filename,'.ogg');
             
-            $client->putObject(array(
-                                     'Bucket' => 'static2.madd3v.com',
-                                     'Key' => $key,
-                                     //'Body' => $file_handle,
-                                     'SourceFile' => realpath($path),
-                                     'ACL' => 'public-read'
-                                     ));
+            $client->putObject($args);
             break;
         }
         
