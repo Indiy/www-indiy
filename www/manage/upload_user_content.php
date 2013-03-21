@@ -48,6 +48,12 @@
 
     use Aws\S3\S3Client;
 
+    function endsWith($haystack, $needle)
+    {
+        return substr($haystack, -strlen($needle)) == $needle;
+    }
+
+
     try
     {
         
@@ -67,6 +73,10 @@
         while( $file = mf($q) )
         {
             $filename = $file['filename'];
+
+            if( !endsWith($filename,'.ogv') )
+                continue;
+
             $path = "../artists/files/$filename";
         
             $key = "artists/files/$filename";
@@ -83,16 +93,6 @@
             break;
         }
         
-        
-        //$client->createBucket(array('Bucket' => 'test.madd3v.com'));
-
-        $client->putObject(array(
-                                 'Bucket' => 'static2.madd3v.com',
-                                 'Key'    => 'artists/files/data5.txt',
-                                 'Body'   => "Hello5!\n",
-                                 'ACL'    => 'public-read'
-                                 ));
-
         print "ListBuckets: \n";
         $result = $client->listBuckets();
         foreach ($result['Buckets'] as $bucket) {
