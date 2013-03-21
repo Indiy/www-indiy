@@ -69,7 +69,7 @@
                       'ContentType' => mime_content_type($filename),
                       );
         
-        print "args: $args\n";
+        print "args: "; var_dump($args); print "\n";
         
         $client->putObject($args);
         
