@@ -58,7 +58,7 @@
     //print "client: "; print_r($client); print "\n";
     
     
-    
+    /*
     $sql = "SELECT * FROM artist_files";
     $q = mq($sql);
     while( $file = mf($q) )
@@ -84,6 +84,8 @@
     
     
     $client->createBucket(array('Bucket' => 'test.madd3v.com'));
+
+     */
 
     print "ListBuckets: \n";
     $result = $client->listBuckets()->get('Buckets');
