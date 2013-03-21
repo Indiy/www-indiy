@@ -66,7 +66,6 @@
                       'Bucket' => "static.madd3v.com",
                       'Key' => $key,
                       'SourceFile' => $path,
-                      'ContentType' => mime_content_type($filename),
                       );
         
         print "args: "; var_dump($args); print "\n";
