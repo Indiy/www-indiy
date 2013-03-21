@@ -99,7 +99,7 @@
     }
     
     print "ListObjects: \n";
-    $iterator = $client->getIterator('ListObjects', array('Bucket' => 'test.madd3v.com'));
+    $iterator = $client->getIterator('ListObjects', array('Bucket' => 'static.madd3v.com'));
     foreach ($iterator as $object) {
         print "here2\n";
         echo $object['Key'] . "\n";
