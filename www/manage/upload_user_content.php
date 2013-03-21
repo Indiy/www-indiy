@@ -57,7 +57,7 @@
     
     //print "client: "; print_r($client); print "\n";
     
-    /*
+    
     
     $sql = "SELECT * FROM artist_files";
     $q = mq($sql);
@@ -81,19 +81,21 @@
         
         break;
     }
-    */
+    
     
     $client->createBucket(array('Bucket' => 'test.madd3v.com'));
 
     print "ListBuckets: \n";
     $result = $client->listBuckets()->get('Buckets');
     foreach ($result['Buckets'] as $bucket) {
+        print "here1\n";
         print "{$bucket['Name']} - {$bucket['CreationDate']}\n";
     }
     
     print "ListObjects: \n";
     $iterator = $client->getIterator('ListObjects', array('Bucket' => 'static.madd3v.com'));
     foreach ($iterator as $object) {
+        print "here2\n";
         echo $object['Key'] . "\n";
     }
     
