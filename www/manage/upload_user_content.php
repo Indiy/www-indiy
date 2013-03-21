@@ -91,8 +91,6 @@
         }
     }
 
-
-
     try
     {
         
@@ -113,27 +111,10 @@
         {
             $filename = $file['filename'];
 
-            if( !endsWith($filename,'.mp4') )
-                continue;
-
             maybe_upload_file($client,$filename,FALSE);
             maybe_upload_file($client,$filename,'.ogv');
             maybe_upload_file($client,$filename,'.ogg');
         }
-        
-        print "ListBuckets: \n";
-        $result = $client->listBuckets();
-        foreach ($result['Buckets'] as $bucket) {
-            print "  {$bucket['Name']} - {$bucket['CreationDate']}\n";
-        }
-        print "===============\n";
-        
-        print "ListObjects: \n";
-        $iterator = $client->getIterator('ListObjects', array('Bucket' => 'static2.madd3v.com'));
-        foreach ($iterator as $object) {
-            echo "  " . $object['Key'] . "\n";
-        }
-        print "===============\n";
     }
     catch( Exception $e )
     {
