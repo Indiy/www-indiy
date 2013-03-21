@@ -1,7 +1,11 @@
 <?php
 
-    $access_key_id = "AKIAIP2VCXXJMBG4K75Q";
-    $secret_access_key = "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";
+    //$access_key_id = "AKIAIP2VCXXJMBG4K75Q";
+    //$secret_access_key = "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";
+
+    $access_key_id = "AKIAIK73DR7TBUD7OJEQ";
+    $secret_access_key = "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";
+
     
     require_once "../includes/config.php";
     require_once "../includes/functions.php";
