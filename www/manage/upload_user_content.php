@@ -58,7 +58,7 @@
     //print "client: "; print_r($client); print "\n";
     
     
-    /*
+    
     $sql = "SELECT * FROM artist_files";
     $q = mq($sql);
     while( $file = mf($q) )
@@ -69,28 +69,23 @@
         $key = "artists/files/$filename";
     
         print "filename: $filename\n";
-        $args = array(
-                      'Bucket' => "static.madd3v.com",
-                      'Key' => $key,
-                      'SourceFile' => $path,
-                      );
         
-        print "args: "; var_dump($args); print "\n";
+        $file_handle = fopen($path,'rb');
         
-        $client->putObject($args);
-        
-        break;
+        $client->putObject(array(
+                                 'Bucket' => 'test.madd3v.com',
+                                 'Key' => $filename,
+                                 'Body' => $file_handle
+                                 ));
     }
     
     
-    $client->createBucket(array('Bucket' => 'test.madd3v.com'));
+    //$client->createBucket(array('Bucket' => 'test.madd3v.com'));
 
-     */
-    
     $client->putObject(array(
                              'Bucket' => 'test.madd3v.com',
-                             'Key'    => 'data.txt',
-                             'Body'   => 'Hello!'
+                             'Key'    => 'data2.txt',
+                             'Body'   => 'Hello2!'
                              ));
 
     print "ListBuckets: \n";
@@ -101,7 +96,7 @@
     }
     
     print "ListObjects: \n";
-    $iterator = $client->getIterator('ListObjects', array('Bucket' => 'static.madd3v.com'));
+    $iterator = $client->getIterator('ListObjects', array('Bucket' => 'test.madd3v.com'));
     foreach ($iterator as $object) {
         print "here2\n";
         echo $object['Key'] . "\n";
