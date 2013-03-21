@@ -94,16 +94,16 @@
     print "ListBuckets: \n";
     $result = $client->listBuckets();
     foreach ($result['Buckets'] as $bucket) {
-        print "here1\n";
-        print "{$bucket['Name']} - {$bucket['CreationDate']}\n";
+        print "  {$bucket['Name']} - {$bucket['CreationDate']}\n";
     }
+    print "===============\n";
     
     print "ListObjects: \n";
     $iterator = $client->getIterator('ListObjects', array('Bucket' => 'static2.madd3v.com'));
     foreach ($iterator as $object) {
-        print "here2\n";
-        echo $object['Key'] . "\n";
+        echo "  " . $object['Key'] . "\n";
     }
+    print "===============\n";
     
     print "\n\n";
     print "done done\n"
