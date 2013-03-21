@@ -1484,13 +1484,13 @@ END;
         return 0;
     }
 
-    function artist_file_host()
+    function artist_file_url_prefix()
     {
-        return $GLOBALS["g_artist_file_host"];
+        return $GLOBALS['g_artist_file_url'];
     }
     function artist_file_url($file)
     {
-        return 'http://' . $GLOBALS['g_artist_file_host'] . '/artists/files/' . $file;
+        return 'http://' . $GLOBALS['g_artist_file_url'] . '/artists/files/' . $file;
     }
 
 ?>
