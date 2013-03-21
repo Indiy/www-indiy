@@ -73,17 +73,20 @@
         $file_handle = fopen($path,'rb');
         
         $client->putObject(array(
-                                 'Bucket' => 'test.madd3v.com',
+                                 'Bucket' => 'static.madd3v.com',
                                  'Key' => $filename,
-                                 'Body' => $file_handle
+                                 'Body' => $file_handle,
+                                 //'SourceFile' => realpath($path),
                                  ));
+        fclose($file_handle);
+        break;
     }
     
     
     //$client->createBucket(array('Bucket' => 'test.madd3v.com'));
 
     $client->putObject(array(
-                             'Bucket' => 'test.madd3v.com',
+                             'Bucket' => 'static.madd3v.com',
                              'Key'    => 'data2.txt',
                              'Body'   => 'Hello2!'
                              ));
