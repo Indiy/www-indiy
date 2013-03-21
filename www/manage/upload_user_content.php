@@ -74,7 +74,7 @@
         {
             $filename = $file['filename'];
 
-            if( !endsWith($filename,'.ogv') )
+            if( !endsWith($filename,'.mp4') )
                 continue;
 
             $path = "../artists/files/$filename";
