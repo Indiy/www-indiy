@@ -86,6 +86,12 @@
     $client->createBucket(array('Bucket' => 'test.madd3v.com'));
 
      */
+    
+    $client->putObject(array(
+                             'Bucket' => 'test.madd3v.com',
+                             'Key'    => 'data.txt',
+                             'Body'   => 'Hello!'
+                             ));
 
     print "ListBuckets: \n";
     $result = $client->listBuckets()->get('Buckets');
