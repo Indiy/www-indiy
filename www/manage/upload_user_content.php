@@ -70,15 +70,12 @@
     
         print "filename: $filename\n";
         
-        $file_handle = fopen($path,'rb');
-        
         $client->putObject(array(
                                  'Bucket' => 'static2.madd3v.com',
                                  'Key' => $key,
                                  //'Body' => $file_handle,
                                  'SourceFile' => realpath($path),
                                  ));
-        fclose($file_handle);
         break;
     }
     
@@ -87,8 +84,8 @@
 
     $client->putObject(array(
                              'Bucket' => 'static2.madd3v.com',
-                             'Key'    => 'artists/files/data3.txt',
-                             'Body'   => 'Hello3!'
+                             'Key'    => 'artists/files/data4.txt',
+                             'Body'   => 'Hello4!'
                              ));
 
     print "ListBuckets: \n";
