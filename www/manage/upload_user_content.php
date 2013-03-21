@@ -78,7 +78,7 @@
                                      'Key' => $key,
                                      //'Body' => $file_handle,
                                      'SourceFile' => realpath($path),
-                                     'GrantRead' => 'Everyone',
+                                     'ACL' => 'public-read'
                                      ));
             break;
         }
@@ -90,7 +90,7 @@
                                  'Bucket' => 'static2.madd3v.com',
                                  'Key'    => 'artists/files/data5.txt',
                                  'Body'   => "Hello5!\n",
-                                 'GrantRead' => 'Everyone',
+                                 'ACL'    => 'public-read'
                                  ));
 
         print "ListBuckets: \n";
