@@ -46,64 +46,73 @@
     echo str_repeat(" ",1024);
     echo "<pre>\n";
 
-    use Aws\S3\S3Client;
-    
-    $args = array(
-                  'key' => $access_key_id,
-                  'secret' => $secret_access_key,
-                  );
-    
-    $client = S3Client::factory($args);
-    
-    //print "client: "; print_r($client); print "\n";
-    
-    
-    
-    $sql = "SELECT * FROM artist_files";
-    $q = mq($sql);
-    while( $file = mf($q) )
-    {
-        $filename = $file['filename'];
-        $path = "../artists/files/$filename";
-    
-        $key = "artists/files/$filename";
-    
-        print "filename: $filename\n";
+
+    try {
+
+        use Aws\S3\S3Client;
         
+        $args = array(
+                      'key' => $access_key_id,
+                      'secret' => $secret_access_key,
+                      );
+        
+        $client = S3Client::factory($args);
+        
+        //print "client: "; print_r($client); print "\n";
+        
+        
+        
+        $sql = "SELECT * FROM artist_files";
+        $q = mq($sql);
+        while( $file = mf($q) )
+        {
+            $filename = $file['filename'];
+            $path = "../artists/files/$filename";
+        
+            $key = "artists/files/$filename";
+        
+            print "filename: $filename\n";
+            
+            $client->putObject(array(
+                                     'Bucket' => 'static2.madd3v.com',
+                                     'Key' => $key,
+                                     //'Body' => $file_handle,
+                                     'SourceFile' => realpath($path),
+                                     'GrantRead' => 'Everyone',
+                                     ));
+            break;
+        }
+        
+        
+        //$client->createBucket(array('Bucket' => 'test.madd3v.com'));
+
         $client->putObject(array(
                                  'Bucket' => 'static2.madd3v.com',
-                                 'Key' => $key,
-                                 //'Body' => $file_handle,
-                                 'SourceFile' => realpath($path),
+                                 'Key'    => 'artists/files/data5.txt',
+                                 'Body'   => "Hello5!\n",
                                  'GrantRead' => 'Everyone',
                                  ));
-        break;
-    }
-    
-    
-    //$client->createBucket(array('Bucket' => 'test.madd3v.com'));
 
-    $client->putObject(array(
-                             'Bucket' => 'static2.madd3v.com',
-                             'Key'    => 'artists/files/data5.txt',
-                             'Body'   => "Hello5!\n",
-                             'GrantRead' => 'Everyone',
-                             ));
-
-    print "ListBuckets: \n";
-    $result = $client->listBuckets();
-    foreach ($result['Buckets'] as $bucket) {
-        print "  {$bucket['Name']} - {$bucket['CreationDate']}\n";
+        print "ListBuckets: \n";
+        $result = $client->listBuckets();
+        foreach ($result['Buckets'] as $bucket) {
+            print "  {$bucket['Name']} - {$bucket['CreationDate']}\n";
+        }
+        print "===============\n";
+        
+        print "ListObjects: \n";
+        $iterator = $client->getIterator('ListObjects', array('Bucket' => 'static2.madd3v.com'));
+        foreach ($iterator as $object) {
+            echo "  " . $object['Key'] . "\n";
+        }
+        print "===============\n";
+        echo inverse(5) . "\n";
+        echo inverse(0) . "\n";
     }
-    print "===============\n";
-    
-    print "ListObjects: \n";
-    $iterator = $client->getIterator('ListObjects', array('Bucket' => 'static2.madd3v.com'));
-    foreach ($iterator as $object) {
-        echo "  " . $object['Key'] . "\n";
+    catch( Exception $e )
+    {
+        echo 'Caught exception: ',  $e->getMessage(), "\n";
     }
-    print "===============\n";
-    
     print "\n\n";
     print "done done\n"
 
