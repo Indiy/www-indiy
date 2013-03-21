@@ -135,8 +135,6 @@
             echo "  " . $object['Key'] . "\n";
         }
         print "===============\n";
-        echo inverse(5) . "\n";
-        echo inverse(0) . "\n";
     }
     catch( Exception $e )
     {
