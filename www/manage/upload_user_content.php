@@ -59,13 +59,18 @@
         $filename = $file['filename'];
         $path = "../artists/files/$filename";
     
+        $key = "artists/files/$filename";
+    
         print "filename: $filename\n";
         $args = array(
                       'Bucket' => "static.madd3v.com",
-                      'Key' => $filename,
+                      'Key' => $key,
                       'SourceFile' => $path,
                       'ContentType' => mime_content_type($filename),
                       );
+        
+        print "args: $args\n";
+        
         $client->putObject($args);
         
         break;
