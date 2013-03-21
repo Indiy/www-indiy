@@ -26,9 +26,9 @@
     // MADDEV.COM
     error_reporting(E_ERROR | E_WARNING | E_PARSE); 
     $dbhost = "localhost";
-    $dbusername = "maddvcom_user";
-    $dbpassword = "MyartistDNA!";
-    $dbname = "maddvcom_mysql";
+    $dbusername = "madd3v_user";
+    $dbpassword = "Wp2T4erBEjREdwrS";
+    $dbname = "madd3v.com";
     
     $domainName = "http://www.madd3v.com";
     $trueSiteUrl = "http://www.madd3v.com";
@@ -36,6 +36,8 @@
     $playerUrl = "http://www.madd3v.com/?url=";
     $siteTitle = "MyArtistDNA";
     $cart_base_url = "http://www.madd3v.com";
+    $g_artist_file_host = "http://static.madd3v.com";
+    $g_aws_static_bucket = "static2.madd3v.com";
     
     $stream_prefix = "stream_maddev_";
     $fm_port = 8000;

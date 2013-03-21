@@ -1484,4 +1484,9 @@ END;
         return 0;
     }
 
+    function artist_file_host()
+    {
+        return $GLOBALS["g_artist_file_host"];
+    }
+
 ?>

@@ -213,8 +213,8 @@
     $i = 0;
     while( $music = mf($q_music) )
     {
-        $music_image = '/artists/files/' . $music["image"];
-        $music_audio = '/artists/files/' . $music["audio"];
+        $music_image = artist_file_host() . '/artists/files/' . $music["image"];
+        $music_audio = artist_file_host() . '/artists/files/' . $music["audio"];
         
         $music_name = stripslashes($music["name"]);
         $music_listens = $music["views"];
@@ -303,8 +303,8 @@
         if( strlen($vid_error) > 0 )
             continue;
         
-        $video_file = trueSiteUrl() . '/artists/files/' . $video['video'];
-        $video_image = '/artists/files/' . $video['image'];
+        $video_file = artist_file_host() . '/artists/files/' . $video['video'];
+        $video_image = artist_file_host() . '/artists/files/' . $video['image'];
         $video_name = $video['name'];
         
         $img_url = "/timthumb.php?src=$video_image&w=200&zc=0&q=100";
@@ -337,19 +337,6 @@
     $video_nav_show = FALSE;
     if( count($video_list) > 3 )
         $video_nav_show = TRUE;
-    $video0_image = "";
-    $video0_sources_html = "";
-    if( count($video_list) > 0 )
-    {
-        $video0 = $video_list[0];
-        $video0_image = $video0["image"];
-
-        $html = "";
-        $html .= "<source src='$video0_mp4' type='video/mp4' />";
-        $html .= "<source src='$video0_ogg' type='video/ogg' />";
-
-        $video0_sources_html = $html;
-    }
     
     $q_photo = mq("SELECT * from photos WHERE artist_id='$artist_id' ORDER BY `order` ASC, `id` DESC");
     $photo_list = array();
@@ -357,7 +344,7 @@
     $i = 0;
     while( $photo = mf($q_photo) )
     {
-        $photo_image = '/artists/files/' . $photo['image'];
+        $photo_image = artist_file_host() . '/artists/files/' . $photo['image'];
         
         $img_url = "/timthumb.php?src=$photo_image&w=200&zc=0&q=100";
         
