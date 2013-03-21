@@ -76,6 +76,18 @@
         
         break;
     }
+
+    print "ListBuckets: \n";
+    $result = $client->listBuckets()->get('Buckets');
+    foreach ($result['Buckets'] as $bucket) {
+        print "{$bucket['Name']} - {$bucket['CreationDate']}\n";
+    }
+    
+    print "ListObjects: \n";
+    $iterator = $client->getIterator('ListObjects', array('Bucket' => 'static.madd3v.com'));
+    foreach ($iterator as $object) {
+        echo $object['Key'] . "\n";
+    }
     
     print "\n\n";
     print "done done\n"
