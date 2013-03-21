@@ -92,7 +92,7 @@
                              ));
 
     print "ListBuckets: \n";
-    $result = $client->listBuckets()->get('Buckets');
+    $result = $client->listBuckets();
     foreach ($result['Buckets'] as $bucket) {
         print "here1\n";
         print "{$bucket['Name']} - {$bucket['CreationDate']}\n";
