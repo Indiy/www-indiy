@@ -51,7 +51,7 @@
     
     $client = S3Client::factory($args);
     
-    print "client: "; print_r($client); print "\n";
+    //print "client: "; print_r($client); print "\n";
     
     /*
     
