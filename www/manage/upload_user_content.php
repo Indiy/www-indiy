@@ -119,7 +119,6 @@
             maybe_upload_file($client,$filename,FALSE);
             maybe_upload_file($client,$filename,'.ogv');
             maybe_upload_file($client,$filename,'.ogg');
-            break;
         }
         
         print "ListBuckets: \n";
