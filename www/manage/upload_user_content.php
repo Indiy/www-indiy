@@ -73,7 +73,7 @@
         $file_handle = fopen($path,'rb');
         
         $client->putObject(array(
-                                 'Bucket' => 'static.madd3v.com',
+                                 'Bucket' => 'static2.madd3v.com',
                                  'Key' => $filename,
                                  'Body' => $file_handle,
                                  //'SourceFile' => realpath($path),
@@ -86,7 +86,7 @@
     //$client->createBucket(array('Bucket' => 'test.madd3v.com'));
 
     $client->putObject(array(
-                             'Bucket' => 'static.madd3v.com',
+                             'Bucket' => 'static2.madd3v.com',
                              'Key'    => 'data2.txt',
                              'Body'   => 'Hello2!'
                              ));
@@ -99,7 +99,7 @@
     }
     
     print "ListObjects: \n";
-    $iterator = $client->getIterator('ListObjects', array('Bucket' => 'static.madd3v.com'));
+    $iterator = $client->getIterator('ListObjects', array('Bucket' => 'static2.madd3v.com'));
     foreach ($iterator as $object) {
         print "here2\n";
         echo $object['Key'] . "\n";
