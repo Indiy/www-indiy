@@ -83,7 +83,7 @@
     }
     */
     
-    $client->createBucket(array('Bucket' => 'mybucket'));
+    $client->createBucket(array('Bucket' => 'test.madd3v.com'));
 
     print "ListBuckets: \n";
     $result = $client->listBuckets()->get('Buckets');
