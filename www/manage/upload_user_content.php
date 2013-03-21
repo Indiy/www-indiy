@@ -74,7 +74,7 @@
         
         $client->putObject(array(
                                  'Bucket' => 'static2.madd3v.com',
-                                 'Key' => $filename,
+                                 'Key' => $key,
                                  'Body' => $file_handle,
                                  //'SourceFile' => realpath($path),
                                  ));
@@ -87,7 +87,7 @@
 
     $client->putObject(array(
                              'Bucket' => 'static2.madd3v.com',
-                             'Key'    => 'data2.txt',
+                             'Key'    => 'foo/data2.txt',
                              'Body'   => 'Hello2!'
                              ));
 
