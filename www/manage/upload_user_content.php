@@ -82,6 +82,8 @@
         break;
     }
     */
+    
+    $client->createBucket(array('Bucket' => 'mybucket'));
 
     print "ListBuckets: \n";
     $result = $client->listBuckets()->get('Buckets');
