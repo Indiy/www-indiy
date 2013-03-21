@@ -46,10 +46,10 @@
     echo str_repeat(" ",1024);
     echo "<pre>\n";
 
+    use Aws\S3\S3Client;
 
-    try {
-
-        use Aws\S3\S3Client;
+    try
+    {
         
         $args = array(
                       'key' => $access_key_id,
