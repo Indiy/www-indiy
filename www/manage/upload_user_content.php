@@ -113,7 +113,7 @@
         {
             $filename = $file['filename'];
 
-            if( !endsWith($filename,'.mp3') )
+            if( !endsWith($filename,'.mp4') )
                 continue;
 
             maybe_upload_file($client,$filename,FALSE);
