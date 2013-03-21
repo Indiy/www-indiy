@@ -75,6 +75,7 @@
                                  'Key' => $key,
                                  //'Body' => $file_handle,
                                  'SourceFile' => realpath($path),
+                                 'GrantRead' => 'Everyone',
                                  ));
         break;
     }
@@ -84,8 +85,9 @@
 
     $client->putObject(array(
                              'Bucket' => 'static2.madd3v.com',
-                             'Key'    => 'artists/files/data4.txt',
-                             'Body'   => 'Hello4!'
+                             'Key'    => 'artists/files/data5.txt',
+                             'Body'   => "Hello5!\n",
+                             'GrantRead' => 'Everyone',
                              ));
 
     print "ListBuckets: \n";
