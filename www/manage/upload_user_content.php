@@ -70,7 +70,9 @@
         
         print "args: "; var_dump($args); print "\n";
         
-        $client->putObject($args);
+        $ret = $client->putObject($args);
+        
+        print "ret: "; var_dump($ret); print "\n";
         
         break;
     }
