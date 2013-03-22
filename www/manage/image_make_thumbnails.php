@@ -76,7 +76,7 @@
         }
         catch( Exception $e )
         {
-            print "Exception: $e\n";
+            echo 'Caught exception: ',  $e->getMessage(), "\n";
         }
             /*
         if(  )
@@ -123,6 +123,8 @@
             
             $src_data = file_get_contents($url);
             $src_image = imagefromstring($src_data);
+            
+            print "filename: $filename\n";
             
             $alts = array();
             
