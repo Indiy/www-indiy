@@ -68,12 +68,11 @@
                                              'Bucket' => 'static2.madd3v.com',
                                              'Key' => $dst_key,
                                              ));
-            print "  Image($dst_key) already exists, skipping";
+            print "  Image($dst_key) already exists, skipping\n";
             return;
         }
         catch( Exception $e )
         {
-            echo 'Caught exception: ',  $e->getMessage(), "\n";
         }
         
         $dst_imagex = $width;
@@ -85,7 +84,10 @@
         {
             $dst_imagey = $src_image_y / $src_imagex * $dst_imagex;
         }
-        $dst_image = imagecreatetruecolor($dest_imagex, $dest_imagey);
+        
+        print "dst: x,y: $dst_imagex,$dst_imagey\n";
+        
+        $dst_image = imagecreatetruecolor($dst_imagex, $dst_imagey);
         
         imagecopyresampled($dst_image, $src_image, 0, 0, 0, 0, $dst_imagex,
                            $dst_imagey, $src_imagex, $src_imagey);
@@ -96,6 +98,8 @@
         $img_data = ob_get_clean();
         
         imagedestroy($dst_image);
+        
+        var_dump($img_data);
 
         $args = array(
                       'Bucket' => 'static2.madd3v.com',
