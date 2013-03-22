@@ -44,7 +44,7 @@
     
     use Aws\S3\S3Client;
     
-    function maybe_convert_and_upload_file($client,$src_image,$prefix,$width,$height,&$alts);
+    function maybe_convert_and_upload_file($client,$src_image,$prefix,$width,$height,&$alts)
     {
         $src_imagex = imagesx($src_image);
         $src_imagey = imagesy($src_image);
