@@ -82,7 +82,7 @@
         }
         else
         {
-            $dst_imagey = $src_image_y / $src_imagex * $dst_imagex;
+            $dst_imagey = $src_imagey / $src_imagex * $dst_imagex;
         }
         
         print "dst: x,y: $dst_imagex,$dst_imagey\n";
