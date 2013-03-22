@@ -64,35 +64,48 @@
         
         try
         {
-        
             $ret = $client->headObject(array(
                                              'Bucket' => 'static2.madd3v.com',
                                              'Key' => $dst_key,
                                              ));
-            
-            var_dump($ret);
-            
-        
+            print "  Image($dst_key) already exists, skipping";
+            return;
         }
         catch( Exception $e )
         {
             echo 'Caught exception: ',  $e->getMessage(), "\n";
         }
-            /*
-        if(  )
+        
+        $dst_imagex = $width;
+        if( $height )
         {
-            
-            $args = array(
-                          'Bucket' => 'static2.madd3v.com',
-                          'Key' => $key,
-                          'SourceFile' => $realpath,
-                          'ACL' => 'public-read',
-                          'CacheControl' => 'public, max-age=22896000'
-                          );
-            $client->putObject($args);
-            print " uploaded: $filename\n";
+            $dst_imagey = $height;
         }
-        */
+        else
+        {
+            $dst_imagey = $src_image_y / $src_imagex * $dst_imagex;
+        }
+        $dst_image = imagecreatetruecolor($dest_imagex, $dest_imagey);
+        
+        imagecopyresampled($dst_image, $src_image, 0, 0, 0, 0, $dst_imagex,
+                           $dst_imagey, $src_imagex, $src_imagey);
+        
+        
+        ob_start();
+        imagejpeg($dst_image,NULL,100);
+        $img_data = ob_get_clean();
+        
+        imagedestroy($dst_image);
+
+        $args = array(
+                      'Bucket' => 'static2.madd3v.com',
+                      'Key' => $dst_key,
+                      'Body' => $img_data,
+                      'ACL' => 'public-read',
+                      'CacheControl' => 'public, max-age=22896000'
+                      );
+        $client->putObject($args);
+        print " uploaded: $dst_key\n";
     }
     
     try
