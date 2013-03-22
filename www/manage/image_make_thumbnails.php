@@ -99,8 +99,6 @@
         
         imagedestroy($dst_image);
         
-        var_dump($img_data);
-
         $args = array(
                       'Bucket' => 'static2.madd3v.com',
                       'Key' => $dst_key,
