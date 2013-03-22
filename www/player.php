@@ -110,7 +110,9 @@
     
     $artist_base_url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
     
-    $extra = json_decode($artist_data['extra_json'],TRUE);
+    $artist_extra = json_decode($artist_data['extra_json'],TRUE);
+    
+    $start_media_type = $artist_extra['start_media_type'];
 
     $product_list = array();
     $product_list_html = "";
@@ -423,8 +425,6 @@
     {
         $fan_email = $_COOKIE['PAGE_VIEWER_EMAIL'];
     }
-    
-    $start_media_type = $extra['start_media_type'];
     
     $body_style = "";
     if( $NARROW_SCREEN )
