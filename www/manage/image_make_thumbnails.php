@@ -1,11 +1,11 @@
 <?php
-
+    
     $access_key_id = "AKIAIP2VCXXJMBG4K75Q";
     $secret_access_key = "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";
-
+    
     require_once "../includes/config.php";
     require_once "../includes/functions.php";
-
+    
     require_once "../../includes/aws.phar";
     
     header("Cache-Control: no-cache");
@@ -22,7 +22,7 @@
 	}
     
     $user = get_current_user();
-    $fd = fopen("/tmp/upload_user_content_$user.lock",'w+');
+    $fd = fopen("/tmp/make_thumbnails_$user.lock",'w+');
     if( !$fd )
     {
         print "failed to open file\n";
@@ -41,31 +41,45 @@
     echo "<html><body>\n";
     echo str_repeat(" ",1024);
     echo "<pre>\n";
-
-    use Aws\S3\S3Client;
-
-    function endsWith($haystack, $needle)
-    {
-        return substr($haystack, -strlen($needle)) == $needle;
-    }
     
-    function maybe_upload_file($client,$filename,$alt_ext)
+    use Aws\S3\S3Client;
+    
+    function maybe_convert_and_upload_file($client,$src_image,$prefix,$width,$height,&$alts);
     {
-        if( $alt_ext )
+        $src_imagex = imagesx($src_image);
+        $src_imagey = imagesy($src_image);
+
+        if( $src_imagex <= $width )
         {
-            $path_parts = pathinfo($filename);
-            $extension = strtolower($path_parts['extension']);
-            
-            $filename = str_replace(".$extension",$alt_ext,$filename);
+            print " skip resize of image: $prefix ($src_imagex <= $width)";
+            return;
         }
-
-
-        $path = "../artists/files/$filename";
-        $key = "artists/files/$filename";
         
-        $realpath = realpath($path);
+        $dst_key = "/test/$prefix_w$width";
+        if( $height )
+        {
+            $dst_key .= "_h$height";
+        }
+        $dst_key .= ".jpg";
         
-        if( file_exists($realpath ) )
+        try
+        {
+        
+            $ret = $client->headObject(array(
+                                             'Bucket' => 'static2.madd3v.com',
+                                             'Key' => $dst_key,
+                                             ));
+            
+            var_dump($ret);
+            
+        
+        }
+        catch( Exception $e )
+        {
+            print "Exception: $e\n";
+        }
+            /*
+        if(  )
         {
             
             $args = array(
@@ -78,15 +92,9 @@
             $client->putObject($args);
             print " uploaded: $filename\n";
         }
-        else
-        {
-            if( !$alt_ext )
-            {
-                print "******file missing: $realpath\n";
-            }
-        }
+        */
     }
-
+    
     try
     {
         
@@ -101,15 +109,27 @@
         
         
         
-        $sql = "SELECT * FROM artist_files";
+        $sql = "SELECT * FROM artist_files WHERE type='IMAGE'";
         $q = mq($sql);
         while( $file = mf($q) )
         {
             $filename = $file['filename'];
+            
+            $url = artist_file_url($filename);
 
-            maybe_upload_file($client,$filename,FALSE);
-            maybe_upload_file($client,$filename,'.ogv');
-            maybe_upload_file($client,$filename,'.ogg');
+            $path_parts = pathinfo($filename);
+            $extension = $path_parts['extension'];
+            $prefix = str_replace(".$extension","",$filename);
+            
+            $src_data = file_get_contents($url);
+            $src_image = imagefromstring($src_data);
+            
+            $alts = array();
+            
+            maybe_convert_and_upload_file($client,$src_image,$prefix,200,FALSE,$alts);
+            //maybe_convert_and_upload_file($client,$prefix,210,132,$alts);
+            //maybe_convert_and_upload_file($client,$prefix,65,45,$alts);
+            break;
         }
     }
     catch( Exception $e )
@@ -118,5 +138,5 @@
     }
     print "\n\n";
     print "done done\n"
-
+    
 ?>
