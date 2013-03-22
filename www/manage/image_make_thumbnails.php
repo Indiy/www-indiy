@@ -122,7 +122,7 @@
             $prefix = str_replace(".$extension","",$filename);
             
             $src_data = file_get_contents($url);
-            $src_image = imagefromstring($src_data);
+            $src_image = imagecreatefromstring($src_data);
             
             print "filename: $filename\n";
             
