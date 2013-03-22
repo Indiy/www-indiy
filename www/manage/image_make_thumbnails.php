@@ -55,10 +55,10 @@
             return;
         }
         
-        $dst_key = "/test/$prefix_w$width";
+        $dst_key = "/test/{$prefix}_w{$width}";
         if( $height )
         {
-            $dst_key .= "_h$height";
+            $dst_key .= "_h{$height}";
         }
         $dst_key .= ".jpg";
         
