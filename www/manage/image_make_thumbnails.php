@@ -104,7 +104,8 @@
                       'Key' => $dst_key,
                       'Body' => $img_data,
                       'ACL' => 'public-read',
-                      'CacheControl' => 'public, max-age=22896000'
+                      'CacheControl' => 'public, max-age=22896000',
+                      'ContentType' => 'image/jpeg',
                       );
         $client->putObject($args);
         print " uploaded: $dst_key\n";
