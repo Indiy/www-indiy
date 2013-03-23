@@ -79,7 +79,7 @@
 				if( $_SESSION['sess_userType'] == 'ARTIST' )
                 {
                     $id_filter = $_SESSION['sess_userId'];
-					$sqlArtistFilter = " AND id = $id_filter ";
+					$sqlArtistFilter = " AND mydna_musicplayer.id = $id_filter ";
                 }
                 else if( $_SESSION['sess_userType'] == 'LABEL' )
                 {
@@ -89,13 +89,13 @@
 				#### End Artist login ######
 
 				####### To handle the sorting functionality #####
-				$orderBy = " ORDER BY id DESC";
+				$orderBy = " ORDER BY mydna_musicplayer.id DESC";
 				if($_GET['sort_by']=='name')
-					$orderBy = " ORDER BY artist ASC";
+					$orderBy = " ORDER BY mydna_musicplayer.artist ASC";
 				elseif($_GET['sort_by']=='ASC')
-					$orderBy = " ORDER BY id ASC";
+					$orderBy = " ORDER BY mydna_musicplayer.id ASC";
 				elseif($_GET['sort_by']=='DESC')
-					$orderBy = " ORDER BY id DESC";
+					$orderBy = " ORDER BY mydna_musicplayer.id DESC";
 				########### End sorting ##############
 
 				$sql = "SELECT id,artist,logo FROM mydna_musicplayer WHERE 1=1 ".$sqlArtistFilter.$orderBy;
