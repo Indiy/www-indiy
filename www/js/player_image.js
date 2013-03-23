@@ -257,7 +257,12 @@ function getImgUrl(item,root_tag)
                 break;
         }
         
-        img_url = "/timthumb.php?src={0}&w={1}&zc=0&q=100".format(item.image,tim_width);
+        var key = "w" + tim_width;
+
+        if( key in item.alts )
+        {
+            img_url = item.alts[key];
+        }
     }
     return img_url;
 }
