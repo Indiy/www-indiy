@@ -376,6 +376,7 @@
                       "views" => $photo['views'],
                       "loaded" => FALSE,
                       "image_data" => json_decode($photo['image_data']),
+                      "alts" => $image_extra['alts'],
                       );
         $photo_list[] = $item;
         
