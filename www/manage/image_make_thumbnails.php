@@ -49,6 +49,8 @@
     
     function maybe_convert_and_upload_file($client,$src_image,$prefix,$width,$height,&$extra)
     {
+        global $ALT_IMAGE_REV_KEY;
+        
         $src_imagex = imagesx($src_image);
         $src_imagey = imagesy($src_image);
 
@@ -187,12 +189,13 @@
             $src_data = file_get_contents($url);
             $src_image = imagecreatefromstring($src_data);
             
-            print "filename: $filename\n";
             
             $alts = array();
             
             $width = imagesx($src_image);
             $height = imagesy($src_image);
+
+            print "filename: $filename ($width,$height)\n";
             
             if( !isset($extra['image_data']) )
             {
