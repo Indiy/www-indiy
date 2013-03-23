@@ -13,9 +13,15 @@
 	}
 	$artistID = $_REQUEST['userId']; 
 	
-	$query_artistDetail = "SELECT * FROM mydna_musicplayer WHERE id='".$artistID."' ";
-	$result_artistDetail = mysql_query($query_artistDetail) or die(mysql_error());
-	$record_artistDetail = mysql_fetch_array($result_artistDetail);
+	$sql = "SELECT mydna_musicplayer.*,artist_files.extra_json AS logo_extra_json";
+    $sql .= " FROM mydna_musicplayer";
+    $sql .= " JOIN artist_files ON mydna_musicplayer.logo = artist_files.filename";
+    $sql .= " WHERE mydna_musicplayer.id='$artistID'";
+    
+	$q = mq($sql) or die(mysql_error());
+	$record_artistDetail = mf($q);
+    
+    $image_extra = json_decode($record_artistDetail['logo_extra_json'],TRUE);
 
 	if(isset($_REQUEST['action'])){
 		if(isset($_REQUEST['artist_id']))
@@ -64,10 +70,15 @@
 	///Timthumb for profile images 
 	
 	if($record_artistDetail['logo'] == '')
+    {
 		$artist_img_logo = 'images/NoPhoto.jpg';
+        $img_url = $artist_img_logo;
+    }
 	else
-		$artist_img_logo = '../artists/files/'.$record_artistDetail['logo'];
-
+    {
+		$artist_img_logo = artist_file_url($record_artistDetail['logo']);
+        $img_url = get_image_thumbnail($record_artistDetail['logo'],$image_extra,200);
+    }
 	$img_url = "timthumb.php?src=".$artist_img_logo.'&amp;w=220&amp;h=248&amp;zc=1&amp;q=100';
 
     $label_name = $_SESSION['sess_userName'];
@@ -152,7 +163,7 @@
 						if($find_record['logo'] == '')
 							$artist_img_logo = 'images/NoPhoto.jpg';
 						else
-							$artist_img_logo = '../artists/files/'.$find_record['logo'];
+							$artist_img_logo = artist_file_url($find_record['logo']);
 
 					$img_url = "timthumb.php?src=".$artist_img_logo.'&amp;w=89&amp;h=40&amp;zc=1&amp;q=100';
 

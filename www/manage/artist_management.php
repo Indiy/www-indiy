@@ -75,7 +75,7 @@
     {
         array_walk($row,cleanup_row_element);
         if( !empty($row['image']) )
-            $row['image_url'] = "/artists/files/" . $row['image'];
+            $row['image_url'] = artist_file_url($row['image']);
         else
             $row['image_url'] = "images/photo_video_01.jpg";
         
@@ -90,7 +90,7 @@
     {
         array_walk($row,cleanup_row_element);
         if( !empty($row['image']) )
-            $row['image_url'] = "/artists/files/" . $row['image'];
+            $row['image_url'] = artist_file_url($row['image']);
         else
             $row['image_url'] = "images/photo_video_01.jpg";
         
@@ -105,7 +105,7 @@
     {
         array_walk($row,cleanup_row_element);
         if( !empty($row['image']) )
-            $row['image_url'] = "/artists/files/" . $row['image'];
+            $row['image_url'] = artist_file_url($row['image']);
         else
             $row['image_url'] = "images/photo_video_01.jpg";
         
@@ -147,7 +147,7 @@
 	if($record_artistDetail['logo'] == '')
 		$artist_img_logo = "/manage/images/artist_need_image.jpg";
 	else
-		$artist_img_logo = "/artists/files/" . $record_artistDetail['logo'];
+		$artist_img_logo = artist_file_url($record_artistDetail['logo']);
 
 	$img_url = $artist_img_logo;
 
