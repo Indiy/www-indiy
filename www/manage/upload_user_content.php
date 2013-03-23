@@ -101,6 +101,7 @@
         }
     }
 
+    $i = 0;
 
     try
     {
@@ -114,9 +115,8 @@
         
         //print "client: "; print_r($client); print "\n";
         
-        $i = 0;
         
-        $sql = "SELECT * FROM artist_files";
+        $sql = "SELECT * FROM artist_files ORDER BY RAND()";
         $q = mq($sql);
         while( $file = mf($q) )
         {
@@ -127,8 +127,7 @@
             maybe_upload_file($client,$filename,'.ogg');
             $i += 1;
             
-            if( $i > 20 )
-                break;
+            flush();
         }
         
         
@@ -138,6 +137,7 @@
         echo 'Caught exception: ',  $e->getMessage(), "\n";
     }
     print "\n\n";
+    print "did $i items\n";
     print "done done\n"
 
 ?>
