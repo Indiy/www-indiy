@@ -15,8 +15,9 @@
     $playerUrl = "http://www.myartistdna.com/?url=";
     $siteTitle = "MyArtistDNA";
     $cart_base_url = "http://www.myartistdna.com";
-    $g_artist_file_url = "http://static.myartistdna.com";
+    $g_artist_file_base_url = "http://static.myartistdna.com";
     $g_aws_static_bucket = "static.myartistdna.com";
+    $g_static_base_url = "http://static.myartistdna.com";
     
     $stream_prefix = "stream_mad_";
     $fm_port = 8000;
@@ -38,8 +39,9 @@
     $playerUrl = "http://www.madd3v.com/?url=";
     $siteTitle = "MyArtistDNA";
     $cart_base_url = "http://www.madd3v.com";
-    $g_artist_file_url = "http://static.madd3v.com";
+    $g_artist_file_base_url = "http://static.madd3v.com";
     $g_aws_static_bucket = "static2.madd3v.com";
+    $g_static_base_url = "http://static.madd3v.com";
     
     $stream_prefix = "stream_maddev_";
     $fm_port = 8000;

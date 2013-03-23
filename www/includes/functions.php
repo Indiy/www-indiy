@@ -1484,13 +1484,13 @@ END;
         return 0;
     }
 
-    function artist_file_url_prefix()
+    function artist_file_base_url()
     {
-        return $GLOBALS['g_artist_file_url'];
+        return $GLOBALS['g_artist_file_base_url'];
     }
     function artist_file_url($file)
     {
-        return $GLOBALS['g_artist_file_url'] . '/artists/files/' . $file;
+        return $GLOBALS['g_artist_file_base_url'] . '/artists/files/' . $file;
     }
     function get_image_thumbnail($image,$extra,$width,$height = 0)
     {
@@ -1504,9 +1504,18 @@ END;
         
         if( isset($alts[$key]) )
         {
-            return artist_file_url_prefix() . $alts[$key];
+            return artist_base_url() . $alts[$key];
         }
         return $image;
+    }
+
+    function static_file_base_url()
+    {
+        return $GLOBALS['g_static_base_url'];
+    }
+    function static_file_url($path)
+    {
+        return $GLOBALS['g_static_base_url'] . $path;
     }
 
 ?>

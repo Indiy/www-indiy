@@ -261,7 +261,7 @@ function getImgUrl(item,root_tag)
 
         if( key in item.alts )
         {
-            img_url = g_artistFileUrlPrefix + item.alts[key];
+            img_url = g_artistFileBaseUrl + item.alts[key];
         }
     }
     return img_url;
