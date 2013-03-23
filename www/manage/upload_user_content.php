@@ -101,6 +101,7 @@
         }
     }
 
+
     try
     {
         
@@ -113,7 +114,7 @@
         
         //print "client: "; print_r($client); print "\n";
         
-        
+        $i = 0;
         
         $sql = "SELECT * FROM artist_files";
         $q = mq($sql);
@@ -124,7 +125,13 @@
             maybe_upload_file($client,$filename,FALSE);
             maybe_upload_file($client,$filename,'.ogv');
             maybe_upload_file($client,$filename,'.ogg');
+            $i += 1;
+            
+            if( $i > 20 )
+                break;
         }
+        
+        
     }
     catch( Exception $e )
     {
