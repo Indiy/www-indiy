@@ -11,17 +11,6 @@
 		header("Location: /index.php");
 		exit();
 	}
-	$artistID = $_REQUEST['userId']; 
-	
-	$sql = "SELECT mydna_musicplayer.*,artist_files.extra_json AS logo_extra_json";
-    $sql .= " FROM mydna_musicplayer";
-    $sql .= " JOIN artist_files ON mydna_musicplayer.logo = artist_files.filename";
-    $sql .= " WHERE mydna_musicplayer.id='$artistID'";
-    
-	$q = mq($sql) or die(mysql_error());
-	$record_artistDetail = mf($q);
-    
-    $image_extra = json_decode($record_artistDetail['logo_extra_json'],TRUE);
 
 	if(isset($_REQUEST['action'])){
 		if(isset($_REQUEST['artist_id']))
@@ -52,34 +41,6 @@
 				break;
 		}
 	}
-	
-	$find_artistAudio = "SELECT * FROM mydna_musicplayer_audio  WHERE artistid='".$artistID."' ";
-	$result_artistAudio = mysql_query($find_artistAudio) or die(mysql_error());
-	
-	$find_artistVideo = "SELECT * FROM mydna_musicplayer_video  WHERE artistid='".$artistID."' ";
-	$result_artistVideo = mysql_query($find_artistVideo) or die(mysql_error());
-
-	$find_artistContent = "SELECT * FROM mydna_musicplayer_content  WHERE artistid='".$artistID."' ";
-	$result_artistContent = mysql_query($find_artistContent) or die(mysql_error());
-	
-	$find_artistProduct = "SELECT * FROM mydna_musicplayer_ecommerce_products  WHERE artistid='".$artistID."' ";
-	$result_artistProduct = mysql_query($find_artistProduct) or die(mysql_error());
-	//echo "<pre />";
-	//print_r($record_artistDetail);
-	
-	///Timthumb for profile images 
-	
-	if($record_artistDetail['logo'] == '')
-    {
-		$artist_img_logo = 'images/NoPhoto.jpg';
-        $img_url = $artist_img_logo;
-    }
-	else
-    {
-		$artist_img_logo = artist_file_url($record_artistDetail['logo']);
-        $img_url = get_image_thumbnail($record_artistDetail['logo'],$image_extra,200);
-    }
-	$img_url = "timthumb.php?src=".$artist_img_logo.'&amp;w=220&amp;h=248&amp;zc=1&amp;q=100';
 
     $label_name = $_SESSION['sess_userName'];
 
@@ -138,6 +99,14 @@
 				########### End sorting ##############
 
 				$sql = "SELECT id,artist,logo FROM mydna_musicplayer WHERE 1=1 ".$sqlArtistFilter.$orderBy;
+
+                $sql = "SELECT mydna_musicplayer.id,mydna_musicplayer.artist,mydna_musicplayer.logo,";
+                $sql .= " artist_files.extra_json AS logo_extra_json";
+                $sql .= " FROM mydna_musicplayer";
+                $sql .= " LEFT JOIN artist_files ON mydna_musicplayer.logo = artist_files.filename";
+                $sql .= " WHERE 1=1 AND $sqlArtistFilter";
+                $sql .= " $orderBy";
+
 				$query_find_artist = mysql_query($sql) or die(mysql_error() . "sql=$sql");
 
 				### Paging Goes here ####
@@ -160,13 +129,18 @@
 				$query_page_artist = mysql_query($page->get_limit_query($sql));	
 				while($find_record = mysql_fetch_array($query_page_artist))
 				{
+                        $image_extra = json_decode($find_record['logo_extra_json'],TRUE);
+                
 						if($find_record['logo'] == '')
+                        {
 							$artist_img_logo = 'images/NoPhoto.jpg';
-						else
+                            $img_url = $artist_img_logo;
+						}
+                        else
+                        {
 							$artist_img_logo = artist_file_url($find_record['logo']);
-
-					$img_url = "timthumb.php?src=".$artist_img_logo.'&amp;w=89&amp;h=40&amp;zc=1&amp;q=100';
-
+                            $img_url = get_image_thumbnail($find_record['logo'],$image_extra,200);
+                        }
 					echo "<li>
 							<figure><a href='artist_management.php?userId=".$find_record['id']." '><img src='".$img_url."' alt='".$find_record['artist']."' title='".$find_record['artist']."'/></a></figure>
 
