@@ -68,10 +68,8 @@
             $alt_key .= "_h{$height}";
         }
         
-        $file_path = "/artists/thumbs/{$prefix}_{$alt_key}_{$ALT_IMAGE_REV_KEY}.jpg"
+        $file_path = "/artists/thumbs/{$prefix}_{$alt_key}_{$ALT_IMAGE_REV_KEY}.jpg";
 
-
-        
         try
         {
             $ret = $client->headObject(array(
