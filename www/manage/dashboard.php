@@ -104,7 +104,7 @@
                 $sql .= " artist_files.extra_json AS logo_extra_json";
                 $sql .= " FROM mydna_musicplayer";
                 $sql .= " LEFT JOIN artist_files ON mydna_musicplayer.logo = artist_files.filename";
-                $sql .= " WHERE 1=1 AND $sqlArtistFilter";
+                $sql .= " WHERE 1=1 $sqlArtistFilter";
                 $sql .= " $orderBy";
 
 				$query_find_artist = mysql_query($sql) or die(mysql_error() . "sql=$sql");
