@@ -298,7 +298,8 @@
     $sql .= " FROM mydna_musicplayer_video";
     $sql .= " JOIN artist_files AS af1 ON mydna_musicplayer_video.video = af1.filename";
     $sql .= " JOIN artist_files AS af2 ON mydna_musicplayer_video.image = af2.filename";
-    $sql .= " WHERE artistid='$artist_id' AND LENGTH(video) > 0 ORDER BY `order` ASC, `id` DESC";
+    $sql .= " WHERE mydna_musicplayer_video.artistid='$artist_id' AND LENGTH(mydna_musicplayer_video.video) > 0";
+    $sql .= " ORDER BY mydna_musicplayer_video.order ASC, mydna_musicplayer_video.id DESC";
     
     $q_video = mq($sql);
     $video_list = array();
@@ -350,7 +351,9 @@
     $sql = "SELECT photos.*, af1.extra_json AS image_extra_json ";
     $sql .= " FROM photos";
     $sql .= " JOIN artist_files AS af1 ON photos.image = af1.filename";
-    $sql .= " WHERE artist_id='$artist_id' ORDER BY `order` ASC, `id` DESC";
+    $sql .= " WHERE photos.artist_id='$artist_id'";
+    $sql .= " ORDER BY photos.order ASC, photos.id DESC";
+
     $q_photo = mq($sql);
     $photo_list = array();
     $photo_list_html = "";
