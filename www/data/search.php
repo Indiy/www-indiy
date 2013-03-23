@@ -116,7 +116,6 @@
         $sql .= " JOIN mydna_musicplayer ON photos.artist_id = mydna_musicplayer.id";
         $sql .= " WHERE mydna_musicplayer.preview_key = ''";
 
-        $sql = "SELECT id,artist_id,name,image FROM photos";
         return get_media($sql);
     }
     
