@@ -10,18 +10,15 @@ include ('header.php');
     <div id="help">
 		<h2>NEED MORE INFO?</h2>
 		<div class="videos">
-<!--
-<video width="638" height="358" controls>
-   <source src="http://madd3v.com/__Master.mp4" type="video/mp4" />
-   <source src="http://madd3v.com/__Master.mp4" type="video/webm" />
-</video>
--->
+
+
 <video width="638" height="358" id="my_video_1" class="video-js vjs-default-skin" controls
-preload="auto" poster="/images/myartistdna_video.jpg"
-data-setup="{}">
+preload="auto" poster="/images/myartistdna_video.jpg" data-setup="{}">
+
     <source src="<?=static_file_url('/videos/mad.webm');?>" type="video/webm" />
     <source src="<?=static_file_url('/videos/mad.iphone.mp4');?>" type="video/mp4" />
     <source src="<?=static_file_url('/videos/mad.ogv');?>" type="video/ogg" />
+
 </video>
 
 
