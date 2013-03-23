@@ -215,10 +215,7 @@
             mysql_update('artist_files',array("extra_json" => $extra_json),'id',$id);
             
             print "updated $id\n";
-            
-            //maybe_convert_and_upload_file($client,$prefix,210,132,$alts);
-            //maybe_convert_and_upload_file($client,$prefix,65,45,$alts);
-            break;
+            flush();
         }
     }
     catch( Exception $e )
