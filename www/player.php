@@ -298,7 +298,7 @@
     $sql .= " FROM mydna_musicplayer_video";
     $sql .= " JOIN artist_files AS af1 ON mydna_musicplayer_video.video = af1.filename";
     $sql .= " JOIN artist_files AS af2 ON mydna_musicplayer_video.image = af2.filename";
-    $sql .= " WHERE artistid='$artist_id' AND LENGTH(video) > 0 ORDER BY `order` ASC, `id` DESC"
+    $sql .= " WHERE artistid='$artist_id' AND LENGTH(video) > 0 ORDER BY `order` ASC, `id` DESC";
     
     $q_video = mq($sql);
     $video_list = array();
