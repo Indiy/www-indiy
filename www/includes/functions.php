@@ -1492,5 +1492,21 @@ END;
     {
         return $GLOBALS['g_artist_file_url'] . '/artists/files/' . $file;
     }
+    function get_image_thumbnail($image,$extra,$width,$height = 0)
+    {
+        $alts = $extra['alts'];
+        
+        $key = "w$width";
+        if( $height > 0 )
+        {
+            $key .= "_h$height";
+        }
+        
+        if( isset($alts[$key]) )
+        {
+            return artist_file_url_prefix() . $alts[$key];
+        }
+        return $image;
+    }
 
 ?>

@@ -294,8 +294,13 @@
     }
     $music_list_json = json_encode($music_list);
     
+    $sql = "SELECT mydna_musicplayer_video.* , af1.extra_json AS video_extra_json, af2.extra_json AS image_extra_json";
+    $sql .= " FROM mydna_musicplayer_video";
+    $sql .= " JOIN artist_files AS af1 ON mydna_musicplayer_video.video = af1.filename";
+    $sql .= " JOIN artist_files AS af2 ON mydna_musicplayer_video.image = af2.filename";
+    $sql .= " WHERE artistid='$artist_id' AND LENGTH(video) > 0 ORDER BY `order` ASC, `id` DESC"
     
-    $q_video = mq("SELECT * from mydna_musicplayer_video WHERE artistid='$artist_id' AND LENGTH(video) > 0 ORDER BY `order` ASC, `id` DESC");
+    $q_video = mq($sql);
     $video_list = array();
     $video_list_html = "";
     $i = 0;
@@ -309,7 +314,9 @@
         $video_image = artist_file_url($video['image']);
         $video_name = $video['name'];
         
-        $img_url = "/timthumb.php?src=$video_image&w=200&zc=0&q=100";
+        $video_img_extra = json_decode($video['image_extra_json'],TRUE);
+        
+        $img_url = get_image_thumbnail($video_image,$video_img_extra,200);
         
         $item = array("id" => $video['id'],
                       "name" => $video_name,
@@ -340,15 +347,20 @@
     if( count($video_list) > 3 )
         $video_nav_show = TRUE;
     
-    $q_photo = mq("SELECT * from photos WHERE artist_id='$artist_id' ORDER BY `order` ASC, `id` DESC");
+    $sql = "SELECT photos.*, af1.extra_json AS image_extra_json ";
+    $sql .= " FROM photos";
+    $sql .= " JOIN artist_files AS af1 ON photos.image = af1.filename";
+    $sql .= " WHERE artist_id='$artist_id' ORDER BY `order` ASC, `id` DESC";
+    $q_photo = mq($sql);
     $photo_list = array();
     $photo_list_html = "";
     $i = 0;
     while( $photo = mf($q_photo) )
     {
         $photo_image = artist_file_url($photo['image']);
+        $image_extra = json_decode($photo['image_extra_json'],TRUE);
         
-        $img_url = "/timthumb.php?src=$photo_image&w=200&zc=0&q=100";
+        $img_url = get_image_thumbnail($photo_image,$image_extra,200);
         
         $photo_name = $photo['name'];
         
