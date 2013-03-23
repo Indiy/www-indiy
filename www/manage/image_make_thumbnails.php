@@ -135,7 +135,7 @@
         
         $ret = array();
         
-        foreach( $needed_widths => $w )
+        foreach( $needed_widths as $w )
         {
             if( $w < $width )
                 $ret[] = array($w,FALSE);
