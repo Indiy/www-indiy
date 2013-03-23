@@ -142,7 +142,11 @@
                             $img_url = get_image_thumbnail($find_record['logo'],$image_extra,200);
                         }
 					echo "<li>
-							<figure><a href='artist_management.php?userId=".$find_record['id']." '><img src='".$img_url."' alt='".$find_record['artist']."' title='".$find_record['artist']."'/></a></figure>
+							<figure>
+                                <a href='artist_management.php?userId=".$find_record['id']." '>
+                                    <img src='".$img_url."' alt='".$find_record['artist']."' title='".$find_record['artist']."' width='89' height='40' />
+                                </a>
+                            </figure>
 
 							<span class='title'><a href='artist_management.php?userId=".$find_record['id']."'>".$find_record['artist']."</a></span>
 
