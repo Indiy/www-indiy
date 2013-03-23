@@ -214,7 +214,7 @@
             
             $extra_json = json_encode($extra);
             
-            mysql_update(array("extra_json" => $extra_json),'id',$id);
+            mysql_update('artist_files',array("extra_json" => $extra_json),'id',$id);
             
             print "updated $id\n";
             
