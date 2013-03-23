@@ -1504,7 +1504,7 @@ END;
         
         if( isset($alts[$key]) )
         {
-            return artist_base_url() . $alts[$key];
+            return artist_file_base_url() . $alts[$key];
         }
         return $image;
     }
