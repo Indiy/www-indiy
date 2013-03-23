@@ -67,16 +67,30 @@
         
         if( file_exists($realpath ) )
         {
-            
-            $args = array(
-                          'Bucket' => 'static2.madd3v.com',
-                          'Key' => $key,
-                          'SourceFile' => $realpath,
-                          'ACL' => 'public-read',
-                          'CacheControl' => 'public, max-age=22896000'
-                          );
-            $client->putObject($args);
-            print " uploaded: $filename\n";
+            try
+            {
+                $ret = $client->headObject(array(
+                                                 'Bucket' => 'static2.madd3v.com',
+                                                 'Key' => $key,
+                                                 ));
+                print " $key already exists, skipping\n";
+                
+                $extra['alts']['alt_key'] = $file_path;
+                
+                return;
+            }
+            catch( Exception $e )
+            {
+                $args = array(
+                              'Bucket' => 'static2.madd3v.com',
+                              'Key' => $key,
+                              'SourceFile' => $realpath,
+                              'ACL' => 'public-read',
+                              'CacheControl' => 'public, max-age=22896000'
+                              );
+                $client->putObject($args);
+                print " uploaded: $filename\n";
+            }
         }
         else
         {
