@@ -80,7 +80,7 @@
                                              ));
             print "  Image($file_path) already exists, skipping\n";
             
-            $extra['alts']['alt_key'] = $file_path;
+            $extra['alts'][$alt_key] = $file_path;
             
             return;
         }
@@ -122,7 +122,7 @@
                       );
         $client->putObject($args);
         
-        $extra['alts']['alt_key'] = $file_path;
+        $extra['alts'][$alt_key] = $file_path;
 
         print " uploaded: $file_path\n";
     }
@@ -189,8 +189,6 @@
             $src_data = file_get_contents($url);
             $src_image = imagecreatefromstring($src_data);
             
-            
-            $alts = array();
             
             $width = imagesx($src_image);
             $height = imagesy($src_image);
