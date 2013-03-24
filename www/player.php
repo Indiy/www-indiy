@@ -244,9 +244,9 @@
             $extra = array();
         }
         
-        if( isset($extra['audio_length']) )
+        if( isset($audio_extra['media_length']) )
         {
-            $song_len = $extra['audio_length'];
+            $song_len = ceil($audio_extra['media_length']);
         }
         else
         {
