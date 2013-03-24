@@ -137,20 +137,28 @@
                 
                 if( $ret == TRUE && $row_count > 0 )
                 {
-                    
-                    $src_data = file_get_contents($url);
-                    $tmp_file = tempnam("/tmp","mac");
-                    file_put_contents($tmp_file,$src_data);
-                    
-                    $media_length = get_audio_length($tmp_file);
-                    
-                    print "  media_length: $media_length\n";
-                    
-                    $extra['media_length'] = $media_length;
-                    
-                    $ogv_file = "$prefix.ogv";
-                    
-                    video_maybe_convert_and_upload_file($client,$tmp_file,$ogv_file,$extra);
+                    try
+                    {
+                        $src_data = file_get_contents($url);
+                        print "  got url: $url\n";
+                        $tmp_file = tempnam("/tmp","mav");
+                        file_put_contents($tmp_file,$src_data);
+                        print "  wrote tmp file: $tmp_file\n";
+                        
+                        $media_length = get_audio_length($tmp_file);
+                        
+                        print "  media_length: $media_length\n";
+                        
+                        $extra['media_length'] = $media_length;
+                        
+                        $ogv_file = "$prefix.ogv";
+                        
+                        video_maybe_convert_and_upload_file($client,$tmp_file,$ogv_file,$extra);
+                    }
+                    catch( Exception $e )
+                    {
+                        echo '  Inner Caught exception: ',  $e->getMessage(), "\n";
+                    }
                     
                     $extra_json = json_encode($extra);
                     $updates = array(
