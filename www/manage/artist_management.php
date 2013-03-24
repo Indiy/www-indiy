@@ -58,7 +58,7 @@
 	$sql = "SELECT mydna_musicplayer_audio.*, artist_files.extra_json AS image_extra_json";
     $sql .= " FROM mydna_musicplayer_audio ";
     $sql .= " LEFT JOIN artist_files ON mydna_musicplayer_audio.image = artist_files.filename";
-    $sql .= " WHERE artistid='$artistID'";
+    $sql .= " WHERE mydna_musicplayer_audio.artistid='$artistID'";
     $sql .= " ORDER BY mydna_musicplayer_audio.order ASC, mydna_musicplayer_audio.id DESC";
 	$result_artistAudio = mysql_query($sql) or die(mysql_error());
     $page_list = array();
@@ -91,7 +91,7 @@
 	$sql = "SELECT photos.*, artist_files.extra_json AS image_extra_json";
     $sql .= " FROM photos ";
     $sql .= " LEFT JOIN artist_files ON photos.image = artist_files.filename";
-    $sql .= " WHERE artist_id='$artistID'";
+    $sql .= " WHERE photos.artist_id='$artistID'";
     $sql .= " ORDER BY photos.order ASC, photos.id DESC";
 	$q_photo = mysql_query($sql) or die(mysql_error());
     $photo_list = array();
