@@ -1,4 +1,4 @@
-<?php header("Content-type: text/css"); ?>
+
 
 @font-face {
     font-family: 'Neuzeit Grotesk';
@@ -37,15 +37,8 @@
     font-style: normal;
 }
 
-<?php
-
-    if( preg_match("/Windows.*Chrome/",$_SERVER['HTTP_USER_AGENT']) === 1 )
-    {
-        /*  Windows Chrome */
-        print <<<END
-
 @font-face {
-    font-family: 'Teletex Bold';
+    font-family: 'Teletex Bold Windows Chrome';
     src: url('teletex_med.eot');
     src: url('teletex_med.eot?#iefix') format('embedded-opentype'),
     url('teletex_med.svg#teletex_mediumregular') format('svg'),
@@ -55,13 +48,6 @@
     font-style: normal;
 }
 
-END;
-    }
-    else
-    {
-        /* Everything else */
-        print <<<END
-        
 @font-face {
     font-family: 'Teletex Bold';
     src: url('teletex_med.eot');
@@ -71,11 +57,6 @@ END;
     font-weight: normal;
     font-style: normal;
 }
-
-END;
-    }
-
-?>
 
 @font-face {
     font-family: 'Lucida Grande';
@@ -408,6 +389,9 @@ body {
     cursor: pointer;
     vertical-align: top;
 }
+.windows.chrome .body_under_title_line a {
+    font-family: "Teletex Bold Windows Chrome", "Teletex Bold", Helvetica, sans-serif;
+}
 .body_buttons {
     position: absolute;
     top: 364px;
@@ -429,6 +413,9 @@ body {
     cursor: pointer;
     vertical-align: top;
 }
+.windows.chrome .body_buttons a {
+    font-family: "Teletex Bold Windows Chrome", "Teletex Bold", Helvetica, sans-serif;
+}
 .body_content_info {
     position: absolute;
     top: 446px;
@@ -442,6 +429,9 @@ body {
     text-align: center;
     background: url("/images/home_artist_info_bg.png") no-repeat;
     vertical-align: top;
+}
+.windows.chrome .body_content_info {
+    font-family: "Teletex Bold Windows Chrome", "Teletex Bold", Helvetica, sans-serif;
 }
 .body_content_info .logo {
     display: inline-block;

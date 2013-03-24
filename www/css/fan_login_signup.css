@@ -1,4 +1,3 @@
-<?php header("Content-type: text/css"); ?>
 
 #login_signup .register_token_sent {
     display: none;
