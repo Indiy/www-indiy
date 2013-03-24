@@ -90,10 +90,14 @@
     {
         if( !isset($extra['media_length']) )
         {
+            print "  No media length\n";
+            var_dump($extra);
             return TRUE;
         }
         if( !isset($extra['alts']['ogg']) )
         {
+            print "  No ogg\n";
+            var_dump($extra);
             return TRUE;
         }
         
@@ -126,7 +130,7 @@
             $extension = $path_parts['extension'];
             $prefix = str_replace(".$extension","",$filename);
             
-            print "filename: $filename ($audio_length secs)\n";
+            print "filename: $filename\n";
             if( audio_needs_update($extra) )
             {
                 
@@ -135,7 +139,8 @@
                 file_put_contents($tmp_file,$src_data);
                 
                 $audio_length = get_audio_length($tmp_file);
-
+                
+                print "  audio_length: $audio_length\n";
                 
                 $extra['media_length'] = $audio_length;
                 
