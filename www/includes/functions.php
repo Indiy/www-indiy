@@ -1520,14 +1520,16 @@ END;
 
     function upload_file_to_s3($key,$source_file)
     {
-        use Aws\S3\S3Client;
+        require_once "aws.phar";
+    
+        //use Aws\S3\S3Client;
     
         $args = array(
                       'key' => $GLOBALS['g_access_key_id'],
                       'secret' => $GLOBALS['g_secret_access_key'],
                       );
         
-        $client = S3Client::factory($args);
+        $client = Aws\S3\S3Client::factory($args);
     
         $args = array(
                       'Bucket' => $GLOBALS['g_aws_static_bucket'],
