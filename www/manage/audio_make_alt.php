@@ -135,8 +135,9 @@
             
                 $sql = "UPDATE artist_files SET processing = 1 WHERE id='$id' AND processing = 0";
                 $ret = mq($sql);
+                $row_count = mysql_affected_rows();
                 
-                if( $ret == TRUE )
+                if( $ret == TRUE && $row_count > 0 )
                 {
                     
                     $src_data = file_get_contents($url);
