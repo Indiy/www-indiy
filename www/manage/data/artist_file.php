@@ -138,15 +138,14 @@
                                     "type" => $type);
                     
                     mysql_insert("artist_files",$values);
-                    $file_id = mysql_insert_id();
-                    $ret['id'] = $file_id;
+                    $ret['id'] = mysql_insert_id();
                     $ret['file'] = $save_filename;
-                    
-                    $file = mf(mq("SELECT * FROM artist_files WHERE id='$file_id'"));
-                    if( type == 'IMAGE' )
-                    {
-                        process_upload_image($file);
-                    }
+                }
+                $file_id = $ret['id'];
+                $file = mf(mq("SELECT * FROM artist_files WHERE id='$file_id'"));
+                if( $type == 'IMAGE' )
+                {
+                    process_upload_image($file);
                 }
 			}
 		}
