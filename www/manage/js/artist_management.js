@@ -123,7 +123,6 @@ function updatePhotoList()
         var class_name = i % 2 == 0 ? 'odd' : '';
         var error = false;
         
-        //var img_url = "/timthumb.php?src={0}&w=210&h=132&zc=1&q=100".format(photo.image_url);
         var img_url = get_thumbnail(photo.image_url,photo.image_extra,210,132);
         
         var html = "";
