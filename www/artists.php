@@ -9,11 +9,14 @@
     while( $artist = mf($artists_q) )
     {
         $logo = $artist['logo'];
-        $logo_path = artist_file_url($logo);
         
-        if( !$logo || !file_exists($logo_path) )
+        if( !$logo )
         {
             $logo_path = "manage/images/NoPhoto.jpg";
+        }
+        else
+        {
+            $logo_path = artist_file_url($logo);
         }
         
         $artist_url = $artist['url'];
