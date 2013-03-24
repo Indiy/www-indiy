@@ -121,7 +121,7 @@
     
     $client = Aws\S3\S3Client::factory($args);
     
-    do_static_dir($html_dir,"/css");
+    do_static_dir($html_dir,"/images");
 
     print "file_map: \n";
     var_dump($file_map);
