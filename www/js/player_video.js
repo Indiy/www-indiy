@@ -58,7 +58,6 @@ function videoPanelChange(index)
     $('#video_container').show();
 
     var url = video.video_file;
-    var url_ogv = url.replace(".mp4",".ogv");
 
     if( 'video_data' in video && video.video_data )
     {
@@ -134,10 +133,13 @@ function videoPanelChange(index)
         $('#video_bitrate').hide();
     }
     
-    var media = [
-                 { type: "video/mp4", src: url },
-                 { type: "video/ogg", src: url_ogv }
-                 ];
+    var media = [ { type: "video/mp4", src: url } ];
+    
+    if( video.video_extra && video.video_extra.alts && video.video_extra.alts.ogv )
+    {
+        var url_ogv = g_artistFileBaseUrl + video.video_extra.alts.ogv;
+        media.push( { type: "video/ogg", src: url_ogv } );
+    }
     
     g_videoPlayer.src(media);
     
@@ -409,7 +411,12 @@ function videoCreateTag()
     
     var video = g_videoList[0];
     var url = video.video_file;
-    var url_ogv = url.replace(".mp4",".ogv");
+    var url_ogv = false;
+    if( video.video_extra && video.video_extra.alts && video.video_extra.alts.ogv )
+    {
+        url_ogv = g_artistFileBaseUrl + video.video_extra.alts.ogv;
+    }
+    
     var image = video.image;
     
     var w_h = " width='" + w + "' height='" + h + "' ";
@@ -417,7 +424,10 @@ function videoCreateTag()
     var html = "";
     html += "<video id='video_player' " + w_h + " class='video-js vjs-default-skin' preload='auto' poster='" + image + "'>";
     html += "<source src='" + url + "' type='video/mp4' />";
-    html += "<source src='" + url_ogv + "' type='video/ogg' />";
+    if( url_ogv )
+    {
+        html += "<source src='" + url_ogv + "' type='video/ogg' />";
+    }
     html += "</video>";
     
     $('#video_container').empty();

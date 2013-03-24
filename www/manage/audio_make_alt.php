@@ -96,6 +96,11 @@
             print "  No ogg\n";
             return TRUE;
         }
+        if( $extra['media_length'] < 1.0 )
+        {
+            print "  Invalid media length: " . $extra['media_length'] . "\n";
+            return TRUE;
+        }
         
         return FALSE;
     }
