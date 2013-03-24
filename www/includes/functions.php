@@ -1518,4 +1518,23 @@ END;
         return $GLOBALS['g_static_base_url'] . $path;
     }
 
+    function upload_file_to_s3($key,$source_file)
+    {
+        $args = array(
+                      'key' => $GLOBALS['g_access_key_id'],
+                      'secret' => $GLOBALS['g_secret_access_key'],
+                      );
+        
+        $client = S3Client::factory($args);
+    
+        $args = array(
+                      'Bucket' => $GLOBALS['g_aws_static_bucket'],
+                      'Key' => $key,
+                      'SourceFile' => realpath($source_file),
+                      'ACL' => 'public-read',
+                      'CacheControl' => 'public, max-age=22896000'
+                      );
+        $client->putObject($args);
+    }
+
 ?>

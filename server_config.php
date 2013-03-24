@@ -43,10 +43,14 @@
     $g_aws_static_bucket = "static2.madd3v.com";
     $g_static_base_url = "http://static.madd3v.com";
     
+
+    
     $stream_prefix = "stream_maddev_";
     $fm_port = 8000;
     
     */
+    $g_access_key_id = "AKIAIP2VCXXJMBG4K75Q";
+    $g_secret_access_key = "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";
 
     $connect = mysql_connect($dbhost, $dbusername, $dbpassword);
     mysql_select_db($dbname,$connect) or die ("Could not select database");

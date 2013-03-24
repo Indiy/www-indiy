@@ -109,11 +109,6 @@
                 $hash = hash_file("md5",$src_file);
                 $save_filename = "{$artist_id}_$hash.$extension";
                 
-                if( PATH_TO_ROOT )
-                    $dst_file = PATH_TO_ROOT . "artists/files/$save_filename";
-                else
-                    $dst_file = "../../artists/files/$save_filename";
-                
                 $sql = "SELECT * FROM artist_files WHERE artist_id='$artist_id' AND filename = '$save_filename'";
                 $existing_file = mf(mq($sql));
                 if( $existing_file )
@@ -134,7 +129,8 @@
                 }
                 else
                 {
-                    @move_uploaded_file($src_file, $dst_file);
+                    $key = "/artists/files/$save_filename";
+                    upload_file_to_s3($key,$src_file);
                     
                     $values = array("artist_id" => $artist_id,
                                     "filename" => $save_filename,
