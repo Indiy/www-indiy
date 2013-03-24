@@ -131,7 +131,7 @@
             $extension = $path_parts['extension'];
             $prefix = str_replace(".$extension","",$filename);
             
-            print "filename: $filename\n";
+            print "filename: $filename, id: $id\n";
             if( audio_needs_update($extra) )
             {
                 
