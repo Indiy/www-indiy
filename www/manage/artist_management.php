@@ -134,7 +134,7 @@
 	$sql = "SELECT mydna_musicplayer_ecommerce_products.*, artist_files.extra_json AS image_extra_json";
     $sql .= " FROM mydna_musicplayer_ecommerce_products ";
     $sql .= " LEFT JOIN artist_files ON mydna_musicplayer_ecommerce_products.image = artist_files.filename";
-    $sql .= " WHERE mydna_musicplayer_ecommerce_products.artist_id = '$artistID'";
+    $sql .= " WHERE mydna_musicplayer_ecommerce_products.artistid = '$artistID'";
     $sql .= " ORDER BY mydna_musicplayer_ecommerce_products.order ASC, mydna_musicplayer_ecommerce_products.id DESC";
 	$result_artistProduct = mq($sql) or die(mysql_error());
 	$product_list = array();
