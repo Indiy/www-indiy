@@ -140,12 +140,11 @@
                     try
                     {
                         print "  got lock...\n";
-                    
-                        $src_data = file_get_contents($url);
-                        print "  got url: $url\n";
+                        
                         $tmp_file = tempnam("/tmp","mav");
-                        file_put_contents($tmp_file,$src_data);
-                        print "  wrote tmp file: $tmp_file\n";
+                        
+                        download_url_to_file($url,$tmp_file);
+                        print "  downloaded url: $url\n";
                         
                         $media_length = get_audio_length($tmp_file);
                         

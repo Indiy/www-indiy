@@ -1689,4 +1689,28 @@ END;
         mysql_update('artist_files',array("extra_json" => $extra_json),'id',$id);
     }
 
+    function download_url_to_file($url,$dst_filename)
+    {
+        $src_file = fopen($url, "rb");
+        $dst_file = fopen($dst_filename,"wb");
+        
+        if( $src_file && $dst_file )
+        {
+            while( !feof($src_file) )
+            {
+                fwrite($dst_file, fread($src_file, 1024 * 1024 ), 1024 * 1024 );
+            }
+        }
+        
+        if( $src_file )
+        {
+            fclose($src_file);
+        }
+        
+        if( $dst_file )
+        {
+            fclose($dst_file);
+        }
+    }
+
 ?>
