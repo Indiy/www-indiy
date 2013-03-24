@@ -259,9 +259,11 @@ function getImgUrl(item,root_tag)
         
         var key = "w" + tim_width;
 
-        if( key in item.alts )
+        if( item.image_extra
+           && item.image_extra.alts
+           && key in item.image_extra.alts )
         {
-            img_url = g_artistFileBaseUrl + item.alts[key];
+            img_url = g_artistFileBaseUrl + item.image_extra.alts[key];
         }
     }
     return img_url;

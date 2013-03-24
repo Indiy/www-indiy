@@ -209,14 +209,23 @@
         $content_tabs_html .= "<div class='tab' onclick='showContact();'>Contact</div>";
     }
     
-    $q_music = mq("SELECT * FROM mydna_musicplayer_audio WHERE artistid='$artist_id' ORDER BY `order` ASC, `id` DESC");
+    $sql = "SELECT mydna_musicplayer_audio.* , af1.extra_json AS audio_extra_json, af2.extra_json AS image_extra_json";
+    $sql .= " FROM mydna_musicplayer_audio";
+    $sql .= " JOIN artist_files AS af1 ON mydna_musicplayer_audio.audio = af1.filename";
+    $sql .= " JOIN artist_files AS af2 ON mydna_musicplayer_audio.image = af2.filename";
+    $sql .= " WHERE mydna_musicplayer_audio.artistid='$artist_id'";
+    $sql .= " ORDER BY mydna_musicplayer_audio.order ASC, mydna_musicplayer_audio.id DESC";
+
     $music_list = array();
     $music_list_html = "";
     $i = 0;
-    while( $music = mf($q_music) )
+    while( $music = mf($sql) )
     {
         $music_image = artist_file_url($music['image']);
         $music_audio = artist_file_url($music['audio']);
+        
+        $audio_extra = json_decode($music['audio_extra_json'],TRUE);
+        $image_extra = json_decode($music['image_exta_json'],TRUE);
         
         $music_name = stripslashes($music["name"]);
         $music_listens = $music["views"];
@@ -256,7 +265,9 @@
                       "product_id" => $product_id,
                       "loaded" => FALSE,
                       "listens" => $music_listens,
-                      "image_data" => json_decode($music['image_data']),
+                      "image_data" => $image_extra['image_data'],
+                      "image_extra" => $image_extra,
+                      "audio_extra" => $audio_extra,
                       );
         $music_list[] = $item;
 
@@ -315,7 +326,8 @@
         $video_image = artist_file_url($video['image']);
         $video_name = $video['name'];
         
-        $video_img_extra = json_decode($video['image_extra_json'],TRUE);
+        $image_extra = json_decode($video['image_extra_json'],TRUE);
+        $video_extra = json_decode($video['video_extra_json'],TRUE);
         
         $img_url = get_image_thumbnail($video_image,$video_img_extra,200);
         
@@ -326,9 +338,11 @@
                       "views" => $video['views'],
                       "bg_color" => "000",
                       "bg_style" => "LETTERBOX",
-                      "image_data" => $video_img_extra['image_data'],
-                      "video_data" => json_decode($video['video_data']),
+                      "image_data" => $image_extra['image_data'],
+                      "video_data" => $video_extra['video_data'],
                       "loaded" => FALSE,
+                      "image_extra" => $image_extra,
+                      "video_extra" => $video_extra,
                       );
         $video_list[] = $item;
         
@@ -376,7 +390,7 @@
                       "views" => $photo['views'],
                       "loaded" => FALSE,
                       "image_data" => $image_extra['image_data'],
-                      "alts" => $image_extra['alts'],
+                      "image_extra" => $image_extra,
                       );
         $photo_list[] = $item;
         
