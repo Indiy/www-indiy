@@ -134,28 +134,41 @@
             flush();
             if( audio_needs_update($extra) )
             {
+            
+                $sql = "UPDATE artist_files SET processing = 1 WHERE id='$id' AND processing = 0";
+                $ret = mq($sql);
                 
-                $src_data = file_get_contents($url);
-                $tmp_file = tempnam("/tmp","mac");
-                file_put_contents($tmp_file,$src_data);
-                
-                $audio_length = get_audio_length($tmp_file);
-                
-                print "  audio_length: $audio_length\n";
-                
-                $extra['media_length'] = $audio_length;
-                
-                $ogg_file = "$prefix.ogg";
-                
-                audio_maybe_convert_and_upload_file($client,$tmp_file,$ogg_file,$extra);
+                if( $ret == TRUE )
+                {
+                    
+                    $src_data = file_get_contents($url);
+                    $tmp_file = tempnam("/tmp","mac");
+                    file_put_contents($tmp_file,$src_data);
+                    
+                    $audio_length = get_audio_length($tmp_file);
+                    
+                    print "  audio_length: $audio_length\n";
+                    
+                    $extra['media_length'] = $audio_length;
+                    
+                    $ogg_file = "$prefix.ogg";
+                    
+                    audio_maybe_convert_and_upload_file($client,$tmp_file,$ogg_file,$extra);
 
-                $extra_json = json_encode($extra);
-                $updates = array("extra_json" => $extra_json);
-                
-                mysql_update('artist_files',$updates,'id',$id);
-                
-                print "  updated $id\n";
-                unlink($tmp_file);
+                    $extra_json = json_encode($extra);
+                    $updates = array(
+                                     "extra_json" => $extra_json,
+                                     "processing" => 0
+                                     );
+                    mysql_update('artist_files',$updates,'id',$id);
+                    
+                    print "  updated $id\n";
+                    unlink($tmp_file);
+                }
+                else
+                {
+                    print "  failed to get lock, skipping...\n";
+                }
             }
             else
             {
