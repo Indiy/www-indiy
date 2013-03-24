@@ -164,7 +164,7 @@
         
         
         
-        $sql = "SELECT * FROM artist_files WHERE type='IMAGE'";
+        $sql = "SELECT * FROM artist_files WHERE type='IMAGE' ORDER BY artist_files.extra_json ASC";
         $q = mq($sql);
         while( $file = mf($q) )
         {
