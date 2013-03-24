@@ -91,13 +91,11 @@
         if( !isset($extra['media_length']) )
         {
             print "  No media length\n";
-            var_dump($extra);
             return TRUE;
         }
         if( !isset($extra['alts']['ogg']) )
         {
             print "  No ogg\n";
-            var_dump($extra);
             return TRUE;
         }
         
