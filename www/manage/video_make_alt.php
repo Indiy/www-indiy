@@ -17,7 +17,7 @@
 	}
     
     $user = get_current_user();
-    $fd = fopen("/tmp/audio_make_alts_$user.lock",'w+');
+    $fd = fopen("/tmp/video_make_alts_$user.lock",'w+');
     if( !$fd )
     {
         print "failed to open file\n";
@@ -37,9 +37,9 @@
     echo str_repeat(" ",1024);
     echo "<pre>\n";
     
-    function audio_maybe_convert_and_upload_file($client,$src_file,$ogg_file,&$extra)
+    function video_maybe_convert_and_upload_file($client,$src_file,$ogv_file,&$extra)
     {
-        $file_path = "/artists/files/$ogg_file";
+        $file_path = "/artists/files/$ogv_file";
         
         try
         {
@@ -47,9 +47,9 @@
                                              'Bucket' => $GLOBALS['g_aws_static_bucket'],
                                              'Key' => $file_path,
                                              ));
-            print "  Audio($file_path) already exists, skipping\n";
+            print "  Video($file_path) already exists, skipping\n";
             
-            $extra['alts']['ogg'] = $file_path;
+            $extra['alts']['ogv'] = $file_path;
             
             return;
         }
@@ -57,34 +57,34 @@
         {
         }
         
-        $dst_file = tempnam("/tmp","ogg");
+        $dst_file = tempnam("/tmp","ogv");
         
-        @system("/usr/local/bin/ffmpeg -i $src_file -acodec libvorbis $dst_file",$retval);
+        @system("/usr/local/bin/ffmpeg -i $src_file -f ogg -vcodec libtheora -qscale 8 -acodec libvorbis $dst_file",$retval);
         if( $retval == 0 )
         {
-            print "  successfully made ogg: $ogg_file\n";
+            print "  successfully made ogv: $ogv_file\n";
             $args = array(
                           'Bucket' => $GLOBALS['g_aws_static_bucket'],
                           'Key' => $file_path,
                           'SourceFile' => realpath($dst_file),
                           'ACL' => 'public-read',
                           'CacheControl' => 'public, max-age=22896000',
-                          'ContentType' => 'audio/ogg',
+                          'ContentType' => 'video/ogg',
                           );
             $client->putObject($args);
-
-            $extra['alts']['ogg'] = $file_path;
-
-            unlink($ogg_file);
+            
+            $extra['alts']['ogv'] = $file_path;
+            
+            unlink($ogv_file);
             print "  uploaded: $file_path\n";
         }
         else
         {
-            print "***failed to make ogg: $ogg_file\n";
+            print "***failed to make ogv: $ogv_file\n";
         }
     }
     
-    function audio_needs_update($extra)
+    function video_needs_update($extra)
     {
         if( !isset($extra['media_length']) )
         {
@@ -104,7 +104,7 @@
     {
         $client = get_s3_client();
         
-        $sql = "SELECT * FROM artist_files WHERE type='AUDIO' ORDER BY artist_files.extra_json ASC";
+        $sql = "SELECT * FROM artist_files WHERE type='VIDEO' ORDER BY artist_files.extra_json ASC";
         $q = mq($sql);
         while( $file = mf($q) )
         {
@@ -128,9 +128,9 @@
             
             print "filename: $filename, id: $id\n";
             flush();
-            if( audio_needs_update($extra) )
+            if( video_needs_update($extra) )
             {
-            
+                
                 $sql = "UPDATE artist_files SET processing = 1 WHERE id='$id' AND processing = 0";
                 $ret = mq($sql);
                 $row_count = mysql_affected_rows();
@@ -142,16 +142,16 @@
                     $tmp_file = tempnam("/tmp","mac");
                     file_put_contents($tmp_file,$src_data);
                     
-                    $audio_length = get_audio_length($tmp_file);
+                    $media_length = get_audio_length($tmp_file);
                     
-                    print "  audio_length: $audio_length\n";
+                    print "  media_length: $media_length\n";
                     
-                    $extra['media_length'] = $audio_length;
+                    $extra['media_length'] = $media_length;
                     
-                    $ogg_file = "$prefix.ogg";
+                    $ogv_file = "$prefix.ogv";
                     
-                    audio_maybe_convert_and_upload_file($client,$tmp_file,$ogg_file,$extra);
-
+                    video_maybe_convert_and_upload_file($client,$tmp_file,$ogv_file,$extra);
+                    
                     $extra_json = json_encode($extra);
                     $updates = array(
                                      "extra_json" => $extra_json,
