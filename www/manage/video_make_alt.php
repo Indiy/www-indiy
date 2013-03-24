@@ -147,7 +147,6 @@
                         print "  downloaded url: $url\n";
                         
                         $media_length = get_audio_length($tmp_file);
-                        
                         print "  media_length: $media_length\n";
                         
                         $extra['media_length'] = $media_length;
