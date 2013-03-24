@@ -55,11 +55,16 @@
         }
 	}
 	
-	$find_artistAudio = "SELECT * FROM mydna_musicplayer_audio  WHERE artistid='".$artistID."' AND `type`='0' ORDER BY `order` ASC, `id` DESC";
-	$result_artistAudio = mysql_query($find_artistAudio) or die(mysql_error());
+	$sql = "SELECT mydna_musicplayer_audio.*, artist_files.extra_json AS image_extra_json";
+    $sql .= " FROM mydna_musicplayer_audio ";
+    $sql .= " LEFT JOIN artist_files ON mydna_musicplater_audio.image = artist_files.filename";
+    $sql .= " WHERE artistid='$artistID'";
+    $sql .= " ORDER BY mydna_musicplayer_audio.order ASC, mydna_musicplayer_audio.id DESC";
+	$result_artistAudio = mysql_query($sql) or die(mysql_error());
     $page_list = array();
     while( $row = mysql_fetch_array($result_artistAudio) )
     {
+        $row['image_extra'] = json_decode($row['image_extra_json'],TRUE);
         $row['short_link'] = make_short_link($row['abbrev']);
         array_walk($row,cleanup_row_element);
         $row['download'] = $row['download'] == "0" ? FALSE : TRUE;
@@ -68,8 +73,8 @@
     }
     $page_list_json = json_encode($page_list);
 	
-	$find_artistVideo = "SELECT * FROM mydna_musicplayer_video  WHERE artistid='".$artistID."' ORDER BY `order` ASC, `id` DESC";
-	$result_artistVideo = mysql_query($find_artistVideo) or die(mysql_error());
+	$sql = "SELECT * FROM mydna_musicplayer_video  WHERE artistid='".$artistID."' ORDER BY `order` ASC, `id` DESC";
+	$result_artistVideo = mysql_query($sql) or die(mysql_error());
     $video_list = array();
     while( $row = mysql_fetch_array($result_artistVideo) )
     {
@@ -83,11 +88,16 @@
     }
     $video_list_json = json_encode($video_list);
     
-    $sql_photo = "SELECT * FROM photos  WHERE artist_id='$artistID' ORDER BY `order` ASC, `id` DESC";
-	$q_photo = mysql_query($sql_photo) or die(mysql_error());
+	$sql = "SELECT photos.*, artist_files.extra_json AS image_extra_json";
+    $sql .= " FROM photos ";
+    $sql .= " LEFT JOIN artist_files ON photos.image = artist_files.filename";
+    $sql .= " WHERE artist_id='$artistID'";
+    $sql .= " ORDER BY photos.order ASC, photos.id DESC";
+	$q_photo = mysql_query($sql) or die(mysql_error());
     $photo_list = array();
     while( $row = mysql_fetch_array($q_photo) )
     {
+        $row['image_extra'] = json_decode($row['image_extra_json'],TRUE);
         array_walk($row,cleanup_row_element);
         if( !empty($row['image']) )
             $row['image_url'] = artist_file_url($row['image']);
@@ -98,8 +108,8 @@
     }
     $photo_list_json = json_encode($photo_list);
 
-	$find_artistContent = "SELECT * FROM mydna_musicplayer_content  WHERE artistid='$artistID' ORDER BY `order` ASC, `id` DESC";
-	$result_artistContent = mysql_query($find_artistContent) or die(mysql_error());
+	$sql = "SELECT * FROM mydna_musicplayer_content  WHERE artistid='$artistID' ORDER BY `order` ASC, `id` DESC";
+	$result_artistContent = mysql_query($sql) or die(mysql_error());
     $tab_list = array();
     while( $row = mysql_fetch_array($result_artistContent) )
     {
@@ -113,8 +123,8 @@
     }
     $tab_list_json = json_encode($tab_list);
 	
-	$find_artistProduct = "SELECT * FROM mydna_musicplayer_ecommerce_products WHERE artistid='$artistID' ORDER BY `order` ASC, `id` DESC";
-	$result_artistProduct = mysql_query($find_artistProduct) or die(mysql_error());
+	$sql = "SELECT * FROM mydna_musicplayer_ecommerce_products WHERE artistid='$artistID' ORDER BY `order` ASC, `id` DESC";
+	$result_artistProduct = mysql_query($sql) or die(mysql_error());
 	$product_list = array();
     while( $row = mysql_fetch_array($result_artistProduct) )
     {
