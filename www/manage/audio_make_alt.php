@@ -131,9 +131,9 @@
             
             print "  updated $id\n";
             unlink($tmp_file);
+            
+            print "\n";
             flush();
-
-            break;
         }
     }
     catch( Exception $e )
