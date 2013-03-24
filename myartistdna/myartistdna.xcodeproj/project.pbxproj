@@ -119,6 +119,7 @@
 		2D3B2E6716FBF15200DA2301 /* image_make_thumbnails.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = image_make_thumbnails.php; sourceTree = "<group>"; };
 		2D3B2E6816FF58A800DA2301 /* audio_make_alt.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = audio_make_alt.php; sourceTree = "<group>"; };
 		2D3B2E6916FF84E500DA2301 /* video_make_alt.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = video_make_alt.php; sourceTree = "<group>"; };
+		2D3B2E6A16FFAF3100DA2301 /* publish_static.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = publish_static.php; path = ../utils/publish_static.php; sourceTree = "<group>"; };
 		2D3D8EF215AE4D0D00BA97B3 /* jquery.mousewheel.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.mousewheel.js; sourceTree = "<group>"; };
 		2D3ED6D41502D5A400A9D171 /* delete_account.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = delete_account.php; sourceTree = "<group>"; };
 		2D3EE24E15053A2800A9D171 /* madfm.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = madfm.js; sourceTree = "<group>"; };
@@ -1093,6 +1094,7 @@
 				2D747C5615D64B9800128EEC /* tag_master.sh */,
 				2D747C5715D64FD100128EEC /* update_from_tag.sh */,
 				2DE18E7816E447870066A13B /* fm_setup.php */,
+				2D3B2E6A16FFAF3100DA2301 /* publish_static.php */,
 			);
 			name = utils;
 			sourceTree = "<group>";
