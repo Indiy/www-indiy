@@ -124,7 +124,7 @@ function updatePhotoList()
         var error = false;
         
         //var img_url = "/timthumb.php?src={0}&w=210&h=132&zc=1&q=100".format(photo.image_url);
-        var img_url = get_thumbnail(photo.image,photo.image_extra,210,132);
+        var img_url = get_thumbnail(photo.image_url,photo.image_extra,210,132);
         
         var html = "";
         html += "<li id='arrayorder_{0}' class='photos_sortable'>".format(photo.id);
@@ -161,7 +161,7 @@ function updateStoreList()
     {
         var product = g_productList[i];
         
-        var img_url = "/timthumb.php?src={0}&w=207&h=130&zc=1&q=100".format(product.image_url);
+        var img_url = get_thumbnail(product.image_url,product.image_extra,210,132);
         
         var html = "";
         html += "<li id='arrayorder_{0}' class='products_sortable'>".format(product.id);
@@ -207,7 +207,7 @@ function updateVideoList()
             tip = "Item needs video!"
         }
         
-        var img_url = "/timthumb.php?src={0}&w=210&h=132&zc=1&q=100".format(video.image_url);
+        var img_url = get_thumbnail(video.image_url,video.image_extra,210,132);
         
         var html = "";
         html += "<li id='arrayorder_{0}' class='videos_sortable'>".format(video.id);

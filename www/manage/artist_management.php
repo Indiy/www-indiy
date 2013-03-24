@@ -60,12 +60,13 @@
     $sql .= " LEFT JOIN artist_files ON mydna_musicplayer_audio.image = artist_files.filename";
     $sql .= " WHERE mydna_musicplayer_audio.artistid='$artistID'";
     $sql .= " ORDER BY mydna_musicplayer_audio.order ASC, mydna_musicplayer_audio.id DESC";
-	$result_artistAudio = mysql_query($sql) or die(mysql_error());
+	$result_artistAudio = mq($sql) or die(mysql_error());
     $page_list = array();
-    while( $row = mysql_fetch_array($result_artistAudio) )
+    while( $row = mf($result_artistAudio) )
     {
-        $row['image_extra'] = json_decode($row['image_extra_json'],TRUE);
+        $image_extra = json_decode($row['image_extra_json'],TRUE);
         $row['short_link'] = make_short_link($row['abbrev']);
+        $row['image_extra'] = $image_extra;
         array_walk($row,cleanup_row_element);
         $row['download'] = $row['download'] == "0" ? FALSE : TRUE;
         $row['product_id'] = $row['product_id'] > 0 ? intval($row['product_id']) : FALSE;
@@ -73,12 +74,18 @@
     }
     $page_list_json = json_encode($page_list);
 	
-	$sql = "SELECT * FROM mydna_musicplayer_video  WHERE artistid='".$artistID."' ORDER BY `order` ASC, `id` DESC";
-	$result_artistVideo = mysql_query($sql) or die(mysql_error());
+	$sql = "SELECT photos.*, artist_files.extra_json AS image_extra_json";
+    $sql .= " FROM mydna_musicplayer_video ";
+    $sql .= " LEFT JOIN artist_files ON mydna_musicplayer_video.image = artist_files.filename";
+    $sql .= " WHERE mydna_musicplayer_video.artistid = '$artistID'";
+    $sql .= " ORDER BY mydna_musicplayer_video.order ASC, mydna_musicplayer_video.id DESC";
+	$result_artistVideo = mq($sql) or die(mysql_error());
     $video_list = array();
-    while( $row = mysql_fetch_array($result_artistVideo) )
+    while( $row = mf($result_artistVideo) )
     {
+        $image_extra = json_decode($row['image_extra_json'],TRUE);
         array_walk($row,cleanup_row_element);
+        $row['image_extra'] = $image_extra;
         if( !empty($row['image']) )
             $row['image_url'] = artist_file_url($row['image']);
         else
@@ -110,9 +117,9 @@
     $photo_list_json = json_encode($photo_list);
 
 	$sql = "SELECT * FROM mydna_musicplayer_content  WHERE artistid='$artistID' ORDER BY `order` ASC, `id` DESC";
-	$result_artistContent = mysql_query($sql) or die(mysql_error());
+	$result_artistContent = mq($sql) or die(mysql_error());
     $tab_list = array();
-    while( $row = mysql_fetch_array($result_artistContent) )
+    while( $row = mf($result_artistContent) )
     {
         array_walk($row,cleanup_row_element);
         if( !empty($row['image']) )
@@ -124,13 +131,19 @@
     }
     $tab_list_json = json_encode($tab_list);
 	
-	$sql = "SELECT * FROM mydna_musicplayer_ecommerce_products WHERE artistid='$artistID' ORDER BY `order` ASC, `id` DESC";
-	$result_artistProduct = mysql_query($sql) or die(mysql_error());
+	$sql = "SELECT mydna_musicplayer_ecommerce_products.*, artist_files.extra_json AS image_extra_json";
+    $sql .= " FROM mydna_musicplayer_ecommerce_products ";
+    $sql .= " LEFT JOIN artist_files ON mydna_musicplayer_ecommerce_products.image = artist_files.filename";
+    $sql .= " WHERE mydna_musicplayer_ecommerce_products.artist_id = '$artistID'";
+    $sql .= " ORDER BY mydna_musicplayer_ecommerce_products.order ASC, mydna_musicplayer_ecommerce_products.id DESC";
+	$result_artistProduct = mq($sql) or die(mysql_error());
 	$product_list = array();
-    while( $row = mysql_fetch_array($result_artistProduct) )
+    while( $row = mf($result_artistProduct) )
     {
+        $image_extra = json_decode($row['image_extra_json'],TRUE);
         $product_id = $row['id'];
         $row = get_product_data($product_id);
+        $row['image_extra'] = $image_extra;
         $product_list[] = $row;
     }
     $product_list_json = json_encode($product_list);
