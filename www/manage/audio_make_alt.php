@@ -150,7 +150,11 @@
                 audio_maybe_convert_and_upload_file($client,$tmp_file,$ogg_file,$extra);
 
                 $extra_json = json_encode($extra);
-                mysql_update('artist_files',array("extra_json" => $extra_json),'id',$id);
+                $updates = array("extra_json" => $extra_json);
+                
+                var_dump($updates);
+                
+                mysql_update('artist_files',$updates,'id',$id);
                 
                 print "  updated $id\n";
                 unlink($tmp_file);
