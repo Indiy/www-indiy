@@ -326,7 +326,7 @@
                       "views" => $video['views'],
                       "bg_color" => "000",
                       "bg_style" => "LETTERBOX",
-                      "image_data" => json_decode($video['image_data']),
+                      "image_data" => $video_img_extra['image_data'],
                       "video_data" => json_decode($video['video_data']),
                       "loaded" => FALSE,
                       );
@@ -375,7 +375,7 @@
                       "bg_style" => $photo['bg_style'],
                       "views" => $photo['views'],
                       "loaded" => FALSE,
-                      "image_data" => json_decode($photo['image_data']),
+                      "image_data" => $image_extra['image_data'],
                       "alts" => $image_extra['alts'],
                       );
         $photo_list[] = $item;
