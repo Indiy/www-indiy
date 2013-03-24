@@ -4,7 +4,8 @@
     
     if( !$base_web_dir || strlen($base_web_dir) == 0 )
     {
-        print "Usage: php {$argv[0]} <base web dir>";
+        print "Usage: php {$argv[0]} <base web dir>\n";
+        print "\n";
         die();
     }
     
