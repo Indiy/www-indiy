@@ -86,6 +86,20 @@
         }
     }
     
+    function audio_needs_update($extra)
+    {
+        if( !isset($extra['media_length']) )
+        {
+            return TRUE;
+        }
+        if( !isset($extra['alts']['ogg']) )
+        {
+            return TRUE;
+        }
+        
+        return FALSE;
+    }
+    
     try
     {
         $client = get_s3_client();
@@ -112,28 +126,37 @@
             $extension = $path_parts['extension'];
             $prefix = str_replace(".$extension","",$filename);
             
-            $src_data = file_get_contents($url);
-            $tmp_file = tempnam("/tmp","mac");
-            file_put_contents($tmp_file,$src_data);
-            
-            $audio_length = get_audio_length($tmp_file);
-
             print "filename: $filename ($audio_length secs)\n";
-            
-            $extra['media_length'] = $audio_length;
-            
-            $ogg_file = "$prefix.ogg";
-            
-            audio_maybe_convert_and_upload_file($client,$tmp_file,$ogg_file,$extra);
+            if( audio_needs_update($extra) )
+            {
+                
+                $src_data = file_get_contents($url);
+                $tmp_file = tempnam("/tmp","mac");
+                file_put_contents($tmp_file,$src_data);
+                
+                $audio_length = get_audio_length($tmp_file);
 
-            $extra_json = json_encode($extra);
-            mysql_update('artist_files',array("extra_json" => $extra_json),'id',$id);
-            
-            print "  updated $id\n";
-            unlink($tmp_file);
+                
+                $extra['media_length'] = $audio_length;
+                
+                $ogg_file = "$prefix.ogg";
+                
+                audio_maybe_convert_and_upload_file($client,$tmp_file,$ogg_file,$extra);
+
+                $extra_json = json_encode($extra);
+                mysql_update('artist_files',array("extra_json" => $extra_json),'id',$id);
+                
+                print "  updated $id\n";
+                unlink($tmp_file);
+            }
+            else
+            {
+                print "  no update needed\n";
+            }
             
             print "\n";
             flush();
+            break;
         }
     }
     catch( Exception $e )
