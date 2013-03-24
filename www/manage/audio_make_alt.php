@@ -115,7 +115,8 @@
             $id = $file['id'];
             $filename = $file['filename'];
             $extra_json = $file['extra_json'];
-            if( $extra_json && strlen($extra_json) > 0 )
+            print "  extra_json: $extra_json\n";
+            if( strlen($extra_json) > 0 )
             {
                 $extra = json_decode($extra_json,TRUE);
             }
