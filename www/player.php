@@ -225,7 +225,7 @@
         $music_audio = artist_file_url($music['audio']);
         
         $audio_extra = json_decode($music['audio_extra_json'],TRUE);
-        $image_extra = json_decode($music['image_exta_json'],TRUE);
+        $image_extra = json_decode($music['image_extra_json'],TRUE);
         
         $music_name = stripslashes($music["name"]);
         $music_listens = $music["views"];
