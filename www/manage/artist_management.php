@@ -91,14 +91,15 @@
 	$sql = "SELECT photos.*, artist_files.extra_json AS image_extra_json";
     $sql .= " FROM photos ";
     $sql .= " LEFT JOIN artist_files ON photos.image = artist_files.filename";
-    $sql .= " WHERE photos.artist_id='$artistID'";
+    $sql .= " WHERE photos.artist_id = '$artistID'";
     $sql .= " ORDER BY photos.order ASC, photos.id DESC";
-	$q_photo = mysql_query($sql) or die(mysql_error());
+	$q_photo = mq($sql) or die(mysql_error());
     $photo_list = array();
-    while( $row = mysql_fetch_array($q_photo) )
+    while( $row = mf($q_photo) )
     {
-        $row['image_extra'] = json_decode($row['image_extra_json'],TRUE);
+        $image_extra = json_decode($row['image_extra_json'],TRUE);
         array_walk($row,cleanup_row_element);
+        $row['image_extra'] = $image_extra;
         if( !empty($row['image']) )
             $row['image_url'] = artist_file_url($row['image']);
         else
