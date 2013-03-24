@@ -1518,18 +1518,22 @@ END;
         return $GLOBALS['g_static_base_url'] . $path;
     }
 
-    function upload_file_to_s3($key,$source_file)
+    function get_s3_client()
     {
         require_once "aws.phar";
-    
-        //use Aws\S3\S3Client;
-    
+        
         $args = array(
                       'key' => $GLOBALS['g_access_key_id'],
                       'secret' => $GLOBALS['g_secret_access_key'],
                       );
         
         $client = Aws\S3\S3Client::factory($args);
+        return $client;
+    }
+
+    function upload_file_to_s3($key,$source_file)
+    {
+        $client = get_s3_client();
     
         $args = array(
                       'Bucket' => $GLOBALS['g_aws_static_bucket'],
@@ -1539,6 +1543,151 @@ END;
                       'CacheControl' => 'public, max-age=22896000'
                       );
         $client->putObject($args);
+    }
+
+    function maybe_convert_and_upload_file($client,$src_image,$prefix,$width,$height,&$extra)
+    {
+        global $ALT_IMAGE_REV_KEY;
+        
+        $src_imagex = imagesx($src_image);
+        $src_imagey = imagesy($src_image);
+        
+        $dst_imagex = $width;
+        if( $height )
+        {
+            $dst_imagey = $height;
+        }
+        else
+        {
+            $dst_imagey = round($src_imagey / $src_imagex * $dst_imagex);
+        }
+        
+        $alt_key = "w{$width}";
+        if( $height )
+        {
+            $alt_key .= "_h{$height}";
+        }
+        
+        $file_path = "/artists/thumbs/{$prefix}_{$alt_key}_{$ALT_IMAGE_REV_KEY}.jpg";
+        
+        try
+        {
+            $ret = $client->headObject(array(
+                                             'Bucket' => $GLOBALS['g_aws_static_bucket'],
+                                             'Key' => $file_path,
+                                             ));
+            $extra['alts'][$alt_key] = $file_path;
+            
+            return;
+        }
+        catch( Exception $e )
+        {
+        }
+        
+        $dst_imagex = $width;
+        if( $height )
+        {
+            $dst_imagey = $height;
+        }
+        else
+        {
+            $dst_imagey = round($src_imagey / $src_imagex * $dst_imagex);
+        }
+        
+        $dst_image = imagecreatetruecolor($dst_imagex, $dst_imagey);
+        
+        imagecopyresampled($dst_image, $src_image, 0, 0, 0, 0, $dst_imagex,
+                           $dst_imagey, $src_imagex, $src_imagey);
+        
+        
+        ob_start();
+        imagejpeg($dst_image,NULL,100);
+        $img_data = ob_get_clean();
+        
+        imagedestroy($dst_image);
+        
+        $args = array(
+                      'Bucket' => $GLOBALS['g_aws_static_bucket'],
+                      'Key' => $file_path,
+                      'Body' => $img_data,
+                      'ACL' => 'public-read',
+                      'CacheControl' => 'public, max-age=22896000',
+                      'ContentType' => 'image/jpeg',
+                      );
+        $client->putObject($args);
+        
+        $extra['alts'][$alt_key] = $file_path;
+    }
+
+    function needed_image_sizes($width)
+    {
+        $needed_widths = array(320,480,640,768,800,960,1024,
+                               1080,1280,1440,1536,1600,2048,
+                               400,500,600,700,900,1000,1100,1200,1300,
+                               1400,1500
+                               );
+        
+        $ret = array();
+        
+        foreach( $needed_widths as $w )
+        {
+            if( $w < $width )
+                $ret[] = array($w,FALSE);
+        }
+        
+        $ret[] = array(200,FALSE);
+        $ret[] = array(65,44);
+        $ret[] = array(210,132);
+        
+        return $ret;
+    }
+
+    function process_upload_image($file)
+    {
+        $client = get_s3_client();
+    
+        $id = $file['id'];
+        $filename = $file['filename'];
+        $extra_json = $file['extra_json'];
+        if( $extra_json && strlen($extra_json) > 0 )
+        {
+            $extra = json_decode($extra_json,TRUE);
+        }
+        else
+        {
+            $extra = array();
+        }
+        
+        $url = artist_file_url($filename);
+        
+        $path_parts = pathinfo($filename);
+        $extension = $path_parts['extension'];
+        $prefix = str_replace(".$extension","",$filename);
+        
+        $src_data = file_get_contents($url);
+        $src_image = imagecreatefromstring($src_data);
+        
+        $width = imagesx($src_image);
+        $height = imagesy($src_image);
+        
+        if( !isset($extra['image_data']) )
+        {
+            $image_data = array("width" => $width,
+                                "height" => $height,
+                                );
+            $extra['image_data'] = $image_data;
+        }
+        
+        $needed_sizes = needed_image_sizes($width);
+        
+        foreach( $needed_sizes as $i => $size )
+        {
+            $f = maybe_convert_and_upload_file($client,$src_image,$prefix,$size[0],$size[1],$extra);
+        }
+        
+        $extra_json = json_encode($extra);
+        
+        mysql_update('artist_files',array("extra_json" => $extra_json),'id',$id);
     }
 
 ?>
