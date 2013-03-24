@@ -139,6 +139,8 @@
                 {
                     try
                     {
+                        print "  got lock...\n";
+                    
                         $src_data = file_get_contents($url);
                         print "  got url: $url\n";
                         $tmp_file = tempnam("/tmp","mav");
