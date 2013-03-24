@@ -57,7 +57,7 @@
 	
 	$sql = "SELECT mydna_musicplayer_audio.*, artist_files.extra_json AS image_extra_json";
     $sql .= " FROM mydna_musicplayer_audio ";
-    $sql .= " LEFT JOIN artist_files ON mydna_musicplater_audio.image = artist_files.filename";
+    $sql .= " LEFT JOIN artist_files ON mydna_musicplayer_audio.image = artist_files.filename";
     $sql .= " WHERE artistid='$artistID'";
     $sql .= " ORDER BY mydna_musicplayer_audio.order ASC, mydna_musicplayer_audio.id DESC";
 	$result_artistAudio = mysql_query($sql) or die(mysql_error());
