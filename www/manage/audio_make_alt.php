@@ -115,7 +115,6 @@
             $id = $file['id'];
             $filename = $file['filename'];
             $extra_json = $file['extra_json'];
-            print "  extra_json: $extra_json\n";
             if( strlen($extra_json) > 0 )
             {
                 $extra = json_decode($extra_json,TRUE);
@@ -132,6 +131,7 @@
             $prefix = str_replace(".$extension","",$filename);
             
             print "filename: $filename, id: $id\n";
+            flush();
             if( audio_needs_update($extra) )
             {
                 
@@ -152,8 +152,6 @@
                 $extra_json = json_encode($extra);
                 $updates = array("extra_json" => $extra_json);
                 
-                var_dump($updates);
-                
                 mysql_update('artist_files',$updates,'id',$id);
                 
                 print "  updated $id\n";
@@ -166,7 +164,6 @@
             
             print "\n";
             flush();
-            break;
         }
     }
     catch( Exception $e )
