@@ -216,10 +216,11 @@
     $sql .= " WHERE mydna_musicplayer_audio.artistid='$artist_id'";
     $sql .= " ORDER BY mydna_musicplayer_audio.order ASC, mydna_musicplayer_audio.id DESC";
 
+    $q = mq($sql);
     $music_list = array();
     $music_list_html = "";
     $i = 0;
-    while( $music = mf($sql) )
+    while( $music = mf($q) )
     {
         $music_image = artist_file_url($music['image']);
         $music_audio = artist_file_url($music['audio']);
