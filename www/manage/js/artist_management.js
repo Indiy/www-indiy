@@ -123,7 +123,8 @@ function updatePhotoList()
         var class_name = i % 2 == 0 ? 'odd' : '';
         var error = false;
         
-        var img_url = "/timthumb.php?src={0}&w=210&h=132&zc=1&q=100".format(photo.image_url);
+        //var img_url = "/timthumb.php?src={0}&w=210&h=132&zc=1&q=100".format(photo.image_url);
+        var img_url = get_thumbnail(photo.image,photo.image_extra,210,132);
         
         var html = "";
         html += "<li id='arrayorder_{0}' class='photos_sortable'>".format(photo.id);
@@ -330,3 +331,19 @@ function clearFileElement(selector)
     var html = $(selector).parent().html();
     $(selector).parent().html(html);
 }
+
+function get_thumbnail(image,image_extra,width,height)
+{
+    var key = "w" + width;
+    if( height && height > 0 )
+    {
+        key += "_h" + height;
+    }
+    
+    if( key in image_extra )
+    {
+        return g_artistFileBaseUrl + image_extra[key];
+    }
+    return image;    
+}
+

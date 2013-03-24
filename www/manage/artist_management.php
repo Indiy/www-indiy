@@ -246,6 +246,7 @@
     var g_fileList = <?=$file_list_json;?>;
 
     var g_playerUrl = "<?=playerUrl();?>";
+    var g_artistFileBaseUrl = "<?=artist_file_base_url();?>";
 
     var g_isPublished = <?=json_encode($is_published);?>;
 
