@@ -85,8 +85,13 @@ function musicPanelChange(index)
     
     var media = {
         mp3: song.mp3,
-        oga: song.mp3.replace(".mp3",".ogg")
     };
+    
+    if( song.audio_extra && song.audio_extra.alts && song.audio_extra.alts.ogg )
+    {
+        media.oga = g_artistFileBaseUrl + song.audio_extra.alts.ogg;
+    }
+    
     $('#jquery_jplayer').jPlayer("setMedia", media);
     playerProgress(0,0);
     
