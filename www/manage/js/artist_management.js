@@ -340,7 +340,7 @@ function get_thumbnail(image,image_extra,width,height)
         key += "_h" + height;
     }
     
-    if( key in image_extra.alts )
+    if( image_extra && key in image_extra.alts )
     {
         return g_artistFileBaseUrl + image_extra.alts[key];
     }
