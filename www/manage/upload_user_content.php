@@ -96,7 +96,7 @@
         {
             if( !$alt_ext )
             {
-                print "******file missing: $realpath\n";
+                print "******file missing: $filename, $path, $realpath\n";
             }
         }
     }
