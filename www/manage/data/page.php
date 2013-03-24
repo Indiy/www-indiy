@@ -55,7 +55,7 @@ function get_page_data($page_id)
     $row['download'] = $row['download'] == "0" ? FALSE : TRUE;
     $row['product_id'] = $row['product_id'] > 0 ? intval($row['product_id']) : FALSE;
     if( !empty($row['image']) )
-        $row['image_url'] = "/artists/files/" . $row['image'];
+        $row['image_url'] = artist_file_url($row['image']);
     else
         $row['image_url'] = "images/photo_video_01.jpg";
     return $row;

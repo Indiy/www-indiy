@@ -93,7 +93,7 @@
             $colors = explode(",", $pro["color"]);
         
         if( $product["image"] )
-            $image = "/artists/files/" . $product["image"];
+            $image = artist_file_url($product["image"]);
         else
             $image = "/images/default_product_image.jpg";
 
@@ -138,7 +138,7 @@
         $image = FALSE;
         if( $tab['image'] != '' )
         {
-            $image = '/artists/files/' . $tab['image'];
+            $image = artist_file_url($tab['image']);
         }
         $item = array("id" => $tab['id'],
                       "title" => $title,
@@ -172,8 +172,8 @@
     $i = 0;
     while( $music = mf($q_music) )
     {
-        $music_image = '/artists/files/' . $music["image"];
-        $music_audio = '/artists/files/' . $music["audio"];
+        $music_image = artist_file_url($music["image"]);
+        $music_audio = artist_file_url($music["audio"]);
         
         $music_name = stripslashes($music["name"]);
         $music_listens = $music["views"];
@@ -240,8 +240,8 @@
         if( strlen($vid_error) > 0 )
             continue;
         
-        $video_file = trueSiteUrl() . '/artists/files/' . $video['video'];
-        $video_image = '/artists/files/' . $video['image'];
+        $video_file = artist_file_url($video['video']);
+        $video_image = artist_file_url($video['image']);
         $video_name = $video['name'];
         
         
@@ -293,7 +293,7 @@
     $i = 0;
     while( $photo = mf($q_photo) )
     {
-        $photo_image = '/artists/files/' . $photo['image'];
+        $photo_image = artist_file_url($photo['image']);
         $photo_name = $photo['name'];
         
         $item = array("id" => $photo['id'],

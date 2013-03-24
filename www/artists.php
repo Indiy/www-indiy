@@ -9,7 +9,7 @@
     while( $artist = mf($artists_q) )
     {
         $logo = $artist['logo'];
-        $logo_path = "artists/files/$logo";
+        $logo_path = artist_file_url($logo);
         
         if( !$logo || !file_exists($logo_path) )
         {
@@ -25,7 +25,7 @@
         $html = "";
         $html .= "<a href='$url'>";
         $html .= " <li>";
-        $html .= "  <img src='/$logo_path' />";
+        $html .= "  <img src='$logo_path' />";
         $html .= "  <span>$name</span>";
         $html .= " </li>";
         $html .= "</a>";

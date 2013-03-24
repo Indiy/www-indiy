@@ -62,7 +62,7 @@
         $product_image = $file['product_image'];
         $product_description = $file['product_description'];
 
-        $product_image_url = "/artists/files/$product_image";
+        $product_image_url = artist_file_url($product_image);
     
         $item = array("id" => $file_id,
                       "name" => $file_name,
@@ -123,7 +123,7 @@
             $artist_logo = $order['artist_logo'];
             $order_date = $order['order_date'];
             
-            $artist_logo_url = "/artists/files/$artist_logo";
+            $artist_logo_url = artist_file_url($artist_logo);
             
             $odd = "";
             if( $i % 2 == 1 )
@@ -181,19 +181,19 @@
         if( $love['song_name'] )
         {
             $item_name = $love['song_name'];
-            $image_url = "/artists/files/" . $love['song_image'];
+            $image_url = artist_file_url($love['song_image']);
             $item_hash = "song_id=" . $love['music_id'];
         }
         elseif( $love['photo_name'] )
         {
             $item_name = $love['photo_name'];
-            $image_url = "/artists/files/" . $love['photo_image'];
+            $image_url = artist_file_url($love['photo_image']);
             $item_hash = "photo_id=" . $love['photo_id'];
         }
         elseif( $love['video_name'] )
         {
             $item_name = $love['video_name'];
-            $image_url = "/artists/files/" . $love['video_image'];
+            $image_url = artist_file_url($love['video_image']);
             $item_hash = "video_id=" . $love['video_id'];
         }
 
