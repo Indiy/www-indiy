@@ -1458,7 +1458,7 @@ END;
 
     function get_audio_length($file)
     {
-        $cmd = "/usr/bin/ffprobe $file 2>&1";
+        $cmd = "/usr/local/bin/ffprobe $file 2>&1";
         $lines = array();
         
         exec($cmd,&$lines);
@@ -1545,7 +1545,7 @@ END;
         $client->putObject($args);
     }
 
-    function maybe_convert_and_upload_file($client,$src_image,$prefix,$width,$height,&$extra)
+    function image_maybe_convert_and_upload_file($client,$src_image,$prefix,$width,$height,&$extra)
     {
         global $ALT_IMAGE_REV_KEY;
         
@@ -1682,11 +1682,10 @@ END;
         
         foreach( $needed_sizes as $i => $size )
         {
-            $f = maybe_convert_and_upload_file($client,$src_image,$prefix,$size[0],$size[1],$extra);
+            image_maybe_convert_and_upload_file($client,$src_image,$prefix,$size[0],$size[1],$extra);
         }
         
         $extra_json = json_encode($extra);
-        
         mysql_update('artist_files',array("extra_json" => $extra_json),'id',$id);
     }
 
