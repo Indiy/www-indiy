@@ -74,7 +74,7 @@
     }
     $page_list_json = json_encode($page_list);
 	
-	$sql = "SELECT photos.*, artist_files.extra_json AS image_extra_json";
+	$sql = "SELECT mydna_musicplayer_video.*, artist_files.extra_json AS image_extra_json";
     $sql .= " FROM mydna_musicplayer_video ";
     $sql .= " LEFT JOIN artist_files ON mydna_musicplayer_video.image = artist_files.filename";
     $sql .= " WHERE mydna_musicplayer_video.artistid = '$artistID'";
