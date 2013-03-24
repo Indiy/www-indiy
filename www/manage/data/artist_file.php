@@ -75,7 +75,8 @@
         $artist_id = $_REQUEST['artist_id'];
         $file_id = $_REQUEST['file_id'];
         
-        $sql = "DELETE FROM artist_files WHERE id = '$file_id' AND artist_id = '$artist_id'";
+        $sql = "UPDATE artist_files SET deleted=1 WHERE id = '$file_id' AND artist_id = '$artist_id'";
+        
         $ret = mq($sql);
         if( $ret )
         {
@@ -117,7 +118,8 @@
                 $existing_file = mf(mq($sql));
                 if( $existing_file )
                 {
-                    if( $existing_file['upload_filename'] )
+                    $deleted = $existing_file['deleted'];
+                    if( !$deleted && $existing_file['upload_filename'] )
                     {
                         $ret['upload_error'] = "File already uploaded.";
                     }
@@ -126,7 +128,7 @@
                         $id = $existing_file['id'];
                         $ret['id'] = $id;
                         $ret['file'] = $save_filename;
-                        $values = array("upload_filename" => $upload_filename);
+                        $values = array("upload_filename" => $upload_filename,'deleted' => 0);
                         mysql_update('artist_files',$values,'id',$id);
                     }
                 }

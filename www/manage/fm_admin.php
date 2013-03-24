@@ -33,7 +33,7 @@
         $streams[] = $s;
     }
     
-    $sql = "SELECT * FROM artist_files WHERE artist_id='$artist_id' AND upload_filename != '' ORDER BY id DESC";
+    $sql = "SELECT * FROM artist_files WHERE artist_id='$artist_id' AND upload_filename != '' AND deleted = 0 ORDER BY id DESC";
     $files_q = mq($sql);
     $file_list = array();
     while( $file = mf($files_q) )
