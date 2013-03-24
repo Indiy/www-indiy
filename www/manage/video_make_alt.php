@@ -91,9 +91,9 @@
             print "  No media length\n";
             return TRUE;
         }
-        if( !isset($extra['alts']['ogg']) )
+        if( !isset($extra['alts']['ogv']) )
         {
-            print "  No ogg\n";
+            print "  No ogv\n";
             return TRUE;
         }
         
