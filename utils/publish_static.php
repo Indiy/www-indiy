@@ -201,6 +201,28 @@
     print "file_map: \n";
     var_dump($file_map);
     
+    $file_map_php_contents = "";
+    
+    $file_map_php_contents .= "<?php\n";
+    $file_map_php_contents .= "\n";
+    $file_map_php_contents .= "\n";
+    $file_map_php_contents .= "    $$g_static_file_map = array(\n";
+
+    foreach( $file_map as $key => $val )
+    {
+        $file_map_php_contents .= "    '$key' => '$val',\n";
+        
+    }
+    $file_map_php_contents .= "    );\n";
+    $file_map_php_contents .= "\n";
+    $file_map_php_contents .= "?>\n";
+
+    $file_map_php = "$base_web_dir/includes/static_file_map.php";
+
+    file_put_contents($file_map_php,$file_map_php_contents);
+
+    print "\n\n";
+    print "Wrote file map to file: $file_map_php\n";
     print "\n\n";
     print "done done\n";
 ?>
