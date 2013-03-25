@@ -8,7 +8,8 @@
     set_include_path($new_include_path);
 
     // This file should have db configuration
-    require_once "server_config.php";
+    require_once 'server_config.php';
+    require_once 'static_file_map.php';
     
 	$prefix = "mydna_";
 

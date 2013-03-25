@@ -1713,4 +1713,18 @@ END;
         }
     }
 
+    function static_file_url($url)
+    {
+        $file_map = $GLOBALS['g_static_file_map'];
+        if( isset($file_map[$url]) )
+        {
+            return $file_map[$url];
+        }
+        else
+        {
+            trigger_error("static_file_url: find url: $url",E_USER_WARNING);
+            return $url;
+        }
+    }
+
 ?>
