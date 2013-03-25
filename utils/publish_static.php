@@ -49,6 +49,60 @@
         return FALSE;
     }
     
+    function starts_with($haystack, $needle)
+    {
+        return !strncmp($haystack, $needle, strlen($needle));
+    }
+    
+    function parse_css($src_file,$html_dir,$web_path)
+    {
+        global $file_map;
+        
+        $dst_file = tempnam("/tmp","css");
+        
+        $contents = file_get_contents($src_file);
+        
+        $arr = array();
+        preg_match_all('/url\([\'\"]?([^\'\"\)]*)[\'\"]?\)/', $contents, $arr, PREG_PATTERN_ORDER);
+        
+        foreach($arr[0] as $i => $item)
+        {
+            print "css item: $item\n";
+        
+            $rel_url = $arr[1][$i];
+            
+            if( starts_with($rel_url,'/') )
+            {
+                $url = $rel_url;
+            }
+            else
+            {
+                $path = "$html_dir$web_path/$rel_url";
+                $abs_path = realpath($path);
+                $url = str_replace($html_dir,'',$abs_path);
+            }
+            
+            
+            print "  url: $url\n";
+            if( isset($file_map[$url]) )
+            {
+                $new_url = $file_map[$url];
+                $new_item = "url($new_url)";
+                print "  new_item: $new_item\n";
+                
+                $contents = str_replace($item,$new_item,$contents);
+            }
+            else
+            {
+                print "***didnt $url in file_map\n";
+            }
+        }
+        
+        file_put_contents($dst_file,$contents);
+        
+        return $dst_file;
+    }
+    
     function do_static_dir($html_dir,$web_path)
     {
         global $file_map;
@@ -69,14 +123,25 @@
                 print "  skip non-file: $item\n";
                 continue;
             }
+            if( starts_with($src_file,'.') )
+            {
+                print "  skip dot file: $item\n";
+                continue;
+            }
             
             $web_file = "$web_path/$item";
 
-            $hash = hash_file("md5",$src_file);
-            
             $path_parts = pathinfo($src_file);
             $extension = $path_parts['extension'];
+            
+            if( $extension == 'css' )
+            {
+                $src_file = parse_css($src_file,$html_dir,$web_path);
+            }
+
+            $hash = hash_file("md5",$src_file);
             $key_file = str_replace(".$extension","_$hash.$extension",$item);
+            
             
             $key = "$web_path/$key_file";
             print "  key: $key\n";
@@ -122,6 +187,8 @@
     $client = Aws\S3\S3Client::factory($args);
     
     do_static_dir($html_dir,"/images");
+    do_static_dir($html_dir,"/fonts");
+    do_static_dir($html_dir,"/css");
 
     print "file_map: \n";
     var_dump($file_map);
