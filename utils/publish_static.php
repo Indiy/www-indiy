@@ -124,7 +124,7 @@
         {
             $src_file = "$dir/$item";
         
-            print "  item: $item" 
+            print "  item: $item";
         
             if( !is_file($src_file) )
             {
