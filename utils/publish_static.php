@@ -67,7 +67,7 @@
         
         foreach($arr[0] as $i => $item)
         {
-            print "css item: $item\n";
+            print "    css item: $item\n";
         
             $url_query = $arr[1][$i];
 
@@ -89,12 +89,12 @@
             }
             
             
-            print "  url: $url\n";
+            print "    url: $url\n";
             if( isset($file_map[$url]) )
             {
                 $new_url = $file_map[$url];
                 $new_item = "url($new_url$end_url)";
-                print "  new_item: $new_item\n";
+                print "    new_item: $new_item\n";
                 
                 $contents = str_replace($item,$new_item,$contents);
             }
@@ -158,7 +158,7 @@
                                                  'Bucket' => $GLOBALS['g_aws_static_bucket'],
                                                  'Key' => $key,
                                                  ));
-                print "  $key already exists, skipping\n";
+                print "    $key already exists, skipping\n";
             }
             catch( Exception $e )
             {
@@ -176,7 +176,7 @@
                 }
                 
                 $client->putObject($args);
-                print "  uploaded: $src_file\n";
+                print "    uploaded: $src_file\n";
             }
             $file_map[$web_file] = $key;
         }
