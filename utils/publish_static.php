@@ -196,6 +196,7 @@
     
     do_static_dir($html_dir,"/images");
     do_static_dir($html_dir,"/fonts");
+    do_static_dir($html_dir,"/js");
     do_static_dir($html_dir,"/css");
 
     //print "file_map: \n";
