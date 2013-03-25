@@ -124,7 +124,7 @@
         {
             $src_file = "$dir/$item";
         
-            print "  item: $item";
+            print "  item: $item\n";
         
             if( !is_file($src_file) )
             {
@@ -160,7 +160,7 @@
                                                  'Bucket' => $GLOBALS['g_aws_static_bucket'],
                                                  'Key' => $key,
                                                  ));
-                print "    $key already exists, skipping\n";
+                print "    skip: $key\n";
             }
             catch( Exception $e )
             {
