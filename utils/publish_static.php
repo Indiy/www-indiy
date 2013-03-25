@@ -198,8 +198,8 @@
     do_static_dir($html_dir,"/fonts");
     do_static_dir($html_dir,"/css");
 
-    print "file_map: \n";
-    var_dump($file_map);
+    //print "file_map: \n";
+    //var_dump($file_map);
     
     $file_map_php_contents = "";
     
