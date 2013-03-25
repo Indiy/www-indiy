@@ -1,1 +1,0 @@
-timthumb cache dir
