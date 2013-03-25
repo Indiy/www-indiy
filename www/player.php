@@ -100,6 +100,8 @@
     $artist_email = $artist_data['email'];
     $artist_views = artist_get_total_views($artist_id);
     $artist_player_template = $artist_data['player_template'];
+    $artist_logo = $artist_data['logo'];
+    
     $artist_twitter = FALSE;
     if( $artist_data['tw_setting'] != 'DISABLED' && $artist_data['twitter'] )
         $artist_twitter = $artist_data['twitter'];
