@@ -206,7 +206,7 @@
     $file_map_php_contents .= "<?php\n";
     $file_map_php_contents .= "\n";
     $file_map_php_contents .= "\n";
-    $file_map_php_contents .= "    $$g_static_file_map = array(\n";
+    $file_map_php_contents .= '    $g_static_file_map = array(\n';
 
     foreach( $file_map as $key => $val )
     {
