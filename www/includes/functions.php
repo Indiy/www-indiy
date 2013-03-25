@@ -1509,15 +1509,6 @@ END;
         return $image;
     }
 
-    function static_file_base_url()
-    {
-        return $GLOBALS['g_static_base_url'];
-    }
-    function static_file_url($path)
-    {
-        return $GLOBALS['g_static_base_url'] . $path;
-    }
-
     function get_s3_client()
     {
         require_once "aws.phar";
@@ -1713,17 +1704,20 @@ END;
         }
     }
 
-    function static_file_url($url)
+    function static_file_base_url()
+    {
+        return $GLOBALS['g_static_base_url'];
+    }
+    function static_file_url($path)
     {
         $file_map = $GLOBALS['g_static_file_map'];
-        if( isset($file_map[$url]) )
+        if( isset($file_map[$path]) )
         {
-            return $file_map[$url];
+            return $GLOBALS['g_static_base_url'] . $file_map[$path];
         }
         else
         {
-            trigger_error("static_file_url: find url: $url",E_USER_WARNING);
-            return $url;
+            return $GLOBALS['g_static_base_url'] . $path;
         }
     }
 
