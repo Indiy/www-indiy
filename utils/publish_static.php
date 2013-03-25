@@ -89,12 +89,12 @@
             }
             
             
-            print "    url: $url\n";
+            print "      url: $url\n";
             if( isset($file_map[$url]) )
             {
                 $new_url = $file_map[$url];
                 $new_item = "url($new_url$end_url)";
-                print "    new_item: $new_item\n";
+                print "      new_item: $new_item\n";
                 
                 $contents = str_replace($item,$new_item,$contents);
             }
@@ -160,7 +160,7 @@
                                                  'Bucket' => $GLOBALS['g_aws_static_bucket'],
                                                  'Key' => $key,
                                                  ));
-                print "    skip: $key\n";
+                print "    skip!\n";
             }
             catch( Exception $e )
             {

@@ -1,31 +1,31 @@
 
 @font-face {
     font-family: 'Neuzeit Grotesk';
-    src: url('Neuzeit-Grotesk.eot');
-    src: local('Neuzeit-Grotesk'), url('Neuzeit-Grotesk.otf') format('opentype');
+    src: url('/fonts/Neuzeit-Grotesk.eot');
+    src: local('Neuzeit-Grotesk'), url('/fonts/Neuzeit-Grotesk.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Neuzeit Grotesk Light';
-    src: url('Neuzeit-Grotesk-Light.eot');
-    src: local('Neuzeit-Grotesk-Light'), url('Neuzeit-Grotesk-Light.otf') format('opentype');
+    src: url('/fonts/Neuzeit-Grotesk-Light.eot');
+    src: local('Neuzeit-Grotesk-Light'), url('/fonts/Neuzeit-Grotesk-Light.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Teletex Light';
-    src: url('Teletex_Light.eot');
-    src: local('Teletex_Light'), url('Teletex_Light.otf') format('opentype');
+    src: url('/fonts/Teletex_Light.eot');
+    src: local('Teletex_Light'), url('/fonts/Teletex_Light.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lucida Grande';
-    src: url('Lucida Grande.eot');
-    src: local('Lucida Grande'), url('Lucida Grande.ttf') format('truetype');
+    src: url('/fonts/Lucida Grande.eot');
+    src: local('Lucida Grande'), url('/fonts/Lucida Grande.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
