@@ -169,7 +169,7 @@
                               'Key' => $key,
                               'SourceFile' => $src_file,
                               'ACL' => 'public-read',
-                              'CacheControl' => 'public, max-age=300',
+                              'CacheControl' => 'public, max-age=22896000',
                               );
                 $content_type = get_content_type($extension);
                 if( $content_type )
