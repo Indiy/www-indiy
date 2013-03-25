@@ -69,7 +69,13 @@
         {
             print "css item: $item\n";
         
-            $rel_url = $arr[1][$i];
+            $url_query = $arr[1][$i];
+
+            $url_arr = array();
+            preg_match('/[^\?\#]*/',$url_query,$url_arr);
+            $rel_url = $url_arr[0];
+            
+            $end_url = substr($url_query,strlen($rel_url));
             
             if( starts_with($rel_url,'/') )
             {
@@ -87,7 +93,7 @@
             if( isset($file_map[$url]) )
             {
                 $new_url = $file_map[$url];
-                $new_item = "url($new_url)";
+                $new_item = "url($new_url$end_url)";
                 print "  new_item: $new_item\n";
                 
                 $contents = str_replace($item,$new_item,$contents);
