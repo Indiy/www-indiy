@@ -124,14 +124,16 @@
         {
             $src_file = "$dir/$item";
         
+            print "  item: $item" 
+        
             if( !is_file($src_file) )
             {
-                print "  skip non-file: $item\n";
+                print "    skip non-file: $item\n";
                 continue;
             }
             if( starts_with($src_file,'.') )
             {
-                print "  skip dot file: $item\n";
+                print "    skip dot file: $item\n";
                 continue;
             }
             
@@ -150,7 +152,7 @@
             
             
             $key = "$web_path/$key_file";
-            print "  key: $key\n";
+            print "    key: $key\n";
             
             try
             {
