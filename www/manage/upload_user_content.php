@@ -1,13 +1,8 @@
 <?php
 
-    $access_key_id = "AKIAIP2VCXXJMBG4K75Q";
-    $secret_access_key = "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";
-
     require_once "../includes/config.php";
     require_once "../includes/functions.php";
 
-    require_once "../../includes/aws.phar";
-    
     header("Cache-Control: no-cache");
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
     
@@ -42,13 +37,6 @@
     echo str_repeat(" ",1024);
     echo "<pre>\n";
 
-    use Aws\S3\S3Client;
-
-    function endsWith($haystack, $needle)
-    {
-        return substr($haystack, -strlen($needle)) == $needle;
-    }
-    
     function maybe_upload_file($client,$filename,$alt_ext)
     {
         if( $alt_ext )
@@ -58,7 +46,6 @@
             
             $filename = str_replace(".$extension",$alt_ext,$filename);
         }
-
 
         $path = "../artists/files/$filename";
         $key = "artists/files/$filename";
@@ -70,7 +57,7 @@
             try
             {
                 $ret = $client->headObject(array(
-                                                 'Bucket' => 'static2.madd3v.com',
+                                                 'Bucket' => $GLOBAL['g_aws_static_bucket'],
                                                  'Key' => $key,
                                                  ));
                 print " $key already exists, skipping\n";
@@ -82,7 +69,7 @@
             catch( Exception $e )
             {
                 $args = array(
-                              'Bucket' => 'static2.madd3v.com',
+                              'Bucket' => $GLOBAL['g_aws_static_bucket'],
                               'Key' => $key,
                               'SourceFile' => $realpath,
                               'ACL' => 'public-read',
@@ -105,16 +92,7 @@
 
     try
     {
-        
-        $args = array(
-                      'key' => $access_key_id,
-                      'secret' => $secret_access_key,
-                      );
-        
-        $client = S3Client::factory($args);
-        
-        //print "client: "; print_r($client); print "\n";
-        
+        $client = get_s3_client();
         
         $sql = "SELECT * FROM artist_files ORDER BY RAND()";
         $q = mq($sql);
@@ -129,8 +107,6 @@
             
             flush();
         }
-        
-        
     }
     catch( Exception $e )
     {
