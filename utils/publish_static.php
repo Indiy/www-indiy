@@ -131,7 +131,7 @@
                 print "    skip non-file: $item\n";
                 continue;
             }
-            if( starts_with($src_file,'.') )
+            if( starts_with($item,'.') )
             {
                 print "    skip dot file: $item\n";
                 continue;
