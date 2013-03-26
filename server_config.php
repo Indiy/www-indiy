@@ -4,10 +4,10 @@
     
     //Production 
     error_reporting(0);
-    $dbhost = "localhost";
+    $dbhost = "madprod.cghmds5s4dwn.us-east-1.rds.amazonaws.com";
     $dbusername = "madcom_user";
-    $dbpassword = "MyartistDNA!";
-    $dbname = "madcom_mysql";
+    $dbpassword = "GpLxHCPnAbLWQRFX";
+    $dbname = "madcom";
     
     $domainName = "http://www.myartistdna.com";
     $trueSiteUrl = "http://www.myartistdna.com";
