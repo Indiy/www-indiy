@@ -61,7 +61,7 @@
 		$languages = $_POST["artist_languages"];
 		$location = $_POST["artist_location"];
 		$music_likes  = $_POST["artist_music_likes"];
-		$url  = $_POST["url"];
+		$url = strtolower($_POST["url"]);
 		$website = $_POST["website"];
 		$appid = $_POST["appid"];
         $tags = $_POST["tags"];
