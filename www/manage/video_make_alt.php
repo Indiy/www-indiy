@@ -75,13 +75,13 @@
             
             $extra['alts']['ogv'] = $file_path;
             
-            unlink($ogv_file);
             print "  uploaded: $file_path\n";
         }
         else
         {
             print "***failed to make ogv: $ogv_file\n";
         }
+        unlink($dst_file);
     }
     
     function video_needs_update($extra)

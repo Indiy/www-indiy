@@ -75,13 +75,13 @@
 
             $extra['alts']['ogg'] = $file_path;
 
-            unlink($ogg_file);
             print "  uploaded: $file_path\n";
         }
         else
         {
             print "***failed to make ogg: $ogg_file\n";
         }
+        unlink($dst_file);
     }
     
     function audio_needs_update($extra)
