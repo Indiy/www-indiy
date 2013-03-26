@@ -133,7 +133,7 @@
                 }
                 else
                 {
-                    print "  no update needed\n";
+                    print "  image currently processing, skip!\n";
                 }
             }
             else
