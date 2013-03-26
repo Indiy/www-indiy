@@ -145,6 +145,11 @@
             if( $extension == 'css' )
             {
                 $src_file = parse_css($src_file,$html_dir,$web_path);
+                $css_file = $src_file;
+            }
+            else
+            {
+                $css_file = FALSE;
             }
 
             $hash = hash_file("md5",$src_file);
@@ -181,6 +186,11 @@
                 print "    uploaded: $src_file\n";
             }
             $file_map[$web_file] = $key;
+            
+            if( $css_file )
+            {
+                unlink($css_file);
+            }
         }
         
         print "done static dir\n";
