@@ -17,6 +17,8 @@
 		exit();
 	}
     
+    // No lock, each file is locked
+    /*
     $user = get_current_user();
     $fd = fopen("/tmp/make_thumbnails_$user.lock",'w+');
     if( !$fd )
@@ -30,6 +32,7 @@
         print "Failed to get lock, done!\n";
         die();
     }
+    */
     
     ignore_user_abort(TRUE);
     set_time_limit(60*60);
