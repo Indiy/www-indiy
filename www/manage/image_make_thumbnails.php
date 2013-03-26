@@ -1,18 +1,12 @@
 <?php
     
-    $access_key_id = "AKIAIP2VCXXJMBG4K75Q";
-    $secret_access_key = "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";
-    
     require_once "../includes/config.php";
     require_once "../includes/functions.php";
-    
-    require_once "../../includes/aws.phar";
     
     header("Cache-Control: no-cache");
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
     
     $ALT_IMAGE_REV_KEY = "1";
-    
     
     error_reporting(E_ALL);
     
@@ -45,8 +39,6 @@
     echo str_repeat(" ",1024);
     echo "<pre>\n";
     
-    use Aws\S3\S3Client;
-    
     function maybe_convert_and_upload_file($client,$src_image,$prefix,$width,$height,&$extra)
     {
         global $ALT_IMAGE_REV_KEY;
@@ -75,7 +67,7 @@
         try
         {
             $ret = $client->headObject(array(
-                                             'Bucket' => 'static2.madd3v.com',
+                                             'Bucket' => $GLOBALS['g_aws_static_bucket'],
                                              'Key' => $file_path,
                                              ));
             print "  Image($file_path) already exists, skipping\n";
@@ -113,7 +105,7 @@
         imagedestroy($dst_image);
         
         $args = array(
-                      'Bucket' => 'static2.madd3v.com',
+                      'Bucket' => $GLOBALS['g_aws_static_bucket'],
                       'Key' => $file_path,
                       'Body' => $img_data,
                       'ACL' => 'public-read',
@@ -152,17 +144,7 @@
     
     try
     {
-        
-        $args = array(
-                      'key' => $access_key_id,
-                      'secret' => $secret_access_key,
-                      );
-        
-        $client = S3Client::factory($args);
-        
-        //print "client: "; print_r($client); print "\n";
-        
-        
+        $client = get_s3_client();
         
         $sql = "SELECT * FROM artist_files WHERE type='IMAGE' ORDER BY artist_files.extra_json ASC";
         $q = mq($sql);

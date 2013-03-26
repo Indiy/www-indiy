@@ -57,7 +57,7 @@
             try
             {
                 $ret = $client->headObject(array(
-                                                 'Bucket' => $GLOBAL['g_aws_static_bucket'],
+                                                 'Bucket' => $GLOBALS['g_aws_static_bucket'],
                                                  'Key' => $key,
                                                  ));
                 print " $key already exists, skipping\n";
@@ -69,7 +69,7 @@
             catch( Exception $e )
             {
                 $args = array(
-                              'Bucket' => $GLOBAL['g_aws_static_bucket'],
+                              'Bucket' => $GLOBALS['g_aws_static_bucket'],
                               'Key' => $key,
                               'SourceFile' => $realpath,
                               'ACL' => 'public-read',
