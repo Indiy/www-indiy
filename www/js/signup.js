@@ -99,7 +99,7 @@ function signupArtist()
     
     var dict = {
             'name': name,
-            'url': url,
+            'url': url.toLowerCase(),
             'email': email,
             'password': password
         };

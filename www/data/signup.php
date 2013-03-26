@@ -41,7 +41,7 @@
     function do_regular_signup($data)
     {
         $name = $data['name'];
-        $url = $data['url'];
+        $url = strtolower($data['url']);
         $email = $data['email'];
         $password = md5($data['password']);
 
@@ -91,7 +91,7 @@
     function do_signup_check($data)
     {
         $name = $data['name'];
-        $url = $data['url'];
+        $url = strtolower($data['url']);
         
         $error = FALSE;
         
