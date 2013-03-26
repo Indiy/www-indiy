@@ -142,10 +142,12 @@
                 
                 if( $ret == TRUE && $row_count > 0 )
                 {
-                    
-                    $src_data = file_get_contents($url);
+                    print "  got lock...\n";
+
                     $tmp_file = tempnam("/tmp","mac");
-                    file_put_contents($tmp_file,$src_data);
+                    
+                    download_url_to_file($url,$tmp_file);
+                    print "  downloaded url: $url\n";
                     
                     $audio_length = get_audio_length($tmp_file);
                     
