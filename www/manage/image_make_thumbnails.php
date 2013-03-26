@@ -138,7 +138,7 @@
             }
             else
             {
-                print " no update needed!"
+                print " no update needed!";
             }
             print "\n";
             flush();
