@@ -17,6 +17,41 @@
 		2D0A2DFB15F2E91000F0EE6D /* player_comments.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_comments.js; sourceTree = "<group>"; };
 		2D0B9F4216680A7F00D09771 /* player_prince.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player_prince.html; sourceTree = "<group>"; };
 		2D117D0C1702984500D6BD84 /* meek_splash.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = meek_splash.html; sourceTree = "<group>"; };
+		2D117D0D17032EC200D6BD84 /* meek_splash.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = meek_splash.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2D117D0F1703307A00D6BD84 /* Lucida Grande.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lucida Grande.eot"; sourceTree = "<group>"; };
+		2D117D101703307A00D6BD84 /* Lucida Grande.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lucida Grande.ttf"; sourceTree = "<group>"; };
+		2D117D111703307A00D6BD84 /* neuzeit-grotesk-bold.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neuzeit-grotesk-bold.eot"; sourceTree = "<group>"; };
+		2D117D121703307A00D6BD84 /* neuzeit-grotesk-bold.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "neuzeit-grotesk-bold.svg"; sourceTree = "<group>"; };
+		2D117D131703307A00D6BD84 /* neuzeit-grotesk-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neuzeit-grotesk-bold.ttf"; sourceTree = "<group>"; };
+		2D117D141703307A00D6BD84 /* neuzeit-grotesk-bold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neuzeit-grotesk-bold.woff"; sourceTree = "<group>"; };
+		2D117D151703307A00D6BD84 /* Neuzeit-Grotesk-Light.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk-Light.eot"; sourceTree = "<group>"; };
+		2D117D161703307A00D6BD84 /* Neuzeit-Grotesk-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk-Light.otf"; sourceTree = "<group>"; };
+		2D117D171703307A00D6BD84 /* neuzeit-grotesk.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neuzeit-grotesk.eot"; sourceTree = "<group>"; };
+		2D117D181703307A00D6BD84 /* neuzeit-grotesk.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "neuzeit-grotesk.svg"; sourceTree = "<group>"; };
+		2D117D191703307A00D6BD84 /* neuzeit-grotesk.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neuzeit-grotesk.ttf"; sourceTree = "<group>"; };
+		2D117D1A1703307A00D6BD84 /* neuzeit-grotesk.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neuzeit-grotesk.woff"; sourceTree = "<group>"; };
+		2D117D1B1703307A00D6BD84 /* teletex_light.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = teletex_light.eot; sourceTree = "<group>"; };
+		2D117D1C1703307A00D6BD84 /* teletex_light.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = teletex_light.svg; sourceTree = "<group>"; };
+		2D117D1D1703307A00D6BD84 /* teletex_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = teletex_light.ttf; sourceTree = "<group>"; };
+		2D117D1E1703307A00D6BD84 /* teletex_light.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = teletex_light.woff; sourceTree = "<group>"; };
+		2D117D1F1703307A00D6BD84 /* teletex_med.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = teletex_med.eot; sourceTree = "<group>"; };
+		2D117D201703307A00D6BD84 /* teletex_med.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = teletex_med.svg; sourceTree = "<group>"; };
+		2D117D211703307A00D6BD84 /* teletex_med.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = teletex_med.ttf; sourceTree = "<group>"; };
+		2D117D221703307A00D6BD84 /* teletex_med.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = teletex_med.woff; sourceTree = "<group>"; };
+		2D117D231703307A00D6BD84 /* teletex_reg.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = teletex_reg.eot; sourceTree = "<group>"; };
+		2D117D241703307A00D6BD84 /* teletex_reg.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = teletex_reg.svg; sourceTree = "<group>"; };
+		2D117D251703307A00D6BD84 /* teletex_reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = teletex_reg.ttf; sourceTree = "<group>"; };
+		2D117D261703307A00D6BD84 /* teletex_reg.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = teletex_reg.woff; sourceTree = "<group>"; };
+		2D117D27170330ED00D6BD84 /* agencyb.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = agencyb.eot; sourceTree = "<group>"; };
+		2D117D28170330ED00D6BD84 /* agencyb.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = agencyb.otf; sourceTree = "<group>"; };
+		2D117D29170330ED00D6BD84 /* agencyb.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = agencyb.svg; sourceTree = "<group>"; };
+		2D117D2A170330ED00D6BD84 /* agencyb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = agencyb.ttf; sourceTree = "<group>"; };
+		2D117D2B170330ED00D6BD84 /* agencyb.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = agencyb.woff; sourceTree = "<group>"; };
+		2D117D2C170330ED00D6BD84 /* agencyr.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = agencyr.eot; sourceTree = "<group>"; };
+		2D117D2D170330ED00D6BD84 /* agencyr.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = agencyr.otf; sourceTree = "<group>"; };
+		2D117D2E170330ED00D6BD84 /* agencyr.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = agencyr.svg; sourceTree = "<group>"; };
+		2D117D2F170330ED00D6BD84 /* agencyr.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = agencyr.ttf; sourceTree = "<group>"; };
+		2D117D30170330ED00D6BD84 /* agencyr.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = agencyr.woff; sourceTree = "<group>"; };
 		2D16391D166AEBB700297030 /* convert_video.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = convert_video.php; sourceTree = "<group>"; };
 		2D163920166BB67500297030 /* unsupported_browser.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = unsupported_browser.html; sourceTree = "<group>"; };
 		2D163921166BBB5300297030 /* unsupported_browser.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = unsupported_browser.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
@@ -842,6 +877,47 @@
 			path = flash;
 			sourceTree = "<group>";
 		};
+		2D117D0E1703307A00D6BD84 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2D117D27170330ED00D6BD84 /* agencyb.eot */,
+				2D117D28170330ED00D6BD84 /* agencyb.otf */,
+				2D117D29170330ED00D6BD84 /* agencyb.svg */,
+				2D117D2A170330ED00D6BD84 /* agencyb.ttf */,
+				2D117D2B170330ED00D6BD84 /* agencyb.woff */,
+				2D117D2C170330ED00D6BD84 /* agencyr.eot */,
+				2D117D2D170330ED00D6BD84 /* agencyr.otf */,
+				2D117D2E170330ED00D6BD84 /* agencyr.svg */,
+				2D117D2F170330ED00D6BD84 /* agencyr.ttf */,
+				2D117D30170330ED00D6BD84 /* agencyr.woff */,
+				2D117D0F1703307A00D6BD84 /* Lucida Grande.eot */,
+				2D117D101703307A00D6BD84 /* Lucida Grande.ttf */,
+				2D117D111703307A00D6BD84 /* neuzeit-grotesk-bold.eot */,
+				2D117D121703307A00D6BD84 /* neuzeit-grotesk-bold.svg */,
+				2D117D131703307A00D6BD84 /* neuzeit-grotesk-bold.ttf */,
+				2D117D141703307A00D6BD84 /* neuzeit-grotesk-bold.woff */,
+				2D117D151703307A00D6BD84 /* Neuzeit-Grotesk-Light.eot */,
+				2D117D161703307A00D6BD84 /* Neuzeit-Grotesk-Light.otf */,
+				2D117D171703307A00D6BD84 /* neuzeit-grotesk.eot */,
+				2D117D181703307A00D6BD84 /* neuzeit-grotesk.svg */,
+				2D117D191703307A00D6BD84 /* neuzeit-grotesk.ttf */,
+				2D117D1A1703307A00D6BD84 /* neuzeit-grotesk.woff */,
+				2D117D1B1703307A00D6BD84 /* teletex_light.eot */,
+				2D117D1C1703307A00D6BD84 /* teletex_light.svg */,
+				2D117D1D1703307A00D6BD84 /* teletex_light.ttf */,
+				2D117D1E1703307A00D6BD84 /* teletex_light.woff */,
+				2D117D1F1703307A00D6BD84 /* teletex_med.eot */,
+				2D117D201703307A00D6BD84 /* teletex_med.svg */,
+				2D117D211703307A00D6BD84 /* teletex_med.ttf */,
+				2D117D221703307A00D6BD84 /* teletex_med.woff */,
+				2D117D231703307A00D6BD84 /* teletex_reg.eot */,
+				2D117D241703307A00D6BD84 /* teletex_reg.svg */,
+				2D117D251703307A00D6BD84 /* teletex_reg.ttf */,
+				2D117D261703307A00D6BD84 /* teletex_reg.woff */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		2D380B98146F0A5700E36189 /* madna.co */ = {
 			isa = PBXGroup;
 			children = (
@@ -1366,6 +1442,7 @@
 		2DF46F491440B77F005538C7 /* www */ = {
 			isa = PBXGroup;
 			children = (
+				2D117D0E1703307A00D6BD84 /* fonts */,
 				2DC18092160E627F007B44C0 /* artists */,
 				2DF470541440B77F005538C7 /* data */,
 				2D0A2DEA15EB05F700F0EE6D /* flash */,
@@ -1440,6 +1517,7 @@
 				2DC1808B160E4D82007B44C0 /* error.css */,
 				2DEADA9F1613B6C00076F95D /* home.css */,
 				2DEADAB41618C1170076F95D /* header2.css */,
+				2D117D0D17032EC200D6BD84 /* meek_splash.css */,
 			);
 			path = css;
 			sourceTree = "<group>";
