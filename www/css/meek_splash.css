@@ -95,7 +95,6 @@ body {
     padding-left: 13px;
     height: 147px;
     font-size: 0px;
-    font-family: 'Agency Bold', 'Agency Regular', Helvetica, sans-serif;
     white-space: nowrap;
     text-align: center;
     background: rgba(0,0,0,0.4);
@@ -115,14 +114,22 @@ body {
     vertical-align: top;
 }
 #top_container .top_line .item .time {
-    margin-top: -8px;
     height: 116px;
-    width: 134px;
+    width: 129px;
+    text-align: left;
+}
+#top_container .top_line .item .time div {
+    display: inline-block;
+    margin-top: -8px;
+    margin-left: -8px;
+    width: 67px;
+    height: 116px;
     color: #37bdbb;
     font-size: 114px;
-    letter-spacing: 16px;
+    font-family: 'Agency Bold', 'Agency Regular', Helvetica, sans-serif;
+    text-align: center;
 }
-#top_container .top_line .item .time {
+#top_container .top_line .item .time div {
     background: -webkit-linear-gradient(#2bb8b5, #6bd3d2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -135,10 +142,11 @@ body {
     text-align: left;
 }
 #top_container .top_line .colon {
-    padding-right: 14px;
+    padding-right: 20px;
     margin-top: -8px;
     color: #37bdbb;
     font-size: 114px;
+    font-family: 'Agency Bold', 'Agency Regular', Helvetica, sans-serif;
 }
 #top_container .hline {
     display: inline-block;
