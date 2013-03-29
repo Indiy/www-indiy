@@ -52,6 +52,7 @@
 		2D117D2E170330ED00D6BD84 /* agencyr.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = agencyr.svg; sourceTree = "<group>"; };
 		2D117D2F170330ED00D6BD84 /* agencyr.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = agencyr.ttf; sourceTree = "<group>"; };
 		2D117D30170330ED00D6BD84 /* agencyr.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = agencyr.woff; sourceTree = "<group>"; };
+		2D117D311706339400D6BD84 /* meek_splash.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = meek_splash.js; sourceTree = "<group>"; };
 		2D16391D166AEBB700297030 /* convert_video.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = convert_video.php; sourceTree = "<group>"; };
 		2D163920166BB67500297030 /* unsupported_browser.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = unsupported_browser.html; sourceTree = "<group>"; };
 		2D163921166BBB5300297030 /* unsupported_browser.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = unsupported_browser.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
@@ -1687,6 +1688,7 @@
 		2DF472C71440B77F005538C7 /* js */ = {
 			isa = PBXGroup;
 			children = (
+				2D117D311706339400D6BD84 /* meek_splash.js */,
 				2D3D8EF215AE4D0D00BA97B3 /* jquery.mousewheel.js */,
 				2DBDD1281469DCC4001E20CC /* login_signup.js */,
 				2D6DF95114BA4F4A00D0750E /* footer.js */,
