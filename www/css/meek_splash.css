@@ -54,6 +54,7 @@ body {
 #main_content {
     min-height: 560px;
     overflow:auto;
+    min-width: 800px;
 }
 
 .full_screen_bg {
