@@ -31,7 +31,6 @@
     font-style: normal;
 }
 
-
 html {
     margin: 0;
     padding: 0;
@@ -359,3 +358,17 @@ body {
     font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: right;
 }
+
+
+/*****************************************/
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    #main_content {
+        min-width: auto;
+    }
+}
+
+
