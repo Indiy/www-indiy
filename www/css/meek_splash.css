@@ -531,7 +531,7 @@ and (max-device-width : 480px) {
     }
     
     #footer .bottom_bar .bottom_container {
-        width: 300px;
+        width: 92%;
         height: 50px;
     }
     #footer .bottom_bar .hline {
