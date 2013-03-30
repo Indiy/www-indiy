@@ -561,7 +561,7 @@ and (max-device-width : 480px) {
     }
     
     ::-webkit-input-placeholder {
-        color: #ccc;
+        color: #ddd;
     }
 }
 
