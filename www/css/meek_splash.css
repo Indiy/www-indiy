@@ -502,8 +502,8 @@ and (max-device-width : 480px) {
     
     
     #footer {
-        height: 180px;
-        margin-top: -180px;
+        height: 102px;
+        margin-top: -102px;
     }
     #footer .banner {
         width: 300px;
@@ -511,19 +511,19 @@ and (max-device-width : 480px) {
     }
     #footer .banner .left {
         padding-top: 10px;
-        padding-left: 20px;
+        padding-left: 40px;
         font-size: 20px;
     }
     #footer .banner .right {
-        padding-top: 8px;
+        padding-top: 14px;
         padding-right: 5px;
     }
     #footer .banner .right .top {
         height: 20px;
-        font-size: 13px;
+        font-size: 14px;
     }
     #footer .banner .right .bottom {
-        font-size: 12px;
+        display: none;
     }
     
     #footer .bottom_bar .bottom_container {
@@ -539,15 +539,10 @@ and (max-device-width : 480px) {
         font-size: 11px;
     }
     #footer .bottom_bar .left .dc_logo {
-        padding-right: 2px;
-        width: 10px;
-        height: 15px;
+        display: none;
     }
     #footer .bottom_bar .left .mad_logo {
-        padding-right: 2px;
-        padding-top: 5px;
-        width: 10px;
-        height: 6px;
+        display: none;
     }
     #footer .bottom_bar .left a {
         padding-top: 5px;
