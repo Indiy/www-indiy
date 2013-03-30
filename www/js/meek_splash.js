@@ -3,6 +3,10 @@
 var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
 var IS_IPHONE = navigator.userAgent.match(/iPhone/i) != null;
 var IS_IOS = IS_IPAD || IS_IPHONE;
+var IS_WINDOWS = navigator.userAgent.match(/Windows/i) != null;
+var IS_CHROME = navigator.userAgent.match(/Chrome/i) != null;
+var IS_MOBILE = navigator.userAgent.match(/Mobile/i) != null;
+var IS_DESKTOP = !IS_MOBILE;
 
 var IS_IE = false;
 var IS_OLD_IE = false;
@@ -24,6 +28,19 @@ var g_updateInterval = false;
 
 function splashReady()
 {
+    if( IS_CHROME )
+        $(body).addClass('chrome');
+    if( IS_IPAD )
+        $(body).addClass('ipad');
+    if( IS_IPHONE )
+        $(body).addClass('iphone');
+    if( IS_IOS )
+        $(body).addClass('ios');
+    if( IS_MOBILE )
+        $(body).addClass('mobile');
+    if( IS_DESKTOP )
+        $(body).addClass('desktop');
+
     imageLoadItem(g_backgroundList[0],0,'#splash_bg');
     splashResize();
 

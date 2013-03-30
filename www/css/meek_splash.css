@@ -132,7 +132,7 @@ body {
     font-family: 'Agency Bold', 'Agency Regular', Helvetica, sans-serif;
     text-align: center;
 }
-#top_container .top_line .item .time div {
+.desktop #top_container .top_line .item .time div {
     background: -webkit-linear-gradient(#2bb8b5, #6bd3d2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -295,7 +295,7 @@ body {
     font-family: 'Agency Regular', Helvetica, sans-serif;
     text-align: right;
 }
-#footer .banner .right .bottom  {
+.desktop #footer .banner .right .bottom  {
     background: -webkit-linear-gradient(#ef983c,#f6be47);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
