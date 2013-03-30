@@ -113,7 +113,7 @@ function onKeyPressPhone(input,event)
         if( key == '-' )
             return false;
     }
-    input.value = val + key;
+    window.setTimeout(function() { input.value = val + key; },1);
     return false;
 }
 
