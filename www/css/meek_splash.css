@@ -520,11 +520,11 @@ and (max-device-width : 480px) {
     #footer .banner .right {
         padding-top: 14px;
         padding-right: 5px;
-        font-family: 'Agency Bold', Helvetica, sans-serif;
     }
     #footer .banner .right .top {
         height: 20px;
         font-size: 14px;
+        font-family: 'Agency Bold', Helvetica, sans-serif;
     }
     #footer .banner .right .bottom {
         display: none;
