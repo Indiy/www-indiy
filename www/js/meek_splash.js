@@ -41,6 +41,13 @@ function splashReady()
     if( IS_DESKTOP )
         $('body').addClass('desktop');
 
+    if( IS_IPHONE )
+    {
+        $('#input_name').attr('placeholder',"Name");
+        $('#input_email').attr('placeholder',"Email Address");
+        $('#input_phone').attr('placeholder',"Phone Number");
+    }
+
     imageLoadItem(g_backgroundList[0],0,'#splash_bg');
     splashResize();
 
