@@ -128,5 +128,6 @@ function submitSplash()
 function splashFormDone()
 {
     $('.form_hide').hide();
+    $('.success_show').show();
 }
 
