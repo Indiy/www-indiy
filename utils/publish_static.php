@@ -67,7 +67,7 @@
         
         foreach($arr[0] as $i => $item)
         {
-            print "    css item: $item\n";
+            //print "    css item: $item\n";
         
             $url_query = $arr[1][$i];
 
@@ -89,12 +89,12 @@
             }
             
             
-            print "      url: $url\n";
+            //print "      url: $url\n";
             if( isset($file_map[$url]) )
             {
                 $new_url = $file_map[$url];
                 $new_item = "url($new_url$end_url)";
-                print "      new_item: $new_item\n";
+                //print "      new_item: $new_item\n";
                 
                 $contents = str_replace($item,$new_item,$contents);
             }
@@ -116,7 +116,7 @@
         
         $dir = "$html_dir$web_path";
         
-        print "doing static dir: $dir\n";
+        //print "doing static dir: $dir\n";
         
         $dir_items = scandir($dir);
         
@@ -124,16 +124,16 @@
         {
             $src_file = "$dir/$item";
         
-            print "  item: $item\n";
+            //print "  item: $item\n";
         
             if( !is_file($src_file) )
             {
-                print "    skip non-file: $item\n";
+                //print "    skip non-file: $item\n";
                 continue;
             }
             if( starts_with($item,'.') )
             {
-                print "    skip dot file: $item\n";
+                //print "    skip dot file: $item\n";
                 continue;
             }
             
@@ -157,7 +157,7 @@
             
             
             $key = "$web_path/$key_file";
-            print "    key: $key\n";
+            //print "    key: $key\n";
             
             try
             {
@@ -165,7 +165,7 @@
                                                  'Bucket' => $GLOBALS['g_aws_static_bucket'],
                                                  'Key' => $key,
                                                  ));
-                print "    skip!\n";
+                //print "    skip!\n";
             }
             catch( Exception $e )
             {
@@ -183,7 +183,7 @@
                 }
                 
                 $client->putObject($args);
-                print "    uploaded: $src_file\n";
+                //print "    uploaded: $src_file\n";
             }
             $file_map[$web_file] = $key;
             
@@ -193,7 +193,7 @@
             }
         }
         
-        print "done static dir\n";
+        //print "done static dir\n";
     }
     
     
@@ -232,8 +232,8 @@
 
     file_put_contents($file_map_php,$file_map_php_contents);
 
-    print "\n\n";
+    //print "\n\n";
     print "Wrote file map to file: $file_map_php\n";
-    print "\n\n";
+    //print "\n\n";
     print "done done\n";
 ?>
