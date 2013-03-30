@@ -92,9 +92,6 @@ function getDigitHtml(value)
 
 function onKeyPressPhone(input,event,sel)
 {
-    if( IS_IOS )
-        return true;
-
     var val = input.value;
     var key = String.fromCharCode(event.keyCode);
     
