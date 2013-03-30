@@ -113,8 +113,8 @@ function onKeyPressPhone(input,event)
         if( key == '-' )
             return false;
     }
-    input.value = val;
-    return true;
+    input.value = val + key;
+    return false;
 }
 
 function submitSplash()
