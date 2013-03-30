@@ -410,7 +410,7 @@ and (max-device-width : 480px) {
     }
     #top_container .top_line {
         padding-left: 11px;
-        height: 55px;
+        height: 57px;
     }
     #top_container .logo_holder {
         margin-top: 10px;
@@ -423,18 +423,18 @@ and (max-device-width : 480px) {
         height: 41px;
     }
     #top_container .top_line .item .time {
-        height: 41px;
+        height: 37px;
         width: 45px;
     }
     #top_container .top_line .item .time div {
         margin-top: -2px;
         margin-left: -2px;
         width: 22px;
-        height: 41px;
+        height: 37px;
         font-size: 40px;
     }
     #top_container .top_line .item .unit {
-        padding-left: 6px;
+        padding-left: 1px;
         font-size: 15px;
     }
     #top_container .top_line .colon {
@@ -453,10 +453,11 @@ and (max-device-width : 480px) {
         padding-bottom: 5px;
         font-size: 50px;
         letter-spacing: 1px;
+        line-height: 44px;
     }
     .subtitle {
         font-size: 30px;
-        line-height: 40px;
+        line-height: 30px;
     }
     .form_container {
         padding-top: 20px;
@@ -474,8 +475,10 @@ and (max-device-width : 480px) {
         letter-spacing: 1px;
     }
     .form_container .input_line .input_container {
-        padding-left: 10px;
-        padding-right: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0px;
+        padding-right: 0px;
     }
     .form_container .input_line .input_container input {
         padding-left: 8px;
