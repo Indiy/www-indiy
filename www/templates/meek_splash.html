@@ -24,6 +24,9 @@
 
     <script type="text/javascript">
         var g_trueSiteUrl = "<?=trueSiteUrl();?>";
+        var g_apiBaseUrl = "http://api.madd3v.com";
+        var g_artistId = 209;
+        var g_formTag = "meek_splash_20130401";
     </script>
 
     <script type="text/javascript">
@@ -76,23 +79,23 @@
         </div>
         <div class='title'>#DC3 DROPS MAY 6TH</div>
         <div class='subtitle'>GET THE <div class='blue'>DREAMCHASERS3 MIX TAPE</div> BEFORE ANYONE ELSE!</div>
-        <div class='subtitle'>ENTER YOUR INFORMATION BELOW</div>
-        <div class='form_container'>
+        <div class='subtitle form_hide'>ENTER YOUR INFORMATION BELOW</div>
+        <div class='form_container form_hide'>
             <div class='input_line'>
                 <div class='label'>Name:</div>
                 <div class='input_container'><input id='input_name'/></div>
             </div>
             <div class='input_line'>
                 <div class='label'>Email Address:</div>
-                <div class='input_container'><input id='input_name'/></div>
+                <div class='input_container'><input id='input_email'/></div>
             </div>
             <div class='input_line'>
                 <div class='label'>Phone Number:</div>
-                <div class='input_container'><input id='input_name'/></div>
+                <div class='input_container'><input id='input_phone' onkeypress='return onKeyPressPhone(this,event);'/></div>
             </div>
             <div class='input_line'>
                 <div class='button_container'>
-                    <div class='button'>GET IT FIRST!</div>
+                    <div class='button' onclick='submitSplash();'>GET IT FIRST!</div>
                 </div>
             </div>
         </div>
