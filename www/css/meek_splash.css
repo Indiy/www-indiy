@@ -359,6 +359,9 @@ body {
     font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: right;
 }
+#footer .bottom_bar .right .rights_reserved {
+    display: inline;
+}
 
 
 /*****************************************/
@@ -552,7 +555,9 @@ and (max-device-width : 480px) {
         padding-right: 3px;
         font-size: 6px;
     }
-
+    #footer .bottom_bar .right .rights_reserved {
+        display: none;
+    }
     
 }
 
