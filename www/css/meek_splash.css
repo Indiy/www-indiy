@@ -560,6 +560,9 @@ and (max-device-width : 480px) {
         display: none;
     }
     
+    ::-webkit-input-placeholder {
+        color: #ccc;
+    }
 }
 
 
