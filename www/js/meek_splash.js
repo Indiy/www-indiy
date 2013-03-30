@@ -90,7 +90,7 @@ function getDigitHtml(value)
     return html;
 }
 
-function onKeyPressPhone(input,event)
+function onKeyPressPhone(input,event,sel)
 {
     var val = input.value;
     var key = String.fromCharCode(event.keyCode);
@@ -113,8 +113,9 @@ function onKeyPressPhone(input,event)
         if( key == '-' )
             return false;
     }
-    window.setTimeout(function() { input.value = val + key; },1);
-    return false;
+    var new_val = val + key;
+    window.setTimeout(function() { $(sel).val(new_val); },1);
+    return true;
 }
 
 function submitSplash()
