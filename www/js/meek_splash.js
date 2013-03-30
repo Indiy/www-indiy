@@ -43,9 +43,9 @@ function splashResize()
 function secsUntilEvent()
 {
     var now = new Date();
-    var event = new Date("Sat, 06 Apr 2013 00:00:00 GMT");
+    
 
-    var time_left = event - now;
+    var time_left = g_eventDate - now;
     return Math.floor(time_left/1000);
 }
 
