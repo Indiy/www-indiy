@@ -472,13 +472,15 @@ and (max-device-width : 480px) {
         display: none;
     }
     .form_container .input_line .input_container {
+        display: block;
         padding-left: 0px;
         padding-right: 0px;
+        text-align: center;
     }
     .form_container .input_line .input_container input {
         padding-left: 8px;
         padding-right: 8px;
-        width: 90%;
+        width: 276px;
         height: 33px;
         font-size: 20px;
         letter-spacing: 1px;
@@ -490,7 +492,7 @@ and (max-device-width : 480px) {
         padding-right: 0px;
     }
     .form_container .input_line .button_container .button {
-        width: 90%;
+        width: 288px;
         height: 37px;
         font-size: 30px;
         border: 4px solid white;
@@ -504,24 +506,24 @@ and (max-device-width : 480px) {
         margin-top: -180px;
     }
     #footer .banner {
-        width: 95%;
-        height: auto;
+        width: 300px;
+        height: 90px;
     }
     #footer .banner .left {
         padding-top: 10px;
-        padding-left: 61px;
-        font-size: 65px;
+        padding-left: 20px;
+        font-size: 20px;
     }
     #footer .banner .right {
-        padding-top: 18px;
-        padding-right: 10px;
+        padding-top: 8px;
+        padding-right: 5px;
     }
     #footer .banner .right .top {
-        height: 36px;
-        font-size: 36px;
+        height: 20px;
+        font-size: 13px;
     }
     #footer .banner .right .bottom {
-        font-size: 24px;
+        font-size: 12px;
     }
     
     #footer .bottom_bar .bottom_container {
