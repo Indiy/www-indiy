@@ -464,7 +464,7 @@ and (max-device-width : 480px) {
     }
     .form_container {
         padding-top: 20px;
-        padding-bottom: 190px;
+        padding-bottom: 135px;
     }
     
     .form_container .input_line {
