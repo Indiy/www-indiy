@@ -403,6 +403,7 @@ and (orientation : portrait) {
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
+
     #main_content {
         min-width: 320px;
         overflow-x: hidden;
@@ -498,6 +499,6 @@ and (max-device-width : 480px) {
         border-radius: 4px;
         box-shadow: inset 0px 3px 35px #066;
     }
-s}
+}
 
 
