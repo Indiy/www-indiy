@@ -2,7 +2,7 @@
 
 var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
 
-var PHONE_REGEX = new RegExp('^[0-9]{3}-[0-9]{3}-[0-9]{4}$')
+var PHONE_REGEX = new RegExp('^[0-9]{3}-[0-9]{3}-[0-9]{4}$');
 
 var g_updateInterval = false;
 
@@ -50,13 +50,28 @@ function getDigitHtml(value)
 function onKeyPressPhone(input,event)
 {
     var val = input.value;
-    var key = Character.toChars(event.keyCode);
+    var key = String.fromCharCode(event.keyCode);
     
-    if( val.length == 3 && key != '-' )
+    if( "1234567890-".indexOf(key) == -1 )
+        return false;
+    
+    if( val.length == 3 )
     {
-        val += '-';
+        if( key != '-' )
+            val += '-';
+    }
+    else if( val.length == 7 )
+    {
+        if( key != '-' )
+            val += '-';
+    }
+    else
+    {
+        if( key == '-' )
+            return false;
     }
     input.value = val;
+    return true;
 }
 
 function submitSplash()
@@ -71,24 +86,24 @@ function submitSplash()
         return;
     }
     
-    if( !EMAIL_REGEX.match(email) )
+    if( !email.match(EMAIL_REGEX) )
     {
         window.alert("Please enter a valid email address.");
         return;
     }
     
-    if( !PHONE_REGEX.match(phone) )
+    if( !phone.match(PHONE_REGEX) )
     {
         window.alert("Please enter a valid phone number.");
         return;
     }
     
     var args = {
+        artist_id: g_artistId,
+        form_tag: g_formTag,
         name: name,
         email: email,
-        phone: phone,
-        artist_id: g_artistId,
-        form_tag: g_formTag
+        phone: phone
     };
     
     var url = "{0}/data/artist_form.php".format(g_apiBaseUrl);

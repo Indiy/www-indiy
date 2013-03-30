@@ -217,6 +217,7 @@ body {
     border: 2px solid #34b0b0;
     border-radius: 4px;
     background: rgba(52,176,176,0.5);
+    outline: none;
 }
 .form_container .input_line .button_container {
     padding-left: 159px;
