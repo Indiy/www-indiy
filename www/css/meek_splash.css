@@ -1,11 +1,11 @@
 
 @font-face {
     font-family: 'Neuzeit Grotesk';
-    src: url('/fonts/neuzeit-grotesk.eot');
-    src: url('/fonts/neuzeit-grotesk-bold.svg#neuzeitgrobold') format('svg'),
-    url('/fonts/neuzeit-grotesk.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/neuzeit-grotesk.woff') format('woff'),
-    url('/fonts/neuzeit-grotesk.ttf') format('truetype');
+    src: url('../fonts/neuzeit-grotesk.eot');
+    src: url('../fonts/neuzeit-grotesk-bold.svg#neuzeitgrobold') format('svg'),
+    url('../fonts/neuzeit-grotesk.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/neuzeit-grotesk.woff') format('woff'),
+    url('../fonts/neuzeit-grotesk.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -342,14 +342,14 @@ body {
 }
 #footer .bottom_bar .left a {
     display: inline-block;
-    padding-top: 9px;
+    padding-top: 12px;
     color: #5ab5b7;
     text-decoration: none;
     vertical-align: top;
 }
 #footer .bottom_bar .right {
     float: right;
-    padding-top: 13px;
+    padding-top: 17px;
     padding-right: 5px;
     color: #5ab5b7;
     font-size: 11px;
