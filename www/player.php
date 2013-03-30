@@ -110,7 +110,7 @@
     {
         $iphone_version = FALSE;
     }
-    if( $artist_player_template == 'MEEK_SPLASH' )
+    if( $artist_player_template == 'MEEK_SPLASH' || $artist_player_template == 'MEEK_VIDEO' )
     {
         $iphone_version = FALSE;
     }
@@ -510,6 +510,10 @@
     else if( $artist_player_template == 'MEEK_SPLASH' )
     {
         include_once 'templates/meek_splash.html';
+    }
+    else if( $artist_player_template == 'MEEK_VIDEO' )
+    {
+        include_once 'templates/meek_video.html';
     }
     else
     {

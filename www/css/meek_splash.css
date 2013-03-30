@@ -176,6 +176,8 @@ body {
     text-align: center;
     line-height: 40px;
 }
+
+.title .blue,
 .subtitle .blue {
     display: inline;
     color: #47c6c3;
