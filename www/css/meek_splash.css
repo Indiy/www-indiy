@@ -475,8 +475,6 @@ and (max-device-width : 480px) {
         letter-spacing: 1px;
     }
     .form_container .input_line .input_container {
-        margin-left: auto;
-        margin-right: auto;
         padding-left: 0px;
         padding-right: 0px;
     }
