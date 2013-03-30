@@ -131,7 +131,8 @@ body {
     font-family: 'Agency Bold', 'Agency Regular', Helvetica, sans-serif;
     text-align: center;
 }
-.desktop #top_container .top_line .item .time div {
+.desktop #top_container .top_line .item .time div,
+.ipad #top_container .top_line .item .time div {
     background: -webkit-linear-gradient(#2bb8b5, #6bd3d2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -368,6 +369,28 @@ and (max-device-width : 1024px)
 and (orientation : portrait) {
     #main_content {
         min-width: auto;
+    }
+    
+    #top_container .top_line .item .time {
+        height: 108px;
+        width: 119px;
+        text-align: left;
+    }
+    #top_container .top_line .item .time div {
+        margin-top: -8px;
+        margin-left: -8px;
+        width: 62px;
+        height: 116px;
+        font-size: 104px;
+    }
+    #top_container .top_line .item .unit {
+        padding-left: 6px;
+    }
+    #top_container .top_line .colon {
+        padding-right: 16px;
+        margin-top: -8px;
+        color: #37bdbb;
+        font-size: 104px;
     }
 }
 
