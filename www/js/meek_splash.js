@@ -29,17 +29,17 @@ var g_updateInterval = false;
 function splashReady()
 {
     if( IS_CHROME )
-        $(body).addClass('chrome');
+        $('body').addClass('chrome');
     if( IS_IPAD )
-        $(body).addClass('ipad');
+        $('body').addClass('ipad');
     if( IS_IPHONE )
-        $(body).addClass('iphone');
+        $('body').addClass('iphone');
     if( IS_IOS )
-        $(body).addClass('ios');
+        $('body').addClass('ios');
     if( IS_MOBILE )
-        $(body).addClass('mobile');
+        $('body').addClass('mobile');
     if( IS_DESKTOP )
-        $(body).addClass('desktop');
+        $('body').addClass('desktop');
 
     imageLoadItem(g_backgroundList[0],0,'#splash_bg');
     splashResize();
