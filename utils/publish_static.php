@@ -230,7 +230,7 @@
 
     $file_map_php = "$base_web_dir/includes/static_file_map.php";
 
-    file_put_contents($file_map_php,$file_map_php_contents);
+    file_put_contents($file_map_php,$file_map_php_contents,LOCK_EX);
 
     //print "\n\n";
     print "Wrote file map to file: $file_map_php\n";
