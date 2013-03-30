@@ -6,20 +6,6 @@
     check_unsupported_browser();
     session_start();
     
-    $ios_version = FALSE;
-    
-    if( strpos($_SERVER['HTTP_USER_AGENT'],"iPhone") !== FALSE )
-        $ios_version = TRUE;
-
-    if( isset($_REQUEST['desktop']) && $_REQUEST['desktop'] == 'true' )
-        $ios_version = FALSE;
-    
-    if( $ios_version )
-    {
-        require_once 'player_iphone.php';
-        die();
-    }
-
     if( !$artist_url )
     {
         $artist_url = get_artist_url_for_page();
@@ -113,8 +99,26 @@
     $artist_base_url = str_replace("http://www.","http://$artist_url.",trueSiteUrl());
     
     $artist_extra = json_decode($artist_data['extra_json'],TRUE);
-    
     $start_media_type = $artist_extra['start_media_type'];
+    
+    $iphone_version = FALSE;
+    if( strpos($_SERVER['HTTP_USER_AGENT'],"iPhone") !== FALSE )
+    {
+        $iphone_version = TRUE;
+    }
+    if( isset($_REQUEST['desktop']) && $_REQUEST['desktop'] == 'true' )
+    {
+        $iphone_version = FALSE;
+    }
+    if( $artist_player_template == 'MEEK_SPLASH' )
+    {
+        $iphone_version = FALSE;
+    }
+    if( $iphone_version )
+    {
+        require_once 'player_iphone.php';
+        die();
+    }
 
     $product_list = array();
     $product_list_html = "";
