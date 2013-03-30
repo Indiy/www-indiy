@@ -310,6 +310,7 @@ body {
 #footer .bottom_bar .bottom_container {
     display: inline-block;
     width: 750px;
+    height: 50px;
 }
 #footer .bottom_bar .hline {
     height: 3px;
@@ -317,22 +318,38 @@ body {
 }
 #footer .bottom_bar .left {
     float: left;
-    height: 48px;
-    padding-top: 10px;
+    padding-top: 4px;
     padding-left: 5px;
     color: #5ab5b7;
     font-size: 11px;
     font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: left;
 }
+#footer .bottom_bar .left .dc_logo {
+    display: inline-block;
+    padding-right: 2px;
+    width: 20px;
+    height: 30px;
+    vertical-align: top;
+}
+#footer .bottom_bar .left .mad_logo {
+    display: inline-block;
+    padding-right: 2px;
+    padding-top: 10px;
+    width: 20px;
+    height: 11px;
+    vertical-align: top;
+}
 #footer .bottom_bar .left a {
+    display: inline-block;
+    padding-top: 9px;
     color: #5ab5b7;
     text-decoration: none;
+    vertical-align: top;
 }
 #footer .bottom_bar .right {
     float: right;
-    height: 48px;
-    padding-top: 10px;
+    padding-top: 13px;
     padding-right: 5px;
     color: #5ab5b7;
     font-size: 11px;
