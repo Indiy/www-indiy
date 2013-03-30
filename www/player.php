@@ -503,6 +503,10 @@
     {
         include_once 'templates/player_prince.html';
     }
+    else if( $artist_player_template == 'MEEK_SPLASH' )
+    {
+        include_once 'templates/meek_splash.html';
+    }
     else
     {
         include_once 'templates/player.html';

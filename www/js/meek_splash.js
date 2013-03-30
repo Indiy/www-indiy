@@ -22,17 +22,6 @@ var PHONE_REGEX = new RegExp('^[0-9]{3}-[0-9]{3}-[0-9]{4}$');
 
 var g_updateInterval = false;
 
-var g_backgroundList = [
-    {
-        image: "../images/meek-bg.jpg",
-        bg_color: "000000",
-        bg_style: "STRETCH",
-        bg_justify: "TOP",
-        loaded: false,
-        image_data: { width:1920, height:768 },
-    }];
-
-
 function splashReady()
 {
     imageLoadItem(g_backgroundList[0],0,'#splash_bg');

@@ -11,22 +11,33 @@
     <![endif]-->
 
     
-    <link href="../css/meek_splash.css" rel="stylesheet" type="text/css"/>
+    <link href="<?=static_file_url('../css/meek_splash.css');?>" rel="stylesheet" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
 
-    <script src="../js/jquery.mousewheel.js" type="text/javascript"></script>
-    <script src="../js/jquery.jplayer.js" type="text/javascript"></script>
-    <script src="../js/string.utils.js" type="text/javascript"></script>
+    <script src="<?=static_file_url('../js/jquery.mousewheel.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('../js/jquery.jplayer.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('../js/string.utils.js');?>" type="text/javascript"></script>
 
-    <script src="../js/player_image.js" type="text/javascript"></script>
-    <script src="../js/meek_splash.js" type="text/javascript"></script>
+    <script src="<?=static_file_url('../js/player_image.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('../js/meek_splash.js');?>" type="text/javascript"></script>
 
     <script type="text/javascript">
         var g_trueSiteUrl = "<?=trueSiteUrl();?>";
         var g_apiBaseUrl = "http://api.madd3v.com";
-        var g_artistId = 209;
+        var g_artistId = <?=$artist_id;?>;
         var g_formTag = "meek_splash_20130401";
+        
+        var g_backgroundList = [
+            {
+                image: "<?=static_file_url('/images/meek-bg.jpg');?>",
+                bg_color: "000000",
+                bg_style: "STRETCH",
+                bg_justify: "TOP",
+                loaded: false,
+                image_data: { width:1920, height:768 }
+            }];
+        
     </script>
 
     <script type="text/javascript">
