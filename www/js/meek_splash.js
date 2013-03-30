@@ -92,6 +92,9 @@ function getDigitHtml(value)
 
 function onKeyPressPhone(input,event,sel)
 {
+    if( IS_IOS )
+        return true;
+
     var val = input.value;
     var key = String.fromCharCode(event.keyCode);
     
@@ -101,20 +104,18 @@ function onKeyPressPhone(input,event,sel)
     if( val.length == 3 )
     {
         if( key != '-' )
-            val += '-';
+            input.value += '-';
     }
     else if( val.length == 7 )
     {
         if( key != '-' )
-            val += '-';
+            input.value += '-';
     }
     else
     {
         if( key == '-' )
             return false;
     }
-    var new_val = val + key;
-    window.setTimeout(function() { $(sel).val(new_val); },1);
     return true;
 }
 
