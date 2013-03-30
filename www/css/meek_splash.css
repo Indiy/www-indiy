@@ -369,6 +369,7 @@ and (max-device-width : 1024px)
 and (orientation : portrait) {
     #main_content {
         min-width: auto;
+        overflow-x: hidden;
     }
     
     #top_container .top_line .item .time {
