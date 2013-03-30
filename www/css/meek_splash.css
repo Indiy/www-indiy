@@ -392,6 +392,11 @@ and (orientation : portrait) {
         color: #37bdbb;
         font-size: 104px;
     }
+    #top_container .hline {
+        min-width: 750px;
+        width: 750px;
+    }
+
 }
 
 
