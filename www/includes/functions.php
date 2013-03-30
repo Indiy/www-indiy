@@ -1721,4 +1721,10 @@ END;
         }
     }
 
+    function api_base_url()
+    {
+        return $GLOBALS['g_api_base_url'];
+    }
+
+
 ?>
