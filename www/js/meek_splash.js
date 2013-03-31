@@ -26,6 +26,7 @@ var PHONE_REGEX = new RegExp('^[0-9]{3}-[0-9]{3}-[0-9]{4}$');
 
 var g_updateInterval = false;
 var g_videoPlayer = false;
+var g_videoPlaying = false;
 
 function splashReady()
 {
@@ -64,16 +65,38 @@ function splashReady()
         g_videoPlayer.addEvent('pause',videoPause);
         g_videoPlayer.addEvent('ended',videoPause);
     }
+    
+    $(window).resize(maybeVideoResize);
 }
 $(document).ready(splashReady);
 
 function videoPlay()
 {
-    
+    g_videoPlaying = true;
+    $('.video_container').addClass('full_screen');
+    videoResize();
 }
 function videoPause()
 {
-    
+    g_videoPlaying = false;
+    $('.video_container').removeClass('full_screen');
+    videoResize();
+}
+function videoResize()
+{
+    if( g_videoPlayer )
+    {
+        var width = $('.video_container').width();
+        var height = $('.video_container').height();
+        g_videoPlayer.size(width,height);
+    }
+}
+function maybeVideoResize()
+{
+    if( g_videoPlaying )
+    {
+        videoResize();
+    }
 }
 
 function splashResize()
