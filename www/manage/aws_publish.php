@@ -220,7 +220,7 @@
             
             foreach( $ret['HostedZones'] as $zone )
             {
-                print "        zone name: " . $zone['Name'] . "\n";
+                //print "        zone name: " . $zone['Name'] . "\n";
 
                 if( $zone['Name'] == $domain )
                     return $zone['Id'];
@@ -250,7 +250,7 @@
         
         foreach( $ret['ResourceRecordSets'] as $record )
         {
-            print "        record: " . $record['Type'] . " " . $record['Name'] . "\n";
+            //print "        record: " . $record['Type'] . " " . $record['Name'] . "\n";
         
             if( $record['Name'] == $name && $record['Type'] == $type )
             {
