@@ -270,6 +270,10 @@ body {
     margin-top: -180px;
     clear: both;
 }
+.splash_video #footer {
+    height: 50px;
+    margin-top: -50px;
+}
 #footer .banner {
     position: relative;
     display: block;
