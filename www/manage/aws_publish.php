@@ -97,11 +97,12 @@
             if( $s3_client->doesBucketExist($s3_bucket) )
             {
                 $web_config = $s3_client->getBucketWebsite(array('Bucket' => $s3_bucket));
-                print "web_config: ";
+                print "  web_config: ";
                 var_dump($web_config);
                 print "\n";
                 $suffix = $web_config['IndexDocument']['Suffix'];
-                print "Got suffix for web config: $suffix\n";
+                print "  Got suffix for web config: $suffix\n";
+                print "  s3 bucket: $s3_bucket\n";
                 return TRUE;
             }
         }
@@ -133,8 +134,12 @@
                           );
             $s3_client->putBucketWebsite($args);
             
+            print "  s3 bucket: $s3_bucket\n";
+            
             return TRUE;
         }
+        print "  failed to make s3 bucket!\n";
+
         return FALSE;
     }
     function make_cloudfront_distro($cf_client,$artist,$extra)
@@ -234,9 +239,9 @@
                 
                 print "artist: $artist_name, url: $url\n";
                 
-                print "  extra:";
-                var_dump($extra);
-                print "\n";
+                //print "  extra:";
+                //var_dump($extra);
+                //print "\n";
                 
                 if( isset($extra['aws']) && $extra['aws']['cloudfront_enable'] )
                 {
