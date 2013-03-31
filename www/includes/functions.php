@@ -1347,7 +1347,8 @@ END;
     {
         $artist_url = FALSE;
         $http_host = $_SERVER["HTTP_HOST"];
-        if( "http://$http_host" == trueSiteUrl() )
+        if( "http://$http_host" == trueSiteUrl()
+           || $http_host == staging_host() )
         {
             if( isset($_GET["url"]) )
             {
@@ -1531,6 +1532,18 @@ END;
                       );
         
         $client = Aws\CloudFront\CloudFrontClient::factory($args);
+        return $client;
+    }
+    function get_r53_client()
+    {
+        require_once "aws.phar";
+        
+        $args = array(
+                      'key' => $GLOBALS['g_access_key_id'],
+                      'secret' => $GLOBALS['g_secret_access_key'],
+                      );
+        
+        $client = Aws\Route53\Route53Client::factory($args);
         return $client;
     }
 
@@ -1738,5 +1751,13 @@ END;
         return $GLOBALS['g_api_base_url'];
     }
 
+    function staging_host()
+    {
+        return $GLOBALS['g_staging_host'];
+    }
+    function root_redirect_ip()
+    {
+        return $GLOBALS['g_root_redirect_ip'];
+    }
 
 ?>

@@ -55,6 +55,9 @@
     $fm_port = 8000;
     
     */
+    
+    $g_root_redirect_ip = "54.225.71.64";
+    
     $g_access_key_id = "AKIAIP2VCXXJMBG4K75Q";
     $g_secret_access_key = "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";
 

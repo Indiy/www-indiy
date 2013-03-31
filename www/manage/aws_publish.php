@@ -37,57 +37,6 @@
     echo str_repeat(" ",1024);
     echo "<pre>\n";
     
-    function maybe_upload_file($client,$filename,$alt_ext)
-    {
-        if( $alt_ext )
-        {
-            $path_parts = pathinfo($filename);
-            $extension = strtolower($path_parts['extension']);
-            
-            $filename = str_replace(".$extension",$alt_ext,$filename);
-        }
-        
-        $path = "../artists/files/$filename";
-        $key = "artists/files/$filename";
-        
-        $realpath = realpath($path);
-        
-        if( file_exists($realpath ) )
-        {
-            try
-            {
-                $ret = $client->headObject(array(
-                                                 'Bucket' => $GLOBALS['g_aws_static_bucket'],
-                                                 'Key' => $key,
-                                                 ));
-                print " $key already exists, skipping\n";
-                
-                $extra['alts']['alt_key'] = $file_path;
-                
-                return;
-            }
-            catch( Exception $e )
-            {
-                $args = array(
-                              'Bucket' => $GLOBALS['g_aws_static_bucket'],
-                              'Key' => $key,
-                              'SourceFile' => $realpath,
-                              'ACL' => 'public-read',
-                              'CacheControl' => 'public, max-age=22896000'
-                              );
-                $client->putObject($args);
-                print " uploaded: $filename\n";
-            }
-        }
-        else
-        {
-            if( !$alt_ext )
-            {
-                print "******file missing: $filename, $path, $realpath\n";
-            }
-        }
-    }
-    
     function make_s3_bucket($s3_client,$url,&$extra)
     {
         if( isset($extra['aws']['s3_bucket']))
@@ -158,10 +107,6 @@
             }
         }
         
-        print "  cf extra: ";
-        var_dump($extra);
-        print "\n";
-        
         $artist_id = $artist['id'];
         $s3_bucket = $extra['aws']['s3_bucket'];
         $url = $artist['url'];
@@ -172,6 +117,7 @@
         
         if( $custom_domain )
         {
+            $custom_domain = str_replace("www.","",$custom_domain);
             $aliases[] = $custom_domain;
             $aliases[] = "www.$custom_domain";
         }
@@ -225,13 +171,178 @@
         $extra['aws']['cloudfront']['domain_name'] = $ret['DomainName'];
         return TRUE;
     }
+
+    function publish_artist_pages($s3_client,$artist,$extra)
+    {
+        $artist_url = $artist['url'];
     
+        $url = "http://" . staging_base_url() .  "/player.php?url=$artist_url";
+        $body = file_get_contents($url);
+        
+        $s3_bucket = $extra['aws']['s3_bucket'];
+        $key = '/index.html';
+        
+        write_s3_html_file($s3_bucket,$key,$body);
+    }
+    
+    function write_s3_html_file($s3_bucket,$key,$body)
+    {
+        $headers = array(
+                         'X-UA-Compatible' => 'chrome=1',
+                         );
+    
+        $args = array(
+                      'Bucket' => $s3_bucket,
+                      'Key' => $key,
+                      'Body' => $body,
+                      'ACL' => 'public-read',
+                      'CacheControl' => 'public, max-age=300',
+                      'ContentType' => 'text/html',
+                      'Metadata' => $headers,
+                      );
+        $client->putObject($args);
+    }
+    
+    function get_r53_zone_id($r53_client,$domain)
+    {
+        $marker = FALSE;
+    
+        while( TRUE )
+        {
+            $args = array();
+            
+            if( $marker )
+            {
+                $args['Marker'] = $marker;
+            }
+     
+            $ret = $r53_client->listHostedZones($args);
+            
+            foreach( $ret['HostedZones'] => $zone )
+            {
+                if( $zone['Name'] == $domain )
+                    return $zone['Id'];
+            }
+            
+            if( $ret['IsTruncated'] )
+            {
+                $marker = $ret['NextMarker'];
+            }
+            else
+            {
+                break;
+            }
+        }
+        return FALSE;
+    }
+    function get_r53_record_set($r53_client,$zone_id,$domain,$host)
+    {
+        $args = array(
+                      'HostedZoneId' => $zone_id,
+                      'StartRecordName' => $host,
+                      'MaxItems' => 100,
+                      );
+        
+        
+        $ret = $r53_client->listResourceRecordSets($args);
+        
+        foreach( $ret['ResourceRecordSets'] as $record )
+        {
+            print "        name: " . $record['Name'] . "\n";
+        
+            if( $record['Name'] == $host )
+            {
+                return $record;
+            }
+        }
+
+        return FALSE;
+    }
+    
+    function update_route53_record($r53_client,$domain,$host,$record_type,$record_value)
+    {
+        print "  Update R53 record: $domain $host $record_type $record_value\n";
+    
+        $zone_id = get_r53_zone_id($r53_client,$domain);
+        
+        if( !$zone_id )
+        {
+            print "  zone ($domain) not found!\n";
+            return TRUE;
+        }
+        
+        $rrs = get_r53_record_set($r53_client,$zone_id,$domain,$host);
+        
+        $changes = array();
+        if( $rrs )
+        {
+            if( $rrs['Type'] == $record_type
+               && $rrs['ResourceRecords'][0]['Value'] == $record_value
+               )
+            {
+                print "    record already exists!\ns";
+                return TRUE;
+            }
+            
+            $change = array(
+                            'Action' => 'DELETE',
+                            'ResourceRecordSet' => $rrs,
+                            );
+            $changes[] = $change;
+        }
+        
+        $rrs = array(
+                     'Name' => $host,
+                     'Type' => $record_type,
+                     'TTL' => 300,
+                     'ResourceRecords' => array(array('Value' => $record_value)),
+                     );
+        
+        $change = array(
+                        'Action' => 'CREATE',
+                        'ResourceRecordSet' => $rrs,
+                        );
+        
+        $changes[] = $change;
+        
+        $args = array(
+                      'HostedZoneId' => $zone_id,
+                      'ChangeBatch' => array('Changes' => $changes),
+                      );
+        $r53_client->changeResourceRecordSets($args);
+        print "    record added!\n";
+        return TRUE;
+    }
+    
+    function update_route53($r53_client,$artist,$extra)
+    {
+        $cf_domain_name = $extra['aws']['cloudfront']['domain_name'];
+    
+        $artist_url = $artist['url'];
+
+        $domain = str_replace("http://","",trueSiteUrl());
+        $host = $artist_url;
+        
+        update_route53_record($r53_client,$domain,$host,'CNAME',$cf_domain_name);
+        
+        $custom_domain = $artist['custom_domain'];
+        
+        if( $custom_domain )
+        {
+            $custom_domain = str_replace("www.","",$custom_domain);
+            
+            update_route53_record($r53_client,$custom_domain,'www','CNAME',$cf_domain_name);
+            update_route53_record($r53_client,$custom_domain,'','A',root_redirect_ip());
+        }
+        
+    }
+
     $i = 0;
-    
     try
     {
         $s3_client = get_s3_client();
         $cf_client = get_cf_client();
+        $r53_client = get_r53_client();
         
         $sql = "SELECT * FROM mydna_musicplayer WHERE url != '' ORDER BY id ASC";
         $q = mq($sql);
@@ -264,8 +375,11 @@
                         continue;
                     }
                     
-                    $extra_json = json_encode($extra);
+                    publish_artist_pages($s3_client,$artist,$extra);
                     
+                    update_route53($r53_client,$artist,$extra);
+                    
+                    $extra_json = json_encode($extra);
                     $updates = array('extra_json' => $extra_json);
                     mysql_update('mydna_musicplayer',$updates,'id',$id);
                     
