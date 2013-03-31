@@ -232,6 +232,10 @@
                 
                 print "artist: $artist_name, url: $url\n";
                 
+                print "  extra:";
+                var_dump($extra);
+                print "\n";
+                
                 if( isset($extra['aws']) && $extra['aws']['cloudfront_enabled'] )
                 {
                     if( !make_s3_bucket($s3_client,$url,$extra) )
