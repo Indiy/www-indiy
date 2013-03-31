@@ -247,6 +247,14 @@ body {
     display: none;
 }
 
+.video_container {
+    text-align: center;
+}
+.video_container video {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /************************************/
 /****** Bottom Bar ******************/
 /************************************/
