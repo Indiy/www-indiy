@@ -254,8 +254,10 @@ body {
     padding-bottom: 100px;
     height: 446px;
     width: 900px;
+    outline: none;
 }
 .video_container video {
+    outline: none;
 }
 
 /************************************/
