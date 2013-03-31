@@ -196,7 +196,9 @@
                       'DefaultRootObject' => 'index.html',
                       'Origins' => array('Quantity' => count($origins),'Origins' => $origins),
                       'DefaultCacheBehavior' => $default_cache_behavior,
+                      'CacheBehaviors' => array('Quantity' => 0),
                       'Comment' => "artist_id: $artist_id",
+                      'Logging' => array('Enabled' => FALSE),
                       'Enabled' => TRUE,
                       );
         
