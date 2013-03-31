@@ -322,7 +322,7 @@
     
         $artist_url = $artist['url'];
 
-        $domain = str_replace("http://www.","",trueSiteUrl());
+        $domain = str_replace("http://www.","",trueSiteUrl()) . ".";
         $host = $artist_url;
         
         update_route53_record($r53_client,$domain,$host,'CNAME',$cf_domain_name);
@@ -331,7 +331,7 @@
         
         if( $custom_domain )
         {
-            $custom_domain = str_replace("www.","",$custom_domain);
+            $custom_domain = str_replace("www.","",$custom_domain) . ".";
             
             update_route53_record($r53_client,$custom_domain,'www','CNAME',$cf_domain_name);
             update_route53_record($r53_client,$custom_domain,'','A',root_redirect_ip());
