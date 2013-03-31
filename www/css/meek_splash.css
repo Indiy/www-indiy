@@ -177,6 +177,15 @@ body {
     line-height: 40px;
 }
 
+.subtitle_med {
+    color: white;
+    font-size: 60px;
+    font-family: 'Agency Regular', Helvetica, sans-serif;
+    text-align: center;
+    line-height: 40px;
+}
+
+
 .title .blue,
 .subtitle .blue {
     display: inline;
