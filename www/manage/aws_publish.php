@@ -149,7 +149,7 @@
                 
                 $cf_data = $cf_client->getDistribution(array('Id' => $cf_id));
                 
-                print "Got Cloud Front Distro: $cf_id\n";
+                print "  Got Cloud Front Distro: $cf_id\n";
                 return TRUE;
             }
             catch( Exception $e )
@@ -280,6 +280,7 @@
             {
                echo "  Caught exception: ",  $e->getMessage(), "\n"; 
             }
+            print "\n\n";
             
             flush();
         }
