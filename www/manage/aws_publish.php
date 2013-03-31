@@ -236,7 +236,7 @@
                 var_dump($extra);
                 print "\n";
                 
-                if( isset($extra['aws']) && $extra['aws']['cloudfront_enabled'] )
+                if( isset($extra['aws']) && $extra['aws']['cloudfront_enable'] )
                 {
                     if( !make_s3_bucket($s3_client,$url,$extra) )
                     {
