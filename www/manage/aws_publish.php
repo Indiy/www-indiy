@@ -248,9 +248,9 @@
                     $extra_json = json_encode($extra);
                     
                     $updates = array('extra_json' => $extra_json);
-                    mysql_update('mydna_musicplayer',$updates,'id',$id)
+                    mysql_update('mydna_musicplayer',$updates,'id',$id);
                     
-                    print "  Updated: $id"
+                    print "  Updated: $id\n";
                 }
                 else
                 {
