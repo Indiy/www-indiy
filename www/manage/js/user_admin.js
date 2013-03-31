@@ -82,6 +82,15 @@ function showAccountSettings()
     $('#account_settings #account_type').val(g_artistData.account_type);
     $('#account_settings #player_template').val(g_artistData.player_template);
     
+    if( 'aws' in g_artistData && g_artistData.aws.cloudfront_enable )
+    {
+        $('#account_settings input[name=cloudfront_enable]:eq(0)').attr('checked','checked');
+    }
+    else
+    {
+        $('#account_settings input[name=cloudfront_enable]:eq(1)').attr('checked','checked');
+    }
+    
     showPopup('#account_settings');
 }
 function onAccountSettingsSubmit()
@@ -90,10 +99,12 @@ function onAccountSettingsSubmit()
 
     var account_type = $('#account_settings #account_type').val();
     var player_template = $('#account_settings #player_template').val();
+    var aws_cloudfront_enable = $('#account_settings input[@name=cloudfront_enable]:checked').val();
     var args = {
         'artist_id': g_artistId,
         'account_type': account_type,
-        'player_template': player_template
+        'player_template': player_template,
+        'aws_cloudfront_enable': aws_cloudfront_enable
     };
     
     jQuery.ajax(

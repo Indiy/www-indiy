@@ -40,10 +40,23 @@
         $artist_id = $_REQUEST['artist_id'];
         $account_type = $_REQUEST['account_type'];
         $player_template = $_REQUEST['player_template'];
+        $aws_cloudfront_enable = $_REQUEST['aws_cloudfront_enable'];
+        
+        $artist_data = mf(mq("SELECT extra_json FROM mydna_musicplayer WHERE id='$artist_id'"));
+        $extra_json = $artist_data['extra_json'];
+        $extra = json_decode($extra_json,TRUE);
+        if( !isset($extra['aws']) )
+        {
+            $extra['aws'] = array('cloudfront_enable' => 0);
+        }
+        $extra['aws']['cloudfront_enable'] = $aws_cloudfront_enable;
+
+        $extra_json = json_encode($extra);
         
         $updates = array(
                          "account_type" => $account_type,
                          "player_template" => $player_template,
+                         "extra_json" => $extra_json,
                          );
         
         mysql_update('mydna_musicplayer',$updates,'id',$artist_id);

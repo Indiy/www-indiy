@@ -36,6 +36,13 @@
                 ?>
             </select>
         </div>
+        <div class='input_container'>
+            <div class='left_label'>Enable CloudFront</div>
+            <div id='cloudfront_enable' class='right_box'>
+                <input type="radio" name="cloudfront_enable" value="1" class="radio" /> Yes
+                <input type="radio" name="cloudfront_enable" value="0" class="radio" /> No
+            </div>
+        </div>
         <div class='submit_container'>
             <button class="submit" onclick='onAccountSettingsSubmit();'>Submit</button>
         </div>

@@ -68,6 +68,11 @@ function splashReady()
     
     $(window).resize(videoResize);
     videoResize();
+    
+    if( IS_MOBILE )
+    {
+        window.scrollTo(0,1);
+    }
 }
 $(document).ready(splashReady);
 
