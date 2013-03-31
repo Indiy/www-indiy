@@ -203,9 +203,9 @@
         
         $args = array(
                       'CallerReference' => "cf_" . time(),
-                      'Aliases' => array('Quantity' => count($aliases),'Aliases' => $aliases),
+                      'Aliases' => array('Quantity' => count($aliases),'Items' => $aliases),
                       'DefaultRootObject' => 'index.html',
-                      'Origins' => array('Quantity' => count($origins),'Origins' => $origins),
+                      'Origins' => array('Quantity' => count($origins),'Items' => $origins),
                       'DefaultCacheBehavior' => $default_cache_behavior,
                       'CacheBehaviors' => array('Quantity' => 0),
                       'Comment' => "artist_id: $artist_id",
