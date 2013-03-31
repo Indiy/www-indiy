@@ -195,6 +195,12 @@
                                         'MinTTL' => 0,
                                         );
         
+        $logging =  array(
+                          'Enabled' => FALSE,
+                          'Bucket' => $s3_domain_name,
+                          'Prefix' => 'logs/',
+                          );
+        
         $args = array(
                       'CallerReference' => "cf_" . time(),
                       'Aliases' => array('Quantity' => count($aliases),'Aliases' => $aliases),
@@ -203,7 +209,7 @@
                       'DefaultCacheBehavior' => $default_cache_behavior,
                       'CacheBehaviors' => array('Quantity' => 0),
                       'Comment' => "artist_id: $artist_id",
-                      'Logging' => array('Enabled' => FALSE),
+                      'Logging' => $logging,
                       'Enabled' => TRUE,
                       );
         
