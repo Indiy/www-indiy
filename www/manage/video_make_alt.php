@@ -59,7 +59,8 @@
         
         $dst_file = tempnam("/tmp","ogv");
         
-        @system("/usr/local/bin/ffmpeg -i $src_file -f ogg -vcodec libtheora -qscale 8 -acodec libvorbis $dst_file",$retval);
+        $output_lines = array();
+        @exec("/usr/local/bin/ffmpeg -i $src_file -f ogg -vcodec libtheora -qscale 8 -acodec libvorbis $dst_file",$output_lines,$retval);
         if( $retval == 0 )
         {
             print "  successfully made ogv: $ogv_file\n";
@@ -80,6 +81,7 @@
         else
         {
             print "***failed to make ogv: $ogv_file\n";
+            var_dump($output_lines);
         }
         unlink($dst_file);
     }
