@@ -142,7 +142,7 @@
 
         return FALSE;
     }
-    function make_cloudfront_distro($cf_client,$artist,$extra)
+    function make_cloudfront_distro($cf_client,$artist,&$extra)
     {
         if( isset($extra['aws']['cloudfront']['id']))
         {
