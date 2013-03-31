@@ -218,7 +218,7 @@
      
             $ret = $r53_client->listHostedZones($args);
             
-            foreach( $ret['HostedZones'] => $zone )
+            foreach( $ret['HostedZones'] as $zone )
             {
                 if( $zone['Name'] == $domain )
                     return $zone['Id'];
