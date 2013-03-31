@@ -55,6 +55,7 @@
 		2D117D311706339400D6BD84 /* meek_splash.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = meek_splash.js; sourceTree = "<group>"; };
 		2D117D321706739F00D6BD84 /* artist_form.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artist_form.php; sourceTree = "<group>"; };
 		2D117D33170798B600D6BD84 /* meek_video.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = meek_video.html; sourceTree = "<group>"; };
+		2D117D341707F09400D6BD84 /* aws_publish.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = aws_publish.php; sourceTree = "<group>"; };
 		2D16391D166AEBB700297030 /* convert_video.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = convert_video.php; sourceTree = "<group>"; };
 		2D163920166BB67500297030 /* unsupported_browser.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = unsupported_browser.html; sourceTree = "<group>"; };
 		2D163921166BBB5300297030 /* unsupported_browser.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = unsupported_browser.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
@@ -1785,6 +1786,7 @@
 				2DF47503144A2D84005538C7 /* js */,
 				2DF4743C144A2D84005538C7 /* css */,
 				2D8D96E6159568FA00AA3D1B /* templates */,
+				2D117D341707F09400D6BD84 /* aws_publish.php */,
 				2D3B2E6616FB33D900DA2301 /* upload_user_content.php */,
 				2D3B2E6716FBF15200DA2301 /* image_make_thumbnails.php */,
 				2D3B2E6816FF58A800DA2301 /* audio_make_alt.php */,

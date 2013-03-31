@@ -47,7 +47,7 @@
         $extra = json_decode($extra_json,TRUE);
         if( !isset($extra['aws']) )
         {
-            $extra['aws'] = array('cloudfront_enable' => 0);
+            $extra['aws'] = array('cloudfront_enable' => FALSE);
         }
         $extra['aws']['cloudfront_enable'] = $aws_cloudfront_enable;
 

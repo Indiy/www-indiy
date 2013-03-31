@@ -1521,6 +1521,18 @@ END;
         $client = Aws\S3\S3Client::factory($args);
         return $client;
     }
+    function get_cf_client()
+    {
+        require_once "aws.phar";
+        
+        $args = array(
+                      'key' => $GLOBALS['g_access_key_id'],
+                      'secret' => $GLOBALS['g_secret_access_key'],
+                      );
+        
+        $client = Aws\CloudFront\CloudFrontClient::factory($args);
+        return $client;
+    }
 
     function upload_file_to_s3($key,$source_file)
     {
