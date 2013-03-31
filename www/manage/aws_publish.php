@@ -126,7 +126,7 @@
         
         if( $s3_bucket )
         {
-            $extra['s3_bucket'] = $s3_bucket;
+            $extra['aws']['s3_bucket'] = $s3_bucket;
             
             $args = array(
                           'Bucket' => $s3_bucket,
