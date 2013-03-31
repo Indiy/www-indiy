@@ -250,7 +250,7 @@
         
         foreach( $ret['ResourceRecordSets'] as $record )
         {
-            print "        record name: " . $record['Name'] . "\n";
+            print "        record: " . $record['Type'] . " " . $record['Name'] . "\n";
         
             if( $record['Name'] == $name && $record['Type'] == $type )
             {
