@@ -320,7 +320,7 @@
     
         $artist_url = $artist['url'];
 
-        $domain = str_replace("http://","",trueSiteUrl());
+        $domain = str_replace("http://www.","",trueSiteUrl());
         $host = $artist_url;
         
         update_route53_record($r53_client,$domain,$host,'CNAME',$cf_domain_name);
