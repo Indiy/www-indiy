@@ -176,7 +176,7 @@
     {
         $artist_url = $artist['url'];
     
-        $url = "http://" . staging_base_url() .  "/player.php?url=$artist_url";
+        $url = "http://" . staging_host() .  "/player.php?url=$artist_url";
         $body = file_get_contents($url);
         
         $s3_bucket = $extra['aws']['s3_bucket'];
