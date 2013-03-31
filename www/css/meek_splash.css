@@ -188,7 +188,7 @@ body {
 
 
 .title .blue,
-.subtitle .blue {
+.subtitle .blue, .subtitle_med .blue {
     display: inline;
     color: #47c6c3;
 }
