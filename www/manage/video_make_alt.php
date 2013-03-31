@@ -60,7 +60,8 @@
         $dst_file = tempnam("/tmp","ogv");
         
         $output_lines = array();
-        @exec("/usr/local/bin/ffmpeg -i $src_file -f ogg -vcodec libtheora -qscale 8 -acodec libvorbis $dst_file",$output_lines,$retval);
+        $cmd = "/usr/local/bin/ffmpeg -i $src_file -f ogg -vcodec libtheora -q:a 8 -q:v 8 -acodec libvorbis $dst_file";
+        @exec($cmd,$output_lines,$retval);
         if( $retval == 0 )
         {
             print "  successfully made ogv: $ogv_file\n";
@@ -82,8 +83,9 @@
         {
             print "***failed to make ogv: $ogv_file\n";
             var_dump($output_lines);
+            print "cmd: $cmd\n";
         }
-        unlink($dst_file);
+        //unlink($dst_file);
     }
     
     function video_needs_update($extra)
@@ -175,7 +177,7 @@
                     mysql_update('artist_files',$updates,'id',$id);
                     
                     print "  updated $id\n";
-                    unlink($tmp_file);
+                    //unlink($tmp_file);
                 }
                 else
                 {
