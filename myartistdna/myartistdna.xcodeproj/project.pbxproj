@@ -78,7 +78,7 @@
 		2D34E22E14A59976004473F9 /* tooltip_text.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = tooltip_text.js; sourceTree = "<group>"; };
 		2D34E23214A9680C004473F9 /* faq.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = faq.php; sourceTree = "<group>"; };
 		2D34E23414AADC6D004473F9 /* forgot_password.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = forgot_password.php; sourceTree = "<group>"; };
-		2D34E23514ABFF09004473F9 /* video-js.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "video-js.css"; sourceTree = "<group>"; };
+		2D34E23514ABFF09004473F9 /* video-js.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "video-js.css"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D34E23714AD5897004473F9 /* fan_connections.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_connections.php; sourceTree = "<group>"; };
 		2D34E23814AD69ED004473F9 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		2D34E23914AD87E2004473F9 /* booking.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = booking.php; sourceTree = "<group>"; };

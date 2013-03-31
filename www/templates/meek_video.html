@@ -13,17 +13,22 @@
     <![endif]-->
     
     <link href="<?=static_file_url('/css/meek_splash.css');?>" rel="stylesheet" type="text/css"/>
+    <link href="<?=static_file_url('/css/video-js.min.css');?>" rel="stylesheet" type="text/css"/>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
 
     <script src="<?=static_file_url('/js/jquery.mousewheel.js');?>" type="text/javascript"></script>
     <script src="<?=static_file_url('/js/jquery.jplayer.js');?>" type="text/javascript"></script>
     <script src="<?=static_file_url('/js/string.utils.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/video.min.js');?>" type="text/javascript"></script>
 
     <script src="<?=static_file_url('/js/player_image.js');?>" type="text/javascript"></script>
     <script src="<?=static_file_url('/js/meek_splash.js');?>" type="text/javascript"></script>
 
     <script type="text/javascript">
+        _V_.options.flash.swf = "<?=static_file_url('/js/video-js.swf');?>";
+    
         var g_trueSiteUrl = "<?=trueSiteUrl();?>";
         var g_apiBaseUrl = "<?=api_base_url();?>";
         var g_artistId = <?=$artist_id;?>;
@@ -87,7 +92,11 @@
         <div class='subtitle'>WATCH THE <div class='blue'>FIRST MEEK MILL</div> LIVE STREAM @ TOWER THEATER!</div>
         <div class='subtitle'>THE SHOW STARTS @7PM!</div>
         <div class='video_container'>
-            <video>
+            <video id="example_video_1" class="video-js vjs-default-skin"
+                controls preload="auto" width="800" height=""
+                poster="<?=static_file_url('/images/mad_video_splash.jpg');?>"
+                data-setup='{}'>
+                <source src="<?=static_file_url('/artists/files/299_49c55736359c6bf6971dbda328743e69.mp4');?>" type='video/mp4' />
             </video>
         </div>
     </div></div>
