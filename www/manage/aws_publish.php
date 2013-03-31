@@ -159,7 +159,7 @@
             }
         }
         
-        $artist_id = $artist['id']
+        $artist_id = $artist['id'];
         $s3_bucket = $extra['aws']['s3_bucket'];
         $url = $artist['url'];
         $custom_domain = $artist['custom_domain'];
