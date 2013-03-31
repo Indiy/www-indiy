@@ -66,7 +66,7 @@ function splashReady()
         g_videoPlayer.addEvent('ended',videoPause);
     }
     
-    $(window).resize(maybeVideoResize);
+    $(window).resize(videoResize);
     videoResize();
 }
 $(document).ready(splashReady);
@@ -90,13 +90,6 @@ function videoResize()
         var width = $('.video_container').width();
         var height = $('.video_container').height();
         g_videoPlayer.size(width,height);
-    }
-}
-function maybeVideoResize()
-{
-    if( g_videoPlaying )
-    {
-        videoResize();
     }
 }
 
