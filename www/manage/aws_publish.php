@@ -241,7 +241,7 @@
     {
         $args = array(
                       'HostedZoneId' => $zone_id,
-                      'StartRecordName' => $host,
+                      'StartRecordName' => "$host.$domain",
                       'MaxItems' => 100,
                       );
         
