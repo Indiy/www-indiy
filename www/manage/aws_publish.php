@@ -97,9 +97,6 @@
             if( $s3_client->doesBucketExist($s3_bucket) )
             {
                 $web_config = $s3_client->getBucketWebsite(array('Bucket' => $s3_bucket));
-                print "  web_config: ";
-                var_dump($web_config);
-                print "\n";
                 $suffix = $web_config['IndexDocument']['Suffix'];
                 print "  Got suffix for web config: $suffix\n";
                 print "  s3 bucket: $s3_bucket\n";
@@ -227,10 +224,6 @@
         
         $ret = $cf_client->createDistribution($args);
 
-        print " createDistribution: ";
-        var_dump($ret);
-        print "\n";
-        
         $extra['aws']['cloudfront']['id'] = $ret['Id'];
         $extra['aws']['cloudfront']['domain_name'] = $ret['DomainName'];
         return TRUE;
