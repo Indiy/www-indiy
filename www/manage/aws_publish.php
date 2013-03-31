@@ -182,10 +182,10 @@
         $s3_bucket = $extra['aws']['s3_bucket'];
         $key = '/index.html';
         
-        write_s3_html_file($s3_bucket,$key,$body);
+        write_s3_html_file($s3_client,$s3_bucket,$key,$body);
     }
     
-    function write_s3_html_file($s3_bucket,$key,$body)
+    function write_s3_html_file($s3_client,$s3_bucket,$key,$body)
     {
         $headers = array(
                          'X-UA-Compatible' => 'chrome=1',
@@ -200,7 +200,7 @@
                       'ContentType' => 'text/html',
                       'Metadata' => $headers,
                       );
-        $client->putObject($args);
+        $s3_client->putObject($args);
     }
     
     function get_r53_zone_id($r53_client,$domain)
