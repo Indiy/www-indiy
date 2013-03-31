@@ -394,7 +394,11 @@ body {
 #footer .bottom_bar .right .rights_reserved {
     display: inline;
 }
-
+.video_container {
+    width: 600px;
+    height: 338px;
+    outline: none;
+}
 
 /*****************************************/
 
@@ -432,6 +436,8 @@ and (orientation : portrait) {
         min-width: 750px;
         width: 750px;
     }
+    
+    
 
 }
 
