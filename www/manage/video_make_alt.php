@@ -60,7 +60,7 @@
         $dst_file = tempnam("/tmp","ogv");
         
         $output_lines = array();
-        $cmd = "/usr/local/bin/ffmpeg -i $src_file -f ogg -vcodec libtheora -q:a 8 -q:v 8 -acodec libvorbis $dst_file";
+        $cmd = "/usr/local/bin/ffmpeg -i $src_file -f ogg -vcodec libtheora -q:a 8 -q:v 8 -acodec libvorbis $dst_file 2>&1";
         @exec($cmd,$output_lines,$retval);
         if( $retval == 0 )
         {
