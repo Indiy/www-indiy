@@ -179,10 +179,14 @@
         }
         
         $s3_domain_name = "$s3_bucket.s3.amazonaws.com";
+        
+        print "  s3_domain_name: $s3_domain_name\n";
+        
         $origin_id = "S3-$s3_domain_name";
         $origin = array(
                         'Id' => $origin_id,
                         'DomainName' => $s3_domain_name,
+                        'S3OriginConfig' => array('OriginAccessIdentity' => ''),
                         );
         
         $origins = array($origin);
@@ -212,6 +216,10 @@
                       'Logging' => $logging,
                       'Enabled' => TRUE,
                       );
+        
+        print "  cf args: ";
+        var_dump($args);
+        print "\n";
         
         $ret = $cf_client->createDistribution($args);
 
