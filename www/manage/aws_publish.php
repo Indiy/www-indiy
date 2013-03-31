@@ -149,10 +149,7 @@
                 
                 $cf_data = $cf_client->getDistribution(array('Id' => $cf_id));
                 
-                print "Cloud Front Data:";
-                var_dump($cf_data);
-                print "\n";
-                
+                print "Got Cloud Front Distro: $cf_id\n";
                 return TRUE;
             }
             catch( Exception $e )
