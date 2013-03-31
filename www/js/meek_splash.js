@@ -67,6 +67,7 @@ function splashReady()
     }
     
     $(window).resize(maybeVideoResize);
+    videoResize();
 }
 $(document).ready(splashReady);
 

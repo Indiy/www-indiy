@@ -394,11 +394,6 @@ body {
 #footer .bottom_bar .right .rights_reserved {
     display: inline;
 }
-.video_container {
-    width: 600px;
-    height: 338px;
-    outline: none;
-}
 
 /*****************************************/
 
@@ -437,8 +432,11 @@ and (orientation : portrait) {
         width: 750px;
     }
     
-    
-
+    .video_container {
+        width: 600px;
+        height: 338px;
+        outline: none;
+    }
 }
 
 @media only screen
