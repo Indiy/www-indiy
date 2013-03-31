@@ -85,7 +85,7 @@
             var_dump($output_lines);
             print "cmd: $cmd\n";
         }
-        //unlink($dst_file);
+        unlink($dst_file);
     }
     
     function video_needs_update($extra)
@@ -177,7 +177,7 @@
                     mysql_update('artist_files',$updates,'id',$id);
                     
                     print "  updated $id\n";
-                    //unlink($tmp_file);
+                    unlink($tmp_file);
                 }
                 else
                 {

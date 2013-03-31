@@ -25,6 +25,7 @@ var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+
 var PHONE_REGEX = new RegExp('^[0-9]{3}-[0-9]{3}-[0-9]{4}$');
 
 var g_updateInterval = false;
+var g_videoPlayer = false;
 
 function splashReady()
 {
@@ -55,8 +56,25 @@ function splashReady()
     updateCountdown();
     
     $(window).resize(splashResize);
+    
+    g_videoPlayer = _V_('splash_video_0');
+    if( g_videoPlayer )
+    {
+        g_videoPlayer.addEvent('play',videoPlay);
+        g_videoPlayer.addEvent('pause',videoPause);
+        g_videoPlayer.addEvent('ended',videoPause);
+    }
 }
 $(document).ready(splashReady);
+
+function videoPlay()
+{
+    
+}
+function videoPause()
+{
+    
+}
 
 function splashResize()
 {
