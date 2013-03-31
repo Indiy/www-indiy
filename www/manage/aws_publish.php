@@ -164,6 +164,10 @@
             }
         }
         
+        print "  cf extra: ";
+        var_dump($extra);
+        print "\n";
+        
         $artist_id = $artist['id'];
         $s3_bucket = $extra['aws']['s3_bucket'];
         $url = $artist['url'];
