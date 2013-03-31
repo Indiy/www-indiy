@@ -237,11 +237,11 @@
         }
         return FALSE;
     }
-    function get_r53_record_set($r53_client,$zone_id,$domain,$host)
+    function get_r53_record_set($r53_client,$zone_id,$name,$type)
     {
         $args = array(
                       'HostedZoneId' => $zone_id,
-                      'StartRecordName' => "$host.$domain",
+                      'StartRecordName' => $name,
                       'MaxItems' => 100,
                       );
         
@@ -252,7 +252,7 @@
         {
             print "        record name: " . $record['Name'] . "\n";
         
-            if( $record['Name'] == $host )
+            if( $record['Name'] == $name && $record['Type'] == $type )
             {
                 return $record;
             }
@@ -273,7 +273,12 @@
             return TRUE;
         }
         
-        $rrs = get_r53_record_set($r53_client,$zone_id,$domain,$host);
+        if( strlen($host) > 0 )
+            $name = "$host.$domain";
+        else
+            $name = $domain;
+        
+        $rrs = get_r53_record_set($r53_client,$zone_id,$name,$record_type);
         
         $changes = array();
         if( $rrs )
@@ -294,7 +299,7 @@
         }
         
         $rrs = array(
-                     'Name' => $host,
+                     'Name' => $name,
                      'Type' => $record_type,
                      'TTL' => 300,
                      'ResourceRecords' => array(array('Value' => $record_value)),
