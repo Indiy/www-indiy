@@ -287,7 +287,7 @@
                && $rrs['ResourceRecords'][0]['Value'] == $record_value
                )
             {
-                print "      record already exists!\ns";
+                print "      record already exists!\n";
                 return TRUE;
             }
             
@@ -341,7 +341,6 @@
             update_route53_record($r53_client,$custom_domain,'www','CNAME',$cf_domain_name);
             update_route53_record($r53_client,$custom_domain,'','A',root_redirect_ip());
         }
-        
     }
 
     $i = 0;
@@ -361,6 +360,7 @@
                 $artist_name = $artist['artist'];
                 $url = $artist['url'];
                 $extra_json = $artist['extra_json'];
+                $old_extra_json = $extra_json;
                 $extra = json_decode($extra_json,TRUE);
                 
                 print "artist: $artist_name, url: $url\n";
@@ -387,10 +387,18 @@
                     update_route53($r53_client,$artist,$extra);
                     
                     $extra_json = json_encode($extra);
-                    $updates = array('extra_json' => $extra_json);
-                    mysql_update('mydna_musicplayer',$updates,'id',$id);
                     
-                    print "  Updated: $id\n";
+                    if( $old_extra_json != $extra_json )
+                    {
+                        $updates = array('extra_json' => $extra_json);
+                        mysql_update('mydna_musicplayer',$updates,'id',$id);
+                        
+                        print "  Updated artist record: $id\n";
+                    }
+                    else
+                    {
+                        print "  No change needed to record: $id\n";
+                    }
                 }
                 else
                 {
