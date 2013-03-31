@@ -40,7 +40,7 @@
         $artist_id = $_REQUEST['artist_id'];
         $account_type = $_REQUEST['account_type'];
         $player_template = $_REQUEST['player_template'];
-        $aws_cloudfront_enable = $_REQUEST['aws_cloudfront_enable'];
+        $aws_cloudfront_enable = $_REQUEST['aws_cloudfront_enable'] == "1";
         
         $artist_data = mf(mq("SELECT extra_json FROM mydna_musicplayer WHERE id='$artist_id'"));
         $extra_json = $artist_data['extra_json'];
