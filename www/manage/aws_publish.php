@@ -267,7 +267,7 @@
         
         if( !$zone_id )
         {
-            print "  zone ($domain) not found!\n";
+            print "    zone ($domain) not found!\n";
             return TRUE;
         }
         
@@ -280,7 +280,7 @@
                && $rrs['ResourceRecords'][0]['Value'] == $record_value
                )
             {
-                print "    record already exists!\ns";
+                print "      record already exists!\ns";
                 return TRUE;
             }
             
@@ -310,7 +310,7 @@
                       'ChangeBatch' => array('Changes' => $changes),
                       );
         $r53_client->changeResourceRecordSets($args);
-        print "    record added!\n";
+        print "      record added!\n";
         return TRUE;
     }
     
