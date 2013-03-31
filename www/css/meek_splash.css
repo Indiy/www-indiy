@@ -56,7 +56,7 @@ body {
 #main_content {
     min-height: 560px;
     overflow:auto;
-    min-width: 800px;
+    min-width: 920px;
 }
 
 .full_screen_bg {
@@ -248,11 +248,14 @@ body {
 }
 
 .video_container {
-    text-align: center;
-}
-.video_container video {
     margin-left: auto;
     margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    height: 446px;
+    width: 900px;
+}
+.video_container video {
 }
 
 /************************************/
