@@ -177,7 +177,7 @@ body {
 #big_play_icon .outer {
     position: absolute;
     top: 0px;
-    left: 0px
+    left: 0px;
     width: 120px;
     height: 120px;
     background-color: rgba(100,100,100,0.7);
@@ -185,22 +185,22 @@ body {
 }
 #big_play_icon .inner {
     position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 108px;
-    height: 108px;
-    border-radius: 108px;
-    border: 4px solid white;
+    top: 4px;
+    left: 4px;
+    width: 104px;
+    height: 104px;
+    border-radius: 104px;
+    border: 8px solid white;
 }
 #big_play_icon .triangle {
     position: absolute;
-    top: 18px;
-    left: 24px;
+    top: 23px;
+    left: 36px;
     width: 0;
 	height: 0;
-	border-top: 18px solid transparent;
-	border-bottom: 18px solid transparent;
-	border-left: 32px solid rgba(255,255,255,0.8);
+	border-top: 36px solid transparent;
+	border-bottom: 36px solid transparent;
+	border-left: 64px solid rgba(255,255,255,0.8);
 }
 
 
