@@ -437,14 +437,14 @@ body {
     text-align: left;
 }
 #footer .bottom_bar .left .dc_logo {
-    display: inline-block;
+    display: none;
     padding-right: 2px;
     width: 20px;
     height: 30px;
     vertical-align: top;
 }
 #footer .bottom_bar .left .mad_logo {
-    display: inline-block;
+    display: none;
     padding-right: 2px;
     padding-top: 10px;
     width: 20px;
