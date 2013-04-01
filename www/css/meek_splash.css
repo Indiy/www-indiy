@@ -508,6 +508,7 @@ and (max-device-width : 480px) {
 
     #main_content {
         min-width: 320px;
+        min-height: 480px;
         overflow-x: hidden;
     }
     #top_container .top_line {
