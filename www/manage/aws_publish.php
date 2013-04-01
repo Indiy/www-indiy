@@ -376,27 +376,19 @@
                     }
                     
                     publish_artist_pages($s3_client,$artist,$extra);
-                    
                     update_route53($r53_client,$artist,$extra);
                     
                     $extra['aws']['published'] = TRUE;
-                    
+                    $updates = array('last_publish' => mysql_now());
+
                     $extra_json = json_encode($extra);
-                    
                     if( $old_extra_json != $extra_json )
                     {
-                        $updates = array(
-                                         'extra_json' => $extra_json,
-                                         'last_publish' => mysql_now(),
-                                         );
-                        mysql_update('mydna_musicplayer',$updates,'id',$id);
-                        
-                        print "  Updated artist record: $id\n";
+                        $updates['extra_json'] = $extra_json;
                     }
-                    else
-                    {
-                        print "  No change needed to record: $id\n";
-                    }
+
+                    mysql_update('mydna_musicplayer',$updates,'id',$id);
+                    print "  Updated artist record: $id\n";
                 }
                 else
                 {
