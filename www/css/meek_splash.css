@@ -507,6 +507,9 @@ and (orientation : portrait) {
         min-width: 750px;
         width: 750px;
     }
+    #big_play_icon:hover .triangle {
+        border-left: 64px solid rgba(255,255,255,0.8);
+    }
 }
 
 @media only screen
@@ -646,6 +649,10 @@ and (max-device-width : 480px) {
         border-bottom: 18px solid transparent;
         border-left: 32px solid rgba(255,255,255,0.8);
     }
+    #big_play_icon:hover .triangle {
+        border-left: 32px solid rgba(255,255,255,0.8);
+    }
+
 
     
     #footer {
