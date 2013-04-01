@@ -172,13 +172,14 @@
     {
         $artist_url = $artist['url'];
     
-        $url = "http://" . staging_host() .  "/player.php?url=$artist_url";
+        $url = "http://" . staging_host() .  "/player.php?url=$artist_url&admin_publish_key=" . admin_publish_key();
         $body = file_get_contents($url);
         
         $s3_bucket = $extra['aws']['s3_bucket'];
         $key = '/index.html';
         
         write_s3_html_file($s3_client,$s3_bucket,$key,$body);
+        print "  Wrote index.html to $s3_bucket\n";
     }
     
     function write_s3_html_file($s3_client,$s3_bucket,$key,$body)

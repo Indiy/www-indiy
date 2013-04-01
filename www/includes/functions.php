@@ -1759,5 +1759,9 @@ END;
     {
         return $GLOBALS['g_root_redirect_ip'];
     }
+    function admin_publish_key()
+    {
+        return '297bhksdy8gr2bjkad792jbkr297';
+    }
 
 ?>
