@@ -1358,7 +1358,17 @@ END;
         }
         return $fan_email;
     }
-    
+
+    function ends_with($haystack, $needle)
+    {
+        $length = strlen($needle);
+        if ($length == 0) {
+            return true;
+        }
+        
+        return (substr($haystack, -$length) === $needle);
+    }
+
     function get_artist_url_for_page()
     {
         $artist_url = FALSE;
@@ -1382,6 +1392,14 @@ END;
                 header("Location: " . trueSiteUrl());
                 die();
             }
+        }
+        else if( ends_with($http_host,staging_host()) )
+        {
+            $host_parts = explode('.',$http_host);
+            $leading_parts = array_slice($host_parts,0,-3);
+            $leading = implode('.',$leading_parts);
+            
+            $artist_url = $leading;
         }
         else
         {
