@@ -130,17 +130,19 @@ body {
     margin-left: -8px;
     width: 67px;
     height: 116px;
-    color: #37bdbb;
+    color: white;
     font-size: 114px;
     font-family: 'Agency Bold', 'Agency Regular', Helvetica, sans-serif;
     text-align: center;
 }
+/*
 .desktop #top_container .top_line .item .time div,
 .ipad #top_container .top_line .item .time div {
     background: -webkit-linear-gradient(#2bb8b5, #6bd3d2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+*/
 #top_container .top_line .item .unit {
     padding-left: 6px;
     color: white;
@@ -151,7 +153,7 @@ body {
 #top_container .top_line .colon {
     padding-right: 20px;
     margin-top: -8px;
-    color: #37bdbb;
+    color: white;
     font-size: 114px;
     font-family: 'Agency Bold', 'Agency Regular', Helvetica, sans-serif;
 }
@@ -254,7 +256,7 @@ body {
 .title .blue,
 .subtitle .blue, .subtitle_med .blue {
     display: inline;
-    color: #47c6c3;
+    color: white;
 }
 
 .form_container {
@@ -378,7 +380,7 @@ body {
     top: 0;
     padding-top: 10px;
     padding-left: 61px;
-    color: #54cdcb;
+    color: white;
     font-size: 65px;
     font-family: 'Agency Bold', Helvetica, sans-serif;
     letter-spacing: 1px;
@@ -398,17 +400,18 @@ body {
     text-align: right;
 }
 #footer .banner .right .bottom {
-    color: #ed9c3c;
+    color: white;
     font-size: 24px;
     font-family: 'Agency Regular', Helvetica, sans-serif;
     text-align: right;
 }
+/*
 .desktop #footer .banner .right .bottom  {
     background: -webkit-linear-gradient(#ef983c,#f6be47);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+*/
 
 #footer .bottom_bar {
     position: absolute;
@@ -431,7 +434,7 @@ body {
     float: left;
     padding-top: 4px;
     padding-left: 5px;
-    color: #5ab5b7;
+    color: white;
     font-size: 11px;
     font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: left;
@@ -454,7 +457,7 @@ body {
 #footer .bottom_bar .left a {
     display: inline-block;
     padding-top: 12px;
-    color: #5ab5b7;
+    color: white;
     text-decoration: none;
     vertical-align: top;
 }
@@ -462,7 +465,7 @@ body {
     float: right;
     padding-top: 17px;
     padding-right: 5px;
-    color: #5ab5b7;
+    color: white;
     font-size: 11px;
     font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: right;
@@ -500,7 +503,7 @@ and (orientation : portrait) {
     #top_container .top_line .colon {
         padding-right: 16px;
         margin-top: -8px;
-        color: #37bdbb;
+        color: white;
         font-size: 104px;
     }
     #top_container .hline {
