@@ -164,19 +164,26 @@ body {
     background: rgba(43,118,120,0.5);
 }
 
+.play_top_space {
+    height: 100px;
+}
+.play_bottom_space {
+    height: 100px;
+}
+
 #big_play_icon {
     display: block;
     position: relative;
     text-align: center;
     width: 120px;
-    height: 300px;
+    height: 120px;
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
 }
 #big_play_icon .outer {
     position: absolute;
-    top: 75px;
+    top: 0px;
     left: 0px;
     width: 120px;
     height: 120px;
@@ -185,7 +192,7 @@ body {
 }
 #big_play_icon .inner {
     position: absolute;
-    top: 75px;
+    top: 0px;
     left: 0px;
     width: 104px;
     height: 104px;
@@ -194,7 +201,7 @@ body {
 }
 #big_play_icon .triangle {
     position: absolute;
-    top: 98px;
+    top: 23px;
     left: 36px;
     width: 0;
 	height: 0;
