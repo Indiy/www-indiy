@@ -314,7 +314,7 @@
         }
         return $ret;
     }
-    function mysql_update($table,$inserts,$insert_key,$insert_val,debug = FALSE)
+    function mysql_update($table,$inserts,$insert_key,$insert_val,$debug = FALSE)
     {
         $values = array_map('mysql_real_escape_string', array_values($inserts));
         $keys = array_keys($inserts);
