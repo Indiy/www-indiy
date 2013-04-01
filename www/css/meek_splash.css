@@ -164,14 +164,14 @@ body {
     background: rgba(43,118,120,0.5);
 }
 
+.top_sub_spacer {
+    height: 11px;
+}
 .play_top_space {
-    height: 83px;
+    height: 73px;
 }
 .play_bottom_space {
     height: 48px;
-}
-.top_sub_spacer {
-    height: 20px;
 }
 
 #big_play_icon {
