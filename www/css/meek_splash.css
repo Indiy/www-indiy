@@ -702,4 +702,11 @@ and (max-device-width : 480px) {
     }
 }
 
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    /* iPhone 5 or iPod Touch 5th generation */
+    #main_content {
+        min-height: 504px;
+    }
+}
+
 
