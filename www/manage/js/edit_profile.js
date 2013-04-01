@@ -103,6 +103,8 @@ function onEditProfileSubmit()
         var custom_domain = $('#edit_profile #custom_domain').val();
         if( typeof(custom_domain) == 'undefined' )
             custom_domain = '';
+        custom_domain = custom_domain.replace("http://","");
+        custom_domain = custom_domain.replace("www.","");
         
         form_data.append('artistid',g_artistId);
         form_data.append('artist',artist);
