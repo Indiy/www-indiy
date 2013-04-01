@@ -167,10 +167,9 @@ body {
 #big_play_icon {
     display: block;
     position: relative;
-    padding-top: 100px;
-    padding-bottom: 100px;
     text-align: center;
     width: 120px;
+    height: 300px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -180,13 +179,13 @@ body {
     left: 0px;
     width: 120px;
     height: 120px;
-    background-color: rgba(100,100,100,0.7);
+    background-color: rgba(100,100,100,0.5);
     border-radius: 120px;
 }
 #big_play_icon .inner {
     position: absolute;
-    top: 79px;
-    left: 4px;
+    top: 75px;
+    left: 0px;
     width: 104px;
     height: 104px;
     border-radius: 104px;
