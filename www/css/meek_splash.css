@@ -202,7 +202,9 @@ body {
 	border-bottom: 36px solid transparent;
 	border-left: 64px solid rgba(255,255,255,0.8);
 }
-
+#big_play_icon:hover .triangle {
+	border-left: 64px solid rgba(111,213,212,1.0);
+}
 
 .title {
     padding-top: 0px;
