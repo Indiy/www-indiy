@@ -54,7 +54,7 @@
         array_walk($row,cleanup_row_element);
         
         if( !empty($row['image']) )
-            $row['image_url'] = "/artists/files/" . $row['image'];
+            $row['image_url'] = artist_file_url($row['image']);
         else
             $row['image_url'] = "images/photo_video_01.jpg";
        
@@ -89,8 +89,6 @@
         $image_file = $_POST['image_drop'];
         $video_file = $_POST['video_drop'];
         
-        $image_data = get_image_data(PATH_TO_ROOT . "artists/files/$image_file");
-
         $values = array("artistid" => $artist_id,
                         "name" => $video_name,
                         "image" => $image_file,
@@ -98,7 +96,6 @@
                         "upload_video_filename" => $upload_video_filename,
                         "tags" => $tags,
                         "error" => $error,
-                        "image_data" => $image_data,
                         );
         
         if( $video_id != "") 
