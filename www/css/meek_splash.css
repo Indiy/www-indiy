@@ -557,16 +557,24 @@ and (max-device-width : 480px) {
     }
     
     .title {
-        padding-top: 8px;
-        padding-bottom: 5px;
-        font-size: 50px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-size: 29px;
         letter-spacing: 1px;
-        line-height: 44px;
-    }
-    .subtitle {
-        font-size: 30px;
         line-height: 30px;
     }
+    .subtitle {
+        font-size: 27px;
+        line-height: 30px;
+    }
+    
+    .play_top_space {
+        height: 15px;
+    }
+    .play_bottom_space {
+        height: 15px;
+    }
+    
     .form_container {
         padding-top: 20px;
         padding-bottom: 135px;
