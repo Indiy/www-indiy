@@ -327,6 +327,10 @@
         $q = "UPDATE `$table` SET " . implode(',', $pairs) . " WHERE `$insert_key` = '$insert_val'";
         return mysql_query($q);
     }
+    function mysql_now()
+    {
+        return date('Y-m-d H:i:s');
+    }
 
 	/* No HTML AT ALL! */
 	function nohtml($nohtml) {

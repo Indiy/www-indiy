@@ -387,7 +387,7 @@
                     {
                         $updates = array(
                                          'extra_json' => $extra_json,
-                                         'last_publish' => time(),
+                                         'last_publish' => mysql_now(),
                                          );
                         mysql_update('mydna_musicplayer',$updates,'id',$id);
                         

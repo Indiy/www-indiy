@@ -60,7 +60,7 @@
                          "account_type" => $account_type,
                          "player_template" => $player_template,
                          "extra_json" => $extra_json,
-                         "last_update" => time(),
+                         "last_update" => mysql_now(),
                          );
         
         mysql_update('mydna_musicplayer',$updates,'id',$artist_id);
