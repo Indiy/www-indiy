@@ -297,15 +297,6 @@ body {
 }
 
 .video_container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 40px;
-    padding-bottom: 35px;
-    width: 800px;
-    height: 450px;
-    outline: none;
-}
-.full_screen.video_container {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -316,6 +307,9 @@ body {
     margin: 0;
     padding: 0;
     background: black;
+    z-index: -1;
+}
+.full_screen.video_container {
     z-index: 2;
 }
 .video_container video {
