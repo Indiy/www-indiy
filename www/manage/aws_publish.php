@@ -161,10 +161,6 @@
                       'Enabled' => TRUE,
                       );
         
-        print "  cf args: ";
-        var_dump($args);
-        print "\n";
-        
         $ret = $cf_client->createDistribution($args);
 
         $extra['aws']['cloudfront']['id'] = $ret['Id'];
@@ -364,10 +360,6 @@
                 $extra = json_decode($extra_json,TRUE);
                 
                 print "artist: $artist_name, url: $url\n";
-                
-                //print "  extra:";
-                //var_dump($extra);
-                //print "\n";
                 
                 if( isset($extra['aws']) && $extra['aws']['cloudfront_enable'] )
                 {
