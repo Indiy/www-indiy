@@ -172,6 +172,7 @@ body {
     height: 300px;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
 }
 #big_play_icon .outer {
     position: absolute;
@@ -215,8 +216,8 @@ body {
 }
 .subtitle {
     color: white;
-    font-size: 40px;
-    font-family: 'Agency Regular', Helvetica, sans-serif;
+    font-size: 36px;
+    font-family: 'Agency Bold', Helvetica, sans-serif;
     text-align: center;
     line-height: 40px;
 
@@ -231,10 +232,10 @@ body {
 }
 
 .bottom_title {
-    height: 100px;
+    height: 150px;
     color: white;
     font-size: 80px;
-    font-family: 'Agency Regular', Helvetica, sans-serif;
+    font-family: 'Agency Bold', Helvetica, sans-serif;
     text-align: center;
 }
 
