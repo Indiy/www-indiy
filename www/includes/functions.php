@@ -304,7 +304,7 @@
         
         if( $debug )
         {
-            print "sql: $q\n";
+            print "mysql_insert sql: $q\n";
             if( !$ret )
             {
                 print "mysql_error: ";
@@ -314,7 +314,7 @@
         }
         return $ret;
     }
-    function mysql_update($table,$inserts,$insert_key,$insert_val,$debug = FALSE)
+    function mysql_update($table,$inserts,$insert_key,$insert_val,$debug=FALSE)
     {
         $values = array_map('mysql_real_escape_string', array_values($inserts));
         $keys = array_keys($inserts);
@@ -325,11 +325,19 @@
             $pairs[] = "`" . $key . "` = '" . $val . "'"; 
         }
         $q = "UPDATE `$table` SET " . implode(',', $pairs) . " WHERE `$insert_key` = '$insert_val'";
+        $ret = mysql_query($q);
+        
         if( $debug )
         {
-            print "mysql_update: sql: $q\n";
+            print "mysql_update sql: $q\n";
+            if( !$ret )
+            {
+                print "mysql_error: ";
+                print mysql_error();
+                print "\n";
+            }
         }
-        return mysql_query($q);
+        return $ret;
     }
     function mysql_now()
     {
