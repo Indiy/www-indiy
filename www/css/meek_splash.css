@@ -624,6 +624,10 @@ and (max-device-width : 480px) {
         height: 169px;
         outline: none;
     }
+    #big_play_icon {
+        width: 72px;
+        height: 72px;
+    }
     #big_play_icon .outer {
         width: 72px;
         height: 72px;
