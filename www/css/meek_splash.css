@@ -561,6 +561,11 @@ and (max-device-width : 480px) {
         font-size: 27px;
         line-height: 30px;
     }
+    .bottom_title {
+        height: 100px;
+        font-size: 64px;
+    }
+
     
     .play_top_space {
         height: 15px;
