@@ -322,7 +322,16 @@ body {
 }
 
 .video_container {
-    display: none;
+    display: block;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    background: black;
+    z-index: -10;
+}
+.full_screen.video_container {
+    display: block;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -334,9 +343,6 @@ body {
     padding: 0;
     background: black;
     z-index: 2;
-}
-.full_screen.video_container {
-    display: block;
 }
 .video_container video {
     outline: none;
