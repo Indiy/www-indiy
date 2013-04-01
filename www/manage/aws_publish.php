@@ -378,11 +378,16 @@
                     
                     update_route53($r53_client,$artist,$extra);
                     
+                    $extra['aws']['published'] = TRUE;
+                    
                     $extra_json = json_encode($extra);
                     
                     if( $old_extra_json != $extra_json )
                     {
-                        $updates = array('extra_json' => $extra_json);
+                        $updates = array(
+                                         'extra_json' => $extra_json,
+                                         'last_publish' => time(),
+                                         );
                         mysql_update('mydna_musicplayer',$updates,'id',$id);
                         
                         print "  Updated artist record: $id\n";
