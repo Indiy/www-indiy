@@ -170,20 +170,26 @@ body {
     padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
 }
 #big_play_icon .outer {
-    width: 72px;
-    height: 72px;
+    position: absolute;
+    top: 0px;
+    left: 0px
+    width: 120px;
+    height: 120px;
     background-color: rgba(100,100,100,0.7);
-    border-radius: 72px;
+    border-radius: 120px;
 }
 #big_play_icon .inner {
     position: absolute;
     top: 2px;
     left: 2px;
-    width: 60px;
-    height: 60px;
-    border-radius: 60px;
+    width: 108px;
+    height: 108px;
+    border-radius: 108px;
     border: 4px solid white;
 }
 #big_play_icon .triangle {
@@ -225,6 +231,13 @@ body {
     line-height: 40px;
 }
 
+.bottom_title {
+    height: 100px;
+    color: white;
+    font-size: 80px;
+    font-family: 'Agency Regular', Helvetica, sans-serif;
+    text-align: center;
+}
 
 .title .blue,
 .subtitle .blue, .subtitle_med .blue {
@@ -297,6 +310,7 @@ body {
 }
 
 .video_container {
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -307,10 +321,10 @@ body {
     margin: 0;
     padding: 0;
     background: black;
-    z-index: -1;
+    z-index: 2;
 }
 .full_screen.video_container {
-    z-index: 2;
+    display: block;
 }
 .video_container video {
     outline: none;

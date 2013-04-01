@@ -76,6 +76,12 @@ function splashReady()
 }
 $(document).ready(splashReady);
 
+function clickVideoPlay()
+{
+    $('.video_container').addClass('full_screen');
+    g_videoPlayer.play();
+}
+
 function videoPlay()
 {
     g_videoPlaying = true;
