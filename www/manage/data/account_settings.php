@@ -63,7 +63,8 @@
                          "last_update" => mysql_now(),
                          );
         
-        mysql_update('mydna_musicplayer',$updates,'id',$artist_id);
+        mysql_update('mydna_musicplayer',$updates,'id',$artist_id,TRUE);
+        print "mysql_error: " . mysql_error() . "\n";
         
         $postedValues['artist_data'] = get_artist_data($artist_id);
         echo json_encode($postedValues);

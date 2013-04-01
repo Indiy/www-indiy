@@ -314,7 +314,7 @@
         }
         return $ret;
     }
-    function mysql_update($table,$inserts,$insert_key,$insert_val)
+    function mysql_update($table,$inserts,$insert_key,$insert_val,debug = FALSE)
     {
         $values = array_map('mysql_real_escape_string', array_values($inserts));
         $keys = array_keys($inserts);
@@ -325,6 +325,10 @@
             $pairs[] = "`" . $key . "` = '" . $val . "'"; 
         }
         $q = "UPDATE `$table` SET " . implode(',', $pairs) . " WHERE `$insert_key` = '$insert_val'";
+        if( $debug )
+        {
+            print "mysql_update: sql: $q\n";
+        }
         return mysql_query($q);
     }
     function mysql_now()
