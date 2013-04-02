@@ -250,6 +250,7 @@
     include_once 'include/social_post.html';
     include_once 'include/account_limit.html';
     include_once 'include/artist_file.html';
+    include_once 'include/edit_template.html';
     
     if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' )
         include_once 'include/edit_account_settings.html';
