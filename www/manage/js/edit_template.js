@@ -59,7 +59,7 @@ function showTemplatePopup(template_index)
         var arg = schema.arg_list[i];
         var name = arg.name;
         
-        if( name in template.params )
+        if( template.params && name in template.params )
         {
             var val = template.params[name];
             if( arg.type == 'string' )
@@ -80,6 +80,28 @@ function showTemplatePopup(template_index)
             {
                 var sel = "#edit_template #template_val_drop_{0}".format(i);
                 fillArtistFileSelect(sel,'VIDEO',val.file_id);
+            }
+        }
+        else
+        {
+            if( arg.type == 'string' )
+            {
+                var sel = "#edit_template #template_val_{0}".format(i);
+                $(sel).val('Sat, 06 Apr 2013 00:00:00 GMT');
+            }
+            else if( arg.type == 'image_spec' )
+            {
+                var sel = "#edit_template #template_val_drop_{0}".format(i);
+                fillArtistFileSelect(sel,'IMAGE',false);
+                var sel = "#edit_template #template_val_bg_style_{0}".format(i);
+                $(sel).val('STRETCH');
+                var sel = "#edit_template #template_val_bg_color_{0}".format(i);
+                $(sel).val('000000');
+            }
+            else if( arg.type == 'video' )
+            {
+                var sel = "#edit_template #template_val_drop_{0}".format(i);
+                fillArtistFileSelect(sel,'VIDEO',false);
             }
         }
     }
