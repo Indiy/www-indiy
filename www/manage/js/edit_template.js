@@ -38,7 +38,7 @@ function showTemplatePopup(template_index)
             html += "  <option value='TILE'>TILE</option>";
             html += " </select>";
             html += "</div>";
-            html += "<div class='input_container'>
+            html += "<div class='input_container'>";
             html += " <div class='left_label'>Image BG Color</div>";
             html += " <input id='template_val_bg_color_{0}' type='text' maxlength='6' size='6' class='color' value='' />".format(i);
             html += "</div>";
