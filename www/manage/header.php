@@ -59,6 +59,7 @@
         <script src="js/social_post.js" type="text/javascript"></script>
         <script src="js/account_limit.js" type="text/javascript"></script>
         <script src="js/artist_file.js" type="text/javascript"></script>
+        <script src="js/edit_template.js" type="text/javascript"></script>
 
         <script src="js/user_admin.js" type="text/javascript"></script>
 
