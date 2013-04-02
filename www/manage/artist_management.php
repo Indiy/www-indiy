@@ -216,7 +216,7 @@
     $artist_data_json = json_encode($artist_data);
     
     
-    $user_templates = array();
+    $template_list = array();
     $sql = "SELECT * FROM templates WHERE artist_id='$artistID'";
     $q = mq($sql);
     while( $t = mf($q) )
@@ -226,9 +226,9 @@
         
         $t['params'] = $params;
         
-        $user_templates[] = $t;
+        $template_list[] = $t;
     }
-    $user_templates_json = json_encode($user_templates);
+    $template_list_json = json_encode($template_list);
     
 
     $include_order = FALSE;
@@ -272,7 +272,7 @@
     var g_tabList = <?=$tab_list_json;?>;
     var g_productList = <?=$product_list_json;?>;
     var g_fileList = <?=$file_list_json;?>;
-    var g_templateList = <?=$user_template_json;?>;
+    var g_templateList = <?=$template_list_json;?>;
 
     var g_playerUrl = "<?=playerUrl();?>";
     var g_artistFileBaseUrl = "<?=artist_file_base_url();?>";
