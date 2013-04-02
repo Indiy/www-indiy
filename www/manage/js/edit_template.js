@@ -75,6 +75,7 @@ function showTemplatePopup(template_index)
                 $(sel).val(val.bg_style);
                 var sel = "#edit_template #template_val_bg_color_{0}".format(i);
                 $(sel).val(val.bg_color);
+                new jscolor.color($(sel)[0]);
             }
             else if( arg.type == 'video' )
             {
@@ -97,6 +98,7 @@ function showTemplatePopup(template_index)
                 $(sel).val('STRETCH');
                 var sel = "#edit_template #template_val_bg_color_{0}".format(i);
                 $(sel).val('000000');
+                new jscolor.color($(sel)[0]);
             }
             else if( arg.type == 'video' )
             {
