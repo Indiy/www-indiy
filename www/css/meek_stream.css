@@ -109,6 +109,8 @@ body {
     right: 20px;
     width: 300px;
     z-index: 2;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 /**************************************************/
