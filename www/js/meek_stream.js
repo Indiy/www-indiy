@@ -35,3 +35,8 @@ function hideAllTabs()
 {
     hideStore();
 }
+
+function updateAnchor()
+{
+    
+}
