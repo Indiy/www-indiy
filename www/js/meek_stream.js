@@ -13,7 +13,7 @@ $(document).ready(streamReady);
 
 function twitterWidgetLoad()
 {
-    if( twtter )
+    if( typeof twtter != 'undefined' )
     {
         twttr.widgets.load();
     }
