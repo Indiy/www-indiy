@@ -16,6 +16,7 @@ function twitterWidgetLoad()
     if( typeof twttr != 'undefined' )
     {
         twttr.widgets.load();
+        showTwitter();
     }
     else
     {
