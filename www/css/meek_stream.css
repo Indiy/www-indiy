@@ -161,11 +161,19 @@ body {
     display: none;
     position: fixed;
     top: 48px;
-    left: 175px;
-    width: 500px;
-    height: 500px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
     background-color: rgba(0,0,0,0.85);
     z-index: 3;
+}
+
+#store_tab .store_inner {
+    position: relative;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
 }
 #store_tab .right {
     position: absolute;
