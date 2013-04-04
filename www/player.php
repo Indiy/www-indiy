@@ -129,6 +129,13 @@
     $i = 0;
     while( $product = mf($q_store) )
     {
+        $extra = array();
+        $extra_json = $product['extra_json'];
+        if( strlen($extra_json) > 0 )
+        {
+            $extra = json_decode($extra_json,TRUE);
+        }
+        
         $sizes = FALSE;
         if( $product["size"] != "" )
             $sizes = explode(",", $pro["size"]);
@@ -151,6 +158,7 @@
                       "price" => $price,
                       "sizes" => $sizes,
                       "colors" => $colors,
+                      "extra" => $extra,
                       );
         $product_list[] = $item;
         
