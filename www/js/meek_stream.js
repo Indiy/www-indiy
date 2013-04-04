@@ -7,9 +7,21 @@ function streamReady()
     var html = '<a class="twitter-timeline" height="{0}" data-chrome="transparent" href="https://twitter.com/search?q=%23meeklive" data-widget-id="319675836225699842">Tweets about "#meeklive"</a>'.format(height);
     
     $('#mad_tw_timeline').html(html);
-    //twttr.widgets.load();
+    twitterWidgetLoad();
 }
 $(document).ready(streamReady);
+
+function twitterWidgetLoad()
+{
+    if( twtter )
+    {
+        twttr.widgets.load();
+    }
+    else
+    {
+        window.setTimeout(twitterWidgetLoad,300);
+    }
+}
 
 
 function hideTwitter()
