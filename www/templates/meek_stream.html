@@ -13,22 +13,29 @@
          <script src="/js/css3-mediaqueries.js"></script>
          <![endif]-->
         
-        <link href="../css/meek_stream.css" rel="stylesheet" type="text/css"/>
+        <link href="<?=static_file_url('css/meek_stream.css');?>" rel="stylesheet" type="text/css"/>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
         
-        <script src="../js/jquery.mousewheel.js" type="text/javascript"></script>
-        <script src="../js/string.utils.js" type="text/javascript"></script>
+        <script src="<?=static_file_url('js/jquery.mousewheel.js');?>" type="text/javascript"></script>
+        <script src="<?=static_file_url('js/string.utils.js');?>" type="text/javascript"></script>
 
-        <script src="../js/player_image.js" type="text/javascript"></script>
-        <script src="../js/meek_stream.js" type="text/javascript"></script>
+        <script src="<?=static_file_url('js/player_image.js');?>" type="text/javascript"></script>
+        <script src="<?=static_file_url('js/meek_stream.js');?>" type="text/javascript"></script>
         
         <script type="text/javascript">
             
             var g_trueSiteUrl = "<?=trueSiteUrl();?>";
+            var g_cartBaseUrl = "<?=cart_base_url();?>";
             var g_apiBaseUrl = "<?=api_base_url();?>";
-            var g_artistId = "<?=$artist_id;?>";
+            var g_artistBaseUrl = "<?=$artist_base_url;?>";
+            var g_artistFileBaseUrl = "<?=artist_file_base_url();?>";
+
+            var g_productList = <?=$product_list_json;?>;
+            
+            var g_artistName = "<?=$artist_name;?>";
+            var g_artistId = <?=$artist_id;?>;
             
         </script>
         

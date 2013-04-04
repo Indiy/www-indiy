@@ -12,21 +12,21 @@
 
 @font-face {
     font-family: 'Agency Regular';
-    src: url('../fonts/agencyr.eot');
-    src: url('../fonts/agencyr.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/agencyr.woff') format('woff'),
-    url('../fonts/agencyr.ttf') format('truetype'),
-    url('../fonts/agencyr.svg#AGENCYR') format('svg');
+    src: url('/fonts/agencyr.eot');
+    src: url('fonts/agencyr.eot?#iefix') format('embedded-opentype'),
+    url('fonts/agencyr.woff') format('woff'),
+    url('fonts/agencyr.ttf') format('truetype'),
+    url('/fonts/agencyr.svg#AGENCYR') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Agency Bold';
-    src: url('../fonts/agencyb.eot');
-    src: url('../fonts/agencyb.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/agencyb.woff') format('woff'),
-    url('../fonts/agencyb.ttf') format('truetype'),
-    url('../fonts/agencyb.svg#AGENCYB') format('svg');
+    src: url('/fonts/agencyb.eot');
+    src: url('/fonts/agencyb.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/agencyb.woff') format('woff'),
+    url('/fonts/agencyb.ttf') format('truetype'),
+    url('/fonts/agencyb.svg#AGENCYB') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -42,7 +42,7 @@ body {
     margin: 0;
     padding: 0;
     background: black;
-     background: black url(../images/meek-bg.jpg) no-repeat center center;
+     background: black url(/images/meek-bg.jpg) no-repeat center center;
      background-size: 100% auto;
 }
 
@@ -117,10 +117,10 @@ body {
     width: 25px;
     height: 25px;
     margin-right: 2px;
-    background: transparent url('../images/player_icons.png') no-repeat -206px -51px;
+    background: transparent url('/images/player_icons.png') no-repeat -206px -51px;
 }
 .no_touch .content_tab .close:hover .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -171px -51px;
+    background: transparent url('/images/player_icons.png') no-repeat -171px -51px;
 }
 .content_tab .close .name {
     display: inline-block;
