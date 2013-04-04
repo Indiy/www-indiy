@@ -117,7 +117,7 @@ body {
     width: 300px;
     z-index: 2;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     background: rgba(48,48,48,0.8);
     border-radius: 9px;
