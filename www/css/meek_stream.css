@@ -169,7 +169,7 @@ body {
 }
 #store_tab .right {
     position: absolute;
-    left: 268px;
+    left: 0px;
     right: 0px;
     top: 36px;
     bottom: 0px;
