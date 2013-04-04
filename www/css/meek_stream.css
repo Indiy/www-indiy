@@ -164,7 +164,6 @@ body {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background-color: rgba(0,0,0,0.85);
     z-index: 3;
 }
 
@@ -173,7 +172,10 @@ body {
     width: 700px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
     height: 100%;
+    background-color: rgba(0,0,0,0.85);
 }
 #store_tab .right {
     position: absolute;
