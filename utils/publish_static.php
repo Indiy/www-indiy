@@ -94,9 +94,9 @@
             {
                 $new_url = $file_map[$url];
                 
-                if( strpos($url,'/font/') !== FALSE )
+                if( strpos($url,'/fonts/') !== FALSE )
                 {
-                    $new_url = $GLOBAL['g_font_base_url'] . $new_url;
+                    $new_url = $GLOBALS['g_font_base_url'] . $new_url;
                 }
                 
                 $new_item = "url($new_url$end_url)";
