@@ -26,3 +26,12 @@ function showTwitter()
     $('#overlay .top_bar .right .show_feed').hide();
     $('#overlay .top_bar .right .hide_feed').show();
 }
+
+function showContentPage()
+{
+}
+
+function hideAllTabs()
+{
+    hideStore();
+}
