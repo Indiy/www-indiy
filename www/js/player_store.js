@@ -95,17 +95,28 @@ function storeBuyProduct()
 {
     var product = g_productList[g_storeCurrentProductIndex];
     
-    storeBuyProductId(product.id);
-
-    $('#buy_now_result .store_title').html("{0} > {1}".format(g_artistName,product.name));
-    $('#buy_now_result .name').html(product.name);
-
-    $('#store_tab .store_content').hide();
-    $('#store_tab #store_back').show();
-    $('#store_tab #buy_now_result').show();
+    if( typeof product.extra !== 'undefined'
+       && typeof product.extra.size_to_url !== 'undefined' )
+    {
+        var size = $('#product_size').val();
+        var url = product.extra.size_to_url[size];
         
-    $('#store_tab').scrollbar("repaint");
-    updateAnchor({product_id: ""});    
+        window.open(url,'_blank');
+    }
+    else
+    {
+        storeBuyProductId(product.id);
+
+        $('#buy_now_result .store_title').html("{0} > {1}".format(g_artistName,product.name));
+        $('#buy_now_result .name').html(product.name);
+
+        $('#store_tab .store_content').hide();
+        $('#store_tab #store_back').show();
+        $('#store_tab #buy_now_result').show();
+            
+        $('#store_tab').scrollbar("repaint");
+        updateAnchor({product_id: ""});
+    }
 }
 function storeBuyProductId(product_id)
 {
