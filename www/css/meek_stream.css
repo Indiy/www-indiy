@@ -111,6 +111,11 @@ body {
     z-index: 2;
     overflow-x: hidden;
     overflow-y: scroll;
+
+    background: rgba(48,48,48,0.8);
+    border-radius: 9px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 /**************************************************/

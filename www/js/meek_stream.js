@@ -2,7 +2,7 @@
 
 function streamReady()
 {
-    var height = $('#mad_tw_timeline').height();
+    var height = $('#mad_tw_timeline').height() - 10;
     
     var html = '<a class="twitter-timeline" height="{0}" data-chrome="transparent" href="https://twitter.com/search?q=%23meeklive" data-widget-id="319675836225699842">Tweets about "#meeklive"</a>'.format(height);
     
