@@ -349,6 +349,11 @@ body {
     font-weight: normal;
     text-align: center;
 }
+#store_tab .product_info .pi_right .price_share .sizes {
+    float: right;
+    padding-top: 10px;
+}
+
 #store_tab .product_info .pi_right .buy {
     margin-top: 22px;
     width: 175px;
