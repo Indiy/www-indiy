@@ -189,7 +189,6 @@ body {
 #store_tab .product_list {
     max-width: 745px;
     padding-bottom: 30px;
-    padding-right: 95px;
 }
 #store_tab .product_list .store_title {
     padding-top: 27px;
@@ -257,7 +256,6 @@ body {
     display: none;
     max-width: 675px;
     padding-bottom: 30px;
-    padding-right: 95px;
 }
 #store_tab .product_info .store_title {
     padding-top: 27px;
@@ -395,7 +393,6 @@ body {
     display: none;
     max-width: 675px;
     padding-bottom: 30px;
-    padding-right: 95px;
 }
 #store_tab .buy_result .store_title {
     padding-top: 27px;
