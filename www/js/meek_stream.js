@@ -11,3 +11,18 @@ function streamReady()
 }
 $(document).ready(streamReady);
 
+
+function hideTwitter()
+{
+    $('#mad_tw_timeline').hide();
+    
+    $('#overlay .top_bar .right .show_feed').show();
+    $('#overlay .top_bar .right .hide_feed').hide();
+}
+function showTwitter()
+{
+    $('#mad_tw_timeline').show();
+
+    $('#overlay .top_bar .right .show_feed').hide();
+    $('#overlay .top_bar .right .hide_feed').show();
+}
