@@ -51,7 +51,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 100px;
+    bottom: 40px;
     z-index: 1;
 }
 #overlay .top_bar {
@@ -79,6 +79,7 @@ body {
     font-size: 22px;
     font-family: 'Agency Regular', Helvetica, sans-serif;
     vertical-align: top;
+    cursor: pointer;
 }
 #overlay .top_bar .right .tw_button {
     display: inline-block;
@@ -99,6 +100,7 @@ body {
     color: white;
     font-size: 50px;
     font-family: 'Agency Regular', Helvetica, sans-serif;
+    cursor: pointer;
 }
 
 /**************************************************/
