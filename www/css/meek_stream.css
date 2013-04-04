@@ -82,6 +82,7 @@ body {
 }
 #overlay .top_bar .right .tw_button {
     display: inline-block;
+    padding-top: 4px;
     width: 150px;
     vertical-align: top;
 }
