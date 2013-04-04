@@ -93,6 +93,12 @@
             if( isset($file_map[$url]) )
             {
                 $new_url = $file_map[$url];
+                
+                if( strpos($url,'/font/') !== FALSE )
+                {
+                    $new_url = $GLOBAL['g_font_base_url'] . $new_url;
+                }
+                
                 $new_item = "url($new_url$end_url)";
                 //print "      new_item: $new_item\n";
                 

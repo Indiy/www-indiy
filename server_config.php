@@ -21,6 +21,8 @@
     $g_api_base_url = "http://api.myartistdna.com";
     $g_manage_base_url = "http://manage.myartistdna.com";
     $g_staging_host = "staging.myartistdna.com";
+    $g_font_base_url = "http://static.myartistdna.com.s3-website-us-east-1.amazonaws.com";
+
     $ALT_IMAGE_REV_KEY = "1";
     
     $stream_prefix = "stream_mad_";
@@ -49,6 +51,8 @@
     $g_api_base_url = "http://api.madd3v.com";
     $g_manage_base_url = "http://manage.madd3v.com";
     $g_staging_host = "staging.madd3v.com";
+    $g_font_base_url = "http://static2.madd3v.com.s3-website-us-east-1.amazonaws.com";
+    
     $ALT_IMAGE_REV_KEY = "1";
     
     $stream_prefix = "stream_maddev_";
