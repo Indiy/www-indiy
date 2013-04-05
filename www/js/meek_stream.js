@@ -93,10 +93,13 @@ function toggleShowTwitter()
 {
     if( $('#mad_tw_timeline').is(":visible") )
     {
+        $('#iphone_show_twitter_button .button').html('SHOW #MEEKLIVE');
         $('#mad_tw_timeline').hide();
     }
     else
     {
+        $('#iphone_show_twitter_button .button').html('HIDE #MEEKLIVE');
+        $(document).scrollTop($('#iphone_show_twitter_button').position().top)
         $('#mad_tw_timeline').show();
     }
 }
@@ -128,10 +131,13 @@ function toggleShowStore()
 {
     if( $('#store_tab').is(":visible") )
     {
+        $('#iphone_show_twitter_button .button').html('SHOW STORE');
         hideStore();
     }
     else
     {
+        $('#iphone_show_twitter_button .button').html('HIDE STORE');
+        $(document).scrollTop($('#iphone_show_twitter_button').position().top)
         showStore();
     }
 }
