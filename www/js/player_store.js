@@ -63,7 +63,7 @@ function storeShowProduct(index)
     g_storeCurrentProductIndex = index;
     var product = g_productList[index];
     
-    var html = "<span onclick='storeShowProductList()'>{0}</span> > {1}".format(g_artistName,product.name);
+    var html = "<span onclick='storeShowProductList();'>{0} Product List</span>".format(g_artistName);
     $('#product_info .store_title').html(html);
     $('#product_info .img_holder img').attr('src',product.image);
     $('#product_info .name').html(product.name);
