@@ -612,7 +612,9 @@ and (max-device-width : 480px) {
         float: none;
         width: auto;
         padding-left: 10px;
-        padding-right: 5px;
+        padding-right: 10px;
     }
-
+    #store_tab .product_info .pi_right .name {
+        padding-top: 24px;
+    }
 }
