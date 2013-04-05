@@ -91,6 +91,7 @@ function showTwitter()
 }
 function toggleShowTwitter()
 {
+    hideStore();
     if( $('#mad_tw_timeline').is(":visible") )
     {
         $('#iphone_show_twitter_button .button').html('SHOW #MEEKLIVE');
@@ -129,6 +130,7 @@ function hideStreamStore()
 }
 function toggleShowStore()
 {
+    $('#mad_tw_timeline').hide();
     if( $('#store_tab').is(":visible") )
     {
         $('#iphone_show_store_button .button').html('SHOW STORE');
