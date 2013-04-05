@@ -516,8 +516,8 @@ and (max-device-width : 480px) {
     
     #iphone_top {
         display: block;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 6px;
+        padding-bottom: 5px;
         padding-left: 5px;
         padding-right: 5px;
     }
@@ -532,6 +532,7 @@ and (max-device-width : 480px) {
         height: 175px;
         padding-left: 5px;
         padding-right: 5px;
+        padding-bottom: 5px;
     }
     #mad_tw_timeline {
         position: static;
@@ -548,7 +549,7 @@ and (max-device-width : 480px) {
     }
     #iphone_pad {
         display: block;
-        height: 12px;
+        height: 10px;
     }
 
 
