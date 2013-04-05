@@ -559,13 +559,17 @@ and (orientation : portrait) {
     #video_bg.min_video {
         top: 685px;
         height: 230px;
+        width: auto;
     }
     #mad_tw_timeline {
         bottom: auto;
-        left: 50px;
-        right: 50px;
-        height: 500px;
+        left: 123px;
+        right: 123px;
+        height: 566px;
         width: auto;
+    }
+    #store_tab {
+        left: 0px;
     }
 }
 
