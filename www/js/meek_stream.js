@@ -59,4 +59,14 @@ function showStreamStore()
 {
     showStore();
     hideTwitter();
+
+    $('#overlay .shop_button .hide_shop').show();
+    $('#overlay .shop_button .show_shop').hide();
+}
+function hideStreamStore()
+{
+    hideStore();
+
+    $('#overlay .shop_button .show_shop').show();
+    $('#overlay .shop_button .hide_shop').hide();
 }
