@@ -503,6 +503,11 @@ and (orientation : portrait) {
         padding-top: 3px;
         font-size: 18px;
     }
+    
+    #video_bg {
+        position: absolute;
+        z-index: -1;
+    }
 
 }
 
