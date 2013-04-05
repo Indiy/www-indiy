@@ -78,7 +78,7 @@ function hideTwitter()
 {
     if( IS_IPAD )
     {
-        $('video').set('visibility','visible');
+        $('video').attr('visibility','visible');
     }
 
     $('#mad_tw_timeline').hide();
@@ -91,7 +91,7 @@ function showTwitter()
     hideStore();
     if( IS_IPAD )
     {
-        $('video').set('visibility','hidden');
+        $('video').attr('visibility','hidden');
     }
 
     $('#mad_tw_timeline').show();
