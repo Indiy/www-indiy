@@ -512,9 +512,24 @@ and (max-device-width : 1024px) {
 
     #video_bg {
         position: absolute;
+        top: 40px;
         z-index: -1;
     }
-
+    #overlay .top_bar .title {
+        padding-left: 70px;
+    }
+    #overlay .shop_button {
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding-top: 5px;
+        padding-left: 5px;
+        color: white;
+        font-size: 22px;
+        font-family: 'Agency Regular', Helvetica, sans-serif;
+        cursor: pointer;
+    }
 }
 
 @media only screen
