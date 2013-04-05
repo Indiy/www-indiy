@@ -100,7 +100,7 @@ function toggleShowTwitter()
     {
         $('#iphone_show_twitter_button .button').html('HIDE #MEEKLIVE');
         $('#mad_tw_timeline').show();
-        $(document).scrollTop($('#iphone_show_twitter_button').position().top)
+        $(document).scrollTop($('#iphone_show_twitter_button').position().top);
     }
 }
 
@@ -138,7 +138,7 @@ function toggleShowStore()
     {
         $('#iphone_show_store_button .button').html('HIDE STORE');
         showStore();
-        $(document).scrollTop($('#iphone_show_store_button').position().top)
+        $(document).scrollTop($('#iphone_show_store_button').position().top);
     }
 }
 
