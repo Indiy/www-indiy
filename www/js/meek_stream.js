@@ -78,7 +78,7 @@ function hideTwitter()
 {
     if( IS_IPAD )
     {
-        $().set('visibility','visibil')
+        $('video').set('visibility','visible');
     }
 
     $('#mad_tw_timeline').hide();
@@ -89,6 +89,11 @@ function hideTwitter()
 function showTwitter()
 {
     hideStore();
+    if( IS_IPAD )
+    {
+        $('video').set('visibility','hidden');
+    }
+
     $('#mad_tw_timeline').show();
 
     $('#overlay .top_bar .right .show_feed').hide();
@@ -128,12 +133,20 @@ function updateAnchor()
 
 function showStreamStore()
 {
-    showStore();
     hideTwitter();
+    showStore();
+    if( IS_IPAD )
+    {
+        $('video').set('visibility','hidden');
+    }
 }
 function hideStreamStore()
 {
     hideStore();
+    if( IS_IPAD )
+    {
+        $('video').set('visibility','visible');
+    }
 }
 function toggleShowStore()
 {
