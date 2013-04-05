@@ -355,6 +355,9 @@ body {
     float: right;
     padding-top: 10px;
 }
+#store_tab .product_info .pi_right .price_share .sizes select {
+    font-size: 18px;
+}
 
 #store_tab .product_info .pi_right .buy {
     margin-top: 22px;
