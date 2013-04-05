@@ -575,5 +575,22 @@ and (max-device-width : 480px) {
     #mad_tw_timeline {
         margin-top: 8px;
     }
+    
+    .content_tab .close {
+        display: none;
+    }
+    #store_tab {
+        position: static;
+        height: auto;
+    }
+    #store_tab .store_inner {
+        position: static;
+    }
+    #store_tab .right {
+        position: static;
+    }
+    #store_tab .product_list .store_title {
+        display: none;
+    }
 
 }
