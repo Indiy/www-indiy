@@ -589,6 +589,7 @@ and (max-device-width : 480px) {
         padding-left: 5px;
         padding-right: 5px;
         padding-bottom: 10px;
+        max-height: none;
     }
     #store_tab .right {
         position: static;
