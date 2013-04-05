@@ -28,8 +28,12 @@ var g_updateInterval = false;
 var g_videoPlayer = false;
 var g_videoPlaying = false;
 
+var g_loadTime = false;
+
 function splashReady()
 {
+    g_loadTime = new Date();
+
     if( IS_CHROME )
         $('body').addClass('chrome');
     if( IS_IPAD )
@@ -114,9 +118,27 @@ function secsUntilEvent()
 {
     var now = new Date();
     
-
     var time_left = g_eventDate - now;
+    
+    if( time_left < 0.0 )
+    {
+        maybeReload();
+        return 0;
+    }
+    
     return Math.floor(time_left/1000);
+}
+
+function maybeReload()
+{
+    var now = new Date();
+    
+    var time_since_load = now - g_loadTime;
+    
+    if( time_since_load > 10000 )
+    {
+        window.location.reload(true);
+    }
 }
 
 function updateCountdown()
