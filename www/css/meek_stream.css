@@ -507,10 +507,7 @@ and (orientation : portrait) {
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
     
-    #overlay .top_bar .right .tw_button {
-        display: none;
-    }
-    #overlay .top_bar .right .mad_fb_button {
+    #overlay {
         display: none;
     }
     
