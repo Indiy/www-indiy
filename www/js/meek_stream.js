@@ -78,7 +78,7 @@ function hideTwitter()
 {
     if( IS_IPAD )
     {
-        $('video').attr('visibility','visible');
+        $('#video_bg').removeClass('min_video');
     }
 
     $('#mad_tw_timeline').hide();
@@ -91,7 +91,7 @@ function showTwitter()
     hideStore();
     if( IS_IPAD )
     {
-        $('video').attr('visibility','hidden');
+        $('#video_bg').addClass('min_video');
     }
 
     $('#mad_tw_timeline').show();
@@ -137,7 +137,7 @@ function showStreamStore()
     showStore();
     if( IS_IPAD )
     {
-        $('video').set('visibility','hidden');
+        $('#video_bg').addClass('min_video');
     }
 }
 function hideStreamStore()
@@ -145,7 +145,7 @@ function hideStreamStore()
     hideStore();
     if( IS_IPAD )
     {
-        $('video').set('visibility','visible');
+        $('#video_bg').removeClass('min_video');
     }
 }
 function toggleShowStore()

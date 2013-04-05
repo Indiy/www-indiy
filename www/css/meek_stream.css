@@ -522,6 +522,10 @@ and (max-device-width : 1024px) {
     #overlay .top_bar .right .hide_feed {
         color: #3cc;
     }
+    #video_bg.min_video {
+        top: 600px
+        height: 100px;
+    }
 }
 
 @media only screen
@@ -543,7 +547,10 @@ and (orientation : portrait) {
         font-size: 18px;
         width: 90px;
     }
-
+    #video_bg.min_video {
+        top: 600px
+        height: 100px;
+    }
 }
 
 @media only screen
