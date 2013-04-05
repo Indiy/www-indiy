@@ -481,6 +481,16 @@ body {
     background-color: #600084;
 }
 
+#iphone_top {
+    display: none;
+}
+#iphone_show_twitter_button {
+    display: none;
+}
+#iphone_show_store_button {
+    display: none;
+}
+
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
@@ -502,6 +512,33 @@ and (max-device-width : 480px) {
     }
     #overlay .top_bar .right .mad_fb_button {
         display: none;
+    }
+    
+    #iphone_top {
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    #iphone_top .title {
+        color: white;
+        font-size: 22px;
+        font-family: 'Agency Regular', Helvetica, sans-serif;
+        text-align: center;
+    }
+    #video_bg {
+        position: static;
+        height: 300px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #mad_tw_timeline {
+        position: static;
+        height: 500px;
+        width: auto;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
 }
