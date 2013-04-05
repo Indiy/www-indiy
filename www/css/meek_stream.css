@@ -618,3 +618,12 @@ and (max-device-width : 480px) {
         padding-top: 24px;
     }
 }
+@media (device-height: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation : portrait) {
+    
+    #video_bg {
+        padding-top: 35px;
+        padding-bottom: 75px;
+    }
+}
