@@ -98,7 +98,9 @@ body {
     display: inline-block;
     padding-top: 4px;
     width: 100px;
+    height: 24px;
     vertical-align: top;
+    overflow: hidden;
 }
 #overlay .shop_button {
     display: inline-block;
