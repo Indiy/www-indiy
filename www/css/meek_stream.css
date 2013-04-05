@@ -523,9 +523,18 @@ and (max-device-width : 1024px) {
         color: #3cc;
     }
     #video_bg.min_video {
-        top: 600px;
-        height: 100px;
+        left: 0px;
+        top: 40px;
+        bottom: 0px;
+        width: 200px;
     }
+    #mad_tw_timeline {
+        width: 500px;
+    }
+    #store_tab {
+        left: 210px;
+    }
+
 }
 
 @media only screen
@@ -548,8 +557,15 @@ and (orientation : portrait) {
         width: 90px;
     }
     #video_bg.min_video {
-        top: 600px;
-        height: 100px;
+        top: 685px;
+        height: 230px;
+    }
+    #mad_tw_timeline {
+        bottom: auto;
+        left: 50px;
+        right: 50px;
+        height: 500px;
+        width: auto;
     }
 }
 
