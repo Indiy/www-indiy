@@ -89,6 +89,17 @@ function showTwitter()
     $('#overlay .top_bar .right .show_feed').hide();
     $('#overlay .top_bar .right .hide_feed').show();
 }
+function toggleShowTwitter()
+{
+    if( $('#mad_tw_timeline').is(":visible") )
+    {
+        $('#mad_tw_timeline').hide();
+    }
+    else
+    {
+        $('#mad_tw_timeline').show();
+    }
+}
 
 function showContentPage()
 {
@@ -113,3 +124,15 @@ function hideStreamStore()
 {
     hideStore();
 }
+function toggleShowStore()
+{
+    if( $('#store_tab').is(":visible") )
+    {
+        hideStore();
+    }
+    else
+    {
+        showStore();
+    }
+}
+
