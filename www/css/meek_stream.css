@@ -513,10 +513,14 @@ and (max-device-width : 1024px) {
         left: 0px;
         padding-top: 1px;
         padding-left: 5px;
-        color: white;
+        color: #3cc;
         font-size: 22px;
         font-family: 'Agency Regular', Helvetica, sans-serif;
         cursor: pointer;
+    }
+    #overlay .top_bar .right .show_feed,
+    #overlay .top_bar .right .hide_feed {
+        color: #3cc;
     }
 }
 
@@ -537,6 +541,7 @@ and (orientation : portrait) {
     #overlay .top_bar .right .hide_feed {
         padding-top: 3px;
         font-size: 18px;
+        width: 90px;
     }
 
 }
