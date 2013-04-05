@@ -88,6 +88,18 @@ function storeShowProduct(index)
     $('#store_tab #store_back').show();
     $('#store_tab #product_info').show();
     
+    if( typeof product.extra !== 'undefined'
+       && typeof product.extra.reserve_url !== 'undefined'
+       && product.extra.reserve_url.length > 0
+       )
+    {
+        $('#store_tab .product_info .pi_right .buy').html("RESERVE");
+    }
+    else
+    {
+        $('#store_tab .product_info .pi_right .buy').html("BUY NOW");
+    }
+    
     $('#store_tab').scrollbar("repaint");
     updateAnchor({product_id: product.id});
 }
