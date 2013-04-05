@@ -62,7 +62,7 @@ function twitterWidgetLoad()
     {
         twttr.widgets.load();
         
-        if( !IS_PHONE )
+        if( !IS_PHONE && !IS_IPAD )
         {
             showTwitter();
         }
@@ -76,6 +76,11 @@ function twitterWidgetLoad()
 
 function hideTwitter()
 {
+    if( IS_IPAD )
+    {
+        $().set('visibility','visibil')
+    }
+
     $('#mad_tw_timeline').hide();
     
     $('#overlay .top_bar .right .show_feed').show();
