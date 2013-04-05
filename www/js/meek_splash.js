@@ -135,7 +135,7 @@ function maybeReload()
     
     var time_since_load = now - g_loadTime;
     
-    if( time_since_load > 10000 )
+    if( time_since_load > 30000 )
     {
         window.location.reload(true);
     }
