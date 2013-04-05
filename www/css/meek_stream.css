@@ -492,3 +492,16 @@ and (orientation : portrait) {
     }
 
 }
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    
+    #overlay .top_bar .right .tw_button {
+        display: none;
+    }
+    #overlay .top_bar .right .fb_button {
+        display: none;
+    }
+
+}
