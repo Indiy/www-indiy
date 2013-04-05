@@ -105,7 +105,7 @@ function storeBuyProduct()
         window.open(url,'_blank');
     }
     else if( typeof product.extra !== 'undefined'
-            && typeof product.extra.reserve_url !== 'undefined')
+            && typeof product.extra.reserve_url !== 'undefined' )
     {
         var url = product.extra.reserve_url;
         window.open(url,'_blank');
