@@ -537,6 +537,13 @@ and (max-device-width : 480px) {
         padding-left: 5px;
         padding-right: 5px;
     }
+    #iphone_show_twitter_button {
+        display: block;
+    }
+    #iphone_show_store_button {
+        display: block;
+    }
+
 
     .button_container {
         padding-left: 0px;
