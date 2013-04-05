@@ -562,10 +562,11 @@ and (orientation : portrait) {
         width: auto;
     }
     #mad_tw_timeline {
+        top: 50px;
         bottom: auto;
         left: 123px;
         right: 123px;
-        height: 566px;
+        height: 616px;
         width: auto;
     }
     #store_tab {
