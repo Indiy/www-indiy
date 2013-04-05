@@ -500,7 +500,7 @@ and (max-device-width : 480px) {
     #overlay .top_bar .right .tw_button {
         display: none;
     }
-    #overlay .top_bar .right .fb_button {
+    #overlay .top_bar .right .mad_fb_button {
         display: none;
     }
 
