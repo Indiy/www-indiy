@@ -526,10 +526,10 @@ and (max-device-width : 1024px) {
         left: 0px;
         top: 40px;
         bottom: 0px;
-        width: 200px;
+        width: 250px;
     }
     #mad_tw_timeline {
-        width: 500px;
+        width: 700px;
     }
     #store_tab {
         left: 210px;

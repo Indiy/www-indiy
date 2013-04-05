@@ -133,6 +133,9 @@ function updateAnchor()
 
 function showStreamStore()
 {
+    if( g_showingStore )
+        return;
+
     hideTwitter();
     showStore();
     if( IS_IPAD )
