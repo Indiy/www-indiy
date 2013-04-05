@@ -548,7 +548,7 @@ and (max-device-width : 480px) {
     }
     #iphone_pad {
         display: block;
-        height: 20px;
+        height: 12px;
     }
 
 
