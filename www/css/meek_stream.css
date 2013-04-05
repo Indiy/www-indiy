@@ -279,6 +279,9 @@ body {
     text-transform: uppercase;
     white-space: normal;
 }
+#store_tab .product_info .store_title span {
+    cursor: pointer;
+}
 #store_tab .product_info .pi_right {
     float: right;
     width: 290px;
