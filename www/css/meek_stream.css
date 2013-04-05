@@ -480,3 +480,15 @@ body {
 #store_tab .buy_result .go_to_fan {
     background-color: #600084;
 }
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    
+    #overlay .top_bar .title {
+        padding-top: 3px;
+        font-size: 18px;
+    }
+
+}
