@@ -523,7 +523,7 @@ and (max-device-width : 1024px) {
         color: #3cc;
     }
     #video_bg.min_video {
-        top: 600px
+        top: 600px;
         height: 100px;
     }
 }
@@ -548,7 +548,7 @@ and (orientation : portrait) {
         width: 90px;
     }
     #video_bg.min_video {
-        top: 600px
+        top: 600px;
         height: 100px;
     }
 }
