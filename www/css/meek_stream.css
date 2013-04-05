@@ -585,9 +585,16 @@ and (max-device-width : 480px) {
     }
     #store_tab .store_inner {
         position: static;
+        width: auto;
+        padding-left: 5px;
+        padding-right: 5px;
     }
     #store_tab .right {
         position: static;
+    }
+    #store_tab .product_list {
+        text-align: center;
+        padding-bottom: 10px;
     }
     #store_tab .product_list .store_title {
         display: none;
