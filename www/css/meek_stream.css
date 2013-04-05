@@ -552,7 +552,6 @@ and (max-device-width : 480px) {
         height: 10px;
     }
 
-
     .button_container {
         padding-left: 0px;
         padding-right: 0px;
@@ -571,6 +570,10 @@ and (max-device-width : 480px) {
         background: #008b8a;
         box-shadow: inset 0px 3px 35px #066;
         cursor: pointer;
+    }
+
+    #mad_tw_timeline {
+        margin-top: 8px;
     }
 
 }
