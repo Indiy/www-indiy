@@ -490,6 +490,9 @@ body {
 #iphone_show_store_button {
     display: none;
 }
+#iphone_pad {
+    display: none;
+}
 
 @media only screen
 and (min-device-width : 768px)
@@ -542,6 +545,10 @@ and (max-device-width : 480px) {
     }
     #iphone_show_store_button {
         display: block;
+    }
+    #iphone_pad {
+        display: block;
+        height: 20px;
     }
 
 
