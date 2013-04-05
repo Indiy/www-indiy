@@ -34,6 +34,7 @@ function hideTwitter()
 }
 function showTwitter()
 {
+    hideStore();
     $('#mad_tw_timeline').show();
 
     $('#overlay .top_bar .right .show_feed').hide();
@@ -52,4 +53,10 @@ function hideAllTabs()
 function updateAnchor()
 {
     
+}
+
+function showStreamStore()
+{
+    showStore();
+    hideTwitter();
 }
