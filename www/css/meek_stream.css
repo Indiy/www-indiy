@@ -283,7 +283,6 @@ body {
     display: inline-block;
     height: 0px;
     width: 0px;
-    margin-top: 4px;
     vertical-align: top;
 	border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
@@ -291,6 +290,7 @@ body {
 }
 #store_tab .product_info .store_title .text {
     cursor: pointer;
+    padding-left: 10px;
 }
 #store_tab .product_info .pi_right {
     float: right;
