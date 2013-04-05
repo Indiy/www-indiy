@@ -133,22 +133,45 @@ function updateAnchor()
 
 function showStreamStore()
 {
-    if( g_showingStore )
-        return;
-
-    hideTwitter();
-    showStore();
     if( IS_IPAD )
     {
-        $('#video_bg').addClass('min_video');
+        ipadToggleStore();
+    }
+    else
+    {
+        hideTwitter();
+        showStore();
     }
 }
+
+function ipadToggleStore()
+{
+    if( $('#video_bg').hasClass('min_video') )
+    {
+        hideStore();
+        $('#video_bg').removeClass('min_video');
+        
+        $('#overlay .shop_button .show_shop').html('+ SHOP');
+    }
+    else
+    {
+        hideTwitter();
+        showStore();
+        $('#video_bg').addClass('min_video');
+        
+        $('#overlay .shop_button .show_shop').html('- HIDE');
+    }
+}
+
 function hideStreamStore()
 {
-    hideStore();
     if( IS_IPAD )
     {
-        $('#video_bg').removeClass('min_video');
+        ipadToggleStore();
+    }
+    else
+    {
+        hideStore();
     }
 }
 function toggleShowStore()
