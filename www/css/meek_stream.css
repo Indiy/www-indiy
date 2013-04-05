@@ -602,5 +602,17 @@ and (max-device-width : 480px) {
     #store_tab .product_list .store_title {
         display: none;
     }
+    #store_tab .product_info .store_title {
+        display: none;
+    }
+    #store_tab .product_info .pi_left {
+        display: none;
+    }
+    #store_tab .product_info .pi_right {
+        float: none;
+        width: auto;
+        padding-left: 10px;
+        padding-right: 5px;
+    }
 
 }
