@@ -98,9 +98,8 @@ body {
     display: inline-block;
     padding-top: 4px;
     width: 100px;
-    height: 24px;
+    height: 22px;
     vertical-align: top;
-    overflow: hidden;
 }
 #overlay .shop_button {
     display: inline-block;
@@ -480,4 +479,6 @@ body {
 #store_tab .buy_result .go_to_fan {
     background-color: #600084;
 }
-
+.fb_edge_widget_with_comment span.fb_edge_comment_widget {
+    left: -300px !important;
+}
