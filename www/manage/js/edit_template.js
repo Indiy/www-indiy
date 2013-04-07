@@ -4,19 +4,21 @@ var g_templateIndex = false;
 function updateTemplateList()
 {
     $('#template_list_ul').empty();
-    for( var i = 0 ; i < g_tabList.length ; ++i )
+    for( var i = 0 ; i < g_templateList.length ; ++i )
     {
-        var tab = g_tabList[i];
+        var template = g_templateList[i];
         var class_name = i % 2 == 0 ? 'odd' : '';
         var html = "";
         
-        html += "<li id='arrayorder_{0}' class='{1}'>".format(tab.id,class_name);
+        var desc = template.id + ": " + template.name;
+        
+        html += "<li id='arrayorder_{0}' class='{1}'>".format(template.id,class_name);
         html += "<span class='title'>";
         html += "<a onclick='showTemplatePopup({0});'>".format(i);
-        html += tab.name;
+        html += desc;
         html += "</a>";
         html += "</span>";
-        html += "<span class='delete'><a  href='#' onclick='deleteTemplate({0});'></a></span>".format(tab.id);
+        html += "<span class='delete'><a  href='#' onclick='deleteTemplate({0});'></a></span>".format(i);
         html += "</li>";
         $('#template_list_ul').append(html);
     }
