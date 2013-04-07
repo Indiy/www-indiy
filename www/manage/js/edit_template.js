@@ -77,7 +77,7 @@ function showTemplatePopup(template_index)
     }
     $('#edit_template .form_fields').html(html);
 
-    $('#edit_template .template_name').val(template.name);
+    $('#edit_template #template_name').val(template.name);
     for( var i = 0 ; i < schema.arg_list.length ; ++i )
     {
         var arg = schema.arg_list[i];
@@ -137,7 +137,7 @@ function showTemplatePopup(template_index)
 
 function onEditTemplateSubmit()
 {
-    var name = $('#edit_template .template_name').val();
+    var name = $('#edit_template #template_name').val();
     
     if( !name || name.length == 0 )
     {
