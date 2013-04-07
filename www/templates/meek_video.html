@@ -31,7 +31,11 @@
         _V_.options.flash.swf = "<?=static_file_url('/js/video-js.swf');?>";
     
         var g_trueSiteUrl = "<?=trueSiteUrl();?>";
+        var g_cartBaseUrl = "<?=cart_base_url();?>";
         var g_apiBaseUrl = "<?=api_base_url();?>";
+        var g_artistBaseUrl = "<?=$artist_base_url;?>";
+        var g_artistFileBaseUrl = "<?=artist_file_base_url();?>";
+        
         var g_artistId = <?=$artist_id;?>;
         var g_formTag = "meek_splash_20130401";
         
@@ -57,17 +61,17 @@
             <div id='image_holder_0' class='image_holder'></div>
         </div>
         <div class='top_spacer'></div>
-        <div class='title'>MEEK MILL LIVE FROM&nbsp;PHILADELPHIA</div>
-        <div class='title'>FRIDAY, APRIL 5TH @8PM EST</div>
+        <div class='title'><?=$top_title1;?></div>
+        <div class='title'><?=$top_title2;?></div>
         <div class='top_sub_spacer'></div>
-        <div class='subtitle'>ONLY ON MEEKMILL.COM</div>
+        <div class='subtitle'><?=$top_subtitle;?></div>
         <div class='play_top_space'></div>
         <div id='big_play_icon' onclick='clickVideoPlay();'>
             <div class='inner'></div>
             <div class='triangle'></div>
         </div>
         <div class='play_bottom_space'></div>
-        <div class='subtitle'>COUNTDOWN TO LIVE STREAM FEED</div>
+        <div class='subtitle'><?=$bottom_subtitle;?></div>
         <div id='top_container'>
             <div class='top_line'>
                 <div class='days item'>
@@ -91,14 +95,11 @@
                 </div>
             </div>
         </div>
-        <div class='bottom_title'>#MEEKLIVE</div>
+        <div class='bottom_title'><?=$bottom_title;?></div>
         <div class='video_container'>
             <video id="splash_video_0" class="video-js vjs-default-skin"
                 controls preload="auto" width="800" height="450"
-                poster="<?=static_file_url('/images/mad_video_splash.jpg');?>"
                 data-setup='{}'>
-                <source src="<?=static_file_url('/artists/files/638_d2ca4894e5dfb3ca078a93b5376fb5cf.mp4');?>" type='video/mp4' />
-                <source src="<?=static_file_url('/artists/files/638_d2ca4894e5dfb3ca078a93b5376fb5cf.ogv');?>" type='video/ogg' />
             </video>
         </div>
     </div></div>

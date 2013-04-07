@@ -1713,7 +1713,6 @@
 		2DF472C71440B77F005538C7 /* js */ = {
 			isa = PBXGroup;
 			children = (
-				2D117D311706339400D6BD84 /* meek_splash.js */,
 				2D3D8EF215AE4D0D00BA97B3 /* jquery.mousewheel.js */,
 				2DBDD1281469DCC4001E20CC /* login_signup.js */,
 				2D6DF95114BA4F4A00D0750E /* footer.js */,
@@ -1747,6 +1746,7 @@
 				2D9214C11601403E000B8DC1 /* signup.js */,
 				2DEADA9E1613B4EC0076F95D /* home.js */,
 				2DEADAC4161BF8160076F95D /* home_data.js */,
+				2D117D311706339400D6BD84 /* meek_splash.js */,
 				2D775D29170D44B800B2250D /* meek_stream.js */,
 			);
 			path = js;

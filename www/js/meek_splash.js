@@ -68,10 +68,20 @@ function splashReady()
     g_updateInterval = window.setInterval(updateCountdown,250);
     updateCountdown();
     
-    
     g_videoPlayer = _V_('splash_video_0');
     if( g_videoPlayer )
     {
+        var video = g_templateParams['video_file'];
+        var url =  video.video_file;
+    
+        var media = [ { type: "video/mp4", src: url } ];
+        if( video.video_extra && video.video_extra.alts && video.video_extra.alts.ogv )
+        {
+            var url_ogv = g_artistFileBaseUrl + video.video_extra.alts.ogv;
+            media.push( { type: "video/ogg", src: url_ogv } );
+        }
+        g_videoPlayer.src(media);
+    
         g_videoPlayer.addEvent('play',videoPlay);
         g_videoPlayer.addEvent('pause',videoPause);
         g_videoPlayer.addEvent('ended',videoPause);
