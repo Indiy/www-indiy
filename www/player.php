@@ -519,14 +519,10 @@
     {
         $template_type = $template['type'];
         $template_params = json_decode($template['params_json'],TRUE);
-        var_dump($template_params);
-        $new_params = array();
         foreach( $template_params as $key => $val )
         {
-            var_dump($val);
-            if( isset($val['image_file_id']) )
+            if( is_array($val) && isset($val['image_file_id']) )
             {
-                print "here1\n";
                 $file_id = $val['image_file_id'];
                 $file = mf(mq("SELECT * FROM artist_files WHERE id='$file_id'"));
                 if( $file )
@@ -541,17 +537,15 @@
                                   "image_data" => $image_extra['image_data'],
                                   "image_extra" => $image_extra,
                                   );
-                    $new_params[$key] = $item;
+                    $template_params[$key] = $item;
                 }
                 else
                 {
-                    print "here2\n";
-                    $new_params[$key] = FALSE;
+                    $template_params[$key] = FALSE;
                 }
             }
-            else if( isset($val['video_file_id']) )
+            else if( is_array($val) && isset($val['video_file_id']) )
             {
-                print "here4\n";
                 $file_id = $val['video_file_id'];
                 $file = mf(mq("SELECT * FROM artist_files WHERE id='$file_id'"));
                 if( $file )
@@ -565,25 +559,14 @@
                                   "loaded" => FALSE,
                                   "video_extra" => $video_extra,
                                   );
-                    $new_params[$key] = $item;
+                    $template_params[$key] = $item;
                 }
                 else
                 {
-                    print "here3\n";
-
-                    $new_params[$key] = FALSE;
+                    $template_params[$key] = FALSE;
                 }
             }
-            else
-            {
-                print "here5\n";
-
-                $new_params[$key] = $value;
-            }
         }
-        var_dump($new_params);
-
-        $template_params = $new_params;
         $template_params_json = json_encode($template_params);
         
         
