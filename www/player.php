@@ -85,8 +85,8 @@
     $artist_name = $artist_data['artist'];
     $artist_email = $artist_data['email'];
     $artist_views = artist_get_total_views($artist_id);
-    $artist_player_template = $artist_data['player_template'];
     $artist_logo = $artist_data['logo'];
+    $template_id = $artist_data['template_id'];
     
     $artist_twitter = FALSE;
     if( $artist_data['tw_setting'] != 'DISABLED' && $artist_data['twitter'] )
@@ -110,10 +110,7 @@
     {
         $iphone_version = FALSE;
     }
-    if( $artist_player_template == 'MEEK_SPLASH'
-       || $artist_player_template == 'MEEK_VIDEO'
-       || $artist_player_template == 'MEEK_STREAM'
-       )
+    if( $template_id )
     {
         $iphone_version = FALSE;
     }
@@ -514,21 +511,32 @@
     $comments_html .= make_comments_for_list($artist_base_url,"video",$video_list);
     $comments_html .= make_comments_for_list($artist_base_url,"photo",$photo_list);
     
-    if( $artist_player_template == 'PLAYER_PRINCE' )
+    if( $template_id )
     {
-        include_once 'templates/player_prince.html';
+        $template = mf(mq("SELECT * FROM templates WHERE id='$template_id'"));
     }
-    else if( $artist_player_template == 'PLAYER_MEEK_SPLASH' )
+    if( $template )
     {
-        include_once 'templates/meek_splash.html';
-    }
-    else if( $artist_player_template == 'PLAYER_MEEK_VIDEO' )
-    {
-        include_once 'templates/meek_video.html';
-    }
-    else if( $artist_player_template == 'PLAYER_MEEK_STREAM' )
-    {
-        include_once 'templates/meek_stream.html';
+        $template_type = $template['type'];
+        $template_params_json = $template['params_json'];
+        $template_params = json_decode($template_params_json,TRUE);
+        
+        if( $template_type == 'PLAYER_PRINCE' )
+        {
+            include_once 'templates/player_prince.html';
+        }
+        else if( $template_type == 'PLAYER_MEEK_SPLASH' )
+        {
+            include_once 'templates/meek_splash.html';
+        }
+        else if( $template_type == 'PLAYER_MEEK_VIDEO' )
+        {
+            include_once 'templates/meek_video.html';
+        }
+        else if( $template_type == 'PLAYER_MEEK_STREAM' )
+        {
+            include_once 'templates/meek_stream.html';
+        }
     }
     else
     {

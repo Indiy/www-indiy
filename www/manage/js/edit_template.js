@@ -47,6 +47,13 @@ function showTemplatePopup(template_index)
             html += " <input id='template_val_{0}' type='text' value='' class='right_text' />".format(i);
             html += "</div>";
         }
+        else if( arg.type == 'textbox' )
+        {
+            html += "<div class='flow_container'>";
+            html += " <div class='line_label'>{0}</div>".format(arg.description);
+            html += " <textarea id='template_val{0}' class='textarea' style='height: 40px; width: 450px;'></textarea>".format(i);
+            html += "</div>";
+        }
         else if( arg.type == 'image_spec' )
         {
             html += "<div class='input_container' style='height: 50px;'>";
@@ -266,18 +273,37 @@ var TEMPLATE_SCHEMA =
     'PLAYER_MEEK_STREAM': {
         type: 'PLAYER',
         description: 'Meek Live Stream',
-        default_params: {},
+        default_params: {
+            top_bar_title: 'WATCH MEEK LIVE @ TOWER THEATER',
+            iphone_title1: 'WATCH MEEK MILL LIVE @ TOWER THEATER',
+            iphone_title2: 'CLICK BUTTON BELOW TO START REPLAY'
+        },
         arg_list:
         [
             {
+                name: 'top_bar_title',
+                description: 'Top Bar Title'.
+                type: 'string'
+            },
+            {
                 name: 'iframe_html',
                 description: 'IFrame HTML',
-                type: 'string'
+                type: 'textbox'
             },
             {
                 name: 'bg_file',
                 description: 'Background Image',
                 type: 'image_spec'
+            },
+            {
+                name: 'iphone_title1',
+                description: 'iPhone Title 1'.
+                type: 'string'
+            },
+            {
+                name: 'iphone_title2',
+                description: 'iPhone Title 2'.
+                type: 'string'
             }
         ]
     }
