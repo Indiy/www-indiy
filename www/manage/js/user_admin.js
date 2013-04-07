@@ -136,7 +136,7 @@ function getTemplateId(callback)
     }
     
     var id = parseInt(val);
-    if( isNan(id) )
+    if( isNaN(id) )
     {
         var schema = TEMPLATE_SCHEMA[val];
     
