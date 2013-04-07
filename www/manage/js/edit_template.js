@@ -228,16 +228,22 @@ var TEMPLATE_SCHEMA =
     'PLAYER_PRINCE': {
         type: 'PLAYER',
         description: 'Prince',
+        default_params: {},
         arg_list: []
     },
     'PLAYER_MEEK_SPLASH': {
         type: 'PLAYER',
         description: 'Meek Splash',
+        default_params: {},
         arg_list: []
     },
     'PLAYER_MEEK_VIDEO': {
         type: 'PLAYER',
         description: 'Meek Video',
+        default_params:
+        {
+            countdown_date: "Sat, 06 Apr 2013 00:00:00 GMT"
+        },
         arg_list:
         [
             {
@@ -260,6 +266,7 @@ var TEMPLATE_SCHEMA =
     'PLAYER_MEEK_STREAM': {
         type: 'PLAYER',
         description: 'Meek Live Stream',
+        default_params: {},
         arg_list:
         [
             {

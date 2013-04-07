@@ -297,14 +297,32 @@
     
     function mysql_insert($table,$inserts,$debug=FALSE)
     {
-        $values = array_map('mysql_real_escape_string', array_values($inserts));
-        $keys = array_keys($inserts);
-        $q = 'INSERT INTO `'.$table.'` (`'.implode('`,`', $keys).'`) VALUES (\''.implode('\',\'', $values).'\')';
-        $ret = mysql_query($q);
-        
+        $keys_sql = "";
+        $values_sql = "";
+        foreach( $inserts  as $key => $value)
+        {
+            if( strlen($values_sql) > 0 )
+            {
+                $keys_sql .= ",";
+                $values_sql .= ",";
+            }
+            $keys_sql .= "`$key`";
+            
+            if( $value === NULL )
+            {
+                $values_sql .= "NULL";
+            }
+            else
+            {
+                $values_sql .= "'" . mysql_real_escape_string($value) . "'";
+            }
+        }
+        $sql = "INSERT INTO `$table` ($keys_sql) VALUES ($values_sql)";
+        $ret = mysql_query($sql);
+
         if( $debug )
         {
-            print "mysql_insert sql: $q\n";
+            print "mysql_insert sql: $sql\n";
             if( !$ret )
             {
                 print "mysql_error: ";
@@ -316,20 +334,29 @@
     }
     function mysql_update($table,$inserts,$insert_key,$insert_val,$debug=FALSE)
     {
-        $values = array_map('mysql_real_escape_string', array_values($inserts));
-        $keys = array_keys($inserts);
-        $pairs = array();
+        $set_sql = "";
         foreach( $inserts as $key => $val )
         {
-            $val = mysql_real_escape_string($val);
-            $pairs[] = "`" . $key . "` = '" . $val . "'"; 
+            if( strlen($set_sql) > 0 )
+            {
+                $set_sql .= ",";
+            }
+            if( $val === NULL )
+            {
+                $val = "NULL";
+            }
+            else
+            {
+                $val = "'" . mysql_real_escape_string($val) . "'";
+            }
+            $set_sql .= "`$key` = $val";
         }
-        $q = "UPDATE `$table` SET " . implode(',', $pairs) . " WHERE `$insert_key` = '$insert_val'";
-        $ret = mysql_query($q);
+        $sql = "UPDATE `$table` SET $set_sql WHERE `$insert_key` = '$insert_val'";
+        $ret = mysql_query($sql);
         
         if( $debug )
         {
-            print "mysql_update sql: $q\n";
+            print "mysql_update sql: $sql\n";
             if( !$ret )
             {
                 print "mysql_error: ";

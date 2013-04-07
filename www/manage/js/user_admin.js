@@ -126,17 +126,65 @@ function showAccountSettings()
     
     showPopup('#account_settings');
 }
+function getTemplateId(callback)
+{
+    var val = $('#account_settings #player_template').val();
+    
+    if( val == 'DEFAULT' )
+    {
+        callback(null);
+    }
+    
+    var id = parseInt(val);
+    if( isNan(id) )
+    {
+        var schema = TEMPLATE_SCHEMA[val];
+    
+        var args = {
+            artist_id: g_artistId,
+            type: val,
+            name: "New " + schema.description,
+            params_json: JSON.stringify(schema.default_params)
+        };
+        
+        jQuery.ajax(
+        {
+            type: 'POST',
+            url:  '/manage/data/template.php',
+            data: args,
+            dataType: 'json',
+            success: function(data) 
+            {
+                g_templateList.push(data.template);
+                callback(data.template.id);
+            },
+            error: function()
+            {
+                showFailure("Update Failed");
+            }
+        });
+    }
+    else
+    {
+        callback(id);
+    }
+}
+
 function onAccountSettingsSubmit()
 {
     showProgress("Updating record...");
 
+    getTemplateId(updateAccountSettings);
+}
+
+function updateAccountSettings(template_id)
+{
     var account_type = $('#account_settings #account_type').val();
-    var player_template = $('#account_settings #player_template').val();
     var aws_cloudfront_enable = $('#account_settings input[@name=cloudfront_enable]:checked').val();
     var args = {
         'artist_id': g_artistId,
         'account_type': account_type,
-        'player_template': player_template,
+        'template_id': template_id,
         'aws_cloudfront_enable': aws_cloudfront_enable
     };
     

@@ -39,7 +39,12 @@
     {
         $artist_id = $_REQUEST['artist_id'];
         $account_type = $_REQUEST['account_type'];
-        $player_template = $_REQUEST['player_template'];
+        $template_id = $_REQUEST['template_id'];
+        if( $template_id == 'null' )
+        {
+            $template_id = NULL;
+        }
+        
         $aws_cloudfront_enable = $_REQUEST['aws_cloudfront_enable'] == "1";
         
         $artist_data = mf(mq("SELECT extra_json FROM mydna_musicplayer WHERE id='$artist_id'"));
@@ -58,7 +63,7 @@
         
         $updates = array(
                          "account_type" => $account_type,
-                         "player_template" => $player_template,
+                         "template_id" => $template_id,
                          "extra_json" => $extra_json,
                          "last_update" => mysql_now(),
                          );
@@ -66,8 +71,11 @@
         mysql_update('mydna_musicplayer',$updates,'id',$artist_id,TRUE);
         print "mysql_error: " . mysql_error() . "\n";
         
-        $postedValues['artist_data'] = get_artist_data($artist_id);
-        echo json_encode($postedValues);
+        $ret['artist_data'] = get_artist_data($artist_id);
+        $ret['post_values'] = $_REQUEST;
+        $ret['posted_template_id'] = $template_id;
+        
+        echo json_encode($ret);
         exit();
     }
 ?>
