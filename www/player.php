@@ -523,6 +523,7 @@
         $new_params = array();
         foreach( $template_params as $key => $val )
         {
+            var_dump($val);
             if( isset($val['image_file_id']) )
             {
                 print "here1\n";
