@@ -519,7 +519,8 @@
     {
         $template_type = $template['type'];
         $template_params = json_decode($template['params_json'],TRUE);
-        
+        var_dump($template_params);
+        $new_params = array();
         foreach( $template_params as $key => $val )
         {
             if( isset($val['image_file_id']) )
@@ -538,11 +539,11 @@
                                   "image_data" => $image_extra['image_data'],
                                   "image_extra" => $image_extra,
                                   );
-                    $template_params[$key] = $item;
+                    $new_params[$key] = $item;
                 }
                 else
                 {
-                    $template_params[$key] = FALSE;
+                    $new_params[$key] = FALSE;
                 }
             }
             else if( isset($val['video_file_id']) )
@@ -560,14 +561,21 @@
                                   "loaded" => FALSE,
                                   "video_extra" => $video_extra,
                                   );
-                    $template_params[$key] = $item;
+                    $new_params[$key] = $item;
                 }
                 else
                 {
-                    $template_params[$key] = FALSE;
+                    $new_params[$key] = FALSE;
                 }
             }
+            else
+            {
+                $new_params[$key] = $value;
+            }
         }
+        var_dump($new_params);
+
+        $template_params = $new_params;
         $template_params_json = json_encode($template_params);
         
         
