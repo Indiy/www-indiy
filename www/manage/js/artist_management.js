@@ -13,6 +13,7 @@ function artistManagementReady()
     updateStoreList();
     updateTabList();
     updateFileList();
+    updateTemplateList();
     
     $('.heading').click(function(){
 		if( $(this).next().is(':hidden') ) 
