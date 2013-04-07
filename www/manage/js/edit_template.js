@@ -282,7 +282,7 @@ var TEMPLATE_SCHEMA =
         [
             {
                 name: 'top_bar_title',
-                description: 'Top Bar Title'.
+                description: 'Top Bar Title',
                 type: 'string'
             },
             {
@@ -297,12 +297,12 @@ var TEMPLATE_SCHEMA =
             },
             {
                 name: 'iphone_title1',
-                description: 'iPhone Title 1'.
+                description: 'iPhone Title 1',
                 type: 'string'
             },
             {
                 name: 'iphone_title2',
-                description: 'iPhone Title 2'.
+                description: 'iPhone Title 2',
                 type: 'string'
             }
         ]
