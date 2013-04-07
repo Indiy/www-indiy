@@ -35,17 +35,8 @@
         var g_artistId = <?=$artist_id;?>;
         var g_formTag = "meek_splash_20130401";
         
-        var g_backgroundList = [
-            {
-                image: "<?=static_file_url('/images/meek-bg.jpg');?>",
-                bg_color: "000000",
-                bg_style: "STRETCH",
-                bg_justify: "CENTER",
-                loaded: false,
-                image_data: { width:1920, height:768 }
-            }];
-        
-        var g_eventDate = new Date("Sat, 06 Apr 2013 00:00:00 GMT");
+        var g_eventDate = new Date("<?=$template_params['countdown_date'];?>");
+        var g_templateParams = <?=$template_params_json;?>;
     </script>
 
     <script>

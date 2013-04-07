@@ -249,10 +249,40 @@ var TEMPLATE_SCHEMA =
         description: 'Meek Video',
         default_params:
         {
-            countdown_date: "Sat, 06 Apr 2013 00:00:00 GMT"
+            top_title1: "MEEK MILL LIVE FROM PHILADELPHIA",
+            top_title2: "FRIDAY, APRIL 5TH @8PM EST",
+            top_subtitle: "ONLY ON MEEKMILL.COM",
+            bottom_subtitle: "COUNTDOWN TO LIVE STREAM FEED",
+            bottom_title: "#MEEKLIVE",
+            countdown_date: "Web, 01 May 2013 04:00:00 GMT"
         },
         arg_list:
         [
+            {
+                name: 'top_title1',
+                description: 'Top Title 1',
+                type: 'string'
+            },
+            {
+                name: 'top_title2',
+                description: 'Top Title 2',
+                type: 'string'
+            },
+            {
+                name: 'top_subtitle',
+                description: 'Top Subtitle',
+                type: 'string'
+            },
+            {
+                name: 'bottom_subtitle',
+                description: 'Bottom Subtittle',
+                type: 'string'
+            },
+            {
+                name: 'bottom_title',
+                description: 'Bottom Title',
+                type: 'string'
+            },
             {
                 name: 'countdown_date',
                 description: 'Countdown Date',
