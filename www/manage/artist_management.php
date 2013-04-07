@@ -230,6 +230,6 @@
     }
     $template_list_json = json_encode($template_list);
     
-    require_once "templates/artist_statement.html";
+    require_once "templates/artist_management.html";
 
 ?>
