@@ -137,9 +137,9 @@ function showTemplatePopup(template_index)
 
 function onEditTemplateSubmit()
 {
-    var name = $('#edit_template #template_name').val();
+    var template_name = $('#edit_template #template_name').val();
     
-    if( !name || name.length == 0 )
+    if( !template_name || template_name.length == 0 )
     {
         window.alert("Please enter a name for your template.");
         return;
@@ -194,7 +194,7 @@ function onEditTemplateSubmit()
     var args = {
         'artist_id': g_artistId,
         'id': template.id,
-        'name': name,
+        'name': template_name,
         'params_json': JSON.stringify(params)
     };
     
