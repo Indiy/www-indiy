@@ -514,19 +514,19 @@
     $comments_html .= make_comments_for_list($artist_base_url,"video",$video_list);
     $comments_html .= make_comments_for_list($artist_base_url,"photo",$photo_list);
     
-    if( $artist_player_template == 'PRINCE' )
+    if( $artist_player_template == 'PLAYER_PRINCE' )
     {
         include_once 'templates/player_prince.html';
     }
-    else if( $artist_player_template == 'MEEK_SPLASH' )
+    else if( $artist_player_template == 'PLAYER_MEEK_SPLASH' )
     {
         include_once 'templates/meek_splash.html';
     }
-    else if( $artist_player_template == 'MEEK_VIDEO' )
+    else if( $artist_player_template == 'PLAYER_MEEK_VIDEO' )
     {
         include_once 'templates/meek_video.html';
     }
-    else if( $artist_player_template == 'MEEK_STREAM' )
+    else if( $artist_player_template == 'PLAYER_MEEK_STREAM' )
     {
         include_once 'templates/meek_stream.html';
     }

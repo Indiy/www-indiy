@@ -78,9 +78,43 @@ function onAddLabelSubmit()
 
 function showAccountSettings()
 {
+    $('#account_settings #player_template').empty();
+
+    var html = "<option value='DEFAULT'>DEFAULT</option>";
+    $('#account_settings #player_template').append(html);
+
+    for( name in TEMPLATE_SCHEMA )
+    {
+        var schema = TEMPLATE_SCHEMA[name];
+        
+        if( schema.type == 'PLAYER' )
+        {
+            var html = "<option value='{0}'>New {0} Template</option>".format(name);
+            $('#account_settings #player_template').append(html);
+        }
+    }
+    for( var i = 0 ; i < g_templateList ; ++i )
+    {
+        var template = g_templateList[i];
+        
+        var schema = TEMPLATE_SCHEMA[template.type];
+        if( schema.type == 'PLAYER' )
+        {
+            var selected = "";
+            if( g_artistData.template_id == template.id )
+            {
+                selected = "selected=selected";
+            }
+            var desc = template.id + ": " + template.name;
+
+            var html = "<option value='{0}' {1}>{2}</option>".format(template.id,selected,desc);
+            $('#account_settings #player_template').append(html);
+        }
+    }
+
     $('#account_settings #artist_id').val(g_artistId);
     $('#account_settings #account_type').val(g_artistData.account_type);
-    $('#account_settings #player_template').val(g_artistData.player_template);
+    //$('#account_settings #player_template').val(g_artistData.player_template);
     
     if( 'aws' in g_artistData && g_artistData.aws.cloudfront_enable )
     {
