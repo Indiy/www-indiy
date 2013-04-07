@@ -93,7 +93,7 @@ function showAccountSettings()
             $('#account_settings #player_template').append(html);
         }
     }
-    for( var i = 0 ; i < g_templateList ; ++i )
+    for( var i = 0 ; i < g_templateList.length ; ++i )
     {
         var template = g_templateList[i];
         var schema = TEMPLATE_SCHEMA[template.type];
