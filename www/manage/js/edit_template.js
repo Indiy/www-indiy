@@ -51,7 +51,7 @@ function showTemplatePopup(template_index)
         {
             html += "<div class='flow_container'>";
             html += " <div class='line_label'>{0}</div>".format(arg.description);
-            html += " <textarea id='template_val{0}' class='textarea' style='height: 70px; width: 600px;'></textarea>".format(i);
+            html += " <textarea id='template_val_{0}' class='textarea' style='height: 70px; width: 600px;'></textarea>".format(i);
             html += "</div>";
         }
         else if( arg.type == 'image_spec' )
