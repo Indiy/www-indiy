@@ -94,7 +94,7 @@ function showTemplatePopup(template_index)
             else if( arg.type == 'image_spec' )
             {
                 var sel = "#edit_template #template_val_drop_{0}".format(i);
-                fillArtistFileSelect(sel,'IMAGE',val.file_id);
+                fillArtistFileIdSelect(sel,'IMAGE',val.file_id);
                 var sel = "#edit_template #template_val_bg_style_{0}".format(i);
                 $(sel).val(val.bg_style);
                 var sel = "#edit_template #template_val_bg_color_{0}".format(i);
@@ -104,7 +104,7 @@ function showTemplatePopup(template_index)
             else if( arg.type == 'video' )
             {
                 var sel = "#edit_template #template_val_drop_{0}".format(i);
-                fillArtistFileSelect(sel,'VIDEO',val.file_id);
+                fillArtistFileIdSelect(sel,'VIDEO',val.file_id);
             }
         }
         else
@@ -112,12 +112,12 @@ function showTemplatePopup(template_index)
             if( arg.type == 'string' )
             {
                 var sel = "#edit_template #template_val_{0}".format(i);
-                $(sel).val('Sat, 06 Apr 2013 00:00:00 GMT');
+                $(sel).val("");
             }
             else if( arg.type == 'image_spec' )
             {
                 var sel = "#edit_template #template_val_drop_{0}".format(i);
-                fillArtistFileSelect(sel,'IMAGE',false);
+                fillArtistFileIdSelect(sel,'IMAGE',false);
                 var sel = "#edit_template #template_val_bg_style_{0}".format(i);
                 $(sel).val('STRETCH');
                 var sel = "#edit_template #template_val_bg_color_{0}".format(i);
@@ -127,7 +127,7 @@ function showTemplatePopup(template_index)
             else if( arg.type == 'video' )
             {
                 var sel = "#edit_template #template_val_drop_{0}".format(i);
-                fillArtistFileSelect(sel,'VIDEO',false);
+                fillArtistFileIdSelect(sel,'VIDEO',false);
             }
         }
     }
@@ -137,7 +137,82 @@ function showTemplatePopup(template_index)
 
 function onEditTemplateSubmit()
 {
+    var name = $('#edit_template .template_name').val();
     
+    if( !name || name.length == 0 )
+    {
+        window.alert("Please enter a name for your template.");
+        return;
+    }
+    
+    var params = {};
+    
+    var template = g_templateList[g_templateIndex];
+    var schema = TEMPLATE_SCHEMA[template.type];
+    
+    for( var i = 0 ; i < schema.arg_list.length ; ++i )
+    {
+        var arg = schema.arg_list[i];
+        var name = arg.name;
+        
+        if( arg.type == 'string' )
+        {
+            var sel = "#edit_template #template_val_{0}".format(i);
+            var val = $(sel).val();
+            
+            params[name] = val;
+        }
+        else if( arg.type == 'image_spec' )
+        {
+            var sel = "#edit_template #template_val_drop_{0}".format(i);
+            var file_id = $(sel).val();
+            
+            var sel = "#edit_template #template_val_bg_style_{0}".format(i);
+            var bg_style = $(sel).val();
+
+            var sel = "#edit_template #template_val_bg_color_{0}".format(i);
+            var bg_color = $(sel).val();
+            
+            params[name] = {
+                file_id: file_id,
+                bg_style: bg_style,
+                bg_color: bg_color
+            };
+        }
+        else if( arg.type == 'video' )
+        {
+            var sel = "#edit_template #template_val_drop_{0}".format(i);
+            var file_id = $(sel).val();
+            params[name] = file_id;
+        }
+    }
+    
+    showProgress("Updating template.");
+    
+    var args = {
+        'artist_id': g_artistId,
+        'id': template.id,
+        'name': name,
+        'params_json': JSON.stringify(params)
+    };
+    
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url:  '/manage/data/template.php',
+        data: args,
+        dataType: 'json',
+        success: function(data) 
+        {
+            g_templateList[g_templateIndex] = data.template;
+            showSuccess("Update Success");
+        },
+        error: function()
+        {
+            showFailure("Update Failed");
+        }
+    });
+    return false;
 }
 
 function deleteTemplate(index)
