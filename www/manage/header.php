@@ -162,13 +162,13 @@
 
     if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' ) 
     {
-        include_once 'include/add_user.html';
-        include_once 'include/add_label.html';
+        require_once 'templates/add_user.html';
+        require_once 'templates/add_label.html';
     }
     else if( $_SESSION['sess_userType'] == 'LABEL' )
     {
-        include_once 'include/add_user.html';
+        require_once 'templates/add_user.html';
     }
 
-    include_once 'include/popup_messages2.html';
+    require_once 'templates/popup_messages2.html';
 ?>

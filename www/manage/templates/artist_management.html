@@ -3,27 +3,27 @@
     $include_order = FALSE;
     $include_editor = TRUE;
 
-    require_once 'header.php';
+    require_once '../header.php';
 
-    include_once 'include/edit_page.html';
-    include_once 'include/edit_video.html';
-    include_once 'include/edit_photo.html';
-    include_once 'include/edit_product.html';
-    include_once 'include/edit_tab.html';
-    include_once 'include/edit_social_config.html';
-    include_once 'include/edit_profile.html';
-    include_once 'include/edit_store.html';
-    include_once 'include/invite_friends.html';
-    include_once 'include/fan_connections.html';
-    include_once 'include/first_instructions.html';
-    include_once 'include/social_post.html';
-    include_once 'include/account_limit.html';
-    include_once 'include/artist_file.html';
-    include_once 'include/edit_template.html';
+    require_once 'edit_page.html';
+    require_once 'edit_video.html';
+    require_once 'edit_photo.html';
+    require_once 'edit_product.html';
+    require_once 'edit_tab.html';
+    require_once 'edit_social_config.html';
+    require_once 'edit_profile.html';
+    require_once 'edit_store.html';
+    require_once 'invite_friends.html';
+    require_once 'fan_connections.html';
+    require_once 'first_instructions.html';
+    require_once 'social_post.html';
+    require_once 'account_limit.html';
+    require_once 'artist_file.html';
+    require_once 'edit_template.html';
 
     if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' )
     {
-        include_once 'include/edit_account_settings.html';
+        require_once 'edit_account_settings.html';
     }
 ?>
 
@@ -292,4 +292,4 @@
     <div class='text'>Drop files anywhere to upload&hellip;</div>
 </div>
 
-<?php include_once 'footer.php'; ?>
+<?php require_once '../footer.php'; ?>
