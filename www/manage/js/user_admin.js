@@ -86,17 +86,16 @@ function showAccountSettings()
     for( name in TEMPLATE_SCHEMA )
     {
         var schema = TEMPLATE_SCHEMA[name];
-        
+        var desc = schema.description;
         if( schema.type == 'PLAYER' )
         {
-            var html = "<option value='{0}'>New {0} Template</option>".format(name);
+            var html = "<option value='{0}'>New {0} Template</option>".format(desc);
             $('#account_settings #player_template').append(html);
         }
     }
     for( var i = 0 ; i < g_templateList ; ++i )
     {
         var template = g_templateList[i];
-        
         var schema = TEMPLATE_SCHEMA[template.type];
         if( schema.type == 'PLAYER' )
         {

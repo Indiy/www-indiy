@@ -207,6 +207,7 @@ function onEditTemplateSubmit()
         success: function(data) 
         {
             g_templateList[g_templateIndex] = data.template;
+            updateTemplateList();
             showSuccess("Update Success");
         },
         error: function()
@@ -226,18 +227,22 @@ var TEMPLATE_SCHEMA =
 {
     'PLAYER_DEFAULT': {
         type: 'PLAYER',
+        description: 'Default',
         arg_list: []
     },
     'PLAYER_PRINCE': {
         type: 'PLAYER',
+        description: 'Prince',
         arg_list: []
     },
     'PLAYER_MEEK_SPLASH': {
         type: 'PLAYER',
+        description: 'Meek Splash',
         arg_list: []
     },
     'PLAYER_MEEK_VIDEO': {
         type: 'PLAYER',
+        description: 'Meek Video',
         arg_list:
         [
             {
@@ -256,6 +261,24 @@ var TEMPLATE_SCHEMA =
                 type: 'video'
             }
         ]
+    },
+    'PLAYER_MEEK_STREAM': {
+        type: 'PLAYER',
+        description: 'Meek Live Stream',
+        arg_list:
+        [
+            {
+                name: 'iframe_html',
+                description: 'IFrame HTML',
+                type: 'string'
+            },
+            {
+                name: 'bg_file',
+                description: 'Background Image',
+                type: 'image_spec'
+            }
+        ]
     }
+    
 };
 
