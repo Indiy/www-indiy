@@ -101,7 +101,7 @@ function showTemplatePopup(template_index)
             else if( arg.type == 'image_spec' )
             {
                 var sel = "#edit_template #template_val_drop_{0}".format(i);
-                fillArtistFileIdSelect(sel,'IMAGE',val.file_id);
+                fillArtistFileIdSelect(sel,'IMAGE',val.image_file_id);
                 var sel = "#edit_template #template_val_bg_style_{0}".format(i);
                 $(sel).val(val.bg_style);
                 var sel = "#edit_template #template_val_bg_color_{0}".format(i);
@@ -111,7 +111,7 @@ function showTemplatePopup(template_index)
             else if( arg.type == 'video' )
             {
                 var sel = "#edit_template #template_val_drop_{0}".format(i);
-                fillArtistFileIdSelect(sel,'VIDEO',val.file_id);
+                fillArtistFileIdSelect(sel,'VIDEO',val.video_file_id);
             }
         }
         else
@@ -181,7 +181,7 @@ function onEditTemplateSubmit()
             var bg_color = $(sel).val();
             
             params[name] = {
-                file_id: file_id,
+                image_file_id: file_id,
                 bg_style: bg_style,
                 bg_color: bg_color
             };
@@ -191,7 +191,7 @@ function onEditTemplateSubmit()
             var sel = "#edit_template #template_val_drop_{0}".format(i);
             var file_id = $(sel).val();
             params[name] = {
-                file_id: file_id
+                video_file_id: file_id
             };
         }
     }

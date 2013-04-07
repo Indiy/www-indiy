@@ -29,9 +29,11 @@ var IS_OLD_IE = false;
     }
 })();
 
+var g_backgroundList = [];
 
 function streamReady()
 {
+
     if( IS_CHROME )
         $('body').addClass('chrome');
     if( IS_IPAD )
@@ -47,6 +49,16 @@ function streamReady()
     if( IS_DESKTOP )
         $('body').addClass('desktop');
 
+
+    if( g_templateParams.bg_file )
+    {
+        g_backgroundList = [ g_templateParams.bg_file ];
+
+        imageLoadItem(g_backgroundList[0],0,'#splash_bg');
+        splashResize();
+        $(window).resize(splashResize);
+    }
+
     var height = $('#mad_tw_timeline').height() - 10;
     
     var html = '<a class="twitter-timeline" height="{0}" data-chrome="transparent" href="https://twitter.com/search?q=%23meeklive" data-widget-id="319675836225699842">Tweets about "#meeklive"</a>'.format(height);
@@ -55,6 +67,11 @@ function streamReady()
     twitterWidgetLoad();
 }
 $(document).ready(streamReady);
+
+function splashResize()
+{
+    imageResizeBackgrounds(g_backgroundList,'#splash_bg');
+}
 
 function twitterWidgetLoad()
 {

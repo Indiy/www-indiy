@@ -518,8 +518,58 @@
     if( $template )
     {
         $template_type = $template['type'];
-        $template_params_json = $template['params_json'];
-        $template_params = json_decode($template_params_json,TRUE);
+        $template_params = json_decode( $template['params_json'],TRUE);
+        
+        foreach( $template_params as $key => $val )
+        {
+            if( isset($val['image_file_id']) )
+            {
+                $file_id = $val['image_file_id']
+                $file = mf(mq("SELECT * FROM artist_files WHERE id='$file_id'"));
+                if( $file )
+                {
+                    $image_url = artist_file_url($file['filename']);
+                    $image_extra = json_decode($file['extra_json'],TRUE);
+                    
+                    $item = array("image" => $image_url,
+                                  "bg_color" => $val['bg_color'],
+                                  "bg_style" => $val['bg_style'],
+                                  "loaded" => FALSE,
+                                  "image_data" => $image_extra['image_data'],
+                                  "image_extra" => $image_extra,
+                                  );
+                    $template_params[$key] = $item;
+                }
+                else
+                {
+                    $template_params[$key] = FALSE;
+                }
+            }
+            else if( isset($val['video_file_id']) )
+            {
+                $file_id = $val['video_file_id']
+                $file = mf(mq("SELECT * FROM artist_files WHERE id='$file_id'"));
+                if( $file )
+                {
+                    $video_url = artist_file_url($file['filename']);
+                    $image_extra = json_decode($file['extra_json'],TRUE);
+                    
+                    $item = array(
+                                  "video_file" => $video_url,
+                                  "video_data" => $video_extra['video_data'],
+                                  "loaded" => FALSE,
+                                  "video_extra" => $video_extra,
+                                  );
+                    $template_params[$key] = $item;
+                }
+                else
+                {
+                    $template_params[$key] = FALSE;
+                }
+            }
+        }
+        $template_params_json = json_encode($template_params);
+        
         
         if( $template_type == 'PLAYER_PRINCE' )
         {
