@@ -525,6 +525,7 @@
         {
             if( isset($val['image_file_id']) )
             {
+                print "here1\n";
                 $file_id = $val['image_file_id'];
                 $file = mf(mq("SELECT * FROM artist_files WHERE id='$file_id'"));
                 if( $file )
@@ -543,11 +544,13 @@
                 }
                 else
                 {
+                    print "here2\n";
                     $new_params[$key] = FALSE;
                 }
             }
             else if( isset($val['video_file_id']) )
             {
+                print "here4\n";
                 $file_id = $val['video_file_id'];
                 $file = mf(mq("SELECT * FROM artist_files WHERE id='$file_id'"));
                 if( $file )
@@ -565,11 +568,15 @@
                 }
                 else
                 {
+                    print "here3\n";
+
                     $new_params[$key] = FALSE;
                 }
             }
             else
             {
+                print "here5\n";
+
                 $new_params[$key] = $value;
             }
         }
