@@ -89,7 +89,7 @@ function showAccountSettings()
         var desc = schema.description;
         if( schema.type == 'PLAYER' )
         {
-            var html = "<option value='{0}'>New {0} Template</option>".format(desc);
+            var html = "<option value='{0}'>New {1} Template</option>".format(name,desc);
             $('#account_settings #player_template').append(html);
         }
     }
