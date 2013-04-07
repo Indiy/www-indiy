@@ -64,7 +64,7 @@
         
         $ret['success'] = "1";
         $ret['posted_values'] = $_REQUEST;
-        $ret['template'] = json_encode($template);
+        $ret['template'] = $template;
         
         echo json_encode($ret);
     }
