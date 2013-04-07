@@ -225,11 +225,6 @@ function deleteTemplate(index)
 
 var TEMPLATE_SCHEMA =
 {
-    'PLAYER_DEFAULT': {
-        type: 'PLAYER',
-        description: 'Default',
-        arg_list: []
-    },
     'PLAYER_PRINCE': {
         type: 'PLAYER',
         description: 'Prince',
