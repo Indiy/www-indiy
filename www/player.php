@@ -524,7 +524,7 @@
         {
             if( isset($val['image_file_id']) )
             {
-                $file_id = $val['image_file_id']
+                $file_id = $val['image_file_id'];
                 $file = mf(mq("SELECT * FROM artist_files WHERE id='$file_id'"));
                 if( $file )
                 {
@@ -547,7 +547,7 @@
             }
             else if( isset($val['video_file_id']) )
             {
-                $file_id = $val['video_file_id']
+                $file_id = $val['video_file_id'];
                 $file = mf(mq("SELECT * FROM artist_files WHERE id='$file_id'"));
                 if( $file )
                 {
