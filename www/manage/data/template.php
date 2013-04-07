@@ -61,6 +61,9 @@
         }
         
         $template = mf(mq("SELECT * FROM templates WHERE id='$template_id'"));
+        $params_json = $template['params_json'];
+        $params = json_decode($params_json,TRUE);
+        $template['params'] = $params;
         
         $ret['success'] = "1";
         $ret['posted_values'] = $_REQUEST;
