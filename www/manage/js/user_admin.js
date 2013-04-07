@@ -156,6 +156,7 @@ function getTemplateId(callback)
             success: function(data) 
             {
                 g_templateList.push(data.template);
+                updateTemplateList();
                 callback(data.template.id);
             },
             error: function()
