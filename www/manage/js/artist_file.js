@@ -429,8 +429,13 @@ function getArtistFiles(type)
     return ret;
 }
 
-function fillArtistFileSelect(sel,type,current_val)
+function fillArtistFileSelect(sel,type,current_val,value_is_id)
 {
+    if( typeof value_is_id === 'undefined' )
+    {
+        value_is_id = false;
+    }
+
     var possible_files = getArtistFiles(type);
     
     $(sel).empty();
@@ -446,6 +451,11 @@ function fillArtistFileSelect(sel,type,current_val)
         
         var val = file.filename;
         var vis = file.upload_filename;
+
+        if( value_is_id )
+        {
+            val = file.id;
+        }
         
         var selected = "";
         if( val == current_val )
@@ -466,6 +476,10 @@ function fillArtistFileSelect(sel,type,current_val)
     
     var html = "<option value='upload_new_file'>Upload New File</option>";
     $(sel).append(html);
+}
+function fillArtistFileIdSelect(sel,type,current_val)
+{
+    fillArtistFileSelect(sel,type,current_val,true)
 }
 
 function artistFileDropChange(el)

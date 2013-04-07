@@ -183,7 +183,9 @@ function onEditTemplateSubmit()
         {
             var sel = "#edit_template #template_val_drop_{0}".format(i);
             var file_id = $(sel).val();
-            params[name] = file_id;
+            params[name] = {
+                file_id: file_id
+            };
         }
     }
     
