@@ -93,7 +93,7 @@ function showTemplatePopup(template_index)
         if( template.params && name in template.params )
         {
             var val = template.params[name];
-            if( arg.type == 'string' )
+            if( arg.type == 'string' || arg.type == 'textbox' )
             {
                 var sel = "#edit_template #template_val_{0}".format(i);
                 $(sel).val(val);
@@ -116,7 +116,7 @@ function showTemplatePopup(template_index)
         }
         else
         {
-            if( arg.type == 'string' )
+            if( arg.type == 'string' || arg.type == 'textbox' )
             {
                 var sel = "#edit_template #template_val_{0}".format(i);
                 $(sel).val("");
@@ -162,7 +162,7 @@ function onEditTemplateSubmit()
         var arg = schema.arg_list[i];
         var name = arg.name;
         
-        if( arg.type == 'string' )
+        if( arg.type == 'string' || arg.type == 'textbox' )
         {
             var sel = "#edit_template #template_val_{0}".format(i);
             var val = $(sel).val();
