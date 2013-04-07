@@ -68,8 +68,7 @@
                          "last_update" => mysql_now(),
                          );
         
-        mysql_update('mydna_musicplayer',$updates,'id',$artist_id,TRUE);
-        print "mysql_error: " . mysql_error() . "\n";
+        mysql_update('mydna_musicplayer',$updates,'id',$artist_id);
         
         $ret['artist_data'] = get_artist_data($artist_id);
         $ret['post_values'] = $_REQUEST;

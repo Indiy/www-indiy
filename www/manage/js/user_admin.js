@@ -193,11 +193,10 @@ function updateAccountSettings(template_id)
         type: 'POST',
         url:  '/manage/data/account_settings.php',
         data: args,
-        dataType: 'text',
+        dataType: 'json',
         success: function(data) 
         {
-            g_artistData.account_type = account_type;
-            g_artistData.player_template = player_template;
+            g_artistData = data.artist_data;
             showSuccess("Update Success");
         },
         error: function()
