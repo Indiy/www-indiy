@@ -518,7 +518,7 @@
     if( $template )
     {
         $template_type = $template['type'];
-        $template_params = json_decode( $template['params_json'],TRUE);
+        $template_params = json_decode($template['params_json'],TRUE);
         
         foreach( $template_params as $key => $val )
         {
