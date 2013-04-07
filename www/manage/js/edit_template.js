@@ -249,6 +249,7 @@ var TEMPLATE_SCHEMA =
         description: 'Meek Video',
         default_params:
         {
+            page_title: "meekmill.com",
             top_title1: "MEEK MILL LIVE FROM PHILADELPHIA",
             top_title2: "FRIDAY, APRIL 5TH @8PM EST",
             top_subtitle: "ONLY ON MEEKMILL.COM",
@@ -258,6 +259,11 @@ var TEMPLATE_SCHEMA =
         },
         arg_list:
         [
+            {
+                name: 'page_title',
+                description: 'Page Title',
+                type: 'string'
+            },
             {
                 name: 'top_title1',
                 description: 'Top Title 1',
@@ -304,12 +310,18 @@ var TEMPLATE_SCHEMA =
         type: 'PLAYER',
         description: 'Meek Live Stream',
         default_params: {
+            page_title: '#MEEKLIVE',
             top_bar_title: 'WATCH MEEK LIVE @ TOWER THEATER',
             iphone_title1: 'WATCH MEEK MILL LIVE @ TOWER THEATER',
             iphone_title2: 'CLICK BUTTON BELOW TO START REPLAY'
         },
         arg_list:
         [
+            {
+                name: 'page_title',
+                description: 'Page Title',
+                type: 'string'
+            },
             {
                 name: 'top_bar_title',
                 description: 'Top Bar Title',
