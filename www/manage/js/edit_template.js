@@ -44,7 +44,7 @@ function showTemplatePopup(template_index)
         {
             html += "<div class='input_container'>";
             html += " <div class='left_label'>{0}</div>".format(arg.description);
-            html += " <input id='template_val_{0}' type='text' value='' class='right_text' />".format(i);
+            html += " <input id='template_val_{0}' type='text' value='' class='right_text' style='width: 470px;' />".format(i);
             html += "</div>";
         }
         else if( arg.type == 'textbox' )
