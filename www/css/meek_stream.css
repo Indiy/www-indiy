@@ -793,7 +793,7 @@ and (max-device-width : 480px) {
         padding-top: 24px;
     }
     #desktop_text {
-        display: hidden;
+        display: none;
     }
 }
 @media (device-height: 568px)
