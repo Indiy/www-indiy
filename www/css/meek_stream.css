@@ -537,17 +537,20 @@ body {
     color: white;
     font-size: 120px;
     font-family: 'Agency Bold', Helvetica, sans-serif;
+    text-align: center;
 }
 #desktop_text .blue_line {
     padding-bottom: 60px;
     color: #3cc;
     font-size: 160px;
     font-family: 'Agency Bold', Helvetica, sans-serif;
+    text-align: center;
 }
 #desktop_text .bottom_line {
     color: white;
     font-size: 120px;
     font-family: 'Agency Regular', Helvetica, sans-serif;
+    text-align: center;
 }
 
 #iphone_top {
