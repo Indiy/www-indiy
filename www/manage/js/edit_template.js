@@ -338,6 +338,21 @@ var TEMPLATE_SCHEMA =
                 type: 'image_spec'
             },
             {
+                name: 'desktop_bg_top_line',
+                description: 'Desktop BG Top Line',
+                type: 'string'
+            },
+            {
+                name: 'desktop_bg_blue_line',
+                description: 'Desktop BG Blue Line',
+                type: 'string'
+            },
+            {
+                name: 'desktop_bg_bottom_line',
+                description: 'Desktop BG Bottom Line',
+                type: 'string'
+            },
+            {
                 name: 'iphone_title1',
                 description: 'iPhone Title 1',
                 type: 'string'
