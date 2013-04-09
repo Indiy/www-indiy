@@ -538,6 +538,7 @@ body {
     font-size: 120px;
     font-family: 'Agency Bold', Helvetica, sans-serif;
     text-align: center;
+    line-height: 120px;
 }
 #desktop_text .blue_line {
     padding-bottom: 15px;
@@ -545,6 +546,7 @@ body {
     font-size: 160px;
     font-family: 'Agency Bold', Helvetica, sans-serif;
     text-align: center;
+    line-height: 160px;
 }
 #desktop_text .bottom_line {
     color: white;
@@ -607,6 +609,37 @@ and (max-device-width : 1024px) {
     #store_tab {
         left: 210px;
     }
+    
+    #desktop_text {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        right: 50px;
+    }
+    #desktop_text .top_line {
+        padding-bottom: 20px;
+        color: white;
+        font-size: 110px;
+        font-family: 'Agency Bold', Helvetica, sans-serif;
+        text-align: center;
+        line-height: 110px;
+    }
+    #desktop_text .blue_line {
+        padding-bottom: 35px;
+        color: #3cc;
+        font-size: 140px;
+        font-family: 'Agency Bold', Helvetica, sans-serif;
+        text-align: center;
+        line-height: 140px;
+    }
+    #desktop_text .bottom_line {
+        color: white;
+        font-size: 72px;
+        font-family: 'Agency Bold', Helvetica, sans-serif;
+        text-align: center;
+        line-height: 72px;
+    }
+
 
 }
 
