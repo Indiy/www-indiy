@@ -533,14 +533,14 @@ body {
     right: 175px;
 }
 #desktop_text .top_line {
-    padding-bottom: 60px;
+    padding-bottom: 10px;
     color: white;
     font-size: 120px;
     font-family: 'Agency Bold', Helvetica, sans-serif;
     text-align: center;
 }
 #desktop_text .blue_line {
-    padding-bottom: 60px;
+    padding-bottom: 15px;
     color: #3cc;
     font-size: 160px;
     font-family: 'Agency Bold', Helvetica, sans-serif;
@@ -548,9 +548,10 @@ body {
 }
 #desktop_text .bottom_line {
     color: white;
-    font-size: 120px;
-    font-family: 'Agency Regular', Helvetica, sans-serif;
+    font-size: 90px;
+    font-family: 'Agency Bold', Helvetica, sans-serif;
     text-align: center;
+    line-height: 90px;
 }
 
 #iphone_top {
