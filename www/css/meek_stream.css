@@ -526,6 +526,30 @@ body {
     background-color: #600084;
 }
 
+#desktop_text {
+    position: absolute;
+    top: 60px;
+    left: 175px;
+    right: 175px;
+}
+#desktop_text .top_line {
+    padding-bottom: 60px;
+    color: white;
+    font-size: 120px;
+    font-family: 'Agency Bold', Helvetica, sans-serif;
+}
+#desktop_text .blue_line {
+    padding-bottom: 60px;
+    color: #3cc;
+    font-size: 160px;
+    font-family: 'Agency Bold', Helvetica, sans-serif;
+}
+#desktop_text .bottom_line {
+    color: white;
+    font-size: 120px;
+    font-family: 'Agency Regular', Helvetica, sans-serif;
+}
+
 #iphone_top {
     display: none;
 }
@@ -633,6 +657,7 @@ and (max-device-width : 480px) {
         padding-bottom: 5px;
         padding-left: 5px;
         padding-right: 5px;
+        height: 60px;
     }
     #iphone_top .title {
         color: white;
@@ -729,6 +754,9 @@ and (max-device-width : 480px) {
     }
     #store_tab .product_info .pi_right .name {
         padding-top: 24px;
+    }
+    #desktop_text {
+        display: hidden;
     }
 }
 @media (device-height: 568px)
