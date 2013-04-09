@@ -533,7 +533,7 @@ body {
     right: 175px;
 }
 #desktop_text .top_line {
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     color: white;
     font-size: 120px;
     font-family: 'Agency Bold', Helvetica, sans-serif;
@@ -541,7 +541,7 @@ body {
     line-height: 120px;
 }
 #desktop_text .blue_line {
-    padding-bottom: 15px;
+    padding-bottom: 40px;
     color: #3cc;
     font-size: 160px;
     font-family: 'Agency Bold', Helvetica, sans-serif;
