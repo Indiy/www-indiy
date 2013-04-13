@@ -287,6 +287,11 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             },
             {
+                name: 'form_tag',
+                description: 'Form Tag',
+                type: 'string'
+            },
+            {
                 name: 'countdown_date',
                 description: 'Countdown Date',
                 type: 'string'
