@@ -282,7 +282,7 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             },
             {
-                name: 'copyright_text',
+                name: 'copyright',
                 description: 'Copyright Text',
                 type: 'string'
             },
