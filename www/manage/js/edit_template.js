@@ -310,6 +310,11 @@ var TEMPLATE_SCHEMA =
                 type: 'image'
             },
             {
+                name: 'banner_image',
+                description: 'Banner Image',
+                type: 'image'
+            },
+            {
                 name: 'form_tag',
                 description: 'Form Tag',
                 type: 'string'
