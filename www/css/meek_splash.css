@@ -234,7 +234,12 @@ body {
     font-family: 'Agency Regular', Helvetica, sans-serif;
     text-align: center;
     line-height: 40px;
-
+}
+.subtitle a {
+    color: white;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .subtitle_med {
