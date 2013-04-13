@@ -582,6 +582,20 @@
                     $template_params[$key] = FALSE;
                 }
             }
+            else if( is_array($val) && isset($val['misc_file_id']) )
+            {
+                $file_id = $val['misc_file_id'];
+                $file = mf(mq("SELECT * FROM artist_files WHERE id='$file_id'"));
+                if( $file )
+                {
+                    $file_url = artist_file_url($file['filename']);
+                    $template_params[$key] = $file_url;
+                }
+                else
+                {
+                    $template_params[$key] = FALSE;
+                }
+            }
         }
         $template_params_json = json_encode($template_params);
         
