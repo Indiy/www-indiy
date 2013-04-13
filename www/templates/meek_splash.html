@@ -26,8 +26,14 @@
 
     <script type="text/javascript">
         var g_trueSiteUrl = "<?=trueSiteUrl();?>";
+        var g_cartBaseUrl = "<?=cart_base_url();?>";
         var g_apiBaseUrl = "<?=api_base_url();?>";
+        var g_artistBaseUrl = "<?=$artist_base_url;?>";
+        var g_artistFileBaseUrl = "<?=artist_file_base_url();?>";
+
+        var g_artistName = "<?=$artist_name;?>";
         var g_artistId = <?=$artist_id;?>;
+
         var g_formTag = "<?=$template_params['form_tag'];?>";
         
         var g_eventDate = new Date("<?=$template_params['countdown_date'];?>");
