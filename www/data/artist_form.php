@@ -10,19 +10,15 @@
     
     $artist_id = $_REQUEST['artist_id'];
     $form_tag = $_REQUEST['form_tag'];
-    $name = $_REQUEST['name'];
-    $email = $_REQUEST['email'];
-    $phone = $_REQUEST['phone'];
+    $form_data_json = $_REQUEST['form_data_json'];
     
     $values = array(
                     "artist_id" => $artist_id,
                     "form_tag" => $form_tag,
-                    "name" => $name,
-                    "email" => $email,
-                    "phone" => $phone,
+                    "form_data_json" => $form_data_json,
                     );
     
-    mysql_insert('subscribers',$values);
+    mysql_insert('artist_form_data',$values);
 
     $ret = array("success" => 1);
 
