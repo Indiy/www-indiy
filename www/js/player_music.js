@@ -84,7 +84,7 @@ function musicPanelChange(index)
     loveChangedMusic(song.id,song.name);
     
     var media = {
-        mp3: song.mp3,
+        mp3: song.mp3
     };
     
     if( song.audio_extra && song.audio_extra.alts && song.audio_extra.alts.ogg )

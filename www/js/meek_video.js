@@ -77,12 +77,62 @@ function splashReady()
     g_updateInterval = window.setInterval(updateCountdown,250);
     updateCountdown();
     
+    g_videoPlayer = _V_('splash_video_0');
+    if( g_videoPlayer )
+    {
+        var video = g_templateParams['video_file'];
+        var url =  video.video_file;
+    
+        var media = [ { type: "video/mp4", src: url } ];
+        if( video.video_extra && video.video_extra.alts && video.video_extra.alts.ogv )
+        {
+            var url_ogv = g_artistFileBaseUrl + video.video_extra.alts.ogv;
+            media.push( { type: "video/ogg", src: url_ogv } );
+        }
+        g_videoPlayer.src(media);
+    
+        g_videoPlayer.addEvent('play',videoPlay);
+        g_videoPlayer.addEvent('pause',videoPause);
+        g_videoPlayer.addEvent('ended',videoPause);
+    }
+    
+    $(window).resize(videoResize);
+    videoResize();
+    
     if( IS_MOBILE )
     {
         window.scrollTo(0,1);
     }
 }
 $(document).ready(splashReady);
+
+function clickVideoPlay()
+{
+    $('.video_container').addClass('full_screen');
+    g_videoPlayer.play();
+}
+
+function videoPlay()
+{
+    g_videoPlaying = true;
+    $('.video_container').addClass('full_screen');
+    videoResize();
+}
+function videoPause()
+{
+    g_videoPlaying = false;
+    $('.video_container').removeClass('full_screen');
+    videoResize();
+}
+function videoResize()
+{
+    if( g_videoPlayer )
+    {
+        var width = $('.video_container').width();
+        var height = $('.video_container').height();
+        g_videoPlayer.size(width,height);
+    }
+}
 
 function splashResize()
 {
@@ -141,86 +191,4 @@ function getDigitHtml(value)
     return html;
 }
 
-function onKeyPressPhone(input,event,sel)
-{
-    var val = input.value;
-    var key = String.fromCharCode(event.keyCode);
-    
-    if( "1234567890-".indexOf(key) == -1 )
-        return false;
-    
-    if( val.length == 3 )
-    {
-        if( key != '-' )
-            input.value += '-';
-    }
-    else if( val.length == 7 )
-    {
-        if( key != '-' )
-            input.value += '-';
-    }
-    else
-    {
-        if( key == '-' )
-            return false;
-    }
-    return true;
-}
-
-function submitSplash()
-{
-    var name = $('#input_name').val();
-    var email = $('#input_email').val();
-    var phone = $('#input_phone').val();
-    
-    if( name.length == 0 || email.length == 0 || phone.length == 0 )
-    {
-        window.alert("Please fill out all form fields.");
-        return;
-    }
-    
-    if( !email.match(EMAIL_REGEX) )
-    {
-        window.alert("Please enter a valid email address.");
-        return;
-    }
-    
-    if( !phone.match(PHONE_REGEX) )
-    {
-        window.alert("Please enter a valid phone number.");
-        return;
-    }
-    
-    var args = {
-        artist_id: g_artistId,
-        form_tag: g_formTag,
-        name: name,
-        email: email,
-        phone: phone
-    };
-    
-    var url = "{0}/data/artist_form.php".format(g_apiBaseUrl);
-    
-    jQuery.ajax(
-    {
-        type: 'POST',
-        url: url,
-        data: args,
-        dataType: 'jsonp',
-        success: function(data) 
-        {
-            splashFormDone();
-        },
-        error: function()
-        {
-            window.alert("Form submission failed, please try again later.");
-        }
-    });
-}
-
-function splashFormDone()
-{
-    $('.form_hide').hide();
-    $('.success_show').show();
-}
 

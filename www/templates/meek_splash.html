@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Meek Mill - DC3</title>
+    <title><?=$template_params['page_title'];?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
@@ -28,19 +28,10 @@
         var g_trueSiteUrl = "<?=trueSiteUrl();?>";
         var g_apiBaseUrl = "<?=api_base_url();?>";
         var g_artistId = <?=$artist_id;?>;
-        var g_formTag = "meek_splash_20130401";
+        var g_formTag = "<?=$template_params['form_tag'];?>";
         
-        var g_backgroundList = [
-            {
-                image: "<?=static_file_url('/images/snupe-bg.jpg');?>",
-                bg_color: "000000",
-                bg_style: "STRETCH",
-                bg_justify: "TOP",
-                loaded: false,
-                image_data: { width:1920, height:768 }
-            }];
-        
-        var g_eventDate = new Date("Sat, 06 Apr 2013 00:00:00 GMT");
+        var g_eventDate = new Date("<?=$template_params['countdown_date'];?>");
+        var g_templateParams = <?=$template_params_json;?>;
     </script>
 
     <script>
@@ -86,9 +77,9 @@
             </div>
             <div class='hline'></div>
         </div>
-        <div class='title'>R.N.I.C.&nbsp;13TH</div>
-        <div class='subtitle'>GET THE <div class='blue'>DEBUT ALBUM FROM LIL SNUPE</div> BEFORE ANYONE ELSE!</div>
-        <div class='subtitle form_hide'>ENTER YOUR INFORMATION BELOW</div>
+        <div class='title'><?=$template_params['title'];?></div>
+        <div class='subtitle'><?=$template_params['subtitle1'];?></div>
+        <div class='subtitle form_hide'><?=$template_params['subtitle2'];?></div>
         <div class='form_container form_hide'>
             <div class='input_line'>
                 <div class='label'>Name:</div>
@@ -107,18 +98,18 @@
             </div>
             <div class='input_line'>
                 <div class='button_container'>
-                    <div class='button' onclick='submitSplash();'>GET IT FIRST!</div>
+                    <div class='button' onclick='submitSplash();'><?=$template_params['button_text'];?></div>
                 </div>
             </div>
         </div>
-        <div class='subtitle success_show'>THANKS FOR ENTERING!</div>
+        <div class='subtitle success_show'><?=$template_params['success_text'];?></div>
     </div></div>
     <div id='footer'>
         <div class='banner'>
-            <div class='left'>R.N.I.C.</div>
+            <div class='left'><?=$template_params['banner_left'];?></div>
             <div class='right'>
-                <div class='top'>SATURDAY 4/13/13 ON MEEKMILL.COM</div>
-                <div class='bottom'>RELEASE OF DEBUT LP FROM LIL SNUPE</div>
+                <div class='top'><?=$template_params['banner_right1'];?></div>
+                <div class='bottom'><?=$template_params['banner_right2'];?></div>
             </div>
         </div>
         <div class='bottom_bar'>
@@ -132,7 +123,7 @@
                     </a>
                 </div>
                 <div class='right'>
-                    Copyright &copy; 2013 Meek Mill. <div class='rights_reserved'>All Rights Reserved.</div>
+                    <?=$template_params['copyright'];?> <div class='rights_reserved'>All Rights Reserved.</div>
                 </div>
             </div<
         </div>

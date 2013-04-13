@@ -277,6 +277,8 @@
 		2D775D391710F53E00B2250D /* fan_connections.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fan_connections.html; path = templates/fan_connections.html; sourceTree = "<group>"; };
 		2D775D3A1710F54000B2250D /* first_instructions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = first_instructions.html; path = templates/first_instructions.html; sourceTree = "<group>"; };
 		2D775D3B1711075E00B2250D /* template.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = template.php; sourceTree = "<group>"; };
+		2D775D4B1719BF5B00B2250D /* meek_video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = meek_video.js; sourceTree = "<group>"; };
+		2D775D4C1719BF6900B2250D /* meek_video.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = meek_video.css; sourceTree = "<group>"; };
 		2D7849EE15CE37EA00A89620 /* fan_signup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_signup.php; sourceTree = "<group>"; };
 		2D7849F115CEEA0600A89620 /* logout.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = logout.php; sourceTree = "<group>"; };
 		2D7A9C4B170A9E0B003C5982 /* edit_template.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_template.js; sourceTree = "<group>"; };
@@ -1543,6 +1545,7 @@
 				2DEADAB41618C1170076F95D /* header2.css */,
 				2D117D0D17032EC200D6BD84 /* meek_splash.css */,
 				2D7A9C4D170D292C003C5982 /* meek_stream.css */,
+				2D775D4C1719BF6900B2250D /* meek_video.css */,
 			);
 			path = css;
 			sourceTree = "<group>";
@@ -1746,6 +1749,7 @@
 				2D9214C11601403E000B8DC1 /* signup.js */,
 				2DEADA9E1613B4EC0076F95D /* home.js */,
 				2DEADAC4161BF8160076F95D /* home_data.js */,
+				2D775D4B1719BF5B00B2250D /* meek_video.js */,
 				2D117D311706339400D6BD84 /* meek_splash.js */,
 				2D775D29170D44B800B2250D /* meek_stream.js */,
 			);
