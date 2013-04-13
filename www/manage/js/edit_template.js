@@ -74,7 +74,7 @@ function showTemplatePopup(template_index)
             html += " <input id='template_val_bg_color_{0}' type='text' maxlength='6' size='6' class='color' value='' />".format(i);
             html += "</div>";
         }
-        else if( arg.type == 'video' || arg.type == 'image' )
+        else if( arg.type == 'video' || arg.type == 'image' || arg.type == 'misc_file' )
         {
             html += "<div class='input_container' style='height: 50px;'>";
             html += " <div class='left_label'>{0}</div>".format(arg.description);
@@ -118,6 +118,11 @@ function showTemplatePopup(template_index)
                 var sel = "#edit_template #template_val_drop_{0}".format(i);
                 fillArtistFileIdSelect(sel,'IMAGE',val.image_file_id);
             }
+            else if( arg.type == 'misc_file' )
+            {
+                var sel = "#edit_template #template_val_drop_{0}".format(i);
+                fillArtistFileIdSelect(sel,'ALL',val.misc_file_id);
+            }
         }
         else
         {
@@ -145,6 +150,11 @@ function showTemplatePopup(template_index)
             {
                 var sel = "#edit_template #template_val_drop_{0}".format(i);
                 fillArtistFileIdSelect(sel,'IMAGE',false);
+            }
+            else if( arg.type == 'misc_file' )
+            {
+                var sel = "#edit_template #template_val_drop_{0}".format(i);
+                fillArtistFileIdSelect(sel,'ALL',false);
             }
         }
     }
@@ -210,6 +220,14 @@ function onEditTemplateSubmit()
             var file_id = $(sel).val();
             params[name] = {
                 image_file_id: file_id
+            };
+        }
+        else if( arg.type == 'misc_file' )
+        {
+            var sel = "#edit_template #template_val_drop_{0}".format(i);
+            var file_id = $(sel).val();
+            params[name] = {
+                misc_file_id: file_id
             };
         }
     }
@@ -343,7 +361,13 @@ var TEMPLATE_SCHEMA =
                 name: 'bg_file',
                 description: 'Background Image',
                 type: 'image_spec'
+            },
+            {
+                name: 'file_download',
+                description: 'File Download',
+                type: 'misc_file'
             }
+
         ]
     },
     'PLAYER_MEEK_VIDEO': {
