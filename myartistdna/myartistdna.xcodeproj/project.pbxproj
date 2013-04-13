@@ -1544,8 +1544,8 @@
 				2DEADA9F1613B6C00076F95D /* home.css */,
 				2DEADAB41618C1170076F95D /* header2.css */,
 				2D117D0D17032EC200D6BD84 /* meek_splash.css */,
-				2D7A9C4D170D292C003C5982 /* meek_stream.css */,
 				2D775D4C1719BF6900B2250D /* meek_video.css */,
+				2D7A9C4D170D292C003C5982 /* meek_stream.css */,
 			);
 			path = css;
 			sourceTree = "<group>";
