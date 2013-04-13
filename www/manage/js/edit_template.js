@@ -240,13 +240,67 @@ var TEMPLATE_SCHEMA =
     },
     'PLAYER_MEEK_SPLASH': {
         type: 'PLAYER',
-        description: 'Meek Splash',
-        default_params: {},
-        arg_list: []
+        description: 'Meek Form Splash',
+        default_params:
+        {
+            page_title: "#DC3",
+            title: "TITLE",
+            subtitle1: "SUBTITLE",
+            subtitle2: "SUBTITLE2",
+            countdown_date: "Web, 01 May 2013 04:00:00 GMT"
+        },
+        arg_list:
+        [
+            {
+                name: 'page_title',
+                description: 'Page Title',
+                type: 'string'
+            },
+            {
+                name: 'title',
+                description: 'Title',
+                type: 'string'
+            },
+            {
+                name: 'subtitle1',
+                description: 'Subtitle 1',
+                type: 'string'
+            },
+            {
+                name: 'subtitle2',
+                description: 'Subtitle 2',
+                type: 'string'
+            },
+            {
+                name: 'button_text',
+                description: 'Button Text',
+                type: 'string'
+            },
+            {
+                name: 'success_text',
+                description: 'Success Text',
+                type: 'string'
+            },
+            {
+                name: 'copyright_text',
+                description: 'Copyright Text',
+                type: 'string'
+            },
+            {
+                name: 'countdown_date',
+                description: 'Countdown Date',
+                type: 'string'
+            },
+            {
+                name: 'bg_file',
+                description: 'Background Image',
+                type: 'image_spec'
+            }
+        ]
     },
     'PLAYER_MEEK_VIDEO': {
         type: 'PLAYER',
-        description: 'Meek Video',
+        description: 'Meek Video Splash',
         default_params:
         {
             page_title: "meekmill.com",
