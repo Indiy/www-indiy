@@ -535,9 +535,20 @@
                     $image_url = artist_file_url($file['filename']);
                     $image_extra = json_decode($file['extra_json'],TRUE);
                     
+                    $bg_color = "#000";
+                    $bg_style = "STRETCH";
+                    if( isset($val['bg_color']) )
+                    {
+                        $bg_color = $val['bg_color'];
+                    }
+                    if( isset($val['bg_style']) )
+                    {
+                        $bg_style = $val['bg_style'];
+                    }
+                    
                     $item = array("image" => $image_url,
-                                  "bg_color" => $val['bg_color'],
-                                  "bg_style" => $val['bg_style'],
+                                  "bg_color" => $bg_color,
+                                  "bg_style" => $bg_style,
                                   "loaded" => FALSE,
                                   "image_data" => $image_extra['image_data'],
                                   "image_extra" => $image_extra,
