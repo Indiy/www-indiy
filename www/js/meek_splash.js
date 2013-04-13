@@ -173,7 +173,7 @@ function submitSplash()
     var email = $('#input_email').val();
     var phone = $('#input_phone').val();
     
-    if( name.length == 0 || email.length == 0 || phone.length == 0 )
+    if( email.length == 0 )
     {
         window.alert("Please fill out all form fields.");
         return;
@@ -184,20 +184,34 @@ function submitSplash()
         window.alert("Please enter a valid email address.");
         return;
     }
-    
+    /*
     if( !phone.match(PHONE_REGEX) )
     {
         window.alert("Please enter a valid phone number.");
         return;
     }
+    */
     
     var args = {
         artist_id: g_artistId,
         form_tag: g_formTag,
-        name: name,
-        email: email,
-        phone: phone
     };
+    
+    var form_data = {};
+    if( name )
+    {
+        form_data.name = name;
+    }
+    if( email )
+    {
+        form_data.email = email;
+    }
+    if( phone )
+    {
+        form_data.phone = phone;
+    }
+    
+    args.form_data_json = JSON.stringify(form_data);
     
     var url = "{0}/data/artist_form.php".format(g_apiBaseUrl);
     
