@@ -1306,9 +1306,9 @@
 		2D9E2FD81569F13600A76906 /* templates */ = {
 			isa = PBXGroup;
 			children = (
-				2D7A9C4C170D27B1003C5982 /* meek_stream.html */,
-				2D117D33170798B600D6BD84 /* meek_video.html */,
 				2D117D0C1702984500D6BD84 /* meek_splash.html */,
+				2D117D33170798B600D6BD84 /* meek_video.html */,
+				2D7A9C4C170D27B1003C5982 /* meek_stream.html */,
 				2D747C5F15E4AFBE00128EEC /* player_iphone.html */,
 				2D25C38E15D9BBA200132306 /* player2.html */,
 				2D25C39015DAE8C400132306 /* player_social_items.html */,
@@ -1749,8 +1749,8 @@
 				2D9214C11601403E000B8DC1 /* signup.js */,
 				2DEADA9E1613B4EC0076F95D /* home.js */,
 				2DEADAC4161BF8160076F95D /* home_data.js */,
-				2D775D4B1719BF5B00B2250D /* meek_video.js */,
 				2D117D311706339400D6BD84 /* meek_splash.js */,
+				2D775D4B1719BF5B00B2250D /* meek_video.js */,
 				2D775D29170D44B800B2250D /* meek_stream.js */,
 			);
 			path = js;

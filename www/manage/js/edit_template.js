@@ -305,6 +305,21 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             },
             {
+                name: 'banner_left',
+                description: 'Banner Left',
+                type: 'string'
+            },
+            {
+                name: 'banner_right1',
+                description: 'Banner Right1',
+                type: 'string'
+            },
+            {
+                name: 'banner_right2',
+                description: 'Banner Right2',
+                type: 'string'
+            },
+            {
                 name: 'logo_image',
                 description: 'Logo Image',
                 type: 'image'
