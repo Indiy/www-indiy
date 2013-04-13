@@ -88,6 +88,11 @@
     $artist_logo = $artist_data['logo'];
     $template_id = $artist_data['template_id'];
     
+    if( isset($_REQUEST['preview_template']) )
+    {
+        $template_id = $_REQUEST['preview_template'];
+    }
+    
     $artist_twitter = FALSE;
     if( $artist_data['tw_setting'] != 'DISABLED' && $artist_data['twitter'] )
         $artist_twitter = $artist_data['twitter'];
