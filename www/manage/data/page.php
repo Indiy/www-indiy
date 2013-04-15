@@ -159,8 +159,6 @@ function do_POST()
                     "name" => $audio_name,
                     "image" => $audio_logo,
                     "bgcolor" => $audio_bgcolor,
-                    "bgposition" => $audio_bgposition,
-                    "bgrepeat" => $audio_bgrepeat,
                     "audio" => $audio_sound,
                     "download" => $audio_download,
                     "amazon" => $audio_amazon,
