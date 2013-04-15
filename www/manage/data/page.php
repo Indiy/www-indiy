@@ -105,7 +105,6 @@ function do_POST()
         $old_logo = '';
     
     $audio_logo = $_POST['image_drop'];
-    $image_data = get_image_data(PATH_TO_ROOT . "artists/files/$audio_logo");
 
     $audio_sound = $_POST['song_drop'];
     
@@ -154,12 +153,6 @@ function do_POST()
         $product_id = NULL;
     }
     
-    if( $audio_sound )
-    {
-        $audio_path = "../../artists/files/$audio_sound";
-        $extra['audio_length'] = get_audio_length($audio_path);
-    }
-    
     $extra_json = json_encode($extra);
     
     $values = array("artistid" => $artist_id,
@@ -173,10 +166,8 @@ function do_POST()
                     "amazon" => $audio_amazon,
                     "itunes" => $audio_itunes,
                     "product_id" => $product_id,
-                    "upload_audio_filename" => $upload_audio_filename,
                     "bg_style" => $bg_style,
                     "tags" => $audio_tags,
-                    "image_data" => $image_data,
                     "extra_json" => $extra_json,
                     );
     
@@ -193,8 +184,8 @@ function do_POST()
     $successMessage = "<div id='notify'>Success! You are being redirected...</div>";
     
     //showing the post value after the upload //	
-    $postedValues['imageSource'] = $audio_logo;
-    $postedValues['audio_sound'] = $audio_sound;
+    $postedValues['values'] = $values;
+    $postedValues['id'] = $song_id;
     $postedValues['success'] = "1";
     
     $postedValues['postedValues'] = $_REQUEST;
