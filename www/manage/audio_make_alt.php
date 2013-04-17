@@ -45,7 +45,9 @@
         
         $dst_file = tempnam("/tmp","ogg");
         
-        @system("/usr/local/bin/ffmpeg -y -i $src_file -acodec libvorbis $dst_file",$retval);
+        $cmd = "/usr/local/bin/ffmpeg -y -i $src_file -f ogg -acodec libvorbis  $dst_file";
+        print "    cmd: $cmd\n";
+        @system($cmd,$retval);
         if( $retval == 0 )
         {
             print "  successfully made ogg: $ogg_file\n";
