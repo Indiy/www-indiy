@@ -1,3 +1,5 @@
 #!/bin/bash
-php ../www/manage/audio_make_alt.php
-php ../www/manage/video_make_alt.php
+pushd $1
+php audio_make_alt.php >/tmp/audio_make_alt.log
+php video_make_alt.php >/tmp/video_make_alt.log
+popd
