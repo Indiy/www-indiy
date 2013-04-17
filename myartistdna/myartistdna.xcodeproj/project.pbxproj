@@ -279,6 +279,7 @@
 		2D775D3B1711075E00B2250D /* template.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = template.php; sourceTree = "<group>"; };
 		2D775D4B1719BF5B00B2250D /* meek_video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = meek_video.js; sourceTree = "<group>"; };
 		2D775D4C1719BF6900B2250D /* meek_video.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = meek_video.css; sourceTree = "<group>"; };
+		2D775D50171F492E00B2250D /* hourly_maintenance.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = hourly_maintenance.sh; path = ../utils/hourly_maintenance.sh; sourceTree = "<group>"; };
 		2D7849EE15CE37EA00A89620 /* fan_signup.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fan_signup.php; sourceTree = "<group>"; };
 		2D7849F115CEEA0600A89620 /* logout.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = logout.php; sourceTree = "<group>"; };
 		2D7A9C4B170A9E0B003C5982 /* edit_template.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_template.js; sourceTree = "<group>"; };
@@ -1178,6 +1179,7 @@
 				2D747C5715D64FD100128EEC /* update_from_tag.sh */,
 				2DE18E7816E447870066A13B /* fm_setup.php */,
 				2D3B2E6A16FFAF3100DA2301 /* publish_static.php */,
+				2D775D50171F492E00B2250D /* hourly_maintenance.sh */,
 			);
 			name = utils;
 			sourceTree = "<group>";

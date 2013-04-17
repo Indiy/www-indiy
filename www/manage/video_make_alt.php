@@ -16,20 +16,6 @@
 		exit();
 	}
     
-    $user = get_current_user();
-    $fd = fopen("/tmp/video_make_alts_$user.lock",'w+');
-    if( !$fd )
-    {
-        print "failed to open file\n";
-        die();
-    }
-    if( !flock($fd,LOCK_EX | LOCK_NB) )
-    {
-        fclose($fd);
-        print "Failed to get lock, done!\n";
-        die();
-    }
-    
     ignore_user_abort(TRUE);
     set_time_limit(60*60);
     
