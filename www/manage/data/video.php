@@ -77,7 +77,7 @@
                         "name" => $video_name,
                         "image" => $image_file,
                         "video" => $video_file,
-                        "tags" => $tags,
+                        "tags" => $video_tags,
                         );
         
         if( $video_id != "") 
