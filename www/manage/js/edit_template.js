@@ -263,7 +263,29 @@ function onEditTemplateSubmit()
 
 function deleteTemplate(index)
 {
+    var template = g_templateList[index];
+
+    var args = {
+        method: 'DELETE',
+        id: template.id
+    };
     
+    jQuery.ajax(
+    {
+        type: 'POST',
+        url:  '/manage/data/template.php',
+        data: args,
+        dataType: 'json',
+        success: function(data) 
+        {
+            g_templateList.splice(index,1);
+            updateTemplateList();
+        },
+        error: function()
+        {
+        }
+    });
+    return false;
 }
 
 var TEMPLATE_SCHEMA =

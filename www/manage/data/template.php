@@ -19,13 +19,22 @@
     
     $method = $_SERVER['REQUEST_METHOD'];
     if( isset($_REQUEST['method']) )
+    {
         $method = strtoupper($_REQUEST['method']);
+    }
     
     if( $method == 'POST' )
+    {
         do_POST();
+    }
+    else if( $method == 'DELETE' )
+    {
+        do_DELETE();
+    }
     else
+    {
         print "Bad method\n";
-    
+    }
     exit();
     
     
@@ -69,6 +78,16 @@
         $ret['posted_values'] = $_REQUEST;
         $ret['template'] = $template;
         
+        echo json_encode($ret);
+    }
+    
+    function do_DELETE()
+    {
+        $id = $_REQUEST['id'];
+        
+        mq("DELETE FROM templates WHERE id='$id'");
+        
+        $ret['success'] = "1";
         echo json_encode($ret);
     }
     
