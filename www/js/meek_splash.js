@@ -96,7 +96,7 @@ function secsUntilEvent()
     
     var time_left = g_eventDate - now;
     
-    if( time_left < 0.0 )
+    if( time_left < 0.0 && time_left > -60*60*1000 )
     {
         maybeReload();
         return 0;
