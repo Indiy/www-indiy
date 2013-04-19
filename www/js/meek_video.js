@@ -148,7 +148,10 @@ function secsUntilEvent()
     
     if( time_left < 0.0 )
     {
-        maybeReload();
+        if( time_left > -60*60*1000 )
+        {
+            maybeReload();
+        }
         return 0;
     }
     
