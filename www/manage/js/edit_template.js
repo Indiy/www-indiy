@@ -438,6 +438,11 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             },
             {
+                name: 'copyright',
+                description: 'Copyright Text',
+                type: 'string'
+            },
+            {
                 name: 'countdown_date',
                 description: 'Countdown Date',
                 type: 'string'
