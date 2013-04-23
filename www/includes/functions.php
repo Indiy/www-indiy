@@ -1823,4 +1823,24 @@ END;
         return '297bhksdy8gr2bjkad792jbkr297';
     }
 
+    function get_ga_code()
+    {
+        $ga_account = $GLOBALS['g_ga_account'];
+        if( !ga_account )
+        {
+            $ga_account = "UA-15194524-1";
+        }
+    
+        $ret = "";
+        $ret .= "var _gaq = _gaq || [];\n";
+        $ret .= "_gaq.push(['_setAccount', '$ga_account']);\n";
+        $ret .= "_gaq.push(['_trackPageview']);\n";
+        $ret .= "(function() {\n";
+        $ret .= "var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n";
+        $ret .= "ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n";
+        $ret .= "var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n";
+        $ret .= "})();\n";
+        return $ret;
+    }
+
 ?>

@@ -73,6 +73,9 @@
 		2D25C3CB15E6F4AE00132306 /* stats.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = stats.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D25C3CC15E6F78A00132306 /* stats.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = stats.html; path = templates/stats.html; sourceTree = "<group>"; };
 		2D25C3CD15E816F700132306 /* player_common.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_common.js; sourceTree = "<group>"; };
+		2D26203B17273AEB00D16D8D /* splash_audio.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = splash_audio.html; sourceTree = "<group>"; };
+		2D26203C172746CB00D16D8D /* splash_audio.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = splash_audio.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2D26203D172746FE00D16D8D /* splash_audio.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = splash_audio.js; sourceTree = "<group>"; };
 		2D34E22414A05F05004473F9 /* utils.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = utils.php; sourceTree = "<group>"; };
 		2D34E22714A06AC9004473F9 /* twitter_landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twitter_landing.php; sourceTree = "<group>"; };
 		2D34E22E14A59976004473F9 /* tooltip_text.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = tooltip_text.js; sourceTree = "<group>"; };
@@ -1308,6 +1311,7 @@
 		2D9E2FD81569F13600A76906 /* templates */ = {
 			isa = PBXGroup;
 			children = (
+				2D26203B17273AEB00D16D8D /* splash_audio.html */,
 				2D117D0C1702984500D6BD84 /* meek_splash.html */,
 				2D117D33170798B600D6BD84 /* meek_video.html */,
 				2D7A9C4C170D27B1003C5982 /* meek_stream.html */,
@@ -1548,6 +1552,7 @@
 				2D117D0D17032EC200D6BD84 /* meek_splash.css */,
 				2D775D4C1719BF6900B2250D /* meek_video.css */,
 				2D7A9C4D170D292C003C5982 /* meek_stream.css */,
+				2D26203C172746CB00D16D8D /* splash_audio.css */,
 			);
 			path = css;
 			sourceTree = "<group>";
@@ -1754,6 +1759,7 @@
 				2D117D311706339400D6BD84 /* meek_splash.js */,
 				2D775D4B1719BF5B00B2250D /* meek_video.js */,
 				2D775D29170D44B800B2250D /* meek_stream.js */,
+				2D26203D172746FE00D16D8D /* splash_audio.js */,
 			);
 			path = js;
 			sourceTree = "<group>";

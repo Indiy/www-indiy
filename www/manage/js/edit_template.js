@@ -516,7 +516,63 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             }
         ]
+    },
+    'PLAYER_SPLASH_AUDIO': {
+        type: 'PLAYER',
+        description: 'Splash Countdown with Audio Player',
+        default_params:
+        {
+            page_title: "MyArtistDNA. Be Seen, Be Heard, Be Independant.",
+            top_title1: "TOP TITLE 1 HERE",
+            top_title2: "TOP TITLE 2 HERE",
+            top_subtitle: "TOP SUB TITLE",
+            bottom_subtitle: "BOTTOM SUB TITLE",
+            bottom_title: "BOTTOM TITLE",
+            countdown_date: "Web, 01 May 2014 04:00:00 GMT"
+        },
+        arg_list:
+        [
+            {
+                name: 'page_title',
+                description: 'Page Title',
+                type: 'string'
+            },
+            {
+                name: 'top_title1',
+                description: 'Top Title 1',
+                type: 'string'
+            },
+            {
+                name: 'top_title2',
+                description: 'Top Title 2',
+                type: 'string'
+            },
+            {
+                name: 'top_subtitle',
+                description: 'Top Subtitle',
+                type: 'string'
+            },
+            {
+                name: 'bottom_subtitle',
+                description: 'Bottom Subtittle',
+                type: 'string'
+            },
+            {
+                name: 'bottom_title',
+                description: 'Bottom Title',
+                type: 'string'
+            },
+            {
+                name: 'copyright',
+                description: 'Copyright Text',
+                type: 'string'
+            },
+            {
+                name: 'countdown_date',
+                description: 'Countdown Date',
+                type: 'string'
+            }
+        ]
     }
-    
 };
 

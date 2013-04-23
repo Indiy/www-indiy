@@ -60,6 +60,8 @@
     
     */
     
+    $g_ga_account = "UA-15194524-1";
+    
     $g_root_redirect_ip = "54.225.71.64";
     
     $g_access_key_id = "AKIAIP2VCXXJMBG4K75Q";
