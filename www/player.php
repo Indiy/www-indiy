@@ -616,6 +616,10 @@
         {
             include_once 'templates/meek_stream.html';
         }
+        else if( $template_type == 'PLAYER_SPLASH_AUDIO' )
+        {
+            include_once 'templates/splash_audio.html';
+        }
     }
     else
     {
