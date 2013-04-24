@@ -58,9 +58,18 @@ function splashReady()
     if( IS_DESKTOP )
         $('body').addClass('desktop');
 
-    imageLoadItem(g_musicList[0],0,'#splash_bg');
-    splashResize();
-    $(window).resize(splashResize);
+    g_backgroundList = g_musicList;
+
+    var opts = {
+        panelCount: g_backgroundList.length,
+        resizeCallback: backgroundResizeBackgrounds,
+        onPanelChange: backgroundPanelChange,
+        onPanelVisible: backgroundPanelVisible,
+        onReady: backgroundSwipeReady
+    };
+    $('#splash_bg').swipe(opts);
+    backgroundPreloadImages();
+
 
     g_updateInterval = window.setInterval(updateCountdown,250);
     updateCountdown();
@@ -72,10 +81,73 @@ function splashReady()
 }
 $(document).ready(splashReady);
 
-
-function splashResize()
+function backgroundPanelChange(index)
 {
-    imageResizeBackgrounds(g_backgroundList,'#splash_bg');
+    backgroundUpdateToIndex(index);
+}
+
+function backgroundPanelVisible(index)
+{
+    var background = g_backgroundList[index];
+    backgroundLoadImage(background,index);
+}
+
+function backgroundSwipeReady()
+{
+}
+
+function backgroundChangeIndex( index )
+{
+    $('#home_bg').swipe("scrollto",index);
+}
+function backgroundUpdateToIndex(index)
+{
+    g_currentBackgroundIndex = index;
+    var background = g_backgroundList[index];
+    
+    backgroundLoadImage(background,index);
+    $('#body_content_info').html(background.content_info_html);
+    
+    if( g_rotateTimeout !== false )
+        window.clearTimeout(g_rotateTimeout);
+    
+    g_rotateTimeout = window.setTimeout(rotateBackground,ROTATE_MS);
+}
+
+function backgroundNext()
+{
+    var index = g_currentBackgroundIndex + 1;
+    if( index == g_backgroundList.length )
+        index = 0;
+    
+    backgroundChangeIndex(index);
+}
+function backgroundPrevious()
+{
+    var index = g_currentBackgroundIndex - 1;
+    if( index < 0 )
+        index = g_backgroundList.length - 1;
+    
+    backgroundChangeIndex(index);
+}
+
+function backgroundPreloadImages()
+{
+    for( var i = 0 ; i < g_backgroundList.length ; ++i  )
+    {
+        var background = g_backgroundList[i];
+        backgroundLoadImage(background,i);
+    }
+}
+
+function backgroundLoadImage(background,index)
+{
+    imageLoadItem(background,index,'#home_bg');
+}
+
+function backgroundResizeBackgrounds()
+{
+    imageResizeBackgrounds(g_backgroundList,'#home_bg');
 }
 
 
