@@ -36,6 +36,8 @@
         
         var g_eventDate = new Date("<?=$template_params['countdown_date'];?>");
         var g_templateParams = <?=$template_params_json;?>;
+        
+        var g_musicList = <?=$music_list_json;?>;
     </script>
 
     <script>
@@ -87,21 +89,12 @@
         <div class='bottom_title'><?=$template_params['bottom_title'];?></div>
     </div></div>
     <div id='footer'>
-        <div class='bottom_bar'>
-            <div class='bottom_container'>
-                <div class='hline'></div>
-                <div class='left'>
-                    <img class='mad_logo'  src="<?=static_file_url('/images/mad_grey_40x22.png');?>" />
-                    <a href="http://www.myartistdna.com">
-                        <div class='copyright'>Powered by MyArtistDNA</div>
-                    </a>
-                </div>
-                <div class='right'>
-                    <?=$template_params['copyright'];?> <div class='rights_reserved'>All Rights Reserved</div>
-                </div>
-            </div<
+        <div class='audio_player'>
+            <div class='album_image'></div>
+            <div class='title'>Wale FT Tiara Thomas - Bad</div>
+            <div class='sep'></div>
+            <div class='time'>00:34</div>
         </div>
     </div>
-    
 </body>
 </html>

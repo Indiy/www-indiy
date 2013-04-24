@@ -58,46 +58,12 @@ function splashReady()
     if( IS_DESKTOP )
         $('body').addClass('desktop');
 
-    if( IS_IPHONE )
-    {
-        $('#input_name').attr('placeholder',"Name");
-        $('#input_email').attr('placeholder',"Email Address");
-        $('#input_phone').attr('placeholder',"Phone Number");
-    }
-
-    if( g_templateParams.bg_file )
-    {
-        g_backgroundList = [ g_templateParams.bg_file ];
-
-        imageLoadItem(g_backgroundList[0],0,'#splash_bg');
-        splashResize();
-        $(window).resize(splashResize);
-    }
+    imageLoadItem(g_musicList[0],0,'#splash_bg');
+    splashResize();
+    $(window).resize(splashResize);
 
     g_updateInterval = window.setInterval(updateCountdown,250);
     updateCountdown();
-    
-    g_videoPlayer = _V_('splash_video_0');
-    if( g_videoPlayer )
-    {
-        var video = g_templateParams['video_file'];
-        var url =  video.video_file;
-    
-        var media = [ { type: "video/mp4", src: url } ];
-        if( video.video_extra && video.video_extra.alts && video.video_extra.alts.ogv )
-        {
-            var url_ogv = g_artistFileBaseUrl + video.video_extra.alts.ogv;
-            media.push( { type: "video/ogg", src: url_ogv } );
-        }
-        g_videoPlayer.src(media);
-    
-        g_videoPlayer.addEvent('play',videoPlay);
-        g_videoPlayer.addEvent('pause',videoPause);
-        g_videoPlayer.addEvent('ended',videoPause);
-    }
-    
-    $(window).resize(videoResize);
-    videoResize();
     
     if( IS_MOBILE )
     {
@@ -106,33 +72,6 @@ function splashReady()
 }
 $(document).ready(splashReady);
 
-function clickVideoPlay()
-{
-    $('.video_container').addClass('full_screen');
-    g_videoPlayer.play();
-}
-
-function videoPlay()
-{
-    g_videoPlaying = true;
-    $('.video_container').addClass('full_screen');
-    videoResize();
-}
-function videoPause()
-{
-    g_videoPlaying = false;
-    $('.video_container').removeClass('full_screen');
-    videoResize();
-}
-function videoResize()
-{
-    if( g_videoPlayer )
-    {
-        var width = $('.video_container').width();
-        var height = $('.video_container').height();
-        g_videoPlayer.size(width,height);
-    }
-}
 
 function splashResize()
 {
