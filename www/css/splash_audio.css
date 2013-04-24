@@ -73,6 +73,12 @@ body {
     white-space: nowrap;
     font-size: 0px;
 }
+.full_screen_bg .pad {
+    display: inline-block;
+    width: 0px;
+    height: 100%;
+    background: black;
+}
 .full_screen_bg .image_holder {
     display: inline-block;
     height: 100%;
