@@ -98,7 +98,7 @@ function backgroundSwipeReady()
 
 function backgroundChangeIndex( index )
 {
-    $('#home_bg').swipe("scrollto",index);
+    $('#splash_bg').swipe("scrollto",index);
 }
 function backgroundUpdateToIndex(index)
 {
@@ -106,12 +106,6 @@ function backgroundUpdateToIndex(index)
     var background = g_backgroundList[index];
     
     backgroundLoadImage(background,index);
-    $('#body_content_info').html(background.content_info_html);
-    
-    if( g_rotateTimeout !== false )
-        window.clearTimeout(g_rotateTimeout);
-    
-    g_rotateTimeout = window.setTimeout(rotateBackground,ROTATE_MS);
 }
 
 function backgroundNext()
@@ -142,12 +136,12 @@ function backgroundPreloadImages()
 
 function backgroundLoadImage(background,index)
 {
-    imageLoadItem(background,index,'#home_bg');
+    imageLoadItem(background,index,'#splash_bg');
 }
 
 function backgroundResizeBackgrounds()
 {
-    imageResizeBackgrounds(g_backgroundList,'#home_bg');
+    imageResizeBackgrounds(g_backgroundList,'#splash_bg');
 }
 
 

@@ -50,7 +50,15 @@
 <body class='splash_audio'>
     <div id='body_wrap'><div id='main_content'>
         <div id='splash_bg' class='full_screen_bg'>
-            <div id='image_holder_0' class='image_holder'></div>
+            <div class='pad'></div>
+            <?php
+                foreach( $music_list as $k => $song )
+                {
+                    echo "<div id='image_holder_$k' class='image_holder'>";
+                    echo "</div>\n";
+                }
+            ?>
+            <div class='pad'></div>
         </div>
         <div class='top_spacer'></div>
         <div class='title'><?=$template_params['top_title1'];?></div>
