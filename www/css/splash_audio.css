@@ -429,6 +429,7 @@ body {
     height: 30px;
     background: url("/images/splash_audio_controls.png") -10px -22px no-repeat;
     vertical-align: top;
+    cursor: pointer;
 }
 #footer .audio_player .controls .play {
     display: inline-block;
@@ -438,6 +439,7 @@ body {
     height: 65px;
     background: url("/images/splash_audio_controls.png") -52px -3px no-repeat;
     vertical-align: top;
+    cursor: pointer;
 }
 #footer .audio_player .controls .next {
     display: inline-block;
@@ -447,6 +449,7 @@ body {
     height: 30px;
     background: url("/images/splash_audio_controls.png") -130px -22px no-repeat;
     vertical-align: top;
+    cursor: pointer;
 }
 
 /*****************************************/

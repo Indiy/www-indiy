@@ -27,6 +27,8 @@
     <script src="<?=static_file_url('/js/splash_audio.js');?>" type="text/javascript"></script>
 
     <script type="text/javascript">
+        var g_swfBase = "<?=static_file_url('/js/Jplayer.swf');?>";
+    
         var g_trueSiteUrl = "<?=trueSiteUrl();?>";
         var g_cartBaseUrl = "<?=cart_base_url();?>";
         var g_apiBaseUrl = "<?=api_base_url();?>";
@@ -48,6 +50,7 @@
 </head>
 
 <body class='splash_audio'>
+    <div id="jquery_jplayer" class="jp-jplayer"></div>
     <div id='body_wrap'><div id='main_content'>
         <div id='splash_bg' class='full_screen_bg'>
             <div class='pad'></div>
@@ -102,9 +105,9 @@
             <div class='sep'></div>
             <div id='song_time' class='time'>00:34</div>
             <div class='controls'>
-                <div class='prev'></div>
-                <div class='play'></div>
-                <div class='next'></div>
+                <div class='prev' onclick='mediaPrev();'></div>
+                <div class='play' onclick='mediaTogglePlay();'></div>
+                <div class='next' onclick='mediaNext();'></div>
             </div>
         </div>
     </div>
