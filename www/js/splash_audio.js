@@ -178,9 +178,16 @@ function jplayerPause()
 function jplayerVolume()
 {
 }
-function jplayerTimeUpdate()
+function jplayerTimeUpdate(event)
 {
+    var curr_time = event.jPlayer.status.currentTime;
+    var total_time = event.jPlayer.status.duration;
     
+    var mins = Math.floor(total_time / 60);
+    var secs = Math.floor(total_time - mins * 60);
+    
+    var html = sprintf("%02:%02",mins,secs);
+    $('#song_time').html(html);
 }
 
 function setupCurrentMedia()
