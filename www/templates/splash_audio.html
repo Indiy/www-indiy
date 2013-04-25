@@ -99,10 +99,17 @@
     </div></div>
     <div id='footer'>
         <div class='audio_player'>
-            <div class='album_image'></div>
+            <div class='album_image'>
+                <img src="<?=get_image_thumbnail($template['album_image']['image'],$template['album_image']['image_extra'],78);?>"/>
+            </div>
             <div class='title'>Wale FT Tiara Thomas - Bad</div>
             <div class='sep'></div>
             <div class='time'>00:34</div>
+            <div class='controls'>
+                <div class='prev'></div>
+                <div class='play'></div>
+                <div class='next'></div>
+            </div>
         </div>
     </div>
 </body>

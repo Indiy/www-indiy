@@ -571,7 +571,13 @@ var TEMPLATE_SCHEMA =
                 name: 'countdown_date',
                 description: 'Countdown Date',
                 type: 'string'
-            }
+            },
+            {
+                name: 'album_image',
+                description: 'Album Image',
+                type: 'image'
+            },
+
         ]
     }
 };
