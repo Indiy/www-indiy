@@ -387,20 +387,21 @@ body {
 }
 #footer .audio_player .song_title {
     display: inline-block;
-    padding-top: 25px;
+    padding-top: 35px;
     padding-left: 10px;
     width: 260px;
     color: white;
-    font-size: 24px;
+    font-size: 26px;
     font-family: 'Agency Regular', Helvetica, sans-serif;
-    text-overflow: ellipse;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
     vertical-align: top;
 }
 #footer .audio_player .sep {
     display: inline-block;
-    margin-top: 25px;
+    margin-top: 35px;
     width: 3px;
     height: 24px;
     background-color: white;
@@ -408,10 +409,10 @@ body {
 }
 #footer .audio_player .time {
     display: inline-block;
-    padding-top: 25px;
+    padding-top: 35px;
     width: 70px;
     color: white;
-    font-size: 24px;
+    font-size: 26px;
     font-family: 'Agency Regular', Helvetica, sans-serif;
     text-align: right;
     vertical-align: top;
