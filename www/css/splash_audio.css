@@ -401,7 +401,7 @@ body {
 }
 #footer .audio_player .sep {
     display: inline-block;
-    margin-top: 35px;
+    margin-top: 39px;
     width: 3px;
     height: 24px;
     background-color: white;
@@ -415,6 +415,36 @@ body {
     font-size: 26px;
     font-family: 'Agency Regular', Helvetica, sans-serif;
     text-align: right;
+    vertical-align: top;
+}
+#footer .audio_player .controls {
+    display: inline-block;
+    vertical-align: top;
+}
+#footer .audio_player .controls .prev {
+    display: inline-block;
+    margin-top: 38px;
+    width: 30px;
+    height: 30px;
+    background: url("/images/splash_audio_controls.png") 30px 0px no-repeat;
+    vertical-align: top;
+}
+#footer .audio_player .controls .play {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 65px;
+    height: 65px;
+    background: url("/images/splash_audio_controls.png") 70px 20px no-repeat;
+    vertical-align: top;
+}
+#footer .audio_player .controls .next {
+    display: inline-block;
+    margin-top: 38px;
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    background: url("/images/splash_audio_controls.png") 30px 100px no-repeat;
     vertical-align: top;
 }
 
