@@ -424,7 +424,7 @@ body {
 }
 #footer .audio_player .controls .prev {
     display: inline-block;
-    margin-top: 38px;
+    margin-top: 36px;
     width: 30px;
     height: 30px;
     background: url("/images/splash_audio_controls.png") -10px -22px no-repeat;
@@ -432,7 +432,7 @@ body {
 }
 #footer .audio_player .controls .play {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 18px;
     margin-left: 11px;
     width: 65px;
     height: 65px;
@@ -441,11 +441,11 @@ body {
 }
 #footer .audio_player .controls .next {
     display: inline-block;
-    margin-top: 38px;
+    margin-top: 36px;
     margin-left: 11px;
     width: 30px;
     height: 30px;
-    background: url("/images/splash_audio_controls.png") -92px -22px no-repeat;
+    background: url("/images/splash_audio_controls.png") -130px -22px no-repeat;
     vertical-align: top;
 }
 
