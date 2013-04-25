@@ -380,6 +380,10 @@ body {
     height: 78px;
     vertical-align: top;
 }
+#footer .audio_player .album_image img {
+    width: 78px;
+    height: 78px;
+}
 
 /*****************************************/
 
