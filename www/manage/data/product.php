@@ -63,7 +63,6 @@ function do_POST()
     $shipping = str_replace("$", "", $_POST["shipping"]);
     $size = $_POST["size"];
     $color = $_POST["color"];
-    $tags = $_POST["tags"];
     $type = $_POST["type"];
     
     if( $type == "DIGITAL" )
@@ -75,7 +74,6 @@ function do_POST()
                     "image" => $image,
                     "price" => $price,
                     "shipping" => $shipping,
-                    "tags" => $tags,
                     "size" => $size,
                     "color" => $color,
                     "type" => $type,
