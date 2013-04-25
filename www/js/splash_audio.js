@@ -183,8 +183,8 @@ function jplayerTimeUpdate(event)
     var curr_time = event.jPlayer.status.currentTime;
     var total_time = event.jPlayer.status.duration;
     
-    var mins = Math.floor(total_time / 60);
-    var secs = Math.floor(total_time - mins * 60);
+    var mins = Math.floor(curr_time / 60);
+    var secs = Math.floor(curr_time - mins * 60);
     
     var html = sprintf("%02d:%02d",mins,secs);
     $('#song_time').html(html);
