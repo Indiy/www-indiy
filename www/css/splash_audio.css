@@ -419,6 +419,7 @@ body {
 }
 #footer .audio_player .controls {
     display: inline-block;
+    padding-left: 20px;
     vertical-align: top;
 }
 #footer .audio_player .controls .prev {
@@ -426,25 +427,25 @@ body {
     margin-top: 38px;
     width: 30px;
     height: 30px;
-    background: url("/images/splash_audio_controls.png") 30px 0px no-repeat;
+    background: url("/images/splash_audio_controls.png") -10px -22px no-repeat;
     vertical-align: top;
 }
 #footer .audio_player .controls .play {
     display: inline-block;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 11px;
     width: 65px;
     height: 65px;
-    background: url("/images/splash_audio_controls.png") 70px 20px no-repeat;
+    background: url("/images/splash_audio_controls.png") -52px -3px no-repeat;
     vertical-align: top;
 }
 #footer .audio_player .controls .next {
     display: inline-block;
     margin-top: 38px;
-    margin-left: 20px;
+    margin-left: 11px;
     width: 30px;
     height: 30px;
-    background: url("/images/splash_audio_controls.png") 30px 100px no-repeat;
+    background: url("/images/splash_audio_controls.png") -92px -22px no-repeat;
     vertical-align: top;
 }
 
