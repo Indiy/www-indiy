@@ -165,7 +165,7 @@ function jplayerReady()
 }
 function jplayerEnded()
 {
-    
+    mediaNext();
 }
 function jplayerPlay()
 {
