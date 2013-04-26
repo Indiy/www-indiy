@@ -186,6 +186,10 @@ function jplayerTimeUpdate(event)
     var mins = Math.floor(curr_time / 60);
     var secs = Math.floor(curr_time - mins * 60);
     
+    updateTime(mins,secs);
+}
+function updateTime(mins,secs)
+{
     var html = getDigitHtml(mins) + ":" + getDigitHtml(secs);
     $('#song_time').html(html);
 }
@@ -206,7 +210,7 @@ function setupCurrentMedia()
     $('#jquery_jplayer').jPlayer("setMedia", media);
     
     $('#song_title').html(song.name);
-    $('#song_time').html("00:00");
+    updateTime(0,0);
     backgroundChangeIndex(g_musicIndex);
 }
 function mediaPlay()

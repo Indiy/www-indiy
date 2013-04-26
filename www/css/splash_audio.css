@@ -419,7 +419,7 @@ body {
 }
 #footer .audio_player .time div {
     display: inline-block;
-    width: 20px;
+    width: 12px;
     text-align: center;
 }
 #footer .audio_player .controls {
