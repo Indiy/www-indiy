@@ -417,6 +417,11 @@ body {
     text-align: right;
     vertical-align: top;
 }
+#footer .audio_player .time div {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
 #footer .audio_player .controls {
     display: inline-block;
     padding-left: 20px;

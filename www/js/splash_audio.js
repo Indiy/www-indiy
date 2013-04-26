@@ -186,7 +186,7 @@ function jplayerTimeUpdate(event)
     var mins = Math.floor(curr_time / 60);
     var secs = Math.floor(curr_time - mins * 60);
     
-    var html = sprintf("%02d:%02d",mins,secs);
+    var html = getDigitHtml(mins) + ":" + getDigitHtml(secs);
     $('#song_time').html(html);
 }
 
