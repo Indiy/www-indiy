@@ -117,6 +117,7 @@ function splashReady()
         {
             $(document).mousemove(showAndTimeoutControls);
         }
+        showAndTimeoutControls();
     }
 }
 $(document).ready(splashReady);
