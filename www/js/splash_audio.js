@@ -105,8 +105,64 @@ function splashReady()
     {
         window.scrollTo(0,1);
     }
+
+    if( !IS_PHONE )
+    {
+        if( g_touchDevice )
+        {
+            $(document).bind("touchstart",showControls);
+            $(document).bind("touchend",timeoutControls);
+        }
+        else
+        {
+            $(document).mousemove(showAndTimeoutControls);
+        }
+    }
 }
 $(document).ready(splashReady);
+
+var g_controlsShown = true;
+var g_hideControlsTimeout = false;
+var HIDE_TIMEOUT = 10*1000;
+var ANIMATE_DURATION = "fast";
+
+function showControls()
+{
+    if( !g_controlsShown )
+    {
+        g_controlsShown = true;
+        $('.idle_hide').animate({ height: 96px },ANIMATE_DURATION);
+    }
+    else if( !$('.idle_hide').is(':animated') )
+    {
+        $('.idle_hide').stop(true,false);
+        $('.idle_hide').css({ height: 96px });
+    }
+    clearTimeoutControls();
+}
+function showAndTimeoutControls()
+{
+    showControls();
+    timeoutControls();
+}
+function clearTimeoutControls()
+{
+    if( g_hideControlsTimeout !== false )
+    {
+        window.clearTimeout(g_hideControlsTimeout);
+        g_hideControlsTimeout = false;
+    }
+}
+function timeoutControls()
+{
+    clearTimeoutControls();
+    g_hideControlsTimeout = window.setTimeout(hideControls,HIDE_TIMEOUT);
+}
+function hideControls()
+{
+    g_controlsShown = false;
+    $('.idle_hide').animate({ height: 0px },ANIMATE_DURATION);
+}
 
 function backgroundPanelChange(index)
 {

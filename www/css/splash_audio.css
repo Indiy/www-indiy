@@ -370,6 +370,8 @@ body {
 #footer .slider {
     position: absolute;
     bottom: 0px;
+    left: 0px;
+    right: 0px;
     height: 96px;
     background: rgba(0,0,0,0.5);
     overflow: hidden;
