@@ -123,7 +123,7 @@ $(document).ready(splashReady);
 
 var g_controlsShown = true;
 var g_hideControlsTimeout = false;
-var HIDE_TIMEOUT = 10*1000;
+var HIDE_TIMEOUT = 5*1000;
 var ANIMATE_DURATION = "fast";
 
 function showControls()
