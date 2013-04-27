@@ -121,8 +121,8 @@
     }
     if( $iphone_version )
     {
-        require_once 'player_iphone.php';
-        die();
+        //require_once 'player_iphone.php';
+        //die();
     }
 
     $product_list = array();
@@ -623,7 +623,14 @@
     }
     else
     {
-        include_once 'templates/player.html';
+        if( $iphone_version )
+        {
+            include_once 'templates/player_iphone.html';
+        }
+        else
+        {
+            include_once 'templates/player.html';
+        }
     }
 
 ?>

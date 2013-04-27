@@ -287,13 +287,23 @@
         $video0_sources_html = $html;
     }
     
-    $q_photo = mq("SELECT * from photos WHERE artist_id='$artist_id' ORDER BY `order` ASC, `id` DESC");
+    $sql = "SELECT photos.*, af1.extra_json AS image_extra_json ";
+    $sql .= " FROM photos";
+    $sql .= " JOIN artist_files AS af1 ON photos.image = af1.filename";
+    $sql .= " WHERE photos.artist_id='$artist_id'";
+    $sql .= " ORDER BY photos.order ASC, photos.id DESC";
+    
+    $q_photo = mq($sql);
     $photo_list = array();
     $photo_list_html = "";
     $i = 0;
     while( $photo = mf($q_photo) )
     {
         $photo_image = artist_file_url($photo['image']);
+        $image_extra = json_decode($photo['image_extra_json'],TRUE);
+        
+        $img_url = get_image_thumbnail($photo_image,$image_extra,200);
+        
         $photo_name = $photo['name'];
         
         $item = array("id" => $photo['id'],
@@ -304,14 +314,15 @@
                       "bg_style" => $photo['bg_style'],
                       "views" => $photo['views'],
                       "loaded" => FALSE,
-                      "image_data" => json_decode($photo['image_data']),
+                      "image_data" => $image_extra['image_data'],
+                      "image_extra" => $image_extra,
                       );
         $photo_list[] = $item;
         
         $html = "";
         $html .= "<div class='item' onclick='photoChangeIndex($i); closeBottom(true);'>";
         $html .= " <div class='picture'>";
-        $html .= "  <img src='$photo_image'/>";
+        $html .= "  <img src='$img_url'/>";
         $html .= " </div>";
         $html .= " <div class='label'>$photo_name</div>";
         $html .= "</div>";
