@@ -61,8 +61,6 @@
 		2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = unsupported_browser.php; sourceTree = "<group>"; };
 		2D25C38715D43BCE00132306 /* fan.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = fan.js; sourceTree = "<group>"; };
 		2D25C38C15D96E2400132306 /* player.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player.php; sourceTree = "<group>"; };
-		2D25C38D15D9BB9A00132306 /* player2.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player2.php; sourceTree = "<group>"; };
-		2D25C38E15D9BBA200132306 /* player2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player2.html; sourceTree = "<group>"; };
 		2D25C38F15DAC0F900132306 /* player2.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = player2.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D25C39015DAE8C400132306 /* player_social_items.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player_social_items.html; sourceTree = "<group>"; };
 		2D25C39115DAEAFC00132306 /* player_social_buttons.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player_social_buttons.html; sourceTree = "<group>"; };
@@ -1316,7 +1314,6 @@
 				2D117D33170798B600D6BD84 /* meek_video.html */,
 				2D7A9C4C170D27B1003C5982 /* meek_stream.html */,
 				2D747C5F15E4AFBE00128EEC /* player_iphone.html */,
-				2D25C38E15D9BBA200132306 /* player2.html */,
 				2D25C39015DAE8C400132306 /* player_social_items.html */,
 				2D25C39115DAEAFC00132306 /* player_social_buttons.html */,
 				2D9E2FD91569F13700A76906 /* player.html */,
@@ -1486,7 +1483,6 @@
 				2DF472C71440B77F005538C7 /* js */,
 				2D9E2FD81569F13600A76906 /* templates */,
 				2D8D96FC15A26FE900AA3D1B /* fan */,
-				2D25C38D15D9BB9A00132306 /* player2.php */,
 				2D25C38C15D96E2400132306 /* player.php */,
 				2D747C6015E4AFE700128EEC /* player_iphone.php */,
 				2D7849F115CEEA0600A89620 /* logout.php */,

@@ -516,9 +516,7 @@ and (orientation : portrait) {
         min-width: 750px;
         width: 750px;
     }
-    #big_play_icon:hover .triangle {
-        border-left: 64px solid rgba(255,255,255,0.8);
-    }
+    
 }
 
 @media only screen
@@ -594,135 +592,10 @@ and (max-device-width : 480px) {
         height: 15px;
     }
     
-    .form_container {
-        padding-top: 20px;
-        padding-bottom: 135px;
-    }
-    
-    .form_container .input_line {
-        padding-top: 5px;
-        padding-bottom: 10px;
-    }
-    .form_container .input_line .label {
+    #footer .audio_player .album_image {
         display: none;
     }
-    .form_container .input_line .input_container {
-        display: block;
-        padding-left: 0px;
-        padding-right: 0px;
-        text-align: center;
-    }
-    .form_container .input_line .input_container input {
-        padding-left: 8px;
-        padding-right: 8px;
-        width: 276px;
-        height: 33px;
-        font-size: 20px;
-        letter-spacing: 1px;
-        border: 2px solid #34b0b0;
-        border-radius: 4px;
-    }
-    .form_container .input_line .button_container {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    .form_container .input_line .button_container .button {
-        width: 288px;
-        height: 37px;
-        font-size: 30px;
-        border: 4px solid white;
-        border-radius: 4px;
-        box-shadow: inset 0px 3px 35px #066;
-    }
-    #big_play_icon {
-        width: 72px;
-        height: 72px;
-    }
-    #big_play_icon .outer {
-        width: 72px;
-        height: 72px;
-        border-radius: 72px;
-    }
-    #big_play_icon .inner {
-        width: 60px;
-        height: 60px;
-        border-radius: 60px;
-        border: 4px solid white;
-    }
-    #big_play_icon .triangle {
-        top: 16px;
-        left: 23px;
-        width: 0;
-        height: 0;
-        border-top: 18px solid transparent;
-        border-bottom: 18px solid transparent;
-        border-left: 32px solid rgba(255,255,255,0.8);
-    }
-    #big_play_icon:hover .triangle {
-        border-left: 32px solid rgba(255,255,255,0.8);
-    }
-
-
-    
-    #footer {
-        height: 102px;
-        margin-top: -102px;
-    }
-    #footer .banner {
-        width: 300px;
-        height: 37px;
-    }
-    #footer .banner .left {
-        padding-top: 10px;
-        padding-left: 40px;
-        font-size: 20px;
-    }
-    #footer .banner .right {
-        padding-top: 14px;
-        padding-right: 5px;
-    }
-    #footer .banner .right .top {
-        height: 20px;
-        font-size: 14px;
-        font-family: 'Agency Bold', Helvetica, sans-serif;
-    }
-    #footer .banner .right .bottom {
-        display: none;
-    }
-    
-    #footer .bottom_bar .bottom_container {
-        width: 92%;
-        height: 50px;
-    }
-    #footer .bottom_bar .hline {
-        height: 3px;
-    }
-    #footer .bottom_bar .left {
-        padding-top: 4px;
-        padding-left: 5px;
-        font-size: 11px;
-    }
-    #footer .bottom_bar .left .dc_logo {
-        display: none;
-    }
-    #footer .bottom_bar .left .mad_logo {
-        display: none;
-    }
-    #footer .bottom_bar .left a {
-        padding-top: 5px;
-    }
-    #footer .bottom_bar .right {
-        padding-top: 8px;
-        padding-right: 3px;
-        font-size: 11px;
-    }
-    #footer .bottom_bar .right .rights_reserved {
-        display: none;
-    }
-    
-    ::-webkit-input-placeholder {
-        color: #ddd;
-    }
+        
 }
 
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
