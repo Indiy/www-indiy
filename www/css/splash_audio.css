@@ -622,6 +622,8 @@ and (max-device-width : 480px) {
         bottom: 0px;
         width: 155px;
         padding-left: 0px;
+        font-size: 0px;
+        text-align: right;
     }
     #footer .audio_player .controls .prev {
     }
