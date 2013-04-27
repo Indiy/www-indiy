@@ -366,9 +366,15 @@ body {
     height: 96px;
     margin-top: -96px;
     clear: both;
-    background: rgba(0,0,0,0.5);
 }
-#footer .audio_player {
+#footer .slider {
+    position: absolute;
+    bottom: 0px;
+    height: 96px;
+    background: rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+#footer .slider .audio_player {
     width: 630px;
     margin-left: auto;
     margin-right: auto;
