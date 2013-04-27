@@ -617,6 +617,24 @@ and (max-device-width : 480px) {
         text-align: right;
     }
     
+    #footer .audio_player .controls {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        width: 100px;
+        padding-left: 0px;
+    }
+    #footer .audio_player .controls .prev {
+    }
+    #footer .audio_player .controls .play_pause {
+        margin-left: 5px;
+    }
+    #footer .audio_player .controls .next {
+        margin-left: 5px;
+    }
+
+    
 }
 
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
