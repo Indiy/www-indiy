@@ -436,15 +436,27 @@ body {
     vertical-align: top;
     cursor: pointer;
 }
+.no_touch #footer .audio_player .controls .prev:hover {
+    background: url("/images/splash_audio_controls.png") -10px -98px no-repeat;
+}
 #footer .audio_player .controls .play_pause {
     display: inline-block;
     margin-top: 18px;
     margin-left: 11px;
     width: 65px;
     height: 65px;
-    background: url("/images/splash_audio_controls.png") -52px -3px no-repeat;
+    background: url("/images/splash_audio_controls.png") -51px -1px no-repeat;
     vertical-align: top;
     cursor: pointer;
+}
+.no_touch #footer .audio_player .controls .play_pause:hover {
+    background: url("/images/splash_audio_controls.png") -51px -79px no-repeat;
+}
+#footer .audio_player .controls .play_pause.playing {
+    background: url("/images/splash_audio_controls.png") -161px -1px no-repeat;
+}
+.no_touch #footer .audio_player .controls .play_pause.playing:hover {
+    background: url("/images/splash_audio_controls.png") -161px -79px no-repeat;
 }
 #footer .audio_player .controls .next {
     display: inline-block;
@@ -455,6 +467,9 @@ body {
     background: url("/images/splash_audio_controls.png") -130px -22px no-repeat;
     vertical-align: top;
     cursor: pointer;
+}
+.no_touch #footer .audio_player .controls .next:hover {
+    background: url("/images/splash_audio_controls.png") -130px -98px no-repeat;
 }
 
 /*****************************************/

@@ -42,9 +42,20 @@ var g_loadTime = false;
 var g_backgroundList = [];
 var g_musicIndex = 0;
 var g_isPlaying = false;
+var g_touchDevice = false;
 
 function splashReady()
 {
+    if( !('ontouchstart' in document) )
+    {
+        $('body').addClass('no_touch');
+        g_touchDevice = false;
+    }
+    else
+    {
+        g_touchDevice = true;
+    }
+
     g_loadTime = new Date();
 
     if( IS_CHROME )
@@ -217,13 +228,13 @@ function mediaPlay()
 {
     $('#jquery_jplayer').jPlayer("play");
     g_isPlaying = true;
-    $('#footer .audio_player .controls .play_pause').removeClass('paused');
+    $('#footer .audio_player .controls .play_pause').addClass('playing');
 }
 function mediaPause()
 {
     $('#jquery_jplayer').jPlayer("pause");
     g_isPlaying = false;
-    $('#footer .audio_player .controls .play_pause').addClass('paused');
+    $('#footer .audio_player .controls .play_pause').removeClass('playing');
 }
 function mediaTogglePlay()
 {
