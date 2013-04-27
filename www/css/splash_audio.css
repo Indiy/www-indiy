@@ -436,7 +436,7 @@ body {
     vertical-align: top;
     cursor: pointer;
 }
-#footer .audio_player .controls .play {
+#footer .audio_player .controls .play_pause {
     display: inline-block;
     margin-top: 18px;
     margin-left: 11px;

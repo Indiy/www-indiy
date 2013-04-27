@@ -217,11 +217,13 @@ function mediaPlay()
 {
     $('#jquery_jplayer').jPlayer("play");
     g_isPlaying = true;
+    $('#footer .audio_player .controls .play_pause').removeClass('paused');
 }
 function mediaPause()
 {
     $('#jquery_jplayer').jPlayer("pause");
     g_isPlaying = false;
+    $('#footer .audio_player .controls .play_pause').addClass('paused');
 }
 function mediaTogglePlay()
 {
