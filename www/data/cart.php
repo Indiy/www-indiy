@@ -30,26 +30,33 @@
     {
         $artist_cart_id = "$artist_id:$cart_id";
     
-        $cart_item_id = $_REQUEST['cart_item_id'];
-        if( $cart_item_id )
+        if( isset($_REQUEST['cart_item_id']) )
         {
-            $values = array("quantity" => $quantity);
+            $cart_item_id = $_REQUEST['cart_item_id'];
+            
+            $values = array('quantity' => $quantity);
             mysql_update('cart_items',$values,'id',$cart_item_id);
         }
         else
         {
             $product_id = $_REQUEST['product_id'];
-            
-            $size = $_REQUEST["size"];
-            $color = $_REQUEST["color"];
-            $quantity = $_REQUEST["quantity"];
-            
-            $values = array("cart_id" => $artist_cart_id,
-                            "product_id" => $product_id,
-                            "quantity" => $quantity,
-                            "size" => $size,
-                            "color" => $color,
+            $quantity = $_REQUEST['quantity'];
+
+            $values = array(
+                            'cart_id' => $artist_cart_id,
+                            'product_id' => $product_id,
+                            'quantity' => $quantity,
                             );
+            
+            if( isset($_REQUEST['size']) )
+            {
+                $values['size'] = $_REQUEST['size'];
+            }
+            if( isset($_REQUEST['color']) )
+            {
+                $values['color'] = $_REQUEST['color'];
+            }
+            
             mysql_insert('cart_items',$values);
         }
         send_store_cart($artist_id,$cart_id);
