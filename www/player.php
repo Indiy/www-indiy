@@ -625,6 +625,19 @@
     {
         if( $iphone_version )
         {
+            $button_count = 0;
+            if( count($music_list) > 0 )
+                $button_count++;
+            if( count($video_list) > 0 )
+                $button_count++;
+            if( count($photo_list) > 0 )
+                $button_count++;
+            
+            $button_style = "buttons_$button_count";
+        
+            $copyright_text = "&copy;MyArtistDNA";
+            $head_title_text = "MyAritstDNA | Be Heard. Be Seen. Be Independent.";
+            
             include_once 'templates/player_iphone.html';
         }
         else
