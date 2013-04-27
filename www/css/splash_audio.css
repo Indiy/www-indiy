@@ -596,25 +596,23 @@ and (max-device-width : 480px) {
         display: none;
     }
     #footer .audio_player .song_title {
-        padding-top: 10px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        bottom: 0px;
+        right: 155px;
+        padding-top: 14px;
         padding-left: 10px;
-        width: 200px;
-        color: white;
+        padding-right: 10px;
+        width: auto;
         font-size: 20px;
-        text-overflow: ellipsis;
-        overflow: hidden;
         white-space: normal;
     }
     #footer .audio_player .sep {
         display: none;
     }
     #footer .audio_player .time {
-        display: inline-block;
-        padding-top: 35px;
-        width: 70px;
-        color: white;
-        font-size: 20px;
-        text-align: right;
+        display: none;
     }
     
     #footer .audio_player .controls {
@@ -622,16 +620,16 @@ and (max-device-width : 480px) {
         right: 0px;
         top: 0px;
         bottom: 0px;
-        width: 100px;
+        width: 155px;
         padding-left: 0px;
     }
     #footer .audio_player .controls .prev {
     }
     #footer .audio_player .controls .play_pause {
-        margin-left: 5px;
+        margin-left: 8px;
     }
     #footer .audio_player .controls .next {
-        margin-left: 5px;
+        margin-left: 8px;
     }
 
     
