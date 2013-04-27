@@ -595,7 +595,28 @@ and (max-device-width : 480px) {
     #footer .audio_player .album_image {
         display: none;
     }
-        
+    #footer .audio_player .song_title {
+        padding-top: 10px;
+        padding-left: 10px;
+        width: 200px;
+        color: white;
+        font-size: 20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: normal;
+    }
+    #footer .audio_player .sep {
+        display: none;
+    }
+    #footer .audio_player .time {
+        display: inline-block;
+        padding-top: 35px;
+        width: 70px;
+        color: white;
+        font-size: 20px;
+        text-align: right;
+    }
+    
 }
 
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
