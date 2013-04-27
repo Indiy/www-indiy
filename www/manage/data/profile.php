@@ -118,7 +118,6 @@
             $artist_page_url .= "/?preview_key=$preview_key";
         }
         
-		$postedValues['imageSource'] = "../artists/files/".$artist_logo;
 		$postedValues['success'] = "1";
 		$postedValues['postedValues'] = $_REQUEST;
         if( $_REQUEST['ajax'] )

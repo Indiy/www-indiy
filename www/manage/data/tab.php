@@ -53,9 +53,9 @@
         array_walk($row,cleanup_row_element);
         
         if( !empty($row['image']) )
-            $row['image_url'] = "/artists/files/" . $row['image'];
+            $row['image_url'] = artist_file_url($row['image']);
         else
-            $row['image_url'] = "images/photo_video_01.jpg";
+            $row['image_url'] = static_file_url("/manage/images/photo_video_01.jpg");
         
         return $row;
     }
