@@ -1118,9 +1118,13 @@
             $price = floatval($cart['price']);
             $name = $cart['name'];
             if(  $cart['image'] )
-                $image = '/artists/files/' . $cart['image'];
+            {
+                $image = artist_file_url($cart['image']);
+            }
             else
-                $image = '/images/default_product_image.jpg';
+            {
+                $image = static_file_url('/images/default_product_image.jpg');
+            }
             
             $shipping = floatval($cart['shipping']);
             $quantity = intval($cart['quantity']);
