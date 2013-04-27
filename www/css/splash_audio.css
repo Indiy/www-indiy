@@ -432,7 +432,7 @@ body {
     margin-top: 36px;
     width: 30px;
     height: 30px;
-    background: url("/images/splash_audio_controls.png") -10px -22px no-repeat;
+    background: url("/images/splash_audio_controls.png") -10px -20px no-repeat;
     vertical-align: top;
     cursor: pointer;
 }
@@ -445,7 +445,7 @@ body {
     margin-left: 11px;
     width: 65px;
     height: 65px;
-    background: url("/images/splash_audio_controls.png") -51px -1px no-repeat;
+    background: url("/images/splash_audio_controls.png") -51px 1px no-repeat;
     vertical-align: top;
     cursor: pointer;
 }
@@ -464,7 +464,7 @@ body {
     margin-left: 11px;
     width: 30px;
     height: 30px;
-    background: url("/images/splash_audio_controls.png") -130px -22px no-repeat;
+    background: url("/images/splash_audio_controls.png") -130px -20px no-repeat;
     vertical-align: top;
     cursor: pointer;
 }
