@@ -626,12 +626,15 @@ and (max-device-width : 480px) {
         text-align: right;
     }
     #footer .audio_player .controls .prev {
+        margin-left: 0px;
         margin-right: 8px;
     }
     #footer .audio_player .controls .play_pause {
+        margin-left: 0px;
         margin-right: 8px;
     }
     #footer .audio_player .controls .next {
+        margin-left: 0px;
         margin-right: 8px;
     }
 
