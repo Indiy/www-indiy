@@ -362,10 +362,10 @@ function updateCountdown()
     var hours = Math.floor( (secs_left / (60*60)) % 24 );
     var days = Math.floor( (secs_left / (24*60*60)) );
     
-    $('#top_container .top_line .days .time').html(getDigitHtml(days));
-    $('#top_container .top_line .hours .time').html(getDigitHtml(hours));
-    $('#top_container .top_line .minutes .time').html(getDigitHtml(minutes));
-    $('#top_container .top_line .seconds .time').html(getDigitHtml(seconds));
+    $('#countdown_container .time_line .days .time').html(getDigitHtml(days));
+    $('#countdown_container .time_line .hours .time').html(getDigitHtml(hours));
+    $('#countdown_container .time_line .minutes .time').html(getDigitHtml(minutes));
+    $('#countdown_container .time_line .seconds .time').html(getDigitHtml(seconds));
 }
 
 function getDigitHtml(value)
