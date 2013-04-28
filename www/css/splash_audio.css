@@ -105,7 +105,8 @@ body {
     padding-bottom: 5px;
     color: white;
     font-size: 48px;
-    font-family: 'Agency Bold', Helvetica, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-style: bold;
     text-align: center;
     letter-spacing: 1px;
     line-height: 48px;
@@ -115,7 +116,8 @@ body {
     padding-bottom: 0px;
     color: white;
     font-size: 60px;
-    font-family: 'Agency Bold', Helvetica, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-style: bold;
     text-align: center;
     letter-spacing: 1px;
     line-height: 60px;
@@ -126,7 +128,7 @@ body {
 .subtitle {
     color: white;
     font-size: 36px;
-    font-family: 'Agency Regular', Helvetica, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
     text-align: center;
     line-height: 40px;
 
@@ -142,14 +144,16 @@ body {
     height: 100px;
     color: white;
     font-size: 80px;
-    font-family: 'Agency Bold', Helvetica, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-style: bold;
     text-align: center;
 }
 .bottom_title2 {
     height: 190px;
     color: white;
     font-size: 64px;
-    font-family: 'Agency Bold', Helvetica, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-style: bold;
     text-align: center;
 }
 
@@ -202,7 +206,7 @@ body {
     width: 260px;
     color: white;
     font-size: 26px;
-    font-family: 'Agency Regular', Helvetica, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
     text-transform: uppercase;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -223,7 +227,7 @@ body {
     width: 70px;
     color: white;
     font-size: 26px;
-    font-family: 'Agency Regular', Helvetica, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
     text-align: right;
     vertical-align: top;
 }
