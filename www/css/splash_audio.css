@@ -486,6 +486,7 @@ body {
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : portrait) {
+
     #main_content {
         min-width: 768px;
         overflow-x: hidden;
@@ -516,13 +517,19 @@ and (orientation : portrait) {
         min-width: 750px;
         width: 750px;
     }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+
     .play_top_space {
-        height: 100px;
+        height: 70px;
     }
     .play_bottom_space {
         height: 48px;
     }
-
 }
 
 @media only screen
