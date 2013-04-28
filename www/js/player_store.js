@@ -100,9 +100,13 @@ function storeShowProduct(index)
         $('#store_tab .product_info .pi_right .buy').html("BUY NOW");
     }
     
-    if( product.sizes )
+    if( product.sizes && product.sizes.length > 0 )
     {
-        
+        $('#store_tab .product_info .pi_right .price_share .sizes').show();
+    }
+    else
+    {
+        $('#store_tab .product_info .pi_right .price_share .sizes').hide();
     }
     
     $('#store_tab').scrollbar("repaint");
