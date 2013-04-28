@@ -519,7 +519,70 @@ var TEMPLATE_SCHEMA =
     },
     'PLAYER_SPLASH_AUDIO': {
         type: 'PLAYER',
-        description: 'Splash Countdown with Audio Player',
+        description: 'Splash with Audio Player',
+        default_params:
+        {
+            page_title: "MyArtistDNA. Be Seen, Be Heard, Be Independant.",
+            top_title1: "TOP TITLE 1 HERE",
+            top_title2: "TOP TITLE 2 HERE",
+            top_subtitle: "TOP SUB TITLE",
+            bottom_subtitle: "BOTTOM SUB TITLE",
+            bottom_title1: "BOTTOM TITLE 1",
+            bottom_title2: "BOTTOM TITLE 2"
+        },
+        arg_list:
+        [
+            {
+                name: 'page_title',
+                description: 'Page Title',
+                type: 'string'
+            },
+            {
+                name: 'top_title1',
+                description: 'Top Title 1',
+                type: 'string'
+            },
+            {
+                name: 'top_title2',
+                description: 'Top Title 2',
+                type: 'string'
+            },
+            {
+                name: 'top_subtitle',
+                description: 'Top Subtitle',
+                type: 'string'
+            },
+            {
+                name: 'bottom_subtitle',
+                description: 'Bottom Subtittle',
+                type: 'string'
+            },
+            {
+                name: 'bottom_title1',
+                description: 'Bottom Title 1',
+                type: 'string'
+            },
+            {
+                name: 'bottom_title2',
+                description: 'Bottom Title 2',
+                type: 'string'
+            },
+            {
+                name: 'copyright',
+                description: 'Copyright Text',
+                type: 'string'
+            },
+            {
+                name: 'album_image',
+                description: 'Album Image',
+                type: 'image'
+            },
+
+        ]
+    },
+    'PLAYER_COUNTDOWN_AUDIO': {
+        type: 'PLAYER',
+        description: 'Countdown with Audio Player',
         default_params:
         {
             page_title: "MyArtistDNA. Be Seen, Be Heard, Be Independant.",

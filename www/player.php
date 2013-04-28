@@ -620,6 +620,10 @@
         {
             include_once 'templates/splash_audio.html';
         }
+        else if( $template_type == 'PLAYER_COUNTDOWN_AUDIO' )
+        {
+            include_once 'templates/countdown_audio.html';
+        }
     }
     else
     {

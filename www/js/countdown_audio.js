@@ -56,6 +56,8 @@ function splashReady()
         g_touchDevice = true;
     }
 
+    g_loadTime = new Date();
+
     if( IS_CHROME )
         $('body').addClass('chrome');
     if( IS_IPAD )
@@ -81,6 +83,9 @@ function splashReady()
     $('#splash_bg').swipe(opts);
     backgroundPreloadImages();
 
+    g_updateInterval = window.setInterval(updateCountdown,250);
+    updateCountdown();
+    
     $('#jquery_jplayer').jPlayer({
                                  ready: jplayerReady,
                                  solution: "html, flash",
@@ -316,6 +321,51 @@ function mediaPrevious()
     g_musicIndex = index;
     setupCurrentMedia();
     mediaPlay();
+}
+
+function secsUntilEvent()
+{
+    var now = new Date();
+    
+    var time_left = g_eventDate - now;
+    
+    if( time_left < 0.0 )
+    {
+        if( time_left > -10*60*1000 )
+        {
+            maybeReload();
+        }
+        return 0;
+    }
+    
+    return Math.floor(time_left/1000);
+}
+
+function maybeReload()
+{
+    var now = new Date();
+    
+    var time_since_load = now - g_loadTime;
+    
+    if( time_since_load > 30000 )
+    {
+        window.location.reload(true);
+    }
+}
+
+function updateCountdown()
+{
+    var secs_left = secsUntilEvent();
+
+    var seconds = Math.floor(secs_left % 60);
+    var minutes = Math.floor( (secs_left / 60) % 60 );
+    var hours = Math.floor( (secs_left / (60*60)) % 24 );
+    var days = Math.floor( (secs_left / (24*60*60)) );
+    
+    $('#countdown_container .time_line .days .time').html(getDigitHtml(days));
+    $('#countdown_container .time_line .hours .time').html(getDigitHtml(hours));
+    $('#countdown_container .time_line .minutes .time').html(getDigitHtml(minutes));
+    $('#countdown_container .time_line .seconds .time').html(getDigitHtml(seconds));
 }
 
 function getDigitHtml(value)
