@@ -106,6 +106,12 @@
     $artist_extra = json_decode($artist_data['extra_json'],TRUE);
     $start_media_type = $artist_extra['start_media_type'];
     
+    $fb_like_url = $artist_base_url;
+    if( $artist_data['custom_domain'] )
+    {
+        $fb_like_url = "http://www." . $artist_data['custom_domain'];
+    }
+    
     $iphone_version = FALSE;
     if( strpos($_SERVER['HTTP_USER_AGENT'],"iPhone") !== FALSE )
     {

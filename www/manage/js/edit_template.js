@@ -486,11 +486,6 @@ var TEMPLATE_SCHEMA =
                 type: 'textbox'
             },
             {
-                name: 'bg_file',
-                description: 'Background Image',
-                type: 'image_spec'
-            },
-            {
                 name: 'desktop_bg_top_line',
                 description: 'Desktop BG Top Line',
                 type: 'string'
@@ -514,6 +509,21 @@ var TEMPLATE_SCHEMA =
                 name: 'iphone_title2',
                 description: 'iPhone Title 2',
                 type: 'string'
+            },
+            {
+                name: 'twitter_handle',
+                description: 'Twitter Handle',
+                type: 'string'
+            },
+            {
+                name: 'twitter_widget',
+                description: 'Twitter Widget',
+                type: 'textbox'
+            },
+            {
+                name: 'bg_file',
+                description: 'Background Image',
+                type: 'image_spec'
             }
         ]
     },

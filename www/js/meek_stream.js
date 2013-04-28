@@ -61,9 +61,29 @@ function streamReady()
 
     var height = $('#mad_tw_timeline').height() - 10;
     
-    var html = '<a class="twitter-timeline" height="{0}" data-chrome="transparent" href="https://twitter.com/search?q=%23meeklive" data-widget-id="319675836225699842">Tweets about "#meeklive"</a>'.format(height);
+    var twitter_widget = g_templateParams['twitter_widget'];
     
-    $('#mad_tw_timeline').html(html);
+    var html = false;
+    if( twitter_widget && twitter_widget.length > 0 )
+    {
+        var re = new RegExp("<a[^<]*</a>");
+        var m = re.exec(twitter_widget);
+        
+        if( m )
+        {
+            html = m[0];
+            html = html.replace('<a ','<a height="{0}" '.format(height));
+        }
+    }
+    if( html !== false )
+    {
+        $('#mad_tw_timeline').html(html);
+    }
+    else
+    {
+        $('#mad_tw_timeline').hide();
+    }
+    
     twitterWidgetLoad();
 }
 $(document).ready(streamReady);
