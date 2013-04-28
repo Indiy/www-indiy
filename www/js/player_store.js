@@ -107,7 +107,7 @@ function storeShowProduct(index)
         
         for( var i = 0 ; i < product.sizes.length ; ++i )
         {
-            var size = product.sizes[0];
+            var size = product.sizes[i];
             var html = "<option value='{0}'>{0}</option>".format(size);
             $('#store_tab .product_info .pi_right .price_share .sizes select').append(html);
         }

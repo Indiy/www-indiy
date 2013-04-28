@@ -399,6 +399,7 @@ body {
 }
 #store_tab .product_info .pi_right .price_share .sizes select {
     font-size: 18px;
+    text-transform: capitalize;
 }
 
 #store_tab .product_info .pi_right .buy {
