@@ -313,10 +313,10 @@ body {
     background: url("/images/splash_audio_controls.png") -51px -79px no-repeat;
 }
 #footer .audio_player .controls .play_pause.playing {
-    background: url("/images/splash_audio_controls.png") -161px 1px no-repeat;
+    background: url("/images/splash_audio_controls.png") -167px 1px no-repeat;
 }
 .no_touch #footer .audio_player .controls .play_pause.playing:hover {
-    background: url("/images/splash_audio_controls.png") -161px -79px no-repeat;
+    background: url("/images/splash_audio_controls.png") -167px -79px no-repeat;
 }
 #footer .audio_player .controls .next {
     display: inline-block;
