@@ -146,11 +146,11 @@
         
         $sizes = FALSE;
         if( $product["size"] != "" )
-            $sizes = explode(",", $pro["size"]);
+            $sizes = explode(",", $product["size"]);
         
         $colors = FALSE;
         if( $product["color"] != "" )
-            $colors = explode(",", $pro["color"]);
+            $colors = explode(",", $product["color"]);
         
         if( $product["image"] )
             $image = artist_file_url($product["image"]);

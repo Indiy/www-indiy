@@ -100,6 +100,11 @@ function storeShowProduct(index)
         $('#store_tab .product_info .pi_right .buy').html("BUY NOW");
     }
     
+    if( product.sizes )
+    {
+        
+    }
+    
     $('#store_tab').scrollbar("repaint");
     updateAnchor({product_id: product.id});
 }
