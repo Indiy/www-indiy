@@ -72,7 +72,8 @@ function streamReady()
         if( m )
         {
             html = m[0];
-            html = html.replace('<a ','<a height="{0}" '.format(height));
+            var updates = '<a data-chrome="transparent" height="{0}" '.format(height);
+            html = html.replace('<a ',updates);
         }
     }
     if( html !== false )
