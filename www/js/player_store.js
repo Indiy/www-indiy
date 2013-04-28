@@ -103,6 +103,14 @@ function storeShowProduct(index)
     if( product.sizes && product.sizes.length > 0 )
     {
         $('#store_tab .product_info .pi_right .price_share .sizes').show();
+        $('#store_tab .product_info .pi_right .price_share .sizes select').empty();
+        
+        for( var i = 0 ; i < product.sizes.length ; ++i )
+        {
+            var size = product.sizes[0];
+            var html = "<option value='{0}'>{0}</option>".format(size);
+            $('#store_tab .product_info .pi_right .price_share .sizes select').append(html);
+        }
     }
     else
     {
