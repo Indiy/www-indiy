@@ -30,6 +30,7 @@ var IS_OLD_IE = false;
 })();
 
 var g_backgroundList = [];
+var g_twitterFeedDisabled = false;
 
 function streamReady()
 {
@@ -79,13 +80,15 @@ function streamReady()
     if( html !== false )
     {
         $('#mad_tw_timeline').html(html);
+        twitterWidgetLoad();
     }
     else
     {
+        g_twitterFeedDisabled = true;
         $('#mad_tw_timeline').hide();
+        $('#overlay .top_bar .right .show_feed').hide();
+        $('#overlay .top_bar .right .hide_feed').hide();
     }
-    
-    twitterWidgetLoad();
 }
 $(document).ready(streamReady);
 
