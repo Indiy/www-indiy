@@ -516,7 +516,13 @@ and (orientation : portrait) {
         min-width: 750px;
         width: 750px;
     }
-    
+    .play_top_space {
+        height: 100px;
+    }
+    .play_bottom_space {
+        height: 48px;
+    }
+
 }
 
 @media only screen
