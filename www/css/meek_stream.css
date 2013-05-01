@@ -795,7 +795,7 @@ and (max-device-width : 480px) {
         text-align: center;
         border: 4px solid white;
         border-radius: 4px;
-        background: #008b8a;
+        background: #990000;
         box-shadow: inset 0px 3px 35px #066;
         cursor: pointer;
     }
