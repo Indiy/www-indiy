@@ -685,6 +685,14 @@ and (orientation : portrait) {
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
     
+    #main_content {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        min-height: 420px;
+    }
+    
     #overlay {
         display: none;
     }
@@ -800,6 +808,10 @@ and (max-device-width : 480px) {
 @media (device-height: 568px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation : portrait) {
+    
+    #main_content {
+        min-height: 504px;
+    }
     
     #video_bg {
         padding-top: 35px;
