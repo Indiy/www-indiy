@@ -89,6 +89,11 @@ function streamReady()
         $('#overlay .top_bar .right .show_feed').hide();
         $('#overlay .top_bar .right .hide_feed').hide();
     }
+    
+    if( IS_PHONE )
+    {
+        window.scrollTo(0,1);
+    }
 }
 $(document).ready(streamReady);
 
