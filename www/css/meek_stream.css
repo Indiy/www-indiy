@@ -860,6 +860,12 @@ and (orientation : portrait) {
     #video_bg {
         padding-bottom: 120px;
     }
+    #iphone_text .title3 {
+        top: 280px;
+    }
+    #iphone_text .title4 {
+        top: 316px;
+    }
 }
 
 video {
