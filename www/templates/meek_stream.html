@@ -100,14 +100,16 @@
             <div class='bottom_line'><?=$template_params['desktop_bg_bottom_line'];?></div>
         </div>
         <div id='iphone_show_twitter_button' class='button_container'>
-            <div class='button' onclick='toggleShowTwitter();'>SHOW #MEEKLIVE</div>
+            <div class='button' onclick='toggleShowTwitter();'>+ SHOW TWITTER</div>
         </div>
         <div id='mad_tw_timeline'>
         </div>
-        <div id='iphone_pad'></div>
-        <div id='iphone_show_store_button' class='button_container'>
-            <div class='button' onclick='toggleShowStore();'>SHOW STORE</div>
-        </div>
+        <?php if( count($product_list) > 0 ): ?>
+            <div id='iphone_pad'></div>
+            <div id='iphone_show_store_button' class='button_container'>
+                <div class='button' onclick='toggleShowStore();'>+ SHOW STORE</div>
+            </div>
+        <?php endif; ?>
         <div id='iphone_pad'></div>
         <div id='store_tab' class='content_tab'>
             <div class='store_inner' >
