@@ -511,6 +511,16 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             },
             {
+                name: 'iphone_title3',
+                description: 'iPhone Title 3',
+                type: 'string'
+            },
+            {
+                name: 'iphone_title4',
+                description: 'iPhone Title 4',
+                type: 'string'
+            },
+            {
                 name: 'twitter_handle',
                 description: 'Twitter Handle',
                 type: 'string'

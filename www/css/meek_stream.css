@@ -557,7 +557,7 @@ body {
     line-height: 90px;
 }
 
-#iphone_top {
+#iphone_text {
     display: none;
 }
 #iphone_show_twitter_button {
@@ -691,23 +691,55 @@ and (max-device-width : 480px) {
         left: 0px;
         right: 0px;
         min-height: 420px;
+        z-index: -1;
     }
     
     #overlay {
         display: none;
     }
     
-    #iphone_top {
-        display: block;
-        padding-top: 6px;
-        padding-bottom: 5px;
-        padding-left: 5px;
-        padding-right: 5px;
-        height: 60px;
+    #iphone_text {
+        position: absolute;
+        top: 0px;
+        left: 0px;
     }
-    #iphone_top .title {
+    #iphone_text .title1 {
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        right: 0px;
         color: white;
-        font-size: 20px;
+        font-size: 34px;
+        font-family: 'Agency Regular', Helvetica, sans-serif;
+        text-align: center;
+    }
+    #iphone_text .title2 {
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        right: 0px;
+        color: #0cc;
+        font-size: 55px;
+        font-family: 'Agency Bold', Helvetica, sans-serif;
+        text-align: center;
+    }
+    #iphone_text .title3 {
+        position: absolute;
+        top: 285px;
+        left: 0px;
+        right: 0px;
+        color: white;
+        font-size: 34px;
+        font-family: 'Agency Regular', Helvetica, sans-serif;
+        text-align: center;
+    }
+    #iphone_text .title4 {
+        position: absolute;
+        top: 320px;
+        left: 0px;
+        right: 0px;
+        color: white;
+        font-size: 34px;
         font-family: 'Agency Regular', Helvetica, sans-serif;
         text-align: center;
     }
