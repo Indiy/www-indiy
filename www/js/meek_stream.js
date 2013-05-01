@@ -148,16 +148,16 @@ function showTwitter()
 function toggleShowTwitter()
 {
     hideStore();
-    $('#iphone_show_store_button .button').html('SHOW STORE');
+    $('#iphone_show_store_button .button').html('+ SHOW STORE');
     
     if( $('#mad_tw_timeline').is(":visible") )
     {
-        $('#iphone_show_twitter_button .button').html('SHOW #MEEKLIVE');
+        $('#iphone_show_twitter_button .button').html('+ SHOW TWITTER');
         $('#mad_tw_timeline').hide();
     }
     else
     {
-        $('#iphone_show_twitter_button .button').html('HIDE #MEEKLIVE');
+        $('#iphone_show_twitter_button .button').html('- HIDE TWITTER');
         $('#mad_tw_timeline').show();
         $(document).scrollTop($('#iphone_show_twitter_button').position().top);
     }
@@ -223,16 +223,16 @@ function hideStreamStore()
 function toggleShowStore()
 {
     $('#mad_tw_timeline').hide();
-    $('#iphone_show_twitter_button .button').html('SHOW #MEEKLIVE');
+    $('#iphone_show_twitter_button .button').html('+ SHOW TWITTER');
     
     if( $('#store_tab').is(":visible") )
     {
-        $('#iphone_show_store_button .button').html('SHOW STORE');
+        $('#iphone_show_store_button .button').html('+ SHOW STORE');
         hideStore();
     }
     else
     {
-        $('#iphone_show_store_button .button').html('HIDE STORE');
+        $('#iphone_show_store_button .button').html('- HIDE STORE');
         showStore();
         $(document).scrollTop($('#iphone_show_store_button').position().top);
     }
