@@ -849,8 +849,7 @@ and (orientation : portrait) {
     }
     
     #video_bg {
-        padding-top: 35px;
-        padding-bottom: 60px;
+        padding-bottom: 120px;
     }
 }
 
