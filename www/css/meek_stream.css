@@ -569,6 +569,9 @@ body {
 #iphone_pad {
     display: none;
 }
+#iphone_pad_no_store {
+    display: none;
+}
 
 @media only screen
 and (min-device-width : 768px)
@@ -760,6 +763,12 @@ and (max-device-width : 480px) {
         padding-left: 5px;
         padding-right: 5px;
     }
+    
+    #iphone_pad_no_store {
+        display: block;
+        height: 37px;
+    }
+    
     #iphone_show_twitter_button {
         display: block;
     }
