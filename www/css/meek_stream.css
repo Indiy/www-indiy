@@ -102,6 +102,10 @@ body {
     font-size: 22px;
     font-family: 'Agency Regular', Helvetica, sans-serif;
 }
+#overlay .top_bar .title a {
+    color: white;
+    text-decoration: none;
+}
 #overlay .top_bar .right {
     float: right;
     padding-right: 10px;
