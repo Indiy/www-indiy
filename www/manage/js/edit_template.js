@@ -466,7 +466,8 @@ var TEMPLATE_SCHEMA =
             page_title: '#MEEKLIVE',
             top_bar_title: 'WATCH MEEK LIVE @ TOWER THEATER',
             iphone_title1: 'WATCH MEEK MILL LIVE @ TOWER THEATER',
-            iphone_title2: 'CLICK BUTTON BELOW TO START REPLAY'
+            iphone_title2: 'CLICK BUTTON BELOW TO START REPLAY',
+            ga_account_id: 'UA-15194524-1'
         },
         arg_list:
         [
@@ -534,6 +535,11 @@ var TEMPLATE_SCHEMA =
                 name: 'bg_file',
                 description: 'Background Image',
                 type: 'image_spec'
+            },
+            {
+                name: 'ga_account_id',
+                description: 'Google Analytics Id',
+                type: 'string'
             }
         ]
     },
