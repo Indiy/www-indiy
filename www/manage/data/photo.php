@@ -65,25 +65,13 @@
         $artist_id = $_POST['artist_id'];
         
         $photo_id = $_POST['id'];
-        if( $photo_id ) 
-        {
-            $row = mf(mq("SELECT * FROM photos WHERE id='$photo_id'"));
-            
-            $old_image_file = $row["image"];
-            $old_image_data = $row["image_data"];
-        }
         
         $name = $_POST["name"];
         $location = $_POST["location"];
         $bg_color = $_POST["bg_color"];
         $bg_style = $_POST["bg_style"];
         $tags = $_POST["tags"];
-        $image_data = $old_image_data;
-        
-        $image = $old_image;
-        
         $image_file = $_POST['image_drop'];
-        $image_data = get_image_data(PATH_TO_ROOT . "artists/files/$image_file");
 
         $values = array("artist_id" => $artist_id,
                         "name" => $name,
@@ -91,8 +79,7 @@
                         "image" => $image_file,
                         "bg_color" => $bg_color,
                         "bg_style" => $bg_style,
-                        "tags" => $audio_tags,
-                        "image_data" => $image_data,
+                        "tags" => $tags,
                         );
         
         if( $photo_id ) 
