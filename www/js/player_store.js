@@ -128,7 +128,7 @@ function storeBuyProduct()
     if( typeof product.extra !== 'undefined'
        && typeof product.extra.size_to_url !== 'undefined' )
     {
-        var size = $('#product_size').val();
+        var size = $('#product_size').val().toLowerCase();
         var url = product.extra.size_to_url[size];
         
         window.open(url,'_blank');
