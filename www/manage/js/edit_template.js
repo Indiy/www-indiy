@@ -678,8 +678,10 @@ var TEMPLATE_SCHEMA =
             top_title1: "TOP TITLE 1",
             top_title2: "TOP TITLE 2",
             top_subtitle: "TOP SUBTITLE",
-            bottom_subtitle: "BOTTOM SUBTITLE",
-            bottom_title: "BOTTOM TITLE",
+            bottom_subtitle1: "BOTTOM SUBTITLE 1",
+            bottom_subtitle2: "BOTTOM SUBTITLE 2",
+            bottom_title1: "BOTTOM TITLE 1",
+            bottom_title2: "BOTTOM TITLE 2",
             ga_account_id: 'UA-15194524-1'
         },
         arg_list:
@@ -705,13 +707,23 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             },
             {
-                name: 'bottom_subtitle',
-                description: 'Bottom Subtittle',
+                name: 'bottom_subtitle1',
+                description: 'Bottom Subtittle 1',
                 type: 'string'
             },
             {
-                name: 'bottom_title',
-                description: 'Bottom Title',
+                name: 'bottom_subtitle2',
+                description: 'Bottom Subtittle 2',
+                type: 'string'
+            },
+            {
+                name: 'bottom_title1',
+                description: 'Bottom Title 1',
+                type: 'string'
+            },
+            {
+                name: 'bottom_title2',
+                description: 'Bottom Title 2',
                 type: 'string'
             },
             {
