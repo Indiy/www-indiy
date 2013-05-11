@@ -675,7 +675,7 @@ var TEMPLATE_SCHEMA =
         default_params:
         {
             page_title: "meekmill.com",
-            top_title1: "TOP TITLE 1,
+            top_title1: "TOP TITLE 1",
             top_title2: "TOP TITLE 2",
             top_subtitle: "TOP SUBTITLE",
             bottom_subtitle: "BOTTOM SUBTITLE",
