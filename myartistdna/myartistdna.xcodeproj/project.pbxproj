@@ -760,6 +760,9 @@
 		2DFBC929172D8D95001DCEF6 /* countdown_audio.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = countdown_audio.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DFBC92A172D8DBB001DCEF6 /* countdown_audio.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = countdown_audio.js; sourceTree = "<group>"; };
 		2DFBC92B172D8DD4001DCEF6 /* countdown_audio.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = countdown_audio.html; sourceTree = "<group>"; };
+		2DFBC92C17358CFC001DCEF6 /* splash_video.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = splash_video.html; sourceTree = "<group>"; };
+		2DFBC92D1735AE7B001DCEF6 /* splash_video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = splash_video.js; sourceTree = "<group>"; };
+		2DFBC92E173E9F0E001DCEF6 /* splash_video.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = splash_video.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DFC2AF9155E2E9000528D3A /* Neuzeit-Grotesk-Light.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk-Light.eot"; sourceTree = "<group>"; };
 		2DFC2AFA155E2E9000528D3A /* Neuzeit-Grotesk-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk-Light.otf"; sourceTree = "<group>"; };
 		2DFC2AFB155E2E9000528D3A /* Neuzeit-Grotesk.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neuzeit-Grotesk.eot"; sourceTree = "<group>"; };
@@ -1314,6 +1317,7 @@
 			children = (
 				2DFBC92B172D8DD4001DCEF6 /* countdown_audio.html */,
 				2D26203B17273AEB00D16D8D /* splash_audio.html */,
+				2DFBC92C17358CFC001DCEF6 /* splash_video.html */,
 				2D117D0C1702984500D6BD84 /* meek_splash.html */,
 				2D117D33170798B600D6BD84 /* meek_video.html */,
 				2D7A9C4C170D27B1003C5982 /* meek_stream.html */,
@@ -1554,6 +1558,7 @@
 				2D7A9C4D170D292C003C5982 /* meek_stream.css */,
 				2D26203C172746CB00D16D8D /* splash_audio.css */,
 				2DFBC929172D8D95001DCEF6 /* countdown_audio.css */,
+				2DFBC92E173E9F0E001DCEF6 /* splash_video.css */,
 			);
 			path = css;
 			sourceTree = "<group>";
@@ -1761,6 +1766,7 @@
 				2D775D4B1719BF5B00B2250D /* meek_video.js */,
 				2D775D29170D44B800B2250D /* meek_stream.js */,
 				2D26203D172746FE00D16D8D /* splash_audio.js */,
+				2DFBC92D1735AE7B001DCEF6 /* splash_video.js */,
 				2DFBC92A172D8DBB001DCEF6 /* countdown_audio.js */,
 			);
 			path = js;

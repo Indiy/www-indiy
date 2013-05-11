@@ -394,7 +394,7 @@ var TEMPLATE_SCHEMA =
     },
     'PLAYER_MEEK_VIDEO': {
         type: 'PLAYER',
-        description: 'Meek Video Splash',
+        description: 'Countdown Video Splash',
         default_params:
         {
             page_title: "meekmill.com",
@@ -667,6 +667,73 @@ var TEMPLATE_SCHEMA =
                 type: 'image'
             },
 
+        ]
+    },
+    'PLAYER_SPLASH_VIDEO': {
+        type: 'PLAYER',
+        description: 'Splash with Video',
+        default_params:
+        {
+            page_title: "meekmill.com",
+            top_title1: "TOP TITLE 1,
+            top_title2: "TOP TITLE 2",
+            top_subtitle: "TOP SUBTITLE",
+            bottom_subtitle: "BOTTOM SUBTITLE",
+            bottom_title: "BOTTOM TITLE",
+            ga_account_id: 'UA-15194524-1'
+        },
+        arg_list:
+        [
+            {
+                name: 'page_title',
+                description: 'Page Title',
+                type: 'string'
+            },
+            {
+                name: 'top_title1',
+                description: 'Top Title 1',
+                type: 'string'
+            },
+            {
+                name: 'top_title2',
+                description: 'Top Title 2',
+                type: 'string'
+            },
+            {
+                name: 'top_subtitle',
+                description: 'Top Subtitle',
+                type: 'string'
+            },
+            {
+                name: 'bottom_subtitle',
+                description: 'Bottom Subtittle',
+                type: 'string'
+            },
+            {
+                name: 'bottom_title',
+                description: 'Bottom Title',
+                type: 'string'
+            },
+            {
+                name: 'copyright',
+                description: 'Copyright Text',
+                type: 'string'
+            },
+            {
+                name: 'bg_file',
+                description: 'Background Image',
+                type: 'image_spec'
+            },
+            {
+                name: 'video_file',
+                description: 'Video File',
+                type: 'video'
+            },
+            {
+                name: 'ga_account_id',
+                description: 'Google Analytics Id',
+                type: 'string'
+            }
         ]
     }
 };
