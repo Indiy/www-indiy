@@ -173,7 +173,7 @@ body {
     height: 73px;
 }
 .play_bottom_space {
-    height: 48px;
+    height: 90px;
 }
 
 #big_play_icon {
@@ -245,8 +245,16 @@ body {
     line-height: 40px;
 }
 
-.bottom_title1, .bottom_title2 {
-    height: 150px;
+.bottom_title1 {
+    padding-top: 20px;
+    height: 90px;
+    color: white;
+    font-size: 60px;
+    font-family: 'Agency Bold', Helvetica, sans-serif;
+    text-align: center;
+}
+.bottom_title2 {
+    height: 170px;
     color: white;
     font-size: 80px;
     font-family: 'Agency Bold', Helvetica, sans-serif;
