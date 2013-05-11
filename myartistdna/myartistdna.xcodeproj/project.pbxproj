@@ -257,7 +257,6 @@
 		2D747C5715D64FD100128EEC /* update_from_tag.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = update_from_tag.sh; path = ../utils/update_from_tag.sh; sourceTree = "<group>"; };
 		2D747C5D15E4AFB300128EEC /* player_iphone.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = player_iphone.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D747C5F15E4AFBE00128EEC /* player_iphone.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = player_iphone.html; sourceTree = "<group>"; };
-		2D747C6015E4AFE700128EEC /* player_iphone.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player_iphone.php; sourceTree = "<group>"; };
 		2D747C6415E8419B00128EEC /* element_loves.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = element_loves.php; sourceTree = "<group>"; };
 		2D775D29170D44B800B2250D /* meek_stream.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = meek_stream.js; sourceTree = "<group>"; };
 		2D775D2A1710E9F600B2250D /* artist_management.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = artist_management.html; path = templates/artist_management.html; sourceTree = "<group>"; };
@@ -1492,7 +1491,6 @@
 				2D9E2FD81569F13600A76906 /* templates */,
 				2D8D96FC15A26FE900AA3D1B /* fan */,
 				2D25C38C15D96E2400132306 /* player.php */,
-				2D747C6015E4AFE700128EEC /* player_iphone.php */,
 				2D7849F115CEEA0600A89620 /* logout.php */,
 				2D8D971415A8CF3900AA3D1B /* signup.php */,
 				2D8949211614C4A500538B7F /* login.php */,

@@ -125,11 +125,6 @@
     {
         $iphone_version = FALSE;
     }
-    if( $iphone_version )
-    {
-        //require_once 'player_iphone.php';
-        //die();
-    }
 
     $product_list = array();
     $product_list_html = "";
@@ -629,6 +624,10 @@
         else if( $template_type == 'PLAYER_COUNTDOWN_AUDIO' )
         {
             include_once 'templates/countdown_audio.html';
+        }
+        else if( $template_type == 'PLAYER_SPLASH_VIDEO' )
+        {
+            include_once 'templates/splash_video.html';
         }
     }
     else
