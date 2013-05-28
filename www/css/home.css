@@ -371,6 +371,7 @@ body {
     padding-bottom: 2px;
     color: white;
     font-size: 24px;
+    text-shadow: 1px 1px 1px #000; 
     font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
     border-bottom: 2px solid #00f1fd;
@@ -408,6 +409,7 @@ body {
     color: white;
     font-size: 11px;
     font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px 1px #000; 
     text-align: center;
     text-decoration: none;
     background: url("/images/home_purple_button.png") no-repeat;
