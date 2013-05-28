@@ -22,7 +22,7 @@ var g_backgroundList = [
     },
     
     {	
-    	image: "/images/home_bg05.jpg",
+    	image: "/images/home_bg03.jpg",
         bg_color: "000000",
         bg_style: "STRETCH",
         bg_justify: "TOP",
