@@ -353,7 +353,7 @@ body {
     left: 87px;
     width: 420px;
     color: white;
-    font-size: 35px;
+    font-size: 56px;
     font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: -1px;
 }
@@ -370,7 +370,7 @@ body {
     padding-bottom: 2px;
     color: white;
     font-size: 16px;
-    font-family: "Teletex Bold Italic", Helvetica, sans-serif;
+    font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
     border-bottom: 2px solid #00f1fd;
     vertical-align: top;
