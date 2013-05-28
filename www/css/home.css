@@ -355,6 +355,7 @@ body {
     color: white;
     font-size: 56px;
     font-family: "Neuzeit Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px 1px #000; 
     letter-spacing: -1px;
 }
 .body_under_title_line {
