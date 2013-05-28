@@ -359,7 +359,7 @@ body {
 }
 .body_under_title_line {
     position: absolute;
-    top: 507px;
+    top: 407px;
     left: 87px;
     font-size: 0px;
 }
@@ -394,7 +394,7 @@ body {
 }
 .body_buttons {
     position: absolute;
-    top: 564px;
+    top: 464px;
     left: 67px;
     font-size: 0px;
 }
@@ -418,7 +418,7 @@ body {
 }
 .body_content_info {
     position: absolute;
-    top: 646px;
+    top: 546px;
     left: 67px;
     padding-top: 14px;
     height: 24px;
