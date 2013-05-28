@@ -12,14 +12,7 @@ include ('header.php');
 		<div class="videos">
 
 
-<video width="638" height="358" id="my_video_1" class="video-js vjs-default-skin" controls
-preload="auto" poster="/images/myartistdna_video.jpg" data-setup="{}">
-
-    <source src="<?=static_file_url('/videos/mad.webm');?>" type="video/webm" />
-    <source src="<?=static_file_url('/videos/mad.iphone.mp4');?>" type="video/mp4" />
-    <source src="<?=static_file_url('/videos/mad.ogv');?>" type="video/ogg" />
-
-</video>
+<iframe src="http://player.vimeo.com/video/67160897" width="638" height="358" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
 
 		</div>
