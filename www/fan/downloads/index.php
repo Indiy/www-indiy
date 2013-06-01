@@ -42,14 +42,17 @@
 
     //header("X-Sendfile: $real_path");
     
-    //$length = filesize($real_path);
-    //header("Content-Length: $length");
+    $length = url_get_content_length($file_url);
+    if( $length )
+    {
+        header("Content-Length: $length");
+    }
     
     if( $as_attachment )
+    {
         header("Content-Disposition: attachment; filename=\"$upload_filename\"");
+    }
     
     readfile($file_url);
-    
     die();
-
 ?>

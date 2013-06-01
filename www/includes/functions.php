@@ -1851,4 +1851,24 @@ END;
         return $ret;
     }
 
+    function url_get_content_length($url)
+    {
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_NOBODY, true);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HEADER, true);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'HEAD');
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        
+        $data = curl_exec($ch);
+        curl_close($ch);
+        
+        $content_length = 0;
+        
+        if( preg_match('/Content-Length: (\d+)/', $data, $matches) )
+        {
+            $content_length = (int)$matches[1];
+        }
+        return $content_length;
+    }
 ?>
