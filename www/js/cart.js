@@ -37,6 +37,11 @@ function cartRender()
         var price = myParseFloat(c['price'],0.0);
         var shipping = myParseFloat(c['shipping'],0.0);
         var quantity = c['quantity'];
+        var size = c['size'];
+        if( size )
+        {
+            name = name + " - " + size.toLowerCase().capitalize();
+        }
 
         var odd = "";
         if( i % 2 == 0 )

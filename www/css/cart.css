@@ -152,11 +152,12 @@ body {
     text-overflow: ellipsis;
 }
 #cart #cart_list .cart_line .image_name_description .name_description .description {
-    width: 100%;
     padding-top: 5px;
     color: #666;
     font-size: 14px;
     text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 #cart #cart_list .cart_line .delete {
     display: inline-block;
