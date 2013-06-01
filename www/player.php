@@ -568,7 +568,7 @@
                 if( $file )
                 {
                     $video_url = artist_file_url($file['filename']);
-                    $image_extra = json_decode($file['extra_json'],TRUE);
+                    $video_extra = json_decode($file['extra_json'],TRUE);
                     
                     $item = array(
                                   "video_file" => $video_url,
