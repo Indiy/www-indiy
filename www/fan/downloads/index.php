@@ -36,19 +36,19 @@
     header("Content-Type: $mime_type");
     
     $filename = $file['filename'];
-    $path = "../../artists/files/$filename";
+    $file_url = artist_file_url($filename);
     
-    $real_path = realpath($path);
+    //$real_path = realpath($path);
 
     //header("X-Sendfile: $real_path");
     
-    $length = filesize($real_path);
-    header("Content-Length: $length");
+    //$length = filesize($real_path);
+    //header("Content-Length: $length");
     
     if( $as_attachment )
         header("Content-Disposition: attachment; filename=\"$upload_filename\"");
     
-    readfile($real_path);
+    readfile($file_url);
     
     die();
 
