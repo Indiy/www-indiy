@@ -456,11 +456,6 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             },
             {
-                name: 'logo_image',
-                description: 'Logo Image',
-                type: 'image'
-            },
-            {
                 name: 'banner_image',
                 description: 'Banner Image',
                 type: 'image'
