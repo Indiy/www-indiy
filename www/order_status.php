@@ -65,6 +65,11 @@
         $image = $item['image'];
         $type = $item['type'];
         
+        if( $size )
+        {
+            $name = "$name - " . ucfirst(strtolower($size));
+        }
+        
         $num = $i + 1;
         
         if( $i % 2 == 0 )

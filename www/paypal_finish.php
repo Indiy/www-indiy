@@ -104,6 +104,11 @@
             $image = $item['image'];
             $type = $item['type'];
             
+            if( $size )
+            {
+                $name = "$name - " . ucfirst(strtolower($size));
+            }
+            
             if( $type == 'DIGITAL' )
                 $contains_digital_items = TRUE;
             else

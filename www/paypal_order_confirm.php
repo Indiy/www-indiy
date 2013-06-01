@@ -91,6 +91,11 @@
             $quantity = $item['quantity'];
             $image = $item['image'];
 
+            if( $size )
+            {
+                $name = "$name - " . ucfirst(strtolower($size));
+            }
+
             $num = $i + 1;
             
             if( $i % 2 == 0 )
