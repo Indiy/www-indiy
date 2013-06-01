@@ -124,13 +124,16 @@ function storeShowProduct(index)
 function storeBuyProduct()
 {
     var product = g_productList[g_storeCurrentProductIndex];
+    var size = false;
+    if( product.sizes && product.sizes.length > 0 )
+    {
+        size = $('#product_size').val().toLowerCase();
+    }
     
     if( typeof product.extra !== 'undefined'
        && typeof product.extra.size_to_url !== 'undefined' )
     {
-        var size = $('#product_size').val().toLowerCase();
         var url = product.extra.size_to_url[size];
-        
         window.open(url,'_blank');
     }
     else if( typeof product.extra !== 'undefined'
@@ -141,7 +144,7 @@ function storeBuyProduct()
     }
     else
     {
-        storeBuyProductId(product.id);
+        storeBuyProductId(product.id,size);
 
         $('#buy_now_result .store_title').html("{0} > {1}".format(g_artistName,product.name));
         $('#buy_now_result .name').html(product.name);
@@ -154,7 +157,7 @@ function storeBuyProduct()
         updateAnchor({product_id: ""});
     }
 }
-function storeBuyProductId(product_id)
+function storeBuyProductId(product_id,size)
 {
     var cart = "";
 
@@ -162,6 +165,10 @@ function storeBuyProductId(product_id)
     cart += "&artist_id=" + g_artistId;
     cart += "&product_id=" + product_id;
     cart += "&quantity=1";
+    if( size )
+    {
+        cart += "&size=" + size;
+    }
     
     var url = "{0}/data/cart.php".format(g_cartBaseUrl);
     
