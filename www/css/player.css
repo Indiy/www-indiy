@@ -1790,35 +1790,13 @@ body {
 #store_tab .product_info .pi_right .price_share .dollar_price.free .dollar {
     display: none;
 }
-#store_tab .product_info .pi_right .price_share .share {
-    display: none;
-    position: relative;
+#store_tab .product_info .pi_right .price_share .sizes {
     float: right;
-    width: 109px;
-    height: 43px;
-    background-color: #004965;
-    border-radius: 0px 3px 3px 0px;
-    cursor: pointer;
+    padding-top: 10px;
 }
-#store_tab .product_info .pi_right .price_share .share .icon {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    width: 45px;
-    background-color: #006084;
-}
-#store_tab .product_info .pi_right .price_share .share .text {
-    position: absolute;
-    top: 0px;
-    left: 45px;
-    right: 0px;
-    padding-top: 16px;
-    color: white;
-    font-size: 13px;
-    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-    font-weight: normal;
-    text-align: center;
+#store_tab .product_info .pi_right .price_share .sizes select {
+    font-size: 18px;
+    text-transform: capitalize;
 }
 #store_tab .product_info .pi_right .buy {
     margin-top: 22px;
