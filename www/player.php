@@ -629,6 +629,10 @@
         {
             include_once 'templates/splash_video.html';
         }
+        else if( $template_type == 'PLAYER_SPLASH_FORM_DOWNLOAD' )
+        {
+            include_once 'templates/splash_form_download.html';
+        }
     }
     else
     {

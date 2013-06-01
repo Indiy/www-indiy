@@ -298,7 +298,7 @@ var TEMPLATE_SCHEMA =
     },
     'PLAYER_MEEK_SPLASH': {
         type: 'PLAYER',
-        description: 'Meek Form Splash',
+        description: 'Countdown Splash Form w/ Download',
         default_params:
         {
             page_title: "#DC3",
@@ -390,6 +390,101 @@ var TEMPLATE_SCHEMA =
                 type: 'misc_file'
             }
 
+        ]
+    },
+    'PLAYER_SPLASH_FORM_DOWNLOAD': {
+        type: 'PLAYER',
+        description: 'Splash Form w/ Download',
+        default_params:
+        {
+            page_title: "#DC3",
+            title: "TITLE",
+            subtitle1: "SUBTITLE",
+            subtitle2: "SUBTITLE2",
+            ga_account_id: 'UA-15194524-1'
+        },
+        arg_list:
+        [
+            {
+                name: 'page_title',
+                description: 'Page Title',
+                type: 'string'
+            },
+            {
+                name: 'title',
+                description: 'Title',
+                type: 'string'
+            },
+            {
+                name: 'subtitle1',
+                description: 'Subtitle 1',
+                type: 'string'
+            },
+            {
+                name: 'subtitle2',
+                description: 'Subtitle 2',
+                type: 'string'
+            },
+            {
+                name: 'button_text',
+                description: 'Button Text',
+                type: 'string'
+            },
+            {
+                name: 'success_text',
+                description: 'Success Text',
+                type: 'string'
+            },
+            {
+                name: 'copyright',
+                description: 'Copyright Text',
+                type: 'string'
+            },
+            {
+                name: 'banner_left',
+                description: 'Banner Left',
+                type: 'string'
+            },
+            {
+                name: 'banner_right1',
+                description: 'Banner Right1',
+                type: 'string'
+            },
+            {
+                name: 'banner_right2',
+                description: 'Banner Right2',
+                type: 'string'
+            },
+            {
+                name: 'logo_image',
+                description: 'Logo Image',
+                type: 'image'
+            },
+            {
+                name: 'banner_image',
+                description: 'Banner Image',
+                type: 'image'
+            },
+            {
+                name: 'form_tag',
+                description: 'Form Tag',
+                type: 'string'
+            },
+            {
+                name: 'bg_file',
+                description: 'Background Image',
+                type: 'image_spec'
+            },
+            {
+                name: 'file_download',
+                description: 'File Download',
+                type: 'misc_file'
+            },
+            {
+                name: 'ga_account_id',
+                description: 'Google Analytics Id',
+                type: 'string'
+            }
         ]
     },
     'PLAYER_MEEK_VIDEO': {

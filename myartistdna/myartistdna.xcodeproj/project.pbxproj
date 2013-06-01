@@ -389,6 +389,9 @@
 		2DE6BFD215297A5E00C3E0EF /* product.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = product.php; sourceTree = "<group>"; };
 		2DE6BFD31529F7A600C3E0EF /* manage_tooltips.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = manage_tooltips.js; sourceTree = "<group>"; };
 		2DE6BFD41529F7B300C3E0EF /* manage_upload.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = manage_upload.js; sourceTree = "<group>"; };
+		2DE6CDCF175AB174007E6792 /* splash_form_download.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = splash_form_download.html; sourceTree = "<group>"; };
+		2DE6CDD0175AB206007E6792 /* splash_form_download.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = splash_form_download.js; sourceTree = "<group>"; };
+		2DE6CDD1175AB28E007E6792 /* splash_form_download.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = splash_form_download.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DE8282E14D0B5F300A91FCE /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DE8283214D0B5F300A91FCE /* holder.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = holder.txt; sourceTree = "<group>"; };
 		2DE8284114D0B84A00A91FCE /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
@@ -1314,6 +1317,7 @@
 		2D9E2FD81569F13600A76906 /* templates */ = {
 			isa = PBXGroup;
 			children = (
+				2DE6CDCF175AB174007E6792 /* splash_form_download.html */,
 				2DFBC92B172D8DD4001DCEF6 /* countdown_audio.html */,
 				2D26203B17273AEB00D16D8D /* splash_audio.html */,
 				2DFBC92C17358CFC001DCEF6 /* splash_video.html */,
@@ -1557,6 +1561,7 @@
 				2D26203C172746CB00D16D8D /* splash_audio.css */,
 				2DFBC929172D8D95001DCEF6 /* countdown_audio.css */,
 				2DFBC92E173E9F0E001DCEF6 /* splash_video.css */,
+				2DE6CDD1175AB28E007E6792 /* splash_form_download.css */,
 			);
 			path = css;
 			sourceTree = "<group>";
@@ -1766,6 +1771,7 @@
 				2D26203D172746FE00D16D8D /* splash_audio.js */,
 				2DFBC92D1735AE7B001DCEF6 /* splash_video.js */,
 				2DFBC92A172D8DBB001DCEF6 /* countdown_audio.js */,
+				2DE6CDD0175AB206007E6792 /* splash_form_download.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
