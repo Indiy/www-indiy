@@ -166,8 +166,15 @@ body {
     background: rgba(43,118,120,0.5);
 }
 
-.top_spacer {
-    height: 100px;
+.top_title {
+    padding-top: 27px;
+    padding-bottom: 13px;
+    color: white;
+    font-size: 62px;
+    font-family: 'Agency Bold', Helvetica, sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 66px;
 }
 
 .top_sub_spacer {
@@ -575,8 +582,12 @@ and (max-device-width : 480px) {
         min-width: 300px;
         width: 95%;
     }
-    .top_spacer {
-        height: 20px;
+    .top_title {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 29px;
+        letter-spacing: 1px;
+        line-height: 30px;
     }
     
     .title {

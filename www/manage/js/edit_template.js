@@ -398,6 +398,7 @@ var TEMPLATE_SCHEMA =
         default_params:
         {
             page_title: "#DC3",
+            top_title: "TOP TITLE",
             title: "TITLE",
             subtitle1: "SUBTITLE",
             subtitle2: "SUBTITLE2",
@@ -408,6 +409,11 @@ var TEMPLATE_SCHEMA =
             {
                 name: 'page_title',
                 description: 'Page Title',
+                type: 'string'
+            },
+            {
+                name: 'top_title',
+                description: 'Top Title',
                 type: 'string'
             },
             {
