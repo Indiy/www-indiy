@@ -167,14 +167,14 @@ body {
 }
 
 .top_title {
-    padding-top: 27px;
-    padding-bottom: 13px;
+    padding-top: 21px;
+    padding-bottom: 8px;
     color: white;
-    font-size: 62px;
+    font-size: 71px;
     font-family: 'Agency Bold', Helvetica, sans-serif;
     text-align: center;
     letter-spacing: 1px;
-    line-height: 66px;
+    line-height: 71px;
 }
 
 .top_sub_spacer {
