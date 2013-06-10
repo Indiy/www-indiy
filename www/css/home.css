@@ -396,7 +396,7 @@ body {
 }
 .body_buttons {
     position: absolute;
-    top: 464px;
+    top: 414px;
     left: 67px;
     font-size: 0px;
 }
@@ -421,7 +421,7 @@ body {
 }
 .body_content_info {
     position: absolute;
-    top: 546px;
+    top: 496px;
     left: 67px;
     padding-top: 14px;
     height: 24px;
