@@ -1,0 +1,357 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+---------------------------------------------
+01. main/default elements
+---------------------------------------------
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style:none
+}
+img, fieldset {
+	border:none
+}
+/* render html5 elements as block */
+header, footer, section, aside, nav, article {
+	display: block;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight:normal
+}
+
+@font-face {
+font-family: 'Neuzeit Grotesk';
+src: url('Neuzeit-Grotesk.eot');
+src: local('Neuzeit-Grotesk'), url('Neuzeit-Grotesk.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Neuzeit Grotesk Light';
+src: url('Neuzeit-Grotesk-Light.eot');
+src: local('Neuzeit-Grotesk-Light'), url('Neuzeit-Grotesk-Light.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Teletex Light';
+src: url('Teletex_Light.eot');
+src: local('Teletex_Light'), url('Teletex_Light.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+
+body { background:#EDEEF0; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif}
+
+p { font-family:"Neuzeit Grotesk Light", "Trebuchet MS", Arial, Helvetica, sans-serif; font-size:15px; color:#4B4B4B; line-height:1.3em}
+p a { color:#4B4B4B; text-decoration:none}
+p a:hover { text-decoration:underline}
+
+
+h1 { font-family:"Teletex Light", "Trebuchet MS", Arial, Helvetica, sans-serif; font-size:64px; color:#4B4B4B; text-transform:uppercase}
+h2 { font-family:"Teletex Light", "Trebuchet MS", Arial, Helvetica, sans-serif; font-size:23px; color:#4B4B4B; text-transform:uppercase}
+h3 { font-family:"Neuzeit Grotesk Light", "Trebuchet MS", Arial, Helvetica, sans-serif; font-size:18px; color:#4B4B4B; text-transform:uppercase}
+
+
+
+/*
+---------------------------------------------
+02. container and wrapper
+---------------------------------------------
+*/
+
+#container { width:100%; float:left; border-top:6px solid #DDDEE0}
+#wrapper { width:960px; margin:0 auto; margin-top:44px}
+
+/*
+---------------------------------------------
+03. header
+---------------------------------------------
+*/
+
+header { width:960px; height:50px; float:left; background:url(../images/bg_header.gif) repeat-x}
+
+header .logo { float:left}
+header .logo a { width:74px; height:50px; float:left; background:url(../images/logo.gif) no-repeat; text-indent:-9999px}
+header .logo a:hover { width:74px; height:50px; float:left; background:url(../images/logo-hover.gif) no-repeat; text-indent:-9999px}
+
+header nav { float:left; padding:20px 0 0 95px}
+header nav ul li { float:left; font-family:"Neuzeit Grotesk", "Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; color:#D5D5D5; text-transform:uppercase; background:url(../images/divider_nav.png) no-repeat right 4px; padding:0 52px 0 41px}
+header nav ul li.nodivider { background:none}
+header nav ul li a { float:left; color:#D5D5D5; text-decoration:none; padding-bottom:14px}
+header nav ul li a:hover { background:url(../images/arrow_nav.gif) no-repeat bottom center}
+header nav ul li a.active { background:url(../images/arrow_nav.gif) no-repeat bottom center}
+
+/*
+---------------------------------------------
+04. content
+---------------------------------------------
+*/
+
+#content { width:960px; float:left; margin-top:52px; padding-bottom:35px}
+#content h1 { padding-bottom:30px}
+
+#content .sort { float:right; font-size:11px; color:#686868; position:relative}
+#content .sort a.sub { width:273px; height:23px; float:right; background:#DDDEE0 url(../images/arrow_down.gif) no-repeat right 14px; color:#686868; text-decoration:none; padding:10px 0 0 15px}
+#content .sort ul.splitter ul { width:288px; float:left; background:#DDDEE0; padding-bottom:10px; position:absolute; top:33px; left:0; display:none; z-index:100} 
+#content .sort ul.splitter:hover ul { display:block} 
+#content .sort ul.splitter ul li { width:258px; float:left; font-size:11px; color:#686868; text-transform:uppercase; border-bottom:1px dotted #AFB0B4; margin:0 15px}
+#content .sort ul.splitter ul li a { width:258px; float:left; color:#686868; text-decoration:none; padding:8px 15px; margin:0 -15px}
+#content .sort ul.splitter ul li a:hover { background:#9BCFCD}
+#content .sort ul.splitter ul li.selected-1 a,
+#content .sort ul.splitter ul li.selected-2 a,
+#content .sort ul.splitter ul li.selected-3 a,
+#content .sort ul.splitter ul li.selected-4 a,
+#artists .sort ul.splitter ul li.selected-5 a,
+#artists .sort ul.splitter ul li.selected-6 a { background:#9BCFCD}
+
+
+#portfolio { width:976px; float:left; padding-top:25px; margin-right:-16px}
+#portfolio ul { float:left}
+.image-grid { width:976px;}
+#portfolio ul li { width:229px; height:251px; float:left; position:relative;padding:0 15px 15px 0}
+#portfolio ul li span { width:195px; height:170px; float:left; font-family:"Teletex Light", "Trebuchet MS",  Arial, Helvetica, sans-serif; font-size:57px; color:#FFFFFF; letter-spacing:-2px; line-height:.8em; text-transform:uppercase; position:absolute; top:0;left:0; padding:81px 0 0 34px; display:none}
+#portfolio ul li .color1 { background:url(../images/bg_artistbox1.gif) no-repeat}
+#portfolio ul li .color2 { background:url(../images/bg_artistbox2.gif) no-repeat}
+#portfolio ul li .color3 { background:url(../images/bg_artistbox3.gif) no-repeat}
+#portfolio ul li .color4 { background:url(../images/bg_artistbox4.gif) no-repeat}
+#portfolio ul li .color5 { background: url(../images/bg_artistbox5.gif) no-repeat}
+#portfolio ul li .nave { width:209px; padding-left:20px}
+#portfolio ul li .night { height:183px; font-size:45px; line-height:.9em; padding-top:68px}
+#portfolio ul li .young { width:207px; font-size:52px; padding-left:22px}
+#portfolio ul li .usher { height:154px; padding-top:97px}
+#portfolio ul li .universal { width:209px; height:158px; font-size:36px; line-height:.9em; padding-top:93px; padding-left:20px}
+#portfolio ul li .searching { width:213px; font-size:36px; padding-left:16px}
+#portfolio ul li .allido { width:207px; height:148px; font-size:54px; padding-top:103px; padding-left:22px}
+
+
+#portfolio ul li a { color:#FFFFFF; text-decoration:none}
+#portfolio ul li a:hover span { display:block}
+
+
+/*
+---------------------------------------------
+05. footer
+---------------------------------------------
+*/
+
+#footer { width:100%; float:left; background:#DDDEE0; padding:20px 0}
+footer { width:960px; margin:0 auto}
+
+footer p { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; color:#686868; float:right; text-transform:uppercase}
+footer p a { color:#686868}
+
+footer p.socialmedia { float:left}
+footer p.socialmedia a { float:left; background:url(../images/divider_nav.png) no-repeat 0 4px; padding-right:24px; padding-left:32px}
+footer p.socialmedia a.nodivider { padding-left:0; background:none}
+
+
+
+/*
+---------------------------------------------
+06. home extended
+---------------------------------------------
+*/
+
+#wrapperextented { width:1205px; margin:0 auto; margin-top:44px}
+#wrapperextented header { width:1205px}
+#wrapperextented header nav { padding-left:200px}
+
+#wrapperextented #content { width:1205px}
+#wrapperextented #content #portfolio { width:1221px}
+#wrapperextented #content #portfolio .image-grid { width:1221px}
+
+.extended { width:1205px}
+
+
+/*
+---------------------------------------------
+07. myartistdna.com
+---------------------------------------------
+*/
+
+
+#myartistdna { width:960px; float:left; padding-bottom:15px}
+
+#myartistdna .details { width:960px; float:left; border-top:1px solid #D1D1D3; border-bottom:1px solid #D1D1D3; padding:22px 0 0 0}
+#myartistdna .details p { padding-bottom:22px}
+ 
+#myartistdna .video {	margin-left: auto;	margin-right: auto; width: 638px;}
+#myartistdna .video figure {  height:412px; float:left; -webkit-box-shadow:#AAAAAC 8px 8px 8px; -moz-box-shadow:#AAAAAC 8px 8px 8px; box-shadow:#AAAAAC 8px 8px 8px; behavior: url(PIE.htc);} 
+#myartistdna .videodetails { width:960px; float:left; padding-top:20px; padding-bottom:5px}
+#myartistdna .videodetails h2 { font-size:33px; text-align:center; padding-top: 20px; padding-bottom:30px}
+
+#myartistdna .examples { width:960px; float:left; border-top:1px solid #D1D1D3; padding:50px 0 25px 0}
+#myartistdna .examples h2 { padding-bottom:25px}
+#myartistdna .examples ul { width:976px; float:left; margin-right:-16px}
+#myartistdna .examples ul li { width:229px; height:251px; float:left; position:relative;padding:0 15px 15px 0}
+#myartistdna .examples ul li span { width:189px; height:156px; float:left; font-family:"Teletex Light", "Trebuchet MS",  Arial, Helvetica, sans-serif; font-size:64px; color:#FFFFFF; line-height:.8em; text-transform:uppercase; position:absolute; top:0;left:0; padding:95px 0 0 40px; display:none}
+#myartistdna .examples ul li .adel { background:url(../images/bg_coolkids.jpg) no-repeat}
+#myartistdna .examples ul li a { color:#FFFFFF; text-decoration:none}
+#myartistdna .examples ul li a:hover span { display:block}
+
+#myartistdna .trymyartist { width:960px; float:left; border-top:1px solid #D1D1D3; border-bottom:1px solid #D1D1D3; padding:17px 0}
+#myartistdna .trymyartist h2 { width:229px; float:left; padding-right:15px}
+#myartistdna .trymyartist p { width:493px; float:left; padding-top:4px}
+#myartistdna .trymyartist .button { float:right; font-size:11px; padding-top:10px}
+#myartistdna .trymyartist .button a { width:152px; height:23px; float:left; color:#686868; text-decoration:none; background:#DDDEE0 url(../images/arrow_visit.gif) no-repeat right 10px; padding:10px 24px 0 14px}
+
+
+
+/*
+---------------------------------------------
+08. projects
+---------------------------------------------
+*/
+
+#projects { width:960px; float:left}
+#projects h1 { padding-bottom:30px}
+
+#projects article { width:960px; float:left; padding-bottom:50px}
+
+#projects .details { width:960px; float:left; border-top:1px solid #D1D1D3; border-bottom:1px solid #D1D1D3; padding:18px 0 12px 0; margin-bottom:35px}
+#projects .details p { width:700px; float:left; padding:5px 0}
+#projects .details .button { float:right; font-size:11px; text-transform:uppercase}
+#projects .details .button a { width:152px; height:23px; float:left; color:#686868; text-decoration:none; background:#DDDEE0 url(../images/arrow_down.gif) no-repeat right 14px; padding:10px 24px 0 14px}
+
+#projects .project1 { width:960px; float:left; padding-bottom:15px}
+#projects .project1 figure { float:left; line-height:.7em; padding-bottom:15px}
+#projects .project1 figure.right { float:right}
+#projects .project1 figure.left { padding-left:15px}
+#projects .project1 figure.spacing img { border:44px solid #FFFFFF} 
+#projects .project1 figure.last img { border-bottom:50px solid #FFFFFF} 
+#projects .project1 figure.spacing2 img { border:20px solid #FFFFFF} 
+
+
+
+#projects .previous { float:left; font-size:11px; text-transform:uppercase; padding-left:287px}
+#projects .previous a { width:152px; height:23px; float:left; text-align:right; color:#686868; text-decoration:none; background:#DDDEE0 url(../images/arrow_previous.gif) no-repeat 0 10px; padding:10px 14px 0 24px}
+
+#projects .next { float:left; font-size:11px; text-transform:uppercase; padding-left:2px}
+#projects .next a { width:152px; height:23px; float:left; color:#686868; text-decoration:none; background:#DDDEE0 url(../images/arrow_visit.gif) no-repeat right 10px; padding:10px 24px 0 14px}
+
+#projects .relatedprojects { width:960px; float:left; border-top:1px solid #D1D1D3; padding-top:22px}
+#projects .relatedprojects h2 { font-size:25px; text-align:center; padding-bottom:30px}
+#projects .relatedprojects ul { width:976px; float:left; margin-right:-16px}
+#projects .relatedprojects ul li { width:229px; height:251px; float:left; position:relative;padding:0 15px 15px 0}
+
+
+/*
+---------------------------------------------
+09. services
+---------------------------------------------
+*/
+
+#services { width:960px; float:left; padding-bottom:15px}
+#services h1 { padding-bottom:30px}
+
+#services .details { width:960px; float:left; border-top:1px solid #D1D1D3; border-bottom:1px solid #D1D1D3; padding:22px 0 0 0}
+#services .details p { padding-bottom:22px}
+
+#casestudies { width:960px; float:left}
+
+#casestudies article.case { width:960px; float:left; padding-top:30px}
+#casestudies #slider1 { width:960px; height:475px; float:left; padding-bottom:40px; position:relative}
+#casestudies #slider1 #slide-scroll.scrollable { width:960px; height:475px; position:relative; overflow:hidden; position:relative}
+#casestudies #slider1 #slide-scroll.scrollable .items { width:20000em; height:475px; position:absolute; clear:both}
+#casestudies #slider1 #slide-scroll.scrollable .item {	width:960px; float:left}
+
+#casestudies #slider1 .prevPage, .nextPage { width:34px; height:34px; background:url(../images/arrow_previous_black.png) no-repeat; text-indent:-9999em; position: absolute; left:13px; top:224px; outline:0}
+#casestudies #slider1 .nextPage { background:url(../images/arrow_next_black.png) no-repeat; left:auto; right:13px; !important}
+
+#casestudies article.case .column1 { width:190px; float:left}
+#casestudies article.case .column1 h2 { line-height:1em; background:url(../images/icon_plus.gif) no-repeat right 24px; padding-bottom:12px; border-bottom:1px solid #4B4B4B; margin-bottom:10px}
+#casestudies article.case .column1 h2.tools { font-size:21px; letter-spacing:-1px}
+#casestudies article.case .column1 h3 { font-family:"Teletex Light", "Trebuchet MS", Arial, Helvetica, sans-serif; font-size:27px; padding-bottom:30px}
+#casestudies article.case .column1 .button { float:left; font-size:11px; text-transform:uppercase}
+#casestudies article.case .column1 .button a { width:152px; height:23px; float:left; color:#686868; text-decoration:none; background:#DDDEE0 url(../images/arrow_down.gif) no-repeat right 14px; padding:10px 24px 0 14px}
+#casestudies article.case .column2 { width:695px; float:right}
+#casestudies article.case .column2 h3 { padding-bottom:15px}
+#casestudies article.case .column2 p { padding-bottom:20px}
+
+#casestudies #slider2 { width:960px; height:475px; float:left; padding-bottom:40px; position:relative}
+#casestudies #slider2 #slide-scroll2.scrollable { width:960px; height:475px; position:relative; overflow:hidden; position:relative}
+#casestudies #slider2 #slide-scroll2.scrollable .items { width:20000em; height:475px; position:absolute; clear:both}
+#casestudies #slider2 #slide-scroll2.scrollable .item {	width:960px; float:left}
+
+#casestudies #slider2 .prevPage2, .nextPage2 { width:34px; height:34px; background:url(../images/arrow_previous_white.png) no-repeat; text-indent:-9999em; position: absolute; left:13px; top:224px; outline:0}
+#casestudies #slider2 .nextPage2 { background:url(../images/arrow_next_white.png) no-repeat; left:auto; right:13px; !important}
+
+#casestudies #slider3 { width:960px; height:475px; float:left; padding-bottom:40px; position:relative}
+#casestudies #slider3 #slide-scroll3.scrollable { width:960px; height:475px; position:relative; overflow:hidden; position:relative}
+#casestudies #slider3 #slide-scroll3.scrollable .items { width:20000em; height:475px; position:absolute; clear:both}
+#casestudies #slider3 #slide-scroll3.scrollable .item {	width:960px; float:left}
+
+#casestudies #slider3 .prevPage3, .nextPage3 { width:34px; height:34px; background:url(../images/arrow_previous_white.png) no-repeat; text-indent:-9999em; position: absolute; left:13px; top:224px; outline:0}
+#casestudies #slider3 .nextPage3 { background:url(../images/arrow_next_white.png) no-repeat; left:auto; right:13px; !important}
+
+#casestudies #slider4 { width:960px; height:475px; float:left; padding-bottom:40px; position:relative}
+#casestudies #slider4 #slide-scroll4.scrollable { width:960px; height:475px; position:relative; overflow:hidden; position:relative}
+#casestudies #slider4 #slide-scroll4.scrollable .items { width:20000em; height:475px; position:absolute; clear:both}
+#casestudies #slider4 #slide-scroll4.scrollable .item {	width:960px; float:left}
+
+#casestudies #slider4 .prevPage4, .nextPage4 { width:34px; height:34px; background:url(../images/arrow_previous_white.png) no-repeat; text-indent:-9999em; position: absolute; left:13px; top:224px; outline:0}
+#casestudies #slider4 .nextPage4 { background:url(../images/arrow_next_white.png) no-repeat; left:auto; right:13px; !important}
+
+#casestudies #slider5 { width:960px; height:475px; float:left; padding-bottom:40px; position:relative}
+#casestudies #slider5 #slide-scroll5.scrollable { width:960px; height:475px; position:relative; overflow:hidden; position:relative}
+#casestudies #slider5 #slide-scroll5.scrollable .items { width:20000em; height:475px; position:absolute; clear:both}
+#casestudies #slider5 #slide-scroll5.scrollable .item {	width:960px; float:left}
+
+#casestudies #slider5 .prevPage5, .nextPage5 { width:34px; height:34px; background:url(../images/arrow_previous_white.png) no-repeat; text-indent:-9999em; position: absolute; left:13px; top:224px; outline:0}
+#casestudies #slider5 .nextPage5 { background:url(../images/arrow_next_white.png) no-repeat; left:auto; right:13px; !important}
+
+
+
+/*
+---------------------------------------------
+10. whoweare
+---------------------------------------------
+*/
+
+#whoweare { width:960px; float:left}
+
+#whoweare .details { width:960px; float:left; border-top:1px solid #D1D1D3;  padding:22px 0 0 0}
+#whoweare .details p { padding-bottom:22px}
+
+#whoweare .clients { width:960px; float:left; padding-bottom:50px}
+#whoweare .clients h2 { padding-bottom:30px; padding-top:40px}
+#whoweare .clients ul { width:960px; float:left; border-top:1px solid #D1D1D3; border-left:1px solid #D1D1D3}
+#whoweare .clients ul li { width:191px; height:150px; float:left; border-right:1px solid #D1D1D3; border-bottom:1px solid #D1D1D3}
+
+#whoweare .features { width:960px; float:left; padding-bottom:25px}
+#whoweare .features h2 { border-bottom:1px solid #D1D1D3; padding-bottom:30px; margin-bottom:20px}
+#whoweare .features h1 { width:294px; height:116px; float:left; font-size:55px; color:#FFFFFF; line-height:.8em; padding:30px 0 0 18px; margin-bottom:15px}
+#whoweare .features p { padding-bottom:15px}
+#whoweare .features article.wecare { width:312px; float:left; padding-right:15px}
+#whoweare .features article.wecare h1 { background:url(../images/bg_wecare.gif) repeat-x}
+#whoweare .features article.welisten { width:307px; float:left; padding-right:14px}
+#whoweare .features article.welisten h1 { width:289px; background:url(../images/bg_welisten.gif) repeat-x}
+#whoweare .features article.werock { width:312px; float:left}
+#whoweare .features article.werock h1 { background:url(../images/bg_werock.gif) repeat-x}
+
+#whoweare .contact { width:960px; float:left}
+#whoweare .contact h2 { border-bottom:1px solid #D1D1D3; padding-bottom:30px; margin-bottom:36px}
+
+#whoweare .contact .column1 { width:275px; float:left; padding-right:52px}
+#whoweare .contact .column1 p { padding-bottom:20px}
+#whoweare .contact .column1 p span { font-weight:bold}
+#whoweare .contact .column1 p.map a { font-size:14px; color:#FFFFFF; text-decoration:none; background:#8D8D8D; padding:10px 15px} 
+
+#whoweare .contact .column2 { width:562px; float:left}
+#whoweare .contact .column2 ul { width:562px; float:left}
+#whoweare .contact .column2 ul li { width:562px; float:left; padding-bottom:15px}
+#whoweare .contact .column2 ul li label { width:562px; float:left; font-family:"Neuzeit Grotesk Light", "Trebuchet MS", Arial, Helvetica, sans-serif; font-size:15px; color:#4B4B4B; padding-bottom:5px}
+#whoweare .contact .column2 ul li .input { width:530px; float:left; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; color:#686868; border:1px solid #D1D1D3; background:#EDEEF0; padding:5px 15px}
+#whoweare .contact .column2 ul li .input:focus { background:#DDDEE0}
+#whoweare .contact .column2 ul li .droplist { width:307px; float:left; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color:#686868; background:#DDDEE0; border:none; padding:5px 4px 5px 15px}
+#whoweare .contact .column2 ul li .textarea { width:530px; height:201px; float:left; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; color:#686868; border:1px solid #D1D1D3; background:#EDEEF0; padding:5px 15px}
+#whoweare .contact .column2 ul li .textarea:focus { background:#DDDEE0}
+#whoweare .contact .column2 ul li .submit { width:87px; height:32px; float:left; background:#8D8D8D; font-family:"Neuzeit Grotesk Light", "Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; color:#FEFEFE; text-align:center; cursor:pointer; border:none;}
+
