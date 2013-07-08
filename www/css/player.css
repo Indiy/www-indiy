@@ -2395,10 +2395,10 @@ body {
 }
 
 .template_prince #top_bar {
-    background: transparent url('../images/topbar_texture_heineken.png') repeat-x;
+    background: transparent url('../images/topbar_texture_heineken.jpg') repeat-x;
 }
 .template_prince #tracker_bar {
-    background: transparent url('../images/tracker_bar_bg_heineken.png') repeat-x;
+    background: transparent url('../images/tracker_bar_bg_heineken.jpg') repeat-x;
 }
 .template_prince #top_bar_mad_logo {
     background: transparent url('../images/topbar_logo_heineken.png') no-repeat;
