@@ -121,10 +121,6 @@
     {
         $iphone_version = FALSE;
     }
-    if( $template_id )
-    {
-        $iphone_version = FALSE;
-    }
 
     $product_list = array();
     $product_list_html = "";
@@ -603,7 +599,14 @@
         
         if( $template_type == 'PLAYER_PRINCE' )
         {
-            include_once 'templates/player_prince.html';
+            if( $iphone_version )
+            {
+                include_once 'templates/player_iphone.html';
+            }
+            else
+            {
+                include_once 'templates/player_prince.html';
+            }
         }
         else if( $template_type == 'PLAYER_MEEK_SPLASH' )
         {
