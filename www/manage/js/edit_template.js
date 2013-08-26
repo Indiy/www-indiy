@@ -864,46 +864,6 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             },
             {
-                name: 'iframe_html',
-                description: 'IFrame HTML',
-                type: 'textbox'
-            },
-            {
-                name: 'desktop_bg_top_line',
-                description: 'Desktop BG Top Line',
-                type: 'string'
-            },
-            {
-                name: 'desktop_bg_blue_line',
-                description: 'Desktop BG Blue Line',
-                type: 'string'
-            },
-            {
-                name: 'desktop_bg_bottom_line',
-                description: 'Desktop BG Bottom Line',
-                type: 'string'
-            },
-            {
-                name: 'iphone_title1',
-                description: 'iPhone Title 1',
-                type: 'string'
-            },
-            {
-                name: 'iphone_title2',
-                description: 'iPhone Title 2',
-                type: 'string'
-            },
-            {
-                name: 'iphone_title3',
-                description: 'iPhone Title 3',
-                type: 'string'
-            },
-            {
-                name: 'iphone_title4',
-                description: 'iPhone Title 4',
-                type: 'string'
-            },
-            {
                 name: 'twitter_handle',
                 description: 'Twitter Handle',
                 type: 'string'
@@ -912,11 +872,6 @@ var TEMPLATE_SCHEMA =
                 name: 'twitter_widget',
                 description: 'Twitter Widget',
                 type: 'textbox'
-            },
-            {
-                name: 'bg_file',
-                description: 'Background Image',
-                type: 'image_spec'
             },
             {
                 name: 'ga_account_id',

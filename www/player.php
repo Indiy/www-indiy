@@ -594,7 +594,7 @@
                 }
             }
         }
-        if( !isset($template_params['ga_account_id']) )
+        if( $template_params['ga_account_id'] )
         {
             $template_params['ga_account_id'] = 'UA-15194524-1';
         }
