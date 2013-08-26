@@ -594,9 +594,11 @@
                 }
             }
         }
+        var_dump($template_params['ga_account_id']);
         if( $template_params['ga_account_id'] && strlen($template_params['ga_account_id']) > 0 )
         {
             $template_params['ga_account_id'] = 'UA-15194524-1';
+            print "here2\n";
         }
         
         $template_params_json = json_encode($template_params);
