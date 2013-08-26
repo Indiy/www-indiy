@@ -843,6 +843,87 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             }
         ]
+    },
+    'PLAYER_DEFAULT_V2': {
+        type: 'PLAYER',
+        description: 'Default v2',
+        default_params: {
+            page_title: 'MyArtistDNA | Be Heard. Be Seen. Be Independent.',
+            ga_account_id: ''
+        },
+        arg_list:
+        [
+            {
+                name: 'page_title',
+                description: 'Page Title',
+                type: 'string'
+            },
+            {
+                name: 'top_bar_title',
+                description: 'Top Bar Title',
+                type: 'string'
+            },
+            {
+                name: 'iframe_html',
+                description: 'IFrame HTML',
+                type: 'textbox'
+            },
+            {
+                name: 'desktop_bg_top_line',
+                description: 'Desktop BG Top Line',
+                type: 'string'
+            },
+            {
+                name: 'desktop_bg_blue_line',
+                description: 'Desktop BG Blue Line',
+                type: 'string'
+            },
+            {
+                name: 'desktop_bg_bottom_line',
+                description: 'Desktop BG Bottom Line',
+                type: 'string'
+            },
+            {
+                name: 'iphone_title1',
+                description: 'iPhone Title 1',
+                type: 'string'
+            },
+            {
+                name: 'iphone_title2',
+                description: 'iPhone Title 2',
+                type: 'string'
+            },
+            {
+                name: 'iphone_title3',
+                description: 'iPhone Title 3',
+                type: 'string'
+            },
+            {
+                name: 'iphone_title4',
+                description: 'iPhone Title 4',
+                type: 'string'
+            },
+            {
+                name: 'twitter_handle',
+                description: 'Twitter Handle',
+                type: 'string'
+            },
+            {
+                name: 'twitter_widget',
+                description: 'Twitter Widget',
+                type: 'textbox'
+            },
+            {
+                name: 'bg_file',
+                description: 'Background Image',
+                type: 'image_spec'
+            },
+            {
+                name: 'ga_account_id',
+                description: 'Google Analytics Id',
+                type: 'string'
+            }
+        ]
     }
 };
 

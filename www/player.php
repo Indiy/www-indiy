@@ -594,8 +594,12 @@
                 }
             }
         }
-        $template_params_json = json_encode($template_params);
+        if( !isset($template_params['ga_account_id']) )
+        {
+            $template_params['ga_account_id'] = 'UA-15194524-1';
+        }
         
+        $template_params_json = json_encode($template_params);
         
         if( $template_type == 'PLAYER_PRINCE' )
         {
@@ -620,6 +624,10 @@
             {
                 include_once 'templates/player_prince.html';
             }
+        }
+        else if( $template_type == 'PLAYER_DEFAULT_V2' )
+        {
+            include_once 'templates/default_v2.html';
         }
         else if( $template_type == 'PLAYER_MEEK_SPLASH' )
         {

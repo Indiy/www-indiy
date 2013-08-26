@@ -244,6 +244,8 @@
 		2D64688A15A65B1C00B9AD11 /* player_tooltips.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_tooltips.js; sourceTree = "<group>"; };
 		2D64689715ADDA3300B9AD11 /* mad.scrollbar.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mad.scrollbar.js; sourceTree = "<group>"; };
 		2D64FD1114F8735800C5C468 /* rich_text_editor.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = rich_text_editor.js; sourceTree = "<group>"; };
+		2D6DF27917CAD06F0020CD97 /* default_v2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = default_v2.html; sourceTree = "<group>"; };
+		2D6DF27A17CAD0E10020CD97 /* default_v2.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = default_v2.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D6DF95114BA4F4A00D0750E /* footer.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = footer.js; sourceTree = "<group>"; };
 		2D6DF95214BA5DA400D0750E /* add_mad_newsletter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_mad_newsletter.php; sourceTree = "<group>"; };
 		2D6DF95314BA62A900D0750E /* mad_newsletter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = mad_newsletter.php; sourceTree = "<group>"; };
@@ -1317,6 +1319,7 @@
 		2D9E2FD81569F13600A76906 /* templates */ = {
 			isa = PBXGroup;
 			children = (
+				2D6DF27917CAD06F0020CD97 /* default_v2.html */,
 				2DE6CDCF175AB174007E6792 /* splash_form_download.html */,
 				2DFBC92B172D8DD4001DCEF6 /* countdown_audio.html */,
 				2D26203B17273AEB00D16D8D /* splash_audio.html */,
@@ -1539,6 +1542,7 @@
 		2DF470471440B77F005538C7 /* css */ = {
 			isa = PBXGroup;
 			children = (
+				2D6DF27A17CAD0E10020CD97 /* default_v2.css */,
 				2DD94A2B14C368DF002B1259 /* vim.css */,
 				2D34E23514ABFF09004473F9 /* video-js.css */,
 				2DF4704F1440B77F005538C7 /* style.css */,
