@@ -13,16 +13,19 @@ function userTabReady()
 
 function maybeShowMoreTabsButton()
 {
-    var top_first = $('#top_bar .content_tabs .tab:first').position().top;
-    var top_last = $('#top_bar .content_tabs .tab:last').position().top;
-    
-    if( top_first == top_last )
+    if( $('#top_bar .content_tabs .tab:first').position() )
     {
-        $('#more_tabs_button').hide();
-    }
-    else
-    {
-        $('#more_tabs_button').show();
+        var top_first = $('#top_bar .content_tabs .tab:first').position().top;
+        var top_last = $('#top_bar .content_tabs .tab:last').position().top;
+        
+        if( top_first == top_last )
+        {
+            $('#more_tabs_button').hide();
+        }
+        else
+        {
+            $('#more_tabs_button').show();
+        }
     }
 }
 function showMoreTabs()
