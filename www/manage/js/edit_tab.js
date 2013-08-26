@@ -2,8 +2,6 @@
 var g_removeTabImage = false;
 var g_tabIndex = false;
 
-$(document).ready(setupRichTextEditor);
-
 function onTabImageRemove()
 {
     var result = window.confirm("Remove image from page?");
@@ -27,9 +25,7 @@ function showTabPopup(tab_index)
         
         $('#edit_tab #content_id').val(tab.id);
         $('#edit_tab #name').val(tab.name);
-        var body = getEncodedBody(tab.body)
         $('#edit_tab #body').val(tab.body);
-        g_editor.setEditorHTML(body);
         
         fillArtistFileSelect('#edit_tab #image_drop','IMAGE',tab.image);
     }
@@ -43,7 +39,6 @@ function showTabPopup(tab_index)
     
         $('#edit_tab #content_id').val("");
         $('#edit_tab #name').val("");
-        g_editor.setEditorHTML("");
         $('#edit_tab #body').val("");
         
         fillArtistFileSelect('#edit_tab #image_drop','IMAGE',false);
@@ -62,16 +57,7 @@ function onAddContentSubmit()
     }
     function fillContentForm(form_data)
     {
-        if( g_rawEditorState == "off" )
-        {
-            g_editor.saveHTML();
-            var body = $('#edit_tab #body').val();
-            body = getRawBody(body);
-        }
-        else
-        {
-            var body = $('#edit_tab #body').val();
-        }
+        var body = $('#edit_tab #body').val();
         var artist_id = $('#edit_tab #artist_id').val();
         var content_id = $('#edit_tab #content_id').val();
         var name = $('#edit_tab #name').val();
