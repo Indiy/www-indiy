@@ -257,16 +257,6 @@
             </div>
         </div>
         <div id='media_social_boxes'>
-            <? if( !$NARROW_SCREEN ): ?>
-                <div class='social_boxes'>
-                    <div class='social_buttons'>
-                        <? include 'player_social_buttons.html'; ?>
-                    </div>
-                    <div id='social_content' class='social_content'>
-                        <? include 'player_social_items.html'; ?>
-                    </div>
-                </div>
-            <? endif; ?>
             <div class='media_boxes'>
                 <div class='media_buttons'>
                     <? if( count($photo_list) > 0 ): ?>
@@ -291,13 +281,6 @@
                         <div class='sep'></div>
                     <? endif; ?>
                     
-                    <?
-                        if( $NARROW_SCREEN )
-                        {
-                            include 'player_social_buttons.html';
-                        }
-                    ?>
-
                 </div>
                 <div id='media_content_lists' class='media_content'>
                     <div id='photo_list' class='media_list picture_list'>
@@ -341,14 +324,6 @@
                             <?=$video_list_html;?>
                         </div>
                     </div>
-                    
-                    <?
-                        if( $NARROW_SCREEN )
-                        {
-                            include 'player_social_items.html';
-                        }
-                    ?>
-                    
                 </div>
             </div>
         </div>
