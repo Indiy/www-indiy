@@ -41,7 +41,7 @@ body {
 .full_screen_bg { 
     position: fixed; 
     top: 0px;
-    bottom: 49px;
+    bottom: 21px;
     left: 0px;
     right: 0px;
     background-color: transparent;
@@ -294,7 +294,7 @@ body {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    height: 49px;
+    height: 21px;
     background-color: black;
     overflow: hidden;
     color: #484848;
@@ -306,7 +306,7 @@ body {
 #bottom_bar .slash,
 #bottom_bar .bottom_link {
     display: inline-block;
-    padding-top: 20px;
+    padding-top: 7px;
     padding-left: 20px;
 }
 #bottom_bar .be_heard a
@@ -333,8 +333,8 @@ body {
 
 #bottom_bar .copyright {
     float: right;
+    padding-top: 7px;
     padding-right: 20px;
-    padding-top: 20px;
 }
 
 #bottom_bar .copyright a {
@@ -343,13 +343,9 @@ body {
     outline: 0;
 }
 
-#bottom_bar .copyright a:visited {
-   	color: #fff:
-}
-
 #bottom_container {
     position: absolute;
-    bottom: 48px;
+    bottom: 21px;
     height: 55px;
     left: 0px;
     right: 0px;
