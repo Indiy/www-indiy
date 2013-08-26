@@ -139,7 +139,11 @@
     <div id='v2_top_bar'>
         <div class='title'><?=$template_params['top_bar_title'];?></div>
         <div class='right'>
-            
+
+            <?php foreach( $tab_list as $k => $tab ): ?>
+                <div id='show_tab_<?=$k;?>' class='show_tab'>+ <?=$tab['name'];?></div>
+                <div id='hide_tab_<?=$k;?>' style='display: none;' class='hide_tab'>- <?=$tab['name'];?></div>
+            <?php endforeach; ?>
 
             <div class='show_store' onclick='showStore();'>+ SHOW STORE</div>
             <div class='hide_store' style='display: none;' onclick='hideStore();'>- HIDE STORE</div>
