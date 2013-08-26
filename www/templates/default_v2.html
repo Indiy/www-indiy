@@ -141,8 +141,8 @@
         <div class='right'>
 
             <?php foreach( $tab_list as $k => $tab ): ?>
-                <div id='show_tab_<?=$k;?>' class='show_tab'>+ <?=$tab['name'];?></div>
-                <div id='hide_tab_<?=$k;?>' style='display: none;' class='hide_tab'>- <?=$tab['name'];?></div>
+                <div id='show_tab_<?=$k;?>' class='show_tab'>+ <?=$tab['title'];?></div>
+                <div id='hide_tab_<?=$k;?>' style='display: none;' class='hide_tab'>- <?=$tab['title'];?></div>
             <?php endforeach; ?>
 
             <div class='show_store' onclick='showStore();'>+ SHOW STORE</div>
@@ -152,27 +152,6 @@
         </div>
     </div>
 
-    
-    <a <?=$all_links_blank;?> href="<?=trueSiteUrl();?>" title='MyArtistDNA'><div id='top_bar_mad_logo'></div></a>
-    <div id='top_bar' class='idle_fade_out'>
-        <div class='artist_name'><?=$artist_name;?></div>
-        <div class='search_viewed_tabs'>
-            <div class='search' onclick='toggleSearchBox();'></div>
-            <div class='sep'></div>
-            <div id='player_view_count' class='view_count'>VIEWED <span id='total_view_count'><?=number_format($artist_views);?></span></div>
-            <div class='sep'></div>
-            <div id='more_tabs_button' class='more_tabs' onclick='showMoreTabs();'>
-                <div class='more_block'>
-                    <div class='more_arrow'></div>
-                </div>
-            </div>
-            <div class='content_tabs'>
-                <div class='inner'>
-                    <?=$content_tabs_html;?>
-                </div>
-            </div>
-        </div>
-    </div>
     <div id='bottom_bar'>
         <div class='be_heard'>BE HEARD. BE SEEN. BE INDEPENDENT.</div>
         <div class='slash'>//</div>
