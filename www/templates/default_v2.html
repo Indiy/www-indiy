@@ -132,19 +132,22 @@
         <div class='pad'></div>
         <div id='video_container'></div>
     </div>
-    <div id='splash_form'>
-        <div class='content'>
-            <div class='input_container'>
-                <input value='ENTER EMAIL TO DOWNLOAD'/>
-            </div>
-            <div class='button_container'>
-                <div class='button' onclick='submitSplashForm();'>DOWNLOAD</div>
-            </div>
-        </div>
-    </div>
     <div id='under_construction'></div>
     <div id='player_prev' class='idle_fade_out player_nav_button' onclick='playerPrevious();'></div>
     <div id='player_next' class='idle_fade_out player_nav_button' onclick='playerNext();'></div>
+    
+    <div id='v2_top_bar'>
+        <div class='title'><?=$template_params['top_bar_title'];?></div>
+        <div class='right'>
+            
+
+            <div class='show_store' onclick='showStore();'>+ SHOW STORE</div>
+            <div class='hide_store' style='display: none;' onclick='hideStore();'>- HIDE STORE</div>
+            <div class='show_feed' onclick='showTwitter();'>+ SHOW SOCIAL FEED</div>
+            <div class='hide_feed' style='display: none;' onclick='hideTwitter();'>- HIDE SOCIAL FEED</div>
+        </div>
+    </div>
+
     
     <a <?=$all_links_blank;?> href="<?=trueSiteUrl();?>" title='MyArtistDNA'><div id='top_bar_mad_logo'></div></a>
     <div id='top_bar' class='idle_fade_out'>
@@ -215,11 +218,6 @@
                         </div>
                     <? endif; ?>
                 <? endif; ?>
-                <div class='sep'></div>
-                <div class='comment tooltiped button' onclick='showComments();' tooltip="COMMENTS">
-                    <div class='icon'></div>
-                    <div id='comment_badge_count' class='comment_badge_count'></div>
-                </div>
                 <div class='sep'></div>
                 <div id='love_button' class='love tooltiped button' onclick='clickLoveIcon();' tooltip="LOVE">
                     <div class='icon'></div>
@@ -421,20 +419,6 @@
                     Thank you for your submission.  Someone will contact you as soon as possible.
                 </div>
             </div>
-        </div>
-        <?=build_scrollbar();?>
-    </div>
-    <div id='comment_tab' class='content_tab'>
-        <div class='close' onclick='hideTab();'>
-            <div class='icon'></div>
-            <div class='name'>CLOSE</div>
-        </div>
-        <div class='left'>
-            <div class='title'>COMMENTS</div>
-        </div>
-        <div class='sep'></div>
-        <div class='comment_container scrollbar-pane'>
-            <?=$comments_html;?>
         </div>
         <?=build_scrollbar();?>
     </div>
