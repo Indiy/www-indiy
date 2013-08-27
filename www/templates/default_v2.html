@@ -39,6 +39,8 @@
     <script src="<?=static_file_url('/js/player_tooltips.js');?>" type="text/javascript"></script>
     <script src="<?=static_file_url('/js/player_comments.js');?>" type="text/javascript"></script>
 
+    <script src="<?=static_file_url('/js/default_v2.js');?>" type="text/javascript"></script>
+
     <script type="text/javascript">
         var g_tabList = <?=$tab_list_json;?>;
         var g_photoList = <?=$photo_list_json;?>;
@@ -141,15 +143,17 @@
         <div class='right'>
 
             <?php foreach( $tab_list as $k => $tab ): ?>
-                <div id='show_tab_<?=$k;?>' class='show_tab'>+ <?=$tab['title'];?></div>
-                <div id='hide_tab_<?=$k;?>' style='display: none;' class='hide_tab'>- <?=$tab['title'];?></div>
+                <div id='show_tab_<?=$k;?>' class='show_tab show_button'>+ <?=$tab['title'];?></div>
+                <div id='hide_tab_<?=$k;?>' style='display: none;' class='hide_tab hide_button'>- <?=$tab['title'];?></div>
             <?php endforeach; ?>
 
-            <div class='show_store' onclick='showStore();'>+ SHOW STORE</div>
-            <div class='hide_store' style='display: none;' onclick='hideStore();'>- HIDE STORE</div>
-            <div class='show_feed' onclick='showTwitter();'>+ SHOW SOCIAL FEED</div>
-            <div class='hide_feed' style='display: none;' onclick='hideTwitter();'>- HIDE SOCIAL FEED</div>
+            <div class='show_store show_button' onclick='showStore();'>+ SHOW STORE</div>
+            <div class='hide_store hide_button' style='display: none;' onclick='hideStore();'>- HIDE STORE</div>
+            <div class='show_feed show_button' onclick='showTwitter();'>+ SHOW SOCIAL FEED</div>
+            <div class='hide_feed hide_button' style='display: none;' onclick='hideTwitter();'>- HIDE SOCIAL FEED</div>
         </div>
+    </div>
+    <div id='mad_tw_timeline'>
     </div>
 
     <div id='bottom_bar'>

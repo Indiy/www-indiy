@@ -203,8 +203,26 @@ body {
     color: white;
     font-size: 19px;
     font-family: 'Agency Regular', Helvetica, sans-serif;
+    text-transform: uppercase;
     vertical-align: top;
     cursor: pointer;
+}
+
+#mad_tw_timeline {
+    display: none;
+    position: fixed;
+    top: 70px;
+    bottom: 40px;
+    right: 20px;
+    width: 300px;
+    z-index: 2;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background: rgba(48,48,48,0.8);
+    border-radius: 9px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 #bottom_bar {

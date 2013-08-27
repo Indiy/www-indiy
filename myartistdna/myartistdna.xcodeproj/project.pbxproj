@@ -246,6 +246,7 @@
 		2D64FD1114F8735800C5C468 /* rich_text_editor.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = rich_text_editor.js; sourceTree = "<group>"; };
 		2D6DF27917CAD06F0020CD97 /* default_v2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = default_v2.html; sourceTree = "<group>"; };
 		2D6DF27A17CAD0E10020CD97 /* default_v2.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = default_v2.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2D6DF27B17CC6CE30020CD97 /* default_v2.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = default_v2.js; sourceTree = "<group>"; };
 		2D6DF95114BA4F4A00D0750E /* footer.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = footer.js; sourceTree = "<group>"; };
 		2D6DF95214BA5DA400D0750E /* add_mad_newsletter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_mad_newsletter.php; sourceTree = "<group>"; };
 		2D6DF95314BA62A900D0750E /* mad_newsletter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = mad_newsletter.php; sourceTree = "<group>"; };
@@ -1776,6 +1777,7 @@
 				2DFBC92D1735AE7B001DCEF6 /* splash_video.js */,
 				2DFBC92A172D8DBB001DCEF6 /* countdown_audio.js */,
 				2DE6CDD0175AB206007E6792 /* splash_form_download.js */,
+				2D6DF27B17CC6CE30020CD97 /* default_v2.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
