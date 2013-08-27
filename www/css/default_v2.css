@@ -152,6 +152,40 @@ body {
     background-color: #007b87;
 }
 
+#v2_top_bar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 30px;
+    background: rgba(0,0,0,0.5);
+}
+#v2_top_bar .title {
+    float: left;
+    padding-top: 1px;
+    padding-left: 10px;
+    color: white;
+    font-size: 22px;
+    font-family: 'Neuzeit Grotesk', Helvetica, sans-serif;
+}
+#v2_top_bar .title a {
+    color: white;
+    text-decoration: none;
+}
+#v2_top_bar .right {
+    float: right;
+    padding-right: 10px;
+}
+#v2_top_bar .right div {
+    display: inline-block;
+    padding-top: 1px;
+    width: 120px;
+    color: white;
+    font-size: 22px;
+    font-family: 'Neuzeit Grotesk', Helvetica, sans-serif;
+    vertical-align: top;
+    cursor: pointer;
+}
 
 #top_bar {
     position: absolute;
