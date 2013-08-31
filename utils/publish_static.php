@@ -115,7 +115,7 @@
         return $dst_file;
     }
     
-    function do_static_dir($html_dir,$web_path)
+    function do_static_dir($html_dir,$web_path,$recursive = FALSE)
     {
         global $file_map;
         global $client;
@@ -131,6 +131,13 @@
             $src_file = "$dir/$item";
         
             //print "  item: $item\n";
+        
+            if( is_dir($src_file) && $recursive)
+            {
+                print "recurse dir: $src_file\n";
+                do_static_dir($html_dir,$web_path . "/" . $src_file,$recursive);
+                continue;
+            }
         
             if( !is_file($src_file) )
             {
