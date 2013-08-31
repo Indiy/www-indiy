@@ -75,7 +75,7 @@ function hideTwitter()
 function showTab($index)
 {
     hideTwitter();
-    showUserTab($index);
+    showUserPage($index);
 }
 function hideTabs()
 {
