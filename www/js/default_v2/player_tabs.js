@@ -39,36 +39,29 @@ function closeMoreTabs()
 
 function showUserPage(i)
 {
-    $('#popup_tab_list').hide();
-    if( g_currentUserPageIndex === i && g_showingContentPage )
+    closeMoreTabs();
+    hideAllTabs();
+    showContentPage();
+    g_currentUserPageIndex = i;
+    
+    var page = g_tabList[i];
+    
+    $('#user_tab .title').html(page.title);
+    if( page.image )
     {
-        hideTab();
+        $('#page_image').attr('src',page.image);
+        $('#page_image_holder').show();
     }
     else
     {
-        hideAllTabs();
-        showContentPage();
-        g_currentUserPageIndex = i;
-        
-        var page = g_tabList[i];
-        
-        $('#user_tab .title').html(page.title);
-        if( page.image )
-        {
-            $('#page_image').attr('src',page.image);
-            $('#page_image_holder').show();
-        }
-        else
-        {
-            $('#page_image_holder').hide();
-        }
-        $('#page_content').html(page.content);
-        $('#user_tab').show();
-        $('#user_tab').scrollbar("repaint");
-        window.setTimeout(function() { $('#user_tab').scrollbar("repaint"); },100);
-        
-        tabUpdateViews(page.id);
+        $('#page_image_holder').hide();
     }
+    $('#page_content').html(page.content);
+    $('#user_tab').show();
+    $('#user_tab').scrollbar("repaint");
+    window.setTimeout(function() { $('#user_tab').scrollbar("repaint"); },100);
+    
+    tabUpdateViews(page.id);
 }
 function hideTab()
 {

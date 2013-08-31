@@ -246,7 +246,6 @@
 		2D64FD1114F8735800C5C468 /* rich_text_editor.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = rich_text_editor.js; sourceTree = "<group>"; };
 		2D6DF27917CAD06F0020CD97 /* default_v2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = default_v2.html; sourceTree = "<group>"; };
 		2D6DF27A17CAD0E10020CD97 /* default_v2.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = default_v2.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
-		2D6DF27B17CC6CE30020CD97 /* default_v2.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = default_v2.js; sourceTree = "<group>"; };
 		2D6DF27D17D2B2910020CD97 /* player_comments.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = player_comments.js; path = default_v2/player_comments.js; sourceTree = "<group>"; };
 		2D6DF27E17D2B2910020CD97 /* player_common.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = player_common.js; path = default_v2/player_common.js; sourceTree = "<group>"; };
 		2D6DF27F17D2B2910020CD97 /* player_general.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = player_general.js; path = default_v2/player_general.js; sourceTree = "<group>"; };
@@ -260,6 +259,7 @@
 		2D6DF28717D2B2910020CD97 /* player_tabs.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = player_tabs.js; path = default_v2/player_tabs.js; sourceTree = "<group>"; };
 		2D6DF28817D2B2910020CD97 /* player_tooltips.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = player_tooltips.js; path = default_v2/player_tooltips.js; sourceTree = "<group>"; };
 		2D6DF28917D2B2910020CD97 /* player_video.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = player_video.js; path = default_v2/player_video.js; sourceTree = "<group>"; };
+		2D6DF28A17D2B2E70020CD97 /* default_v2.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = default_v2.js; path = default_v2/default_v2.js; sourceTree = "<group>"; };
 		2D6DF95114BA4F4A00D0750E /* footer.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = footer.js; sourceTree = "<group>"; };
 		2D6DF95214BA5DA400D0750E /* add_mad_newsletter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_mad_newsletter.php; sourceTree = "<group>"; };
 		2D6DF95314BA62A900D0750E /* mad_newsletter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = mad_newsletter.php; sourceTree = "<group>"; };
@@ -1197,10 +1197,10 @@
 		2D6DF27C17D2AF6B0020CD97 /* default_v2 */ = {
 			isa = PBXGroup;
 			children = (
-				2D6DF27B17CC6CE30020CD97 /* default_v2.js */,
+				2D6DF28A17D2B2E70020CD97 /* default_v2.js */,
+				2D6DF27F17D2B2910020CD97 /* player_general.js */,
 				2D6DF27D17D2B2910020CD97 /* player_comments.js */,
 				2D6DF27E17D2B2910020CD97 /* player_common.js */,
-				2D6DF27F17D2B2910020CD97 /* player_general.js */,
 				2D6DF28017D2B2910020CD97 /* player_image.js */,
 				2D6DF28117D2B2910020CD97 /* player_love.js */,
 				2D6DF28217D2B2910020CD97 /* player_music.js */,
@@ -1771,7 +1771,6 @@
 		2DF472C71440B77F005538C7 /* js */ = {
 			isa = PBXGroup;
 			children = (
-				2D6DF27C17D2AF6B0020CD97 /* default_v2 */,
 				2D3D8EF215AE4D0D00BA97B3 /* jquery.mousewheel.js */,
 				2DBDD1281469DCC4001E20CC /* login_signup.js */,
 				2D6DF95114BA4F4A00D0750E /* footer.js */,
@@ -1812,6 +1811,7 @@
 				2DFBC92D1735AE7B001DCEF6 /* splash_video.js */,
 				2DFBC92A172D8DBB001DCEF6 /* countdown_audio.js */,
 				2DE6CDD0175AB206007E6792 /* splash_form_download.js */,
+				2D6DF27C17D2AF6B0020CD97 /* default_v2 */,
 			);
 			path = js;
 			sourceTree = "<group>";

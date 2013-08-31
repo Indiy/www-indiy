@@ -60,6 +60,8 @@ function showTwitter()
 
     $('#v2_top_bar .right .show_feed').hide();
     $('#v2_top_bar .right .hide_feed').show();
+    
+    closeBottom(false);
 }
 
 function hideTwitter()
@@ -68,4 +70,14 @@ function hideTwitter()
 
     $('#v2_top_bar .right .show_button').show();
     $('#v2_top_bar .right .hide_button').hide();
+}
+
+function showTab($index)
+{
+    hideTwitter();
+    showUserTab($index);
+}
+function hideTabs()
+{
+    hideAllTabs();
 }

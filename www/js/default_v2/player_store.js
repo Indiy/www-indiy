@@ -10,24 +10,18 @@ function storeReady()
 
 function showStore(product_id)
 {
-    $('#popup_tab_list').hide();
-    if( g_showingStore && !product_id )
+    closeMoreTabs();
+    hideAllTabs();
+    showContentPage();
+    storeShowProductList();
+    g_showingStore = true;
+    $('#store_tab').show();
+    
+    $('#store_tab').scrollbar("repaint");
+    
+    if( product_id )
     {
-        hideTab();
-        updateAnchor({product_id: ""});
-    }
-    else
-    {
-        hideAllTabs();
-        showContentPage();
-        storeShowProductList();
-        g_showingStore = true;
-        $('#store_tab').show();
-        
-        $('#store_tab').scrollbar("repaint");
-        
-        if( product_id )
-            storeShowProductId(product_id);
+        storeShowProductId(product_id);
     }
 }
 
