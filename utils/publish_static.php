@@ -132,10 +132,15 @@
         
             //print "  item: $item\n";
         
-            if( is_dir($src_file) && $recursive)
+            if( $item == '.' || $item == '..' )
+            {
+                continue;
+            }
+        
+            if( is_dir($src_file) && $recursive )
             {
                 print "recurse dir: $src_file\n";
-                do_static_dir($html_dir,$web_path . "/" . $src_file,$recursive);
+                do_static_dir($html_dir,$web_path . "/" . $item,$recursive);
                 continue;
             }
         
