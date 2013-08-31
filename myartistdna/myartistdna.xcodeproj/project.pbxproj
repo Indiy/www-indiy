@@ -1181,6 +1181,13 @@
 			name = data;
 			sourceTree = "<group>";
 		};
+		2D6DF27C17D2AF6B0020CD97 /* default_v2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = default_v2;
+			sourceTree = "<group>";
+		};
 		2D747C5015D6354A00128EEC /* utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -1737,6 +1744,7 @@
 		2DF472C71440B77F005538C7 /* js */ = {
 			isa = PBXGroup;
 			children = (
+				2D6DF27C17D2AF6B0020CD97 /* default_v2 */,
 				2D3D8EF215AE4D0D00BA97B3 /* jquery.mousewheel.js */,
 				2DBDD1281469DCC4001E20CC /* login_signup.js */,
 				2D6DF95114BA4F4A00D0750E /* footer.js */,
