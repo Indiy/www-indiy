@@ -51,12 +51,17 @@ function twitterWidgetLoad()
     }
 }
 
+function showAllShowButtons()
+{
+    $('#v2_top_bar .right .show_button').show();
+    $('#v2_top_bar .right .hide_button').hide();
+}
+
 function showTwitter()
 {
     $('#mad_tw_timeline').show();
 
-    $('#v2_top_bar .right .show_button').show();
-    $('#v2_top_bar .right .hide_button').hide();
+    showAllShowButtons();
 
     $('#v2_top_bar .right .show_feed').hide();
     $('#v2_top_bar .right .hide_feed').show();
@@ -68,16 +73,35 @@ function hideTwitter()
 {
     $('#mad_tw_timeline').hide();
 
-    $('#v2_top_bar .right .show_button').show();
-    $('#v2_top_bar .right .hide_button').hide();
+    showAllShowButtons();
 }
 
-function showTab($index)
+function v2_showTab(index)
 {
     hideTwitter();
-    showUserPage($index);
+    showAllShowButtons();
+    $('#v2_top_bar .right .show_tab_' + index).hide();
+    $('#v2_top_bar .right .hide_tab_' + index).show();
+
+    showUserPage(index);
 }
-function hideTabs()
+function v2_hideTabs()
 {
     hideAllTabs();
+    showAllShowButtons();
+}
+function v2_showStore()
+{
+    hideTwitter();
+    showAllShowButtons();
+    
+    $('#v2_top_bar .right .show_store').hide();
+    $('#v2_top_bar .right .hide_store').show();
+
+    showStore();
+}
+function v2_hideStore()
+{
+    showAllShowButtons();
+    hideStore();
 }

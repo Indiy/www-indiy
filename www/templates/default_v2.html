@@ -135,12 +135,12 @@
         <div class='right'>
 
             <?php foreach( $tab_list as $k => $tab ): ?>
-                <div id='show_tab_<?=$k;?>' class='show_tab show_button' onclick='showTab(<?=$k;?>);'>+ <?=$tab['title'];?></div>
-                <div id='hide_tab_<?=$k;?>' style='display: none;' class='hide_tab hide_button' onclick='hideTabs();'>- <?=$tab['title'];?></div>
+                <div id='show_tab_<?=$k;?>' class='show_tab show_button' onclick='v2_showTab(<?=$k;?>);'>+ <?=$tab['title'];?></div>
+                <div id='hide_tab_<?=$k;?>' style='display: none;' class='hide_tab hide_button' onclick='v2_hideTabs();'>- <?=$tab['title'];?></div>
             <?php endforeach; ?>
 
-            <div class='show_store show_button' onclick='showStore();'>+ SHOW STORE</div>
-            <div class='hide_store hide_button' style='display: none;' onclick='hideStore();'>- HIDE STORE</div>
+            <div class='show_store show_button' onclick='v2_showStore();'>+ SHOW STORE</div>
+            <div class='hide_store hide_button' style='display: none;' onclick='v2_hideStore();'>- HIDE STORE</div>
             <div class='show_feed show_button' onclick='showTwitter();'>+ SHOW SOCIAL FEED</div>
             <div class='hide_feed hide_button' style='display: none;' onclick='hideTwitter();'>- HIDE SOCIAL FEED</div>
         </div>
