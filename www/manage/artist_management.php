@@ -235,15 +235,24 @@
     $q = mq($sql);
     while( $pl = mf($q) )
     {
-        $playlist_id = $pl['playlist_id'];
+        
         $pl['items'] = array();
+        
+        $playlist_list[] = $pl;
+    }
+    
+    for( $i = 0 ; $i < count($playlist_list) ; ++$i )
+    {
+        $playlist = $playlist_list[$i];
+        $playlist_id = $playlist['playlist_id'];
         
         $sql = "SELECT playlist_items.*, artist_files.filename AS image, artist_files.extra_json AS image_extra_json ";
         $sql .= " FROM playlist_items ";
         $sql .= " LEFT JOIN artist_files ON playlist_items.image_id = artist_files.id ";
         $sql .= " WHERE playlist_id='$playlist_id' ";
-        $q2 = mq($sql);
-        while( $row = mf($q2) )
+        print "sql: $sql\n";
+        $q = mq($sql);
+        while( $row = mf($q) )
         {
             $image_extra = json_decode($row['image_extra_json'],TRUE);
             $row['image_extra'] = $image_extra;
@@ -255,10 +264,10 @@
             {
                 $row['image_url'] = "images/photo_video_01.jpg";
             }
-            $pl['items'][] = $row;
+            $playlist['items'][] = $row;
         }
-        $playlist_list[] = $pl;
     }
+    
     $playlist_list_json = json_encode($playlist_list);
     
     require_once "templates/artist_management.html";
