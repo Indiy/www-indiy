@@ -116,6 +116,12 @@ function onPlaylistItemSubmit()
     var bg_color = $('#edit_playlist_item #bg_color').val();
     var media_id = $('#edit_playlist_item #media_id').val();
     
+    if( name.length == 0 )
+    {
+        window.alert('Please name your item.');
+        return;
+    }
+    
     var url = "/manage/data/playlist_items.php";
     var data = {
         playlist_id: playlist.playlist_id,
