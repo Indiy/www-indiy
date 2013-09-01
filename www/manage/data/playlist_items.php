@@ -57,9 +57,26 @@ function do_ORDER()
     exit();
 }
 
-function get_playlist_item()
+function get_playlist_item($playlist_item_id)
 {
-    
+    $sql = "SELECT playlist_items.*, artist_files.filename AS image, artist_files.extra_json AS image_extra_json ";
+    $sql .= " FROM playlist_items ";
+    $sql .= " LEFT JOIN artist_files ON playlist_items.image_id = artist_files.id ";
+    $sql .= " WHERE playlist_item_id = '$playlist_item_id' ";
+    $q = mq($sql);
+    while( $row = mf($q) )
+    {
+        $image_extra = json_decode($row['image_extra_json'],TRUE);
+        $row['image_extra'] = $image_extra;
+        if( !empty($row['image']) )
+        {
+            $row['image_url'] = artist_file_url($row['image']);
+        }
+        else
+        {
+            $row['image_url'] = "images/photo_video_01.jpg";
+        }
+    }
 }
 
 function do_POST()
@@ -87,6 +104,7 @@ function do_POST()
     }
     
     $ret = array();
+    $ret['playlist_item'] = get_playlist_item($playlist_item_id);
     $ret['values'] = $values;
     $ret['playlist_item_id'] = $playlist_item_id;
     $ret['success'] = 1;

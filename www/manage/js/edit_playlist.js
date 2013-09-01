@@ -74,14 +74,32 @@ function updatePlaylists()
 $(document).ready(updatePlaylists);
 
 var g_currentPlaylistIndex = false;
-function showPlaylistItemPopup(playlist_index)
+var g_currentPlaylistItemIndex = false;
+function showPlaylistItemPopup(playlist_index,playlist_item_index)
 {
     g_currentPlaylistIndex = playlist_index;
-    
-    $('#edit_playlist_item #name').val("");
-    fillArtistFileIdSelect('#edit_playlist_item #image_id','IMAGE',false);
-    $('#edit_playlist_item #bg_color').val('000000');
-    fillArtistFileIdSelect('#edit_playlist_item #media_id',['AUDIO','VIDEO'],false);
+
+    if( playlist_item_index )
+    {
+        var playlist = g_playlistList[playlist_index];
+        g_currentPlaylistItemIndex = playlist_item_index;
+        var playlist_item = playlist.items[playlist_item_index];
+        
+        $('#edit_playlist_item #name').val(playlist_item.name);
+        fillArtistFileIdSelect('#edit_playlist_item #image_id','IMAGE',playlist_item.image_id);
+        $('#edit_playlist_item #bg_style').val(playlist_item.bg_style);
+        $('#edit_playlist_item #bg_color').val(playlist_item.bg_color);
+        fillArtistFileIdSelect('#edit_playlist_item #media_id',['AUDIO','VIDEO'],playlist_item.media_id);
+    }
+    else
+    {
+        g_currentPlaylistItemIndex = false;
+        $('#edit_playlist_item #name').val("");
+        fillArtistFileIdSelect('#edit_playlist_item #image_id','IMAGE',false);
+        $('#edit_playlist_item #bg_style').val('LETTERBOX');
+        $('#edit_playlist_item #bg_color').val('000000');
+        fillArtistFileIdSelect('#edit_playlist_item #media_id',['AUDIO','VIDEO'],false);
+    }
     
     showPopup('#edit_playlist_item');
 }
@@ -107,6 +125,11 @@ function onPlaylistItemSubmit()
         bg_color: bg_color,
         media_id: media_id
     };
+
+    if( g_currentPlaylistItemIndex )
+    {
+        data.playlist_item_id = playlist.items[g_currentPlaylistItemIndex].playlist_item_id;
+    }
     
     jQuery.ajax(
     {
@@ -116,6 +139,15 @@ function onPlaylistItemSubmit()
         dataType: 'json',
         success: function(data) 
         {
+            if( g_currentPlaylistItemIndex )
+            {
+                playlist.items[g_currentPlaylistItemIndex] = data.playlist_item;
+            }
+            else
+            {
+                playlist.items.push(data.playlist_item);
+            }
+            updatePlaylists();
             showSuccess("Playlist item added.");
         },
         error: function()
