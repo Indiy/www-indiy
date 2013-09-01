@@ -277,6 +277,34 @@
         
         $page_list[] = $row;
     }
+    for( $i = 0 ; $i < count($page_list) ; ++$i )
+    {
+        $page = $page_list[$i];
+        $page_id = $page['page_id'];
+        
+        $sql = "SELECT page_playlists.*, page_playlists.name AS playlist_name ";
+        $sql .= " FROM page_playlists ";
+        $sql .= " LEFT JOIN playlists ON page_playlists.playlist_id = playlists.playlist_id ";
+        $sql .= " WHERE page_id = '$page_id' ";
+        $sql .= " ORDER BY page_playlists.order ASC, page_playlists.page_playlist_id DESC ";
+        $q = mq($sql);
+        while( $row = mf($q) )
+        {
+            $page_list[$i]['playlists'][] = $row;
+        }
+        
+        $sql = "SELECT page_tabs.*, mydna_musicplayer_content.name AS tab_name ";
+        $sql .= " FROM page_tabs ";
+        $sql .= " LEFT JOIN mydna_musicplayer_content ON page_tabs.tab_id = mydna_musicplayer_content.id ";
+        $sql .= " WHERE page_id = '$page_id' ";
+        $sql .= " ORDER BY page_tabs.orders ASC, page_tabs.page_tab_id DESC ";
+        $q = mq($sql);
+        while( $row = mf($q) )
+        {
+            $page_list[$i]['tabs'][] = $row;
+        }
+    }
+    
     $page_list_json = json_encode($page_list);
     
     require_once "templates/artist_management.html";
