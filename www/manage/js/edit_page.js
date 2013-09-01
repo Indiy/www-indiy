@@ -120,7 +120,7 @@ function onPageItemSubmit()
 {
     var page = g_pageList[g_pageIndex];
     
-    var playlist_id = $('#edit_page_item #playlist_list').val();
+    var playlist_id = $('#add_page_item #playlist_list').val();
     if( playlist_id > 0 )
     {
         var url = "/manage/data/page_playlists.php";
@@ -146,7 +146,7 @@ function onPageItemSubmit()
         });
     }
     
-    var tab_id = $('#edit_page_item #tab_list').val();
+    var tab_id = $('#add_page_item #tab_list').val();
     if( tab_id > 0 )
     {
         
