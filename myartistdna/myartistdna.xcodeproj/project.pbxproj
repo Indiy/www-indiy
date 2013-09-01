@@ -267,6 +267,7 @@
 		2D6DF28F17D37F8E0020CD97 /* pages.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = pages.php; sourceTree = "<group>"; };
 		2D6DF29017D381A90020CD97 /* edit_page.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_page.js; sourceTree = "<group>"; };
 		2D6DF29117D381C00020CD97 /* edit_page.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = edit_page.html; sourceTree = "<group>"; };
+		2D6DF29217D3A1D80020CD97 /* page_playlists.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = page_playlists.php; sourceTree = "<group>"; };
 		2D6DF95114BA4F4A00D0750E /* footer.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = footer.js; sourceTree = "<group>"; };
 		2D6DF95214BA5DA400D0750E /* add_mad_newsletter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_mad_newsletter.php; sourceTree = "<group>"; };
 		2D6DF95314BA62A900D0750E /* mad_newsletter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = mad_newsletter.php; sourceTree = "<group>"; };
@@ -1446,6 +1447,7 @@
 				2D6DF28B17D2C3E10020CD97 /* playlists.php */,
 				2D6DF28C17D2C7F70020CD97 /* playlist_items.php */,
 				2D6DF28F17D37F8E0020CD97 /* pages.php */,
+				2D6DF29217D3A1D80020CD97 /* page_playlists.php */,
 			);
 			path = data;
 			sourceTree = "<group>";

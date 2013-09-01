@@ -1,5 +1,9 @@
 
 
+function updatePages()
+{
+}
+
 var g_pageIndex = false;
 function showPagePopup(index)
 {
@@ -86,3 +90,67 @@ function onPageSubmit()
     });
     return false; 
 }
+
+function showPageItemPopup(page_index)
+{
+    g_pageIndex = page_index;
+    
+    var html = "<option value='0'>None</option>";
+    $('#edit_page_item #playlist_list').html(html);
+    for( var i = 0 ; i < g_playlistList.length ; ++i )
+    {
+        var playlist = g_playlistList[i];
+        var html = "<option value='{0}'>{2}</option>".format(playlist.playlist_id,playlist.name);
+        $('#edit_page_item #playlist_list').append(html);
+    }
+    showPopup('#edit_page_item');
+    
+    var html = "<option value='0'>None</option>";
+    $('#edit_page_item #tab_list').html(html);
+    for( var i = 0 ; i < g_tabList.length ; ++i )
+    {
+        var tab = g_tabList[i];
+        var html = "<option value='{0}'>{2}</option>".format(tab.id,tab.name);
+        $('#edit_page_item #tab_list').append(html);
+    }
+    showPopup('#edit_page_item');
+}
+
+function onPageItemSubmit()
+{
+    var page = g_pageList[g_pageIndex];
+    
+    var playlist_id = $('#edit_page_item #playlist_list').val();
+    if( playlist_id > 0 )
+    {
+        var url = "/manage/data/page_playlists.php";
+        var data = {
+            page_id: page.page_id,
+            playlist_id: playlist_id
+        };
+        
+        jQuery.ajax(
+        {
+            type: 'POST',
+            url: url,
+            data: data,
+            dataType: 'json',
+            success: function(data) 
+            {
+                updatePages();
+            },
+            error: function()
+            {
+                showFailure("Page playlist add failed.  You can only add a playlist once.");
+            }
+        });
+    }
+    
+    var tab_id = $('#edit_page_item #tab_list').val();
+    if( tab_id > 0 )
+    {
+        
+    }
+}
+
+
