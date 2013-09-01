@@ -55,18 +55,14 @@ function showPagePopup(index)
         g_pageIndex = index;
         template_id = page.template_id;
         $('#edit_page #uri').val(page.uri);
-        fillArtistFileIdSelect('#edit_page #favicon_id','ALL',page.favicon_id);
     }
     else
     {
         g_pageIndex = false;
         $('#edit_page #uri').val("");
-        fillArtistFileIdSelect('#edit_page #favicon_id','ALL',false);
     }
     
     $('#edit_page #template_list').empty();
-    var html = "<option value='0'>DEFAULT</option>";
-    $('#edit_page #template_list').append(html);
     for( var i = 0 ; i < g_templateList.length ; ++i )
     {
         var template = g_templateList[i];
@@ -93,7 +89,6 @@ function onPageSubmit()
 
     var uri = $('#edit_page #uri').val();
     var template_id = $('#edit_page #template_list').val();
-    var favicon_id = $('#edit_page #favicon_id').val();
     
     if( uri.length == 0 )
     {
@@ -105,8 +100,7 @@ function onPageSubmit()
     var data = {
         artist_id: g_artistId,
         uri: uri,
-        template_id: template_id,
-        favicon_id: favicon_id
+        template_id: template_id
     };
     if( g_pageIndex !== false )
     {

@@ -13,35 +13,26 @@
     session_start();
     session_write_close();
     
-    $artist_url = get_artist_url_for_page();
-    
-    if( $artist_url )
+    if( isset($_SESSION['sess_userId']) && $_SESSION['sess_userId'] > 0 )
     {
-        include_once 'player.php';
-    }
-    else
-    {
-        if( isset($_SESSION['sess_userId']) && $_SESSION['sess_userId'] > 0 )
+        $user_id =  $_SESSION['sess_userId'];
+        if( $_SESSION['sess_userType'] == 'ARTIST' )
         {
-            $user_id =  $_SESSION['sess_userId'];
-            if( $_SESSION['sess_userType'] == 'ARTIST' )
-            {
-                header("Location: /manage/artist_management.php?userId=$user_id");
-                die();
-            }
-            else if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' )
-            {
-                header("Location: /manage/dashboard.php");
-                die();
-            }
-            else if( $_SESSION['sess_userType'] == 'LABEL' )
-            {
-                header("Location: /manage/dashboard.php");
-                die();
-            }
+            header("Location: /manage/artist_management.php?userId=$user_id");
+            die();
         }
-        include_once 'home.php';
-        die();
+        else if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' )
+        {
+            header("Location: /manage/dashboard.php");
+            die();
+        }
+        else if( $_SESSION['sess_userType'] == 'LABEL' )
+        {
+            header("Location: /manage/dashboard.php");
+            die();
+        }
     }
+    include_once 'home.php';
+    die();
 
 ?>

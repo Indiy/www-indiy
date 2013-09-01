@@ -48,7 +48,6 @@ function do_POST()
     $values['artist_id'] = $_REQUEST['artist_id'];
     $values['uri'] = $_REQUEST['uri'];
     $values['template_id'] = $_REQUEST['template_id'];
-    $values['favicon_id'] = $_REQUEST['favicon_id'];
     
     if( isset($_REQUEST['page_id']) )
     {

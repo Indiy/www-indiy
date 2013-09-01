@@ -38,8 +38,8 @@
         }
     }
     
-    print "found page: " . $page['page_id'] . "\n"; 
-    die();
+    print "found page: " . $page['page_id'] . "\n";
+    $page_id = 
     
     $hide_volume = FALSE;
     $single_media_button = FALSE;
@@ -108,7 +108,7 @@
     $artist_email = $artist_data['email'];
     $artist_views = artist_get_total_views($artist_id);
     $artist_logo = $artist_data['logo'];
-    $template_id = $artist_data['template_id'];
+    $template_id = $page['template_id'];
     
     if( isset($_REQUEST['preview_template']) )
     {
@@ -182,9 +182,14 @@
     if( count($product_list) > 0 )
         $store_enabled = TRUE;
     
-    $q_tabs = mq("SELECT * FROM mydna_musicplayer_content WHERE artistid='$artist_id' ORDER BY `order` ASC, `id` DESC");
+    $sql = "SELECT mydna_musicplayer_content.* ";
+    $sql .= " FROM page_tabs ";
+    $sql .= " JOIN mydna_musicplayer_content.id ON mydna_musicplayer_content.id = page_tabs.tab_id ";
+    $sql .= " WHERE page_tabs.page_id = '$page_id' ";
+    $sql .= " ORDER BY page_tabs.order ASC, page_tabs.page_tab_id DESC";
+    $q = mq($sql);
     $tab_list = array();
-    while( $tab = mf($q_tabs) )
+    while( $tab = mf($q) )
     {
         $title = stripslashes($tab['name']);
         $content = stripslashes($tab['body']);
@@ -201,23 +206,6 @@
         $tab_list[] = $item;
     }
     $tab_list_json = json_encode($tab_list);
-
-    $content_tabs_html = '';
-    foreach( $tab_list as $i => $tab )
-    {
-        $title = $tab['title'];
-        $content_tabs_html .= "<div class='tab' onclick='showUserPage($i);'>$title</div>\n";
-    }
-    
-    if( $store_enabled )
-    {
-        $content_tabs_html .= "<div class='tab' onclick='showStore();'>Store</div>";
-    }
-    //$content_tabs_html .= "<div class='tab' onclick='showComments();'>Comment</div>";
-    if( $artist_email )
-    {
-        $content_tabs_html .= "<div class='tab' onclick='showContact();'>Contact</div>";
-    }
     
     $sql = "SELECT mydna_musicplayer_audio.* , af1.extra_json AS audio_extra_json, af2.extra_json AS image_extra_json";
     $sql .= " FROM mydna_musicplayer_audio";
@@ -421,32 +409,13 @@
     if( count($photo_list) > 3 )
         $photo_nav_show = TRUE;
     
-    if( $_COOKIE['FAN_HAS_ORDERED'] == "1" )
-        $show_order_status = TRUE;
-    else
-        $show_order_status = FALSE;
-
-
     $is_logged_in_text = FALSE;
     $is_logged_in_url = FALSE;
 
-
     $login_url = FALSE;
-    if( strlen($_COOKIE['FAN_EMAIL']) > 0 
-       || strlen($_COOKIE['LOGIN_EMAIL']) > 0 )
-        $login_url = trueSiteUrl() . "/login.php";
-        
     $signup_url = trueSiteUrl() . "/signup.php";
     
     $fan_email = "";
-    if( strlen($_COOKIE['FAN_EMAIL']) > 0 )
-    {
-        $fan_email = $_COOKIE['FAN_EMAIL'];
-    }
-    elseif( strlen($_COOKIE['PAGE_VIEWER_EMAIL']) > 0 )
-    {
-        $fan_email = $_COOKIE['PAGE_VIEWER_EMAIL'];
-    }
     
     $body_style = "";
     if( $NARROW_SCREEN )
@@ -462,11 +431,6 @@
     {
         $body_style .= " thin_footer";
     }
-        
-    $comments_html = "";
-    $comments_html .= make_comments_for_list($artist_base_url,"song",$music_list);
-    $comments_html .= make_comments_for_list($artist_base_url,"video",$video_list);
-    $comments_html .= make_comments_for_list($artist_base_url,"photo",$photo_list);
     
     if( $template_id )
     {
@@ -612,30 +576,6 @@
         else if( $template_type == 'PLAYER_SPLASH_FORM_DOWNLOAD' )
         {
             include_once 'templates/splash_form_download.html';
-        }
-    }
-    else
-    {
-        if( $iphone_version )
-        {
-            $button_count = 0;
-            if( count($music_list) > 0 )
-                $button_count++;
-            if( count($video_list) > 0 )
-                $button_count++;
-            if( count($photo_list) > 0 )
-                $button_count++;
-            
-            $button_style = "buttons_$button_count";
-        
-            $copyright_text = "&copy;MyArtistDNA";
-            $head_title_text = "MyAritstDNA | Be Heard. Be Seen. Be Independent.";
-            
-            include_once 'templates/player_iphone.html';
-        }
-        else
-        {
-            include_once 'templates/player.html';
         }
     }
 
