@@ -1,7 +1,7 @@
 
 function showSocialPost(page_index)
 {
-    var page = g_pageList[page_index];
+    var page = g_audioList[page_index];
     var name = page.name;
     var short_link = page.short_link;
     var update_text = "Check out my new Art, {0}: {1} via @myartistdna".format(name,short_link);

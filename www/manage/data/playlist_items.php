@@ -112,9 +112,7 @@ function do_POST()
     $ret['values'] = $values;
     $ret['playlist_item_id'] = $playlist_item_id;
     $ret['success'] = 1;
-    
     $ret['postedValues'] = $_REQUEST;
-    
     echo json_encode($ret);
     exit();
 }

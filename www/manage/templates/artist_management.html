@@ -21,6 +21,7 @@
     require_once 'artist_file.html';
     require_once 'edit_template.html';
     require_once 'edit_playlist.html';
+    require_once 'edit_page.html';
 
     if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' )
     {
@@ -38,7 +39,7 @@
     
     var g_artistPageUrl = "<?=$artist_url;?>";
     
-    var g_pageList = <?=$page_list_json;?>;
+    var g_audioList = <?=$audio_list_json;?>;
     var g_photoList = <?=$photo_list_json;?>;
     var g_videoList = <?=$video_list_json;?>;
     var g_tabList = <?=$tab_list_json;?>;
@@ -46,6 +47,7 @@
     var g_fileList = <?=$file_list_json;?>;
     var g_templateList = <?=$template_list_json;?>;
     var g_playlistList = <?=$playlist_list_json;?>;
+    var g_pageList = <?=$page_list_json;?>;
     
     var g_playerUrl = "<?=playerUrl();?>";
     var g_artistFileBaseUrl = "<?=artist_file_base_url();?>";
@@ -113,6 +115,7 @@
                     <h6>Platform</h6>
                     <ul>
                         <li><a onclick='showPlaylistPopup(false);' title='Add Playlist'>Add Playlist</a></li>
+                        <li><a onclick='showPagePopup(false);' title='Add Page'>Add Page</a></li>
                         <li><a onclick='showAudioPopup(false);' title='Add audio to your site'>Add Audio</a></li>
                         <li><a onclick='showVideoPopup(false);' title='Add a video to your site'>Add Video</a></li>
                         <li><a onclick='showPhotoPopup(false);' title='Add a photo to your site'>Add Photo</a></li>
@@ -184,7 +187,7 @@
                                     <span class="delete">Delete</span>
                                 </li>
                             </ul>
-                            <ul id='page_list_ul' class="playlist_sortable">
+                            <ul id='audio_list_ul' class="audio_sortable">
                             </ul>
                         </div>
                     </div>
@@ -295,6 +298,51 @@
                     
                     <?php endforeach; ?>
                     
+                    <?php foreach( $page_list as $k => $page ): ?>
+                     
+                        <div class="content_list">
+                            <div class="heading">
+                                <div class='title'>Page: <?=$page['name'];?></div>
+                                <a onclick='deletePage(<?=$k;?>);' title='Delete page'>
+                                    <div class="buttonadd">
+                                        <div class='label'>X</div>
+                                    </div>
+                                </a>
+                                <a onclick='showPageItemPopup(<?=$k;?>,false);' title='Add an item to the page'>
+                                    <div class="buttonadd">
+                                        <div class='plus'></div>
+                                        <div class='label'>Add Item</div>
+                                    </div>
+                                </a>
+                                <a onclick='showPagePopup(<?=$k;?>);' title='Edit page'>
+                                    <div class="buttonadd">
+                                        <div class='label'>Edit Page</div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="list" style='display: none;'>
+                                <ul>
+                                    <li class="listheading">
+                                        <span class="title">Playlists</span>
+                                        <span class="delete">Remove</span>
+                                    </li>
+                                </ul>
+                                <ul id='page_playlist_list_ul_<?=$k;?>' class='page_playlist_list_sortable'>
+                                </ul>
+                                <ul>
+                                    <li class="listheading">
+                                        <span class="title">Tabs</span>
+                                        <span class="delete">Remove</span>
+                                    </li>
+                                </ul>
+                                <ul id='page_tab_list_ul_<?=$k;?>' class='page_tab_list_sortable'>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                    <?php endforeach; ?>
+                    
                     <?php if( count($template_list) > 0 ): ?>
                      
                         <div class="content_list">
@@ -319,8 +367,8 @@
                 </div>
             </div>
         </div>
-    </section><!-- content -->
-</section><!-- wrapper -->
+    </section>
+</section>
 
 <div id='drop_file_overlay'>
     <div class='text'>Drop files anywhere to upload&hellip;</div>

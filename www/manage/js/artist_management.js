@@ -7,7 +7,7 @@ var PHOTO_REGULAR_LIMIT = 10;
 
 function artistManagementReady()
 {
-    updatePageList();
+    updateAudioList();
     updatePhotoList();
     updateVideoList();
     updateStoreList();
@@ -29,7 +29,7 @@ function artistManagementReady()
 	});
     $('.heading a').click(function(e) { e.stopPropagation(); });
     
-    setupSortableList('ul.playlist_sortable',"/manage/data/audio.php");
+    setupSortableList('ul.audio_sortable',"/manage/data/audio.php");
     setupSortableList('ul.videos_sortable',"/manage/data/video.php");
     setupSortableList('ul.products_sortable',"/manage/data/product.php");
     setupSortableList('ul.photos_sortable',"/manage/data/photo.php");
@@ -56,17 +56,17 @@ function showList(list_selector)
     }
 }
 
-function updatePageList()
+function updateAudioList()
 {
-    $('#page_list_ul').empty();
-    for( var i = 0 ; i < g_pageList.length ; ++i )
+    $('#audio_list_ul').empty();
+    for( var i = 0 ; i < g_audioList.length ; ++i )
     {
-        var song = g_pageList[i];
+        var song = g_audioList[i];
         
         var class_name = i % 2 == 0 ? 'odd' : ''; 
 
         var html = "";
-        html += "<li id='arrayorder_{0}' class='playlist_sortable {1}'>".format(song.id,class_name);
+        html += "<li id='arrayorder_{0}' class='audio_sortable {1}'>".format(song.id,class_name);
         html += "<span class='title'>\n";
         html += "<a onclick='showAudioPopup({0});'>".format(i);
         html += song.name;
@@ -106,12 +106,12 @@ function updatePageList()
         html += "<span class='delete'><a onclick='deletePage({0});' ></a></span>".format(song.id);
         html += "</li>\n";
         
-        $('#page_list_ul').append(html);
+        $('#audio_list_ul').append(html);
     }
-    if( g_pageList.length == 0 )
+    if( g_audioList.length == 0 )
     {
         var html = "<div class='empty_list'>You have not uploaded any pages yet.</div>";
-        $('#page_list_ul').append(html);
+        $('#audio_list_ul').append(html);
     }
 }
 function updatePhotoList()
@@ -267,7 +267,7 @@ function updateProfile()
 {
     $('#profile_figure img').attr('src',g_artistData.logo_url);
     $('#profile_name_anchor').text(g_artistData.artist);
-    updatePageList();
+    updateAudioList();
     updatePublishState();
 }
 

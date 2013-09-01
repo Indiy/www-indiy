@@ -70,7 +70,7 @@ function updatePlaylists()
             var img_url = get_thumbnail(pl_item.image_url,pl_item.image_extra,210,132);
         
             var html = "";
-            html += "<li id='arrayorder_{0}' class='playlist_sortable'>".format(pl_item.playlist_item_id);
+            html += "<li id='arrayorder_{0}'>".format(pl_item.playlist_item_id);
             html += " <figure>";
             html += "  <span class='close'>";
             html += "   <a href='#' onclick='deletePlaylistItem({0},{1});'></a>".format(i,j);

@@ -46,32 +46,43 @@ function do_POST()
 {
     $values = array();
     $values['artist_id'] = $_REQUEST['artist_id'];
-    $values['name'] = $_REQUEST['name'];
-    $values['type'] = $_REQUEST['type'];
+    $values['uri'] = $_REQUEST['uri'];
+    $values['template_id'] = $_REQUEST['template_id'];
+    $values['favicon_id'] = $_REQUEST['favicon_id'];
     
-    if( isset($_REQUEST['playlist_id']) )
+    if( isset($_REQUEST['page_id']) )
     {
-        $playlist_id = $_REQUEST['playlist_id'];
-        mysql_update("playlists",$values,'playlist_id',$playlist_id);
+        $page_id = $_REQUEST['page_id'];
+        mysql_update("pages",$values,'page_id',$page_id);
     }
     else
     {
-        mysql_insert("playlists",$values);
-        $playlist_id = mysql_insert_id();
+        mysql_insert("pages",$values);
+        $page_id = mysql_insert_id();
+        
+        if( !$page_id )
+        {
+            header('HTTP/1.1 407 Conflict');
+            $ret = array();
+            $ret['postedValues'] = $_REQUEST;
+            $ret['success'] = 0;
+            echo json_encode($ret);
+            exit();
+        }
     }
 
     $ret = array();
     $ret['values'] = $values;
     $ret['success'] = "1";
     $ret['postedValues'] = $_REQUEST;
-    $ret['playlist_id'] = $playlist_id;
+    $ret['page_id'] = $page_id;
     echo json_encode($ret);
     exit();
 }
 function do_DELETE()
 {
-    $playlist_id = $_REQUEST['playlist_id'];
-    $sql = "DELETE FROM playlists WHERE playlist_id='$playlist_id'";
+    $page_id = $_REQUEST['page_id'];
+    $sql = "DELETE FROM pages WHERE page_id='$page_id'";
     mq($sql);
 
     $ret = array();

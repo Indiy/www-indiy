@@ -61,7 +61,7 @@
     $sql .= " WHERE mydna_musicplayer_audio.artistid='$artistID'";
     $sql .= " ORDER BY mydna_musicplayer_audio.order ASC, mydna_musicplayer_audio.id DESC";
 	$result_artistAudio = mq($sql) or die(mysql_error());
-    $page_list = array();
+    $audio_list = array();
     while( $row = mf($result_artistAudio) )
     {
         $image_extra = json_decode($row['image_extra_json'],TRUE);
@@ -70,9 +70,9 @@
         array_walk($row,cleanup_row_element);
         $row['download'] = $row['download'] == "0" ? FALSE : TRUE;
         $row['product_id'] = $row['product_id'] > 0 ? intval($row['product_id']) : FALSE;
-        $page_list[] = $row;
+        $audio_list[] = $row;
     }
-    $page_list_json = json_encode($page_list);
+    $audio_list_json = json_encode($audio_list);
 	
 	$sql = "SELECT mydna_musicplayer_video.*, artist_files.extra_json AS image_extra_json";
     $sql .= " FROM mydna_musicplayer_video ";
@@ -239,7 +239,6 @@
         
         $playlist_list[] = $pl;
     }
-    
     for( $i = 0 ; $i < count($playlist_list) ; ++$i )
     {
         $playlist = $playlist_list[$i];
@@ -266,8 +265,19 @@
             $playlist_list[$i]['items'][] = $row;
         }
     }
-    
     $playlist_list_json = json_encode($playlist_list);
+    
+    $page_list = array();
+    $sql = "SELECT * FROM pages WHERE artist_id='$artistID'";
+    $q = mq($sql);
+    while( $row = mf($q) )
+    {
+        $row['playlists'] = array();
+        $row['tabs'] = array();
+        
+        $page_list[] = $row;
+    }
+    $page_list_json = json_encode($page_list);
     
     require_once "templates/artist_management.html";
 

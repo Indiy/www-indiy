@@ -1,0 +1,30 @@
+<div id='edit_page' class='popup_wrapper'>
+<div id="popup">
+    <div class='top_bar'>
+        <h2>Page</h2>
+        <button onclick='closePopup();'>CLOSE</button>
+    </div>
+    
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+    
+    <div class='input_container'>
+        <div class='left_label'>URI<span class='required'>*</span></div>
+        <input id='uri' class='right_text' type='text' value="" />
+    </div>
+    <div class='input_container'>
+        <div class='left_label'>Template</div>
+        <select id='template_list' class='right_drop'></select>
+    </div>
+    <div class='input_container' style='height: 50px;'>
+        <div class='left_label'>Favicon</div>
+        <select id='favicon_id' class='right_drop' onchange='artistFileDropChange(this);'></select>
+    </div>
+    <div class='submit_container'>
+        <button class="submit" onclick='onPlaylistSubmit();'>Submit</button>
+    </div>
+    
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
+</div>
+</div>

@@ -3,7 +3,7 @@ var g_removeSong = false;
 var g_removeImage = false;
 
 var g_songId = '';
-var g_pageIndex = false;
+var g_audioIndex = false;
 
 $(document).ready(function() { jscolor.init(); });
 
@@ -12,7 +12,7 @@ function showAudioPopup(page_index,song_filename)
     if( !song_filename )
         song_filename = false;
 
-    g_pageIndex = page_index;
+    g_audioIndex = page_index;
     g_removeSong = false;
     g_removeImage = false;
 
@@ -22,7 +22,7 @@ function showAudioPopup(page_index,song_filename)
     {
         $('#edit_audio .top_bar h2').html("Edit Song");
     
-        var song = g_pageList[page_index];
+        var song = g_audioList[page_index];
         
         g_songId = song.id;
         $('#edit_audio #song_id').val(song.id);
@@ -51,7 +51,7 @@ function showAudioPopup(page_index,song_filename)
     else
     {
         if( g_artistData.account_type == 'REGULAR'
-           && g_pageList.length >= SONG_REGULAR_LIMIT )
+           && g_audioList.length >= SONG_REGULAR_LIMIT )
         {
             showAccountLimitPopup();
             return;
@@ -156,15 +156,15 @@ function onAddMusicSubmit()
 
 function onAudioSuccess(data)
 {
-    if( g_pageIndex !== false )
+    if( g_audioIndex !== false )
     {
-        g_pageList[g_pageIndex] = data.page_data;
+        g_audioList[g_audioIndex] = data.page_data;
     }
     else
     {
-        g_pageList.unshift(data.page_data);
+        g_audioList.unshift(data.page_data);
     }
-    updatePageList();
+    updateAudioList();
     showList('.playlist .heading');
 }
 
