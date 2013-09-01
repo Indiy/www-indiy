@@ -235,12 +235,27 @@
     $q = mq($sql);
     while( $pl = mf($q) )
     {
+        $playlist_id = $pl['playlist_id'];
         $pl['items'] = array();
-        $sql = "SELECT * FROM playlist_items WHERE playlist_id='$artistID'";
+        
+        $sql = "SELECT playlist_items.*, artist_files.filename AS image, artist_files.extra_json AS image_extra_json ";
+        $sql .= " FROM playlist_items ";
+        $sql .= " LEFT JOIN artist_files ON playlist_items.image_id = artist_files.id ";
+        $sql .= " WHERE playlist_id='$playlist_id' ";
         $q2 = mq($sql);
-        while( $pi = mf($q2) )
+        while( $row = mf($q2) )
         {
-            $pl['items'][] = $pi;
+            $image_extra = json_decode($row['image_extra_json'],TRUE);
+            $row['image_extra'] = $image_extra;
+            if( !empty($row['image']) )
+            {
+                $row['image_url'] = artist_file_url($row['image']);
+            }
+            else
+            {
+                $row['image_url'] = "images/photo_video_01.jpg";
+            }
+            $pl['items'][] = $row;
         }
         $playlist_list[] = $pl;
     }

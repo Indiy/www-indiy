@@ -36,6 +36,42 @@ function onPlaylistSubmit()
     return false; 
 }
 
+function updatePlaylists()
+{
+    for( var i = 0 ; i < g_playlistList.length ; ++i )
+    {
+        var playlist = g_playlistList[i];
+        var sel = '#playlist_list_ul_' + i;
+        $(sel).empty();
+        for( var j = 0 ; j < playlist.items.length ; ++j )
+        {
+            var pl_item = playlist.items[j];
+
+            var img_url = get_thumbnail(pl_item.image_url,pl_item.image_extra,210,132);
+        
+            var html = "";
+            html += "<li id='arrayorder_{0}' class='playlist_sortable'>".format(pl_item.playlist_item_id);
+            html += " <figure>";
+            html += "  <span class='close'>";
+            html += "   <a href='#' onclick='deletePlaylistItem({0},{1});'></a>".format(i,j);
+            html += "  </span>";
+            html += "  <a title='{0}' onclick='showPlaylistItemPopup({0},{1});'>".format(i,j);
+            html += "   <img src='{0}' width='210' height='132'>".format(img_url);
+            html += "  </a>";
+            html += " </figure>";
+            html += " <span>";
+            html += "  <a title='Edit Item' onclick='showPlaylistItemPopup({0},{1});'>".format(i,j);
+            html += pl_item.name;
+            html += "  </a>";
+            html += " </span>";
+            html += " <br>";
+            html += "</li>";
+            $(sel).append(html);
+        }
+    }
+}
+$(document).ready(updatePlaylists);
+
 var g_currentPlaylistIndex = false;
 function showPlaylistItemPopup(playlist_index)
 {
