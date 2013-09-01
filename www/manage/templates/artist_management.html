@@ -112,7 +112,7 @@
                     </ul>
                     <h6>Platform</h6>
                     <ul>
-                        <li><a onclick='showPlaylistPopup();' title='Add Playlist'>Add Playlist</a></li>
+                        <li><a onclick='showPlaylistPopup(false);' title='Add Playlist'>Add Playlist</a></li>
                         <li><a onclick='showPagePopup(false);' title='Add audio to your site'>Add Audio</a></li>
                         <li><a onclick='showVideoPopup(false);' title='Add a video to your site'>Add Video</a></li>
                         <li><a onclick='showPhotoPopup(false);' title='Add a photo to your site'>Add Photo</a></li>
@@ -269,10 +269,20 @@
                         <div class="photolist">
                             <div class="heading">
                                 <div class='title'>PL: <?=$pl['name'];?></div>
+                                <a onclick='showPlaylistPopup(<?=$k;?>);' title='Edit playlist'>
+                                    <div class="buttonadd">
+                                        <div class='label'>Edit Playlist</div>
+                                    </div>
+                                </a>
                                 <a onclick='showPlaylistItemPopup(<?=$k;?>,false);' title='Add an item to the playlist'>
                                     <div class="buttonadd">
                                         <div class='plus'></div>
                                         <div class='label'>Add Item</div>
+                                    </div>
+                                </a>
+                                <a onclick='deletePlaylist(<?=$k;?>);' title='Delete playlist'>
+                                    <div class="buttonadd">
+                                        <div class='label'>X</div>
                                     </div>
                                 </a>
                             </div>
