@@ -18,11 +18,11 @@
     {
         $uri = "/";
     }
-    print "<html><pre>\n";
-    print "REQUEST_URI: " . $_SERVER['REQUEST_URI'] . "\n";
-    print "artist_id: $artist_id\n";
-    print "url: $uri\n";
-    print "query: $query\n";
+//    print "<html><pre>\n";
+//    print "REQUEST_URI: " . $_SERVER['REQUEST_URI'] . "\n";
+//    print "artist_id: $artist_id\n";
+//    print "url: $uri\n";
+//    print "query: $query\n";
     
     $page = mf(mq("SELECT * FROM pages WHERE artist_id = '$artist_id' AND uri = '$uri'"));
     if( !$page )
@@ -35,7 +35,7 @@
         }
         else
         {
-            print "no page, and not default\n";
+            //print "no page, and not default\n";
         
             header("HTTP/1.0 404 Not Found");
             header("Cache-Control: no-cache");
