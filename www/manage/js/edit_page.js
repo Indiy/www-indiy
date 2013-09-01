@@ -2,7 +2,30 @@
 
 function updatePages()
 {
+    for( var i = 0 ; i < g_pageList.length ; ++i )
+    {
+        var page = g_pageList[i];
+        var sel = '#page_playlist_list_ul_' + i;
+        $(sel).empty();
+        for( var j = 0 ; j < page.playlists.length ; ++j )
+        {
+            var page_playlist = page.playlists[j];
+            var class_name = i % 2 == 0 ? 'odd' : '';
+
+            var html = "";
+            html += "<li id='arrayorder_{0}' class='{1}'>".format(page_playlist.page_playlist_id,class_name);
+            html += "<span class='title'>";
+            html += desc;
+            html += "</span>";
+            html += "<span class='delete'><a  href='#' onclick='deletePagePlaylist({0},{1});'></a></span>".format(i,j);
+            html += "</li>";
+            $(sel).append(html);
+        }
+    }
+    setupSortableList('ul.page_playlist_list_sortable',"/manage/data/page_playlists.php");
+    setupSortableList('ul.page_tab_list_sortable',"/manage/data/page_tabs.php");
 }
+$(document).ready(updatePages);
 
 var g_pageIndex = false;
 function showPagePopup(index)
@@ -138,6 +161,7 @@ function onPageItemSubmit()
             success: function(data) 
             {
                 updatePages();
+                showSuccess("Playlist added to page.");
             },
             error: function()
             {
