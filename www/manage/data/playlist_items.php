@@ -17,6 +17,11 @@
 		exit();
 	}
 
+    if( $_SERVER['REQUEST_METHOD'] == 'DELETE' )
+    {
+       parse_str(file_get_contents('php://input'), $_POST);
+       $_REQUEST = array_merge($_POST,$_GET);
+    }
     $method = $_SERVER['REQUEST_METHOD'];
     if( isset($_REQUEST['method']) )
     {
