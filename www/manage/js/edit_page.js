@@ -19,6 +19,7 @@ function showPagePopup(index)
         fillArtistFileIdSelect('#edit_page #favicon_id','ALL',false);
     }
     
+    $('#edit_page #template_list').empty();
     var html = "<option value='0'>DEFAULT</option>";
     $('#edit_page #template_list').append(html);
     for( var i = 0 ; i < g_templateList.length ; ++i )
@@ -43,10 +44,10 @@ function showPagePopup(index)
 
 function onPageSubmit()
 {
-    showProgress("Adding playlist...");
+    showProgress("Adding page...");
 
     var uri = $('#edit_page #uri').val();
-    var template_id = $('#edit_page #template_id').val();
+    var template_id = $('#edit_page #template_list').val();
     var favicon_id = $('#edit_page #favicon_id').val();
     
     if( uri.length == 0 )
