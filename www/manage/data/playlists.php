@@ -71,7 +71,10 @@ function do_DELETE()
     $sql = "DELETE FROM playlists WHERE playlist_id='$playlist_id'";
     mq($sql);
 
-    $ret = array('success' => 1,'sql' => $sql);
+    $ret = array();
+    $ret['postedValues'] = $_REQUEST;
+    $ret['success'] = ;
+    $ret['sql'] = $sql;
     echo json_encode($ret);
     exit();
 }
