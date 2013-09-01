@@ -15,7 +15,7 @@
     
     $uri = $_SERVER['REQUEST_URI'];
     list($page,$query)  = explode('?',$uri,2);
-    if( len($page) == 0 )
+    if( strlen($page) == 0 )
     {
         $page = "/";
     }
