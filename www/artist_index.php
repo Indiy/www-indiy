@@ -308,7 +308,7 @@
                 $row['video_data'] = array();
             }
             
-            $playlist_list[$i]['items'][] = $item;
+            $playlist_list[$i]['items'][] = $row;
         }
         
         if( $playlist['type'] == 'AUDIO' && empty($music_list) )
