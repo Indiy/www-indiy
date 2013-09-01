@@ -39,7 +39,7 @@
     }
     
     print "found page: " . $page['page_id'] . "\n";
-    $page_id = 
+    $page_id = $page['page_id'];
     
     $hide_volume = FALSE;
     $single_media_button = FALSE;
