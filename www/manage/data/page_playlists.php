@@ -53,7 +53,7 @@ function do_ORDER()
     foreach( $array as $id )
     {
         $values = array("order" => $count);
-        mysql_update('page_playlists',$values,"id",$id);
+        mysql_update('page_playlists',$values,'page_playlist_id',$id);
         ++$count;
     }
     
