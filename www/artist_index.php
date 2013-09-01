@@ -38,7 +38,6 @@
         }
     }
     
-    print "found page: " . $page['page_id'] . "\n";
     $page_id = $page['page_id'];
     
     $hide_volume = FALSE;
@@ -79,7 +78,7 @@
         $media_auto_start = FALSE;
     }
     
-    $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE url='$artist_url' LIMIT 1"));
+    $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id' LIMIT 1"));
     if( $artist_data == FALSE )
     {
         header("HTTP/1.0 404 Not Found");
