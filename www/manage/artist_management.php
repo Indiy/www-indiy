@@ -282,7 +282,7 @@
         $page = $page_list[$i];
         $page_id = $page['page_id'];
         
-        $sql = "SELECT page_playlists.*, page_playlists.name AS playlist_name ";
+        $sql = "SELECT page_playlists.*, playlists.name AS playlist_name ";
         $sql .= " FROM page_playlists ";
         $sql .= " LEFT JOIN playlists ON page_playlists.playlist_id = playlists.playlist_id ";
         $sql .= " WHERE page_id = '$page_id' ";
