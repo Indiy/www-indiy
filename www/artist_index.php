@@ -233,7 +233,7 @@
         $sql .= " ,af2.filename AS media_filename, af2.extra_json AS media_extra_json ";
         $sql .= " FROM playlist_items ";
         $sql .= " LEFT JOIN artist_files AS af1 ON playlist_items.image_id = af1.id ";
-        $sql .= " LEFT JOIN artist_files AS af2 ON playlist_items.,media_id = af2.id ";
+        $sql .= " LEFT JOIN artist_files AS af2 ON playlist_items.media_id = af2.id ";
         $sql .= " WHERE playlist_items.playlist_id = '$playlist_id' ";
         $sql .= " ORDER BY playlist_items.order ASC, playlist_items.playlist_item_id DESC ";
         print "sql: $sql\n";
