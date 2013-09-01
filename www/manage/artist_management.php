@@ -249,7 +249,7 @@
         $sql .= " FROM playlist_items ";
         $sql .= " LEFT JOIN artist_files ON playlist_items.image_id = artist_files.id ";
         $sql .= " WHERE playlist_id='$playlist_id' ";
-        print "sql: $sql\n";
+        $sql .= " ORDER BY playlist_items.order ASC, playlist_items.playlist_item_id DESC ";
         $q = mq($sql);
         while( $row = mf($q) )
         {
