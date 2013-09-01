@@ -62,6 +62,7 @@ function do_POST()
     $playlist_id = $_REQUEST['playlist_id'];
 
     $values = array();
+    $values['playlist_id'] = $playlist_id;
     $values['name'] = $_REQUEST['name'];
     $values['image_id'] = $_REQUEST['image_id'];
     $values['bg_style'] = $_REQUEST['bg_style'];
