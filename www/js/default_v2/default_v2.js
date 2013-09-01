@@ -80,8 +80,8 @@ function v2_showTab(index)
 {
     hideTwitter();
     showAllShowButtons();
-    $('#v2_top_bar .right .show_tab_' + index).hide();
-    $('#v2_top_bar .right .hide_tab_' + index).show();
+    $('#v2_top_bar .right #show_tab_' + index).hide();
+    $('#v2_top_bar .right #hide_tab_' + index).show();
 
     showUserPage(index);
 }
