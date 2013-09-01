@@ -1468,6 +1468,59 @@ END;
         return $artist_url;
     }
 
+    function get_artist_id_for_page()
+    {
+        $artist_host = FALSE;
+        $http_host = $_SERVER["HTTP_HOST"];
+        if( ends_with($http_host,staging_host()) )
+        {
+            $host_parts = explode('.',$http_host);
+            $leading_parts = array_slice($host_parts,0,-3);
+            $leading = implode('.',$leading_parts);
+            
+            $artist_host = $leading;
+        }
+        else
+        {
+            $host_parts = explode('.',$http_host);
+            $trailing_parts = array_slice($host_parts,-2);
+            $trailing = implode('.',$trailing_parts);
+            $leading_parts = array_slice($host_parts,0,-2);
+            $leading = implode('.',$leading_parts);
+            if( "http://www." . $trailing == trueSiteUrl() )
+            {
+                $artist_url = $leading;
+            }
+            else
+            {
+                $row = mf(mq("SELECT id FROM mydna_musicplayer WHERE custom_domain = '$http_host'"));
+                if( $row )
+                {
+                    return $row['id'];
+                }
+                if( !$artist_url )
+                {
+                    $row = mf(mq("SELECT id FROM mydna_musicplayer WHERE custom_domain LIKE '%$trailing'"));
+                    if( $row )
+                    {
+                        return $row['id'];
+                    }
+                }
+            }
+        }
+        
+        if( $artist_host != FALSE )
+        {
+            $row = mf(mq("SELECT id FROM mydna_musicplayer WHERE url = '$artist_host'"));
+            if( $row )
+            {
+                return $row['id'];
+            }
+        }
+        
+        return FALSE;
+    }
+
     function add_free_product_to_fan($product_id)
     {
         $product = get_product_data($product_id);
