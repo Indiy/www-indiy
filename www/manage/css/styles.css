@@ -849,6 +849,9 @@ footer .logo {float:right; line-height:.5em; padding:0 0 43px 0}
     padding: 10px;
     background: #b84852;
 }
+#adminblock .content_list.dark_grey .heading {
+    background: #444;
+}
 #adminblock .content_list .heading .title {
     float: left;
     color: white;
@@ -2486,4 +2489,11 @@ textarea {
 }
 #adminblock .pages .heading .buttonadd .label {
     background-color: #682128;
+}
+
+#adminblock .content_list.dark_grey .heading .buttonadd .plus {
+    background-color: #666;
+}
+#adminblock .content_list.dark_grey .heading .buttonadd .label {
+    background-color: #777;
 }
