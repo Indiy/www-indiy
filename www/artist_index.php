@@ -13,17 +13,38 @@
         die();
     }
     
-    $uri = $_SERVER['REQUEST_URI'];
-    list($page,$query)  = explode('?',$uri,2);
-    if( strlen($page) == 0 )
+    list($uri,$query)  = explode('?',$_SERVER['REQUEST_URI'],2);
+    if( strlen($uri) == 0 )
     {
-        $page = "/";
+        $uri = "/";
     }
     print "<html><pre>\n";
-    print "URI: $uri\n";
+    print "REQUEST_URI: " . $_SERVER['REQUEST_URI'] . "\n";
     print "artist_id: $artist_id\n";
-    print "page: $page\n";
+    print "url: $uri\n";
     print "query: $query\n";
+    
+    $page = mf(mq("SELECT * FROM pages WHERE artist_id = '$artist_id' AND uri = '$uri'"));
+    if( !$page )
+    {
+        if( $uri == '/' )
+        {
+            include_once 'player.php';
+            die();
+        }
+        else
+        {
+            print "no page, and not default\n";
+        
+            header("HTTP/1.0 404 Not Found");
+            header("Cache-Control: no-cache");
+            header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
+            include_once 'error404.php';
+            die();
+        }
+    }
+    
+    print "found page: " . $page['page_id'] . "\n"; 
     die();
     
     $hide_volume = FALSE;
