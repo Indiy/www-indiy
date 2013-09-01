@@ -4,7 +4,7 @@ function showPlaylistPopup()
     showPopup('#edit_playlist');
 }
 
-function onPlaylistSubmit()
+function onPlaylistSubmit(playlist_index)
 {
     showProgress("Adding playlist...");
 
@@ -17,6 +17,11 @@ function onPlaylistSubmit()
         name: name,
         type: type
     };
+    if( playlist_index !== false )
+    {
+        var playlist = g_playlistList[playlist_index];
+        data.playlist_id = playlist.playlist_id;
+    }
     
     jQuery.ajax(
     {
@@ -26,11 +31,18 @@ function onPlaylistSubmit()
         dataType: 'json',
         success: function(data) 
         {
-            showSuccess("Playlist added.");
+            if( playlist_index === false )
+            {
+                window.reload();
+            }
+            else
+            {
+                showSuccess("Playlist updated.");
+            }
         },
         error: function()
         {
-            showFailure("Update Failed");
+            showFailure("Playlist update failed.");
         }
     });
     return false; 
@@ -174,10 +186,8 @@ function deletePlaylistItem(i,j)
     };
     
     var r = window.confirm("Are you sure you want to delete this item?");
-    
     if( r )
     {
-
         jQuery.ajax(
         {
             type: 'DELETE',
@@ -188,6 +198,36 @@ function deletePlaylistItem(i,j)
             {
                 playlist.items.splice(j,1);
                 updatePlaylists();
+            },
+            error: function()
+            {
+                window.alert("Delete failed.");
+            }
+        });
+    }
+    return false;
+}
+function deletePlaylist(i)
+{
+    var playlist = g_playlistList[i];
+    
+    var url = "/manage/data/playlists.php";
+    var data = {
+        playlist_id: playlist.playlist_id
+    };
+    
+    var r = window.confirm("Are you sure you want to delete this playlist?");
+    if( r )
+    {
+        jQuery.ajax(
+        {
+            type: 'DELETE',
+            url: url,
+            data: data,
+            dataType: 'json',
+            success: function(data) 
+            {
+                window.reload();
             },
             error: function()
             {

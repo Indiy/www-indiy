@@ -269,9 +269,9 @@
                         <div class="photolist">
                             <div class="heading">
                                 <div class='title'>PL: <?=$pl['name'];?></div>
-                                <a onclick='showPlaylistPopup(<?=$k;?>);' title='Edit playlist'>
+                                <a onclick='deletePlaylist(<?=$k;?>);' title='Delete playlist'>
                                     <div class="buttonadd">
-                                        <div class='label'>Edit Playlist</div>
+                                        <div class='label'>X</div>
                                     </div>
                                 </a>
                                 <a onclick='showPlaylistItemPopup(<?=$k;?>,false);' title='Add an item to the playlist'>
@@ -280,9 +280,9 @@
                                         <div class='label'>Add Item</div>
                                     </div>
                                 </a>
-                                <a onclick='deletePlaylist(<?=$k;?>);' title='Delete playlist'>
+                                <a onclick='showPlaylistPopup(<?=$k;?>);' title='Edit playlist'>
                                     <div class="buttonadd">
-                                        <div class='label'>X</div>
+                                        <div class='label'>Edit Playlist</div>
                                     </div>
                                 </a>
                             </div>

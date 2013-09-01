@@ -1858,7 +1858,13 @@ textarea {
     text-transform: uppercase;
     padding:5px 0 0 9px;
 }
-#adminblock .photolist .heading .buttonadd { float:right; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#ffffff}
+#adminblock .photolist .heading .buttonadd {
+    float: right;
+    padding-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #ffffff;
+}
 #adminblock .photolist .heading .buttonadd a { 
     float:left; 
     color:#FFFFFF; 
