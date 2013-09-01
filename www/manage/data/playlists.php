@@ -73,7 +73,7 @@ function do_DELETE()
 
     $ret = array();
     $ret['postedValues'] = $_REQUEST;
-    $ret['success'] = ;
+    $ret['success'] = 1;
     $ret['sql'] = $sql;
     echo json_encode($ret);
     exit();
