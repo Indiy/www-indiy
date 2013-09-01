@@ -68,7 +68,7 @@ function do_POST()
 function do_DELETE()
 {
     $playlist_id = $_REQUEST['playlist_id'];
-    mf("DELETE FROM playlists WHERE playlist_id='$playlist_id'");
+    mq("DELETE FROM playlists WHERE playlist_id='$playlist_id'");
 
     $ret = array('success' => 1);
     echo json_encode($ret);

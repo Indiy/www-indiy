@@ -116,7 +116,7 @@ function do_POST()
 function do_DELETE()
 {
     $playlist_item_id = $_REQUEST['playlist_item_id'];
-    mf("DELETE FROM playlist_items WHERE playlist_item_id='$playlist_item_id'");
+    mq("DELETE FROM playlist_items WHERE playlist_item_id='$playlist_item_id'");
 
     $ret = array('success' => 1);
     echo json_encode($ret);
