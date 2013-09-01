@@ -299,6 +299,7 @@
         $sql .= " WHERE page_id = '$page_id' ";
         $sql .= " ORDER BY page_tabs.orders ASC, page_tabs.page_tab_id DESC ";
         $q = mq($sql);
+        print "sql: $sql\n";
         while( $row = mf($q) )
         {
             $page_list[$i]['tabs'][] = $row;
