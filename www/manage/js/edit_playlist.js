@@ -126,7 +126,7 @@ function onPlaylistItemSubmit()
         media_id: media_id
     };
 
-    if( g_currentPlaylistItemIndex )
+    if( g_currentPlaylistItemIndex !== false )
     {
         data.playlist_item_id = playlist.items[g_currentPlaylistItemIndex].playlist_item_id;
     }
@@ -139,7 +139,7 @@ function onPlaylistItemSubmit()
         dataType: 'json',
         success: function(data) 
         {
-            if( g_currentPlaylistItemIndex )
+            if( g_currentPlaylistItemIndex !== false )
             {
                 playlist.items[g_currentPlaylistItemIndex] = data.playlist_item;
             }
