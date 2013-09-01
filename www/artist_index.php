@@ -236,7 +236,6 @@
         $sql .= " LEFT JOIN artist_files AS af2 ON playlist_items.media_id = af2.id ";
         $sql .= " WHERE playlist_items.playlist_id = '$playlist_id' ";
         $sql .= " ORDER BY playlist_items.order ASC, playlist_items.playlist_item_id DESC ";
-        print "sql: $sql\n";
         $q = mq($sql);
         while( $row = mf($q) )
         {
