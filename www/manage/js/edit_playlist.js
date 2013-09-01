@@ -26,6 +26,12 @@ function onPlaylistSubmit()
     var name = $('#edit_playlist #playlist_name').val();
     var type = $('#edit_playlist #playlist_type').val();
     
+    if( name.length == 0 )
+    {
+        window.alert("Please enter a name for your playlist.");
+        return;
+    }
+    
     var url = "/manage/data/playlists.php";
     var data = {
         artist_id: g_artistId,

@@ -52,6 +52,7 @@ function onPageSubmit()
     if( uri.length == 0 )
     {
         window.alert("Please enter a uri for your page.");
+        return;
     }
     
     var url = "/manage/data/pages.php";
