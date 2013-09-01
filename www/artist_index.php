@@ -183,7 +183,7 @@
     
     $sql = "SELECT mydna_musicplayer_content.* ";
     $sql .= " FROM page_tabs ";
-    $sql .= " JOIN mydna_musicplayer_content.id ON mydna_musicplayer_content.id = page_tabs.tab_id ";
+    $sql .= " JOIN mydna_musicplayer_content ON mydna_musicplayer_content.id = page_tabs.tab_id ";
     $sql .= " WHERE page_tabs.page_id = '$page_id' ";
     $sql .= " ORDER BY page_tabs.order ASC, page_tabs.page_tab_id DESC";
     $q = mq($sql);
