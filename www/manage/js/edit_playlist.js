@@ -163,4 +163,38 @@ function onPlaylistItemSubmit()
     });
     return false; 
 }
+function deletePlaylistItem(i,j)
+{
+    var playlist = g_playlistList[i];
+    var playlist_item = playlist.item[j];
+    
+    var url = "/manage/data/playlist_items.php";
+    var data = {
+        playlist_item_id: playlist_item.playlist_item_id
+    };
+    
+    var r = window.confirm("Are you sure you want to delete this item?");
+    
+    if( r )
+    {
+
+        jQuery.ajax(
+        {
+            type: 'DELETE',
+            url: url,
+            data: data,
+            dataType: 'json',
+            success: function(data) 
+            {
+                playlist.items.splice(j,1);
+                updatePlaylists();
+            },
+            error: function()
+            {
+                window.alert("Delete failed.");
+            }
+        });
+    }
+    return false;
+}
 
