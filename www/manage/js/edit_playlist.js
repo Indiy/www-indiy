@@ -48,7 +48,7 @@ function onPlaylistSubmit()
         {
             if( g_playlistIndex === false )
             {
-                window.reload();
+                window.location.reload();
             }
             else
             {
@@ -242,7 +242,7 @@ function deletePlaylist(i)
             dataType: 'json',
             success: function(data) 
             {
-                window.reload();
+                window.location.reload();
             },
             error: function()
             {
