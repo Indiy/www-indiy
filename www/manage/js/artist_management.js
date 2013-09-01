@@ -33,7 +33,7 @@ function artistManagementReady()
     setupSortableList('ul.videos_sortable',"/manage/data/video.php");
     setupSortableList('ul.products_sortable',"/manage/data/product.php");
     setupSortableList('ul.photos_sortable',"/manage/data/photo.php");
-    setupSortableList('ul.pages_sortable',"/manage/data/tab.php");
+    setupSortableList('ul.tabs_sortable',"/manage/data/tab.php");
     
     if( !g_artistData['email'] )
     {
@@ -103,7 +103,7 @@ function updateAudioList()
         }
         html += "</span>";
         
-        html += "<span class='delete'><a onclick='deletePage({0});' ></a></span>".format(song.id);
+        html += "<span class='delete'><a onclick='deleteAudio({0});' ></a></span>".format(song.id);
         html += "</li>\n";
         
         $('#audio_list_ul').append(html);
@@ -246,7 +246,7 @@ function updateTabList()
         var class_name = i % 2 == 0 ? 'odd' : '';
         var html = "";
 
-        html += "<li id='arrayorder_{0}' class='pages_sortable {1}'>".format(tab.id,class_name);
+        html += "<li id='arrayorder_{0}' class='tabs_sortable {1}'>".format(tab.id,class_name);
         html += "<span class='title'>";
         html += "<a onclick='showTabPopup({0});'>".format(i);
         html += tab.name;
@@ -271,7 +271,7 @@ function updateProfile()
     updatePublishState();
 }
 
-function deletePage(song_id)
+function deleteAudio(song_id)
 {
     var ret = window.confirm("Are you sure you want delete this item?");
     if(ret)
