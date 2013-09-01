@@ -287,7 +287,6 @@
         $sql .= " LEFT JOIN playlists ON page_playlists.playlist_id = playlists.playlist_id ";
         $sql .= " WHERE page_id = '$page_id' ";
         $sql .= " ORDER BY page_playlists.order ASC, page_playlists.page_playlist_id DESC ";
-        print "sql: $sql\n";
         $q = mq($sql);
         while( $row = mf($q) )
         {

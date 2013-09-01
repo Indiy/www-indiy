@@ -15,7 +15,7 @@ function updatePages()
             var html = "";
             html += "<li id='arrayorder_{0}' class='{1}'>".format(page_playlist.page_playlist_id,class_name);
             html += "<span class='title'>";
-            html += desc;
+            html += page_playlist.playlist_name;
             html += "</span>";
             html += "<span class='delete'><a  href='#' onclick='deletePagePlaylist({0},{1});'></a></span>".format(i,j);
             html += "</li>";
