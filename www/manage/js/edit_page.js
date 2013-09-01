@@ -17,7 +17,7 @@ function updatePages()
             html += "<span class='title'>";
             html += page_playlist.playlist_name;
             html += "</span>";
-            html += "<span class='delete'><a  href='#' onclick='deletePagePlaylist({0},{1});'></a></span>".format(i,j);
+            html += "<span class='delete'><a onclick='deletePagePlaylist({0},{1});'></a></span>".format(i,j);
             html += "</li>";
             $(sel).append(html);
         }
@@ -34,7 +34,7 @@ function updatePages()
             html += "<span class='title'>";
             html += page_tab.tab_name;
             html += "</span>";
-            html += "<span class='delete'><a  href='#' onclick='deletePageTab({0},{1});'></a></span>".format(i,j);
+            html += "<span class='delete'><a onclick='deletePageTab({0},{1});'></a></span>".format(i,j);
             html += "</li>";
             $(sel).append(html);
         }
