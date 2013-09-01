@@ -38,6 +38,7 @@ function showPagePopup(index)
             $('#edit_page #template_list').append(html);
         }
     }
+    showPopup('#edit_page');
 }
 
 function onPageSubmit()
