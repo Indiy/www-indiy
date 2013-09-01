@@ -166,7 +166,7 @@ function onPlaylistItemSubmit()
 function deletePlaylistItem(i,j)
 {
     var playlist = g_playlistList[i];
-    var playlist_item = playlist.item[j];
+    var playlist_item = playlist.items[j];
     
     var url = "/manage/data/playlist_items.php";
     var data = {
