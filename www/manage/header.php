@@ -4,9 +4,6 @@
 	<meta charset="utf-8" />
 	<title>MYARTISTDNA</title>
 
-    <!-- Combo-handled YUI CSS files: --> 
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.9.0/build/assets/skins/sam/skin.css"> 
-
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 
     <? if( $include_order ): ?>
