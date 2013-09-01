@@ -15,6 +15,10 @@
     
     $uri = $_SERVER['REQUEST_URI'];
     list($page,$query)  = explode('?',$uri,2);
+    if( len($page) == 0 )
+    {
+        $page = "/";
+    }
     print "<html><pre>\n";
     print "URI: $uri\n";
     print "artist_id: $artist_id\n";
