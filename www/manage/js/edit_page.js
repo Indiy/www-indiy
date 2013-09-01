@@ -96,24 +96,24 @@ function showPageItemPopup(page_index)
     g_pageIndex = page_index;
     
     var html = "<option value='0'>None</option>";
-    $('#edit_page_item #playlist_list').html(html);
+    $('#add_page_item #playlist_list').html(html);
     for( var i = 0 ; i < g_playlistList.length ; ++i )
     {
         var playlist = g_playlistList[i];
         var html = "<option value='{0}'>{2}</option>".format(playlist.playlist_id,playlist.name);
-        $('#edit_page_item #playlist_list').append(html);
+        $('#add_page_item #playlist_list').append(html);
     }
-    showPopup('#edit_page_item');
     
     var html = "<option value='0'>None</option>";
-    $('#edit_page_item #tab_list').html(html);
+    $('#add_page_item #tab_list').html(html);
     for( var i = 0 ; i < g_tabList.length ; ++i )
     {
         var tab = g_tabList[i];
         var html = "<option value='{0}'>{2}</option>".format(tab.id,tab.name);
-        $('#edit_page_item #tab_list').append(html);
+        $('#add_page_item #tab_list').append(html);
     }
-    showPopup('#edit_page_item');
+    
+    showPopup('#add_page_item');
 }
 
 function onPageItemSubmit()
