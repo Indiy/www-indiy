@@ -33,3 +33,48 @@
     <div class='bottom_blue_bar'></div>
 </div>
 </div>
+
+<div id='edit_playlist_item' class='popup_wrapper'>
+<div id="popup">
+    <div class='top_bar'>
+        <h2>Edit Playlist Item</h2>
+        <button onclick='closePopup();'>CLOSE</button>
+    </div>
+
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+
+    <div class='input_container'>
+        <div class='line_label'>Name<span class='required'>*</span></div>
+        <input id='photo_name' type="text" name="name" value="" class="line_text" />
+    </div>
+    <div class='input_container' style='height: 50px;'>
+        <div class='left_label'>Image<span class='required'>*</span></div>
+        <select id='image_id' class='right_drop' onchange='artistFileDropChange(this);'></select>
+    </div>
+    <div class='input_container'>
+        <div class='left_label'>Background Style</div>
+        <select id='bg_type' class='right_drop'>
+        <?php
+            $styles = array('LETTERBOX','STRETCH','CENTER','TILE');
+            foreach( $styles as $style ) 
+                echo "<option value='$style'>$style</option>\n";
+        ?>
+        </select>
+    </div>
+    <div class='input_container'>
+        <div class='left_label'>Background Color</div>
+        <input id='bg_color' type="text" maxlength="6" size="6" class='color' value="" />
+    </div>
+    <div class='input_container' style='height: 50px;'>
+        <div class='left_label'>Media File</div>
+        <select id='media_id' class='right_drop' onchange='artistFileDropChange(this);'></select>
+    </div>
+    <div class='submit_container'>
+        <button class="submit" onclick='onPlaylistItemSubmit();'>Submit</button>
+    </div>
+        
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
+</div>
+</div>

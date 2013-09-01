@@ -409,7 +409,7 @@ function onDrop(je)
     }
 }
 
-function getArtistFiles(type)
+function getArtistFiles(type_list)
 {
     var ret = [];
 
@@ -423,7 +423,7 @@ function getArtistFiles(type)
         if( file.error && file.error.length > 0 )
             continue;
         
-        if( type == 'ALL' || file.type == type )
+        if( $.inArray('ALL', type_list) || $.inArray(file.type, type_list) )
             ret.push(file);
     }
     return ret;
@@ -435,8 +435,17 @@ function fillArtistFileSelect(sel,type,current_val,value_is_id)
     {
         value_is_id = false;
     }
+    var type_list;
+    if( typeof type === 'string' )
+    {
+        type_list = [type];
+    }
+    else
+    {
+        type_list = type;
+    }
 
-    var possible_files = getArtistFiles(type);
+    var possible_files = getArtistFiles(type_list);
     
     $(sel).empty();
     

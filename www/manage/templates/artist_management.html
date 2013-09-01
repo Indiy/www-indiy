@@ -45,6 +45,7 @@
     var g_productList = <?=$product_list_json;?>;
     var g_fileList = <?=$file_list_json;?>;
     var g_templateList = <?=$template_list_json;?>;
+    var g_playlistList = <?=$playlist_list_json;?>;
     
     var g_playerUrl = "<?=playerUrl();?>";
     var g_artistFileBaseUrl = "<?=artist_file_base_url();?>";
@@ -53,7 +54,7 @@
     
     var g_shouldShowFirstInstruction = <?=json_encode($show_first_instruction);?>
     
-    </script>
+</script>
 
 <section id="wrapper">
     <section id="content" class='thin'>
@@ -268,6 +269,12 @@
                         <div class="content_list">
                             <div class="heading">
                                 <div class='title'>PL: <?=$pl['name'];?></div>
+                                <a onclick='showPlaylistItemPopup(<?=$k;?>);' title='Add an item to the playlist'>
+                                    <div class="buttonadd">
+                                        <div class='plus'></div>
+                                        <div class='label'>Add Item</div>
+                                    </div>
+                                </a>
                             </div>
                             
                             <div class="list" style='display: none;'>
