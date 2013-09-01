@@ -29,6 +29,7 @@
     {
         if( $uri == '/' )
         {
+            // This may be an old style page, passthrough
             include_once 'player.php';
             die();
         }
