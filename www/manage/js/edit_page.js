@@ -160,6 +160,7 @@ function onPageItemSubmit()
             dataType: 'json',
             success: function(data) 
             {
+                page.playlists.push(data.page_playlist);
                 updatePages();
                 showSuccess("Playlist added to page.");
             },
@@ -173,7 +174,29 @@ function onPageItemSubmit()
     var tab_id = $('#add_page_item #tab_list').val();
     if( tab_id > 0 )
     {
+        var url = "/manage/data/page_tabs.php";
+        var data = {
+            page_id: page.page_id,
+            tab_id: tab_id
+        };
         
+        jQuery.ajax(
+        {
+            type: 'POST',
+            url: url,
+            data: data,
+            dataType: 'json',
+            success: function(data) 
+            {
+                page.tabs.push(data.page_tab);
+                updatePages();
+                showSuccess("Tab added to page.");
+            },
+            error: function()
+            {
+                showFailure("Page tab add failed.  You can only add a tab once.");
+            }
+        });
     }
 }
 
