@@ -14,9 +14,11 @@
     }
     
     $uri = $_SERVER['REQUEST_URI'];
+    $page = explode('?',$uri)[0];
     print "<html><pre>\n";
     print "URI: $uri\n";
     print "artist_id: $artist_id\n";
+    print "page: $page\n";
     die();
     
     $hide_volume = FALSE;
