@@ -48,6 +48,7 @@
         var g_videoList = <?=$video_list_json;?>;
         var g_productList = <?=$product_list_json;?>;
         var g_totalPageViews = <?=$artist_views;?>;
+        var g_playlistList = <?=$playlist_list_json;?>;
         
         var g_trueSiteUrl = "<?=trueSiteUrl();?>";
         var g_cartBaseUrl = "<?=cart_base_url();?>";
@@ -150,18 +151,6 @@
 
     <div id='bottom_bar'>
         <div class='be_heard'>BE HEARD. BE SEEN. BE INDEPENDENT.</div>
-        <div class='slash'>//</div>
-        <? if( $is_logged_in_text ): ?>
-            <div class='sign_up bottom_link'><?=$is_logged_in_text;?></div>
-        <? elseif( $login_url ): ?>
-            <div class='sign_up bottom_link'><a <?=$all_links_blank;?> href='<?=$login_url;?>' >LOGIN NOW</a></div>
-        <? else: ?>
-            <div class='sign_up bottom_link'><a <?=$all_links_blank;?> href='<?=$signup_url;?>' >SIGN UP NOW</a></div>
-        <? endif; ?>
-        <? if( $show_order_status ): ?>
-            <div class='slash'>//</div>
-            <div class='order_status bottom_link'><a target="_blank" href='/order_status.php'>ORDER STATUS</a></div>
-        <? endif; ?>
         <div class='copyright'>&copy;2012 Powered by <a href="http://myartistdna.com">MyArtistDNA</a></div>
     </div>
     <div id='tooltip'>
@@ -268,7 +257,20 @@
                             <div class='right_nav' onclick='photoListScrollRight();'></div>
                         <? endif; ?>
                         <div class='content'>
-                            <?=$photo_list_html;?>
+                            
+                            <?php
+                                foreach( $photo_list as $i => $photo ):
+                                    $img_url = get_image_thumbnail($photo['image'],$photo['image_extra'],200);
+                                    $photo_name = $photo['name'];
+                            ?>
+                                <div class='item' onclick='photoChangeIndex(<?=$i;?>); closeBottom(true);'>
+                                    <div class='picture'>
+                                        <img src='<?=$img_url;?>'/>
+                                    </div>
+                                    <div class='label'><?=$photo_name;?></div>
+                                </div>
+                            <?php endforeach; ?>
+                            
                         </div>
                     </div>
                     <div id='music_list' class='media_list'>
@@ -290,7 +292,36 @@
                                     </div>
                                 </div>
                                 <div class='sep_line'></div>
-                                <?=$music_list_html;?>
+                                
+                                <?php
+                                    foreach( $music_list as $i => $audio ):
+                                        $audio_name = $audio['name'];
+                                        $listens = $audio['listens'];
+                                        $media_length = $audio['media_length'];
+                                        $length_string = sprintf("%02d:%02d",$media_length / 60,$media_length % 60);
+                                    
+                                        $num = $i + 1;
+                                        if( $num % 2 == 1 )
+                                            $odd = "odd";
+                                        else
+                                            $odd = "";
+                                ?>
+                                    <div id='song_playlist_<?=$i;?>' class='play_line <?=$odd;?>'>
+                                        <div class='love_song_name'>
+                                            <div class='love' onclick='musicToggleLoveIndex(<?=$i;?>);'></div>
+                                            <div onclick='musicChange(<?=$i;?>); closeBottom(true);' class='song_name'>
+                                                <?=$num . ". " . $audio_name;?>
+                                            </div>
+                                        </div>
+                                        <div class='buy_length_listens'>
+                                            <div class='sep'></div>
+                                            <div class='length'><?=$length_string;?></div>
+                                            <div class='sep'></div>
+                                            <div class='played'><?=$music_listens;?></div>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                                
                             </div>
                         </div>
                     </div>
@@ -300,7 +331,20 @@
                             <div class='right_nav' onclick='videoListScrollRight();'></div>
                         <? endif; ?>
                         <div class='content'>
-                            <?=$video_list_html;?>
+                            
+                            <?php
+                                foreach( $video_list as $i => $video ):
+                                    $img_url = get_image_thumbnail($video['image'],$video['image_extra'],200);
+                                    $video_name = $video['name'];
+                            ?>
+                                <div class='item' onclick='videoPlayIndex(<?=$i;?>); closeBottom(true);'>
+                                    <div class='picture'>
+                                        <img src='<?=$img_url;?>'/>
+                                    </div>
+                                    <div class='label'><?=$video_name;?></div>
+                                </div>
+                            <?php endforeach; ?>
+                            
                         </div>
                     </div>
                 </div>
