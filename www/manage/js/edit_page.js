@@ -100,7 +100,7 @@ function showPageItemPopup(page_index)
     for( var i = 0 ; i < g_playlistList.length ; ++i )
     {
         var playlist = g_playlistList[i];
-        var html = "<option value='{0}'>{2}</option>".format(playlist.playlist_id,playlist.name);
+        var html = "<option value='{0}'>{1}</option>".format(playlist.playlist_id,playlist.name);
         $('#add_page_item #playlist_list').append(html);
     }
     
@@ -109,7 +109,7 @@ function showPageItemPopup(page_index)
     for( var i = 0 ; i < g_tabList.length ; ++i )
     {
         var tab = g_tabList[i];
-        var html = "<option value='{0}'>{2}</option>".format(tab.id,tab.name);
+        var html = "<option value='{0}'>{1}</option>".format(tab.id,tab.name);
         $('#add_page_item #tab_list').append(html);
     }
     
