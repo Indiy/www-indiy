@@ -1,10 +1,25 @@
 
-function showPlaylistPopup()
+
+var g_playlistIndex = false;
+function showPlaylistPopup(playlist_index)
 {
+    if( playlist_index !== false )
+    {
+        g_playlistIndex = playlist_index;
+        var playlist = g_playlistList[g_playlistIndex];
+        $('#edit_playlist #playlist_name').val(playlist.name);
+        $('#edit_playlist #playlist_type').val(playlist.type);
+    }
+    else
+    {
+        g_playlistIndex = false;
+        $('#edit_playlist #playlist_name').val("");
+        $('#edit_playlist #playlist_type').val("AUDIO");
+    }
     showPopup('#edit_playlist');
 }
 
-function onPlaylistSubmit(playlist_index)
+function onPlaylistSubmit()
 {
     showProgress("Adding playlist...");
 
@@ -17,9 +32,9 @@ function onPlaylistSubmit(playlist_index)
         name: name,
         type: type
     };
-    if( playlist_index !== false )
+    if( g_playlistIndex !== false )
     {
-        var playlist = g_playlistList[playlist_index];
+        var playlist = g_playlistList[g_playlistIndex];
         data.playlist_id = playlist.playlist_id;
     }
     
@@ -31,7 +46,7 @@ function onPlaylistSubmit(playlist_index)
         dataType: 'json',
         success: function(data) 
         {
-            if( playlist_index === false )
+            if( g_playlistIndex === false )
             {
                 window.reload();
             }
