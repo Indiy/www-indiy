@@ -488,26 +488,6 @@
         $body_style .= " thin_footer";
     }
     
-    function make_comments_for_list($base_url,$type,$list)
-    {
-        $ret_html = "";
-        foreach( $list as $index => $item )
-        {
-            $id = $item['id'];
-            $url = "$base_url/#{$type}_id=$id";
-            $id_tag = "{$type}_id_$id";
-        
-            $html = "";
-            $html .= "<div id='$id_tag' class='fb_container'>";
-            $html .= " <fb:comments href='$url' num_posts='10' width='470' colorscheme='dark'></fb:comments>";
-            $html .= "</div>";
-            
-            $ret_html .= $html;
-        }
-        
-        return $ret_html;
-    }
-    
     $comments_html = "";
     $comments_html .= make_comments_for_list($artist_base_url,"song",$music_list);
     $comments_html .= make_comments_for_list($artist_base_url,"video",$video_list);

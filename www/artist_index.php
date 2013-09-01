@@ -18,11 +18,6 @@
     {
         $uri = "/";
     }
-//    print "<html><pre>\n";
-//    print "REQUEST_URI: " . $_SERVER['REQUEST_URI'] . "\n";
-//    print "artist_id: $artist_id\n";
-//    print "url: $uri\n";
-//    print "query: $query\n";
     
     $page = mf(mq("SELECT * FROM pages WHERE artist_id = '$artist_id' AND uri = '$uri'"));
     if( !$page )
@@ -35,8 +30,6 @@
         }
         else
         {
-            //print "no page, and not default\n";
-        
             header("HTTP/1.0 404 Not Found");
             header("Cache-Control: no-cache");
             header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
@@ -469,27 +462,7 @@
     {
         $body_style .= " thin_footer";
     }
-    
-    function make_comments_for_list($base_url,$type,$list)
-    {
-        $ret_html = "";
-        foreach( $list as $index => $item )
-        {
-            $id = $item['id'];
-            $url = "$base_url/#{$type}_id=$id";
-            $id_tag = "{$type}_id_$id";
         
-            $html = "";
-            $html .= "<div id='$id_tag' class='fb_container'>";
-            $html .= " <fb:comments href='$url' num_posts='10' width='470' colorscheme='dark'></fb:comments>";
-            $html .= "</div>";
-            
-            $ret_html .= $html;
-        }
-        
-        return $ret_html;
-    }
-    
     $comments_html = "";
     $comments_html .= make_comments_for_list($artist_base_url,"song",$music_list);
     $comments_html .= make_comments_for_list($artist_base_url,"video",$video_list);
