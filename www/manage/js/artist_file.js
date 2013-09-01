@@ -423,7 +423,7 @@ function getArtistFiles(type_list)
         if( file.error && file.error.length > 0 )
             continue;
         
-        if( $.inArray('ALL', type_list) || $.inArray(file.type, type_list) )
+        if( $.inArray('ALL', type_list) != -1 || $.inArray(file.type, type_list) != -1 )
             ret.push(file);
     }
     return ret;
