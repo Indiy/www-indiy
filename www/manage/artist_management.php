@@ -284,7 +284,7 @@
         
         $sql = "SELECT page_playlists.*, playlists.name AS playlist_name ";
         $sql .= " FROM page_playlists ";
-        $sql .= " LEFT JOIN playlists ON page_playlists.playlist_id = playlists.playlist_id ";
+        $sql .= " JOIN playlists ON page_playlists.playlist_id = playlists.playlist_id ";
         $sql .= " WHERE page_id = '$page_id' ";
         $sql .= " ORDER BY page_playlists.order ASC, page_playlists.page_playlist_id DESC ";
         $q = mq($sql);
@@ -295,7 +295,7 @@
         
         $sql = "SELECT page_tabs.*, mydna_musicplayer_content.name AS tab_name ";
         $sql .= " FROM page_tabs ";
-        $sql .= " LEFT JOIN mydna_musicplayer_content ON page_tabs.tab_id = mydna_musicplayer_content.id ";
+        $sql .= " JOIN mydna_musicplayer_content ON page_tabs.tab_id = mydna_musicplayer_content.id ";
         $sql .= " WHERE page_id = '$page_id' ";
         $sql .= " ORDER BY page_tabs.order ASC, page_tabs.page_tab_id DESC ";
         $q = mq($sql);
