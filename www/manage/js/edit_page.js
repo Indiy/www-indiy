@@ -21,6 +21,24 @@ function updatePages()
             html += "</li>";
             $(sel).append(html);
         }
+        
+        sel = '#page_tab_list_ul_' + i;
+        $(sel).empty();
+        for( var j = 0 ; j < page.tabs.length ; ++j )
+        {
+            var page_tab = page.tabs[j];
+            var class_name = i % 2 == 0 ? 'odd' : '';
+
+            var html = "";
+            html += "<li id='arrayorder_{0}' class='{1}'>".format(page_tab.page_tab_id,class_name);
+            html += "<span class='title'>";
+            html += page_tab.tab_name;
+            html += "</span>";
+            html += "<span class='delete'><a  href='#' onclick='deletePageTab({0},{1});'></a></span>".format(i,j);
+            html += "</li>";
+            $(sel).append(html);
+        }
+
     }
     setupSortableList('ul.page_playlist_list_sortable',"/manage/data/page_playlists.php");
     setupSortableList('ul.page_tab_list_sortable',"/manage/data/page_tabs.php");
