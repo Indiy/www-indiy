@@ -230,6 +230,22 @@
     }
     $template_list_json = json_encode($template_list);
     
+    $playlist_list = array();
+    $sql = "SELECT * FROM playlists WHERE artist_id='$artistID'";
+    $q = mq($sql);
+    while( $pl = mf($q) )
+    {
+        $pl['items'] = array();
+        $sql = "SELECT * FROM playlist_items WHERE playlist_id='$artistID'";
+        $q2 = mq($sql);
+        while( $pi = mf($q2) )
+        {
+            $pl['items'][] = $pi;
+        }
+        $playlist_list[] = $pl;
+    }
+    $playlist_list_json = json_encode($playlist_list);
+    
     require_once "templates/artist_management.html";
 
 ?>

@@ -20,6 +20,7 @@
     require_once 'account_limit.html';
     require_once 'artist_file.html';
     require_once 'edit_template.html';
+    require_once 'edit_playlist.html';
 
     if( $_SESSION['sess_userType'] == 'SUPER_ADMIN' )
     {
@@ -110,6 +111,7 @@
                     </ul>
                     <h6>Platform</h6>
                     <ul>
+                        <li><a onclick='showPlaylistPopup();' title='Add Playlist'>Add Playlist</a></li>
                         <li><a onclick='showPagePopup(false);' title='Add audio to your site'>Add Audio</a></li>
                         <li><a onclick='showVideoPopup(false);' title='Add a video to your site'>Add Video</a></li>
                         <li><a onclick='showPhotoPopup(false);' title='Add a photo to your site'>Add Photo</a></li>
@@ -260,6 +262,21 @@
                             </ul>
                         </div>
                     </div>
+                    
+                    <?php foreach( $playlist_list as $k => $pl ): ?>
+                     
+                        <div class="content_list">
+                            <div class="heading">
+                                <div class='title'>PL: <?=$pl['name'];?></div>
+                            </div>
+                            
+                            <div class="list" style='display: none;'>
+                                <ul id='pl_list_ul_<?=$k;?>'>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                    <?php endforeach; ?>
                     
                     <?php if( count($template_list) > 0 ): ?>
                      

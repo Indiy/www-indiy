@@ -1,0 +1,35 @@
+<div id='edit_playlist' class='popup_wrapper'>
+<div id="popup">
+    <div class='top_bar'>
+        <h2>Playlist</h2>
+        <button onclick='closePopup();'>CLOSE</button>
+    </div>
+    
+    <div class='top_blue_bar'></div>
+    <div class='top_sep'></div>
+    
+    <div class='input_container'>
+        <div class='input_container'>
+            <div class='left_label'>Name of Playlist<span class='required'>*</span></div>
+            <input id='playlist_name' class='right_text' type='text' value="" />
+        </div>
+        <div class='left_label'>Playlist Type</div>
+        <select id='playlist_type' class='right_drop'>
+            <?php
+                $options = array('AUDIO', 'VIDEO', 'PHOTO', 'ANY', 'DIR');
+                foreach( $options as $option ) 
+                {
+                    $option_value = $option;
+                    echo "<option value='$option'>$option_value</option>\n";
+                }
+            ?>
+        </select>
+    </div>
+    <div class='submit_container'>
+        <button class="submit" onclick='onPlaylistSubmit();'>Submit</button>
+    </div>
+    
+    <div class='bottom_sep'></div>
+    <div class='bottom_blue_bar'></div>
+</div>
+</div>
