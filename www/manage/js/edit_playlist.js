@@ -177,7 +177,7 @@ function onPlaylistItemSubmit()
             }
             else
             {
-                playlist.items.push(data.playlist_item);
+                playlist.items.unshift(data.playlist_item);
             }
             updatePlaylists();
             showSuccess("Playlist item added.");

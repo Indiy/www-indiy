@@ -178,7 +178,7 @@ function onPageItemSubmit()
             dataType: 'json',
             success: function(data) 
             {
-                page.playlists.push(data.page_playlist);
+                page.playlists.unshift(data.page_playlist);
                 updatePages();
                 showSuccess("Playlist added to page.");
             },
@@ -206,7 +206,7 @@ function onPageItemSubmit()
             dataType: 'json',
             success: function(data) 
             {
-                page.tabs.push(data.page_tab);
+                page.tabs.unshift(data.page_tab);
                 updatePages();
                 showSuccess("Tab added to page.");
             },
@@ -218,4 +218,86 @@ function onPageItemSubmit()
     }
 }
 
+function deletePage(i)
+{
+    var page = g_pageList[i];
+    
+    var url = "/manage/data/pages.php";
+    var data = {
+        page_id: page.page_id
+    };
+    
+    var r = window.confirm("Are you sure you want to delete this page?");
+    if( r )
+    {
+        jQuery.ajax(
+        {
+            type: 'DELETE',
+            url: url,
+            data: data,
+            dataType: 'json',
+            success: function(data) 
+            {
+                window.location.reload();
+            },
+            error: function()
+            {
+                window.alert("Delete failed.");
+            }
+        });
+    }
+}
+
+function deletePagePlaylist(i,j)
+{
+    var page_playlist = g_pageList[i].playlists[j];
+    
+    var url = "/manage/data/page_playlists.php";
+    var data = {
+        page_playlist_id: page_playlist.page_playlist_id
+    };
+    
+    jQuery.ajax(
+    {
+        type: 'DELETE',
+        url: url,
+        data: data,
+        dataType: 'json',
+        success: function(data) 
+        {
+            g_pageList[i].playlists.splice(j,1);
+            updatePages();
+        },
+        error: function()
+        {
+            window.alert("Delete failed.");
+        }
+    });
+}
+function deletePageTab(i,j)
+{
+    var page_tab = g_pageList[i].tabs[j];
+    
+    var url = "/manage/data/page_tabs.php";
+    var data = {
+        page_tab_id: page_tab.page_tab_id
+    };
+    
+    jQuery.ajax(
+    {
+        type: 'DELETE',
+        url: url,
+        data: data,
+        dataType: 'json',
+        success: function(data) 
+        {
+            g_pageList[i].tabs.splice(j,1);
+            updatePages();
+        },
+        error: function()
+        {
+            window.alert("Delete failed.");
+        }
+    });
+}
 
