@@ -69,6 +69,7 @@ function updatePlaylists()
             $(sel).append(html);
         }
     }
+    setupSortableList('ul.playlist_items_sortable',"/manage/data/playlist_items.php");
 }
 $(document).ready(updatePlaylists);
 
