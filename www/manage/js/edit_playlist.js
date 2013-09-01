@@ -46,14 +46,7 @@ function onPlaylistSubmit()
         dataType: 'json',
         success: function(data) 
         {
-            if( g_playlistIndex === false )
-            {
-                window.location.reload();
-            }
-            else
-            {
-                showSuccess("Playlist updated.");
-            }
+            window.location.reload();
         },
         error: function()
         {
