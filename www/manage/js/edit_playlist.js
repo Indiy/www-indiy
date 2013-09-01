@@ -40,8 +40,10 @@ var g_currentPlaylistIndex = false;
 function showPlaylistItemPopup(playlist_index)
 {
     g_currentPlaylistIndex = playlist_index;
+    
     $('#edit_playlist_item #name').val("");
     fillArtistFileIdSelect('#edit_playlist_item #image_id','IMAGE',false);
+    $('#edit_playlist_item #bg_color').val('000000');
     fillArtistFileIdSelect('#edit_playlist_item #media_id',['AUDIO','VIDEO'],false);
     
     showPopup('#edit_playlist_item');
@@ -64,9 +66,9 @@ function onPlaylistItemSubmit()
         playlist_id: playlist.playlist_id,
         name: name,
         image_id: image_id,
-        media_id: media_id,
         bg_style: bg_style,
-        bg_color: bg_color
+        bg_color: bg_color,
+        media_id: media_id
     };
     
     jQuery.ajax(
@@ -81,7 +83,7 @@ function onPlaylistItemSubmit()
         },
         error: function()
         {
-            showFailure("Playlist item add failed.");
+            showFailure("Update failed.");
         }
     });
     return false; 
