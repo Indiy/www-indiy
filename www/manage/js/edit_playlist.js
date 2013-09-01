@@ -79,7 +79,7 @@ function showPlaylistItemPopup(playlist_index,playlist_item_index)
 {
     g_currentPlaylistIndex = playlist_index;
 
-    if( playlist_item_index )
+    if( playlist_item_index !== false )
     {
         var playlist = g_playlistList[playlist_index];
         g_currentPlaylistItemIndex = playlist_item_index;
