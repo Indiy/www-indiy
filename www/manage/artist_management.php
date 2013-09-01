@@ -235,7 +235,6 @@
     $q = mq($sql);
     while( $pl = mf($q) )
     {
-        
         $pl['items'] = array();
         
         $playlist_list[] = $pl;
@@ -264,7 +263,7 @@
             {
                 $row['image_url'] = "images/photo_video_01.jpg";
             }
-            $playlist['items'][] = $row;
+            $playlist_list[$i]['items'][] = $row;
         }
     }
     
