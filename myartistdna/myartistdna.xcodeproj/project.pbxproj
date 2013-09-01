@@ -285,7 +285,7 @@
 		2D775D2D1710F53600B2250D /* add_user.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = add_user.html; path = templates/add_user.html; sourceTree = "<group>"; };
 		2D775D2E1710F53700B2250D /* artist_file.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = artist_file.html; path = templates/artist_file.html; sourceTree = "<group>"; };
 		2D775D2F1710F53700B2250D /* edit_account_settings.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = edit_account_settings.html; path = templates/edit_account_settings.html; sourceTree = "<group>"; };
-		2D775D301710F53700B2250D /* edit_page.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = edit_page.html; path = templates/edit_page.html; sourceTree = "<group>"; };
+		2D775D301710F53700B2250D /* edit_audio.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = edit_audio.html; path = templates/edit_audio.html; sourceTree = "<group>"; };
 		2D775D311710F53800B2250D /* edit_photo.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = edit_photo.html; path = templates/edit_photo.html; sourceTree = "<group>"; };
 		2D775D321710F53800B2250D /* edit_product.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = edit_product.html; path = templates/edit_product.html; sourceTree = "<group>"; };
 		2D775D331710F53900B2250D /* edit_profile.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = edit_profile.html; path = templates/edit_profile.html; sourceTree = "<group>"; };
@@ -404,7 +404,7 @@
 		2DE197A214F6133000305EAD /* password.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = password.php; sourceTree = "<group>"; };
 		2DE3F8A715B1F4ED00B5D439 /* mad.swipe.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mad.swipe.js; sourceTree = "<group>"; };
 		2DE61EDD15FD841500D032A9 /* convert_media.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = convert_media.php; sourceTree = "<group>"; };
-		2DE6BFCF15291E5A00C3E0EF /* page.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = page.php; sourceTree = "<group>"; };
+		2DE6BFCF15291E5A00C3E0EF /* audio.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = audio.php; sourceTree = "<group>"; };
 		2DE6BFD0152971B700C3E0EF /* edit_product.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_product.js; sourceTree = "<group>"; };
 		2DE6BFD215297A5E00C3E0EF /* product.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = product.php; sourceTree = "<group>"; };
 		2DE6BFD31529F7A600C3E0EF /* manage_tooltips.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = manage_tooltips.js; sourceTree = "<group>"; };
@@ -778,7 +778,7 @@
 		2DF61FE8151FEF4900DBFBC8 /* string.utils.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = string.utils.js; sourceTree = "<group>"; };
 		2DF61FEA1520264500DBFBC8 /* convert_videos.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = convert_videos.php; sourceTree = "<group>"; };
 		2DF61FEE1527FFE300DBFBC8 /* artist_management.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_management.js; sourceTree = "<group>"; };
-		2DF61FF01528235500DBFBC8 /* edit_page.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_page.js; sourceTree = "<group>"; };
+		2DF61FF01528235500DBFBC8 /* edit_audio.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_audio.js; sourceTree = "<group>"; };
 		2DFBC929172D8D95001DCEF6 /* countdown_audio.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = countdown_audio.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DFBC92A172D8DBB001DCEF6 /* countdown_audio.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = countdown_audio.js; sourceTree = "<group>"; };
 		2DFBC92B172D8DD4001DCEF6 /* countdown_audio.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = countdown_audio.html; sourceTree = "<group>"; };
@@ -1242,7 +1242,7 @@
 				2D775D2D1710F53600B2250D /* add_user.html */,
 				2D775D2E1710F53700B2250D /* artist_file.html */,
 				2D775D2F1710F53700B2250D /* edit_account_settings.html */,
-				2D775D301710F53700B2250D /* edit_page.html */,
+				2D775D301710F53700B2250D /* edit_audio.html */,
 				2D775D311710F53800B2250D /* edit_photo.html */,
 				2D775D321710F53800B2250D /* edit_product.html */,
 				2D775D331710F53900B2250D /* edit_profile.html */,
@@ -1420,7 +1420,7 @@
 			isa = PBXGroup;
 			children = (
 				2DE197A214F6133000305EAD /* password.php */,
-				2DE6BFCF15291E5A00C3E0EF /* page.php */,
+				2DE6BFCF15291E5A00C3E0EF /* audio.php */,
 				2D9E2FEC1579D43D00A76906 /* photo.php */,
 				2DE6BFD215297A5E00C3E0EF /* product.php */,
 				2DFCE0EE152A2B8500F9ABEE /* video.php */,
@@ -2129,7 +2129,7 @@
 				2D41C01C152BD8A600F18000 /* edit_social_config.js */,
 				2D41C02F15309DEB00F18000 /* edit_store.js */,
 				2D41C014152ACDD100F18000 /* edit_profile.js */,
-				2DF61FF01528235500DBFBC8 /* edit_page.js */,
+				2DF61FF01528235500DBFBC8 /* edit_audio.js */,
 				2D9E2FEB1579C11F00A76906 /* edit_photo.js */,
 				2DFCE0ED152A296300F9ABEE /* edit_video.js */,
 				2DE6BFD0152971B700C3E0EF /* edit_product.js */,

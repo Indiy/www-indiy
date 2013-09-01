@@ -34,7 +34,7 @@
         
     <? if( $include_editor !== FALSE ): ?>
 
-        <script src="js/edit_page.js" type="text/javascript"></script>
+        <script src="js/edit_audio.js" type="text/javascript"></script>
         <script src="js/edit_photo.js" type="text/javascript"></script>
         <script src="js/edit_product.js" type="text/javascript"></script>
         <script src="js/edit_video.js" type="text/javascript"></script>

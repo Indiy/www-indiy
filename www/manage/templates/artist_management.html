@@ -5,7 +5,7 @@
 
     require_once 'header.php';
 
-    require_once 'edit_page.html';
+    require_once 'edit_audio.html';
     require_once 'edit_video.html';
     require_once 'edit_photo.html';
     require_once 'edit_product.html';
@@ -113,7 +113,7 @@
                     <h6>Platform</h6>
                     <ul>
                         <li><a onclick='showPlaylistPopup(false);' title='Add Playlist'>Add Playlist</a></li>
-                        <li><a onclick='showPagePopup(false);' title='Add audio to your site'>Add Audio</a></li>
+                        <li><a onclick='showAudioPopup(false);' title='Add audio to your site'>Add Audio</a></li>
                         <li><a onclick='showVideoPopup(false);' title='Add a video to your site'>Add Video</a></li>
                         <li><a onclick='showPhotoPopup(false);' title='Add a photo to your site'>Add Photo</a></li>
                         <li id='add_tab_list_item'><a onclick='showTabPopup(false);' title='Add a tab to your site'>Add Tab</a></li>
@@ -168,7 +168,7 @@
                     <div class="playlist">
                         <div class="heading">
                             <h5>AUDIO</h5>
-                            <a onclick='showPagePopup(false);' title='Add a song to your site'>
+                            <a onclick='showAudioPopup(false);' title='Add a song to your site'>
                                 <div class="buttonadd">
                                     <div class='plus'></div>
                                     <div class='label'>Add Audio</div>

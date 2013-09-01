@@ -122,7 +122,7 @@ function artistFilenameClick(index)
     
     if( file.type == 'AUDIO' )
     {
-        showPagePopup(false,file.filename);
+        showAudioPopup(false,file.filename);
     }
     else if( file.type == 'VIDEO' )
     {

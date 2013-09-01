@@ -29,7 +29,7 @@ function artistManagementReady()
 	});
     $('.heading a').click(function(e) { e.stopPropagation(); });
     
-    setupSortableList('ul.playlist_sortable',"/manage/data/page.php");
+    setupSortableList('ul.playlist_sortable',"/manage/data/audio.php");
     setupSortableList('ul.videos_sortable',"/manage/data/video.php");
     setupSortableList('ul.products_sortable',"/manage/data/product.php");
     setupSortableList('ul.photos_sortable',"/manage/data/photo.php");
@@ -68,7 +68,7 @@ function updatePageList()
         var html = "";
         html += "<li id='arrayorder_{0}' class='playlist_sortable {1}'>".format(song.id,class_name);
         html += "<span class='title'>\n";
-        html += "<a onclick='showPagePopup({0});'>".format(i);
+        html += "<a onclick='showAudioPopup({0});'>".format(i);
         html += song.name;
         html += "</a>\n";
         html += "</span>\n";
