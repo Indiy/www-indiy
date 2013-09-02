@@ -624,6 +624,10 @@ body {
     border-left: 1px solid black;
     border-right: 1px solid #333;
 }
+#tracker_bar .buttons .spacer {
+    display: inline-block;
+    width: 20px;
+}
 
 .tooltip {
     display: none;
