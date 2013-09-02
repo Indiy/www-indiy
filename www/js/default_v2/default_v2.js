@@ -2,6 +2,13 @@
 
 function default_v2_ready()
 {
+    if( g_templateParams['tracker_bar_texture'] )
+    {
+        var url = g_templateParams['tracker_bar_texture'];
+        var bg = "transparent url({0}) repeat-x".format(url);
+        $('#tracker_bar').css('background',bg);
+    }
+
     var twitter_enabled = twitterInsert();
     var facebook_enabled = facebookInsert();
     var instagram_enabled = instagramInsert();
