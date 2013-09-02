@@ -151,7 +151,7 @@ function photoUpdateToIndex(index)
     g_currentPhotoId = photo.id;
 
     updateAnchorMedia({ photo_id: photo.id });
-    commentChangedMedia('photo',photo.id);
+    //commentChangedMedia('photo',photo.id);
     
     playerPhotoInfo(photo.name,photo.location,photo.listens);
     photoUpdateViews(photo.id,index);

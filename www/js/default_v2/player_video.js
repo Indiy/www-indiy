@@ -46,7 +46,7 @@ function videoPanelChange(index)
     var video = g_videoList[index];
 
     updateAnchorMedia({ video_id: video.id });
-    commentChangedMedia('video',video.id);
+    //commentChangedMedia('video',video.id);
     
     loveChangedVideo(video.id,video.name);
     

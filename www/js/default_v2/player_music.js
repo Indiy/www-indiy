@@ -107,7 +107,7 @@ function musicPanelChange(index)
     g_currentSongId = song.id;
     
     updateAnchorMedia({ song_id: song.id });
-    commentChangedMedia('song',song.id);
+    //commentChangedMedia('song',song.id);
     
     playerTrackInfo(song.name,song.listens);
     

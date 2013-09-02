@@ -131,7 +131,14 @@
                  "photos" => $photos,
                  );
                  
-    echo json_encode($ret);
-    
+    $json = json_encode($ret);
+    if( isset($_REQUEST['callback']) )
+    {
+        $callback = $_REQUEST['callback'];
+        echo "$callback($json);";
+    }
+    else
+    {
+        echo $json;
+    }
 ?>
-

@@ -26,6 +26,14 @@
     }
 
     $output = array("success" => 1);
-    print json_encode($output);
-
+    $json = json_encode($output);
+    if( isset($_REQUEST['callback']) )
+    {
+        $callback = $_REQUEST['callback'];
+        echo "$callback($json);";
+    }
+    else
+    {
+        echo $json;
+    }
 ?>
