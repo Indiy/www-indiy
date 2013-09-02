@@ -761,8 +761,7 @@ var TEMPLATE_SCHEMA =
                 name: 'album_image',
                 description: 'Album Image',
                 type: 'image'
-            },
-
+            }
         ]
     },
     'PLAYER_SPLASH_VIDEO': {
@@ -864,6 +863,11 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             },
             {
+                name: 'bottom_left_text',
+                description: 'Bottom Left Text',
+                type: 'textbox'
+            },
+            {
                 name: 'twitter_handle',
                 description: 'Twitter Handle',
                 type: 'string'
@@ -879,9 +883,9 @@ var TEMPLATE_SCHEMA =
                 type: 'textbox'
             },
             {
-                name: 'instagram_widget',
-                description: 'Instagram Widget',
-                type: 'textbox'
+                name: 'tracker_bar_texture',
+                description: 'Tracker Bar Texture',
+                type: 'image'
             },
             {
                 name: 'ga_account_id',
