@@ -39,13 +39,13 @@ function genericUpdateViews(type,list,id,index)
     var arg_name = "{0}_id".format(type);
     args[arg_name] = id;
 
-    var url = "/data/element_views.php";
+    var url = g_trueSiteUrl + "/data/element_views.php?method=POST";
     jQuery.ajax(
     {
-        type: 'POST',
+        type: 'GET',
         url: url,
         data: args,
-        dataType: 'json',
+        dataType: 'jsonp',
         success: function(data) 
         {
             var total_views = data['total_views'];

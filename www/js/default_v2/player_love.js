@@ -190,7 +190,7 @@ function syncLoved()
     var data = JSON.stringify(dict);
     jQuery.ajax(
     {
-        type: 'POST',
+        type: 'GET',
         url: "/fan/data/love.php?method=POST",
         contentType: 'application/json',
         data: data,

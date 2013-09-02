@@ -19,8 +19,8 @@ function searchOnReady()
     jQuery.ajax(
     {
         type: 'GET',
-        url: "/data/search.php",
-        dataType: 'json',
+        url: g_trueSiteUrl + "/data/search.php",
+        dataType: 'jsonp',
         success: function(data) 
         {
             g_searchData = data;
