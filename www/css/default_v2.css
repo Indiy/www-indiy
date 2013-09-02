@@ -260,14 +260,15 @@ body {
 
 #bottom_left_text {
     position: absolute;
-    bottom: 60px;
+    bottom: 70px;
     left: 20px;
     color: white;
-    font-size: 40px;
+    font-size: 55px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
 }
 #bottom_left_text a {
+    color: white;
     text-decoration: none;
 }
 
