@@ -874,6 +874,16 @@ var TEMPLATE_SCHEMA =
                 type: 'textbox'
             },
             {
+                name: 'facebook_widget',
+                description: 'Facebook Widget',
+                type: 'textbox'
+            },
+            {
+                name: 'instagram_widget',
+                description: 'Instagram Widget',
+                type: 'textbox'
+            },
+            {
                 name: 'ga_account_id',
                 description: 'Google Analytics Id',
                 type: 'string'
