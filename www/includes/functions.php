@@ -1489,7 +1489,7 @@ END;
             $leading = implode('.',$leading_parts);
             if( "http://www." . $trailing == trueSiteUrl() )
             {
-                $artist_url = $leading;
+                $artist_host = $leading;
             }
             else
             {
