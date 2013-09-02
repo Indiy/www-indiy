@@ -33,6 +33,7 @@ function default_v2_ready()
     }
     else
     {
+        $('#social_box').addClass('hidden');
         $('#v2_top_bar .right .show_feed').addClass('hidden');
         $('#v2_top_bar .right .hide_feed').addClass('hidden');
     }
