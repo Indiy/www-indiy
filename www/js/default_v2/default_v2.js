@@ -49,7 +49,6 @@ function twitterInsert()
     }
     return html !== false;
 }
-
 function twitterWidgetLoad()
 {
     if( typeof twttr != 'undefined' )
@@ -60,6 +59,10 @@ function twitterWidgetLoad()
     {
         window.setTimeout(twitterWidgetLoad,300);
     }
+}
+function facebookInsert()
+{
+    return false;
 }
 
 function showAllShowButtons()
