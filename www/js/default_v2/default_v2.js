@@ -2,8 +2,6 @@
 
 function default_v2_ready()
 {
-    var height = $('#mad_tw_timeline').height() - 10;
-    
     var twitter_enabled = twitterInsert();
     var facebook_enabled = facebookInsert();
     
@@ -32,6 +30,8 @@ $(document).ready(default_v2_ready);
 
 function twitterInsert()
 {
+    var height = $('#social_box .social_twitter').height() - 10;
+    
     var twitter_widget = g_templateParams['twitter_widget'];
     var html = false;
     if( twitter_widget && twitter_widget.length > 0 )
