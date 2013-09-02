@@ -249,10 +249,9 @@ body {
     position: absolute;
     top: 28px;
     bottom: 0px;
-    left: 0px;
     padding-left: 8px;
     padding-right: 8px;
-    width: 300px;
+    width: 284px;
     overflow-x: hidden;
     overflow-y: auto;
 }
