@@ -18,6 +18,11 @@ function default_v2_ready()
             {
                 $('#social_box .social_facebook').show();
             }
+            showSocialFeed();
+        }
+        else
+        {
+            hideSocialFeed();
         }
     }
     else

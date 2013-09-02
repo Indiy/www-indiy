@@ -209,7 +209,7 @@ body {
 }
 
 #social_box {
-    display: none;
+    display: block;
     position: fixed;
     top: 35px;
     bottom: 80px;
