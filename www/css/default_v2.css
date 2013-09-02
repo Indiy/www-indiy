@@ -208,7 +208,7 @@ body {
     cursor: pointer;
 }
 
-#mad_tw_timeline {
+#social_box {
     display: none;
     position: fixed;
     top: 35px;
@@ -216,13 +216,36 @@ body {
     right: 20px;
     width: 300px;
     z-index: 2;
-    overflow-x: hidden;
-    overflow-y: auto;
 
     background: rgba(48,48,48,0.8);
     border-radius: 9px;
     padding-left: 8px;
     padding-right: 8px;
+}
+#social_box .buttons {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 30px;
+    text-align: center;
+}
+#social_box .buttons .button {
+    display: inline-block;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+}
+#social_box .social_item {
+    display: none;
+    position: relative;
+    top: 30px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 #bottom_bar {

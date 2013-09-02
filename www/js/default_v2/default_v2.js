@@ -11,7 +11,15 @@ function default_v2_ready()
     {
         if( !IS_PHONE && !IS_IPAD )
         {
-            showSocialBox();
+            $('#social_box .social_item').hide();
+            if( twitter_enabled )
+            {
+                $('#social_box .social_twitter').show();
+            }
+            else if( facebook_enabled )
+            {
+                $('#social_box .social_facebook').show();
+            }
         }
     }
     else
