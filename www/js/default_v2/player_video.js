@@ -63,7 +63,7 @@ function videoPanelChange(index)
     {
         var window_height = $(window).height();
     
-        var res_list = false;
+        var res_list = [];
         if( _V_.isFF() )
         {
             res_list = video.video_data.ogv;
@@ -71,6 +71,10 @@ function videoPanelChange(index)
         else
         {
             res_list = video.video_data.mp4;
+        }
+        if( !res_list )
+        {
+            res_list = [];
         }
 
         $("#quality_popup .size").removeClass("current");
