@@ -140,10 +140,14 @@
                 <div id='hide_tab_<?=$k;?>' style='display: none;' class='hide_tab hide_button' onclick='v2_hideTabs();'>- <?=$tab['title'];?></div>
             <?php endforeach; ?>
 
-            <div class='show_store show_button' onclick='v2_showStore();'>+ SHOW STORE</div>
-            <div class='hide_store hide_button' style='display: none;' onclick='v2_hideStore();'>- HIDE STORE</div>
-            <div class='show_feed show_button' onclick='showTwitter();'>+ SHOW SOCIAL FEED</div>
-            <div class='hide_feed hide_button' style='display: none;' onclick='hideTwitter();'>- HIDE SOCIAL FEED</div>
+            <?php if( $store_enabled ): ?>
+                <div class='show_store show_button' onclick='v2_showStore();'>+ SHOW STORE</div>
+                <div class='hide_store hide_button' style='display: none;' onclick='v2_hideStore();'>- HIDE STORE</div>
+            <?php endif; ?>
+            <?php if( strlen($template_params['twitter_widget']) > 0 ): ?>
+                <div class='show_feed show_button' onclick='showTwitter();'>+ SHOW SOCIAL FEED</div>
+                <div class='hide_feed hide_button' style='display: none;' onclick='hideTwitter();'>- HIDE SOCIAL FEED</div>
+            <?php endif; ?>
         </div>
     </div>
     <div id='mad_tw_timeline'>
