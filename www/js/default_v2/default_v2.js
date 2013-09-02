@@ -4,7 +4,7 @@ function default_v2_ready()
 {
     if( g_templateParams['tracker_bar_texture'] )
     {
-        var url = g_templateParams['tracker_bar_texture'];
+        var url = g_templateParams['tracker_bar_texture'].image;
         var bg = "transparent url({0}) repeat-x".format(url);
         $('#tracker_bar').css('background',bg);
     }
