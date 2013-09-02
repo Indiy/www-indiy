@@ -49,7 +49,6 @@ function twitterInsert()
     {
         var re = new RegExp("<a[^<]*</a>");
         var m = re.exec(twitter_widget);
-        
         if( m )
         {
             html = m[0];
@@ -81,8 +80,23 @@ function twitterWidgetLoad()
 }
 function facebookInsert()
 {
-    $('#social_box .button.facebook').addClass('hidden');
-    return false;
+    var width = $('#social_box .social_facebook').width();
+    
+    var facebook_widget = g_templateParams['facebook_widget'];
+    var html = false;
+    if( facebook_widget && facebook_widget.length > 0 )
+    {
+        html = facebook_widget.replace(/(.*data-width=)("\w+\d+\w+")(.*)/, '$1"' + width + '"$3')
+    }
+    if( html !== false )
+    {
+        $('#social_box .social_facebook').html(html);
+    }
+    else
+    {
+        $('#social_box .button.facebook').addClass('hidden');
+    }
+    return html !== false;
 }
 
 function instagramInsert()
