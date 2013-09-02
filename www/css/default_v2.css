@@ -240,6 +240,7 @@ body {
     font-size: 12px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
+    text-transform: uppercase;
     background: rgba(66,66,66,0.8);
     border-radius: 2px;
 }
