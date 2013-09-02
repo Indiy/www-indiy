@@ -233,7 +233,7 @@ function openBottom()
     hideVideoBitrate();
     hideContentPage();
     hideAllTabs();
-    hideTwitter();
+    hideSocialFeed();
     g_bottomOpen = true;
     $('#bottom_container').stop();
     if( IS_NARROW )

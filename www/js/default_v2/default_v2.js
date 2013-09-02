@@ -4,8 +4,27 @@ function default_v2_ready()
 {
     var height = $('#mad_tw_timeline').height() - 10;
     
-    var twitter_widget = g_templateParams['twitter_widget'];
+    var twitter_enabled = twitterInsert();
+    var facebook_enabled = facebookInsert();
     
+    if( twitter_enabled || facebook_enabled )
+    {
+        if( !IS_PHONE && !IS_IPAD )
+        {
+            showSocialBox();
+        }
+    }
+    else
+    {
+        $('#v2_top_bar .right .show_feed').addClass('hidden');
+        $('#v2_top_bar .right .hide_feed').addClass('hidden');
+    }
+}
+$(document).ready(default_v2_ready);
+
+function twitterInsert()
+{
+    var twitter_widget = g_templateParams['twitter_widget'];
     var html = false;
     if( twitter_widget && twitter_widget.length > 0 )
     {
@@ -21,29 +40,21 @@ function default_v2_ready()
     }
     if( html !== false )
     {
-        $('#mad_tw_timeline').html(html);
+        $('#social_box .social_twitter').html(html);
         twitterWidgetLoad();
     }
     else
     {
-        g_twitterFeedDisabled = true;
-        $('#mad_tw_timeline').hide();
-        $('#v2_top_bar .right .show_feed').hide();
-        $('#v2_top_bar .right .hide_feed').hide();
+        $('#social_box .social_twitter').hide();
     }
+    return html !== false;
 }
-$(document).ready(default_v2_ready);
 
 function twitterWidgetLoad()
 {
     if( typeof twttr != 'undefined' )
     {
         twttr.widgets.load();
-        
-        if( !IS_PHONE && !IS_IPAD )
-        {
-            showTwitter();
-        }
     }
     else
     {
@@ -57,9 +68,9 @@ function showAllShowButtons()
     $('#v2_top_bar .right .hide_button').hide();
 }
 
-function showTwitter()
+function showSocialFeed()
 {
-    $('#mad_tw_timeline').show();
+    $('#social_box').show();
 
     showAllShowButtons();
 
@@ -69,16 +80,16 @@ function showTwitter()
     closeBottom(false);
 }
 
-function hideTwitter()
+function hideSocialFeed()
 {
-    $('#mad_tw_timeline').hide();
+    $('#social_box').hide();
 
     showAllShowButtons();
 }
 
 function v2_showTab(index)
 {
-    hideTwitter();
+    hideSocialFeed();
     showAllShowButtons();
     $('#v2_top_bar .right #show_tab_' + index).hide();
     $('#v2_top_bar .right #hide_tab_' + index).show();
@@ -92,7 +103,7 @@ function v2_hideTabs()
 }
 function v2_showStore()
 {
-    hideTwitter();
+    hideSocialFeed();
     showAllShowButtons();
     
     $('#v2_top_bar .right .show_store').hide();
