@@ -80,13 +80,15 @@ function twitterWidgetLoad()
 }
 function facebookInsert()
 {
+    var height = $('#social_box .social_facebook').height() - 10;
     var width = $('#social_box .social_facebook').width();
     
     var facebook_widget = g_templateParams['facebook_widget'];
     var html = false;
     if( facebook_widget && facebook_widget.length > 0 )
     {
-        html = facebook_widget.replace(/(.*data-width=)("\w+\d+\w+")(.*)/, '$1"' + width + '"$3')
+        html = facebook_widget.replace(/(.*)(data-height="\w+\d+\w+")(.*)/, '$1 $3');
+        html = html.replace(/(.*data-width=)("\w+\d+\w+")(.*)/, '$1"' + width + '" data-height="' + height +'" $3');
     }
     if( html !== false )
     {
