@@ -868,11 +868,6 @@ var TEMPLATE_SCHEMA =
                 type: 'textbox'
             },
             {
-                name: 'twitter_handle',
-                description: 'Twitter Handle',
-                type: 'string'
-            },
-            {
                 name: 'twitter_widget',
                 description: 'Twitter Widget',
                 type: 'textbox'
