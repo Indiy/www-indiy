@@ -258,6 +258,19 @@ body {
     overflow-y: auto;
 }
 
+#bottom_left_text {
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    color: white;
+    font-size: 40px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#bottom_left_text a {
+    text-decoration: none;
+}
+
 #bottom_bar {
     position: absolute;
     bottom: 0px;
