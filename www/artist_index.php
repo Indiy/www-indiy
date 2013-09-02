@@ -2,21 +2,39 @@
 
     require_once 'includes/config.php';
     require_once 'includes/functions.php';
-    
-    $artist_id = get_artist_id_for_page();
-    if( !$artist_id )
-    {
-        header("HTTP/1.0 404 Not Found");
-        header("Cache-Control: no-cache");
-        header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
-        include_once "error404.php";
-        die();
-    }
-    
+
     list($uri,$query)  = explode('?',$_SERVER['REQUEST_URI'],2);
     if( strlen($uri) == 0 )
     {
         $uri = "/";
+    }
+    
+    $artist_id = get_artist_id_for_page();
+    if( !$artist_id )
+    {
+        if( $uri == '/favicon.ico' )
+        {
+            header("Content-Type: image/x-icon");
+            header("Cache-Control: public, max-age=3600");
+            readfile('favicon.ico');
+        }
+        else
+        {
+            header("HTTP/1.0 404 Not Found");
+            header("Cache-Control: no-cache");
+            header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
+            include_once "error404.php";
+        }
+        die();
+    }
+    
+    if( $uri == '/favicon.ico' )
+    {
+        // Custom ICO per artist code goes here
+        header("Content-Type: image/x-icon");
+        header("Cache-Control: public, max-age=3600");
+        readfile('favicon.ico');
+        die();
     }
     
     $page = mf(mq("SELECT * FROM pages WHERE artist_id = '$artist_id' AND uri = '$uri'"));
