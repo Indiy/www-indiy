@@ -216,28 +216,28 @@ body {
     right: 20px;
     width: 300px;
     z-index: 2;
-
     background: rgba(48,48,48,0.8);
     border-radius: 9px;
-    padding-left: 8px;
-    padding-right: 8px;
 }
 #social_box .buttons {
     position: absolute;
-    top: 0px;
+    top: 5px;
     left: 0px;
     right: 0px;
-    height: 30px;
+    height: 23px;
     text-align: center;
+    font-size: 0px;
 }
 #social_box .buttons .button {
     display: inline-block;
-    padding-top: 2px;
+    padding-top: 7px;
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 2px;
-    color: #888;
-    font-size: 12px;
+    margin-right: 2px;
+    margin-left: 2px;
+    color: #ccc;
+    font-size: 15px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
@@ -247,10 +247,10 @@ body {
 #social_box .social_item {
     display: none;
     position: absolute;
-    top: 20px;
-    left: 0px;
-    right: 0px;
+    top: 28px;
     bottom: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
     overflow-x: hidden;
     overflow-y: auto;
 }
