@@ -8,18 +8,17 @@ function default_v2_ready()
     
     if( twitter_enabled || facebook_enabled || instagram_enabled )
     {
-        $('#social_box .social_item').hide();
         if( twitter_enabled )
         {
-            $('#social_box .social_twitter').show();
+            showTwitter();
         }
         else if( facebook_enabled )
         {
-            $('#social_box .social_facebook').show();
+            showFacebook();
         }
         else if( instagram_enabled )
         {
-            $('#social_box .social_instagram').show();
+            showInstagram();
         }
 
         if( !IS_PHONE && !IS_IPAD )
@@ -146,4 +145,20 @@ function v2_hideStore()
 {
     showAllShowButtons();
     hideStore();
+}
+
+function showTwitter()
+{
+    $('#social_box .social_item').hide();
+    $('#social_box .social_twitter').show();
+}
+function showFacebook()
+{
+    $('#social_box .social_item').hide();
+    $('#social_box .social_facebook').show();
+}
+function showInstagram()
+{
+    $('#social_box .social_item').hide();
+    $('#social_box .social_instagram').show();
 }
