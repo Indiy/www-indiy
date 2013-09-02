@@ -214,7 +214,7 @@ body {
     top: 35px;
     bottom: 80px;
     right: 20px;
-    width: 300px;
+    width: 366px;
     z-index: 2;
     background: rgba(48,48,48,0.8);
     border-radius: 9px;
@@ -243,6 +243,7 @@ body {
     text-transform: uppercase;
     background: rgba(66,66,66,0.8);
     border-radius: 2px;
+    cursor: pointer;
 }
 #social_box .social_item {
     display: block;
@@ -252,7 +253,7 @@ body {
     left: 0px;
     padding-left: 8px;
     padding-right: 8px;
-    width: 284px;
+    width: 350px;
     overflow-x: hidden;
     overflow-y: auto;
 }
