@@ -187,15 +187,16 @@ function syncLoved()
     var dict = {
         'love_list': love_list
     };
+    var url = g_trueSiteUrl + "/fan/data/love.php?method=POST";
     var data = JSON.stringify(dict);
     jQuery.ajax(
     {
         type: 'GET',
-        url: "/fan/data/love.php?method=POST",
+        url: url,
         contentType: 'application/json',
         data: data,
         processData: false,
-        dataType: 'json',
+        dataType: 'jsonp',
         success: function(data) 
         {
             //console.log(data);
