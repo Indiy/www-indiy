@@ -4,20 +4,26 @@ function default_v2_ready()
 {
     var twitter_enabled = twitterInsert();
     var facebook_enabled = facebookInsert();
+    var instagram_enabled = instagramInsert();
     
-    if( twitter_enabled || facebook_enabled )
+    if( twitter_enabled || facebook_enabled || instagram_enabled )
     {
+        $('#social_box .social_item').hide();
+        if( twitter_enabled )
+        {
+            $('#social_box .social_twitter').show();
+        }
+        else if( facebook_enabled )
+        {
+            $('#social_box .social_facebook').show();
+        }
+        else if( instagram_enabled )
+        {
+            $('#social_box .social_instagram').show();
+        }
+
         if( !IS_PHONE && !IS_IPAD )
         {
-            $('#social_box .social_item').hide();
-            if( twitter_enabled )
-            {
-                $('#social_box .social_twitter').show();
-            }
-            else if( facebook_enabled )
-            {
-                $('#social_box .social_facebook').show();
-            }
             showSocialFeed();
         }
         else
@@ -58,7 +64,7 @@ function twitterInsert()
     }
     else
     {
-        $('#social_box .social_twitter').hide();
+        $('#social_box .button.twitter').addClass('hidden');
     }
     return html !== false;
 }
@@ -75,8 +81,16 @@ function twitterWidgetLoad()
 }
 function facebookInsert()
 {
+    $('#social_box .button.facebook').addClass('hidden');
     return false;
 }
+
+function instagramInsert()
+{
+    $('#social_box .button.instagram').addClass('hidden');
+    return false;
+}
+
 
 function showAllShowButtons()
 {
