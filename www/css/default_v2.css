@@ -2319,10 +2319,11 @@ and (max-device-width : 480px) {
         display: none !important;
     }
     
-    
     #iphone_top_text {
         position: absolute;
         top: 0px;
+        left: 0px;
+        right: 0px;
         display: block;
         color: white;
         font-size: 40px;
@@ -2333,6 +2334,8 @@ and (max-device-width : 480px) {
         display: block;
         position: absolute;
         top: 200px;
+        left: 0px;
+        right: 0px;
         height: 60px;
         color: red;
         font-size: 50px;
@@ -2342,6 +2345,8 @@ and (max-device-width : 480px) {
     #iphone_bottom_section {
         position: absolute;
         top: 250px;
+        left: 0px;
+        right: 0px;
     }
 
     #social_box {
