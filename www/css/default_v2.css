@@ -2354,7 +2354,7 @@ and (max-device-width : 480px) {
     }
 
     #social_box {
-        position: static;
+        position: relative;
         height: 359px;
         width: auto;
         padding-left: 5px;
