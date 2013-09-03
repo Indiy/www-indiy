@@ -2355,11 +2355,13 @@ and (max-device-width : 480px) {
 
     #social_box {
         position: relative;
+        left: auto;
+        right: auto;
         height: 359px;
         width: auto;
         padding-left: 5px;
         padding-right: 5px;
-        margin-top: 8px;
+        margin-top: 0px;
     }
     
     #iphone_pad_no_store {
