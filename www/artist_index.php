@@ -24,6 +24,7 @@
             header("Cache-Control: no-cache");
             header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
             include_once "error404.php";
+            echo "<!-- no artist found -->";
         }
         die();
     }
@@ -52,6 +53,7 @@
             header("Cache-Control: no-cache");
             header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
             include_once 'error404.php';
+            echo "<!-- no page found -->";
             die();
         }
     }
@@ -62,22 +64,6 @@
     $all_links_blank = "";
     $media_auto_start = TRUE;
 
-    $IPHONE = FALSE;
-    $IOS = FALSE;
-    $IPAD = FALSE;
-    if( strpos($_SERVER['HTTP_USER_AGENT'],"iPhone") !== FALSE
-       || strpos($_SERVER['HTTP_USER_AGENT'],"Googlebot-Mobile") !== FALSE
-       )
-    {
-        $IPHONE = TRUE;
-        $IOS = TRUE;
-    }
-    else if( strpos($_SERVER['HTTP_USER_AGENT'],"iPad") )
-    {
-        $IOS = TRUE;
-        $IPAD = TRUE;
-    }
-    
     if( FALSE && isset($_REQUEST['embed']) )
     {
         $single_media_button = TRUE;
@@ -92,6 +78,7 @@
         header("Cache-Control: no-cache");
         header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
         include_once "error404.php";
+        echo "<!-- no artist data loaded -->";
         die();
     }
     if( strlen($artist_data['preview_key']) > 0 )
@@ -103,6 +90,7 @@
             header("Cache-Control: no-cache");
             header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
             include_once "error404.php";
+            echo "<!-- not authorized -->";
             die();
         }
     }
@@ -120,7 +108,6 @@
     {
         $template_id = $_REQUEST['preview_template'];
     }
-    
 
     $product_list = array();
     $product_list_html = "";
@@ -497,6 +484,15 @@
         {
             include_once 'templates/splash_form_download.html';
         }
+    }
+    else
+    {
+        header("HTTP/1.0 404 Not Found");
+        header("Cache-Control: no-cache");
+        header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
+        include_once "error404.php";
+        echo "<!-- unknown template -->";
+        die();
     }
 
 ?>
