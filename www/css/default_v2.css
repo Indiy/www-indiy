@@ -2267,92 +2267,11 @@ body {
 
 /*************************************************************************/
 
-.narrow_screen #media_social_boxes .media_boxes .media_buttons .button {
-    height: 41px;
-}
-.narrow_screen #media_social_boxes {
-    height: 294px;
-}
-.narrow_screen #media_social_boxes .media_boxes .media_buttons .button .label {
-    margin-top: 14px;
-}
-.narrow_screen #media_social_boxes .media_boxes .media_buttons .button .icon {
-    margin-top: -8px;
-}
-
-.narrow_screen #media_social_boxes .button.twitter .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -603px -665px;
-}
-.narrow_screen.no_touch #media_social_boxes .button.twitter:hover .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -603px -596px;
-}
-.narrow_screen #media_social_boxes .button.facebook .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -560px -665px;
-}
-.narrow_screen.no_touch #media_social_boxes .button.facebook:hover .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -560px -597px;
-}
-.narrow_screen #media_social_boxes .button.share .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -523px -664px;
-}
-.narrow_screen.no_touch #media_social_boxes .button.share:hover .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -523px -596px;
-}
-.narrow_screen #media_social_boxes .button.email .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -482px -665px;
-}
-.narrow_screen.no_touch #media_social_boxes .button.email:hover .icon  {
-    background: transparent url('../images/player_icons.png') no-repeat -482px -597px;
-}
-.narrow_screen #media_social_boxes .media_boxes .media_buttons .sep {
-    height: 1px;
-    background: #282828;
-}
-.narrow_screen #music_list .left .track_container {
-    height: 294px;
-}
-.narrow_screen #music_list .right {
-    height: 294px;
-}
-/*************************************************************************/
-
 .hide_volume #tracker_bar .media_controls .progress_container {
     left: 75px;
 }
 
 /*************************************************************************/
-
-.thin_footer #bottom_bar {
-    height: 25px;
-}
-.thin_footer #bottom_bar .be_heard,
-.thin_footer #bottom_bar .slash,
-.thin_footer #bottom_bar .bottom_link {
-    padding-top: 7px;
-}
-
-.thin_footer #bottom_bar .copyright {
-    padding-top: 7px;
-}
-.thin_footer #bottom_container {
-    bottom: 25px;
-}
-
-.thin_footer .full_screen_bg {
-    bottom: 25px;
-}
-.thin_footer #user_tab {
-    bottom: 80px;
-}
-.thin_footer #contact_tab {
-    bottom: 80px;
-}
-.thin_footer #comment_tab {
-    bottom: 80px;
-}
-.thin_footer #store_tab {
-    bottom: 80px;
-}
 
 .template_prince #top_bar {
     background: transparent url('../images/topbar_texture_heineken.jpg') repeat-x;

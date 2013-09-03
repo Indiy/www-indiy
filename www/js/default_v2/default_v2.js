@@ -2,6 +2,12 @@
 
 function default_v2_ready()
 {
+    if( IS_IOS || IS_PHONE || IS_TABLET )
+    {
+        $('.volume_hidden').addClass('hidden');
+        $('body').addClass('hide_volume');
+    }
+
     if( g_templateParams['tracker_bar_texture'] )
     {
         var url = g_templateParams['tracker_bar_texture'].image;

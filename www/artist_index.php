@@ -58,10 +58,8 @@
     
     $page_id = $page['page_id'];
     
-    $hide_volume = FALSE;
     $single_media_button = FALSE;
     $all_links_blank = "";
-    $thin_footer = FALSE;
     $media_auto_start = TRUE;
 
     $IPHONE = FALSE;
@@ -80,19 +78,10 @@
         $IPAD = TRUE;
     }
     
-    $NARROW_SCREEN = FALSE;
-    if( $IOS )
+    if( FALSE && isset($_REQUEST['embed']) )
     {
-        $NARROW_SCREEN = TRUE;
-        $hide_volume = TRUE;
-    }
-    if( isset($_REQUEST['embed']) )
-    {
-        $NARROW_SCREEN = TRUE;
-        $hide_volume = TRUE;
         $single_media_button = TRUE;
         $all_links_blank = " target='_blank' ";
-        $thin_footer = TRUE;
         $media_auto_start = FALSE;
     }
     
@@ -362,19 +351,6 @@
     $fan_email = "";
     
     $body_style = "";
-    if( $NARROW_SCREEN )
-    {
-        $body_style .= " narrow_screen";
-    }
-    
-    if( $hide_volume  )
-    {
-        $body_style .= " hide_volume";
-    }
-    if( $thin_footer )
-    {
-        $body_style .= " thin_footer";
-    }
     
     if( $template_id )
     {
