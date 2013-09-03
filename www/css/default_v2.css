@@ -2273,18 +2273,38 @@ body {
 
 /*************************************************************************/
 
-.template_prince #top_bar {
-    background: transparent url('../images/topbar_texture_heineken.jpg') repeat-x;
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+    #v2_top_bar {
+        display: none !important;
+    }
+    #bottom_left_text {
+        display: none !important;
+    }
+    #bottom_bar {
+        display: none !important;
+    }
+    #bottom_container {
+        display: none !important;
+    }
+    #player_prev {
+        display: none !important;
+    }
+    #player_next {
+        display: none !important;
+    }
 }
-.template_prince #tracker_bar {
-    background: transparent url('../images/tracker_bar_bg_heineken.jpg') repeat-x;
-}
-.template_prince #top_bar_mad_logo {
-    background: transparent url('../images/topbar_logo_heineken.png') no-repeat;
-    cursor: default;
-}
-.template_prince #bottom_bar .be_heard {
-    color: white;
+
+/*************************************************************************/
+
+@media (device-height: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation : portrait) {
+    
+    
+
 }
 
 /*************************************************************************/
