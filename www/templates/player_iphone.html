@@ -8,31 +8,27 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     
     <link rel="apple-touch-icon" href="<?=artist_file_url($artist_logo);?>" />
-    <link rel="apple-touch-startup-image" href="/images/apple-loading-screen.jpg" />
+    <link rel="apple-touch-startup-image" href="<?=static_file_url('/images/apple-loading-screen.jpg');?>" />
 
-    <!--[if lt IE 9]>
-     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-     
-    <link href="/css/video-js.css" rel="stylesheet">
-    <link href="/css/player_iphone.css" rel="stylesheet" type="text/css"/>
+    <link href="<?=static_file_url('/css/video-js.css');?>" rel="stylesheet">
+    <link href="<?=static_file_url('/css/player_iphone.css');?>" rel="stylesheet" type="text/css"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="/js/video.js"></script>
+    <script src="<?=static_file_url('/js/video.js');?>"></script>
 
-    <script src="/js/jquery.mousewheel.js" type="text/javascript"></script>
-    <script src="/js/jquery.jplayer.js" type="text/javascript"></script>
-    <script src="/js/string.utils.js" type="text/javascript"></script>
-    <script src="/js/mad.scrollbar.js" type="text/javascript"></script>
-    <script src="/js/mad.swipe.js" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/jquery.mousewheel.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/jquery.jplayer.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/string.utils.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/mad.scrollbar.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/mad.swipe.js');?>" type="text/javascript"></script>
 
-    <script src="/js/player_image.js" type="text/javascript"></script>
-    <script src="/js/player_common.js" type="text/javascript"></script>
-    <script src="/js/pl_iphone.js" type="text/javascript"></script>
-    <script src="/js/pl_iphone_photo.js" type="text/javascript"></script>
-    <script src="/js/pl_iphone_music.js" type="text/javascript"></script>
-    <script src="/js/pl_iphone_video.js" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/player_image.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/player_common.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/pl_iphone.j');?>s" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/pl_iphone_photo.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/pl_iphone_music.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/pl_iphone_video.js');?>" type="text/javascript"></script>
 
     <script type="text/javascript">
         var g_tabList = <?=$tab_list_json;?>;
