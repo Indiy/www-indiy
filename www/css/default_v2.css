@@ -2318,6 +2318,9 @@ and (max-device-width : 480px) {
     #player_next {
         display: none !important;
     }
+    .full_screen_bg {
+        position: absolute;
+    }
     
     #iphone_top_text {
         position: absolute;
@@ -2333,7 +2336,7 @@ and (max-device-width : 480px) {
     #iphone_bottom_text {
         display: block;
         position: absolute;
-        top: 200px;
+        top: 246px;
         left: 0px;
         right: 0px;
         height: 60px;
@@ -2342,9 +2345,10 @@ and (max-device-width : 480px) {
         font-family: 'Agency Regular', Helvetica, sans-serif;
         text-align: center;
     }
+    
     #iphone_bottom_section {
         position: absolute;
-        top: 250px;
+        top: 270px;
         left: 0px;
         right: 0px;
     }
