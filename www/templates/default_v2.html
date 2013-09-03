@@ -151,6 +151,17 @@
             <div class='hide_feed hide_button' style='display: none;' onclick='hideSocialFeed();'>- HIDE SOCIAL FEED</div>
         </div>
     </div>
+    
+    <div class='iphone_top_text'>#MAYBACHMUSICTV</div>
+    <div class='iphone_body_spacer'></div>
+    <div class='iphone_bottom_text'>#SELFMADE3</div>
+    <?php if( $store_enabled ): ?>
+        <div id='iphone_pad_no_store'></div>
+    <?php endif; ?>
+    <div id='iphone_show_social_button' class='button_container'>
+        <div class='button' onclick='toggleShowSocial();'>+ SHOW SOCIAL</div>
+    </div>
+    
     <div id='social_box'>
         <div class='buttons'>
             <div class='twitter button' onclick='showTwitter();'>Twitter</div>
@@ -161,6 +172,15 @@
         <div class='social_facebook social_item'></div>
         <div class='social_instagram social_item'></div>
     </div>
+
+    <?php if( $store_enabled ): ?>
+        <div id='iphone_pad'></div>
+        <div id='iphone_show_store_button' class='button_container'>
+            <div class='button' onclick='toggleShowStore();'>+ SHOW STORE</div>
+        </div>
+    <?php endif; ?>
+    <div id='iphone_pad'></div>
+
     <div id='bottom_left_text' class='idle_fade_out'><?=$template_params['bottom_left_text'];?></div>
 
     <div id='bottom_bar'>
