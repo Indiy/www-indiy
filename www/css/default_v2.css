@@ -2321,25 +2321,29 @@ and (max-device-width : 480px) {
     
     
     #iphone_top_text {
+        position: absolute;
+        top: 0px;
         display: block;
-        height: 50px;
         color: white;
         font-size: 40px;
         font-family: 'Agency Regular', Helvetica, sans-serif;
         text-align: center;
     }
-    #iphone_body_pad {
-        display: block;
-        height: 365px;
-    }
     #iphone_bottom_text {
         display: block;
+        position: absolute;
+        top: 200px;
         height: 60px;
         color: red;
         font-size: 50px;
         font-family: 'Agency Regular', Helvetica, sans-serif;
         text-align: center;
     }
+    #iphone_bottom_section {
+        position: absolute;
+        top: 250px;
+    }
+
     #social_box {
         position: static;
         height: 359px;
@@ -2429,7 +2433,7 @@ and (max-device-width : 480px) {
     #big_play_icon {
         display: none;
         position: absolute;
-        top: 50%;
+        top: 200px;
         left: 50%;
         height: 0px;
         width: 0px;

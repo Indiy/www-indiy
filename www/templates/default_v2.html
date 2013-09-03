@@ -153,34 +153,112 @@
     </div>
     
     <div id='iphone_top_text'>#MAYBACHMUSICTV</div>
-    <div id='iphone_body_spacer'></div>
     <div id='iphone_bottom_text'>#SELFMADE3</div>
-    <?php if( $store_enabled ): ?>
-        <div id='iphone_pad_no_store'></div>
-    <?php endif; ?>
-    <div id='iphone_show_social_button' class='button_container'>
-        <div class='button' onclick='toggleShowSocial();'>+ SHOW SOCIAL</div>
+    <div id='iphone_bottom_section'>
+        <?php if( $store_enabled ): ?>
+            <div id='iphone_pad_no_store'></div>
+        <?php endif; ?>
+        <div id='iphone_show_social_button' class='button_container'>
+            <div class='button' onclick='toggleShowSocial();'>+ SHOW SOCIAL</div>
+        </div>
+        
+        <div id='social_box'>
+            <div class='buttons'>
+                <div class='twitter button' onclick='showTwitter();'>Twitter</div>
+                <div class='facebook button' onclick='showFacebook();'>Facebook</div>
+                <div class='instagram button' onclick='showInstagram();'>Instagram</div>
+            </div>
+            <div class='social_twitter social_item'></div>
+            <div class='social_facebook social_item'></div>
+            <div class='social_instagram social_item'></div>
+        </div>
+
+        <?php if( $store_enabled ): ?>
+            <div id='iphone_pad'></div>
+            <div id='iphone_show_store_button' class='button_container'>
+                <div class='button' onclick='toggleShowStore();'>+ SHOW STORE</div>
+            </div>
+        <?php endif; ?>
+        <div id='iphone_pad'></div>
+        <div id='store_tab' class='content_tab'>
+            <div class='close' onclick='hideTab();'>
+                <div class='icon'></div>
+                <div class='name'>CLOSE</div>
+            </div>
+            <div class='left'>
+                <div class='title'>STORE</div>
+                <div id='store_back' class='back' onclick='storeShowProductList();'>
+                    <div class='arrow'></div>
+                    <div class='text'>BACK TO LIST</div>
+                </div>
+                <div class='back' onclick='storeViewCart();'>
+                    <div class='arrow'></div>
+                    <div class='text'>VIEW CART</div>
+                </div>
+            </div>
+            <div class='sep'></div>
+            <div class='right scrollbar-pane'>
+                <div id='product_list' class='product_list store_content'>
+                    <div class='store_title'><?=$artist_name;?> STORE</div>
+                    <?=$product_list_html;?>
+                </div>
+                <div id='product_info' class='product_info store_content'>
+                    <div class='store_title'></div>
+                    <div class='pi_right'>
+                        <div class='name'></div>
+                        <div class='hsep'></div>
+                        <div class='price_share'>
+                            <div class='dollar_price'><span class='dollar'>$</span><span class='price'></span></div>
+                            <div class='sizes'>
+                                <select id='product_size'>
+                                    <option value='small'>Small</option>
+                                    <option value='medium'>Medium</option>
+                                    <option value='large'>Large</option>
+                                    <option value='x-large'>X-Large</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class='hsep'></div>
+                        <div class='buy' onclick='storeBuyProduct();'>BUY NOW</div>
+                        <div class='buy_free' onclick='storeBuyFreeProduct();'>DOWNLOAD</div>
+                        <div class='description'></div>
+                    </div>
+                    <div class='pi_left'>
+                        <div class='img_holder'>
+                            <img src=''/>
+                        </div>
+                    </div>
+                </div>
+                <div id='buy_now_result' class='buy_now_result buy_result store_content'>
+                    <div class='store_title'></div>
+                    <div class='name'></div>
+                    <div class='hsep'></div>
+                    <div class='text'>PRODUCT ADDED TO CART.</div>
+                    <div class='return_to_store button' onclick='storeShowProductList();'>RETURN TO STORE</div>
+                    <div class='view_cart button' onclick='storeViewCart();'>VIEW CART</div>
+                    <div class='checkout button' onclick='storeCheckout();'>CHECKOUT NOW</div>
+                </div>
+                <div id='free_product_success' class='free_product_success buy_result store_content'>
+                    <div class='store_title'></div>
+                    <div class='name'></div>
+                    <div class='hsep'></div>
+                    <div class='text'>Product added to your fan account!</div>
+                    <div class='return_to_store button' onclick='storeShowProductList();'>RETURN TO STORE</div>
+                    <div class='go_to_fan button' onclick='storeGoToFan();'>GO TO FAN PAGE</div>
+                </div>
+                <div id='free_product_need_fan' class='free_product_need_fan buy_result store_content'>
+                    <div class='store_title'></div>
+                    <div class='name'></div>
+                    <div class='hsep'></div>
+                    <div class='text'>You need to signup for a MyArtistDNA fan account to download this item.</div>
+                    <div class='fan_signup button' onclick='storeFanSignup();'>SIGNUP</div>
+                    <div class='fan_login button' onclick='storeFanLogin();'>LOGIN</div>
+                </div>
+            </div>
+            <?=build_scrollbar();?>
+        </div>
     </div>
     
-    <div id='social_box'>
-        <div class='buttons'>
-            <div class='twitter button' onclick='showTwitter();'>Twitter</div>
-            <div class='facebook button' onclick='showFacebook();'>Facebook</div>
-            <div class='instagram button' onclick='showInstagram();'>Instagram</div>
-        </div>
-        <div class='social_twitter social_item'></div>
-        <div class='social_facebook social_item'></div>
-        <div class='social_instagram social_item'></div>
-    </div>
-
-    <?php if( $store_enabled ): ?>
-        <div id='iphone_pad'></div>
-        <div id='iphone_show_store_button' class='button_container'>
-            <div class='button' onclick='toggleShowStore();'>+ SHOW STORE</div>
-        </div>
-    <?php endif; ?>
-    <div id='iphone_pad'></div>
-
     <div id='bottom_left_text' class='idle_fade_out'><?=$template_params['bottom_left_text'];?></div>
 
     <div id='bottom_bar'>
@@ -485,83 +563,7 @@
         </div>
         <?=build_scrollbar();?>
     </div>
-    <div id='store_tab' class='content_tab'>
-        <div class='close' onclick='hideTab();'>
-            <div class='icon'></div>
-            <div class='name'>CLOSE</div>
-        </div>
-        <div class='left'>
-            <div class='title'>STORE</div>
-            <div id='store_back' class='back' onclick='storeShowProductList();'>
-                <div class='arrow'></div>
-                <div class='text'>BACK TO LIST</div>
-            </div>
-            <div class='back' onclick='storeViewCart();'>
-                <div class='arrow'></div>
-                <div class='text'>VIEW CART</div>
-            </div>
-        </div>
-        <div class='sep'></div>
-        <div class='right scrollbar-pane'>
-            <div id='product_list' class='product_list store_content'>
-                <div class='store_title'><?=$artist_name;?> STORE</div>
-                <?=$product_list_html;?>
-            </div>
-            <div id='product_info' class='product_info store_content'>
-                <div class='store_title'></div>
-                <div class='pi_right'>
-                    <div class='name'></div>
-                    <div class='hsep'></div>
-                    <div class='price_share'>
-                        <div class='dollar_price'><span class='dollar'>$</span><span class='price'></span></div>
-                        <div class='sizes'>
-                            <select id='product_size'>
-                                <option value='small'>Small</option>
-                                <option value='medium'>Medium</option>
-                                <option value='large'>Large</option>
-                                <option value='x-large'>X-Large</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class='hsep'></div>
-                    <div class='buy' onclick='storeBuyProduct();'>BUY NOW</div>
-                    <div class='buy_free' onclick='storeBuyFreeProduct();'>DOWNLOAD</div>
-                    <div class='description'></div>
-                </div>
-                <div class='pi_left'>
-                    <div class='img_holder'>
-                        <img src=''/>
-                    </div>
-                </div>
-            </div>
-            <div id='buy_now_result' class='buy_now_result buy_result store_content'>
-                <div class='store_title'></div>
-                <div class='name'></div>
-                <div class='hsep'></div>
-                <div class='text'>PRODUCT ADDED TO CART.</div>
-                <div class='return_to_store button' onclick='storeShowProductList();'>RETURN TO STORE</div>
-                <div class='view_cart button' onclick='storeViewCart();'>VIEW CART</div>
-                <div class='checkout button' onclick='storeCheckout();'>CHECKOUT NOW</div>
-            </div>
-            <div id='free_product_success' class='free_product_success buy_result store_content'>
-                <div class='store_title'></div>
-                <div class='name'></div>
-                <div class='hsep'></div>
-                <div class='text'>Product added to your fan account!</div>
-                <div class='return_to_store button' onclick='storeShowProductList();'>RETURN TO STORE</div>
-                <div class='go_to_fan button' onclick='storeGoToFan();'>GO TO FAN PAGE</div>
-            </div>
-            <div id='free_product_need_fan' class='free_product_need_fan buy_result store_content'>
-                <div class='store_title'></div>
-                <div class='name'></div>
-                <div class='hsep'></div>
-                <div class='text'>You need to signup for a MyArtistDNA fan account to download this item.</div>
-                <div class='fan_signup button' onclick='storeFanSignup();'>SIGNUP</div>
-                <div class='fan_login button' onclick='storeFanLogin();'>LOGIN</div>
-            </div>
-        </div>
-        <?=build_scrollbar();?>
-    </div>
+    
     <div id='search'>
         <div class='search_box'>
             <input placeholder='Search'>
