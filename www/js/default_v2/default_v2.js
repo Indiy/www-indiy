@@ -138,12 +138,28 @@ function showSocialFeed()
     
     closeBottom(false);
 }
-
 function hideSocialFeed()
 {
     $('#social_box').hide();
 
     showAllShowButtons();
+}
+function toggleSocialFeed()
+{
+    hideStore();
+    $('#iphone_show_store_button .button').html('+ SHOW STORE');
+    
+    if( $('#mad_tw_timeline').is(":visible") )
+    {
+        $('#iphone_show_social_button .button').html('+ SHOW SOCIAL');
+        $('#social_box').hide();
+    }
+    else
+    {
+        $('#iphone_show_social_button .button').html('- HIDE SOCIAL');
+        $('#social_box').show();
+        $(document).scrollTop($('#iphone_show_social_button').position().top);
+    }
 }
 
 function v2_showTab(index)
