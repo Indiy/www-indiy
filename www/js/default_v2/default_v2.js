@@ -169,12 +169,12 @@ function toggleStore()
     if( $('#store_tab').is(":visible") )
     {
         $('#iphone_show_store_button .button').html('+ SHOW STORE');
-        $('#store_tab').hide();
+        hideStore();
     }
     else
     {
         $('#iphone_show_store_button .button').html('- HIDE STORE');
-        $('#store_tab').show();
+        showStore();
         $(document).scrollTop($('#iphone_show_store_button').position().top);
     }    
 }
