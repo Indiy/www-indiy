@@ -2438,6 +2438,7 @@ and (max-device-width : 480px) {
     #store_tab .product_list {
         padding-top: 6px;
         padding-bottom: 0px;
+        padding-right: 0px;
         text-align: center;
     }
     #store_tab .product_list .store_title {
