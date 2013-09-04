@@ -149,7 +149,7 @@ function toggleSocialFeed()
     hideStore();
     $('#iphone_show_store_button .button').html('+ SHOW STORE');
     
-    if( $('#mad_tw_timeline').is(":visible") )
+    if( $('#social_box').is(":visible") )
     {
         $('#iphone_show_social_button .button').html('+ SHOW SOCIAL');
         $('#social_box').hide();
