@@ -2415,6 +2415,15 @@ and (max-device-width : 480px) {
         position: static;
         height: auto;
     }
+    #store_tab .left {
+        display: none;
+    }
+    #store_tab .sep {
+        display: none;
+    }
+    #store_tab .scrollbar-handle-container {
+        display: none;
+    }
     #store_tab .store_inner {
         position: static;
         width: auto;
