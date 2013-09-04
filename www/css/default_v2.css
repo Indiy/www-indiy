@@ -2444,6 +2444,9 @@ and (max-device-width : 480px) {
     #store_tab .product_list .store_title {
         display: none;
     }
+    #store_tab .product_info {
+        padding-right: 0px;
+    }
     #store_tab .product_info .store_title {
         display: none;
     }
@@ -2458,6 +2461,9 @@ and (max-device-width : 480px) {
     }
     #store_tab .product_info .pi_right .name {
         padding-top: 24px;
+    }
+    #store_tab .buy_result {
+        padding-right: 0px;
     }
     
     #big_play_icon {
