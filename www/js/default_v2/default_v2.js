@@ -163,7 +163,20 @@ function toggleSocialFeed()
 }
 function toggleStore()
 {
+    $('#social_box').hide();
+    $('#iphone_show_social_button .button').html('+ SHOW SOCIAL');
 
+    if( $('#store_tab').is(":visible") )
+    {
+        $('#iphone_show_store_button .button').html('+ SHOW STORE');
+        $('#store_tab').hide();
+    }
+    else
+    {
+        $('#iphone_show_store_button .button').html('- HIDE STORE');
+        $('#store_tab').show();
+        $(document).scrollTop($('#iphone_show_store_button').position().top);
+    }    
 }
 
 function v2_showTab(index)
