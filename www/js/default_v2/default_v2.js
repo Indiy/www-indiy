@@ -161,6 +161,10 @@ function toggleSocialFeed()
         $(document).scrollTop($('#iphone_show_social_button').position().top);
     }
 }
+function toggleStore()
+{
+
+}
 
 function v2_showTab(index)
 {

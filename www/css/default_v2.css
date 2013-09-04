@@ -2369,6 +2369,8 @@ and (max-device-width : 480px) {
     }
     #social_box .social_item {
         width: auto;
+        left: 0px;
+        right: 0px;
     }
     
     #iphone_pad_no_store {
