@@ -2526,9 +2526,42 @@ and (max-device-width : 480px) {
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation : portrait) {
     
-    
+    .full_screen_bg {
+        bottom: auto;
+        height: 504px;
+    }
 
 }
+
+@media (device-height: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation : landscape) {
+    
+    .full_screen_bg {
+        bottom: auto;
+        height: 268px;
+    }
+}
+
+
+@media (device-height: 480px)
+and (orientation : portrait) {
+
+    .full_screen_bg {
+        bottom: auto;
+        height: 416px;
+    }
+}
+
+@media (device-height: 480px)
+and (orientation : landscape) {
+
+    .full_screen_bg {
+        bottom: auto;
+        height: 268px;
+    }
+}
+
 
 /*************************************************************************/
 
