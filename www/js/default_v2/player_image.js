@@ -7,6 +7,10 @@ function imageLoadItem(item,index,root_tag)
     if( typeof color == 'undefined' )
         color = item.bg_color;
     var bg_style = item.bg_style;
+    if( IS_PHONE )
+    {
+        bg_style = 'STRETCH';
+    }
     
     if( !item.loaded )
     {
@@ -101,6 +105,11 @@ function imageResizeBackgrounds(list,root_tag)
             continue;
         
         var bg_style = item.bg_style;
+        if( IS_PHONE )
+        {
+            bg_style = 'STRETCH';
+        }
+
         if( bg_style == 'STRETCH' || bg_style == 'LETTERBOX' )
         {
             var image_params;
