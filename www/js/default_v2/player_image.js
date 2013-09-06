@@ -166,7 +166,7 @@ function imageGetStretchParams(item,root_tag)
     if( bg_justify == "TOP" )
         margin_top = 0;
     
-    var img_url = getImgUrl(item,root_tag);
+    var img_url = getImgUrl(item,root_tag,img_ratio/win_ratio);
     
     var ret = {
         'width': width,
@@ -207,7 +207,7 @@ function imageGetLetterboxParams(item,root_tag)
         margin_top = (win_height - height)/2;
     }
     
-    var img_url = getImgUrl(item,root_tag,img_ratio/win_ratio);
+    var img_url = getImgUrl(item,root_tag);
     
     var ret = {
         'width': width,
