@@ -224,7 +224,7 @@ function getImgUrl(item,root_tag)
     var img_width = item.image_data.width;
 
     var tim_width = win_width;
-    if( IS_IOS )
+    if( IS_RETINA )
     {
         tim_width = 2*tim_width;
     }

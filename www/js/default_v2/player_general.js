@@ -20,6 +20,8 @@ var IS_CHROME = navigator.userAgent.match(/Chrome/i) != null;
 var IS_MOBILE = navigator.userAgent.match(/Mobile/i) != null;
 var IS_DESKTOP = !IS_MOBILE;
 
+var IS_RETINA = window.devicePixelRatio > 1;
+
 var IS_IE = false;
 var IS_OLD_IE = false;
 (function() {
