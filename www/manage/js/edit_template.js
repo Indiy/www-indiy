@@ -877,6 +877,11 @@ var TEMPLATE_SCHEMA =
                 type: 'textbox'
             },
             {
+                name: 'media_button_text',
+                description: 'Media Button Text',
+                type: 'string'
+            },
+            {
                 name: 'footer_left',
                 description: 'Footer Left Text',
                 type: 'string'

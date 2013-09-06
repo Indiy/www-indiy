@@ -278,10 +278,11 @@
     <div id='bottom_container' class='idle_fade_out'>
         <div id='tracker_bar'>
             <div class='buttons'>
-                <? if( $single_media_button ): ?>
+                <? if( strlen($template_params['media_button_text']) > 0 ): ?>
                     <div class='sep'></div>
-                    <div class='plus tooltiped button' onclick='toggleBottom();' tooltip="MORE">
+                    <div class='plus button long' onclick='toggleBottom();'>
                         <div class='icon'></div>
+                        <div class='label'><?=$template_params['media_button_text'];?></div>
                     </div>
                 <? else: ?>
                     <? if( count($photo_list) > 0): ?>
