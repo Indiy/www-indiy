@@ -848,6 +848,10 @@ var TEMPLATE_SCHEMA =
         description: 'Default v2',
         default_params: {
             page_title: 'MyArtistDNA | Be Heard. Be Seen. Be Independent.',
+            footer_left: 'BE HEARD. BE SEEN. BE INDEPENDENT.',
+            footer_right: '&copy;2012 Powered by <a href="http://myartistdna.com">MyArtistDNA</a>',
+            iphone_top_text: '#MAYBACHMUSICTV',
+            iphone_bottom_text: '#SELFMADE3',
             ga_account_id: ''
         },
         arg_list:
@@ -871,6 +875,26 @@ var TEMPLATE_SCHEMA =
                 name: 'bottom_left_text',
                 description: 'Bottom Left Text',
                 type: 'textbox'
+            },
+            {
+                name: 'footer_left',
+                description: 'Footer Left Text',
+                type: 'string'
+            },
+            {
+                name: 'footer_right',
+                description: 'Footer Right Text',
+                type: 'string'
+            },
+            {
+                name: 'iphone_top_text',
+                description: 'iPhone Top Text',
+                type: 'string'
+            },
+            {
+                name: 'iphone_bottom_text',
+                description: 'iPhone Bottom Text',
+                type: 'string'
             },
             {
                 name: 'twitter_widget',
