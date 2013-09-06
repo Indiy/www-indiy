@@ -570,6 +570,7 @@ body {
 }
 #tracker_bar .buttons .button.long .icon {
     display: inline-block;
+    vertical-align: top;
 }
 #tracker_bar .buttons .button.long .label {
     display: inline-block;
@@ -580,6 +581,7 @@ body {
     font-size: 18px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     text-transform: uppercase;
+    vertical-align: top;
 }
 
 #tracker_bar .buttons .photos.button .icon {
