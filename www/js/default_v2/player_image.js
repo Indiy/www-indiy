@@ -207,7 +207,7 @@ function imageGetLetterboxParams(item,root_tag)
         margin_top = (win_height - height)/2;
     }
     
-    var img_url = getImgUrl(item,root_tag);
+    var img_url = getImgUrl(item,root_tag,img_ratio/win_ratio);
     
     var ret = {
         'width': width,
@@ -218,7 +218,7 @@ function imageGetLetterboxParams(item,root_tag)
     };
     return ret;
 }
-function getImgUrl(item,root_tag)
+function getImgUrl(item,root_tag,ratio_ratio)
 {
     var win_width = $(root_tag).width();
     var img_width = item.image_data.width;
@@ -227,6 +227,10 @@ function getImgUrl(item,root_tag)
     if( IS_RETINA )
     {
         tim_width = 2*tim_width;
+    }
+    if( ratio_ratio && ratio_ratio > 1.0 )
+    {
+        tim_width = ratio_ratio * tim_width;
     }
     
     var img_url = item.image;
