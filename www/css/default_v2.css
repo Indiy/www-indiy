@@ -2307,6 +2307,9 @@ body {
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
 
+    #top_bar_image {
+        display: none !important;
+    }
     #v2_top_bar {
         display: none !important;
     }
