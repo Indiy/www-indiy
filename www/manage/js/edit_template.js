@@ -858,6 +858,11 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             },
             {
+                name: 'top_bar_image',
+                description: 'Top Bar Image',
+                type: 'image'
+            },
+            {
                 name: 'top_bar_title',
                 description: 'Top Bar Title',
                 type: 'string'
