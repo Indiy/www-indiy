@@ -116,6 +116,7 @@ function showPlaylistItemPopup(playlist_index,playlist_item_index)
         $('#edit_playlist_item #bg_style').val(playlist_item.bg_style);
         $('#edit_playlist_item #bg_color').val(playlist_item.bg_color);
         fillArtistFileIdSelect('#edit_playlist_item #media_id',['AUDIO','VIDEO'],playlist_item.media_id);
+        $('#edit_playlist_item #iframe_code').val(playlist_item.iframe_code);
     }
     else
     {
@@ -125,6 +126,7 @@ function showPlaylistItemPopup(playlist_index,playlist_item_index)
         $('#edit_playlist_item #bg_style').val('LETTERBOX');
         $('#edit_playlist_item #bg_color').val('000000');
         fillArtistFileIdSelect('#edit_playlist_item #media_id',['AUDIO','VIDEO'],false);
+        $('#edit_playlist_item #iframe_code').val("");
     }
     
     showPopup('#edit_playlist_item');
@@ -141,6 +143,7 @@ function onPlaylistItemSubmit()
     var bg_style = $('#edit_playlist_item #bg_style').val();
     var bg_color = $('#edit_playlist_item #bg_color').val();
     var media_id = $('#edit_playlist_item #media_id').val();
+    var iframe_code = $('#edit_playlist_item #iframe_code').val();
     
     if( name.length == 0 )
     {
@@ -155,7 +158,8 @@ function onPlaylistItemSubmit()
         image_id: image_id,
         bg_style: bg_style,
         bg_color: bg_color,
-        media_id: media_id
+        media_id: media_id,
+        iframe_code
     };
 
     if( g_currentPlaylistItemIndex !== false )

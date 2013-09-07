@@ -94,6 +94,7 @@ function do_POST()
     $values['bg_style'] = $_REQUEST['bg_style'];
     $values['bg_color'] = $_REQUEST['bg_color'];
     $values['media_id'] = $_REQUEST['media_id'];
+    $values['iframe_code'] = $_REQUEST['iframe_code'];
     $values['tags'] = "";
     
     if( isset($_REQUEST['playlist_item_id']) )
