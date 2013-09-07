@@ -21,7 +21,13 @@ function imageLoadItem(item,index,root_tag)
         var win_width = $(root_tag).width();
         
         holder.css("background-color", "#" + color);
-        if( bg_style == 'STRETCH' )
+        if( item.iframe_code )
+        {
+            holder.css("background-image","none");
+            var html = "<div style='width: 100%; height: {0}px;'>{1}</div>".format(win_height,item.iframe_code);
+            holder.html(html);
+        }
+        else if( bg_style == 'STRETCH' )
         {
             var image_params = imageGetStretchParams(item,root_tag);
             
@@ -109,8 +115,10 @@ function imageResizeBackgrounds(list,root_tag)
         {
             bg_style = 'STRETCH';
         }
-
-        if( bg_style == 'STRETCH' || bg_style == 'LETTERBOX' )
+        if( item.iframe_code )
+        {
+        }
+        else if( bg_style == 'STRETCH' || bg_style == 'LETTERBOX' )
         {
             var image_params;
             
