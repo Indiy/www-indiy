@@ -81,6 +81,8 @@ function hideAllTabs()
     g_showingCommentPage = false;
     
     hideStore();
+    
+    $('#embed_tab').hide();
 }
 
 var g_showingContactPage = false;

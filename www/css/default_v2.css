@@ -2293,6 +2293,54 @@ body {
     color: white;
 }
 
+#embed_tab .title {
+    position: absolute;
+    left: 30px;
+    top: 85px;
+    width: 180px;
+    color: white;
+    font-size: 20px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: right;
+}
+#embed_tab .sep {
+    position: absolute;
+    left: 240px;
+    width: 2px;
+    top: 36px;
+    bottom: 0px;
+    background-color: #aaa;
+    background-color: rgba(255,255,255,0.4);
+}
+#embed_tab .content_container {
+    position: absolute;
+    left: 278px;
+    right: 0px;
+    top: 36px;
+    bottom: 0px;
+}
+#embed_tab .scrollable_container {
+    padding-right: 102px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#embed_tab .scrollable_container .page_content {
+    max-width: 650px;
+    padding-bottom: 30px;
+    color: white;
+    font-size: 13px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-weight: normal;
+}
+#embed_tab .scrollable_container .page_content a,
+#embed_tab .scrollable_container .page_content a:visited {
+    color: white;
+}
+
+
 /*************************************************************************/
 
 .hide_volume #tracker_bar .media_controls .progress_container {
