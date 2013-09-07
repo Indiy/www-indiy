@@ -102,6 +102,15 @@
     $artist_email = $artist_data['email'];
     $artist_views = artist_get_total_views($artist_id);
     $artist_logo = $artist_data['logo'];
+    if( $artist_data['custom_domain'] )
+    {
+        $artist_base_url = "http://" . $artist_data['custom_domain'];
+    }
+    else
+    {
+        $artist_base_url = str_replace("http://www.","http://" . $artist_data['url'] . ".",trueSiteUrl());
+    }
+    $page_url = "$artist_base_url$uri";
     $template_id = $page['template_id'];
     
     if( isset($_REQUEST['preview_template']) )
