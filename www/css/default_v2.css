@@ -177,6 +177,7 @@ body {
     top: 0px;
     left: 0px;
     width: 100px;
+    z-index: 2;
 }
 
 #v2_top_bar {
@@ -1193,7 +1194,7 @@ body {
 #user_tab .title {
     position: absolute;
     left: 30px;
-    top: 60px;
+    top: 85px;
     width: 180px;
     color: white;
     font-size: 20px;
@@ -1247,7 +1248,7 @@ body {
 #contact_tab .left {
     position: absolute;
     left: 30px;
-    top: 60px;
+    top: 85px;
     width: 180px;
 }
 #contact_tab .left .title {
@@ -1422,7 +1423,7 @@ body {
 #comment_tab .left {
     position: absolute;
     left: 30px;
-    top: 60px;
+    top: 85px;
     width: 180px;
 }
 #comment_tab .left .title {
@@ -1589,7 +1590,7 @@ body {
 #store_tab .left {
     position: absolute;
     left: 30px;
-    top: 60px;
+    top: 85px;
     width: 180px;
 }
 #store_tab .left .title {
