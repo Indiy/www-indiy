@@ -159,7 +159,7 @@ function onPlaylistItemSubmit()
         bg_style: bg_style,
         bg_color: bg_color,
         media_id: media_id,
-        iframe_code
+        iframe_code: iframe_code
     };
 
     if( g_currentPlaylistItemIndex !== false )
