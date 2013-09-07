@@ -681,7 +681,7 @@ function updateAnchorMedia(map)
     
     jQuery.extend(default_map,map);
     
-    updateAnchor(default_map);
+    //updateAnchor(default_map);
 }
 function maybeHashChanged()
 {

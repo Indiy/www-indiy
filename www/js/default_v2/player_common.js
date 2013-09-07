@@ -23,22 +23,32 @@ var g_genericViewsUpdated = {
     song: {},
     video: {},
     photo: {},
-    tab: {}
+    tab: {},
+    media: {}
 };
 function genericUpdateViews(type,list,id,index)
 {
+    var item = {};
+    if( list && index )
+        item = list[index];
+    
+    if( 'playlist_item_id' in item )
+    {
+        type = 'media';
+        id = item.playlist_item_id;
+    }
+
     if( id in g_genericViewsUpdated[type] )
         return false;
 
     g_genericViewsUpdated[type][id] = true;
 
     var args = {
-        artist_id: g_artistId
+        artist_id: g_artistId,
+        type: type,
+        id: id
     };
     
-    var arg_name = "{0}_id".format(type);
-    args[arg_name] = id;
-
     var url = g_trueSiteUrl + "/data/element_views.php?method=POST";
     jQuery.ajax(
     {

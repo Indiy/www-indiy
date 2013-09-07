@@ -20,6 +20,24 @@
         return $views;
     }
     
+    if( isset($_REQUEST['type']) && isset($_REQUEST['id']) )
+    {
+        $type = $_REQUEST['type'];
+        $id = $_REQUEST['id'];
+        if( $type == 'media' )
+        {
+            $views = 0;
+            mq("UPDATE playlist_items SET views = views + 1 WHERE playlist_item_id = '$id'");
+            $item = mf(mq("SELECT views FROM playlist_items WHERE playlist_item_id='$id'"));
+            if( $item )
+                $views = $item['views'];
+            
+        }
+        else if( $type == 'tab' )
+        {
+            $views = update_table('mydna_musicplayer_content',$id);
+        }
+    }
     if( isset($_REQUEST['song_id']) )
     {
         $views = update_table('mydna_musicplayer_audio',$_REQUEST['song_id']);
