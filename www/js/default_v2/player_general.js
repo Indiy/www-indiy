@@ -398,6 +398,7 @@ function showContentPage()
 {
     g_showingContentPage = true;
     closeBottom();
+    hideSocialFeed();
 }
 function hideContentPage()
 {
