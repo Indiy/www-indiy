@@ -2339,6 +2339,14 @@ body {
 #embed_tab .scrollable_container .page_content a:visited {
     color: white;
 }
+#embed_tab textarea {
+    width: 400px;
+    height: 250px;
+    font-size: 16px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    background-color: #777;
+    border: 2px black dashed;
+}
 
 
 /*************************************************************************/
