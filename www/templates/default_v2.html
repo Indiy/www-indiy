@@ -305,6 +305,10 @@
                     <? endif; ?>
                 <? endif; ?>
                 <div class='sep'></div>
+                <div class='embed button' onclick='showEmbedTab();'>
+                    <div class='icon'>&lt; &gt;</div>
+                </div>
+                <div class='sep'></div>
                 <div class='spacer'></div>
                 <!--
                 <div class='sep'></div>
@@ -482,6 +486,22 @@
                     <img id='page_image'/>
                 </div>
                 <div id='page_content' class='page_content'></div>
+            </div>
+        </div>
+        <?=build_scrollbar();?>
+    </div>
+    <div id='embed_tab' class='content_tab'>
+        <div class='close' onclick='hideTab();'>
+            <div class='icon'></div>
+            <div class='name'>CLOSE</div>
+        </div>
+        <div class='title'>Embed Code</div>
+        <div class='sep'></div>
+        <div class='content_container'>
+            <div class='scrollable_container scrollbar-pane'>
+                <textarea>
+<iframe src="" border="0" width="600" height="600" frameborder="0"></iframe>
+                </textarea>
             </div>
         </div>
         <?=build_scrollbar();?>

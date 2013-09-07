@@ -196,3 +196,13 @@ function submitBooking()
     }
 }
 
+function showEmbedTab()
+{
+    $('#popup_tab_list').hide();
+    hideAllTabs();
+    showContentPage();
+    $('#embed_tab').show();
+    $('#embed_tab').scrollbar("repaint");
+}
+
+
