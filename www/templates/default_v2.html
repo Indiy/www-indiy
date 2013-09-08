@@ -153,6 +153,13 @@
             <div class='hide_feed hide_button' style='display: none;' onclick='hideSocialFeed();'>- HIDE SOCIAL FEED</div>
         </div>
     </div>
+
+    <div id='big_play_icon' onclick='playerPlayPause();'>
+        <div class='outer'></div>
+        <div class='inner'></div>
+        <div class='triangle'></div>
+    </div>
+    <div id='bottom_left_text' class='idle_fade_out'><?=$template_params['bottom_left_text'];?></div>
     
     <div id='iphone_top_text'><?=$template_params['iphone_top_text'];?></div>
     <div id='iphone_bottom_text'><?=$template_params['iphone_bottom_text'];?></div>
@@ -260,8 +267,6 @@
             <?=build_scrollbar();?>
         </div>
     </div>
-    
-    <div id='bottom_left_text' class='idle_fade_out'><?=$template_params['bottom_left_text'];?></div>
 
     <div id='bottom_bar'>
         <div class='be_heard'><?=$template_params['footer_left'];?></div>
@@ -270,11 +275,6 @@
     <div id='tooltip'>
         <div class='carrot'></div>
         <span>TEST</span>
-    </div>
-    <div id='big_play_icon' onclick='playerPlayPause();'>
-        <div class='outer'></div>
-        <div class='inner'></div>
-        <div class='triangle'></div>
     </div>
     <div id='bottom_container' class='idle_fade_out'>
         <div id='tracker_bar'>
