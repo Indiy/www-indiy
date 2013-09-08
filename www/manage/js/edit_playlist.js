@@ -118,6 +118,29 @@ function showPlaylistItemPopup(playlist_index,playlist_item_index)
 {
     g_currentPlaylistIndex = playlist_index;
 
+    var playlist = g_playlistList[playlist_index];
+
+    var html = "<option val='0'>None</option>";
+    $('#edit_playlist_item #child_playlist_id').html(html);
+    for( var i = 0 ; i < g_playlistList.length ; ++i )
+    {
+        var p = g_playlistList[i];
+        if( p.playlist_id != playlist.playlist_id )
+        {
+            var html = "<option val='{0}'>{1}</option>".format(p.playlist_id,p.name);
+            $('#edit_playlist_item #child_playlist_id').append(html);
+        }
+    }
+
+    $('#edit_playlist_item .playlist_type').hide();
+    if( playlist.type == 'DIR' )
+    {
+        $('#edit_playlist_item .playlist_type.dir').show();
+    }
+    else
+    {
+        $('#edit_playlist_item .playlist_type.normal').show();
+    }
     if( playlist_item_index !== false )
     {
         var playlist = g_playlistList[playlist_index];
@@ -130,6 +153,7 @@ function showPlaylistItemPopup(playlist_index,playlist_item_index)
         $('#edit_playlist_item #bg_color').val(playlist_item.bg_color);
         fillArtistFileIdSelect('#edit_playlist_item #media_id',['AUDIO','VIDEO'],playlist_item.media_id);
         $('#edit_playlist_item #iframe_code').val(playlist_item.iframe_code);
+        $('#edit_playlist_item #child_playlist_id').val(playlist_item.child_playlist_id);
     }
     else
     {
@@ -140,6 +164,7 @@ function showPlaylistItemPopup(playlist_index,playlist_item_index)
         $('#edit_playlist_item #bg_color').val('000000');
         fillArtistFileIdSelect('#edit_playlist_item #media_id',['AUDIO','VIDEO'],false);
         $('#edit_playlist_item #iframe_code').val("");
+        $('#edit_playlist_item #child_playlist_id')[0].value = "";
     }
     
     showPopup('#edit_playlist_item');

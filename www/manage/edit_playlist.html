@@ -56,31 +56,39 @@
         <div class='line_label'>Name<span class='required'>*</span></div>
         <input id='name' class='line_text' type='text' value="" />
     </div>
-    <div class='input_container' style='height: 50px;'>
-        <div class='left_label'>Image<span class='required'>*</span></div>
-        <select id='image_id' class='right_drop' onchange='artistFileDropChange(this);'></select>
+    <div class='playlist_type normal'>
+        <div class='input_container' style='height: 50px;'>
+            <div class='left_label'>Image<span class='required'>*</span></div>
+            <select id='image_id' class='right_drop' onchange='artistFileDropChange(this);'></select>
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Background Style</div>
+            <select id='bg_style' class='right_drop'>
+            <?php
+                $styles = array('LETTERBOX','STRETCH','CENTER','TILE');
+                foreach( $styles as $style ) 
+                    echo "<option value='$style'>$style</option>\n";
+            ?>
+            </select>
+        </div>
+        <div class='input_container'>
+            <div class='left_label'>Background Color</div>
+            <input id='bg_color' class='color' type='text' maxlength="6" size="6" value="" />
+        </div>
+        <div class='input_container' style='height: 50px;'>
+            <div class='left_label'>Media File</div>
+            <select id='media_id' class='right_drop' onchange='artistFileDropChange(this);'></select>
+        </div>
+        <div class='flow_container'>
+            <div class='line_label'>IFRAME Code</div>
+            <textarea id='iframe_code' class="textarea" style="height: 40px; width: 450px;"></textarea>
+        </div>
     </div>
-    <div class='input_container'>
-        <div class='left_label'>Background Style</div>
-        <select id='bg_style' class='right_drop'>
-        <?php
-            $styles = array('LETTERBOX','STRETCH','CENTER','TILE');
-            foreach( $styles as $style ) 
-                echo "<option value='$style'>$style</option>\n";
-        ?>
-        </select>
-    </div>
-    <div class='input_container'>
-        <div class='left_label'>Background Color</div>
-        <input id='bg_color' class='color' type='text' maxlength="6" size="6" value="" />
-    </div>
-    <div class='input_container' style='height: 50px;'>
-        <div class='left_label'>Media File</div>
-        <select id='media_id' class='right_drop' onchange='artistFileDropChange(this);'></select>
-    </div>
-    <div class='flow_container'>
-        <div class='line_label'>IFRAME Code</div>
-        <textarea id='iframe_code' class="textarea" style="height: 40px; width: 450px;"></textarea>
+    <div class='playlist_type dir'>
+        <div class='input_container'>
+            <div class='left_label'>Child Playlist</div>
+            <select id='child_playlist_id' class='right_drop'></select>
+        </div>
     </div>
     <div class='submit_container'>
         <button class="submit" onclick='onPlaylistItemSubmit();'>Submit</button>
