@@ -2411,6 +2411,7 @@ body {
     height: 160px;
     margin-bottom: 50px;
     border: 1px solid whitesmoke;
+    cursor: pointer;
 }
 #playlist_tab .playlist_contents .item_column .item img {
     position: absolute;
