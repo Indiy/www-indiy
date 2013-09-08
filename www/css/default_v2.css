@@ -2410,6 +2410,7 @@ body {
     width: 233px;
     height: 160px;
     margin-bottom: 50px;
+    margin-right: 30px;
     border: 1px solid whitesmoke;
     cursor: pointer;
 }
@@ -2455,6 +2456,16 @@ body {
 }
 .no_touch #playlist_tab .playlist_contents .item_column .item:hover {
     border: 1px solid white;
+}
+
+#playlist_tab .playlist_contents .item_column.dir {
+    padding-left: 60px;
+}
+#playlist_tab .playlist_contents .item_column.media {
+    float: none;
+    width: auto;
+    padding-left: 60px;
+    overflow: hidden;
 }
 
 /*************************************************************************/
