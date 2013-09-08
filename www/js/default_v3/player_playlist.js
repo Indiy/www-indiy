@@ -11,7 +11,7 @@ function playlistReady()
             for( var j = 0 ; j < playlist.items.length ; ++j )
             {
                 html = getImageHolders(playlist.items[j]);
-                $(body).prepend(html);
+                $('body').prepend(html);
                 
                 setupSwipe(playlist.items[j]);
             }
@@ -19,13 +19,14 @@ function playlistReady()
         else
         {
             html = getImageHolders(playlist);
-            $(body).prepend(html);
+            $('body').prepend(html);
             
             setupSwipe(playlist);
         }
     }
     setupJplayer();
 }
+$(document).ready(playlistReady);
 
 function getImageHolders(playlist)
 {
@@ -238,6 +239,51 @@ function setupJplayer()
     .bind($.jPlayer.event.play,jplayerPlay)
     .bind($.jPlayer.event.pause,jplayerPause)
     .bind($.jPlayer.event.volumechange,jplayerVolume);
+}
+function jplayerReady() 
+{
+    g_musicPlayerReady = true;
+    
+    if( g_musicStartIndex !== false )
+    {
+        if( IS_IOS )
+            g_musicIsPlaying = false;
+        else
+            g_musicIsPlaying = true;
+        musicChange(g_musicStartIndex);
+        var vol_ratio = 0.8;
+        volumeSetLevel(vol_ratio);
+    }
+}
+function jplayerTimeUpdate(event)
+{
+    //var percent = event.jPlayer.status.currentPercentAbsolute;
+    var total_time = event.jPlayer.status.duration;
+    var curr_time = event.jPlayer.status.currentTime;
+    
+    playerProgress(curr_time,total_time);
+}
+var g_musicIsPlaying = false;
+function jplayerPlay()
+{
+    g_musicIsPlaying = true;
+    playerSetPlaying();
+}
+function jplayerPause()
+{
+    g_musicIsPlaying = false;    
+    playerSetPaused();
+}
+function jplayerEnded()
+{
+    g_musicIsPlaying = false;
+    playerSetPaused();
+    musicNext();
+}
+function jplayerVolume(event)
+{
+    var vol_ratio = event.jPlayer.options.volume;
+    volumeSetLevel(vol_ratio);
 }
 
 
