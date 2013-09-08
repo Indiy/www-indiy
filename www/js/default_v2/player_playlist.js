@@ -34,7 +34,7 @@ function clickPlaylist(index)
 
 function clickPlaylistDirItem(playlist_index,child_playlist_index)
 {
-    var playlist = g_playlistList[index];
+    var playlist = g_playlistList[playlist_index];
     var child_playlist = playlist.items[child_playlist_index];
     
     $('#playlist_tab .item_column.dir').children().removeClass('active');
