@@ -2447,7 +2447,7 @@ body {
     color: #888;
 }
 .no_touch #playlist_tab .playlist_contents .item_column .item:hover .overlay {
-    background-color: none;
+    background-color: rgba(30,30,30,0.1);
 }
 .no_touch #playlist_tab .playlist_contents .item_column .item:hover .name {
     color: white;
