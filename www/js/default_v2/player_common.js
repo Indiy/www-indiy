@@ -29,7 +29,7 @@ var g_genericViewsUpdated = {
 function genericUpdateViews(type,list,id,index)
 {
     var item = {};
-    if( list && index )
+    if( list && index !== false )
         item = list[index];
     
     if( 'playlist_item_id' in item )
