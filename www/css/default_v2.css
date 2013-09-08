@@ -2384,7 +2384,7 @@ body {
     position: absolute;
     left: 0px;
     right: 0px;
-    top: 82px;
+    top: 90px;
     bottom: 0px;
 }
 #playlist_tab .scrollable_container {
@@ -2426,10 +2426,19 @@ body {
     bottom: 0px;
     left: 5px;
     right: 5px;
+    color: white;
     font-size: 25px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     text-transform: uppercase;
     overflow: hidden;
+}
+#playlist_tab .playlist_contents .item_column .item.inactive .overlay {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(30,30,30,0.6);
 }
 
 /*************************************************************************/
