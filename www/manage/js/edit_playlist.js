@@ -8,13 +8,17 @@ function showPlaylistPopup(playlist_index)
         g_playlistIndex = playlist_index;
         var playlist = g_playlistList[g_playlistIndex];
         $('#edit_playlist #playlist_name').val(playlist.name);
+        $('#edit_playlist #display_name').val(playlist.display_name);
         $('#edit_playlist #playlist_type').val(playlist.type);
+        fillArtistFileIdSelect('#edit_playlist #image_id','IMAGE',playlist.image_id);
     }
     else
     {
         g_playlistIndex = false;
         $('#edit_playlist #playlist_name').val("");
+        $('#edit_playlist #display_name').val("");
         $('#edit_playlist #playlist_type').val("AUDIO");
+        fillArtistFileIdSelect('#edit_playlist #image_id','IMAGE',false);
     }
     showPopup('#edit_playlist');
 }
@@ -24,11 +28,18 @@ function onPlaylistSubmit()
     showProgress("Adding playlist...");
 
     var name = $('#edit_playlist #playlist_name').val();
+    var display_name = $('#edit_playlist #display_name').val();
     var type = $('#edit_playlist #playlist_type').val();
+    var image_id = $('#edit_playlist #image_id').val();
     
     if( name.length == 0 )
     {
         window.alert("Please enter a name for your playlist.");
+        return;
+    }
+    if( display_name.length == 0 )
+    {
+        window.alert("Please enter a display name for your playlist.");
         return;
     }
     
@@ -36,7 +47,9 @@ function onPlaylistSubmit()
     var data = {
         artist_id: g_artistId,
         name: name,
-        type: type
+        display_name: display_name,
+        type: type,
+        image_id: image_id
     };
     if( g_playlistIndex !== false )
     {

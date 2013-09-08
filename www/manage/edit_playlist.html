@@ -13,6 +13,14 @@
         <input id='playlist_name' class='right_text' type='text' value="" />
     </div>
     <div class='input_container'>
+        <div class='left_label'>Display Name<span class='required'>*</span></div>
+        <input id='display_name' class='right_text' type='text' value="" />
+    </div>
+    <div class='input_container' style='height: 50px;'>
+        <div class='left_label'>Thumbnail Image</div>
+        <select id='image_id' class='right_drop' onchange='artistFileDropChange(this);'></select>
+    </div>
+    <div class='input_container'>
         <div class='left_label'>Playlist Type</div>
         <select id='playlist_type' class='right_drop'>
             <?php

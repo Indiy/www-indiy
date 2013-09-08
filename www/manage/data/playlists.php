@@ -47,7 +47,9 @@ function do_POST()
     $values = array();
     $values['artist_id'] = $_REQUEST['artist_id'];
     $values['name'] = $_REQUEST['name'];
+    $values['display_name'] = $_REQUEST['display_name'];
     $values['type'] = $_REQUEST['type'];
+    $values['image_id'] = $_REQUEST['image_id'];
     
     if( isset($_REQUEST['playlist_id']) )
     {
