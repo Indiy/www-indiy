@@ -232,6 +232,41 @@
         $playlist_id = $playlist['playlist_id'];
         
         $items = get_items_for_playlist($playlist_id);
+        
+        for( $j = 0 ; $j < count($items) ; ++$j )
+        {
+            $pi = $items[$j];
+            if( $pi['child_playlist_id'] )
+            {
+                $child_playlist_id = $pi['child_playlist_id'];
+                $sql = "SELECT playlists.* ";
+                $sql .= " ,af1.filename AS image_filename, af1.extra_json AS image_extra_json ";
+                $sql .= " FROM playlists ";
+                $sql .= " LEFT JOIN artist_files AS af1 ON playlists.image_id = af1.id ";
+                $sql .= " WHERE playlist_id = '$child_playlist_id' ";
+                $row = mf(mq($sql));
+                
+                $image_url = FALSE;
+                if( $row['image_filename'] )
+                {
+                    $image_url = artist_file_url($row['image_filename']);
+                }
+                $row['image'] = $image_url;
+                if( isset($image_extra['image_data']) )
+                {
+                    $row['image_data'] = $image_extra['image_data'];
+                }
+                else
+                {
+                    $row['image_data'] = array();
+                }
+                $row['image_extra'] = $image_extra;
+                $row['items'] = get_items_for_playlist($child_playlist_id);
+                
+                $items[$j] = $row;
+            }
+        }
+        
         $playlist_list[$i]['items'] = $items;
         
         if( $playlist['type'] == 'AUDIO' && empty($music_list) )
