@@ -2384,18 +2384,18 @@ body {
     position: absolute;
     left: 0px;
     right: 0px;
-    top: 36px;
+    top: 80px;
     bottom: 0px;
 }
-#playlist_tab .playlist_contents {
-    font-size: 0px;
-    white-space: nowrap;
-}
-#playlist_tab .playlist_contents .scrollable_container {
+#playlist_tab .scrollable_container {
     padding-right: 102px;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+}
+#playlist_tab .playlist_contents {
+    font-size: 0px;
+    white-space: nowrap;
 }
 #playlist_tab .playlist_contents .item_column {
     float: left;
