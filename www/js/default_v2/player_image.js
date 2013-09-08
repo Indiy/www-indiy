@@ -236,9 +236,14 @@ function imageGetLetterboxParams(item,root_tag)
 function getImgUrl(item,root_tag,ratio_ratio)
 {
     var win_width = $(root_tag).width();
-    var img_width = item.image_data.width;
+    
+    return getImgUrlWithWidth(item,win_width,ratio_ratio);
+}
 
-    var tim_width = win_width;
+function getImgUrlWithWidth(item,req_width,ratio_ratio)
+{
+    var img_width = item.image_data.width;|
+    var tim_width = req_width;
     if( IS_RETINA )
     {
         tim_width = 2*tim_width;
