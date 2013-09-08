@@ -2441,16 +2441,19 @@ body {
     background-color: rgba(30,30,30,0.6);
 }
 #playlist_tab .playlist_contents .item_column .item.inactive {
-    border: 1px solid #333;
+    border: 1px solid #888;
 }
 #playlist_tab .playlist_contents .item_column .item.inactive .name {
-    color: #333;
+    color: #888;
 }
 .no_touch #playlist_tab .playlist_contents .item_column .item:hover .overlay {
     background-color: none;
 }
 .no_touch #playlist_tab .playlist_contents .item_column .item:hover .name {
     color: white;
+}
+.no_touch #playlist_tab .playlist_contents .item_column .item:hover {
+    border: 1px solid white;
 }
 
 /*************************************************************************/
