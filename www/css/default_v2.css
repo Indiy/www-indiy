@@ -2384,7 +2384,7 @@ body {
     position: absolute;
     left: 0px;
     right: 0px;
-    top: 80px;
+    top: 82px;
     bottom: 0px;
 }
 #playlist_tab .scrollable_container {
@@ -2402,11 +2402,14 @@ body {
     padding-left: 40px;
     width: 235px;
     font-size: 0px;
+    white-space: normal;
 }
 #playlist_tab .playlist_contents .item_column .item {
+    position: relative;
     display: inline-block;
-    width: 235px;
+    width: 233px;
     height: 160px;
+    margin-bottom: 50px;
     border: 1px solid whitesmoke;
 }
 #playlist_tab .playlist_contents .item_column .item img {
@@ -2415,11 +2418,12 @@ body {
     bottom: 0px;
     left: 0px;
     right: 0px;
+    width: 233px;
+    height: 160px;
 }
 #playlist_tab .playlist_contents .item_column .item .name {
     position: absolute;
-    height: 50px;
-    bottom: 5px;
+    bottom: 0px;
     left: 5px;
     right: 5px;
     font-size: 25px;
