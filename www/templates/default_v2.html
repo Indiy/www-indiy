@@ -487,22 +487,24 @@
         </div>
         <div class='content_container'>
             <div class='scrollable_container scrollbar-pane'>
-                <div class='playlist_column'>
-                    <?php
-                        foreach( $playlist_list as $k => $playlist ):
-                            $name = $playlist['display_name'];
-                            $image_url = get_image_thumbnail($playlist['image'],$playlist['image_extra'],470);
-                    ?>
-                        <div class='item inactive'>
-                            <img src="<?=$image_url;?>"/>
-                            <div class='overlay'></div>
-                            <div class='name'><?=$name;?></div>
-                        </div>
-                    <?php endforeach;?>
-                </div>
-                <div class='dir_column'>
-                </div>
-                <div class='media_column'>
+                <div class='playlist_contents'>
+                    <div class='item_column playlist'>
+                        <?php
+                            foreach( $playlist_list as $k => $playlist ):
+                                $name = $playlist['display_name'];
+                                $image_url = get_image_thumbnail($playlist['image'],$playlist['image_extra'],470);
+                        ?>
+                            <div class='item inactive'>
+                                <img src="<?=$image_url;?>"/>
+                                <div class='overlay'></div>
+                                <div class='name'><?=$name;?></div>
+                            </div>
+                        <?php endforeach;?>
+                    </div>
+                    <div class='item_column dir'>
+                    </div>
+                    <div class='item_column media'>
+                    </div>
                 </div>
             </div>
         </div>

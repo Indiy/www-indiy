@@ -2375,22 +2375,57 @@ body {
     margin-right: 60px;
     color: white;
     font-size: 25px;
-    font-family:  "Neuzeit Grotesk Light", Helvetica, sans-serif;
+    font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
+    text-transform: uppercase;
     border-bottom: 1px solid white;
 }
 
-#embed_tab .content_container {
+#playlist_tab .content_container {
     position: absolute;
     left: 0px;
     right: 0px;
     top: 36px;
     bottom: 0px;
 }
-#embed_tab .scrollable_container {
+#playlist_tab .playlist_contents {
+    font-size: 0px;
+    white-space: nowrap;
+}
+#playlist_tab .playlist_contents .scrollable_container {
     padding-right: 102px;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+}
+#playlist_tab .playlist_contents .item_column {
+    float: left;
+    padding-left: 40px;
+    width: 235px;
+    font-size: 0px;
+}
+#playlist_tab .playlist_contents .item_column .item {
+    display: inline-block;
+    width: 235px;
+    height: 160px;
+    border: 1px solid whitesmoke;
+}
+#playlist_tab .playlist_contents .item_column .item img {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+#playlist_tab .playlist_contents .item_column .item .name {
+    position: absolute;
+    height: 50px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    font-size: 25px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
 }
 
 /*************************************************************************/
