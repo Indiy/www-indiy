@@ -2353,6 +2353,14 @@ body {
 
 /*************************************************************************/
 
+#playlist_tab {
+    z-index: 3;
+}
+
+#playlist_tab .close {
+    top: 56px;
+}
+
 #playlist_tab .headers {
     padding-left: 40px;
     font-size: 0px;
@@ -2361,13 +2369,13 @@ body {
 }
 #playlist_tab .headers .header {
     display: inline-block;
-    padding-top: 10px;
+    padding-top: 16px;
     width: 235px;
     line-height: 50px;
     margin-right: 60px;
     color: white;
-    font-size: 37px;
-    font-family:  "Neuzeit Grotesk", Helvetica, sans-serif;
+    font-size: 25px;
+    font-family:  "Neuzeit Grotesk Light", Helvetica, sans-serif;
     border-bottom: 1px solid white;
 }
 
