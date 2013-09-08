@@ -231,97 +231,20 @@
         $playlist = $playlist_list[$i];
         $playlist_id = $playlist['playlist_id'];
         
-        $sql = "SELECT playlist_items.* ";
-        $sql .= " ,af1.filename AS image_filename, af1.extra_json AS image_extra_json ";
-        $sql .= " ,af2.filename AS media_filename, af2.extra_json AS media_extra_json ";
-        $sql .= " FROM playlist_items ";
-        $sql .= " LEFT JOIN artist_files AS af1 ON playlist_items.image_id = af1.id ";
-        $sql .= " LEFT JOIN artist_files AS af2 ON playlist_items.media_id = af2.id ";
-        $sql .= " WHERE playlist_items.playlist_id = '$playlist_id' ";
-        $sql .= " ORDER BY playlist_items.order ASC, playlist_items.playlist_item_id DESC ";
-        $q = mq($sql);
-        while( $row = mf($q) )
-        {
-            $image_extra = array();
-            if( $row['image_extra_json'] )
-            {
-                $image_extra = json_decode($row['image_extra_json'],TRUE);
-            }
-            json_decode($row['image_extra_json'],TRUE);
-            
-            $media_extra = array();
-            if( $row['media_extra_json'] )
-            {
-                $media_extra = json_decode($row['media_extra_json'],TRUE);
-            }
-            
-            $image_url = FALSE;
-            if( $row['image_filename'] )
-            {
-                $image_url = artist_file_url($row['image_filename']);
-            }
-            $media_url = FALSE;
-            if( $row['media_filename'] )
-            {
-                $media_url = artist_file_url($row['media_filename']);
-            }
-            
-            $row['loaded'] = FALSE;
-
-            $row['free_download'] = FALSE;
-            $row['product_id'] = FALSE;
-            $row['amazon'] = "";
-            $row['itunes'] = "";
-            if( isset($media_extra['media_length']) )
-            {
-                $row['media_length'] = ceil($media_extra['media_length']);
-            }
-            else
-            {
-                $row['media_length'] = 4*60 + 5;
-            }
-
-            $row['location'] = "";
-
-            $row['image'] = $image_url;
-            if( isset($image_extra['image_data']) )
-            {
-                $row['image_data'] = $image_extra['image_data'];
-            }
-            else
-            {
-                $row['image_data'] = array();
-            }
-            $row['image_extra'] = $image_extra;
-
-            $row['mp3'] = $media_url;
-            $row['video_file'] = $media_url;
-            $row['audio_extra'] = $media_extra;
-            $row['video_extra'] = $media_extra;
-            $row['media_extra'] = $media_extra;
-            if( isset($media_extra['video_data']) )
-            {
-                $row['video_data'] = $media_extra['video_data'];
-            }
-            else
-            {
-                $row['video_data'] = array();
-            }
-            
-            $playlist_list[$i]['items'][] = $row;
-        }
+        $items = get_items_for_playlist($playlist_id);
+        $playlist_list[$i]['items'] = $items;
         
         if( $playlist['type'] == 'AUDIO' && empty($music_list) )
         {
-            $music_list = $playlist_list[$i]['items'];
+            $music_list = $items;
         }
         if( $playlist['type'] == 'VIDEO' && empty($video_list) )
         {
-            $video_list = $playlist_list[$i]['items'];
+            $video_list = $items;
         }
         if( $playlist['type'] == 'PHOTO' && empty($photo_list) )
         {
-            $photo_list = $playlist_list[$i]['items'];
+            $photo_list = $items;
         }
     }
     $playlist_list_json = json_encode($playlist_list);
