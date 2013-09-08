@@ -49,6 +49,11 @@ function default_v2_ready()
         $('#v2_top_bar .right .show_feed').addClass('hidden');
         $('#v2_top_bar .right .hide_feed').addClass('hidden');
     }
+    
+    if( !$('#iphone_top_text').is(":visible") )
+    {
+        $('#iphone_bottom_section').children().unwrap();
+    }
 }
 $(document).ready(default_v2_ready);
 
