@@ -2035,6 +2035,7 @@ END;
             
             $items[] = $row;
         }
+        return $items;
     }
 
 ?>
