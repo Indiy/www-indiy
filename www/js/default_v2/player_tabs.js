@@ -83,6 +83,7 @@ function hideAllTabs()
     hideStore();
     
     $('#embed_tab').hide();
+    $('#playlist_tab').hide();
 }
 
 var g_showingContactPage = false;

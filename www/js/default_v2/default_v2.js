@@ -215,6 +215,7 @@ function v2_showPlaylistTab()
 {
     hideAllTabs();
     hideSocialFeed();
+    showContentPage();
     $('#playlist_tab').show();
 }
 
