@@ -267,13 +267,11 @@
             }
             
             $row['loaded'] = FALSE;
-            $row['listens'] = $row['views'];
 
             $row['free_download'] = FALSE;
             $row['product_id'] = FALSE;
             $row['amazon'] = "";
             $row['itunes'] = "";
-            $row['bgcolor'] = $row['bg_color'];
             if( isset($media_extra['media_length']) )
             {
                 $row['media_length'] = ceil($media_extra['media_length']);

@@ -3,9 +3,7 @@
 function imageLoadItem(item,index,root_tag)
 {
     var image = item.image;
-    var color = item.bgcolor;
-    if( typeof color == 'undefined' )
-        color = item.bg_color;
+    var color = item.bg_color;
     var bg_style = item.bg_style;
     if( IS_PHONE )
     {
