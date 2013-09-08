@@ -127,7 +127,7 @@ function showPlaylistItemPopup(playlist_index,playlist_item_index)
         var p = g_playlistList[i];
         if( p.playlist_id != playlist.playlist_id )
         {
-            var html = "<option val='{0}'>{1}</option>".format(p.playlist_id,p.name);
+            var html = "<option value='{0}'>{1}</option>".format(p.playlist_id,p.name);
             $('#edit_playlist_item #child_playlist_id').append(html);
         }
     }
