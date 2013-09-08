@@ -37,8 +37,6 @@ var IS_OLD_IE = false;
 
 var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
 
-var IS_NARROW = false;
-
 var g_bottomOpen = false;
 var g_mediaContent = "music";
 var g_playerMode = "music";
@@ -65,10 +63,6 @@ function generalOnReady()
         g_touchDevice = true;
     }
 
-    clickMusicMediaButton();
-    clickShareButton();
-
-
     $('#volume_slider .bar').click(clickVolume);
     var opts = {
         'axis': "y",
@@ -82,53 +76,6 @@ function generalOnReady()
     $('#media_seek_bar').click(clickSeekBar);
     
     var anchor_map = getAnchorMap();
-    
-    if( 'song_id' in anchor_map )
-    {
-        var song_id = anchor_map['song_id'];
-        musicChangeId(song_id);
-    }
-    else if( 'video_id' in anchor_map )
-    {
-        var video_id = anchor_map['video_id'];
-        videoChangeId(video_id);
-    }
-    else if( 'photo_id' in anchor_map )
-    {
-        var photo_id = anchor_map['photo_id'];
-        photoChangeId(photo_id);
-    }
-    else if( g_startMediaType == 'MUSIC' && g_musicList.length > 0 )
-    {
-        musicChange(0);
-    }
-    else if( g_startMediaType == 'PHOTO' && g_photoList.length > 0 )
-    {
-        photoChangeIndex(0);
-    }
-    else if( g_startMediaType == 'VIDEO' && g_videoList.length > 0 )
-    {
-        videoPlayIndex(0);
-    }
-    else
-    {
-        if( g_musicList.length > 0 )
-        {
-            musicChange(0);
-        }
-        else if( g_photoList.length > 0 )
-        {
-            photoChangeIndex(0);
-        }
-        else if( g_videoList.length > 0 )
-        {
-            videoPlayIndex(0);
-        }
-        else
-        {
-            $('#under_construction').show();
-        }
-    }
     if( 'product_id' in anchor_map )
     {
         var product_id = anchor_map['product_id'];
@@ -143,11 +90,6 @@ function generalOnReady()
     else
     {
         $(document).mousemove(showAndTimeoutControls);
-    }
-    
-    if( $('body').hasClass('narrow_screen') )
-    {
-        IS_NARROW = true;
     }
     
     g_storedHash = window.location.hash;
@@ -238,14 +180,7 @@ function openBottom()
     hideSocialFeed();
     g_bottomOpen = true;
     $('#bottom_container').stop();
-    if( IS_NARROW )
-    {
-        $('#bottom_container').animate({ height: '348px' });
-    }
-    else
-    {
-        $('#bottom_container').animate({ height: '275px' });
-    }
+    $('#bottom_container').animate({ height: '275px' });
 }
 
 function closeBottom(animate)
@@ -321,18 +256,10 @@ function clickMediaIcon(name,callback)
 function preMediaShow()
 {
     $('#media_content_lists .media_list').hide();
-    if( IS_NARROW )
-    {
-        $('#media_social_boxes .social_item').hide();
-    }
 }
 function preSocialItemShow()
 {
     $('#media_social_boxes .social_item').hide();
-    if( IS_NARROW )
-    {
-        $('#media_content_lists .media_list').hide();
-    }
 }
 function clickPhotoMediaButton()
 {

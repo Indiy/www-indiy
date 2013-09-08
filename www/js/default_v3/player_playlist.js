@@ -12,14 +12,19 @@ function playlistReady()
             {
                 html = getImageHolders(playlist.items[j]);
                 $(body).prepend(html);
+                
+                setupSwipe(playlist.items[j]);
             }
         }
         else
         {
             html = getImageHolders(playlist);
             $(body).prepend(html);
+            
+            setupSwipe(playlist);
         }
     }
+    setupJplayer();
 }
 
 function getImageHolders(playlist)
@@ -36,6 +41,18 @@ function getImageHolders(playlist)
     html += " <div id='video_container'></div>";
     html += "</div>";
     return html;
+}
+function setupSwipe(playlist)
+{
+    var sel = "playlist_bg_{0}".format(playlist.playlist_id);
+    var opts = {
+        panelCount: playlist.items.length,
+        resizeCallback: playlistResizeBackgrounds,
+        onPanelChange: playlistPanelChange,
+        onPanelVisible: playlistPanelVisible,
+        onReady: playlistSwipeReady
+    };
+    $(sel).swipe(opts);
 }
 
 function clickPlaylist(index)
@@ -120,8 +137,108 @@ function clickPlaylistMediaItem(playlist_index,child_playlist_index,playlist_ite
     var playlist_item = playlist[playlist_item_index];
     
     g_currentPlaylist = playlist;
-    g_currentPlaylistIndex = playlist_item_index;
     
-    
-    
+    $('.full_screen_bg').hide();
+    var sel = "playlist_bg_{0}".format(playlist.playlist_id);
+    $(sel).show();
+
+    playlistChangeIndex(playlist_item_index);
 }
+
+function playlistChangeIndex(index)
+{
+    var sel = "playlist_bg_{0}".format(g_currentPlaylist.playlist_id);
+    $(sel).swipe('scrollto',index);
+}
+
+function playlistPanelVisible(index)
+{
+    //var song = g_musicList[index];
+    //musicLoadImage(song,index);
+    console.log("playlistPanelVisible: " + index);
+}
+function playlistPanelChange(index)
+{
+    console.log("playlistPanelChange: " + index);
+    g_currentPlaylistIndex = index;
+    /*
+    g_songsPlayed++;
+    if( g_songsPlayed == 3 )
+        maybeAskForEmail();
+    
+    g_currentSongIndex = index;
+    var song = g_musicList[index];
+    
+    loveChangedMusic(song.id,song.name);
+    
+    var media = {
+        mp3: song.mp3
+    };
+    
+    if( song.audio_extra && song.audio_extra.alts && song.audio_extra.alts.ogg )
+    {
+        media.oga = g_artistFileBaseUrl + song.audio_extra.alts.ogg;
+    }
+    
+    $('#jquery_jplayer').jPlayer("setMedia", media);
+    playerProgress(0,0);
+    
+    if( g_mediaAutoStart )
+    {
+        $('#jquery_jplayer').jPlayer("play");
+    }
+    // Just inhibit the first play
+    g_mediaAutoStart = true;
+
+    playlistLoadImage(song,index);
+    
+    g_currentSongId = song.id;
+    
+    updateAnchorMedia({ song_id: song.id });
+    //commentChangedMedia('song',song.id);
+    
+    playerTrackInfo(song.name,song.views);
+    
+    if( musicUpdateListens(song.id,index) )
+    {
+        playerUpdateTotalViewCount(g_totalPageViews + 1);
+    }
+    */
+}
+function playlistLoadImage(item,index)
+{
+    //imageLoadItem(item,index,'#music_bg');
+}
+
+function playlistResizeBackgrounds()
+{
+    //imageResizeBackgrounds(g_musicList,'#music_bg');
+    console.log("playlistResizeBackgrounds");
+}
+
+function playlistSwipeReady()
+{
+    console.log("playlistSwipeReady");
+}
+
+
+function setupJplayer()
+{
+    $('#jquery_jplayer').jPlayer({
+                                 ready: jplayerReady,
+                                 solution: "html, flash",
+                                 supplied: "mp3, oga",
+                                 swfPath: "/js/Jplayer.swf",
+                                 verticalVolume: true,
+                                 wmode: "window",
+                                 volume: 0.8
+                                 })
+    .bind($.jPlayer.event.ended,jplayerEnded)
+    .bind($.jPlayer.event.timeupdate,jplayerTimeUpdate)
+    .bind($.jPlayer.event.play,jplayerPlay)
+    .bind($.jPlayer.event.pause,jplayerPause)
+    .bind($.jPlayer.event.volumechange,jplayerVolume);
+}
+
+
+
