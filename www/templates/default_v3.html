@@ -11,7 +11,7 @@
     <link rel="apple-touch-startup-image" href="<?=static_file_url('/images/apple-loading-screen.jpg');?>" />
 
     <link href="<?=static_file_url('/css/video-js.css');?>" rel="stylesheet">
-    <link href="<?=static_file_url('/css/default_v2.css');?>" rel="stylesheet" type="text/css"/>
+    <link href="<?=static_file_url('/css/default_v3.css');?>" rel="stylesheet" type="text/css"/>
     
     <!--[if lt IE 9]>
      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -30,26 +30,19 @@
     <script src="<?=static_file_url('/js/mad.scrollbar.js');?>" type="text/javascript"></script>
     <script src="<?=static_file_url('/js/mad.swipe.js');?>" type="text/javascript"></script>
 
-    <script src="<?=static_file_url('/js/default_v2/player_general.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v2/player_common.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v2/player_image.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v2/player_photo.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v2/player_music.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v2/player_video.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v2/player_love.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v2/player_social.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v2/player_tabs.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v2/player_store.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v2/player_tooltips.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v2/player_playlist.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v3/player_general.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v3/player_common.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v3/player_image.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v3/player_social.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v3/player_tabs.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v3/player_store.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v3/player_tooltips.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v3/player_playlist.js');?>" type="text/javascript"></script>
 
-    <script src="<?=static_file_url('/js/default_v2/default_v2.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v3/default_v3.js');?>" type="text/javascript"></script>
 
     <script type="text/javascript">
         var g_tabList = <?=$tab_list_json;?>;
-        var g_photoList = <?=$photo_list_json;?>;
-        var g_musicList = <?=$music_list_json;?>;
-        var g_videoList = <?=$video_list_json;?>;
         var g_productList = <?=$product_list_json;?>;
         var g_totalPageViews = <?=$artist_views;?>;
         var g_playlistList = <?=$playlist_list_json;?>;
@@ -97,6 +90,7 @@
 
 <body class='<?=$body_style;?>'>
     <div id="fb-root"></div>
+    
     <div id='music_bg' class='full_screen_bg'>
         <div class='pad'></div>
         <?php
@@ -107,48 +101,24 @@
             }
         ?>
         <div class='pad'></div>
+        <div class='video_container'></div>
     </div>
-    <div id='photo_bg' class='full_screen_bg'>
-        <div class='pad'></div>
-        <?php
-            foreach( $photo_list as $k => $photo )
-            {
-                echo "<div id='image_holder_$k' class='image_holder'>";
-                echo "</div>\n";
-            }
-        ?>
-        <div class='pad'></div>
-    </div>
-    <div id="jquery_jplayer" class="jp-jplayer"></div>
-    <div id='video_bg' class='full_screen_bg'>
-        <div class='pad'></div>
-        <?php
-            foreach( $video_list as $k => $video )
-            {
-                echo "<div id='image_holder_$k' class='image_holder'>";
-                echo "</div>\n";
-            }
-        ?>
-        <div class='pad'></div>
-        <div id='video_container'></div>
-    </div>
-    <div id='under_construction'></div>
     <div id='player_prev' class='idle_fade_out player_nav_button' onclick='playerPrevious();'></div>
     <div id='player_next' class='idle_fade_out player_nav_button' onclick='playerNext();'></div>
     
     <img id='top_bar_image' src="<?=get_image_thumbnail($template_params['top_bar_image']['image'],$template_params['top_bar_image']['image_extra'],200);?>" />
-    <div id='v2_top_bar'>
+    <div id='v3_top_bar'>
         <div class='title'><?=$template_params['top_bar_title'];?></div>
         <div class='right'>
 
             <?php foreach( $tab_list as $k => $tab ): ?>
-                <div id='show_tab_<?=$k;?>' class='show_tab show_button' onclick='v2_showTab(<?=$k;?>);'>+ <?=$tab['title'];?></div>
-                <div id='hide_tab_<?=$k;?>' style='display: none;' class='hide_tab hide_button' onclick='v2_hideTabs();'>- <?=$tab['title'];?></div>
+                <div id='show_tab_<?=$k;?>' class='show_tab show_button' onclick='v3_showTab(<?=$k;?>);'>+ <?=$tab['title'];?></div>
+                <div id='hide_tab_<?=$k;?>' style='display: none;' class='hide_tab hide_button' onclick='v3_hideTabs();'>- <?=$tab['title'];?></div>
             <?php endforeach; ?>
 
             <?php if( $store_enabled ): ?>
-                <div class='show_store show_button' onclick='v2_showStore();'>+ SHOW STORE</div>
-                <div class='hide_store hide_button' style='display: none;' onclick='v2_hideStore();'>- HIDE STORE</div>
+                <div class='show_store show_button' onclick='v3_showStore();'>+ SHOW STORE</div>
+                <div class='hide_store hide_button' style='display: none;' onclick='v3_hideStore();'>- HIDE STORE</div>
             <?php endif; ?>
             <div class='show_feed show_button' onclick='showSocialFeed();'>+ SHOW SOCIAL FEED</div>
             <div class='hide_feed hide_button' style='display: none;' onclick='hideSocialFeed();'>- HIDE SOCIAL FEED</div>
@@ -191,7 +161,7 @@
         <?php endif; ?>
         <div id='iphone_pad'></div>
         <div id='store_tab' class='content_tab'>
-            <div class='close' onclick='v2_hideStore();'>
+            <div class='close' onclick='v3_hideStore();'>
                 <div class='icon'></div>
                 <div class='name'>CLOSE</div>
             </div>
@@ -282,7 +252,7 @@
             <div class='buttons'>
                 <? if( strlen($template_params['media_button_text']) > 0 ): ?>
                     <div class='sep'></div>
-                    <div class='plus button long' onclick='toggleBottom();'>
+                    <div class='plus button long' onclick='v3_showPlaylistTab();'>
                         <div class='icon'></div>
                         <div class='label'><?=$template_params['media_button_text'];?></div>
                     </div>
@@ -477,7 +447,7 @@
     </div>
     
     <div id='playlist_tab' class='content_tab'>
-        <div class='close' onclick='v2_hideTabs();'>
+        <div class='close' onclick='v3_hideTabs();'>
             <div class='icon'></div>
             <div class='name'>CLOSE</div>
         </div>
@@ -513,7 +483,7 @@
     </div>
     
     <div id='user_tab' class='content_tab'>
-        <div class='close' onclick='v2_hideTabs();'>
+        <div class='close' onclick='v3_hideTabs();'>
             <div class='icon'></div>
             <div class='name'>CLOSE</div>
         </div>
@@ -530,7 +500,7 @@
         <?=build_scrollbar();?>
     </div>
     <div id='embed_tab' class='content_tab'>
-        <div class='close' onclick='v2_hideTabs();'>
+        <div class='close' onclick='v3_hideTabs();'>
             <div class='icon'></div>
             <div class='name'>CLOSE</div>
         </div>

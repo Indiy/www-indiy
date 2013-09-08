@@ -922,6 +922,86 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             }
         ]
+    },
+    'PLAYER_DEFAULT_V3': {
+        type: 'PLAYER',
+        description: 'Default v3',
+        default_params: {
+            page_title: 'MyArtistDNA | Be Heard. Be Seen. Be Independent.',
+            footer_left: 'BE HEARD. BE SEEN. BE INDEPENDENT.',
+            footer_right: '&copy;2012 Powered by <a href="http://myartistdna.com">MyArtistDNA</a>',
+            iphone_top_text: '#MAYBACHMUSICTV',
+            iphone_bottom_text: '#SELFMADE3',
+            ga_account_id: ''
+        },
+        arg_list:
+        [
+            {
+                name: 'page_title',
+                description: 'Page Title',
+                type: 'string'
+            },
+            {
+                name: 'top_bar_image',
+                description: 'Top Bar Image',
+                type: 'image'
+            },
+            {
+                name: 'top_bar_title',
+                description: 'Top Bar Title',
+                type: 'string'
+            },
+            {
+                name: 'bottom_left_text',
+                description: 'Bottom Left Text',
+                type: 'textbox'
+            },
+            {
+                name: 'media_button_text',
+                description: 'Media Button Text',
+                type: 'string'
+            },
+            {
+                name: 'footer_left',
+                description: 'Footer Left Text',
+                type: 'string'
+            },
+            {
+                name: 'footer_right',
+                description: 'Footer Right Text',
+                type: 'string'
+            },
+            {
+                name: 'iphone_top_text',
+                description: 'iPhone Top Text',
+                type: 'string'
+            },
+            {
+                name: 'iphone_bottom_text',
+                description: 'iPhone Bottom Text',
+                type: 'string'
+            },
+            {
+                name: 'twitter_widget',
+                description: 'Twitter Widget',
+                type: 'textbox'
+            },
+            {
+                name: 'facebook_widget',
+                description: 'Facebook Widget',
+                type: 'textbox'
+            },
+            {
+                name: 'tracker_bar_texture',
+                description: 'Tracker Bar Texture',
+                type: 'image'
+            },
+            {
+                name: 'ga_account_id',
+                description: 'Google Analytics Id',
+                type: 'string'
+            }
+        ]
     }
 };
 

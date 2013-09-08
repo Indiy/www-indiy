@@ -271,6 +271,18 @@
 		2D6DF29317D3B7630020CD97 /* page_tabs.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = page_tabs.php; sourceTree = "<group>"; };
 		2D6DF29417D3C2260020CD97 /* artist_index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = artist_index.php; sourceTree = "<group>"; };
 		2D6DF29517DCF5F70020CD97 /* player_playlist.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = player_playlist.js; path = default_v2/player_playlist.js; sourceTree = "<group>"; };
+		2D6DF29617DD282E0020CD97 /* default_v3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = default_v3.html; sourceTree = "<group>"; };
+		2D6DF29717DD2D850020CD97 /* default_v3.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = default_v3.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2D6DF29917DD2F380020CD97 /* default_v3.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = default_v3.js; sourceTree = "<group>"; };
+		2D6DF29A17DD2F380020CD97 /* player_comments.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_comments.js; sourceTree = "<group>"; };
+		2D6DF29B17DD2F380020CD97 /* player_common.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_common.js; sourceTree = "<group>"; };
+		2D6DF29C17DD2F380020CD97 /* player_general.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_general.js; sourceTree = "<group>"; };
+		2D6DF29D17DD2F380020CD97 /* player_image.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_image.js; sourceTree = "<group>"; };
+		2D6DF29E17DD2F380020CD97 /* player_playlist.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_playlist.js; sourceTree = "<group>"; };
+		2D6DF29F17DD2F380020CD97 /* player_social.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_social.js; sourceTree = "<group>"; };
+		2D6DF2A017DD2F380020CD97 /* player_store.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_store.js; sourceTree = "<group>"; };
+		2D6DF2A117DD2F380020CD97 /* player_tabs.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_tabs.js; sourceTree = "<group>"; };
+		2D6DF2A217DD2F380020CD97 /* player_tooltips.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_tooltips.js; sourceTree = "<group>"; };
 		2D6DF95114BA4F4A00D0750E /* footer.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = footer.js; sourceTree = "<group>"; };
 		2D6DF95214BA5DA400D0750E /* add_mad_newsletter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_mad_newsletter.php; sourceTree = "<group>"; };
 		2D6DF95314BA62A900D0750E /* mad_newsletter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = mad_newsletter.php; sourceTree = "<group>"; };
@@ -1227,6 +1239,23 @@
 			name = default_v2;
 			sourceTree = "<group>";
 		};
+		2D6DF29817DD2F360020CD97 /* default_v3 */ = {
+			isa = PBXGroup;
+			children = (
+				2D6DF29917DD2F380020CD97 /* default_v3.js */,
+				2D6DF29A17DD2F380020CD97 /* player_comments.js */,
+				2D6DF29B17DD2F380020CD97 /* player_common.js */,
+				2D6DF29C17DD2F380020CD97 /* player_general.js */,
+				2D6DF29D17DD2F380020CD97 /* player_image.js */,
+				2D6DF29E17DD2F380020CD97 /* player_playlist.js */,
+				2D6DF29F17DD2F380020CD97 /* player_social.js */,
+				2D6DF2A017DD2F380020CD97 /* player_store.js */,
+				2D6DF2A117DD2F380020CD97 /* player_tabs.js */,
+				2D6DF2A217DD2F380020CD97 /* player_tooltips.js */,
+			);
+			path = default_v3;
+			sourceTree = "<group>";
+		};
 		2D747C5015D6354A00128EEC /* utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -1368,6 +1397,7 @@
 		2D9E2FD81569F13600A76906 /* templates */ = {
 			isa = PBXGroup;
 			children = (
+				2D6DF29617DD282E0020CD97 /* default_v3.html */,
 				2D6DF27917CAD06F0020CD97 /* default_v2.html */,
 				2DE6CDCF175AB174007E6792 /* splash_form_download.html */,
 				2DFBC92B172D8DD4001DCEF6 /* countdown_audio.html */,
@@ -1598,6 +1628,7 @@
 			isa = PBXGroup;
 			children = (
 				2D6DF27A17CAD0E10020CD97 /* default_v2.css */,
+				2D6DF29717DD2D850020CD97 /* default_v3.css */,
 				2DD94A2B14C368DF002B1259 /* vim.css */,
 				2D34E23514ABFF09004473F9 /* video-js.css */,
 				2DF4704F1440B77F005538C7 /* style.css */,
@@ -1831,6 +1862,7 @@
 				2DFBC92D1735AE7B001DCEF6 /* splash_video.js */,
 				2DFBC92A172D8DBB001DCEF6 /* countdown_audio.js */,
 				2DE6CDD0175AB206007E6792 /* splash_form_download.js */,
+				2D6DF29817DD2F360020CD97 /* default_v3 */,
 				2D6DF27C17D2AF6B0020CD97 /* default_v2 */,
 			);
 			path = js;
