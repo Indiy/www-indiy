@@ -109,7 +109,7 @@ function musicPanelChange(index)
     updateAnchorMedia({ song_id: song.id });
     //commentChangedMedia('song',song.id);
     
-    playerTrackInfo(song.name,song.listens);
+    playerTrackInfo(song.name,song.views);
     
     if( musicUpdateListens(song.id,index) )
     {

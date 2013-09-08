@@ -588,7 +588,7 @@ function playerProgress(curr_time,total_time)
     $('#track_progress').html(time);
     $('#track_current_bar').css('width',percent + "%");
 }
-function playerPhotoInfo(name,location,listens)
+function playerPhotoInfo(name,location,views)
 {
     $('#media_controls').hide();
     $('#big_play_icon').hide();
@@ -603,18 +603,18 @@ function playerUpdateTotalViewCount(count)
     $('#total_view_count').html(g_totalPageViews);
 }
 
-function playerTrackInfo(track_name,listens)
+function playerTrackInfo(track_name,views)
 {
     $('#photo_info').hide();
     $('#media_controls').show();
     $('#big_play_icon').show();
 
     $('#track_name').html(track_name);
-    playerUpdateElementViews(listens);
+    playerUpdateElementViews(views);
 }
-function playerUpdateElementViews(listens)
+function playerUpdateElementViews(views)
 {
-     $('#track_play_count').html(listens);
+     $('#track_play_count').html(views);
 }
 
 function playerSetPaused()

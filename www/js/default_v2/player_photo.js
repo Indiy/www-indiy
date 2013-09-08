@@ -153,7 +153,7 @@ function photoUpdateToIndex(index)
     updateAnchorMedia({ photo_id: photo.id });
     //commentChangedMedia('photo',photo.id);
     
-    playerPhotoInfo(photo.name,photo.location,photo.listens);
+    playerPhotoInfo(photo.name,photo.location,photo.views);
     photoUpdateViews(photo.id,index);
 }
 

@@ -419,7 +419,7 @@
                                 <?php
                                     foreach( $music_list as $i => $audio ):
                                         $audio_name = $audio['name'];
-                                        $listens = $audio['listens'];
+                                        $views = $audio['views'];
                                         $media_length = $audio['media_length'];
                                         $length_string = sprintf("%02d:%02d",$media_length / 60,$media_length % 60);
                                     
@@ -440,7 +440,7 @@
                                             <div class='sep'></div>
                                             <div class='length'><?=$length_string;?></div>
                                             <div class='sep'></div>
-                                            <div class='played'><?=$listens;?></div>
+                                            <div class='played'><?=$views;?></div>
                                         </div>
                                     </div>
                                 <?php endforeach; ?>

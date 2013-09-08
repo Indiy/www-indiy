@@ -28,7 +28,7 @@
         {
             $views = 0;
             mq("UPDATE playlist_items SET views = views + 1 WHERE playlist_item_id = '$id'");
-            $item = mf(mq("SELECT views FROM playlist_items WHERE playlist_item_id='$id'"));
+            $item = mf(mq("SELECT views FROM playlist_items WHERE playlist_item_id = '$id'"));
             if( $item )
                 $views = $item['views'];
             
