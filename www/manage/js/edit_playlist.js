@@ -25,8 +25,6 @@ function showPlaylistPopup(playlist_index)
 
 function onPlaylistSubmit()
 {
-    showProgress("Adding playlist...");
-
     var name = $('#edit_playlist #playlist_name').val();
     var display_name = $('#edit_playlist #display_name').val();
     var type = $('#edit_playlist #playlist_type').val();
@@ -43,6 +41,8 @@ function onPlaylistSubmit()
         return;
     }
     
+    showProgress("Adding playlist...");
+
     var url = "/manage/data/playlists.php";
     var data = {
         artist_id: g_artistId,
@@ -147,8 +147,6 @@ function showPlaylistItemPopup(playlist_index,playlist_item_index)
 
 function onPlaylistItemSubmit()
 {
-    showProgress("Adding item to playlist...");
-    
     var playlist = g_playlistList[g_currentPlaylistIndex];
 
     var name = $('#edit_playlist_item #name').val();
@@ -164,6 +162,8 @@ function onPlaylistItemSubmit()
         return;
     }
     
+    showProgress("Adding item to playlist...");
+
     var url = "/manage/data/playlist_items.php";
     var data = {
         playlist_id: playlist.playlist_id,
