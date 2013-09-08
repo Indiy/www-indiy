@@ -224,6 +224,7 @@
     $playlist_list = array();
     while( $row = mf($q) )
     {
+        $row = fill_image_data($row);
         $row['items'] = array();
         $playlist_list[] = $row;
     }
@@ -248,26 +249,8 @@
                 $sql .= " WHERE playlist_id = '$child_playlist_id' ";
                 $row = mf(mq($sql));
                 
-                $image_extra = array();
-                if( $row['image_extra_json'] )
-                {
-                    $image_extra = json_decode($row['image_extra_json'],TRUE);
-                }
-                $image_url = FALSE;
-                if( $row['image_filename'] )
-                {
-                    $image_url = artist_file_url($row['image_filename']);
-                }
-                $row['image'] = $image_url;
-                if( isset($image_extra['image_data']) )
-                {
-                    $row['image_data'] = $image_extra['image_data'];
-                }
-                else
-                {
-                    $row['image_data'] = array();
-                }
-                $row['image_extra'] = $image_extra;
+                $row = fill_image_data($row);
+                
                 $row['items'] = get_items_for_playlist($child_playlist_id);
                 
                 $items[$j] = $row;

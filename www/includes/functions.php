@@ -2036,5 +2036,29 @@ END;
         }
         return $items;
     }
+    function fill_image_data($row)
+    {
+        $image_extra = array();
+        if( $row['image_extra_json'] )
+        {
+            $image_extra = json_decode($row['image_extra_json'],TRUE);
+        }
+        $image_url = FALSE;
+        if( $row['image_filename'] )
+        {
+            $image_url = artist_file_url($row['image_filename']);
+        }
+        $row['image'] = $image_url;
+        if( isset($image_extra['image_data']) )
+        {
+            $row['image_data'] = $image_extra['image_data'];
+        }
+        else
+        {
+            $row['image_data'] = array();
+        }
+        $row['image_extra'] = $image_extra;
+        return $row;
+    }
 
 ?>
