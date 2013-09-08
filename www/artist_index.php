@@ -246,6 +246,11 @@
                 $sql .= " WHERE playlist_id = '$child_playlist_id' ";
                 $row = mf(mq($sql));
                 
+                $image_extra = array();
+                if( $row['image_extra_json'] )
+                {
+                    $image_extra = json_decode($row['image_extra_json'],TRUE);
+                }
                 $image_url = FALSE;
                 if( $row['image_filename'] )
                 {

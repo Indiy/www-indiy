@@ -1972,7 +1972,6 @@ END;
             {
                 $image_extra = json_decode($row['image_extra_json'],TRUE);
             }
-            json_decode($row['image_extra_json'],TRUE);
             
             $media_extra = array();
             if( $row['media_extra_json'] )
