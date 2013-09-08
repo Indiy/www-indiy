@@ -214,8 +214,10 @@
     $photo_list = array();
     
     $sql = "SELECT playlists.* ";
+    $sql .= " ,af1.filename AS image_filename, af1.extra_json AS image_extra_json ";
     $sql .= " FROM page_playlists ";
     $sql .= " JOIN playlists ON playlists.playlist_id = page_playlists.playlist_id ";
+    $sql .= " LEFT JOIN artist_files AS af1 ON playlists.image_id = af1.id ";
     $sql .= " WHERE page_playlists.page_id = '$page_id' ";
     $sql .= " ORDER BY page_playlists.order ASC, page_playlists.page_playlist_id DESC";
     $q = mq($sql);
