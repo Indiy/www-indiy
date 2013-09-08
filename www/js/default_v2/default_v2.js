@@ -129,14 +129,13 @@ function showAllShowButtons()
 
 function showSocialFeed()
 {
+    closeBottom(false);
+    hideAllTabs();
     $('#social_box').show();
 
     showAllShowButtons();
-
     $('#v2_top_bar .right .show_feed').hide();
-    $('#v2_top_bar .right .hide_feed').show();
-    
-    closeBottom(false);
+    $('#v2_top_bar .right .hide_feed').show();    
 }
 function hideSocialFeed()
 {
@@ -148,7 +147,7 @@ function toggleSocialFeed()
 {
     hideStore();
     $('#iphone_show_store_button .button').html('+ SHOW STORE');
-    
+
     if( $('#social_box').is(":visible") )
     {
         $('#iphone_show_social_button .button').html('+ SHOW SOCIAL');
@@ -182,11 +181,11 @@ function toggleStore()
 function v2_showTab(index)
 {
     hideSocialFeed();
+    showUserPage(index);
+    
     showAllShowButtons();
     $('#v2_top_bar .right #show_tab_' + index).hide();
     $('#v2_top_bar .right #hide_tab_' + index).show();
-
-    showUserPage(index);
 }
 function v2_hideTabs()
 {
@@ -196,12 +195,11 @@ function v2_hideTabs()
 function v2_showStore()
 {
     hideSocialFeed();
-    showAllShowButtons();
+    showStore();
     
+    showAllShowButtons();
     $('#v2_top_bar .right .show_store').hide();
     $('#v2_top_bar .right .hide_store').show();
-
-    showStore();
 }
 function v2_hideStore()
 {
