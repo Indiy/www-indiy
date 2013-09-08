@@ -120,7 +120,7 @@ function showPlaylistItemPopup(playlist_index,playlist_item_index)
 
     var playlist = g_playlistList[playlist_index];
 
-    var html = "<option val='0'>None</option>";
+    var html = "<option value='0'>None</option>";
     $('#edit_playlist_item #child_playlist_id').html(html);
     for( var i = 0 ; i < g_playlistList.length ; ++i )
     {
