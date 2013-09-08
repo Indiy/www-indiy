@@ -242,7 +242,7 @@ function getImgUrl(item,root_tag,ratio_ratio)
 
 function getImgUrlWithWidth(item,req_width,ratio_ratio)
 {
-    var img_width = item.image_data.width;|
+    var img_width = item.image_data.width;
     var tim_width = req_width;
     if( IS_RETINA )
     {
