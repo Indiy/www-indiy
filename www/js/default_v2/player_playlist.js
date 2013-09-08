@@ -40,7 +40,7 @@ function clickPlaylistDirItem(playlist_index,child_playlist_index)
     $('#playlist_tab .item_column.dir').children().removeClass('active');
     $('#playlist_tab .item_column.dir').children().addClass('inactive');
 
-    var sel = "#playlist_tab .item_column.dir #item_{0}".format(index);
+    var sel = "#playlist_tab .item_column.dir #item_{0}".format(child_playlist_index);
     $(sel).removeClass('inactive');
     $(sel).addClass('active');
     
@@ -50,8 +50,10 @@ function clickPlaylistDirItem(playlist_index,child_playlist_index)
         var pi = child_playlist.items[i];
         var image_url = getImgUrlWithWidth(pi,233);
         
+        var tup = "{0},{1},{2}".format(playlist_index,child_playlist_index,i);
+        
         var html = "";
-        html += "<div id='item_{1}' class='item inactive' onclick='clickPlaylistMediaItem({0},{1});'>".format(index,i);
+        html += "<div id='item_{1}' class='item inactive' onclick='clickPlaylistMediaItem({0});'>".format(tup,i);
         html += " <img src='{0}'/>".format(image_url);
         html += " <div class='overlay'></div>";
         html += " <div class='name'>{0}</div>".format(pi.name);
