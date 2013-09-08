@@ -129,13 +129,13 @@ function showAllShowButtons()
 
 function showSocialFeed()
 {
-    closeBottom(false);
+    closeBottom(true);
     hideAllTabs();
     $('#social_box').show();
 
     showAllShowButtons();
     $('#v2_top_bar .right .show_feed').hide();
-    $('#v2_top_bar .right .hide_feed').show();    
+    $('#v2_top_bar .right .hide_feed').show();
 }
 function hideSocialFeed()
 {
