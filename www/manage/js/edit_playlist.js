@@ -164,7 +164,7 @@ function showPlaylistItemPopup(playlist_index,playlist_item_index)
         $('#edit_playlist_item #bg_color').val('000000');
         fillArtistFileIdSelect('#edit_playlist_item #media_id',['AUDIO','VIDEO'],false);
         $('#edit_playlist_item #iframe_code').val("");
-        $('#edit_playlist_item #child_playlist_id')[0].value = "";
+        $('#edit_playlist_item #child_playlist_id').val(0);
     }
     
     showPopup('#edit_playlist_item');
@@ -180,6 +180,7 @@ function onPlaylistItemSubmit()
     var bg_color = $('#edit_playlist_item #bg_color').val();
     var media_id = $('#edit_playlist_item #media_id').val();
     var iframe_code = $('#edit_playlist_item #iframe_code').val();
+    var child_playlist_id = $('#edit_playlist_item #child_playlist_id').val();
     
     if( name.length == 0 )
     {
@@ -197,7 +198,8 @@ function onPlaylistItemSubmit()
         bg_style: bg_style,
         bg_color: bg_color,
         media_id: media_id,
-        iframe_code: iframe_code
+        iframe_code: iframe_code,
+        child_playlist_id: child_playlist_id
     };
 
     if( g_currentPlaylistItemIndex !== false )
