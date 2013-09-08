@@ -281,7 +281,7 @@
             <div class='buttons'>
                 <? if( strlen($template_params['media_button_text']) > 0 ): ?>
                     <div class='sep'></div>
-                    <div class='plus button long' onclick='toggleBottom();'>
+                    <div class='plus button long' onclick='v2_showPlaylistTab();'>
                         <div class='icon'></div>
                         <div class='label'><?=$template_params['media_button_text'];?></div>
                     </div>
@@ -474,6 +474,41 @@
             </div>
         </div>
     </div>
+    
+    <div id='playlist_tab' class='content_tab'>
+        <div class='close' onclick='v2_hideTabs();'>
+            <div class='icon'></div>
+            <div class='name'>CLOSE</div>
+        </div>
+        <div class='headers'>
+            <div class='header column1'>Artists</div>
+            <div class='header column2'>Playlists</div>
+            <div class='header column3'>Media</div>
+        </div>
+        <div class='content_container'>
+            <div class='scrollable_container scrollbar-pane'>
+                <div class='playlist_column'>
+                    <?php
+                        foreach( $playlist_list as $k => $playlist ):
+                            $name = $playlist['display_name'];
+                            $image_url = get_image_thumbnail($playlist['image'],$playlist['image_extra'],470);
+                    ?>
+                        <div class='item inactive'>
+                            <img src='$image_url'/>
+                            <div class='overlay'></div>
+                            <div class='name'>$name</div>
+                        </div>
+                    <?php endforeach;?>
+                </div>
+                <div class='dir_column'>
+                </div>
+                <div class='media_column'>
+                </div>
+            </div>
+        </div>
+        <?=build_scrollbar();?>
+    </div>
+    
     <div id='user_tab' class='content_tab'>
         <div class='close' onclick='v2_hideTabs();'>
             <div class='icon'></div>

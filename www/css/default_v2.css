@@ -2293,6 +2293,8 @@ body {
     color: white;
 }
 
+/*************************************************************************/
+
 #embed_tab .title {
     position: absolute;
     left: 30px;
@@ -2349,6 +2351,39 @@ body {
     border: 2px black dashed;
 }
 
+/*************************************************************************/
+
+#playlist_tab .headers {
+    padding-left: 40px;
+    font-size: 0px;
+    height: 82px;
+    white-space: nowrap;
+}
+#playlist_tab .headers .header {
+    display: inline-block;
+    padding-top: 10px;
+    width: 235px;
+    line-height: 50px;
+    margin-right: 60px;
+    color: white;
+    font-size: 37px;
+    font-family:  "Neuzeit Grotesk", Helvetica, sans-serif;
+    border-bottom: 1px solid white;
+}
+
+#embed_tab .content_container {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 36px;
+    bottom: 0px;
+}
+#embed_tab .scrollable_container {
+    padding-right: 102px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 /*************************************************************************/
 

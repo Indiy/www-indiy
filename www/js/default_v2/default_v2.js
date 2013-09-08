@@ -211,6 +211,12 @@ function v2_hideStore()
     showAllShowButtons();
     hideStore();
 }
+function v2_showPlaylistTab()
+{
+    hideAllTabs();
+    hideSocialFeed();
+    $('#playlist_tab').show();
+}
 
 function showTwitter()
 {
