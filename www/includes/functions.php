@@ -1085,9 +1085,16 @@
         $video_sum = mf(mq("SELECT SUM(views) AS sum_views FROM mydna_musicplayer_video WHERE `artistid`='$artist_id'"));
         $photo_sum = mf(mq("SELECT SUM(views) AS sum_views FROM photos WHERE `artist_id`='$artist_id'"));
         
+        $sql = "SELECT SUM( playlist_items.views ) AS sum_views ";
+        $sql .= " FROM  `playlists` ";
+        $sql .= " JOIN playlist_items ON playlist_items.playlist_id = playlists.playlist_id ";
+        $sql .= " WHERE artist_id = '$artist_id' ";
+        $playlist_item_sum = mf(mq($sql));
+        
         $total = intval($music_sum['sum_views']);
         $total += intval($video_sum['sum_views']);
         $total += intval($photo_sum['sum_views']);
+        $totla += intval($playlist_item_sum['sum_views']);
         
         return $total;
     }
