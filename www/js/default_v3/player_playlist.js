@@ -240,6 +240,7 @@ function setupJplayer()
     .bind($.jPlayer.event.pause,jplayerPause)
     .bind($.jPlayer.event.volumechange,jplayerVolume);
 }
+var g_musicStartIndex = false;
 function jplayerReady() 
 {
     g_musicPlayerReady = true;
