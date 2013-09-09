@@ -446,7 +446,7 @@ function maybeVideoCreateTag(playlist)
     var video = false;
     for( var i = 0 ; i < playlist.items.length ; ++i )
     {
-        var pi - playlist.items[i];
+        var pi = playlist.items[i];
         if( pi.media_type == 'VIDEO' )
         {
             video = pi;
