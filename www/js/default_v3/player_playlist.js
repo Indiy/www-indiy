@@ -45,7 +45,7 @@ function getImageHolders(playlist)
 }
 function setupSwipe(playlist)
 {
-    var sel = "playlist_bg_{0}".format(playlist.playlist_id);
+    var sel = "#playlist_bg_{0}".format(playlist.playlist_id);
     var opts = {
         panelCount: playlist.items.length,
         resizeCallback: playlistResizeBackgrounds,
@@ -125,6 +125,7 @@ var g_currentPlaylistIndex = 0;
 
 function clickPlaylistMediaItem(playlist_index,child_playlist_index,playlist_item_index)
 {
+    hideAllTabs();
     var playlist = g_playlistList[playlist_index];
     
     if( typeof playlist_item_index !== 'indefined' )
@@ -140,7 +141,7 @@ function clickPlaylistMediaItem(playlist_index,child_playlist_index,playlist_ite
     g_currentPlaylist = playlist;
     
     $('.full_screen_bg').hide();
-    var sel = "playlist_bg_{0}".format(playlist.playlist_id);
+    var sel = "#playlist_bg_{0}".format(playlist.playlist_id);
     $(sel).show();
 
     playlistChangeIndex(playlist_item_index);
@@ -148,7 +149,7 @@ function clickPlaylistMediaItem(playlist_index,child_playlist_index,playlist_ite
 
 function playlistChangeIndex(index)
 {
-    var sel = "playlist_bg_{0}".format(g_currentPlaylist.playlist_id);
+    var sel = "#playlist_bg_{0}".format(g_currentPlaylist.playlist_id);
     $(sel).swipe('scrollto',index);
 }
 
