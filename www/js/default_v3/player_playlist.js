@@ -189,11 +189,11 @@ function currentPlaylistChangeIndex(index)
     $(sel).swipe('scrollto',index);
 }
 
-function swipePanelVisible(playlist,index)
+function swipePanelVisible(that,playlist,index)
 {
     playlistLoadImage(playlist,index);
 }
-function swipePanelChange(playlist,index)
+function swipePanelChange(that,playlist,index)
 {
     console.log("playlistPanelChange: " + index);
     g_currentPlaylistIndex = index;
@@ -289,7 +289,7 @@ function playlistLoadImage(playlist,index)
     imageLoadItem(playlist.items[index],index,sel);
 }
 
-function swipeResizeBackgrounds(playlist)
+function swipeResizeBackgrounds(that,playlist)
 {
     var sel = playlist.bg_sel;
     imageResizeBackgrounds(playlist.items,sel);
