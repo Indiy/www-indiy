@@ -2025,7 +2025,7 @@ END;
             $row['video_extra'] = $media_extra;
             $row['media_extra'] = $media_extra;
 
-            else if( isset($media_extra['video_data']) )
+            if( isset($media_extra['video_data']) )
             {
                 $row['video_data'] = $media_extra['video_data'];
             }
