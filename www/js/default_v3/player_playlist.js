@@ -455,12 +455,12 @@ function videoOnWindowResize(playlist)
 }
 function onVideoReady(that,playlist)
 {
-    that.addEvent("loadstart",makeCallback(videoLoadStart));
-    that.addEvent("play",makeCallback(videoPlayStarted));
-    that.addEvent("timeupdate",makeCallback(videoTimeUpdate));
-    that.addEvent("ended",makeCallback(videoEnded));
-    that.addEvent("durationchange",makeCallback(videoDurationChange));
-    that.addEvent("progress",makeCallback(videoDownloadProgress));
+    that.addEvent("loadstart",makeCallback(videoLoadStart,playlist));
+    that.addEvent("play",makeCallback(videoPlayStarted,playlist));
+    that.addEvent("timeupdate",makeCallback(videoTimeUpdate,playlist));
+    that.addEvent("ended",makeCallback(videoEnded,playlist));
+    that.addEvent("durationchange",makeCallback(videoDurationChange,playlist));
+    that.addEvent("progress",makeCallback(videoDownloadProgress,playlist));
     
     g_videoPlayerReady = true;
     maybeAudioAndVideoReady();
@@ -548,7 +548,7 @@ function maybeVideoCreateTag(playlist)
     $(sel + ' .video_container').empty();
     $(sel + ' .video_container').html(html);
     playlist.video_player = _V_(video_sel);
-    playlist.video_player.ready(makeCallback(onVideoReady));
+    playlist.video_player.ready(makeCallback(onVideoReady,playlist));
     return 1;
 }
 
