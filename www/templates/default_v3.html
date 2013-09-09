@@ -91,7 +91,7 @@
 <body class='<?=$body_style;?>'>
     <div id="fb-root"></div>
     
-    <div id='player_prev' class='idle_fade_out player_nav_button' onclick='playistPrevious();'></div>
+    <div id='player_prev' class='idle_fade_out player_nav_button' onclick='playlistPrevious();'></div>
     <div id='player_next' class='idle_fade_out player_nav_button' onclick='playlistNext();'></div>
     
     <img id='top_bar_image' src="<?=get_image_thumbnail($template_params['top_bar_image']['image'],$template_params['top_bar_image']['image_extra'],200);?>" />
@@ -113,7 +113,7 @@
         </div>
     </div>
 
-    <div id='big_play_icon' onclick='playerPlayPause();'>
+    <div id='big_play_icon' onclick='playlistPlayPause();'>
         <div class='outer'></div>
         <div class='inner'></div>
         <div class='triangle'></div>
@@ -279,7 +279,7 @@
             </div>
             <div class='media_info_box'>
                 <div id='media_controls' class='media_controls info_box'>
-                    <div id='track_play_pause_button' class='play_pause tooltiped' onclick='playerPlayPause();' tooltip="PLAY">
+                    <div id='track_play_pause_button' class='play_pause tooltiped' onclick='playlistPlayPause();' tooltip="PLAY">
                         <div class='icon'></div>
                     </div>
                     <div class='sep volume_hidden'></div>

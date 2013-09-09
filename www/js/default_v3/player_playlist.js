@@ -1,4 +1,5 @@
 
+var g_musicIsPlaying = false;
 
 function playlistReady()
 {
@@ -286,6 +287,24 @@ function playlistPrevious()
         index = g_currentPlaylist.items.length - 1;
     
     currentPlaylistChangeIndex(index);
+}
+function playlistPlayPause()
+{
+    hideTooltip();
+    var playlist_item = g_currentPlaylist[g_currentPlaylistIndex];
+    var media_type = playlist_item.media_type;
+    
+    if( media_type == 'AUDIO' )
+    {
+        if( g_musicIsPlaying )
+            $('#jquery_jplayer').jPlayer("pause");
+        else
+            $('#jquery_jplayer').jPlayer("play");
+    }
+    else if( media_type == 'VIDEO' )
+    {
+        
+    }
 }
 
 function setupJplayer()

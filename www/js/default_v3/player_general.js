@@ -355,15 +355,6 @@ function setPlayerMode(mode)
     }
 }
 
-function playerPlayPause()
-{
-    hideTooltip();
-    if( g_playerMode == "music" )
-        musicPlayPause();
-    else if( g_playerMode == "video" )
-        videoPlayPause();
-}
-
 function hideVolume()
 {
     $('#volume_slider').hide();
