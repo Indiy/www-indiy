@@ -125,7 +125,7 @@ var g_currentPlaylistIndex = 0;
 
 function clickPlaylistMediaItem(playlist_index,child_playlist_index,playlist_item_index)
 {
-    var playlist = playlist_index[playlist_index];
+    var playlist = g_playlistList[playlist_index];
     
     if( typeof playlist_item_index !== 'indefined' )
     {
