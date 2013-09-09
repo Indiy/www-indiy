@@ -109,7 +109,7 @@ function clickPlaylistMediaItem(playlist_index,child_playlist_index,playlist_ite
 {
     var playlist = playlist_index[playlist_index];
     
-    if( typeof playlist_item_index !== 'indefined' )
+    if( typeof playlist_item_index !== 'undefined' )
     {
         playlist = playlist.items[child_playlist_index];
     }
