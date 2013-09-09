@@ -14,20 +14,13 @@ function playlistReady()
         {
             for( var j = 0 ; j < playlist.items.length ; ++j )
             {
-                html = getImageHolders(playlist.items[j]);
-                $('body').prepend(html);
-                
-                setupSwipe(playlist.items[j]);
-                video_container_made += maybeVideoCreateTag(playlist);
+                var child_playlist = playlist.items[j];
+                setupPlaylist(child_playlist);
             }
         }
         else
         {
-            html = getImageHolders(playlist);
-            $('body').prepend(html);
-            
-            setupSwipe(playlist);
-            video_container_made += maybeVideoCreateTag(playlist);
+            setupPlaylist(playlist);
         }
     }
     
@@ -40,6 +33,19 @@ function playlistReady()
     setupJplayer();
 }
 $(document).ready(playlistReady);
+
+function setupPlaylist(playlist)
+{
+    var sel = "#playlist_bg_{0}".format(playlist.playlist_id);
+    playlist.bg_sel = sel;
+    playlist.video_container_sel = sel + " .video_container";
+    
+    var html = getImageHolders(playlist);
+    $('body').prepend(html);
+
+    setupSwipe(playlist);
+    video_container_made += maybeVideoCreateTag(playlist);
+}
 
 function getImageHolders(playlist)
 {
@@ -58,7 +64,7 @@ function getImageHolders(playlist)
 }
 function setupSwipe(playlist)
 {
-    var sel = "#playlist_bg_{0}".format(playlist.playlist_id);
+    var sel = playlist.bg_sel;
     var opts = {
         panelCount: playlist.items.length,
         resizeCallback: makeCallback(playlistResizeBackgrounds,playlist),
@@ -153,20 +159,25 @@ function clickPlaylistMediaItem(playlist_index,child_playlist_index,playlist_ite
     {
         playlist_item_index = child_playlist_index;
     }
-    var playlist_item = playlist[playlist_item_index];
+    
+    var old_playlist = g_currentPlaylist;
+    if( old_playlist.video_player )
+    {
+        old_playlist.video_player.stop();
+        $(old_playlist.video_container_sel).hide();
+    }
     
     g_currentPlaylist = playlist;
     
     $('.full_screen_bg').hide();
-    var sel = "#playlist_bg_{0}".format(playlist.playlist_id);
-    $(sel).show();
+    $(playlist.bg_sel).show();
 
     currentPlaylistChangeIndex(playlist_item_index);
 }
 
 function currentPlaylistChangeIndex(index)
 {
-    var sel = "#playlist_bg_{0}".format(g_currentPlaylist.playlist_id);
+    var sel = g_currentPlaylist.bg_sel;
     $(sel).swipe('scrollto',index);
 }
 
@@ -202,12 +213,36 @@ function playlistPanelChange(playlist,index)
         {
             $('#jquery_jplayer').jPlayer("play");
         }
-        // Just inhibit the first play
-        g_mediaAutoStart = true;
     }
     else if( media_type == 'VIDEO' )
     {
         playerTrackInfo(playlist_item.name,playlist_item.views);
+        
+        var left_sl = $(playlist.bg_sel).scrollLeft();
+        $(playlist.video_container_sel).css({left: left_sl });
+        $(playlist.video_container_sel).show();
+
+        var url = video.video_file;
+        
+        var media = [ { type: "video/mp4", src: url } ];
+    
+        if( video.video_extra && video.video_extra.alts && video.video_extra.alts.ogv )
+        {
+            var url_ogv = g_artistFileBaseUrl + video.video_extra.alts.ogv;
+            media.push( { type: "video/ogg", src: url_ogv } );
+        }
+        
+        playlist.video_player.src(media);
+        
+        if( g_mediaAutoStart )
+        {
+            playlist.video_player.play();
+            $(playlist.video_container_sel).show();
+        }
+        else
+        {
+            $(playlist.video_container_sel).hide();
+        }
     }
     else
     {
@@ -222,61 +257,18 @@ function playlistPanelChange(playlist,index)
     {
         playerProgress(0,0);
     }
-    
-    
-    /*
-    g_songsPlayed++;
-    if( g_songsPlayed == 3 )
-        maybeAskForEmail();
-    
-    g_currentSongIndex = index;
-    var song = g_musicList[index];
-    
-    loveChangedMusic(song.id,song.name);
-    
-    var media = {
-        mp3: song.mp3
-    };
-    
-    if( song.audio_extra && song.audio_extra.alts && song.audio_extra.alts.ogg )
-    {
-        media.oga = g_artistFileBaseUrl + song.audio_extra.alts.ogg;
-    }
-    
-    $('#jquery_jplayer').jPlayer("setMedia", media);
-    playerProgress(0,0);
-    
-    if( g_mediaAutoStart )
-    {
-        $('#jquery_jplayer').jPlayer("play");
-    }
     // Just inhibit the first play
     g_mediaAutoStart = true;
-
-    playlistLoadImage(g_currentPlaylist,index);
-    
-    g_currentSongId = song.id;
-    
-    updateAnchorMedia({ song_id: song.id });
-    //commentChangedMedia('song',song.id);
-    
-    playerTrackInfo(song.name,song.views);
-    
-    if( musicUpdateListens(song.id,index) )
-    {
-        playerUpdateTotalViewCount(g_totalPageViews + 1);
-    }
-    */
 }
 function playlistLoadImage(playlist,index)
 {
-    var sel = "#playlist_bg_{0}".format(playlist.playlist_id);
+    var sel = playlist.bg_sel;
     imageLoadItem(playlist.items[index],index,sel);
 }
 
 function playlistResizeBackgrounds(playlist)
 {
-    var sel = "#playlist_bg_{0}".format(playlist.playlist_id);
+    var sel = playlist.bg_sel;
     imageResizeBackgrounds(playlist.items,sel);
 }
 
@@ -359,16 +351,6 @@ function jplayerReady()
     g_musicPlayerReady = true;
     
     maybeAudioAndVideoReady();
-    
-    if( g_musicStartIndex !== false )
-    {
-        if( IS_IOS )
-            g_musicIsPlaying = false;
-        else
-            g_musicIsPlaying = true;
-        musicChange(g_musicStartIndex);
-    }
-    
 }
 function jplayerTimeUpdate(event)
 {
@@ -458,7 +440,7 @@ function maybeVideoCreateTag(playlist)
         return 0;
     }
 
-    var sel = "#playlist_bg_" + playlist.playlist_id;
+    var sel = playlist.bg_sel;
     
     var h = $(sel + ' .video_container').height();
     var w = $(sel + ' .video_container').width();
@@ -473,6 +455,7 @@ function maybeVideoCreateTag(playlist)
     var w_h = " width='" + w + "' height='" + h + "' ";
     
     var video_sel = "video_player_{0}".format(playlist.playlist_id);
+    playlist.video_sel = "#" + video_sel;
     
     var html = "";
     html += "<video id='{0}' {1} class='video-js vjs-default-skin' preload='auto'>".format(video_sel,w_h);
