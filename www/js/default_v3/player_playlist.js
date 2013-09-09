@@ -148,10 +148,10 @@ function clickPlaylistMediaItem(playlist_index,child_playlist_index,playlist_ite
     var sel = "#playlist_bg_{0}".format(playlist.playlist_id);
     $(sel).show();
 
-    playlistChangeIndex(playlist_item_index);
+    currentPlaylistChangeIndex(playlist_item_index);
 }
 
-function playlistChangeIndex(index)
+function currentPlaylistChangeIndex(index)
 {
     var sel = "#playlist_bg_{0}".format(g_currentPlaylist.playlist_id);
     $(sel).swipe('scrollto',index);
@@ -168,7 +168,7 @@ function playlistPanelChange(playlist,index)
     
     playlistLoadImage(playlist,index);
     
-    var playlist_item = playlist[index];
+    var playlist_item = playlist.items[index];
     playerTrackInfo(playlist_item.name,playlist_item.views);
     
     /*
@@ -231,6 +231,23 @@ function playlistSwipeReady(playlist)
 {
     console.log("playlistSwipeReady");
 }
+function playlistNext()
+{
+    var index = g_currentPlaylistIndex + 1;
+    if( index == g_currentPlaylist.items.length )
+        index = 0;
+    
+    currentPlaylistChangeIndex(index);
+}
+function playlistPrevious()
+{
+    var index = g_currentPlaylistIndex - 1;
+    if( index < 0 )
+        index = g_currentPlaylist.items.length - 1;
+    
+    currentPlaylistChangeIndex(index);
+}
+
 
 
 function setupJplayer()
