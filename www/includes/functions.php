@@ -2020,17 +2020,25 @@ END;
 
             $row['mp3'] = $media_url;
             $row['video_file'] = $media_url;
+            $row['media_url'] = $media_url;
             $row['audio_extra'] = $media_extra;
             $row['video_extra'] = $media_extra;
             $row['media_extra'] = $media_extra;
-            if( isset($media_extra['video_data']) )
+            if( !$media_url )
+            {
+                $row['media_type'] = 'NONE';
+            }
+            else if( isset($media_extra['video_data']) )
             {
                 $row['video_data'] = $media_extra['video_data'];
+                $row['media_type'] = 'VIDEO';
             }
             else
             {
                 $row['video_data'] = array();
+                $row['media_type'] = 'AUDIO';
             }
+            
             
             $items[] = $row;
         }

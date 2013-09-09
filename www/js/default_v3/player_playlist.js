@@ -169,7 +169,47 @@ function playlistPanelChange(playlist,index)
     playlistLoadImage(playlist,index);
     
     var playlist_item = playlist.items[index];
-    playerTrackInfo(playlist_item.name,playlist_item.views);
+    
+    var media_type = playlist_item.media_type;
+    var media_extra = playlist_item.media_extra;
+    
+    if( media_type == 'NONE' )
+    {
+        playerPhotoInfo(playlist_item.name,playlist_item.location,playlist_item.views);
+    }
+    else if( media_type == 'AUDIO' )
+    {
+        playerTrackInfo(playlist_item.name,playlist_item.views);
+        
+        var media = {
+            mp3: playlist_item.media_url
+        };
+        if( playlist_item.audio_extra && playlist_item.audio_extra.alts && playlist_item.audio_extra.alts.ogg )
+        {
+            media.oga = g_artistFileBaseUrl + playlist_item.audio_extra.alts.ogg;
+        }
+        $('#jquery_jplayer').jPlayer("setMedia", media);
+        if( g_mediaAutoStart )
+        {
+            $('#jquery_jplayer').jPlayer("play");
+        }
+        // Just inhibit the first play
+        g_mediaAutoStart = true;
+    }
+    else if( media_type == 'VIDEO' )
+    {
+        playerTrackInfo(playlist_item.name,playlist_item.views);
+    }
+    
+    if( media_extra && media_extra.media_length )
+    {
+        playerProgress(0,media_extra.media_length);
+    }
+    else
+    {
+        playerProgress(0,0);
+    }
+    
     
     /*
     g_songsPlayed++;
@@ -247,8 +287,6 @@ function playlistPrevious()
     
     currentPlaylistChangeIndex(index);
 }
-
-
 
 function setupJplayer()
 {
