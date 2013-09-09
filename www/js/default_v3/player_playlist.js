@@ -476,7 +476,7 @@ function maybeVideoCreateTag(playlist)
     playlist.video_sel = "#" + video_sel;
     
     var html = "";
-    html += "<video id='{0}' {1} class='video-js vjs-default-skin' preload='auto'>".format(video_sel,w_h);
+    html += "<video id='{0}' {1} class='video-js vjs-default-skin' preload='none'>".format(video_sel,w_h);
     html += " <source src='{0}' type='video/mp4' />".format(url);
     if( url_ogv )
     {
