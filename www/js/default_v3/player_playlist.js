@@ -48,12 +48,16 @@ function setupSwipe(playlist)
     var sel = "#playlist_bg_{0}".format(playlist.playlist_id);
     var opts = {
         panelCount: playlist.items.length,
-        resizeCallback: playlistResizeBackgrounds,
-        onPanelChange: playlistPanelChange,
-        onPanelVisible: playlistPanelVisible,
-        onReady: playlistSwipeReady
+        resizeCallback: makeCallback(playlistResizeBackgrounds,playlist),
+        onPanelChange: makeCallback(playlistPanelChange,playlist),
+        onPanelVisible: makeCallback(playlistPanelVisible,playlist),
+        onReady: makeCallback(playlistSwipeReady,playlist)
     };
     $(sel).swipe(opts);
+}
+function makeCallback(callback,arg1)
+{
+    return function(arg2) { return callback(arg1,arg2); };
 }
 
 function clickPlaylist(index)
@@ -147,19 +151,19 @@ function clickPlaylistMediaItem(playlist_index,child_playlist_index,playlist_ite
     playlistChangeIndex(playlist_item_index);
 }
 
-function playlistChangeIndex(index)
+function playlistChangeIndex(playlist,index)
 {
     var sel = "#playlist_bg_{0}".format(g_currentPlaylist.playlist_id);
     $(sel).swipe('scrollto',index);
 }
 
-function playlistPanelVisible(index)
+function playlistPanelVisible(playlist,index)
 {
     //var song = g_musicList[index];
     //musicLoadImage(song,index);
     console.log("playlistPanelVisible: " + index);
 }
-function playlistPanelChange(index)
+function playlistPanelChange(playlist,index)
 {
     console.log("playlistPanelChange: " + index);
     g_currentPlaylistIndex = index;
@@ -212,13 +216,13 @@ function playlistLoadImage(item,index)
     //imageLoadItem(item,index,'#music_bg');
 }
 
-function playlistResizeBackgrounds()
+function playlistResizeBackgrounds(playlist)
 {
     //imageResizeBackgrounds(g_musicList,'#music_bg');
     console.log("playlistResizeBackgrounds");
 }
 
-function playlistSwipeReady()
+function playlistSwipeReady(playlist)
 {
     console.log("playlistSwipeReady");
 }
