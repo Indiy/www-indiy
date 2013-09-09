@@ -457,10 +457,7 @@ function clickSeekBar(event)
     var width = $('#media_seek_bar').width();
     var seek_ratio = x / width;
     
-    if( g_playerMode == "music" )
-        musicSeek(seek_ratio);
-    else if( g_playerMode == "video" )
-        videoSeek(seek_ratio);
+    playlistSeek(seek_ratio);
 }
 
 function formatMinSeconds(seconds)

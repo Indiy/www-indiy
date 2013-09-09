@@ -270,7 +270,6 @@ function playlistResizeBackgrounds(playlist)
 
 function playlistSwipeReady(playlist)
 {
-    console.log("playlistSwipeReady");
 }
 function playlistNext()
 {
@@ -306,6 +305,20 @@ function playlistPlayPause()
         
     }
 }
+function playlistSeek(seek_ratio)
+{
+    var playlist_item = g_currentPlaylist.items[g_currentPlaylistIndex];
+    var media_type = playlist_item.media_type;
+    
+    if( media_type == 'AUDIO' )
+    {
+        $('#jquery_jplayer').jPlayer( "playHead", seek_ratio * 100 );
+    }
+    else if( media_type == 'VIDEO' )
+    {
+        
+    }
+}
 
 function setupJplayer()
 {
@@ -329,6 +342,8 @@ function jplayerReady()
 {
     g_musicPlayerReady = true;
     
+    maybeAudioAndVideoReady();
+    
     if( g_musicStartIndex !== false )
     {
         if( IS_IOS )
@@ -336,9 +351,8 @@ function jplayerReady()
         else
             g_musicIsPlaying = true;
         musicChange(g_musicStartIndex);
-        var vol_ratio = 0.8;
-        volumeSetLevel(vol_ratio);
     }
+    
 }
 function jplayerTimeUpdate(event)
 {
@@ -370,6 +384,23 @@ function jplayerVolume(event)
     var vol_ratio = event.jPlayer.options.volume;
     volumeSetLevel(vol_ratio);
 }
-
+function maybeAudioAndVideoReady()
+{
+    if( g_musicPlayerReady )
+    {
+        var vol_ratio = 0.8;
+        volumeSetLevel(vol_ratio);
+        
+        var playlist = g_playlistList[0];
+        if( playlist.type == 'DIR' )
+        {
+            clickPlaylistMediaItem(0,0,0);
+        }
+        else
+        {
+            clickPlaylistMediaItem(0,0);
+        }
+    }
+}
 
 
