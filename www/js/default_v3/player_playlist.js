@@ -6,6 +6,7 @@ var g_musicPlayerReady = false;
 var g_videoContainers = 0;
 var g_currentPlaylist = false;
 var g_currentPlaylistIndex = 0;
+var g_volRatio = 0.8;
 
 function playlistReady()
 {
@@ -222,6 +223,7 @@ function swipePanelChange(that,playlist,index)
     g_mediaAutoStart = true;
 
     genericUpdateViews('media',playlist_item.playlist_item_id,playlist_item);
+    playlistSetVolume(g_volRatio);
 }
 function playlistLoadImage(playlist,index)
 {
@@ -313,6 +315,7 @@ function playlistSetVolume(vol_ratio)
     {
         g_currentPlaylist.video_player.volume(vol_ratio);
     }
+    g_volRatio = vol_ratio;
 }
 
 function setupJplayer()
