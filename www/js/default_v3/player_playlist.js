@@ -468,6 +468,7 @@ function onVideoReady(that,playlist)
 {
     that.addEvent("loadstart",makeCallback(videoLoadStart,playlist));
     that.addEvent("play",makeCallback(videoPlayStarted,playlist));
+    that.addEvent("pause",makeCallback(videoPaused,playlist));
     that.addEvent("timeupdate",makeCallback(videoTimeUpdate,playlist));
     that.addEvent("ended",makeCallback(videoEnded,playlist));
     that.addEvent("durationchange",makeCallback(videoDurationChange,playlist));
@@ -498,6 +499,11 @@ function videoPlayStarted(that,playlist)
     playerSetPlaying();
     
     videoOnWindowResize(playlist);
+}
+function videoPaused(that,playlist)
+{
+    g_videoIsPlaying = false;
+    playerSetPaused();
 }
 function videoProgress(that,playlist)
 {
