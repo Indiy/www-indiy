@@ -2,10 +2,11 @@
 var g_musicIsPlaying = false;
 var g_videoPlayerReady = false;
 var g_musicPlayerReady = false;
+var g_videoContainers = 0;
 
 function playlistReady()
 {
-    var video_container_made = 0;
+    g_videoContainers = 0;
     var html = "";
     for( var i = 0 ; i < g_playlistList.length ; ++i )
     {
@@ -24,7 +25,7 @@ function playlistReady()
         }
     }
     
-    if( video_container_made == 0 )
+    if( g_videoContainers == 0 )
     {
         // Dont need video
         g_videoPlayerReady = true;
@@ -44,7 +45,10 @@ function setupPlaylist(playlist)
     $('body').prepend(html);
 
     setupSwipe(playlist);
-    video_container_made += maybeVideoCreateTag(playlist);
+    if( maybeVideoCreateTag(playlist) )
+    {
+        ++g_videoContainers;
+    }
 }
 
 function getImageHolders(playlist)
