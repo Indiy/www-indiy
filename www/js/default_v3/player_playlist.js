@@ -72,17 +72,17 @@ function setupSwipe(playlist)
     var sel = playlist.bg_sel;
     var opts = {
         panelCount: playlist.items.length,
-        resizeCallback: makeCallback(playlistResizeBackgrounds,playlist),
-        onPanelChange: makeCallback(playlistPanelChange,playlist),
-        onPanelVisible: makeCallback(playlistPanelVisible,playlist),
-        onReady: makeCallback(playlistSwipeReady,playlist)
+        resizeCallback: makeCallback(swipeResizeBackgrounds,playlist),
+        onPanelChange: makeCallback(swipePanelChange,playlist),
+        onPanelVisible: makeCallback(swipePanelVisible,playlist),
+        onReady: makeCallback(swipeReady,playlist)
     };
     $(sel).swipe(opts);
 }
 function makeCallback(callback,arg1)
 {
-    var f = function(arg2) {
-        return callback.bind(this,arg1,arg2)(arg1,arg2);
+    var f = function(arg2,arg3,arg4) {
+        return callback(this,arg1,arg2,arg3,arg4);
     };
     return f;
 }
@@ -189,11 +189,11 @@ function currentPlaylistChangeIndex(index)
     $(sel).swipe('scrollto',index);
 }
 
-function playlistPanelVisible(playlist,index)
+function swipePanelVisible(playlist,index)
 {
     playlistLoadImage(playlist,index);
 }
-function playlistPanelChange(playlist,index)
+function swipePanelChange(playlist,index)
 {
     console.log("playlistPanelChange: " + index);
     g_currentPlaylistIndex = index;
@@ -289,7 +289,7 @@ function playlistLoadImage(playlist,index)
     imageLoadItem(playlist.items[index],index,sel);
 }
 
-function playlistResizeBackgrounds(playlist)
+function swipeResizeBackgrounds(playlist)
 {
     var sel = playlist.bg_sel;
     imageResizeBackgrounds(playlist.items,sel);
@@ -302,7 +302,7 @@ function playlistResizeBackgrounds(playlist)
     }
 }
 
-function playlistSwipeReady(playlist)
+function swipeReady(playlist)
 {
 }
 function playlistNext()
@@ -453,49 +453,49 @@ function videoOnWindowResize(playlist)
         playlist.video_player.size(w,h);
     }
 }
-function onVideoReady(playlist)
+function onVideoReady(that,playlist)
 {
-    this.addEvent("loadstart",makeCallback(videoLoadStart));
-    this.addEvent("play",makeCallback(videoPlayStarted));
-    this.addEvent("timeupdate",makeCallback(videoTimeUpdate));
-    this.addEvent("ended",makeCallback(videoEnded));
-    this.addEvent("durationchange",makeCallback(videoDurationChange));
-    this.addEvent("progress",makeCallback(videoDownloadProgress));
+    that.addEvent("loadstart",makeCallback(videoLoadStart));
+    that.addEvent("play",makeCallback(videoPlayStarted));
+    that.addEvent("timeupdate",makeCallback(videoTimeUpdate));
+    that.addEvent("ended",makeCallback(videoEnded));
+    that.addEvent("durationchange",makeCallback(videoDurationChange));
+    that.addEvent("progress",makeCallback(videoDownloadProgress));
     
     g_videoPlayerReady = true;
     maybeAudioAndVideoReady();
 }
-function videoLoadStart(playlist)
+function videoLoadStart(that,playlist)
 {
     //seekVideo();
 }
-function videoDownloadProgress(playlist)
+function videoDownloadProgress(that,playlist)
 {
     //seekVideo();
 }
-function videoTimeUpdate(playlist)
+function videoTimeUpdate(that,playlist)
 {
-    videoProgress(playlist,this);
+    videoProgress(that,playlist);
 }
-function videoDurationChange(playlist)
+function videoDurationChange(that,playlist)
 {
-    videoProgress(playlist,this);
+    videoProgress(that,playlist);
 }
-function videoPlayStarted(playlist)
+function videoPlayStarted(that,playlist)
 {
     g_videoIsPlaying = true;
     playerSetPlaying();
     
     videoOnWindowResize(playlist);
 }
-function videoProgress(playlist,video_player)
+function videoProgress(that,playlist)
 {
-    var curr_pos = video_player.currentTime();
-    var total_time = video_player.duration();
+    var curr_pos = that.currentTime();
+    var total_time = that.duration();
 
     playerProgress(curr_pos,total_time);
 }
-function videoEnded(playlist)
+function videoEnded(that,playlist)
 {
     g_videoIsPlaying = false;
     playerSetPaused();
