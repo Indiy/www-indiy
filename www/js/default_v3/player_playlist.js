@@ -171,7 +171,7 @@ function clickPlaylistMediaItem(playlist_index,child_playlist_index,playlist_ite
     var old_playlist = g_currentPlaylist;
     if( old_playlist.video_player )
     {
-        old_playlist.video_player.stop();
+        old_playlist.video_player.pause();
         $(old_playlist.video_container_sel).hide();
     }
     
@@ -209,7 +209,7 @@ function swipePanelChange(that,playlist,index)
     {
         if( playlist.video_player )
         {
-            playlist.video_player.stop();
+            playlist.video_player.pause();
             $(playlist.video_container_sel).hide();
         }
         
@@ -265,7 +265,7 @@ function swipePanelChange(that,playlist,index)
     {
         if( playlist.video_player )
         {
-            playlist.video_player.stop();
+            playlist.video_player.pause();
             $(playlist.video_container_sel).hide();
         }
         
@@ -330,13 +330,24 @@ function playlistPlayPause()
     if( media_type == 'AUDIO' )
     {
         if( g_musicIsPlaying )
+        {
             $('#jquery_jplayer').jPlayer("pause");
+        }
         else
+        {
             $('#jquery_jplayer').jPlayer("play");
+        }
     }
     else if( media_type == 'VIDEO' )
     {
-        g_currentPlaylist.video_player.stop();
+        if( g_videoIsPlaying )
+        {
+            g_currentPlaylist.video_player.pause();
+        }
+        else
+        {
+            g_currentPlaylist.video_player.play();
+        }
     }
 }
 function playlistSeek(seek_ratio)
