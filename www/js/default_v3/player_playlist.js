@@ -333,7 +333,7 @@ function playlistPlayPause()
     }
     else if( media_type == 'VIDEO' )
     {
-        
+        g_currentPlaylist.video_player.stop();
     }
 }
 function playlistSeek(seek_ratio)
@@ -347,12 +347,18 @@ function playlistSeek(seek_ratio)
     }
     else if( media_type == 'VIDEO' )
     {
-        
+        var video_player = g_currentPlaylist.video_player;
+        var seek_secs = seek_ratio * video_player.duration();
+        video_player.currentTime(seek_secs);
     }
 }
 function playlistSetVolume(vol_ratio)
 {
     $('#jquery_jplayer').jPlayer("volume",vol_ratio);
+    if( g_currentPlaylist.video_player )
+    {
+        g_currentPlaylist.video_player.volume(vol_ratio);
+    }
 }
 
 function setupJplayer()
