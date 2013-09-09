@@ -201,9 +201,14 @@ function swipePanelChange(that,playlist,index)
             playlist.video_player.pause();
             $(playlist.video_container_sel).hide();
         }
+        if( playlist_item.iframe_code )
+        {
+            $('#jquery_jplayer').jPlayer("pause");
+        }
         
         playerPhotoInfo(playlist_item.name,playlist_item.location,playlist_item.views);
     }
+    
     
     if( media_extra && media_extra.media_length )
     {
