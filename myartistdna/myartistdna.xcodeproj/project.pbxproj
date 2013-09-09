@@ -283,6 +283,7 @@
 		2D6DF2A017DD2F380020CD97 /* player_store.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_store.js; sourceTree = "<group>"; };
 		2D6DF2A117DD2F380020CD97 /* player_tabs.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_tabs.js; sourceTree = "<group>"; };
 		2D6DF2A217DD2F380020CD97 /* player_tooltips.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_tooltips.js; sourceTree = "<group>"; };
+		2D6DF2A317DD88FA0020CD97 /* player_catalog.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_catalog.js; sourceTree = "<group>"; };
 		2D6DF95114BA4F4A00D0750E /* footer.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = footer.js; sourceTree = "<group>"; };
 		2D6DF95214BA5DA400D0750E /* add_mad_newsletter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_mad_newsletter.php; sourceTree = "<group>"; };
 		2D6DF95314BA62A900D0750E /* mad_newsletter.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = mad_newsletter.php; sourceTree = "<group>"; };
@@ -1248,6 +1249,7 @@
 				2D6DF29C17DD2F380020CD97 /* player_general.js */,
 				2D6DF29D17DD2F380020CD97 /* player_image.js */,
 				2D6DF29E17DD2F380020CD97 /* player_playlist.js */,
+				2D6DF2A317DD88FA0020CD97 /* player_catalog.js */,
 				2D6DF29F17DD2F380020CD97 /* player_social.js */,
 				2D6DF2A017DD2F380020CD97 /* player_store.js */,
 				2D6DF2A117DD2F380020CD97 /* player_tabs.js */,
