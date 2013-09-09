@@ -617,10 +617,10 @@ body {
     background: transparent url('/images/player_icons.png') no-repeat -243px -534px;
 }
 #tracker_bar .buttons .plus.button .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -37px 11px;
+    background: transparent url('/images/player_icons.png') no-repeat -775px -270px;
 }
 .no_touch #tracker_bar .buttons .plus.button .icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat 13px 11px;
+    background: transparent url('/images/player_icons.png') no-repeat -775px -308px;
 }
 #tracker_bar .buttons .comment.button .icon {
     background: transparent url('/images/comment_icon.png') no-repeat -60px 11px;
@@ -629,10 +629,10 @@ body {
     background: transparent url('/images/comment_icon.png') no-repeat 0px 11px;
 }
 #tracker_bar .buttons .embed.button .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -37px 11px;
+    background: transparent url('/images/player_icons.png') no-repeat -711px -267px;
 }
 .no_touch #tracker_bar .buttons .embed.button .icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat 13px 11px;
+    background: transparent url('/images/player_icons.png') no-repeat -711px -311px;
 }
 
 #tracker_bar .buttons .button .comment_badge_count {
