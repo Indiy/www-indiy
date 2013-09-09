@@ -226,13 +226,13 @@ function playlistPanelChange(playlist,index)
         $(playlist.video_container_sel).css({left: left_sl });
         $(playlist.video_container_sel).show();
 
-        var url = video.video_file;
+        var url = playlist_item.video_file;
         
         var media = [ { type: "video/mp4", src: url } ];
     
-        if( video.video_extra && video.video_extra.alts && video.video_extra.alts.ogv )
+        if( playlist_item.video_extra && playlist_item.video_extra.alts && playlist_item.video_extra.alts.ogv )
         {
-            var url_ogv = g_artistFileBaseUrl + video.video_extra.alts.ogv;
+            var url_ogv = g_artistFileBaseUrl + playlist_item.video_extra.alts.ogv;
             media.push( { type: "video/ogg", src: url_ogv } );
         }
         
