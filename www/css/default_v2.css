@@ -561,6 +561,7 @@ body {
 #tracker_bar .buttons .button.long {
     width: auto;
     vertical-align: top;
+    cursor: pointer;
 }
 #tracker_bar .buttons .button .icon {
     width: 28px;
@@ -573,17 +574,23 @@ body {
 #tracker_bar .buttons .button.long .icon {
     display: inline-block;
     vertical-align: top;
+    width: 40px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 #tracker_bar .buttons .button.long .label {
     display: inline-block;
     padding-left: 0px;
     padding-top: 21px;
     padding-right: 10px;
-    color: white;
+    color: #777;
     font-size: 18px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     text-transform: uppercase;
     vertical-align: top;
+}
+#tracker_bar .buttons .button.long:hover .label {
+    color: white;
 }
 
 #tracker_bar .buttons .photos.button .icon {
@@ -617,10 +624,10 @@ body {
     background: transparent url('/images/player_icons.png') no-repeat -243px -534px;
 }
 #tracker_bar .buttons .plus.button .icon {
-    background: transparent url('/images/embed_plus.png') no-repeat -37px 11px;
+    background: transparent url('/images/player_icons.png') no-repeat -780px -270px;
 }
-.no_touch #tracker_bar .buttons .plus.button .icon:hover {
-    background: transparent url('/images/embed_plus.png') no-repeat 13px 11px;
+.no_touch #tracker_bar .buttons .plus.button:hover .icon {
+    background: transparent url('/images/player_icons.png') no-repeat -780px -314px;
 }
 #tracker_bar .buttons .comment.button .icon {
     background: transparent url('/images/comment_icon.png') no-repeat -60px 11px;
@@ -628,6 +635,13 @@ body {
 .no_touch #tracker_bar .buttons .comment.button .icon:hover {
     background: transparent url('/images/comment_icon.png') no-repeat 0px 11px;
 }
+#tracker_bar .buttons .embed.button .icon {
+    background: transparent url('/images/player_icons.png') no-repeat -711px -267px;
+}
+.no_touch #tracker_bar .buttons .embed.button:hover .icon {
+    background: transparent url('/images/player_icons.png') no-repeat -711px -311px;
+}
+
 #tracker_bar .buttons .button .comment_badge_count {
     position: absolute;
     display: none;
