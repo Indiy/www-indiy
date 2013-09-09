@@ -1958,7 +1958,7 @@ END;
         
         $sql = "SELECT playlist_items.* ";
         $sql .= " ,af1.filename AS image_filename, af1.extra_json AS image_extra_json ";
-        $sql .= " ,af2.filename AS media_filename, af2.extra_json AS media_extra_json ";
+        $sql .= " ,af2.filename AS media_filename, af2.extra_json AS media_extra_json, af2.type AS media_type ";
         $sql .= " FROM playlist_items ";
         $sql .= " LEFT JOIN artist_files AS af1 ON playlist_items.image_id = af1.id ";
         $sql .= " LEFT JOIN artist_files AS af2 ON playlist_items.media_id = af2.id ";
@@ -2024,21 +2024,15 @@ END;
             $row['audio_extra'] = $media_extra;
             $row['video_extra'] = $media_extra;
             $row['media_extra'] = $media_extra;
-            if( !$media_url )
-            {
-                $row['media_type'] = 'NONE';
-            }
+
             else if( isset($media_extra['video_data']) )
             {
                 $row['video_data'] = $media_extra['video_data'];
-                $row['media_type'] = 'VIDEO';
             }
             else
             {
                 $row['video_data'] = array();
-                $row['media_type'] = 'AUDIO';
             }
-            
             
             $items[] = $row;
         }

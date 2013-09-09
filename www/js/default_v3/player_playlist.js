@@ -186,18 +186,14 @@ function playlistPanelChange(playlist,index)
     var media_type = playlist_item.media_type;
     var media_extra = playlist_item.media_extra;
     
-    if( media_type == 'NONE' )
-    {
-        playerPhotoInfo(playlist_item.name,playlist_item.location,playlist_item.views);
-    }
-    else if( media_type == 'AUDIO' )
+    if( media_type == 'AUDIO' )
     {
         playerTrackInfo(playlist_item.name,playlist_item.views);
         
         var media = {
             mp3: playlist_item.media_url
         };
-        if( playlist_item.audio_extra && playlist_item.audio_extra.alts && playlist_item.audio_extra.alts.ogg )
+        if( playlist_item.media_extra && playlist_item.media_extra.alts && playlist_item.media_extra.alts.ogg )
         {
             media.oga = g_artistFileBaseUrl + playlist_item.audio_extra.alts.ogg;
         }
@@ -212,6 +208,10 @@ function playlistPanelChange(playlist,index)
     else if( media_type == 'VIDEO' )
     {
         playerTrackInfo(playlist_item.name,playlist_item.views);
+    }
+    else
+    {
+        playerPhotoInfo(playlist_item.name,playlist_item.location,playlist_item.views);
     }
     
     if( media_extra && media_extra.media_length )
