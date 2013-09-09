@@ -81,7 +81,7 @@ function setupSwipe(playlist)
 }
 function makeCallback(callback,arg1)
 {
-    return function(arg2) { return callback(arg1,arg2); };
+    return function(arg2) { return callback.bind(this,arg1,arg2)(); };
 }
 
 function clickPlaylist(index)
