@@ -579,11 +579,15 @@ body {
     padding-left: 0px;
     padding-top: 21px;
     padding-right: 10px;
-    color: white;
+    color: #777;
     font-size: 18px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     text-transform: uppercase;
     vertical-align: top;
+    cursor: pointer;
+}
+#tracker_bar .buttons .button.long:hover .label {
+    color: white;
 }
 
 #tracker_bar .buttons .photos.button .icon {
@@ -617,10 +621,10 @@ body {
     background: transparent url('/images/player_icons.png') no-repeat -243px -534px;
 }
 #tracker_bar .buttons .plus.button .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -775px -270px;
+    background: transparent url('/images/player_icons.png') no-repeat -773px -270px;
 }
 .no_touch #tracker_bar .buttons .plus.button .icon:hover {
-    background: transparent url('/images/player_icons.png') no-repeat -775px -308px;
+    background: transparent url('/images/player_icons.png') no-repeat -773px -314px;
 }
 #tracker_bar .buttons .comment.button .icon {
     background: transparent url('/images/comment_icon.png') no-repeat -60px 11px;
