@@ -52,7 +52,7 @@ function getImageHolders(playlist)
         html += " <div id='image_holder_{0}' class='image_holder'></div>".format(i);
     }
     html += " <div class='pad'></div>";
-    html += " <div id='video_container'></div>";
+    html += " <div class='video_container'></div>";
     html += "</div>";
     return html;
 }
