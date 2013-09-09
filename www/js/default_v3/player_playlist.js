@@ -319,6 +319,10 @@ function playlistSeek(seek_ratio)
         
     }
 }
+function playlistSetVolume(vol_ratio)
+{
+    $('#jquery_jplayer').jPlayer("volume",vol_ratio);
+}
 
 function setupJplayer()
 {

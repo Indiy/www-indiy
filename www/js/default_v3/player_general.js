@@ -414,12 +414,7 @@ function clickVolume(event)
 
 function volumeChange(vol_ratio)
 {
-    if( g_playerMode == "music" )
-        musicVolume(vol_ratio);
-    else if( g_playerMode == "video" )
-        videoVolume(vol_ratio);
-    else if( g_playerMode == "photo" )
-        photoVolume(vol_ratio);
+    playlistSetVolume(vol_ratio);
 }
 
 function volumeSetLevel(vol_ratio)
