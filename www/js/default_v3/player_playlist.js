@@ -104,13 +104,13 @@ function playlistChangePlaylist(new_playlist,playlist_item_index)
     
     if( new_playlist.items.length < 2 )
     {
-        $('#player_prev').hide();
-        $('#player_next').hide();
+        $('#player_prev').addClass('hidden');
+        $('#player_next').addClass('hidden');
     }
     else
     {
-        $('#player_prev').show();
-        $('#player_next').show();
+        $('#player_prev').removeClass('hidden');
+        $('#player_next').removeClass('hidden');
     }
 
     currentPlaylistChangeIndex(playlist_item_index);
