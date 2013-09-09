@@ -180,7 +180,7 @@ body {
     z-index: 2;
 }
 
-#v2_top_bar {
+#v3_top_bar {
     position: absolute;
     top: 0px;
     left: 100px;
@@ -188,7 +188,7 @@ body {
     height: 30px;
     background: rgba(0,0,0,0.5);
 }
-#v2_top_bar .title {
+#v3_top_bar .title {
     float: left;
     padding-top: 1px;
     padding-left: 10px;
@@ -196,15 +196,15 @@ body {
     font-size: 22px;
     font-family: 'Agency Regular', Helvetica, sans-serif;
 }
-#v2_top_bar .title a {
+#v3_top_bar .title a {
     color: white;
     text-decoration: none;
 }
-#v2_top_bar .right {
+#v3_top_bar .right {
     float: right;
     padding-right: 10px;
 }
-#v2_top_bar .right div {
+#v3_top_bar .right div {
     display: inline-block;
     padding-top: 3px;
     padding-left: 20px;
@@ -2506,7 +2506,7 @@ and (max-device-width : 480px) {
     #top_bar_image {
         display: none !important;
     }
-    #v2_top_bar {
+    #v3_top_bar {
         display: none !important;
     }
     #bottom_left_text {
