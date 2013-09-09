@@ -204,6 +204,8 @@ function swipePanelChange(that,playlist,index)
     }
     // Just inhibit the first play
     g_mediaAutoStart = true;
+
+    genericUpdateViews('media',playlist_item.playlist_item_id,playlist_item);
 }
 function playlistLoadImage(playlist,index)
 {
