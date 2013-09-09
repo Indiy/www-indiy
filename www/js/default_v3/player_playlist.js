@@ -1,4 +1,5 @@
 
+var g_videoIsPlaying = false;
 var g_musicIsPlaying = false;
 var g_videoPlayerReady = false;
 var g_musicPlayerReady = false;
@@ -203,6 +204,12 @@ function playlistPanelChange(playlist,index)
     
     if( media_type == 'AUDIO' )
     {
+        if( playlist.video_player )
+        {
+            playlist.video_player.stop();
+            $(playlist.video_container_sel).hide();
+        }
+        
         playerTrackInfo(playlist_item.name,playlist_item.views);
         
         var media = {
@@ -220,6 +227,8 @@ function playlistPanelChange(playlist,index)
     }
     else if( media_type == 'VIDEO' )
     {
+        $('#jquery_jplayer').jPlayer("pause");
+        
         playerTrackInfo(playlist_item.name,playlist_item.views);
         
         var left_sl = $(playlist.bg_sel).scrollLeft();
@@ -247,9 +256,16 @@ function playlistPanelChange(playlist,index)
         {
             $(playlist.video_container_sel).hide();
         }
+        videoOnWindowResize(playlist);
     }
     else
     {
+        if( playlist.video_player )
+        {
+            playlist.video_player.stop();
+            $(playlist.video_container_sel).hide();
+        }
+        
         playerPhotoInfo(playlist_item.name,playlist_item.location,playlist_item.views);
     }
     
@@ -274,6 +290,13 @@ function playlistResizeBackgrounds(playlist)
 {
     var sel = playlist.bg_sel;
     imageResizeBackgrounds(playlist.items,sel);
+    videoOnWindowResize(playlist);
+
+    if( playlist.bg_sel && playlist.video_container_sel )
+    {
+        var left_sl = $(playlist.bg_sel).scrollLeft();
+        $(playlist.video_container_sel).css({left: left_sl });
+    }
 }
 
 function playlistSwipeReady(playlist)
@@ -379,7 +402,7 @@ function jplayerEnded()
 {
     g_musicIsPlaying = false;
     playerSetPaused();
-    musicNext();
+    playlistNext();
 }
 function jplayerVolume(event)
 {
@@ -412,19 +435,62 @@ function maybeAudioAndVideoReady()
     }
 }
 
-function videoOnWindowResize()
+function videoOnWindowResize(playlist)
 {
-    if( g_videoPlayer )
+    if( playlist.video_player )
     {
-        var h = $('#video_container').height();
-        var w = $('#video_container').width();
-        g_videoPlayer.size(w,h);
+        var h = $(playlist.video_container_sel).height();
+        var w = $(playlist.video_container_sel).width();
+        playlist.video_player.size(w,h);
     }
 }
-function onVideoReady()
+function onVideoReady(playlist)
 {
+    this.addEvent("loadstart",makeCallback(videoLoadStart));
+    this.addEvent("play",makeCallback(videoPlayStarted));
+    this.addEvent("timeupdate",makeCallback(videoTimeUpdate));
+    this.addEvent("ended",makeCallback(videoEnded));
+    this.addEvent("durationchange",makeCallback(videoDurationChange));
+    this.addEvent("progress",makeCallback(videoDownloadProgress));
+    
     g_videoPlayerReady = true;
     maybeAudioAndVideoReady();
+}
+function videoLoadStart(playlist)
+{
+    //seekVideo();
+}
+function videoDownloadProgress(playlist)
+{
+    //seekVideo();
+}
+function videoTimeUpdate(playlist)
+{
+    videoProgress(playlist,this);
+}
+function videoDurationChange(playlist)
+{
+    videoProgress(playlist,this);
+}
+function videoPlayStarted(playlist)
+{
+    g_videoIsPlaying = true;
+    playerSetPlaying();
+    
+    videoOnWindowResize(playlist);
+}
+function videoProgress(playlist,video_player)
+{
+    var curr_pos = video_player.currentTime();
+    var total_time = video_player.duration();
+
+    playerProgress(curr_pos,total_time);
+}
+function videoEnded(playlist)
+{
+    g_videoIsPlaying = false;
+    playerSetPaused();
+    playlistNext();
 }
 
 function maybeVideoCreateTag(playlist)
@@ -473,7 +539,7 @@ function maybeVideoCreateTag(playlist)
     $(sel + ' .video_container').empty();
     $(sel + ' .video_container').html(html);
     playlist.video_player = _V_(video_sel);
-    playlist.video_player.ready(onVideoReady);
+    playlist.video_player.ready(makeCallback(onVideoReady));
     return 1;
 }
 
