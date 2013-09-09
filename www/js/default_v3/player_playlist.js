@@ -10,6 +10,8 @@ var g_volRatio = 0.8;
 
 function playlistReady()
 {
+    $('#playlist_tab').scrollbar();
+
     g_videoContainers = 0;
     var html = "";
     for( var i = 0 ; i < g_playlistList.length ; ++i )

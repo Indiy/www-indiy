@@ -40,6 +40,7 @@ function catalogClickPlaylist(index)
         var playlist_tuple = "{0}".format(index);
         populateMedia(playlist,playlist_tuple);
     }
+    $('#playlist_tab').scrollbar("repaint");
 }
 
 function catalogClickPlaylistDirItem(playlist_index,child_playlist_index)
@@ -56,6 +57,7 @@ function catalogClickPlaylistDirItem(playlist_index,child_playlist_index)
     
     var playlist_tuple = "{0},{1}".format(playlist_index,child_playlist_index);
     populateMedia(child_playlist,playlist_tuple);
+    $('#playlist_tab').scrollbar("repaint");
 }
 function populateMedia(playlist,playlist_tup)
 {
