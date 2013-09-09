@@ -367,11 +367,11 @@ function maybeAudioAndVideoReady()
         var playlist = g_playlistList[0];
         if( playlist.type == 'DIR' )
         {
-            clickPlaylistMediaItem(0,0,0);
+            catalogClickPlaylistMediaItem(0,0,0);
         }
         else
         {
-            clickPlaylistMediaItem(0,0);
+            catalogClickPlaylistMediaItem(0,0);
         }
         g_autoStart = false;
     }
