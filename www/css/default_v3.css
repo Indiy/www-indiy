@@ -574,6 +574,9 @@ body {
 #tracker_bar .buttons .button.long .icon {
     display: inline-block;
     vertical-align: top;
+    width: 40px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 #tracker_bar .buttons .button.long .label {
     display: inline-block;
@@ -621,10 +624,10 @@ body {
     background: transparent url('/images/player_icons.png') no-repeat -243px -534px;
 }
 #tracker_bar .buttons .plus.button .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -773px -270px;
+    background: transparent url('/images/player_icons.png') no-repeat -780px -270px;
 }
 .no_touch #tracker_bar .buttons .plus.button:hover .icon {
-    background: transparent url('/images/player_icons.png') no-repeat -773px -314px;
+    background: transparent url('/images/player_icons.png') no-repeat -780px -314px;
 }
 #tracker_bar .buttons .comment.button .icon {
     background: transparent url('/images/comment_icon.png') no-repeat -60px 11px;
