@@ -1,8 +1,11 @@
 
 var g_musicIsPlaying = false;
+var g_videoPlayerReady = false;
+var g_musicPlayerReady = false;
 
 function playlistReady()
 {
+    var video_container_made = 0;
     var html = "";
     for( var i = 0 ; i < g_playlistList.length ; ++i )
     {
@@ -15,6 +18,7 @@ function playlistReady()
                 $('body').prepend(html);
                 
                 setupSwipe(playlist.items[j]);
+                video_container_made += maybeVideoCreateTag(playlist);
             }
         }
         else
@@ -23,8 +27,16 @@ function playlistReady()
             $('body').prepend(html);
             
             setupSwipe(playlist);
+            video_container_made += maybeVideoCreateTag(playlist);
         }
     }
+    
+    if( video_container_made == 0 )
+    {
+        // Dont need video
+        g_videoPlayerReady = true;
+    }
+    
     setupJplayer();
 }
 $(document).ready(playlistReady);
@@ -388,8 +400,14 @@ function jplayerVolume(event)
     var vol_ratio = event.jPlayer.options.volume;
     volumeSetLevel(vol_ratio);
 }
+var g_autoStart = true;
 function maybeAudioAndVideoReady()
 {
+    if( !g_autoStart )
+    {
+        return;
+    }
+
     if( g_musicPlayerReady )
     {
         var vol_ratio = 0.8;
@@ -404,7 +422,72 @@ function maybeAudioAndVideoReady()
         {
             clickPlaylistMediaItem(0,0);
         }
+        g_autoStart = false;
     }
+}
+
+function videoOnWindowResize()
+{
+    if( g_videoPlayer )
+    {
+        var h = $('#video_container').height();
+        var w = $('#video_container').width();
+        g_videoPlayer.size(w,h);
+    }
+}
+function onVideoReady()
+{
+    g_videoPlayerReady = true;
+    maybeAudioAndVideoReady();
+}
+
+function maybeVideoCreateTag(playlist)
+{
+    var video = false;
+    for( var i = 0 ; i < playlist.items.length ; ++i )
+    {
+        var pi - playlist.items[i];
+        if( pi.media_type == 'VIDEO' )
+        {
+            video = pi;
+        }
+    }
+    
+    if( video === false )
+    {
+        return 0;
+    }
+
+    var sel = "#playlist_bg_" + playlist.playlist_id;
+    
+    var h = $(sel + ' .video_container').height();
+    var w = $(sel + ' .video_container').width();
+    
+    var url = video.video_file;
+    var url_ogv = false;
+    if( video.video_extra && video.video_extra.alts && video.video_extra.alts.ogv )
+    {
+        url_ogv = g_artistFileBaseUrl + video.video_extra.alts.ogv;
+    }
+    
+    var w_h = " width='" + w + "' height='" + h + "' ";
+    
+    var video_sel = "video_player_{0}".format(playlist.playlist_id);
+    
+    var html = "";
+    html += "<video id='{0}' {1} class='video-js vjs-default-skin' preload='auto'>".format(video_sel,w_h);
+    html += " <source src='{0}' type='video/mp4' />".format(url);
+    if( url_ogv )
+    {
+        html += " <source src='{0}' type='video/ogg' />".format(url_ogv);
+    }
+    html += "</video>";
+    
+    $(sel + ' .video_container').empty();
+    $(sel + ' .video_container').html(html);
+    playlist.video_player = _V_(video_sel);
+    playlist.video_player.ready(onVideoReady);
+    return 1;
 }
 
 
