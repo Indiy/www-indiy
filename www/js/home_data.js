@@ -29,7 +29,7 @@ var g_backgroundList = [
         loaded: false,
         image_data: { width:1267, height:800 },
         content_info_html:
-            "<div class='logo'></div><a href='http://meekmill.com' target='_blank'>#MEEKLIVE<div class='slashes'>//</div>CLOTHING LINE</a>"      
+            "<div class='logo'></div><a href='http://meekmill.com' target='_blank'>#MEEKLIVE<div class='slashes'>//</div>MUSIC ARTIST</a>"      
        
     }
 ];
