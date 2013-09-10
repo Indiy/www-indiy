@@ -2359,12 +2359,12 @@ body {
 }
 #embed_tab textarea {
     width: 400px;
-    height: 120px;
-    color: #ccc;
-    font-size: 16px;
+    height: 400px;
+    color: #fff;
+    font-size: 18px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
-    background-color: #777;
-    border: 2px black dashed;
+    background-color: #000;
+    border: 1px solid white;
 }
 
 /*************************************************************************/
