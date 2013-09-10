@@ -58,6 +58,9 @@ function default_v3_ready()
     if( IS_EMBED )
     {
         $('body').addClass('embed');
+        $('#v3_top_bar .show_tab').addClass('hidden');
+        $('#v3_top_bar .hide_tab').addClass('hidden');
+        g_mediaAutoStart = false;
     }
 }
 $(document).ready(default_v3_ready);
