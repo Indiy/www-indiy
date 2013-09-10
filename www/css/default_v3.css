@@ -2776,13 +2776,13 @@ and (orientation : landscape) {
 .embed #tracker_bar .buttons .button.plus {
     display: none !important;
 }
-.embed #tracker_bar .buttons .plus_sep {
+.embed #tracker_bar .buttons #plus_sep {
     display: none !important;
 }
 .embed #tracker_bar .buttons .button.embed {
     display: none !important;
 }
-.embed #tracker_bar .buttons .embed_sep {
+.embed #tracker_bar .buttons #embed_sep {
     display: none !important;
 }
 
