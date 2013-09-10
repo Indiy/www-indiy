@@ -384,7 +384,7 @@ function maybeAudioAndVideoReady()
         return;
     }
 
-    if( g_musicPlayerReady )
+    if( g_musicPlayerReady && g_videoPlayerReady )
     {
         var vol_ratio = 0.8;
         volumeSetLevel(vol_ratio);
