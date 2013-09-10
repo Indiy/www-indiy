@@ -268,7 +268,8 @@ function playlistPrevious()
 function playlistPlayPause()
 {
     hideTooltip();
-    var playlist_item = g_currentPlaylist.items[g_currentPlaylistIndex];
+    var playlist = g_currentPlaylist;
+    var playlist_item = playlist.items[g_currentPlaylistIndex];
     var media_type = playlist_item.media_type;
     
     if( media_type == 'AUDIO' )
@@ -286,11 +287,11 @@ function playlistPlayPause()
     {
         if( g_videoIsPlaying )
         {
-            g_currentPlaylist.video_player.pause();
+            playlist.video_player.pause();
         }
         else
         {
-            g_currentPlaylist.video_player.play();
+            playlist.video_player.play();
             $(playlist.video_container_sel).show();
         }
     }
