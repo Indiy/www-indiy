@@ -289,15 +289,13 @@ function playlistPlayPause()
         if( g_videoIsPlaying )
         {
             playlist.video_player.pause();
-            if( IS_IPHONE )
-            {
-                $('#big_play_icon').addClass('hidden');
-            }
         }
         else
         {
             playlist.video_player.play();
             $(playlist.video_container_sel).show();
+            $('#big_play_icon').hide();
+
         }
     }
 }
