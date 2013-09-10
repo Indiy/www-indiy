@@ -289,6 +289,10 @@ function playlistPlayPause()
         if( g_videoIsPlaying )
         {
             playlist.video_player.pause();
+            if( IS_IPHONE )
+            {
+                $('#big_play_icon').hide();
+            }
         }
         else
         {
