@@ -6,6 +6,7 @@ function default_v3_ready()
     {
         $('.volume_hidden').addClass('hidden');
         $('body').addClass('hide_volume');
+        g_mediaAutoStart = false;
     }
 
     if( g_templateParams['tracker_bar_texture'] )

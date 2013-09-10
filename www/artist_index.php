@@ -62,14 +62,6 @@
     
     $single_media_button = FALSE;
     $all_links_blank = "";
-    $media_auto_start = TRUE;
-
-    if( FALSE && isset($_REQUEST['embed']) )
-    {
-        $single_media_button = TRUE;
-        $all_links_blank = " target='_blank' ";
-        $media_auto_start = FALSE;
-    }
     
     $artist_data = mf(mq("SELECT * FROM mydna_musicplayer WHERE id='$artist_id' LIMIT 1"));
     if( $artist_data == FALSE )
