@@ -291,7 +291,7 @@ function playlistPlayPause()
             playlist.video_player.pause();
             if( IS_IPHONE )
             {
-                $('#big_play_icon').hide();
+                $('#big_play_icon').addClass('hidden');
             }
         }
         else
