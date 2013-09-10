@@ -241,7 +241,7 @@
         <div id='tracker_bar'>
             <div class='buttons'>
                 <? if( strlen($template_params['media_button_text']) > 0 ): ?>
-                    <div class='sep'></div>
+                    <div id='plus_sep' class='sep'></div>
                     <div class='plus button long' onclick='v3_showPlaylistTab();'>
                         <div class='icon'></div>
                         <div class='label'><?=$template_params['media_button_text'];?></div>
@@ -266,7 +266,7 @@
                         </div>
                     <? endif; ?>
                 <? endif; ?>
-                <div class='sep'></div>
+                <div id='embed_sep' class='sep'></div>
                 <div class='embed button' onclick='showEmbedTab();'>
                     <div class='icon'></div>
                 </div>

@@ -34,7 +34,7 @@ function default_v3_ready()
             showInstagram();
         }
 
-        if( !IS_PHONE && !IS_IPAD )
+        if( !IS_PHONE && !IS_IPAD && !IS_EMBED )
         {
             showSocialFeed();
         }
@@ -53,6 +53,11 @@ function default_v3_ready()
     if( !$('#iphone_top_text').is(":visible") )
     {
         $('#iphone_bottom_section').children().unwrap();
+    }
+    
+    if( IS_EMBED )
+    {
+        $('body').addClass('embed');
     }
 }
 $(document).ready(default_v3_ready);
