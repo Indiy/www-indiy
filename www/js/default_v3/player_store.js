@@ -43,6 +43,7 @@ function storeShowProductList()
     if( g_productList.length == 1 )
     {
         storeShowProduct(0);
+        $('#store_tab #store_back').addClass('hidden');
     }
 }
 function storeShowProductId(id)
