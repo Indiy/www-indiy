@@ -39,6 +39,11 @@ function storeShowProductList()
     
     $('#store_tab').scrollbar("repaint");
     updateAnchor({product_id: ""});
+    
+    if( g_productList.length == 1 )
+    {
+        storeShowProduct(0);
+    }
 }
 function storeShowProductId(id)
 {
