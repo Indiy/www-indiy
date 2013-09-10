@@ -287,10 +287,12 @@ function playlistPlayPause()
         if( g_videoIsPlaying )
         {
             g_currentPlaylist.video_player.pause();
+            $(playlist.video_container_sel).hide();
         }
         else
         {
             g_currentPlaylist.video_player.play();
+            $(playlist.video_container_sel).show();
         }
     }
 }
