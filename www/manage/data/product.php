@@ -64,6 +64,7 @@ function do_POST()
     $size = $_POST["size"];
     $color = $_POST["color"];
     $type = $_POST["type"];
+    $extra_json = $_POST["extra_json"];
     
     if( $type == "DIGITAL" )
         $shipping = 0.0;
@@ -77,6 +78,7 @@ function do_POST()
                     "size" => $size,
                     "color" => $color,
                     "type" => $type,
+                    "extra_json" => $extra_json,
                     );
     
     if( $product_id != "" ) 

@@ -49,6 +49,7 @@ function showProductPopup(product_index)
         fillArtistFileSelect('#edit_product #dd_drop','ALL',false);
         
         clickProductType(product.type);
+        $('#edit_product #extra_json').val(product.extra_json);
     }
     else
     {
@@ -70,6 +71,7 @@ function showProductPopup(product_index)
         g_digitalDownloads = [];
         
         renderDigitalDownloads();
+        $('#edit_product #extra_json').val("");
     }
     showPopup('#edit_product');
     return false;
@@ -109,6 +111,7 @@ function onAddProductSubmit()
         var type = $('#edit_product input[@name=product_type]:checked').val();
         var shipping = $('#edit_product #shipping').val();
         var image_drop = $('#edit_product #image_drop').val();
+        var extra_json = $('#edit_product #extra_json').val();
         
         form_data.append('artistid',artist_id);
         form_data.append('id',product_id);
@@ -122,6 +125,7 @@ function onAddProductSubmit()
         form_data.append('color',color);
         form_data.append('type',type);
         form_data.append('shipping',shipping);
+        form_data.append('extra_json',extra_json);
         
         form_data.append('ajax',true);
 
