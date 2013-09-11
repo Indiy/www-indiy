@@ -124,7 +124,7 @@ function storeShowProduct(index)
 function storeBuyProduct()
 {
     var product = g_productList[g_storeCurrentProductIndex];
-    var size = false;
+    var size = 'none';
     if( product.sizes && product.sizes.length > 0 )
     {
         size = $('#product_size').val().toLowerCase();
