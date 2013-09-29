@@ -16,7 +16,7 @@
     $sql = "DELETE FROM  `mydna_musicplayer_ecommerce_cart` "
         . "WHERE `date` < DATE_SUB( NOW() , INTERVAL 1 DAY ) ";
         
-    $ret = mysql_query($sql);
+    $ret = mq($sql);
     if( $ret )
     {
         $num = mysql_affected_rows();

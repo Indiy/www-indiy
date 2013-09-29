@@ -20,7 +20,7 @@
         $sql .= " JOIN artist_files ON mydna_musicplayer.logo = artist_files.filename";
         $sql .= " WHERE preview_key =  ''";
         
-        $q = mysql_query($sql);
+        $q = mq($sql);
         $ret = array();
         while( $row = mysql_fetch_assoc($q) )
         {
@@ -52,7 +52,7 @@
     {
         global $allowed_artists;
     
-        $q = mysql_query($sql);
+        $q = mq($sql);
         $ret = array();
         while( $row = mysql_fetch_assoc($q) )
         {

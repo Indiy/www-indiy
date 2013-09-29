@@ -25,19 +25,19 @@
 			$type = "product";
 		switch($type){
 			case 'artist':
-				mysql_query("delete FROM mydna_musicplayer WHERE id='".$_REQUEST['artist_id']."' ");
+				mq("delete FROM mydna_musicplayer WHERE id='".$_REQUEST['artist_id']."' ");
 				break;
 			case 'audio':
-				mysql_query("delete FROM mydna_musicplayer_audio  WHERE id='".$_REQUEST['song_id']."' ");
+				mq("delete FROM mydna_musicplayer_audio  WHERE id='".$_REQUEST['song_id']."' ");
 				break;
 			case 'video':
-				mysql_query("delete FROM mydna_musicplayer_video  WHERE id='".$_REQUEST['video_id']."' ");
+				mq("delete FROM mydna_musicplayer_video  WHERE id='".$_REQUEST['video_id']."' ");
 				break;
 			case 'content':
-				mysql_query("delete FROM mydna_musicplayer_content  WHERE id='".$_REQUEST['content_id']."' ");
+				mq("delete FROM mydna_musicplayer_content  WHERE id='".$_REQUEST['content_id']."' ");
 				break;
 			case 'product':
-				mysql_query("delete FROM mydna_musicplayer_ecommerce_products  WHERE id='".$_REQUEST['prod_id']."' ");
+				mq("delete FROM mydna_musicplayer_ecommerce_products  WHERE id='".$_REQUEST['prod_id']."' ");
 				break;
 		}
 	}
@@ -107,7 +107,7 @@
                 $sql .= " WHERE 1=1 $sqlArtistFilter";
                 $sql .= " $orderBy";
 
-				$query_find_artist = mysql_query($sql) or die(mysql_error() . "sql=$sql");
+				$query_find_artist = mq($sql) or die(mysql_error() . "sql=$sql");
 
 				### Paging Goes here ####
 				$record_per_page="10";
@@ -126,7 +126,7 @@
 				$page->set_page_data($_SERVER['PHP_SELF'],$total_records,$record_per_page,$scroll_select,True,false,false);
 				######### End Paging #########
 
-				$query_page_artist = mysql_query($page->get_limit_query($sql));	
+				$query_page_artist = mq($page->get_limit_query($sql));
 				while($find_record = mysql_fetch_array($query_page_artist))
 				{
                         $image_extra = json_decode($find_record['logo_extra_json'],TRUE);

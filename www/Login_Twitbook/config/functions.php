@@ -8,14 +8,14 @@ class User {
     function checkUser($uid, $oauth_provider, $username,$user_info=null,$music_str=null,$autoincrement_id=null) 
 	{
 		if($autoincrement_id > 0 ) {
-			$query = mysql_query("SELECT * FROM mydna_musicplayer WHERE id = '$autoincrement_id'") or die(mysql_error());
+			$query = mq("SELECT * FROM mydna_musicplayer WHERE id = '$autoincrement_id'") or die(mysql_error());
 		    $result = mysql_fetch_array($query);
 		}
 		else {
 			if($oauth_provider == 'twitter') {
-			$query = mysql_query("SELECT * FROM mydna_musicplayer WHERE oauth_uid_twitter = '$uid' ") or die(mysql_error());
+			$query = mq("SELECT * FROM mydna_musicplayer WHERE oauth_uid_twitter = '$uid' ") or die(mysql_error());
 			}elseif($oauth_provider == 'facebook') {
-					$query = mysql_query("SELECT * FROM mydna_musicplayer WHERE oauth_uid = '$uid' ") or die(mysql_error());
+					$query = mq("SELECT * FROM mydna_musicplayer WHERE oauth_uid = '$uid' ") or die(mysql_error());
 			}
 		    $result = mysql_fetch_array($query);
 		}
@@ -30,7 +30,7 @@ class User {
 							location='".$user_info["location"]["name"]."',
 							oauth_uid='".$uid."'
 						    WHERE id = '$result[id]'";
-			    mysql_query($query);
+			    mq($query);
 
 		   elseif($oauth_provider=='twitter') : // TWITTER UPDATE
 
@@ -39,7 +39,7 @@ class User {
 					twitter_screen_name ='".$user_info->screen_name."',
 					oauth_uid_twitter ='".$uid."'
 					WHERE id = '$result[id]'";
-				mysql_query($query);
+				mq($query);
 				
 		   endif;
 		  
@@ -127,7 +127,7 @@ class User {
                                                            ));
                 }
 
-			 $query_data = mysql_query("SELECT * FROM mydna_musicplayer WHERE oauth_uid = '$uid' and oauth_provider = '$oauth_provider'");
+			 $query_data = mq("SELECT * FROM mydna_musicplayer WHERE oauth_uid = '$uid' and oauth_provider = '$oauth_provider'");
 			 $result_data = mysql_fetch_array($query_data);
              post_artist_signup($result_data);
 			 return $result_data;

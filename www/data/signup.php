@@ -49,7 +49,7 @@
         $sql = "SELECT * FROM mydna_musicplayer";
         $sql .= " WHERE url = '$url' ";
         $sql .= " OR email = '$email' ";
-        $q = mysql_query($sql) or die("bad sql: '$sql'");
+        $q = mq($sql) or die("bad sql: '$sql'");
         $row = mf($q);
         if( $row )
         {
@@ -71,7 +71,7 @@
             if( mysql_insert('mydna_musicplayer',$values) )
             {
                 $insert_id = mysql_insert_id();
-                $q = mysql_query("SELECT * FROM mydna_musicplayer WHERE id = $insert_id");
+                $q = mq("SELECT * FROM mydna_musicplayer WHERE id = $insert_id");
                 $row = mf($q);
                 post_artist_signup($row);
                 $url = loginArtistFromRow($row);
@@ -96,7 +96,7 @@
         
         $sql = "SELECT * FROM mydna_musicplayer";
         $sql .= " WHERE url = '$url' ";
-        $q = mysql_query($sql) or die("bad sql: '$sql'");
+        $q = mq($sql) or die("bad sql: '$sql'");
         $row = mf($q);
         if( $row )
         {

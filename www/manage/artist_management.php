@@ -28,30 +28,30 @@
     $MAX_TABS = 5;
     
 	$query_artistDetail = "SELECT * FROM mydna_musicplayer WHERE id='".$artistID."' ";
-	$result_artistDetail = mysql_query($query_artistDetail) or die(mysql_error());
+	$result_artistDetail = mq($query_artistDetail) or die(mysql_error());
 	$record_artistDetail = mysql_fetch_array($result_artistDetail);
 
 	if(isset($_REQUEST['action']))
     {
 		if(isset($_REQUEST['song_id']))
         {
-            mysql_query("DELETE FROM mydna_musicplayer_audio WHERE id='".$_REQUEST['song_id']."' ");
+            mq("DELETE FROM mydna_musicplayer_audio WHERE id='".$_REQUEST['song_id']."' ");
         }
 		elseif(isset($_REQUEST['video_id']))
         {
-            mysql_query("DELETE FROM mydna_musicplayer_video WHERE id='".$_REQUEST['video_id']."' ");
+            mq("DELETE FROM mydna_musicplayer_video WHERE id='".$_REQUEST['video_id']."' ");
         }
 		elseif(isset($_REQUEST['content_id']))
         {
-            mysql_query("DELETE FROM mydna_musicplayer_content WHERE id='".$_REQUEST['content_id']."' ");
+            mq("DELETE FROM mydna_musicplayer_content WHERE id='".$_REQUEST['content_id']."' ");
         }
 		elseif(isset($_REQUEST['prod_id']))
         {
-            mysql_query("DELETE FROM mydna_musicplayer_ecommerce_products WHERE id='".$_REQUEST['prod_id']."' ");
+            mq("DELETE FROM mydna_musicplayer_ecommerce_products WHERE id='".$_REQUEST['prod_id']."' ");
         }
 		elseif(isset($_REQUEST['photo_id']))
         {
-            mysql_query("DELETE FROM photos WHERE id='".$_REQUEST['photo_id']."' ");
+            mq("DELETE FROM photos WHERE id='".$_REQUEST['photo_id']."' ");
         }
 	}
 	

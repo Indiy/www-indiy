@@ -92,7 +92,7 @@ function artist_login($username,$password)
 {
     $user = mysql_real_escape_string($username);
     $pass = md5($password);
-    $result = mysql_query("SELECT * FROM mydna_musicplayer WHERE (email='$user' || url='$user' || username='$user') AND password='$pass' AND activeStatus='1'");
+    $result = mq("SELECT * FROM mydna_musicplayer WHERE (email='$user' || url='$user' || username='$user') AND password='$pass' AND activeStatus='1'");
     if( mysql_num_rows($result) > 0 )
     {
         $row = mf($result);
@@ -106,7 +106,7 @@ function admin_login($username,$password)
 {
     $user = mysql_real_escape_string($username);
     $pass = md5($password);
-    $result = mysql_query("SELECT * FROM myartist_users WHERE (email='$user' ||  username='$user') AND password='$pass'");
+    $result = mq("SELECT * FROM myartist_users WHERE (email='$user' ||  username='$user') AND password='$pass'");
     if( mysql_num_rows($result) > 0 )
     {
         $row = mf($result);
