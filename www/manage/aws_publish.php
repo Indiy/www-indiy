@@ -172,6 +172,7 @@
 
     function publish_artist_pages($s3_client,$artist,$extra)
     {
+        print "  publish_artist_pages\n";
         $artist_url = $artist['url'];
     
         $url = "http://" . staging_host() .  "/player.php?url=$artist_url&admin_publish_key=" . admin_publish_key();
@@ -322,6 +323,7 @@
     
     function update_route53($r53_client,$artist,$extra)
     {
+        print "  update_route53\n";
         $cf_domain_name = $extra['aws']['cloudfront']['domain_name'];
     
         $artist_url = $artist['url'];
