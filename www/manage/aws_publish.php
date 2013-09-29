@@ -177,6 +177,7 @@
     
         $url = "http://" . staging_host() .  "/player.php?url=$artist_url&admin_publish_key=" . admin_publish_key();
         $body = file_get_contents($url);
+        print "   got body for page\n";
         
         $s3_bucket = $extra['aws']['s3_bucket'];
         $key = '/index.html';
