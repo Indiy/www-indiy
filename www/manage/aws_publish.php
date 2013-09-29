@@ -188,6 +188,8 @@
     
     function write_s3_html_file($s3_client,$s3_bucket,$key,$body)
     {
+        print "    s3_bucket: $s3_bucket, key: $key, strlen(body): " . strlen($body) . "\n";
+        
         $headers = array(
                          'X-UA-Compatible' => 'chrome=1',
                          );
