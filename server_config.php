@@ -4,10 +4,10 @@
     
     //Production 
     error_reporting(0);
-    $dbhost = "madprod.cghmds5s4dwn.us-east-1.rds.amazonaws.com";
-    $dbusername = "madcom_user";
-    $dbpassword = "GpLxHCPnAbLWQRFX";
-    $dbname = "madcom";
+    $DB_HOST = "madprod.cghmds5s4dwn.us-east-1.rds.amazonaws.com";
+    $DB_USERNAME = "madcom_user";
+    $DB_PASSWORD = "GpLxHCPnAbLWQRFX";
+    $DB_NAME = "madcom";
     
     $domainName = "http://www.myartistdna.com";
     $trueSiteUrl = "http://www.myartistdna.com";
@@ -34,10 +34,10 @@
     
     // MADDEV.COM
     error_reporting(E_ERROR | E_WARNING | E_PARSE); 
-    $dbhost = "localhost";
-    $dbusername = "madd3v_user";
-    $dbpassword = "Wp2T4erBEjREdwrS";
-    $dbname = "madd3v.com";
+    $DB_HOST = "localhost";
+    $DB_USERNAME = "madd3v_user";
+    $DB_PASSWORD = "Wp2T4erBEjREdwrS";
+    $DB_NAME = "madd3v.com";
     
     $domainName = "http://www.madd3v.com";
     $trueSiteUrl = "http://www.madd3v.com";
@@ -67,8 +67,12 @@
     $g_access_key_id = "AKIAIP2VCXXJMBG4K75Q";
     $g_secret_access_key = "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";
 
-    $connect = mysql_connect($dbhost, $dbusername, $dbpassword);
-    mysql_select_db($dbname,$connect) or die ("Could not select database");
+    $GLOBALS['DB_CONNECT'] = FALSE;
+    
+    if( !isset($GLOBALS['DB_LAZY']) || !$GLOBALS['DB_LAZY'] )
+    {
+        mysql_connect();
+    }
 
     $SandboxFlag = TRUE;
     if( $SandboxFlag == TRUE )

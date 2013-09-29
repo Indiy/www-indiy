@@ -1,5 +1,16 @@
 <?
 
+    function mysql_connect()
+    {
+        if( !$GLOBALS['DB_CONNECT'] )
+        {
+            $connect = mysql_connect($DB_HOST, $DB_USERNAME, $DB_PASSWORD);
+            mysql_select_db($DB_NAME,$connect) or die ("Could not select database");
+            $GLOBALS['DB_CONNECT'] = $connect;
+        }
+    }
+
+
 	/* Meta Refresh */
 	function refresh($delay,$url) {
 		echo '<meta http-equiv="refresh" content="'.$delay.';url='.$url.'">';
@@ -155,6 +166,7 @@
 	
 	/* mysql_query function */
 	function mq($mycontent) {
+        mysql_connect();
 		$pre = $GLOBALS["prefix"];
 		return mysql_query(str_replace("[p]", "{$pre}", $mycontent)); 
 	}
@@ -213,6 +225,8 @@
 	
 	/* Update database */
 	function update($database,$tables,$values,$locationtable,$locationvalue) {
+        mysql_connect();
+
 		$pre = $GLOBALS["prefix"];
 		/* Get Database */
 		$intodatabase = str_replace("[p]", $pre, $database);
@@ -255,6 +269,8 @@
 	
 	/* Insert into Database */
 	function insert($database,$tables,$values) {
+        mysql_connect();
+
 		$pre = $GLOBALS["prefix"];
 		/* Get Database */
 		$intodatabase = str_replace("[p]", $pre, $database);
@@ -297,6 +313,8 @@
     
     function mysql_insert($table,$inserts,$debug=FALSE)
     {
+        mysql_connect();
+
         $keys_sql = "";
         $values_sql = "";
         foreach( $inserts  as $key => $value)
@@ -334,6 +352,8 @@
     }
     function mysql_update($table,$inserts,$insert_key,$insert_val,$debug=FALSE)
     {
+        mysql_connect();
+
         $set_sql = "";
         foreach( $inserts as $key => $val )
         {

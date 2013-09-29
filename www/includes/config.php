@@ -7,6 +7,8 @@
         . PATH_SEPARATOR . dirname(__FILE__) . "/../../includes";
     set_include_path($new_include_path);
 
+    require_once 'includes/functions.php';
+
     // This file should have db configuration
     require_once 'server_config.php';
     require_once 'static_file_map.php';
