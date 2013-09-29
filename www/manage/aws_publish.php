@@ -174,8 +174,7 @@
     {
         print "  publish_artist_pages\n";
         $artist_url = $artist['url'];
-    
-        $url = "http://" . staging_host() .  "/player.php?url=$artist_url&admin_publish_key=" . admin_publish_key();
+        $url = "http://$artist_url." . staging_host() .  "/";
         $body = file_get_contents($url);
         print "   got body for page\n";
         
