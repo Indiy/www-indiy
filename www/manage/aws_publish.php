@@ -165,6 +165,8 @@
 
         $extra['aws']['cloudfront']['id'] = $ret['Id'];
         $extra['aws']['cloudfront']['domain_name'] = $ret['DomainName'];
+        
+        print "Made CF: " . $ret['DomainName'] . ", id: " .  $ret['Id'] . "\n";
         return TRUE;
     }
 

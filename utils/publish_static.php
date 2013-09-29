@@ -12,6 +12,7 @@
     $base_web_dir = realpath($base_web_dir);
     print "Base Dir: $base_web_dir\n";
     
+    $DB_LAZY = TRUE;
     require_once "$base_web_dir/server_config.php";
     require_once "$base_web_dir/includes/aws.phar";
     
