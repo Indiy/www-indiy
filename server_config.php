@@ -71,7 +71,7 @@
     
     if( !isset($GLOBALS['DB_LAZY']) || !$GLOBALS['DB_LAZY'] )
     {
-        mysql_connect();
+        mad_mysql_connect();
     }
 
     $SandboxFlag = TRUE;

@@ -1,6 +1,6 @@
 <?
 
-    function mysql_connect()
+    function mad_mad_mysql_connect()
     {
         if( !$GLOBALS['DB_CONNECT'] )
         {
@@ -166,7 +166,7 @@
 	
 	/* mysql_query function */
 	function mq($mycontent) {
-        mysql_connect();
+        mad_mysql_connect();
 		$pre = $GLOBALS["prefix"];
 		return mysql_query(str_replace("[p]", "{$pre}", $mycontent)); 
 	}
@@ -225,7 +225,7 @@
 	
 	/* Update database */
 	function update($database,$tables,$values,$locationtable,$locationvalue) {
-        mysql_connect();
+        mad_mysql_connect();
 
 		$pre = $GLOBALS["prefix"];
 		/* Get Database */
@@ -269,7 +269,7 @@
 	
 	/* Insert into Database */
 	function insert($database,$tables,$values) {
-        mysql_connect();
+        mad_mysql_connect();
 
 		$pre = $GLOBALS["prefix"];
 		/* Get Database */
@@ -313,7 +313,7 @@
     
     function mysql_insert($table,$inserts,$debug=FALSE)
     {
-        mysql_connect();
+        mad_mysql_connect();
 
         $keys_sql = "";
         $values_sql = "";
@@ -352,7 +352,7 @@
     }
     function mysql_update($table,$inserts,$insert_key,$insert_val,$debug=FALSE)
     {
-        mysql_connect();
+        mad_mysql_connect();
 
         $set_sql = "";
         foreach( $inserts as $key => $val )
