@@ -369,19 +369,27 @@
                 
                 if( isset($extra['aws']) && $extra['aws']['cloudfront_enable'] )
                 {
-                    if( !make_s3_bucket($s3_client,$url,$extra) )
+                    try
                     {
-                        print "  Failed to create s3 bucket\n";
-                        continue;
-                    }
-                    if( !make_cloudfront_distro($cf_client,$artist,$extra) )
-                    {
-                        print "  Failed to create CloudFront distro\n";
-                        continue;
-                    }
                     
-                    publish_artist_pages($s3_client,$artist,$extra);
-                    update_route53($r53_client,$artist,$extra);
+                        if( !make_s3_bucket($s3_client,$url,$extra) )
+                        {
+                            print "  Failed to create s3 bucket\n";
+                            continue;
+                        }
+                        if( !make_cloudfront_distro($cf_client,$artist,$extra) )
+                        {
+                            print "  Failed to create CloudFront distro\n";
+                            continue;
+                        }
+                        
+                        publish_artist_pages($s3_client,$artist,$extra);
+                        update_route53($r53_client,$artist,$extra);
+                    }
+                    catch( Exception $e )
+                    {
+                        echo "  Caught exception during publish: ",  $e->getMessage(), "\n";
+                    }
                     
                     $extra['aws']['published'] = TRUE;
                     $updates = array('last_publish' => mysql_now());
@@ -402,7 +410,7 @@
             }
             catch( Exception $e )
             {
-               echo "  Caught exception: ",  $e->getMessage(), "\n"; 
+                echo "  Caught exception: ",  $e->getMessage(), "\n";
             }
             print "\n\n";
             
