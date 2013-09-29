@@ -1,4 +1,4 @@
-<?
+<?php
 
     function mad_mad_mysql_connect()
     {
