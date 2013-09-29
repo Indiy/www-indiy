@@ -1,11 +1,11 @@
 <?php
 
-    function mad_mad_mysql_connect()
+    function mad_mysql_connect()
     {
         if( !$GLOBALS['DB_CONNECT'] )
         {
-            $connect = mysql_connect($DB_HOST, $DB_USERNAME, $DB_PASSWORD);
-            mysql_select_db($DB_NAME,$connect) or die ("Could not select database");
+            $connect = mysql_connect($GLOBALS['DB_HOST'], $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD']);
+            mysql_select_db($GLOBALS['DB_NAME'],$connect) or die ("Could not select database");
             $GLOBALS['DB_CONNECT'] = $connect;
         }
     }
