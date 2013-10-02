@@ -185,46 +185,66 @@ function storeBuyProductId(product_id,size)
 function storeBuyFreeProduct()
 {
     var product = g_productList[g_storeCurrentProductIndex];
-    
-    var args = {
-        artist_id: g_artistId,
-        product_id: product.id
-    };
-    
-    var url = "{0}/data/free_product.php".format(g_cartBaseUrl);
-    
-    jQuery.ajax(
+    var size = false;
+    if( product.sizes && product.sizes.length > 0 )
     {
-        type: 'GET',
-        url: url,
-        data: args,
-        dataType: 'jsonp',
-        success: function(data) 
+        size = $('#product_size').val().toLowerCase();
+    }
+    
+    if( typeof product.extra !== 'undefined'
+       && typeof product.extra.size_to_url !== 'undefined' )
+    {
+        var url = product.extra.size_to_url[size];
+        window.open(url,'_blank');
+    }
+    else if( typeof product.extra !== 'undefined'
+            && typeof product.extra.reserve_url !== 'undefined' )
+    {
+        var url = product.extra.reserve_url;
+        window.open(url,'_blank');
+    }
+    else
+    {
+        var args = {
+            artist_id: g_artistId,
+            product_id: product.id
+        };
+        
+        var url = "{0}/data/free_product.php".format(g_cartBaseUrl);
+        
+        jQuery.ajax(
         {
-            if( data.success )
+            type: 'GET',
+            url: url,
+            data: args,
+            dataType: 'jsonp',
+            success: function(data) 
             {
-                $('#free_product_success .store_title').html("{0} > {1}".format(g_artistName,product.name));
-                $('#free_product_success .name').html(product.name);
-                $('#store_tab .store_content').hide();
-                $('#store_tab #store_back').show();
-                $('#store_tab #free_product_success').show();
-            }
-            else
+                if( data.success )
+                {
+                    $('#free_product_success .store_title').html("{0} > {1}".format(g_artistName,product.name));
+                    $('#free_product_success .name').html(product.name);
+                    $('#store_tab .store_content').hide();
+                    $('#store_tab #store_back').show();
+                    $('#store_tab #free_product_success').show();
+                }
+                else
+                {
+                    $('#free_product_need_fan .store_title').html("{0} > {1}".format(g_artistName,product.name));
+                    $('#free_product_need_fan .name').html(product.name);
+                    $('#store_tab .store_content').hide();
+                    $('#store_tab #store_back').show();
+                    $('#store_tab #free_product_need_fan').show();
+                }
+                $('#store_tab').scrollbar("repaint");
+                updateAnchor({product_id: ""});
+            },
+            error: function()
             {
-                $('#free_product_need_fan .store_title').html("{0} > {1}".format(g_artistName,product.name));
-                $('#free_product_need_fan .name').html(product.name);
-                $('#store_tab .store_content').hide();
-                $('#store_tab #store_back').show();
-                $('#store_tab #free_product_need_fan').show();
+                //window.alert("Error!");
             }
-            $('#store_tab').scrollbar("repaint");
-            updateAnchor({product_id: ""});
-        },
-        error: function()
-        {
-            //window.alert("Error!");
-        }
-    });
+        });
+    }
 }
 
 function storeViewCart()
