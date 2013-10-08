@@ -801,6 +801,7 @@
 		2DF61FF01528235500DBFBC8 /* edit_audio.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_audio.js; sourceTree = "<group>"; };
 		2DF84C711803B96500165BF8 /* mad_stream.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = mad_stream.html; sourceTree = "<group>"; };
 		2DF84C721803B9BF00165BF8 /* mad_stream.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mad_stream.js; sourceTree = "<group>"; };
+		2DF84C731803C69B00165BF8 /* mad_stream.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = mad_stream.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DFBC929172D8D95001DCEF6 /* countdown_audio.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = countdown_audio.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DFBC92A172D8DBB001DCEF6 /* countdown_audio.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = countdown_audio.js; sourceTree = "<group>"; };
 		2DFBC92B172D8DD4001DCEF6 /* countdown_audio.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = countdown_audio.html; sourceTree = "<group>"; };
@@ -1657,6 +1658,7 @@
 				2DFBC929172D8D95001DCEF6 /* countdown_audio.css */,
 				2DFBC92E173E9F0E001DCEF6 /* splash_video.css */,
 				2DE6CDD1175AB28E007E6792 /* splash_form_download.css */,
+				2DF84C731803C69B00165BF8 /* mad_stream.css */,
 			);
 			path = css;
 			sourceTree = "<group>";
