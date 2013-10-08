@@ -437,7 +437,7 @@
         }
         else if( $template_type == 'PLAYER_MAD_STREAM' )
         {
-            include_once 'templates/player_mad_stream.html';
+            include_once 'templates/mad_stream.html';
         }
     }
     else
