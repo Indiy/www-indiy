@@ -919,10 +919,17 @@ video {
 .iphone #big_play_icon {
     display: block;
 }
-
+.iphone #iphone_video_bg_pad {
+    height: 305px;
+}
 .iphone #video_bg {
-    
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -9;
+    visibility: visible;
 }
 .iphone #video_bg video {
     
 }
+

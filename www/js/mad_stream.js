@@ -260,4 +260,7 @@ function toggleShowStore()
         $(document).scrollTop($('#iphone_show_store_button').position().top);
     }
 }
-
+function videoPlay()
+{
+    $('video')[0].play();
+}
