@@ -113,7 +113,9 @@ function streamReady()
     }
     else
     {
-        
+        var url = g_templateParams.hls_url;
+        var html = '<video style="width: 100%; height: 100%;" src="{0}" controls autoplay ></video>'.format(url);
+        $('#video_bg').html(html);
     }
 }
 $(document).ready(streamReady);
