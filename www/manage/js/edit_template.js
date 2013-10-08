@@ -639,6 +639,95 @@ var TEMPLATE_SCHEMA =
             }
         ]
     },
+    'PLAYER_MAD_STREAM': {
+        type: 'PLAYER',
+        description: 'MAD Live Stream',
+        default_params: {
+            page_title: 'MAD Steam',
+            top_bar_title: 'MAD STREAM!',
+            iphone_title1: 'MAD STREAM!',
+            iphone_title2: 'MAD STREAM ROCKS!',
+            ga_account_id: 'UA-15194524-1'
+        },
+        arg_list:
+        [
+            {
+                name: 'page_title',
+                description: 'Page Title',
+                type: 'string'
+            },
+            {
+                name: 'top_bar_title',
+                description: 'Top Bar Title',
+                type: 'string'
+            },
+            {
+                name: 'hds_url',
+                description: 'HDS URL',
+                type: 'string'
+            },
+            {
+                name: 'hls_url',
+                description: 'HLS URL',
+                type: 'string'
+            },
+            {
+                name: 'desktop_bg_top_line',
+                description: 'Desktop BG Top Line',
+                type: 'string'
+            },
+            {
+                name: 'desktop_bg_blue_line',
+                description: 'Desktop BG Blue Line',
+                type: 'string'
+            },
+            {
+                name: 'desktop_bg_bottom_line',
+                description: 'Desktop BG Bottom Line',
+                type: 'string'
+            },
+            {
+                name: 'iphone_title1',
+                description: 'iPhone Title 1',
+                type: 'string'
+            },
+            {
+                name: 'iphone_title2',
+                description: 'iPhone Title 2',
+                type: 'string'
+            },
+            {
+                name: 'iphone_title3',
+                description: 'iPhone Title 3',
+                type: 'string'
+            },
+            {
+                name: 'iphone_title4',
+                description: 'iPhone Title 4',
+                type: 'string'
+            },
+            {
+                name: 'twitter_handle',
+                description: 'Twitter Handle',
+                type: 'string'
+            },
+            {
+                name: 'twitter_widget',
+                description: 'Twitter Widget',
+                type: 'textbox'
+            },
+            {
+                name: 'bg_file',
+                description: 'Background Image',
+                type: 'image_spec'
+            },
+            {
+                name: 'ga_account_id',
+                description: 'Google Analytics Id',
+                type: 'string'
+            }
+        ]
+    },
     'PLAYER_SPLASH_AUDIO': {
         type: 'PLAYER',
         description: 'Splash with Audio Player',

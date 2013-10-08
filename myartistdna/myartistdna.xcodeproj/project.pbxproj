@@ -799,6 +799,8 @@
 		2DF61FEA1520264500DBFBC8 /* convert_videos.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = convert_videos.php; sourceTree = "<group>"; };
 		2DF61FEE1527FFE300DBFBC8 /* artist_management.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = artist_management.js; sourceTree = "<group>"; };
 		2DF61FF01528235500DBFBC8 /* edit_audio.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_audio.js; sourceTree = "<group>"; };
+		2DF84C711803B96500165BF8 /* mad_stream.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = mad_stream.html; sourceTree = "<group>"; };
+		2DF84C721803B9BF00165BF8 /* mad_stream.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mad_stream.js; sourceTree = "<group>"; };
 		2DFBC929172D8D95001DCEF6 /* countdown_audio.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = countdown_audio.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DFBC92A172D8DBB001DCEF6 /* countdown_audio.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = countdown_audio.js; sourceTree = "<group>"; };
 		2DFBC92B172D8DD4001DCEF6 /* countdown_audio.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = countdown_audio.html; sourceTree = "<group>"; };
@@ -1399,6 +1401,7 @@
 		2D9E2FD81569F13600A76906 /* templates */ = {
 			isa = PBXGroup;
 			children = (
+				2DF84C711803B96500165BF8 /* mad_stream.html */,
 				2D6DF29617DD282E0020CD97 /* default_v3.html */,
 				2D6DF27917CAD06F0020CD97 /* default_v2.html */,
 				2DE6CDCF175AB174007E6792 /* splash_form_download.html */,
@@ -1864,6 +1867,7 @@
 				2DFBC92D1735AE7B001DCEF6 /* splash_video.js */,
 				2DFBC92A172D8DBB001DCEF6 /* countdown_audio.js */,
 				2DE6CDD0175AB206007E6792 /* splash_form_download.js */,
+				2DF84C721803B9BF00165BF8 /* mad_stream.js */,
 				2D6DF29817DD2F360020CD97 /* default_v3 */,
 				2D6DF27C17D2AF6B0020CD97 /* default_v2 */,
 			);
