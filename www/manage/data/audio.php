@@ -85,7 +85,7 @@ function do_POST()
         }
     }
     
-    $audio_name = my($_POST["name"]);
+    $audio_name = $_POST["name"];
     $audio_download = $_POST["download"];
     $audio_bgcolor = $_POST["bgcolor"];
     $audio_bgposition = $_POST["bgposition"];

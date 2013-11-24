@@ -66,7 +66,7 @@
         $artist_id = $_POST["artistid"];
         $video_id = $_POST["id"];
         
-        $video_name = my($_POST["name"]);
+        $video_name = $_POST["name"];
         $video_tags = $_POST["tags"];
         
         $image_file = $_POST['image_drop'];

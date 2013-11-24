@@ -55,7 +55,7 @@
         
         $extra = json_decode($artist_data['extra_json'],TRUE);
 		
-		$artist = my($_POST["artist"]);
+		$artist = $_POST["artist"];
 		$email = $_POST["email"];
 		$gender = $_POST["artist_gender"];
 		$languages = $_POST["artist_languages"];

@@ -57,8 +57,8 @@ function do_POST()
 
     $image = $_POST['image_drop'];
     
-    $name = my($_POST["name"]);
-    $description = my($_POST["description"]);
+    $name = $_POST["name"];
+    $description = $_POST["description"];
     $price = str_replace("$", "", $_POST["price"]);
     $shipping = str_replace("$", "", $_POST["shipping"]);
     $size = $_POST["size"];

@@ -66,9 +66,9 @@
         $artist_id = $_POST["artistid"];
         $tab_id = $_POST["id"];
     
-        $content_name = my($_POST["name"]);
+        $content_name = $_POST["name"];
         $content_video = $_POST["video"];
-        $content_body = my($_POST["body"]);
+        $content_body = $_POST["body"];
 
         $image_file = $_POST['image_drop'];
         
