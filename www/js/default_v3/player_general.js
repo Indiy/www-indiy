@@ -37,19 +37,6 @@ var IS_OLD_IE = false;
     }
 })();
 
-if( IS_IE )
-{
-    $('body').addClass('ie');
-}
-if( IS_FIREFOX )
-{
-    $('body').addClass('firefox');
-}
-if( IS_WINDOWS )
-{
-    $('body').addClass('windows');
-}
-
 var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
 
 var g_bottomOpen = false;
@@ -68,6 +55,19 @@ var g_stored_hash = "";
 $(document).ready(generalOnReady);
 function generalOnReady()
 {
+    if( IS_IE )
+    {
+        $('body').addClass('ie');
+    }
+    if( IS_FIREFOX )
+    {
+        $('body').addClass('firefox');
+    }
+    if( IS_WINDOWS )
+    {
+        $('body').addClass('windows');
+    }
+    
     if( !('ontouchstart' in document) )
     {
         g_touchDevice = false;
