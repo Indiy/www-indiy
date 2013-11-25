@@ -1,22 +1,22 @@
 
 (function($, document){
 
-    var IS_IE = false;
     var IS_OLD_IE = false;
     (function() {
-        var ie_match = navigator.userAgent.match(/IE ([^;]*);/);
-        if( ie_match != null && ie_match.length > 1 )
+        try
         {
-            IS_IE = true;
-            var ie_version = parseFloat(ie_match[1]);
-            if( ie_version < 9.0 )
-                IS_OLD_IE = true;
+            var ie_match = navigator.userAgent.match(/IE ([^;]*);/);
+            if( ie_match != null && ie_match.length > 1 )
+            {
+                var ie_version = parseFloat(ie_match[1]);
+                if( ie_version < 10.0 )
+                {
+                    IS_OLD_IE = true;
+                }
+            }
         }
-     
-        if( navigator.userAgent.match(/Trident/i) != null )
-        {
-            IS_IE = true;
-        }
+        catch(e)
+        {}
     })();
 
     var methods = {
