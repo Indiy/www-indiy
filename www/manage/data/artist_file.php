@@ -107,7 +107,7 @@
                 $type = get_file_type($upload_filename);
                 
                 $hash = hash_file("md5",$src_file);
-                $save_filename = "{$artist_id}_$hash.$extension";
+                $save_filename = "{$artist_id}/$hash.$extension";
                 
                 $sql = "SELECT * FROM artist_files WHERE artist_id='$artist_id' AND filename = '$save_filename'";
                 $existing_file = mf(mq($sql));

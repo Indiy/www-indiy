@@ -1703,7 +1703,8 @@ END;
                       'Key' => $key,
                       'SourceFile' => realpath($source_file),
                       'ACL' => 'public-read',
-                      'CacheControl' => 'public, max-age=22896000'
+                      'CacheControl' => 'public, max-age=22896000',
+                      'ContentType' => mime_content_type($source_file),
                       );
         $client->putObject($args);
     }
