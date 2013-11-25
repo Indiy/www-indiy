@@ -591,6 +591,9 @@ body {
     text-transform: uppercase;
     vertical-align: top;
 }
+.firefox.windows #tracker_bar .buttons .button.long .label {
+    padding-top: 17px;
+}
 #tracker_bar .buttons .button.long:hover .label {
     color: white;
 }
