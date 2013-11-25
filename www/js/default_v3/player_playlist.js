@@ -234,6 +234,8 @@ function swipePanelChange(that,playlist,index)
 
     genericUpdateViews('media',playlist_item.playlist_item_id,playlist_item);
     playlistSetVolume(g_volRatio);
+    
+    $(playlist.bg_sel).swipe('fixupscroll');
 }
 function playlistLoadImage(playlist,index)
 {

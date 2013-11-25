@@ -54,6 +54,12 @@
                 this.swipe.scrollto(to,animate);
             });
         },
+        fixupscroll: function()
+        {
+            return this.each(function(){
+                this.swipe.fixupscroll();
+            });
+        },
         
         // Remove the swipe (and the generated HTML elements).
         //
@@ -189,6 +195,12 @@
                 this.container.scrollLeft(left);
                 this.onAnimateComplete();
             }
+        },
+        fixupscroll: function()
+        {
+            var left = this.panelIndex * this.contentWidth;
+            left += this.overflow;
+            this.container.scrollLeft(left);
         },
         
         //
