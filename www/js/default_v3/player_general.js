@@ -35,6 +35,11 @@ var IS_OLD_IE = false;
         if( ie_version < 9.0 )
             IS_OLD_IE = true;
     }
+ 
+    if( navigator.userAgent.match(/Trident/i) != null )
+    {
+        IS_IE = true;
+    }
 })();
 
 var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
