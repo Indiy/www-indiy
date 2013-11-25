@@ -1,6 +1,24 @@
 
 (function($, document){
 
+    var IS_IE = false;
+    var IS_OLD_IE = false;
+    (function() {
+        var ie_match = navigator.userAgent.match(/IE ([^;]*);/);
+        if( ie_match != null && ie_match.length > 1 )
+        {
+            IS_IE = true;
+            var ie_version = parseFloat(ie_match[1]);
+            if( ie_version < 9.0 )
+                IS_OLD_IE = true;
+        }
+     
+        if( navigator.userAgent.match(/Trident/i) != null )
+        {
+            IS_IE = true;
+        }
+    })();
+
     var methods = {
         init: function(fn,opts){
 
@@ -156,7 +174,7 @@
                     console.log("refreshHtml: timeout left: ",left);
                     console.log("refreshHtml: container: ",el);
                     el.scrollLeft(left);
-                },1000);
+                },100);
             }
  
             this.contentWidth = this.container.width();
@@ -164,7 +182,14 @@
             this.pad.width(this.overflow);
             var left = this.panelIndex * this.contentWidth + this.overflow;
             console.log("refreshHtml: left: ",left," container: ",this.container);
-            scroll_later(this.container,left);
+            if( IS_OLD_IE )
+            {
+                scroll_later(this.container,left);
+            }
+            else
+            {
+                this.container.scrollLeft(left);
+            }
         },
         onContainerResize: function() {
             this.container.stop(true);
