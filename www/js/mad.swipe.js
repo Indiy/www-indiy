@@ -153,7 +153,11 @@
             this.pad.width(this.overflow);
             var left = this.panelIndex * this.contentWidth + this.overflow;
             console.log("refreshHtml: left: ",left);
-            this.container.scrollLeft(left);
+            window.setTimeout(function(){
+                console.log("refreshHtml: timeout left: ",left);
+                console.log("refreshHtml: container: ",this.container);
+                this.container.scrollLeft(left);
+            },1000);
         },
         onContainerResize: function() {
             this.container.stop(true);
