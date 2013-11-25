@@ -147,17 +147,24 @@
             
             return this;
         },
-        refreshHtml: function() {
+        refreshHtml: function()
+        {
+            function scroll_later(el,left)
+            {
+                window.setTimeout(function()
+                {
+                    console.log("refreshHtml: timeout left: ",left);
+                    console.log("refreshHtml: container: ",el);
+                    el.scrollLeft(left);
+                },1000);
+            }
+ 
             this.contentWidth = this.container.width();
             this.overflow = Math.floor(this.contentWidth * this.opts.overFlowRatio);
             this.pad.width(this.overflow);
             var left = this.panelIndex * this.contentWidth + this.overflow;
-            console.log("refreshHtml: left: ",left);
-            window.setTimeout(function(){
-                console.log("refreshHtml: timeout left: ",left);
-                console.log("refreshHtml: container: ",this.container);
-                this.container.scrollLeft(left);
-            },1000);
+            console.log("refreshHtml: left: ",left," container: ",this.container);
+            scroll_later(this.container,left);
         },
         onContainerResize: function() {
             this.container.stop(true);
