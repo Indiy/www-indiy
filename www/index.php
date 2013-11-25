@@ -1,12 +1,4 @@
 <?php
-    
-    $browser = get_browser(null,TRUE);
-    if( $browser['browser'] == 'IE' && $browser['majorver'] < 8 )
-    {
-        include_once 'unsupported_browser.php';
-        die();
-    }
-
     require_once 'includes/config.php';
     require_once 'includes/functions.php';
     
