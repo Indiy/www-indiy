@@ -27,6 +27,8 @@ var IS_EMBED = window.location.href.match(/embed/i) != null;
 var IS_IE = false;
 var IS_OLD_IE = false;
 var IS_VERY_OLD_IE = false;
+var IS_UNSUPPORTED_BROWSER = false;
+
 (function() {
     var ie_match = navigator.userAgent.match(/IE ([^;]*);/);
     if( ie_match != null && ie_match.length > 1 )
@@ -41,6 +43,10 @@ var IS_VERY_OLD_IE = false;
         {
             IS_VERY_OLD_IE = true;
         }
+        if( ie_version < 8.0 )
+        {
+            IS_UNSUPPORTED_BROWSER = true;
+        }
     }
  
     if( navigator.userAgent.match(/Trident/i) != null )
@@ -48,6 +54,12 @@ var IS_VERY_OLD_IE = false;
         IS_IE = true;
     }
 })();
+
+if( IS_UNSUPPORTED_BROWSER )
+{
+    window.location.href = g_trueSiteUrl + "/unsupported_browser.php";
+}
+
 
 var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
 
