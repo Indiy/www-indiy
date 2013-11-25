@@ -171,8 +171,6 @@
             {
                 window.setTimeout(function()
                 {
-                    console.log("refreshHtml: timeout left: ",left);
-                    console.log("refreshHtml: container: ",el);
                     el.scrollLeft(left);
                 },100);
             }
@@ -181,7 +179,6 @@
             this.overflow = Math.floor(this.contentWidth * this.opts.overFlowRatio);
             this.pad.width(this.overflow);
             var left = this.panelIndex * this.contentWidth + this.overflow;
-            console.log("refreshHtml: left: ",left," container: ",this.container);
             if( IS_OLD_IE )
             {
                 scroll_later(this.container,left);
@@ -222,7 +219,6 @@
             var opts = {
                 complete: $.proxy(this, 'onAnimateComplete')
             };
-            console.log("scrollto: left: ",left);
             if( animate )
             {
                 this.container.animate({ scrollLeft: left },opts);
