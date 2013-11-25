@@ -8,6 +8,8 @@ var g_currentPlaylist = false;
 var g_currentPlaylistIndex = 0;
 var g_volRatio = 0.8;
 var g_mediaAutoStart = true;
+var g_swipeReadyCount = 0;
+var g_swipeCount = 0;
 
 function playlistReady()
 {
@@ -75,6 +77,7 @@ function getImageHolders(playlist)
 }
 function setupSwipe(playlist)
 {
+    g_swipeCount++;
     var sel = playlist.bg_sel;
     var opts = {
         panelCount: playlist.items.length,
@@ -249,6 +252,9 @@ function swipeResizeBackgrounds(that,playlist)
 
 function swipeReady(playlist)
 {
+    g_swipeReadyCount++;
+    maybeAudioAndVideoAndSwipeReady();
+    
 }
 function playlistNext()
 {
@@ -347,7 +353,7 @@ function jplayerReady()
 {
     g_musicPlayerReady = true;
     
-    maybeAudioAndVideoReady();
+    maybeAudioAndVideoAndSwipeReady();
 }
 function jplayerTimeUpdate(event)
 {
@@ -380,14 +386,14 @@ function jplayerVolume(event)
     volumeSetLevel(vol_ratio);
 }
 var g_autoStart = true;
-function maybeAudioAndVideoReady()
+function maybeAudioAndVideoAndSwipeReady()
 {
     if( !g_autoStart )
     {
         return;
     }
 
-    if( g_musicPlayerReady && g_videoPlayerReady )
+    if( g_musicPlayerReady && g_videoPlayerReady && g_swipeReadyCount == g_swipeCount )
     {
         var vol_ratio = 0.8;
         volumeSetLevel(vol_ratio);
@@ -425,7 +431,7 @@ function onVideoReady(that,playlist)
     that.addEvent("progress",makeCallback(videoDownloadProgress,playlist));
     
     g_videoPlayerReady = true;
-    maybeAudioAndVideoReady();
+    maybeAudioAndVideoAndSwipeReady();
 }
 function videoLoadStart(that,playlist)
 {
