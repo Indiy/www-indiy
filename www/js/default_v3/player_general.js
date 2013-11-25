@@ -55,12 +55,6 @@ var IS_UNSUPPORTED_BROWSER = false;
     }
 })();
 
-if( IS_UNSUPPORTED_BROWSER )
-{
-    window.location.href = g_trueSiteUrl + "/unsupported_browser.php";
-}
-
-
 var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
 
 var g_bottomOpen = false;
@@ -79,6 +73,11 @@ var g_stored_hash = "";
 $(document).ready(generalOnReady);
 function generalOnReady()
 {
+    if( IS_UNSUPPORTED_BROWSER )
+    {
+        window.location.href = g_trueSiteUrl + "/unsupported_browser.php";
+    }
+
     if( IS_IE )
     {
         $('body').addClass('ie');
