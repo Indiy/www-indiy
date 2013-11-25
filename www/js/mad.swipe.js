@@ -152,6 +152,7 @@
             this.overflow = Math.floor(this.contentWidth * this.opts.overFlowRatio);
             this.pad.width(this.overflow);
             var left = this.panelIndex * this.contentWidth + this.overflow;
+            console.log("refreshHtml: left: ",left);
             this.container.scrollLeft(left);
         },
         onContainerResize: function() {
@@ -185,7 +186,7 @@
             var opts = {
                 complete: $.proxy(this, 'onAnimateComplete')
             };
-            
+            console.log("scrollto: left: ",left);
             if( animate )
             {
                 this.container.animate({ scrollLeft: left },opts);
