@@ -3,7 +3,6 @@
     require_once 'includes/config.php';
     require_once 'includes/functions.php';
     
-    check_unsupported_browser();
     session_start();
     
     if( !$artist_url )
