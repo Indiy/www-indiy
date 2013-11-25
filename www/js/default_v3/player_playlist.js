@@ -120,13 +120,17 @@ function playlistChangePlaylist(new_playlist,playlist_item_index)
         $('#player_next').removeClass('hidden');
     }
 
-    currentPlaylistChangeIndex(playlist_item_index);
+    currentPlaylistChangeIndex(playlist_item_index,false);
 }
 
-function currentPlaylistChangeIndex(index)
+function currentPlaylistChangeIndex(index,animate)
 {
+    if( animate !== false )
+    {
+        animate = true;
+    }
     var sel = g_currentPlaylist.bg_sel;
-    $(sel).swipe('scrollto',index);
+    $(sel).swipe('scrollto',index,animate);
 }
 
 function swipePanelVisible(that,playlist,index)
