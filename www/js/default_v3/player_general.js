@@ -18,6 +18,7 @@ var IS_TABLET = IS_ANDROID_TABLET || IS_IPAD;
 var IS_WINDOWS = navigator.userAgent.match(/Windows/i) != null;
 var IS_CHROME = navigator.userAgent.match(/Chrome/i) != null;
 var IS_MOBILE = navigator.userAgent.match(/Mobile/i) != null;
+var IS_FIREFOX = navigator.userAgent.match(/Firefox/i) != null;
 var IS_DESKTOP = !IS_MOBILE;
 
 var IS_RETINA = window.devicePixelRatio > 1;
@@ -35,6 +36,19 @@ var IS_OLD_IE = false;
             IS_OLD_IE = true;
     }
 })();
+
+if( IS_IE )
+{
+    $('body').addClass('ie');
+}
+if( IS_FIREFOX )
+{
+    $('body').addClass('firefox');
+}
+if( IS_WINDOWS )
+{
+    $('body').addClass('windows');
+}
 
 var EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
 

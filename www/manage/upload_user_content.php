@@ -73,7 +73,8 @@
                               'Key' => $key,
                               'SourceFile' => $realpath,
                               'ACL' => 'public-read',
-                              'CacheControl' => 'public, max-age=22896000'
+                              'CacheControl' => 'public, max-age=22896000',
+                              'ContentType' => mime_content_type($src_file),
                               );
                 $client->putObject($args);
                 print " uploaded: $filename\n";

@@ -194,6 +194,7 @@
                               'SourceFile' => $src_file,
                               'ACL' => 'public-read',
                               'CacheControl' => 'public, max-age=22896000',
+                              'ContentType' => mime_content_type($src_file),
                               );
                 $content_type = get_content_type($extension);
                 if( $content_type )
