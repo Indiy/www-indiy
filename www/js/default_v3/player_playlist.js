@@ -341,7 +341,7 @@ function setupJplayer()
                                  ready: jplayerReady,
                                  solution: "html, flash",
                                  supplied: "mp3, oga",
-                                 swfPath: "/js/Jplayer.swf",
+                                 swfPath: g_jplayerSWF,
                                  verticalVolume: true,
                                  wmode: "window",
                                  volume: 0.8
