@@ -26,14 +26,21 @@ var IS_EMBED = window.location.href.match(/embed/i) != null;
 
 var IS_IE = false;
 var IS_OLD_IE = false;
+var IS_VERY_OLD_IE = false;
 (function() {
     var ie_match = navigator.userAgent.match(/IE ([^;]*);/);
     if( ie_match != null && ie_match.length > 1 )
     {
         IS_IE = true;
         var ie_version = parseFloat(ie_match[1]);
-        if( ie_version < 9.0 )
+        if( ie_version < 10.0 )
+        {
             IS_OLD_IE = true;
+        }
+        if( ie_version < 9.0 )
+        {
+            IS_VERY_OLD_IE = true;
+        }
     }
  
     if( navigator.userAgent.match(/Trident/i) != null )

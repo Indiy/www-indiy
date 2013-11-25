@@ -40,6 +40,12 @@ function playlistReady()
         g_videoPlayerReady = true;
     }
     
+    if( IS_VERY_OLD_IE )
+    {
+        // Old IE videojs doesnt fire events right
+        g_videoPlayerReady = true;
+    }
+    
     setupJplayer();
 }
 $(document).ready(playlistReady);
@@ -139,7 +145,6 @@ function swipePanelVisible(that,playlist,index)
 }
 function swipePanelChange(that,playlist,index)
 {
-    console.log("playlistPanelChange: " + index);
     g_currentPlaylistIndex = index;
     
     playlistLoadImage(playlist,index);
@@ -397,7 +402,7 @@ function maybeAudioAndVideoAndSwipeReady()
         return;
     }
 
-    if( g_musicPlayerReady && g_videoPlayerReady && g_swipeReadyCount == g_swipeCount )
+    if( g_musicPlayerReady && g_videoPlayerReady )
     {
         var vol_ratio = 0.8;
         volumeSetLevel(vol_ratio);
