@@ -3,7 +3,7 @@
     $browser = get_browser(null,TRUE);
     if( $browser['browser'] == 'IE' && $browser['majorver'] < 8 )
     {
-        include('unsupported_browser.php');
+        include_once '../unsupported_browser.php';
         die();
     }
     

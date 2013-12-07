@@ -1,7 +1,7 @@
 <?php
 
-	include('includes/config.php');
-	include('includes/functions.php');	
+	require_once('includes/config.php');
+	require_once('includes/functions.php');	
 
 	$artist = $_GET['artist'];
 	$getid = $_GET['id'];

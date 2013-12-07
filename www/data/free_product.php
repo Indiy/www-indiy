@@ -5,8 +5,8 @@
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
     header("Access-Control-Allow-Origin: *");
 
-    include('../includes/functions.php');   
-    include('../includes/config.php');
+    require_once('../includes/functions.php');   
+    require_once('../includes/config.php');
 
     session_start();
 
