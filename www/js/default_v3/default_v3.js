@@ -46,6 +46,7 @@ function default_v3_ready()
     }
     else
     {
+        $('#iphone_show_social_button').addClass('hidden');
         $('#social_box').addClass('hidden');
         $('#v3_top_bar .right .show_feed').addClass('hidden');
         $('#v3_top_bar .right .hide_feed').addClass('hidden');
