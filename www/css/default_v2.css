@@ -1800,11 +1800,32 @@ body {
     font-size: 18px;
     text-transform: capitalize;
 }
+#store_tab .product_info .out_stock {
+    display: none;
+}
+#store_tab .product_info .in_stock {
+    display: none;
+}
+#store_tab .product_info .out_stock.stock_count {
+    padding-top: 15px;
+    padding-bottom: 7px;
+    color: red;
+    font-size: 25px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+}
+#store_tab .product_info .in_stock.stock_count {
+    padding-top: 15px;
+    padding-bottom: 7px;
+    color: white;
+    font-size: 25px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+}
+
 #store_tab .product_info .pi_right .buy {
     margin-top: 22px;
     width: 175px;
-    padding-top: 13px;
-    height: 30px;
+    padding-top: 10px;
+    height: 45px;
     background-color: #ba0218;
     text-align: center;
     color: white;
@@ -1812,14 +1833,18 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     border-radius: 3px;
+    border: none;
     cursor: pointer;
+}
+#store_tab .product_info .pi_right .buy:disabled {
+    background-color: #555;
 }
 #store_tab .product_info .pi_right .buy_free {
     display: none;
     margin-top: 22px;
     width: 175px;
-    padding-top: 13px;
-    height: 30px;
+    padding-top: 10px;
+    height: 45px;
     background-color: #ba0218;
     text-align: center;
     color: white;
@@ -1827,6 +1852,7 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     border-radius: 3px;
+    border: none;
     cursor: pointer;
 }
 #store_tab .product_info .pi_right .description {
