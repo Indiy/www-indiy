@@ -1131,6 +1131,7 @@
         $sql .= "  mydna_musicplayer_ecommerce_products.image, ";
         $sql .= "  mydna_musicplayer_ecommerce_products.price, ";
         $sql .= "  mydna_musicplayer_ecommerce_products.shipping ";
+        $sql .= "  mydna_musicplayer_ecommerce_products.stock_count ";
         $sql .= " FROM cart_items";
         $sql .= " JOIN mydna_musicplayer_ecommerce_products ON cart_items.product_id = mydna_musicplayer_ecommerce_products.id";
         $sql .= " WHERE cart_id='$artist_cart_id'";
@@ -1166,6 +1167,7 @@
                           "size" => $cart['size'],
                           "color" => $cart['color'],
                           "quantity" => $quantity,
+                          "stock_count" => $cart['stock_count'],
                           );
             $cart_list[] = $item;
         }

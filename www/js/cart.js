@@ -160,7 +160,6 @@ function cartQuantityChange(e)
 
     var qty = parseInt($(this).val());
     
-    
     if( qty > 0 && qty != c.quantity )
     {
         parent.find('.quantity_update .saved').hide();
@@ -179,6 +178,18 @@ function cartUpdateQuantity(index)
     var selector = "#cart_line_{0} .quantity_update".format(index);
     var parent = $(selector);
     var qty = parseInt(parent.find('input').val());
+    
+    if( c.stock_count != null )
+    {
+        if( qty > c.stock_count )
+        {
+            window.alert("Only " + c.stock_count + " left in stock.");
+            parent.find('input').val(c.quantity);
+            parent.find('.update').hide();
+            parent.find('.saved').hide();
+            return;
+        }
+    }
     
     if( qty > 0 && qty != c.quantity )
     {

@@ -180,29 +180,36 @@
         }
         login_fan_from_row($fan_data);
         
-        if( $contains_digital_items )
+        for( $i = 0 ; $i < count($order_items) ; $i++ )
         {
-            for( $i = 0 ; $i < count($order_items) ; $i++ )
+            $order_item = $order_items[$i];
+            $product_id = $order_item['product_id'];
+            $product = get_product_data($product_id);
+            $digital_downloads = $product['digital_downloads'];
+            for( $j = 0 ; $j < count($digital_downloads) ; ++$j )
             {
-                $order_item = $order_items[$i];
-                $product_id = $order_item['product_id'];
-                $product = get_product_data($product_id);
-                $digital_downloads = $product['digital_downloads'];
-                for( $j = 0 ; $j < count($digital_downloads) ; ++$j )
+                $download = $digital_downloads[$j];
+                $product_file_id = $download['id'];
+                $inserts = array("fan_id" => $fan_id,
+                                 "product_file_id" => $product_file_id,
+                                 );
+                mysql_insert('fan_files',$inserts);
+            }
+            if( $product['stock_count'] != null )
+            {
+                $stock_count = $product['stock_count'] -= $order_item['quantity'];
+                if( $stock_count < 0 )
                 {
-                    $download = $digital_downloads[$j];
-                    $product_file_id = $download['id'];
-                    $inserts = array("fan_id" => $fan_id,
-                                     "product_file_id" => $product_file_id,
-                                     );
-                    mysql_insert('fan_files',$inserts);
+                    $stock_count = 0;
                 }
+                $updates = array('stock_count' => $stock_count);
+                mysql_update('mydna_musicplayer_ecommerce_products',$updates,'id',$product_id)
             }
-            if( $all_digital )
-            {
-                $updates = array("state" => "CLOSED");
-                mysql_update('orders',$updates,'id',$order_id);
-            }
+        }
+        if( $all_digital )
+        {
+            $updates = array("state" => "CLOSED");
+            mysql_update('orders',$updates,'id',$order_id);
         }
         $order_email = $fan_email;
         $shipping_amount = number_format($shipping_amount,2);

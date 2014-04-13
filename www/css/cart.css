@@ -383,7 +383,7 @@ body {
 }
 #cart .checkout .paypal .label {
     display: inline-block;
-    width: 52px;
+    width: 100px;
     padding-top: 7px;
     height: 18px;
     color: white;
