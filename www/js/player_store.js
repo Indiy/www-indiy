@@ -117,6 +117,21 @@ function storeShowProduct(index)
         $('#store_tab .product_info .pi_right .price_share .sizes').hide();
     }
     
+    $('#store_tab .product_info .out_stock').hide();
+    $('#store_tab .product_info .in_stock').hide();
+    if( product.stock_count != null  )
+    {
+        if( product.stock_count > 0 )
+        {
+            $('#store_tab .product_info .in_stock').show();
+            $('#store_tab .product_info .in_stock .count').html(product.stock_count);
+        }
+        else
+        {
+            $('#store_tab .product_info .out_stock').show();
+        }
+    }
+    
     $('#store_tab').scrollbar("repaint");
     updateAnchor({product_id: product.id});
 }
