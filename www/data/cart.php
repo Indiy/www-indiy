@@ -33,6 +33,7 @@
         if( isset($_REQUEST['cart_item_id']) )
         {
             $cart_item_id = $_REQUEST['cart_item_id'];
+            $quantity = $_REQUEST['quantity'];
             
             $values = array('quantity' => $quantity);
             mysql_update('cart_items',$values,'id',$cart_item_id);
