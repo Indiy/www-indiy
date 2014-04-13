@@ -1839,8 +1839,8 @@ body {
 #store_tab .product_info .pi_right .buy {
     margin-top: 22px;
     width: 175px;
-    padding-top: 13px;
-    height: 30px;
+    padding-top: 10px;
+    height: 45px;
     background-color: #ba0218;
     text-align: center;
     color: white;
@@ -1848,6 +1848,7 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     border-radius: 3px;
+    border: none;
     cursor: pointer;
 }
 #store_tab .product_info .pi_right .buy:disabled {
@@ -1857,8 +1858,8 @@ body {
     display: none;
     margin-top: 22px;
     width: 175px;
-    padding-top: 13px;
-    height: 30px;
+    padding-top: 10px;
+    height: 45px;
     background-color: #ba0218;
     text-align: center;
     color: white;
@@ -1866,6 +1867,7 @@ body {
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: normal;
     border-radius: 3px;
+    border: none;
     cursor: pointer;
 }
 #store_tab .product_info .pi_right .description {
