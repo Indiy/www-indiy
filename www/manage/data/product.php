@@ -72,7 +72,10 @@ function do_POST()
     }
     
     if( $type == "DIGITAL" )
+    {
         $shipping = 0.0;
+        $stock_count = NULL;
+    }
     
     $values = array("artistid" => $artist_id,
                     "name" => $name,
