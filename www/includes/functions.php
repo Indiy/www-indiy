@@ -1139,6 +1139,8 @@
         $q = mq($sql);
         
         $cart_list = array();
+        $max_shipping = 0.0;
+        $shipping_total = 0.0;
         while($cart = mf($q)) 
         {
             $id = $cart['id'];
@@ -1156,6 +1158,8 @@
             
             $shipping = floatval($cart['shipping']);
             $quantity = intval($cart['quantity']);
+            $max_shipping = MAX($max_shipping,$shipping);
+            $shipping_total += $shipping * $quantity * 0.5;
             
             $item = array("id" => $id,
                           "product_id" => $product_id,
@@ -1171,7 +1175,14 @@
                           );
             $cart_list[] = $item;
         }
-        return $cart_list;
+        $shipping_total += $max_shipping * 0.5;
+        
+        $cart_info = array(
+            "shipping_total" => $shipping_total,
+            "cart_list" => $cart_list,
+        );
+        
+        return $cart_info;
     }
     
     function store_get_order($order_id)

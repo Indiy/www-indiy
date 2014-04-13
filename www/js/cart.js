@@ -81,7 +81,6 @@ function cartRender()
 
 function cartRenderTotals()
 {
-    var shipping_total = 0.0;
     var sub_total = 0.0;
     for( var i = 0 ; i < g_cartList.length ; ++i )
     {
@@ -90,9 +89,9 @@ function cartRenderTotals()
         var shipping = myParseFloat(c['shipping'],0.0);
         var quantity = c['quantity'];
         
-        shipping_total += shipping * quantity;
         sub_total += price * quantity;
     }
+    var shipping_total = g_cart.shipping_total;
     
     var total = shipping_total + sub_total;
     $('#cart #shipping_amount').html("$" + shipping_total.toFixed(2));
@@ -141,7 +140,8 @@ function cartDeleteIndex(i)
         dataType: 'json',
         success: function(data) 
         {
-            g_cartList = data;
+            g_cart = data;
+            g_cartList = g_cart.cart_list;
             cartRender();
         },
         error: function()
@@ -206,7 +206,8 @@ function cartUpdateQuantity(index)
             dataType: 'json',
             success: function(data) 
             {
-                g_cartList = data;
+                g_cart = data;
+                g_cartList = g_cart.cart_list;
                 $(parent).find('.update').hide();
                 $(parent).find('.saved').show();
                 cartRenderTotals();

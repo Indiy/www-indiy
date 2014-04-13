@@ -15,7 +15,8 @@
         <script src="<?=static_file_url('/js/cart.js');?>" type="text/javascript"></script>
         
         <script type="text/javascript">
-            var g_cartList = <?=$cart_list_json;?>;
+            var g_cart = <?=$cart_json;?>;
+            var g_cartList = g_cart.cart_list;
             var g_trueSiteUrl = "<?=trueSiteUrl();?>";
             var g_artistId = <?=$artist_id;?>;
         </script>

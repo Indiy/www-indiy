@@ -21,18 +21,19 @@
     
     $cart = store_get_cart($artist_id,$cart_id);
     
+    $cart_list = $cart['cart_list'];
+    
     $payment_amount = 0.0;
     $subTotal = 0.0;
-    $shipping_total = 0.0;
-    for( $i = 0 ; $i < count($cart) ; $i++ )
+    for( $i = 0 ; $i < count($cart_list) ; $i++ )
     {
-        $c = $cart[$i];
+        $c = $cart_list[$i];
         $qty = floatval($c['quantity']);
         $price = floatval($c['price']);
         $shipping = floatval($c['shipping']);
         $sub_total += $qty * $price;
-        $shipping_total += $qty * $shipping;
     }
+    $shipping_total = $cart['shipping_total'];
     $payment_amount = $shipping_total + $sub_total;
     
     $order = array("artist_id" => $artist_id,
@@ -49,9 +50,9 @@
     
     $order_item_args = array();
 
-    for( $i = 0 ; $i < count($cart) ; ++$i )
+    for( $i = 0 ; $i < count($cart_list) ; ++$i )
     {
-        $c = $cart[$i];
+        $c = $cart_list[$i];
         $color = $c['color'];
         $size = $c['size'];
         $price = $c['price'];
