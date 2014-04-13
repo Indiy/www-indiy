@@ -33,6 +33,14 @@ function showProductPopup(product_index)
         $('#edit_product #shipping').val(product.shipping);
         $('#edit_product #size').val(product.size);
         $('#edit_product #color').val(product.color);
+        if( product.stock_count != null )
+        {
+            $('#edit_product #stock_count').val(product.stock_count);
+        }
+        else
+        {
+            $('#edit_product #stock_count').val("");
+        }
         
         if( product.type == 'DIGITAL' )
         {
@@ -61,6 +69,7 @@ function showProductPopup(product_index)
         $('#edit_product #size').val("");
         $('#edit_product #color').val("");
         $('#edit_product #downloads').html("None");
+        $('#edit_product #stock_count').val("");
         
         $('#edit_product input[name=product_type]:eq(0)').attr('checked','checked');
         clickProductType("DIGITAL");
@@ -111,6 +120,11 @@ function onAddProductSubmit()
         var type = $('#edit_product input[@name=product_type]:checked').val();
         var shipping = $('#edit_product #shipping').val();
         var image_drop = $('#edit_product #image_drop').val();
+        var stock_count = $('#edit_product #stock_count').val();
+        if( stock_count.length == 0 )
+        {
+            stock_count = null;
+        }
         var extra_json = $('#edit_product #extra_json').val();
         
         form_data.append('artistid',artist_id);
@@ -126,6 +140,7 @@ function onAddProductSubmit()
         form_data.append('type',type);
         form_data.append('shipping',shipping);
         form_data.append('extra_json',extra_json);
+        form_data.append('stock_count',stock_count);
         
         form_data.append('ajax',true);
 

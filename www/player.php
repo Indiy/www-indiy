@@ -157,6 +157,7 @@
                       "sizes" => $sizes,
                       "colors" => $colors,
                       "extra" => $extra,
+                      "stock_count" => $product['stock_count'],
                       );
         $product_list[] = $item;
         
