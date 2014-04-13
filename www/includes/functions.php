@@ -1130,7 +1130,7 @@
         $sql .= "  mydna_musicplayer_ecommerce_products.description,";
         $sql .= "  mydna_musicplayer_ecommerce_products.image, ";
         $sql .= "  mydna_musicplayer_ecommerce_products.price, ";
-        $sql .= "  mydna_musicplayer_ecommerce_products.shipping ";
+        $sql .= "  mydna_musicplayer_ecommerce_products.shipping, ";
         $sql .= "  mydna_musicplayer_ecommerce_products.stock_count ";
         $sql .= " FROM cart_items";
         $sql .= " JOIN mydna_musicplayer_ecommerce_products ON cart_items.product_id = mydna_musicplayer_ecommerce_products.id";
