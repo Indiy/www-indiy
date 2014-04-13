@@ -582,10 +582,10 @@ body {
     height: 25px;
 }
 #tracker_bar .buttons .fullscreen.button svg polygon {
-    fill: #555;
+    fill: #777;
 }
 #tracker_bar .buttons .fullscreen.button:hover svg polygon {
-    fill: #999;
+    fill: #eee;
 }
 #tracker_bar .buttons .button.long .icon {
     display: inline-block;
