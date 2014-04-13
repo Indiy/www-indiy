@@ -195,7 +195,7 @@
                                  );
                 mysql_insert('fan_files',$inserts);
             }
-            if( $product['stock_count'] != null )
+            if( $product['stock_count'] != NULL )
             {
                 $stock_count = $product['stock_count'] -= $order_item['quantity'];
                 if( $stock_count < 0 )
@@ -203,7 +203,7 @@
                     $stock_count = 0;
                 }
                 $updates = array('stock_count' => $stock_count);
-                mysql_update('mydna_musicplayer_ecommerce_products',$updates,'id',$product_id)
+                mysql_update('mydna_musicplayer_ecommerce_products',$updates,'id',$product_id);
             }
         }
         if( $all_digital )
