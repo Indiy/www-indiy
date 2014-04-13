@@ -1822,16 +1822,18 @@ body {
     display: none;
 }
 #store_tab .product_info .out_stock.stock_count {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 7px;
     color: red;
     font-size: 25px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
 }
 #store_tab .product_info .in_stock.stock_count {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: green;
+    padding-top: 15px;
+    padding-bottom: 7px;
+    color: #66FF33;
     font-size: 25px;
+    font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
 }
 
 #store_tab .product_info .pi_right .buy {
