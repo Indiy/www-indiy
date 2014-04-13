@@ -1821,19 +1821,18 @@ body {
 #store_tab .product_info .in_stock {
     display: none;
 }
-#store_tab .product_info .out_stock.store_count {
+#store_tab .product_info .out_stock.stock_count {
     padding-top: 10px;
     padding-bottom: 10px;
     color: red;
     font-size: 25px;
 }
-#store_tab .product_info .in_stock.store_count {
+#store_tab .product_info .in_stock.stock_count {
     padding-top: 10px;
     padding-bottom: 10px;
     color: green;
     font-size: 25px;
 }
-
 
 #store_tab .product_info .pi_right .buy {
     margin-top: 22px;

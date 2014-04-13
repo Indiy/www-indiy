@@ -119,6 +119,7 @@ function storeShowProduct(index)
     
     $('#store_tab .product_info .out_stock').hide();
     $('#store_tab .product_info .in_stock').hide();
+    $('#store_tab .product_info .pi_right .buy').removeAttr('disabled');
     if( product.stock_count != null  )
     {
         if( product.stock_count > 0 )
@@ -129,6 +130,7 @@ function storeShowProduct(index)
         else
         {
             $('#store_tab .product_info .out_stock').show();
+            $('#store_tab .product_info .pi_right .buy').attr('disabled','disabled');
         }
     }
     
