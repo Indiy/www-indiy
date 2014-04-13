@@ -1831,7 +1831,7 @@ body {
 #store_tab .product_info .in_stock.stock_count {
     padding-top: 15px;
     padding-bottom: 7px;
-    color: #66FF33;
+    color: white;
     font-size: 25px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
 }
