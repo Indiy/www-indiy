@@ -1176,6 +1176,7 @@
             $cart_list[] = $item;
         }
         $shipping_total += $max_shipping * 0.5;
+        $shipping_total = round($shipping_total,2);
         
         $cart_info = array(
             "shipping_total" => $shipping_total,
