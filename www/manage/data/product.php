@@ -66,6 +66,10 @@ function do_POST()
     $type = $_POST["type"];
     $extra_json = $_POST["extra_json"];
     $stock_count = $_POST["stock_count"];
+    if( $stock_count == "null" )
+    {
+        $stock_count = NULL;
+    }
     
     if( $type == "DIGITAL" )
         $shipping = 0.0;
