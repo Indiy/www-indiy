@@ -1849,6 +1849,9 @@ body {
     border-radius: 3px;
     cursor: pointer;
 }
+#store_tab .product_info .pi_right .buy:disabled {
+    background-color: #555;
+}
 #store_tab .product_info .pi_right .buy_free {
     display: none;
     margin-top: 22px;
