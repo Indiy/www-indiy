@@ -47,6 +47,11 @@ function playlistReady()
     }
     
     setupJplayer();
+    
+    $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange',function()
+    {
+        console.log("webkitfullscreenchange");
+    });
 }
 $(document).ready(playlistReady);
 
@@ -467,6 +472,8 @@ function videoPlayStarted(that,playlist)
 }
 function videoPaused(that,playlist)
 {
+    console.log("videoPaused");
+
     g_videoIsPlaying = false;
     playerSetPaused();
 }
@@ -479,6 +486,8 @@ function videoProgress(that,playlist)
 }
 function videoEnded(that,playlist)
 {
+    console.log("videoEnded");
+
     g_videoIsPlaying = false;
     playerSetPaused();
     playlistNext();
