@@ -312,10 +312,10 @@ function playlistPlayPause()
         }
         else
         {
-            playlist.video_player.play();
             $(playlist.video_container_sel).show();
+            $(playlist.video_container_sel + " video").show();
+            playlist.video_player.play();
             $('#big_play_icon').hide();
-
         }
     }
 }
@@ -491,6 +491,18 @@ function videoEnded(that,playlist)
     g_videoIsPlaying = false;
     playerSetPaused();
     playlistNext();
+}
+function videoCheckFullscreen()
+{
+    var playlist = g_currentPlaylist;
+    var sel = playlist.video_container_sel;
+    
+    var is_fullscreen = $(sel + " video")[0].webkitDisplayingFullscreen;
+    if( !is_fullscreen )
+    {
+        $(sel + " video").hide();
+        $(sel).hide();
+    }
 }
 
 function maybeVideoCreateTag(playlist)
