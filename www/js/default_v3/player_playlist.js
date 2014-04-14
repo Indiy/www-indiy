@@ -507,6 +507,7 @@ function videoCheckFullscreen()
         {
             $(sel + " video").hide();
             $(sel).hide();
+            $('#big_play_icon').show();
         }
         else
         {
