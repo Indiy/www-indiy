@@ -450,6 +450,7 @@ function onVideoReady(that,playlist)
 }
 function videoLoadStart(that,playlist)
 {
+    console.log("videoLoadStart");
     //seekVideo();
 }
 function videoDownloadProgress(that,playlist)
@@ -466,6 +467,7 @@ function videoDurationChange(that,playlist)
 }
 function videoPlayStarted(that,playlist)
 {
+    console.log("videoPlayStarted");
     g_videoIsPlaying = true;
     playerSetPlaying();
     
@@ -525,7 +527,6 @@ function videoCheckFullscreenLater()
     }
     g_videoCheckFullscreenTimeout = window.setTimeout(videoCheckFullscreen,500);
 }
-
 
 function maybeVideoCreateTag(playlist)
 {
