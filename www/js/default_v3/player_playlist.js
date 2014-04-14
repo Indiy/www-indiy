@@ -316,6 +316,7 @@ function playlistPlayPause()
             $(playlist.video_container_sel + " video").show();
             playlist.video_player.play();
             $('#big_play_icon').hide();
+            videoCheckFullscreenLater();
         }
     }
 }
@@ -476,6 +477,7 @@ function videoPaused(that,playlist)
 
     g_videoIsPlaying = false;
     playerSetPaused();
+    videoCheckFullscreen();
 }
 function videoProgress(that,playlist)
 {
@@ -490,20 +492,39 @@ function videoEnded(that,playlist)
 
     g_videoIsPlaying = false;
     playerSetPaused();
+    videoCheckFullscreen();
     playlistNext();
 }
 function videoCheckFullscreen()
 {
-    var playlist = g_currentPlaylist;
-    var sel = playlist.video_container_sel;
-    
-    var is_fullscreen = $(sel + " video")[0].webkitDisplayingFullscreen;
-    if( !is_fullscreen )
+    if( IS_IPHONE || IS_IPOD )
     {
-        $(sel + " video").hide();
-        $(sel).hide();
+        var playlist = g_currentPlaylist;
+        var sel = playlist.video_container_sel;
+        
+        var is_fullscreen = $(sel + " video")[0].webkitDisplayingFullscreen;
+        if( !is_fullscreen )
+        {
+            $(sel + " video").hide();
+            $(sel).hide();
+        }
+        else
+        {
+            videoCheckFullscreenLater();
+        }
     }
 }
+var g_videoCheckFullscreenTimeout = false;
+function videoCheckFullscreenLater()
+{
+    if( g_videoCheckFullscreenTimeout !== false )
+    {
+        window.cancelTimeout(g_videoCheckFullscreenTimeout);
+        g_videoCheckFullscreenTimeout = false;
+    }
+    g_videoCheckFullscreenTimeout = window.setTimeout(videoCheckFullscreen,500);
+}
+
 
 function maybeVideoCreateTag(playlist)
 {
