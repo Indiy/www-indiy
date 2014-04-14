@@ -519,7 +519,7 @@ function videoCheckFullscreenLater()
 {
     if( g_videoCheckFullscreenTimeout !== false )
     {
-        window.cancelTimeout(g_videoCheckFullscreenTimeout);
+        window.clearTimeout(g_videoCheckFullscreenTimeout);
         g_videoCheckFullscreenTimeout = false;
     }
     g_videoCheckFullscreenTimeout = window.setTimeout(videoCheckFullscreen,500);
