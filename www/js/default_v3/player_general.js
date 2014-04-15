@@ -76,7 +76,7 @@ function find_playlist_item(playlist,playlist_id,playlist_item_id)
     {
         for( var i = 0 ; i < playlist.items.length ; ++i )
         {
-            var playlist_item = playlist.items[j];
+            var playlist_item = playlist.items[i];
             if( playlist_item.playlist_item_id == playlist_item_id )
             {
                 return i;
