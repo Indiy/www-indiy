@@ -113,12 +113,16 @@ function generalOnReady()
     
     $('#media_seek_bar').click(clickSeekBar);
     
+    var show_social = true;
+    
     var anchor_map = getAnchorMap();
     if( 'product_id' in anchor_map )
     {
         var product_id = anchor_map['product_id'];
         showStore(product_id);
+        show_social = false;
     }
+    default_v3_ready(show_social);
     
     if( g_touchDevice )
     {

@@ -1,6 +1,6 @@
 
 
-function default_v3_ready()
+function default_v3_ready(show_social)
 {
     if( IS_IOS || IS_PHONE || IS_TABLET )
     {
@@ -22,7 +22,7 @@ function default_v3_ready()
     
     if( twitter_enabled || facebook_enabled || instagram_enabled )
     {
-        if( !$('#store_tab').is(':visible') )
+        if( show_social )
         {
             if( twitter_enabled )
             {
@@ -68,7 +68,7 @@ function default_v3_ready()
         g_mediaAutoStart = false;
     }
 }
-$(document).ready(default_v3_ready);
+//$(document).ready(default_v3_ready);
 
 function twitterInsert()
 {
