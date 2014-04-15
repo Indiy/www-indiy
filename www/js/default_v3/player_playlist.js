@@ -525,7 +525,7 @@ function videoCheckFullscreenLater()
         window.clearTimeout(g_videoCheckFullscreenTimeout);
         g_videoCheckFullscreenTimeout = false;
     }
-    g_videoCheckFullscreenTimeout = window.setTimeout(videoCheckFullscreen,500);
+    g_videoCheckFullscreenTimeout = window.setTimeout(videoCheckFullscreen,2000);
 }
 
 function maybeVideoCreateTag(playlist)
