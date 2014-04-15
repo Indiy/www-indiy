@@ -82,10 +82,11 @@ function populateMedia(playlist,playlist_tup)
 
 function catalogClickPlaylistMediaItem(playlist_index,child_playlist_index,playlist_item_index)
 {
-    hideAllTabs();
+    $('#playlist_tab').hide();
     var playlist = g_playlistList[playlist_index];
     
-    if( typeof playlist_item_index !== 'undefined' )
+    if( typeof playlist_item_index !== 'undefined'
+        && playlist_item_index !== false )
     {
         playlist = playlist.items[child_playlist_index];
     }

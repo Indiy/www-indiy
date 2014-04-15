@@ -421,14 +421,7 @@ function maybeAudioAndVideoAndSwipeReady()
         volumeSetLevel(vol_ratio);
         
         var playlist = g_playlistList[0];
-        if( playlist.type == 'DIR' )
-        {
-            catalogClickPlaylistMediaItem(0,0,0);
-        }
-        else
-        {
-            catalogClickPlaylistMediaItem(0,0);
-        }
+        catalogClickPlaylistMediaItem(g_startPlaylistIndex,g_startChildPlaylistIndex,g_startPlaylistItemIndex);
         g_autoStart = false;
     }
 }

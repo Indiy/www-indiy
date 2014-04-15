@@ -70,6 +70,25 @@ var g_volumeShown = false;
 var g_touchDevice = false;
 var g_stored_hash = "";
 
+function find_playlist_item(playlist,playlist_id,playlist_item_id)
+{
+    if( playlist.playlist_id == playlist_id )
+    {
+        for( var i = 0 ; i < playlist.items.length ; ++i )
+        {
+            var playlist_item = playlist.items[j];
+            if( playlist_item.playlist_item_id == playlist_item_id )
+            {
+                return i;
+            }
+        }
+    }
+    return false;
+}
+var g_startPlaylistIndex = 0;
+var g_startChildPlaylistIndex = 0;
+var g_startPlaylistItemIndex = false;
+
 $(document).ready(generalOnReady);
 function generalOnReady()
 {
@@ -121,6 +140,45 @@ function generalOnReady()
         var product_id = anchor_map['product_id'];
         showStore(product_id);
         show_social = false;
+    }
+    if( g_playlistList.length > 0 && g_playlistList[0].type == 'DIR' )
+    {
+        g_startPlaylistItemIndex = 0;
+    }
+    
+    if( ( 'playlist_id' in anchor_map ) && ( 'playlist_item_id' in anchor_map ) )
+    {
+        var playlist_id = anchor_map.playlist_id;
+        var playlist_item_id = anchor_map.playlist_item_id;
+        
+        for( var i = 0 ; i < g_playlistList.length ; ++i )
+        {
+            var playlist = g_playlistList[i];
+            if( playlist.type == 'DIR' )
+            {
+                for( var j = 0 ; j < playlist.items.length ; ++j )
+                {
+                    var child_playlist = playlist.items[j];
+                    var index = find_playlist_item(child_playlist,playlist_id,playlist_item_id);
+                    if( index !== false )
+                    {
+                        g_startPlaylistIndex = i;
+                        g_startChildPlaylistIndex = j;
+                        g_startPlaylistItemIndex = index;
+                    }
+                }
+            }
+            else
+            {
+                var index = find_playlist_item(playlist,playlist_id,playlist_item_id);
+                if( index !== false )
+                {
+                    g_startPlaylistIndex = i;
+                    g_startChildPlaylistIndex = index;
+                    g_startPlaylistItemIndex = false;
+                }
+            }
+        }
     }
     default_v3_ready(show_social);
     
