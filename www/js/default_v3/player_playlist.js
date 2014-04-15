@@ -450,7 +450,6 @@ function onVideoReady(that,playlist)
 }
 function videoLoadStart(that,playlist)
 {
-    console.log("videoLoadStart");
     //seekVideo();
 }
 function videoDownloadProgress(that,playlist)
@@ -467,7 +466,6 @@ function videoDurationChange(that,playlist)
 }
 function videoPlayStarted(that,playlist)
 {
-    console.log("videoPlayStarted");
     g_videoIsPlaying = true;
     playerSetPlaying();
     
@@ -475,8 +473,6 @@ function videoPlayStarted(that,playlist)
 }
 function videoPaused(that,playlist)
 {
-    console.log("videoPaused");
-
     g_videoIsPlaying = false;
     playerSetPaused();
     videoCheckFullscreen();
@@ -490,8 +486,6 @@ function videoProgress(that,playlist)
 }
 function videoEnded(that,playlist)
 {
-    console.log("videoEnded");
-
     g_videoIsPlaying = false;
     playerSetPaused();
     videoCheckFullscreen();
