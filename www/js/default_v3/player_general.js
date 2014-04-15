@@ -601,18 +601,6 @@ function updateAnchor(map)
     g_storedHash = "#" + anchor;
     window.location.hash = anchor;
 }
-function updateAnchorMedia(map)
-{
-    var default_map = {
-        song_id: "",
-        photo_id: "",
-        video_id: ""
-    };
-    
-    jQuery.extend(default_map,map);
-    
-    //updateAnchor(default_map);
-}
 function maybeHashChanged()
 {
     if( g_storedHash != window.location.hash )

@@ -159,6 +159,11 @@ function swipePanelChange(that,playlist,index)
     var media_type = playlist_item.media_type;
     var media_extra = playlist_item.media_extra;
     
+    updateAnchor({
+        playlist_id: playlist.playlist_id,
+        playlist_item_id: playlist_item.playlist_item_id,
+    });
+    
     if( media_type == 'AUDIO' )
     {
         if( playlist.video_player )

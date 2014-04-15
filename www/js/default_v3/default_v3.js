@@ -22,26 +22,29 @@ function default_v3_ready()
     
     if( twitter_enabled || facebook_enabled || instagram_enabled )
     {
-        if( twitter_enabled )
+        if( !$('#store_tab').is(':visible') )
         {
-            showTwitter();
-        }
-        else if( facebook_enabled )
-        {
-            showFacebook();
-        }
-        else if( instagram_enabled )
-        {
-            showInstagram();
-        }
+            if( twitter_enabled )
+            {
+                showTwitter();
+            }
+            else if( facebook_enabled )
+            {
+                showFacebook();
+            }
+            else if( instagram_enabled )
+            {
+                showInstagram();
+            }
 
-        if( !IS_PHONE && !IS_IPAD && !IS_EMBED )
-        {
-            showSocialFeed();
-        }
-        else
-        {
-            hideSocialFeed();
+            if( !IS_PHONE && !IS_IPAD && !IS_EMBED )
+            {
+                showSocialFeed();
+            }
+            else
+            {
+                hideSocialFeed();
+            }
         }
     }
     else
