@@ -208,6 +208,7 @@ function swipePanelChange(that,playlist,index)
         {
             playlist.video_player.play();
             $(playlist.video_container_sel).show();
+            $(playlist.video_container_sel + " video").show();
         }
         else
         {
@@ -221,6 +222,7 @@ function swipePanelChange(that,playlist,index)
         {
             playlist.video_player.pause();
             $(playlist.video_container_sel).hide();
+            $(playlist.video_container_sel + " video").hide();
         }
         if( playlist_item.iframe_code )
         {
