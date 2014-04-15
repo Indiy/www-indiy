@@ -67,6 +67,12 @@ function default_v3_ready(show_social)
         $('#v3_top_bar .hide_tab').addClass('hidden');
         g_mediaAutoStart = false;
     }
+    
+    var fullscreenEnabled = document.fullscreenEnabled || document.webkitFullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled;
+    if( !fullscreenEnabled || IS_PHONE || IS_TABLET )
+    {
+        $('#tracker_bar .buttons .fullscreen').hide();
+    }
 }
 //$(document).ready(default_v3_ready);
 
