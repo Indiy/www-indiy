@@ -237,7 +237,7 @@
         
         /******** Fan Email *******/
         
-        $to = $order_email;
+        $to = $order_email + ",store@myartistdna.com";
         $subject = "Order Made on MyArtistDNA";
         
         ob_start();
