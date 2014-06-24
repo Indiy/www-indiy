@@ -22,28 +22,31 @@
     $new_password = $data['new_password'];
 
     $artist = mf(mq("SELECT * FROM mydna_musicplayer WHERE `id` = '$artist_id' LIMIT 1"));
-    
-    if( strlen($artist['password']) == 0 )
+
+    if( $_SESSION['sess_userType'] != 'SUPER_ADMIN' )
     {
-        if( strlen($old_password) != 0 )
+        if( strlen($artist['password']) == 0 )
+        {
+            if( strlen($old_password) != 0 )
+            {
+                header("HTTP/1.0 403 Forbidden");
+                print "old_password not blank but password is";
+                exit();
+            }
+            //print "empty password\n";
+        }
+        else if( md5($old_password) != $artist['password'] )
         {
             header("HTTP/1.0 403 Forbidden");
-            print "old_password not blank but password is";
+            print "old_password doesnt match password";
             exit();
         }
-        print "empty password\n";
-    }
-    else if( md5($old_password) != $artist['password'] )
-    {
-        header("HTTP/1.0 403 Forbidden");
-        print "old_password doesnt match password (".$artist['password'].")";
-        exit();
     }
 
     $updates = array("password" => md5($new_password));
     $ret = mysql_update("mydna_musicplayer",$updates,"id",$artist_id);
-    print_r($ret);
-    print "rows: " . mssql_rows_affected();
+    //print_r($ret);
+    //print "rows: " . mssql_rows_affected();
 
     echo "{ \"success\": 1 }\n";
 ?>
