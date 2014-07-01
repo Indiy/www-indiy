@@ -1,6 +1,6 @@
 <?php
 
-    include_once "../includes/config.php"
+    require_once "../includes/config.php"
 
     ignore_user_abort(true);
     set_time_limit(0);
