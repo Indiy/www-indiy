@@ -325,6 +325,8 @@
 		2D7A9C4B170A9E0B003C5982 /* edit_template.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = edit_template.js; sourceTree = "<group>"; };
 		2D7A9C4C170D27B1003C5982 /* meek_stream.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = meek_stream.html; sourceTree = "<group>"; };
 		2D7A9C4D170D292C003C5982 /* meek_stream.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = meek_stream.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2D88DA4919628D7E00F6788C /* config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = config.php; sourceTree = "<group>"; };
+		2D88DA4A19628DE200F6788C /* functions.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = functions.php; sourceTree = "<group>"; };
 		2D8949211614C4A500538B7F /* login.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = login.php; sourceTree = "<group>"; };
 		2D8949231614D58700538B7F /* login.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = login.html; sourceTree = "<group>"; };
 		2D89492416151AB300538B7F /* build_invoices.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = build_invoices.php; sourceTree = "<group>"; };
@@ -1276,6 +1278,15 @@
 			name = utils;
 			sourceTree = "<group>";
 		};
+		2D88DA4819628D7E00F6788C /* includes */ = {
+			isa = PBXGroup;
+			children = (
+				2D88DA4919628D7E00F6788C /* config.php */,
+				2D88DA4A19628DE200F6788C /* functions.php */,
+			);
+			path = includes;
+			sourceTree = "<group>";
+		};
 		2D8D96E6159568FA00AA3D1B /* templates */ = {
 			isa = PBXGroup;
 			children = (
@@ -1496,6 +1507,7 @@
 		2DE8282B14D0B5F300A91FCE /* mad.tv */ = {
 			isa = PBXGroup;
 			children = (
+				2D88DA4819628D7E00F6788C /* includes */,
 				2DF614031516A3D100DBFBC8 /* data */,
 				2DE8282C14D0B5F300A91FCE /* admin */,
 				2DE8282D14D0B5F300A91FCE /* css */,

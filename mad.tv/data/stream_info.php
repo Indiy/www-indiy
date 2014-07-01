@@ -5,33 +5,24 @@
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
     header("Access-Control-Allow-Origin: *");
 
-    $dbhost		=	"localhost";
-    $dbusername	=	"madtv_user";
-    $dbpassword	=	"MyartistDNA!";
-    $dbname		=	"madtv_mysql";
-    
-    $connect 	= 	mysql_connect($dbhost, $dbusername, $dbpassword);
-    mysql_select_db($dbname,$connect) or die ("Could not select database");
-    
-    $sql = "SELECT * FROM genres ORDER BY `order` ASC";
-    $q = mysql_query($sql);
-    $genre_list = array();
-    while( $row = mysql_fetch_array($q) )
-        $genre_list[] = $row['genre'];
-
-
     $ret = array();
     $ret['history'] = array();
-    $ret['genre_list'] = $genre_list;
-
-    foreach( $genre_list as $genre )
+    $ret['genre_list'] = array();
+    
+    $sql = "SELECT * FROM genre ORDER BY `order` ASC";
+    $q = mq($sql);
+    while( $row = mf($q) )
     {
-        $file = "/tmp/madtv_history_data_$genre.json";
+        $name = $row['name'];
+        $genre_id = $row[]
+        
+        $ret['genre_list'][] = $row;
+
+        $file = "/tmp/madtv_history_data_$genre_id.json";
         $json = file_get_contents($file);
-        $ret['history'][$genre] = json_decode($json);
+        $ret['history'][$genre_id] = json_decode($json);
     }
     
     print json_encode($ret);
 
 ?>
-

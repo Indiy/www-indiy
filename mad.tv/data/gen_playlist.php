@@ -1,29 +1,21 @@
 <?php
 
+    include_once "../includes/config.php"
+
     ignore_user_abort(true);
     set_time_limit(0);
     
     $genre = $argv[1];
-    if( !$genre )
-        $genre = 'rock';
+    if( !$genre_id )
+        $genre_id = 1;
 
-    $FILE = "/tmp/madtv_history_data_$genre.json";
-
-    $root_url = "http://www.myartistdna.tv";
+    $FILE = "/tmp/madtv_history_data_$genre_id.json";
 
     //Production 
-    $dbhost		=	"localhost";
-    $dbusername	=	"madtv_user";
-    $dbpassword	=	"MyartistDNA!";
-    $dbname		=	"madtv_mysql";
-    
-    $connect 	= 	mysql_connect($dbhost, $dbusername, $dbpassword);
-    mysql_select_db($dbname,$connect) or die ("Could not select database");
-    
-    $sql = "SELECT * FROM videos WHERE genre = '$genre'";
-    $q = mysql_query($sql);
+    $sql = "SELECT * FROM video WHERE genre_id = '$genre_id'";
+    $q = mq($sql);
     $video_list = array();
-    while( $row = mysql_fetch_array($q) )
+    while( $row = mf($q) )
     {
         $logo = $row['logo_file'];
         $poster = $row['poster_file'];
@@ -36,9 +28,9 @@
         $item = array("artist" => $artist,
                       "name" => $name,
                       "title" => "$artist - $name",
-                      "logo" => "$root_url/media/$logo",
-                      "poster" => "$root_url/media/$poster",
-                      "video_file" => "$root_url/media/$video_file",
+                      "logo" => "$ROOT_URL/media/$logo",
+                      "poster" => "$ROOT_URL/media/$poster",
+                      "video_file" => "$ROOT_URL/media/$video_file",
                       "duration" => $duration
                       );
         $video_list[] = $item;
