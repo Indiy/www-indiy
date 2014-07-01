@@ -16,7 +16,7 @@
     while( $row = mf($q) )
     {
         $name = $row['name'];
-        $genre_id = $row[]
+        $genre_id = $row['genre_id'];
         
         $ret['genre_list'][] = $row;
 
