@@ -5,7 +5,7 @@
     ignore_user_abort(true);
     set_time_limit(0);
     
-    $genre = $argv[1];
+    $genre_id = $argv[1];
     if( !$genre_id )
         $genre_id = 1;
 
@@ -110,6 +110,8 @@
 
     function get_duration($video_file)
     {
+        global $BASE_PATH;
+    
         $cmd = "/usr/bin/ffmpeg -i $BASE_PATH$video_file 2>&1";
         print "get_duraction: cmd: $cmd\n";
         $output = @shell_exec($cmd);
