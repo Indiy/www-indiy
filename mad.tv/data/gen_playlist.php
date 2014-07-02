@@ -1,5 +1,7 @@
 <?php
 
+    $BASE_PATH = "/var/www/mad.tv/html"
+
     require_once "../includes/config.php"
 
     ignore_user_abort(true);
@@ -28,9 +30,9 @@
         $item = array("artist" => $artist,
                       "name" => $name,
                       "title" => "$artist - $name",
-                      "logo" => "$ROOT_URL/media/$logo",
-                      "poster" => "$ROOT_URL/media/$poster",
-                      "video_file" => "$ROOT_URL/media/$video_file",
+                      "logo" => "$logo",
+                      "poster" => "$poster",
+                      "video_file" => "$video_file",
                       "duration" => $duration
                       );
         $video_list[] = $item;
@@ -109,7 +111,7 @@
 
     function get_duration($video_file)
     {
-        $output = @shell_exec("/usr/bin/ffmpeg -i ~/public_html/media/$video_file 2>&1");
+        $output = @shell_exec("/usr/bin/ffmpeg -i $BASE_PATH$video_file 2>&1");
         
         preg_match('/Duration: (.*?),/', $output, $matches);
         $duration = $matches[1];

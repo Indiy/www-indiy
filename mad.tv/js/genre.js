@@ -1,6 +1,6 @@
 
 var g_genrePickerShown = false;
-var g_genre = 'rock';
+var g_genre_id = false;
 
 function toggleGenrePicker()
 {
@@ -17,10 +17,10 @@ function showGenrePicker()
         for( var i = 0 ; i < g_genreList.length ; ++i )
         {
             var g = g_genreList[i];
-            if( g != g_genre )
+            if( g.genre_id != g_genre_id )
             {
-                var html = "<div onclick=\"changeGenre('" + g + "');\">";
-                html += g;
+                var html = "<div onclick=\"changeGenre('" + g.genre_id + "');\">";
+                html += g.name;
                 html += "</div>";
                 $('#genre_container').append(html);
             }
