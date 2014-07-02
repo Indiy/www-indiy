@@ -74,7 +74,6 @@
         $duration = $file["duration"];
         print "Sleeping $duration seconds\n\n";
         sleep($duration);
-        break;
     }
 
 
