@@ -5,9 +5,9 @@
     ignore_user_abort(true);
     set_time_limit(0);
     
-    $genre_id = $argv[1];
-    if( !$genre_id )
-        $genre_id = 1;
+    $genre_id = 1;
+    if( count($argv) > 2 )
+        $genre_id = $%argv[1];
 
     $FILE = "/tmp/madtv_history_data_$genre_id.json";
 
