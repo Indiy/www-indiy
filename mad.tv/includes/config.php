@@ -11,6 +11,7 @@
     $DB_NAME = "madtv";
     
     $ROOT_URL = "http://tv.myartistdna.com";
+    $BASE_PATH = "/var/www/mad.tv/html";
 
     require_once 'functions.php';
 
