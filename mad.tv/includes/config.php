@@ -9,14 +9,13 @@
     $DB_USERNAME = "madtv_user";
     $DB_PASSWORD = "GpLxHCPnAbLWQRFX";
     $DB_NAME = "madtv";
+    $DB_CONNECT = false;
     
     $ROOT_URL = "http://tv.myartistdna.com";
     $BASE_PATH = "/var/www/mad.tv/html";
 
     require_once 'functions.php';
 
-    $cookie_domain = str_replace("http://www.","",$trueSiteUrl);
-    session_set_cookie_params(30*24*60*60,"/",$cookie_domain);
     ini_set("session.gc_maxlifetime",2*24*60*60);
 	//session_start();
 

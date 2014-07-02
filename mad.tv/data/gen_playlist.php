@@ -72,6 +72,7 @@
         $duration = $file["duration"];
         print "Sleeping $duration seconds\n\n";
         sleep($duration);
+        break;
     }
 
 
@@ -109,7 +110,9 @@
 
     function get_duration($video_file)
     {
-        $output = @shell_exec("/usr/bin/ffmpeg -i $BASE_PATH$video_file 2>&1");
+        $cmd = "/usr/bin/ffmpeg -i $BASE_PATH$video_file 2>&1";
+        print "get_duraction: cmd: $cmd\n";
+        $output = @shell_exec($cmd);
         
         preg_match('/Duration: (.*?),/', $output, $matches);
         $duration = $matches[1];
