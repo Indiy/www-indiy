@@ -2,7 +2,7 @@
 
     require_once "includes/config.php";
 
-    if( isset($_GET['genre']) )
+    if( isset($_GET['genre_id']) )
     {
         include_once 'player.html';
     }

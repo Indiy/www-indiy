@@ -1,30 +1,11 @@
-<?
-
-//Production 
-error_reporting(0);
-$dbhost		=	"localhost";
-$dbusername	=	"madtv_user";
-$dbpassword	=	"MyartistDNA!";
-$dbname		=	"madtv_mysql";
+<?php
 
 //echo "<html><body><pre>\n";
 
-/*
- // MADDEV.COM
- error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE); 
- $dbhost		=	"localhost";
- $dbusername	=	"maddvcom_user";
- $dbpassword	=	"MyartistDNA!";
- $dbname		=	"maddvcom_mysql";
- */
-
-$connect 	= 	mysql_connect($dbhost, $dbusername, $dbpassword);
-mysql_select_db($dbname,$connect) or die ("Could not select database");
-
 $sql = "SELECT * FROM videos ORDER BY `order` ASC, `id` ASC";
-$q = mysql_query($sql);
+$q = mq($sql);
 $video_list = array();
-while( $row = mysql_fetch_array($q) )
+while( $row = mf($q) )
 {
     $logo = $row['logo_file'];
     $poster = $row['poster_file'];

@@ -26,7 +26,7 @@ function loadGenreList()
     jQuery.ajax(
     {
         type: 'GET',
-        url: "http://www.myartistdna.tv/test/data/stream_info.php",
+        url: "http://www.myartistdna.tv/data/stream_info.php",
         dataType: 'json',
         success: function(data) 
         {
@@ -47,9 +47,12 @@ function renderGenreList()
     for( var i = 0 ; i < g_genreList.length ; ++i )
     {
         var g = g_genreList[i];
-        var html = "<a href='player.html?genre=" + g + "'>";
+        var id = g.genre_id;
+        var name = g.name;
+        
+        var html = "<a href='player.html?genre_id=" + id + "'>";
         html += "<div class='item " + cls + "'>";
-        html += "<div class='label'>I WANT " + g + "</div>";
+        html += "<div class='label'>I WANT " + name + "</div>";
         html += "<div class='icon'></div>";
         html += "</div>";
         html += "</a>";
