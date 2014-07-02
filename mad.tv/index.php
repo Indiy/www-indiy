@@ -12,8 +12,9 @@
         $q = mq($sql);
         $genre_list = array();
         while( $row = mf($q) )
-            $genre_list[] = $row['name'];
-            
+        {
+            $genre_list[] = $row;
+        }
         $genre_list_json = json_encode($genre_list);
     
         include_once 'splash.html';
