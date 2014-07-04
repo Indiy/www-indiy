@@ -408,6 +408,10 @@
         {
             include_once 'templates/default_v3.html';
         }
+        else if( $template_type == 'PLAYER_DEFAULT_V4' )
+        {
+            include_once 'templates/default_v4.html';
+        }
         else if( $template_type == 'PLAYER_MEEK_SPLASH' )
         {
             include_once 'templates/meek_splash.html';

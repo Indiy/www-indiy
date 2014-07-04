@@ -327,6 +327,19 @@
 		2D7A9C4D170D292C003C5982 /* meek_stream.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = meek_stream.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D88DA4919628D7E00F6788C /* config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = config.php; sourceTree = "<group>"; };
 		2D88DA4A19628DE200F6788C /* functions.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = functions.php; sourceTree = "<group>"; };
+		2D88DA4B19672D1100F6788C /* default_v4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = default_v4.html; sourceTree = "<group>"; };
+		2D88DA4D1967322100F6788C /* default_v4.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = default_v4.js; sourceTree = "<group>"; };
+		2D88DA4E1967322100F6788C /* player_catalog.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_catalog.js; sourceTree = "<group>"; };
+		2D88DA4F1967322100F6788C /* player_comments.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_comments.js; sourceTree = "<group>"; };
+		2D88DA501967322100F6788C /* player_common.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_common.js; sourceTree = "<group>"; };
+		2D88DA511967322100F6788C /* player_general.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_general.js; sourceTree = "<group>"; };
+		2D88DA521967322100F6788C /* player_image.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_image.js; sourceTree = "<group>"; };
+		2D88DA531967322100F6788C /* player_playlist.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_playlist.js; sourceTree = "<group>"; };
+		2D88DA541967322100F6788C /* player_social.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_social.js; sourceTree = "<group>"; };
+		2D88DA551967322100F6788C /* player_store.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_store.js; sourceTree = "<group>"; };
+		2D88DA561967322100F6788C /* player_tabs.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_tabs.js; sourceTree = "<group>"; };
+		2D88DA571967322100F6788C /* player_tooltips.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_tooltips.js; sourceTree = "<group>"; };
+		2D88DA591967332E00F6788C /* default_v4.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = default_v4.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D8949211614C4A500538B7F /* login.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = login.php; sourceTree = "<group>"; };
 		2D8949231614D58700538B7F /* login.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = login.html; sourceTree = "<group>"; };
 		2D89492416151AB300538B7F /* build_invoices.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = build_invoices.php; sourceTree = "<group>"; };
@@ -1287,6 +1300,72 @@
 			path = includes;
 			sourceTree = "<group>";
 		};
+		2D88DA4C1967322100F6788C /* default_v4 */ = {
+			isa = PBXGroup;
+			children = (
+				2D88DA4D1967322100F6788C /* default_v4.js */,
+				2D88DA4E1967322100F6788C /* player_catalog.js */,
+				2D88DA4F1967322100F6788C /* player_comments.js */,
+				2D88DA501967322100F6788C /* player_common.js */,
+				2D88DA511967322100F6788C /* player_general.js */,
+				2D88DA521967322100F6788C /* player_image.js */,
+				2D88DA531967322100F6788C /* player_playlist.js */,
+				2D88DA541967322100F6788C /* player_social.js */,
+				2D88DA551967322100F6788C /* player_store.js */,
+				2D88DA561967322100F6788C /* player_tabs.js */,
+				2D88DA571967322100F6788C /* player_tooltips.js */,
+			);
+			path = default_v4;
+			sourceTree = "<group>";
+		};
+		2D88DA581967323000F6788C /* old */ = {
+			isa = PBXGroup;
+			children = (
+				2D3D8EF215AE4D0D00BA97B3 /* jquery.mousewheel.js */,
+				2DBDD1281469DCC4001E20CC /* login_signup.js */,
+				2D6DF95114BA4F4A00D0750E /* footer.js */,
+				2DF47519144B55A8005538C7 /* tour.js */,
+				2DF472D11440B77F005538C7 /* homepage_slideshow.js */,
+				2DF472DD1440B77F005538C7 /* main.js */,
+				2DF61FE2151ED3DE00DBFBC8 /* string.utils.js */,
+				2D9E2FDB156A0F2B00A76906 /* player_general.js */,
+				2D25C3CD15E816F700132306 /* player_common.js */,
+				2DFF87EB156EB98C008EA18C /* player_music.js */,
+				2DFF87ED156EFF2F008EA18C /* player_video.js */,
+				2D9E2FED157A89C500A76906 /* player_photo.js */,
+				2D9E2FE715734A0000A76906 /* player_love.js */,
+				2D9E2FE8157495CB00A76906 /* player_social.js */,
+				2D9E2FE91575AC9800A76906 /* player_tabs.js */,
+				2D9E2FEF157DC38900A76906 /* player_image.js */,
+				2D9E2FEE157C836400A76906 /* player_search.js */,
+				2D9E2FF7158413D900A76906 /* player_store.js */,
+				2D64688A15A65B1C00B9AD11 /* player_tooltips.js */,
+				2D0A2DFB15F2E91000F0EE6D /* player_comments.js */,
+				2D9E2FFC1585C8B600A76906 /* cart.js */,
+				2D8D96EC1597C40500AA3D1B /* search.js */,
+				2D8D96FA15A1698200AA3D1B /* order.js */,
+				2D64689715ADDA3300B9AD11 /* mad.scrollbar.js */,
+				2DE3F8A715B1F4ED00B5D439 /* mad.swipe.js */,
+				2D25C38715D43BCE00132306 /* fan.js */,
+				2D25C3C515E5399400132306 /* pl_iphone.js */,
+				2D25C3C715E544FB00132306 /* pl_iphone_photo.js */,
+				2D25C3C815E556EC00132306 /* pl_iphone_music.js */,
+				2D25C3C915E58DB900132306 /* pl_iphone_video.js */,
+				2D9214C11601403E000B8DC1 /* signup.js */,
+				2DEADA9E1613B4EC0076F95D /* home.js */,
+				2DEADAC4161BF8160076F95D /* home_data.js */,
+				2D117D311706339400D6BD84 /* meek_splash.js */,
+				2D775D4B1719BF5B00B2250D /* meek_video.js */,
+				2D775D29170D44B800B2250D /* meek_stream.js */,
+				2D26203D172746FE00D16D8D /* splash_audio.js */,
+				2DFBC92D1735AE7B001DCEF6 /* splash_video.js */,
+				2DFBC92A172D8DBB001DCEF6 /* countdown_audio.js */,
+				2DE6CDD0175AB206007E6792 /* splash_form_download.js */,
+				2DF84C721803B9BF00165BF8 /* mad_stream.js */,
+			);
+			name = old;
+			sourceTree = "<group>";
+		};
 		2D8D96E6159568FA00AA3D1B /* templates */ = {
 			isa = PBXGroup;
 			children = (
@@ -1414,6 +1493,7 @@
 			isa = PBXGroup;
 			children = (
 				2DF84C711803B96500165BF8 /* mad_stream.html */,
+				2D88DA4B19672D1100F6788C /* default_v4.html */,
 				2D6DF29617DD282E0020CD97 /* default_v3.html */,
 				2D6DF27917CAD06F0020CD97 /* default_v2.html */,
 				2DE6CDCF175AB174007E6792 /* splash_form_download.html */,
@@ -1647,6 +1727,7 @@
 			children = (
 				2D6DF27A17CAD0E10020CD97 /* default_v2.css */,
 				2D6DF29717DD2D850020CD97 /* default_v3.css */,
+				2D88DA591967332E00F6788C /* default_v4.css */,
 				2DD94A2B14C368DF002B1259 /* vim.css */,
 				2D34E23514ABFF09004473F9 /* video-js.css */,
 				2DF4704F1440B77F005538C7 /* style.css */,
@@ -1841,47 +1922,8 @@
 		2DF472C71440B77F005538C7 /* js */ = {
 			isa = PBXGroup;
 			children = (
-				2D3D8EF215AE4D0D00BA97B3 /* jquery.mousewheel.js */,
-				2DBDD1281469DCC4001E20CC /* login_signup.js */,
-				2D6DF95114BA4F4A00D0750E /* footer.js */,
-				2DF47519144B55A8005538C7 /* tour.js */,
-				2DF472D11440B77F005538C7 /* homepage_slideshow.js */,
-				2DF472DD1440B77F005538C7 /* main.js */,
-				2DF61FE2151ED3DE00DBFBC8 /* string.utils.js */,
-				2D9E2FDB156A0F2B00A76906 /* player_general.js */,
-				2D25C3CD15E816F700132306 /* player_common.js */,
-				2DFF87EB156EB98C008EA18C /* player_music.js */,
-				2DFF87ED156EFF2F008EA18C /* player_video.js */,
-				2D9E2FED157A89C500A76906 /* player_photo.js */,
-				2D9E2FE715734A0000A76906 /* player_love.js */,
-				2D9E2FE8157495CB00A76906 /* player_social.js */,
-				2D9E2FE91575AC9800A76906 /* player_tabs.js */,
-				2D9E2FEF157DC38900A76906 /* player_image.js */,
-				2D9E2FEE157C836400A76906 /* player_search.js */,
-				2D9E2FF7158413D900A76906 /* player_store.js */,
-				2D64688A15A65B1C00B9AD11 /* player_tooltips.js */,
-				2D0A2DFB15F2E91000F0EE6D /* player_comments.js */,
-				2D9E2FFC1585C8B600A76906 /* cart.js */,
-				2D8D96EC1597C40500AA3D1B /* search.js */,
-				2D8D96FA15A1698200AA3D1B /* order.js */,
-				2D64689715ADDA3300B9AD11 /* mad.scrollbar.js */,
-				2DE3F8A715B1F4ED00B5D439 /* mad.swipe.js */,
-				2D25C38715D43BCE00132306 /* fan.js */,
-				2D25C3C515E5399400132306 /* pl_iphone.js */,
-				2D25C3C715E544FB00132306 /* pl_iphone_photo.js */,
-				2D25C3C815E556EC00132306 /* pl_iphone_music.js */,
-				2D25C3C915E58DB900132306 /* pl_iphone_video.js */,
-				2D9214C11601403E000B8DC1 /* signup.js */,
-				2DEADA9E1613B4EC0076F95D /* home.js */,
-				2DEADAC4161BF8160076F95D /* home_data.js */,
-				2D117D311706339400D6BD84 /* meek_splash.js */,
-				2D775D4B1719BF5B00B2250D /* meek_video.js */,
-				2D775D29170D44B800B2250D /* meek_stream.js */,
-				2D26203D172746FE00D16D8D /* splash_audio.js */,
-				2DFBC92D1735AE7B001DCEF6 /* splash_video.js */,
-				2DFBC92A172D8DBB001DCEF6 /* countdown_audio.js */,
-				2DE6CDD0175AB206007E6792 /* splash_form_download.js */,
-				2DF84C721803B9BF00165BF8 /* mad_stream.js */,
+				2D88DA581967323000F6788C /* old */,
+				2D88DA4C1967322100F6788C /* default_v4 */,
 				2D6DF29817DD2F360020CD97 /* default_v3 */,
 				2D6DF27C17D2AF6B0020CD97 /* default_v2 */,
 			);

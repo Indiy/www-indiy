@@ -1091,6 +1091,39 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             }
         ]
+    },
+    'PLAYER_DEFAULT_V4': {
+        type: 'PLAYER',
+        description: 'Default v4',
+        default_params: {
+            page_title: 'MyArtistDNA | Be Heard. Be Seen. Be Independent.',
+            top_text: 'KID CUDI',
+            bottom_text: '#thekingofpop',
+            ga_account_id: ''
+        },
+        arg_list:
+        [
+            {
+                name: 'page_title',
+                description: 'Page Title',
+                type: 'string'
+            },
+            {
+                name: 'top_text',
+                description: 'Top Text',
+                type: 'string'
+            },
+            {
+                name: 'bottom_text',
+                description: 'Bottom Text',
+                type: 'string'
+            },
+            {
+                name: 'ga_account_id',
+                description: 'Google Analytics Id',
+                type: 'string'
+            }
+        ]
     }
 };
 
