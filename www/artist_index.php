@@ -3,7 +3,7 @@
     require_once 'includes/config.php';
     require_once 'includes/functions.php';
 
-    list($uri,$query)  = explode('?',$_SERVER['REQUEST_URI'],2);
+    list($uri,$query) = explode('?',$_SERVER['REQUEST_URI'],2);
     if( strlen($uri) == 0 )
     {
         $uri = "/";

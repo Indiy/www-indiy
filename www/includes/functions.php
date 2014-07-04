@@ -1114,7 +1114,7 @@
         $total = intval($music_sum['sum_views']);
         $total += intval($video_sum['sum_views']);
         $total += intval($photo_sum['sum_views']);
-        $totla += intval($playlist_item_sum['sum_views']);
+        $total += intval($playlist_item_sum['sum_views']);
         
         return $total;
     }

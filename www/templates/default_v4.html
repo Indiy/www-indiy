@@ -115,7 +115,7 @@
                     </div>
                     <div class='track_list'>
                         <?php
-                            foreach( $playlist[] as $j => $item ):
+                            foreach( $playlist['items'] as $j => $item ):
                                 $name = $item['name'];
                                 $action = "clickPlaylistItem($i,$j);";
                         ?>
