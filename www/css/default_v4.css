@@ -85,39 +85,43 @@ body {
     height: 45px;
     background: rgba(0,0,0,0.5);
 }
+.content_tab .top_bar .sprite_icon {
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+}
 
 .content_tab .top_bar .left_menu {
-    float: left;
-    width: 39px;
-    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
     background-position: -240px -11px;
 }
 .content_tab .top_bar .title {
-    float: left;
-    margin-left: 39px;
-    margin-right: 39px;
-    padding-top: 12px;
+    position: absolute;
+    top: 0px;
+    left: 39px;
+    right: 39px;
+    padding-top: 8px;
     color: white;
     font-size: 23px;
     text-align: center;
 }
-.content_tab .top_bar .right_icon {
-    float: right;
-    width: 39px;
+.content_tab .top_bar .right_menu {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 40px;
     height: 100%;
 }
-.content_tab .top_bar .right_icon .sprite_icon {
-    width: 39px;
-    height: 45px;
-}
 
-.content_tab .top_bar .right_icon .sprite_icon.plus {
+.content_tab .top_bar .right_menu .sprite_icon.plus {
     background-position: -160px -11px;
 }
-.content_tab .top_bar .right_icon .sprite_icon.close {
+.content_tab .top_bar .right_menu .sprite_icon.close {
     background-position: -160px -11px;
 }
-.content_tab .top_bar .right_icon .extended_menu {
+.content_tab .top_bar .right_menu .extended_menu {
     display: none;
     background: rgba(0,0,0,0.5);
 }
@@ -132,8 +136,8 @@ body {
     left: 0px;
     right: 0px;
     height: 38px;
-    padding-top: 5px;
-    padding-bottom: 11px;
+    padding-top: 4px;
+    padding-bottom: 12px;
     color: white;
     font-size: 36px;
     text-align: center;
