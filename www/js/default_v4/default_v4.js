@@ -1,6 +1,6 @@
 (function(){
 
-window.default_ready = default_ready;
+window.defaultReady = defaultReady;
 window.clickMenu = clickMenu;
 window.clickClose = clickClose;
 window.clickPlus = clickPlus;
@@ -11,23 +11,21 @@ window.clickShowStore = clickShowStore;
 window.clickShowSocial = clickShowSocial;
 window.clickShowShare = clickShowShare;
 
-function default_ready(show_social)
+function defaultReady(show_social)
 {
     if( IS_IOS || IS_PHONE || IS_TABLET )
     {
         g_mediaAutoStart = false;
     }
-
-    
-    
     if( IS_EMBED )
     {
         $('body').addClass('embed');
         g_mediaAutoStart = false;
     }
-    
+
+    twitterInsert();
 }
-// default_ready is run from generalOnReady
+// defaultReady is run from generalOnReady
 
 function clickMenu()
 {

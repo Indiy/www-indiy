@@ -1099,6 +1099,7 @@ var TEMPLATE_SCHEMA =
             page_title: 'MyArtistDNA | Be Heard. Be Seen. Be Independent.',
             top_text: 'KID CUDI',
             bottom_text: '#thekingofpop',
+            twitter_widget: '',
             ga_account_id: ''
         },
         arg_list:
@@ -1117,6 +1118,11 @@ var TEMPLATE_SCHEMA =
                 name: 'bottom_text',
                 description: 'Bottom Text',
                 type: 'string'
+            },
+            {
+                name: 'twitter_widget',
+                description: 'Twitter Widget',
+                type: 'textbox'
             },
             {
                 name: 'ga_account_id',
