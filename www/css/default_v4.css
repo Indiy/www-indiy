@@ -318,6 +318,7 @@ body {
     padding-left: 9px;
     padding-right: 9px;
     width: 302px;
+    cursor: pointer;
 }
 .store_list_tab .store_list .store_item .name {
     padding-bottom: 6px;
