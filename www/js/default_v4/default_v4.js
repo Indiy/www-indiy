@@ -7,6 +7,9 @@ window.clickPlus = clickPlus;
 window.clickPlaylist = clickPlaylist;
 window.clickPlaylistItem = clickPlaylistItem;
 window.clickShowTab = clickShowTab;
+window.clickShowStore = clickShowStore;
+window.clickShowSocial = clickShowSocial;
+window.clickShowShare = clickShowShare;
 
 function default_ready(show_social)
 {
@@ -57,6 +60,21 @@ function clickShowTab(i)
 {
     $('.content_tab').hide();
     $('#user_tab_' + i).show();
+}
+function clickShowStore()
+{
+    $('.content_tab').hide();
+    $('.store_tab.content_tab').hide();
+}
+function clickShowSocial()
+{
+    $('.content_tab').hide();
+    $('.social_tab.content_tab').hide();
+}
+function clickShowShare()
+{
+    $('.content_tab').hide();
+    $('.share_tab.content_tab').hide();
 }
 
 })();
