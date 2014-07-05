@@ -247,6 +247,8 @@ body {
 
 .user_tab .page_content {
     padding-top: 65px;
+    padding-left: 9px;
+    padding-right: 9px;
     font-size: 16px;
 }
 
