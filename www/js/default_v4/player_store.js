@@ -174,8 +174,13 @@ function storeBuyProduct()
         updateAnchor({product_id: ""});
     }
 }
-function storeBuyProductId(product_id,size)
+function storeBuyProductId(product_id,size,done)
 {
+    if( !done )
+    {
+        done = function() {};
+    }
+
     var cart = "";
 
     cart += "&method=post";
@@ -198,9 +203,11 @@ function storeBuyProductId(product_id,size)
         success: function(data) 
         {
             console.log(data);
+            done();
         },
         error: function()
         {
+            done('failed');
             //window.alert("Error!");
         }
     });

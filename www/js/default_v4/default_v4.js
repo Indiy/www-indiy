@@ -12,6 +12,7 @@ window.clickShowSocial = clickShowSocial;
 window.clickShowShare = clickShowShare;
 window.clickStoreItem = clickStoreItem;
 window.clickSize = clickSize;
+window.clickBuyProduct = clickBuyProduct;
 
 function defaultReady(show_social)
 {
@@ -81,12 +82,37 @@ function clickStoreItem(i)
 {
     $('.content_tab').hide();
     $('#product_tab_' + i).show();
+    window.scrollTo(0,0);
 }
 
 function clickSize(ele)
 {
     $(ele).siblings().removeClass('active');
     $(ele).addClass('active');
+}
+
+function clickBuyProduct(ele,i)
+{
+    var product = g_productList[i];
+    var size = false;
+    if( product.sizes )
+    {
+        var sel = "#product_tab_{0} .size_list .active".format(i);
+        size = $(sel).text();
+        if( !size )
+        {
+            window.alert("Please select a size.");
+            return;
+        }
+    }
+    $(ele).attr('disabled',true);
+    storeBuyProductId(product.id,size,function(err)
+    {
+        $(ele).attr('disabled',false);
+        
+        $('.content_tab').hide();
+        $('.store_add_success_tab.content_tab').show();
+    });
 }
 
 })();

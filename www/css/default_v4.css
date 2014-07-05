@@ -408,12 +408,34 @@ body {
     line-height: 18px;
 }
 .product_tab .buy_button {
+    display: block;
     padding-top: 8px;
     padding-bottom: 12px;
     color: white;
     font-size: 23px;
     text-align: center;
+    outline: 0;
+    border: 0;
     background: rgba(34,64,77,0.9);
+}
+
+.store_add_success_tab .success_check {
+    margin-top: 128px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90px;
+    height: 90px;
+    background-position: -14px -9px;
+}
+.store_add_success_tab .description {
+    padding-right: 20px;
+    padding-left: 20px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
 }
 
 /*************************************************************************/
