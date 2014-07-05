@@ -339,13 +339,14 @@ body {
 }
 
 .product_tab .product_info {
+    padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
 }
 .product_tab .product_info .name {
-    padding-bottom: 6px;
+    padding-bottom: 10px;
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
 }
 .product_tab .product_info .image_holder {
