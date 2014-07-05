@@ -404,7 +404,7 @@ function jplayerEnded()
 function jplayerVolume(event)
 {
     var vol_ratio = event.jPlayer.options.volume;
-    volumeSetLevel(vol_ratio);
+    playerVolumeSetLevel(vol_ratio);
 }
 var g_autoStart = true;
 function maybeAudioAndVideoAndSwipeReady()
@@ -417,7 +417,7 @@ function maybeAudioAndVideoAndSwipeReady()
     if( g_musicPlayerReady && g_videoPlayerReady )
     {
         var vol_ratio = 0.8;
-        volumeSetLevel(vol_ratio);
+        playerVolumeSetLevel(vol_ratio);
         
         var playlist = g_playlistList[0];
         catalogClickPlaylistMediaItem(g_startPlaylistIndex,g_startChildPlaylistIndex,g_startPlaylistItemIndex);

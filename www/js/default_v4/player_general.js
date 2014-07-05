@@ -189,6 +189,9 @@ function playerTrackInfo(track_name,views)
 function playerUpdateElementViews(views)
 {
 }
+function playerVolumeSetLevel(vol_ratio)
+{
+}
 
 function playerSetPaused()
 {
