@@ -234,8 +234,8 @@ body {
     padding-right: 9px;
 }
 .playlist_tab .tab_list .tab_name {
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 14px;
+    padding-bottom: 14px;
     color: white;
     font-size: 18px;
     white-space: nowrap;
@@ -243,6 +243,11 @@ body {
     text-overflow: ellipsis;
     border-bottom: 1px solid rgba(255,255,255,0.7);
     cursor: pointer;
+}
+
+.user_tab .page_content {
+    padding-top: 65px;
+    font-size: 16px;
 }
 
 /*************************************************************************/
