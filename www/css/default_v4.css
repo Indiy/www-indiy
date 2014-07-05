@@ -93,7 +93,7 @@ body {
     left: 0px;
     right: 0px;
     height: 45px;
-    background: rgba(31,58,71,0.5);
+    background: rgba(34,64,77,0.9);
 }
 .content_tab .top_bar .sprite_icon {
     cursor: pointer;
@@ -167,6 +167,54 @@ body {
     font-size: 16px;
 }
 
+.playlist_tab .playlist_list {
+    padding-top: 45px;
+    padding-right: 9px;
+    padding-left: 9px;
+}
+.playlist_tab .playlist_list .playlist .title_arrow {
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+.playlist_tab .playlist_list .playlist .title_arrow .title {
+    padding-top: 19px;
+    padding-right: 20px;
+    padding-bottom: 13px;
+    color: #777;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipse;
+    white-space: nowrap;
+}
+.playlist_tab .playlist_list .playlist.active .title_arrow .title {
+    color: white;
+}
+.playlist_tab .playlist_list .playlist .title_arrow .arrow {
+    position: absolute;
+    right: 0px;
+    width: 20px;
+    height:
+}
+.playlist_tab .playlist_list .playlist .track_list {
+    display: none;
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+.playlist_tab .playlist_list .playlist.active .track_list {
+    display: block;
+}
+.playlist_tab .playlist_list .playlist .track_list .track_name {
+    padding-left: 15px;
+    padding-top: 19px;
+    padding-bottom: 13px;
+    color: #777;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipse;
+    white-space: nowrap;
+}
+.playlist_tab .playlist_list .playlist .track_list .track_name.active {
+    color: white;
+}
 
 /*************************************************************************/
 

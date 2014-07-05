@@ -108,9 +108,10 @@
             <?php
                 foreach( $playlist_list as $i => $playlist ):
                     $name = $playlist['display_name'];
+                    $action = "clickPlaylist($i);";
             ?>
-                <div class='playlist'>
-                    <div class='title_arrow'>
+                <div id='playlist_<?=$i;?>' class='playlist'>
+                    <div class='title_arrow' onclick='<?=$action;?>'>
                         <div class='title'><?=$name;?></div>
                         <div class='arrow'></div>
                     </div>
@@ -120,7 +121,7 @@
                                 $name = $item['name'];
                                 $action = "clickPlaylistItem($i,$j);";
                         ?>
-                            <div class='track_name' onclick='<?=$action;?>'>
+                            <div id='track_<?=$j;?>' class='track_name' onclick='<?=$action;?>'>
                                 <?=$name;?>
                             </div>
                         <?php endforeach; ?>
