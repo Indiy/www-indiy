@@ -232,7 +232,7 @@
             $price = "Free";
             if( $product['price'] )
             {
-                $price = "$" + $product['price'];
+                $price = "$" . $product['price'];
             }
             $buy_action = "clickBuyProduct($i);";
             $description = $product['description'];
