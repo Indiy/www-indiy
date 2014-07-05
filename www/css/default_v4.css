@@ -95,7 +95,7 @@ body {
     position: absolute;
     left: 0px;
     top: 0px;
-    background-position: -240px -11px;
+    background-position: -240px -9px;
 }
 .content_tab .top_bar .title {
     position: absolute;
@@ -116,10 +116,10 @@ body {
 }
 
 .content_tab .top_bar .right_menu .sprite_icon.plus {
-    background-position: -160px -11px;
+    background-position: -196px -9px;
 }
 .content_tab .top_bar .right_menu .sprite_icon.close {
-    background-position: -160px -11px;
+    background-position: -160px -9px;
 }
 .content_tab .top_bar .right_menu .extended_menu {
     display: none;
@@ -162,7 +162,7 @@ and (orientation : portrait) {
     
     .full_screen_bg {
         bottom: auto;
-        height: 504px;
+        height: 529px;
     }
 
 }
