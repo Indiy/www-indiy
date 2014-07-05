@@ -6,8 +6,9 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    background-color: black;
+    color: white;
     font-family: 'Montserrat', sans-serif;
+    background-color: black;
 }
 
 .hidden {
@@ -128,7 +129,7 @@ body {
     background-position: -196px -9px;
 }
 .content_tab .top_bar .right_menu .sprite_icon.close {
-    background-position: -160px -9px;
+    background-position: -150px -9px;
 }
 .content_tab .top_bar .right_menu .extended_menu {
     display: none;
