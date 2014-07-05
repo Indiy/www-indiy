@@ -6,6 +6,7 @@ window.clickClose = clickClose;
 window.clickPlus = clickPlus;
 window.clickPlaylist = clickPlaylist;
 window.clickPlaylistItem = clickPlaylistItem;
+window.catalogClickPlaylistMediaItem = catalogClickPlaylistMediaItem;
 window.clickShowTab = clickShowTab;
 window.clickShowStore = clickShowStore;
 window.clickShowSocial = clickShowSocial;
@@ -59,6 +60,22 @@ function clickPlaylistItem(i,j)
  
     var playlist = g_playlistList[i];
     playlistChangePlaylist(playlist,j);
+}
+function catalogClickPlaylistMediaItem(playlist_index,child_playlist_index,playlist_item_index)
+{
+    $('#playlist_tab').hide();
+    var playlist = g_playlistList[playlist_index];
+    
+    if( typeof playlist_item_index !== 'undefined'
+        && playlist_item_index !== false )
+    {
+        playlist = playlist.items[child_playlist_index];
+    }
+    else
+    {
+        playlist_item_index = child_playlist_index;
+    }
+    playlistChangePlaylist(playlist,playlist_item_index);
 }
 
 function clickShowTab(i)
