@@ -2,6 +2,8 @@
 
 window.default_ready = default_ready;
 window.clickMenu = clickMenu;
+window.clickClose = clickClose;
+window.clickPlus = clickPlus;
 
 function default_ready(show_social)
 {
