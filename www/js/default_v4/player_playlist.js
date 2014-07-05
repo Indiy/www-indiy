@@ -50,7 +50,7 @@ function playlistReady()
     
     $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange',function()
     {
-        console.log("webkitfullscreenchange");
+        //console.log("webkitfullscreenchange");
     });
 }
 $(document).ready(playlistReady);

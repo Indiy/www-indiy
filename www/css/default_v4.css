@@ -150,6 +150,7 @@ body {
 
 .home_tab.content_tab {
     display: block;
+    position: static;
     background: transparent;
 }
 .home_tab.content_tab .top_bar {
