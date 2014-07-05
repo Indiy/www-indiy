@@ -6,6 +6,7 @@ window.clickClose = clickClose;
 window.clickPlus = clickPlus;
 window.clickPlaylist = clickPlaylist;
 window.clickPlaylistItem = clickPlaylistItem;
+window.clickShowTab = clickShowTab;
 
 function default_ready(show_social)
 {
@@ -50,6 +51,12 @@ function clickPlaylistItem(i,j)
     $('.playlist_tab .playlist_list .playlist .track_name').removeClass('active');
     var sel = ".playlist_tab .playlist_list #playlist_{0} #track_{1}".format(i,j);
     $(sel).addClass('active');
+}
+
+function clickShowTab(i);
+{
+    $('.content_tab').hide();
+    $('#user_tab_' + i).show();
 }
 
 })();

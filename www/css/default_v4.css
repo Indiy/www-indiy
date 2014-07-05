@@ -175,6 +175,7 @@ body {
 .playlist_tab .playlist_list .playlist .title_arrow {
     position: relative;
     border-bottom: 1px solid rgba(255,255,255,0.7);
+    cursor: pointer;
 }
 .playlist_tab .playlist_list .playlist .title_arrow .title {
     padding-top: 19px;
@@ -183,7 +184,7 @@ body {
     color: #777;
     font-size: 18px;
     overflow: hidden;
-    text-overflow: ellipse;
+    text-overflow: ellipsis;
     white-space: nowrap;
 }
 .playlist_tab .playlist_list .playlist.active .title_arrow .title {
@@ -201,19 +202,47 @@ body {
 }
 .playlist_tab .playlist_list .playlist.active .track_list {
     display: block;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 .playlist_tab .playlist_list .playlist .track_list .track_name {
     padding-left: 15px;
-    padding-top: 19px;
-    padding-bottom: 13px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     color: #777;
     font-size: 18px;
     overflow: hidden;
-    text-overflow: ellipse;
+    text-overflow: ellipsis;
     white-space: nowrap;
+    cursor: pointer;
 }
 .playlist_tab .playlist_list .playlist .track_list .track_name.active {
     color: white;
+}
+
+.playlist_tab .section_title {
+    padding-left: 9px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.playlist_tab .tab_list {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+.playlist_tab .tab_list .tab_name {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: white;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+    cursor: pointer;
 }
 
 /*************************************************************************/
