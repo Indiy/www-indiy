@@ -224,7 +224,48 @@
             <?php endforeach; ?>
         </div>
     </div>
-    
+
+    <?php
+        foreach( $product_list as $i => $product ):
+            $name = $product['name'];
+            $image = $product['image'];
+            $price = "$" + $product['price'];
+            $buy_action = "clickBuyProduct($i);";
+            $description = $product['description'];
+            $size_list = $product['sizes'];
+    ?>
+        <div id='product_tab_<?=$i;?>' class='product_tab content_tab'>
+            <div class='top_bar'>
+                <div class='left_menu sprite_icon' onclick='clickMenu();'></div>
+                <div class='title'>Store</div>
+                <div class='right_menu'>
+                    <div class= 'close sprite_icon' onclick='clickClose();'></div>
+                </div>
+            </div>
+            <div class='content_tab_spacer'></div>
+            <div class='product_info'>
+                <div class='name'><?=$name;?></div>
+                <div class='image_holder'>
+                    <img src='<?=$image;?>'/>
+                </div>
+                <div class='price'>Price: <?=$price;?></div>
+                <?php if( $size_list ): ?>
+                    <div class='size_list'>
+                        <div class='label'>Size:</div>
+                        <?php foreach( $size_list as $j => $size ):
+                            $size_action = "clickSize(this,$i,$j);";
+                        ?>
+                            <div class='size' onclick='<?=$size_action;?>'><?=$size;?></div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+                <div class='description'><?=$description;?></div>
+            </div>
+            <div class='buy_button' onclick='<?=$buy_action;?>'>Buy Now</div>
+        </div>
+    <?php endforeach; ?>
+
+
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', "<?=$template_params['ga_account_id'];?>"]);

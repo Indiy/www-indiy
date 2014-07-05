@@ -316,8 +316,8 @@ body {
 .store_list_tab .store_list .store_item {
     display: inline-block;
     padding-top: 14px;
-    padding-left: 9px;
-    padding-right: 9px;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 302px;
     cursor: pointer;
 }
@@ -337,6 +337,69 @@ body {
     padding: 2px;
     width: 100%;
 }
+
+.product_tab .product_info {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.product_tab .product_info .name {
+    padding-bottom: 6px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+.product_tab .product_info .image_holder {
+    padding-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-bottom: 1px solid #555;
+    text-align: center;
+}
+.product_tab .product_info .image_holder img {
+    background: white;
+    padding: 2px;
+    width: 100%;
+    max-width: 500px;
+}
+.product_tab .product_info .price {
+    padding-top: 8px;
+    padding-bottom: 14px;
+    color: white;
+    font-size: 16px;
+}
+.product_tab .product_info .size_list {
+    padding-bottom: 5px;
+    white-space: nowrap;
+}
+.product_tab .product_info .size_list .label {
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    vertical-align: top;
+}
+.product_tab .product_info .size_list .label .size {
+    display: inline-block;
+    padding: 11px;
+    margin-left: 9px;
+    margin-right: 9px;
+    vertical-align: top;
+}
+.product_tab .product_info .description {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    color: white;
+    font-size: 14px;
+    line-height: 18px;
+}
+.product_tab .buy_button {
+    padding-top: 8px;
+    padding-bottom: 12px;
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    background: rgba(34,64,77,0.9);
+}
+
 /*************************************************************************/
 
 @media (device-height: 568px)

@@ -10,6 +10,7 @@ window.clickShowTab = clickShowTab;
 window.clickShowStore = clickShowStore;
 window.clickShowSocial = clickShowSocial;
 window.clickShowShare = clickShowShare;
+window.clickStoreItem = clickStoreItem;
 
 function defaultReady(show_social)
 {
@@ -73,6 +74,12 @@ function clickShowShare()
 {
     $('.content_tab').hide();
     $('.share_tab.content_tab').show();
+}
+
+function clickStoreItem(i)
+{
+    $('.content_tab').hide();
+    $('#product_tab_' + i).show();
 }
 
 })();
