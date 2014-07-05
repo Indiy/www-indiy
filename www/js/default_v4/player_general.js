@@ -195,13 +195,11 @@ function playerVolumeSetLevel(vol_ratio)
 
 function playerSetPaused()
 {
-    $('#track_play_pause_button').removeClass('playing');
-    $('#big_play_icon').removeClass('playing');
+    $('#big_play_icon').show();
 }
 function playerSetPlaying()
 {
-    $('#track_play_pause_button').addClass('playing');
-    $('#big_play_icon').addClass('playing');
+    $('#big_play_icon').hide();
 }
 
 

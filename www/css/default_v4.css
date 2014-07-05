@@ -179,6 +179,27 @@ body {
     font-size: 16px;
 }
 
+.home_tab .big_play_icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -175px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+.home_tab .big_play_icon .icon {
+    width: 80px;
+    height: 80px;
+    background-position: -14px -9px;
+}
+.home_tab .big_play_icon .text {
+    padding-top: 20px;
+    color: white;
+    font-size: 70px;
+    text-align: center;
+}
+
 .playlist_tab .playlist_list {
     padding-top: 45px;
     padding-right: 9px;
