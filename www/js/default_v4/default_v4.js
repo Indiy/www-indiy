@@ -64,17 +64,17 @@ function clickShowTab(i)
 function clickShowStore()
 {
     $('.content_tab').hide();
-    $('.store_tab.content_tab').hide();
+    $('.store_tab.content_tab').show();
 }
 function clickShowSocial()
 {
     $('.content_tab').hide();
-    $('.social_tab.content_tab').hide();
+    $('.social_tab.content_tab').show();
 }
 function clickShowShare()
 {
     $('.content_tab').hide();
-    $('.share_tab.content_tab').hide();
+    $('.share_tab.content_tab').show();
 }
 
 })();
