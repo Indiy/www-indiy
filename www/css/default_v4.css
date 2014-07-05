@@ -131,6 +131,15 @@ body {
 .content_tab .top_bar .right_menu .sprite_icon.close {
     background-position: -150px -9px;
 }
+.content_tab .top_bar .right_menu .sprite_icon.store {
+    background-position: -196px -9px;
+}
+.content_tab .top_bar .right_menu .sprite_icon.social {
+    background-position: -196px -9px;
+}
+.content_tab .top_bar .right_menu .sprite_icon.share {
+    background-position: -196px -9px;    
+}
 .content_tab .top_bar .right_menu .extended_menu {
     display: none;
     background: rgba(0,0,0,0.5);
