@@ -13,7 +13,7 @@ body {
 .full_screen_bg { 
     position: fixed; 
     top: 0px;
-    bottom: 21px;
+    bottom: 0px;
     left: 0px;
     right: 0px;
     background-color: transparent;
@@ -69,6 +69,11 @@ body {
     background-color: black;
 }
 
+.sprite_icon {
+    background: transparent url('/images/default_v4_sprite.png') no-repeat;
+    background-size: 306px 396px;
+}
+
 .content_tab {
     display: none;
 }
@@ -85,13 +90,15 @@ body {
     float: left;
     width: 39px;
     height: 100%;
-    background: transparent url('/images/default_v4_sprite.png') no-repeat -40px -497px;
+    background-position: -240px -11px;
 }
 .content_tab .top_bar .title {
     float: left;
     margin-left: 39px;
     margin-right: 39px;
-    height: 100%;
+    padding-top: 12px;
+    color: white;
+    font-size: 23px;
     text-align: center;
 }
 .content_tab .top_bar .right_icon {
@@ -99,15 +106,16 @@ body {
     width: 39px;
     height: 100%;
 }
-.content_tab .top_bar .right_icon .icon {
+.content_tab .top_bar .right_icon .sprite_icon {
     width: 39px;
     height: 45px;
 }
-.content_tab .top_bar .right_icon .icon.plus {
-    background: transparent url('/images/default_v4_sprite.png') no-repeat -40px -407px;
+
+.content_tab .top_bar .right_icon .sprite_icon.plus {
+    background-position: -160px -11px;
 }
-.content_tab .top_bar .right_icon .icon.close {
-    background: transparent url('/images/default_v4_sprite.png') no-repeat -40px -315px;
+.content_tab .top_bar .right_icon .sprite_icon.close {
+    background-position: -160px -11px;
 }
 .content_tab .top_bar .right_icon .extended_menu {
     display: none;
@@ -124,8 +132,8 @@ body {
     left: 0px;
     right: 0px;
     height: 38px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 5px;
+    padding-bottom: 11px;
     color: white;
     font-size: 36px;
     text-align: center;
@@ -138,7 +146,7 @@ body {
     left: 6px;
     right: 0px;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 
