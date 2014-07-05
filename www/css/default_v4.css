@@ -1,5 +1,9 @@
 
 body {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 100%;
     margin: 0px;
     padding: 0px;
     background-color: black;
@@ -76,6 +80,10 @@ body {
 
 .content_tab {
     display: none;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    min-height: 100%;
     background: rgba(0,0,0,0.9);
 }
 .content_tab .top_bar {
