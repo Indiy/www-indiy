@@ -13,6 +13,7 @@ window.clickShowShare = clickShowShare;
 window.clickStoreItem = clickStoreItem;
 window.clickSize = clickSize;
 window.clickBuyProduct = clickBuyProduct;
+window.showProductById = showProductById;
 
 function defaultReady(show_social)
 {
@@ -55,6 +56,9 @@ function clickPlaylistItem(i,j)
     $('.playlist_tab .playlist_list .playlist .track_name').removeClass('active');
     var sel = ".playlist_tab .playlist_list #playlist_{0} #track_{1}".format(i,j);
     $(sel).addClass('active');
+ 
+    var playlist = g_playlistList[i];
+    playlistChangePlaylist(playlist,j);
 }
 
 function clickShowTab(i)
@@ -83,6 +87,18 @@ function clickStoreItem(i)
     $('.content_tab').hide();
     $('#product_tab_' + i).show();
     window.scrollTo(0,0);
+}
+function showProductById(product_id)
+{
+    for( var i = 0 ; i < g_productList.length ; ++i )
+    {
+        var product = g_productList[i];
+        if( product.id == product_id )
+        {
+            clickStoreItem(i);
+            break;
+        }
+    }
 }
 
 function clickSize(ele)
