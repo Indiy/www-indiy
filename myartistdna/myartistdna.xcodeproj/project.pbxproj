@@ -1723,9 +1723,6 @@
 		2DF470471440B77F005538C7 /* css */ = {
 			isa = PBXGroup;
 			children = (
-				2D6DF27A17CAD0E10020CD97 /* default_v2.css */,
-				2D6DF29717DD2D850020CD97 /* default_v3.css */,
-				2D88DA591967332E00F6788C /* default_v4.css */,
 				2DD94A2B14C368DF002B1259 /* vim.css */,
 				2D34E23514ABFF09004473F9 /* video-js.css */,
 				2DF4704F1440B77F005538C7 /* style.css */,
@@ -1750,6 +1747,9 @@
 				2DFBC92E173E9F0E001DCEF6 /* splash_video.css */,
 				2DE6CDD1175AB28E007E6792 /* splash_form_download.css */,
 				2DF84C731803C69B00165BF8 /* mad_stream.css */,
+				2D6DF27A17CAD0E10020CD97 /* default_v2.css */,
+				2D6DF29717DD2D850020CD97 /* default_v3.css */,
+				2D88DA591967332E00F6788C /* default_v4.css */,
 			);
 			path = css;
 			sourceTree = "<group>";
