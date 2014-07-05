@@ -382,6 +382,7 @@ body {
 }
 .product_tab .product_info .label_size .size_list {
     display: inline-block;
+    margin-right: 40px;
     white-space: normal;
 }
 .product_tab .product_info .label_size .size_list .size {
@@ -389,6 +390,7 @@ body {
     padding: 7px 11px 6px 11px;
     margin-left: 4px;
     margin-right: 4px;
+    margin-bottom: 15px;
     vertical-align: top;
     background: rgba(34,64,77,0.9);
     border-radius: 8px;
