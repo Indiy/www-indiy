@@ -254,13 +254,15 @@
                 </div>
                 <div class='price'>Price: <?=$price;?></div>
                 <?php if( $size_list ): ?>
-                    <div class='size_list'>
+                    <div class='label_size'>
                         <div class='label'>Size:</div>
-                        <?php foreach( $size_list as $j => $size ):
-                            $size_action = "clickSize(this,$i,$j);";
-                        ?>
-                            <div class='size' onclick='<?=$size_action;?>'><?=$size;?></div>
-                        <?php endforeach; ?>
+                        <div class='size_list'>
+                            <?php foreach( $size_list as $j => $size ):
+                                $size_action = "clickSize(this,$i,$j);";
+                            ?>
+                                <div class='size' onclick='<?=$size_action;?>'><?=$size;?></div>
+                            <?php endforeach; ?>
+                        </div>
                     </div>
                 <?php endif; ?>
                 <div class='description'><?=$description;?></div>
