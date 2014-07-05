@@ -53,7 +53,7 @@ function clickPlaylistItem(i,j)
     $(sel).addClass('active');
 }
 
-function clickShowTab(i);
+function clickShowTab(i)
 {
     $('.content_tab').hide();
     $('#user_tab_' + i).show();
