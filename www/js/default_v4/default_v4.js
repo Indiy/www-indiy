@@ -11,6 +11,7 @@ window.clickShowStore = clickShowStore;
 window.clickShowSocial = clickShowSocial;
 window.clickShowShare = clickShowShare;
 window.clickStoreItem = clickStoreItem;
+window.clickSize = clickSize;
 
 function defaultReady(show_social)
 {
@@ -80,6 +81,12 @@ function clickStoreItem(i)
 {
     $('.content_tab').hide();
     $('#product_tab_' + i).show();
+}
+
+function clickSize(ele)
+{
+    $(ele).siblings().removeClass('active');
+    $(ele).addClass('active');
 }
 
 })();
