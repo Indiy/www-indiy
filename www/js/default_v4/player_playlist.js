@@ -295,7 +295,6 @@ function playlistPrevious()
 }
 function playlistPlayPause()
 {
-    hideTooltip();
     var playlist = g_currentPlaylist;
     var playlist_item = playlist.items[g_currentPlaylistIndex];
     var media_type = playlist_item.media_type;

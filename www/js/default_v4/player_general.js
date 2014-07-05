@@ -257,7 +257,7 @@ function hideControls()
         g_controlsShown = false;
         $('.idle_fade_out').fadeOut();
         closeBottom(false);
-        hideTooltip();
+
     }
 }
 
@@ -272,7 +272,6 @@ function toggleBottom()
 
 function openBottom()
 {
-    hideTooltip();
     hideVolume();
     hideVideoBitrate();
     hideContentPage();
@@ -285,7 +284,6 @@ function openBottom()
 
 function closeBottom(animate)
 {
-    hideTooltip();
     hideVolume();
     hideVideoBitrate();
     g_bottomOpen = false;

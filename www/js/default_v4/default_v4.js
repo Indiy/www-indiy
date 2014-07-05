@@ -78,7 +78,7 @@ function default_v3_ready(show_social)
 
 function twitterInsert()
 {
-    var height = $('#social_box .social_twitter').height() - 10;
+    var height = $('#social_twitter').height() - 10;
     
     var twitter_widget = g_templateParams['twitter_widget'];
     var html = false;
