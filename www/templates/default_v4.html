@@ -229,7 +229,11 @@
         foreach( $product_list as $i => $product ):
             $name = $product['name'];
             $image = $product['image'];
-            $price = "$" + $product['price'];
+            $price = "Free";
+            if( $product['price'] )
+            {
+                $price = "$" + $product['price'];
+            }
             $buy_action = "clickBuyProduct($i);";
             $description = $product['description'];
             $size_list = $product['sizes'];
