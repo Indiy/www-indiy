@@ -374,15 +374,17 @@ body {
 }
 .product_tab .product_info .size_list .label {
     display: inline-block;
+    padding-top: 6px;
+    padding-right: 5px;
     color: white;
     font-size: 16px;
     vertical-align: top;
 }
 .product_tab .product_info .size_list .size {
     display: inline-block;
-    padding: 11px;
-    margin-left: 9px;
-    margin-right: 9px;
+    padding: 7px 11px 6px 11px;
+    margin-left: 4px;
+    margin-right: 4px;
     vertical-align: top;
     background: rgba(34,64,77,0.9);
     border-radius: 8px;
