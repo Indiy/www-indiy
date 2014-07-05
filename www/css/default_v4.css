@@ -76,6 +76,7 @@ body {
 
 .content_tab {
     display: none;
+    background: rgba(0,0,0,0.9);
 }
 .content_tab .top_bar {
     position: absolute;
@@ -83,7 +84,7 @@ body {
     left: 0px;
     right: 0px;
     height: 45px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(31,58,71,0.5);
 }
 .content_tab .top_bar .sprite_icon {
     cursor: pointer;
@@ -128,6 +129,10 @@ body {
 
 .home_tab.content_tab {
     display: block;
+    background: transparent;
+}
+.home_tab.content_tab .top_bar {
+    background: rgba(0,0,0,0.5);
 }
 
 .home_tab .bottom_title {
