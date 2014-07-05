@@ -180,7 +180,7 @@ body {
 }
 
 .home_tab .big_play_icon {
-    display: none;
+    display: block;
     position: absolute;
     top: 50%;
     left: 0px;
