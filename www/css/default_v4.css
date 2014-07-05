@@ -309,6 +309,32 @@ body {
     right: 9px;
 }
 
+.store_list_tab .store_list {
+    text-align: center;
+}
+.store_list_tab .store_list .store_item {
+    display: inline-block;
+    padding-top: 14px;
+    padding-left: 9px;
+    padding-right: 9px;
+    width: 302px;
+}
+.store_list_tab .store_list .store_item .name {
+    padding-bottom: 6px;
+    color: white;
+    font-size: 14px;
+}
+.store_list_tab .store_list .store_item .image_holder {
+    padding-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-bottom: 1px solid #555;
+}
+.store_list_tab .store_list .store_item .image_holder img {
+    background: white;
+    padding: 2px;
+    width: 100%;
+}
 /*************************************************************************/
 
 @media (device-height: 568px)

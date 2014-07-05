@@ -62,7 +62,7 @@ function clickShowTab(i)
 function clickShowStore()
 {
     $('.content_tab').hide();
-    $('.store_tab.content_tab').show();
+    $('.store_list_tab.content_tab').show();
 }
 function clickShowSocial()
 {

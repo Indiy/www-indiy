@@ -199,6 +199,32 @@
         <div class='button'>Email</div>
     </div>
     
+    <div class='store_list_tab content_tab'>
+        <div class='top_bar'>
+            <div class='left_menu sprite_icon' onclick='clickMenu();'></div>
+            <div class='title'>Store</div>
+            <div class='right_menu'>
+                <div class= 'close sprite_icon' onclick='clickClose();'></div>
+            </div>
+        </div>
+        <div class='content_tab_spacer'></div>
+        <div class='store_list'>
+            <?php
+                foreach( $product_list as $i => $product ):
+                    $title = $product['name'];
+                    $image = $product['image'];
+                    $action = "clickStoreItem($i);";
+            ?>
+                <div class='store_item' onclick='<?=$action;?>'>
+                    <div class='name'><?=$name;?></div>
+                    <div class='image_holder'>
+                        <img src='<?=$image;?>'/>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', "<?=$template_params['ga_account_id'];?>"]);
