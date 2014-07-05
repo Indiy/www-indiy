@@ -87,6 +87,9 @@ body {
     min-height: 100%;
     background: rgba(0,0,0,0.9);
 }
+.content_tab .content_tab_spacer {
+    height: 45px;
+}
 .content_tab .top_bar {
     position: absolute;
     top: 0px;
@@ -260,6 +263,34 @@ body {
     padding-right: 9px;
     color: #eee;
     font-size: 16px;
+}
+
+.share_tab .section_title {
+    padding-top: 23px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.share_tab .section_content {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+.share_tab .section_content textarea {
+    width: 100%;
+    background: rgba(32,32,32,0.8);
+}
+.share_tab .button {
+    margin-right: 9px;
+    margin-left: 9px;
+    margin-bottom: 9px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    background: rgba(32,32,32,0.8);
 }
 
 /*************************************************************************/
