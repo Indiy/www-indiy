@@ -60,6 +60,7 @@ function clickPlaylistItem(i,j)
  
     var playlist = g_playlistList[i];
     playlistChangePlaylist(playlist,j);
+    clickClose();
 }
 function catalogClickPlaylistMediaItem(playlist_index,child_playlist_index,playlist_item_index)
 {
