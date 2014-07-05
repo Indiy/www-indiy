@@ -310,6 +310,7 @@ body {
 }
 
 .store_list_tab .store_list {
+    padding-bottom: 30px;
     text-align: center;
 }
 .store_list_tab .store_list .store_item {
