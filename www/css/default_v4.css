@@ -183,15 +183,18 @@ body {
     display: none;
     position: absolute;
     top: 50%;
+    left: 0px;
+    right: 0px;
     margin-top: -175px;
     text-align: center;
     cursor: pointer;
     z-index: 1000;
 }
 .home_tab .big_play_icon .icon {
-    width: 80px;
-    height: 80px;
-    background-position: -14px -9px;
+    display: inline-block;
+    width: 82px;
+    height: 82px;
+    background-position: -109px -70px;
 }
 .home_tab .big_play_icon .text {
     padding-top: 20px;
