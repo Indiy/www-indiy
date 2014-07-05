@@ -4,7 +4,7 @@ window.twitterInsert = twitterInsert;
 
 function twitterInsert()
 {
-    var height = $('#social_twitter').height() - 10;
+    var height = $('body').height() - 80;
     
     var twitter_widget = g_templateParams['twitter_widget'];
     var html = false;
