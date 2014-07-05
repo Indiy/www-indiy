@@ -363,8 +363,8 @@ body {
     max-width: 500px;
 }
 .product_tab .product_info .price {
-    padding-top: 8px;
-    padding-bottom: 14px;
+    padding-top: 12px;
+    padding-bottom: 10px;
     color: white;
     font-size: 16px;
 }
@@ -378,12 +378,13 @@ body {
     font-size: 16px;
     vertical-align: top;
 }
-.product_tab .product_info .size_list .label .size {
+.product_tab .product_info .size_list .size {
     display: inline-block;
     padding: 11px;
     margin-left: 9px;
     margin-right: 9px;
     vertical-align: top;
+    background: rgba(34,64,77,0.9);
 }
 .product_tab .product_info .description {
     padding-top: 15px;
