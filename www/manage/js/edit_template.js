@@ -1130,6 +1130,27 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             }
         ]
+    },
+    'PLAYER_DEFAULT_V5': {
+        type: 'PLAYER',
+        description: 'Default v5',
+        default_params: {
+            page_title: 'MyArtistDNA | Be Heard. Be Seen. Be Independent.',
+            ga_account_id: ''
+        },
+        arg_list:
+        [
+            {
+                name: 'page_title',
+                description: 'Page Title',
+                type: 'string'
+            },
+            {
+                name: 'ga_account_id',
+                description: 'Google Analytics Id',
+                type: 'string'
+            }
+        ]
     }
 };
 

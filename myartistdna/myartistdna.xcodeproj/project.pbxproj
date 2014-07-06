@@ -336,6 +336,19 @@
 		2D88DA541967322100F6788C /* player_social.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_social.js; sourceTree = "<group>"; };
 		2D88DA551967322100F6788C /* player_store.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_store.js; sourceTree = "<group>"; };
 		2D88DA591967332E00F6788C /* default_v4.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = default_v4.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2D88DA5B1969133600F6788C /* default_v5.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = default_v5.js; sourceTree = "<group>"; };
+		2D88DA5C1969133600F6788C /* player_catalog.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_catalog.js; sourceTree = "<group>"; };
+		2D88DA5D1969133600F6788C /* player_comments.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_comments.js; sourceTree = "<group>"; };
+		2D88DA5E1969133600F6788C /* player_common.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_common.js; sourceTree = "<group>"; };
+		2D88DA5F1969133600F6788C /* player_general.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_general.js; sourceTree = "<group>"; };
+		2D88DA601969133600F6788C /* player_image.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_image.js; sourceTree = "<group>"; };
+		2D88DA611969133600F6788C /* player_playlist.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_playlist.js; sourceTree = "<group>"; };
+		2D88DA621969133600F6788C /* player_social.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_social.js; sourceTree = "<group>"; };
+		2D88DA631969133600F6788C /* player_store.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_store.js; sourceTree = "<group>"; };
+		2D88DA641969133600F6788C /* player_tabs.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_tabs.js; sourceTree = "<group>"; };
+		2D88DA651969133600F6788C /* player_tooltips.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_tooltips.js; sourceTree = "<group>"; };
+		2D88DA661969138900F6788C /* default_v5.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = default_v5.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2D88DA67196913A200F6788C /* default_v5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = default_v5.html; sourceTree = "<group>"; };
 		2D8949211614C4A500538B7F /* login.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = login.php; sourceTree = "<group>"; };
 		2D8949231614D58700538B7F /* login.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = login.html; sourceTree = "<group>"; };
 		2D89492416151AB300538B7F /* build_invoices.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = build_invoices.php; sourceTree = "<group>"; };
@@ -1358,6 +1371,24 @@
 			name = old;
 			sourceTree = "<group>";
 		};
+		2D88DA5A1969133600F6788C /* default_v5 */ = {
+			isa = PBXGroup;
+			children = (
+				2D88DA5B1969133600F6788C /* default_v5.js */,
+				2D88DA5C1969133600F6788C /* player_catalog.js */,
+				2D88DA5D1969133600F6788C /* player_comments.js */,
+				2D88DA5E1969133600F6788C /* player_common.js */,
+				2D88DA5F1969133600F6788C /* player_general.js */,
+				2D88DA601969133600F6788C /* player_image.js */,
+				2D88DA611969133600F6788C /* player_playlist.js */,
+				2D88DA621969133600F6788C /* player_social.js */,
+				2D88DA631969133600F6788C /* player_store.js */,
+				2D88DA641969133600F6788C /* player_tabs.js */,
+				2D88DA651969133600F6788C /* player_tooltips.js */,
+			);
+			path = default_v5;
+			sourceTree = "<group>";
+		};
 		2D8D96E6159568FA00AA3D1B /* templates */ = {
 			isa = PBXGroup;
 			children = (
@@ -1484,10 +1515,11 @@
 		2D9E2FD81569F13600A76906 /* templates */ = {
 			isa = PBXGroup;
 			children = (
-				2DF84C711803B96500165BF8 /* mad_stream.html */,
+				2D88DA67196913A200F6788C /* default_v5.html */,
 				2D88DA4B19672D1100F6788C /* default_v4.html */,
 				2D6DF29617DD282E0020CD97 /* default_v3.html */,
 				2D6DF27917CAD06F0020CD97 /* default_v2.html */,
+				2DF84C711803B96500165BF8 /* mad_stream.html */,
 				2DE6CDCF175AB174007E6792 /* splash_form_download.html */,
 				2DFBC92B172D8DD4001DCEF6 /* countdown_audio.html */,
 				2D26203B17273AEB00D16D8D /* splash_audio.html */,
@@ -1744,6 +1776,7 @@
 				2D6DF27A17CAD0E10020CD97 /* default_v2.css */,
 				2D6DF29717DD2D850020CD97 /* default_v3.css */,
 				2D88DA591967332E00F6788C /* default_v4.css */,
+				2D88DA661969138900F6788C /* default_v5.css */,
 			);
 			path = css;
 			sourceTree = "<group>";
@@ -1915,6 +1948,7 @@
 			isa = PBXGroup;
 			children = (
 				2D88DA581967323000F6788C /* old */,
+				2D88DA5A1969133600F6788C /* default_v5 */,
 				2D88DA4C1967322100F6788C /* default_v4 */,
 				2D6DF29817DD2F360020CD97 /* default_v3 */,
 				2D6DF27C17D2AF6B0020CD97 /* default_v2 */,

@@ -412,6 +412,10 @@
         {
             include_once 'templates/default_v4.html';
         }
+        else if( $template_type == 'PLAYER_DEFAULT_V5' )
+        {
+            include_once 'templates/default_v5.html';
+        }
         else if( $template_type == 'PLAYER_MEEK_SPLASH' )
         {
             include_once 'templates/meek_splash.html';
