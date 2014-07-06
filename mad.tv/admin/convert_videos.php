@@ -2,7 +2,7 @@
 
     require_once "../includes/config.php";
 
-    $sql = "SELECT * FROM videos ORDER BY `order` ASC, `id` ASC";
+    $sql = "SELECT * FROM videos";
     $q = mq($sql);
     $video_list = array();
     while( $row = mf($q) )
