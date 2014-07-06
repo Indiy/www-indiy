@@ -1,6 +1,7 @@
 <?php
 
     require_once "../includes/config.php";
+    error_reporting(E_ALL);
 
     $sql = "SELECT * FROM videos";
     $q = mq($sql);
