@@ -3,7 +3,7 @@
     require_once "../includes/config.php";
     error_reporting(E_ALL);
 
-    $sql = "SELECT * FROM videos";
+    $sql = "SELECT * FROM video";
     $q = mq($sql);
     $video_list = array();
     while( $row = mf($q) )
@@ -25,7 +25,9 @@
         else
         {
             print "Encoding file...";
-            @system("/usr/local/bin/ffmpeg2theora --videoquality 8 --audioquality 6 -o $path_ogv $path_mp4");
+            $src_file = $path_mp4;
+            $dst_file = $path_ogv;
+            @system("/usr/local/bin/ffmpeg -y -i $src_file -f ogg -vcodec libtheora -q:a 8 -q:v 8 -acodec libvorbis $dst_file");
             print "Done\n";
         }
         print "---------------------\n";
