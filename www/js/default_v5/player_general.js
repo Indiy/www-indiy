@@ -180,7 +180,7 @@ function generalOnReady()
             }
         }
     }
-    default_v3_ready(show_social);
+    defaultReady(show_social);
     
     if( g_touchDevice )
     {

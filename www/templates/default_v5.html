@@ -2,7 +2,7 @@
 <html>
 <head>
     <title><?=$template_params['page_title'];?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -11,7 +11,7 @@
     <link rel="apple-touch-startup-image" href="<?=static_file_url('/images/apple-loading-screen.jpg');?>" />
 
     <link href="<?=static_file_url('/css/video-js.css');?>" rel="stylesheet">
-    <link href="<?=static_file_url('/css/default_v3.css');?>" rel="stylesheet" type="text/css"/>
+    <link href="<?=static_file_url('/css/default_v5.css');?>" rel="stylesheet" type="text/css"/>
     
     <!--[if lt IE 9]>
      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -30,17 +30,17 @@
     <script src="<?=static_file_url('/js/mad.scrollbar.js');?>" type="text/javascript"></script>
     <script src="<?=static_file_url('/js/mad.swipe.js');?>" type="text/javascript"></script>
 
-    <script src="<?=static_file_url('/js/default_v3/player_general.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v3/player_common.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v3/player_image.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v3/player_social.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v3/player_tabs.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v3/player_store.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v3/player_tooltips.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v3/player_catalog.js');?>" type="text/javascript"></script>
-    <script src="<?=static_file_url('/js/default_v3/player_playlist.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v5/player_general.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v5/player_common.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v5/player_image.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v5/player_social.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v5/player_tabs.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v5/player_store.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v5/player_tooltips.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v5/player_catalog.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v5/player_playlist.js');?>" type="text/javascript"></script>
 
-    <script src="<?=static_file_url('/js/default_v3/default_v3.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/default_v5/default_v5.js');?>" type="text/javascript"></script>
     <script type="text/javascript">
         var g_jplayerSWF = "<?=static_file_url('/js/Jplayer.swf');?>";
     
@@ -75,17 +75,6 @@
         }
         $(document).ready(iphoneReady);
         
-    </script>
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', "<?=$template_params['ga_account_id'];?>"]);
-        _gaq.push(['_trackPageview']);
-        
-        (function() {
-         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-         })();
     </script>
 </head>
 
@@ -547,6 +536,17 @@
         </div>
     </div>
     
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', "<?=$template_params['ga_account_id'];?>"]);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+         })();
+    </script>
     <script>
         (function(d, s, id) {
          var js, fjs = d.getElementsByTagName(s)[0];

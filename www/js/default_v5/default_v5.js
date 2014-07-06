@@ -1,6 +1,6 @@
 
 
-function default_v3_ready(show_social)
+function defaultReady(show_social)
 {
     if( IS_IOS || IS_PHONE || IS_TABLET )
     {
@@ -74,7 +74,7 @@ function default_v3_ready(show_social)
         $('#tracker_bar .buttons .fullscreen').hide();
     }
 }
-//$(document).ready(default_v3_ready);
+//defaultReady called from playerReady
 
 function twitterInsert()
 {
