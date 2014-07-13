@@ -1357,255 +1357,28 @@ body {
     overflow: hidden;
 }
 
-/*************************************************************************/
-
-.hide_volume #tracker_bar .media_controls .progress_container {
-    left: 75px;
+.remote_button {
+    display: inline-block;
+    position: fixed;
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 15px 8px 15px;
+    color: #ec3731;
+    font-size: 16px;
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 0;
 }
 
-/*************************************************************************/
-
-#iphone_top_text {
+.remote {
     display: none;
-}
-#iphone_body_spacer {
-    display: none;
-}
-#iphone_bottom_text {
-    display: none;
-}
-#iphone_show_social_button {
-    display: none;
-}
-#iphone_show_store_button {
-    display: none;
-}
-#iphone_pad {
-    display: none;
-}
-#iphone_pad_no_store {
-    display: none;
-}
-
-
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-
-    #top_bar_image {
-        display: none !important;
-    }
-    #v3_top_bar {
-        display: none !important;
-    }
-    #bottom_left_text {
-        display: none !important;
-    }
-    #bottom_bar {
-        display: none !important;
-    }
-    #bottom_container {
-        display: none !important;
-    }
-    #player_prev {
-        display: none !important;
-    }
-    #player_next {
-        display: none !important;
-    }
-    .full_screen_bg {
-        position: absolute;
-    }
     
-    #iphone_top_text {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        display: block;
-        color: white;
-        font-size: 40px;
-        font-family: 'Agency Regular', Helvetica, sans-serif;
-        -webkit-font-smoothing: subpixel-antialiased;
-        text-align: center;
-    }
-    #iphone_bottom_text {
-        display: block;
-        position: absolute;
-        top: 246px;
-        left: 0px;
-        right: 0px;
-        height: 60px;
-        color: red;
-        font-size: 50px;
-        font-family: 'Agency Regular', Helvetica, sans-serif;
-        -webkit-font-smoothing: subpixel-antialiased;
-        text-align: center;
-    }
-    
-    #iphone_bottom_section {
-        position: absolute;
-        top: 270px;
-        left: 0px;
-        right: 0px;
-    }
+}
 
-    #social_box {
-        position: relative;
-        top: auto;
-        bottom: auto;
-        left: auto;
-        right: auto;
-        height: 359px;
-        width: auto;
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-top: 12px;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-    #social_box .social_item {
-        width: auto;
-        left: 0px;
-        right: 0px;
-    }
-    
-    #iphone_pad_no_store {
-        display: block;
-        height: 37px;
-    }
-    
-    #iphone_show_social_button {
-        display: block;
-    }
-    #iphone_show_store_button {
-        display: block;
-    }
-    #iphone_pad {
-        display: block;
-        height: 10px;
-    }
-
-    .button_container {
-        padding-left: 0px;
-        padding-right: 0px;
-        text-align: center;
-    }
-    .button_container .button {
-        display: inline-block;
-        width: 288px;
-        height: 37px;
-        color: white;
-        font-size: 30px;
-        font-family: 'Agency Regular', Helvetica, sans-serif;
-        -webkit-font-smoothing: subpixel-antialiased;
-        text-align: center;
-        border: 4px solid white;
-        border-radius: 4px;
-        background: black;
-        cursor: pointer;
-    }
-
-    .content_tab .close {
-        display: none;
-    }
-    #store_tab {
-        position: static;
-        height: auto;
-    }
-    #store_tab .left {
-        display: none;
-    }
-    #store_tab .sep {
-        display: none;
-    }
-    #store_tab .scrollbar-handle-container {
-        display: none;
-    }
-    #store_tab .store_inner {
-        position: static;
-        width: auto;
-        padding-left: 5px;
-        padding-right: 5px;
-        padding-bottom: 0px;
-        max-height: none;
-    }
-    #store_tab .right {
-        position: static;
-    }
-    #store_tab .product_list {
-        padding-top: 6px;
-        padding-bottom: 0px;
-        padding-right: 0px;
-        text-align: center;
-    }
-    #store_tab .product_list .store_title {
-        display: none;
-    }
-    #store_tab .product_info {
-        padding-right: 0px;
-    }
-    #store_tab .product_info .store_title {
-        display: none;
-    }
-    #store_tab .product_info .pi_left {
-        display: none;
-    }
-    #store_tab .product_info .pi_right {
-        float: none;
-        width: auto;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    #store_tab .product_info .pi_right .name {
-        padding-top: 24px;
-    }
-    #store_tab .buy_result {
-        padding-right: 0px;
-    }
-    
-    #big_play_icon {
-        display: none;
-        position: absolute;
-        top: 150px;
-        left: 50%;
-        height: 0px;
-        width: 0px;
-        margin-left: -36px;
-        margin-top: -36px;
-        z-index: 100;
-        background: none;
-    }
-    #big_play_icon .outer {
-        width: 72px;
-        height: 72px;
-        background-color: rgba(100,100,100,0.7);
-        border-radius: 72px;
-    }
-    #big_play_icon .inner {
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        width: 60px;
-        height: 60px;
-        border-radius: 60px;
-        border: 4px solid white;
-    }
-    #big_play_icon .triangle {
-        position: absolute;
-        top: 18px;
-        left: 24px;
-        width: 0;
-        height: 0;
-        border-top: 18px solid transparent;
-        border-bottom: 18px solid transparent;
-        border-left: 32px solid rgba(255,255,255,0.8);
-    }
-
-    #big_play_icon.playing {
-        display: none !important;
-    }
-
+.remote_paused {
+}
+.remove_overlay {
 }
 
 /*************************************************************************/
