@@ -1358,11 +1358,14 @@ body {
 }
 
 .remote_button {
-    display: inline-block;
     position: fixed;
     bottom: 0px;
-    margin-left: auto;
-    margin-right: auto;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+}
+.remote_button .button {
+    display: inline-block;
     padding: 15px 15px 8px 15px;
     color: #ec3731;
     font-size: 16px;
