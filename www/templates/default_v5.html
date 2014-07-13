@@ -104,225 +104,28 @@
         </div>
     </div>
 
-    <div id='big_play_icon' onclick='playlistPlayPause();'>
-        <div class='outer'></div>
-        <div class='inner'></div>
-        <div class='triangle'></div>
-    </div>
-    <div id='bottom_left_text' class='idle_fade_out'><?=$template_params['bottom_left_text'];?></div>
-    
-    <div id='iphone_top_text'><?=$template_params['iphone_top_text'];?></div>
-    <div id='iphone_bottom_text'><?=$template_params['iphone_bottom_text'];?></div>
-    <div id='iphone_bottom_section'>
-        <?php if( $store_enabled ): ?>
-            <div id='iphone_pad_no_store'></div>
-        <?php endif; ?>
-        <div id='iphone_show_social_button' class='button_container'>
-            <div class='button' onclick='toggleSocialFeed();'>+ SHOW SOCIAL</div>
-        </div>
-        
-        <div id='social_box'>
-            <div class='buttons'>
-                <div class='twitter button' onclick='showTwitter();'>Twitter</div>
-                <div class='facebook button' onclick='showFacebook();'>Facebook</div>
-                <div class='instagram button' onclick='showInstagram();'>Instagram</div>
-            </div>
-            <div class='social_twitter social_item'></div>
-            <div class='social_facebook social_item'></div>
-            <div class='social_instagram social_item'></div>
-        </div>
 
-        <?php if( $store_enabled ): ?>
-            <div id='iphone_pad'></div>
-            <div id='iphone_show_store_button' class='button_container'>
-                <div class='button' onclick='toggleStore();'>+ SHOW STORE</div>
-            </div>
-        <?php endif; ?>
-        <div id='iphone_pad'></div>
-        <div id='store_tab' class='content_tab'>
-            <div class='close' onclick='v3_hideStore();'>
-                <div class='icon'></div>
-                <div class='name'>CLOSE</div>
-            </div>
-            <div class='left'>
-                <div class='title'>STORE</div>
-                <div id='store_back' class='back' onclick='storeShowProductList();'>
-                    <div class='arrow'></div>
-                    <div class='text'>BACK TO LIST</div>
-                </div>
-                <div class='back' onclick='storeViewCart();'>
-                    <div class='arrow'></div>
-                    <div class='text'>VIEW CART</div>
-                </div>
-            </div>
-            <div class='sep'></div>
-            <div class='right scrollbar-pane'>
-                <div id='product_list' class='product_list store_content'>
-                    <div class='store_title'><?=$artist_name;?> STORE</div>
-                    <?=$product_list_html;?>
-                </div>
-                <div id='product_info' class='product_info store_content'>
-                    <div class='store_title'></div>
-                    <div class='pi_right'>
-                        <div class='name'></div>
-                        <div class='hsep'></div>
-                        <div class='price_share'>
-                            <div class='dollar_price'><span class='dollar'>$</span><span class='price'></span></div>
-                            <div class='sizes'>
-                                <select id='product_size'>
-                                    <option value='small'>Small</option>
-                                    <option value='medium'>Medium</option>
-                                    <option value='large'>Large</option>
-                                    <option value='x-large'>X-Large</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class='hsep'></div>
-                        <div class='stock_count in_stock'>
-                            <span class='count'></span> IN STOCK
-                        </div>
-                        <div class='hsep in_stock'></div>
-                        <div class='stock_count out_stock'>
-                            OUT OF STOCK
-                        </div>
-                        <div class='hsep out_stock'></div>
-                        <button class='buy' onclick='storeBuyProduct();'>BUY NOW</button>
-                        <button class='buy_free' onclick='storeBuyFreeProduct();'>DOWNLOAD</button>
-                        <div class='description'></div>
-                    </div>
-                    <div class='pi_left'>
-                        <div class='img_holder'>
-                            <img src=''/>
-                        </div>
-                    </div>
-                </div>
-                <div id='buy_now_result' class='buy_now_result buy_result store_content'>
-                    <div class='store_title'></div>
-                    <div class='name'></div>
-                    <div class='hsep'></div>
-                    <div class='text'>PRODUCT ADDED TO CART.</div>
-                    <div class='return_to_store button' onclick='storeShowProductList();'>RETURN TO STORE</div>
-                    <div class='view_cart button' onclick='storeViewCart();'>VIEW CART</div>
-                    <div class='checkout button' onclick='storeCheckout();'>CHECKOUT NOW</div>
-                </div>
-                <div id='free_product_success' class='free_product_success buy_result store_content'>
-                    <div class='store_title'></div>
-                    <div class='name'></div>
-                    <div class='hsep'></div>
-                    <div class='text'>Product added to your fan account!</div>
-                    <div class='return_to_store button' onclick='storeShowProductList();'>RETURN TO STORE</div>
-                    <div class='go_to_fan button' onclick='storeGoToFan();'>GO TO FAN PAGE</div>
-                </div>
-                <div id='free_product_need_fan' class='free_product_need_fan buy_result store_content'>
-                    <div class='store_title'></div>
-                    <div class='name'></div>
-                    <div class='hsep'></div>
-                    <div class='text'>You need to signup for a MyArtistDNA fan account to download this item.</div>
-                    <div class='fan_signup button' onclick='storeFanSignup();'>SIGNUP</div>
-                    <div class='fan_login button' onclick='storeFanLogin();'>LOGIN</div>
-                </div>
-            </div>
-            <?=build_scrollbar();?>
+
+    <div class='remote_button' onclick='clickRemoteToggle();'>REMOTE</div>
+    <div class='remote'>
+        <div class='widget'>
+            <div class='share' onclick='clickRemoteShare();'></div>
+            <div class='menu' onclick='clickRemoteMenu();'></div>
+            <div class='prev' onclick='clickRemotePrev();'></div>
+            <div class='next' onclick='clickRemoteNext();'></div>
+            <div class='play' onclick='clickRemoteNavPlayToggle();'></div>
+        </div>
+        <div class='close'>X</div>
+    </div>
+    <div class='remote_paused'>
+        <div class='widget'>
+            <div class='prev' onclick='clickRemotePrev();'></div>
+            <div class='next' onclick='clickRemoteNext();'></div>
+            <div class='play' onclick='clickRemoteNavPlayToggle();'></div>
         </div>
     </div>
 
-    <div id='bottom_bar'>
-        <div class='be_heard'><?=$template_params['footer_left'];?></div>
-        <div class='copyright'><?=$template_params['footer_right'];?></div>
-    </div>
-    <div id='tooltip'>
-        <div class='carrot'></div>
-        <span>TEST</span>
-    </div>
-    <div id='bottom_container' class='idle_fade_out'>
-        <div id='tracker_bar'>
-            <div class='buttons'>
-                <? if( strlen($template_params['media_button_text']) > 0 ): ?>
-                    <div id='plus_sep' class='sep'></div>
-                    <div class='plus button long' onclick='v3_showPlaylistTab();'>
-                        <div class='icon'></div>
-                        <div class='label'><?=$template_params['media_button_text'];?></div>
-                    </div>
-                <? else: ?>
-                    <? if( count($photo_list) > 0): ?>
-                        <div class='sep'></div>
-                        <div class='photos tooltiped button' onclick='clickPhotoIcon();' tooltip="PHOTOS">
-                            <div class='icon'></div>
-                        </div>
-                    <? endif; ?>
-                    <? if( count($music_list) > 0): ?>
-                        <div class='sep'></div>
-                        <div class='music tooltiped button' onclick='clickMusicIcon();' tooltip="MUSIC">
-                            <div class='icon'></div>
-                        </div>
-                    <? endif; ?>
-                    <? if( count($video_list) > 0 ): ?>
-                        <div class='sep'></div>
-                        <div class='video tooltiped button' onclick='clickVideoIcon();' tooltip="VIDEO">
-                            <div class='icon'></div>
-                        </div>
-                    <? endif; ?>
-                <? endif; ?>
-                <div id='embed_sep' class='sep'></div>
-                <div class='embed button' onclick='showEmbedTab();'>
-                    <div class='icon'></div>
-                </div>
-                <div class='sep'></div>
-                <div class='fullscreen button' onclick='toggleFullscreen();'>
-                    <div class='icon'>
-                        <svg height="32px" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <g id="Layer_1"></g>
-                            <g id="fullscreen">
-                                <g>
-                                    <polygon points="27.414,24.586 22.828,20 20,22.828 24.586,27.414 20,32 32,32 32,20"></polygon>
-                                    <polygon points="12,0 0,0 0,12 4.586,7.414 9.129,11.953 11.957,9.125 7.414,4.586"></polygon>
-                                    <polygon points="12,22.828 9.172,20 4.586,24.586 0,20 0,32 12,32 7.414,27.414"></polygon>
-                                    <polygon points="32,0 20,0 24.586,4.586 20.043,9.125 22.871,11.953 27.414,7.414 32,12"></polygon>
-                                </g>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-                <div class='fullscreen sep'></div>
-                <div class='spacer'></div>
-                <!--
-                <div class='sep'></div>
-                <div id='love_button' class='love tooltiped button' onclick='clickLoveIcon();' tooltip="LOVE">
-                    <div class='icon'></div>
-                </div>
-                -->
-            </div>
-            <div class='media_info_box'>
-                <div id='media_controls' class='media_controls info_box'>
-                    <div id='track_play_pause_button' class='play_pause tooltiped' onclick='playlistPlayPause();' tooltip="PLAY">
-                        <div class='icon'></div>
-                    </div>
-                    <div class='sep'></div>
-                    <div class='volume tooltiped volume_hidden' onclick='playerVolume();' tooltip="VOLUME">
-                        <div class='icon'></div>
-                    </div>
-                    <div class='sep2 volume_hidden'></div>
-                    <div class='progress_container'>
-                        <div class='progress_bar' id='media_seek_bar'>
-                            <div class='current_bar_holder'>
-                                <div id='track_current_bar' class='current_bar'></div>
-                            </div>
-                            <div id='track_name' class='track_name'></div>
-                            <div class='progress_play_times'>
-                                <div id='track_progress' class='progress'></div>
-                                <div class='play_times'> - PLAYED <div id='track_play_count'></div> TIMES</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id='photo_info' class='photo_info info_box'>
-                    <div class='name'></div>
-                    <div class='location'></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+
     <div id='playlist_tab' class='content_tab'>
         <div class='close' onclick='v3_hideTabs();'>
             <div class='icon'></div>
@@ -477,63 +280,6 @@
             <input placeholder='Search'>
         </div>
         <div id='search_results' class='search_results'></div>
-    </div>
-    <div class='idle_fade_out'>
-        <div id='volume_slider'>
-            <div class='carrot'></div>
-            <div class='bar'>
-                <div class='current'></div>
-                <div class='handle'></div>
-            </div>
-        </div>
-    </div>
-    
-    <div id='submit_email_popup' class='popup_wrapper'>
-        <div class="popup">
-            <div class='top_bar'>
-                <div class='title'>Submit Your Email</div>
-                <div class='close' onclick='closePopup();'>CLOSE</div>
-            </div>
-            <div class='description'>
-                To download this file you have to log in or signup.  Signing up is FREE
-                and only takes a couple of seconds.
-            </div>
-            <div class='center_input_container'>
-                <div class='label'>Email Address</div>
-                <input id='email' type="text" name="email" value="" class='center_text' />
-            </div>
-            <div class='submit_container'>
-                <button class="submit" onclick='onSubmitEmail();'>Submit</button>
-            </div>
-        </div>
-    </div>
-    <div id='song_buy_popup' class='popup_wrapper'>
-        <div class="popup">
-            <div class='top_bar'>
-                <div class='title'>BUY THIS SONG</div>
-                <div class='close' onclick='closePopup();'>CLOSE</div>
-            </div>
-            <div class='buy_buttons'>
-                <a id='mad_link' onclick='clickSongBuyPopupMAD();'>
-                    <div id='mad_button' class='mad button'></div>
-                </a>
-                <a id='itunes_link' href='#' target='_blank'>
-                    <div class='itunes button'></div>
-                </a>
-                <a id='amazon_link' href='#' target='_blank'>
-                    <div class='amazon button'></div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div id='popup_mask'></div>
-
-    <div id='popup_tab_list' onclick='closeMoreTabs();'>
-        <div class='inner'>
-            <div class='list'>
-                <?=$content_tabs_html;?>
-            </div>
-        </div>
     </div>
     
     <script type="text/javascript">
