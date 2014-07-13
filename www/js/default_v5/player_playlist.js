@@ -7,7 +7,7 @@ var g_videoContainers = 0;
 var g_currentPlaylist = false;
 var g_currentPlaylistIndex = 0;
 var g_volRatio = 0.8;
-var g_mediaAutoStart = true;
+var g_mediaAutoStart = false;
 var g_swipeReadyCount = 0;
 var g_swipeCount = 0;
 
