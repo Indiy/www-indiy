@@ -188,6 +188,7 @@ body {
     right: 0px;
     height: 30px;
     background: rgba(0,0,0,0.5);
+    z-index: 2;
 }
 #v3_top_bar .title {
     float: left;
@@ -1401,19 +1402,17 @@ body {
 }
 .remote .widget .share {
     position: absolute;
-    top: 0px;
+    top: 4px;
     left: 42px;
     width: 100px;
     height: 38px;
-    background: rgba(0,0,100,0.5);
 }
 .remote .widget .menu {
     position: absolute;
-    bottom: 0px;
+    bottom: 4px;
     left: 42px;
     width: 100px;
     height: 38px;
-    background: rgba(0,0,100,0.5);
 }
 .remote .widget .play {
     position: absolute;
@@ -1421,7 +1420,6 @@ body {
     left: 53px;
     width: 78px;
     height: 78px;
-    background: rgba(0,0,100,0.5);
 }
 .remote .widget .prev {
     position: absolute;
@@ -1429,7 +1427,6 @@ body {
     left: 4px;
     width: 38px;
     height: 100px;
-    background: rgba(0,0,100,0.5);
 }
 .remote .widget .next {
     position: absolute;
@@ -1437,7 +1434,6 @@ body {
     right: 4px;
     width: 38px;
     height: 100px;
-    background: rgba(0,0,100,0.5);
 }
 
 .remote_paused {
