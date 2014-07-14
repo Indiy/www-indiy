@@ -1380,13 +1380,6 @@ body {
 
 .remote {
     display: none;
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    background: rgba(96,25,21,0.5);
-    z-index: 1;
 }
 
 .remote .widget {
@@ -1439,6 +1432,13 @@ body {
 .remote_paused {
 }
 .remove_overlay {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: rgba(106,35,31,0.9);
+    z-index: 1;
 }
 
 /*************************************************************************/
