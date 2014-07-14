@@ -246,8 +246,6 @@ function swipePanelChange(that,playlist,index)
     {
         playerProgress(0,0);
     }
-    // Just inhibit the first play
-    g_mediaAutoStart = true;
 
     genericUpdateViews('media',playlist_item.playlist_item_id,playlist_item);
     playlistSetVolume(g_volRatio);

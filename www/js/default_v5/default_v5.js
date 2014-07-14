@@ -52,11 +52,12 @@ function clickRemoteNavPlayToggle()
 
 function playerShowPaused()
 {
-    $('.remote_paused').show();
     g_mediaAutoStart = false;
+    $('.remote_paused').show();
 }
 function playerHidePaused()
 {
+    g_mediaAutoStart = true;
     $('.remote_paused').hide();
 }
 
