@@ -1363,7 +1363,7 @@ body {
     left: 0px;
     right: 0px;
     text-align: center;
-    z-index: 1;
+    z-index: 3;
 }
 .remote_button .button {
     display: inline-block;
@@ -1371,7 +1371,7 @@ body {
     color: #ec3731;
     font-size: 16px;
     letter-spacing: 2px;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.3);
     border: 1px solid rgba(255,255,255,0.5);
     border-bottom: 0;
     border-radius: 5px 5px 0px 0px;
@@ -1379,7 +1379,60 @@ body {
 
 .remote {
     display: none;
-    
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: rgba(96,25,21,0.5);
+    z-index: 1;
+}
+
+.remote .widget {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 184px;
+    height: 184px;
+    margin-left: -92px;
+    margin-top: -92px;
+    background: url("/images/v5_remote.png");
+    z-index: 2;
+}
+.remote .widget .share {
+    top: 0px;
+    left: 42px;
+    width: 100px;
+    height: 38px;
+    background: rgba(0,0,100,0.5);
+}
+.remote .widget .menu {
+    bottom: 0px;
+    left: 42px;
+    width: 100px;
+    height: 38px;
+    background: rgba(0,0,100,0.5);
+}
+.remote .widget .play {
+    top: 53px;
+    left: 53px;
+    width: 78px;
+    height: 78px;
+    background: rgba(0,0,100,0.5);
+}
+.remote .widget .prev {
+    top: 42px;
+    left: 4px;
+    width: 38px;
+    height: 100px;
+    background: rgba(0,0,100,0.5);
+}
+.remote .widget .next {
+    top: 42px;
+    right: 4px;
+    width: 38px;
+    height: 100px;
+    background: rgba(0,0,100,0.5);
 }
 
 .remote_paused {
