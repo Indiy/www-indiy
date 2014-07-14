@@ -1400,6 +1400,7 @@ body {
     z-index: 2;
 }
 .remote .widget .share {
+    position: absolute;
     top: 0px;
     left: 42px;
     width: 100px;
@@ -1407,6 +1408,7 @@ body {
     background: rgba(0,0,100,0.5);
 }
 .remote .widget .menu {
+    position: absolute;
     bottom: 0px;
     left: 42px;
     width: 100px;
@@ -1414,6 +1416,7 @@ body {
     background: rgba(0,0,100,0.5);
 }
 .remote .widget .play {
+    position: absolute;
     top: 53px;
     left: 53px;
     width: 78px;
@@ -1421,6 +1424,7 @@ body {
     background: rgba(0,0,100,0.5);
 }
 .remote .widget .prev {
+    position: absolute;
     top: 42px;
     left: 4px;
     width: 38px;
@@ -1428,6 +1432,7 @@ body {
     background: rgba(0,0,100,0.5);
 }
 .remote .widget .next {
+    position: absolute;
     top: 42px;
     right: 4px;
     width: 38px;
