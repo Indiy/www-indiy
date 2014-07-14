@@ -1430,6 +1430,7 @@ body {
 }
 
 .remote_paused {
+    display: block;
 }
 .remote_overlay {
     position: fixed;
