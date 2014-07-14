@@ -583,7 +583,6 @@ function playerProgress(curr_time,total_time)
 function playerPhotoInfo(name,location,views)
 {
     $('#media_controls').hide();
-    $('#big_play_icon').hide();
     $('#photo_info').show();
     $('#photo_info .name').html(name);
     $('#photo_info .location').html(location);
@@ -599,7 +598,6 @@ function playerTrackInfo(track_name,views)
 {
     $('#photo_info').hide();
     $('#media_controls').show();
-    $('#big_play_icon').show();
 
     $('#track_name').html(track_name);
     playerUpdateElementViews(views);
@@ -611,13 +609,11 @@ function playerUpdateElementViews(views)
 
 function playerSetPaused()
 {
-    $('#track_play_pause_button').removeClass('playing');
-    $('#big_play_icon').removeClass('playing');
+    playerShowPaused();
 }
 function playerSetPlaying()
 {
-    $('#track_play_pause_button').addClass('playing');
-    $('#big_play_icon').addClass('playing');
+    playerHidePaused();
 }
 
 

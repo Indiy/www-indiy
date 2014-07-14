@@ -322,7 +322,7 @@ function playlistPlayPause()
             $(playlist.video_container_sel).show();
             $(playlist.video_container_sel + " video").show();
             playlist.video_player.play();
-            $('#big_play_icon').hide();
+            playerHidePaused();
             videoCheckFullscreenLater();
         }
     }
@@ -503,7 +503,6 @@ function videoCheckFullscreen()
         {
             $(sel + " video").hide();
             $(sel).hide();
-            $('#big_play_icon').show();
         }
         else
         {
