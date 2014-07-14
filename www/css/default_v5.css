@@ -62,7 +62,7 @@ body {
 .full_screen_bg { 
     position: fixed; 
     top: 0px;
-    bottom: 21px;
+    bottom: 0px;
     left: 0px;
     right: 0px;
     background-color: transparent;
@@ -1363,15 +1363,18 @@ body {
     left: 0px;
     right: 0px;
     text-align: center;
+    z-index: 1;
 }
 .remote_button .button {
     display: inline-block;
     padding: 15px 15px 8px 15px;
     color: #ec3731;
     font-size: 16px;
+    letter-spacing: 2px;
     background: rgba(0,0,0,0.5);
     border: 1px solid rgba(255,255,255,0.5);
     border-bottom: 0;
+    border-radius: 5px 5px 0px 0px;
 }
 
 .remote {
