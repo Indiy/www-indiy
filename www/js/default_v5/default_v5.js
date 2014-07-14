@@ -53,6 +53,7 @@ function clickRemoteNavPlayToggle()
 function playerShowPaused()
 {
     $('.remote_paused').show();
+    g_mediaAutoStart = false;
 }
 function playerHidePaused()
 {
