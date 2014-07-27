@@ -510,7 +510,7 @@ and (orientation : landscape) {
 @media (max-height: 320px)
 and (orientation : landscape) {
     .home_tab .big_play_icon {
-        margin-top: 95px;
+        margin-top: -95px;
     }
     .home_tab .big_play_icon .text {
         padding-top: 0px;
