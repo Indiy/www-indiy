@@ -88,21 +88,28 @@ body {
     height: 0px;
     background: rgba(0,0,0,0.9);
     transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
     transition: transform 0.5s, height 2s;
+    -webkit-transition: transform 0.5s, height 2s;
+    overflow: hidden;
 }
 .content_tab.open {
     height: auto;
     min-height: 100%;
     transform: translateX(0);
-    trasition: transform 0.5s, height 0s;
+    -webkit-transform: translateX(0);
+    transition: transform 0.5s, height 0s;
+    -webkit-transition: transform 0.5s, height 0s;
 }
 .home_tab.content_tab {
     position: static;
     transform: translateX(100%);
+    -webkit-transform: translateX(100%);
     background: transparent;
 }
 .home_tab.content_tab.open {
     transform: translateX(0);
+    -webkit-transform: translateX(0);
 }
 
 .content_tab .content_tab_spacer {
