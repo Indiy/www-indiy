@@ -71,7 +71,7 @@
     <div id="jquery_jplayer" class="jp-jplayer"></div>
     
     <div class='home_tab content_tab open'>
-        <div class='top_bar'>
+        <div class='top_bar home_tab_item'>
             <div class='left_menu sprite_icon' onclick='clickMenu();'></div>
             <div class='title'><?=$template_params['top_text'];?></div>
             <div class='right_menu'>
@@ -83,14 +83,14 @@
                 </div>
             </div>
         </div>
-        <div id='big_play_icon' class='big_play_icon' onclick='playlistPlayPause();'>
+        <div id='big_play_icon' class='big_play_icon home_tab_item' onclick='playlistPlayPause();'>
             <div class='icon sprite_icon'></div>
             <div class='text'>PLAY</div>
         </div>
 
-        <div class='bottom_title'><?=$template_params['bottom_text'];?></div>
+        <div class='bottom_title home_tab_item'><?=$template_params['bottom_text'];?></div>
 
-        <div class='powered_by'>Powered by myartistdna</div>
+        <div class='powered_by home_tab_item'>Powered by myartistdna</div>
     </div>
 
     <div class='playlist_tab content_tab'>
