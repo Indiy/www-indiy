@@ -15,6 +15,7 @@ window.clickStoreItem = clickStoreItem;
 window.clickSize = clickSize;
 window.clickBuyProduct = clickBuyProduct;
 window.showProductById = showProductById;
+window.showContentTab = showContentTab;
 
 function defaultReady(show_social)
 {
@@ -34,13 +35,11 @@ function defaultReady(show_social)
 
 function clickMenu()
 {
-    $('.content_tab').hide();
-    $('.playlist_tab.content_tab').show();
+    showContentTab('.playlist_tab');
 }
 function clickClose()
 {
-    $('.content_tab').hide();
-    $('.home_tab.content_tab').show();
+    showContentTab('.home_tab');
 }
 function clickPlus()
 {
@@ -81,29 +80,24 @@ function catalogClickPlaylistMediaItem(playlist_index,child_playlist_index,playl
 
 function clickShowTab(i)
 {
-    $('.content_tab').hide();
-    $('#user_tab_' + i).show();
+    showContentTab('#user_tab_' + i);
 }
 function clickShowStore()
 {
-    $('.content_tab').hide();
-    $('.store_list_tab.content_tab').show();
+    showContentTab('.store_list_tab');
 }
 function clickShowSocial()
 {
-    $('.content_tab').hide();
-    $('.social_tab.content_tab').show();
+    showContentTab('.social_tab');
 }
 function clickShowShare()
 {
-    $('.content_tab').hide();
-    $('.share_tab.content_tab').show();
+    showContentTab('.share_tab');
 }
 
 function clickStoreItem(i)
 {
-    $('.content_tab').hide();
-    $('#product_tab_' + i).show();
+    showContentTab('#product_tab_' + i);
     window.scrollTo(0,0);
 }
 function showProductById(product_id)
@@ -144,9 +138,14 @@ function clickBuyProduct(ele,i)
     {
         $(ele).attr('disabled',false);
         
-        $('.content_tab').hide();
-        $('.store_add_success_tab.content_tab').show();
+        showContentTab('.store_add_success_tab');
     });
+}
+
+function showContentTab(name)
+{
+    $('.content_tab').removeClass('open');
+    $('.content_tab' + name).addClass('open');
 }
 
 })();

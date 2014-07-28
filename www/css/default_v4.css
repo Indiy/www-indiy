@@ -9,6 +9,7 @@ body {
     color: white;
     font-family: 'Montserrat', sans-serif;
     background-color: black;
+    overflow-x: hidden;
 }
 
 .hidden {
@@ -80,13 +81,25 @@ body {
 }
 
 .content_tab {
-    display: none;
     position: absolute;
-    left: 0px;
-    right: 0px;
+    left: -100%;
+    width: 100%;
     min-height: 100%;
     background: rgba(0,0,0,0.9);
 }
+.content_tab.open {
+    left: 0px;
+    transition: left 0.5s;
+}
+.home_tab.content_tab {
+    position: absolute;
+    left: 100%;
+    background: transparent;
+}
+.home_tab.content_tab.open {
+    left: 0px;
+}
+
 .content_tab .content_tab_spacer {
     height: 45px;
 }
@@ -148,11 +161,6 @@ body {
     background: rgba(0,0,0,0.5);
 }
 
-.home_tab.content_tab {
-    display: block;
-    position: static;
-    background: transparent;
-}
 .home_tab.content_tab .top_bar {
     background: rgba(0,0,0,0.5);
 }
