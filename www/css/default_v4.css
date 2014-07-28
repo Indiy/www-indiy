@@ -96,8 +96,8 @@ body {
 .content_tab.open {
     height: auto;
     min-height: 100%;
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
+    transform: none;
+    -webkit-transform: none;
     transition: transform 0.5s, height 0s;
     -webkit-transition: transform 0.5s, height 0s;
 }
@@ -108,8 +108,10 @@ body {
     background: transparent;
 }
 .home_tab.content_tab.open {
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
+    min-height: 0px;
+    height: 0px;
+    transform: none;
+    -webkit-transform: none;
 }
 
 .content_tab .content_tab_spacer {
