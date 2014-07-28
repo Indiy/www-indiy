@@ -82,11 +82,12 @@ body {
 
 .content_tab {
     position: absolute;
-    left: 0;
+    top: 0px;
+    left: 0px;
     width: 100%;
     min-height: 100%;
     background: rgba(0,0,0,0.9);
-    transform: translateX(-50%);
+    transform: translateX(-100%);
 }
 .content_tab.open {
     transform: translateX(0);
@@ -94,11 +95,11 @@ body {
 }
 .home_tab.content_tab {
     position: static;
-    transform: translateX(50%);
+    transform: translateX(100%);
     background: transparent;
 }
 .home_tab.content_tab.open {
-    left: 0px;
+    transform: translateX(0);
 }
 
 .content_tab .content_tab_spacer {
