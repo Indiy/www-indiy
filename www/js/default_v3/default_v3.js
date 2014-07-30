@@ -303,5 +303,5 @@ function templateString(name,def)
     {
         val = def;
     }
-    return def;
+    return val;
 }
