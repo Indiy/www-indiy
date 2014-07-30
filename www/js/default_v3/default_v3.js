@@ -22,7 +22,7 @@ function default_v3_ready(show_social)
     
     if( twitter_enabled || facebook_enabled || instagram_enabled )
     {
-        if( false )
+        if( true )
         {
             if( twitter_enabled )
             {
@@ -37,17 +37,6 @@ function default_v3_ready(show_social)
                 showInstagram();
             }
 
-            if( !IS_PHONE && !IS_IPAD && !IS_EMBED )
-            {
-                showSocialFeed();
-            }
-            else
-            {
-                hideSocialFeed();
-            }
-        }
-        else
-        {
             hideSocialFeed();
         }
     }
