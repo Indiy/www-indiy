@@ -229,6 +229,7 @@ function v3_showPlaylistTab()
     hideSocialFeed();
     showContentPage();
     $('#playlist_tab').show();
+    catalogExpandCurrent();
 }
 
 function showTwitter()

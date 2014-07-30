@@ -1,4 +1,9 @@
 
+function catalogExpandCurrent()
+{
+    catalogClickPlaylist(g_currentPlaylistIndex);
+}
+
 function catalogClickPlaylist(index)
 {
     var playlist = g_playlistList[index];
