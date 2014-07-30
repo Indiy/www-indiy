@@ -47,6 +47,10 @@
         {
             return "text/css";
         }
+        else if( $extension == 'js' )
+        {
+            return "text/javascript";
+        }
         return FALSE;
     }
     

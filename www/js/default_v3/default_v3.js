@@ -174,16 +174,16 @@ function hideSocialFeed()
 function toggleSocialFeed()
 {
     hideStore();
-    $('#iphone_show_store_button .button').html('+ SHOW STORE');
+    $('#iphone_show_store_button .button').html(templateString('show_store_text','+ SHOW STORE'));
 
     if( $('#social_box').is(":visible") )
     {
-        $('#iphone_show_social_button .button').html('+ SHOW SOCIAL');
+        $('#iphone_show_social_button .button').html(templateString('show_social_text','+ SHOW SOCIAL'));
         $('#social_box').hide();
     }
     else
     {
-        $('#iphone_show_social_button .button').html('- HIDE SOCIAL');
+        $('#iphone_show_social_button .button').html(templateString('hide_social_text','- HIDE SOCIAL'));
         $('#social_box').show();
         $(document).scrollTop($('#iphone_show_social_button').position().top);
     }
@@ -191,16 +191,16 @@ function toggleSocialFeed()
 function toggleStore()
 {
     $('#social_box').hide();
-    $('#iphone_show_social_button .button').html('+ SHOW SOCIAL');
+    $('#iphone_show_social_button .button').html(templateString('show_social_text','+ SHOW SOCIAL'));
 
     if( $('#store_tab').is(":visible") )
     {
-        $('#iphone_show_store_button .button').html('+ SHOW STORE');
+        $('#iphone_show_store_button .button').html(templateString('show_store_text','+ SHOW STORE'));
         hideStore();
     }
     else
     {
-        $('#iphone_show_store_button .button').html('- HIDE STORE');
+        $('#iphone_show_store_button .button').html(templateString('hide_store_text','- HIDE STORE'));
         showStore();
         $(document).scrollTop($('#iphone_show_store_button').position().top);
     }    
@@ -301,4 +301,18 @@ function toggleFullscreen()
             document.webkitExitFullscreen();
         }
     }
+}
+
+var templateString(name,def)
+{
+    var val = def;
+    if( name in g_templateParams )
+    {
+        val = g_templateParams[name];
+    }
+    if( !val || val.length == 0 )
+    {
+        val = def;
+    }
+    return def;
 }
