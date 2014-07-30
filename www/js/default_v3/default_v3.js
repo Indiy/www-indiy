@@ -303,7 +303,7 @@ function toggleFullscreen()
     }
 }
 
-var templateString(name,def)
+function templateString(name,def)
 {
     var val = def;
     if( name in g_templateParams )
