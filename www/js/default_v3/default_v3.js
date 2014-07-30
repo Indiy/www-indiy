@@ -167,12 +167,12 @@ function toggleSocialFeed()
 
     if( $('#social_box').is(":visible") )
     {
-        $('#iphone_show_social_button .button').html(templateString('show_social_text','+ SHOW SOCIAL'));
+        $('#iphone_show_social_button .button').html(templateString('show_social_feed_text','+ SHOW SOCIAL'));
         $('#social_box').hide();
     }
     else
     {
-        $('#iphone_show_social_button .button').html(templateString('hide_social_text','- HIDE SOCIAL'));
+        $('#iphone_show_social_button .button').html(templateString('hide_social_feed_text','- HIDE SOCIAL'));
         $('#social_box').show();
         $(document).scrollTop($('#iphone_show_social_button').position().top);
     }
@@ -180,7 +180,7 @@ function toggleSocialFeed()
 function toggleStore()
 {
     $('#social_box').hide();
-    $('#iphone_show_social_button .button').html(templateString('show_social_text','+ SHOW SOCIAL'));
+    $('#iphone_show_social_button .button').html(templateString('show_social_feed_text','+ SHOW SOCIAL'));
 
     if( $('#store_tab').is(":visible") )
     {
