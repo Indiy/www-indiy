@@ -1,7 +1,15 @@
 
 function catalogExpandCurrent()
 {
-    catalogClickPlaylist(g_currentPlaylistIndex);
+    for( var i = 0 ; i < g_playlistList.length ; ++i )
+    {
+        if( g_playlistList[i].playlist_id == g_currentPlaylist.playlist_id )
+        {
+            catalogClickPlaylist(i);
+            return;
+        }
+    }
+
 }
 
 function catalogClickPlaylist(index)
