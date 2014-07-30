@@ -22,7 +22,7 @@ function default_v3_ready(show_social)
     
     if( twitter_enabled || facebook_enabled || instagram_enabled )
     {
-        if( show_social )
+        if( false )
         {
             if( twitter_enabled )
             {
