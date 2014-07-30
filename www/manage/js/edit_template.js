@@ -1125,6 +1125,11 @@ var TEMPLATE_SCHEMA =
                 type: 'textbox'
             },
             {
+                name: 'instagram_username',
+                description: 'Instagram Username',
+                type: 'string'
+            },
+            {
                 name: 'ga_account_id',
                 description: 'Google Analytics Id',
                 type: 'string'

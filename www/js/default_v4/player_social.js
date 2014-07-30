@@ -41,10 +41,21 @@ function load_twitter()
 
 function instagramInsert()
 {
-    $('.instagram-lite').instagramLite({
-        clientID: '4456c161ef3849bca5119242b28c64ca',
-        username: 'kobebryant'
-    });
+    var instagram_username = g_templateParams['instagram_username'];
+ 
+    if( instagram_username )
+    {
+        $('.instagram-lite').instagramLite({
+            clientID: '4456c161ef3849bca5119242b28c64ca',
+            username: 'kobebryant'
+        });
+        return true;
+    }
+    else
+    {
+        $('.social_tab .social_buttons .button.instagram').hide();
+        return false;
+    }
 }
 
 })();
