@@ -47,7 +47,7 @@ function instagramInsert()
     {
         $('.instagram-lite').instagramLite({
             clientID: '4456c161ef3849bca5119242b28c64ca',
-            username: 'kobebryant'
+            username: instagram_username
         });
         return true;
     }
