@@ -46,6 +46,10 @@ function default_v3_ready(show_social)
                 hideSocialFeed();
             }
         }
+        else
+        {
+            hideSocialFeed();
+        }
     }
     else
     {
