@@ -107,11 +107,11 @@
             <?php endforeach; ?>
 
             <?php if( $store_enabled ): ?>
-                <div class='show_store show_button' onclick='v3_showStore();'>+ SHOW STORE</div>
-                <div class='hide_store hide_button' style='display: none;' onclick='v3_hideStore();'>- HIDE STORE</div>
+                <div class='show_store show_button' onclick='v3_showStore();'><?=template_string("show_store_text","+ SHOW STORE");?></div>
+                <div class='hide_store hide_button' style='display: none;' onclick='v3_hideStore();'><?=template_string("hide_store_text","- HIDE STORE");?></div>
             <?php endif; ?>
-            <div class='show_feed show_button' onclick='showSocialFeed();'>+ SHOW SOCIAL FEED</div>
-            <div class='hide_feed hide_button' style='display: none;' onclick='hideSocialFeed();'>- HIDE SOCIAL FEED</div>
+            <div class='show_feed show_button' onclick='showSocialFeed();'><?=template_string("show_social_text","+ SHOW SOCIAL FEED");?></div>
+            <div class='hide_feed hide_button' style='display: none;' onclick='hideSocialFeed();'><?=template_string("hide_social_text","- HIDE SOCIAL");?></div>
         </div>
     </div>
 
