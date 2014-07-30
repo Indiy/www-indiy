@@ -148,6 +148,8 @@ function clickSocial(type)
 {
     $('.social_tab .social_item').hide();
     $('.social_tab .social_item.social_' + type).show();
+    $('.social_tab .social_buttons .button').removeClass('active');
+    $('.social_tab .social_buttons .button.' + type).addClass('active');
 }
 
 function showContentTab(name)

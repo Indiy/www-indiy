@@ -366,14 +366,19 @@ body {
 
 .social_tab .social_buttons {
     text-align: center;
+    margin-top: 15px;
 }
 .social_tab .social_buttons .button {
     display: inline-block;
-    padding: 5px 10px 10px 5px;
-    margin: 0px 10px 10px 0px;
+    padding: 5px 10px 5px 10px;
+    margin: 0px 10px 0px 10px;
     background: #333;
     border: 1px solid #777;
     border-radius: 5px;
+    cursor: pointer;
+}
+.social_tab .social_buttons .button.active {
+    background: #555;
 }
 
 .social_tab .social_item {
@@ -382,7 +387,7 @@ body {
 .social_tab .social_item.social_twitter {
     display: block;
     position: absolute;
-    top: 60px;
+    top: 90px;
     bottom: 10px;
     left: 9px;
     right: 9px;
@@ -392,6 +397,10 @@ body {
 }
 .social_tab .social_item.social_instagram ul {
     list-style-type: none;
+    padding-bottom: 50px;
+}
+.social_tab .social_item.social_instagram ul li {
+    padding-bottom: 10px;
 }
 .social_tab .social_item.social_instagram ul li img {
     max-width: 90%;
