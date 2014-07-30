@@ -146,7 +146,7 @@
         <?php if( $store_enabled ): ?>
             <div id='iphone_pad'></div>
             <div id='iphone_show_store_button' class='button_container'>
-                <div class='button' onclick='toggleStore();'>+ SHOW STORE</div>
+                <div class='button' onclick='toggleStore();'><?=template_string("show_store_text","+ SHOW STORE");?></div>
             </div>
         <?php endif; ?>
         <div id='iphone_pad'></div>
@@ -340,9 +340,9 @@
             <div class='name'>CLOSE</div>
         </div>
         <div class='headers'>
-            <div class='header column1'>Artists</div>
-            <div class='header column2'>Playlists</div>
-            <div class='header column3'>Media</div>
+            <div class='header column1'><?=template_string("playlist_artists_text","Artists");?></div>
+            <div class='header column2'><?=template_string("playlist_playlists_text","Playlists");?></div>
+            <div class='header column3'><?=template_string("playlist_media_text","Media");?></div>
         </div>
         <div class='content_container'>
             <div class='scrollable_container scrollbar-pane'>
