@@ -1021,6 +1021,13 @@ var TEMPLATE_SCHEMA =
             footer_right: '&copy;2012 Powered by <a href="http://myartistdna.com">MyArtistDNA</a>',
             iphone_top_text: '#MAYBACHMUSICTV',
             iphone_bottom_text: '#SELFMADE3',
+            show_social_feed_text: '+ SHOW SOCIAL FEED',
+            hide_social_feed_text: '- HIDE SOCIAL FEED',
+            show_store_text: '+ SHOW STORE',
+            hide_store_text: '- HIDE STORE',
+            playlist_artist_text: 'ARTISTS',
+            playlist_playlists_text: 'PLAYLISTS',
+            playlist_media_text: 'MEDIA',
             ga_account_id: ''
         },
         arg_list:
@@ -1084,6 +1091,41 @@ var TEMPLATE_SCHEMA =
                 name: 'tracker_bar_texture',
                 description: 'Tracker Bar Texture',
                 type: 'image'
+            },
+            {
+                name: 'show_social_feed_text',
+                description: 'Show Social Feed',
+                type: 'string'
+            },
+            {
+                name: 'hide_social_feed_text',
+                description: 'Hide Social Feed',
+                type: 'string'
+            },
+            {
+                name: 'show_store_text',
+                description: 'Show Store',
+                type: 'string'
+            },
+            {
+                name: 'hide_store_text',
+                description: 'Hide Store',
+                type: 'string'
+            },
+            {
+                name: 'playlist_artist_text',
+                description: 'Playlist Artist Label',
+                type: 'string'
+            },
+            {
+                name: 'playlist_playlists_text',
+                description: 'Playlist Playlists Label',
+                type: 'string'
+            },
+            {
+                name: 'playlist_media_text',
+                description: 'Playlist Media Label',
+                type: 'string'
             },
             {
                 name: 'ga_account_id',

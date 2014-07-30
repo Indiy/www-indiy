@@ -2097,5 +2097,16 @@ END;
         $row['image_extra'] = $image_extra;
         return $row;
     }
+    
+    function template_string($name,$def)
+    {
+        global $template_params;
+        $val = $template_params[$name];
+        if( !$val || strlen($val) == 0 )
+        {
+            $val = $def;
+        }
+        return $val;
+    }
 
 ?>
