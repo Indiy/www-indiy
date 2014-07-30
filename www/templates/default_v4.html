@@ -27,6 +27,7 @@
 
     <script src="<?=static_file_url('/js/jquery.mousewheel.js');?>" type="text/javascript"></script>
     <script src="<?=static_file_url('/js/jquery.jplayer.js');?>" type="text/javascript"></script>
+    <script src="<?=static_file_url('/js/instagramLite.js');?>" type="text/javascript"></script>
     <script src="<?=static_file_url('/js/string.utils.js');?>" type="text/javascript"></script>
     <script src="<?=static_file_url('/js/mad.scrollbar.js');?>" type="text/javascript"></script>
     <script src="<?=static_file_url('/js/mad.swipe.js');?>" type="text/javascript"></script>
@@ -173,7 +174,14 @@
             </div>
         </div>
         <div class='content_tab_spacer'></div>
+        <div class='social_buttons'>
+            <div class='button twitter' onclick="clickSocial('twitter');">Twitter</div>
+            <div class='button instagram' onclick="clickSocial('instagram');">Instagram</div>
+        </div>
         <div id='social_twitter' class='social_twitter social_item'></div>
+        <div id='social_instagram' class='social_instagram social_item'>
+            <ul class="instagram-lite"></ul>
+        </div>
     </div>
     
     <div class='share_tab content_tab'>

@@ -16,6 +16,7 @@ window.clickSize = clickSize;
 window.clickBuyProduct = clickBuyProduct;
 window.showProductById = showProductById;
 window.showContentTab = showContentTab;
+window.clickSocial = clickSocial;
 
 function defaultReady(show_social)
 {
@@ -30,6 +31,7 @@ function defaultReady(show_social)
     }
 
     twitterInsert();
+    instagramInsert();
 }
 // defaultReady is run from generalOnReady
 
@@ -140,6 +142,12 @@ function clickBuyProduct(ele,i)
         
         showContentTab('.store_add_success_tab');
     });
+}
+
+function clickSocial(type)
+{
+    $('.social_tab .social_item').hide();
+    $('.social_tab .social_item.social_' + type).show();
 }
 
 function showContentTab(name)

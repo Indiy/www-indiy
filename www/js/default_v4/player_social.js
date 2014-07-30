@@ -1,6 +1,7 @@
 (function(){
 
 window.twitterInsert = twitterInsert;
+window.instagramInsert = instagramInsert;
 
 function twitterInsert()
 {
@@ -36,6 +37,14 @@ function load_twitter()
     {
         window.setTimeout(load_twitter,300);
     }
+}
+
+function instagramInsert()
+{
+    $('.instagram-lite').instagramLite({
+        clientID: '4456c161ef3849bca5119242b28c64ca',
+        username: 'kobebryant'
+    });
 }
 
 })();
