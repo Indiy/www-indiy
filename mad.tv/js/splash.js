@@ -52,7 +52,7 @@ function renderGenreList()
         
         var html = "<a href='player.html?genre_id=" + id + "'>";
         html += "<div class='item " + cls + "'>";
-        html += "<div class='label'>I WANT " + name + "</div>";
+        html += "<div class='label'>WATCH NOW</div>";
         html += "<div class='icon'></div>";
         html += "</div>";
         html += "</a>";
