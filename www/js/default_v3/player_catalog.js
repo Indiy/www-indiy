@@ -3,10 +3,26 @@ function catalogExpandCurrent()
 {
     for( var i = 0 ; i < g_playlistList.length ; ++i )
     {
-        if( g_playlistList[i].playlist_id == g_currentPlaylist.playlist_id )
+        var pl = g_playlistList[i];
+        if( pl.type == 'DIR' )
         {
-            catalogClickPlaylist(i);
-            return;
+            for( var j = 0 ; j < pl.items.length ; ++j )
+            {
+                var pl2 = pl.items[j];
+                if( pl2.playlist_id == g_currentPlaylist.playlist_id )
+                {
+                    catalogClickPlaylist(i);
+                    return;
+                }
+            }
+        }
+        else
+        {
+            if( pl.playlist_id == g_currentPlaylist.playlist_id )
+            {
+                catalogClickPlaylist(i);
+                return;
+            }
         }
     }
 
