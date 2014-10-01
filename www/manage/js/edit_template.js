@@ -1142,6 +1142,7 @@ var TEMPLATE_SCHEMA =
             top_text: 'KID CUDI',
             bottom_text: '#thekingofpop',
             twitter_widget: '',
+            footer_text: 'Powered by myartistdna',
             ga_account_id: ''
         },
         arg_list:
@@ -1169,6 +1170,11 @@ var TEMPLATE_SCHEMA =
             {
                 name: 'instagram_username',
                 description: 'Instagram Username',
+                type: 'string'
+            },
+            {
+                name: 'footer_text',
+                description: 'Footer Text',
                 type: 'string'
             },
             {
