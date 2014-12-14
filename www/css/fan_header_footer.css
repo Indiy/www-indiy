@@ -131,7 +131,8 @@
     
     margin-top: -186px;
     clear:both;
-    
+
+    color: white;
     font-family:"Neuzeit Grotesk",Arial, Helvetica, sans-serif;
 }
 #footer .pad {
@@ -145,6 +146,9 @@
 #footer p {
     margin: 0;
     padding: 0;
+}
+#footer a {
+    color: white;
 }
 
 #footer footer { width:940px; margin:0 auto; }
