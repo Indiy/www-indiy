@@ -1,75 +1,11 @@
 <div id='header'>
     <div class='top_bar'>
         <div class='inner'>
-            <? if( $fan_email ): ?>
-                <div class='right'>
-                    <div class='fan_email'><?=$fan_email;?></div>
-                    <div class='bar'></div>
-                    <a href='/logout.php'><div class='logout'>Logout</div></a>
-                </div>
-            <? endif; ?>
         </div>
     </div>
     <div class='mad_bar'>
         <div class='inner'>
             <a href="/home.php"><div class='logo'></div></a>
-            <div class='right'>
-            
-                <? if( isset($_SESSION['sess_userId']) ): ?>
-                    <a href="/manage/">
-                        <div class='item'>
-                            <div class='name'>Artist Home</div>
-                            <div class='arrow'></div>
-                        </div>
-                        <div class='sep'>//</div>
-                    </a>
-                <? endif; ?>
-
-                <? if( $show_fan_login === TRUE ): ?>
-                    <a href="/login.php">
-                        <div class='item'>
-                            <div class='name'>Login</div>
-                            <div class='arrow'></div>
-                        </div>
-                    </a>
-                <? else: ?>
-                    <a href="/fan/">
-                        <div class='item'>
-                            <div class='name'>Home</div>
-                            <div class='arrow'></div>
-                        </div>
-                    </a>
-                <? endif; ?>
-
-                <div class='sep'>//</div>
-                <a href="/home.php">
-                    <div class='item'>
-                        <div class='name'>Discover</div>
-                        <div class='arrow'></div>
-                    </div>
-                </a>
-                <div class='sep'>//</div>
-                <a href="http://myartistdna.tumblr.com">
-                    <div class='item'>
-                        <div class='name'>Read</div>
-                        <div class='arrow'></div>
-                    </div>
-                </a>
-                <div class='sep'>//</div>
-                <a href="http://www.myartistdna.fm">
-                    <div class='item'>
-                        <div class='name'>Listen</div>
-                        <div class='arrow'></div>
-                    </div>
-                </a>
-                <div class='sep'>//</div>
-                <a href="http://www.myartistdna.tv">
-                    <div class='item'>
-                        <div class='name'>Watch</div>
-                        <div class='arrow'></div>
-                    </div>
-                </a>
-            </div>
         </div>
     </div>
 </div>
