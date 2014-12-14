@@ -58,6 +58,8 @@
 		2D16391D166AEBB700297030 /* convert_video.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = convert_video.php; sourceTree = "<group>"; };
 		2D163920166BB67500297030 /* unsupported_browser.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = unsupported_browser.html; sourceTree = "<group>"; };
 		2D163921166BBB5300297030 /* unsupported_browser.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = unsupported_browser.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2D175DC41A3E351A007064B8 /* header3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = header3.html; sourceTree = "<group>"; };
+		2D175DC51A3E352F007064B8 /* footer3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = footer3.html; sourceTree = "<group>"; };
 		2D1CBBFD1448FE4B008A3474 /* unsupported_browser.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = unsupported_browser.php; sourceTree = "<group>"; };
 		2D25C38715D43BCE00132306 /* fan.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = fan.js; sourceTree = "<group>"; };
 		2D25C38C15D96E2400132306 /* player.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = player.php; sourceTree = "<group>"; };
@@ -1533,13 +1535,15 @@
 				2D8D96ED1599781A00AA3D1B /* order_details.html */,
 				2DC262C415EEC76900CA560F /* fan_header.html */,
 				2DC262C215EEC67400CA560F /* footer.html */,
+				2DEADAB21618C0320076F95D /* header2.html */,
+				2DEADAB31618C0410076F95D /* footer2.html */,
+				2D175DC41A3E351A007064B8 /* header3.html */,
+				2D175DC51A3E352F007064B8 /* footer3.html */,
 				2DC262E815FFD6A400CA560F /* signup.html */,
 				2D8949231614D58700538B7F /* login.html */,
 				2DEADABA1618E3AD0076F95D /* forgot_password.html */,
 				2DEADABD1618F7960076F95D /* recover_account.html */,
 				2DEADA9D1613A27C0076F95D /* home.html */,
-				2DEADAB21618C0320076F95D /* header2.html */,
-				2DEADAB31618C0410076F95D /* footer2.html */,
 				2D163920166BB67500297030 /* unsupported_browser.html */,
 				2DEADAAD16180E670076F95D /* email_artist_signup.html */,
 				2DEADABE1619039A0076F95D /* email_fan_signup.html */,
