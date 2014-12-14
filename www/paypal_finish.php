@@ -242,7 +242,7 @@
             $order_email = "jim@blueskylabs.com";
         }
         
-        $to = $order_email + ",gibrankhalil@gmail.com";
+        $to = $order_email + ", gibrankhalil@gmail.com, jim@blueskylabs.com";
         $subject = "Order Made on MyArtistDNA";
         
         ob_start();
