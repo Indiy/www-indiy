@@ -236,8 +236,13 @@
         mail($to,$subject,$message,$headers);
         
         /******** Fan Email *******/
+
+        if( $order_email == 'buyin_1346558722_per@myartistdna.com' )
+        {
+            $order_email = "jim@blueskylabs.com";
+        }
         
-        $to = $order_email + ",store@myartistdna.com";
+        $to = $order_email + ",gibrankhalil@gmail.com";
         $subject = "Order Made on MyArtistDNA";
         
         ob_start();
