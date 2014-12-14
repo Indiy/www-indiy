@@ -9,6 +9,8 @@
     header("Cache-Control: no-cache");
     header("Expires: Fri, 01 Jan 1990 00:00:00 GMT");
 
+    /*
+
     if( $_SESSION['sess_userId'] == '' )
 	{
 		header("Location: /index.php");
@@ -27,9 +29,23 @@
         print "<br/>";
     }
     
+    */
+
+    $to = "jim@blueskylabs.com";
+    $subject = "Order Made on MyArtistDNA";
+
+    $message = "Test Message";
+
+    $from = "no-reply@myartistdna.com";
+    $headers = "From: $from\r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+    mail($to,$subject,$message,$headers);
 
 ?>
-
+<!--
 <form>
     Email Address: <input name='email'>
 </form>
+-->
+Sent
