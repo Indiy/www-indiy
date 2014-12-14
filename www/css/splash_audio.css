@@ -10,27 +10,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Agency Regular';
-    src: url('/fonts/agencyr.eot');
-    src: url('/fonts/agencyr.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/agencyr.woff') format('woff'),
-    url('/fonts/agencyr.ttf') format('truetype'),
-    url('/fonts/agencyr.svg#AGENCYR') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Agency Bold';
-    src: url('/fonts/agencyb.eot');
-    src: url('/fonts/agencyb.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/agencyb.woff') format('woff'),
-    url('/fonts/agencyb.ttf') format('truetype'),
-    url('/fonts/agencyb.svg#AGENCYB') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 html {
     margin: 0;
     padding: 0;
@@ -187,7 +166,9 @@ body {
 #footer .audio_player .album_image {
     display: inline-block;
     padding-top: 9px;
+    padding-left: 30px;
     width: 78px;
+    float: left;
     height: 78px;
     vertical-align: top;
 }
