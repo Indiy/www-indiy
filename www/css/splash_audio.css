@@ -293,7 +293,7 @@ and (max-device-width : 480px) {
 
     #main_content {
         min-width: 320px;
-        min-height: 480px;
+        min-height: 370px;
         overflow-x: hidden;
     }
     .top_title1 {
@@ -338,7 +338,7 @@ and (max-device-width : 480px) {
         left: 0px;
         top: 0px;
         bottom: 0px;
-        right: 155px;
+        right: 135px;
         padding-top: 14px;
         padding-left: 10px;
         padding-right: 10px;
@@ -354,7 +354,7 @@ and (max-device-width : 480px) {
     }
     
     #footer .audio_player .controls {
-        width: 155px;
+        width: 135px;
         padding-left: 0px;
         padding-right: 10px;
         font-size: 0px;
@@ -362,15 +362,15 @@ and (max-device-width : 480px) {
     }
     #footer .audio_player .controls .prev {
         margin-left: 0px;
-        margin-right: 8px;
+        margin-right: 0px;
     }
     #footer .audio_player .controls .play_pause {
         margin-left: 0px;
-        margin-right: 8px;
+        margin-right: 0px;
     }
     #footer .audio_player .controls .next {
         margin-left: 0px;
-        margin-right: 8px;
+        margin-right: 0px;
     }
 
     
@@ -379,7 +379,7 @@ and (max-device-width : 480px) {
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     /* iPhone 5 or iPod Touch 5th generation */
     #main_content {
-        min-height: 504px;
+        min-height: 460px;
     }
 }
 
