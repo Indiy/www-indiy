@@ -158,8 +158,6 @@ body {
     overflow: hidden;
 }
 #footer .slider .audio_player {
-    margin-left: auto;
-    margin-right: auto;
     font-size: 20px;
 }
 #footer .audio_player .album_image {
@@ -211,10 +209,11 @@ font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
     text-align: center;
 }
 #footer .audio_player .controls {
-    display: inline-block;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
     padding-left: 20px;
-    vertical-align: top;
-    float: right;
     padding-right: 30px;
 }
 #footer .audio_player .controls .prev {
