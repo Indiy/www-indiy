@@ -158,10 +158,9 @@ body {
     overflow: hidden;
 }
 #footer .slider .audio_player {
-    width: 630px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 0px;
+    font-size: 20px;
 }
 #footer .audio_player .album_image {
     display: inline-block;
