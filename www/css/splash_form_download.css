@@ -147,14 +147,16 @@ body {
     padding-left: 6px;
     color: white;
     font-size: 22px;
-font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;    text-align: left;
+    font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;    
+    text-align: left;
 }
 #top_container .top_line .colon {
     padding-right: 20px;
     margin-top: -8px;
     color: white;
     font-size: 114px;
-font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;}
+    font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;}
+
 #top_container .hline {
     display: inline-block;
     height: 3px;
@@ -169,7 +171,8 @@ font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;}
     padding-bottom: 8px;
     color: white;
     font-size: 71px;
-font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;    text-align: center;
+    font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;    
+    text-align: center;
     letter-spacing: 1px;
     line-height: 71px;
 }
@@ -316,8 +319,9 @@ font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;    text-align: left
     width: 257px;
     height: 37px;
     color: white;
-    font-size: 30px;
-font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;    text-align: right;
+    font-size: 24px;
+    margin:0px auto;
+    font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;    text-align: right;
     border: 4px solid white;
     border-radius: 4px;
     background: #008b8a;
@@ -695,7 +699,9 @@ and (max-device-width : 480px) {
     #footer .banner .right .top {
         height: 20px;
         font-size: 14px;
-font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;    }
+        font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
+    }
+
     #footer .banner .right .bottom {
         display: none;
     }
