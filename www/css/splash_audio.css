@@ -289,7 +289,6 @@ and (orientation : landscape) {
 }
 
 @media only screen
-and (min-device-width : 320px)
 and (max-device-width : 480px) {
 
     #main_content {
@@ -355,12 +354,9 @@ and (max-device-width : 480px) {
     }
     
     #footer .audio_player .controls {
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        bottom: 0px;
         width: 155px;
         padding-left: 0px;
+        padding-right: 10px;
         font-size: 0px;
         text-align: right;
     }
