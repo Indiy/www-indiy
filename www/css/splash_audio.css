@@ -214,6 +214,8 @@ font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
     display: inline-block;
     padding-left: 20px;
     vertical-align: top;
+    float: right;
+    padding-right: 30px;
 }
 #footer .audio_player .controls .prev {
     display: inline-block;
