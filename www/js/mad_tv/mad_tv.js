@@ -154,18 +154,17 @@ function hideHistory()
 }
 function updateHistory()
 {
-    var video_history = getPreviousVideolist();
+    var video_list = getPreviousVideoList();
 
     $('#history .content').empty();
     var html = "";
     for( var i = 0 ; i < video_list.length ; ++i )
     {
-        var video = video_history[i];
+        var video = video_list[i];
         var title = video.title;
         var duration = mins_secs(video.durationSec);
-        var love = "";
-        if( title in g_loveMap )
-            love = "love";
+
+        var love = loveIsLoved(title) ? "love" : "";
         
         var img = "<img onerror='$(this).hide();' src='{0}'>".format(video.logo);
 
@@ -174,7 +173,7 @@ function updateHistory()
         html += " <div class='title'>" + title + "</div>";
         html += " <div class='length'>" + duration + "</div>";
         html += " <div id='history_loved_" + i + "' class='loved " + love + "'>";
-        html += "  <div class='love_icon' onclick='toggleLoveHistory(this," + i + ");'>";
+        html += "  <div class='love_icon' onclick='toggleLoveHistory(this,{0},{1});'>".format(i,title);
         html += "   <div class='tooltip love_tip'>";
         html += "    <div class='carrot'></div>";
         html += "    LOVE";
@@ -267,7 +266,7 @@ function updateVideoDisplay()
     var video = getCurrentVideo();
     var title = video.title;
     $('#track_title').text(title);
-    if( title in g_loveMap )
+    if( loveIsLoved(title) )
         $('#player .heart').addClass('love');
     else
         $('#player .heart').removeClass('love');
@@ -373,19 +372,47 @@ function videoEnded()
     updateVideoElement();
 }
 
-var MAX_SEEK_FREQUENCY = 2000;
+var MAX_SEEK_FREQUENCY = 2*1000;
+var MIN_SEEK_MS = 10*1000;
 
 var g_lastSeek = 0;
 function maybeSeekVideo()
 {
+    var video = getCurrentVideo();
+    var time_ms = getCorrectTime();
+
+    var pos_ms = getCurrentTime() * 1000;
+
+    var video_time_ms = video.startTimeMS + pos_ms;
+
+    var video_delta_ms = time_ms - video_time_ms;
+    if( Math.abs(video_delta_ms) > MIN_SEEK_MS )
+    {
+        var now = Date.now();
+        var seek_delta = now - g_lastSeek;
+
+        if( seek_delta < MAX_SEEK_FREQUENCY )
+        {
+            window.setTimeout(maybeSeekVideo,MAX_SEEK_FREQUENCY);
+        }
+        else
+        {
+            g_lastSeek = now;
+            var seek_secs = (video_delta_ms + pos_ms) / 1000;
+            if( seek_secs > video.durationSec )
+            {
+                seek_secs = video.durationSec - 2;
+            }
+            setCurrentTime(seek_secs);
+        }
+    }
+
     /*
     var video = g[0];
     var time_progress = Math.floor((new Date().getTime())/1000 - video.start_time);
     if( time_progress > video.duration * 0.9 )
         time_progress = Math.floor(video.duration * 0.9);
     g_seekOnPlay = time_progress;
-
-    */
 
     if( g_seekOnPlay !== false )
     {
@@ -410,6 +437,7 @@ function maybeSeekVideo()
             }
         }
     }
+    */
 }
 
 function setCurrentTime(new_time)
@@ -487,7 +515,7 @@ function getCurrentVideo()
     return ret;
 }
 
-function getPreviousVideolist()
+function getPreviousVideoList()
 {
     calcVideoHistory();
 

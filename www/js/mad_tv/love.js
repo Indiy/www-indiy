@@ -5,48 +5,66 @@ var g_loveMap = {};
 
 $(document).ready(loadLoved);
 
-function toggleLoveTrack(track)
+function toggleLoveTrack(video)
 {
-    var title = track.title;
+    var title = video.title;
+    var ret = false;
     if( title in g_loveMap )
     {
         delete g_loveMap[title];
-        return false;
+        ret = false;
     }
     else 
     {
         addLoved(title);
-        showLoved(track);
-        return true;
+        showLoved(video);
+        ret = true;
     }
+    saveLoved();
+    return ret;
 }
 function toggleLoveCurrent()
 {
-    var track = g_videoHistory[0];
-    if( toggleLoveTrack(track) )
+    var video = getCurrentVideo();
+    if( toggleLoveTrack(video) )
+    {
         $('#player .heart').addClass('love');
+    }
     else
+    {
         $('#player .heart').removeClass('love');
+    }
 }
 function toggleLoveHistory(self,i)
 {
-    var track = g_videoHistory[i];
-    if( toggleLoveTrack(track) )
+    var video_list = getPreviousVideoList();
+    var video = video_list[i];
+    if( toggleLoveTrack(video) )
+    {
         $('#history_loved_' + i).addClass('love');
+    }
     else
+    {
         $('#history_loved_' + i).removeClass('love');
+    }
 }
 
 function addLoved(title)
 {
+    g_loveMap[title] = true;
+    saveLoved();
+}
+
+function saveLoved()
+{
     try
     {
-        g_loveMap[title] = true;
         var json = JSON.stringify(g_loveMap);
         window.localStorage["love_map"] = json;
     }
     catch(e) {}
 }
+
 function loadLoved()
 {
     try 
@@ -61,19 +79,20 @@ function loadLoved()
     catch(e) {}
 }
 
-function showLoved(track)
+function showLoved(video)
 {
     //hideGenrePicker();
     
-    var artist = track.artist;
-    var video = track.name;
+    var artist = g_artistName;
+    var title = video.title;
+    var quoted_title = "\"{0}\"".format(title);
     
-    $('#video_love .dialog .header .title span').text('"' + video + '"');
+    $('#video_love .dialog .header .title span').text(quoted_title);
     
     var link_url = "http://www.myartistdna.tv"
     var host = "www.myartistdna.tv"
-    var msg = 'Check out ' + artist + '\'s video "' + video + '" on MyArtistDNA.TV';
-    var name = 'MyArtistDNA.FM';
+    var msg = "Check out {0}'s video {1} on MyArtistDNA.TV".format(artist,quoted_title);
+    var name = "MyArtistDNA.TV";
     
     $('#fb_link').attr('href','http://www.facebook.com/sharer/sharer.php?u=' + host);
     $('#tw_link').attr('href','http://twitter.com/?status=' + encodeURIComponent(msg));
@@ -100,5 +119,9 @@ function hideLoved()
     $('#video_love').fadeOut();
 }
 
+function loveIsLoved(title)
+{
+    return title in g_loveMap;
+}
 
 
