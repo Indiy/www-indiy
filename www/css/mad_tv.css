@@ -131,52 +131,52 @@ body {
     border-left: 1px solid #3c3c3a;
 }
 #player .play {
-    background: transparent url("/images/controls.png") -5px -86px no-repeat;
+    background: transparent url("/images/tv_controls.png") -5px -86px no-repeat;
 }
 #player .play.paused {
-    background: transparent url("/images/play.png") 9px 6px no-repeat;
+    background: transparent url("/images/tv_play.png") 9px 6px no-repeat;
 }
 .no_touch #player .play.paused:hover {
-    background: transparent url("/images/play-hover.png") 9px 6px no-repeat;
+    background: transparent url("/images/tv_play-hover.png") 9px 6px no-repeat;
 }
 #player .right_arrow {
-    background: transparent url("/images/controls.png") -71px -86px no-repeat;
+    background: transparent url("/images/tv_controls.png") -71px -86px no-repeat;
 }
 #player .left_arrow {
-    background: transparent url("/images/controls.png") -606px -86px no-repeat;
+    background: transparent url("/images/tv_controls.png") -606px -86px no-repeat;
 }
 #player .genre {
-    background: transparent url("/images/controls.png") -670px -86px no-repeat;
+    background: transparent url("/images/tv_controls.png") -670px -86px no-repeat;
 }
 #player .plus {
-    background: transparent url("/images/controls.png") -740px -86px no-repeat;
+    background: transparent url("/images/tv_controls.png") -740px -86px no-repeat;
 }
 #player .heart {
-    background: transparent url("/images/controls.png") -802px -86px no-repeat;
+    background: transparent url("/images/tv_controls.png") -802px -86px no-repeat;
 }
 .no_touch #player .play:hover {
-    background: transparent url("/images/controls.png") -5px -16px no-repeat;
+    background: transparent url("/images/tv_controls.png") -5px -16px no-repeat;
 }
 .no_touch #player .right_arrow:hover {
-    background: transparent url("/images/controls.png") -71px -16px no-repeat;
+    background: transparent url("/images/tv_controls.png") -71px -16px no-repeat;
 }
 .no_touch #player .left_arrow:hover {
-    background: transparent url("/images/controls.png") -606px -16px no-repeat;
+    background: transparent url("/images/tv_controls.png") -606px -16px no-repeat;
 }
 .no_touch #player .genre:hover {
-    background: transparent url("/images/controls.png") -670px -16px no-repeat;
+    background: transparent url("/images/tv_controls.png") -670px -16px no-repeat;
 }
 .no_touch #player .plus:hover {
-    background: transparent url("/images/controls.png") -740px -16px no-repeat;
+    background: transparent url("/images/tv_controls.png") -740px -16px no-repeat;
 }
 .no_touch #player .heart:hover {
-    background: transparent url("/images/controls.png") -802px -16px no-repeat;
+    background: transparent url("/images/tv_controls.png") -802px -16px no-repeat;
 }
 #player .heart.love {
-    background: transparent url("/images/controls.png") -802px -16px no-repeat;
+    background: transparent url("/images/tv_controls.png") -802px -16px no-repeat;
 }
 .no_touch #player .heart.love:hover {
-    background: transparent url("/images/controls.png") -802px -86px no-repeat;
+    background: transparent url("/images/tv_controls.png") -802px -86px no-repeat;
 }
 #player #history {
     display: none;
@@ -303,17 +303,17 @@ body {
     position: relative;
     height: 30px;
     width: 30px;
-    background: transparent url("/images/controls.png") -802px -86px no-repeat;
+    background: transparent url("/images/tv_controls.png") -802px -86px no-repeat;
     cursor: pointer;
 }
 .no_touch #history .content .row .loved .love_icon:hover {
-    background: transparent url("/images/controls.png") -802px -16px no-repeat;
+    background: transparent url("/images/tv_controls.png") -802px -16px no-repeat;
 }
 #history .content .row .loved.love .love_icon {
-    background: transparent url("/images/controls.png") -802px -16px no-repeat;
+    background: transparent url("/images/tv_controls.png") -802px -16px no-repeat;
 }
 .no_touch #history .content .row .loved.love .love_icon:hover {
-    background: transparent url("/images/controls.png") -802px -86px no-repeat;
+    background: transparent url("/images/tv_controls.png") -802px -86px no-repeat;
 }
 #history .content .row .loved .love_icon .tooltip.love_tip {
     left: -22px;
@@ -419,11 +419,11 @@ body {
     right: 14px;
     width: 19px;
     height: 19px;
-    background: url("/images/close.png");
+    background: url("/images/tv_close.png");
     cursor: pointer;
 }
 .no_touch #add_video .dialog .header .close:hover {
-    background: url("/images/close-hover.png");
+    background: url("/images/tv_close-hover.png");
 }
 #add_video .dialog .description {
     height: 60px;
@@ -553,11 +553,11 @@ body {
     right: 14px;
     width: 19px;
     height: 19px;
-    background: url("/images/close.png");
+    background: url("/images/tv_close.png");
     cursor: pointer;
 }
 .no_touch #video_love .dialog .header .close:hover {
-    background: url("/images/close-hover.png");
+    background: url("/images/tv_close-hover.png");
 }
 #video_love .dialog .description {
     height: 40px;
@@ -604,22 +604,22 @@ body {
     background-color: #e07329;
 }
 #video_love .dialog .links .item.facebook .icon {
-    background: url("/images/fb_icon.png");
+    background: url("/images/tv_fb_icon.png");
 }
 #video_love .dialog .links .item.twitter .icon {
-    background: url("/images/tw_icon.png");
+    background: url("/images/tv_tw_icon.png");
 }
 #video_love .dialog .links .item.tumblr .icon {
-    background: url("/images/tumblr_icon.png");
+    background: url("/images/tv_tumblr_icon.png");
 }
 #video_love .dialog .links .item.pinterest .icon {
-    background: url("/images/pin_icon.png");
+    background: url("/images/tv_pin_icon.png");
 }
 #video_love .dialog .links .item.google .icon {
-    background: url("/images/google_icon.png");
+    background: url("/images/tv_google_icon.png");
 }
 #video_love .dialog .links .item.email .icon {
-    background: url("/images/email_icon.png");
+    background: url("/images/tv_email_icon.png");
 }
 #video_love .dialog .links .item .name {
     display: inline-block;
@@ -664,7 +664,7 @@ body {
     display: inline-block;
     width: 44px;
     height: 44px;
-    background: url("/images/itunes_icon.png");
+    background: url("/images/tv_itunes_icon.png");
 }
 #video_love .dialog .buy_container .buy .name {
     display: inline-block;
