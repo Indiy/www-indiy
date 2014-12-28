@@ -448,6 +448,10 @@
         {
             include_once 'templates/mad_stream.html';
         }
+        else if( $template_type == 'PLAYER_MAD_TV' )
+        {
+            include_once 'templates/mad_tv.html';
+        }
     }
     else
     {
