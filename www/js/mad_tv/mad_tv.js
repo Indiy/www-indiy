@@ -269,6 +269,8 @@ function updateVideoElementInProgress()
 function updateVideoElement()
 {
     var video = getCurrentVideo();
+    console.log("updateVideoElement: new video:",video);
+
     var url = video.video_file;
     var url_ogv = false;
     if( video.video_extra && video.video_extra.alts && video.video_extra.alts.ogv )
@@ -409,7 +411,7 @@ function maybeSeekVideo()
             {
                 seek_secs = video.durationSec - 2;
             }
-            console.log("seek to secs:",seek_secs,",pos_ms:",pos_ms,"video.startTimeMS:",video.startTimeMS,"video_delta_ms:",video_delta_ms);
+            console.log("seek to secs:",seek_secs,"pos_ms:",pos_ms,"video.startTimeMS:",video.startTimeMS,"video_delta_ms:",video_delta_ms);
             setCurrentTime(seek_secs);
         }
     }
