@@ -638,6 +638,10 @@
         {
             include_once 'templates/splash_form_download.html';
         }
+        else if( $template_type == 'PLAYER_MAD_TV' )
+        {
+            include_once 'templates/mad_tv.html';
+        }
     }
     else
     {
