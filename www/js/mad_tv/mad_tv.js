@@ -169,7 +169,7 @@ function updateHistory()
     {
         var video = video_history[i];
         var title = video.title;
-        var duration = mins_secs(video.duration);
+        var duration = mins_secs(video.durationSec);
         var love = "";
         if( title in g_loveMap )
             love = "love";
@@ -465,29 +465,27 @@ function getCorrectTime()
 
 function getCurrentVideo()
 {
+    var ret = null;
+    calcVideoHistory();
     if( g_videoHistoryList.length > 0 )
     {
-        var video = g_videoHistoryList[0];
-        var time_ms = getCorrectTime();
-        if( time_ms < video.endTimeMS )
-        {
-            calcVideoHistory();
-        }
+        ret = g_videoHistoryList[0]
     }
-    else
-    {
-        calcVideoHistory();
-    }
-    return g_videoHistoryList[0];
+    return ret;
 }
 
 function getPreviousVideolist()
 {
+    calcVideoHistory();
 
+    return g_videoHistoryList.slice(1,4);
 }
+
+var LOOP_MS = 7*24*60*60*1000;
+
 function calcVideoHistory()
 {
-    var time_ms = getCorrectTime();
+    var now_ms = getCorrectTime();
     var next_index = 0;
     var video_list = g_playlistList[0].items;
 
@@ -496,16 +494,19 @@ function calcVideoHistory()
         return;
     }
 
+    var next_start_ms = Math.floor(now_ms / LOOP_MS) * LOOP_MS;
+
     while(1)
     {
         if( g_videoHistoryList.length > 0 )
         {
             var video = g_videoHistoryList[0];
-            if( video.endTimeMS > time_ms )
+            if( video.endTimeMS > now_ms )
             {
                 break;
             }
             next_index = video.index + 1;
+            next_start_ms = video.endTimeMS;
         }
 
         if( next_index > video_list.length - 1 )
@@ -514,13 +515,21 @@ function calcVideoHistory()
         }
 
         var next_video = video_list[next_index];
-        var start_time_ms
+        var durationSec = next_video.media_length;
+        var startTimeMS = next_start_ms;
+        var endTimeMS = startTimeMS + durationSec * 1000;
+        next_start_ms = endTimeMS;
+
         g_videoHistoryList.unshift({
             startTimeMS: startTimeMS,
-            endTimeMS:
+            endTimeMS: endTimeMS,
             index: next_index,
-            title: video.name,
-
+            title: next_video.name,
+            durationSec: durationSec,
+            image: next_video.image,
+            image_extra: next_video.image_extra,
+            video_file: next_video.video_file,
+            video_extra: next_video.video_extra
         });
     }
 }
