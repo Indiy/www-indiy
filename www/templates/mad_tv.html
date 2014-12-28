@@ -1,0 +1,209 @@
+<html>
+    <head>
+        <title>MyAritstDNA.tv</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" />
+        <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        
+        <link rel="apple-touch-icon" href="<?=artist_file_url($artist_logo);?>" />
+        <link rel="apple-touch-startup-image" href="<?=static_file_url('/images/apple-loading-screen.jpg');?>" />
+        
+        <link href="<?=static_file_url('/css/video-js.css');?>" rel="stylesheet" type="text/css"/>
+        <link href="<?=static_file_url('/css/mad_tv.css');?>" rel="stylesheet" type="text/css"/>
+            
+        <!--[if lt IE 9]>
+         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+         <![endif]-->
+        <!--[if lt IE 9]>
+         <script src="<?=static_file_url('/js/css3-mediaqueries.js');?>"></script>
+         <![endif]-->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="<?=static_file_url('/js/video.js');?>"></script>
+        <script src="<?=static_file_url('/js/string.utils.js');?>" type="text/javascript"></script>
+        
+    </head>
+    <body>
+        <div id='video_container'>
+            
+        </div>
+        <div id='overlay_container'>
+            <a href='/'><div id='mad_tv_logo'></div></a>
+            <div id='player'>
+                <div class='play tooltiped paused' onclick='playerToggle();'>
+                    <div class='icon'></div>
+                    <div id='tip_play' class='tooltip'>
+                        <div class='carrot'></div>
+                        PLAY
+                    </div>
+                    <div id='tip_pause' class='tooltip'>
+                        <div class='carrot'></div>
+                        PAUSE
+                    </div>
+                </div>
+                <div class='progress'>
+                    <div id='track_bar' class='bar'></div>
+                    <div id='title_scoller' class='title'><span id='track_title'><span></div>
+                    <div id='track_duration' class='duration'></div>
+                </div>
+                
+                <div class='left_arrow tooltiped' onclick='toggleHistory();'>
+                    <div id='tip_history' class='tooltip'>
+                        <div class='carrot'></div>
+                        HISTORY
+                    </div>
+                </div>
+                <div class='sep'></div>
+                <div class='genre tooltiped' onclick='toggleGenrePicker();'>
+                    <div id='tip_genre' class='tooltip'>
+                        <div class='carrot'></div>
+                        GENRE
+                    </div>
+                </div>
+                <div class='sep'></div>
+                <div class='plus tooltiped' onclick='showAddVideo();'>
+                    <div id='tip_add_music' class='tooltip'>
+                        <div class='carrot'></div>
+                        ADD YOUR VIDEO
+                    </div>
+                </div>
+                <div class='sep'></div>
+                <div class='heart tooltiped' onclick='toggleLoveCurrent();'>
+                    <div id='tip_love' class='tooltip'>
+                        <div class='carrot'></div>
+                        LOVE
+                    </div>
+                    <div id='tip_unlove' class='tooltip'>
+                        <div class='carrot'></div>
+                        UNLOVE
+                    </div>
+                </div>
+                <div id='history'>
+                    <div class='header'>
+                        <div class='title'>LAST 3 SONGS PLAYED</div>
+                        <div class='length'>LENGTH</div>
+                        <div class='loved'>LOVED</div>
+                    </div>
+                    <div class='content'>
+                    </div>
+                </div>
+                <div class='genre_picker'>
+                    <div class='carrot'></div>
+                    <div id='genre_container' class='container'>
+                        <div class='rock' onclick='changeGenre("rock");'>ROCK</div>
+                        <div class='dance' onclick='changeGenre("dance");'>DANCE</div>
+                        <div class='chill' onclick='changeGenre("chill");'>CHILL</div>
+                        <div class='bounce' onclick='changeGenre("bounce");'>BOUNCE</div>
+                    </div>
+                </div>
+                
+            </div>
+            <div id='bottom'>
+                <div class='be_heard'>BE HEARD. BE SEEN. BE INDEPENDENT.</div>
+                <div class='copyright'>&copy;2012 MYARTISTDNA</div>
+            </div>
+        </div>
+        <div id='add_video'>
+            <div class='overlay'></div>
+            <div class='dialog'>
+                <div class='header'>
+                    <div class='title'>ADD YOUR VIDEO TO <span>MYARTISTDNA.TV</span></div>
+                    <div class='close' onclick='hideAddVideo();'></div>
+                </div>
+                <div class='description'>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </div>
+                <div class='pictures'>
+                    <div class='item'>
+                        <img src='images/young_chris.png' />
+                        <div class='name'>YOUNG CHRIS</div>
+                    </div>
+                    <div class='item'>
+                        <img src='images/basil.png' />
+                        <div class='name'>BASIL</div>
+                    </div>
+                    <div class='item'>
+                        <img src='images/blackroc.png' />
+                        <div class='name'>BLACKROC</div>
+                    </div>
+                    <div class='item'>
+                        <img src='images/jen.png' />
+                        <div class='name'>JEN</div>
+                    </div>
+                </div>
+                <div class='join_container'>
+                    <div class='be_heard'>BE HEARD. BE SEEN. BE INDEPENDENT. <span>JOIN NOW</span></div>
+                    <div class='join'>
+                        <div class='icon'></div>
+                        <a title='Join MyartistDNA.com' href="http://www.myartistdna.com/home.php"><div class='title'>JOIN MYARTISTDNA.COM</div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='video_love'>
+            <div class='overlay'></div>
+            <div class='dialog'>
+                <div class='header'>
+                    <div class='title'>YOU JUST LOVED <span>""</span></div>
+                    <div class='close' onclick='hideLoved();'></div>
+                </div>
+                <div class='description'>
+                    NOW PROCLAIM YOUR NEWFOUND LOVE TO THE WORLD
+                </div>
+                <div class='links'>
+                    <a id='fb_link' href='#' target='_blank'>
+                        <div class='item facebook'>
+                            <div class='icon'></div>
+                            <div class='name'>FACEBOOK</div>
+                        </div>
+                    </a>
+                    <a id='tw_link' href='#' target='_blank'>
+                        <div class='item twitter'>
+                            <div class='icon'></div>
+                            <div class='name'>TWITTER</div>
+                        </div>
+                    </a>
+                    <a id='tumblr_link' href='#' target='_blank'>
+                        <div class='item tumblr'>
+                            <div class='icon'></div>
+                            <div class='name'>TUMBLR</div>
+                        </div>
+                    </a>
+                </div>
+                <div class='links'>
+                    <a id='pin_link' href='#' target='_blank'>
+                        <div class='item pinterest'>
+                            <div class='icon'></div>
+                            <div class='name'>PINTEREST</div>
+                        </div>
+                    </a>
+                    <a id='google_link' href='#' target='_blank'>
+                        <div class='item google'>
+                            <div class='icon'></div>
+                            <div class='name'>GOOGLE +</div>
+                        </div>
+                    </a>
+                    <a id='email_link' href='#' target='_blank'>
+                        <div class='item email'>
+                            <div class='icon'></div>
+                            <div class='name'>EMAIL</div>
+                        </div>
+                    </a>
+                </div>
+                <div class='sep'></div>
+                <div class='buy_container'>
+                    <div class='support'>SUPPORT THIS ARTIST, <span>PURCHASE THIS SONG THROUGH ITUNES</span></div>
+                    <a id='itunes_link' href='#' target='_blank'>
+                        <div class='buy'>
+                            <div class='icon'></div>
+                            <a title='Buy on iTunes' href="#"><div class='name'>ITUNES</div></a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
