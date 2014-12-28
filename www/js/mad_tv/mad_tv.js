@@ -495,6 +495,7 @@ function getPreviousVideolist()
 }
 
 var LOOP_MS = 7*24*60*60*1000;
+var MAX_HISTORY_LEN = 10;
 
 function calcVideoHistory()
 {
@@ -544,6 +545,11 @@ function calcVideoHistory()
             video_file: next_video.video_file,
             video_extra: next_video.video_extra
         });
+
+        if( g_videoHistoryList.length > MAX_HISTORY_LEN )
+        {
+            g_videoHistoryList.length = MAX_HISTORY_LEN;
+        }
     }
 }
 
