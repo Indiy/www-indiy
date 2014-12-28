@@ -23,7 +23,40 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
         <script src="<?=static_file_url('/js/video.js');?>"></script>
         <script src="<?=static_file_url('/js/string.utils.js');?>" type="text/javascript"></script>
-        
+        <script type="text/javascript">
+            var g_jplayerSWF = "<?=static_file_url('/js/Jplayer.swf');?>";
+            
+            var g_tabList = <?=$tab_list_json;?>;
+            var g_productList = <?=$product_list_json;?>;
+            var g_totalPageViews = <?=$artist_views;?>;
+            var g_playlistList = <?=$playlist_list_json;?>;
+            
+            var g_trueSiteUrl = "<?=trueSiteUrl();?>";
+            var g_cartBaseUrl = "<?=cart_base_url();?>";
+            var g_apiBaseUrl = "<?=api_base_url();?>";
+            var g_fanBaseUrl = "<?=fan_base_url();?>";
+            var g_artistFileBaseUrl = "<?=artist_file_base_url();?>";
+            
+            var g_artistName = "<?=$artist_name;?>";
+            var g_artistId = <?=$artist_id;?>;
+            var g_artistBaseUrl = "<?=$artist_base_url;?>";
+            var g_pageUrl = "<?=$page_url;?>";
+            
+            var g_fanEmail = "<?=$fan_email;?>";
+            
+            var g_startMediaType = "<?=$start_media_type;?>";
+            
+            var g_templateParams = <?=$template_params_json;?>;
+            
+            function iphoneReady()
+            {
+                if( IS_IOS )
+                {
+                    window.scrollTo(0,1);
+                }
+            }
+            $(document).ready(iphoneReady);
+        </script>
     </head>
     <body>
         <div id='video_container'>
