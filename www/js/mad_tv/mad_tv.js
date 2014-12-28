@@ -236,6 +236,7 @@ function createVideoTag()
     
     $('#video_container').empty();
     $('#video_container').html(html);
+    inhibitSeek();
     if( g_touchDevice )
     {
         g_videoPlayer = $("video")[0];
@@ -277,6 +278,8 @@ function updateVideoElement()
     }
 
     updateVideoDisplay();
+
+    inhibitSeek();
     if( g_touchDevice )
     {
         g_videoPlayer.attr('src',url);
@@ -380,6 +383,7 @@ var MAX_SEEK_FREQUENCY = 2*1000;
 var MIN_SEEK_MS = 10*1000;
 
 var g_lastSeek = 0;
+var g_seekVideoTimeout = false;
 function maybeSeekVideo()
 {
     var video = getCurrentVideo();
@@ -397,7 +401,12 @@ function maybeSeekVideo()
 
         if( seek_delta < MAX_SEEK_FREQUENCY )
         {
-            window.setTimeout(maybeSeekVideo,MAX_SEEK_FREQUENCY);
+            if( g_seekVideoTimeout )
+            {
+                window.clearTimeout(g_seekVideoTimeout);
+                g_seekVideoTimeout = false;
+            }
+            g_seekVideoTimeout = window.setTimeout(maybeSeekVideo,MAX_SEEK_FREQUENCY);
         }
         else
         {
@@ -407,42 +416,20 @@ function maybeSeekVideo()
             {
                 seek_secs = video.durationSec - 2;
             }
-            console.log("seek to secs:",seek_secs);
+            console.log("seek to secs:",seek_secs,",pos_ms:",pos_ms,"video.startTimeMS:",video.startTimeMS,"video_delta_ms:",video_delta_ms);
             setCurrentTime(seek_secs);
         }
     }
+}
 
-    /*
-    var video = g[0];
-    var time_progress = Math.floor((new Date().getTime())/1000 - video.start_time);
-    if( time_progress > video.duration * 0.9 )
-        time_progress = Math.floor(video.duration * 0.9);
-    g_seekOnPlay = time_progress;
-
-    if( g_seekOnPlay !== false )
+function inhibitSeek()
+{
+    g_lastSeek = Date.now();
+    if( g_seekVideoTimeout )
     {
-        var curr_time = Date.now();
-        var delta = curr_time - g_lastSeek;
-        if( delta < MAX_SEEK_FREQUENCY )
-        {
-            window.setTimeout(maybeSeekVideo,MAX_SEEK_FREQUENCY);
-        }
-        else
-        {
-            g_lastSeek = curr_time;
-        
-            var pos = getCurrentTime() + 1;
-            if( pos >= g_seekOnPlay )
-            {
-                g_seekOnPlay = false;
-            }
-            else
-            {
-                setCurrentTime(g_seekOnPlay);
-            }
-        }
+        window.clearTimeout(g_seekVideoTimeout);
+        g_seekVideoTimeout = false;
     }
-    */
 }
 
 function setCurrentTime(new_time)
