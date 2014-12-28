@@ -74,68 +74,29 @@ body {
     overflow: hidden;
 }
 
-.top_spacer {
-    height: 17px;
-}
-
-
 .top_title1 {
-    padding-top: 0px;
-    padding-bottom: 5px;
-    color: white;
-    font-size: 48px;
-    font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
-    text-align: center;
-    letter-spacing: 1px;
-    line-height: 48px;
-}
-.top_title2 {
-    padding-top: 0px;
+    padding-top: 10px;
     padding-bottom: 0px;
     color: white;
-    font-size: 60px;
-   font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
-    text-align: center;
-    letter-spacing: 1px;
-    line-height: 60px;
-}
-.top_sub_spacer {
-    height: 11px;
-}
-.subtitle {
-    color: white;
-    font-size: 36px;
+    font-size: 30px;
     font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
-    text-align: center;
-    line-height: 40px;
-
+    text-align: left;
+    line-height: 30px;
 }
-.play_top_space {
-    height: 210px;
+.top_title2 {
+    padding-top: 16px;
+    padding-bottom: 0px;
+    color: white;
+    font-size: 76px;
+    font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
+    text-align: left;
+    line-height: 96px;
 }
-.play_bottom_space {
-    height: 48px;
-}
-
 .bottom_title1 {
-    height: 100px;
-    color: white;
-    font-size: 80px;
-    font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
-    text-align: center;
-}
-.bottom_title2 {
-    height: 190px;
     color: white;
     font-size: 64px;
     font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
     text-align: center;
-}
-
-.title .blue,
-.subtitle .blue, .subtitle_med .blue {
-    display: inline;
-    color: white;
 }
 
 /************************************/
@@ -144,8 +105,8 @@ body {
 
 #footer {
     position: relative;
-    height: 96px;
-    margin-top: -96px;
+    height: 171px;
+    margin-top: -171px;
     clear: both;
 }
 #footer .slider {
@@ -297,37 +258,26 @@ and (max-device-width : 480px) {
         overflow-x: hidden;
     }
     .top_title1 {
-        padding-top: 0px;
+        padding-top: 20px;
         padding-bottom: 0px;
-        font-size: 29px;
-        letter-spacing: 1px;
-        line-height: 30px;
+        font-size: 16px;
+        line-height: 16px;
     }
     .top_title2 {
-        padding-top: 0px;
+        padding-top: 10px;
         padding-bottom: 0px;
-        font-size: 29px;
-        letter-spacing: 1px;
-        line-height: 30px;
-    }
-    .subtitle {
-        font-size: 27px;
-        line-height: 30px;
+        font-size: 38px;
+        line-height: 50px;
     }
     .bottom_title1 {
-        height: 40px;
-        font-size: 34px;
-    }
-    .bottom_title2 {
-        height: 40px;
-        font-size: 34px;
+        font-size: 36px;
     }
     
-    .play_top_space {
-        height: 15px;
-    }
-    .play_bottom_space {
-        height: 15px;
+    #footer {
+        position: relative;
+        height: 146px;
+        margin-top: -146px;
+        clear: both;
     }
     
     #footer .audio_player .album_image {
