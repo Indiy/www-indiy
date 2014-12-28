@@ -44,7 +44,7 @@ body {
 #player {
     position: absolute;
     height: 72px;
-    width: 860px;
+    width: 730px;
     bottom: 70px;
     left: 50%;
     margin-top: -86px;
@@ -781,11 +781,11 @@ body {
 }
 #player #tip_love {
     top: -24px;
-    left: 789px;
+    left: 661px;
 }
 #player #tip_unlove {
     top: -24px;
-    left: 780px;
+    left: 652px;
 }
 .no_touch #player .play.paused:hover #tip_pause {
     display: none;
