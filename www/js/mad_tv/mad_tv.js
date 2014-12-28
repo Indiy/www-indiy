@@ -539,7 +539,7 @@ function calcVideoHistory()
         }
 
         var next_video = video_list[next_index];
-        var durationSec = Math.floor(next_video.media_extra.media_length);
+        var durationSec = Math.floor(next_video.media_length);
         var startTimeMS = next_start_ms;
         var endTimeMS = startTimeMS + durationSec * 1000;
         next_start_ms = endTimeMS;
