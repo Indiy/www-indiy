@@ -36,7 +36,9 @@ function setupVideoPlayer()
     window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,k,v){vars[k] = v;});
     
     if( 'genre_id' in vars )
+    {
         g_genre_id = vars['genre_id'];
+    }
 
     $(window).resize(onWindowResize);
     if( g_touchDevice )
@@ -80,7 +82,9 @@ function timeoutControls()
 {
     clearTimeoutControls();
     if( g_playing )
+    {
         g_hideControlsTimeout = window.setTimeout(hideControls,2000);
+    }
 }
 function hideControls()
 {
@@ -204,22 +208,14 @@ function createVideoTag()
 {
     updateVideoDisplay();
 
-    if( g_touchDevice )
-    {
-        createVideoTagForTouch();
-    }
-    else
-    {
-        createVideoTagVideoJS();
-    }
+    createVideoTag();
 }
-function createVideoTagVideoJS()
+function createVideoTag()
 {
     var h = $('#video_container').height();
     var w = $('#video_container').width();
     
     var video = getCurrentVideo();
-    var title = video.title;
     var url = video.video_file;
     var url_ogv = false;
     if( video.video_extra && video.video_extra.alts && video.video_extra.alts.ogv )
@@ -230,7 +226,7 @@ function createVideoTagVideoJS()
     var html = "";
     html += "<video id='madtv_player' width='{0}' height='{1}' class='video-js vjs-default-skin' preload='auto'>".format(w,h);
     html += "<source src='{0}' type='video/mp4' />".format(url);
-    if( url_ogv )
+    if( url_ogv && !g_touchDevice )
     {
         html += "<source src='{0}' type='video/ogg' />".format(url_ogv);
     }
@@ -238,27 +234,16 @@ function createVideoTagVideoJS()
     
     $('#video_container').empty();
     $('#video_container').html(html);
-    g_videoPlayer = _V_('madtv_player');
-    g_videoPlayer.ready(onVideoReadyVideoJS);
-
-}
-function createVideoTagForTouch()
-{
-    var h = $('#video_container').height();
-    var w = $('#video_container').width();
-    
-    var video = getCurrentVideo();
-    var url = video.video_file;
-    var url_ogv = url.replace(".mp4",".ogv");
-    
-    var html = '';
-    html += "<video id='madtv_player' width='{0}' height='{1}' src='{2}' preload='metadata' >".format(w,h,url);
-    html += "</video>";
-    
-    $('#video_container').empty();
-    $('#video_container').html(html);    
-    g_videoPlayer = $("video")[0];
-    g_videoPlayer.ready(onVideoReadyTouch);
+    if( g_touchDevice )
+    {
+        g_videoPlayer = $("video")[0];
+        g_videoPlayer.ready(onVideoReadyTouch);
+    }
+    else
+    {
+        g_videoPlayer = _V_('madtv_player');
+        g_videoPlayer.ready(onVideoReadyVideoJS);
+    }
 }
 
 function updateVideoDisplay()
@@ -267,9 +252,13 @@ function updateVideoDisplay()
     var title = video.title;
     $('#track_title').text(title);
     if( loveIsLoved(title) )
+    {
         $('#player .heart').addClass('love');
+    }
     else
+    {
         $('#player .heart').removeClass('love');
+    }
 }
 function updateVideoElementInProgress()
 {
@@ -352,20 +341,28 @@ function videoProgress()
     
     var s = mins_secs(curr_pos) 
     if( duration )
+    {
         s += " - " + mins_secs(duration);
+    }
     if( $('#track_duration').text() != s )
+    {
         $('#track_duration').text(s);
-    
+    }
     var percent = 0;
     if( duration > 0 )
-        var percent = curr_pos/duration;
+    {
+        percent = curr_pos/duration;
+    }
     var width = percent * PROGRESS_BAR_WIDTH;
     $('#player .progress .bar').width(width);
     if( width >= PROGRESS_ROUND_LENGTH )
+    {
         $('#player .progress .bar').css('border-radius','6px 6px 6px 6px');
+    }
     else
+    {
         $('#player .progress .bar').css('border-radius','6px 0px 0px 6px');
-    
+    }
 }
 function videoEnded()
 {
