@@ -215,15 +215,22 @@ function createVideoTag()
     var url_ogv = false;
     if( video.video_extra && video.video_extra.alts && video.video_extra.alts.ogv )
     {
-        url_ogv = video.video_extra.alts.ogv;
+        url_ogv = g_artistFileBaseUrl + video.video_extra.alts.ogv;
     }
 
     var html = "";
-    html += "<video id='madtv_player' width='{0}' height='{1}' class='video-js vjs-default-skin' preload='auto'>".format(w,h);
-    html += "<source src='{0}' type='video/mp4' />".format(url);
-    if( url_ogv && !g_touchDevice )
+    if( g_touchDevice )
     {
-        html += "<source src='{0}' type='video/ogg' />".format(url_ogv);
+        html += "<video id='madtv_player' width='{0}' height='{1}' src='{2}' preload='metadata'>".format(w,h,url);
+    }
+    else
+    {
+        html += "<video id='madtv_player' width='{0}' height='{1}' class='video-js vjs-default-skin' preload='auto'>".format(w,h);
+        html += "<source src='{0}' type='video/mp4' />".format(url);
+        if( url_ogv )
+        {
+            html += "<source src='{0}' type='video/ogg' />".format(url_ogv);
+        }
     }
     html += "</video>";
     
@@ -263,7 +270,11 @@ function updateVideoElement()
 {
     var video = getCurrentVideo();
     var url = video.video_file;
-    var url_ogv = url.replace(".mp4",".ogv");
+    var url_ogv = false;
+    if( video.video_extra && video.video_extra.alts && video.video_extra.alts.ogv )
+    {
+        url_ogv = g_artistFileBaseUrl + video.video_extra.alts.ogv;
+    }
 
     updateVideoDisplay();
     if( g_touchDevice )
@@ -273,10 +284,11 @@ function updateVideoElement()
     }
     else
     {
-        var media = [
-             { type: "video/mp4", src: url },
-             { type: "video/ogg", src: url_ogv }
-        ];
+        var media = [ { type: "video/mp4", src: url } ];
+        if( url_ogv )
+        {
+            media.push({ type: "video/ogg", src: url_ogv });
+        }
         g_videoPlayer.src(media);
         g_videoPlayer.play();
     }
