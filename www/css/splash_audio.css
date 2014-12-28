@@ -300,7 +300,7 @@ and (max-device-width : 480px) {
         padding-left: 10px;
         padding-right: 10px;
         width: auto;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 30px;
         white-space: normal;
     }
