@@ -236,7 +236,6 @@ function createVideoTag()
     
     $('#video_container').empty();
     $('#video_container').html(html);
-    inhibitSeek();
     if( g_touchDevice )
     {
         g_videoPlayer = $("video")[0];
@@ -383,7 +382,6 @@ var MAX_SEEK_FREQUENCY = 2*1000;
 var MIN_SEEK_MS = 10*1000;
 
 var g_lastSeek = 0;
-var g_seekVideoTimeout = false;
 function maybeSeekVideo()
 {
     var video = getCurrentVideo();
@@ -401,12 +399,6 @@ function maybeSeekVideo()
 
         if( seek_delta < MAX_SEEK_FREQUENCY )
         {
-            if( g_seekVideoTimeout )
-            {
-                window.clearTimeout(g_seekVideoTimeout);
-                g_seekVideoTimeout = false;
-            }
-            g_seekVideoTimeout = window.setTimeout(maybeSeekVideo,MAX_SEEK_FREQUENCY);
             console.log("would have seeked, but waiting for MAX_SEEK_FREQENCY");
         }
         else
@@ -426,11 +418,6 @@ function maybeSeekVideo()
 function inhibitSeek()
 {
     g_lastSeek = Date.now();
-    if( g_seekVideoTimeout )
-    {
-        window.clearTimeout(g_seekVideoTimeout);
-        g_seekVideoTimeout = false;
-    }
 }
 
 function setCurrentTime(new_time)
@@ -550,7 +537,7 @@ function calcVideoHistory()
         }
 
         var next_video = video_list[next_index];
-        var durationSec = next_video.media_length;
+        var durationSec = Math.floor(next_video.media_extra.media_length);
         var startTimeMS = next_start_ms;
         var endTimeMS = startTimeMS + durationSec * 1000;
         next_start_ms = endTimeMS;
