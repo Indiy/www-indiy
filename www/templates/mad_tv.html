@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>MyAritstDNA.tv</title>
+        <title><?=$template_params['page_title'];?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" />
         <meta http-equiv="X-UA-Compatible" content="chrome=1" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -242,6 +242,29 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', "<?=$template_params['ga_account_id'];?>"]);
+            _gaq.push(['_trackPageview']);
+            
+            (function() {
+             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+             })();
+        </script>
+        <script>
+            (function(d, s, id) {
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) return;
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=256680924395123";
+             fjs.parentNode.insertBefore(js, fjs);
+             }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        </script>
     </body>
 </html>
 
