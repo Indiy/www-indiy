@@ -202,16 +202,11 @@ function hideAddVideo()
     $('#add_video').fadeOut();
 }
 
-
 var g_videoPlayer = false;
 function createVideoTag()
 {
     updateVideoDisplay();
 
-    createVideoTag();
-}
-function createVideoTag()
-{
     var h = $('#video_container').height();
     var w = $('#video_container').width();
     
@@ -400,6 +395,7 @@ function maybeSeekVideo()
             {
                 seek_secs = video.durationSec - 2;
             }
+            console.log("seek to secs:",seek_secs);
             setCurrentTime(seek_secs);
         }
     }
