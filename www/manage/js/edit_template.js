@@ -736,10 +736,7 @@ var TEMPLATE_SCHEMA =
             page_title: "MyArtistDNA. Be Seen, Be Heard, Be Independant.",
             top_title1: "TOP TITLE 1 HERE",
             top_title2: "TOP TITLE 2 HERE",
-            top_subtitle: "TOP SUB TITLE",
-            bottom_subtitle: "BOTTOM SUB TITLE",
             bottom_title1: "BOTTOM TITLE 1",
-            bottom_title2: "BOTTOM TITLE 2"
         },
         arg_list:
         [
@@ -759,23 +756,8 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             },
             {
-                name: 'top_subtitle',
-                description: 'Top Subtitle',
-                type: 'string'
-            },
-            {
-                name: 'bottom_subtitle',
-                description: 'Bottom Subtittle',
-                type: 'string'
-            },
-            {
                 name: 'bottom_title1',
                 description: 'Bottom Title 1',
-                type: 'string'
-            },
-            {
-                name: 'bottom_title2',
-                description: 'Bottom Title 2',
                 type: 'string'
             },
             {
