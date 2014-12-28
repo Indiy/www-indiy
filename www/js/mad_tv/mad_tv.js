@@ -407,6 +407,7 @@ function maybeSeekVideo()
                 g_seekVideoTimeout = false;
             }
             g_seekVideoTimeout = window.setTimeout(maybeSeekVideo,MAX_SEEK_FREQUENCY);
+            console.log("would have seeked, but waiting for MAX_SEEK_FREQENCY");
         }
         else
         {
