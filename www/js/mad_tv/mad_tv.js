@@ -269,7 +269,7 @@ function updateVideoElementInProgress()
 function updateVideoElement()
 {
     var video = getCurrentVideo();
-    console.log("updateVideoElement: new video:",video);
+    console.log("updateVideoElement: now:",Date.now(),"new video:",video);
 
     var url = video.video_file;
     var url_ogv = false;
@@ -377,6 +377,7 @@ function videoProgress()
 }
 function videoEnded()
 {
+    console.log("videoEnded");
     updateVideoElement();
 }
 
