@@ -847,6 +847,11 @@ body {
     height: 100%;
     overflow: hidden;
 }
+#overlay_container .upper_left_logo {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+}
 
 #overlay_container .splash_top_text {
     padding-top: 120px;

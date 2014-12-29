@@ -1219,6 +1219,11 @@ var TEMPLATE_SCHEMA =
                 type: 'image_spec'
             },
             {
+                name: 'upper_left_logo',
+                description: 'Upper Left Logo',
+                type: 'image'
+            },
+            {
                 name: 'footer_left_text',
                 description: 'Footer Left Text',
                 type: 'string'
