@@ -26,10 +26,12 @@ var g_touchDevice = false;
 var g_genreHistory = false;
 var g_currentVideo = false;
 var g_backgroundList = [];
-var g_currentPlaylist = g_playlistList[0];
+var g_currentPlaylist = false;
 
 function setupVideoPlayer()
 {
+    g_currentPlaylist = g_playlistList[0];
+
     if( !('ontouchstart' in document) )
     {
         $('body').addClass('no_touch');
