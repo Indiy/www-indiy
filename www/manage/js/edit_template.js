@@ -1210,13 +1210,13 @@ var TEMPLATE_SCHEMA =
             },
             {
                 name: 'splash_bottom_text',
-                description: 'Splash Top Text',
+                description: 'Splash Bottom Text',
                 type: 'string'
             },
             {
                 name: 'splash_bg',
                 description: 'Splash Background',
-                type: 'image'
+                type: 'image_spec'
             },
             {
                 name: 'footer_left_text',
