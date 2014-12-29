@@ -16,6 +16,7 @@ var g_controlsShown = false;
 var g_hideControlsTimeout = false;
 var g_touchDevice = false;
 var g_genreHistory = false;
+var g_currentVideo = false;
 
 
 function setupVideoPlayer()
@@ -211,6 +212,7 @@ function createVideoTag()
     var w = $('#video_container').width();
     
     var video = getCurrentVideo();
+    g_currentVideo = video;
     var url = video.video_file;
     var url_ogv = false;
     if( video.video_extra && video.video_extra.alts && video.video_extra.alts.ogv )
@@ -269,6 +271,7 @@ function updateVideoElementInProgress()
 function updateVideoElement()
 {
     var video = getCurrentVideo();
+    g_currentVideo = video;
     console.log("updateVideoElement: now:",Date.now(),"new video:",video);
 
     var url = video.video_file;
@@ -388,32 +391,38 @@ var g_lastSeek = 0;
 function maybeSeekVideo()
 {
     var video = getCurrentVideo();
-    var time_ms = getCorrectTime();
-
-    var pos_ms = getCurrentTime() * 1000;
-
-    var video_time_ms = video.startTimeMS + pos_ms;
-
-    var video_delta_ms = time_ms - video_time_ms;
-    if( Math.abs(video_delta_ms) > MIN_SEEK_MS )
+    if( g_currentVideo == video )
     {
-        var now = Date.now();
-        var seek_delta = now - g_lastSeek;
+        var time_ms = getCorrectTime();
 
-        if( seek_delta < MAX_SEEK_FREQUENCY )
+        var pos_ms = getCurrentTime() * 1000;
+
+        var video_time_ms = video.startTimeMS + pos_ms;
+
+        var video_delta_ms = time_ms - video_time_ms;
+        if( Math.abs(video_delta_ms) > MIN_SEEK_MS )
         {
-            console.log("would have seeked, but waiting for MAX_SEEK_FREQENCY");
-        }
-        else
-        {
-            g_lastSeek = now;
-            var seek_secs = (video_delta_ms + pos_ms) / 1000;
-            if( seek_secs > video.durationSec )
+            var now = Date.now();
+            var seek_delta = now - g_lastSeek;
+
+            if( seek_delta < MAX_SEEK_FREQUENCY )
             {
-                seek_secs = video.durationSec - 2;
+                console.log("would have seeked, but waiting for MAX_SEEK_FREQENCY");
             }
-            console.log("seek to secs:",seek_secs,"pos_ms:",pos_ms,"video.startTimeMS:",video.startTimeMS,"video_delta_ms:",video_delta_ms);
-            setCurrentTime(seek_secs);
+            else
+            {
+                g_lastSeek = now;
+                var seek_secs = (video_delta_ms + pos_ms) / 1000;
+                if( seek_secs > video.durationSec )
+                {
+                    seek_secs = video.durationSec - 2;
+                }
+                console.log("seek to secs:",seek_secs,
+                    "pos_ms:",pos_ms,
+                    "video.startTimeMS:",video.startTimeMS,
+                    "video_delta_ms:",video_delta_ms);
+                setCurrentTime(seek_secs);
+            }
         }
     }
 }
