@@ -61,7 +61,7 @@ function showControls()
     if( !g_controlsShown )
     {
         g_controlsShown = true;
-        $("#overlay_container").fadeIn();
+        $(".idle_hide").fadeIn();
     }
     clearTimeoutControls();
 }
@@ -89,7 +89,7 @@ function timeoutControls()
 function hideControls()
 {
     g_controlsShown = false;
-    $("#overlay_container").fadeOut();
+    $(".idle_hide").fadeOut();
 }
 
 function mins_secs(secs)
