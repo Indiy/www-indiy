@@ -80,8 +80,8 @@
             <div id='splash_bg' class='full_screen_bg splash_item'>
                 <div id='image_holder_0' class='image_holder'></div>
             </div>
-            <div class='splash_top_text'><?=$template_params['splash_top_text'];?></div>
-            <div class='splash_buttons'>
+            <div class='splash_top_text splash_item'><?=$template_params['splash_top_text'];?></div>
+            <div class='splash_buttons splash_item'>
                 <?php foreach( $playlist_list as $i => $playlist ): ?>
                     <div class='button' onclick='choosePlaylist(<?=$i;?>);'>
                         <div class='text'><?=$playlist['display_name'];?></div>
@@ -89,7 +89,7 @@
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class='splash_bottom_text'><?=$template_params['splash_bottom_text'];?></div>
+            <div class='splash_bottom_text splash_item'><?=$template_params['splash_bottom_text'];?></div>
 
             <a class='player_item' href='/'><div id='mad_tv_logo'></div></a>
             <div id='player' class='player_item'>
