@@ -922,14 +922,14 @@ and (max-device-width : 480px) {
     #overlay_container .splash_buttons .button .text {
         padding-top: 10px;
         padding-left: 10px;
-        width: 190px;
-        font-size: 18px;
+        width: 185px;
+        font-size: 16px;
     }
     #overlay_container .splash_buttons .button .arrow {
-        margin-top: 12px;
-        border-top: 7px solid transparent;
-        border-bottom: 7px solid transparent;
-        border-left: 12px solid white;
+        margin-top: 9px;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 11px solid white;
     }
     #overlay_container .splash_bottom_text {
         padding-top: 35px;
