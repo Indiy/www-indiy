@@ -520,6 +520,12 @@ function calcVideoHistory()
 
     var next_start_ms = Math.floor(now_ms / LOOP_MS) * LOOP_MS;
 
+    var log = function() {};
+    if( g_videoHistoryList.length > 0 )
+    {
+        log = console.log;
+    }
+
     while(1)
     {
         if( g_videoHistoryList.length > 0 )
@@ -544,7 +550,7 @@ function calcVideoHistory()
         var endTimeMS = startTimeMS + durationSec * 1000;
         next_start_ms = endTimeMS;
 
-        g_videoHistoryList.unshift({
+        var item = {
             startTimeMS: startTimeMS,
             endTimeMS: endTimeMS,
             index: next_index,
@@ -554,7 +560,9 @@ function calcVideoHistory()
             image_extra: next_video.image_extra,
             video_file: next_video.video_file,
             video_extra: next_video.video_extra
-        });
+        };
+        g_videoHistoryList.unshift(item);
+        log("added:",item);
 
         if( g_videoHistoryList.length > MAX_HISTORY_LEN )
         {
