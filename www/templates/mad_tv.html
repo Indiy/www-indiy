@@ -91,7 +91,9 @@
             </div>
             <div class='splash_bottom_text splash_item'><?=$template_params['splash_bottom_text'];?></div>
 
-            <img class='upper_left_logo player_item' src="<?=$template_params['upper_left_logo'];?>"/>
+            <img class='upper_left_logo player_item'
+                src="<?=$template_params['upper_left_logo']['image'];?>" />
+                
             <div id='player' class='player_item'>
                 <div class='play tooltiped paused' onclick='playerToggle();'>
                     <div class='icon'></div>
