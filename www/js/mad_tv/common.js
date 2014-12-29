@@ -47,7 +47,7 @@ if( window.localStorage.enable_debug )
 
 function enableDebug()
 {
-    window.debug_log = console.log.bind(console);
+    window.debugLog = console.log.bind(console);
     window.localStorage.enable_debug = "1";
 }
 function disableDebug()
