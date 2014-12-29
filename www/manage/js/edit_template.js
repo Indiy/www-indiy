@@ -1192,6 +1192,8 @@ var TEMPLATE_SCHEMA =
         description: 'TV Template',
         default_params: {
             page_title: 'MyArtistDNA | Be Heard. Be Seen. Be Independent.',
+            footer_left_text: 'BE HEARD. BE SEEN. BE INDEPENDENT.',
+            footer_right_text: '&copy;2012 Powered by <a href="http://myartistdna.com">MyArtistDNA</a>',
             ga_account_id: ''
         },
         arg_list:
@@ -1199,6 +1201,31 @@ var TEMPLATE_SCHEMA =
             {
                 name: 'page_title',
                 description: 'Page Title',
+                type: 'string'
+            },
+            {
+                name: 'splash_top_text',
+                description: 'Splash Top Text',
+                type: 'string'
+            },
+            {
+                name: 'splash_bottom_text',
+                description: 'Splash Top Text',
+                type: 'string'
+            },
+            {
+                name: 'splash_bg',
+                description: 'Splash Background',
+                type: 'image'
+            },
+            {
+                name: 'footer_left_text',
+                description: 'Footer Left Text',
+                type: 'string'
+            },
+            {
+                name: 'footer_right_text',
+                description: 'Footer Right Text',
                 type: 'string'
             },
             {
