@@ -905,47 +905,55 @@ body {
 @media only screen
 and (max-device-width : 480px) {
     #overlay_container .splash_top_text {
-        padding-top: 120px;
+        padding-top: 90px;
         color: white;
         font-size: 40px;
         line-height: 60px;
     }
+    #overlay_container .splash_buttons {
+        padding-top: 50px;
+    }
     #overlay_container .splash_buttons .button {
-        margin-bottom: 10px;
-        width: 250px;
-        height: 46px;
+        margin-bottom: 12px;
+        width: 220px;
+        height: 36px;
         font-size: 20px;
     }
     #overlay_container .splash_buttons .button .text {
-        padding-top: 15px;
+        padding-top: 10px;
         padding-left: 10px;
-        width: 220px;
+        width: 190px;
         font-size: 20px;
     }
     #overlay_container .splash_buttons .button .arrow {
-        margin-top: 15px;
-        border-top: 9px solid transparent;
-        border-bottom: 9px solid transparent;
+        margin-top: 12px;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
         border-left: 12px solid white;
     }
     #overlay_container .splash_bottom_text {
-        padding-top: 30px;
-        font-size: 25px;
+        padding-top: 35px;
+        font-size: 18px;
     }
     #bottom {
-        height: 49px;
+        height: 30px;
         font-size: 10px;
     }
     #bottom .copyright {
-        right: 10px;
-        width: 200px;
+        top: 11px;
+        right: 8px;
+        width: 145px;
         overflow: hidden;
         white-space: nowrap;
+        text-align: right;
     }
     #bottom .be_heard {
-        left: 10px;
+        top: 11px;
+        left: 8px;
+        width: 145px;
         overflow: hidden;
         white-space: nowrap;
+        text-align: left;
     }
 }
 
