@@ -91,10 +91,10 @@
             </div>
             <div class='splash_bottom_text splash_item'><?=$template_params['splash_bottom_text'];?></div>
 
-            <img class='upper_left_logo player_item'
+            <img class='upper_left_logo player_item idle_hide'
                 src="<?=$template_params['upper_left_logo']['image'];?>" />
                 
-            <div id='player' class='player_item'>
+            <div id='player' class='player_item idle_hide'>
                 <div class='play tooltiped paused' onclick='playerToggle();'>
                     <div class='icon'></div>
                     <div id='tip_play' class='tooltip'>
@@ -165,7 +165,7 @@
                 </div>
                 
             </div>
-            <div id='bottom'>
+            <div id='bottom idle_hide'>
                 <div class='be_heard'><?=$template_params['footer_left_text'];?></div>
                 <div class='copyright'><?=$template_params['footer_right_text'];?></div>
             </div>

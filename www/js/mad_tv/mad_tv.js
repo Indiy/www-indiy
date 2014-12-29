@@ -55,16 +55,6 @@ function setupVideoPlayer()
     }
 
     $(window).resize(onWindowResize);
-    if( g_touchDevice )
-    {
-        $(document).on("touchstart",showControls);
-        $(document).on("touchend",timeoutControls);
-    }
-    else
-    {
-        $(document).mousemove(showAndTimeoutControls);
-    }
-    showControls();
 
     createVideoTag();
 
@@ -95,21 +85,30 @@ function choosePlaylist(i)
             g_currentPlaylist = g_playlistList[i];
             g_updateOnFirstTick = true;
         }
-        if( !IS_PHONE )
-        {
-            $('.splash_item').hide();
-            $('.player_item').show();
-        }
     }
     else
     {
         g_videoHistoryList = [];
         g_currentPlaylist = g_playlistList[i];
+        updateVideoElement(true);
+    }
+
+    if( !g_touchDevice || !IS_PHONE )
+    {
         $('.splash_item').hide();
         $('.player_item').show();
-        updateVideoElement(true);
+        if( g_touchDevice )
+        {
+            $(document).on("touchstart",showControls);
+            $(document).on("touchend",timeoutControls);
+        }
+        else
+        {
+            $(document).mousemove(showAndTimeoutControls);
+        }
         showControls();
     }
+
     g_currentPlaylistIndex = i;
 }
 
