@@ -79,6 +79,15 @@ function splashResize()
     imageResizeBackgrounds(g_backgroundList,'#splash_bg');
 }
 
+function choosePlaylist(i)
+{
+    g_videoHistoryList = [];
+    g_currentPlaylist = g_playlistList[i];
+    $('.splash_item').hide();
+    $('.player_item').show();
+    updateVideoElement();
+    showControls();
+}
 
 function showControls()
 {
@@ -164,9 +173,13 @@ var g_historyShown = false;
 function toggleHistory()
 {
     if( g_historyShown )
+    {
         hideHistory();
+    }
     else
+    {
         showHistory();
+    }
 }
 function showHistory()
 {
@@ -543,7 +556,7 @@ function calcVideoHistory()
 {
     var now_ms = getCorrectTime();
     var next_index = 0;
-    var video_list = g_playlistList[0].items;
+    var video_list = g_currentPlaylist.items;
 
     if( video_list.length == 0 )
     {
