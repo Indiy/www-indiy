@@ -30,6 +30,8 @@ var g_currentPlaylistIndex = 0;
 var g_currentPlaylist = false;
 var g_updateOnFirstTick = false;
 
+var g_noPlayerUI = false;
+
 function setupVideoPlayer()
 {
     g_currentPlaylist = g_playlistList[g_currentPlaylistIndex];
@@ -43,6 +45,11 @@ function setupVideoPlayer()
     {
         g_touchDevice = true;
     }
+    if( g_touchDevice && IS_PHONE )
+    {
+        g_noPlayerUI = true;
+    }
+
     //g_touchDevice = true;
     //$(document).mousemove(showAndTimeoutControls)
 
@@ -93,7 +100,7 @@ function choosePlaylist(i)
         updateVideoElement(true);
     }
 
-    if( !g_touchDevice || !IS_PHONE )
+    if( !g_noPlayerUI )
     {
         $('.splash_item').hide();
         $('.player_item').show();
@@ -114,38 +121,53 @@ function choosePlaylist(i)
 
 function showControls()
 {
-    if( !g_controlsShown )
+    if( !g_noPlayerUI )
     {
-        g_controlsShown = true;
-        $(".idle_hide").fadeIn();
+        if( !g_controlsShown )
+        {
+            g_controlsShown = true;
+            $(".idle_hide").fadeIn();
+        }
+        clearTimeoutControls();
     }
-    clearTimeoutControls();
 }
 function showAndTimeoutControls()
 {
-    showControls();
-    timeoutControls();
+    if( !g_noPlayerUI )
+    {
+        showControls();
+        timeoutControls();
+    }
 }
 function clearTimeoutControls()
 {
-    if( g_hideControlsTimeout !== false )
+    if( !g_noPlayerUI )
     {
-        window.clearTimeout(g_hideControlsTimeout);
-        g_hideControlsTimeout = false;
+        if( g_hideControlsTimeout !== false )
+        {
+            window.clearTimeout(g_hideControlsTimeout);
+            g_hideControlsTimeout = false;
+        }
     }
 }
 function timeoutControls()
 {
-    clearTimeoutControls();
-    if( g_playing )
+    if( !g_noPlayerUI )
     {
-        g_hideControlsTimeout = window.setTimeout(hideControls,2000);
+        clearTimeoutControls();
+        if( g_playing )
+        {
+            g_hideControlsTimeout = window.setTimeout(hideControls,2000);
+        }
     }
 }
 function hideControls()
 {
-    g_controlsShown = false;
-    $(".idle_hide").fadeOut();
+    if( !g_noPlayerUI )
+    {
+        g_controlsShown = false;
+        $(".idle_hide").fadeOut();
+    }
 }
 
 function mins_secs(secs)
