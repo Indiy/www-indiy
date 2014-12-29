@@ -27,6 +27,7 @@ var g_genreHistory = false;
 var g_currentVideo = false;
 var g_backgroundList = [];
 var g_currentPlaylist = false;
+var g_updateOnFirstTick = false;
 
 function setupVideoPlayer()
 {
@@ -84,12 +85,27 @@ function splashResize()
 
 function choosePlaylist(i)
 {
-    g_videoHistoryList = [];
-    g_currentPlaylist = g_playlistList[i];
-    $('.splash_item').hide();
-    $('.player_item').show();
-    updateVideoElement(true);
-    showControls();
+    if( g_touchDevice )
+    {
+        g_videoPlayer.play();
+        g_videoHistoryList = [];
+        g_currentPlaylist = g_playlistList[i];
+        g_updateOnFirstTick = true;
+        if( !IS_PHONE )
+        {
+            $('.splash_item').hide();
+            $('.player_item').show();
+        }
+    }
+    else
+    {
+        g_videoHistoryList = [];
+        g_currentPlaylist = g_playlistList[i];
+        $('.splash_item').hide();
+        $('.player_item').show();
+        updateVideoElement(true);
+        showControls();
+    }
 }
 
 function showControls()
@@ -155,7 +171,7 @@ function playerPlay()
         }
         else
         {
-            updateVideoElementInProgress();
+            updateVideoElement();
         }
     }
     catch(e) {}
@@ -303,10 +319,6 @@ function updateVideoDisplay()
         $('#player .heart').removeClass('love');
     }
 }
-function updateVideoElementInProgress()
-{
-    updateVideoElement();
-}
 function updateVideoElement(no_inhibit_seek)
 {
     var video = getCurrentVideo();
@@ -378,17 +390,20 @@ function videoTimeUpdate()
 {
     maybeSeekVideo();
     videoProgress();
+    maybeChangeVideo();
 }
 function videoDurationChange()
 {
     maybeSeekVideo();
     videoProgress();
+    maybeChangeVideo();
 }
 function videoPlayStarted()
 {
     g_playing = true;
     $('#player .play').removeClass('paused');
     timeoutControls();
+    maybeChangeVideo();
 }
 function videoProgress()
 {
@@ -468,6 +483,14 @@ function maybeSeekVideo()
                 setCurrentTime(seek_secs);
             }
         }
+    }
+}
+function maybeChangeVideo()
+{
+    if( g_updateOnFirstTick )
+    {
+        g_updateOnFirstTick = false;
+        updateVideoElement(true);
     }
 }
 
