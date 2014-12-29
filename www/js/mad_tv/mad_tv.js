@@ -26,6 +26,8 @@ var g_touchDevice = false;
 var g_genreHistory = false;
 var g_currentVideo = false;
 
+var debug_log = function() {};
+
 function setupVideoPlayer()
 {
     if( !('ontouchstart' in document) )
@@ -279,7 +281,7 @@ function updateVideoElement()
 {
     var video = getCurrentVideo();
     g_currentVideo = video;
-    console.log("updateVideoElement: now:",Date.now(),"new video:",video);
+    debug_log("updateVideoElement: now:",Date.now(),"new video:",video);
 
     var url = video.video_file;
     var url_ogv = false;
@@ -387,7 +389,7 @@ function videoProgress()
 }
 function videoEnded()
 {
-    console.log("videoEnded");
+    debug_log("videoEnded");
     updateVideoElement();
 }
 
@@ -412,7 +414,7 @@ function maybeSeekVideo()
 
             if( seek_delta < MAX_SEEK_FREQUENCY )
             {
-                console.log("would have seeked, but waiting for MAX_SEEK_FREQENCY");
+                debug_log("would have seeked, but waiting for MAX_SEEK_FREQENCY");
             }
             else
             {
@@ -426,7 +428,7 @@ function maybeSeekVideo()
                 {
                     seek_secs = 0;
                 }
-                console.log("seek to secs:",seek_secs,
+                debug_log("seek to secs:",seek_secs,
                     "pos_ms:",pos_ms,
                     "video.startTimeMS:",video.startTimeMS,
                     "video_delta_ms:",video_delta_ms);
@@ -539,7 +541,7 @@ function calcVideoHistory()
     var log = function() {};
     if( g_videoHistoryList.length > 0 )
     {
-        log = console.log.bind(console);
+        log = debug_log;
     }
 
     while(1)
