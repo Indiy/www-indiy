@@ -26,6 +26,7 @@ var g_touchDevice = false;
 var g_genreHistory = false;
 var g_currentVideo = false;
 var g_backgroundList = [];
+var g_currentPlaylist = g_playlistList[0];
 
 function setupVideoPlayer()
 {
