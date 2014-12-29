@@ -923,7 +923,7 @@ and (max-device-width : 480px) {
         padding-top: 10px;
         padding-left: 10px;
         width: 190px;
-        font-size: 20px;
+        font-size: 18px;
     }
     #overlay_container .splash_buttons .button .arrow {
         margin-top: 12px;
