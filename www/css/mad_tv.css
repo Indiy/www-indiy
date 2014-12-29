@@ -368,6 +368,13 @@ body {
     top: 20px;
     left: 270px;
 }
+#bottom a {
+    color: inherit;
+    text-decoration: inherit;
+}
+#bottom a:hover {
+    text-decoration: underline;
+}
 
 #add_video {
     display: none;
@@ -849,13 +856,18 @@ body {
     text-align: center;
 }
 #overlay_container .splash_buttons {
-    text-align: center;
+    padding-top: 60px;
 }
 #overlay_container .splash_buttons .button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
     width: 250px;
     height: 46px;
-    border: 2px white;
+    border: 2px solid white;
     border-radius: 2px;
+    cursor: pointer;
+    background: black;
 }
 #overlay_container .splash_buttons .button .text {
     display: inline-block;
@@ -870,10 +882,10 @@ body {
     margin-top: 20px;
     width: 0px;
     height: 0px;
-    border: 0px 20px 0px 0px white;
+    border: 0px 20px 0px 0px solid white;
 }
 #overlay_container .splash_bottom_text {
-    padding-top: 80px;
+    padding-top: 64px;
     color: white;
     font-size: 25px;
     text-align: center;
