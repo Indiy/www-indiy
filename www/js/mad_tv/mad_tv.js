@@ -523,7 +523,7 @@ function calcVideoHistory()
     var log = function() {};
     if( g_videoHistoryList.length > 0 )
     {
-        log = console.log;
+        log = console.log.bind(console);
     }
 
     while(1)
