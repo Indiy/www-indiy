@@ -88,9 +88,12 @@ function choosePlaylist(i)
     if( g_touchDevice )
     {
         g_videoPlayer.play();
-        g_videoHistoryList = [];
-        g_currentPlaylist = g_playlistList[i];
-        g_updateOnFirstTick = true;
+        if( i != 0 )
+        {
+            g_videoHistoryList = [];
+            g_currentPlaylist = g_playlistList[i];
+            g_updateOnFirstTick = true;
+        }
         if( !IS_PHONE )
         {
             $('.splash_item').hide();
