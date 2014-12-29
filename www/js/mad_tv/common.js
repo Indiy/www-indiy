@@ -55,4 +55,4 @@ function disableDebug()
     delete window.localStorage.enable_debug;
 }
 
-)();
+})();
