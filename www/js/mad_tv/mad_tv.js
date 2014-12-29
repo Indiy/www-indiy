@@ -343,7 +343,7 @@ function updateVideoElement(no_inhibit_seek)
     }
     if( g_touchDevice )
     {
-        g_videoPlayer.attr('src',url);
+        g_videoPlayer.src = url;
         g_videoPlayer.play();
     }
     else
@@ -544,8 +544,8 @@ function onWindowResize()
         var w = $('#video_container').width();
         if( g_touchDevice )
         {
-            g_videoPlayer.width(w);
-            g_videoPlayer.height(h);
+            g_videoPlayer.width = w;
+            g_videoPlayer.height = h;
         }
         else
         {
