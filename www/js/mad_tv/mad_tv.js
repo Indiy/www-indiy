@@ -417,6 +417,10 @@ function maybeSeekVideo()
                 {
                     seek_secs = video.durationSec - 2;
                 }
+                else if( seek_secs < 0 )
+                {
+                    seek_secs = 0;
+                }
                 console.log("seek to secs:",seek_secs,
                     "pos_ms:",pos_ms,
                     "video.startTimeMS:",video.startTimeMS,
@@ -557,7 +561,7 @@ function calcVideoHistory()
         var next_video = video_list[next_index];
         var durationSec = Math.floor(next_video.media_length);
         var startTimeMS = next_start_ms;
-        var endTimeMS = startTimeMS + durationSec * 1000;
+        var endTimeMS = startTimeMS + durationSec * 1000 - 1000;
         next_start_ms = endTimeMS;
 
         var item = {
