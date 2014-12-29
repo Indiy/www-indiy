@@ -26,12 +26,13 @@ var g_touchDevice = false;
 var g_genreHistory = false;
 var g_currentVideo = false;
 var g_backgroundList = [];
+var g_currentPlaylistIndex = 0;
 var g_currentPlaylist = false;
 var g_updateOnFirstTick = false;
 
 function setupVideoPlayer()
 {
-    g_currentPlaylist = g_playlistList[0];
+    g_currentPlaylist = g_playlistList[g_currentPlaylistIndex];
 
     if( !('ontouchstart' in document) )
     {
@@ -88,7 +89,7 @@ function choosePlaylist(i)
     if( g_touchDevice )
     {
         g_videoPlayer.play();
-        if( i != 0 )
+        if( i != g_currentPlaylistIndex )
         {
             g_videoHistoryList = [];
             g_currentPlaylist = g_playlistList[i];
