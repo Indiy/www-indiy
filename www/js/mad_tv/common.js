@@ -52,6 +52,7 @@ function enableDebug()
 }
 function disableDebug()
 {
+    window.debugLog = function() {};
     delete window.localStorage.enable_debug;
 }
 
