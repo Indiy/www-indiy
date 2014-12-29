@@ -25,7 +25,7 @@ var g_hideControlsTimeout = false;
 var g_touchDevice = false;
 var g_genreHistory = false;
 var g_currentVideo = false;
-
+var g_backgroundList = [];
 
 function setupVideoPlayer()
 {
@@ -62,8 +62,23 @@ function setupVideoPlayer()
     showControls();
 
     createVideoTag();
+
+    if( g_templateParams.splash_bg )
+    {
+        g_backgroundList = [ g_templateParams.splash_bg ];
+
+        imageLoadItem(g_backgroundList[0],0,'#splash_bg');
+        splashResize();
+        $(window).resize(splashResize);
+    }
 }
 $(document).ready(setupVideoPlayer);
+
+function splashResize()
+{
+    imageResizeBackgrounds(g_backgroundList,'#splash_bg');
+}
+
 
 function showControls()
 {
@@ -330,7 +345,7 @@ function onVideoReadyVideoJS()
     g_videoPlayer.addEvent("durationchange",videoDurationChange);
     g_videoPlayer.addEvent("progress",videoDownloadProgress);
     
-    g_videoPlayer.play();
+    //g_videoPlayer.play();
 }
 function videoLoadStart()
 {

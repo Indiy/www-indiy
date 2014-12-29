@@ -811,3 +811,76 @@ body {
     display: block;
 }
 
+.full_screen_bg {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0px;
+}
+.full_screen_bg .image_holder {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    vertical-align: top;
+}
+.full_screen_bg .image_holder div {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#overlay_container .splash_top_text {
+    padding-top: 200px;
+    color: white;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+}
+#overlay_container .splash_buttons {
+    text-align: center;
+}
+#overlay_container .splash_buttons .button {
+    width: 250px;
+    height: 46px;
+    border: 2px white;
+    border-radius: 2px;
+}
+#overlay_container .splash_buttons .button .text {
+    display: inline-block;
+    padding-top: 15px;
+    width: 225px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+#overlay_container .splash_buttons .button .arrow {
+    display: inline-block;
+    margin-top: 20px;
+    width: 0px;
+    height: 0px;
+    border: 0px 20px 0px 0px white;
+}
+#overlay_container .splash_bottom_text {
+    padding-top: 80px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+.splash_item {
+}
+.player_item {
+    display: none;
+}
