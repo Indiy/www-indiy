@@ -10,6 +10,14 @@ if( !Date.now )
 var PROGRESS_BAR_WIDTH = 534 - 2;
 var PROGRESS_ROUND_LENGTH = PROGRESS_BAR_WIDTH - 6;
 
+var MAX_BROWSER_TIME_DELTA_MS = 10*1000;
+
+var MAX_SEEK_FREQUENCY = 2*1000;
+var MIN_SEEK_MS = 10*1000;
+
+var LOOP_MS = 7*24*60*60*1000;
+var MAX_HISTORY_LEN = 10;
+
 var g_videoHistoryList = [];
 var g_genreList = false;
 var g_controlsShown = false;
@@ -17,7 +25,6 @@ var g_hideControlsTimeout = false;
 var g_touchDevice = false;
 var g_genreHistory = false;
 var g_currentVideo = false;
-
 
 function setupVideoPlayer()
 {
@@ -384,8 +391,6 @@ function videoEnded()
     updateVideoElement();
 }
 
-var MAX_SEEK_FREQUENCY = 2*1000;
-var MIN_SEEK_MS = 10*1000;
 
 var g_lastSeek = 0;
 function maybeSeekVideo()
@@ -488,7 +493,6 @@ function onWindowResize()
     }
 }
 
-var MAX_BROWSER_TIME_DELTA_MS = 10*1000;
 
 function getCorrectTime()
 {
@@ -518,8 +522,6 @@ function getPreviousVideoList()
     return g_videoHistoryList.slice(1,4);
 }
 
-var LOOP_MS = 7*24*60*60*1000;
-var MAX_HISTORY_LEN = 10;
 
 function calcVideoHistory()
 {
