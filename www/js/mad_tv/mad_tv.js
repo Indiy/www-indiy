@@ -280,7 +280,7 @@ function createVideoTag()
     if( g_touchDevice )
     {
         g_videoPlayer = $("video")[0];
-        g_videoPlayer.ready(onVideoReadyTouch);
+        $("video").ready(onVideoReadyTouch);
     }
     else
     {
