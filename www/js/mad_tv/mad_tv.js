@@ -88,7 +88,7 @@ function choosePlaylist(i)
     g_currentPlaylist = g_playlistList[i];
     $('.splash_item').hide();
     $('.player_item').show();
-    updateVideoElement();
+    updateVideoElement(true);
     showControls();
 }
 
@@ -307,7 +307,7 @@ function updateVideoElementInProgress()
 {
     updateVideoElement();
 }
-function updateVideoElement()
+function updateVideoElement(no_inhibit_seek)
 {
     var video = getCurrentVideo();
     g_currentVideo = video;
@@ -322,7 +322,10 @@ function updateVideoElement()
 
     updateVideoDisplay();
 
-    inhibitSeek();
+    if( !no_inhibit_seek )
+    {
+        inhibitSeek();
+    }
     if( g_touchDevice )
     {
         g_videoPlayer.attr('src',url);

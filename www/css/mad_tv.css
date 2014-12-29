@@ -865,7 +865,7 @@ body {
     width: 250px;
     height: 46px;
     border: 2px solid white;
-    border-radius: 2px;
+    border-radius: 3px;
     cursor: pointer;
     background: black;
 }
@@ -901,3 +901,51 @@ body {
 .player_item {
     display: none;
 }
+
+@media only screen
+and (max-device-width : 480px) {
+    #overlay_container .splash_top_text {
+        padding-top: 120px;
+        color: white;
+        font-size: 40px;
+        line-height: 60px;
+    }
+    #overlay_container .splash_buttons .button {
+        margin-bottom: 10px;
+        width: 250px;
+        height: 46px;
+        font-size: 20px;
+    }
+    #overlay_container .splash_buttons .button .text {
+        padding-top: 15px;
+        padding-left: 10px;
+        width: 220px;
+        font-size: 20px;
+    }
+    #overlay_container .splash_buttons .button .arrow {
+        margin-top: 15px;
+        border-top: 9px solid transparent;
+        border-bottom: 9px solid transparent;
+        border-left: 12px solid white;
+    }
+    #overlay_container .splash_bottom_text {
+        padding-top: 30px;
+        font-size: 25px;
+    }
+    #bottom {
+        height: 49px;
+        font-size: 10px;
+    }
+    #bottom .copyright {
+        right: 10px;
+        width: 200px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    #bottom .be_heard {
+        left: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
