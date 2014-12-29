@@ -110,6 +110,7 @@ function choosePlaylist(i)
         updateVideoElement(true);
         showControls();
     }
+    g_currentPlaylistIndex = i;
 }
 
 function showControls()
