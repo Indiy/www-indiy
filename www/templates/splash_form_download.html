@@ -65,9 +65,10 @@
                 </div>
             </div>
         </div>
-        <div class='subtitle success_show'><?=$template_params['success_text'];?></div>
         <?php if($template_params['file_download']): ?>
-            <div class='subtitle success_show'><a href="<?=$template_params['file_download'];?>" target="_blank">Download File</a></div>
+            <div class='subtitle success_show'><a href="<?=$template_params['file_download'];?>" target="_blank"><?=$template_params['success_text'];?></a></div>
+        <?php else: ?>
+            <div class='subtitle success_show'><?=$template_params['success_text'];?></div>
         <?php endif; ?>
     </div></div>
     <div id='footer'>
