@@ -244,6 +244,9 @@ font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;    text-align: cent
 font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;    text-align: center;
     line-height: 40px;
 }
+.subtitle.success_show {
+    margin-top: 50px;
+}
 .subtitle a {
     color: white;
     text-decoration: none;

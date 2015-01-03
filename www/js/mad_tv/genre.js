@@ -2,6 +2,11 @@
 var g_genrePickerShown = false;
 var g_genre_id = false;
 
+function clickGenre()
+{
+    window.reload();
+}
+
 function toggleGenrePicker()
 {
     if( g_genrePickerShown )

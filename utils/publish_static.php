@@ -37,7 +37,7 @@
         }
         else if( $extension == 'woff' )
         {
-            return "font/x-woff";
+            return "application/font-woff";
         }
         else if( $extension == 'svg' )
         {
