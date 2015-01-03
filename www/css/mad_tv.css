@@ -43,7 +43,7 @@ body {
 #player {
     position: absolute;
     height: 72px;
-    width: 730px;
+    width: 795px;
     bottom: 70px;
     left: 50%;
     margin-top: -86px;
@@ -183,7 +183,7 @@ body {
     bottom: 72px;
     left: 0px;
     height: 230px;
-    width: 860px;
+    width: 794px;
     background: rgba(0,0,0,0.6);
     border-radius: 6px 6px 0px 0px;
     z-index: -1;
@@ -200,7 +200,7 @@ body {
 #history .header .title {
     float: left;
     height: 22px;
-    width: 702px;
+    width: 635px;
     padding-top: 15px;
     padding-left: 10px;
     font-size: 11px;
@@ -254,7 +254,7 @@ body {
 }
 #history .content .row .title {
     float: left;
-    width: 626px;
+    width: 561px;
     height: 36px;
     padding-top: 26px;
     padding-left: 16px;
@@ -787,11 +787,11 @@ body {
 }
 #player #tip_love {
     top: -24px;
-    left: 661px;
+    left: 726px;
 }
 #player #tip_unlove {
     top: -24px;
-    left: 652px;
+    left: 717px;
 }
 .no_touch #player .play.paused:hover #tip_pause {
     display: none;

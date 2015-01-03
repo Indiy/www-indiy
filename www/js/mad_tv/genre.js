@@ -4,7 +4,7 @@ var g_genre_id = false;
 
 function clickGenre()
 {
-    window.reload();
+    window.location.reload();
 }
 
 function toggleGenrePicker()
