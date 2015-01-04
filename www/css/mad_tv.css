@@ -942,7 +942,28 @@ body {
 
 .content_tab {
     display: none;
+    position: absolute;
+    top: 46px;
+    bottom: 49px;
+    left: 0px;
+    right: 0px;
+    overflow: auto;
 }
+.content_tab.social_item {
+    left: auto;
+    max-width: 400px;
+}
+.content_tab.social_item.instagram ul {
+    list-style-type: none;
+    padding-bottom: 50px;
+}
+.content_tab.social_item.instagram ul li {
+    padding-bottom: 10px;
+}
+.content_tab.social_item.instagram ul li img {
+    max-width: 90%;
+}
+
 
 .splash_item {
 }
