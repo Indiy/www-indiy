@@ -940,6 +940,26 @@ body {
     display: none;
 }
 
+#top_bar_nav .button.tab .icon {
+    background: transparent url("/images/player_icons.png") -180px -227px no-repeat;
+}
+#top_bar_nav .button.store .icon {
+    background: transparent url("/images/player_icons.png") -180px -227px no-repeat;
+}
+#top_bar_nav .button.facebook .icon {
+    background: transparent url("/images/player_icons.png") -180px -227px no-repeat;
+}
+#top_bar_nav .button.twitter .icon {
+    background: transparent url("/images/player_icons.png") -180px -227px no-repeat;
+}
+#top_bar_nav .button.instagram .icon {
+    background: transparent url("/images/player_icons.png") -180px -227px no-repeat;
+}
+/*
+.no_touch #top_bar_nav .button.facebook:hover .icon {
+    background: transparent url("/images/player_icons.png") -180px -227px no-repeat;
+}
+*/
 .content_tab {
     display: none;
     position: absolute;
