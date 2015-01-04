@@ -39,6 +39,7 @@ window.IS_NARROW = false;
 window.debugLog = function() {};
 window.enableDebug = enableDebug;
 window.disableDebug = disableDebug;
+window.updateAnchor = updateAnchor;
 
 if( window.localStorage.enable_debug )
 {
@@ -54,6 +55,51 @@ function disableDebug()
 {
     window.debugLog = function() {};
     delete window.localStorage.enable_debug;
+}
+
+var g_storedHash = "";
+
+function getAnchorMap()
+{
+    var anchor_map = {};
+    var anchor = self.document.location.hash.substring(1);
+    var anchor_elements = anchor.split('&');
+    for( var i = 0 ; i < anchor_elements.length ; i++ )
+    {
+        var e = anchor_elements[i];
+        var k_v = e.split('=');
+        
+        k = unescape(k_v[0]);
+        if( k_v.length > 1 )
+            anchor_map[k] = unescape(k_v[1]);
+        else
+            anchor_map[k] = true;
+    }
+    return anchor_map;
+}
+
+function updateAnchor(map)
+{
+    var anchor_map = getAnchorMap();
+    
+    jQuery.extend(anchor_map,map);
+    
+    var anchor = "";
+    for( var key in anchor_map )
+    {
+        var val = anchor_map[key];
+        
+        if( val.length > 0 )
+        {
+            if( anchor.length > 0 )
+                anchor += "&";
+            anchor += "{0}={1}".format(key,val);
+        }
+    }
+
+    // inhibit hashChanged if we do it
+    g_storedHash = "#" + anchor;
+    window.location.hash = anchor;
 }
 
 })();
