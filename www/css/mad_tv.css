@@ -933,6 +933,9 @@ body {
     height: 30px;
     background: blue;
 }
+#top_bar_nav .button.active .icon {
+    background: red;
+}
 #top_bar_nav .button .text {
     display: none;
 }
@@ -940,8 +943,6 @@ body {
 .content_tab {
     display: none;
 }
-
-
 
 .splash_item {
 }
@@ -1003,3 +1004,6 @@ and (max-device-width : 480px) {
     }
 }
 
+.hidden {
+    display: none !important;
+}

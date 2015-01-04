@@ -1,11 +1,40 @@
 (function(){
 
-window.twitterInsert = twitterInsert;
-window.instagramInsert = instagramInsert;
+$(document).ready(ready);
+
+function ready()
+{
+    facebookInsert();
+    twitterInsert();
+    instagramInsert();
+}
+
+function facebookInsert()
+{
+    var height = $('.social_item.facebook').height() - 10;
+    var width = $('.social_item.facebook').width();
+    
+    var facebook_widget = g_templateParams['facebook_widget'];
+    var html = false;
+    if( facebook_widget && facebook_widget.length > 0 )
+    {
+        html = facebook_widget.replace(/(.*)(data-height="\w+\d+\w+")(.*)/, '$1 $3');
+        html = html.replace(/(.*data-width=)("\w+\d+\w+")(.*)/, '$1"' + width + '" data-height="' + height +'" $3');
+    }
+    if( html !== false )
+    {
+        $('.social_item.facebook').html(html);
+    }
+    else
+    {
+        $('#top_bar_nav .social.button.facebook').addClass('hidden');
+    }
+    return html !== false;
+}
 
 function twitterInsert()
 {
-    var height = $('body').height() - 80;
+    var height = $('.social_item.twitter').height();
     
     var twitter_widget = g_templateParams['twitter_widget'];
     var html = false;
@@ -22,8 +51,12 @@ function twitterInsert()
     }
     if( html !== false )
     {
-        $('#social_twitter').html(html);
+        $('.social_item.twitter').html(html);
         load_twitter();
+    }
+    else
+    {
+        $('#top_bar_nav .social.button.twitter').addClass('hidden');
     }
     return html !== false;
 }
@@ -45,7 +78,7 @@ function instagramInsert()
  
     if( instagram_username )
     {
-        $('.instagram-lite').instagramLite({
+        $('.social_item.instagram .instagram-lite').instagramLite({
             clientID: '4456c161ef3849bca5119242b28c64ca',
             username: instagram_username
         });
@@ -53,7 +86,7 @@ function instagramInsert()
     }
     else
     {
-        $('.social_tab .social_buttons .button.instagram').hide();
+        $('#top_bar_nav .social.button.instagram').addClass('hidden');
         return false;
     }
 }
