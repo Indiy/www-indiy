@@ -852,11 +852,6 @@ body {
     height: 100%;
     overflow: hidden;
 }
-#overlay_container .upper_left_logo {
-    position: absolute;
-    top: 20px;
-    left: 0px;
-}
 
 #overlay_container .splash_top_text {
     padding-top: 120px;
@@ -915,11 +910,17 @@ body {
     left: 0px;
     right: 0px;
     height: 46px;
+    padding-right: 10px;
     background: #1a1a1a;
     text-align: right;
     font-size: 0px;
     white-space: nowrap;
+    z-index: 101;
 }
+#top_bar_nav .upper_left_logo {
+    float: left;
+}
+
 #top_bar_nav .button {
     display: inline-block;
     margin-top: 12px;
