@@ -35,12 +35,24 @@
     <script type="text/javascript">
         var g_swfBase = "<?=static_file_url('/js/Jplayer.swf');?>";
     
+        var g_tabList = <?=$tab_list_json;?>;
+        var g_productList = <?=$product_list_json;?>;
+        var g_totalPageViews = <?=$artist_views;?>;
+        var g_playlistList = <?=$playlist_list_json;?>;
+        
         var g_trueSiteUrl = "<?=trueSiteUrl();?>";
         var g_cartBaseUrl = "<?=cart_base_url();?>";
         var g_apiBaseUrl = "<?=api_base_url();?>";
-        var g_artistBaseUrl = "<?=$artist_base_url;?>";
+        var g_fanBaseUrl = "<?=fan_base_url();?>";
         var g_artistFileBaseUrl = "<?=artist_file_base_url();?>";
         
+        var g_artistName = "<?=$artist_name;?>";
+        var g_artistId = <?=$artist_id;?>;
+        var g_artistBaseUrl = "<?=$artist_base_url;?>";
+        var g_pageUrl = "<?=$page_url;?>";
+        
+        var g_fanEmail = "<?=$fan_email;?>";
+
         var g_artistId = <?=$artist_id;?>;
         
         var g_eventDate = new Date("<?=$template_params['countdown_date'];?>");
@@ -94,6 +106,18 @@
             </div>
         </div>
     </div>
+    <script>
+        (function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=256680924395123";
+         fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    </script>
     <script>
         <?=get_ga_code();?>
     </script>
