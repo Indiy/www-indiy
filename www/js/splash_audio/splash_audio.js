@@ -8,33 +8,9 @@ var g_loadTime = false;
 var g_backgroundList = [];
 var g_musicIndex = 0;
 var g_isPlaying = false;
-var g_touchDevice = false;
 
 function splashReady()
 {
-    if( !('ontouchstart' in document) )
-    {
-        $('body').addClass('no_touch');
-        g_touchDevice = false;
-    }
-    else
-    {
-        g_touchDevice = true;
-    }
-
-    if( IS_CHROME )
-        $('body').addClass('chrome');
-    if( IS_IPAD )
-        $('body').addClass('ipad');
-    if( IS_IPHONE )
-        $('body').addClass('iphone');
-    if( IS_IOS )
-        $('body').addClass('ios');
-    if( IS_MOBILE )
-        $('body').addClass('mobile');
-    if( IS_DESKTOP )
-        $('body').addClass('desktop');
-
     g_backgroundList = g_musicList;
 
     var opts = {

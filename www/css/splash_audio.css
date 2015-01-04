@@ -421,6 +421,10 @@ font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
     color: #888;
 }
 
+.phone .content_tab .close {
+    display: none;
+}
+
 .content_tab.user_tab {
     padding-top: 30px;
     padding-left: 50px;

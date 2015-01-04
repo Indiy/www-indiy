@@ -21,16 +21,17 @@ window.IS_RETINA = window.devicePixelRatio > 1;
 
 window.IS_IE = false;
 window.IS_OLD_IE = false;
-(function() {
- window.ie_match = navigator.userAgent.match(/IE ([^;]*);/);
- if( ie_match != null && ie_match.length > 1 )
- {
- IS_IE = true;
- window.ie_version = parseFloat(ie_match[1]);
- if( ie_version < 9.0 )
- IS_OLD_IE = true;
- }
- })();
+
+var ie_match = navigator.userAgent.match(/IE ([^;]*);/);
+if( ie_match != null && ie_match.length > 1 )
+{
+    window.IS_IE = true;
+    var ie_version = parseFloat(ie_match[1]);
+    if( ie_version < 9.0 )
+    {
+        window.IS_OLD_IE = true;
+    }
+}
 
 window.EMAIL_REGEX = new RegExp('[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?');
 window.PHONE_REGEX = new RegExp('^[0-9]{3}-[0-9]{3}-[0-9]{4}$');
@@ -41,6 +42,51 @@ window.debugLog = function() {};
 window.enableDebug = enableDebug;
 window.disableDebug = disableDebug;
 window.updateAnchor = updateAnchor;
+
+window.g_touchDevice = 'ontouchstart' in document;
+
+function ready()
+{
+    if( g_touchDevice )
+    {
+        $('body').addClass('touch');
+    }
+    else
+    {
+        $('body').addClass('no_touch');
+    }
+
+    if( IS_CHROME )
+    {
+        $('body').addClass('chrome');
+    }
+    if( IS_IPAD )
+    {
+        $('body').addClass('ipad');
+    }
+    if( IS_IPHONE )
+    {
+        $('body').addClass('iphone');
+    }
+    if( IS_IOS )
+    {
+        $('body').addClass('ios');
+    }
+    if( IS_MOBILE )
+    {
+        $('body').addClass('mobile');
+    }
+    if( IS_DESKTOP )
+    {
+        $('body').addClass('desktop');
+    }
+    if( IS_PHONE )
+    {
+        $('body').addClass('phone');
+    }
+}
+$(document).ready(ready);
+
 
 if( window.localStorage.enable_debug )
 {
