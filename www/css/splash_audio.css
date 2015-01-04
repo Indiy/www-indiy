@@ -155,7 +155,8 @@ body {
     left: 0px;
     right: 0px;
     height: 96px;
-    background: rgba(0,0,0,0.5);
+    background: black;
+    background: rgba(0,0,0,0.8);
     overflow: hidden;
 }
 #footer .slider .audio_player {
