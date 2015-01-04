@@ -1234,6 +1234,21 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             },
             {
+                name: 'facebook_widget',
+                description: 'Facebook Widget',
+                type: 'textbox'
+            },
+            {
+                name: 'twitter_widget',
+                description: 'Twitter Widget',
+                type: 'textbox'
+            },
+            {
+                name: 'instagram_username',
+                description: 'Instagram Username',
+                type: 'string'
+            },
+            {
                 name: 'ga_account_id',
                 description: 'Google Analytics Id',
                 type: 'string'
