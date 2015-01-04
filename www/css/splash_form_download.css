@@ -183,7 +183,7 @@ body {
 }
 
 .top_title {
-    padding-top: 21px;
+    padding-top: 58px;
     padding-bottom: 8px;
     color: white;
     font-size: 71px;
@@ -587,7 +587,7 @@ font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;    text-align: righ
     display: none;
     position: absolute;
     top: 46px;
-    bottom: 96px;
+    bottom: 0px;
     left: 0px;
     right: 0px;
     overflow: auto;
