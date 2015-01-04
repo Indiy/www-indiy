@@ -55,7 +55,7 @@ function hideAll()
 
 function navHideTab(ele)
 {
-    $('#top_bar_nav .social.button').removeClass('active');
+    $('#top_bar_nav .button').removeClass('active');
     hideAll();
 }
 
