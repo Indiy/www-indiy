@@ -1100,6 +1100,7 @@ body {
 }
 .content_tab.user_tab .content_container {
     overflow: auto;
+    font-size: 20px;
 }
 
 #store_tab {
