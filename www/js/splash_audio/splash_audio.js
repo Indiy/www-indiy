@@ -122,17 +122,19 @@ var g_hideControlsTimeout = false;
 var HIDE_TIMEOUT = 5*1000;
 var ANIMATE_DURATION = "fast";
 
+var g_inhibitControlsHide = false;
+
 function showControls()
 {
     if( !g_controlsShown )
     {
         g_controlsShown = true;
-        $('.idle_hide').animate({ height: '96px' },ANIMATE_DURATION);
+        $('.idle_hide').fadeOut();
     }
     else if( !$('.idle_hide').is(':animated') )
     {
         $('.idle_hide').stop(true,false);
-        $('.idle_hide').css({ height: '96px' });
+        $('.idle_hide').fadeIn();
     }
     clearTimeoutControls();
 }
@@ -156,8 +158,11 @@ function timeoutControls()
 }
 function hideControls()
 {
-    g_controlsShown = false;
-    $('.idle_hide').animate({ height: '0px' },ANIMATE_DURATION);
+    if( !g_inhibitControlsHide )
+    {
+        g_controlsShown = false;
+        $('.idle_hide').fadeOut();
+    }
 }
 
 function backgroundPanelChange(index)

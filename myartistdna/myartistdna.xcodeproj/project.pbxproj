@@ -1809,7 +1809,6 @@
 				2D117D0D17032EC200D6BD84 /* meek_splash.css */,
 				2D775D4C1719BF6900B2250D /* meek_video.css */,
 				2D7A9C4D170D292C003C5982 /* meek_stream.css */,
-				2D26203C172746CB00D16D8D /* splash_audio.css */,
 				2DFBC929172D8D95001DCEF6 /* countdown_audio.css */,
 				2DFBC92E173E9F0E001DCEF6 /* splash_video.css */,
 				2DE6CDD1175AB28E007E6792 /* splash_form_download.css */,
@@ -1819,6 +1818,7 @@
 				2D88DA591967332E00F6788C /* default_v4.css */,
 				2D88DA661969138900F6788C /* default_v5.css */,
 				2DCEC1451A4FB3FE00DB41D7 /* mad_tv.css */,
+				2D26203C172746CB00D16D8D /* splash_audio.css */,
 			);
 			path = css;
 			sourceTree = "<group>";

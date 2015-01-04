@@ -310,7 +310,7 @@ font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
     display: none;
     position: absolute;
     top: 46px;
-    bottom: 49px;
+    bottom: 96px;
     left: 0px;
     right: 0px;
     overflow: auto;
@@ -392,6 +392,7 @@ font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
 }
 .content_tab.user_tab .content_container {
     overflow: auto;
+    color: white;
     font-size: 20px;
 }
 
