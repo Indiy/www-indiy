@@ -770,7 +770,21 @@ var TEMPLATE_SCHEMA =
                 description: 'Album Image',
                 type: 'image'
             },
-
+            {
+                name: 'facebook_widget',
+                description: 'Facebook Widget',
+                type: 'textbox'
+            },
+            {
+                name: 'twitter_widget',
+                description: 'Twitter Widget',
+                type: 'textbox'
+            },
+            {
+                name: 'instagram_username',
+                description: 'Instagram Username',
+                type: 'string'
+            }
         ]
     },
     'PLAYER_COUNTDOWN_AUDIO': {

@@ -229,6 +229,12 @@
 		2D3FAF0B1A58BCC40009F2F3 /* player_social.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_social.js; sourceTree = "<group>"; };
 		2D3FAF0C1A58BCC40009F2F3 /* player_store.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_store.js; sourceTree = "<group>"; };
 		2D3FAF0D1A58BCC40009F2F3 /* top_bar_nav.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = top_bar_nav.js; sourceTree = "<group>"; };
+		2D3FAF0E1A59D0500009F2F3 /* frag_top_bar_nav.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = frag_top_bar_nav.html; sourceTree = "<group>"; };
+		2D3FAF101A59D1650009F2F3 /* common.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = common.js; sourceTree = "<group>"; };
+		2D3FAF111A59D1650009F2F3 /* player_social.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_social.js; sourceTree = "<group>"; };
+		2D3FAF121A59D1650009F2F3 /* player_store.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_store.js; sourceTree = "<group>"; };
+		2D3FAF131A59D1650009F2F3 /* splash_audio.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = splash_audio.js; sourceTree = "<group>"; };
+		2D3FAF141A59D1650009F2F3 /* top_bar_nav.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = top_bar_nav.js; sourceTree = "<group>"; };
 		2D4116BB1534E44900F18000 /* privacy.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = privacy.php; sourceTree = "<group>"; };
 		2D4116BC1534E44A00F18000 /* terms_service.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = terms_service.php; sourceTree = "<group>"; };
 		2D4116BD1534E9BB00F18000 /* player.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = player.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
@@ -1267,6 +1273,18 @@
 			path = mad_tv;
 			sourceTree = "<group>";
 		};
+		2D3FAF0F1A59D1650009F2F3 /* splash_audio */ = {
+			isa = PBXGroup;
+			children = (
+				2D3FAF101A59D1650009F2F3 /* common.js */,
+				2D3FAF111A59D1650009F2F3 /* player_social.js */,
+				2D3FAF121A59D1650009F2F3 /* player_store.js */,
+				2D3FAF131A59D1650009F2F3 /* splash_audio.js */,
+				2D3FAF141A59D1650009F2F3 /* top_bar_nav.js */,
+			);
+			path = splash_audio;
+			sourceTree = "<group>";
+		};
 		2D6DF27C17D2AF6B0020CD97 /* default_v2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1534,7 +1552,9 @@
 		2D9E2FD81569F13600A76906 /* templates */ = {
 			isa = PBXGroup;
 			children = (
+				2D3FAF0E1A59D0500009F2F3 /* frag_top_bar_nav.html */,
 				2DCEC1441A4FB21300DB41D7 /* mad_tv.html */,
+				2D26203B17273AEB00D16D8D /* splash_audio.html */,
 				2D88DA67196913A200F6788C /* default_v5.html */,
 				2D88DA4B19672D1100F6788C /* default_v4.html */,
 				2D6DF29617DD282E0020CD97 /* default_v3.html */,
@@ -1542,7 +1562,6 @@
 				2DF84C711803B96500165BF8 /* mad_stream.html */,
 				2DE6CDCF175AB174007E6792 /* splash_form_download.html */,
 				2DFBC92B172D8DD4001DCEF6 /* countdown_audio.html */,
-				2D26203B17273AEB00D16D8D /* splash_audio.html */,
 				2DFBC92C17358CFC001DCEF6 /* splash_video.html */,
 				2D117D0C1702984500D6BD84 /* meek_splash.html */,
 				2D117D33170798B600D6BD84 /* meek_video.html */,
@@ -1976,6 +1995,7 @@
 				2D6DF29817DD2F360020CD97 /* default_v3 */,
 				2D6DF27C17D2AF6B0020CD97 /* default_v2 */,
 				2D3FAF061A58BCC40009F2F3 /* mad_tv */,
+				2D3FAF0F1A59D1650009F2F3 /* splash_audio */,
 			);
 			path = js;
 			sourceTree = "<group>";
