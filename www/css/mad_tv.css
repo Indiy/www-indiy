@@ -906,12 +906,47 @@ body {
     text-align: center;
 }
 
+
+
+
+#top_bar_nav {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 46px;
+    background: #1a1a1a;
+    text-align: right;
+    font-size: 0px;
+    white-space: nowrap;
+}
+#top_bar_nav .button {
+    display: inline-block;
+    margin-top: 12px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+#top_bar_nav .button .icon {
+    display: inline-block;
+    width: 32px;
+    height: 30px;
+    background: blue;
+}
+#top_bar_nav .button .text {
+    display: none;
+}
+
+.content_tab {
+    display: none;
+}
+
+
+
 .splash_item {
 }
 .player_item {
     display: none;
 }
-
 @media only screen
 and (max-device-width : 480px) {
     #overlay_container .splash_top_text {
