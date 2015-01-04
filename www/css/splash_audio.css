@@ -900,7 +900,11 @@ and (max-device-width : 480px) {
         margin-right: 0px;
     }
 
-    
+    .content_tab.social_item.facebook {
+        width: auto;
+        left: 0px;
+        right: 0px;
+    }
 }
 
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
