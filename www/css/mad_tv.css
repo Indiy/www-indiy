@@ -941,25 +941,42 @@ body {
 }
 
 #top_bar_nav .button.tab .icon {
-    background: transparent url("/images/player_icons.png") -180px -227px no-repeat;
+    background: transparent url("/images/player_icons.png") -12px -227px no-repeat;
 }
 #top_bar_nav .button.store .icon {
-    background: transparent url("/images/player_icons.png") -180px -227px no-repeat;
+    background: transparent url("/images/player_icons.png") -58px -227px no-repeat;
 }
 #top_bar_nav .button.facebook .icon {
-    background: transparent url("/images/player_icons.png") -180px -227px no-repeat;
+    background: transparent url("/images/player_icons.png") -104px -227px no-repeat;
 }
 #top_bar_nav .button.twitter .icon {
-    background: transparent url("/images/player_icons.png") -180px -227px no-repeat;
+    background: transparent url("/images/player_icons.png") -139px -227px no-repeat;
 }
 #top_bar_nav .button.instagram .icon {
-    background: transparent url("/images/player_icons.png") -180px -227px no-repeat;
+    background: transparent url("/images/player_icons.png") -177px -227px no-repeat;
 }
-/*
+
+#top_bar_nav .button.tab.active .icon,
+.no_touch #top_bar_nav .button.tab:hover .icon {
+    background: transparent url("/images/player_icons.png") -12px -176px no-repeat;
+}
+#top_bar_nav .button.store.active .icon,
+.no_touch #top_bar_nav .button.store:hover .icon {
+    background: transparent url("/images/player_icons.png") -58px -176px no-repeat;
+}
+#top_bar_nav .button.facebook.active .icon,
 .no_touch #top_bar_nav .button.facebook:hover .icon {
-    background: transparent url("/images/player_icons.png") -180px -227px no-repeat;
+    background: transparent url("/images/player_icons.png") -104px -176px no-repeat;
 }
-*/
+#top_bar_nav .button.twitter.active .icon,
+.no_touch #top_bar_nav .button.twitter:hover .icon {
+    background: transparent url("/images/player_icons.png") -139px -176px no-repeat;
+}
+#top_bar_nav .button.instagram.active .icon,
+.no_touch #top_bar_nav .button.instagram:hover .icon {
+    background: transparent url("/images/player_icons.png") -177px -176px no-repeat;
+}
+
 .content_tab {
     display: none;
     position: absolute;
