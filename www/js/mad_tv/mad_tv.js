@@ -257,7 +257,6 @@ function updateHistory()
         var img = "<img onerror='$(this).hide();' src='{0}'>".format(video.logo);
 
         html += "<div class='row'>";
-        html += " <div class='icon'>{0}</div>".format(img);
         html += " <div class='title'>" + title + "</div>";
         html += " <div class='length'>" + duration + "</div>";
         html += " <div id='history_loved_" + i + "' class='loved " + love + "'>";
