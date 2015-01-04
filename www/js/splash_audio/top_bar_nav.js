@@ -57,6 +57,7 @@ function navHideTab(ele)
 {
     $('#top_bar_nav .button').removeClass('active');
     hideAll();
+    g_inhibitControlsHide = false;
 }
 
 })();
