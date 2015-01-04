@@ -271,6 +271,9 @@ body {
 }
 #history .content .row {
     height: 64px;
+    font-size: 0px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 #history .content .row .icon {
     float: left;
@@ -291,10 +294,10 @@ body {
 }
 #history .content .row .title {
     float: left;
-    width: 561px;
+    width: 616px;
     height: 36px;
     padding-top: 26px;
-    padding-left: 16px;
+    padding-left: 30px;
     font-size: 15px;
     font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
     font-weight: bold;
