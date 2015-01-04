@@ -7,6 +7,7 @@ window.navToggleTwitter = navToggleTwitter;
 window.navToggleInstagram = navToggleInstagram;
 window.navHideTab = navHideTab;
 
+
 function navToggleTab(ele,i)
 {
     toggleItem(ele,'#user_tab_' + i);
@@ -34,6 +35,8 @@ function toggleItem(ele,item_sel)
     if( ele_jq.hasClass('active') )
     {
         ele_jq.removeClass('active');
+        hideAll();
+        g_inhibitControlsHide = false;
     }
     else
     {
@@ -41,6 +44,7 @@ function toggleItem(ele,item_sel)
         ele_jq.addClass('active');
         hideAll();
         $(item_sel).show();
+        g_inhibitControlsHide = true;
     }
 }
 

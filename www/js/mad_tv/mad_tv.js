@@ -22,6 +22,7 @@ var g_videoHistoryList = [];
 var g_genreList = false;
 var g_controlsShown = false;
 var g_hideControlsTimeout = false;
+var g_inhibitControlsHide = false;
 var g_touchDevice = false;
 var g_genreHistory = false;
 var g_currentVideo = false;
@@ -29,6 +30,7 @@ var g_backgroundList = [];
 var g_currentPlaylistIndex = 0;
 var g_currentPlaylist = false;
 var g_updateOnFirstTick = false;
+
 
 var g_noPlayerUI = false;
 
@@ -163,7 +165,7 @@ function timeoutControls()
 }
 function hideControls()
 {
-    if( !g_noPlayerUI )
+    if( !g_noPlayerUI && !g_inhibitControlsHide )
     {
         g_controlsShown = false;
         $(".idle_hide").fadeOut();
