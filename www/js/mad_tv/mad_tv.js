@@ -85,6 +85,19 @@ function splashResize()
 
 function choosePlaylist(i)
 {
+    var playlist = g_playlistList[i];
+
+    authorizePlaylist(playlist,function(err)
+    {
+        if( !err )
+        {
+            playPlaylist(i);
+        }
+    });
+}
+
+function playPlaylist(i)
+{
     if( g_touchDevice )
     {
         g_videoPlayer.play();

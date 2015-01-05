@@ -80,12 +80,18 @@
         $API_UserName="mad_1346558535_biz_api1.myartistdna.com";
         $API_Password="1346558558";
         $API_Signature="Ab.Ua9MmJioLkDJWgEubbcrQ8dONA9x1bbDIhJetM9P6ktHGYZ6AK3D-";
+
+        $g_stripe_public_key = "pk_test_Ff9HzDNRBuL1kPiPGKQaPYV1";
+        $g_stripe_secret_key = "sk_test_u0E8xR8Qo5CP8yYqbly7HGqy";
     }
     else
     {
         $API_UserName="wtl_api1.lomaxco.com";
         $API_Password="B9K3CSH3AMLQSRRU";
         $API_Signature="AYPWYcsCU66yye7Ljup18V27fG8LAJE0BPSJQ5lI8-ogx1T9aLnD7sS3";
+
+        $g_stripe_public_key = "pk_test_Ff9HzDNRBuL1kPiPGKQaPYV1";
+        $g_stripe_secret_key = "sk_test_u0E8xR8Qo5CP8yYqbly7HGqy";
     }
 
 ?>

@@ -1278,6 +1278,31 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             },
             {
+                name: 'checkout_playlist',
+                description: 'Checkout Playlist',
+                type: 'string'
+            },
+            {
+                name: 'checkout_name',
+                description: 'Checkout Name',
+                type: 'string'
+            },
+            {
+                name: 'checkout_description',
+                description: 'Checkout Description',
+                type: 'string'
+            },
+            {
+                name: 'checkout_amount',
+                description: 'Checkout Amount',
+                type: 'string'
+            },
+            {
+                name: 'checkout_image',
+                description: 'Checkout Image',
+                type: 'image'
+            },
+            {
                 name: 'ga_account_id',
                 description: 'Google Analytics Id',
                 type: 'string'
