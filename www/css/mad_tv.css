@@ -897,6 +897,7 @@ body {
     padding-top: 120px;
     color: white;
     font-size: 50px;
+    font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
     line-height: 60px;
     text-align: center;
 }
@@ -921,6 +922,7 @@ body {
     width: 220px;
     color: white;
     font-size: 20px;
+    font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
     text-align: center;
     vertical-align: top;
 }
@@ -938,6 +940,7 @@ body {
     padding-top: 64px;
     color: white;
     font-size: 25px;
+    font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
     text-align: center;
 }
 
