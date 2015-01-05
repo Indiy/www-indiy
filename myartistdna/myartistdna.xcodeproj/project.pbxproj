@@ -187,6 +187,7 @@
 		2D3FAF191A59FA310009F2F3 /* splash_form_download.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = splash_form_download.js; sourceTree = "<group>"; };
 		2D3FAF1A1A59FA310009F2F3 /* top_bar_nav.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = top_bar_nav.js; sourceTree = "<group>"; };
 		2D3FAF1B1A5A37FB0009F2F3 /* stripe_checkout.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = stripe_checkout.js; sourceTree = "<group>"; };
+		2D3FAF1C1A5A58A60009F2F3 /* tv_buy.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = tv_buy.php; sourceTree = "<group>"; };
 		2D4116BB1534E44900F18000 /* privacy.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = privacy.php; sourceTree = "<group>"; };
 		2D4116BC1534E44A00F18000 /* terms_service.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = terms_service.php; sourceTree = "<group>"; };
 		2D4116BD1534E9BB00F18000 /* player.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = player.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
@@ -1716,6 +1717,7 @@
 				2D0A2DF315EDD72C00F0EE6D /* artist_contact.php */,
 				2DC262CD15F7B21900CA560F /* paypal_ipn.php */,
 				2D00E36E16331FF600E2B768 /* free_product.php */,
+				2D3FAF1C1A5A58A60009F2F3 /* tv_buy.php */,
 			);
 			path = data;
 			sourceTree = "<group>";
