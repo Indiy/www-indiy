@@ -112,7 +112,7 @@ body {
 }
 
 .top_title1 {
-    padding-top: 10px;
+    padding-top: 56px;
     padding-bottom: 0px;
     padding-left: 20px;
     color: white;
@@ -831,7 +831,7 @@ and (max-device-width : 480px) {
         overflow-x: hidden;
     }
     .top_title1 {
-        padding-top: 20px;
+        padding-top: 56px;
         padding-bottom: 0px;
         padding-left: 7px;
         font-size: 16px;
@@ -842,7 +842,7 @@ and (max-device-width : 480px) {
         padding-bottom: 0px;
         padding-left: 7px;
         font-size: 38px;
-        line-height: 50px;
+        line-height: 40px;
     }
     .bottom_title1 {
         padding-left: 7px;
