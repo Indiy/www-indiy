@@ -63,6 +63,11 @@ function setupVideoPlayer()
         g_genre_id = vars['genre_id'];
     }
 
+    if( vars.token )
+    {
+        window.localStorage.secret_token = vars.token;
+    }
+
     $(window).resize(onWindowResize);
 
     createVideoTag();
