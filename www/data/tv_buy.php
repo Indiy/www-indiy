@@ -44,10 +44,6 @@
                     'currency' => 'usd',
                 ));
 
-                var_dump($charge);
-
-                echo "checkout_amount=$checkout_amount,amount=$amount\n";
-
                 $stripe_charge_id = $charge->id;
                 $secret_token = random_string(32);
 
@@ -57,7 +53,7 @@
                     'stripe_charge_id' => $stripe_charge_id,
                     'secret_token' => $secret_token,
                 );
-                mysql_insert("subscriptions",$values,TRUE);
+                mysql_insert("subscriptions",$values);
 
                 $channel_url = "$url?token=$secret_token";
 
