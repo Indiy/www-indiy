@@ -1263,6 +1263,8 @@
     {
         $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";	
 
+        $str = "";
+
         $size = strlen( $chars );
         for( $i = 0; $i < $length; $i++ ) 
         {

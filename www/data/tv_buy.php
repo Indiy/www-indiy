@@ -53,7 +53,7 @@
                     'stripe_charge_id' => $stripe_charge_id,
                     'secret_token' => $secret_token,
                 );
-                mysql_insert("subscriptions",$values);
+                mysql_insert("subscriptions",$values,TRUE);
 
                 $channel_url = "$url?token=$secret_token";
 
