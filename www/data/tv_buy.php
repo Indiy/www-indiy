@@ -46,6 +46,8 @@
 
                 var_dump($charge);
 
+                echo "checkout_amount=$checkout_amount,amount=$amount\n";
+
                 $stripe_charge_id = $charge->charge_id;
                 $secret_token = random_string(32);
 
