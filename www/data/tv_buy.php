@@ -48,7 +48,7 @@
 
                 echo "checkout_amount=$checkout_amount,amount=$amount\n";
 
-                $stripe_charge_id = $charge->charge_id;
+                $stripe_charge_id = $charge->id;
                 $secret_token = random_string(32);
 
                 $values = array(
