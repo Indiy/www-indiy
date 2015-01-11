@@ -76,6 +76,7 @@
 		2D26203B17273AEB00D16D8D /* splash_audio.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = splash_audio.html; sourceTree = "<group>"; };
 		2D26203C172746CB00D16D8D /* splash_audio.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = splash_audio.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2D26203D172746FE00D16D8D /* splash_audio.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = splash_audio.js; sourceTree = "<group>"; };
+		2D31BE391A63389F00A86F8A /* sub_check_token.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = sub_check_token.php; sourceTree = "<group>"; };
 		2D34E22414A05F05004473F9 /* utils.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = utils.php; sourceTree = "<group>"; };
 		2D34E22714A06AC9004473F9 /* twitter_landing.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = twitter_landing.php; sourceTree = "<group>"; };
 		2D34E22E14A59976004473F9 /* tooltip_text.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = tooltip_text.js; sourceTree = "<group>"; };
@@ -1718,6 +1719,7 @@
 				2DC262CD15F7B21900CA560F /* paypal_ipn.php */,
 				2D00E36E16331FF600E2B768 /* free_product.php */,
 				2D3FAF1C1A5A58A60009F2F3 /* tv_buy.php */,
+				2D31BE391A63389F00A86F8A /* sub_check_token.php */,
 			);
 			path = data;
 			sourceTree = "<group>";

@@ -3,7 +3,7 @@
 window.authorizePlaylist = authorizePlaylist;
 
 var g_handler = false;
-var g_checkoutCallback = function(){};
+var g_authorizeCallback = function(){};
 
 function ready()
 {
@@ -19,7 +19,6 @@ $(document).ready(ready);
 
 function onCheckoutToken(token)
 {
-    console.log("onCheckoutToken: token:",token);
     var args = {
         artist_id: g_artistId,
         url: g_pageUrl,
@@ -34,11 +33,28 @@ function onCheckoutToken(token)
         data: args,
         success: function(data)
         {
-            console.log("onCheckoutToken: success:",data);
+            if( data && data.error )
+            {
+                var error = data.error;
+                if( error == 'existing_sub' )
+                {
+                    window.alert("You already have a subscription. Please use the link in your email to access this content.");
+                }
+                else
+                {
+                    window.alert("Payment failed, please try again.");
+                }
+            }
+            else
+            {
+                var secret_token = data.secret_token;
+                window.localStorage.secret_token = secret_token;
+                g_authorizeCallback(null);
+            }
         },
         error: function()
         {
-            console.log("onCheckoutToken: error:",arguments);
+            window.alert("Payment failed, please try again.");
         }
     });
 }
@@ -59,16 +75,54 @@ function showCheckout()
 
 function authorizePlaylist(playlist,callback)
 {
-    g_checkoutCallback = callback;
+    g_authorizeCallback = callback;
 
     if( playlist.name == g_templateParams.checkout_playlist )
     {
-        showCheckout();
+        if( window.localStorage.secret_token )
+        {
+            checkToken();
+        }
+        else
+        {
+            showCheckout();
+        }
     }
     else
     {
-        callback(null);
+        g_authorizeCallback(null);
     }
+}
+function checkToken()
+{
+    var secret_token = window.localStorage.secret_token;
+    var args = {
+        artist_id: g_artistId,
+        secret_token: secret_token
+    };
+    var url = "{0}/data/sub_check_token.php".format(g_apiBaseUrl);
+    jQuery.ajax({
+        type: 'POST',
+        url: url,
+        data: args,
+        success: function(data)
+        {
+            if( data && data.error )
+            {
+                delete window.localStorage.secret_token;
+                showCheckout();
+            }
+            else
+            {
+                g_authorizeCallback(null);
+            }
+        },
+        error: function()
+        {
+            delete window.localStorage.secret_token;
+            showCheckout();
+        }
+    });
 }
 
 })();
