@@ -19,7 +19,25 @@ $(document).ready(ready);
 
 function onCheckoutToken(token)
 {
-    console.log("token:",token);
+    console.log("onCheckoutToken: token:",token);
+    var args = {
+        token: token.id,
+        email: token.email
+    };
+    var url = "{0}/data/tv_buy.php".format(g_apiBaseUrl);
+    jQuery.ajax({
+        type: 'POST',
+        url: url,
+        data: args,
+        success: function(data)
+        {
+            console.log("onCheckoutToken: success:",data);
+        },
+        error: function()
+        {
+            console.log("onCheckoutToken: error:",arguments);
+        }
+    });
 }
 
 function showCheckout()
