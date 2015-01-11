@@ -19,9 +19,11 @@ $(document).ready(ready);
 
 function onCheckoutToken(token)
 {
+    var url = window.location.protcol + "//" + window.location.hostname + window.location.pathname;
+
     var args = {
         artist_id: g_artistId,
-        url: g_pageUrl,
+        url: url,
         template_id: g_templateId,
         token: token.id,
         email: token.email
