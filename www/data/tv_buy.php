@@ -26,7 +26,6 @@
         'currency' => 'usd',
     ));
 
-    echo $charge;
-
+    echo json_encode(array("charge" => $charge,"customer" => $customer));
     die();
 ?>
