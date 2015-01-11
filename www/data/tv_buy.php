@@ -44,7 +44,9 @@
                     'currency' => 'usd',
                 ));
 
-                $stripe_charge_id = $charge['charge_id'];
+                var_dump($charge);
+
+                $stripe_charge_id = $charge->charge_id;
                 $secret_token = random_string(32);
 
                 $values = array(
