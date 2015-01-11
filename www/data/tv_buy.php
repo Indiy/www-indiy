@@ -10,7 +10,7 @@
 
     require_once 'Stripe.php';
 
-    Stripe::setApiKey($stripe['secret_key']);
+    Stripe::setApiKey($g_stripe_secret_key);
 
     $token = $_REQUEST['token'];
     $email = $_REQUEST['email'];
