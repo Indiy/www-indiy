@@ -17,7 +17,7 @@
     $email = $_REQUEST['email'];
     $url = $_REQUEST['url'];
 
-    $sub = mf(mq("SELECT * FROM subscriptions WHERE artist_id = '$artist_id' AND 'email' = $email"));
+    $sub = mf(mq("SELECT * FROM subscriptions WHERE artist_id = '$artist_id' AND email = '$email'"));
     $template = mf(mq("SELECT * FROM templates WHERE id='$template_id'"));
 
     if( $sub )
