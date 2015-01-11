@@ -21,6 +21,9 @@ function onCheckoutToken(token)
 {
     console.log("onCheckoutToken: token:",token);
     var args = {
+        artist_id: g_artistId,
+        url: g_pageUrl,
+        template_id: g_templateId,
         token: token.id,
         email: token.email
     };
