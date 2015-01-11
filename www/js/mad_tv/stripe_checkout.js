@@ -46,7 +46,7 @@ function onCheckoutToken(token)
 function showCheckout()
 {
     var checkout_amount = g_templateParams.checkout_amount;
-    var amount = Math.floor(parseInt(checkout_amount) * 100);
+    var amount = Math.floor(parseFloat(checkout_amount) * 100);
 
     var options = {
         name: g_templateParams.checkout_name,
