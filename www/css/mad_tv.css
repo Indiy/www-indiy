@@ -1178,7 +1178,37 @@ body {
 }
 
 #store_tab .right .nav {
+    padding-top: 20px;
+    padding-bottom: 10px;
     height: 30px;
+    font-size: 12px;
+}
+
+#store_tab .right .nav .store_back {
+    display: inline-block;
+    float: left;
+}
+#store_tab .right .nav .view_cart {
+    display: inline-block;
+    float: right;
+}
+#store_tab .right .nav .store_close {
+    display: inline-block;
+    float: right;
+}
+#store_tab .right .nav .arrow {
+    display: inline-block;
+    height: 0px;
+    width: 0px;
+    margin-top: 4px;
+    vertical-align: top;
+	border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 10px solid white;
+}
+#store_tab .right .nav .arrow {
+    display: inline-block;
+    vertical-align: top;
 }
 
 #store_tab .product_list {

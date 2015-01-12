@@ -46,7 +46,7 @@
 <div id='store_tab' class='content_tab'>
     <div class='right scrollbar-pane'>
         <div class='nav'>
-            <div id='store_back' class='back' onclick='storeShowProductList();' style='display: none'>
+            <div id='store_back' class='store_back' onclick='storeShowProductList();' style='display: none'>
                 <div class='arrow'></div>
                 <div class='text'>BACK TO LIST</div>
             </div>
@@ -56,14 +56,13 @@
             </div>
             <div class='store_close' onclick='navHideTab(this);'>
                 <div class='icon'></div>
-                <div class='name'>CLOSE</div>
+                <div class='text'>CLOSE</div>
             </div>
         </div>
         <div id='product_list' class='product_list store_content'>
             <?=$product_list_html;?>
         </div>
         <div id='product_info' class='product_info store_content'>
-            <div class='store_title'></div>
             <div class='pi_right'>
                 <div class='name'></div>
                 <div class='hsep'></div>
