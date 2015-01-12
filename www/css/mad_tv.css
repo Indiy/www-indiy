@@ -1171,18 +1171,20 @@ body {
     background-color: rgba(255,255,255,0.4);
 }
 #store_tab .right {
-    position: absolute;
-    left: 268px;
-    right: 0px;
-    top: 36px;
-    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
     overflow: auto;
+}
+
+#store_tab .right .nav {
+    height: 30px;
 }
 
 #store_tab .product_list {
     max-width: 745px;
     padding-bottom: 30px;
-    padding-right: 95px;
+    padding-right: 0px;
 }
 #store_tab .product_list .store_title {
     padding-top: 27px;
@@ -1250,7 +1252,7 @@ body {
     display: none;
     max-width: 675px;
     padding-bottom: 30px;
-    padding-right: 95px;
+    padding-right: 0px;
 }
 #store_tab .product_info .store_title {
     padding-top: 27px;
@@ -1392,7 +1394,7 @@ body {
     display: none;
     max-width: 675px;
     padding-bottom: 30px;
-    padding-right: 95px;
+    padding-right: 0px;
 }
 #store_tab .buy_result .store_title {
     padding-top: 27px;

@@ -44,19 +44,21 @@
 </div>
 
 <div id='store_tab' class='content_tab'>
-    <div id='store_back' class='back' onclick='storeShowProductList();' style='display: none'>
-        <div class='arrow'></div>
-        <div class='text'>BACK TO LIST</div>
-    </div>
-    <div class='view_cart' onclick='storeViewCart();'>
-        <div class='arrow'></div>
-        <div class='text'>VIEW CART</div>
-    </div>
-    <div class='close' onclick='navHideTab(this);'>
-        <div class='icon'></div>
-        <div class='name'>CLOSE</div>
-    </div>
     <div class='right scrollbar-pane'>
+        <div class='nav'>
+            <div id='store_back' class='back' onclick='storeShowProductList();' style='display: none'>
+                <div class='arrow'></div>
+                <div class='text'>BACK TO LIST</div>
+            </div>
+            <div class='view_cart' onclick='storeViewCart();'>
+                <div class='arrow'></div>
+                <div class='text'>VIEW CART</div>
+            </div>
+            <div class='store_close' onclick='navHideTab(this);'>
+                <div class='icon'></div>
+                <div class='name'>CLOSE</div>
+            </div>
+        </div>
         <div id='product_list' class='product_list store_content'>
             <?=$product_list_html;?>
         </div>
