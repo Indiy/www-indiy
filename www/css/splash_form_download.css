@@ -631,13 +631,14 @@ font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;    text-align: righ
 }
 .content_tab .close .icon {
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 19px;
+    height: 19px;
     margin-right: 2px;
-    background: transparent url('../images/player_icons.png') no-repeat -206px -51px;
+    margin-top: 4px;
+    background: transparent url("/images/player_icons.png") -672px -332px no-repeat;
 }
 .no_touch .content_tab .close:hover .icon {
-    background: transparent url('../images/player_icons.png') no-repeat -171px -51px;
+    background: transparent url("/images/player_icons.png") -672px -291px no-repeat;
 }
 .content_tab .close .name {
     display: inline-block;

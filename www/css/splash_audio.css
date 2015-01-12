@@ -395,10 +395,11 @@ font-family: "Neuzeit Grotesk Light", Helvetica, sans-serif;
     width: 19px;
     height: 19px;
     margin-right: 2px;
+    margin-top: 4px;
     background: transparent url("/images/player_icons.png") -672px -332px no-repeat;
 }
 .no_touch .content_tab .close:hover .icon {
-    background: transparent url("/images/player_icons.png") -672px -332px no-repeat;
+    background: transparent url("/images/player_icons.png") -672px -291px no-repeat;
 }
 .content_tab .close .name {
     display: inline-block;
