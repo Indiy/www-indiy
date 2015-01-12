@@ -1180,7 +1180,7 @@ body {
 #store_tab .right .nav {
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-right: 40px;
+    padding-right: 20px;
     height: 15px;
     font-size: 12px;
 }
@@ -1209,11 +1209,12 @@ body {
 }
 #store_tab .right .nav .store_close .icon {
     display: inline-block;
-    height: 12px;
-    width: 12px;
+    height: 19px;
+    width: 19px;
+    margin-top: -3px;
     margin-right: 5px;
     vertical-align: top;
-    background: transparent url("/images/player_icons.png") -672px -334px no-repeat;
+    background: transparent url("/images/player_icons.png") -672px -332px no-repeat;
 }
 #store_tab .right .nav .text {
     display: inline-block;
