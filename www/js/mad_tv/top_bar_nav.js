@@ -43,14 +43,14 @@ function toggleItem(ele,item_sel)
         ele_jq.siblings().removeClass('active');
         ele_jq.addClass('active');
         hideAll();
-        $(item_sel).show();
+        $(item_sel).fadeIn('fast');
         g_inhibitControlsHide = true;
     }
 }
 
 function hideAll()
 {
-    $('.content_tab').hide();
+    $('.content_tab').fadeOut('fast');
 }
 
 function navHideTab(ele)
