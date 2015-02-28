@@ -452,6 +452,10 @@
         {
             include_once 'templates/mad_tv.html';
         }
+        else if( $template_type == 'PLAYER_MYCHANNEL' )
+        {
+            include_once 'templates/mychannel.html';
+        }
     }
     else
     {

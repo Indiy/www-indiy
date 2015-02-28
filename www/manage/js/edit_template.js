@@ -1308,6 +1308,56 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             }
         ]
+    },
+    'PLAYER_MYCHANNEL': {
+        type: 'PLAYER',
+        description: 'MyChannel',
+        default_params: {
+            page_title: 'MyChannel',
+            top_text: 'Top',
+            bottom_text: 'bottom',
+            twitter_widget: '',
+            footer_text: 'Powered by MyChannel',
+            ga_account_id: ''
+        },
+        arg_list:
+        [
+            {
+                name: 'page_title',
+                description: 'Page Title',
+                type: 'string'
+            },
+            {
+                name: 'top_text',
+                description: 'Top Text',
+                type: 'string'
+            },
+            {
+                name: 'bottom_text',
+                description: 'Bottom Text',
+                type: 'string'
+            },
+            {
+                name: 'twitter_widget',
+                description: 'Twitter Widget',
+                type: 'textbox'
+            },
+            {
+                name: 'instagram_username',
+                description: 'Instagram Username',
+                type: 'string'
+            },
+            {
+                name: 'footer_text',
+                description: 'Footer Text',
+                type: 'string'
+            },
+            {
+                name: 'ga_account_id',
+                description: 'Google Analytics Id',
+                type: 'string'
+            }
+        ]
     }
 };
 

@@ -1,0 +1,621 @@
+
+body {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.full_screen_bg { 
+    position: fixed; 
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0px;
+}
+/*
+#image #image_slider {
+    height: 100%;
+    width: 100%;
+}
+
+#image #image_slider .container {
+    height: 100%;
+    width: 100%;
+}
+*/
+.full_screen_bg .pad {
+    display: inline-block;
+    width: 0px;
+    height: 100%;
+    background: black;
+}
+.full_screen_bg .image_holder {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    vertical-align: top;
+}
+.full_screen_bg .image_holder div { 
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.full_screen_bg .video_container {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+.sprite_icon {
+    background: transparent url('/images/default_v4_sprite.png') no-repeat;
+    background-size: 306px 396px;
+}
+
+.content_tab {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    background: rgba(0,0,0,0.9);
+    overflow: hidden;
+    
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transition: transform 0.5s;
+    -webkit-transition: -webkit-transform 0.5s;
+}
+.content_tab.open {
+    max-height: none;
+    
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+}
+.home_tab.content_tab {
+    position: static;
+    min-height: 0px;
+    height: 0px;
+    background: transparent;
+
+    transform: none;
+    -webkit-transform: none;
+    transition: none;
+    -webkit-transition: none;
+}
+.home_tab.content_tab.open {
+    transform: none;
+    -webkit-transform: none;
+    transition: none;
+    -webkit-transition: none;
+}
+.home_tab.content_tab .home_tab_item {
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transition: transform 0.5s;
+    -webkit-transition: -webkit-transform 0.5s;
+}
+.home_tab.content_tab.open .home_tab_item {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+}
+
+.content_tab .content_tab_spacer {
+    height: 45px;
+}
+.content_tab .top_bar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 45px;
+    background: rgba(34,64,77,0.9);
+}
+.content_tab .top_bar .sprite_icon {
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+}
+
+.content_tab .top_bar .left_menu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-position: -240px -9px;
+}
+.content_tab .top_bar .title {
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    right: 40px;
+    padding-top: 8px;
+    color: white;
+    font-size: 23px;
+    text-align: center;
+}
+.content_tab .top_bar .right_menu {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 40px;
+    height: 100%;
+}
+
+.content_tab .top_bar .right_menu .sprite_icon.plus {
+    background-position: -196px -9px;
+}
+.content_tab .top_bar .right_menu .sprite_icon.close {
+    background-position: -150px -9px;
+}
+.content_tab .top_bar .right_menu .sprite_icon.store {
+    background-position: -58px -9px;
+}
+.content_tab .top_bar .right_menu .sprite_icon.social {
+    background-position: -105px -9px;
+}
+.content_tab .top_bar .right_menu .sprite_icon.share {
+    background-position: -14px -9px;
+}
+.content_tab .top_bar .right_menu .extended_menu {
+    display: none;
+    background: rgba(0,0,0,0.5);
+}
+
+.home_tab.content_tab .top_bar {
+    background: rgba(0,0,0,0.5);
+}
+
+.home_tab .bottom_title {
+    position: absolute;
+    bottom: 29px;
+    left: 0px;
+    right: 0px;
+    height: 38px;
+    padding-top: 4px;
+    padding-bottom: 12px;
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+}
+
+.home_tab .powered_by {
+    position: absolute;
+    bottom: 4px;
+    left: 6px;
+    right: 0px;
+    color: white;
+    font-size: 16px;
+}
+
+.home_tab .big_play_icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    right: 0px;
+    margin-top: -175px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+.home_tab .big_play_icon .icon {
+    display: inline-block;
+    width: 82px;
+    height: 82px;
+    background-position: -109px -70px;
+}
+.home_tab .big_play_icon .text {
+    padding-top: 20px;
+    color: white;
+    font-size: 70px;
+    text-align: center;
+}
+
+.playlist_tab .playlist_list {
+    padding-top: 45px;
+    padding-right: 9px;
+    padding-left: 9px;
+}
+.playlist_tab .playlist_list .playlist .title_arrow {
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+    cursor: pointer;
+}
+.playlist_tab .playlist_list .playlist .title_arrow .title {
+    padding-top: 19px;
+    padding-right: 20px;
+    padding-bottom: 13px;
+    color: #777;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.playlist_tab .playlist_list .playlist.active .title_arrow .title {
+    color: white;
+}
+.playlist_tab .playlist_list .playlist .title_arrow .arrow {
+    position: absolute;
+    right: 0px;
+    width: 20px;
+    height:
+}
+.playlist_tab .playlist_list .playlist .track_list {
+    display: none;
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+.playlist_tab .playlist_list .playlist.active .track_list {
+    display: block;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.playlist_tab .playlist_list .playlist .track_list .track_name {
+    padding-left: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: #777;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.playlist_tab .playlist_list .playlist .track_list .track_name.active {
+    color: white;
+}
+
+.playlist_tab .section_title {
+    padding-left: 9px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.playlist_tab .tab_list {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+.playlist_tab .tab_list .tab_name {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    color: white;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+    cursor: pointer;
+}
+
+.user_tab .page_content {
+    padding-top: 65px;
+    padding-left: 9px;
+    padding-right: 9px;
+    color: #eee;
+    font-size: 16px;
+}
+
+.share_tab .section_title {
+    padding-top: 23px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.share_tab .section_content {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+.share_tab .section_content textarea {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    min-height: 100px;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    border: 0;
+    outline: 0;
+    background: rgba(36,36,36,0.8);
+    resize: none;
+}
+.share_tab .button {
+    margin-right: 9px;
+    margin-left: 9px;
+    margin-bottom: 9px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    background: rgba(36,36,36,0.8);
+}
+
+.social_tab .social_buttons {
+    text-align: center;
+    margin-top: 15px;
+}
+.social_tab .social_buttons .button {
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    margin: 0px 10px 0px 10px;
+    background: #333;
+    border: 1px solid #777;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.social_tab .social_buttons .button.active {
+    background: #555;
+}
+
+.social_tab .social_item {
+    display: none;
+}
+.social_tab .social_item.social_twitter {
+    display: block;
+    position: absolute;
+    top: 90px;
+    bottom: 10px;
+    left: 9px;
+    right: 9px;
+}
+.social_tab .social_item.social_instagram {
+    
+}
+.social_tab .social_item.social_instagram ul {
+    list-style-type: none;
+    padding-bottom: 50px;
+}
+.social_tab .social_item.social_instagram ul li {
+    padding-bottom: 10px;
+}
+.social_tab .social_item.social_instagram ul li img {
+    max-width: 90%;
+}
+
+.store_list_tab .store_list {
+    padding-bottom: 30px;
+    text-align: center;
+}
+.store_list_tab .store_list .store_item {
+    display: inline-block;
+    padding-top: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 280px;
+    cursor: pointer;
+}
+.store_list_tab .store_list .store_item .name {
+    padding-bottom: 6px;
+    color: white;
+    font-size: 14px;
+}
+.store_list_tab .store_list .store_item .image_holder {
+    padding-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-bottom: 1px solid #555;
+}
+.store_list_tab .store_list .store_item .image_holder img {
+    background: white;
+    padding: 2px;
+    width: 100%;
+}
+
+.product_tab .product_info {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.product_tab .product_info .name {
+    padding-bottom: 10px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+.product_tab .product_info .image_holder {
+    padding-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-bottom: 1px solid #555;
+    text-align: center;
+}
+.product_tab .product_info .image_holder img {
+    background: white;
+    padding: 2px;
+    width: 100%;
+    max-width: 500px;
+}
+.product_tab .product_info .price {
+    padding-top: 12px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 16px;
+}
+.product_tab .product_info .label_size {
+    padding-bottom: 5px;
+    white-space: nowrap;
+}
+.product_tab .product_info .label_size .label {
+    display: inline-block;
+    padding-top: 6px;
+    padding-right: 5px;
+    color: white;
+    font-size: 16px;
+    vertical-align: top;
+}
+.product_tab .product_info .label_size .size_list {
+    display: inline-block;
+    margin-right: 40px;
+    white-space: normal;
+}
+.product_tab .product_info .label_size .size_list .size {
+    display: inline-block;
+    padding: 7px 11px 6px 11px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 15px;
+    vertical-align: top;
+    background: rgba(34,64,77,0.9);
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.product_tab .product_info .label_size .size_list .size.active {
+    border: 1px solid white;
+}
+.product_tab .product_info .description {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    color: white;
+    font-size: 14px;
+    line-height: 18px;
+}
+.product_tab .buy_button {
+    display: block;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    outline: 0;
+    border: 0;
+    background: rgba(34,64,77,0.9);
+    cursor: pointer;
+}
+
+.store_add_success_tab .success_check {
+    margin-top: 128px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90px;
+    height: 90px;
+    background-position: -5px -66px;
+}
+.store_add_success_tab .description {
+    padding-right: 20px;
+    padding-left: 20px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+}
+
+/*************************************************************************/
+
+@media (device-height: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation : portrait) {
+    
+    .full_screen_bg {
+        bottom: auto;
+        height: 529px;
+    }
+
+}
+
+@media (device-height: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation : landscape) {
+    
+    .full_screen_bg {
+        bottom: auto;
+        height: 268px;
+    }
+}
+
+
+@media (device-height: 480px)
+and (orientation : portrait) {
+
+    .full_screen_bg {
+        bottom: auto;
+        height: 416px;
+    }
+}
+
+@media (device-height: 480px)
+and (orientation : landscape) {
+
+    .full_screen_bg {
+        bottom: auto;
+        height: 268px;
+    }
+}
+
+@media (max-height: 320px)
+and (orientation : landscape) {
+    .home_tab .big_play_icon {
+        margin-top: -95px;
+    }
+    .home_tab .big_play_icon .text {
+        padding-top: 0px;
+    }
+}
+
+
+
+#under_construction {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 231px;
+    margin-left: -250px;
+    margin-top: -130px;
+    background: url('/images/under_construction.jpg') no-repeat;
+    z-index: 0;
+}
+
+#test_warning {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 50px;
+    margin-left: -200px;
+    margin-top: -25px;
+    font-size: 50px;
+    color: red;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    z-index: 1000000;
+}
+
