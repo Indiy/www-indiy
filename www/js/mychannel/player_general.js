@@ -120,55 +120,10 @@ function generalOnReady()
         g_touchDevice = true;
     }
     
-    var show_social = true;
-    
-    var anchor_map = getAnchorMap();
-    if( 'product_id' in anchor_map )
-    {
-        var product_id = anchor_map['product_id'];
-        showProductById(product_id);
-        show_social = false;
-    }
     if( g_playlistList.length > 0 && g_playlistList[0].type == 'DIR' )
     {
         g_startPlaylistItemIndex = 0;
     }
-    
-    if( ( 'playlist_id' in anchor_map ) && ( 'playlist_item_id' in anchor_map ) )
-    {
-        var playlist_id = anchor_map.playlist_id;
-        var playlist_item_id = anchor_map.playlist_item_id;
-        
-        for( var i = 0 ; i < g_playlistList.length ; ++i )
-        {
-            var playlist = g_playlistList[i];
-            if( playlist.type == 'DIR' )
-            {
-                for( var j = 0 ; j < playlist.items.length ; ++j )
-                {
-                    var child_playlist = playlist.items[j];
-                    var index = find_playlist_item(child_playlist,playlist_id,playlist_item_id);
-                    if( index !== false )
-                    {
-                        g_startPlaylistIndex = i;
-                        g_startChildPlaylistIndex = j;
-                        g_startPlaylistItemIndex = index;
-                    }
-                }
-            }
-            else
-            {
-                var index = find_playlist_item(playlist,playlist_id,playlist_item_id);
-                if( index !== false )
-                {
-                    g_startPlaylistIndex = i;
-                    g_startChildPlaylistIndex = index;
-                    g_startPlaylistItemIndex = false;
-                }
-            }
-        }
-    }
-    defaultReady(show_social);
 }
 
 

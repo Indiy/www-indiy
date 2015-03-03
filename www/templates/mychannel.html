@@ -67,8 +67,32 @@
 <body class='<?=$body_style;?>'>
     <div id="fb-root"></div>
     <div id="jquery_jplayer" class="jp-jplayer"></div>
-    
-    <div class='home_tab content_tab open'>
+
+    <div class='signup1 content_tab open'>
+        <div class='middle'>
+            THE LEADING<br/>
+            PERSONALIZED<br/>
+            CONSUMER EXPERIENCE
+        </div>
+        <div class='next_arrow' onclick='clickSignup1Next();'>
+            <div class='arrow'></div>
+        </div>
+    </div>
+    <div class='signup2 content_tab'>
+        <div class='middle'>
+            NEW CHANNEL
+            <div class='button' onclick='clickSignup2Next();'>CREATE</div>
+        </div>
+    </div>
+    <div class='signup3 content_tab'>
+        <div class='middle'>
+            Pick Type of Channel
+        </div>
+        <div class='next_arrow' onclick='clickSignup3Next();'>
+            <div class='arrow'></div>
+        </div>
+    </div>
+    <div class='home_tab content_tab'>
         <div class='top_bar home_tab_item'>
             <div class='left_menu sprite_icon' onclick='clickMenu();'></div>
             <div class='title'><?=$template_params['top_text'];?></div>
@@ -202,90 +226,7 @@
         <div class='button'>Email</div>
     </div>
     
-    <div class='store_list_tab content_tab'>
-        <div class='top_bar'>
-            <div class='left_menu sprite_icon' onclick='clickMenu();'></div>
-            <div class='title'>Store</div>
-            <div class='right_menu'>
-                <div class= 'close sprite_icon' onclick='clickClose();'></div>
-            </div>
-        </div>
-        <div class='content_tab_spacer'></div>
-        <div class='store_list'>
-            <?php
-                foreach( $product_list as $i => $product ):
-                    $name = $product['name'];
-                    $image = $product['image'];
-                    $action = "clickStoreItem($i);";
-            ?>
-                <div class='store_item' onclick='<?=$action;?>'>
-                    <div class='name'><?=$name;?></div>
-                    <div class='image_holder'>
-                        <img src='<?=$image;?>'/>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
 
-    <?php
-        foreach( $product_list as $i => $product ):
-            $name = $product['name'];
-            $image = $product['image'];
-            $price = "Free";
-            if( $product['price'] )
-            {
-                $price = "$" . $product['price'];
-            }
-            $buy_action = "clickBuyProduct(this,$i);";
-            $description = $product['description'];
-            $size_list = $product['sizes'];
-    ?>
-        <div id='product_tab_<?=$i;?>' class='product_tab content_tab'>
-            <div class='top_bar'>
-                <div class='left_menu sprite_icon' onclick='clickMenu();'></div>
-                <div class='title'>Store</div>
-                <div class='right_menu'>
-                    <div class= 'close sprite_icon' onclick='clickClose();'></div>
-                </div>
-            </div>
-            <div class='content_tab_spacer'></div>
-            <div class='product_info'>
-                <div class='name'><?=$name;?></div>
-                <div class='image_holder'>
-                    <img src='<?=$image;?>'/>
-                </div>
-                <div class='price'>Price: <?=$price;?></div>
-                <?php if( $size_list ): ?>
-                    <div class='label_size'>
-                        <div class='label'>Size:</div>
-                        <div class='size_list'>
-                            <?php foreach( $size_list as $j => $size ):
-                                $size_action = "clickSize(this,$i,$j);";
-                            ?>
-                                <div class='size' onclick='<?=$size_action;?>'><?=$size;?></div>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                <?php endif; ?>
-                <div class='description'><?=$description;?></div>
-            </div>
-            <button class='buy_button' onclick='<?=$buy_action;?>'>Buy Now</button>
-        </div>
-    <?php endforeach; ?>
-    
-    <div class='store_add_success_tab content_tab'>
-        <div class='top_bar'>
-            <div class='left_menu sprite_icon' onclick='clickMenu();'></div>
-            <div class='title'>Store</div>
-            <div class='right_menu'>
-                <div class= 'close sprite_icon' onclick='clickClose();'></div>
-            </div>
-        </div>
-        <div class='content_tab_spacer'></div>
-        <div class='success_check sprite_icon'></div>
-        <div class='description'>This item has been added to your cart.</div>
-    </div>
 
 
     <script type="text/javascript">
