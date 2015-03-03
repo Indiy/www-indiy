@@ -3,6 +3,9 @@
 window.clickSignup1Next = clickSignup1Next;
 window.clickSignup2Next = clickSignup2Next;
 window.clickSignup3Next = clickSignup3Next;
+window.clickSignup4Next = clickSignup4Next;
+window.clickSignup5Next = clickSignup5Next;
+window.clickSignup6Next = clickSignup6Next;
 window.clickMenu = clickMenu;
 window.clickClose = clickClose;
 window.clickPlaylist = clickPlaylist;
@@ -37,6 +40,18 @@ function clickSignup2Next()
 function clickSignup3Next()
 {
     slideInOutContentTab('.signup4');
+}
+function clickSignup4Next()
+{
+    slideInOutContentTab('.signup5');
+}
+function clickSignup5Next()
+{
+    slideInOutContentTab('.signup6');
+}
+function clickSignup6Next()
+{
+    slideInOutContentTab('.welcome1');
 }
 function clickMenu()
 {
