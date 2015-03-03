@@ -28,15 +28,15 @@ $(document).ready(defaultReady);
 
 function clickSignup1Next()
 {
-    showContentTab('.signup2');
+    slideInOutContentTab('.signup2');
 }
 function clickSignup2Next()
 {
-    showContentTab('.signup3');
+    slideInOutContentTab('.signup3');
 }
 function clickSignup3Next()
 {
-    showContentTab('.signup4');
+    slideInOutContentTab('.signup4');
 }
 function clickMenu()
 {
@@ -91,6 +91,11 @@ function clickShowShare()
 function showContentTab(name)
 {
     $('.content_tab').removeClass('open');
+    $('.content_tab' + name).addClass('open');
+}
+function slideInOutContentTab(name)
+{
+    $('.content_tab.open').addClass('closed');
     $('.content_tab' + name).addClass('open');
 }
 
