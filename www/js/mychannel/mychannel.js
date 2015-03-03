@@ -11,7 +11,6 @@ window.catalogClickPlaylistMediaItem = catalogClickPlaylistMediaItem;
 window.clickShowTab = clickShowTab;
 window.clickShowShare = clickShowShare;
 window.showContentTab = showContentTab;
-window.clickSocial = clickSocial;
 
 function defaultReady(show_social)
 {
