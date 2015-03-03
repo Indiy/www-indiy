@@ -9,9 +9,7 @@ window.clickPlaylist = clickPlaylist;
 window.clickPlaylistItem = clickPlaylistItem;
 window.catalogClickPlaylistMediaItem = catalogClickPlaylistMediaItem;
 window.clickShowTab = clickShowTab;
-window.clickShowSocial = clickShowSocial;
 window.clickShowShare = clickShowShare;
-window.clickStoreItem = clickStoreItem;
 window.showContentTab = showContentTab;
 window.clickSocial = clickSocial;
 
