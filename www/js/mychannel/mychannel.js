@@ -5,7 +5,6 @@ window.clickSignup2Next = clickSignup2Next;
 window.clickSignup3Next = clickSignup3Next;
 window.clickMenu = clickMenu;
 window.clickClose = clickClose;
-window.clickPlus = clickPlus;
 window.clickPlaylist = clickPlaylist;
 window.clickPlaylistItem = clickPlaylistItem;
 window.catalogClickPlaylistMediaItem = catalogClickPlaylistMediaItem;
