@@ -159,6 +159,7 @@ body {
     color: black;
     font-size: 23px;
     line-height: 32px;
+    font-weight: 100;
 }
 .signup.content_tab .next_arrow {
     position: absolute;
@@ -177,15 +178,20 @@ body {
 	border-bottom: 10px solid transparent;
 	border-left:10px solid white;
 }
+.signup.content_tab .button {
+    display: inline-block;
+    padding-top: 6px;
+    padding-bottom: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: black;
+    font-size: 15px;
+    font-weight: normal;
+    background: #9bdbf4;
+    border-radius: 3px;
+}
 
-
-
-
-
-
-
-
-
+/*****************************************/
 
 .content_tab .top_bar {
     position: absolute;
