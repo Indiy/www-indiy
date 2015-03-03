@@ -1316,7 +1316,6 @@ var TEMPLATE_SCHEMA =
             page_title: 'MyChannel',
             top_text: 'Top',
             bottom_text: 'bottom',
-            twitter_widget: '',
             footer_text: 'Powered by MyChannel',
             ga_account_id: ''
         },
@@ -1335,16 +1334,6 @@ var TEMPLATE_SCHEMA =
             {
                 name: 'bottom_text',
                 description: 'Bottom Text',
-                type: 'string'
-            },
-            {
-                name: 'twitter_widget',
-                description: 'Twitter Widget',
-                type: 'textbox'
-            },
-            {
-                name: 'instagram_username',
-                description: 'Instagram Username',
                 type: 'string'
             },
             {
