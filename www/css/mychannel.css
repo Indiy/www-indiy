@@ -200,6 +200,7 @@ body {
 }
 .signup.content_tab .middle input {
     width: 214px;
+    margin-top: 36px;
     border: 0;
     font-size: 18px;
     line-height: 33px;
