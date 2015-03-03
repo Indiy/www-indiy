@@ -179,26 +179,6 @@ function getAnchorMap()
 }
 function updateAnchor(map)
 {
-    var anchor_map = getAnchorMap();
-    
-    jQuery.extend(anchor_map,map);
-    
-    var anchor = "";
-    for( var key in anchor_map )
-    {
-        var val = anchor_map[key];
-        
-        if( val.length > 0 )
-        {
-            if( anchor.length > 0 )
-                anchor += "&";
-            anchor += "{0}={1}".format(key,val);
-        }
-    }
-
-    // inhibit hashChanged if we do it
-    g_storedHash = "#" + anchor;
-    window.location.hash = anchor;
 }
 function maybeHashChanged()
 {
