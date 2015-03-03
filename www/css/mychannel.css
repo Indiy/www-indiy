@@ -198,6 +198,14 @@ body {
     background: #9bdbf4;
     border-radius: 3px;
 }
+.signup.content_tab .middle input {
+    width: 214px;
+    border: 0;
+    font-size: 18px;
+    line-height: 33px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
 
 /*****************************************/
 
