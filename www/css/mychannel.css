@@ -198,7 +198,7 @@ body {
     background: #9bdbf4;
     border-radius: 3px;
 }
-.signup.content_tab .middle input {
+.signup.content_tab .middle input[type=text] {
     width: 214px;
     margin-top: 36px;
     border: 0;
@@ -209,7 +209,11 @@ body {
 }
 
 .signup.content_tab .middle .pick_list {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 16px;
+    text-align: left;
 }
 
 /*****************************************/
