@@ -248,12 +248,26 @@ input[type=radio] + label > span {
     background-image: linear-gradient(rgb(240,240,240),rgb(224,224,224));
     vertical-align: bottom;
 }
-input[type=checkbox]:not(old):checked + label > span,
-input[type=radio   ]:not(old):checked + label > span{
+input[type=checkbox]:checked + label > span,
+input[type=radio]:checked + label > span {
     background-image: -moz-linear-gradient(rgb(224,224,224),rgb(240,240,240));
     background-image: -ms-linear-gradient(rgb(224,224,224),rgb(240,240,240));
     background-image: -webkit-linear-gradient(rgb(224,224,224),rgb(240,240,240));
     background-image: linear-gradient(rgb(224,224,224),rgb(240,240,240));
+}
+input[type=checkbox]:checked + label > span > span,
+input[type=radio]:checked + label > span > span {
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    margin: 0.125em;
+    border: 0.0625em solid rgb(115,153,77);
+    border-radius: 0.125em;
+    background: rgb(153,204,102);
+    background-image: -moz-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+    background-image: -ms-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+    background-image: -webkit-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+    background-image: linear-gradient(rgb(179,217,140),rgb(153,204,102));
 }
 
 
