@@ -109,14 +109,14 @@
     <div class='signup signup4 content_tab'>
         <div class='middle'>
             Signup for a new channel<br/>
-            <input placeholder="Phone Number"/><br/>
+            <input type="text" placeholder="Phone Number"/><br/>
             <div class='button' onclick='clickSignup4Next();'>SIGN UP</div>
         </div>
     </div>
     <div class='signup signup5 content_tab'>
         <div class='middle'>
             Name Your Channel<br/>
-            <input placeholder="First Name"/><br/>
+            <input type="text" placeholder="First Name"/><br/>
             <div class='button' onclick='clickSignup5Next();'>SUBMIT</div>
         </div>
     </div>
@@ -124,6 +124,32 @@
         <div class='middle'>
             Personalize Your Channel<br/>
             <div class='subtitle'>Add the topics that interest you</div>
+            <div class='pick_list'>
+                <div class='item'>
+                    <input id="channel_interest_1" type="checkbox">
+                    <label for="channel_interest_1"><span><span></span></span>Hypertension</label>
+                </div>
+                <div class='item'>
+                    <input id="channel_interest_2" type="checkbox">
+                    <label for="channel_interest_2"><span><span></span></span>Diabetes</label>
+                </div>
+                <div class='item'>
+                    <input id="channel_interest_3" type="checkbox">
+                    <label for="channel_interest_3"><span><span></span></span>Wellness Lifestyle</label>
+                </div>
+                <div class='item'>
+                    <input id="channel_interest_4" type="checkbox">
+                    <label for="channel_interest_4"><span><span></span></span>Current News</label>
+                </div>
+                <div class='item'>
+                    <input id="channel_interest_5" type="checkbox">
+                    <label for="channel_interest_5"><span><span></span></span>Your Wearables Info</label>
+                </div>
+                <div class='item'>
+                    <input id="channel_interest_6" type="checkbox">
+                    <label for="channel_interest_6"><span><span></span></span>Your Social Media Info</label>
+                </div>
+            </div>
             <div class='button' onclick='clickSignup6Next();'>ENGAGE</div>
         </div>
     </div>
