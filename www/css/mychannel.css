@@ -225,10 +225,11 @@ body {
     margin-bottom: 10px;
 }
 .signup.signup6.content_tab .middle {
-    margin-top: -100px;
+    margin-top: -180px;
 }
 .signup.signup6.content_tab .middle .pick_list {
-    width: 120px;
+    margin-top: 20px;
+    width: 190px;
     font-size: 16px;
 }
 
