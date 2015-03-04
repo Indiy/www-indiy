@@ -90,8 +90,8 @@ body {
     background: transparent;
     overflow: hidden;
     
-    transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
     transition: transform 0.5s;
     -webkit-transition: -webkit-transform 0.5s;
 }
@@ -143,13 +143,14 @@ body {
 }
 
 .content_tab.open.closed {
-    transform: translateX(100%);
-    -webkit-transform: translateX(100%);
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
     transition: transform 0.5s;
     -webkit-transition: -webkit-transform 0.5s;
 }
 
 .signup.content_tab {
+    max-height: 100%;
     font-family: "Lato",sans-serif;
 }
 
