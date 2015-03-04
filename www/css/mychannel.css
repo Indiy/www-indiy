@@ -209,11 +209,20 @@ body {
 }
 
 .signup.content_tab .middle .pick_list {
-    width: 200px;
+    width: 115px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 16px;
+    font-size: 19px;
     text-align: left;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.signup.content_tab .middle .pick_list {
+    margin-top: 30px;
+}
+.signup.content_tab .middle .pick_list .item {
+    margin-bottom: 10px;
 }
 
 /*****************************************/
@@ -238,36 +247,19 @@ input[type=radio] + label > span {
     display: inline-block;
     width: 0.875em;
     height : 0.875em;
-    margin: 0.25em 0.5em 0.25em 0.25em;
-    border: 0.0625em solid rgb(192,192,192);
-    border-radius: 0.25em;
-    background: rgb(224,224,224);
-    background-image: -moz-linear-gradient(rgb(240,240,240),rgb(224,224,224));
-    background-image: -ms-linear-gradient(rgb(240,240,240),rgb(224,224,224));
-    background-image: -webkit-linear-gradient(rgb(240,240,240),rgb(224,224,224));
-    background-image: linear-gradient(rgb(240,240,240),rgb(224,224,224));
+    margin: 0.25em 0.9em 0.25em 0.25em;
+    border: 2px solid white;
+    border-radius: 1em;
     vertical-align: bottom;
-}
-input[type=checkbox]:checked + label > span,
-input[type=radio]:checked + label > span {
-    background-image: -moz-linear-gradient(rgb(224,224,224),rgb(240,240,240));
-    background-image: -ms-linear-gradient(rgb(224,224,224),rgb(240,240,240));
-    background-image: -webkit-linear-gradient(rgb(224,224,224),rgb(240,240,240));
-    background-image: linear-gradient(rgb(224,224,224),rgb(240,240,240));
 }
 input[type=checkbox]:checked + label > span > span,
 input[type=radio]:checked + label > span > span {
     display: block;
-    width: 0.5em;
-    height: 0.5em;
-    margin: 0.125em;
-    border: 0.0625em solid rgb(115,153,77);
-    border-radius: 0.125em;
-    background: rgb(153,204,102);
-    background-image: -moz-linear-gradient(rgb(179,217,140),rgb(153,204,102));
-    background-image: -ms-linear-gradient(rgb(179,217,140),rgb(153,204,102));
-    background-image: -webkit-linear-gradient(rgb(179,217,140),rgb(153,204,102));
-    background-image: linear-gradient(rgb(179,217,140),rgb(153,204,102));
+    width: 0.6em;
+    height: 0.6em;
+    margin: 0.15em;
+    border-radius: 1em;
+    background: white;
 }
 
 
