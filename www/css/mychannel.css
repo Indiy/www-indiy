@@ -234,6 +234,10 @@ body {
     font-size: 16px;
 }
 
+.signup.signup6.content_tab .middle .pick_list .item {
+    margin-bottom: 4px;
+}
+
 /*****************************************/
 
 input[type=checkbox],
@@ -266,7 +270,7 @@ input[type=radio]:checked + label > span > span {
     display: block;
     width: 0.6em;
     height: 0.6em;
-    margin: 0.13em;
+    margin: 0.14em;
     border-radius: 1em;
     background: white;
 }
