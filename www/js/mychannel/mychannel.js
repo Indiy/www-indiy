@@ -6,6 +6,9 @@ window.clickSignup3Next = clickSignup3Next;
 window.clickSignup4Next = clickSignup4Next;
 window.clickSignup5Next = clickSignup5Next;
 window.clickSignup6Next = clickSignup6Next;
+window.clickWelcome1Next = clickWelcome1Next;
+window.clickWelcome2Next = clickWelcome2Next;
+
 window.clickMenu = clickMenu;
 window.clickClose = clickClose;
 window.clickPlaylist = clickPlaylist;
@@ -52,6 +55,14 @@ function clickSignup5Next()
 function clickSignup6Next()
 {
     slideInOutContentTab('.welcome1');
+}
+function clickWelcome1Next()
+{
+    slideInOutContentTab('.welcome2');
+}
+function clickWelcome2Next()
+{
+    slideInOutContentTab('.home_tab');
 }
 function clickMenu()
 {
