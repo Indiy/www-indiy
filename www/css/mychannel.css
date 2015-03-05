@@ -287,6 +287,11 @@ body {
     line-height: 50px;
 }
 
+.welcome2.welcome.content_tab .middle {
+    font-size: 32px;
+    line-height: 44px;
+}
+
 /*****************************************/
 
 input[type=checkbox],
