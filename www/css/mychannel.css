@@ -537,11 +537,11 @@ input[type=radio].small:checked + label > span > span {
     height: 66px;
     color: white;
     background: #ed9442;
-    background: -moz-linear-gradient(left, #f5a852 0%,#da742c 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f5a852), color-stop(100%,#da742c));
-    background: -webkit-linear-gradient(left, #f5a852 0%,#da742c 100%);
-    background: -ms-linear-gradient(left, #f5a852 0%,#da742c 100%);
-    background: linear-gradient(to right, #f5a852 0%,#da742c 100%);
+    background: -moz-linear-gradient(left, #e88236 0%,#f6a953 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#e88236), color-stop(100%,#f6a953));
+    background: -webkit-linear-gradient(left, #e88236 0%,#f6a953 100%);
+    background: -ms-linear-gradient(left, #e88236 0%,#f6a953 100%);
+    background: linear-gradient(to right, #e88236 0%,#f6a953 100%);
 }
 
 
