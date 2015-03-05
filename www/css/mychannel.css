@@ -267,10 +267,10 @@ body {
     position: absolute;
     top: 58px;
     left: 50%;
-    width: 286px;
-    height: 80px;
-    margin-left: -143px;
-    background: transparent url("/images/mychannel_icons.png") no-repeat -18px -21px;
+    width: 186px;
+    height: 68px;
+    margin-left: -93px;
+    background: transparent url("/images/mychannel_icons.png") no-repeat -352px -28px;
     z-index: -1;
 }
 
