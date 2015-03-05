@@ -359,22 +359,36 @@ input[type=radio] + label {
 input[type=checkbox] + label > span,
 input[type=radio] + label > span {
     display: inline-block;
-    width: 0.875em;
-    height : 0.875em;
+    width: 17px;
+    height: 17px;
     margin: 0.25em 0.9em 0.18em 0.25em;
     border: 2px solid white;
-    border-radius: 1em;
+    border-radius: 17px;
     vertical-align: bottom;
 }
 input[type=checkbox]:checked + label > span > span,
 input[type=radio]:checked + label > span > span {
     display: block;
-    width: 0.6em;
-    height: 0.6em;
-    margin: 0.15em;
-    border-radius: 1em;
+    width: 11px;
+    height: 11px;
+    margin: 3px;
+    border-radius: 11px;
     background: white;
 }
+input[type=checkbox].small + label > span,
+input[type=radio].small + label > span {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+}
+input[type=checkbox].small:checked + label > span > span,
+input[type=radio].small:checked + label > span > span {
+    width: 9px;
+    height: 9px;
+    margin: 3px;
+    border-radius: 9px;
+}
+
 
 
 /*****************************************/
