@@ -397,7 +397,7 @@ and (max-device-width : 736px)
 and (orientation : portrait)
 and (-webkit-min-device-pixel-ratio: 2) {
     .welcome.content_tab .header {
-        top: 58px;
+        top: 38px;
         left: 50%;
         margin-left: -93px;
     }
