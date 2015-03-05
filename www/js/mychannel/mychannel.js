@@ -29,6 +29,17 @@ function defaultReady(show_social)
         $('body').addClass('embed');
         g_mediaAutoStart = false;
     }
+
+    var name = window.localStorage.signup_name;
+    if( name )
+    {
+        $('.content_tab.welcome1').addClass('open instant_open');
+        $('.user_first_name').html(name);
+    }
+    else
+    {
+        $('.content_tab.signup1').addClass('open instant_open');
+    }
 }
 $(document).ready(defaultReady);
 
@@ -50,6 +61,11 @@ function clickSignup4Next()
 }
 function clickSignup5Next()
 {
+    var name = $('.signup5 input').val();
+    if( name )
+    {
+        window.localStorage.signup_name = name;
+    }
     slideInOutContentTab('.signup6');
 }
 function clickSignup6Next()
@@ -116,11 +132,13 @@ function clickShowShare()
 
 function showContentTab(name)
 {
+    $('.content_tab').removeClass('instant_open');
     $('.content_tab').removeClass('open');
     $('.content_tab' + name).addClass('open');
 }
 function slideInOutContentTab(name)
 {
+    $('.content_tab').removeClass('instant_open');
     $('.content_tab.open').addClass('closed');
     $('.content_tab' + name).addClass('open');
 }
