@@ -280,9 +280,10 @@ input[type=text]:focus {
     position: absolute;
     top: 51px;
     right: 53px;
-    color: #97f01f;
+    color: #974f1e;
     font-size: 15px;
     font-weight: 700;
+    text-transform: uppercase;
     z-index: -1;
 }
 
@@ -349,6 +350,10 @@ input[type=text]:focus {
     line-height: 33px;
     padding-left: 8px;
     padding-right: 8px;
+}
+
+.welcome2.welcome.content_tab .middle {
+    margin-top: -100px;
 }
 
 @media only screen 
