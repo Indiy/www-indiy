@@ -363,7 +363,8 @@ input[type=text]:focus {
     height: 38px;
 }
 .welcome.content_tab .daily_goal .label {
-    font-size: 13px;
+    padding-bottom: 8px;
+    font-size: 14px;
     color: #8d4b1e;
     font-weight: 400;
 }
@@ -371,7 +372,7 @@ input[type=text]:focus {
     display: inline-block;
     padding-left: 16px;
     vertical-align: bottom;
-    font-size: 15px;
+    font-size: 16px;
 }
 .welcome.content_tab .daily_goal .bar {
     height: 13px;
@@ -380,7 +381,7 @@ input[type=text]:focus {
 }
 .welcome.content_tab .daily_goal .bar .whole_bar {
     background: #c86926;
-    margin: 2px;
+    margin: 3px;
     height: 7px;
     border-radius: 5px;
 }
