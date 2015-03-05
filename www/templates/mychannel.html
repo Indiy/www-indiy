@@ -190,34 +190,55 @@
             <div class='label'>DAILY GOAL<div class='percent'>34%</div></div>
             <div class='bar'>
                 <div class='whole_bar'>
-                    <div class='selected_bar'></div>
+                    <div class='filled_bar'></div>
                 </div>
             </div>
         </div>
     </div>
     <div class='home_tab content_tab'>
-        <div class='top_bar home_tab_item'>
-            <div class='left_menu sprite_icon' onclick='clickMenu();'></div>
-            <div class='title'><?=$template_params['top_text'];?></div>
-            <div class='right_menu'>
-                <div class='plus sprite_icon' onclick='clickPlus();'></div>
-                <div class='extended_menu'>
-                    <div class='store sprite_icon' onclick='clickShowStore();'></div>
-                    <div class='social sprite_icon' onclick='clickShowSocial();'></div>
-                    <div class='share sprite_icon' onclick='clickShowShare();'></div>
+        <div class='side_menu' onclick='clickMenu();'>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class='share_star'>
+            <div class='share'>SHARE</div>
+            <div class='star'>
+                <div class='icon'></div>
+            </div>
+        </div>
+        <div class='controls'>
+            <div class='tracker_bar'>
+                <div class='whole_bar'>
+                    <div class='filled_bar'></div>
+                    <div class='current_pos'></div>
+                </div>
+            </div>
+            <div class='info_bar'>
+                <div class='now_playing'>
+                    <div class='label'>NOW PLAYING</div>
+                    <div class='track_title'>The One Great Stretch</div>
+                </div>
+                <div class='play_pause'>
+                    <div class='stop'>
+                        <div></div>
+                    </div>
+                    <div class='start'>
+                        <div></div>
+                    </div>
+                </div>
+                <div class='next'>
+                    <div class='icon'></div>
+                </div>
+                <div class='volume'>
+                    <div class='icon'></div>
+                </div>
+                <div class='info'>
+                    INFO
                 </div>
             </div>
         </div>
-        <div id='big_play_icon' class='big_play_icon home_tab_item' onclick='playlistPlayPause();'>
-            <div class='icon sprite_icon'></div>
-            <div class='text'>PLAY</div>
-        </div>
-
-        <div class='bottom_title home_tab_item'><?=$template_params['bottom_text'];?></div>
-
-        <div class='powered_by home_tab_item'><?=$template_params['footer_text'];?></div>
     </div>
-
     <div class='playlist_tab content_tab'>
         <div class='top_bar'>
             <div class='left_menu sprite_icon' onclick='clickMenu();'></div>
