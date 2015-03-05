@@ -544,6 +544,12 @@ input[type=radio].small:checked + label > span > span {
     background: linear-gradient(to right, #e88236 0%,#f6a953 100%);
 }
 
+.home_tab .controls .info_bar .info {
+    position: absolute;
+    right: 0px;
+    width: 176px;
+}
+
 
 /**********************************************/
 
