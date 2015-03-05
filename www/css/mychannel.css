@@ -287,9 +287,20 @@ body {
     line-height: 50px;
 }
 
-.welcome2.welcome.content_tab .middle {
+.welcome.content_tab .middle .question {
+    position: relative;
     font-size: 32px;
     line-height: 44px;
+}
+.welcome.content_tab .middle .question .behind {
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    right: 0px;
+    color: #e18d40;
+    font-size: 120px;
+    z-index: -1;
+    text-align: center;
 }
 
 /*****************************************/
