@@ -367,7 +367,7 @@ input[type=text]:focus {
     color: #8d4b1e;
     font-weight: 400;
 }
-.welcome.content_tab .daily_goal .label .percentage {
+.welcome.content_tab .daily_goal .label .percent {
     display: inline-block;
     padding-left: 16px;
     vertical-align: bottom;
@@ -375,20 +375,20 @@ input[type=text]:focus {
 }
 .welcome.content_tab .daily_goal .bar {
     height: 13px;
-    border-radius: 1px solid white;
-    border-radius: 10px;
+    border: 1px solid white;
+    border-radius: 7px;
 }
 .welcome.content_tab .daily_goal .bar .whole_bar {
     background: #c86926;
     margin: 2px;
     height: 7px;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 .welcome.content_tab .daily_goal .bar .whole_bar .selected_bar {
     width: 37%;
     height: 7px;
     background: white;
-    border-radius: 2px 2px 0px 0px;
+    border-radius: 5px 0px 0px 5px;
 }
 
 @media only screen 
