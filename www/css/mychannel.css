@@ -522,57 +522,28 @@ input[type=radio].small:checked + label > span > span {
     -webkit-transform: translateX(0);
 }
 
-
-.home_tab.content_tab .top_bar {
-    background: rgba(0,0,0,0.5);
-}
-
-.home_tab .bottom_title {
+.home_tab .controls {
     position: absolute;
-    bottom: 29px;
+    bottom: 36px;
     left: 0px;
     right: 0px;
-    height: 38px;
-    padding-top: 4px;
-    padding-bottom: 12px;
-    color: white;
-    font-size: 36px;
-    text-align: center;
-    background: rgba(0,0,0,0.5);
+    height: 102px;
 }
-
-.home_tab .powered_by {
+.home_tab .controls .info_bar {
     position: absolute;
-    bottom: 4px;
-    left: 6px;
-    right: 0px;
-    color: white;
-    font-size: 16px;
-}
-
-.home_tab .big_play_icon {
-    display: block;
-    position: absolute;
-    top: 50%;
     left: 0px;
     right: 0px;
-    margin-top: -175px;
-    text-align: center;
-    cursor: pointer;
-    z-index: 1000;
-}
-.home_tab .big_play_icon .icon {
-    display: inline-block;
-    width: 82px;
-    height: 82px;
-    background-position: -109px -70px;
-}
-.home_tab .big_play_icon .text {
-    padding-top: 20px;
+    bottom: 0px;
+    height: 66px;
     color: white;
-    font-size: 70px;
-    text-align: center;
+    background: #ed9442;
+    background: -moz-linear-gradient(left, #f5a852 0%,#da742c 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f5a852), color-stop(100%,#da742c));
+    background: -webkit-linear-gradient(left, #f5a852 0%,#da742c 100%);
+    background: -ms-linear-gradient(left, #f5a852 0%,#da742c 100%);
+    background: linear-gradient(to right, #f5a852 0%,#da742c 100%);
 }
+
 
 /**********************************************/
 
