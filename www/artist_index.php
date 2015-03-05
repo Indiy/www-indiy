@@ -456,6 +456,10 @@
         {
             include_once 'templates/mychannel.html';
         }
+        else if( $template_type == 'PLAYER_MYCHANNEL_TEST' )
+        {
+            include_once 'templates/mychannel_test.html';
+        }
     }
     else
     {

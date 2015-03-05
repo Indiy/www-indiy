@@ -380,6 +380,7 @@
 		2D9E2FFC1585C8B600A76906 /* cart.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = cart.js; sourceTree = "<group>"; };
 		2D9E2FFD1588355100A76906 /* cart.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = cart.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DA723A315B8BEAC00658D4B /* love.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = love.php; path = data/love.php; sourceTree = "<group>"; };
+		2DAD99351AA8B34B008102B1 /* mychannel_test.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = mychannel_test.html; sourceTree = "<group>"; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
 		2DC1808B160E4D82007B44C0 /* error.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = error.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
@@ -1434,6 +1435,7 @@
 		2D9E2FD81569F13600A76906 /* templates */ = {
 			isa = PBXGroup;
 			children = (
+				2DAD99351AA8B34B008102B1 /* mychannel_test.html */,
 				2D3FAF0E1A59D0500009F2F3 /* frag_top_bar_nav.html */,
 				2DE6CDCF175AB174007E6792 /* splash_form_download.html */,
 				2DCEC1441A4FB21300DB41D7 /* mad_tv.html */,

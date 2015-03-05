@@ -1347,6 +1347,21 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             }
         ]
+    },
+    'PLAYER_MYCHANNEL_TEST': {
+        type: 'PLAYER',
+        description: 'MyChannel Test',
+        default_params: {
+            page_title: 'MyChannel'
+        },
+        arg_list:
+        [
+            {
+                name: 'page_title',
+                description: 'Page Title',
+                type: 'string'
+            }
+        ]
     }
 };
 
