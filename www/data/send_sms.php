@@ -36,11 +36,11 @@
     if( isset($_REQUEST['callback']) )
     {
         $callback = $_REQUEST['callback'];
-        die "$callback($json);";
+        die("$callback($json);");
     }
     else
     {
-        die $json;
+        die($json);
     }
 
 ?>
