@@ -302,6 +302,18 @@ body {
     z-index: -1;
     text-align: center;
 }
+.welcome.content_tab .middle input[type=text] {
+    width: 214px;
+    margin-top: 36px;
+    border-top: 3px solid #af5e26;
+    border-left: 3px solid #af5e26;
+    border-bottom: 1px solid #efa668;
+    background: #c86926;
+    font-size: 18px;
+    line-height: 33px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
 
 /*****************************************/
 
