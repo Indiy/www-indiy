@@ -269,12 +269,20 @@ input[type=text]:focus {
 }
 .welcome.content_tab .header {
     position: absolute;
-    top: 58px;
-    left: 50%;
+    top: 40px;
+    left: 46px;
     width: 186px;
     height: 68px;
-    margin-left: -93px;
     background: transparent url("/images/mychannel_icons.png") no-repeat -352px -28px;
+    z-index: -1;
+}
+.welcome.content_tab .date {
+    position: absolute;
+    top: 51px;
+    right: 53px;
+    color: #97f01f;
+    font-size: 15px;
+    font-weight: 700;
     z-index: -1;
 }
 
@@ -341,6 +349,20 @@ input[type=text]:focus {
     line-height: 33px;
     padding-left: 8px;
     padding-right: 8px;
+}
+
+@media only screen 
+and (max-device-width : 736px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .welcome.content_tab .header {
+        top: 58px;
+        left: 50%;
+        margin-left: -93px;
+    }
+    .welcome.content_tab .date {
+        display: none;
+    }
 }
 
 /*****************************************/
