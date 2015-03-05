@@ -16,6 +16,10 @@ body {
     display: none !important;
 }
 
+input[type=text]:focus {
+    outline: none;
+}
+
 .full_screen_bg { 
     position: fixed; 
     top: 0px;
@@ -388,8 +392,6 @@ input[type=radio].small:checked + label > span > span {
     margin: 3px;
     border-radius: 9px;
 }
-
-
 
 /*****************************************/
 
