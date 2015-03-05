@@ -332,6 +332,7 @@ body {
     border-bottom: 1px solid #efa668;
     border-right: 0;
     background: #c86926;
+    color: white;
     font-size: 18px;
     line-height: 33px;
     padding-left: 8px;
@@ -370,7 +371,7 @@ input[type=radio]:checked + label > span > span {
     display: block;
     width: 0.6em;
     height: 0.6em;
-    margin: 0.14em;
+    margin: 0.15em;
     border-radius: 1em;
     background: white;
 }
