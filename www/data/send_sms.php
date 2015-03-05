@@ -22,7 +22,7 @@
         $client->account->messages->create(array(
             'To' => $to,
             'From' => "+12672974818",
-            'Body' => "Test test test",
+            'Body' => "Welcome to MyChannel",
         ));
 
         $ret = array("success" => 1);

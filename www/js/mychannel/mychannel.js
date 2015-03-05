@@ -59,6 +59,13 @@ function clickSignup3Next()
 }
 function clickSignup4Next()
 {
+    var phone_number = $('.signup4 input').val();
+    if( phone_number )
+    {
+        window.localStorage.signup_phone_number = phone_number;
+        sendSMS(phone_number);
+    }
+
     slideInOutContentTab('.signup5');
 }
 function clickSignup5Next()
@@ -144,6 +151,29 @@ function slideInOutContentTab(name)
     $('.content_tab').removeClass('instant_open');
     $('.content_tab.open').addClass('closed');
     $('.content_tab' + name).addClass('open');
+}
+
+function sendSMS(phone_number)
+{
+    var args = {
+        to: phone_number
+    };
+
+    var url = g_trueSiteUrl + "/data/send_sms.php";
+    jQuery.ajax(
+    {
+        type: 'GET',
+        url: url,
+        data: args,
+        dataType: 'jsonp',
+        success: function(data)
+        {
+        },
+        error: function(data)
+        {
+            console.log("SMS failed:",data);
+        }
+    });
 }
 
 })();
