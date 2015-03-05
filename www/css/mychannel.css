@@ -295,10 +295,13 @@ input[type=text]:focus {
     margin-top: -50px;
     text-align: center;
     color: white;
-    font-size: 50px;
+    font-size: 64px;
     line-height: 80px;
     font-weight: 300;
     letter-spacing: 1px;
+}
+.welcome2.welcome.content_tab .middle {
+    margin-top: -100px;
 }
 .welcome.content_tab .middle .next_arrow {
     padding-top: 20px;
@@ -316,7 +319,7 @@ input[type=text]:focus {
 .welcome.content_tab .middle .user_first_name {
     padding-top: 10px;
     text-transform: uppercase;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 700;
     line-height: 50px;
 }
@@ -352,8 +355,40 @@ input[type=text]:focus {
     padding-right: 8px;
 }
 
-.welcome2.welcome.content_tab .middle {
-    margin-top: -100px;
+.welcome.content_tab .daily_goal {
+    position: absolute;
+    bottom: 52px;
+    left: 52px;
+    width: 288px;
+    height: 38px;
+}
+.welcome.content_tab .daily_goal .label {
+    font-size: 13px;
+    color: #8d4b1e;
+    font-weight: 400;
+}
+.welcome.content_tab .daily_goal .label .percentage {
+    display: inline-block;
+    padding-left: 16px;
+    vertical-align: bottom;
+    font-size: 15px;
+}
+.welcome.content_tab .daily_goal .bar {
+    height: 13px;
+    border-radius: 1px solid white;
+    border-radius: 10px;
+}
+.welcome.content_tab .daily_goal .bar .whole_bar {
+    background: #c86926;
+    margin: 2px;
+    height: 7px;
+    border-radius: 8px;
+}
+.welcome.content_tab .daily_goal .bar .whole_bar .selected_bar {
+    width: 37%;
+    height: 7px;
+    background: white;
+    border-radius: 2px 2px 0px 0px;
 }
 
 @media only screen 
@@ -367,6 +402,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
     .welcome.content_tab .date {
         display: none;
+    }
+    .welcome.content_tab .daily_goal {
+        left: 50%;
+        margin-left: -144px;
     }
 }
 
