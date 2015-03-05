@@ -65,6 +65,7 @@ function clickSignup5Next()
     if( name )
     {
         window.localStorage.signup_name = name;
+        $('.user_first_name').html(name);
     }
     slideInOutContentTab('.signup6');
 }
