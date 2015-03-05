@@ -381,6 +381,7 @@
 		2D9E2FFD1588355100A76906 /* cart.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = cart.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		2DA723A315B8BEAC00658D4B /* love.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; name = love.php; path = data/love.php; sourceTree = "<group>"; };
 		2DAD99351AA8B34B008102B1 /* mychannel_test.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = mychannel_test.html; sourceTree = "<group>"; };
+		2DAD99361AA8C713008102B1 /* send_sms.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = send_sms.php; sourceTree = "<group>"; };
 		2DBDD1271469D46D001E20CC /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
 		2DBDD1281469DCC4001E20CC /* login_signup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = login_signup.js; sourceTree = "<group>"; };
 		2DC1808B160E4D82007B44C0 /* error.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = error.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
@@ -1735,6 +1736,7 @@
 		2DF470541440B77F005538C7 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				2DAD99361AA8C713008102B1 /* send_sms.php */,
 				2D117D321706739F00D6BD84 /* artist_form.php */,
 				2D5DD4B114CCE4AF00566E9A /* cart.php */,
 				2D34E23914AD87E2004473F9 /* booking.php */,
