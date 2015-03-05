@@ -294,11 +294,12 @@ body {
 }
 .welcome.content_tab .middle .question .behind {
     position: absolute;
-    top: -10px;
+    top: 20px;
     left: 0px;
     right: 0px;
-    color: #e18d40;
+    color: #da742c;
     font-size: 120px;
+    font-weight: 400;
     z-index: -1;
     text-align: center;
 }
@@ -308,6 +309,7 @@ body {
     border-top: 3px solid #af5e26;
     border-left: 3px solid #af5e26;
     border-bottom: 1px solid #efa668;
+    border-right: 0;
     background: #c86926;
     font-size: 18px;
     line-height: 33px;
