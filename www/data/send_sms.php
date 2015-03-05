@@ -9,27 +9,38 @@
     require_once '../includes/functions.php';
     require_once 'Twilio.php';
 
-    $account_sid = 'ACcc57cd6bc794d8b1a04691e900d4176d';
-    $auth_token = '1424e97eead39de5f910719fb904f3ce';
-    $client = new Services_Twilio($account_sid, $auth_token);
+    $to = $_REQUEST['to'];
 
-    $client->account->messages->create(array(
-        'To' => "2134446630",
-        'From' => "+12672974818",
-        'Body' => "Test test test",
-    ));
+    $ret = array("success" => 0,"error" => "unknown");
 
-    $ret = array("success" => 1);
+    if( strlen($to) > 0 )
+    {
+        $account_sid = 'ACcc57cd6bc794d8b1a04691e900d4176d';
+        $auth_token = '1424e97eead39de5f910719fb904f3ce';
+        $client = new Services_Twilio($account_sid, $auth_token);
+
+        $client->account->messages->create(array(
+            'To' => $to,
+            'From' => "+12672974818",
+            'Body' => "Test test test",
+        ));
+
+        $ret = array("success" => 1);
+    }
+    else
+    {
+        $ret = array("success" => 0,"error" => "to is required");
+    }
 
     $json = json_encode($ret);
     if( isset($_REQUEST['callback']) )
     {
         $callback = $_REQUEST['callback'];
-        echo "$callback($json);";
+        die "$callback($json);";
     }
     else
     {
-        echo $json;
+        die $json;
     }
 
 ?>
