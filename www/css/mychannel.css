@@ -522,6 +522,7 @@ input[type=radio].small:checked + label > span > span {
     -webkit-transform: translateX(0);
 }
 .home_tab .top_items {
+    position: absolute;
     left: 0px;
     right: 0px;
     top: 0px;
