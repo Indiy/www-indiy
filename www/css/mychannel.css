@@ -748,6 +748,7 @@ input[type=radio].small:checked + label > span > span {
     left: 0px;
     top: 0px;
     bottom: 0px;
+    width: 100%;
     max-width: 266px;
     overflow-x: hidden;
     overflow-y: scroll;
