@@ -641,7 +641,7 @@ input[type=radio].small:checked + label > span > span {
 }
 .home_tab .controls .tracker_bar .whole_bar .filled_bar {
     display: inline-block;
-    width: 50%;
+    width: 0%;
     height: 8px;
     background: white;
     border-radius: 3px 0px 0px 3px;

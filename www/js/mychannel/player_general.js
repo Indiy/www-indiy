@@ -129,6 +129,14 @@ function generalOnReady()
 
 function playerProgress(curr_time,total_time)
 {
+    var percentage = 0;
+    if( total_time > 0 )
+    {
+        percentage = curr_time/total_time * 100;
+    }
+    percentage = Math.min(percentage,100);
+    percentage = Math.max(percentage,0);
+    $('.home_tab .controls .tracker_bar .whole_bar .filled_bar').css('width',percentage + "%");
 }
 function playerPhotoInfo(name,location,views)
 {
