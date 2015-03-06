@@ -554,6 +554,28 @@ input[type=radio].small:checked + label > span > span {
     top: 36px;
     width: 123px;
     height: 23px;
+    text-align: right;
+    font-size: 0px;
+}
+.home_tab .top_items .share_star .share {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 17px;
+    padding-right: 40px;
+    color: white;
+    font-size: 16px;
+    text-shadow: #c5c5c5;
+}
+.no_touch .home_tab .top_items .share_star .share:hover {
+    color: #eca057;
+}
+.home_tab .top_items .share_star .star {
+    display: inline-block;
+    vertical-align: top;
+    height: 23px;
+    width: 25px;
+    background: transparent url("/images/oen_icons@2x.png") no-repeat -130px -235px;
+    background-size: 854px 676px;
 }
 
 .home_tab .controls {
