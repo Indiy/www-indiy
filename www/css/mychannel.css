@@ -629,18 +629,22 @@ input[type=radio].small:checked + label > span > span {
 }
 .home_tab .controls .tracker_bar .whole_bar {
     margin-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
     width: 90%;
     height: 8px;
-    background: rgba(158,84,29,0.9);
+    background: rgba(138,74,19,0.6);
     border-radius: 3px;
     text-align: left;
+    font-size: 0px;
+    cursor: pointer;
 }
 .home_tab .controls .tracker_bar .whole_bar .filled_bar {
     display: inline-block;
     width: 50%;
     height: 8px;
     background: white;
-    border-radius: 3px;
+    border-radius: 3px 0px 0px 3px;
     vertical-align: top;
 }
 .home_tab .controls .tracker_bar .whole_bar .current_pos {
