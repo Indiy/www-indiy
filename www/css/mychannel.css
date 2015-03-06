@@ -626,6 +626,7 @@ input[type=radio].small:checked + label > span > span {
     left: 0px;
     right: 0px;
     height: 36px;
+    font-size: 0px;
 }
 .home_tab .controls .tracker_bar .whole_bar {
     margin-top: 7px;
@@ -636,7 +637,6 @@ input[type=radio].small:checked + label > span > span {
     background: rgba(138,74,19,0.6);
     border-radius: 3px;
     text-align: left;
-    font-size: 0px;
     cursor: pointer;
 }
 .home_tab .controls .tracker_bar .whole_bar .filled_bar {
