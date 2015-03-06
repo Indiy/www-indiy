@@ -794,6 +794,10 @@ input[type=radio].small:checked + label > span > span {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     border-top: 1px solid #ac6423;
+    cursor: pointer;
+}
+.no_touch .side_menu .shown_menu .menu_item_list .menu_item:hover {
+    color: white;
 }
 .side_menu .shown_menu .menu_item_list .menu_item.last {
     border-bottom: 1px solid #ac6423;
