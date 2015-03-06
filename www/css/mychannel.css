@@ -549,8 +549,9 @@ input[type=radio].small:checked + label > span > span {
     bottom: 1px;
     right: 0px;
     width: 176px;
-    padding-bottom: 22px;
+    padding-bottom: 19px;
     color: #964f15;
+    font-size: 20px;
     text-align: center;
     cursor: pointer;
 }
@@ -561,7 +562,7 @@ input[type=radio].small:checked + label > span > span {
     right: 176px;
     bottom: 1px;
     border-right: 2px solid #ac6423;
-    background: transparent url("/images/oen_icons@2x.png") no-repeat -140px -530px;
+    background: transparent url("/images/oen_icons@2x.png") no-repeat -140px -531px;
     background-size: 854px 676px;
     cursor: pointer;
 }
@@ -572,7 +573,7 @@ input[type=radio].small:checked + label > span > span {
     right: 234px;
     bottom: 1px;
     border-right: 2px solid #ac6423;
-    background: transparent url("/images/oen_icons@2x.png") no-repeat -74px -530px;
+    background: transparent url("/images/oen_icons@2x.png") no-repeat -74px -531px;
     background-size: 854px 676px;
     cursor: pointer;
 }
@@ -588,7 +589,8 @@ input[type=radio].small:checked + label > span > span {
     cursor: pointer;
 }
 .home_tab .controls .info_bar .play_pause.playing {
-    background: transparent url("/images/oen_icons@2x.png") no-repeat -10px -530px;
+    background: transparent url("/images/oen_icons@2x.png") no-repeat -10px -531px;
+    background-size: 854px 676px;
 }
 .no_touch .home_tab .controls .info_bar .info:hover {
     color: white;
