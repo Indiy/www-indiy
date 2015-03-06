@@ -521,8 +521,14 @@ input[type=radio].small:checked + label > span > span {
     transform: translateX(0);
     -webkit-transform: translateX(0);
 }
-
-.home_tab .side_menu {
+.home_tab .top_items {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 0px;
+    overflow: visible;
+}
+.home_tab .top_items .side_menu {
     position: absolute;
     top: 53px;
     left: 55px;
@@ -531,17 +537,18 @@ input[type=radio].small:checked + label > span > span {
     overflow: hidden;
     cursor: pointer;
 }
-.home_tab .side_menu div {
+.home_tab .top_items .side_menu div {
     width: 100%;
     height: 4px;
     background: white;
     margin-bottom: 6px;
 }
-.no_touch .home_tab .side_menu:hover div {
+.no_touch .home_tab .top_items .side_menu:hover div {
     background: #eca057;
 }
 
-.home_tab .share_star {
+.home_tab .top_items .share_star {
+    position: absolute;
     right: 53px;
     top: 36px;
     width: 123px;
