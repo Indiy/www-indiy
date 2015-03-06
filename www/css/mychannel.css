@@ -574,7 +574,7 @@ input[type=radio].small:checked + label > span > span {
 .home_tab .top_items .share_star .star {
     display: inline-block;
     vertical-align: top;
-    height: 23px;
+    height: 28px;
     width: 28px;
     background: transparent url("/images/oen_icons@2x.png") no-repeat -126px -236px;
     background-size: 854px 676px;
