@@ -534,9 +534,7 @@ input[type=radio].small:checked + label > span > span {
     left: 0px;
     right: 0px;
     bottom: 0px;
-    height: 64px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    height: 66px;
     color: white;
     background: #ed9442;
     background: -moz-linear-gradient(left, #e88236 0%,#f6a953 100%);
@@ -548,7 +546,7 @@ input[type=radio].small:checked + label > span > span {
 
 .home_tab .controls .info_bar .info {
     position: absolute;
-    bottom: 0px;
+    bottom: 1px;
     right: 0px;
     width: 176px;
     padding-bottom: 22px;
@@ -558,9 +556,9 @@ input[type=radio].small:checked + label > span > span {
 .home_tab .controls .info_bar .volume {
     position: absolute;
     width: 56px;
-    height: 100%;
+    height: 64px;
     right: 176px;
-    bottom: 0px;
+    bottom: 1px;
     border-right: 2px solid #ac6423;
     background: transparent url("/images/oen_icons@2x.png") no-repeat -140px -530px;
     background-size: 854px 676px;
@@ -568,9 +566,9 @@ input[type=radio].small:checked + label > span > span {
 .home_tab .controls .info_bar .next {
     position: absolute;
     width: 56px;
-    height: 100%;
+    height: 64px;
     right: 234px;
-    bottom: 0px;
+    bottom: 1px;
     border-right: 2px solid #ac6423;
     background: transparent url("/images/oen_icons@2x.png") no-repeat -74px -530px;
     background-size: 854px 676px;
@@ -578,9 +576,9 @@ input[type=radio].small:checked + label > span > span {
 .home_tab .controls .info_bar .play_pause {
     position: absolute;
     width: 56px;
-    height: 100%;
+    height: 64px;
     right: 292px;
-    bottom: 0px;
+    bottom: 1px;
     border-right: 2px solid #ac6423;
     background: transparent url("/images/oen_icons@2x.png") no-repeat -10px -530px;
     background-size: 854px 676px;
@@ -588,12 +586,27 @@ input[type=radio].small:checked + label > span > span {
 .home_tab .controls .info_bar .now_playing {
     position: absolute;
     left: 0px;
-    height: 100%;
+    height: 64px;
     right: 350px;
-    bottom: 0px;
+    bottom: 1px;
     border-right: 2px solid #ac6423;
+    text-align: left;
 }
-.home_tab .controls .info_bar .now_playing {
+.home_tab .controls .info_bar .now_playing .label {
+    display: inline-block;
+    padding-left: 54px;
+    padding-bottom: 20px;
+    vertical-align: bottom;
+    color: #964f15;
+    font-size: 16px;
+}
+.home_tab .controls .info_bar .now_playing .track_title {
+    display: inline-block;
+    padding-left: 38px;
+    padding-bottom: 20px;
+    vertical-align: bottom;
+    color: white;
+    font-size: 16px;
 }
 
 /**********************************************/
