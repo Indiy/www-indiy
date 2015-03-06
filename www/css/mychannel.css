@@ -546,10 +546,60 @@ input[type=radio].small:checked + label > span > span {
 
 .home_tab .controls .info_bar .info {
     position: absolute;
+    bottom: 0px;
     right: 0px;
     width: 176px;
+    padding-bottom: 10px;
+    text-align: center;
 }
-
+.home_tab .controls .info_bar .volume {
+    position: absolute;
+    width: 56px;
+    height: 100%;
+    right: 176px;
+    bottom: 0px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    border-right: 1px solid #ac6423;
+    background: transparent url("/images/oen_icons@2x.png") no-repeat -147px -522px;
+    background-size: 854px 676px;
+}
+.home_tab .controls .info_bar .next {
+    position: absolute;
+    width: 56px;
+    height: 100%;
+    right: 233px;
+    bottom: 0px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    border-right: 1px solid #ac6423;
+    background: transparent url("/images/oen_icons@2x.png") no-repeat -147px -522px;
+    background-size: 854px 676px;
+}
+.home_tab .controls .info_bar .play_pause {
+    position: absolute;
+    width: 56px;
+    height: 100%;
+    right: 290px;
+    bottom: 0px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    border-right: 1px solid #ac6423;
+    background: transparent url("/images/oen_icons@2x.png") no-repeat -147px -522px;
+    background-size: 854px 676px;
+}
+.home_tab .controls .info_bar .now_playing {
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    right: 347px;
+    bottom: 0px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    border-right: 1px solid #ac6423;
+}
+.home_tab .controls .info_bar .now_playing {
+}
 
 /**********************************************/
 
