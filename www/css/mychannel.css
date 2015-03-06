@@ -522,6 +522,32 @@ input[type=radio].small:checked + label > span > span {
     -webkit-transform: translateX(0);
 }
 
+.home_tab .side_menu {
+    position: absolute;
+    top: 53px;
+    left: 55px;
+    width: 34px;
+    height: 25px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.home_tab .side_menu div {
+    width: 100%;
+    height: 4px;
+    background: white;
+    margin-bottom: 6px;
+}
+.no_touch .home_tab .side_menu:hover div {
+    background: #eca057;
+}
+
+.home_tab .share_star {
+    right: 53px;
+    top: 36px;
+    width: 123px;
+    height: 23px;
+}
+
 .home_tab .controls {
     position: absolute;
     bottom: 36px;
