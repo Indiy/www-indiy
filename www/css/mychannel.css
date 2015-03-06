@@ -785,7 +785,7 @@ input[type=radio].small:checked + label > span > span {
     background-size: 854px 676px;
 }
 .no_touch .side_menu .shown_menu .close_holder .close:hover {
-    background: transparent url("/images/oen_icons@2x.png") no-repeat -161px -456px;
+    background: transparent url("/images/oen_icons@2x.png") no-repeat -161px -454px;
     background-size: 854px 676px;
 }
 .side_menu .shown_menu .menu_item_list {
