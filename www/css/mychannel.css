@@ -764,6 +764,7 @@ input[type=radio].small:checked + label > span > span {
     height: 136px;
 }
 .side_menu .shown_menu .logo div {
+    margin-top: 54px;
     margin-left: 35px;
     width: 210px;
     height: 78px;
