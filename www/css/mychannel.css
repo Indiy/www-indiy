@@ -602,18 +602,18 @@ input[type=radio].small:checked + label > span > span {
 .home_tab .controls .info_bar .now_playing .label {
     display: inline-block;
     padding-left: 54px;
-    padding-bottom: 20px;
-    vertical-align: bottom;
+    padding-top: 20px;
+    vertical-align: top;
     color: #964f15;
-    font-size: 16px;
+    font-size: 20px;
 }
 .home_tab .controls .info_bar .now_playing .track_title {
     display: inline-block;
     padding-left: 38px;
-    padding-bottom: 20px;
-    vertical-align: bottom;
+    padding-top: 20px;
+    vertical-align: top;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 /**********************************************/
