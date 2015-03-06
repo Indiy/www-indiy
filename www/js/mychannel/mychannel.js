@@ -10,6 +10,7 @@ window.clickWelcome1Next = clickWelcome1Next;
 window.clickWelcome2Next = clickWelcome2Next;
 
 window.clickMenu = clickMenu;
+window.clickMenuClose = clickMenuClose;
 window.clickClose = clickClose;
 window.clickPlaylist = clickPlaylist;
 window.clickPlaylistItem = clickPlaylistItem;
@@ -92,11 +93,11 @@ function clickWelcome2Next()
 }
 function clickMenu()
 {
-    showContentTab('.playlist_tab');
+    $('.side_menu').addClass('open');
 }
-function clickClose()
+function clickMenuClose()
 {
-    showContentTab('.home_tab');
+    $('.side_menu').removeClass('open');
 }
 function clickPlaylist(i)
 {
