@@ -552,6 +552,7 @@ input[type=radio].small:checked + label > span > span {
     padding-bottom: 22px;
     color: #964f15;
     text-align: center;
+    cursor: pointer;
 }
 .home_tab .controls .info_bar .volume {
     position: absolute;
@@ -562,6 +563,7 @@ input[type=radio].small:checked + label > span > span {
     border-right: 2px solid #ac6423;
     background: transparent url("/images/oen_icons@2x.png") no-repeat -140px -530px;
     background-size: 854px 676px;
+    cursor: pointer;
 }
 .home_tab .controls .info_bar .next {
     position: absolute;
@@ -572,6 +574,7 @@ input[type=radio].small:checked + label > span > span {
     border-right: 2px solid #ac6423;
     background: transparent url("/images/oen_icons@2x.png") no-repeat -74px -530px;
     background-size: 854px 676px;
+    cursor: pointer;
 }
 .home_tab .controls .info_bar .play_pause {
     position: absolute;
@@ -582,6 +585,10 @@ input[type=radio].small:checked + label > span > span {
     border-right: 2px solid #ac6423;
     background: transparent url("/images/oen_icons@2x.png") no-repeat -10px -530px;
     background-size: 854px 676px;
+    cursor: pointer;
+}
+.no_touch .home_tab .controls .info_bar .info:hover {
+    color: white;
 }
 .home_tab .controls .info_bar .now_playing {
     position: absolute;
