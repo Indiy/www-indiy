@@ -99,6 +99,12 @@ function clickMenuClose()
 {
     $('.side_menu').removeClass('open');
 }
+
+function clickClose()
+{
+    console.log("Not implemented");
+}
+
 function clickPlaylist(i)
 {
     $('.playlist_tab .playlist_list .playlist').removeClass('active');
