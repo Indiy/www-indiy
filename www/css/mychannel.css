@@ -583,9 +583,12 @@ input[type=radio].small:checked + label > span > span {
     right: 292px;
     bottom: 1px;
     border-right: 2px solid #ac6423;
-    background: transparent url("/images/oen_icons@2x.png") no-repeat -10px -530px;
+    background: transparent url("/images/oen_icons@2x.png") no-repeat -10px -594px;
     background-size: 854px 676px;
     cursor: pointer;
+}
+.home_tab .controls .info_bar .play_pause.playing {
+    background: transparent url("/images/oen_icons@2x.png") no-repeat -10px -530px;
 }
 .no_touch .home_tab .controls .info_bar .info:hover {
     color: white;
