@@ -960,7 +960,7 @@ input[type=radio].small:checked + label > span > span {
 }
 
 @media only screen 
-and (max-device-width : 842px) {
+and (max-width: 842px) {
     .side_menu.side_open {
         transform: translateX(-100%);
         -webkit-transform: translateX(-100%);
