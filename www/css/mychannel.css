@@ -129,8 +129,8 @@ input[type=text]:focus {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background: #5a4173 url("/images/oen_background.gif") no-repeat;
-    background-size: 100%;
+    background: #423967 url("/images/oen_background.gif") no-repeat;
+    background-size: 100% 100%;
     z-index: 0;
     overflow: hidden;
     white-space: nowrap;
