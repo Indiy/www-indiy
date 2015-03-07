@@ -17,6 +17,8 @@ window.clickCloseAll = clickCloseAll;
 
 window.clickClose = clickClose;
 
+window.clickContentListItem = clickContentListItem;
+
 window.clickPlaylist = clickPlaylist;
 window.clickPlaylistItem = clickPlaylistItem;
 window.catalogClickPlaylistMediaItem = catalogClickPlaylistMediaItem;
@@ -113,6 +115,12 @@ function clickCloseAll()
 function clickClose()
 {
     console.log("Not implemented");
+}
+
+function clickContentListItem(i,j)
+{
+    clickCloseAll();
+    clickPlaylistItem(i,j);
 }
 
 function clickPlaylist(i)
