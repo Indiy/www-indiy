@@ -889,6 +889,8 @@ input[type=radio].small:checked + label > span > span {
     margin-right: auto;
 }
 .content_list_tab .content_list .top_line {
+    margin-left: 22px;
+    margin-right: 22px;
     height: 0px;
     border-bottom: 2px solid #ac6423;
 }
