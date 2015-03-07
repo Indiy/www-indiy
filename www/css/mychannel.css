@@ -896,26 +896,28 @@ input[type=radio].small:checked + label > span > span {
     padding-left: 8px;
     padding-right: 8px;
     width: 284px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     vertical-align: top;
 }
 .content_list_tab .content_list .content_item .left .type {
-    font-size: 18px;
+    padding-bottom: 20px;
     color: #954e15;
-    padding-bottom: 32px;
+    font-size: 18px;
+    font-weight: 400;
 }
 .content_list_tab .content_list .content_item .left .title {
+    padding-bottom: 5px;
     color: white;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 400;
 }
 .content_list_tab .content_list .content_item .left .description {
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipse;
+    text-overflow: ellipsis;
 }
 .content_list_tab .content_list .content_item .right {
     display: inline-block;
@@ -947,10 +949,10 @@ input[type=radio].small:checked + label > span > span {
     width: 0px;
     top: 50%;
     left: 50%;
-    margin-top: -8px;
-    margin-left: -2px;
-	border-top: 14px solid transparent;
-	border-bottom: 14px solid transparent;
+    margin-top: -12px;
+    margin-left: -5px;
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
 	border-left: 16px solid rgba(255,255,255,0.8);
 }
 
