@@ -123,11 +123,19 @@ input[type=text]:focus {
 
 /**************************************************/
 
-.signup.full_screen_bg {
-    background: url("/images/oen_background.gif") no-repeat;
+.signup.signup_bg {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: #5a4173 url("/images/oen_background.gif") no-repeat;
     background-size: 100%;
+    z-index: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0px;
 }
-
 .signup.content_tab {
     max-height: 100%;
     font-family: "Lato",sans-serif;
