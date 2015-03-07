@@ -46,6 +46,7 @@ function defaultReady(show_social)
     }
     else
     {
+        $('.signup.full_screen_bg').show();
         $('.content_tab.signup1').addClass('open instant_open');
     }
     var date = moment().format("dddd MMMM DD YYYY");
@@ -88,6 +89,7 @@ function clickSignup5Next()
 }
 function clickSignup6Next()
 {
+    $('.signup.full_screen_bg').hide();
     slideInOutContentTab('.welcome1');
 }
 function clickWelcome1Next()

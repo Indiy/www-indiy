@@ -121,15 +121,24 @@ input[type=text]:focus {
     -webkit-transition: -webkit-transform 0.5s;
 }
 
+/**************************************************/
+
+.signup.full_screen_bg {
+    background: url("/images/oen_background.gif") no-repeat;
+    background-size: 100%;
+}
+
 .signup.content_tab {
     max-height: 100%;
     font-family: "Lato",sans-serif;
+    /*
     background: #5a4173;
     background: -moz-linear-gradient(top, #5a4173 0%, #6c5f95 30%, #564070 67%, #4c3262 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5a4173), color-stop(30%,#6c5f95), color-stop(67%,#564070), color-stop(100%,#4c3262));
     background: -webkit-linear-gradient(top, #5a4173 0%,#6c5f95 30%,#564070 67%,#4c3262 100%);
     background: -ms-linear-gradient(top, #5a4173 0%,#6c5f95 30%,#564070 67%,#4c3262 100%);
     background: linear-gradient(to bottom, #5a4173 0%,#6c5f95 30%,#564070 67%,#4c3262 100%);
+    */
 }
 
 .signup.content_tab .header {
