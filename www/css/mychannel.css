@@ -893,7 +893,9 @@ input[type=radio].small:checked + label > span > span {
 }
 .content_list_tab .content_list .content_item .left {
     display: inline-block;
-    width: 300px;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 284px;
     font-family: 'Montserrat', sans-serif;
     vertical-align: top;
 }
