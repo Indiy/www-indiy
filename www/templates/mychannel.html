@@ -263,23 +263,24 @@
         <div class='desktop_header'>
             <div class='icon_close' onclick='clickCloseAll();'></div>
         </div>
-        <div class='content_list'>
-            <div class='top_line'></div>
-            <?php
-                foreach( $playlist_list as $i => $playlist ):
-                    foreach( $playlist['items'] as $j => $item ):
-                        $name = $item['name'];
-                        $description = $item['description'];
-                        $img_url = get_image_thumbnail($item['image'],$item['image_extra'],500);
-                        $action = "clickContentListItem($i,$j);";
-            ?>
-                <div class='content_item'>
-                    <div class='left'>
-                        <div class='type'>VIDEO</div>
-                        <div class='title'><?=$name;?></div>
-                        <div class='description'><?=$description;?></div>
-                    </div>
-                    <div class='right'>
+        <div class='content_list_holder'>
+            <div class='content_list'>
+                <div class='top_line'></div>
+                <?php
+                    foreach( $playlist_list as $i => $playlist ):
+                        foreach( $playlist['items'] as $j => $item ):
+                            $name = $item['name'];
+                            $description = $item['description'];
+                            $img_url = get_image_thumbnail($item['image'],$item['image_extra'],500);
+                            $action = "clickContentListItem($i,$j);";
+                ?>
+                    <div class='content_item'>
+                        <div class='left'>
+                            <div class='type'>VIDEO</div>
+                            <div class='title'><?=$name;?></div>
+                            <div class='description'><?=$description;?></div>
+                        </div>
+                        <div class='right'>
                             <div class='image_container' onclick='<?=$action;?>'>
                                 <img src='<?=$img_url;?>'/>
                                 <div class='play_button'>
@@ -288,8 +289,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            <?php endforeach; endforeach; ?>
+                <?php endforeach; endforeach; ?>
+            </div>
         </div>
     </div>
     <div class='playlist_tab content_tab'>

@@ -567,6 +567,7 @@ input[type=radio].small:checked + label > span > span {
     color: white;
     font-size: 16px;
     text-shadow: #c5c5c5;
+    cursor: pointer;
 }
 .no_touch .home_tab .top_items .share_star .share:hover {
     color: #eca057;
@@ -578,6 +579,7 @@ input[type=radio].small:checked + label > span > span {
     width: 28px;
     background: transparent url("/images/oen_icons@2x.png") no-repeat -126px -236px;
     background-size: 854px 676px;
+    cursor: pointer;
 }
 
 .home_tab .controls {
@@ -852,7 +854,7 @@ input[type=radio].small:checked + label > span > span {
 .content_list_tab .desktop_header {
     position: absolute;
     top: 0px;
-    bottom: 80px;
+    height: 80px;
     left: 0px;
     right: 0px;
 }
@@ -863,16 +865,20 @@ input[type=radio].small:checked + label > span > span {
     vertical-align: top;
 }
 
-.content_list_tab .content_list {
+.content_list_tab .content_list_holder {
     position: absolute;
     top: 80px;
     bottom: 20px;
+    left: 0px;
+    right: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.content_list_tab .content_list {
     width: 100%;
     max-width: 550px;
     margin-left: auto;
     margin-right: auto;
-    overflow-x: hidden;
-    overflow-y: scroll;
 }
 .content_list_tab .content_list .top_line {
     height: 0px;
