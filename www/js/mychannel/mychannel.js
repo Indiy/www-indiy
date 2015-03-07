@@ -191,7 +191,7 @@ function slideInOutContentTab(name,callback)
     $('.content_tab' + name).addClass('open');
     if( callback )
     {
-        window.setTimeout(callback,60*1000);
+        window.setTimeout(callback,2*1000);
     }
 }
 
