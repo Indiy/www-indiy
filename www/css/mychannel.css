@@ -884,7 +884,7 @@ input[type=radio].small:checked + label > span > span {
 }
 .content_list_tab .content_list {
     width: 100%;
-    max-width: 550px;
+    max-width: 594px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -971,7 +971,7 @@ input[type=radio].small:checked + label > span > span {
 }
 
 @media only screen 
-and (max-width: 842px) {
+and (max-width: 862px) {
     .side_menu.side_open {
         transform: translateX(-100%);
         -webkit-transform: translateX(-100%);
