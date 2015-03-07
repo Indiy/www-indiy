@@ -891,7 +891,26 @@ input[type=radio].small:checked + label > span > span {
     vertical-align: top;
     border-bottom: 2px solid #ac6423;
 }
-
+.content_list_tab .content_list .content_item .left {
+    display: inline-block;
+    width: 300px;
+    font-family: 'Montserrat', sans-serif;
+}
+.content_list_tab .content_list .content_item .left .type {
+    font-size: 18px;
+    color: #954e15;
+    padding-bottom: 32px;
+}
+.content_list_tab .content_list .content_item .left .title {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+.content_list_tab .content_list .content_item .left .description {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
 /**********************************************/
 
 .playlist_tab .playlist_list {
@@ -921,7 +940,6 @@ input[type=radio].small:checked + label > span > span {
     position: absolute;
     right: 0px;
     width: 20px;
-    height:
 }
 .playlist_tab .playlist_list .playlist .track_list {
     display: none;
