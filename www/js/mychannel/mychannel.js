@@ -89,8 +89,10 @@ function clickSignup5Next()
 }
 function clickSignup6Next()
 {
-    $('.signup.signup_bg').hide();
-    slideInOutContentTab('.welcome1');
+    slideInOutContentTab('.welcome1',function()
+    {
+        $('.signup.signup_bg').hide();
+    });
 }
 function clickWelcome1Next()
 {
@@ -182,11 +184,12 @@ function showContentTab(name)
     $('.content_tab').removeClass('open');
     $('.content_tab' + name).addClass('open');
 }
-function slideInOutContentTab(name)
+function slideInOutContentTab(name,callback)
 {
     $('.content_tab').removeClass('instant_open');
     $('.content_tab.open').addClass('closed');
     $('.content_tab' + name).addClass('open');
+    window.setTimeout(callback,60*1000);
 }
 
 function sendSMS(phone_number)
