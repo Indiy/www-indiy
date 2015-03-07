@@ -895,6 +895,7 @@ input[type=radio].small:checked + label > span > span {
     display: inline-block;
     width: 300px;
     font-family: 'Montserrat', sans-serif;
+    vertical-align: top;
 }
 .content_list_tab .content_list .content_item .left .type {
     font-size: 18px;
@@ -911,6 +912,43 @@ input[type=radio].small:checked + label > span > span {
     font-size: 18px;
     font-weight: 700;
 }
+.content_list_tab .content_list .content_item .right {
+    display: inline-block;
+    width: 250px;
+    vertical-align: top;
+}
+.content_list_tab .content_list .content_item .right .image_container {
+    position: relative;
+    width: 186px;
+    height: 100px;
+    cursor: pointer;
+}
+.content_list_tab .content_list .content_item .right .image_container img {
+    width: 100%;
+    height: 100%;
+}
+.content_list_tab .content_list .content_item .right .image_container .play_button {
+    position: absolute;
+    top: 26px;
+    left: 69px;
+    width: 48px;
+    height: 48px;
+    border: 4px solid rgba(255,255,255,0.5);
+    border-radius: 48px;
+}
+.content_list_tab .content_list .content_item .right .image_container .play_button div {
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    top: 50%;
+    left: 50%;
+    margin-left: 0px;
+    margin-top: 0px;
+	border-top: 33px solid transparent;
+	border-bottom: 33px solid transparent;
+	border-left: 33px solid rgba(255,255,255,0.5);
+}
+
 /**********************************************/
 
 .playlist_tab .playlist_list {
