@@ -533,12 +533,14 @@ input[type=radio].small:checked + label > span > span {
     position: absolute;
     top: 53px;
     left: 55px;
+}
+.side_menu_button {
     width: 34px;
     height: 25px;
     overflow: hidden;
     cursor: pointer;
 }
-.home_tab .top_items .side_menu_button div {
+.side_menu_button div {
     width: 100%;
     height: 4px;
     background: white;
@@ -851,6 +853,11 @@ input[type=radio].small:checked + label > span > span {
 
 .content_list_tab .mobile_header {
     display: none;
+}
+.content_list_tab .mobile_header .side_menu_button {
+    position: absolute;
+    top: 26px;
+    left: 28px;
 }
 .content_list_tab .desktop_header {
     position: absolute;
