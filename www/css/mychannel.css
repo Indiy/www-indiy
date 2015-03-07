@@ -929,7 +929,12 @@ and (max-width: 675px) {
     margin-top: 28px;
     vertical-align: top;
 }
-
+.content_list_tab .top_line {
+    margin-left: 22px;
+    margin-right: 22px;
+    height: 0px;
+    border-bottom: 2px solid #ac6423;
+}
 .content_list_tab .content_list_holder {
     position: absolute;
     top: 80px;
@@ -944,12 +949,6 @@ and (max-width: 675px) {
     max-width: 594px;
     margin-left: auto;
     margin-right: auto;
-}
-.content_list_tab .content_list .top_line {
-    margin-left: 22px;
-    margin-right: 22px;
-    height: 0px;
-    border-bottom: 2px solid #ac6423;
 }
 .content_list_tab .content_list .content_item {
     padding-top: 30px;
@@ -1077,7 +1076,7 @@ and (max-width: 594px) {
     }
     .right_tab.content_list_tab {
         display: block !important;
-        z-index: -1;
+        z-index: 0;
         transform: translateX(0%);
         -webkit-transform: translateX(0%);
         transition: none;

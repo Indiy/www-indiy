@@ -265,9 +265,9 @@
         <div class='desktop_header'>
             <div class='icon_close' onclick='clickCloseAll();'></div>
         </div>
+        <div class='top_line'></div>
         <div class='content_list_holder'>
             <div class='content_list'>
-                <div class='top_line'></div>
                 <?php
                     foreach( $playlist_list as $i => $playlist ):
                         foreach( $playlist['items'] as $j => $item ):
@@ -302,32 +302,6 @@
             <div class='right_menu'>
                 <div class= 'close sprite_icon' onclick='clickClose();'></div>
             </div>
-        </div>
-        
-        <div class='playlist_list'>
-            <?php
-                foreach( $playlist_list as $i => $playlist ):
-                    $name = $playlist['display_name'];
-                    $action = "clickPlaylist($i);";
-            ?>
-                <div id='playlist_<?=$i;?>' class='playlist'>
-                    <div class='title_arrow' onclick='<?=$action;?>'>
-                        <div class='title'><?=$name;?></div>
-                        <div class='arrow'></div>
-                    </div>
-                    <div class='track_list'>
-                        <?php
-                            foreach( $playlist['items'] as $j => $item ):
-                                $name = $item['name'];
-                                $action = "clickPlaylistItem($i,$j);";
-                        ?>
-                            <div id='track_<?=$j;?>' class='track_name' onclick='<?=$action;?>'>
-                                <?=$name;?>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-            <?php endforeach; ?>
         </div>
         
         <?php if( count($tab_list) > 0 ): ?>
