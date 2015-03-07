@@ -787,6 +787,7 @@ input[type=radio].small:checked + label > span > span {
     float: right;
     background: transparent url("/images/oen_icons@2x.png") no-repeat -271px -451px;
     background-size: 854px 676px;
+    cursor: pointer;
 }
 .no_touch .side_menu .shown_menu .close_holder .close:hover {
     background: transparent url("/images/oen_icons@2x.png") no-repeat -161px -454px;
