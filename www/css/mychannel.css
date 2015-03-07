@@ -780,11 +780,13 @@ input[type=radio].small:checked + label > span > span {
     padding-top: 8px;
     padding-bottom: 12px;
 }
-.side_menu .shown_menu .close_holder .close {
-    height: 24px;
-    width: 24px;
+.side_menu .shown_menu .close_holder .icon_close {
     margin-right: 18px;
     float: right;
+}
+.icon_close {
+    height: 24px;
+    width: 24px;
     background: transparent url("/images/oen_icons@2x.png") no-repeat -271px -451px;
     background-size: 854px 676px;
     cursor: pointer;
@@ -820,8 +822,6 @@ input[type=radio].small:checked + label > span > span {
     left: 267px;
     top: 0px;
     bottom: 0px;
-    overflow-x: hidden;
-    overflow-y: scroll;
     background: #f09b49;
     background: -moz-linear-gradient(top, #f5a852 0%,#da742c 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5a852), color-stop(100%,#da742c));
@@ -849,11 +849,30 @@ input[type=radio].small:checked + label > span > span {
 .content_list_tab .mobile_header {
     display: none;
 }
+.content_list_tab .desktop_header {
+    position: absolute;
+    top: 0px;
+    bottom: 80px;
+    left: 0px;
+    right: 0px;
+}
+.content_list_tab .desktop_header .icon_close {
+    float: right;
+    margin-right: 50px;
+    margin-top: 28px;
+    vertical-align: top;
+}
 
 .content_list_tab .content_list {
+    position: absolute;
+    top: 80px;
+    bottom: 20px;
+    width: 100%;
     max-width: 550px;
     margin-left: auto;
     margin-right: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 .content_list_tab .content_list .top_line {
     height: 0px;
