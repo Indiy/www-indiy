@@ -716,6 +716,28 @@ input[type=radio].small:checked + label > span > span {
     vertical-align: top;
 }
 
+@media only screen 
+and (max-width: 862px) {
+    .home_tab .controls .info_bar .now_playing .label {
+        display: none;
+    }
+}
+@media only screen 
+and (max-width: 675px) {
+    .home_tab .controls .info_bar .info {
+        width: 100px;
+    }
+    .home_tab .controls .info_bar .volume {
+        right: 100px;
+    }
+    .home_tab .controls .info_bar .next {
+        right: 158px;
+    }
+    .home_tab .controls .info_bar .play_pause {
+        right: 216px;
+    }
+}
+
 /**********************************************/
 
 .side_menu {
@@ -860,12 +882,12 @@ input[type=radio].small:checked + label > span > span {
 }
 .content_list_tab .mobile_header .title {
     position: absolute;
-    top: 20px;
+    top: 27px;
     left: 40px;
     right: 40px;
-    font-size: 20px;
+    font-size: 22px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     overflow: hidden;
 }
