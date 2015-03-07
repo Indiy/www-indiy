@@ -69,6 +69,48 @@
     <div id="fb-root"></div>
     <div id="jquery_jplayer" class="jp-jplayer"></div>
 
+    <div class='right_tab content_list_tab'>
+        <div class='mobile_header'>
+            <div class='side_menu_button' onclick='clickMenu();'>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class='title'>CONTENT</div>
+        </div>
+        <div class='desktop_header'>
+            <div class='icon_close' onclick='clickCloseAll();'></div>
+        </div>
+        <div class='top_line'></div>
+        <div class='content_list_holder'>
+            <div class='content_list'>
+                <?php
+                    foreach( $playlist_list as $i => $playlist ):
+                        foreach( $playlist['items'] as $j => $item ):
+                            $name = $item['name'];
+                            $description = $item['description'];
+                            $img_url = get_image_thumbnail($item['image'],$item['image_extra'],500);
+                            $action = "clickContentListItem($i,$j);";
+                ?>
+                    <div class='content_item'>
+                        <div class='left'>
+                            <div class='type'>VIDEO</div>
+                            <div class='title'><?=$name;?></div>
+                            <div class='description'><?=$description;?></div>
+                        </div>
+                        <div class='right'>
+                            <div class='image_container' onclick='<?=$action;?>'>
+                                <img src='<?=$img_url;?>'/>
+                                <div class='play_button'>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; endforeach; ?>
+            </div>
+        </div>
+    </div>
     <div class='signup signup_bg'></div>
     <div class='signup signup1 content_tab'>
         <div class='header'></div>
@@ -253,48 +295,8 @@
             </div>
         </div>
     </div>
-    <div class='right_tab content_list_tab'>
-        <div class='mobile_header'>
-            <div class='side_menu_button' onclick='clickMenu();'>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class='title'>CONTENT</div>
-        </div>
-        <div class='desktop_header'>
-            <div class='icon_close' onclick='clickCloseAll();'></div>
-        </div>
-        <div class='top_line'></div>
-        <div class='content_list_holder'>
-            <div class='content_list'>
-                <?php
-                    foreach( $playlist_list as $i => $playlist ):
-                        foreach( $playlist['items'] as $j => $item ):
-                            $name = $item['name'];
-                            $description = $item['description'];
-                            $img_url = get_image_thumbnail($item['image'],$item['image_extra'],500);
-                            $action = "clickContentListItem($i,$j);";
-                ?>
-                    <div class='content_item'>
-                        <div class='left'>
-                            <div class='type'>VIDEO</div>
-                            <div class='title'><?=$name;?></div>
-                            <div class='description'><?=$description;?></div>
-                        </div>
-                        <div class='right'>
-                            <div class='image_container' onclick='<?=$action;?>'>
-                                <img src='<?=$img_url;?>'/>
-                                <div class='play_button'>
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php endforeach; endforeach; ?>
-            </div>
-        </div>
-    </div>
+
+    
     <div class='playlist_tab content_tab'>
         <div class='top_bar'>
             <div class='left_menu sprite_icon' onclick='clickMenu();'></div>
