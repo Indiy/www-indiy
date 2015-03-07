@@ -851,12 +851,25 @@ input[type=radio].small:checked + label > span > span {
 
 .content_list_tab .mobile_header {
     display: none;
+    position: relative;
 }
 .content_list_tab .mobile_header .side_menu_button {
     position: absolute;
     top: 26px;
     left: 28px;
 }
+.content_list_tab .mobile_header .title {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    overflow: hidden;
+}
+
 .content_list_tab .desktop_header {
     position: absolute;
     top: 0px;
@@ -989,11 +1002,25 @@ and (max-width: 862px) {
 @media only screen 
 and (max-width: 594px) {
     .content_list_tab .content_list .content_item .right {
+        width: auto;
         padding-top: 20px;
     }
     .content_list_tab .content_list .content_item .right .image_container {
         width: 90%;
         height: auto;
+    }
+    .content_list_tab .content_list .content_item .right .image_container .play_button {
+        margin-left: -49px;
+        margin-top: -49px;
+        width: 90px;
+        height: 90px;
+    }
+    .content_list_tab .content_list .content_item .right .image_container .play_button div {
+        margin-top: -25px;
+        margin-left: -10px;
+        border-top: 24px solid transparent;
+        border-bottom: 24px solid transparent;
+        border-left: 32px solid rgba(255,255,255,0.8);
     }
 }
 
