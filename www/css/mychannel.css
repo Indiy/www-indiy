@@ -910,7 +910,10 @@ input[type=radio].small:checked + label > span > span {
 .content_list_tab .content_list .content_item .left .description {
     color: white;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipse;
 }
 .content_list_tab .content_list .content_item .right {
     display: inline-block;
@@ -929,11 +932,11 @@ input[type=radio].small:checked + label > span > span {
 }
 .content_list_tab .content_list .content_item .right .image_container .play_button {
     position: absolute;
-    top: 26px;
-    left: 69px;
-    width: 48px;
-    height: 48px;
-    border: 4px solid rgba(255,255,255,0.5);
+    top: 25px;
+    left: 59px;
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255,255,255,0.8);
     border-radius: 48px;
 }
 .content_list_tab .content_list .content_item .right .image_container .play_button div {
@@ -942,11 +945,11 @@ input[type=radio].small:checked + label > span > span {
     width: 0px;
     top: 50%;
     left: 50%;
-    margin-left: 0px;
-    margin-top: 0px;
-	border-top: 33px solid transparent;
-	border-bottom: 33px solid transparent;
-	border-left: 33px solid rgba(255,255,255,0.5);
+    margin-top: -8px;
+    margin-left: -2px;
+	border-top: 14px solid transparent;
+	border-bottom: 14px solid transparent;
+	border-left: 16px solid rgba(255,255,255,0.8);
 }
 
 /**********************************************/
