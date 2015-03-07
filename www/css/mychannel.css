@@ -739,6 +739,9 @@ and (max-width: 675px) {
     .home_tab .controls .info_bar .play_pause {
         right: 216px;
     }
+    .home_tab .controls .info_bar .now_playing {
+        right: 272px;
+    }
 }
 
 /**********************************************/
