@@ -1021,6 +1021,14 @@ and (max-width: 675px) {
     width: 100%;
     height: 100%;
 }
+.content_list_tab .content_list .content_item .right .image_container video {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    height: 1px;
+    width: 1px;
+    z-index: -1;
+}
 .content_list_tab .content_list .content_item .right .image_container .play_button {
     position: absolute;
     top: 50%;

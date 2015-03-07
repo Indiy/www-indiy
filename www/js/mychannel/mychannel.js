@@ -132,8 +132,16 @@ function clickClose()
 
 function clickContentListItem(i,j)
 {
-    clickCloseAll();
-    clickPlaylistItem(i,j);
+    if( IS_PHONE )
+    {
+        var sel = "video#video_{0}_{1}".format(i,j);
+        $(sel)[0].play();
+    }
+    else
+    {
+        clickCloseAll();
+        clickPlaylistItem(i,j);
+    }
 }
 
 function clickPlaylist(i)

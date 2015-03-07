@@ -95,6 +95,8 @@
                             $description = $item['description'];
                             $img_url = get_image_thumbnail($item['image'],$item['image_extra'],500);
                             $action = "clickContentListItem($i,$j);";
+                            $video_url = $item['media_url'];
+                            $video_id = "video_$i_$j";
                 ?>
                     <div class='content_item'>
                         <div class='left'>
@@ -108,6 +110,7 @@
                                 <div class='play_button'>
                                     <div></div>
                                 </div>
+                                <video id="<?=$video_id;?>" src="<?=$video_url;>" preload="none"/>
                             </div>
                         </div>
                     </div>
@@ -300,7 +303,7 @@
         </div>
     </div>
 
-
+    <!--
     <div class='playlist_tab content_tab'>
         <div class='top_bar'>
             <div class='left_menu sprite_icon' onclick='clickMenu();'></div>
@@ -386,8 +389,7 @@
         <div class='button'>Email</div>
     </div>
     
-
-
+    -->
 
     <script type="text/javascript">
         var _gaq = _gaq || [];
