@@ -1071,6 +1071,23 @@ and (max-width: 594px) {
     }
 }
 
+@media (max-device-height: 736px) {
+    .full_screen_bg {
+        display: none !important;
+    }
+    .right_tab.content_list_tab {
+        display: block !important;
+        z-index: -1;
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        transition: none;
+        -webkit-transition: none;
+    }
+    .home_tab {
+        display: none !important;
+    }
+}
+
 /**********************************************/
 
 .playlist_tab .playlist_list {
