@@ -899,6 +899,7 @@ and (max-width: 675px) {
 .content_list_tab .mobile_header {
     display: none;
     position: relative;
+    text-align: center;
 }
 .content_list_tab .mobile_header .side_menu_button {
     position: absolute;
@@ -923,6 +924,7 @@ and (max-width: 675px) {
     height: 80px;
     left: 0px;
     right: 0px;
+    text-align: center;
 }
 .content_list_tab .desktop_header .icon_close {
     float: right;
@@ -931,9 +933,12 @@ and (max-width: 675px) {
     vertical-align: top;
 }
 .content_list_tab .top_line {
-    margin-left: 22px;
-    margin-right: 22px;
-    height: 0px;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
     border-bottom: 2px solid #ac6423;
 }
 .content_list_tab .content_list_holder {
