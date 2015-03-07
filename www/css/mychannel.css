@@ -663,6 +663,9 @@ input[type=radio].small:checked + label > span > span {
     bottom: 1px;
     border-right: 2px solid #ac6423;
     text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .home_tab .controls .info_bar .now_playing .label {
     display: inline-block;
