@@ -189,7 +189,10 @@ function slideInOutContentTab(name,callback)
     $('.content_tab').removeClass('instant_open');
     $('.content_tab.open').addClass('closed');
     $('.content_tab' + name).addClass('open');
-    window.setTimeout(callback,60*1000);
+    if( callback )
+    {
+        window.setTimeout(callback,60*1000);
+    }
 }
 
 function sendSMS(phone_number)
