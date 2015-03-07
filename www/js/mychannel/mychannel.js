@@ -100,16 +100,24 @@ function clickWelcome2Next()
 }
 function clickMenu()
 {
-    $('.side_menu').addClass('open');
+    $('.side_menu').addClass('overlay_open');
 }
 function clickMenuClose()
 {
-    $('.side_menu').removeClass('open');
+    $('.side_menu').removeClass('overlay_open');
+    $('.side_menu').removeClass('side_open');
 }
 function clickCloseAll()
 {
     clickMenuClose();
     $('.right_tab').removeClass('open');
+}
+function slideInRightTab(name)
+{
+    $('.side_menu').addClass('side_open');
+    $('.side_menu').removeClass('overlay_open');
+    $('.right_tab').removeClass('open');
+    $('.right_tab' + name).addClass('open');
 }
 
 function clickClose()
@@ -176,12 +184,6 @@ function slideInOutContentTab(name)
     $('.content_tab').removeClass('instant_open');
     $('.content_tab.open').addClass('closed');
     $('.content_tab' + name).addClass('open');
-}
-
-function slideInRightTab(name)
-{
-    $('.right_tab').removeClass('open');
-    $('.right_tab' + name).addClass('open');
 }
 
 function sendSMS(phone_number)
