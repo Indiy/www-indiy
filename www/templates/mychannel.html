@@ -234,17 +234,17 @@
         </div>
     </div>
     <div class='side_menu'>
-        <div class='cover' onclick='clickMenuClose();'></div>
+        <div class='cover' onclick='clickCloseAll();'></div>
         <div class='shown_menu'>
             <div class='logo'>
                 <div></div>
             </div>
             <div class='close_holder'>
-                <div class='close' onclick='clickMenuClose();'></div>
+                <div class='close' onclick='clickCloseAll();'></div>
             </div>
             <div class='menu_item_list'>
                 <div class='menu_item'>NEWS</div>
-                <div class='menu_item'>CONTENT</div>
+                <div class='menu_item' onclick="slideInRightTab('.content_tab_list',this);">CONTENT</div>
                 <div class='menu_item'>STORE</div>
                 <div class='menu_item'>ANALYTICS</div>
                 <div class='menu_item'>SOCIAL MEDIA</div>
@@ -260,21 +260,37 @@
                 <div></div>
             </div>
         </div>
+        <div class='desktop_header'>
+            <div class='close' onclick='clickCloseAll();'></div>
+        </div>
         <div class='content_list'>
             <?php
                 foreach( $playlist_list as $i => $playlist ):
                     foreach( $playlist['items'] as $j => $item ):
                         $name = $item['name'];
+                        $description = $item['description'];
+                        $img_url = get_image_thumbnail($item['image'],$item['image_extra'],500);
                         $action = "clickPlaylistItem($i,$j);";
             ?>
-                <div id='track_<?=$j;?>' class='track_name' onclick='<?=$action;?>'>
-                    <?=$name;?>
+                <div class='content_item'>
+                    <div class='left'>
+                        <div class='type'>VIDEO</div>
+                        <div class='title'><?=$name;?></div>
+                        <div class='description'><?=$description;?></div>
+                    </div>
+                    <div class='right'>
+                            <div class='image_container' onclick='<?=$action;?>'>
+                                <img src='<?=$img_url;?>'/>
+                                <div class='play_button'>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             <?php endforeach; endforeach; ?>
         </div>
     </div>
-
-
     <div class='playlist_tab content_tab'>
         <div class='top_bar'>
             <div class='left_menu sprite_icon' onclick='clickMenu();'></div>

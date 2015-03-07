@@ -9,9 +9,14 @@ window.clickSignup6Next = clickSignup6Next;
 window.clickWelcome1Next = clickWelcome1Next;
 window.clickWelcome2Next = clickWelcome2Next;
 
+window.slideInRightTab = slideInRightTab;
+
 window.clickMenu = clickMenu;
 window.clickMenuClose = clickMenuClose;
+window.clickCloseAll = clickCloseAll;
+
 window.clickClose = clickClose;
+
 window.clickPlaylist = clickPlaylist;
 window.clickPlaylistItem = clickPlaylistItem;
 window.catalogClickPlaylistMediaItem = catalogClickPlaylistMediaItem;
@@ -99,6 +104,11 @@ function clickMenuClose()
 {
     $('.side_menu').removeClass('open');
 }
+function clickCloseAll()
+{
+    clickMenuClose();
+    $('.right_tab').removeClass('open');
+}
 
 function clickClose()
 {
@@ -158,6 +168,12 @@ function slideInOutContentTab(name)
     $('.content_tab').removeClass('instant_open');
     $('.content_tab.open').addClass('closed');
     $('.content_tab' + name).addClass('open');
+}
+
+function slideInRightTab(name)
+{
+    $('.right_tab').removeClass('open');
+    $('.right_tab' + name).addClass('open');
 }
 
 function sendSMS(phone_number)
