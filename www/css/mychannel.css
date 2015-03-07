@@ -731,7 +731,7 @@ input[type=radio].small:checked + label > span > span {
     -webkit-transform: translateX(-100%);
     transition: transform 0.5s;
     -webkit-transition: -webkit-transform 0.5s;
-    z-index: 100;
+    z-index: 10;
 }
 .side_menu.open {
     transform: translateX(0%);
@@ -743,6 +743,7 @@ input[type=radio].small:checked + label > span > span {
     bottom: 0px;
     left: 0px;
     right: 0px;
+    z-index: 11;
 }
 .side_menu .shown_menu {
     position: absolute;
@@ -759,6 +760,7 @@ input[type=radio].small:checked + label > span > span {
     background: -webkit-linear-gradient(top, #f5a852 0%,#da742c 100%);
     background: -ms-linear-gradient(top, #f5a852 0%,#da742c 100%);
     background: linear-gradient(to bottom, #f5a852 0%,#da742c 100%);
+    border-right: 1px solid #ac6423;
     z-index: 101;
 }
 
@@ -774,7 +776,9 @@ input[type=radio].small:checked + label > span > span {
     background-size: 854px 676px;
 }
 .side_menu .shown_menu .close_holder {
-    height: 40px;
+    height: 24px;
+    padding-top: 8px;
+    padding-bottom: 12px;
 }
 .side_menu .shown_menu .close_holder .close {
     height: 24px;
@@ -805,6 +809,44 @@ input[type=radio].small:checked + label > span > span {
 }
 .side_menu .shown_menu .menu_item_list .menu_item.last {
     border-bottom: 1px solid #ac6423;
+}
+
+/**********************************************/
+
+.right_tab {
+    position: absolute;
+    right: 0px;
+    left: 267px;
+    top: 0px;
+    bottom: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: #f09b49;
+    background: -moz-linear-gradient(top, #f5a852 0%,#da742c 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5a852), color-stop(100%,#da742c));
+    background: -webkit-linear-gradient(top, #f5a852 0%,#da742c 100%);
+    background: -ms-linear-gradient(top, #f5a852 0%,#da742c 100%);
+    background: linear-gradient(to bottom, #f5a852 0%,#da742c 100%);
+    border-left: 1px solid #ac6423;
+    z-index: 20;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transition: transform 0.5s;
+    -webkit-transition: -webkit-transform 0.5s;
+}
+.right_tab.open {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+}
+
+/**********************************************/
+
+.content_list_tab {
+    
+}
+
+.content_list_tab .mobile_header {
+    display: none;
 }
 
 /**********************************************/

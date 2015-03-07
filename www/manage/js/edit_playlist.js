@@ -148,6 +148,7 @@ function showPlaylistItemPopup(playlist_index,playlist_item_index)
         var playlist_item = playlist.items[playlist_item_index];
         
         $('#edit_playlist_item #name').val(playlist_item.name);
+        $('#edit_playlist_item #description').val(playlist_item.description);
         fillArtistFileIdSelect('#edit_playlist_item #image_id','IMAGE',playlist_item.image_id);
         $('#edit_playlist_item #bg_style').val(playlist_item.bg_style);
         $('#edit_playlist_item #bg_color').val(playlist_item.bg_color);
@@ -159,6 +160,7 @@ function showPlaylistItemPopup(playlist_index,playlist_item_index)
     {
         g_currentPlaylistItemIndex = false;
         $('#edit_playlist_item #name').val("");
+        $('#edit_playlist_item #description').val("");
         fillArtistFileIdSelect('#edit_playlist_item #image_id','IMAGE',false);
         $('#edit_playlist_item #bg_style').val('LETTERBOX');
         $('#edit_playlist_item #bg_color').val('000000');
@@ -175,6 +177,7 @@ function onPlaylistItemSubmit()
     var playlist = g_playlistList[g_currentPlaylistIndex];
 
     var name = $('#edit_playlist_item #name').val();
+    var description = $('#edit_playlist_item #description').val();
     var image_id = $('#edit_playlist_item #image_id').val();
     var bg_style = $('#edit_playlist_item #bg_style').val();
     var bg_color = $('#edit_playlist_item #bg_color').val();
@@ -194,6 +197,7 @@ function onPlaylistItemSubmit()
     var data = {
         playlist_id: playlist.playlist_id,
         name: name,
+        description: description,
         image_id: image_id,
         bg_style: bg_style,
         bg_color: bg_color,
