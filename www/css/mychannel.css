@@ -735,7 +735,7 @@ input[type=radio].small:checked + label > span > span {
     -webkit-transform: translateX(-100%);
     transition: transform 0.5s;
     -webkit-transition: -webkit-transform 0.5s;
-    z-index: 10;
+    z-index: 200;
 }
 .side_menu.overlay_open,
 .side_menu.side_open {
@@ -766,7 +766,7 @@ input[type=radio].small:checked + label > span > span {
     background: -ms-linear-gradient(top, #f5a852 0%,#da742c 100%);
     background: linear-gradient(to bottom, #f5a852 0%,#da742c 100%);
     border-right: 1px solid #ac6423;
-    z-index: 101;
+    z-index: 300;
 }
 
 .side_menu .shown_menu .logo {

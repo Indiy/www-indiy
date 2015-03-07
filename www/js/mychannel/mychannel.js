@@ -100,6 +100,7 @@ function clickWelcome2Next()
 }
 function clickMenu()
 {
+    $('.side_menu').removeClass('side_open');
     $('.side_menu').addClass('overlay_open');
 }
 function clickMenuClose()
