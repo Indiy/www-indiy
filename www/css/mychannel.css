@@ -365,9 +365,7 @@ input[type=text]:focus {
 }
 
 @media only screen 
-and (max-device-width : 736px)
-and (orientation : portrait)
-and (-webkit-min-device-pixel-ratio: 2) {
+and (max-width : 500px) {
     .welcome.content_tab .header {
         top: 38px;
         left: 50%;
@@ -950,8 +948,10 @@ input[type=radio].small:checked + label > span > span {
 }
 .content_list_tab .content_list .content_item .right .image_container .play_button {
     position: absolute;
-    top: 21px;
-    left: 64px;
+    top: 50%;
+    left: 50%;
+    margin-left: -27px;
+    margin-top: -27px;
     width: 50px;
     height: 50px;
     border: 4px solid rgba(255,255,255,0.8);
@@ -984,6 +984,16 @@ and (max-width: 862px) {
     }
     .content_list_tab .desktop_header {
         display: none;
+    }
+}
+@media only screen 
+and (max-width: 594px) {
+    .content_list_tab .content_list .content_item .right {
+        padding-top: 20px;
+    }
+    .content_list_tab .content_list .content_item .right .image_container {
+        width: 90%;
+        height: auto;
     }
 }
 
