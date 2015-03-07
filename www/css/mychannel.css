@@ -909,8 +909,8 @@ and (max-width: 675px) {
 .content_list_tab .mobile_header .title {
     position: absolute;
     top: 27px;
-    left: 40px;
-    right: 40px;
+    left: 62px;
+    right: 62px;
     font-size: 22px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
