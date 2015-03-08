@@ -1055,6 +1055,7 @@ and (max-width: 594px) {
 /**********************************************/
 
 .news_tab .content_list .content_item {
+    display: inline-block;
     height: 126px;
     width: 224px;
     padding-top: 22px;
@@ -1064,10 +1065,10 @@ and (max-width: 594px) {
     font-size: 0px;
     vertical-align: top;
     border-bottom: 1px solid #ac6423;
+    font-family: "Lato",sans-serif;
 }
 
 .news_tab .content_list .content_item .top_line {
-    font-family: 'Montserrat', sans-serif;
     height: 30px;
 }
 .news_tab .content_list .content_item .top_line .title {
