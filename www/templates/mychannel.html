@@ -331,7 +331,7 @@
                 ?>
                     <div class='content_item'>
                         <div class='top_line'>
-                            <div class='title'><?=$title;?><div>
+                            <div class='title'><?=$title;?></div>
                             <div class='date'><?=$date;?></div>
                         </div>
                         <div class='summary'>
@@ -343,94 +343,6 @@
             </div>
         </div>
     </div>
-    <!--
-    <div class='playlist_tab content_tab'>
-        <div class='top_bar'>
-            <div class='left_menu sprite_icon' onclick='clickMenu();'></div>
-            <div class='title'>Playlists</div>
-            <div class='right_menu'>
-                <div class= 'close sprite_icon' onclick='clickClose();'></div>
-            </div>
-        </div>
-        
-        <?php if( count($tab_list) > 0 ): ?>
-            <div class='section_title'>Pages</div>
-            <div class='tab_list'>
-                <?php
-                    foreach( $tab_list as $i => $tab ):
-                        $title = $tab['title'];
-                        $action = "clickShowTab($i);";
-                ?>
-                    <div class='tab_name' onclick='<?=$action;?>'>
-                        <?=$title;?>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        <?php endif; ?>
-    </div>
-    
-    <?php
-        foreach( $tab_list as $i => $tab ):
-            $title = $tab['title'];
-            $content = $tab['content'];
-            $action = "clickShowTab($i);";
-    ?>
-        <div id='user_tab_<?=$i;?>' class='user_tab content_tab'>
-            <div class='top_bar'>
-                <div class='left_menu sprite_icon' onclick='clickMenu();'></div>
-                <div class='title'><?=$title;?></div>
-                <div class='right_menu'>
-                    <div class= 'close sprite_icon' onclick='clickClose();'></div>
-                </div>
-            </div>
-            <div class='page_content'>
-                <?=$content;?>
-            </div>
-        </div>
-    <?php endforeach; ?>
-    
-    <div class='social_tab content_tab'>
-        <div class='top_bar'>
-            <div class='left_menu sprite_icon' onclick='clickMenu();'></div>
-            <div class='title'>Social</div>
-            <div class='right_menu'>
-                <div class= 'close sprite_icon' onclick='clickClose();'></div>
-            </div>
-        </div>
-        <div class='content_tab_spacer'></div>
-        <div class='social_buttons'>
-            <div class='button twitter active' onclick="clickSocial('twitter');">Twitter</div>
-            <div class='button instagram' onclick="clickSocial('instagram');">Instagram</div>
-        </div>
-        <div id='social_twitter' class='social_twitter social_item'></div>
-        <div id='social_instagram' class='social_instagram social_item'>
-            <ul class="instagram-lite"></ul>
-        </div>
-    </div>
-    
-    <div class='share_tab content_tab'>
-        <div class='top_bar'>
-            <div class='left_menu sprite_icon' onclick='clickMenu();'></div>
-            <div class='title'>Share</div>
-            <div class='right_menu'>
-                <div class= 'close sprite_icon' onclick='clickClose();'></div>
-            </div>
-        </div>
-        <div class='content_tab_spacer'></div>
-        <div class='section_title'>Embed:</div>
-        <div class='section_content'>
-            <textarea readonly="readonly" spellcheck="false">
-<iframe src="<?=$page_url;?>?embed=true" border="0" width="600" height="600" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-            </textarea>
-        </div>
-        <div class='section_title'>Send to a Friend:</div>
-        <div class='button'>Facebook</div>
-        <div class='button'>Twitter</div>
-        <div class='button'>Email</div>
-    </div>
-    
-    -->
-
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', "<?=$template_params['ga_account_id'];?>"]);
