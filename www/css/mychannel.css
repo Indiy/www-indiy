@@ -449,66 +449,6 @@ input[type=radio].small:checked + label > span > span {
     border-radius: 9px;
 }
 
-/*****************************************/
-
-.content_tab .top_bar {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    height: 45px;
-    background: rgba(34,64,77,0.9);
-}
-.content_tab .top_bar .sprite_icon {
-    cursor: pointer;
-    width: 40px;
-    height: 45px;
-}
-
-.content_tab .top_bar .left_menu {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    background-position: -240px -9px;
-}
-.content_tab .top_bar .title {
-    position: absolute;
-    top: 0px;
-    left: 40px;
-    right: 40px;
-    padding-top: 8px;
-    color: white;
-    font-size: 23px;
-    text-align: center;
-}
-.content_tab .top_bar .right_menu {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    width: 40px;
-    height: 100%;
-}
-
-.content_tab .top_bar .right_menu .sprite_icon.plus {
-    background-position: -196px -9px;
-}
-.content_tab .top_bar .right_menu .sprite_icon.close {
-    background-position: -150px -9px;
-}
-.content_tab .top_bar .right_menu .sprite_icon.store {
-    background-position: -58px -9px;
-}
-.content_tab .top_bar .right_menu .sprite_icon.social {
-    background-position: -105px -9px;
-}
-.content_tab .top_bar .right_menu .sprite_icon.share {
-    background-position: -14px -9px;
-}
-.content_tab .top_bar .right_menu .extended_menu {
-    display: none;
-    background: rgba(0,0,0,0.5);
-}
-
 /************************************************/
 
 .home_tab.content_tab {
@@ -976,7 +916,7 @@ and (max-width: 675px) {
     vertical-align: top;
     border-bottom: 2px solid #ac6423;
 }
-.content_list_tab .content_list .content_item .left {
+.play_list_tab .content_list .content_item .left {
     display: inline-block;
     padding-left: 8px;
     padding-right: 8px;
@@ -984,19 +924,19 @@ and (max-width: 675px) {
     font-family: 'Lato', sans-serif;
     vertical-align: top;
 }
-.content_list_tab .content_list .content_item .left .type {
+.play_list_tab .content_list .content_item .left .type {
     padding-bottom: 20px;
     color: #954e15;
     font-size: 18px;
     font-weight: 400;
 }
-.content_list_tab .content_list .content_item .left .title {
+.play_list_tab .content_list .content_item .left .title {
     padding-bottom: 5px;
     color: white;
     font-size: 18px;
     font-weight: 400;
 }
-.content_list_tab .content_list .content_item .left .description {
+.play_list_tab .content_list .content_item .left .description {
     color: white;
     font-size: 16px;
     font-weight: 300;
@@ -1004,12 +944,12 @@ and (max-width: 675px) {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.content_list_tab .content_list .content_item .right {
+.play_list_tab .content_list .content_item .right {
     display: inline-block;
     width: 250px;
     vertical-align: top;
 }
-.content_list_tab .content_list .content_item .right .image_container {
+.play_list_tab .content_list .content_item .right .image_container {
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -1017,11 +957,11 @@ and (max-width: 675px) {
     height: 100px;
     cursor: pointer;
 }
-.content_list_tab .content_list .content_item .right .image_container img {
+.play_list_tab .content_list .content_item .right .image_container img {
     width: 100%;
     height: 100%;
 }
-.content_list_tab .content_list .content_item .right .image_container video {
+.play_list_tab .content_list .content_item .right .image_container video {
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -1029,7 +969,7 @@ and (max-width: 675px) {
     width: 1px;
     z-index: -1;
 }
-.content_list_tab .content_list .content_item .right .image_container .play_button {
+.play_list_tab .content_list .content_item .right .image_container .play_button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1040,7 +980,7 @@ and (max-width: 675px) {
     border: 4px solid rgba(255,255,255,0.8);
     border-radius: 48px;
 }
-.content_list_tab .content_list .content_item .right .image_container .play_button div {
+.play_list_tab .content_list .content_item .right .image_container .play_button div {
     position: absolute;
     height: 0px;
     width: 0px;
@@ -1072,21 +1012,21 @@ and (max-width: 862px) {
 }
 @media only screen 
 and (max-width: 594px) {
-    .content_list_tab .content_list .content_item .right {
+    .play_list_tab .content_list .content_item .right {
         width: auto;
         padding-top: 20px;
     }
-    .content_list_tab .content_list .content_item .right .image_container {
+    .play_list_tab .content_list .content_item .right .image_container {
         width: 90%;
         height: auto;
     }
-    .content_list_tab .content_list .content_item .right .image_container .play_button {
+    .play_list_tab .content_list .content_item .right .image_container .play_button {
         margin-left: -49px;
         margin-top: -49px;
         width: 90px;
         height: 90px;
     }
-    .content_list_tab .content_list .content_item .right .image_container .play_button div {
+    .play_list_tab .content_list .content_item .right .image_container .play_button div {
         margin-top: -25px;
         margin-left: -10px;
         border-top: 24px solid transparent;
@@ -1099,7 +1039,7 @@ and (max-width: 594px) {
     .full_screen_bg {
         display: none !important;
     }
-    .right_tab.content_list_tab {
+    .right_tab.play_list_tab {
         display: block !important;
         z-index: 0;
         transform: translateX(0%);
@@ -1114,90 +1054,6 @@ and (max-width: 594px) {
 
 /**********************************************/
 
-.playlist_tab .playlist_list {
-    padding-top: 45px;
-    padding-right: 9px;
-    padding-left: 9px;
-}
-.playlist_tab .playlist_list .playlist .title_arrow {
-    position: relative;
-    border-bottom: 1px solid rgba(255,255,255,0.7);
-    cursor: pointer;
-}
-.playlist_tab .playlist_list .playlist .title_arrow .title {
-    padding-top: 19px;
-    padding-right: 20px;
-    padding-bottom: 13px;
-    color: #777;
-    font-size: 18px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-.playlist_tab .playlist_list .playlist.active .title_arrow .title {
-    color: white;
-}
-.playlist_tab .playlist_list .playlist .title_arrow .arrow {
-    position: absolute;
-    right: 0px;
-    width: 20px;
-}
-.playlist_tab .playlist_list .playlist .track_list {
-    display: none;
-    border-bottom: 1px solid rgba(255,255,255,0.7);
-}
-.playlist_tab .playlist_list .playlist.active .track_list {
-    display: block;
-    padding-top: 6px;
-    padding-bottom: 6px;
-}
-.playlist_tab .playlist_list .playlist .track_list .track_name {
-    padding-left: 15px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    color: #777;
-    font-size: 18px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    cursor: pointer;
-}
-.playlist_tab .playlist_list .playlist .track_list .track_name.active {
-    color: white;
-}
-
-.playlist_tab .section_title {
-    padding-left: 9px;
-    padding-top: 12px;
-    padding-bottom: 8px;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-}
-.playlist_tab .tab_list {
-    padding-left: 9px;
-    padding-right: 9px;
-}
-.playlist_tab .tab_list .tab_name {
-    padding-top: 14px;
-    padding-bottom: 14px;
-    color: white;
-    font-size: 18px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    border-bottom: 1px solid rgba(255,255,255,0.7);
-    cursor: pointer;
-}
-
-.user_tab .page_content {
-    padding-top: 65px;
-    padding-left: 9px;
-    padding-right: 9px;
-    color: #eee;
-    font-size: 16px;
-}
 
 .share_tab .section_title {
     padding-top: 23px;

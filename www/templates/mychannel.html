@@ -69,7 +69,7 @@
     <div id="fb-root"></div>
     <div id="jquery_jplayer" class="jp-jplayer"></div>
 
-    <div class='right_tab content_list_tab'>
+    <div class='right_tab content_list_tab play_list_tab'>
         <div class='mobile_header'>
             <div class='side_menu_button' onclick='clickMenu();'>
                 <div></div>
@@ -293,8 +293,8 @@
                 <div class='icon_close' onclick='clickCloseAll();'></div>
             </div>
             <div class='menu_item_list'>
-                <div class='menu_item'>NEWS</div>
-                <div class='menu_item' onclick="slideInRightTab('.content_list_tab',this);">CONTENT</div>
+                <div class='menu_item' onclick="slideInRightTab('.news_tab',this);">NEWS</div>
+                <div class='menu_item' onclick="slideInRightTab('.playlist_tab',this);">CONTENT</div>
                 <div class='menu_item'>STORE</div>
                 <div class='menu_item'>ANALYTICS</div>
                 <div class='menu_item'>SOCIAL MEDIA</div>
@@ -302,7 +302,47 @@
             </div>
         </div>
     </div>
+    <div class='right_tab content_list_tab news_tab'>
+        <div class='mobile_header'>
+            <div class='side_menu_button' onclick='clickMenu();'>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class='title'>NEWS</div>
+        </div>
+        <div class='desktop_header'>
+            <div class='icon_close' onclick='clickCloseAll();'></div>
+        </div>
+        <div class='top_line_holder_holder'>
+            <div class='top_line_holder'>
+                <div class='top_line'></div>
+            </div>
+        </div>
+        <div class='content_list_holder'>
+            <div class='content_list'>
 
+                <?php
+                    foreach( $tab_list as $i => $tab ):
+                        $title = $tab['title'];
+                        $dt = $tab['item_dateitme'];
+                        $date = strftime("MM/DD/YYYY",strtotime($dt));
+                        $content = $tab['content'];
+                ?>
+                    <div class='content_item'>
+                        <div class='top_line'>
+                            <div class='title'><?=$title;?><div>
+                            <div class='date'><?=$date;?></div>
+                        </div>
+                        <div class='summary'>
+                            <?=$content;?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
+            </div>
+        </div>
+    </div>
     <!--
     <div class='playlist_tab content_tab'>
         <div class='top_bar'>
