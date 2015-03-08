@@ -67,7 +67,7 @@
         $tab_id = $_POST["id"];
     
         $content_name = $_POST["name"];
-        $content_video = $_POST["video"];
+        $content_video = $_POST["video"] || "";
         $content_body = $_POST["body"];
         $item_datetime = $_POST["item_datetime"];
         $image_file = $_POST['image_drop'];
