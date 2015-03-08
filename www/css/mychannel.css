@@ -267,7 +267,7 @@ input[type=text]:focus {
     background: transparent url("/images/mychannel_icons.png") no-repeat -352px -28px;
     z-index: -1;
 }
-.welcome.content_tab .date {
+.welcome.content_tab .today_date {
     position: absolute;
     top: 51px;
     right: 53px;
@@ -390,7 +390,7 @@ and (max-width : 500px) {
         left: 50%;
         margin-left: -93px;
     }
-    .welcome.content_tab .date {
+    .welcome.content_tab .today_date {
         display: none;
     }
     .welcome.content_tab .daily_goal {
