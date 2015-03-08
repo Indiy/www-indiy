@@ -70,19 +70,23 @@
         $content_video = $_POST["video"];
         $content_body = $_POST["body"];
         $item_datetime = $_POST["item_datetime"];
-
         $image_file = $_POST['image_drop'];
-        
-        $tables = "artistid|name|image|video|body|item_datetime";
-        $values = "$artist_id|$content_name|$image_file|$content_video|$content_body|$item_datetime";
-        
+
+        $values = array(
+            "artistid" => $artist_id,
+            "name" => $content_name,
+            "image" => $image_file,
+            "video" => $content_video,
+            "body" => $content_body,
+            "item_datetime" => $item_datetime,
+        );
         if( $tab_id != "" )
         {
-            update("mydna_musicplayer_content",$tables,$values,"id",$tab_id);
+            mysql_update('mydna_musicplayer_content',$values,'id',$tab_id);
         } 
         else 
         {
-            insert("mydna_musicplayer_content",$tables,$values);
+            mysql_insert('mydna_musicplayer_content',$values);
             $tab_id = mysql_insert_id();
         }
         $postedValues['imageSource'] = $image_file;
