@@ -26,7 +26,8 @@ function showTabPopup(tab_index)
         $('#edit_tab #content_id').val(tab.id);
         $('#edit_tab #name').val(tab.name);
         $('#edit_tab #body').val(tab.body);
-        
+        $('#edit_tab #item_datetime').val(tab.item_datetime);
+
         fillArtistFileSelect('#edit_tab #image_drop','IMAGE',tab.image);
     }
     else
@@ -40,7 +41,8 @@ function showTabPopup(tab_index)
         $('#edit_tab #content_id').val("");
         $('#edit_tab #name').val("");
         $('#edit_tab #body').val("");
-        
+        $('#edit_tab #item_datetime').val("");
+
         fillArtistFileSelect('#edit_tab #image_drop','IMAGE',false);
     }
     showPopup('#edit_tab');
@@ -62,11 +64,13 @@ function onAddContentSubmit()
         var content_id = $('#edit_tab #content_id').val();
         var name = $('#edit_tab #name').val();
         var image_drop = $('#edit_tab #image_drop').val();
+        var item_datetime = $('#edit_tab #item_datetime').val();
         
         form_data.append('artistid',artist_id);
         form_data.append('id',content_id);
         form_data.append('name',name);
         form_data.append('body',body);
+        form_data.append('item_datetime',item_datetime)
 
         form_data.append('image_drop',image_drop);
         

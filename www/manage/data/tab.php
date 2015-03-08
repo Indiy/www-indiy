@@ -69,11 +69,12 @@
         $content_name = $_POST["name"];
         $content_video = $_POST["video"];
         $content_body = $_POST["body"];
+        $item_datetime = $_POST["item_datetime"];
 
         $image_file = $_POST['image_drop'];
         
-        $tables = "artistid|name|image|video|body";
-        $values = "$artist_id|$content_name|$image_file|$content_video|$content_body";
+        $tables = "artistid|name|image|video|body|item_datetime";
+        $values = "$artist_id|$content_name|$image_file|$content_video|$content_body|$item_datetime";
         
         if( $tab_id != "" )
         {
