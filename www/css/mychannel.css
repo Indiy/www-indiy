@@ -907,7 +907,7 @@ and (max-width: 675px) {
     margin-left: auto;
     margin-right: auto;
 }
-.content_list_tab .content_list .content_item {
+.play_list_tab .content_list .content_item {
     padding-top: 30px;
     padding-bottom: 22px;
     margin-left: 22px;
@@ -1054,7 +1054,56 @@ and (max-width: 594px) {
 
 /**********************************************/
 
-.news_tab .content_list .content_item . {
+.news_tab .content_list .content_item {
+    height: 126px;
+    width: 224px;
+    padding-top: 22px;
+    padding-bottom: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 0px;
+    vertical-align: top;
+    border-bottom: 1px solid #ac6423;
+}
+
+.news_tab .content_list .content_item .top_line {
+    font-family: 'Montserrat', sans-serif;
+    height: 30px;
+}
+.news_tab .content_list .content_item .top_line .title {
+    display: inline-block;
+    width: 160px;
+    float: left;
+    color: #96511f;
+    font-size: 16px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.news_tab .content_list .content_item .top_line .date {
+    color: white;
+    float: right;
+    font-size: 16px;
+}
+.news_tab .content_list .content_item .summary {
+    display: inline-block;
+    height: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+}
+.news_tab .content_list .content_item .read_more_container {
+    height: 24px;
+}
+.news_tab .content_list .content_item .read_more_container .read_more {
+    float: right;
+    color: black;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 300;
 }
 
 
