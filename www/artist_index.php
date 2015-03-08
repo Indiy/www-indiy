@@ -193,11 +193,13 @@
         {
             $image = artist_file_url($tab['image']);
         }
-        $item = array("id" => $tab['id'],
-                      "title" => $title,
-                      "image" => $image,
-                      "content" => $content,
-                      );
+        $item = array(
+            "id" => $tab['id'],
+            "title" => $title,
+            "image" => $image,
+            "content" => $content,
+            "item_datetime" => $tab['item_datetime'],
+        );
         $tab_list[] = $item;
     }
     $tab_list_json = json_encode($tab_list);
