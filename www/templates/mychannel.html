@@ -326,11 +326,8 @@
                     foreach( $tab_list as $i => $tab ):
                         $title = $tab['title'];
                         $dt = $tab['item_datetime'];
-                        echo $dt;
                         $time = strtotime($dt);
-                        echo $time;
                         $dt_string = strftime("%m/%d/%y",$time);
-                        echo $dt_string;
                         $content = $tab['content'];
                 ?>
                     <div class='content_item'>
