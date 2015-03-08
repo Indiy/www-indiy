@@ -722,6 +722,9 @@ and (max-width: 675px) {
     -webkit-transition: -webkit-transform 0.5s;
     z-index: 200;
 }
+.side_menu.overlay_open {
+    z-index: 250;
+}
 .side_menu.overlay_open,
 .side_menu.side_open {
     transform: translateX(0%);
