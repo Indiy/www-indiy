@@ -900,12 +900,14 @@ and (max-width: 675px) {
     right: 0px;
     overflow-x: hidden;
     overflow-y: scroll;
+    font-size: 0px;
 }
 .content_list_tab .content_list {
     width: 100%;
     max-width: 594px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 0px;
 }
 .play_list_tab .content_list .content_item {
     padding-top: 30px;
@@ -1054,6 +1056,10 @@ and (max-width: 594px) {
 
 /**********************************************/
 
+.news_tab .content_list {
+    text-align: center;
+}
+
 .news_tab .content_list .content_item {
     display: inline-block;
     height: 126px;
@@ -1075,6 +1081,8 @@ and (max-width: 594px) {
     display: inline-block;
     width: 160px;
     float: left;
+    vertical-align: top;
+
     color: #96511f;
     font-size: 16px;
     font-weight: 400;
@@ -1085,11 +1093,12 @@ and (max-width: 594px) {
 .news_tab .content_list .content_item .top_line .date {
     color: white;
     float: right;
-    font-size: 16px;
+    font-size: 14px;
+    vertical-align: top;
 }
 .news_tab .content_list .content_item .summary {
     display: inline-block;
-    height: 70px;
+    height: 75px;
     overflow: hidden;
     text-overflow: ellipsis;
     color: white;
@@ -1101,8 +1110,9 @@ and (max-width: 594px) {
 }
 .news_tab .content_list .content_item .read_more_container .read_more {
     float: right;
+    padding-top: 5px;
     color: black;
-    font-size: 16px;
+    font-size: 14px;
     font-style: italic;
     font-weight: 300;
 }
