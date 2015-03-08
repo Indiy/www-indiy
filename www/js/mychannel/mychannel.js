@@ -50,7 +50,7 @@ function defaultReady(show_social)
         $('.content_tab.signup1').addClass('open instant_open');
     }
     var date = moment().format("dddd MMMM DD YYYY");
-    $('.date').html(date);
+    $('.today_date').html(date);
 }
 $(document).ready(defaultReady);
 
