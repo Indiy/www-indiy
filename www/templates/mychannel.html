@@ -326,13 +326,17 @@
                     foreach( $tab_list as $i => $tab ):
                         $title = $tab['title'];
                         $dt = $tab['item_datetime'];
-                        $dt_string = strftime("%m/%d/%y",strtotime($dt));
+                        echo $dt;
+                        $time = strtotime($dt);
+                        echo $time;
+                        $dt_string = strftime("%m/%d/%y",$time);
+                        echo $dt_string;
                         $content = $tab['content'];
                 ?>
                     <div class='content_item'>
                         <div class='top_line'>
                             <div class='title'><?=$title;?></div>
-                            <div class='date'><?=$dt_string;?></div>
+                            <div class='date'><?;<?=$dt_string;?></div>
                         </div>
                         <div class='summary'>
                             <?=$content;?>
