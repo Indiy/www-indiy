@@ -1056,7 +1056,20 @@ and (max-width: 594px) {
 
 /**********************************************/
 
+.news_tab .top_line_holder_holder {
+    top: 79px;
+}
+
+.news_tab .top_line_holder_holder .top_line_holder {
+    width: 510px;
+}
+.news_tab .top_line_holder_holder .top_line_holder .top_line {
+    margin: 0;
+    border-bottom: 1px solid #ac6423;
+}
+
 .news_tab .content_list {
+    max-width: 510px;
     text-align: center;
 }
 
@@ -1071,6 +1084,7 @@ and (max-width: 594px) {
     font-size: 0px;
     vertical-align: top;
     border-bottom: 1px solid #ac6423;
+    border-right: 1px solid #ac6423;
     font-family: "Lato",sans-serif;
 }
 
@@ -1115,6 +1129,14 @@ and (max-width: 594px) {
     font-size: 14px;
     font-style: italic;
     font-weight: 300;
+}
+
+@media only screen 
+and (max-width: 510px) {
+    .news_tab .content_list .content_item {
+        border-right: 0;
+        width: 100%;
+    }
 }
 
 
