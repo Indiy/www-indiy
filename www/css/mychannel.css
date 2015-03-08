@@ -1070,7 +1070,7 @@ and (max-width: 594px) {
 
 .news_tab .content_list {
     max-width: 510px;
-    text-align: center;
+    text-align: left;
 }
 
 .news_tab .content_list .content_item {
@@ -1086,6 +1086,7 @@ and (max-width: 594px) {
     border-bottom: 1px solid #ac6423;
     border-right: 1px solid #ac6423;
     font-family: "Lato",sans-serif;
+    text-align: left;
 }
 
 .news_tab .content_list .content_item .top_line {
@@ -1129,13 +1130,14 @@ and (max-width: 594px) {
     font-size: 14px;
     font-style: italic;
     font-weight: 300;
+    cursor: pointer;
 }
 
 @media only screen 
 and (max-width: 510px) {
     .news_tab .content_list .content_item {
         border-right: 0;
-        width: 100%;
+        width: auto;
     }
 }
 
