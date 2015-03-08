@@ -26,7 +26,12 @@ function showTabPopup(tab_index)
         $('#edit_tab #content_id').val(tab.id);
         $('#edit_tab #name').val(tab.name);
         $('#edit_tab #body').val(tab.body);
-        $('#edit_tab #item_datetime').val(tab.item_datetime);
+        var dt = "";
+        if( tab.item_datetime )
+        {
+            dt = moment(tab.item_datetime).format("YYYY-MM-DDTHH:mm:ss");
+        }
+        $('#edit_tab #item_datetime').val(dt);
 
         fillArtistFileSelect('#edit_tab #image_drop','IMAGE',tab.image);
     }
