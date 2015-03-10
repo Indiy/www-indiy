@@ -1314,9 +1314,6 @@ var TEMPLATE_SCHEMA =
         description: 'MyChannel',
         default_params: {
             page_title: 'MyChannel',
-            top_text: 'Top',
-            bottom_text: 'bottom',
-            footer_text: 'Powered by MyChannel',
             ga_account_id: ''
         },
         arg_list:
@@ -1327,19 +1324,14 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             },
             {
-                name: 'top_text',
-                description: 'Top Text',
-                type: 'string'
+                name: 'signup_video_file',
+                description: 'Signup Video File',
+                type: 'video'
             },
             {
-                name: 'bottom_text',
-                description: 'Bottom Text',
-                type: 'string'
-            },
-            {
-                name: 'footer_text',
-                description: 'Footer Text',
-                type: 'string'
+                name: 'signup_image_bg,
+                description: 'Signup Image Background',
+                type: 'image'
             },
             {
                 name: 'ga_account_id',
