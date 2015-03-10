@@ -174,7 +174,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
     width: 100%;
     margin-top: -50px;
     text-align: center;
-    color: black;
+    color: white;
     font-size: 24px;
     line-height: 32px;
     font-weight: 300;
@@ -204,7 +204,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
     padding-bottom: 0px;
     padding-left: 18px;
     padding-right: 18px;
-    color: black;
+    color: white;
     font-size: 16px;
     font-family: "Montserrat", sans-serif;
     line-height: 25px;

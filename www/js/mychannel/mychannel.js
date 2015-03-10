@@ -56,7 +56,7 @@ $(document).ready(defaultReady);
 
 function clickSignup1Next()
 {
-    slideInOutContentTab('.signup2');
+    slideInOutContentTab('.signup3');
 }
 function clickSignup2Next()
 {
