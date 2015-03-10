@@ -63,7 +63,7 @@ function startSignupVideo()
         if( video_jq.length )
         {
             var video = video_jq[0];
-            if( !video.paused )
+            if( video.paused )
             {
                 video.play();
             }
