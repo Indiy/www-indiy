@@ -142,7 +142,7 @@ input[type=text]:focus {
     margin-right: auto;
     height: 100%;
 }
-.signup.signup_bg .cover {
+.signup.signup_bg .video_cover {
     position: absolute;
     top: 0px;
     bottom: 0px;
