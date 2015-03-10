@@ -152,10 +152,10 @@ function clickSignup5Next()
 }
 function clickSignup6Next()
 {
+    stopSignupVideo();
     slideInOutContentTab('.welcome1',function()
     {
         $('.signup.signup_bg').hide();
-        stopSignupVideo();
     });
 }
 function clickWelcome1Next()
