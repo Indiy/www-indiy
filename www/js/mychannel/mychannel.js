@@ -60,12 +60,12 @@ function startSignupVideo()
     try
     {
         var video_jq = $('.signup.signup_bg video');
-        if( video_jq.length && video_jq[0].stop )
+        if( video_jq.length )
         {
             var video = video_jq[0];
             if( !video.paused )
             {
-                video.start();
+                video.play();
             }
         }
     }
@@ -77,10 +77,10 @@ function stopSignupVideo()
     try
     {
         var video_jq = $('.signup.signup_bg video');
-        if( video_jq.length && video_jq[0].stop )
+        if( video_jq.length )
         {
             var video = video_jq[0];
-            video.stop();
+            video.pause();
         }
     }
     catch(e)
