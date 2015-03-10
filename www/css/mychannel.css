@@ -131,18 +131,17 @@ input[type=text]:focus {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background: #423967 url("/images/oen_background.gif") no-repeat;
-    background-size: 100% 100%;
+    background: #0a5c70;
     z-index: 0;
     overflow: hidden;
     white-space: nowrap;
     font-size: 0px;
 }
+/*
 @media only screen
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (-webkit-min-device-pixel-ratio: 1) {
-    /* No whack background on old iPad */
     .signup.signup_bg {
         background: #5a4173;
         background: -moz-linear-gradient(top, #5a4173 0%, #6c5f95 30%, #564070 67%, #4c3262 100%);
@@ -152,6 +151,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
         background: linear-gradient(to bottom, #5a4173 0%,#6c5f95 30%,#564070 67%,#4c3262 100%);
     }
 }
+*/
 .signup.content_tab {
     max-height: 100%;
     font-family: "Lato",sans-serif;
