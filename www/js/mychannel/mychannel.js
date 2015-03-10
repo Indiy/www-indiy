@@ -48,12 +48,42 @@ function defaultReady(show_social)
     {
         $('.signup.signup_bg').show();
         $('.content_tab.signup1').addClass('open instant_open');
+        resizeSignupVideo();
+        $(window).resize(resizeSignupVideo);
         startSignupVideo();
     }
     var date = moment().format("dddd MMMM DD YYYY");
     $('.today_date').html(date);
 }
 $(document).ready(defaultReady);
+
+function resizeSignupVideo()
+{
+    var video_jq = $('.signup.signup_bg video');
+    if( video_jq.length )
+    {
+        var signup_bg_jq = $('.signup.signup_bg');
+        var width = video_jq.width();
+        var height = video_jq.height();
+
+        var bg_width = signup_bg_jq.width();
+        var bg_height = signup_bg_jq.height();
+
+        var aspect = width / height;
+        var bg_aspect = bg_width / bg_height;
+
+        if( aspect > bg_aspect )
+        {
+            video_jq.css('width',"auto");
+            video_jq.css('height',"100%");
+        }
+        else
+        {
+            video_jq.css('width',"100%");
+            video_jq.css('height',"auto");
+        }
+    }
+}
 
 function startSignupVideo()
 {
