@@ -1329,7 +1329,7 @@ var TEMPLATE_SCHEMA =
                 type: 'video'
             },
             {
-                name: 'signup_image_bg,
+                name: 'signup_image_bg',
                 description: 'Signup Image Background',
                 type: 'image'
             },
