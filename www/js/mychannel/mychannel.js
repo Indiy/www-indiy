@@ -48,14 +48,47 @@ function defaultReady(show_social)
     {
         $('.signup.signup_bg').show();
         $('.content_tab.signup1').addClass('open instant_open');
+        startSignupVideo();
     }
     var date = moment().format("dddd MMMM DD YYYY");
     $('.today_date').html(date);
 }
 $(document).ready(defaultReady);
 
+function startSignupVideo()
+{
+    try
+    {
+        var video_jq = $('.signup.signup_bg video');
+        if( video_jq.length && video_jq[0].stop )
+        {
+            var video = video_jq[0];
+            if( !video.paused )
+            {
+                video.start();
+            }
+        }
+    }
+    catch(e)
+    {}
+}
+function stopSignupVideo()
+{
+    try
+    {
+        var video_jq = $('.signup.signup_bg video');
+        if( video_jq.length && video_jq[0].stop )
+        {
+            var video = video_jq[0];
+            video.stop();
+        }
+    }
+    catch(e)
+    {}
+}
 function clickSignup1Next()
 {
+    startSignupVideo();
     slideInOutContentTab('.signup3');
 }
 function clickSignup2Next()
@@ -92,6 +125,7 @@ function clickSignup6Next()
     slideInOutContentTab('.welcome1',function()
     {
         $('.signup.signup_bg').hide();
+        stopSignupVideo();
     });
 }
 function clickWelcome1Next()
