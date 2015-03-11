@@ -66,6 +66,7 @@ function onSignupVideoPlay()
 {
     console.log("onSignupVideoPlay");
     resizeSignupVideo();
+    window.setTimeout(1000,resizeSignupVideo);
 }
 function resizeSignupVideo()
 {
