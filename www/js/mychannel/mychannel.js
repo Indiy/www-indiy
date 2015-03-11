@@ -193,7 +193,6 @@ function clickSignup5Next()
 }
 function clickSignup6Next()
 {
-    stopSignupVideo();
     slideInOutContentTab('.welcome1',function()
     {
         $('.signup.signup_bg').hide();
@@ -205,6 +204,7 @@ function clickWelcome1Next()
 }
 function clickWelcome2Next()
 {
+    stopSignupVideo();
     slideInOutContentTab('.home_tab');
 }
 function clickMenu()
