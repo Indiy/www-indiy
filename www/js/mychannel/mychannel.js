@@ -64,12 +64,21 @@ function defaultReady(show_social)
     if( IS_PHONE )
     {
         $('.signup.signup_bg video').hide();
+        $(window).on('scroll',fixScroll);
     }
 
     var date = moment().format("dddd MMMM DD YYYY");
     $('.today_date').html(date);
 }
 $(document).ready(defaultReady);
+
+function fixScroll()
+{
+    if( window.pageXOffset != 0 )
+    {
+        window.scrollTo(0);
+    }
+}
 
 function onSignupVideoPlay()
 {
