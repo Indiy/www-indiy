@@ -51,6 +51,8 @@ function defaultReady(show_social)
     {
         $('.signup.signup_bg').show();
         $('.content_tab.signup1').addClass('open instant_open');
+        $('.signup.signup_bg video').on('play',onSignupVideoPlay);
+
         resizeSignupVideo();
         $(window).resize(resizeSignupVideo);
         startSignupVideo();
@@ -60,6 +62,11 @@ function defaultReady(show_social)
 }
 $(document).ready(defaultReady);
 
+function onSignupVideoPlay()
+{
+    console.log("onSignupVideoPlay");
+    resizeSignupVideo();
+}
 function resizeSignupVideo()
 {
     var video_jq = $('.signup.signup_bg video');
