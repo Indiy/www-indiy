@@ -4,6 +4,7 @@ window.clickSignup1Next = clickSignup1Next;
 window.clickSignup2Next = clickSignup2Next;
 window.clickSignup3Next = clickSignup3Next;
 window.clickSignup4Next = clickSignup4Next;
+window.clickSignup45Next = clickSignup45Next;
 window.clickSignup5Next = clickSignup5Next;
 window.clickSignup6Next = clickSignup6Next;
 window.clickWelcome1Next = clickWelcome1Next;
@@ -147,6 +148,10 @@ function clickSignup4Next()
         sendSMS(phone_number);
     }
 
+    slideInOutContentTab('.signup45');
+}
+function clickSignup45Next()
+{
     slideInOutContentTab('.signup5');
 }
 function clickSignup5Next()
