@@ -76,11 +76,18 @@ function resizeSignupVideo()
         {
             video_jq.css('width',"auto");
             video_jq.css('height',"100%");
+
+            var delta = video_jq.width() - bg_width;
+            var margin = "-{0}px".format(delta/2);
+            video_jq.css('margin-left',margin);
         }
         else
         {
             video_jq.css('width',"100%");
             video_jq.css('height',"auto");
+            var delta = video_jq.height() - bg_height;
+            var margin = "-{0}px".format(delta/2);
+            video_jq.css('margin-top',margin);
         }
     }
 }
