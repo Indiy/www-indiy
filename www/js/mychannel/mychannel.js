@@ -27,6 +27,8 @@ window.clickShowTab = clickShowTab;
 window.clickShowShare = clickShowShare;
 window.showContentTab = showContentTab;
 
+window.resizeSignupVideo = resizeSignupVideo;
+
 function defaultReady(show_social)
 {
     if( IS_IOS || IS_PHONE || IS_TABLET )
