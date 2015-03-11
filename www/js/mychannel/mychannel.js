@@ -64,8 +64,8 @@ $(document).ready(defaultReady);
 
 function onSignupVideoPlay()
 {
-    console.log("onSignupVideoPlay");
     resizeSignupVideo();
+    // Hack!
     window.setTimeout(resizeSignupVideo,1000);
 }
 function resizeSignupVideo()
