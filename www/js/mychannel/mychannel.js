@@ -51,12 +51,21 @@ function defaultReady(show_social)
     {
         $('.signup.signup_bg').show();
         $('.content_tab.signup1').addClass('open instant_open');
-        $('.signup.signup_bg video').on('play',onSignupVideoPlay);
 
-        resizeSignupVideo();
-        $(window).resize(resizeSignupVideo);
-        startSignupVideo();
+        if( !IS_PHONE )
+        {
+            $('.signup.signup_bg video').on('play',onSignupVideoPlay);
+
+            resizeSignupVideo();
+            $(window).resize(resizeSignupVideo);
+            startSignupVideo();
+        }
     }
+    if( IS_PHONE )
+    {
+        $('.signup.signup_bg video').hide();
+    }
+
     var date = moment().format("dddd MMMM DD YYYY");
     $('.today_date').html(date);
 }
@@ -138,7 +147,6 @@ function stopSignupVideo()
 }
 function clickSignup1Next()
 {
-    startSignupVideo();
     slideInOutContentTab('.signup3');
 }
 function clickSignup2Next()
