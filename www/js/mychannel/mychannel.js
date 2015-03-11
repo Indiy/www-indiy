@@ -80,6 +80,7 @@ function resizeSignupVideo()
             var delta = video_jq.width() - bg_width;
             var margin = "-{0}px".format(delta/2);
             video_jq.css('margin-left',margin);
+            video_jq.css('margin-top',"");
         }
         else
         {
@@ -88,6 +89,7 @@ function resizeSignupVideo()
             var delta = video_jq.height() - bg_height;
             var margin = "-{0}px".format(delta/2);
             video_jq.css('margin-top',margin);
+            video_jq.css('margin-left',"");
         }
     }
 }
