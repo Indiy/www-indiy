@@ -766,12 +766,12 @@ and (max-width: 675px) {
     max-width: 266px;
     overflow-x: hidden;
     overflow-y: scroll;
-    background: rgba(240,155,73,0.7);
-    background: -moz-linear-gradient(top, rgba(245,168,82,0.7) 0%,rgba(218,116,44,0.7) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(245,168,82,0.7)), color-stop(100%,rgba(218,116,44,0.7)));
-    background: -webkit-linear-gradient(top, rgba(245,168,82,0.7) 0%,rgba(218,116,44,0.7) 100%);
-    background: -ms-linear-gradient(top, rgba(245,168,82,0.7) 0%,rgba(218,116,44,0.7) 100%);
-    background: linear-gradient(to bottom, rgba(245,168,82,0.7) 0%,rgba(218,116,44,0.7) 100%);
+    background: rgba(240,155,73,0.9);
+    background: -moz-linear-gradient(top, rgba(245,168,82,0.9) 0%,rgba(218,116,44,0.9) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(245,168,82,0.9)), color-stop(100%,rgba(218,116,44,0.9)));
+    background: -webkit-linear-gradient(top, rgba(245,168,82,0.9) 0%,rgba(218,116,44,0.9) 100%);
+    background: -ms-linear-gradient(top, rgba(245,168,82,0.9) 0%,rgba(218,116,44,0.9) 100%);
+    background: linear-gradient(to bottom, rgba(245,168,82,0.9) 0%,rgba(218,116,44,0.9) 100%);
     border-right: 1px solid #ac6423;
     z-index: 300;
 }
