@@ -290,11 +290,12 @@ and (-webkit-min-device-pixel-ratio: 1) {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 186px;
-    height: 68px;
-    margin-top: -34px;
-    margin-left: -93px;
-    background: transparent url("/images/mychannel_icons.png") no-repeat -352px -28px;
+    width: 300px;
+    height: 105px;
+    margin-top: -52px;
+    margin-left: -150px;
+    background: transparent url("/images/oen_logo.png") no-repeat -28px -28px;
+    background-size: 300px 105px;
     z-index: -1;
 }
 .welcome.content_tab .today_date {
