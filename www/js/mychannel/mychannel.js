@@ -197,7 +197,7 @@ function clickSignup6Next()
     {
         $('.signup.signup_bg').hide();
     });
-    window.timeout(function()
+    window.setTimeout(function()
     {
         slideInOutContentTab('.welcome1');
     },2000);
