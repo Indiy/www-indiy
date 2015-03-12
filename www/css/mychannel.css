@@ -290,11 +290,11 @@ and (-webkit-min-device-pixel-ratio: 1) {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 300px;
-    height: 105px;
-    margin-top: -52px;
-    margin-left: -150px;
-    background: transparent url("/images/oen_logo.png") no-repeat -28px -28px;
+    width: 266px;
+    height: 94px;
+    margin-top: -47px;
+    margin-left: -133px;
+    background: transparent url("/images/oen_logo.png") no-repeat -12px -3px;
     background-size: 300px 105px;
     z-index: -1;
 }
