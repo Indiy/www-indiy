@@ -193,10 +193,14 @@ function clickSignup5Next()
 }
 function clickSignup6Next()
 {
-    slideInOutContentTab('.welcome1',function()
+    slideInOutContentTab('.welcome0',function()
     {
         $('.signup.signup_bg').hide();
     });
+    window.timeout(function()
+    {
+        slideInOutContentTab('.welcome1');
+    },2000);
 }
 function clickWelcome1Next()
 {

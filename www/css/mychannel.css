@@ -286,6 +286,17 @@ and (-webkit-min-device-pixel-ratio: 1) {
     background: transparent url("/images/mychannel_icons.png") no-repeat -352px -28px;
     z-index: -1;
 }
+.welcome.content_tab .middle_header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 186px;
+    height: 150px;
+    margin-top: -75px;
+    margin-left: -93px;
+    background: transparent url("/images/mychannel_icons.png") no-repeat -352px -28px;
+    z-index: -1;
+}
 .welcome.content_tab .today_date {
     position: absolute;
     top: 51px;
