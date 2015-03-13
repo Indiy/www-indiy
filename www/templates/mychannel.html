@@ -118,12 +118,12 @@
             </div>
         </div>
     </div>
-    <? if( $template_params['signup_image_bg'] ): ?>
-        <div id='signup_bg_image' class='signup full_screen_bg'>
-            <div id='image_holder_0' class='image_holder'></div>
-        </div>
-    <? endif; ?>
     <div class='signup signup_bg'>
+        <? if( $template_params['signup_image_bg'] ): ?>
+            <div id='signup_bg_image' class='signup full_screen_bg'>
+                <div id='image_holder_0' class='image_holder'></div>
+            </div>
+        <? endif; ?>
         <? if( $template_params['signup_video_file'] ): ?>
             <video src='<?=$template_params['signup_video_file']['video_file'];?>' preload='none' loop='loop'></video>
         <? endif; ?>
