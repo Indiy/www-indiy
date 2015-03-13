@@ -126,7 +126,7 @@ input[type=text]:focus {
 
 .signup.signup_bg {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 0px;
     bottom: 0px;
     left: 0px;
@@ -152,7 +152,7 @@ input[type=text]:focus {
 }
 
 .signup.signup_bg .image_bg {
-    position: fixed; 
+    position: absolute;
     top: 0px;
     bottom: 0px;
     left: 0px;
