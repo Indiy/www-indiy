@@ -138,8 +138,6 @@ input[type=text]:focus {
     font-size: 0px;
 }
 .signup.signup_bg video {
-    margin-left: auto;
-    margin-right: auto;
     height: 100%;
 }
 .signup.signup_bg .video_cover {
