@@ -151,6 +151,54 @@ input[type=text]:focus {
     background: rgba(0,0,0,0.4);
 }
 
+.signup.signup_bg .image_bg {
+    position: fixed; 
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0px;
+}
+/*
+#image #image_slider {
+    height: 100%;
+    width: 100%;
+}
+
+#image #image_slider .container {
+    height: 100%;
+    width: 100%;
+}
+*/
+.signup.signup_bg .image_bg .pad {
+    display: inline-block;
+    width: 0px;
+    height: 100%;
+    background: black;
+}
+.signup.signup_bg .image_bg .image_holder {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    vertical-align: top;
+}
+.signup.signup_bg .image_bg .image_holder div { 
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
 /*
 @media only screen
 and (min-device-width : 768px) 
