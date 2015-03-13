@@ -29,6 +29,8 @@ window.showContentTab = showContentTab;
 
 window.resizeSignupVideo = resizeSignupVideo;
 
+var g_signupBackgroundList = [];
+
 function defaultReady(show_social)
 {
     if( IS_IOS || IS_PHONE || IS_TABLET )
@@ -65,6 +67,18 @@ function defaultReady(show_social)
     {
         $('.signup.signup_bg video').hide();
         $(window).on('scroll',fixScroll);
+        if( g_templateParams.signup_image_bg )
+        {
+            g_signupBackgroundList = [ g_templateParams.signup_image_bg ];
+
+            imageLoadItem(g_signupBackgroundList[0],0,'#signup_bg_image');
+            signupSplashResize();
+            $(window).resize(signupSplashResize);
+        }
+    }
+    else
+    {
+        $('#signup_bg_image').hide();
     }
 
     var date = moment().format("dddd MMMM DD YYYY");
@@ -78,6 +92,10 @@ function fixScroll()
     {
         window.scrollTo(0);
     }
+}
+function signupSplashResize()
+{
+    imageResizeBackgrounds(g_signupBackgroundList,'#signup_bg_image');
 }
 
 function onSignupVideoPlay()
@@ -156,6 +174,10 @@ function stopSignupVideo()
 }
 function clickSignup1Next()
 {
+    if( IS_IPAD )
+    {
+        startSignupVideo();
+    }
     slideInOutContentTab('.signup3');
 }
 function clickSignup2Next()
