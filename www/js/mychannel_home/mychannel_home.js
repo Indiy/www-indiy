@@ -141,7 +141,7 @@ function clickSubmit()
     var email = $('.signup1 input').val();
     if( email )
     {
-        sendEmail(phone_number);
+        sendEmail(email);
         $('.signup1 .form').hide();
         $('.signup1 .success').show();
     }

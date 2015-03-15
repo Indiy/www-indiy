@@ -271,6 +271,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
     font-weight: normal;
     background: #9bdbf4;
     border-radius: 3px;
+    cursor: pointer;
 }
 .signup.content_tab .middle input.text {
     width: 214px;
