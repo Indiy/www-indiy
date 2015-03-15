@@ -1354,6 +1354,42 @@ var TEMPLATE_SCHEMA =
                 type: 'string'
             }
         ]
+    },
+    'PLAYER_MYCHANNEL_HOME': {
+        type: 'PLAYER',
+        description: 'MyChannel Home Page',
+        default_params: {
+            page_title: 'MyChannel',
+            home_text: 'Coming Soon'
+        },
+        arg_list:
+        [
+            {
+                name: 'page_title',
+                description: 'Page Title',
+                type: 'string'
+            },
+            {
+                name: 'home_text',
+                description: 'Home Text',
+                type: 'string'
+            },
+            {
+                name: 'signup_video_file',
+                description: 'Signup Video File',
+                type: 'video'
+            },
+            {
+                name: 'signup_image_bg',
+                description: 'Signup Image Background',
+                type: 'image'
+            },
+            {
+                name: 'ga_account_id',
+                description: 'Google Analytics Id',
+                type: 'string'
+            }
+        ]
     }
 };
 
