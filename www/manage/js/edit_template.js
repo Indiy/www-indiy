@@ -1360,7 +1360,9 @@ var TEMPLATE_SCHEMA =
         description: 'MyChannel Home Page',
         default_params: {
             page_title: 'MyChannel',
-            home_text: 'Coming Soon'
+            home_text: 'Coming Soon',
+            placeholder_text: 'Email',
+            button_text: 'SUBMIT'
         },
         arg_list:
         [
@@ -1372,6 +1374,16 @@ var TEMPLATE_SCHEMA =
             {
                 name: 'home_text',
                 description: 'Home Text',
+                type: 'string'
+            },
+            {
+                name: 'placeholder_text',
+                description: 'Placeholder Text',
+                type: 'string'
+            },
+            {
+                name: 'button_text',
+                description: 'Button Text',
                 type: 'string'
             },
             {

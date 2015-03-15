@@ -406,6 +406,13 @@
 		2DCEC1441A4FB21300DB41D7 /* mad_tv.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = mad_tv.html; sourceTree = "<group>"; };
 		2DCEC1451A4FB3FE00DB41D7 /* mad_tv.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = mad_tv.css; sourceTree = "<group>"; };
 		2DD94A2B14C368DF002B1259 /* vim.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = vim.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		2DE117991AB5B3B700706A08 /* mychannel_home.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = mychannel_home.html; path = ../www/templates/mychannel_home.html; sourceTree = "<group>"; };
+		2DE1179A1AB5B3CB00706A08 /* mychannel_home.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = mychannel_home.css; path = ../www/css/mychannel_home.css; sourceTree = "<group>"; };
+		2DE1179C1AB5B41C00706A08 /* mychannel_home.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mychannel_home.js; sourceTree = "<group>"; };
+		2DE1179D1AB5B41C00706A08 /* player_common.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_common.js; sourceTree = "<group>"; };
+		2DE1179E1AB5B41C00706A08 /* player_general.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_general.js; sourceTree = "<group>"; };
+		2DE1179F1AB5B41C00706A08 /* player_image.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_image.js; sourceTree = "<group>"; };
+		2DE117A01AB5B41C00706A08 /* player_playlist.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = player_playlist.js; sourceTree = "<group>"; };
 		2DE18E6F16E28E3A0066A13B /* fm_admin.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fm_admin.php; sourceTree = "<group>"; };
 		2DE18E7116E2959C0066A13B /* fm_admin.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fm_admin.html; path = templates/fm_admin.html; sourceTree = "<group>"; };
 		2DE18E7216E30F3D0066A13B /* fm_stream.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = fm_stream.php; sourceTree = "<group>"; };
@@ -1502,6 +1509,29 @@
 			path = files;
 			sourceTree = "<group>";
 		};
+		2DE117981AB5B38100706A08 /* mychannel_home */ = {
+			isa = PBXGroup;
+			children = (
+				2DE1179B1AB5B41C00706A08 /* js */,
+				2DE117991AB5B3B700706A08 /* mychannel_home.html */,
+				2DE1179A1AB5B3CB00706A08 /* mychannel_home.css */,
+			);
+			name = mychannel_home;
+			sourceTree = "<group>";
+		};
+		2DE1179B1AB5B41C00706A08 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				2DE1179C1AB5B41C00706A08 /* mychannel_home.js */,
+				2DE1179D1AB5B41C00706A08 /* player_common.js */,
+				2DE1179E1AB5B41C00706A08 /* player_general.js */,
+				2DE1179F1AB5B41C00706A08 /* player_image.js */,
+				2DE117A01AB5B41C00706A08 /* player_playlist.js */,
+			);
+			name = js;
+			path = ../www/js/mychannel_home;
+			sourceTree = "<group>";
+		};
 		2DE197A114F6130700305EAD /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -1630,6 +1660,7 @@
 				2D747C5015D6354A00128EEC /* utils */,
 				2DF46F491440B77F005538C7 /* www */,
 				2DF339811AA28699003639A0 /* mychannel */,
+				2DE117981AB5B38100706A08 /* mychannel_home */,
 				2D380B98146F0A5700E36189 /* madna.co */,
 				2D98BF3A1480778500CE851D /* mad.fm */,
 				2DE8282B14D0B5F300A91FCE /* mad.tv */,
