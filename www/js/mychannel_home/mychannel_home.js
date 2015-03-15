@@ -1,31 +1,8 @@
 (function(){
 
-window.clickSignup1Next = clickSignup1Next;
-window.clickSignup2Next = clickSignup2Next;
-window.clickSignup3Next = clickSignup3Next;
-window.clickSignup4Next = clickSignup4Next;
-window.clickSignup45Next = clickSignup45Next;
-window.clickSignup5Next = clickSignup5Next;
-window.clickSignup6Next = clickSignup6Next;
-window.clickWelcome1Next = clickWelcome1Next;
-window.clickWelcome2Next = clickWelcome2Next;
+window.clickSubmit = clickSubmit;
 
 window.slideInRightTab = slideInRightTab;
-
-window.clickMenu = clickMenu;
-window.clickMenuClose = clickMenuClose;
-window.clickCloseAll = clickCloseAll;
-
-window.clickClose = clickClose;
-
-window.clickContentListItem = clickContentListItem;
-
-window.clickPlaylist = clickPlaylist;
-window.clickPlaylistItem = clickPlaylistItem;
-window.catalogClickPlaylistMediaItem = catalogClickPlaylistMediaItem;
-window.clickShowTab = clickShowTab;
-window.clickShowShare = clickShowShare;
-window.showContentTab = showContentTab;
 
 window.resizeSignupVideo = resizeSignupVideo;
 
@@ -160,175 +137,25 @@ function stopSignupVideo()
     catch(e)
     {}
 }
-function clickSignup1Next()
+function clickSubmit()
 {
-    if( IS_IPAD )
+    var email = $('.signup1 input').val();
+    if( email )
     {
-        startSignupVideo();
-    }
-    slideInOutContentTab('.signup3');
-}
-function clickSignup2Next()
-{
-    slideInOutContentTab('.signup3');
-}
-function clickSignup3Next()
-{
-    slideInOutContentTab('.signup4');
-}
-function clickSignup4Next()
-{
-    var phone_number = $('.signup4 input').val();
-    if( phone_number )
-    {
-        window.localStorage.signup_phone_number = phone_number;
-        sendSMS(phone_number);
-    }
-
-    slideInOutContentTab('.signup45');
-}
-function clickSignup45Next()
-{
-    slideInOutContentTab('.signup5');
-}
-function clickSignup5Next()
-{
-    var name = $('.signup5 input').val();
-    if( name )
-    {
-        window.localStorage.signup_name = name;
-        $('.user_first_name').html(name);
-    }
-    slideInOutContentTab('.signup6');
-}
-function clickSignup6Next()
-{
-    slideInOutContentTab('.welcome0',function()
-    {
-        $('.signup.signup_bg').hide();
-    });
-    window.setTimeout(function()
-    {
-        slideInOutContentTab('.welcome1');
-    },2000);
-}
-function clickWelcome1Next()
-{
-    slideInOutContentTab('.welcome2');
-}
-function clickWelcome2Next()
-{
-    stopSignupVideo();
-    slideInOutContentTab('.home_tab');
-}
-function clickMenu()
-{
-    $('.side_menu').removeClass('side_open');
-    $('.side_menu').addClass('overlay_open');
-}
-function clickMenuClose()
-{
-    $('.side_menu').removeClass('overlay_open');
-    $('.side_menu').removeClass('side_open');
-}
-function clickCloseAll()
-{
-    clickMenuClose();
-    $('.right_tab').removeClass('open');
-}
-function slideInRightTab(name)
-{
-    $('.side_menu').addClass('side_open');
-    $('.side_menu').removeClass('overlay_open');
-    $('.right_tab').removeClass('open');
-    $('.right_tab' + name).addClass('open');
-}
-
-function clickClose()
-{
-    console.log("Not implemented");
-}
-
-function clickContentListItem(i,j)
-{
-    if( IS_PHONE )
-    {
-        var sel = "video#video_{0}_{1}".format(i,j);
-        $(sel)[0].play();
-    }
-    else
-    {
-        clickCloseAll();
-        clickPlaylistItem(i,j);
+        sendEmail(phone_number);
+        $('.signup1 .form').hide();
+        $('.signup1 .success').show();
     }
 }
-
-function clickPlaylist(i)
-{
-    $('.playlist_tab .playlist_list .playlist').removeClass('active');
-    var sel = ".playlist_tab .playlist_list #playlist_{0}".format(i);
-    $(sel).addClass('active');
-}
-function clickPlaylistItem(i,j)
-{
-    $('.playlist_tab .playlist_list .playlist .track_name').removeClass('active');
-    var sel = ".playlist_tab .playlist_list #playlist_{0} #track_{1}".format(i,j);
-    $(sel).addClass('active');
- 
-    var playlist = g_playlistList[i];
-    playlistChangePlaylist(playlist,j);
-    clickClose();
-}
-function catalogClickPlaylistMediaItem(playlist_index,child_playlist_index,playlist_item_index)
-{
-    $('#playlist_tab').hide();
-    var playlist = g_playlistList[playlist_index];
-    
-    if( typeof playlist_item_index !== 'undefined'
-        && playlist_item_index !== false )
-    {
-        playlist = playlist.items[child_playlist_index];
-    }
-    else
-    {
-        playlist_item_index = child_playlist_index;
-    }
-    playlistChangePlaylist(playlist,playlist_item_index);
-}
-
-function clickShowTab(i)
-{
-    showContentTab('#user_tab_' + i);
-}
-function clickShowShare()
-{
-    showContentTab('.share_tab');
-}
-
-function showContentTab(name)
-{
-    $('.content_tab').removeClass('instant_open');
-    $('.content_tab').removeClass('open');
-    $('.content_tab' + name).addClass('open');
-}
-function slideInOutContentTab(name,callback)
-{
-    $('.content_tab').removeClass('instant_open');
-    $('.content_tab.open').addClass('closed');
-    $('.content_tab' + name).addClass('open');
-    if( callback )
-    {
-        window.setTimeout(callback,2*1000);
-    }
-}
-
-function sendSMS(phone_number)
+function sendEmail(email)
 {
     var args = {
-        to: phone_number
+        artist_id: g_artistId,
+        email: email,
+        comments: "MyChannel home email submission."
     };
 
-    var url = g_trueSiteUrl + "/data/send_sms.php";
+    var url = g_trueSiteUrl + "/data/artist_contact.php";
     jQuery.ajax(
     {
         type: 'GET',
@@ -340,7 +167,7 @@ function sendSMS(phone_number)
         },
         error: function(data)
         {
-            console.log("SMS failed:",data);
+            console.log("Failed:",data);
         }
     });
 }

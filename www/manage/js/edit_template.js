@@ -1362,7 +1362,8 @@ var TEMPLATE_SCHEMA =
             page_title: 'MyChannel',
             home_text: 'Coming Soon',
             placeholder_text: 'Email',
-            button_text: 'SUBMIT'
+            button_text: 'SUBMIT',
+            success_text: 'THANK YOU'
         },
         arg_list:
         [
@@ -1384,6 +1385,11 @@ var TEMPLATE_SCHEMA =
             {
                 name: 'button_text',
                 description: 'Button Text',
+                type: 'string'
+            },
+            {
+                name: 'success_text',
+                description: 'Success Text',
                 type: 'string'
             },
             {

@@ -85,8 +85,13 @@
         <div class='middle'>
             <?=$template_params['home_text'];?>
             <br/>
-            <input class='text' type="tel" placeholder="<?=$template_params['placeholder_text'];?>"/><br/>
-            <div class='button' onclick='clickSignup4Next();'><?=$template_params['button_text'];?></div>
+            <div class='form'>
+                <input class='text' type="tel" placeholder="<?=$template_params['placeholder_text'];?>"/><br/>
+                <div class='button' onclick='clickSubmit();'><?=$template_params['button_text'];?></div>
+            </div>
+            <div class='success'>
+                <?=$template_params['success_text'];?>
+            </div>
         </div>
     </div>
 

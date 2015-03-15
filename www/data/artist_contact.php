@@ -23,6 +23,17 @@
 
     mail($to,$subject,$message,$headers);
     
-    echo "{ success: 1 }\n";
+    $ret = array( "success" => 1 );
+
+    $json = json_encode($ret);
+    if( isset($_REQUEST['callback']) )
+    {
+        $callback = $_REQUEST['callback'];
+        echo "$callback($json);";
+    }
+    else
+    {
+        echo $json;
+    }
     
 ?>

@@ -307,8 +307,11 @@ and (-webkit-min-device-pixel-ratio: 1) {
     font-size: 16px;
 }
 
-.signup.signup6.content_tab .middle .pick_list .item {
-    margin-bottom: 4px;
+.signup.signup1.content_tab .middle .success {
+    display: none;
+}
+.signup.signup1.content_tab .middle .form {
+    display: block;
 }
 
 
