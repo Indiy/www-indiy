@@ -2,9 +2,8 @@
 
 window.clickSubmit = clickSubmit;
 
-window.slideInRightTab = slideInRightTab;
-
 window.resizeSignupVideo = resizeSignupVideo;
+window.catalogClickPlaylistMediaItem = function() {}
 
 var g_signupBackgroundList = [];
 
