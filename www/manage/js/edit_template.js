@@ -1390,7 +1390,7 @@ var TEMPLATE_SCHEMA =
             {
                 name: 'success_text',
                 description: 'Success Text',
-                type: 'string'
+                type: 'textbox'
             },
             {
                 name: 'signup_video_file',
